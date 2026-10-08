@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "risques-electriques-synthese",
       "enonce": "Léa, future aide-soignante, révise la sécurité électrique à partir d'une prise de sa salle de bain. Elle y branche un oscilloscope et observe une tension sinusoïdale : la courbe se répète tous les $20$ ms et son sommet atteint $U_{max} = 325$ V. On prend $\\sqrt{2} \\approx 1{,}41$ et on rappelle la loi d'Ohm $U = R \\times I$. **1.** Déterminer la fréquence $f$ du secteur observé, en Hz. **2.** Calculer la valeur efficace $U$ de cette tension, puis donner la valeur minimale $U_{min}$ atteinte par la sinusoïde. **3.** Les mains bien sèches, la résistance du corps de Léa vaut $R = 4600\\ \\Omega$. Si elle touchait un conducteur sous la tension efficace $U$ trouvée au 2., quelle intensité $I$ traverserait son corps ? L'exprimer en mA. **4.** Elle se remouille les mains : sa résistance chute à $R' = 1150\\ \\Omega$. Calculer la nouvelle intensité $I'$, puis, à l'aide des seuils du cours ($10$ mA tétanisation, $30$ mA asphyxie, $\\geq 100$ mA fibrillation), comparer la gravité des deux situations. **5.** La prise est protégée par un disjoncteur différentiel de seuil $30$ mA. Dans la situation du 4., expliquer pourquoi il déclenche et protège Léa. **6.** La ligne comporte aussi un fusible de calibre $16$ A. Protège-t-il Léa contre l'électrisation du 4. ? Justifier en précisant ce que protège réellement chaque dispositif.",
       "corrige": [
@@ -138,6 +138,456 @@
         "6. Non. Le fusible $16$ A ne fond que si l'intensité de la ligne dépasse $16$ A (surintensité) ; or la fuite ne vaut que $0{,}200$ A, très en dessous de $16$ A : il ne réagit pas. Le fusible protège l'**installation** contre les surintensités (risque d'incendie), tandis que le différentiel protège les **personnes** en détectant une fuite. Ce sont deux rôles distincts."
       ],
       "reponse": "1. $f = 50$ Hz. 2. $U \\approx 230$ V, $U_{min} = -325$ V. 3. $I = 50$ mA (mains sèches). 4. $I' = 200$ mA : sèches c'est déjà grave ($> 30$ mA), mouillées c'est mortel ($> 100$ mA). 5. La fuite ($\\approx 200$ mA $> 30$ mA) fait déclencher le différentiel, qui coupe et sauve Léa. 6. Le fusible $16$ A ne la protège pas (il ne coupe qu'au-delà de $16$ A) : il protège l'installation, pas les personnes."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "tension-alternative-sinusoidale",
+      "enonce": "Dire si chaque générateur fournit une tension continue ou alternative : a) une pile ; b) une prise de courant du logement ; c) la batterie d'un téléphone.",
+      "corrige": [
+        "Une tension continue garde toujours le même signe ; une tension alternative change de signe régulièrement.",
+        "La pile et la batterie fournissent une tension continue ; la prise du secteur fournit une tension alternative sinusoïdale."
+      ],
+      "reponse": "a) continue ; b) alternative ; c) continue."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "electrisation-electrocution",
+      "enonce": "Définir l'électrisation et l'électrocution, puis classer : a) un bricoleur reçoit une décharge, sursaute, puis va bien ; b) une victime décède d'un arrêt cardiaque après avoir touché un câble.",
+      "corrige": [
+        "L'électrisation est le passage d'un courant à travers le corps ; l'électrocution est une électrisation mortelle.",
+        "a) électrisation ; b) électrocution."
+      ],
+      "reponse": "a) électrisation ; b) électrocution (électrisation mortelle)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "prise-terre",
+      "enonce": "Associer chaque fil d'une installation électrique à sa couleur : phase, neutre, terre.",
+      "corrige": [
+        "Les couleurs sont normalisées : phase rouge ou marron, neutre bleu, terre vert et jaune."
+      ],
+      "reponse": "Phase : rouge ou marron ; neutre : bleu ; terre : vert/jaune."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "intensite-seuils-danger",
+      "enonce": "Convertir : a) $30$ mA en ampères ; b) $0{,}5$ A en milliampères ; c) $2$ mA en ampères.",
+      "corrige": [
+        "$1$ mA $= 10^{-3}$ A et $1$ A $= 1\\,000$ mA.",
+        "a) $30$ mA $= 0{,}030$ A ; b) $0{,}5$ A $= 500$ mA ; c) $2$ mA $= 0{,}002$ A."
+      ],
+      "reponse": "a) $0{,}030$ A ; b) $500$ mA ; c) $0{,}002$ A."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "periode-frequence",
+      "enonce": "Sur un oscilloscope, on mesure la période de la tension du secteur : $T = 20$ ms. Calculer sa fréquence.",
+      "corrige": [
+        "On convertit : $T = 20$ ms $= 0{,}020$ s.",
+        "$f = \\dfrac{1}{T} = \\dfrac{1}{0{,}020} = 50$ Hz."
+      ],
+      "reponse": "$f = 50$ Hz."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "periode-frequence",
+      "enonce": "Un élève écrit : « $T = 20$ ms, donc $f = \\dfrac{1}{20} = 0{,}05$ Hz. » Trouver l'erreur et corriger.",
+      "corrige": [
+        "La période doit être exprimée en secondes : $20$ ms $= 0{,}020$ s.",
+        "$f = \\dfrac{1}{0{,}020} = 50$ Hz : l'erreur était d'un facteur $1\\,000$."
+      ],
+      "reponse": "Période non convertie en secondes : $f = 50$ Hz."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "valeur-efficace",
+      "enonce": "Un transformateur délivre une tension sinusoïdale de valeur maximale $U_{max} = 17$ V. Calculer sa valeur efficace.",
+      "corrige": [
+        "$U = \\dfrac{U_{max}}{\\sqrt{2}} = \\dfrac{17}{\\sqrt{2}} \\approx 12$ V."
+      ],
+      "reponse": "$U \\approx 12$ V."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "valeur-efficace",
+      "enonce": "Une lampe de chevet fonctionne sous une tension alternative de valeur efficace $U = 12$ V. Calculer les valeurs maximale et minimale de cette tension.",
+      "corrige": [
+        "$U_{max} = U \\times \\sqrt{2} = 12 \\times \\sqrt{2} \\approx 17$ V.",
+        "La sinusoïde est symétrique : $U_{min} = -U_{max} \\approx -17$ V."
+      ],
+      "reponse": "$U_{max} \\approx 17$ V et $U_{min} \\approx -17$ V."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "intensite-seuils-danger",
+      "enonce": "Un courant de $50$ mA traverse le corps d'une personne. À l'aide des seuils du cours, quels effets peut-il provoquer ?",
+      "corrige": [
+        "$50$ mA dépasse $10$ mA (tétanisation) et $30$ mA (atteinte des muscles respiratoires).",
+        "Il reste inférieur à $100$ mA : la fibrillation n'est pas le risque principal, mais l'asphyxie menace."
+      ],
+      "reponse": "Tétanisation et risque d'asphyxie (atteinte respiratoire)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "dispositifs-securite",
+      "enonce": "Pour chaque dispositif, dire s'il protège surtout l'installation ou les personnes : a) le fusible ; b) le disjoncteur de calibre $16$ A ; c) le disjoncteur différentiel $30$ mA.",
+      "corrige": [
+        "Le fusible et le disjoncteur coupent en cas de surintensité : ils évitent l'échauffement des fils et l'incendie.",
+        "Le différentiel détecte une fuite de courant (par exemple à travers une personne) : il protège les personnes."
+      ],
+      "reponse": "a) installation ; b) installation ; c) personnes."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "loi-ohm-differentiel",
+      "enonce": "Une personne aux mains sèches, de résistance $R = 3\\,000\\ \\Omega$, touche un conducteur sous $U = 230$ V. Calculer l'intensité qui la traverse (loi d'Ohm $U = R \\times I$) et donner le danger correspondant.",
+      "corrige": [
+        "$I = \\dfrac{U}{R} = \\dfrac{230}{3\\,000} \\approx 0{,}077$ A $\\approx 77$ mA.",
+        "$77$ mA dépasse $30$ mA : risque d'asphyxie, même avec les mains sèches."
+      ],
+      "reponse": "$I \\approx 77$ mA : risque d'asphyxie."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "risques-du-corps",
+      "enonce": "Expliquer pourquoi il est beaucoup plus dangereux de toucher un appareil électrique avec les mains mouillées.",
+      "corrige": [
+        "L'eau fait chuter la résistance électrique du corps.",
+        "Sous la même tension, l'intensité qui traverse le corps devient beaucoup plus grande ; or c'est l'intensité qui provoque les lésions."
+      ],
+      "reponse": "La peau mouillée a une résistance plus faible : l'intensité dans le corps augmente."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "tension-alternative-sinusoidale",
+      "enonce": "Sur l'écran d'un oscilloscope (balayage : $5$ ms par division ; sensibilité verticale : $100$ V par division), une période de la tension du secteur occupe $4$ divisions horizontales, et le sommet de la courbe est à $3{,}25$ divisions au-dessus de l'axe. Déterminer $T$, $f$ et $U_{max}$.",
+      "corrige": [
+        "$T = 4 \\times 5 = 20$ ms $= 0{,}020$ s, donc $f = \\dfrac{1}{0{,}020} = 50$ Hz.",
+        "$U_{max} = 3{,}25 \\times 100 = 325$ V."
+      ],
+      "reponse": "$T = 20$ ms ; $f = 50$ Hz ; $U_{max} = 325$ V."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "valeur-efficace",
+      "enonce": "Un voltmètre en position « alternatif » branché sur une prise affiche $230$ V. Un élève en conclut que la tension ne dépasse jamais $230$ V. A-t-il raison ?",
+      "corrige": [
+        "Le voltmètre affiche la valeur **efficace**, pas la valeur maximale.",
+        "La tension monte en réalité jusqu'à $U_{max} = 230 \\times \\sqrt{2} \\approx 325$ V."
+      ],
+      "reponse": "Non : $230$ V est la valeur efficace ; le maximum vaut environ $325$ V."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "periode-frequence",
+      "enonce": "La tension du secteur a une fréquence de $50$ Hz. 1) Combien de périodes effectue-t-elle en une minute ? 2) Sachant qu'elle change deux fois de signe par période, combien de fois change-t-elle de signe en une seconde ?",
+      "corrige": [
+        "1) $50$ périodes par seconde, donc $50 \\times 60 = 3\\,000$ périodes par minute.",
+        "2) $2 \\times 50 = 100$ changements de signe par seconde."
+      ],
+      "reponse": "$3\\,000$ périodes ; $100$ changements de signe par seconde."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "dispositifs-securite",
+      "enonce": "Sur une même ligne protégée par un disjoncteur de $16$ A, on branche un four ($9$ A), une bouilloire ($8$ A) et un grille-pain ($4$ A). 1) Calculer l'intensité totale. 2) Que se passe-t-il ? 3) Quel danger est ainsi évité ?",
+      "corrige": [
+        "1) Les intensités des appareils branchés sur la ligne s'ajoutent : $9 + 8 + 4 = 21$ A.",
+        "2) $21$ A $> 16$ A : surintensité, le disjoncteur coupe la ligne.",
+        "3) Il évite l'échauffement des fils, donc le risque d'incendie."
+      ],
+      "reponse": "$21$ A ; le disjoncteur saute ; il évite un incendie."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "dispositifs-securite",
+      "enonce": "Un disjoncteur différentiel $30$ mA mesure $I_{\\text{phase}} = 2{,}000$ A et $I_{\\text{neutre}} = 1{,}965$ A. Déclenche-t-il ? Que signifie cet écart ?",
+      "corrige": [
+        "Écart : $2{,}000 - 1{,}965 = 0{,}035$ A $= 35$ mA.",
+        "$35$ mA $\\geq 30$ mA : il déclenche. Une partie du courant ne revient pas par le neutre : il fuit ailleurs (par la terre, ou à travers une personne)."
+      ],
+      "reponse": "Oui ($35$ mA $\\geq 30$ mA) : il y a une fuite de courant."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "prise-terre",
+      "enonce": "Le tambour métallique d'un lave-linge est relié à la terre. Un fil de phase dénudé touche ce tambour. Expliquer ce qui se passe et le rôle de la terre.",
+      "corrige": [
+        "La carcasse se retrouve sous tension. Grâce au fil vert/jaune, le courant de défaut s'écoule vers le sol.",
+        "Ce courant ne revient pas par le neutre : le disjoncteur différentiel détecte l'écart et coupe aussitôt. Personne ne s'électrise en touchant la machine."
+      ],
+      "reponse": "Le courant de défaut part à la terre, le différentiel détecte la fuite et coupe."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "electrisation-electrocution",
+      "enonce": "Vrai ou faux ? a) Toute électrisation est mortelle. b) Toute électrocution est une électrisation. c) C'est surtout l'intensité traversant le corps qui fait la gravité d'un accident électrique.",
+      "corrige": [
+        "a) Faux : seule l'électrocution est mortelle.",
+        "b) Vrai : l'électrocution est une électrisation qui entraîne la mort.",
+        "c) Vrai : la tension est la cause, mais c'est l'intensité dans le corps qui blesse."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Vrai."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "intensite-seuils-danger",
+      "enonce": "Pourquoi une victime traversée par un courant de $10$ à $20$ mA reste-t-elle « collée » au fil, et pourquoi cela aggrave-t-il l'accident ?",
+      "corrige": [
+        "À partir d'environ $10$ mA, les muscles sont tétanisés : la main se contracte et se referme sur le conducteur.",
+        "Le contact dure plus longtemps ; or la durée compte autant que l'intensité dans la gravité des lésions."
+      ],
+      "reponse": "Tétanisation : la main ne peut plus lâcher ; le passage du courant se prolonge."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "loi-ohm-differentiel",
+      "enonce": "Quelle devrait être la résistance minimale du corps pour que l'intensité reste inférieure à $10$ mA sous $230$ V ? Comparer à la résistance d'une peau sèche (quelques milliers d'ohms) et conclure.",
+      "corrige": [
+        "$R = \\dfrac{U}{I} = \\dfrac{230}{0{,}010} = 23\\,000\\ \\Omega$.",
+        "Une peau sèche n'offre que quelques milliers d'ohms, bien moins que $23\\,000\\ \\Omega$ : toucher le secteur est donc toujours dangereux."
+      ],
+      "reponse": "$R = 23\\,000\\ \\Omega$ ; une peau sèche n'en offre pas autant : danger dans tous les cas."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "prise-terre",
+      "enonce": "Pour brancher un appareil à trois broches dans une vieille prise sans terre, une personne utilise un adaptateur qui supprime la broche de terre. L'appareil fonctionne. Pourquoi est-ce pourtant dangereux ?",
+      "corrige": [
+        "La terre ne sert pas au fonctionnement de l'appareil, mais à la sécurité : c'est pourquoi tout semble normal.",
+        "En cas de défaut, la carcasse resterait sous tension sans que le courant puisse s'écouler à la terre : la personne qui la toucherait serait électrisée."
+      ],
+      "reponse": "La protection par la terre est supprimée : en cas de défaut, la carcasse électriserait l'utilisateur."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "risques-du-corps",
+      "enonce": "Citer trois facteurs qui augmentent la gravité d'une électrisation.",
+      "corrige": [
+        "Exemple de réponse : une intensité élevée dans le corps ; une peau mouillée (résistance plus faible) ; un contact prolongé (durée)."
+      ],
+      "reponse": "Exemple : intensité élevée, peau mouillée, contact prolongé."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "valeur-efficace",
+      "enonce": "Au Royaume-Uni, la tension du secteur a une valeur efficace de $240$ V. Calculer sa valeur maximale.",
+      "corrige": [
+        "$U_{max} = U \\times \\sqrt{2} = 240 \\times \\sqrt{2} \\approx 339$ V."
+      ],
+      "reponse": "$U_{max} \\approx 339$ V."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "periode-frequence",
+      "enonce": "Dans un pays où la fréquence du secteur est de $60$ Hz, combien de périodes la tension effectue-t-elle en $0{,}5$ s ? Quelle est la durée d'une période en millisecondes ?",
+      "corrige": [
+        "$60$ périodes par seconde, donc $60 \\times 0{,}5 = 30$ périodes en $0{,}5$ s.",
+        "$T = \\dfrac{1}{60} \\approx 0{,}0167$ s $\\approx 16{,}7$ ms."
+      ],
+      "reponse": "$30$ périodes ; $T \\approx 16{,}7$ ms."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "loi-ohm-differentiel",
+      "enonce": "Certains éclairages de piscine fonctionnent sous une tension efficace de $12$ V. Pour une personne mouillée de résistance $R = 1\\,000\\ \\Omega$, comparer l'intensité qui la traverserait sous $12$ V et sous $230$ V. Conclure.",
+      "corrige": [
+        "Sous $12$ V : $I = \\dfrac{12}{1\\,000} = 0{,}012$ A $= 12$ mA.",
+        "Sous $230$ V : $I = \\dfrac{230}{1\\,000} = 0{,}230$ A $= 230$ mA, au-delà du seuil de fibrillation.",
+        "La très basse tension limite fortement l'intensité : c'est pourquoi on l'utilise dans les lieux humides."
+      ],
+      "reponse": "$12$ mA sous $12$ V contre $230$ mA sous $230$ V : la basse tension réduit fortement le danger."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "loi-ohm-differentiel",
+      "enonce": "Lors d'une électrisation sous $230$ V, on estime que l'intensité qui a traversé le corps valait $46$ mA. Calculer la résistance du corps de la victime. La peau était-elle plutôt sèche ou mouillée ?",
+      "corrige": [
+        "$R = \\dfrac{U}{I} = \\dfrac{230}{0{,}046} = 5\\,000\\ \\Omega$.",
+        "C'est une résistance de quelques milliers d'ohms, typique d'une peau sèche (une peau mouillée descend vers $1\\,000\\ \\Omega$)."
+      ],
+      "reponse": "$R = 5\\,000\\ \\Omega$ : peau plutôt sèche."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "dispositifs-securite",
+      "enonce": "Un bricoleur, debout sur un tabouret en bois isolant, touche en même temps le fil de phase d'une main et le fil de neutre de l'autre. Le courant entre par une main et ressort par l'autre. 1) Le disjoncteur différentiel détecte-t-il un écart entre phase et neutre ? 2) Le disjoncteur de $16$ A coupe-t-il ? 3) Quelle règle en tirer ?",
+      "corrige": [
+        "1) Tout le courant qui part par la phase revient par le neutre (à travers le corps) : $I_{\\text{phase}} = I_{\\text{neutre}}$. Le différentiel ne voit aucune fuite et ne coupe pas.",
+        "2) L'intensité dans le corps, de l'ordre de la centaine de milliampères, reste très inférieure à $16$ A : il ne coupe pas non plus.",
+        "3) Aucun dispositif ne protège dans ce cas : il faut toujours couper le courant au tableau avant d'intervenir sur un circuit."
+      ],
+      "reponse": "Non ; non ; toujours couper le courant avant d'intervenir."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "tension-alternative-sinusoidale",
+      "enonce": "La tension du secteur ($f = 50$ Hz, $U_{max} = 325$ V) vaut $0$ V à l'instant $t = 0$ et commence par augmenter. Donner sa valeur aux instants $t = 5$ ms, $t = 10$ ms, $t = 15$ ms et $t = 20$ ms.",
+      "corrige": [
+        "La période vaut $T = 20$ ms. Au quart de période ($5$ ms), la tension atteint son maximum $325$ V ; à la demi-période ($10$ ms), elle repasse par $0$.",
+        "Aux trois quarts ($15$ ms), elle atteint son minimum $-325$ V ; à $20$ ms, une période est achevée : elle revaut $0$ V."
+      ],
+      "reponse": "$325$ V ; $0$ V ; $-325$ V ; $0$ V."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "intensite-seuils-danger",
+      "enonce": "Deux personnes touchent le même conducteur sous $230$ V : la première a une résistance de $2\\,000\\ \\Omega$ (mains humides), la seconde de $10\\,000\\ \\Omega$ (mains très sèches, chaussures isolantes). Calculer les deux intensités et comparer les dangers.",
+      "corrige": [
+        "$I_1 = \\dfrac{230}{2\\,000} = 0{,}115$ A $= 115$ mA : au-delà de $100$ mA, risque de fibrillation.",
+        "$I_2 = \\dfrac{230}{10\\,000} = 0{,}023$ A $= 23$ mA : tétanisation, proche du seuil de $30$ mA.",
+        "La même tension peut être mortelle pour l'une et « seulement » grave pour l'autre."
+      ],
+      "reponse": "$115$ mA (fibrillation possible) contre $23$ mA (tétanisation)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "valeur-efficace",
+      "enonce": "Autrefois, la tension du secteur en France avait une valeur maximale d'environ $311$ V. Calculer sa valeur efficace.",
+      "corrige": [
+        "$U = \\dfrac{U_{max}}{\\sqrt{2}} = \\dfrac{311}{\\sqrt{2}} \\approx 220$ V."
+      ],
+      "reponse": "$U \\approx 220$ V."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "risques-du-corps",
+      "enonce": "Une aide à domicile intervient chez une personne âgée. Rédiger trois consignes de sécurité électrique adaptées à la salle de bain et à la cuisine, en justifiant chacune par une phrase.",
+      "corrige": [
+        "Exemple de réponse : « Ne pas utiliser le sèche-cheveux près d'un lavabo rempli : l'eau ferait chuter la résistance du corps. »",
+        "« Ne jamais toucher un appareil électrique avec les mains mouillées : l'intensité dans le corps augmenterait. »",
+        "« Ne pas surcharger une multiprise : la surintensité peut échauffer les fils et provoquer un incendie. »"
+      ],
+      "reponse": "Exemple : pas d'appareil près de l'eau, mains sèches, pas de multiprise surchargée (justifications : résistance du corps, incendie)."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "dispositifs-securite",
+      "enonce": "Pourquoi le seuil de déclenchement des disjoncteurs différentiels destinés à protéger les personnes est-il fixé à $30$ mA, et non à $300$ mA ?",
+      "corrige": [
+        "À partir d'environ $30$ mA, les muscles respiratoires sont atteints : risque d'asphyxie ; au-delà de $100$ mA, fibrillation du cœur.",
+        "Un seuil de $300$ mA laisserait passer dans le corps des courants mortels avant de couper ; $30$ mA coupe avant le danger respiratoire."
+      ],
+      "reponse": "$30$ mA correspond au seuil de danger respiratoire ; $300$ mA serait déjà mortel."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "periode-frequence-efficace",
+      "enonce": "Sur un oscilloscope branché à la sortie d'un transformateur, on observe $2$ périodes complètes en $40$ ms ; la valeur maximale est $17$ V. Calculer la période, la fréquence et la valeur efficace.",
+      "corrige": [
+        "$T = \\dfrac{40}{2} = 20$ ms $= 0{,}020$ s, donc $f = \\dfrac{1}{0{,}020} = 50$ Hz.",
+        "$U = \\dfrac{17}{\\sqrt{2}} \\approx 12$ V."
+      ],
+      "reponse": "$T = 20$ ms ; $f = 50$ Hz ; $U \\approx 12$ V."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "electrisation-electrocution",
+      "enonce": "Lire ce court récit : « En réparant une lampe branchée, Paul a reçu une décharge et n'arrivait plus à lâcher le fil. Sa voisine a coupé le disjoncteur général avant de l'approcher. Paul a été hospitalisé et s'en est remis. » 1) Électrisation ou électrocution ? 2) Quel effet du courant explique qu'il ne pouvait plus lâcher le fil ? 3) Pourquoi la voisine a-t-elle eu raison de couper le courant avant de le toucher ?",
+      "corrige": [
+        "1) Paul a survécu : c'est une **électrisation**.",
+        "2) La **tétanisation** des muscles (à partir d'environ $10$ mA) : la main se referme sur le conducteur.",
+        "3) Tant que le courant passe, toucher la victime ferait passer le courant aussi dans le corps du sauveteur : il serait électrisé à son tour."
+      ],
+      "reponse": "Électrisation ; tétanisation ; sinon elle aurait été électrisée à son tour."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "risques-electriques-synthese",
+      "enonce": "Une aide à domicile constate que le lave-linge d'une personne âgée n'est pas relié à la terre. Un jour, un fil de phase dénudé touche la carcasse métallique ($U = 230$ V). La personne, pieds nus sur un sol mouillé, a une résistance de $1\\,500\\ \\Omega$. 1) Calculer l'intensité qui la traverserait si elle touchait la machine. 2) Évaluer le danger. 3) Expliquer comment une prise de terre associée à un différentiel $30$ mA aurait évité l'accident. 4) Le disjoncteur de $16$ A de la ligne l'aurait-il protégée ?",
+      "corrige": [
+        "1) $I = \\dfrac{230}{1\\,500} \\approx 0{,}153$ A $\\approx 153$ mA.",
+        "2) $153$ mA $\\geq 100$ mA : risque de fibrillation, accident potentiellement mortel.",
+        "3) Avec la terre, le courant de défaut s'écoule au sol dès que la phase touche la carcasse ; le différentiel détecte cette fuite ($\\geq 30$ mA) et coupe avant que la personne ne touche la machine sous tension.",
+        "4) Non : $153$ mA est très inférieur à $16$ A ; le disjoncteur ne protège que l'installation."
+      ],
+      "reponse": "$I \\approx 153$ mA (danger mortel) ; terre + différentiel auraient coupé ; le disjoncteur $16$ A ne l'aurait pas protégée."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "risques-electriques-synthese",
+      "enonce": "Une lampe de chevet est alimentée par un transformateur. À l'oscilloscope (balayage $5$ ms par division, sensibilité $5$ V par division), une période occupe $4$ divisions et le sommet est à $3{,}4$ divisions. 1) Déterminer $T$ et $f$. 2) Déterminer $U_{max}$ puis $U$. 3) Une personne de résistance $1\\,200\\ \\Omega$ touche les bornes : calculer l'intensité et l'effet. 4) Comparer avec le même contact sur le secteur ($230$ V).",
+      "corrige": [
+        "1) $T = 4 \\times 5 = 20$ ms ; $f = 50$ Hz.",
+        "2) $U_{max} = 3{,}4 \\times 5 = 17$ V ; $U = \\dfrac{17}{\\sqrt{2}} \\approx 12$ V.",
+        "3) $I = \\dfrac{12}{1\\,200} \\approx 0{,}010$ A $= 10$ mA : picotement, au seuil de tétanisation.",
+        "4) Sous $230$ V : $I = \\dfrac{230}{1\\,200} \\approx 192$ mA, au-delà du seuil de fibrillation : la basse tension est bien moins dangereuse."
+      ],
+      "reponse": "$T = 20$ ms, $f = 50$ Hz ; $U_{max} = 17$ V, $U \\approx 12$ V ; $I \\approx 10$ mA ; sur le secteur $\\approx 192$ mA."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "risques-electriques-synthese",
+      "enonce": "Dans une cuisine, une multiprise branchée sur une ligne protégée par un disjoncteur $16$ A et un différentiel $30$ mA alimente une plaque ($10$ A) et une bouilloire ($8$ A). 1) Que se passe-t-il ? Quel dispositif agit et pourquoi ? 2) Après réarmement, on ne garde que la bouilloire ($8$ A). Une personne touche un fil dénudé de son cordon ; un courant de $60$ mA traverse son corps vers la terre. Quelles intensités mesure le différentiel sur la phase et le neutre ? Que fait-il ? 3) Sans différentiel, quel aurait été le danger ?",
+      "corrige": [
+        "1) $10 + 8 = 18$ A $> 16$ A : le disjoncteur coupe (surintensité, risque d'incendie).",
+        "2) $I_{\\text{phase}} = 8{,}060$ A et $I_{\\text{neutre}} = 8{,}000$ A : écart de $60$ mA $\\geq 30$ mA, le différentiel coupe.",
+        "3) $60$ mA dépasse le seuil de $30$ mA : risque d'asphyxie ; le disjoncteur $16$ A, lui, ne voit rien d'anormal."
+      ],
+      "reponse": "Le disjoncteur coupe ($18$ A) ; écart $60$ mA, le différentiel coupe ; sinon risque d'asphyxie."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "loi-ohm-differentiel",
+      "enonce": "Pour vérifier un différentiel $30$ mA, un électricien relie brièvement la phase à la terre ($230$ V) à travers une résistance. 1) Avec une résistance de $4\\,600\\ \\Omega$, quelle est l'intensité de fuite ? Le différentiel doit-il couper ? 2) Avec $23\\,000\\ \\Omega$ ? 3) Quelle valeur de résistance donnerait exactement $30$ mA ?",
+      "corrige": [
+        "1) $I = \\dfrac{230}{4\\,600} = 0{,}050$ A $= 50$ mA $\\geq 30$ mA : il doit couper.",
+        "2) $I = \\dfrac{230}{23\\,000} = 0{,}010$ A $= 10$ mA $< 30$ mA : il ne doit pas couper.",
+        "3) $R = \\dfrac{230}{0{,}030} \\approx 7\\,667\\ \\Omega$."
+      ],
+      "reponse": "$50$ mA (coupe) ; $10$ mA (ne coupe pas) ; $R \\approx 7\\,667\\ \\Omega$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "risques-electriques-synthese",
+      "enonce": "Un patient hospitalisé à domicile utilise un appareil électrique dont le cordon est abîmé. 1) Mains sèches ($R = 5\\,000\\ \\Omega$), puis mains mouillées ($R = 1\\,000\\ \\Omega$) : calculer l'intensité qui traverserait son corps sous $230$ V dans chaque cas. 2) Qualifier le danger à l'aide des seuils du cours. 3) Le logement est protégé par un fusible de $16$ A et un différentiel $30$ mA : lequel le protège, et pourquoi ? 4) Quelle consigne donner au patient ?",
+      "corrige": [
+        "1) Mains sèches : $I = \\dfrac{230}{5\\,000} = 0{,}046$ A $= 46$ mA. Mains mouillées : $I = \\dfrac{230}{1\\,000} = 0{,}23$ A $= 230$ mA.",
+        "2) $46$ mA : au-delà de $30$ mA, risque d'asphyxie. $230$ mA : au-delà de $100$ mA, risque de fibrillation (mortel).",
+        "3) Le différentiel : il détecte la fuite vers la terre ($\\geq 30$ mA) et coupe. Le fusible ne coupe qu'au-delà de $16$ A : il protège l'installation, pas les personnes.",
+        "4) Ne plus utiliser l'appareil et faire remplacer le cordon ; ne jamais le manipuler avec les mains mouillées."
+      ],
+      "reponse": "$46$ mA (asphyxie) et $230$ mA (fibrillation) ; le différentiel le protège ; ne plus utiliser l'appareil avant réparation."
     }
   ]
 }

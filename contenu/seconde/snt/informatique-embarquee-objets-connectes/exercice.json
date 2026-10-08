@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "définition d'un système embarqué",
       "enonce": "a) Qu'est-ce qu'un système informatique embarqué ? b) Parmi ces objets, lesquels contiennent un système embarqué : un lave-linge programmable, un marteau, une montre connectée, une chaise, un régulateur de vitesse de voiture ? c) Cite une contrainte forte fréquente pour ce type de système.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "capteur / actionneur",
       "enonce": "Un chauffage connecté mesure la température de la pièce et allume ou éteint le radiateur pour maintenir 20 °C. a) Quel composant mesure la température ? b) Quel composant agit sur le monde physique ? c) Classe : thermomètre, moteur de volet, capteur de lumière, LED — en capteurs ou actionneurs.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "chaîne capteur-traitement-actionneur",
       "enonce": "Un éclairage automatique de couloir allume la lumière quand il détecte un mouvement la nuit. Reconstitue dans l'ordre les trois étapes de la chaîne : traitement (décision par le programme), actionneur (lampe), capteur (détecteur de mouvement). Puis explique ce que fait l'étape du milieu.",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "objet connecté et réseau",
       "enonce": "Un bracelet de sport mesure les pas et envoie chaque soir les données vers un serveur, consultables sur une application. a) Qu'est-ce qui distingue un objet connecté d'un simple objet embarqué ? b) Cite deux avantages de cette connexion. c) Cite deux risques liés à l'envoi de ces données.",
       "corrige": [
@@ -60,9 +60,9 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "programme d'un microcontrôleur",
-      "enonce": "Sur une carte, une variable temp reçoit la température. Le programme :\nif temp > 25:\n    ventilateur = 'ON'\nelse:\n    ventilateur = 'OFF'\nDonne l'état du ventilateur pour a) temp = 30, b) temp = 25, c) temp = 18. d) Quelle condition faudrait-il écrire pour aussi allumer le ventilateur exactement à 25 °C ?",
+      "enonce": "Sur une carte, une variable temp reçoit la température. Le programme :\n\n```python\nif temp > 25:\n    ventilateur = 'ON'\nelse:\n    ventilateur = 'OFF'\n```\n\nDonne l'état du ventilateur pour a) temp = 30, b) temp = 25, c) temp = 18. d) Quelle condition faudrait-il écrire pour aussi allumer le ventilateur exactement à 25 °C ?",
       "corrige": [
         "temp = 30 : 30 > 25 est vrai → ventilateur = 'ON'.",
         "temp = 25 : 25 > 25 est faux (strictement supérieur) → ventilateur = 'OFF'. temp = 18 : 18 > 25 faux → 'OFF'.",
@@ -72,19 +72,19 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "autonomie et calcul d'énergie",
       "enonce": "Un capteur connecté embarque une batterie de 1200 mAh. En veille il consomme 2 mA, mais pendant 1 minute par heure il émet ses données en consommant 100 mA. a) Quelle charge (en mAh) consomme-t-il en 1 heure ? b) Combien d'heures d'autonomie environ ? c) Propose une idée pour prolonger l'autonomie.",
       "corrige": [
-        "Émission : 100 mA pendant 1 min = 1/60 h, soit 100 × (1/60) ≈ 1,67 mAh. Veille : 59 min à 2 mA = 2 × (59/60) ≈ 1,97 mAh. Total par heure ≈ 1,67 + 1,97 ≈ 3,64 mAh.",
-        "Autonomie ≈ capacité / consommation horaire = 1200 / 3,64 ≈ 330 heures, soit environ 13 à 14 jours.",
+        "Émission : 100 mA pendant 1 min = 1/60 h, soit 100 × (1/60) ≈ 1,67 mAh. Veille : 59 min à 2 mA = 2 × (59/60) ≈ 1,97 mAh. Total par heure = 100/60 + 2 × 59/60 = 218/60 ≈ 3,63 mAh.",
+        "Autonomie ≈ capacité / consommation horaire = 1200 / 3,63 ≈ 330 heures, soit environ 13 à 14 jours.",
         "Idées : émettre moins souvent (ex. toutes les 2 h), réduire la puissance d'émission, mettre le capteur en sommeil profond entre les mesures, ajouter un petit panneau solaire."
       ],
-      "reponse": "≈ 3,64 mAh par heure, soit environ 330 heures (≈ 13 jours) ; on prolonge en émettant moins souvent ou en dormant plus."
+      "reponse": "≈ 3,63 mAh par heure, soit environ 330 heures (≈ 13 jours) ; on prolonge en émettant moins souvent ou en dormant plus."
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "exemples de systèmes embarqués",
       "enonce": "Parmi ces objets, indique lesquels contiennent un système embarqué et justifie : a) un lave-linge programmable, b) un marteau, c) une montre connectée, d) un vélo classique.",
       "corrige": [
@@ -96,7 +96,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "capteurs et grandeurs mesurées",
       "enonce": "Associe chaque capteur à la grandeur qu'il mesure et donne pour chacun un objet du quotidien qui l'utilise : thermistance, photorésistance, accéléromètre.",
       "corrige": [
@@ -108,7 +108,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "chaîne d'information et boucle de régulation",
       "enonce": "Un chauffage connecté maintient une pièce à 20 °C. a) Quel est le capteur, quel est l'actionneur ? b) Décris la boucle : que se passe-t-il si la température mesurée descend à 18 °C ? c) Que fait le système quand 20 °C sont atteints ?",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "autonomie et calcul d'énergie",
       "enonce": "Un capteur sur pile consomme en moyenne 5 mA sous 3 V ; la pile stocke 1200 mAh. a) Combien d'heures fonctionne-t-il en continu ? b) Convertis en jours. c) S'il n'est actif qu'une minute toutes les dix minutes (soit 1/10 du temps), combien de jours tient-il alors ?",
       "corrige": [
@@ -129,6 +129,461 @@
         "En n'étant actif que 1/10 du temps, la consommation moyenne est divisée par 10 : l'autonomie est multipliée par 10, soit environ 100 jours (2400 h)."
       ],
       "reponse": "240 h = 10 jours en continu ; en veille 9 minutes sur 10, environ 100 jours."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "définition d'un système embarqué",
+      "enonce": "Complète la phrase : « Un système embarqué est un système informatique intégré dans un objet et conçu pour une … précise, contrairement à un ordinateur … qui peut tout faire. »",
+      "corrige": [
+        "Un système embarqué ne fait qu'une chose (laver le linge, réguler un chauffage…), alors qu'un ordinateur classique est polyvalent."
+      ],
+      "reponse": "« tâche » et « généraliste »."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "capteur / actionneur",
+      "enonce": "Classe ces composants en capteurs ou en actionneurs : microphone, haut-parleur, caméra, serrure électrique, bouton, moteur, écran, capteur d'humidité.",
+      "corrige": [
+        "Un capteur mesure une grandeur du monde physique (son, image, appui, humidité) et la transforme en données.",
+        "Un actionneur agit sur le monde physique : il produit un son, bloque une porte, fait tourner, affiche."
+      ],
+      "reponse": "Capteurs : microphone, caméra, bouton, capteur d'humidité. Actionneurs : haut-parleur, serrure électrique, moteur, écran."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "capteur / actionneur",
+      "enonce": "Corrige l'erreur de cette phrase : « Dans une porte de garage automatique, c'est le capteur qui ouvre la porte. »",
+      "corrige": [
+        "Un capteur ne fait que mesurer ou détecter (signal de la télécommande, obstacle sous la porte).",
+        "C'est un actionneur, le moteur, qui agit et ouvre la porte, sur décision du programme."
+      ],
+      "reponse": "C'est l'actionneur (le moteur) qui ouvre la porte ; le capteur ne fait que détecter."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "chaîne capteur-traitement-actionneur",
+      "enonce": "Un système d'arrosage automatique arrose le jardin lorsque la terre est trop sèche. Identifie : a) le capteur ; b) ce que fait le programme ; c) l'actionneur.",
+      "corrige": [
+        "Capter : un capteur d'humidité du sol mesure si la terre est sèche.",
+        "Traiter : le programme compare la mesure à un seuil (« si la terre est trop sèche, alors arroser »).",
+        "Agir : une pompe (ou une vanne électrique) laisse passer l'eau."
+      ],
+      "reponse": "a) capteur d'humidité du sol ; b) il compare l'humidité à un seuil et décide d'arroser ; c) la pompe ou la vanne."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "chaîne capteur-traitement-actionneur",
+      "enonce": "À la sortie d'un parking, une barrière se lève quand un ticket payé est inséré, puis se baisse quand la voiture est passée. Décris la chaîne capteurs → traitement → actionneur, en citant deux capteurs.",
+      "corrige": [
+        "Capteurs : le lecteur de ticket (ticket payé ou non) et un détecteur de présence du véhicule sous la barrière.",
+        "Traitement : le programme vérifie le ticket ; s'il est valide, il commande l'ouverture, puis attend que le détecteur indique que la voiture est passée.",
+        "Actionneur : le moteur qui lève et baisse la barrière."
+      ],
+      "reponse": "Lecteur de ticket et détecteur de véhicule → programme qui vérifie et décide → moteur de la barrière."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "capteurs et grandeurs mesurées",
+      "enonce": "Quel capteur utiliser pour : a) savoir qu'il fait nuit ; b) mesurer la distance d'un obstacle quand une voiture recule ; c) détecter de la fumée ; d) mesurer l'humidité d'une salle de bains ?",
+      "corrige": [
+        "a) un capteur de lumière (photorésistance) ; b) un capteur de distance, par exemple à ultrasons (radar de recul) ; c) un détecteur de fumée ; d) un capteur d'humidité."
+      ],
+      "reponse": "a) capteur de lumière ; b) capteur de distance à ultrasons ; c) détecteur de fumée ; d) capteur d'humidité."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "exemples de systèmes embarqués",
+      "enonce": "Pour chacun de ces objets, cite un capteur et un actionneur : a) un four à micro-ondes ; b) un ascenseur ; c) un distributeur de billets.",
+      "corrige": [
+        "Exemple de réponse : a) four : capteur = bouton ou détecteur de porte fermée ; actionneur = moteur du plateau tournant ou lampe.",
+        "b) ascenseur : capteur = bouton d'appel ou capteur d'étage ; actionneur = moteur de la cabine ou des portes.",
+        "c) distributeur : capteur = lecteur de carte ou clavier ; actionneur = mécanisme qui délivre les billets ou écran."
+      ],
+      "reponse": "Exemple : four (bouton / moteur du plateau), ascenseur (bouton d'appel / moteur), distributeur (lecteur de carte / mécanisme de sortie des billets)."
+    },
+    {
+      "id": 18,
+      "difficulte": "decouverte",
+      "notion": "objet connecté et réseau",
+      "enonce": "Parmi ces objets, lesquels sont des objets connectés ? a) une calculatrice de poche ; b) un thermostat pilotable depuis un téléphone ; c) une enceinte à commande vocale reliée à Internet ; d) un four à micro-ondes sans connexion.",
+      "corrige": [
+        "Tous contiennent de l'informatique embarquée, mais un objet n'est connecté que s'il est relié à un réseau.",
+        "Le thermostat pilotable à distance et l'enceinte reliée à Internet communiquent par un réseau ; la calculatrice et le four, non."
+      ],
+      "reponse": "b et c."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "objet connecté et réseau",
+      "enonce": "Un objet connecté peut communiquer par Wi-Fi, par Bluetooth ou par le réseau mobile. Propose la connexion la plus adaptée pour : a) un bracelet qui envoie ses données au téléphone posé à côté ; b) une ampoule du salon reliée à la box ; c) un capteur installé dans un champ, loin de toute box.",
+      "corrige": [
+        "Le Bluetooth convient aux échanges à courte distance entre deux appareils proches.",
+        "Le Wi-Fi relie les objets de la maison à la box.",
+        "Loin de toute box, il faut passer par le réseau mobile."
+      ],
+      "reponse": "a) Bluetooth ; b) Wi-Fi ; c) réseau mobile."
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "objet connecté et réseau",
+      "enonce": "Une ampoule connectée « envoie des données » et « reçoit des commandes ». Donne un exemple de chaque cas.",
+      "corrige": [
+        "Exemple de réponse : elle envoie son état (allumée ou éteinte) ou sa consommation à l'application du téléphone.",
+        "Elle reçoit une commande quand l'utilisateur l'allume ou change sa couleur à distance depuis son téléphone."
+      ],
+      "reponse": "Exemple : elle envoie son état (allumée/éteinte) ; elle reçoit l'ordre de s'allumer depuis le téléphone."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Un éclairage automatique lit la luminosité (de 0 à 100). Qu'affiche ce programme ?\n\n```python\nfor lum in [80, 50, 20]:\n    if lum < 50:\n        print(lum, \"lampe allumée\")\n    else:\n        print(lum, \"lampe éteinte\")\n```",
+      "corrige": [
+        "La lampe s'allume seulement si la luminosité est strictement inférieure à 50.",
+        "80 et 50 ne vérifient pas lum < 50 : lampe éteinte. 20 le vérifie : lampe allumée."
+      ],
+      "reponse": "80 lampe éteinte, 50 lampe éteinte, 20 lampe allumée."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Ce programme simule un chauffage qui fait monter la température d'un degré à chaque tour. Qu'affiche-t-il ? Combien de fois le chauffage est-il allumé ?\n\n```python\ntemp = 17\nwhile temp < 20:\n    print(\"chauffage allumé à\", temp)\n    temp = temp + 1\nprint(\"consigne atteinte :\", temp)\n```",
+      "corrige": [
+        "Tant que temp < 20, on affiche puis on augmente de 1 : la boucle tourne pour 17, 18 et 19.",
+        "Quand temp vaut 20, la condition est fausse : on sort de la boucle et on affiche la dernière ligne."
+      ],
+      "reponse": "chauffage allumé à 17, à 18, à 19, puis « consigne atteinte : 20 » ; le chauffage est allumé 3 fois."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Une alarme doit sonner seulement si la porte est ouverte ET qu'il fait nuit. Qu'affiche ce programme ? Où est l'erreur ?\n\n```python\nporte_ouverte = True\nnuit = False\nif porte_ouverte or nuit:\n    print(\"alarme\")\nelse:\n    print(\"calme\")\n```",
+      "corrige": [
+        "Avec or, il suffit qu'une seule condition soit vraie : porte_ouverte vaut True, donc le programme affiche « alarme » alors qu'il fait jour.",
+        "Il faut que les deux conditions soient vraies en même temps : on remplace or par and."
+      ],
+      "reponse": "Il affiche « alarme » ; il faut remplacer « or » par « and » (le programme afficherait alors « calme »)."
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Pour éviter qu'un ventilateur s'allume et s'éteigne sans arrêt, on utilise deux seuils : il s'allume au-dessus de 26 °C et ne s'éteint qu'en dessous de 24 °C ; entre les deux, il garde son état. Qu'affiche ce programme ?\n\n```python\nventilo = False\nfor t in [23, 25, 27, 25, 23]:\n    if t > 26:\n        ventilo = True\n    elif t < 24:\n        ventilo = False\n    print(t, ventilo)\n```",
+      "corrige": [
+        "23 : sous 24, le ventilateur reste éteint (False). 25 : entre les seuils, il garde son état (False).",
+        "27 : au-dessus de 26, il s'allume (True). 25 : entre les seuils, il reste allumé (True).",
+        "23 : sous 24, il s'éteint (False)."
+      ],
+      "reponse": "23 False, 25 False, 27 True, 25 True, 23 False."
+    },
+    {
+      "id": 25,
+      "difficulte": "probleme",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Un arrosage automatique doit arroser si l'humidité du sol est inférieure à 30 % et s'il ne pleut pas. Qu'affiche ce programme ? Justifie chaque ligne.\n\n```python\nmesures = [(20, False), (20, True), (45, False), (29, False)]\nfor humidite, pluie in mesures:\n    if humidite < 30 and not pluie:\n        print(humidite, \"arroser\")\n    else:\n        print(humidite, \"attendre\")\n```",
+      "corrige": [
+        "(20, False) : sol sec et pas de pluie → arroser.",
+        "(20, True) : il pleut, not pluie est faux → attendre. (45, False) : sol assez humide → attendre.",
+        "(29, False) : 29 < 30 et pas de pluie → arroser."
+      ],
+      "reponse": "20 arroser, 20 attendre, 45 attendre, 29 arroser."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "autonomie et calcul d'énergie",
+      "enonce": "Une montre connectée possède une batterie de 300 mAh et consomme en moyenne 10 mA. Combien d'heures tient-elle ? Est-ce plus ou moins d'une journée et demie ?",
+      "corrige": [
+        "Autonomie = capacité / courant moyen = 300 / 10 = 30 heures.",
+        "Une journée et demie dure 36 heures : 30 h, c'est un peu moins."
+      ],
+      "reponse": "30 heures, un peu moins d'une journée et demie."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "autonomie et calcul d'énergie",
+      "enonce": "Un thermostat connecté consomme 0,5 W en permanence. a) Quelle énergie consomme-t-il en un an (8 760 heures), en kWh ? b) Quel est le coût annuel, à 0,20 € le kWh ?",
+      "corrige": [
+        "Énergie = puissance × durée = 0,5 W × 8 760 h = 4 380 Wh = 4,38 kWh.",
+        "Coût = 4,38 × 0,20 ≈ 0,88 €."
+      ],
+      "reponse": "Environ 4,38 kWh par an, soit environ 0,88 €."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "autonomie et calcul d'énergie",
+      "enonce": "Un capteur sur batterie de 2 400 mAh consomme 0,1 mA en veille. À chaque envoi, il consomme en plus 50 mA pendant 6 secondes (1/600 d'heure). On néglige le reste. a) Quelle charge consomme un envoi ? b) Calcule la consommation par heure s'il envoie une fois par heure, puis s'il envoie toutes les 10 minutes. c) Compare les autonomies.",
+      "corrige": [
+        "Un envoi : 50 × 1/600 ≈ 0,083 mAh.",
+        "Un envoi par heure : 0,1 + 0,083 ≈ 0,18 mAh par heure. Six envois par heure : 0,1 + 6 × 0,083 = 0,6 mAh par heure.",
+        "Autonomies : 2 400 / 0,183 ≈ 13 000 h (environ 1 an et demi) contre 2 400 / 0,6 = 4 000 h (environ 167 jours) : envoyer plus souvent réduit fortement l'autonomie."
+      ],
+      "reponse": "≈ 0,083 mAh par envoi ; ≈ 0,18 mAh/h contre 0,6 mAh/h ; environ 13 000 h (1 an et demi) contre 4 000 h (167 jours)."
+    },
+    {
+      "id": 29,
+      "difficulte": "decouverte",
+      "notion": "temps réel et contraintes",
+      "enonce": "Pourquoi dit-on que le système qui déclenche un airbag doit fonctionner « en temps réel » ?",
+      "corrige": [
+        "Lors d'un choc, l'airbag ne sert que s'il se gonfle avant que le passager soit projeté vers l'avant.",
+        "Le système doit donc répondre dans un délai très court et garanti : une réponse correcte mais trop tardive serait inutile."
+      ],
+      "reponse": "Parce qu'il doit réagir dans un délai très court et garanti, sinon le déclenchement arrive trop tard."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "temps réel et contraintes",
+      "enonce": "Pour chaque système, indique la contrainte la plus importante parmi : réactivité (temps réel), faible consommation, fiabilité. a) le déclenchement d'un airbag ; b) un capteur posé dans un champ et alimenté par une pile ; c) la commande des portes d'un ascenseur. Justifie.",
+      "corrige": [
+        "Exemple de réponse : a) réactivité, car l'airbag doit se gonfler en une fraction de seconde.",
+        "b) faible consommation, car on ne peut pas changer la pile souvent.",
+        "c) fiabilité, car une panne mettrait des personnes en danger (porte qui s'ouvre entre deux étages)."
+      ],
+      "reponse": "a) réactivité ; b) faible consommation ; c) fiabilité."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "temps réel et contraintes",
+      "enonce": "Une voiture roule à 90 km/h, soit 25 m/s. Quelle distance parcourt-elle pendant le temps de réaction du système d'aide au freinage, si ce temps vaut 0,1 s ? Et s'il valait 1 s ? Conclus.",
+      "corrige": [
+        "Distance = vitesse × temps : 25 × 0,1 = 2,5 m.",
+        "Avec 1 s : 25 × 1 = 25 m.",
+        "Un système lent laisserait la voiture parcourir 22,5 m de plus avant d'agir : la réactivité est une question de sécurité."
+      ],
+      "reponse": "2,5 m en 0,1 s contre 25 m en 1 s : le système doit réagir très vite."
+    },
+    {
+      "id": 32,
+      "difficulte": "decouverte",
+      "notion": "sécurité des objets connectés",
+      "enonce": "Cite deux bonnes pratiques pour protéger une caméra connectée contre le piratage.",
+      "corrige": [
+        "Le cours conseille de changer le mot de passe fourni par défaut et d'installer les mises à jour, qui corrigent les failles de sécurité."
+      ],
+      "reponse": "Changer le mot de passe par défaut et faire les mises à jour."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "sécurité des objets connectés",
+      "enonce": "Une caméra de surveillance est installée avec l'identifiant « admin » et le mot de passe « 1234 » fournis par le fabricant, jamais modifiés. Quel est le risque ? Que faut-il faire ?",
+      "corrige": [
+        "Les identifiants par défaut sont souvent les mêmes pour toute une série d'appareils et circulent sur Internet : un pirate peut se connecter facilement.",
+        "Il pourrait alors regarder les images (espionnage) ou prendre le contrôle de la caméra. Il faut choisir un mot de passe long et personnel."
+      ],
+      "reponse": "Un pirate peut s'y connecter et espionner ; il faut remplacer le mot de passe par défaut par un mot de passe solide."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "sécurité des objets connectés",
+      "enonce": "Le code d'une serrure connectée est un nombre de 4 chiffres (de 0000 à 9999). a) Combien de codes différents existe-t-il ? b) Un programme malveillant peut tester 10 codes par seconde : combien de temps lui faut-il, au maximum, pour tous les essayer ? c) Pourquoi est-ce un code faible ?",
+      "corrige": [
+        "Chaque chiffre a 10 possibilités : 10 × 10 × 10 × 10 = 10 000 codes.",
+        "10 000 / 10 = 1 000 secondes, soit environ 17 minutes.",
+        "En moins d'une demi-heure, tous les codes sont testés : un code aussi court ne protège presque pas, sauf si la serrure bloque les essais répétés."
+      ],
+      "reponse": "10 000 codes ; 1 000 s, soit environ 17 minutes ; il est trop court pour résister à des essais automatiques."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "sécurité des objets connectés",
+      "enonce": "Un fabricant découvre une faille dans le programme de ses ampoules connectées et publie une mise à jour. a) Que risquent les utilisateurs qui ne l'installent pas ? b) Pourquoi un objet que le fabricant ne met plus à jour devient-il dangereux avec le temps ?",
+      "corrige": [
+        "a) La faille reste ouverte : un pirate qui la connaît peut prendre le contrôle de l'ampoule, et parfois s'en servir pour atteindre les autres appareils du réseau de la maison.",
+        "b) De nouvelles failles sont découvertes au fil des années ; sans mises à jour, elles ne sont jamais corrigées."
+      ],
+      "reponse": "a) Un pirate peut exploiter la faille et prendre le contrôle de l'objet ; b) les nouvelles failles ne sont plus corrigées."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "vie privée et données collectées",
+      "enonce": "Une enceinte à commande vocale enregistre les demandes de ses utilisateurs. Cite deux types de données qu'elle collecte et une information personnelle qu'on peut en déduire.",
+      "corrige": [
+        "Elle collecte la voix, le contenu des demandes et l'heure à laquelle elles sont faites.",
+        "Exemple de déduction : les horaires de lever et de coucher, les goûts musicaux, la présence à la maison."
+      ],
+      "reponse": "La voix et les demandes (avec leur heure) ; on peut en déduire les habitudes, par exemple les horaires de présence."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "vie privée et données collectées",
+      "enonce": "Un thermostat connecté baisse le chauffage quand la maison est vide et envoie ces informations sur un serveur. Explique pourquoi ces données sont sensibles, même si elles ne parlent « que » de température.",
+      "corrige": [
+        "Les baisses de chauffage révèlent les moments où la maison est inoccupée (journées de travail, vacances).",
+        "Si ces données sont piratées ou revendues, elles peuvent renseigner un cambrioleur ou dévoiler le mode de vie des habitants."
+      ],
+      "reponse": "Elles révèlent quand la maison est vide : ce sont des informations sur la vie privée des habitants."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "vie privée et données collectées",
+      "enonce": "L'application d'une ampoule connectée demande l'accès : a) au réseau Wi-Fi ; b) aux contacts du téléphone ; c) à la localisation précise ; d) au microphone. Quelles autorisations sont nécessaires pour allumer l'ampoule à distance ? Que faut-il faire des autres ?",
+      "corrige": [
+        "Pour piloter l'ampoule, l'application doit communiquer avec elle par le réseau : l'accès au Wi-Fi est nécessaire.",
+        "Les contacts, la localisation précise et le microphone ne servent pas à allumer une lampe : on refuse ces autorisations, comme le conseille le cours (limiter les autorisations)."
+      ],
+      "reponse": "Seul l'accès au Wi-Fi est nécessaire ; on refuse les contacts, la localisation et le microphone."
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "environnement et dépendance",
+      "enonce": "Cite un impact environnemental d'un objet connecté à chacune de ces étapes : sa fabrication, son utilisation, sa fin de vie.",
+      "corrige": [
+        "Fabrication : extraction de métaux et de ressources.",
+        "Utilisation : consommation électrique de l'objet et des serveurs avec lesquels il communique.",
+        "Fin de vie : déchets électroniques difficiles à recycler."
+      ],
+      "reponse": "Fabrication : métaux extraits ; utilisation : électricité consommée ; fin de vie : déchets électroniques."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "environnement et dépendance",
+      "enonce": "Une maison compte 10 objets connectés qui consomment chacun 1 W en veille, jour et nuit. a) Quelle énergie consomment-ils ensemble en un an (8 760 h), en kWh ? b) Quel est le coût, à 0,20 € le kWh ?",
+      "corrige": [
+        "Puissance totale : 10 × 1 = 10 W.",
+        "Énergie : 10 W × 8 760 h = 87 600 Wh = 87,6 kWh.",
+        "Coût : 87,6 × 0,20 ≈ 17,52 €."
+      ],
+      "reponse": "87,6 kWh par an, soit environ 17,52 €."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "environnement et dépendance",
+      "enonce": "Une entreprise ferme le service en ligne qui pilotait ses ampoules connectées : l'application ne fonctionne plus. a) Quel enjeu du cours ce cas illustre-t-il ? b) Quelle conséquence pour l'environnement si les clients jettent leurs ampoules ? c) Quelle précaution prendre à l'achat ?",
+      "corrige": [
+        "a) La dépendance : l'objet ne fonctionne que tant que le service associé existe.",
+        "b) Des objets encore en état de marche deviennent des déchets électroniques.",
+        "c) Exemple de réponse : choisir un objet qui fonctionne aussi sans le service en ligne (interrupteur classique, commande locale) ou se demander si la connexion est vraiment nécessaire."
+      ],
+      "reponse": "a) la dépendance ; b) des déchets électroniques inutiles ; c) préférer un objet utilisable sans le service en ligne."
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "définition d'un système embarqué",
+      "enonce": "Vrai ou faux ? Justifie. a) « Tout objet connecté contient de l'informatique embarquée. » b) « Tout système embarqué est un objet connecté. »",
+      "corrige": [
+        "a) Vrai : un objet connecté est un objet doté d'informatique embarquée et relié à un réseau.",
+        "b) Faux : un lave-linge programmable ou une calculatrice ont un système embarqué, mais ils ne sont reliés à aucun réseau."
+      ],
+      "reponse": "a) vrai ; b) faux."
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "capteurs et grandeurs mesurées",
+      "enonce": "Un smartphone contient de nombreux capteurs. Associe chaque fonction au capteur utilisé : a) l'écran pivote quand on tourne le téléphone ; b) la luminosité de l'écran s'adapte à la pièce ; c) on déverrouille avec son doigt ; d) l'application de carte affiche notre position. Capteurs : récepteur GPS, accéléromètre, capteur d'empreinte digitale, capteur de lumière ambiante.",
+      "corrige": [
+        "L'accéléromètre mesure l'orientation et les mouvements du téléphone.",
+        "Le capteur de lumière mesure l'éclairage de la pièce ; le capteur d'empreinte lit le doigt ; le récepteur GPS fournit la position."
+      ],
+      "reponse": "a) accéléromètre ; b) capteur de lumière ambiante ; c) capteur d'empreinte digitale ; d) récepteur GPS."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information et boucle de régulation",
+      "enonce": "Un four électrique à thermostat chauffe jusqu'à 180 °C puis maintient cette température. Un minuteur de cuisine, lui, sonne simplement au bout de 10 minutes. Lequel des deux réalise une boucle de régulation ? Justifie.",
+      "corrige": [
+        "Dans une boucle de régulation, le résultat de l'action est mesuré à nouveau, en continu.",
+        "Le four mesure sans cesse sa température et rallume ou coupe la résistance selon l'écart avec 180 °C. Le minuteur ne mesure pas l'effet de son action : il compte seulement le temps."
+      ],
+      "reponse": "Le four à thermostat : il mesure en continu la température obtenue et corrige le chauffage."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "chaîne d'information et boucle de régulation",
+      "enonce": "Le chauffage d'un aquarium doit maintenir 25 °C : il chauffe si la température mesurée est inférieure à 25 °C, sinon il s'arrête. Mesures toutes les 10 minutes : 24,2 °C ; 24,6 °C ; 25,1 °C ; 25,3 °C ; 24,9 °C. Donne l'état du chauffage après chaque mesure et explique pourquoi la température oscille autour de 25 °C.",
+      "corrige": [
+        "24,2 et 24,6 sont inférieures à 25 : chauffage allumé. 25,1 et 25,3 ne le sont pas : chauffage éteint. 24,9 : chauffage rallumé.",
+        "L'eau se refroidit quand le chauffage est coupé et se réchauffe quand il fonctionne : la boucle corrige sans cesse l'écart, d'où une température qui oscille légèrement autour de la consigne."
+      ],
+      "reponse": "allumé, allumé, éteint, éteint, allumé ; la boucle corrige en permanence l'écart à 25 °C."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Un détecteur de mouvement envoie une mesure par seconde (1 = mouvement, 0 = rien). Qu'affiche ce programme ? Que compte la variable alertes ?\n\n```python\nmesures = [0, 1, 1, 0, 0, 1, 0]\nalertes = 0\nfor i in range(len(mesures)):\n    if mesures[i] == 1 and (i == 0 or mesures[i - 1] == 0):\n        alertes = alertes + 1\nprint(alertes)\n```",
+      "corrige": [
+        "On compte une alerte quand on voit 1 alors que la mesure précédente valait 0 (ou au tout début) : c'est le début d'un mouvement.",
+        "Indice 1 : 1 après 0 → alerte. Indice 2 : 1 après 1 → pas de nouvelle alerte. Indice 5 : 1 après 0 → alerte.",
+        "Le programme compte donc les mouvements distincts, pas les secondes de mouvement."
+      ],
+      "reponse": "Il affiche 2 : alertes compte le nombre de mouvements distincts (débuts de mouvement)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "chaîne capteur-traitement-actionneur",
+      "enonce": "On veut concevoir une serre connectée qui maintient une bonne température et un sol humide, et prévient le jardinier sur son téléphone. Propose : a) deux capteurs ; b) deux actionneurs ; c) une règle « si… alors… » ; d) le rôle de la connexion réseau.",
+      "corrige": [
+        "Exemple de réponse : a) un capteur de température et un capteur d'humidité du sol.",
+        "b) un ventilateur (ou une ouverture motorisée du toit) et une pompe d'arrosage.",
+        "c) « Si la température dépasse 30 °C, alors allumer le ventilateur. »",
+        "d) La connexion (Wi-Fi ou réseau mobile) envoie les mesures et les alertes au téléphone, et permet de commander l'arrosage à distance."
+      ],
+      "reponse": "Exemple : capteurs de température et d'humidité ; ventilateur et pompe ; « si T > 30 °C alors ventiler » ; le réseau envoie mesures et alertes au téléphone."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "autonomie et calcul d'énergie",
+      "enonce": "Une sonnette connectée sur batterie consomme 0,5 mA en veille. À chaque appui, elle filme pendant 2 minutes en consommant 200 mA. Elle est sollicitée 6 fois par jour. a) Calcule la consommation de veille sur 24 h. b) Calcule la consommation des vidéos sur une journée. c) Combien de jours tient une batterie de 5 200 mAh ? (On néglige la veille pendant les vidéos.)",
+      "corrige": [
+        "Veille : 0,5 mA × 24 h = 12 mAh par jour.",
+        "Vidéos : 6 × 2 min = 12 min = 0,2 h ; 200 mA × 0,2 h = 40 mAh par jour.",
+        "Total : 52 mAh par jour ; autonomie = 5 200 / 52 = 100 jours."
+      ],
+      "reponse": "a) 12 mAh ; b) 40 mAh ; c) 100 jours."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "sécurité des objets connectés",
+      "enonce": "Une famille installe une caméra intérieure, un thermostat et une serrure connectés. Rédige trois conseils pour limiter les risques de piratage et d'atteinte à la vie privée, en justifiant chacun.",
+      "corrige": [
+        "Exemple de réponse : 1) Changer tous les mots de passe par défaut, car ils sont connus des pirates.",
+        "2) Installer régulièrement les mises à jour, qui corrigent les failles découvertes.",
+        "3) Vérifier quelles données sont collectées et limiter les autorisations (par exemple désactiver la caméra quand la famille est présente), car ces objets enregistrent la vie de la maison."
+      ],
+      "reponse": "Exemple : changer les mots de passe par défaut, faire les mises à jour, limiter les données collectées et les autorisations."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Un thermostat programmable vise 19 °C de 7 h à 22 h et 16 °C la nuit. Qu'affiche ce programme ? Explique le rôle de la fonction consigne.\n\n```python\ndef consigne(heure):\n    if 7 <= heure < 22:\n        return 19\n    return 16\n\ntemp = 17\nfor heure in [6, 8, 23]:\n    if temp < consigne(heure):\n        print(heure, \"h : chauffer\")\n    else:\n        print(heure, \"h : ne pas chauffer\")\n```",
+      "corrige": [
+        "La fonction consigne renvoie la température visée selon l'heure : 19 entre 7 h et 22 h (22 h exclu), 16 sinon.",
+        "6 h : consigne 16, 17 n'est pas inférieur à 16 → ne pas chauffer. 8 h : consigne 19, 17 < 19 → chauffer. 23 h : consigne 16 → ne pas chauffer."
+      ],
+      "reponse": "6 h : ne pas chauffer ; 8 h : chauffer ; 23 h : ne pas chauffer. La fonction donne la consigne selon l'heure."
     }
   ]
 }

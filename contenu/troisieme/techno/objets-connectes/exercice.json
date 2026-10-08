@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Définition et IoT",
       "enonce": "Qu'est-ce qu'un objet connecté ? Comment appelle-t-on l'ensemble des objets connectés (donne le nom français et le sigle anglais) ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Chaîne d'information",
       "enonce": "Cite les trois fonctions de la chaîne d'information d'un objet connecté et le composant associé à chacune.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Capteur ou actionneur",
       "enonce": "Classe chaque élément en capteur ou actionneur : a) un moteur, b) un capteur ultrason (distance), c) une LED, d) un accéléromètre.",
       "corrige": [
@@ -50,7 +50,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Programmé vs connecté",
       "enonce": "Une lampe programmée s'allume seule quand il fait nuit, mais ne communique avec rien. Une montre envoie ton nombre de pas vers ton smartphone par Bluetooth. Laquelle est un objet connecté ? Explique précisément ce qui fait la différence.",
       "corrige": [
@@ -63,7 +63,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Thermostat connecté",
       "enonce": "Décris le fonctionnement d'un thermostat connecté en suivant les fonctions acquérir → traiter → agir → communiquer. Précise le rôle du capteur, du microcontrôleur, de l'actionneur et de la liaison sans fil.",
       "corrige": [
@@ -77,7 +77,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Chaînes et enjeux",
       "enonce": "Pour un bracelet connecté qui mesure le rythme cardiaque et l'envoie vers une application, indique quels éléments appartiennent à la chaîne d'information et lesquels à la chaîne d'énergie. Puis explique deux enjeux (sécurité et données personnelles) posés par ce type d'objet.",
       "corrige": [
@@ -90,7 +90,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "le microcontrôleur",
       "enonce": "Quel est le rôle du microcontrôleur dans un objet connecté ? Pourquoi dit-on que c'est le « cerveau » de l'objet ?",
       "corrige": [
@@ -102,7 +102,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "communiquer sans fil",
       "enonce": "Ce qui rend un objet « connecté », c'est sa capacité à communiquer à distance. (a) Cite deux technologies sans fil utilisées. (b) Où sont souvent envoyées les données ? (c) Comment l'utilisateur peut-il les consulter ?",
       "corrige": [
@@ -114,7 +114,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "analyser une montre connectée",
       "enonce": "Une montre connectée mesure le nombre de pas et l'affiche, puis l'envoie au smartphone. Identifie les trois fonctions de la chaîne d'information (acquérir, traiter, communiquer) et l'élément qui réalise chacune.",
       "corrige": [
@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "chaînes et enjeux d'une caméra connectée",
       "enonce": "On étudie une caméra de surveillance connectée. (a) À quelle chaîne appartient le capteur d'image, à quelle chaîne le moteur qui oriente la caméra ? (b) Comment communique-t-elle ? (c) Cite un intérêt et un risque pour la vie privée.",
       "corrige": [
@@ -136,6 +136,450 @@
         "(c) Intérêt : la surveillance et la sécurité du logement à distance. Risque : les images (données personnelles) peuvent être interceptées ou utilisées à notre insu."
       ],
       "reponse": "(a) Le capteur d'image → chaîne d'information ; le moteur → chaîne d'énergie (commandé par l'information). (b) par Wi-Fi/réseau mobile vers un serveur. (c) intérêt : surveillance à distance ; risque : atteinte à la vie privée (images interceptées)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "définition et IoT",
+      "enonce": "Que signifie le sigle IoT ? Donne sa traduction française.",
+      "corrige": [
+        "IoT est un sigle anglais : Internet of Things.",
+        "En français, on dit l'Internet des objets."
+      ],
+      "reponse": "Internet of Things : l'Internet des objets."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "capteur ou actionneur",
+      "enonce": "Complète : « Le capteur … (entrée) ; l'actionneur … (sortie). »",
+      "corrige": [
+        "Le capteur recueille l'information.",
+        "L'actionneur transforme une commande en action."
+      ],
+      "reponse": "Le capteur mesure (entrée) ; l'actionneur agit (sortie)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "chaîne d'information",
+      "enonce": "Dans quel ordre se succèdent les fonctions « traiter », « acquérir » et « communiquer / restituer » dans la chaîne d'information ?",
+      "corrige": [
+        "On recueille d'abord l'information, puis on décide, puis on transmet ou on agit."
+      ],
+      "reponse": "Acquérir → traiter → communiquer / restituer."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "microcontrôleur et programme",
+      "enonce": "Où est enregistré le programme qui décide des actions d'un objet connecté ?",
+      "corrige": [
+        "Le programme est exécuté par un petit ordinateur intégré à l'objet."
+      ],
+      "reponse": "Dans le microcontrôleur."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "communication sans fil",
+      "enonce": "Cite trois technologies sans fil qui permettent à un objet de communiquer.",
+      "corrige": [
+        "Le cours cite le Wi-Fi, le Bluetooth et la téléphonie mobile."
+      ],
+      "reponse": "Le Wi-Fi, le Bluetooth et la téléphonie mobile."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "capteur ou actionneur",
+      "enonce": "Que fait un capteur de luminosité ?",
+      "corrige": [
+        "Un capteur transforme une grandeur physique en signal utilisable.",
+        "Ici, la grandeur physique est la lumière."
+      ],
+      "reponse": "Il mesure la lumière et la transforme en un signal utilisable par le programme."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "capteur ou actionneur",
+      "enonce": "Classe en capteurs ou actionneurs : un buzzer, un capteur d'humidité, un bouton-poussoir, un ventilateur, une LED, un capteur de présence.",
+      "corrige": [
+        "Les capteurs recueillent une information : capteur d'humidité, bouton-poussoir, capteur de présence.",
+        "Les actionneurs agissent : le buzzer sonne, le ventilateur tourne, la LED s'allume."
+      ],
+      "reponse": "Capteurs : capteur d'humidité, bouton-poussoir, capteur de présence ; actionneurs : buzzer, ventilateur, LED."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "capteur ou actionneur",
+      "enonce": "Associe chaque capteur à la grandeur physique qu'il mesure : capteur ultrason, accéléromètre, capteur de température ; grandeurs : mouvement, distance, température.",
+      "corrige": [
+        "Le capteur ultrason mesure une distance.",
+        "L'accéléromètre mesure le mouvement ; le capteur de température, la température."
+      ],
+      "reponse": "Ultrason → distance ; accéléromètre → mouvement ; capteur de température → température."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "définition et IoT",
+      "enonce": "Cite trois exemples d'objets connectés de la vie quotidienne.",
+      "corrige": [
+        "Un objet connecté échange des informations à distance.",
+        "Le cours cite la montre connectée, le thermostat intelligent, l'enceinte vocale, les capteurs de la maison."
+      ],
+      "reponse": "Par exemple : une montre connectée, un thermostat intelligent, une enceinte vocale."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "programmé ou connecté",
+      "enonce": "Corrige l'erreur de Nathan : « Mon robot suit une ligne grâce à son programme, donc c'est un objet connecté. »",
+      "corrige": [
+        "Un objet programmé n'est pas forcément connecté.",
+        "Pour être connecté, il doit communiquer à distance (Wi-Fi, Bluetooth, réseau mobile)."
+      ],
+      "reponse": "Faux : il est programmé ; il ne serait connecté que s'il communiquait à distance."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "microcontrôleur et programme",
+      "enonce": "Pourquoi un capteur seul ne peut-il pas allumer une lampe quand il fait nuit ?",
+      "corrige": [
+        "Un capteur mesure, mais il ne décide pas et n'agit pas.",
+        "Il faut un microcontrôleur et son programme pour décider, puis un actionneur pour allumer."
+      ],
+      "reponse": "Parce qu'un capteur mesure seulement : la décision revient au microcontrôleur, et l'action à l'actionneur."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "communication sans fil",
+      "enonce": "Une enceinte reçoit la musique d'un smartphone posé à 2 m, sans câble ni box. Quelle technologie sans fil est la plus probablement utilisée ?",
+      "corrige": [
+        "La liaison se fait directement entre deux appareils proches, sans passer par la box.",
+        "C'est le principe du Bluetooth."
+      ],
+      "reponse": "Le Bluetooth."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "intérêts et limites",
+      "enonce": "Cite deux services rendus par les objets connectés.",
+      "corrige": [
+        "Le cours cite le confort, les économies d'énergie, la surveillance de la santé et la domotique."
+      ],
+      "reponse": "Par exemple : le confort et les économies d'énergie (ou la surveillance de la santé, la domotique)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "chaîne d'information et chaîne d'énergie",
+      "enonce": "Une LED est commandée par un microcontrôleur. À quelle chaîne appartient-elle ? Par quelle chaîne est-elle commandée ?",
+      "corrige": [
+        "La LED agit (elle s'allume) : c'est un actionneur, qui appartient à la chaîne d'énergie.",
+        "Elle est commandée par la chaîne d'information (le microcontrôleur)."
+      ],
+      "reponse": "Elle appartient à la chaîne d'énergie et est commandée par la chaîne d'information."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "définition et IoT",
+      "enonce": "Vrai ou faux : « Un objet connecté a besoin qu'un humain lui donne un ordre à chaque échange de données. » Corrige si c'est faux.",
+      "corrige": [
+        "Un objet connecté échange des informations avec d'autres appareils ou avec Internet.",
+        "Il le fait sans intervention permanente de l'humain."
+      ],
+      "reponse": "Faux : il échange des informations sans intervention permanente de l'humain."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information",
+      "enonce": "Un arrosage connecté mesure l'humidité du sol, décide d'arroser si la terre est sèche, ouvre une vanne et envoie un message au smartphone. Associe chaque action à une fonction : acquérir, traiter, agir, communiquer.",
+      "corrige": [
+        "Mesurer l'humidité : acquérir (capteur).",
+        "Décider : traiter (microcontrôleur).",
+        "Ouvrir la vanne : agir (actionneur) ; envoyer un message : communiquer."
+      ],
+      "reponse": "Mesurer → acquérir ; décider → traiter ; ouvrir la vanne → agir ; envoyer le message → communiquer."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information",
+      "enonce": "Une sonnette connectée filme la personne devant la porte quand on appuie sur le bouton, puis envoie la vidéo sur le smartphone. Identifie le capteur qui déclenche, le traitement et la communication.",
+      "corrige": [
+        "Le bouton-poussoir détecte l'appui : il acquiert l'information (la caméra acquiert aussi l'image).",
+        "Le microcontrôleur décide de filmer et de prévenir l'utilisateur.",
+        "La vidéo est envoyée par Wi-Fi vers le smartphone : communiquer."
+      ],
+      "reponse": "Capteur : le bouton-poussoir (et la caméra) ; traitement : le microcontrôleur ; communication : envoi de la vidéo par Wi-Fi au smartphone."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information",
+      "enonce": "Un capteur de température envoie une mesure toutes les 10 minutes vers un serveur. Combien de mesures envoie-t-il en une journée ?",
+      "corrige": [
+        "Une heure compte 60 ÷ 10 = 6 mesures.",
+        "En 24 h : 6 × 24 = 144 mesures."
+      ],
+      "reponse": "144 mesures."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "microcontrôleur et programme",
+      "enonce": "Écris, sous la forme « si… alors… sinon… », la décision que prend le programme d'un thermostat réglé à 19 °C.",
+      "corrige": [
+        "Le microcontrôleur compare la température mesurée à la consigne de 19 °C.",
+        "S'il fait plus froid, il met en marche le chauffage ; sinon, il l'arrête."
+      ],
+      "reponse": "Si la température mesurée est inférieure à 19 °C, alors allumer le chauffage, sinon éteindre le chauffage."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "microcontrôleur et programme",
+      "enonce": "Le capteur d'un thermostat réglé à 19 °C mesure successivement 18 °C, 19,5 °C puis 17 °C. Pour chaque mesure, le chauffage est-il commandé en marche ou à l'arrêt ? (Règle : chauffer si la température est inférieure à 19 °C.)",
+      "corrige": [
+        "18 °C < 19 °C : chauffage en marche.",
+        "19,5 °C > 19 °C : chauffage à l'arrêt.",
+        "17 °C < 19 °C : chauffage en marche."
+      ],
+      "reponse": "18 °C : marche ; 19,5 °C : arrêt ; 17 °C : marche."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "programmé ou connecté",
+      "enonce": "Classe en objet programmé seulement ou objet connecté : (a) un robot aspirateur qu'on pilote depuis une application ; (b) une veilleuse qui s'allume seule dans le noir ; (c) une balance qui envoie la masse mesurée vers un smartphone.",
+      "corrige": [
+        "Un objet connecté communique à distance.",
+        "(a) et (c) communiquent avec un smartphone : connectés.",
+        "(b) réagit seule mais ne communique avec rien : seulement programmée."
+      ],
+      "reponse": "(a) connecté ; (b) programmé seulement ; (c) connecté."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "communication sans fil",
+      "enonce": "Où vont souvent les données d'un objet connecté avant d'être consultées sur le smartphone ? Comment appelle-t-on ce service en ligne ?",
+      "corrige": [
+        "Les données sont envoyées vers un serveur ou un service en ligne.",
+        "On appelle couramment ce service le « cloud »."
+      ],
+      "reponse": "Vers un serveur en ligne, appelé couramment le « cloud »."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "intérêts et limites",
+      "enonce": "Pourquoi les données d'une montre connectée (rythme cardiaque, sommeil, trajets) sont-elles sensibles ?",
+      "corrige": [
+        "Ce sont des données personnelles : santé, habitudes, lieux fréquentés.",
+        "Elles peuvent être interceptées ou utilisées à notre insu."
+      ],
+      "reponse": "Ce sont des données personnelles (santé, déplacements) qui peuvent être interceptées ou utilisées à notre insu."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "intérêts et limites",
+      "enonce": "Cite deux gestes simples pour protéger un objet connecté de la maison.",
+      "corrige": [
+        "Changer le mot de passe par défaut et en choisir un solide.",
+        "Faire les mises à jour, et ne partager que les données nécessaires."
+      ],
+      "reponse": "Exemple : changer le mot de passe par défaut et faire les mises à jour."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information et chaîne d'énergie",
+      "enonce": "Dans un portail connecté, classe ces éléments dans la chaîne d'information ou la chaîne d'énergie : le moteur, le module Wi-Fi, le capteur de présence, l'alimentation électrique, le microcontrôleur.",
+      "corrige": [
+        "Chaîne d'information : capteur de présence (acquérir), microcontrôleur (traiter), module Wi-Fi (communiquer).",
+        "Chaîne d'énergie : alimentation électrique et moteur (actionneur)."
+      ],
+      "reponse": "Information : capteur de présence, microcontrôleur, module Wi-Fi ; énergie : alimentation électrique, moteur."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "chaîne d'information et chaîne d'énergie",
+      "enonce": "Corrige l'erreur : « Dans une lampe connectée, l'électricité qui allume l'ampoule circule dans la chaîne d'information. »",
+      "corrige": [
+        "L'information circule pour décider ; l'énergie permet d'agir.",
+        "L'électricité qui fait briller l'ampoule appartient à la chaîne d'énergie ; la chaîne d'information se contente de commander l'allumage."
+      ],
+      "reponse": "Faux : l'énergie qui allume l'ampoule appartient à la chaîne d'énergie ; la chaîne d'information ne fait que commander."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "chaîne d'information",
+      "enonce": "Une poubelle connectée mesure son taux de remplissage avec un capteur ultrason et prévient la mairie quand elle est pleine à 80 %. Décris sa chaîne d'information.",
+      "corrige": [
+        "Acquérir : le capteur ultrason mesure la distance jusqu'aux déchets, donc le remplissage.",
+        "Traiter : le microcontrôleur compare le remplissage au seuil de 80 %.",
+        "Communiquer : si le seuil est atteint, il envoie un message à la mairie par le réseau mobile."
+      ],
+      "reponse": "Capteur ultrason (acquérir) → microcontrôleur qui compare à 80 % (traiter) → message envoyé à la mairie (communiquer)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "chaîne d'information",
+      "enonce": "Une poubelle de 100 cm de profondeur a un capteur ultrason fixé sur le couvercle. Il mesure 30 cm jusqu'aux déchets. Quelle hauteur de déchets y a-t-il ? La poubelle est-elle pleine à 80 % ?",
+      "corrige": [
+        "Hauteur des déchets : 100 − 30 = 70 cm.",
+        "Remplissage : 70 ÷ 100 = 70 %, inférieur à 80 %."
+      ],
+      "reponse": "70 cm de déchets, soit 70 % : le seuil de 80 % n'est pas atteint."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "microcontrôleur et programme",
+      "enonce": "Un détecteur de fumée connecté a un capteur de fumée, un buzzer et un module Wi-Fi. Écris son programme avec une condition, et dis ce qu'il fait en plus d'un détecteur ordinaire.",
+      "corrige": [
+        "Programme : si le capteur détecte de la fumée, alors faire sonner le buzzer et envoyer une alerte au smartphone.",
+        "En plus d'un détecteur ordinaire, il prévient l'utilisateur à distance, même absent."
+      ],
+      "reponse": "Si de la fumée est détectée, alors faire sonner le buzzer et envoyer une alerte au smartphone ; il prévient à distance."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "communication sans fil",
+      "enonce": "Une montre envoie les données au smartphone par Bluetooth, et le smartphone les envoie au serveur par la téléphonie mobile. Pourquoi la montre ne peut-elle pas envoyer directement les données au serveur, dans cet exemple ?",
+      "corrige": [
+        "Le Bluetooth relie des appareils proches l'un de l'autre.",
+        "La montre a besoin du smartphone comme relais pour atteindre Internet et le serveur."
+      ],
+      "reponse": "Parce que le Bluetooth ne relie que des appareils proches : le smartphone sert de relais vers Internet."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "intérêts et limites",
+      "enonce": "On admet que baisser le chauffage de 1 °C fait économiser environ 7 % d'énergie de chauffage. Une famille dépense 1 000 € par an en chauffage et son thermostat connecté baisse la température de 1 °C. Quelle économie peut-elle espérer ?",
+      "corrige": [
+        "7 % de 1 000 € = 0,07 × 1 000 = 70 €."
+      ],
+      "reponse": "Environ 70 € par an."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "intérêts et limites",
+      "enonce": "Cite deux limites des objets connectés liées à la consommation.",
+      "corrige": [
+        "Ils consomment de l'électricité (fonctionnement, serveurs).",
+        "Leur fabrication consomme des ressources, et ils deviennent vite obsolètes."
+      ],
+      "reponse": "Exemple : la consommation d'électricité et l'obsolescence (ressources pour fabriquer)."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "programmé ou connecté",
+      "enonce": "Explique ce qu'il faudrait ajouter à une lampe à détecteur de présence pour en faire un objet connecté.",
+      "corrige": [
+        "La lampe est déjà programmée : capteur, traitement, actionneur.",
+        "Il faut ajouter un moyen de communiquer à distance : un module Wi-Fi ou Bluetooth, pour l'allumer ou suivre son état depuis un smartphone."
+      ],
+      "reponse": "Un module de communication sans fil (Wi-Fi ou Bluetooth) pour qu'elle échange avec un smartphone ou un serveur."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "chaîne d'information",
+      "enonce": "Une serre connectée doit garder la température entre 18 °C et 26 °C : elle allume un chauffage en dessous de 18 °C, ouvre un volet d'aération au-dessus de 26 °C, et envoie la température au smartphone toutes les heures. Nomme le capteur, les deux actionneurs, et écris la règle de décision.",
+      "corrige": [
+        "Capteur : un capteur de température.",
+        "Actionneurs : le chauffage et le moteur qui ouvre le volet.",
+        "Règle : si la température < 18 °C, alors chauffer ; si la température > 26 °C, alors ouvrir le volet ; sinon, ne rien faire."
+      ],
+      "reponse": "Capteur de température ; actionneurs : chauffage et moteur du volet ; si T < 18 °C chauffer, si T > 26 °C ouvrir le volet, sinon ne rien faire."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "microcontrôleur et programme",
+      "enonce": "Avec la règle de la serre (chauffer en dessous de 18 °C, aérer au-dessus de 26 °C), que fait le programme pour les mesures 16 °C, 22 °C et 29 °C ?",
+      "corrige": [
+        "16 °C < 18 °C : chauffer.",
+        "22 °C est entre 18 °C et 26 °C : rien.",
+        "29 °C > 26 °C : ouvrir le volet."
+      ],
+      "reponse": "16 °C : chauffer ; 22 °C : rien ; 29 °C : ouvrir le volet."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "chaîne d'information",
+      "enonce": "Un bracelet connecté compte les pas : il enregistre 7 200 pas en 1 h 30 de marche. Combien de pas par minute cela représente-t-il ? Quel capteur permet ce comptage ?",
+      "corrige": [
+        "1 h 30 = 90 min.",
+        "7 200 ÷ 90 = 80 pas par minute.",
+        "Le comptage repose sur un accéléromètre, qui mesure les mouvements."
+      ],
+      "reponse": "80 pas par minute ; capteur : l'accéléromètre."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "intérêts et limites",
+      "enonce": "Lis : « Une enceinte vocale écoute en permanence pour réagir à son mot d'activation, et envoie les demandes vers un serveur. » Cite un intérêt de cet objet et deux risques pour la vie privée.",
+      "corrige": [
+        "Intérêt : commander la musique, la lumière ou poser une question à la voix, sans les mains.",
+        "Risques : des conversations peuvent être enregistrées et envoyées au serveur ; les données peuvent être interceptées ou utilisées à notre insu."
+      ],
+      "reponse": "Intérêt : commande vocale pratique ; risques : enregistrement de conversations, données interceptées ou utilisées à notre insu."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "chaîne d'information et chaîne d'énergie",
+      "enonce": "Pour un volet roulant connecté, trace la chaîne complète : ce qui acquiert, ce qui traite, ce qui communique, ce qui agit, et d'où vient l'énergie de l'action.",
+      "corrige": [
+        "Acquérir : un capteur de luminosité (ou l'ordre reçu du smartphone).",
+        "Traiter : le microcontrôleur décide de monter ou baisser le volet ; communiquer : module Wi-Fi avec le smartphone.",
+        "Agir : le moteur (actionneur) ; l'énergie vient du réseau électrique, dans la chaîne d'énergie."
+      ],
+      "reponse": "Capteur de luminosité → microcontrôleur → module Wi-Fi ; action : moteur, alimenté par le réseau électrique (chaîne d'énergie)."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "définition et IoT",
+      "enonce": "Explique pourquoi un thermostat connecté fait partie de l'Internet des objets, alors qu'un thermomètre à alcool n'en fait pas partie.",
+      "corrige": [
+        "Le thermostat connecté échange des informations avec un smartphone ou un serveur, sans intervention permanente de l'humain.",
+        "Le thermomètre à alcool n'a ni programme ni communication : il affiche la température, c'est tout."
+      ],
+      "reponse": "Le thermostat connecté échange des données à distance ; le thermomètre à alcool ne communique pas et n'est pas programmé."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "communication sans fil",
+      "enonce": "Un capteur connecté envoie 144 mesures par jour, chacune de 50 octets. Quelle quantité de données envoie-t-il par jour ? Et en 30 jours, en kilooctets (1 ko = 1 000 octets) ?",
+      "corrige": [
+        "Par jour : 144 × 50 = 7 200 octets.",
+        "En 30 jours : 7 200 × 30 = 216 000 octets = 216 ko."
+      ],
+      "reponse": "7 200 octets par jour ; 216 ko en 30 jours."
     }
   ]
 }

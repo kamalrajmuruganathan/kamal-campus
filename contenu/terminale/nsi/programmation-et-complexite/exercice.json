@@ -12,9 +12,9 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "trace d'exécution",
-      "enonce": "Donne la valeur renvoyée par cette fonction pour mystere(4) :\n\ndef mystere(n):\n    s = 0\n    for i in range(1, n+1):\n        s = s + i\n    return s",
+      "enonce": "Donne la valeur renvoyée par cette fonction pour mystere(4) :\n\n```python\ndef mystere(n):\n    s = 0\n    for i in range(1, n+1):\n        s = s + i\n    return s\n```",
       "corrige": [
         "range(1, n+1) avec n=4 parcourt i = 1, 2, 3, 4.",
         "s démarre à 0, puis s = 0+1 = 1, puis 1+2 = 3, puis 3+3 = 6, puis 6+4 = 10.",
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "jeu de tests / assertions",
       "enonce": "On veut tester la fonction maximum(t) qui renvoie le plus grand élément d'une liste non vide. Propose trois assertions Python pertinentes couvrant des cas différents.",
       "corrige": [
@@ -38,9 +38,9 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "débogage",
-      "enonce": "Cette fonction doit compter les nombres pairs d'une liste mais renvoie toujours 0. Trouve et corrige le bug :\n\ndef compte_pairs(t):\n    c = 0\n    for x in t:\n        if x % 2 == 1:\n            c = c + 1\n    return c",
+      "enonce": "Cette fonction doit compter les nombres pairs d'une liste mais renvoie toujours 0. Trouve et corrige le bug :\n\n```python\ndef compte_pairs(t):\n    c = 0\n    for x in t:\n        if x % 2 == 1:\n            c = c + 1\n    return c\n```",
       "corrige": [
         "Un nombre est pair quand le reste de sa division par 2 est 0, pas 1.",
         "La condition x % 2 == 1 teste en réalité les nombres impairs.",
@@ -51,9 +51,9 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "complexité d'une boucle",
-      "enonce": "Donne la complexité en temps, en fonction de n = len(t), du nombre d'opérations de comparaison effectuées par cette recherche, dans le pire des cas :\n\ndef recherche(t, x):\n    for i in range(len(t)):\n        if t[i] == x:\n            return i\n    return -1",
+      "enonce": "Donne la complexité en temps, en fonction de n = len(t), du nombre d'opérations de comparaison effectuées par cette recherche, dans le pire des cas :\n\n```python\ndef recherche(t, x):\n    for i in range(len(t)):\n        if t[i] == x:\n            return i\n    return -1\n```",
       "corrige": [
         "Dans le pire des cas, x est absent ou en dernière position : la boucle parcourt tout le tableau.",
         "Elle effectue alors n comparaisons t[i] == x, une par élément.",
@@ -64,7 +64,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "comparaison de complexités",
       "enonce": "On dispose d'un tableau trié de taille n. La recherche séquentielle est en O(n) et la recherche dichotomique en O(log n). Pour n = 1 000 000, estime le nombre de comparaisons de chaque méthode dans le pire des cas et conclus.",
       "corrige": [
@@ -78,9 +78,9 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "complexité de boucles imbriquées et invariant",
-      "enonce": "1) Donne la complexité de la fonction ci-dessous en fonction de n. 2) Énonce un invariant de boucle qui prouve qu'à la fin, m contient le maximum de t (liste non vide).\n\ndef doublons(t):\n    n = len(t)\n    for i in range(n):\n        for j in range(i+1, n):\n            if t[i] == t[j]:\n                return True\n    return False\n\ndef maxi(t):\n    m = t[0]\n    for i in range(1, len(t)):\n        if t[i] > m:\n            m = t[i]\n    return m",
+      "enonce": "1) Donne la complexité de la fonction ci-dessous en fonction de n. 2) Énonce un invariant de boucle qui prouve qu'à la fin, m contient le maximum de t (liste non vide).\n\n```python\ndef doublons(t):\n    n = len(t)\n    for i in range(n):\n        for j in range(i+1, n):\n            if t[i] == t[j]:\n                return True\n    return False\n\ndef maxi(t):\n    m = t[0]\n    for i in range(1, len(t)):\n        if t[i] > m:\n            m = t[i]\n    return m\n```",
       "corrige": [
         "Pour doublons : la boucle interne effectue environ (n-1)+(n-2)+...+1 = n(n-1)/2 comparaisons dans le pire des cas (aucun doublon).",
         "Ce nombre est proportionnel à n au carré : la complexité est quadratique, O(n^2).",
@@ -93,7 +93,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "complexité d'une boucle simple",
       "enonce": "Quelle est la complexité en temps, en fonction de n, de la boucle suivante : for i in range(n): print(i) ? Justifie.",
       "corrige": [
@@ -106,7 +106,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "assertions et jeu de tests",
       "enonce": "Une fonction maximum(a, b) doit renvoyer le plus grand des deux nombres. Écris deux assertions qui vérifient un cas où a > b et un cas d'égalité.",
       "corrige": [
@@ -119,7 +119,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "complexité de boucles imbriquées",
       "enonce": "Quelle est la complexité de deux boucles imbriquées allant chacune de 0 à n-1 ? Combien d'itérations de la boucle interne pour n = 5 ?",
       "corrige": [
@@ -132,7 +132,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "comparer des complexités",
       "enonce": "On cherche une valeur dans un tableau trié de n = 1000 éléments. Estime le nombre de comparaisons pour la recherche séquentielle et pour la recherche dichotomique, et conclus.",
       "corrige": [
@@ -142,6 +142,483 @@
         "Sur un tableau trié, on préfère donc la dichotomique."
       ],
       "reponse": "≈ 1000 comparaisons en séquentiel contre ≈ 10 en dichotomique : la dichotomique est bien plus efficace."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "types d'erreurs",
+      "enonce": "Classe chaque erreur : erreur de syntaxe, d'exécution ou de logique. a) Il manque le « : » à la fin d'une ligne `if`. b) Le programme s'arrête sur une division par zéro. c) Une fonction de moyenne divise par 2 au lieu de diviser par le nombre de notes.",
+      "corrige": [
+        "a) Le programme ne respecte pas la grammaire de Python : il ne s'exécute pas du tout. C'est une erreur de syntaxe.",
+        "b) Le programme démarre mais s'arrête en cours d'exécution : erreur d'exécution.",
+        "c) Le programme s'exécute sans planter mais donne un résultat faux : erreur de logique."
+      ],
+      "reponse": "a) syntaxe ; b) exécution ; c) logique."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "spécification et documentation",
+      "enonce": "Qu'est-ce qu'une précondition ? Donne la précondition de la fonction `moyenne(notes)` du cours, et ce qui se passerait si elle n'était pas respectée.",
+      "corrige": [
+        "Une précondition est une condition que l'on suppose vraie sur les entrées quand on appelle la fonction.",
+        "Pour `moyenne`, la liste notes doit être non vide.",
+        "Avec une liste vide, `len(notes)` vaut 0 : la division provoque une erreur `ZeroDivisionError`."
+      ],
+      "reponse": "Condition supposée vraie en entrée ; ici notes doit être non vide, sinon division par zéro."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "notation grand O",
+      "enonce": "Range ces complexités de la plus rapide (la meilleure) à la plus lente pour de grandes valeurs de n : O(n²), O(1), O(n log n), O(log n), O(n).",
+      "corrige": [
+        "O(1) ne dépend pas de n ; O(log n) croît très lentement ; O(n) croît proportionnellement à n.",
+        "O(n log n) croît un peu plus vite que O(n), et O(n²) beaucoup plus vite."
+      ],
+      "reponse": "O(1), O(log n), O(n), O(n log n), O(n²)."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "trace d'exécution",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ndef f(t):\n    r = 1\n    for x in t:\n        if x > 0:\n            r = r * x\n    return r\n\nprint(f([2, -3, 5, 0, 1]))\n```",
+      "corrige": [
+        "r part de 1 et n'est multiplié que par les éléments strictement positifs.",
+        "x = 2 : r = 2 ; −3 ignoré ; x = 5 : r = 10 ; 0 ignoré (0 n'est pas > 0) ; x = 1 : r = 10.",
+        "La fonction calcule le produit des éléments strictement positifs."
+      ],
+      "reponse": "`10`"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "jeu de tests / assertions",
+      "enonce": "Que se passe-t-il à l'exécution de ces deux lignes ? Que peut-on en conclure sur la fonction `carre` ?\n\n```python\ndef carre(x):\n    return x * 2\n\nassert carre(2) == 4\nassert carre(3) == 9\n```",
+      "corrige": [
+        "`carre(2)` vaut 2 × 2 = 4 : la première assertion est vraie, elle ne fait rien.",
+        "`carre(3)` vaut 3 × 2 = 6 ≠ 9 : la seconde assertion est fausse et lève une erreur `AssertionError`.",
+        "La fonction est donc fausse (il faut `x * x`) : le premier test réussissait par coïncidence, ce qui montre qu'un test réussi ne prouve pas l'absence de bug."
+      ],
+      "reponse": "La 1re assertion passe, la 2de lève `AssertionError` : la fonction est fausse (il faut `x * x`)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "complexité d'une boucle",
+      "enonce": "Donne la complexité en temps, en fonction de n = len(t), de chacune de ces opérations sur une liste Python : a) `t[0]` ; b) `sum(t)` ; c) une boucle `for x in t` qui affiche chaque élément.",
+      "corrige": [
+        "a) Accéder à un élément par son indice prend un temps qui ne dépend pas de n : O(1).",
+        "b) `sum` doit additionner les n éléments : O(n).",
+        "c) La boucle fait n tours avec une opération par tour : O(n)."
+      ],
+      "reponse": "a) O(1) ; b) O(n) ; c) O(n)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "cas limites",
+      "enonce": "On veut tester une fonction `indice_min(t)` qui renvoie l'indice du plus petit élément d'une liste non vide. Cite trois cas limites à inclure dans le jeu de tests.",
+      "corrige": [
+        "Les cas limites sont les situations « au bord » où les erreurs sont fréquentes.",
+        "Exemples : une liste d'un seul élément ; le minimum en première position ; le minimum en dernière position.",
+        "On peut aussi tester un minimum présent plusieurs fois, ou des valeurs négatives."
+      ],
+      "reponse": "Exemple de réponse : liste à un élément, minimum en premier, minimum en dernier (ou minimum répété)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "comparaison de complexités",
+      "enonce": "Un algorithme linéaire, O(n), traite 1 000 données en 2 ms. Environ combien de temps lui faut-il pour 100 000 données ? Et à un algorithme quadratique, O(n²), qui met aussi 2 ms pour 1 000 données ?",
+      "corrige": [
+        "On multiplie n par 100.",
+        "Linéaire : le temps est multiplié par 100, soit environ 200 ms.",
+        "Quadratique : le temps est multiplié par 100² = 10 000, soit environ 20 000 ms = 20 s."
+      ],
+      "reponse": "Environ 0,2 s pour l'algorithme linéaire et environ 20 s pour le quadratique."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "débogage",
+      "enonce": "Ce programme provoque une erreur. Lis le message et corrige le programme.\n\n```python\nage = input(\"Ton âge ? \")   # l'utilisateur tape 16\nprint(age + 1)\n```\n\nMessage : `TypeError: can only concatenate str (not \"int\") to str`.",
+      "corrige": [
+        "Le message indique qu'on essaie d'ajouter un entier à une chaîne.",
+        "`input` renvoie toujours une chaîne de caractères : age vaut \"16\", et non 16.",
+        "Il faut convertir : `age = int(input(\"Ton âge ? \"))` ; le programme affiche alors 17."
+      ],
+      "reponse": "`input` renvoie une chaîne ; il faut `int(input(...))`."
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "jeu de tests / assertions",
+      "enonce": "Que se passe-t-il à l'exécution de `assert 2 + 2 == 4` ? Et de `assert 2 + 2 == 5` ?",
+      "corrige": [
+        "Une assertion évalue une condition : si elle est vraie, il ne se passe rien et le programme continue.",
+        "2 + 2 == 4 est vrai : rien ne se passe.",
+        "2 + 2 == 5 est faux : Python lève une erreur `AssertionError` et le programme s'arrête."
+      ],
+      "reponse": "La première ne fait rien ; la seconde lève `AssertionError`."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "trace d'exécution",
+      "enonce": "Qu'affiche ce programme ? Combien de tours fait la boucle ?\n\n```python\ni = 1\nwhile i < 50:\n    i = i * 3\nprint(i)\n```",
+      "corrige": [
+        "i prend les valeurs 1, 3, 9, 27, 81.",
+        "Quand i vaut 81, la condition i < 50 est fausse : la boucle s'arrête après 4 tours."
+      ],
+      "reponse": "`81`, après 4 tours."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "trace d'exécution",
+      "enonce": "Qu'affiche ce programme ? Que calcule la fonction ?\n\n```python\ndef g(n):\n    c = 0\n    while n > 0:\n        n = n // 10\n        c = c + 1\n    return c\n\nprint(g(2026), g(7))\n```",
+      "corrige": [
+        "À chaque tour, `n // 10` supprime le dernier chiffre de n, et c compte les tours.",
+        "Pour 2026 : 202, 20, 2, 0 → 4 tours. Pour 7 : 0 → 1 tour.",
+        "La fonction compte les chiffres d'un entier strictement positif."
+      ],
+      "reponse": "`4 1` : la fonction renvoie le nombre de chiffres de n."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "trace d'exécution",
+      "enonce": "Donne les valeurs de a et b à la fin de chaque tour de boucle, puis l'affichage.\n\n```python\na, b = 0, 1\nfor i in range(5):\n    a, b = b, a + b\nprint(a)\n```",
+      "corrige": [
+        "Tour 1 : (a, b) = (1, 1). Tour 2 : (1, 2). Tour 3 : (2, 3). Tour 4 : (3, 5). Tour 5 : (5, 8).",
+        "L'affectation simultanée calcule `b` et `a + b` avec les anciennes valeurs.",
+        "On obtient les termes de la suite de Fibonacci ; le programme affiche a = 5."
+      ],
+      "reponse": "`5` (couples successifs : (1, 1), (1, 2), (2, 3), (3, 5), (5, 8))."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "jeu de tests / assertions",
+      "enonce": "La fonction suivante doit renvoyer `True` si une année est bissextile (divisible par 4 mais pas par 100, ou divisible par 400). Écris quatre assertions qui testent les quatre situations possibles, puis indique si la fonction les passe.\n\n```python\ndef bissextile(a):\n    return (a % 4 == 0 and a % 100 != 0) or a % 400 == 0\n```",
+      "corrige": [
+        "Situations : année non divisible par 4 (2023), divisible par 4 et pas par 100 (2024), divisible par 100 et pas par 400 (1900), divisible par 400 (2000).",
+        "Assertions : `assert not bissextile(2023)`, `assert bissextile(2024)`, `assert not bissextile(1900)`, `assert bissextile(2000)`.",
+        "Les quatre assertions sont vraies : la fonction passe ces tests."
+      ],
+      "reponse": "Exemple : 2023 (False), 2024 (True), 1900 (False), 2000 (True) ; la fonction passe les quatre tests."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "débogage",
+      "enonce": "Cette fonction doit renvoyer la somme des éléments d'une liste, mais `somme([4, 5, 6])` renvoie 11. Trouve le bug et corrige-le.\n\n```python\ndef somme(t):\n    s = 0\n    for i in range(1, len(t)):\n        s = s + t[i]\n    return s\n```",
+      "corrige": [
+        "11 = 5 + 6 : le premier élément (4) n'est pas compté.",
+        "`range(1, len(t))` commence à l'indice 1 et oublie l'indice 0.",
+        "Correction : `for i in range(len(t))` (ou `for x in t: s = s + x`) ; on obtient 15."
+      ],
+      "reponse": "La boucle doit commencer à l'indice 0 : `range(len(t))` ; la somme vaut alors 15."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "débogage",
+      "enonce": "On ajoute des `print` pour déboguer cette fonction censée renvoyer le plus grand élément. Qu'affiche l'appel `plus_grand([3, 8, 2])` ? Où est le bug ?\n\n```python\ndef plus_grand(t):\n    m = 0\n    for x in t:\n        if x > m:\n            m = x\n        print(\"x =\", x, \"m =\", m)\n    return m\n```",
+      "corrige": [
+        "Les affichages sont : x = 3 m = 3, puis x = 8 m = 8, puis x = 2 m = 8 ; la fonction renvoie 8.",
+        "Sur cet exemple, le résultat est juste, mais m commence à 0 : avec une liste de nombres tous négatifs, comme [−5, −2], la fonction renverrait 0, qui n'est pas dans la liste.",
+        "Correction : initialiser avec `m = t[0]` (précondition : liste non vide)."
+      ],
+      "reponse": "Affichages : (3, 3), (8, 8), (2, 8), puis renvoie 8 ; le bug est `m = 0`, faux si tous les nombres sont négatifs ; il faut `m = t[0]`."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "complexité de boucles imbriquées",
+      "enonce": "Combien de fois l'instruction `c = c + 1` est-elle exécutée ? Donne le résultat pour n = 10, puis la complexité.\n\n```python\nc = 0\nfor i in range(n):\n    for j in range(i):\n        c = c + 1\n```",
+      "corrige": [
+        "Pour i donné, la boucle interne fait i tours : 0 + 1 + 2 + … + (n − 1) = n(n − 1)/2 tours au total.",
+        "Pour n = 10 : 10 × 9 / 2 = 45.",
+        "n(n − 1)/2 est de l'ordre de n²/2 : la complexité est quadratique, O(n²)."
+      ],
+      "reponse": "n(n − 1)/2 fois, soit 45 pour n = 10 ; complexité O(n²)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "complexité d'une boucle",
+      "enonce": "Quelle est la complexité de cette fonction en fonction de n ? Combien de tours fait la boucle pour n = 1024 ?\n\n```python\ndef h(n):\n    k = 0\n    while n > 1:\n        n = n // 2\n        k = k + 1\n    return k\n```",
+      "corrige": [
+        "n est divisé par 2 à chaque tour : le nombre de tours est de l'ordre de log₂(n).",
+        "Pour n = 1024 = 2^10 : n vaut successivement 512, 256, …, 2, 1, soit 10 tours.",
+        "La complexité est logarithmique : O(log n)."
+      ],
+      "reponse": "O(log n) ; 10 tours pour n = 1024."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "complexité d'une boucle",
+      "enonce": "Deux boucles successives (et non imbriquées) parcourent chacune une liste de taille n. Quelle est la complexité totale ? Compare avec deux boucles imbriquées.",
+      "corrige": [
+        "Deux boucles l'une après l'autre font n + n = 2n tours : la complexité reste linéaire, O(n) (on ne garde pas le facteur 2).",
+        "Deux boucles imbriquées font n × n = n² tours : complexité quadratique, O(n²)."
+      ],
+      "reponse": "Successives : O(n) ; imbriquées : O(n²)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "spécification et documentation",
+      "enonce": "Écris la docstring de la fonction ci-dessous : ce qu'elle renvoie, ses paramètres et sa précondition.\n\n```python\ndef pourcentage(partie, total):\n    return 100 * partie / total\n```",
+      "corrige": [
+        "La docstring décrit le rôle de la fonction, ses entrées et ses conditions d'utilisation.",
+        "La précondition essentielle est que total soit différent de 0 (sinon division par zéro).",
+        "Exemple de réponse : « Renvoie le pourcentage que représente partie par rapport à total. partie et total sont des nombres. Précondition : total est non nul. »"
+      ],
+      "reponse": "Exemple : \"\"\"Renvoie le pourcentage de partie dans total. Précondition : total != 0.\"\"\""
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "types d'erreurs",
+      "enonce": "Pour chaque programme, indique le type d'erreur (syntaxe, exécution ou logique) : a) `print(\"Bonjour\"` ; b) `t = [1, 2, 3]` puis `print(t[3])` ; c) une fonction `est_pair(n)` qui renvoie `n % 2 == 1`.",
+      "corrige": [
+        "a) La parenthèse fermante manque : le programme ne peut pas être exécuté, erreur de syntaxe.",
+        "b) L'indice 3 n'existe pas : le programme s'arrête avec `IndexError`, erreur d'exécution.",
+        "c) La fonction s'exécute mais répond l'inverse de ce qu'on attend : erreur de logique."
+      ],
+      "reponse": "a) syntaxe ; b) exécution (IndexError) ; c) logique."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "comparaison de complexités",
+      "enonce": "Pour n = 1 000, calcule l'ordre de grandeur du nombre d'opérations pour des algorithmes en O(log n), O(n), O(n log n) et O(n²) (on prendra log₂ 1 000 ≈ 10).",
+      "corrige": [
+        "O(log n) : environ 10.",
+        "O(n) : 1 000 ; O(n log n) : 1 000 × 10 = 10 000.",
+        "O(n²) : 1 000² = 1 000 000."
+      ],
+      "reponse": "Environ 10 ; 1 000 ; 10 000 ; 1 000 000."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "complexité d'une boucle",
+      "enonce": "Combien de tours fait la boucle `for i in range(0, n, 2)` pour n = 10 ? Et pour n quelconque (pair) ? Quelle est sa complexité ?",
+      "corrige": [
+        "`range(0, n, 2)` donne 0, 2, 4, …, jusqu'à n − 2 (pas de 2).",
+        "Pour n = 10 : 0, 2, 4, 6, 8, soit 5 tours. Pour n pair : n / 2 tours.",
+        "n / 2 est proportionnel à n : la complexité reste linéaire, O(n)."
+      ],
+      "reponse": "5 tours pour n = 10 ; n / 2 tours en général ; O(n)."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "complexité de boucles imbriquées",
+      "enonce": "Quelle est la complexité de cette fonction, en fonction de n = len(t) ? Peut-on la simplifier ?\n\n```python\ndef nb_avant(t, x):\n    \"\"\"Renvoie le nombre d'éléments situés avant la première occurrence de x.\"\"\"\n    for i in range(len(t)):\n        if t[i] == x:\n            return len(t[:i])\n    return len(t)\n```",
+      "corrige": [
+        "Attention au piège : `len(t[:i])` crée une copie de i éléments (coût O(i)), mais elle n'est faite qu'une seule fois, au moment du `return`.",
+        "La boucle fait au plus n tours de coût constant, puis une copie d'au plus n éléments : la complexité est O(n), déjà linéaire.",
+        "On peut toutefois simplifier en renvoyant directement i : `return i`, ce qui évite la copie inutile."
+      ],
+      "reponse": "Elle est déjà en O(n) (la copie n'est faite qu'une fois) ; on simplifie en `return i`."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "comparaison de complexités",
+      "enonce": "Deux fonctions testent si une liste contient deux fois la même valeur. Donne la complexité de chacune ; laquelle choisir pour une liste d'un million d'éléments ?\n\n```python\ndef doublon1(t):\n    for i in range(len(t)):\n        for j in range(i + 1, len(t)):\n            if t[i] == t[j]:\n                return True\n    return False\n\ndef doublon2(t):\n    vus = set()\n    for x in t:\n        if x in vus:\n            return True\n        vus.add(x)\n    return False\n```",
+      "corrige": [
+        "doublon1 compare tous les couples : jusqu'à n(n − 1)/2 comparaisons, complexité O(n²).",
+        "doublon2 parcourt la liste une fois ; le test `x in vus` et l'ajout dans un ensemble se font en temps constant en moyenne : complexité O(n).",
+        "Pour un million d'éléments, O(n²) représente de l'ordre de 5 × 10^11 comparaisons, contre environ un million d'opérations pour doublon2 : on choisit doublon2."
+      ],
+      "reponse": "doublon1 : O(n²) ; doublon2 : O(n) en moyenne ; on choisit doublon2."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "jeu de tests / assertions",
+      "enonce": "Un élève écrit une fonction `mediane(t)` pour une liste triée de longueur impaire et la teste uniquement avec `assert mediane([1, 2, 3]) == 2`. Le test passe. Sa fonction est `return t[1]`. Explique pourquoi le test ne suffit pas, et propose un test qui révèle l'erreur.",
+      "corrige": [
+        "Pour [1, 2, 3], l'élément du milieu est à l'indice 1 : le test passe par hasard.",
+        "La médiane d'une liste triée de longueur impaire est `t[len(t) // 2]` ; `t[1]` n'est juste que pour 3 éléments.",
+        "Test révélateur : `assert mediane([1, 2, 3, 4, 5]) == 3`, qui échoue avec `t[1]` (on obtient 2)."
+      ],
+      "reponse": "Un seul test ne prouve rien ; `assert mediane([1, 2, 3, 4, 5]) == 3` échoue et révèle le bug."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "spécification et documentation",
+      "enonce": "La fonction `dichotomie(t, x)` a pour précondition « t est trié dans l'ordre croissant ». Que peut-il se passer si on l'appelle sur une liste non triée ? Comment ajouter une vérification avec `assert` au début de la fonction ? Quel est alors le coût de cette vérification ?",
+      "corrige": [
+        "Sur une liste non triée, la dichotomie élimine des moitiés à tort : elle peut répondre « absent » pour une valeur présente.",
+        "Vérification possible : `assert all(t[i] <= t[i + 1] for i in range(len(t) - 1)), \"liste non triée\"`.",
+        "Cette vérification parcourt toute la liste : elle coûte O(n), ce qui annule l'intérêt de la dichotomie en O(log n). On la réserve à la phase de mise au point."
+      ],
+      "reponse": "Résultat faux possible ; on peut vérifier le tri avec un `assert`, mais cela coûte O(n)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "complexité d'une boucle",
+      "enonce": "Quelle est la complexité de cette fonction ? Attention au piège.\n\n```python\ndef appartient_tous(t, u):\n    \"\"\"Renvoie True si chaque élément de t est dans la liste u.\"\"\"\n    for x in t:\n        if x not in u:\n            return False\n    return True\n```",
+      "corrige": [
+        "La boucle fait au plus n tours, avec n = len(t).",
+        "Mais le test `x not in u` sur une liste parcourt u : il coûte O(m), avec m = len(u).",
+        "Au pire, la complexité est O(n × m), soit O(n²) si les deux listes ont la même taille n."
+      ],
+      "reponse": "O(n × m) (O(n²) si les listes ont la même taille), car `in` sur une liste est linéaire."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "types d'erreurs",
+      "enonce": "Pourquoi les erreurs de logique sont-elles les plus difficiles à détecter ? Quelle méthode du cours permet de les mettre en évidence ?",
+      "corrige": [
+        "Une erreur de syntaxe empêche l'exécution et une erreur d'exécution arrête le programme avec un message : elles se voient immédiatement.",
+        "Une erreur de logique ne provoque aucun message : le programme se termine normalement mais le résultat est faux.",
+        "On la détecte avec des jeux de tests (résultats attendus connus, cas limites) et en affichant des valeurs intermédiaires pour localiser l'écart."
+      ],
+      "reponse": "Rien ne « plante » : seuls des tests comparant résultats attendus et obtenus (et des affichages intermédiaires) les révèlent."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "trace d'exécution",
+      "enonce": "Qu'affiche ce programme ? Combien de fois la condition du `while` est-elle évaluée ?\n\n```python\nn = 27\netapes = 0\nwhile n != 1 and etapes < 5:\n    if n % 2 == 0:\n        n = n // 2\n    else:\n        n = 3 * n + 1\n    etapes = etapes + 1\nprint(n, etapes)\n```",
+      "corrige": [
+        "27 est impair → 82 ; 82 est pair → 41 ; 41 → 124 ; 124 → 62 ; 62 → 31.",
+        "Après 5 tours, etapes vaut 5 : la condition `etapes < 5` devient fausse et la boucle s'arrête.",
+        "La condition est évaluée 6 fois : 5 fois vraie, puis une dernière fois fausse."
+      ],
+      "reponse": "`31 5` ; la condition est évaluée 6 fois."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "comparaison de complexités",
+      "enonce": "Pour chercher plusieurs valeurs dans un tableau non trié de n éléments, on hésite entre : (A) k recherches séquentielles ; (B) trier d'abord le tableau en O(n log n), puis faire k recherches dichotomiques. Donne la complexité de chaque option en fonction de n et k. Que choisir si k = 1 ? Et si k = n ?",
+      "corrige": [
+        "(A) : k recherches en O(n), soit O(k × n).",
+        "(B) : O(n log n) pour le tri, plus k recherches en O(log n) : O(n log n + k log n).",
+        "Si k = 1 : (A) coûte O(n), (B) O(n log n) : on choisit (A). Si k = n : (A) coûte O(n²) et (B) O(n log n) : on choisit (B)."
+      ],
+      "reponse": "(A) O(kn) ; (B) O((n + k) log n) ; k = 1 → A ; k = n → B."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "cas limites",
+      "enonce": "On donne la fonction `def dernier(t): return t[len(t) - 1]`. Quel appel la fait échouer ? Quelle erreur obtient-on ? Propose deux façons de traiter ce cas.",
+      "corrige": [
+        "Avec une liste vide, `len(t) - 1` vaut −1, et `t[-1]` sur une liste vide lève `IndexError`.",
+        "Première façon : l'écrire comme précondition dans la docstring (« t est non vide ») et éventuellement la vérifier avec `assert len(t) > 0`.",
+        "Deuxième façon : traiter le cas dans la fonction, par exemple `if len(t) == 0: return None`."
+      ],
+      "reponse": "`dernier([])` lève `IndexError` ; on documente/vérifie la précondition « t non vide » ou on renvoie `None`."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "jeu de tests / assertions",
+      "enonce": "Écris une fonction `occurrences(t, x)` qui renvoie le nombre de fois où x apparaît dans t, avec sa docstring, puis un jeu de quatre assertions dont au moins deux cas limites.",
+      "corrige": [
+        "Exemple de code : `c = 0`, puis `for y in t: if y == x: c = c + 1`, puis `return c` ; docstring : « Renvoie le nombre d'occurrences de x dans la liste t. »",
+        "Tests : `assert occurrences([], 5) == 0` (liste vide, cas limite) ; `assert occurrences([5], 5) == 1` (un seul élément).",
+        "`assert occurrences([1, 2, 1, 1], 1) == 3` (plusieurs occurrences) ; `assert occurrences([1, 2], 7) == 0` (valeur absente)."
+      ],
+      "reponse": "Exemple de jeu : [] → 0, [5] → 1, [1, 2, 1, 1] → 3 pour x = 1, [1, 2] → 0 pour x = 7."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "débogage",
+      "enonce": "Cette fonction doit renvoyer `True` si le mot est un palindrome (il se lit de la même façon dans les deux sens). Elle provoque une erreur `IndexError`. Trouve et corrige le bug, puis indique la complexité de la version corrigée.\n\n```python\ndef palindrome(m):\n    n = len(m)\n    for i in range(n):\n        if m[i] != m[n - i]:\n            return False\n    return True\n```",
+      "corrige": [
+        "Pour i = 0, on lit `m[n - 0] = m[n]` : cet indice n'existe pas (le dernier est n − 1), d'où `IndexError`.",
+        "Il faut comparer `m[i]` à `m[n - 1 - i]`.",
+        "On peut s'arrêter à la moitié : `for i in range(n // 2)`. La complexité est O(n)."
+      ],
+      "reponse": "Remplacer `m[n - i]` par `m[n - 1 - i]` (et boucler sur `range(n // 2)`) ; complexité O(n)."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "complexité de boucles imbriquées",
+      "enonce": "On veut savoir s'il existe deux éléments d'une liste TRIÉE dont la somme vaut s. Version 1 : deux boucles imbriquées testent tous les couples. Version 2 :\n\n```python\ndef somme_deux(t, s):\n    g, d = 0, len(t) - 1\n    while g < d:\n        if t[g] + t[d] == s:\n            return True\n        elif t[g] + t[d] < s:\n            g = g + 1\n        else:\n            d = d - 1\n    return False\n```",
+      "corrige": [
+        "Version 1 : on teste jusqu'à n(n − 1)/2 couples, complexité O(n²).",
+        "Version 2 : à chaque tour, g augmente ou d diminue ; d − g diminue de 1, donc au plus n − 1 tours : complexité O(n).",
+        "Elle utilise la précondition « t est trié » : si la somme est trop petite, seul augmenter g peut aider ; si elle est trop grande, seul diminuer d le peut. Par exemple `somme_deux([1, 3, 4, 8, 11], 12)` renvoie True (1 + 11 et 4 + 8)."
+      ],
+      "reponse": "Version 1 : O(n²) ; version 2 : O(n), grâce au tableau trié."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "comparaison de complexités",
+      "enonce": "Un site doit trier 10^6 commandes. Un tri en O(n²) effectue environ 10^12 opérations ; un tri en O(n log n) environ 2 × 10^7 (log₂ 10^6 ≈ 20). Sur une machine réalisant 10^9 opérations par seconde, estime la durée de chaque tri.",
+      "corrige": [
+        "Tri quadratique : 10^12 / 10^9 = 1 000 s, soit environ 17 minutes.",
+        "Tri en O(n log n) : 2 × 10^7 / 10^9 = 0,02 s.",
+        "La complexité compte bien plus que la puissance de la machine pour de grandes données."
+      ],
+      "reponse": "Environ 1 000 s (17 min) contre 0,02 s."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "spécification et documentation",
+      "enonce": "Écris la spécification complète (docstring avec rôle, paramètres, valeur renvoyée et précondition) d'une fonction `rang(t, x)` qui renvoie le nombre d'éléments de la liste t strictement inférieurs à x, puis écris son code et donne sa complexité.",
+      "corrige": [
+        "Docstring possible : « Renvoie le nombre d'éléments de t strictement inférieurs à x. t : liste de nombres ; x : nombre. Précondition : aucune (une liste vide renvoie 0). »",
+        "Code : `return len([y for y in t if y < x])` (ou une boucle avec un compteur).",
+        "On parcourt chaque élément une fois : complexité O(n). Exemple : `rang([5, 1, 8, 3], 5)` renvoie 2."
+      ],
+      "reponse": "Exemple : `rang([5, 1, 8, 3], 5)` renvoie 2 ; complexité O(n)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "cas limites",
+      "enonce": "La fonction ci-dessous doit renvoyer la moyenne des notes supérieures ou égales à 10. Trouve un cas limite qui la fait planter, puis corrige-la pour qu'elle renvoie `None` dans ce cas.\n\n```python\ndef moyenne_admis(notes):\n    admis = [n for n in notes if n >= 10]\n    return sum(admis) / len(admis)\n```",
+      "corrige": [
+        "Si aucune note n'est supérieure ou égale à 10 (par exemple [8, 5]), ou si la liste est vide, la liste admis est vide.",
+        "On divise alors par `len(admis) = 0` : erreur `ZeroDivisionError`.",
+        "Correction : `if len(admis) == 0: return None` avant la division."
+      ],
+      "reponse": "Cas limite : aucune note ⩾ 10 (ex. [8, 5]) → division par zéro ; on ajoute `if len(admis) == 0: return None`."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "complexité d'une boucle",
+      "enonce": "Un algorithme a une complexité en O(log n). Pour n = 1 000, il fait environ 10 opérations. Environ combien en fait-il pour n = 1 000 000 ? Et pour n = 10^9 ?",
+      "corrige": [
+        "log₂(1 000) ≈ 10, log₂(10^6) ≈ 20, log₂(10^9) ≈ 30.",
+        "Multiplier n par 1 000 n'ajoute qu'environ 10 opérations (car 2^10 = 1 024 ≈ 1 000).",
+        "On obtient environ 20 opérations pour un million et 30 pour un milliard."
+      ],
+      "reponse": "Environ 20 pour 10^6 et environ 30 pour 10^9."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "complexité de boucles imbriquées",
+      "enonce": "On compte expérimentalement les comparaisons faites par cette fonction pour plusieurs tailles. Qu'affiche le programme ? Que peut-on en déduire sur la complexité ?\n\n```python\ndef compte(n):\n    c = 0\n    for i in range(n):\n        for j in range(i + 1, n):\n            c = c + 1\n    return c\n\nfor n in [10, 20, 40]:\n    print(n, compte(n))\n```",
+      "corrige": [
+        "Le nombre de comparaisons vaut n(n − 1)/2 : 45 pour 10, 190 pour 20, 780 pour 40.",
+        "Quand n double, le nombre est multiplié par environ 4 (190 / 45 ≈ 4,2 et 780 / 190 ≈ 4,1).",
+        "C'est la signature d'une complexité quadratique, O(n²)."
+      ],
+      "reponse": "`10 45`, `20 190`, `40 780` : ×4 quand n double, donc O(n²)."
     }
   ]
 }

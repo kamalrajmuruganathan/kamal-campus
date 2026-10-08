@@ -64,7 +64,7 @@
         "Rien, car la fonction ne contient pas de `print`"
       ],
       "reponse": 0,
-      "explication": "L'appel remplace `x` par $2$ : la fonction renvoie $3 \\times 2 + 1 = 7$. Le piège du dernier choix : c'est `return` qui renvoie le résultat, pas `print` — `print` ne sert qu'à afficher. $6$ oublie le $+1$ et $9$ calcule $3 \\times (2+1)$."
+      "explication": "L'appel remplace `x` par $2$ : la fonction renvoie $3 \\times 2 + 1 = 7$. Le piège « rien, car pas de `print` » : c'est `return` qui renvoie le résultat, pas `print` — `print` ne sert qu'à afficher. $6$ oublie le $+1$ et $9$ calcule $3 \\times (2+1)$."
     },
     {
       "id": 5,
@@ -162,7 +162,7 @@
         "Rien : on ne peut pas réaffecter `x`"
       ],
       "reponse": 0,
-      "explication": "Chaque affectation **écrase** l'ancienne valeur : `x` reçoit d'abord $10$, puis $7$ — le $10$ est perdu. Le piège $17$ additionne les deux valeurs ; le dernier choix croit à tort qu'une variable ne peut recevoir qu'une seule valeur dans sa vie."
+      "explication": "Chaque affectation **écrase** l'ancienne valeur : `x` reçoit d'abord $10$, puis $7$ — le $10$ est perdu. Le piège $17$ additionne les deux valeurs ; la réponse « on ne peut pas réaffecter `x` » croit à tort qu'une variable ne peut recevoir qu'une seule valeur dans sa vie."
     },
     {
       "id": 12,

@@ -80,7 +80,7 @@
       "enonce": "Quelle requête ajoute une nouvelle ligne dans une table ?",
       "choix": ["INSERT INTO", "SELECT INTO", "ADD ROW", "CREATE VALUE"],
       "reponse": 0,
-      "explication": "INSERT INTO ... VALUES ajoute une ligne. Les autres formulations n'existent pas en SQL standard."
+      "explication": "INSERT INTO ... VALUES ajoute une ligne. SELECT INTO ne sert pas à ajouter une ligne dans une table existante, et ADD ROW ou CREATE VALUE n'existent pas en SQL."
     },
     {
       "id": 9,
@@ -143,7 +143,7 @@
       "enonce": "Quelle requête change la classe de l'élève d'id 42 en 'TG2' ?",
       "choix": ["UPDATE eleve SET classe = 'TG2';", "UPDATE eleve SET classe = 'TG2' WHERE id = 42;", "INSERT INTO eleve classe = 'TG2' WHERE id = 42;", "SELECT classe = 'TG2' FROM eleve WHERE id = 42;"],
       "reponse": 1,
-      "explication": "UPDATE ... SET ... WHERE cible la bonne ligne. Sans WHERE (choix 1), tous les élèves changeraient de classe."
+      "explication": "UPDATE ... SET ... WHERE cible la bonne ligne. Sans WHERE (UPDATE eleve SET classe = 'TG2';), tous les élèves changeraient de classe."
     },
     {
       "id": 16,

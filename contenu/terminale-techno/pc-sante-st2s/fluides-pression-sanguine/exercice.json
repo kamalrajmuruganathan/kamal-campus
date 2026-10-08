@@ -124,7 +124,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "fluides-pression-sanguine",
       "enonce": "Lors d'une consultation, on relève chez un patient les données suivantes : fréquence cardiaque $f_C = 80$ bpm, volume d'éjection systolique $VES = 70$ mL, tension artérielle $14\\,/\\,9$ (en cmHg). L'aorte a une section $S = 3{,}5$ cm². Le sang a une masse volumique $\\rho = 1060$ kg/m³ et on prend $g = 10$ N/kg. On rappelle $DC = f_C \\times VES$, $D = v \\times S$, $\\Delta p = \\rho g h$, $1$ cmHg $= 10$ mmHg et $1$ mmHg $\\approx 133$ Pa. 1) Calculer le débit cardiaque $DC$ en L/min. 2) En déduire la vitesse moyenne $v$ du sang dans l'aorte, en m/s (on convertira $DC$ en m³/s et $S$ en m²). 3) Exprimer la tension $14\\,/\\,9$ en mmHg et préciser laquelle est la systolique et laquelle est la diastolique. 4) Convertir la pression systolique en pascals. 5) Le cerveau est situé à une hauteur $h = 0{,}40$ m au-dessus du cœur. Calculer la différence de pression $\\Delta p$ entre le cœur et le cerveau, en mmHg, puis en déduire la pression systolique au niveau du cerveau.",
       "corrige": [
@@ -135,6 +135,457 @@
         "5. Différence de pression : $\\Delta p = \\rho g h = 1060 \\times 10 \\times 0{,}40 = 4240$ Pa, soit $\\dfrac{4240}{133} \\approx 32$ mmHg. Le cerveau est plus haut que le cœur : la pression y est plus faible de $\\Delta p$. Pression systolique au cerveau $= 140 - 32 = 108$ mmHg."
       ],
       "reponse": "$DC = 5{,}6$ L/min ; $v \\approx 0{,}27$ m/s ; tension $= 140\\,/\\,90$ mmHg (systolique $140$, diastolique $90$) ; systolique $\\approx 1{,}9 \\times 10^{4}$ Pa ; $\\Delta p \\approx 32$ mmHg d'où une systolique au cerveau d'environ $108$ mmHg."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "debit-volumique",
+      "enonce": "Qu'appelle-t-on débit volumique d'un fluide ? Donner sa formule et son unité de base.",
+      "corrige": [
+        "Le débit volumique est le volume de fluide qui traverse une section par unité de temps.",
+        "$D = \\dfrac{V}{\\Delta t}$, en mètres cubes par seconde (m³/s) ; en santé, on utilise souvent les L/min ou les mL/min."
+      ],
+      "reponse": "$D = \\dfrac{V}{\\Delta t}$, en m³/s (souvent L/min ou mL/min)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "tension-arterielle",
+      "enonce": "Une tension artérielle est notée « $13/8$ » (en cmHg). Que représentent les deux nombres ?",
+      "corrige": [
+        "Le premier nombre, le plus grand, est la pression **systolique** : pression maximale, quand le cœur se contracte.",
+        "Le second est la pression **diastolique** : pression minimale, quand le cœur se relâche."
+      ],
+      "reponse": "$13$ cmHg : systolique (maximale) ; $8$ cmHg : diastolique (minimale)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "conversions-pression",
+      "enonce": "Convertir : a) $14$ cmHg en mmHg ; b) $75$ mmHg en cmHg.",
+      "corrige": [
+        "$1$ cmHg $= 10$ mmHg.",
+        "a) $14 \\times 10 = 140$ mmHg ; b) $\\dfrac{75}{10} = 7{,}5$ cmHg."
+      ],
+      "reponse": "a) $140$ mmHg ; b) $7{,}5$ cmHg."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "statique-fluides",
+      "enonce": "Vrai ou faux ? a) Dans un fluide au repos, la pression augmente avec la profondeur. b) Au fond d'une cuve large, la pression est plus grande qu'au fond d'un tube fin rempli du même liquide sur la même hauteur.",
+      "corrige": [
+        "a) Vrai : $p_{\\text{bas}} = p_{\\text{haut}} + \\rho g h$.",
+        "b) Faux : la différence de pression ne dépend que de $\\rho$, de $g$ et de la hauteur $h$, pas de la forme du récipient."
+      ],
+      "reponse": "a) Vrai ; b) Faux."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "debit-volumique",
+      "enonce": "Une poche de $1{,}0$ L doit être perfusée en $24$ h. Calculer le débit en mL/h puis en mL/min.",
+      "corrige": [
+        "$D = \\dfrac{1\\,000}{24} \\approx 41{,}7$ mL/h.",
+        "$24$ h $= 1\\,440$ min, donc $D = \\dfrac{1\\,000}{1\\,440} \\approx 0{,}69$ mL/min."
+      ],
+      "reponse": "$D \\approx 41{,}7$ mL/h $\\approx 0{,}69$ mL/min."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "debit-volumique",
+      "enonce": "Une perfusion de $500$ mL est réglée à un débit de $2{,}5$ mL/min. Combien de temps dure-t-elle ? Donner le résultat en minutes puis en heures et minutes.",
+      "corrige": [
+        "$\\Delta t = \\dfrac{V}{D} = \\dfrac{500}{2{,}5} = 200$ min.",
+        "$200$ min $= 3$ h $20$ min."
+      ],
+      "reponse": "$200$ min, soit $3$ h $20$ min."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "debit-cardiaque",
+      "enonce": "Le cœur d'une personne au repos bat à $60$ bpm et éjecte $80$ mL à chaque battement. Calculer son débit cardiaque en mL/min puis en L/min.",
+      "corrige": [
+        "$DC = f_C \\times VES = 60 \\times 80 = 4\\,800$ mL/min.",
+        "$4\\,800$ mL/min $= 4{,}8$ L/min."
+      ],
+      "reponse": "$DC = 4\\,800$ mL/min $= 4{,}8$ L/min."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "pression-force",
+      "enonce": "Pour injecter un médicament, un soignant appuie avec une force de $10$ N sur le piston d'une seringue de section $1{,}0$ cm². Calculer la pression exercée sur le liquide.",
+      "corrige": [
+        "$S = 1{,}0$ cm² $= 1{,}0 \\times 10^{-4}$ m².",
+        "$p = \\dfrac{F}{S} = \\dfrac{10}{1{,}0 \\times 10^{-4}} = 1{,}0 \\times 10^{5}$ Pa."
+      ],
+      "reponse": "$p = 1{,}0 \\times 10^{5}$ Pa."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "conversions-pression",
+      "enonce": "La pression diastolique d'un patient vaut $90$ mmHg. La convertir en pascals ($1$ mmHg $\\approx 133$ Pa).",
+      "corrige": [
+        "$p = 90 \\times 133 = 11\\,970$ Pa, soit environ $1{,}2 \\times 10^{4}$ Pa."
+      ],
+      "reponse": "$p \\approx 1{,}2 \\times 10^{4}$ Pa."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "tension-arterielle",
+      "enonce": "Remettre dans l'ordre les étapes de la mesure de la tension avec un tensiomètre manuel : a) on dégonfle lentement le brassard ; b) les bruits disparaissent : on lit la diastolique ; c) on gonfle le brassard jusqu'à écraser l'artère ; d) les premiers bruits apparaissent : on lit la systolique.",
+      "corrige": [
+        "On commence par gonfler le brassard pour arrêter le passage du sang, puis on dégonfle lentement.",
+        "Les bruits apparaissent quand la pression du brassard passe sous la systolique, et disparaissent quand elle passe sous la diastolique."
+      ],
+      "reponse": "c → a → d → b."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "debit-vitesse-section",
+      "enonce": "De l'eau circule dans un tuyau de section $2{,}0$ cm² avec un débit de $6{,}0$ L/min. Calculer sa vitesse moyenne en m/s.",
+      "corrige": [
+        "Conversions : $D = \\dfrac{6{,}0 \\times 10^{-3}}{60} = 1{,}0 \\times 10^{-4}$ m³/s ; $S = 2{,}0 \\times 10^{-4}$ m².",
+        "$v = \\dfrac{D}{S} = \\dfrac{1{,}0 \\times 10^{-4}}{2{,}0 \\times 10^{-4}} = 0{,}50$ m/s."
+      ],
+      "reponse": "$v = 0{,}50$ m/s."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "debit-vitesse-section",
+      "enonce": "Une plaque d'athérome réduit de moitié la section d'une artère. Le débit sanguin restant le même, comment varie la vitesse du sang dans le rétrécissement ?",
+      "corrige": [
+        "$D = v \\times S$ : si $D$ est constant et que $S$ est divisée par $2$, la vitesse $v$ est multipliée par $2$.",
+        "Le sang accélère dans le rétrécissement."
+      ],
+      "reponse": "La vitesse double."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "debit-cardiaque",
+      "enonce": "Le débit cardiaque d'un patient est de $5{,}6$ L/min pour une fréquence cardiaque de $80$ bpm. Calculer son volume d'éjection systolique.",
+      "corrige": [
+        "$VES = \\dfrac{DC}{f_C} = \\dfrac{5\\,600}{80}$ (en mL/min divisé par des battements par minute).",
+        "$VES = 70$ mL."
+      ],
+      "reponse": "$VES = 70$ mL."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "debit-cardiaque",
+      "enonce": "Le débit cardiaque d'une personne vaut $6{,}0$ L/min et son volume d'éjection systolique $75$ mL. Calculer sa fréquence cardiaque.",
+      "corrige": [
+        "$f_C = \\dfrac{DC}{VES} = \\dfrac{6\\,000}{75}$.",
+        "$f_C = 80$ bpm."
+      ],
+      "reponse": "$f_C = 80$ bpm."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "pression-force",
+      "enonce": "Un élève calcule la pression exercée par une force de $600$ N sur une surface de $2$ cm² : il écrit $S = 2 \\times 10^{-2}$ m² et trouve $p = 3 \\times 10^{4}$ Pa. Corriger.",
+      "corrige": [
+        "Pour une aire, $1$ cm² $= (10^{-2})^{2}$ m² $= 10^{-4}$ m² : donc $S = 2 \\times 10^{-4}$ m².",
+        "$p = \\dfrac{600}{2 \\times 10^{-4}} = 3 \\times 10^{6}$ Pa : l'élève s'était trompé d'un facteur $100$."
+      ],
+      "reponse": "$p = 3 \\times 10^{6}$ Pa."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "pression-force",
+      "enonce": "Le brassard d'un tensiomètre est gonflé à $120$ mmHg ; sa surface de contact avec le bras vaut $0{,}030$ m². Calculer la pression en pascals, puis la force pressante exercée sur le bras.",
+      "corrige": [
+        "$p = 120 \\times 133 = 15\\,960$ Pa.",
+        "$F = p \\times S = 15\\,960 \\times 0{,}030 \\approx 479$ N."
+      ],
+      "reponse": "$p \\approx 1{,}6 \\times 10^{4}$ Pa ; $F \\approx 479$ N."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "conversions-pression",
+      "enonce": "Exprimer la pression atmosphérique normale ($1$ atm) en mmHg, en cmHg et en pascals, puis vérifier la cohérence avec $1$ mmHg $\\approx 133$ Pa.",
+      "corrige": [
+        "$1$ atm $= 760$ mmHg $= 76$ cmHg $\\approx 1{,}01 \\times 10^{5}$ Pa.",
+        "Vérification : $760 \\times 133 = 101\\,080$ Pa $\\approx 1{,}01 \\times 10^{5}$ Pa."
+      ],
+      "reponse": "$760$ mmHg $= 76$ cmHg $\\approx 1{,}01 \\times 10^{5}$ Pa."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "statique-fluides",
+      "enonce": "Au fond d'une piscine profonde de $2{,}0$ m, de combien la pression est-elle plus grande qu'à la surface ? Donner le résultat en pascals puis en mmHg ($\\rho = 1\\,000$ kg/m³, $g = 10$ N/kg).",
+      "corrige": [
+        "$\\Delta p = \\rho g h = 1\\,000 \\times 10 \\times 2{,}0 = 20\\,000$ Pa.",
+        "$\\dfrac{20\\,000}{133} \\approx 150$ mmHg."
+      ],
+      "reponse": "$\\Delta p = 2{,}0 \\times 10^{4}$ Pa $\\approx 150$ mmHg."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "statique-fluides",
+      "enonce": "Un plongeur descend à $20$ m de profondeur. La pression à la surface vaut $1{,}0 \\times 10^{5}$ Pa. Calculer la pression qu'il subit ($\\rho = 1\\,000$ kg/m³, $g = 10$ N/kg). Combien de fois est-elle plus grande qu'en surface ?",
+      "corrige": [
+        "$\\Delta p = 1\\,000 \\times 10 \\times 20 = 2{,}0 \\times 10^{5}$ Pa.",
+        "$p = 1{,}0 \\times 10^{5} + 2{,}0 \\times 10^{5} = 3{,}0 \\times 10^{5}$ Pa, soit $3$ fois la pression en surface."
+      ],
+      "reponse": "$p = 3{,}0 \\times 10^{5}$ Pa, $3$ fois plus qu'en surface."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "tension-arterielle",
+      "enonce": "Lors d'une mesure, les premiers bruits apparaissent quand le manomètre indique $135$ mmHg et disparaissent à $85$ mmHg. Donner la tension en mmHg puis en cmHg.",
+      "corrige": [
+        "Apparition des bruits : systolique $= 135$ mmHg ; disparition : diastolique $= 85$ mmHg.",
+        "En cmHg : $13{,}5/8{,}5$."
+      ],
+      "reponse": "$135/85$ mmHg $= 13{,}5/8{,}5$ cmHg."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "tension-arterielle",
+      "enonce": "Pourquoi le premier nombre d'une tension artérielle est-il toujours plus grand que le second ? Relier chaque valeur à l'activité du cœur.",
+      "corrige": [
+        "Pendant la systole, le cœur se contracte et éjecte le sang : la pression dans les artères est maximale.",
+        "Pendant la diastole, le cœur se relâche et se remplit : la pression est minimale. La systolique, écrite en premier, est donc la plus grande."
+      ],
+      "reponse": "Systolique (contraction, maximale) puis diastolique (relâchement, minimale)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "debit-volumique",
+      "enonce": "Un débit vaut $1{,}0 \\times 10^{-4}$ m³/s. L'exprimer en L/s puis en L/min.",
+      "corrige": [
+        "$1$ m³ $= 1\\,000$ L : $1{,}0 \\times 10^{-4}$ m³/s $= 0{,}10$ L/s.",
+        "$0{,}10 \\times 60 = 6{,}0$ L/min."
+      ],
+      "reponse": "$0{,}10$ L/s $= 6{,}0$ L/min."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "conversions-pression",
+      "enonce": "On parle souvent d'hypertension quand la tension dépasse $14/9$ (cmHg). Exprimer ces valeurs en mmHg, puis la systolique en pascals.",
+      "corrige": [
+        "$14/9$ cmHg $= 140/90$ mmHg.",
+        "$140 \\times 133 = 18\\,620$ Pa $\\approx 1{,}9 \\times 10^{4}$ Pa."
+      ],
+      "reponse": "$140/90$ mmHg ; systolique $\\approx 1{,}9 \\times 10^{4}$ Pa."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "debit-vitesse-section",
+      "enonce": "Le sang circule vite dans l'aorte et très lentement dans les capillaires, alors que le débit total est le même. Expliquer pourquoi, et en quoi c'est utile.",
+      "corrige": [
+        "$D = v \\times S$ : la section totale de tous les capillaires réunis est énorme par rapport à celle de l'aorte ; à débit égal, la vitesse y est donc très faible.",
+        "Ce ralentissement laisse le temps aux échanges entre le sang et les cellules."
+      ],
+      "reponse": "Section totale des capillaires énorme, donc vitesse faible ; cela laisse le temps aux échanges."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "statique-fluides",
+      "enonce": "Un patient lève le bras : sa main se trouve $0{,}60$ m au-dessus du cœur. 1) Calculer la différence de pression sanguine entre le cœur et la main ($\\rho = 1\\,060$ kg/m³, $g = 10$ N/kg), en Pa puis en mmHg. 2) Si la systolique vaut $120$ mmHg au niveau du cœur, que vaut-elle dans la main ? 3) Pourquoi mesure-t-on la tension avec le bras au niveau du cœur ?",
+      "corrige": [
+        "1) $\\Delta p = 1\\,060 \\times 10 \\times 0{,}60 = 6\\,360$ Pa $\\approx 48$ mmHg.",
+        "2) La main est plus haute que le cœur : la pression y est plus faible, $120 - 48 \\approx 72$ mmHg.",
+        "3) La pression dépend de la hauteur : pour une mesure fiable et comparable, le brassard doit être au niveau du cœur."
+      ],
+      "reponse": "$\\Delta p \\approx 48$ mmHg ; environ $72$ mmHg dans la main ; la pression dépend de la hauteur."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "debit-vitesse-section",
+      "enonce": "Dans une artère carotide, le débit sanguin vaut environ $0{,}30$ L/min et la section $0{,}28$ cm². Calculer la vitesse moyenne du sang en m/s.",
+      "corrige": [
+        "$D = \\dfrac{0{,}30 \\times 10^{-3}}{60} = 5{,}0 \\times 10^{-6}$ m³/s ; $S = 0{,}28 \\times 10^{-4}$ m² $= 2{,}8 \\times 10^{-5}$ m².",
+        "$v = \\dfrac{D}{S} = \\dfrac{5{,}0 \\times 10^{-6}}{2{,}8 \\times 10^{-5}} \\approx 0{,}18$ m/s."
+      ],
+      "reponse": "$v \\approx 0{,}18$ m/s."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "debit-cardiaque",
+      "enonce": "Le cœur d'un adulte au repos a un débit de $5{,}0$ L/min et bat à $70$ bpm. 1) Quel volume de sang pompe-t-il en une journée ? 2) Combien de battements effectue-t-il en une journée ?",
+      "corrige": [
+        "1) $24$ h $= 1\\,440$ min : $5{,}0 \\times 1\\,440 = 7\\,200$ L.",
+        "2) $70 \\times 1\\,440 = 100\\,800$ battements."
+      ],
+      "reponse": "$7\\,200$ L ; $100\\,800$ battements."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "statique-fluides",
+      "enonce": "On souhaite que la colonne de liquide d'une perfusion exerce une surpression de $60$ mmHg au point d'injection. À quelle hauteur au-dessus de ce point faut-il suspendre la poche ? ($\\rho = 1\\,000$ kg/m³, $g = 10$ N/kg, $1$ mmHg $\\approx 133$ Pa)",
+      "corrige": [
+        "$\\Delta p = 60 \\times 133 = 7\\,980$ Pa.",
+        "$h = \\dfrac{\\Delta p}{\\rho g} = \\dfrac{7\\,980}{1\\,000 \\times 10} \\approx 0{,}80$ m."
+      ],
+      "reponse": "$h \\approx 0{,}80$ m."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "pression-force",
+      "enonce": "Un patient alité de poids $700$ N repose sur un matelas classique avec une surface de contact de $0{,}10$ m², puis sur un matelas anti-escarres qui épouse mieux son corps (surface de contact $0{,}35$ m²). 1) Calculer la pression moyenne dans les deux cas, en Pa puis en mmHg. 2) Expliquer l'intérêt du matelas anti-escarres.",
+      "corrige": [
+        "1) Matelas classique : $p = \\dfrac{700}{0{,}10} = 7\\,000$ Pa $\\approx 53$ mmHg. Anti-escarres : $p = \\dfrac{700}{0{,}35} = 2\\,000$ Pa $\\approx 15$ mmHg.",
+        "2) À force égale, une plus grande surface de contact réduit la pression sur la peau : la circulation sanguine des zones d'appui est moins écrasée, ce qui limite le risque d'escarres."
+      ],
+      "reponse": "$7\\,000$ Pa ($\\approx 53$ mmHg) contre $2\\,000$ Pa ($\\approx 15$ mmHg) : la pression est mieux répartie."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "conversions-pression",
+      "enonce": "La pression à l'intérieur de l'œil d'un patient vaut $15$ mmHg. La convertir en pascals puis en cmHg.",
+      "corrige": [
+        "$15 \\times 133 = 1\\,995$ Pa $\\approx 2{,}0 \\times 10^{3}$ Pa.",
+        "$\\dfrac{15}{10} = 1{,}5$ cmHg."
+      ],
+      "reponse": "$\\approx 2{,}0 \\times 10^{3}$ Pa ; $1{,}5$ cmHg."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "tension-arterielle",
+      "enonce": "On mesure la tension de deux patients : A : $12/8$ ; B : $16/10$ (en cmHg). On considère souvent qu'au-delà de $14/9$ il y a hypertension. 1) Exprimer les deux tensions en mmHg. 2) Lequel est hypertendu ? 3) Pour le patient B, calculer l'écart entre systolique et diastolique en mmHg.",
+      "corrige": [
+        "1) A : $120/80$ mmHg ; B : $160/100$ mmHg.",
+        "2) B dépasse $140/90$ mmHg : il est hypertendu.",
+        "3) $160 - 100 = 60$ mmHg."
+      ],
+      "reponse": "A : $120/80$, B : $160/100$ mmHg ; B est hypertendu ; écart $60$ mmHg."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "debit-volumique",
+      "enonce": "Un pousse-seringue électrique délivre un médicament à $2{,}0$ mL/h à partir d'une seringue de $50$ mL. 1) Combien de temps dure l'administration ? 2) Exprimer ce débit en mL/min.",
+      "corrige": [
+        "1) $\\Delta t = \\dfrac{50}{2{,}0} = 25$ h.",
+        "2) $\\dfrac{2{,}0}{60} \\approx 0{,}033$ mL/min."
+      ],
+      "reponse": "$25$ h ; $\\approx 0{,}033$ mL/min."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "debit-cardiaque",
+      "enonce": "Un coureur de fond entraîné a, au repos, une fréquence cardiaque de $45$ bpm et un volume d'éjection systolique de $90$ mL. 1) Calculer son débit cardiaque. 2) Le comparer à celui d'une personne non entraînée ($70$ bpm, $70$ mL). 3) Que peut-on en conclure sur le cœur du sportif ?",
+      "corrige": [
+        "1) $DC = 45 \\times 90 = 4\\,050$ mL/min $\\approx 4{,}05$ L/min.",
+        "2) Non entraîné : $70 \\times 70 = 4\\,900$ mL/min $= 4{,}9$ L/min : les débits sont voisins.",
+        "3) Le cœur du sportif éjecte plus de sang à chaque battement : il obtient un débit comparable en battant moins vite."
+      ],
+      "reponse": "$\\approx 4{,}05$ L/min, proche de $4{,}9$ L/min ; son cœur éjecte plus par battement et bat moins vite."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "statique-fluides",
+      "enonce": "Un élève affirme : « Dans un réservoir très large, la pression au fond est plus grande que dans un tube étroit, car il y a plus de liquide au-dessus. » Les deux contiennent de l'eau sur $50$ cm de hauteur. Corriger son raisonnement et calculer la surpression au fond ($\\rho = 1\\,000$ kg/m³, $g = 10$ N/kg).",
+      "corrige": [
+        "La différence de pression ne dépend que de $\\rho$, de $g$ et de la hauteur $h$, pas de la quantité de liquide ni de la forme du récipient.",
+        "Dans les deux cas : $\\Delta p = 1\\,000 \\times 10 \\times 0{,}50 = 5\\,000$ Pa."
+      ],
+      "reponse": "La pression est la même : $\\Delta p = 5\\,000$ Pa dans les deux récipients."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "debit-vitesse-section",
+      "enonce": "Une perfusion s'écoule à $2{,}5$ mL/min dans un cathéter de section intérieure $0{,}50$ mm². Calculer la vitesse du liquide dans le cathéter, en m/s puis en cm/s ($1$ mm² $= 10^{-6}$ m²).",
+      "corrige": [
+        "$D = \\dfrac{2{,}5 \\times 10^{-6}}{60} \\approx 4{,}2 \\times 10^{-8}$ m³/s ; $S = 0{,}50 \\times 10^{-6}$ m².",
+        "$v = \\dfrac{D}{S} \\approx 0{,}083$ m/s, soit environ $8{,}3$ cm/s."
+      ],
+      "reponse": "$v \\approx 0{,}083$ m/s $\\approx 8{,}3$ cm/s."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "fluides-pression-sanguine",
+      "enonce": "En plongée dans une piscine, on ressent une gêne aux oreilles. 1) Calculer la surpression de l'eau à $3{,}0$ m de profondeur ($\\rho = 1\\,000$ kg/m³, $g = 10$ N/kg), en Pa puis en mmHg. 2) Le tympan a une surface d'environ $0{,}60$ cm² : calculer la force pressante supplémentaire qu'il subit. 3) Expliquer pourquoi la gêne augmente quand on descend. 4) Cette surpression dépend-elle de la taille de la piscine ?",
+      "corrige": [
+        "1) $\\Delta p = 1\\,000 \\times 10 \\times 3{,}0 = 30\\,000$ Pa $\\approx 226$ mmHg.",
+        "2) $S = 0{,}60 \\times 10^{-4}$ m², donc $F = \\Delta p \\times S = 30\\,000 \\times 0{,}60 \\times 10^{-4} = 1{,}8$ N.",
+        "3) $\\Delta p$ est proportionnelle à la profondeur : plus on descend, plus la force sur le tympan augmente.",
+        "4) Non : seules comptent $\\rho$, $g$ et la profondeur."
+      ],
+      "reponse": "$\\Delta p = 30\\,000$ Pa $\\approx 226$ mmHg ; $F = 1{,}8$ N ; la force croît avec la profondeur ; indépendante de la taille de la piscine."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "fluides-pression-sanguine",
+      "enonce": "Un sportif a, au repos, $f_C = 72$ bpm et $VES = 70$ mL ; à l'effort, $f_C = 150$ bpm et $VES = 105$ mL. L'aorte a une section de $3{,}0$ cm². 1) Calculer les débits cardiaques au repos et à l'effort en L/min. 2) Par quel facteur le débit est-il multiplié ? 3) Calculer la vitesse moyenne du sang dans l'aorte à l'effort. 4) À quoi sert cette augmentation du débit ?",
+      "corrige": [
+        "1) Repos : $72 \\times 70 = 5\\,040$ mL/min $\\approx 5{,}0$ L/min. Effort : $150 \\times 105 = 15\\,750$ mL/min $\\approx 15{,}8$ L/min.",
+        "2) $\\dfrac{15\\,750}{5\\,040} \\approx 3{,}1$.",
+        "3) $D = \\dfrac{15\\,750 \\times 10^{-6}}{60} \\approx 2{,}6 \\times 10^{-4}$ m³/s ; $v = \\dfrac{D}{S} = \\dfrac{2{,}6 \\times 10^{-4}}{3{,}0 \\times 10^{-4}} \\approx 0{,}88$ m/s.",
+        "4) Elle apporte davantage de dioxygène et de nutriments aux muscles qui travaillent."
+      ],
+      "reponse": "Repos $\\approx 5{,}0$ L/min, effort $\\approx 15{,}8$ L/min ; facteur $\\approx 3{,}1$ ; $v \\approx 0{,}88$ m/s ; mieux alimenter les muscles."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "fluides-pression-sanguine",
+      "enonce": "Une infirmière pose une perfusion de $500$ mL de sérum physiologique à passer en $2$ h. Elle suspend la poche $1{,}0$ m au-dessus du bras du patient ($\\rho = 1\\,000$ kg/m³, $g = 10$ N/kg). 1) Calculer le débit en mL/min et en mL/h. 2) Calculer la surpression due à la colonne de liquide, en Pa puis en mmHg. 3) La pression du sang dans la veine est d'environ $10$ mmHg : la perfusion peut-elle s'écouler ? 4) Que se passerait-il si la poche était posée sur le lit, au niveau du bras ?",
+      "corrige": [
+        "1) $D = \\dfrac{500}{120} \\approx 4{,}2$ mL/min, soit $\\dfrac{500}{2} = 250$ mL/h.",
+        "2) $\\Delta p = 1\\,000 \\times 10 \\times 1{,}0 = 10\\,000$ Pa $\\approx 75$ mmHg.",
+        "3) $75$ mmHg $> 10$ mmHg : le liquide est poussé dans la veine.",
+        "4) Sans différence de hauteur, il n'y aurait plus de surpression : la perfusion ne s'écoulerait plus (le sang pourrait même refluer dans la tubulure)."
+      ],
+      "reponse": "$\\approx 4{,}2$ mL/min ($250$ mL/h) ; $\\approx 75$ mmHg $> 10$ mmHg : écoulement possible ; au niveau du bras, plus d'écoulement."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "tension-arterielle",
+      "enonce": "Chez un patient allongé, la pression systolique vaut $120$ mmHg au niveau du cœur comme au niveau des chevilles. Le patient se lève : ses chevilles se trouvent alors $1{,}2$ m sous le cœur ($\\rho_{\\text{sang}} = 1\\,060$ kg/m³, $g = 10$ N/kg). 1) Pourquoi les pressions sont-elles égales quand il est allongé ? 2) Calculer la surpression aux chevilles quand il est debout, en Pa puis en mmHg. 3) En déduire la systolique aux chevilles. 4) Expliquer pourquoi les chevilles peuvent gonfler après une longue station debout.",
+      "corrige": [
+        "1) Allongé, chevilles et cœur sont à la même hauteur : $h = 0$, donc pas de différence de pression due à la colonne de sang.",
+        "2) $\\Delta p = 1\\,060 \\times 10 \\times 1{,}2 = 12\\,720$ Pa $\\approx 96$ mmHg.",
+        "3) $120 + 96 \\approx 216$ mmHg.",
+        "4) La pression du sang est beaucoup plus forte dans les jambes en position debout : elle pousse davantage de liquide hors des vaisseaux vers les tissus."
+      ],
+      "reponse": "Même hauteur ; $\\Delta p \\approx 96$ mmHg ; systolique $\\approx 216$ mmHg aux chevilles ; la forte pression favorise le gonflement."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "fluides-pression-sanguine",
+      "enonce": "Chez la girafe, la tête peut se trouver environ $2{,}0$ m au-dessus du cœur. 1) Calculer la différence de pression due à la colonne de sang entre le cœur et la tête ($\\rho = 1\\,060$ kg/m³, $g = 10$ N/kg), en Pa puis en mmHg. 2) Pour que le sang arrive encore au cerveau avec une pression d'au moins $80$ mmHg, quelle pression systolique minimale le cœur doit-il produire ? 3) Comparer à la valeur habituelle chez l'humain ($120$ mmHg) et conclure.",
+      "corrige": [
+        "1) $\\Delta p = 1\\,060 \\times 10 \\times 2{,}0 = 21\\,200$ Pa $\\approx 159$ mmHg.",
+        "2) La pression diminue en montant : il faut au cœur au moins $80 + 159 \\approx 239$ mmHg.",
+        "3) C'est environ deux fois la valeur humaine : la girafe doit avoir une pression artérielle bien plus élevée que l'humain."
+      ],
+      "reponse": "$\\Delta p \\approx 159$ mmHg ; au moins $\\approx 239$ mmHg au cœur ; pression bien plus élevée que chez l'humain."
     }
   ]
 }

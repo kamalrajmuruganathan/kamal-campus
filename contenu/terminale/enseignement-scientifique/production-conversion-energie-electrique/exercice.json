@@ -44,9 +44,9 @@
         "Le rendement global d'une chaîne est le **produit** des rendements de chaque étape : $\\eta_{\\text{g}} = \\eta_1 \\times \\eta_2 \\times \\eta_3$.",
         "Application numérique : $\\eta_{\\text{g}} = 0{,}90 \\times 0{,}95 \\times 0{,}88 = 0{,}7524 \\approx 0{,}75$, soit $75\\ \\%$.",
         "L'énergie reçue à l'entrée est $E_{\\text{reçue}} = 500$ kJ. L'énergie utile en sortie vaut $E_{\\text{utile}} = \\eta_{\\text{g}} \\times E_{\\text{reçue}}$.",
-        "$E_{\\text{utile}} = 0{,}75 \\times 500 = 375$ kJ. Environ un quart de l'énergie de départ a été perdu en chaleur le long de la chaîne."
+        "$E_{\\text{utile}} = 0{,}7524 \\times 500 \\approx 376$ kJ. Environ un quart de l'énergie de départ a été perdu en chaleur le long de la chaîne."
       ],
-      "reponse": "$\\eta_{\\text{g}} = \\eta_1 \\eta_2 \\eta_3 \\approx 0{,}75$ ($75\\ \\%$) ; $E_{\\text{utile}} = 375$ kJ."
+      "reponse": "$\\eta_{\\text{g}} = \\eta_1 \\eta_2 \\eta_3 \\approx 0{,}75$ ($75\\ \\%$) ; $E_{\\text{utile}} \\approx 376$ kJ."
     },
     {
       "id": 4,
@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "conversion-energie",
       "enonce": "**Une ferme photovoltaïque raccordée au réseau.** Une ferme solaire comporte $S = 5000\\ \\text{m}^2$ de panneaux photovoltaïques de rendement $\\eta_{\\text{pv}} = 0{,}20$. L'éclairement reçu vaut $G = 1{,}0 \\times 10^{3}\\ \\text{W/m}^2$. Le courant continu produit passe par un onduleur (rendement $\\eta_{\\text{ond}} = 0{,}95$) qui le rend utilisable, puis l'électricité est transportée par une ligne de résistance $R = 0{,}50\\ \\Omega$ sous une tension $U = 2{,}0 \\times 10^{4}$ V (20 kV). Donnée : $1$ kWh $= 3{,}6 \\times 10^{6}$ J. 1) Calculer la puissance lumineuse totale $P_{\\text{reçue}}$ captée par les panneaux. 2) En déduire la puissance électrique $P_{\\text{pv}}$ produite par les panneaux, puis la puissance $P_{\\text{ond}}$ disponible en sortie de l'onduleur. 3) Calculer le rendement global $\\eta_{\\text{g}}$ de la conversion, du Soleil à la sortie de l'onduleur. 4) La puissance $P_{\\text{ond}}$ est transportée sous $U = 20$ kV. Calculer l'intensité $I$ dans la ligne, puis la puissance $P_{\\text{J}}$ perdue par effet Joule. 5) On envisage de transporter la même puissance sous $U' = 400$ V. Calculer les nouvelles pertes $P'_{\\text{J}}$ et expliquer pourquoi ce choix est impossible : conclure sur l'intérêt de la haute tension. 6) Sur une journée équivalant à $5{,}0$ h de production à pleine puissance, quelle énergie électrique (en kWh puis en J) l'onduleur délivre-t-il ?",
       "corrige": [
@@ -139,6 +139,464 @@
         "6. L'énergie délivrée est $E = P_{\\text{ond}} \\times t = 0{,}95\\ \\text{MW} \\times 5{,}0\\ \\text{h} = 950\\ \\text{kW} \\times 5{,}0\\ \\text{h} = 4750$ kWh, soit $4{,}75 \\times 10^{3}$ kWh. En joules : $E = 4750 \\times 3{,}6 \\times 10^{6} = 1{,}71 \\times 10^{10}$ J."
       ],
       "reponse": "$P_{\\text{reçue}} = 5{,}0$ MW ; $P_{\\text{pv}} = 1{,}0$ MW ; $P_{\\text{ond}} = 0{,}95$ MW ; $\\eta_{\\text{g}} = 0{,}19$ ($19\\ \\%$). Sous 20 kV : $I = 47{,}5$ A et $P_{\\text{J}} \\approx 1{,}1$ kW ($0{,}12\\ \\%$) ; sous 400 V les pertes ($\\approx 2{,}8$ MW) dépasseraient la puissance transportée, d'où la haute tension. Énergie : $E \\approx 4750$ kWh $\\approx 1{,}7 \\times 10^{10}$ J."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "induction",
+      "enonce": "Un aimant est posé, immobile, à l'intérieur d'une bobine reliée à un voltmètre. Le voltmètre indique-t-il une tension ? Justifier.",
+      "corrige": [
+        "L'induction n'apparaît que si le champ magnétique qui traverse la bobine varie au cours du temps.",
+        "Un aimant immobile crée un champ constant : aucune tension n'est induite, le voltmètre indique zéro."
+      ],
+      "reponse": "Non : sans variation du champ magnétique, il n'y a pas de tension induite."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "alternateur",
+      "enonce": "Compléter : « Un alternateur convertit de l'énergie … (un mouvement de …) en énergie … . Un aimant tourne devant des bobines fixes, ce qui induit une tension … . »",
+      "corrige": [
+        "L'alternateur transforme une rotation, donc de l'énergie mécanique, en énergie électrique.",
+        "Le champ qui traverse les bobines change sans cesse de sens : la tension induite est alternative."
+      ],
+      "reponse": "« … énergie mécanique (un mouvement de rotation) en énergie électrique … une tension alternative. »"
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "voies-production",
+      "enonce": "Associer chaque dispositif à la forme d'énergie de départ qu'il convertit en électricité : (a) cellule photovoltaïque ; (b) pile ; (c) alternateur d'une éolienne.",
+      "corrige": [
+        "La cellule photovoltaïque convertit la lumière : voie radiative.",
+        "La pile convertit l'énergie d'une réaction chimique : voie électrochimique.",
+        "L'alternateur convertit un mouvement : voie mécanique."
+      ],
+      "reponse": "(a) rayonnement lumineux ; (b) réaction chimique ; (c) mouvement (énergie mécanique)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "rendement-conversion",
+      "enonce": "Vrai ou faux ? « Un moteur très performant peut avoir un rendement de 110 %. » Justifier.",
+      "corrige": [
+        "Faux : le rendement est le rapport de l'énergie utile à l'énergie reçue.",
+        "Une conversion ne peut pas restituer plus d'énergie qu'elle n'en reçoit : le rendement est toujours compris entre 0 et 1, soit au plus 100 %."
+      ],
+      "reponse": "Faux : un rendement est toujours inférieur ou égal à 1 (100 %)."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "stockage",
+      "enonce": "Classer chaque dispositif de stockage dans sa famille (chimique, mécanique ou électromagnétique) : batterie de téléphone ; STEP ; supercondensateur ; volant d'inertie ; réservoir de dihydrogène.",
+      "corrige": [
+        "Stockage chimique (énergie des liaisons chimiques) : batterie, dihydrogène.",
+        "Stockage mécanique (énergie de position ou de mouvement) : STEP, volant d'inertie.",
+        "Stockage électromagnétique : supercondensateur."
+      ],
+      "reponse": "Chimique : batterie, dihydrogène. Mécanique : STEP, volant d'inertie. Électromagnétique : supercondensateur."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "induction",
+      "enonce": "Citer trois façons d'augmenter la tension induite dans une bobine par un aimant.",
+      "corrige": [
+        "La tension induite est d'autant plus grande que le champ magnétique varie vite.",
+        "On peut déplacer l'aimant plus rapidement, utiliser un aimant plus puissant, ou augmenter le nombre de spires de la bobine."
+      ],
+      "reponse": "Déplacer l'aimant plus vite, prendre un aimant plus puissant, augmenter le nombre de spires."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "induction",
+      "enonce": "On approche un aimant d'une bobine : le voltmètre indique $+0{,}3$ V. Prévoir ce qu'il indique quand : (a) l'aimant reste immobile dans la bobine ; (b) on retire l'aimant à la même vitesse ; (c) on approche à nouveau l'aimant, mais beaucoup plus lentement.",
+      "corrige": [
+        "(a) Aimant immobile : pas de variation du champ, donc $0$ V.",
+        "(b) On retire l'aimant : la variation est de sens opposé, la tension change de signe (environ $-0{,}3$ V à la même vitesse).",
+        "(c) Variation plus lente : tension positive mais plus petite que $0{,}3$ V."
+      ],
+      "reponse": "(a) 0 V ; (b) une tension négative (environ $-0{,}3$ V) ; (c) une tension positive plus faible."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "alternateur",
+      "enonce": "Dans une centrale hydraulique, on trouve dans l'ordre : l'eau du barrage, la turbine, l'alternateur, le réseau. Indiquer le rôle de la turbine et celui de l'alternateur, et dire lequel produit le courant.",
+      "corrige": [
+        "La turbine est mise en rotation par l'eau : elle fournit le mouvement.",
+        "L'alternateur, entraîné par la turbine, transforme ce mouvement en énergie électrique : c'est lui qui produit le courant."
+      ],
+      "reponse": "La turbine fournit la rotation ; l'alternateur la convertit en électricité et produit le courant."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "voies-production",
+      "enonce": "Pour chaque installation, dire si l'électricité est produite avec ou sans combustion, et préciser la voie (mécanique, radiative, électrochimique) quand il n'y a pas de combustion : (a) centrale au charbon ; (b) éolienne ; (c) panneau photovoltaïque ; (d) barrage ; (e) centrale au gaz ; (f) pile de télécommande.",
+      "corrige": [
+        "Avec combustion : (a) et (e), où l'on brûle un combustible pour produire de la vapeur.",
+        "Sans combustion : (b) et (d) par voie mécanique (alternateur) ; (c) par voie radiative ; (f) par voie électrochimique."
+      ],
+      "reponse": "Combustion : (a), (e). Sans combustion : (b) et (d) mécanique ; (c) radiative ; (f) électrochimique."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "effet-photovoltaique",
+      "enonce": "Qu'est-ce qu'un semi-conducteur ? Quel est le matériau semi-conducteur le plus utilisé dans les cellules photovoltaïques ?",
+      "corrige": [
+        "Un semi-conducteur est un matériau intermédiaire entre un conducteur et un isolant : ses électrons ne circulent que si on leur apporte assez d'énergie.",
+        "Le matériau le plus utilisé dans les cellules photovoltaïques est le silicium."
+      ],
+      "reponse": "Un matériau intermédiaire entre conducteur et isolant ; le silicium."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "rendement-conversion",
+      "enonce": "Une lampe à LED reçoit une puissance électrique de $10$ W et émet une puissance lumineuse de $3{,}0$ W. Calculer son rendement et la puissance perdue. Sous quelle forme est-elle perdue ?",
+      "corrige": [
+        "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{reçue}}} = \\dfrac{3{,}0}{10} = 0{,}30$, soit $30\\ \\%$.",
+        "Puissance perdue : $10 - 3{,}0 = 7{,}0$ W, dissipée sous forme de chaleur."
+      ],
+      "reponse": "$\\eta = 0{,}30$ (30 %) ; $7{,}0$ W perdus en chaleur."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "rendement-conversion",
+      "enonce": "Un moteur électrique de rendement $\\eta = 0{,}90$ reçoit une puissance électrique de $2{,}0$ kW. Calculer la puissance mécanique utile et la puissance perdue.",
+      "corrige": [
+        "$P_{\\text{utile}} = \\eta \\times P_{\\text{reçue}} = 0{,}90 \\times 2{,}0 = 1{,}8$ kW.",
+        "Pertes : $2{,}0 - 1{,}8 = 0{,}2$ kW, soit $200$ W."
+      ],
+      "reponse": "$1{,}8$ kW utiles ; $0{,}2$ kW (200 W) perdus."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "effet-joule",
+      "enonce": "Un câble de résistance $R = 0{,}50\\ \\Omega$ est parcouru par un courant d'intensité $I = 8{,}0$ A. Calculer la puissance dissipée par effet Joule.",
+      "corrige": [
+        "$P = R\\,I^{2} = 0{,}50 \\times 8{,}0^{2} = 0{,}50 \\times 64$.",
+        "$P = 32$ W."
+      ],
+      "reponse": "$P = 32$ W."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "unites-energie",
+      "enonce": "Effectuer les conversions ($1$ kWh $= 3{,}6 \\times 10^{6}$ J) : 1) $3{,}0$ kWh en joules ; 2) $7{,}2 \\times 10^{6}$ J en kWh ; 3) l'énergie consommée par un appareil de $500$ W fonctionnant $3{,}0$ h, en kWh.",
+      "corrige": [
+        "1) $3{,}0 \\times 3{,}6 \\times 10^{6} = 1{,}08 \\times 10^{7}$ J.",
+        "2) $\\dfrac{7{,}2 \\times 10^{6}}{3{,}6 \\times 10^{6}} = 2{,}0$ kWh.",
+        "3) $E = P \\times t = 0{,}500\\ \\text{kW} \\times 3{,}0\\ \\text{h} = 1{,}5$ kWh."
+      ],
+      "reponse": "1) $1{,}08 \\times 10^{7}$ J. 2) $2{,}0$ kWh. 3) $1{,}5$ kWh."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "rendement-global",
+      "enonce": "Une chaîne comporte deux conversions de rendements $\\eta_1 = 0{,}80$ et $\\eta_2 = 0{,}90$. Calculer le rendement global.",
+      "corrige": [
+        "Le rendement global est le produit des rendements : $\\eta_{\\text{g}} = 0{,}80 \\times 0{,}90$.",
+        "$\\eta_{\\text{g}} = 0{,}72$, soit $72\\ \\%$."
+      ],
+      "reponse": "$\\eta_{\\text{g}} = 0{,}72$ (72 %)."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "induction",
+      "enonce": "La lampe d'un vélo est alimentée par une dynamo (un petit alternateur entraîné par la roue). Expliquer pourquoi la lampe brille davantage quand on roule plus vite, et pourquoi elle s'éteint à l'arrêt.",
+      "corrige": [
+        "Plus la roue tourne vite, plus le champ magnétique varie vite dans la bobine de la dynamo : la tension induite est plus grande et la lampe brille davantage.",
+        "À l'arrêt, l'aimant ne tourne plus : le champ ne varie plus, il n'y a plus de tension induite, la lampe s'éteint."
+      ],
+      "reponse": "Rouler plus vite fait varier le champ plus vite (tension plus grande) ; à l'arrêt, pas de variation, donc pas de tension."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "alternateur",
+      "enonce": "Expliquer pourquoi la tension produite par un alternateur est dite « alternative ».",
+      "corrige": [
+        "Dans l'alternateur, un aimant tourne devant des bobines fixes.",
+        "Au cours d'un tour, le champ qui traverse chaque bobine change de sens : la tension induite change de signe régulièrement.",
+        "Une tension qui change périodiquement de signe est dite alternative."
+      ],
+      "reponse": "Parce que la rotation de l'aimant fait changer de sens le champ dans les bobines : la tension change de signe périodiquement."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "voies-production",
+      "enonce": "Un élève affirme : « Un panneau solaire contient un petit alternateur qui tourne grâce à la lumière. » Corriger cette affirmation.",
+      "corrige": [
+        "Le panneau photovoltaïque ne contient aucune pièce en mouvement.",
+        "Il convertit directement la lumière en électricité grâce à l'effet photovoltaïque dans un semi-conducteur ; seule la voie mécanique passe par un alternateur."
+      ],
+      "reponse": "Faux : la cellule photovoltaïque convertit directement la lumière en électricité, sans pièce mobile ni alternateur."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "effet-photovoltaique",
+      "enonce": "Une maison est équipée d'un chauffe-eau solaire et de panneaux photovoltaïques. Expliquer la différence entre ces deux installations. Laquelle relève de ce chapitre ?",
+      "corrige": [
+        "Le chauffe-eau solaire capte la chaleur du Soleil pour chauffer de l'eau : c'est du solaire thermique.",
+        "Les panneaux photovoltaïques convertissent la lumière en électricité : c'est l'effet photovoltaïque, qui relève de ce chapitre."
+      ],
+      "reponse": "Chauffe-eau solaire : chaleur (solaire thermique) ; panneaux photovoltaïques : électricité (ce chapitre)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "effet-photovoltaique",
+      "enonce": "Un panneau photovoltaïque de $1{,}6\\ \\text{m}^2$ a un rendement de $0{,}20$. Il reçoit un éclairement $G = 800\\ \\text{W/m}^2$. Calculer la puissance lumineuse reçue, puis la puissance électrique fournie.",
+      "corrige": [
+        "Puissance reçue : $P_{\\text{reçue}} = G \\times S = 800 \\times 1{,}6 = 1\\,280$ W.",
+        "Puissance électrique : $P_{\\text{élec}} = 0{,}20 \\times 1\\,280 = 256$ W."
+      ],
+      "reponse": "$1\\,280$ W reçus ; $256$ W électriques."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "rendement-conversion",
+      "enonce": "Un panneau photovoltaïque de rendement $0{,}15$ fournit une puissance électrique de $300$ W. Quelle puissance lumineuse reçoit-il ?",
+      "corrige": [
+        "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{reçue}}}$, donc $P_{\\text{reçue}} = \\dfrac{P_{\\text{utile}}}{\\eta}$.",
+        "$P_{\\text{reçue}} = \\dfrac{300}{0{,}15} = 2\\,000$ W."
+      ],
+      "reponse": "$2\\,000$ W."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "rendement-global",
+      "enonce": "Pour une chaîne de rendements $0{,}95$, $0{,}90$ et $0{,}85$, un élève écrit : « rendement global $= 0{,}95 + 0{,}90 + 0{,}85 = 2{,}70$ ». Expliquer pourquoi c'est absurde et calculer le bon résultat.",
+      "corrige": [
+        "Un rendement de $2{,}70$ (270 %) est impossible : une chaîne ne peut pas restituer plus d'énergie qu'elle n'en reçoit.",
+        "On multiplie les rendements : $0{,}95 \\times 0{,}90 \\times 0{,}85 \\approx 0{,}73$."
+      ],
+      "reponse": "On multiplie : $\\eta_{\\text{g}} \\approx 0{,}73$ (73 %)."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "rendement-global",
+      "enonce": "Une chaîne comporte trois étapes de rendements $0{,}98$, $0{,}60$ et $0{,}95$. Calculer le rendement global et le comparer au plus faible des trois rendements.",
+      "corrige": [
+        "$\\eta_{\\text{g}} = 0{,}98 \\times 0{,}60 \\times 0{,}95 \\approx 0{,}56$.",
+        "$0{,}56 < 0{,}60$ : le rendement global est plus petit que le plus faible des rendements, car les pertes s'accumulent à chaque maillon."
+      ],
+      "reponse": "$\\eta_{\\text{g}} \\approx 0{,}56$, inférieur au plus faible rendement (0,60)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "effet-joule",
+      "enonce": "Dans une ligne de résistance fixe, par combien sont multipliées les pertes par effet Joule si l'intensité : (a) est multipliée par 2 ? (b) est multipliée par 3 ? (c) est divisée par 2 ?",
+      "corrige": [
+        "Les pertes $P = R\\,I^{2}$ varient comme le carré de l'intensité.",
+        "(a) $2^{2} = 4$ : pertes multipliées par 4. (b) $3^{2} = 9$ : multipliées par 9. (c) $\\left(\\dfrac{1}{2}\\right)^{2} = \\dfrac{1}{4}$ : divisées par 4."
+      ],
+      "reponse": "(a) × 4 ; (b) × 9 ; (c) ÷ 4."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "effet-joule",
+      "enonce": "Pour un fil de résistance $R = 4{,}0\\ \\Omega$ parcouru par $I = 15$ A, un élève calcule $P = R \\times I = 60$ W. Corriger son erreur et donner la bonne valeur.",
+      "corrige": [
+        "La formule de l'effet Joule est $P = R\\,I^{2}$ : l'intensité est au carré.",
+        "$P = 4{,}0 \\times 15^{2} = 4{,}0 \\times 225 = 900$ W."
+      ],
+      "reponse": "$P = R\\,I^{2} = 900$ W (et non 60 W)."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "unites-energie",
+      "enonce": "Un radiateur électrique de $2\\,000$ W fonctionne $5$ heures par jour pendant $30$ jours. 1) Calculer l'énergie consommée en kWh. 2) Calculer le coût, avec un prix de $0{,}20$ € le kWh.",
+      "corrige": [
+        "1) $E = P \\times t = 2{,}0\\ \\text{kW} \\times (5 \\times 30)\\ \\text{h} = 2{,}0 \\times 150 = 300$ kWh.",
+        "2) Coût : $300 \\times 0{,}20 = 60$ €."
+      ],
+      "reponse": "1) 300 kWh. 2) 60 €."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "stockage",
+      "enonce": "Une batterie a un rendement de $0{,}95$ à la charge et de $0{,}95$ à la décharge. On y stocke $10$ kWh. Quel est le rendement global du stockage, et quelle énergie récupère-t-on ?",
+      "corrige": [
+        "Stocker, c'est convertir deux fois : $\\eta_{\\text{g}} = 0{,}95 \\times 0{,}95 \\approx 0{,}90$.",
+        "Énergie récupérée : $0{,}9025 \\times 10 \\approx 9{,}0$ kWh."
+      ],
+      "reponse": "$\\eta_{\\text{g}} \\approx 0{,}90$ ; environ $9{,}0$ kWh récupérés."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "stockage",
+      "enonce": "Expliquer pourquoi le développement de l'éolien et du photovoltaïque rend le stockage de l'énergie de plus en plus nécessaire. Donner un exemple concret.",
+      "corrige": [
+        "L'électricité éolienne et photovoltaïque est intermittente : elle dépend du vent et de la lumière, pas de la demande.",
+        "Par exemple, des panneaux produisent beaucoup à midi, alors que la consommation d'un foyer est souvent forte le soir : il faut stocker le surplus pour le restituer plus tard."
+      ],
+      "reponse": "Production intermittente, qui ne coïncide pas avec la demande ; exemple : stocker la production de midi pour le soir."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "alternateur",
+      "enonce": "Le vent fournit aux pales d'une éolienne une puissance mécanique de $2{,}0$ MW. L'alternateur a un rendement de $0{,}95$. 1) Calculer la puissance électrique produite. 2) Quelle énergie, en kWh, l'éolienne produit-elle en $6{,}0$ h à cette puissance ?",
+      "corrige": [
+        "1) $P_{\\text{élec}} = 0{,}95 \\times 2{,}0 = 1{,}9$ MW.",
+        "2) $E = 1{,}9\\ \\text{MW} \\times 6{,}0\\ \\text{h} = 11{,}4$ MWh, soit $1{,}14 \\times 10^{4}$ kWh."
+      ],
+      "reponse": "1) $1{,}9$ MW. 2) Environ $1{,}1 \\times 10^{4}$ kWh."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "induction",
+      "enonce": "On réalise quatre expériences avec une bobine reliée à un voltmètre : (a) aimant faible approché lentement d'une bobine de 100 spires ; (b) aimant puissant approché rapidement d'une bobine de 500 spires ; (c) aimant puissant approché lentement d'une bobine de 500 spires ; (d) aimant puissant immobile dans une bobine de 500 spires. Quelle expérience donne la plus grande tension ? Laquelle donne une tension nulle ? Justifier.",
+      "corrige": [
+        "La tension induite augmente avec la rapidité de la variation du champ, la puissance de l'aimant et le nombre de spires.",
+        "(b) réunit les trois facteurs favorables : c'est la plus grande tension.",
+        "(d) : aimant immobile, pas de variation du champ, donc tension nulle."
+      ],
+      "reponse": "Plus grande tension : (b). Tension nulle : (d)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "effet-joule",
+      "enonce": "On transporte une puissance $P = 500$ kW sur une ligne de résistance $R = 2{,}0\\ \\Omega$. Calculer l'intensité et les pertes Joule sous $20$ kV, puis sous $400$ kV. Par quel facteur les pertes sont-elles divisées ?",
+      "corrige": [
+        "Sous 20 kV : $I = \\dfrac{P}{U} = \\dfrac{500\\,000}{20\\,000} = 25$ A ; $P_{\\text{J}} = 2{,}0 \\times 25^{2} = 1\\,250$ W.",
+        "Sous 400 kV : $I = \\dfrac{500\\,000}{400\\,000} = 1{,}25$ A ; $P_{\\text{J}} = 2{,}0 \\times 1{,}25^{2} \\approx 3{,}1$ W.",
+        "La tension est multipliée par 20, l'intensité divisée par 20, donc les pertes divisées par $20^{2} = 400$."
+      ],
+      "reponse": "20 kV : 25 A et $1\\,250$ W ; 400 kV : $1{,}25$ A et environ $3{,}1$ W ; pertes divisées par 400."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "effet-joule",
+      "enonce": "Une ligne à haute tension de résistance $R = 10\\ \\Omega$ transporte une puissance de $10$ MW sous $200$ kV. Calculer les pertes par effet Joule et la fraction de la puissance transportée qu'elles représentent.",
+      "corrige": [
+        "$I = \\dfrac{P}{U} = \\dfrac{10 \\times 10^{6}}{200 \\times 10^{3}} = 50$ A.",
+        "$P_{\\text{J}} = 10 \\times 50^{2} = 25\\,000$ W, soit 25 kW.",
+        "Fraction : $\\dfrac{25 \\times 10^{3}}{10 \\times 10^{6}} = 0{,}0025$, soit $0{,}25\\ \\%$."
+      ],
+      "reponse": "25 kW de pertes, soit $0{,}25\\ \\%$ de la puissance transportée."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "rendement-global",
+      "enonce": "Dans une centrale thermique, la chaîne comporte : la chaudière ($\\eta_1 = 0{,}90$), la turbine à vapeur ($\\eta_2 = 0{,}45$), l'alternateur ($\\eta_3 = 0{,}98$), puis le transport ($\\eta_4 = 0{,}95$). 1) Calculer le rendement de la centrale (trois premières étapes), puis le rendement global jusqu'à l'utilisateur. 2) Sur $1\\,000$ MJ libérés par le combustible, quelle énergie électrique arrive à l'utilisateur ? 3) Quel maillon limite le plus le rendement ?",
+      "corrige": [
+        "1) Centrale : $0{,}90 \\times 0{,}45 \\times 0{,}98 \\approx 0{,}40$ ; avec le transport : $0{,}397 \\times 0{,}95 \\approx 0{,}38$.",
+        "2) $0{,}377 \\times 1\\,000 \\approx 377$ MJ, soit environ 380 MJ.",
+        "3) La turbine à vapeur ($0{,}45$) : plus de la moitié de l'énergie y est perdue en chaleur."
+      ],
+      "reponse": "1) Environ $0{,}40$ puis $0{,}38$. 2) Environ 380 MJ. 3) La turbine à vapeur."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "effet-photovoltaique",
+      "enonce": "Un foyer consomme $12$ kWh par jour. On installe des panneaux de rendement $0{,}20$ ; on considère que la production d'une journée équivaut à $4{,}0$ h sous un éclairement $G = 1{,}0 \\times 10^{3}\\ \\text{W/m}^2$. Quelle surface de panneaux faut-il pour couvrir cette consommation sur une journée ?",
+      "corrige": [
+        "Puissance électrique par mètre carré : $0{,}20 \\times 1\\,000 = 200\\ \\text{W/m}^2$.",
+        "Énergie par mètre carré et par jour : $200 \\times 4{,}0 = 800$ Wh, soit $0{,}80$ kWh.",
+        "Surface : $\\dfrac{12}{0{,}80} = 15\\ \\text{m}^2$."
+      ],
+      "reponse": "$15\\ \\text{m}^2$ de panneaux."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "stockage",
+      "enonce": "Pour restituer $500$ MWh d'électricité, on compare une STEP (rendement aller-retour $0{,}80$) et un parc de batteries (rendement aller-retour $0{,}90$). Quelle énergie faut-il fournir à chaque installation ? Calculer la différence.",
+      "corrige": [
+        "STEP : $E_{\\text{entrée}} = \\dfrac{500}{0{,}80} = 625$ MWh.",
+        "Batteries : $E_{\\text{entrée}} = \\dfrac{500}{0{,}90} \\approx 556$ MWh.",
+        "Différence : environ $625 - 556 = 69$ MWh de plus pour la STEP."
+      ],
+      "reponse": "STEP : 625 MWh ; batteries : environ 556 MWh ; écart d'environ 69 MWh."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "rendement-conversion",
+      "enonce": "L'alternateur d'une centrale, de rendement $0{,}96$, fournit une puissance électrique de $4{,}8$ MW. 1) Quelle puissance mécanique reçoit-il ? 2) Quelle puissance est perdue ? 3) Quelle énergie est ainsi transformée en chaleur en une heure, en kWh puis en joules ?",
+      "corrige": [
+        "1) $P_{\\text{reçue}} = \\dfrac{4{,}8}{0{,}96} = 5{,}0$ MW.",
+        "2) Pertes : $5{,}0 - 4{,}8 = 0{,}2$ MW, soit 200 kW.",
+        "3) $E = 200\\ \\text{kW} \\times 1\\ \\text{h} = 200$ kWh $= 200 \\times 3{,}6 \\times 10^{6} = 7{,}2 \\times 10^{8}$ J."
+      ],
+      "reponse": "1) $5{,}0$ MW. 2) 200 kW. 3) 200 kWh, soit $7{,}2 \\times 10^{8}$ J."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "alternateur",
+      "enonce": "Problème — Une hydrolienne est posée au fond de la mer. Le courant marin fait tourner son rotor, qui entraîne un alternateur. La puissance mécanique captée vaut $1{,}0$ MW ; l'alternateur a un rendement de $0{,}95$ et l'acheminement jusqu'à la côte un rendement de $0{,}97$. 1) Par quelle voie de production sans combustion l'électricité est-elle produite ? 2) Calculer le rendement global et la puissance électrique livrée. 3) La production d'une journée équivaut à $10$ h à cette puissance : calculer l'énergie livrée en kWh. 4) Combien de foyers consommant $10$ kWh par jour cela représente-t-il ?",
+      "corrige": [
+        "1) La voie mécanique : un mouvement (le courant marin) entraîne un alternateur.",
+        "2) $\\eta_{\\text{g}} = 0{,}95 \\times 0{,}97 \\approx 0{,}92$ ; $P_{\\text{livrée}} \\approx 0{,}92$ MW.",
+        "3) $E \\approx 0{,}92\\ \\text{MW} \\times 10\\ \\text{h} \\approx 9{,}2$ MWh, soit environ $9\\,200$ kWh.",
+        "4) $\\dfrac{9\\,200}{10} \\approx 920$ foyers."
+      ],
+      "reponse": "1) Voie mécanique (alternateur). 2) $\\eta_{\\text{g}} \\approx 0{,}92$ ; environ $0{,}92$ MW. 3) Environ $9\\,200$ kWh. 4) Environ 920 foyers."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "effet-joule",
+      "enonce": "Problème — Un village consomme une puissance de $50$ kW. Il est relié au réseau par une ligne de résistance $R = 0{,}80\\ \\Omega$. 1) Calculer l'intensité et les pertes par effet Joule si l'on transportait cette puissance sous $230$ V. 2) Même question sous $20$ kV. 3) Conclure sur le choix de la tension de transport.",
+      "corrige": [
+        "1) $I = \\dfrac{50\\,000}{230} \\approx 217$ A ; $P_{\\text{J}} = 0{,}80 \\times 217^{2} \\approx 3{,}8 \\times 10^{4}$ W, soit environ 38 kW : les trois quarts de la puissance transportée !",
+        "2) $I = \\dfrac{50\\,000}{20\\,000} = 2{,}5$ A ; $P_{\\text{J}} = 0{,}80 \\times 2{,}5^{2} = 5{,}0$ W.",
+        "3) Augmenter la tension réduit l'intensité, et les pertes varient comme $I^{2}$ : on transporte à haute tension, puis on abaisse la tension près des habitations."
+      ],
+      "reponse": "1) Environ 217 A et 38 kW de pertes. 2) $2{,}5$ A et $5{,}0$ W. 3) On transporte à haute tension pour limiter les pertes."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "stockage",
+      "enonce": "Problème — Des panneaux photovoltaïques produisent $16$ kWh par jour. Le foyer consomme directement $5$ kWh pendant la journée et a besoin de $6$ kWh le soir, fournis par une batterie dont le rendement aller-retour vaut $0{,}90$. 1) Quelle énergie faut-il envoyer dans la batterie pour récupérer $6$ kWh le soir ? 2) Quelle énergie reste-t-il à vendre au réseau ? 3) Quelle est la famille de stockage utilisée, et pourquoi a-t-on besoin de stocker ici ?",
+      "corrige": [
+        "1) $E_{\\text{entrée}} = \\dfrac{6}{0{,}90} \\approx 6{,}7$ kWh.",
+        "2) $16 - 5 - 6{,}7 \\approx 4{,}3$ kWh vendus au réseau.",
+        "3) Stockage chimique (batterie). La production photovoltaïque a lieu le jour, alors qu'une partie de la consommation a lieu le soir : il faut décaler l'énergie dans le temps."
+      ],
+      "reponse": "1) Environ $6{,}7$ kWh. 2) Environ $4{,}3$ kWh. 3) Stockage chimique, pour décaler la production du jour vers le soir."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "unites-energie",
+      "enonce": "Problème — Une éolienne de puissance maximale $3{,}0$ MW produit en moyenne, sur l'année, $25\\ \\%$ de cette puissance (le vent n'est pas toujours suffisant). 1) Calculer sa puissance moyenne. 2) Calculer l'énergie produite en un an ($8\\,760$ h), en MWh puis en kWh. 3) Convertir cette énergie en joules. 4) Combien de foyers consommant $4\\,500$ kWh par an peut-elle alimenter en moyenne ?",
+      "corrige": [
+        "1) $P_{\\text{moy}} = 0{,}25 \\times 3{,}0 = 0{,}75$ MW.",
+        "2) $E = 0{,}75 \\times 8\\,760 = 6\\,570$ MWh, soit $6{,}57 \\times 10^{6}$ kWh.",
+        "3) $6{,}57 \\times 10^{6} \\times 3{,}6 \\times 10^{6} \\approx 2{,}4 \\times 10^{13}$ J.",
+        "4) $\\dfrac{6{,}57 \\times 10^{6}}{4\\,500} \\approx 1\\,460$ foyers."
+      ],
+      "reponse": "1) $0{,}75$ MW. 2) $6\\,570$ MWh, soit $6{,}57 \\times 10^{6}$ kWh. 3) Environ $2{,}4 \\times 10^{13}$ J. 4) Environ $1\\,460$ foyers."
     }
   ]
 }

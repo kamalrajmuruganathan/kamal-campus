@@ -39,7 +39,7 @@ La fusion ne se fait **qu'avec *el*** (masculin singulier). Avec les autres arti
 | los | a los / de los | Hablo **a los** alumnos. |
 | las | a las / de las | Cerca **de las** tiendas. |
 
-Attention aussi : on **ne contracte pas** devant **él** (le pronom, avec accent) : *Este regalo es para él* → mais ici c'est *para*, pas *a*. Et devant un nom propre commençant par *El* (majuscule) : *Vengo de El Salvador*.
+Attention aussi : on **ne contracte pas** devant **él** (le pronom « lui », avec accent) : *Hablo de él* (je parle de lui), *Escribo a él*. Ni devant un nom propre commençant par *El* (majuscule) : *Vengo de El Salvador*.
 
 ## 3. Les erreurs à éviter
 

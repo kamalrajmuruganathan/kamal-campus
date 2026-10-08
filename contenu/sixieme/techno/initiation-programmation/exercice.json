@@ -12,19 +12,19 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "instruction et ordre",
       "enonce": "On donne à un robot ces deux instructions : « mets tes chaussures » puis « mets tes chaussettes ». Le résultat est-il correct ? Explique pourquoi l'ordre des instructions est important.",
       "corrige": [
         "La machine exécute les instructions exactement dans l'ordre donné.",
-        "Ici elle mettrait les chaussures avant les chaussettes, ce qui est impossible correctement.",
+        "Ici elle mettrait les chaussures avant les chaussettes : on ne pourrait plus enfiler les chaussettes correctement.",
         "Il faut inverser : d'abord les chaussettes, puis les chaussures."
       ],
       "reponse": "Non : l'ordre est mauvais ; il faut « mets tes chaussettes » puis « mets tes chaussures », car la machine suit exactement l'ordre indiqué."
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "boucle et condition",
       "enonce": "Pour chaque phrase, dis s'il s'agit d'une boucle ou d'une condition : (a) « Répéter 4 fois : avance de 100 ». (b) « Si le lutin touche le bord, alors il rebondit ».",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "boucle pour dessiner",
       "enonce": "Pour dessiner un carré, on écrit quatre fois « avance de 100 ; tourne de 90° ». Réécris ce programme plus court en utilisant une boucle.",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "trace d'un programme",
       "enonce": "Un lutin exécute : « Répéter 3 fois : [ avance de 50 ; tourne de 120° ] ». Combien de côtés trace-t-il, et quelle figure obtient-il ?",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "condition avec capteur",
       "enonce": "Un robot doit s'arrêter s'il rencontre un obstacle. Écris l'instruction sous la forme « si… alors… » en utilisant son capteur, puis explique quel actionneur est commandé.",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "algorithme complet",
       "enonce": "Écris l'algorithme d'un feu tricolore pour piétons qui répète en boucle : vert 20 s, puis orange 3 s, puis rouge 20 s, et qui, seulement au rouge, allume aussi le petit bonhomme vert « traversez ». Utilise une boucle et une condition.",
       "corrige": [
@@ -85,7 +85,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "séquence et ordre",
       "enonce": "On veut faire dessiner un trait puis écrire « fini » par un lutin. Ces deux instructions forment une séquence. Explique ce qu'est une séquence et pourquoi l'ordre compte ici.",
       "corrige": [
@@ -97,7 +97,7 @@
     },
     {
       "id": 8,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Scratch, lutin et blocs",
       "enonce": "En cours, on programme avec Scratch. Explique ce qu'est un « lutin » et comment on écrit un programme dans ce logiciel.",
       "corrige": [
@@ -109,7 +109,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "boucle pour dessiner un triangle",
       "enonce": "On veut faire dessiner un triangle équilatéral à un lutin. Écris le programme avec une boucle, sachant qu'il faut avancer trois fois et tourner de 120° à chaque fois.",
       "corrige": [
@@ -121,7 +121,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "algorithme d'un robot qui évite un obstacle",
       "enonce": "Écris l'algorithme d'un petit robot qui, en boucle permanente, avance mais s'arrête et tourne dès qu'il rencontre un obstacle grâce à son capteur.",
       "corrige": [
@@ -131,6 +131,460 @@
         "Le capteur donne l'information, la condition choisit l'action, et le moteur (actionneur) exécute."
       ],
       "reponse": "Répéter indéfiniment : [ SI le capteur détecte un obstacle ALORS tourner SINON avancer ]."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "algorithme",
+      "enonce": "Complète : « Un algorithme est une suite d'… données dans l'… pour réaliser une tâche. »",
+      "corrige": [
+        "Un algorithme ressemble à une recette de cuisine : des étapes à suivre une par une.",
+        "Chaque étape est une instruction, et l'ordre des étapes compte."
+      ],
+      "reponse": "Un algorithme est une suite d'instructions données dans l'ordre pour réaliser une tâche."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "instruction et ordre",
+      "enonce": "Qu'est-ce qu'une instruction ? Donne un exemple d'instruction pour un lutin.",
+      "corrige": [
+        "Une instruction est un ordre unique : une seule action à faire.",
+        "Exemple de réponse : « avance de 10 pas » ou « tourne à droite »."
+      ],
+      "reponse": "Un ordre unique donné à la machine, par exemple « avance de 10 pas »."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "boucle et condition",
+      "enonce": "Vrai ou faux : « Une boucle sert à choisir entre deux actions. » Corrige si c'est faux.",
+      "corrige": [
+        "Une boucle sert à répéter des instructions.",
+        "C'est la condition (si… alors…) qui sert à choisir."
+      ],
+      "reponse": "Faux : une boucle sert à répéter ; c'est la condition qui sert à choisir."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "Scratch, lutin et blocs",
+      "enonce": "Dans Scratch, comment appelle-t-on le personnage qui exécute les blocs à l'écran ?",
+      "corrige": [
+        "Dans Scratch, un personnage à l'écran exécute les instructions assemblées.",
+        "Ce personnage s'appelle le lutin."
+      ],
+      "reponse": "Le lutin."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "algorithme",
+      "enonce": "Pourquoi compare-t-on souvent un algorithme à une recette de cuisine ?",
+      "corrige": [
+        "Une recette donne des étapes à suivre une par une.",
+        "Ces étapes doivent être faites dans le bon ordre, comme les instructions d'un algorithme."
+      ],
+      "reponse": "Parce qu'une recette est une suite d'étapes à suivre une par une, dans le bon ordre, comme un algorithme."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "condition",
+      "enonce": "Quels mots utilise-t-on pour écrire une condition ?",
+      "corrige": [
+        "Une condition permet de choisir selon une situation.",
+        "On l'écrit avec « si… alors… » (et parfois « sinon »)."
+      ],
+      "reponse": "« Si… alors… » (et éventuellement « sinon »)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "Réécris ce programme avec une boucle : « avance de 20 ; avance de 20 ; avance de 20 ; avance de 20 ; avance de 20 ».",
+      "corrige": [
+        "La même instruction « avance de 20 » est écrite 5 fois.",
+        "On la place dans une boucle qui répète 5 fois."
+      ],
+      "reponse": "Répéter 5 fois : [ avance de 20 ]."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "trace d'un programme",
+      "enonce": "Un lutin exécute « Répéter 5 fois : [ avance de 20 ] ». De combien de pas a-t-il avancé en tout ?",
+      "corrige": [
+        "La boucle répète 5 fois l'avance de 20 pas.",
+        "5 × 20 = 100."
+      ],
+      "reponse": "100 pas."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "Dans le programme « Répéter 6 fois : [ avance de 30 ; tourne de 60° ] », quelles instructions sont répétées et combien de fois ?",
+      "corrige": [
+        "Les instructions répétées sont celles placées entre les crochets de la boucle.",
+        "Le nombre indiqué après « Répéter » donne le nombre de répétitions."
+      ],
+      "reponse": "« avance de 30 » et « tourne de 60° » sont répétées 6 fois."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "instruction et ordre",
+      "enonce": "Remets dans l'ordre les instructions pour se brosser les dents : « rincer la brosse », « mettre du dentifrice sur la brosse », « brosser les dents », « prendre la brosse ».",
+      "corrige": [
+        "On ne peut pas mettre du dentifrice avant d'avoir pris la brosse.",
+        "On brosse les dents ensuite, puis on rince la brosse à la fin."
+      ],
+      "reponse": "1) prendre la brosse, 2) mettre du dentifrice sur la brosse, 3) brosser les dents, 4) rincer la brosse."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "condition",
+      "enonce": "Dans un jeu, on écrit : « Si le lutin touche la pomme, alors le score augmente de 1. » Le lutin ne touche pas la pomme : que se passe-t-il ?",
+      "corrige": [
+        "La machine teste si la condition est vraie.",
+        "Ici elle est fausse (le lutin ne touche pas la pomme) : l'action n'est pas faite."
+      ],
+      "reponse": "Rien : le score n'augmente pas, car la condition est fausse."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "boucle et condition",
+      "enonce": "Pour chaque programme, dis s'il contient une boucle, une condition ou les deux : (a) « Répéter 10 fois : [ avance de 5 ] » ; (b) « Si la touche espace est pressée, alors sauter » ; (c) « Répéter indéfiniment : [ si le lutin touche le bord, alors rebondir ] ».",
+      "corrige": [
+        "« Répéter » indique une boucle ; « si… alors… » indique une condition.",
+        "Le programme (c) contient une condition placée à l'intérieur d'une boucle."
+      ],
+      "reponse": "(a) une boucle ; (b) une condition ; (c) les deux."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "Scratch, lutin et blocs",
+      "enonce": "Dans Scratch, écrit-on un long texte pour programmer ? Explique comment on fait.",
+      "corrige": [
+        "Non : dans Scratch, on n'écrit pas de texte compliqué.",
+        "On assemble des blocs d'instructions comme des pièces de puzzle."
+      ],
+      "reponse": "Non : on assemble des blocs d'instructions comme des pièces de puzzle."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "instruction et ordre",
+      "enonce": "Dans quel ordre le lutin exécute-t-il ce programme : « dire Bonjour ; avancer de 50 ; dire Au revoir » ? Que dit-il en dernier ?",
+      "corrige": [
+        "La machine exécute les instructions les unes après les autres, dans l'ordre écrit.",
+        "La dernière instruction est « dire Au revoir »."
+      ],
+      "reponse": "Il dit « Bonjour », avance de 50, puis dit « Au revoir » en dernier."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "trace d'un programme",
+      "enonce": "Un lutin exécute « Répéter 4 fois : [ avance de 50 ; tourne de 90° ] ». Quelle figure trace-t-il et quelle est la longueur totale du tracé ?",
+      "corrige": [
+        "Le lutin trace 4 côtés de 50 et tourne de 90° à chaque coin : c'est un carré.",
+        "Longueur totale : 4 × 50 = 200."
+      ],
+      "reponse": "Un carré ; la longueur totale du tracé est de 200 pas."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "trace d'un programme",
+      "enonce": "Un lutin exécute « Répéter 6 fois : [ avance de 40 ; tourne de 60° ] ». Combien de côtés trace-t-il ? Quelle est la longueur totale du tracé ?",
+      "corrige": [
+        "La boucle répète 6 fois « avancer puis tourner » : 6 côtés de 40.",
+        "Avec une rotation de 60° à chaque coin, le lutin revient à son point de départ : il trace un hexagone régulier.",
+        "Longueur : 6 × 40 = 240."
+      ],
+      "reponse": "6 côtés (un hexagone régulier) ; longueur totale : 240 pas."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "On veut dessiner un hexagone régulier. Combien de fois faut-il répéter « avance de 80 ; tourne de 60° » ? Écris le programme.",
+      "corrige": [
+        "Un hexagone a 6 côtés : on répète 6 fois.",
+        "À chaque coin, le lutin tourne de 60°."
+      ],
+      "reponse": "Répéter 6 fois : [ avance de 80 ; tourne de 60° ]."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "Écris, sous la forme « si… alors… sinon… », la règle suivante : quand il pleut, on prend un parapluie ; sinon, on prend une casquette.",
+      "corrige": [
+        "La situation testée est « il pleut ».",
+        "Si elle est vraie, on fait la première action ; sinon, on fait l'autre."
+      ],
+      "reponse": "S'il pleut, alors prendre un parapluie, sinon prendre une casquette."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "Dans un jeu, « Si le score atteint 10, alors afficher “Gagné !” ». Le score vaut 7. Le message s'affiche-t-il ? Et quand le score vaut 10 ?",
+      "corrige": [
+        "La machine teste la condition : le score a-t-il atteint 10 ?",
+        "À 7, la condition est fausse : rien ne s'affiche.",
+        "À 10, la condition est vraie : le message s'affiche."
+      ],
+      "reponse": "À 7 : non ; à 10 : oui, « Gagné ! » s'affiche."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "condition avec capteur",
+      "enonce": "Une lampe de jardin doit s'allumer quand il fait nuit. Écris la règle avec « si… alors… sinon… » et nomme le capteur utilisé.",
+      "corrige": [
+        "On teste la lumière grâce à un capteur de lumière.",
+        "S'il fait sombre, on allume ; sinon, on éteint."
+      ],
+      "reponse": "Si le capteur de lumière détecte qu'il fait sombre, alors allumer la lampe, sinon éteindre la lampe ; capteur : capteur de lumière."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "condition avec capteur",
+      "enonce": "Un ventilateur intelligent doit se mettre en marche quand il fait plus de 28 °C. Écris la règle avec une condition et dis quel est le capteur et quel est l'actionneur.",
+      "corrige": [
+        "Le capteur de température mesure la température.",
+        "Le programme teste : la température dépasse-t-elle 28 °C ?",
+        "Si oui, il commande le moteur du ventilateur (actionneur)."
+      ],
+      "reponse": "Si la température mesurée dépasse 28 °C, alors mettre en marche le moteur ; capteur : capteur de température ; actionneur : moteur."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "instruction et ordre",
+      "enonce": "Corrige l'erreur de Tom : « L'ordre des instructions n'a pas d'importance, la machine comprend ce que je veux faire. »",
+      "corrige": [
+        "La machine exécute exactement les instructions dans l'ordre donné.",
+        "Elle ne devine pas ce qu'on veut : si l'ordre change, le résultat change."
+      ],
+      "reponse": "Faux : la machine ne devine rien, elle exécute exactement dans l'ordre écrit ; changer l'ordre change le résultat."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "Ce programme doit faire traverser une rue à un robot piéton, mais il manque une étape : « regarder à gauche ; regarder à droite ; traverser ». Quelle étape importante manque-t-il ? Où la placer ?",
+      "corrige": [
+        "Un algorithme doit décrire chaque action, même celles qui semblent évidentes.",
+        "Avant de traverser, il faut vérifier qu'aucune voiture n'arrive : c'est une condition.",
+        "Exemple de réponse : ajouter « si aucune voiture n'arrive, alors traverser » à la place de « traverser »."
+      ],
+      "reponse": "Il manque la vérification : « si aucune voiture n'arrive, alors traverser » (après avoir regardé des deux côtés)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "Écris l'algorithme (au moins 4 instructions dans l'ordre) pour préparer un verre de sirop.",
+      "corrige": [
+        "On découpe la tâche en actions simples, dans l'ordre.",
+        "Exemple de réponse : prendre un verre ; verser un peu de sirop ; ajouter de l'eau ; mélanger."
+      ],
+      "reponse": "Exemple : 1) prendre un verre, 2) verser un peu de sirop, 3) ajouter de l'eau, 4) mélanger."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "Scratch, lutin et blocs",
+      "enonce": "Dans Scratch, cite trois actions qu'un lutin peut faire grâce aux blocs.",
+      "corrige": [
+        "Les blocs donnent des ordres au lutin.",
+        "Il peut avancer, tourner, dire quelque chose, changer de couleur…"
+      ],
+      "reponse": "Exemple : avancer, tourner, dire quelque chose (ou changer de couleur)."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "trace d'un programme",
+      "enonce": "Un lutin part du point (0 ; 0), regardant vers la droite. Il exécute : « avance de 100 ; tourne de 90° vers la gauche ; avance de 50 ». Décris son trajet et donne la distance totale parcourue.",
+      "corrige": [
+        "Il avance d'abord de 100 vers la droite.",
+        "Il tourne d'un quart de tour vers la gauche : il regarde maintenant vers le haut, puis avance de 50.",
+        "Distance totale : 100 + 50 = 150."
+      ],
+      "reponse": "Il va de 100 vers la droite, puis de 50 vers le haut ; distance totale : 150 pas."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "trace d'un programme",
+      "enonce": "Que dessine ce programme : « Répéter 2 fois : [ avance de 100 ; tourne de 90° ; avance de 50 ; tourne de 90° ] » ? Calcule la longueur totale du tracé.",
+      "corrige": [
+        "Dans une répétition, le lutin trace un côté de 100 puis un côté de 50, en tournant de 90° à chaque coin.",
+        "Répété 2 fois, cela fait 4 côtés : 100, 50, 100, 50, avec des angles droits : c'est un rectangle.",
+        "Longueur totale : 2 × (100 + 50) = 300."
+      ],
+      "reponse": "Un rectangle de 100 sur 50 ; longueur totale : 300 pas."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "boucle",
+      "enonce": "Ce programme doit dessiner un carré, mais il y a une erreur : « Répéter 3 fois : [ avance de 100 ; tourne de 90° ] ». Trouve l'erreur et corrige-la.",
+      "corrige": [
+        "Un carré a 4 côtés.",
+        "Avec 3 répétitions, le lutin ne trace que 3 côtés : la figure n'est pas fermée."
+      ],
+      "reponse": "Il faut répéter 4 fois : Répéter 4 fois : [ avance de 100 ; tourne de 90° ]."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "boucle",
+      "enonce": "Avec une boucle, combien d'instructions écrit-on pour dessiner un carré, contre combien sans boucle ? Quel est l'avantage de la boucle ?",
+      "corrige": [
+        "Sans boucle : 4 × 2 = 8 instructions (avance, tourne, quatre fois).",
+        "Avec boucle : un bloc « Répéter 4 fois » contenant 2 instructions.",
+        "La boucle rend le programme plus court et plus clair."
+      ],
+      "reponse": "8 instructions sans boucle contre une boucle de 2 instructions ; le programme est plus court et plus clair."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "condition",
+      "enonce": "Un jeu utilise : « Si le lutin touche le bord, alors il rebondit. » Pourquoi faut-il placer cette condition dans une boucle « Répéter indéfiniment » ?",
+      "corrige": [
+        "Une condition n'est testée qu'au moment où la machine la lit.",
+        "Pour que le lutin rebondisse à chaque fois qu'il touche le bord, il faut tester la condition tout le temps : on la place dans une boucle."
+      ],
+      "reponse": "Pour que la condition soit testée en permanence, et pas une seule fois au début."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "condition avec capteur",
+      "enonce": "Un robot aspirateur avance tout droit. Écris son algorithme pour qu'il tourne quand il détecte un mur, en utilisant une boucle et une condition.",
+      "corrige": [
+        "Le robot doit vérifier tout le temps : boucle permanente.",
+        "À chaque tour, il teste son capteur d'obstacle.",
+        "S'il détecte un mur, il tourne ; sinon, il avance."
+      ],
+      "reponse": "Répéter indéfiniment : [ si le capteur détecte un mur, alors tourner, sinon avancer ]."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "condition avec capteur",
+      "enonce": "Explique pourquoi on dit que programmer un objet, c'est écrire sa chaîne d'information. Appuie-toi sur l'exemple d'un robot qui s'arrête devant un obstacle.",
+      "corrige": [
+        "Le capteur d'obstacle acquiert l'information.",
+        "Le programme (la condition « si… alors… ») traite l'information et décide.",
+        "Il commande ensuite l'actionneur : le moteur s'arrête."
+      ],
+      "reponse": "Le programme reçoit l'information du capteur, la traite avec une condition, puis commande l'actionneur (le moteur) : c'est la chaîne d'information."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "boucle et condition",
+      "enonce": "Lina veut que son lutin dise « Bonjour » 3 fois. Elle écrit : « Si Bonjour, alors dire Bonjour 3 fois. » Quelle structure aurait-elle dû utiliser ? Écris le bon programme.",
+      "corrige": [
+        "Répéter une action est le rôle de la boucle, pas de la condition.",
+        "Il n'y a rien à tester ici : il suffit de répéter."
+      ],
+      "reponse": "Une boucle : Répéter 3 fois : [ dire Bonjour ]."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "algorithme",
+      "enonce": "Écris l'algorithme d'un distributeur de boissons simplifié : il attend une pièce ; si une pièce est insérée, il sert la boisson ; et il recommence pour le client suivant.",
+      "corrige": [
+        "Le distributeur fonctionne sans arrêt : boucle « Répéter indéfiniment ».",
+        "À chaque tour, il teste : une pièce est-elle insérée ?",
+        "Si oui, il sert la boisson."
+      ],
+      "reponse": "Répéter indéfiniment : [ si une pièce est insérée, alors servir la boisson ]."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "trace d'un programme",
+      "enonce": "Un lutin exécute « Répéter 3 fois : [ avance de 30 ] ; tourne de 90° ; Répéter 2 fois : [ avance de 30 ] ». Quelle distance a-t-il parcourue en tout ?",
+      "corrige": [
+        "Première boucle : 3 × 30 = 90.",
+        "Deuxième boucle : 2 × 30 = 60.",
+        "Le virage ne fait pas avancer le lutin. Total : 90 + 60 = 150."
+      ],
+      "reponse": "150 pas."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "boucle et condition",
+      "enonce": "Écris le programme d'un lutin qui avance 10 fois de 10 pas, et qui, à chaque pas de la boucle, dit « Aïe ! » s'il touche le bord.",
+      "corrige": [
+        "On répète 10 fois : boucle « Répéter 10 fois ».",
+        "Dans la boucle, on avance de 10 puis on teste la condition « touche le bord »."
+      ],
+      "reponse": "Répéter 10 fois : [ avance de 10 ; si le lutin touche le bord, alors dire « Aïe ! » ]."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "condition avec capteur",
+      "enonce": "Une porte de garage automatique ne doit pas se refermer si une voiture est dessous. Écris la règle avec « si… alors… sinon… », et nomme le capteur et l'actionneur.",
+      "corrige": [
+        "Un capteur de présence détecte la voiture sous la porte.",
+        "Si une voiture est détectée, on ne ferme pas ; sinon, on peut fermer.",
+        "L'actionneur est le moteur de la porte."
+      ],
+      "reponse": "Si le capteur détecte une voiture sous la porte, alors ne pas fermer, sinon fermer la porte ; capteur : capteur de présence ; actionneur : moteur."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "instruction et ordre",
+      "enonce": "Deux programmes : (A) « tourne de 90° ; avance de 100 » ; (B) « avance de 100 ; tourne de 90° ». Le lutin part au même endroit, regardant vers la droite. Arrive-t-il au même endroit ? Explique.",
+      "corrige": [
+        "Programme A : il tourne d'abord, donc il avance de 100 dans une autre direction que la droite.",
+        "Programme B : il avance d'abord de 100 vers la droite, puis tourne sur place.",
+        "Les deux points d'arrivée sont différents."
+      ],
+      "reponse": "Non : en changeant l'ordre, le lutin n'avance pas dans la même direction, donc il n'arrive pas au même endroit."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "algorithme",
+      "enonce": "Un feu pour piétons s'allume au vert quand on appuie sur le bouton, puis repasse au rouge. Écris l'algorithme avec une boucle et une condition (durée du vert : 15 s).",
+      "corrige": [
+        "Le feu attend en permanence : boucle « Répéter indéfiniment ».",
+        "Il teste si le bouton est appuyé.",
+        "Si oui : allumer le vert, attendre 15 s, puis repasser au rouge."
+      ],
+      "reponse": "Répéter indéfiniment : [ si le bouton est appuyé, alors allumer le vert ; attendre 15 s ; allumer le rouge ]."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "Scratch, lutin et blocs",
+      "enonce": "Dans Scratch, Noé assemble les blocs « quand le drapeau vert est cliqué », puis « Répéter 4 fois : [ avancer de 100 ; tourner de 90° ] ». Que fait le lutin quand on clique sur le drapeau vert ?",
+      "corrige": [
+        "Le bloc « quand le drapeau vert est cliqué » lance le programme.",
+        "La boucle fait avancer et tourner le lutin 4 fois avec des angles de 90° : il parcourt un carré et revient à son point de départ."
+      ],
+      "reponse": "Il parcourt un carré de 100 pas de côté et revient à son point de départ."
     }
   ]
 }

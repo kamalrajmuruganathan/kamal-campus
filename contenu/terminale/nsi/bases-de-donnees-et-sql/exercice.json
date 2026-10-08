@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "clé primaire et schéma",
       "enonce": "On dispose de la table Eleve(id, nom, prenom, classe). Explique le rôle de l'attribut id comme clé primaire, et dis si deux élèves homonymes (même nom et même prénom) peuvent coexister dans cette table.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "SELECT et WHERE",
       "enonce": "Sur la table Eleve(id, nom, prenom, classe), écris une requête SQL qui affiche le nom et le prénom de tous les élèves de la classe 'TG1'.",
       "corrige": [
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "ORDER BY",
       "enonce": "Toujours sur Eleve(id, nom, prenom, classe), écris une requête qui affiche tous les attributs des élèves, triés par nom dans l'ordre alphabétique croissant.",
       "corrige": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "agrégation GROUP BY",
       "enonce": "On ajoute la table Note(id_eleve, matiere, valeur). Écris une requête qui, pour chaque matière, affiche la moyenne des notes, arrondie ou non, sous forme d'une colonne nommée moyenne.",
       "corrige": [
@@ -64,7 +64,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "jointure (clé étrangère)",
       "enonce": "Note.id_eleve est une clé étrangère qui référence Eleve.id. Écris une requête qui affiche le nom de l'élève et la valeur de chaque note en matière 'NSI'.",
       "corrige": [
@@ -77,9 +77,9 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "jointure + agrégation + HAVING",
-      "enonce": "À partir de Eleve(id, nom, prenom, classe) et Note(id_eleve, matiere, valeur), écris une requête qui affiche le nom des élèves dont la moyenne générale (toutes matières confondues) est strictement supérieure à 12, avec cette moyenne, triée de la meilleure à la moins bonne.",
+      "enonce": "À partir des tables Eleve(id, nom, prenom, classe) et Note(id_eleve, matiere, valeur), écris une requête qui affiche le nom des élèves dont la moyenne générale (toutes matières confondues) est strictement supérieure à 12, avec cette moyenne, triée de la meilleure à la moins bonne.",
       "corrige": [
         "On joint les deux tables : FROM Eleve JOIN Note ON Eleve.id = Note.id_eleve.",
         "On regroupe par élève : GROUP BY Eleve.id, Eleve.nom (on groupe sur la clé, et on peut afficher le nom associé).",
@@ -91,7 +91,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "écrire un SELECT simple",
       "enonce": "La table eleve possède les colonnes id, nom, classe. Écris la requête SQL qui affiche le nom de tous les élèves.",
       "corrige": [
@@ -103,7 +103,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "SELECT avec WHERE et ORDER BY",
       "enonce": "Écris la requête qui affiche le nom et la classe des élèves de la classe 'TG1', triés par nom croissant.",
       "corrige": [
@@ -116,7 +116,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "INSERT puis UPDATE",
       "enonce": "Écris la requête qui ajoute dans eleve l'élève (id 42, nom 'Diallo', classe 'TG1'), puis celle qui change ensuite sa classe en 'TG2'.",
       "corrige": [
@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "jointure et agrégation",
       "enonce": "Deux tables : eleve(id, nom) et emprunt(id_eleve, date_emprunt), où id_eleve est une clé étrangère vers eleve.id. Écris la requête qui donne, pour chaque élève, son nom et son nombre d'emprunts.",
       "corrige": [
@@ -139,6 +139,478 @@
         "Requête : SELECT eleve.nom, COUNT(*) AS nb FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve GROUP BY eleve.id, eleve.nom ;"
       ],
       "reponse": "SELECT eleve.nom, COUNT(*) AS nb FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve GROUP BY eleve.id, eleve.nom ;"
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "modèle relationnel (vocabulaire)",
+      "enonce": "Dans la table `eleve(id, nom, classe)`, que représente une ligne ? Une colonne ? Que désigne le « domaine » de l'attribut id ?",
+      "corrige": [
+        "Une ligne (un enregistrement) représente un élève particulier.",
+        "Une colonne (un attribut) représente une caractéristique commune à tous les élèves : id, nom ou classe.",
+        "Le domaine d'un attribut est l'ensemble des valeurs autorisées : pour id, des entiers."
+      ],
+      "reponse": "Ligne : un élève ; colonne : une caractéristique ; domaine de `id` : les entiers."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "modèle relationnel (vocabulaire)",
+      "enonce": "Que signifie le sigle SGBD ? Cite un avantage d'une base de données gérée par un SGBD par rapport à des fichiers isolés.",
+      "corrige": [
+        "SGBD signifie « système de gestion de base de données ».",
+        "Il permet à plusieurs programmes et utilisateurs de partager les mêmes données.",
+        "Il garantit leur cohérence, par exemple grâce aux contraintes de clés (on ne peut pas référencer un élève qui n'existe pas)."
+      ],
+      "reponse": "Système de gestion de base de données ; avantage : données partagées et cohérentes (contraintes d'intégrité)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "clé primaire et schéma",
+      "enonce": "Pour une table `livre`, quel attribut choisir comme clé primaire : le titre, l'auteur ou un identifiant numérique id ? Justifie.",
+      "corrige": [
+        "Une clé primaire doit être unique et toujours renseignée.",
+        "Deux livres peuvent avoir le même titre ou le même auteur : ces attributs ne garantissent pas l'unicité.",
+        "Un identifiant id attribué à chaque livre est unique par construction : c'est le bon choix."
+      ],
+      "reponse": "L'identifiant id, car titre et auteur peuvent se répéter."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "SELECT et WHERE",
+      "enonce": "On utilise la base de la bibliothèque du lycée : eleve(id, nom, classe), livre(id, titre, auteur, annee) et emprunt(id, id_eleve, id_livre, date_emprunt), où id_eleve et id_livre sont des clés étrangères vers eleve.id et livre.id. Contenu :\n\n```text\neleve\nid | nom    | classe\n1  | Diallo | TG1\n2  | Martin | TG2\n3  | Nguyen | TG1\n4  | Benali | TG2\n5  | Petit  | TG1\n\nlivre\nid | titre          | auteur   | annee\n1  | Germinal       | Zola     | 1885\n2  | Candide        | Voltaire | 1759\n3  | Nana           | Zola     | 1880\n4  | Les Misérables | Hugo     | 1862\n\nemprunt\nid | id_eleve | id_livre | date_emprunt\n1  | 1        | 2        | 2026-09-14\n2  | 3        | 1        | 2026-09-15\n3  | 1        | 4        | 2026-09-20\n4  | 2        | 2        | 2026-09-21\n5  | 1        | 3        | 2026-09-28\n```\n\nÉcris la requête qui affiche le titre des livres écrits par Zola, puis donne le résultat.",
+      "corrige": [
+        "On sélectionne la colonne titre de la table livre.",
+        "On filtre avec `WHERE auteur = 'Zola'` (valeur texte entre apostrophes)."
+      ],
+      "reponse": "`SELECT titre FROM livre WHERE auteur = 'Zola';` → Germinal, Nana."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "SELECT et WHERE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Quel est le résultat de cette requête ?\n\n```sql\nSELECT nom FROM eleve WHERE classe = 'TG2';\n```",
+      "corrige": [
+        "La requête garde les lignes de la table `eleve` dont la classe vaut TG2.",
+        "Ce sont Martin (id 2) et Benali (id 4) ; on n'affiche que leur nom."
+      ],
+      "reponse": "Martin et Benali."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "ORDER BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche le titre et l'année de tous les livres, du plus ancien au plus récent. Donne le premier et le dernier titre obtenus.",
+      "corrige": [
+        "On sélectionne titre et annee dans la table livre.",
+        "On trie par année croissante : `ORDER BY annee` (ASC par défaut).",
+        "Années : Candide 1759, Les Misérables 1862, Nana 1880, Germinal 1885."
+      ],
+      "reponse": "`SELECT titre, annee FROM livre ORDER BY annee;` → premier : Candide (1759), dernier : Germinal (1885)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que renvoie la requête suivante ?\n\n```sql\nSELECT COUNT(*) FROM eleve WHERE classe = 'TG1';\n```",
+      "corrige": [
+        "WHERE garde d'abord les élèves de TG1 : Diallo, Nguyen et Petit.",
+        "`COUNT(*)` compte les lignes restantes."
+      ],
+      "reponse": "3"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "INSERT, UPDATE, DELETE",
+      "enonce": "Écris la requête qui ajoute dans la table `livre(id, titre, auteur, annee)` le livre d'identifiant 5, « Le Rouge et le Noir », de Stendhal, paru en 1830.",
+      "corrige": [
+        "On utilise `INSERT INTO` en précisant les colonnes puis les valeurs dans le même ordre.",
+        "Les textes sont entre apostrophes, les nombres sans apostrophes."
+      ],
+      "reponse": "`INSERT INTO livre (id, titre, auteur, annee) VALUES (5, 'Le Rouge et le Noir', 'Stendhal', 1830);`"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "clé étrangère",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Dans la table emprunt, la ligne d'id 3 a pour id_eleve 1 et id_livre 4. Quel élève a emprunté quel livre ? Quel attribut de quelle table la clé étrangère id_livre référence-t-elle ?",
+      "corrige": [
+        "id_eleve = 1 référence l'élève d'id 1 : Diallo.",
+        "id_livre = 4 référence le livre d'id 4 : Les Misérables.",
+        "id_livre est une clé étrangère qui référence la clé primaire livre.id."
+      ],
+      "reponse": "Diallo a emprunté Les Misérables ; id_livre référence livre.id."
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "SELECT et WHERE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que fait la requête `SELECT * FROM livre;` ? Combien de lignes et de colonnes contient son résultat ? Modifie-t-elle la table ?",
+      "corrige": [
+        "`*` signifie « toutes les colonnes » : la requête affiche toute la table livre.",
+        "Le résultat a 4 lignes (les 4 livres) et 4 colonnes (id, titre, auteur, annee).",
+        "Une requête SELECT lit les données sans jamais les modifier."
+      ],
+      "reponse": "Elle affiche toute la table : 4 lignes et 4 colonnes ; elle ne modifie rien."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "ORDER BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche les noms des élèves dans l'ordre alphabétique inverse (de Z à A). Donne le résultat.",
+      "corrige": [
+        "On trie par nom avec `ORDER BY nom` et on ajoute `DESC` pour l'ordre décroissant.",
+        "Ordre alphabétique : Benali, Diallo, Martin, Nguyen, Petit ; on l'inverse."
+      ],
+      "reponse": "`SELECT nom FROM eleve ORDER BY nom DESC;` → Petit, Nguyen, Martin, Diallo, Benali."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "SELECT et WHERE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche le titre des livres parus entre 1800 et 1882 (bornes comprises). Donne le résultat.",
+      "corrige": [
+        "On combine deux comparaisons avec AND : `annee >= 1800 AND annee <= 1882`.",
+        "Nana (1880) et Les Misérables (1862) conviennent ; Candide (1759) et Germinal (1885) non."
+      ],
+      "reponse": "`SELECT titre FROM livre WHERE annee >= 1800 AND annee <= 1882;` → Nana, Les Misérables."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "SELECT et WHERE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Quel est le résultat de cette requête ?\n\n```sql\nSELECT titre FROM livre\nWHERE auteur = 'Zola' OR annee < 1800\nORDER BY titre DESC;\n```",
+      "corrige": [
+        "On garde les livres de Zola (Germinal, Nana) ou parus avant 1800 (Candide).",
+        "On trie les titres par ordre alphabétique décroissant : Nana, Germinal, Candide."
+      ],
+      "reponse": "Nana, Germinal, Candide."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche, pour chaque classe, le nombre d'élèves (colonne nommée effectif). Donne le résultat.",
+      "corrige": [
+        "On regroupe les lignes par classe avec `GROUP BY classe`.",
+        "Pour chaque groupe, `COUNT(*)` compte les élèves ; `AS effectif` nomme la colonne.",
+        "TG1 : Diallo, Nguyen, Petit ; TG2 : Martin, Benali."
+      ],
+      "reponse": "`SELECT classe, COUNT(*) AS effectif FROM eleve GROUP BY classe;` → TG1 : 3 ; TG2 : 2."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que renvoient ces trois requêtes ?\n\n```sql\nSELECT MIN(annee) FROM livre;\nSELECT MAX(annee) FROM livre WHERE auteur = 'Zola';\nSELECT AVG(annee) FROM livre WHERE auteur = 'Zola';\n```",
+      "corrige": [
+        "`MIN(annee)` donne l'année la plus petite de toute la table : 1759.",
+        "Pour Zola, les années sont 1885 et 1880 : le maximum vaut 1885.",
+        "La moyenne vaut (1885 + 1880) / 2 = 1882,5."
+      ],
+      "reponse": "1759 ; 1885 ; 1882,5."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "jointure (clé étrangère)",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche le nom de l'élève et la date de chaque emprunt. Combien de lignes obtient-on ?",
+      "corrige": [
+        "Le nom est dans eleve, la date dans emprunt : on joint sur `eleve.id = emprunt.id_eleve`.",
+        "Chaque emprunt est relié à exactement un élève : on obtient une ligne par emprunt.",
+        "La table emprunt contient 5 lignes."
+      ],
+      "reponse": "`SELECT eleve.nom, emprunt.date_emprunt FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve;` → 5 lignes."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "jointure (clé étrangère)",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche le titre des livres empruntés par Diallo, triés par titre. Donne le résultat.",
+      "corrige": [
+        "Les titres sont dans livre, le nom dans eleve, et le lien entre les deux dans emprunt : il faut deux jointures.",
+        "`FROM emprunt JOIN eleve ON eleve.id = emprunt.id_eleve JOIN livre ON livre.id = emprunt.id_livre`.",
+        "On filtre avec `WHERE eleve.nom = 'Diallo'` et on trie avec `ORDER BY livre.titre`. Diallo (id 1) a emprunté les livres 2, 4 et 3."
+      ],
+      "reponse": "`SELECT livre.titre FROM emprunt JOIN eleve ON eleve.id = emprunt.id_eleve JOIN livre ON livre.id = emprunt.id_livre WHERE eleve.nom = 'Diallo' ORDER BY livre.titre;` → Candide, Les Misérables, Nana."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "INSERT, UPDATE, DELETE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Martin change de classe et passe en TG1. Écris la requête de mise à jour. Que se passerait-il si on oubliait la clause WHERE ?",
+      "corrige": [
+        "`UPDATE eleve SET classe = 'TG1' WHERE id = 2;` (on cible Martin par sa clé primaire, plus sûr que par son nom).",
+        "Sans WHERE, la modification s'appliquerait à toutes les lignes : les 5 élèves seraient en TG1."
+      ],
+      "reponse": "`UPDATE eleve SET classe = 'TG1' WHERE id = 2;` ; sans WHERE, tous les élèves passeraient en TG1."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "INSERT, UPDATE, DELETE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui supprime tous les emprunts effectués avant le 20 septembre 2026 (les dates sont écrites sous la forme AAAA-MM-JJ). Combien de lignes reste-t-il dans emprunt ?",
+      "corrige": [
+        "Au format AAAA-MM-JJ, l'ordre des chaînes correspond à l'ordre chronologique : on peut comparer directement.",
+        "`DELETE FROM emprunt WHERE date_emprunt < '2026-09-20';` supprime les emprunts du 14 et du 15 septembre.",
+        "Il reste les emprunts des 20, 21 et 28 septembre."
+      ],
+      "reponse": "`DELETE FROM emprunt WHERE date_emprunt < '2026-09-20';` ; il reste 3 lignes."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "clé primaire et schéma",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). On exécute la requête ci-dessous. Pourquoi le SGBD la refuse-t-il ?\n\n```sql\nINSERT INTO eleve (id, nom, classe) VALUES (3, 'Roux', 'TG2');\n```",
+      "corrige": [
+        "`id` est la clé primaire de `eleve` : sa valeur doit être unique.",
+        "Il existe déjà un élève d'id 3 (Nguyen).",
+        "L'insertion violerait l'unicité de la clé primaire : le SGBD la refuse. Il faut choisir un id libre, par exemple 6."
+      ],
+      "reponse": "L'id 3 est déjà utilisé (Nguyen) : la clé primaire doit rester unique."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "clé étrangère",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Pourquoi la requête ci-dessous est-elle refusée par le SGBD ? Quelle contrainte protège-t-elle ?\n\n```sql\nINSERT INTO emprunt (id, id_eleve, id_livre, date_emprunt)\nVALUES (6, 9, 1, '2026-10-01');\n```",
+      "corrige": [
+        "id_eleve est une clé étrangère vers eleve.id.",
+        "Aucun élève n'a l'id 9 : l'emprunt référencerait un élève inexistant.",
+        "C'est la contrainte d'intégrité référentielle, qui garantit la cohérence entre les tables."
+      ],
+      "reponse": "Il n'existe pas d'élève d'id 9 : la contrainte d'intégrité référentielle est violée."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "ORDER BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche le nom et la classe des élèves, triés par classe, puis par nom à l'intérieur de chaque classe. Donne l'ordre des noms obtenu.",
+      "corrige": [
+        "On peut trier sur plusieurs colonnes : `ORDER BY classe, nom` trie d'abord par classe, puis par nom en cas d'égalité.",
+        "TG1 : Diallo, Nguyen, Petit ; TG2 : Benali, Martin."
+      ],
+      "reponse": "`SELECT nom, classe FROM eleve ORDER BY classe, nom;` → Diallo, Nguyen, Petit, Benali, Martin."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que renvoie la requête `SELECT COUNT(*) FROM emprunt WHERE id_eleve = 1;` ? Quelle question de la documentaliste permet-elle de résoudre ?",
+      "corrige": [
+        "WHERE garde les emprunts dont id_eleve vaut 1 : ceux d'id 1, 3 et 5.",
+        "COUNT(*) compte ces lignes : 3.",
+        "Elle répond à la question : « Combien de livres l'élève d'id 1 (Diallo) a-t-il empruntés ? »"
+      ],
+      "reponse": "3 : le nombre d'emprunts de Diallo (id 1)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "jointure (clé étrangère)",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche le nom de l'élève et le titre du livre pour l'emprunt du 21 septembre 2026. Donne le résultat.",
+      "corrige": [
+        "Il faut relier emprunt à eleve (par id_eleve) et à livre (par id_livre) : deux jointures.",
+        "On filtre avec `WHERE emprunt.date_emprunt = '2026-09-21'`.",
+        "Exemple de réponse : `SELECT eleve.nom, livre.titre FROM emprunt JOIN eleve ON eleve.id = emprunt.id_eleve JOIN livre ON livre.id = emprunt.id_livre WHERE emprunt.date_emprunt = '2026-09-21';`"
+      ],
+      "reponse": "Martin, Candide."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "jointure et agrégation",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche, pour chaque livre emprunté au moins une fois, son titre et le nombre de fois où il a été emprunté, du plus emprunté au moins emprunté. Donne la première ligne.",
+      "corrige": [
+        "On joint livre et emprunt sur `livre.id = emprunt.id_livre`.",
+        "On regroupe par livre (`GROUP BY livre.id, livre.titre`) et on compte avec `COUNT(*) AS nb`.",
+        "On trie avec `ORDER BY nb DESC`. Candide (id 2) a été emprunté deux fois (emprunts 1 et 4), les autres une fois."
+      ],
+      "reponse": "`SELECT livre.titre, COUNT(*) AS nb FROM livre JOIN emprunt ON livre.id = emprunt.id_livre GROUP BY livre.id, livre.titre ORDER BY nb DESC;` → première ligne : Candide, 2."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "jointure et agrégation",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que renvoie cette requête ? Pourquoi Benali et Petit n'apparaissent-ils pas ?\n\n```sql\nSELECT eleve.classe, COUNT(*) AS nb\nFROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve\nGROUP BY eleve.classe;\n```",
+      "corrige": [
+        "La jointure associe chaque emprunt à son élève : Diallo (3 emprunts, TG1), Nguyen (1, TG1), Martin (1, TG2).",
+        "Par classe : TG1 compte 3 + 1 = 4 emprunts, TG2 en compte 1.",
+        "Benali et Petit n'ont aucun emprunt : la jointure ne produit aucune ligne pour eux."
+      ],
+      "reponse": "TG1 : 4 ; TG2 : 1. Benali et Petit n'ont rien emprunté, la jointure ne les fait pas apparaître."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "WHERE ou GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Un élève écrit la requête ci-dessous pour compter les élèves de chaque classe, mais n'obtient qu'une seule ligne. Explique et corrige.\n\n```sql\nSELECT COUNT(*) FROM eleve WHERE classe = 'TG1' OR classe = 'TG2';\n```",
+      "corrige": [
+        "WHERE filtre des lignes : ici il garde tous les élèves de TG1 et de TG2, puis COUNT(*) les compte tous ensemble (5).",
+        "Pour obtenir un résultat par classe, il faut regrouper avec GROUP BY et afficher la classe.",
+        "Correction : `SELECT classe, COUNT(*) FROM eleve GROUP BY classe;`"
+      ],
+      "reponse": "Il obtient 5 (total) ; il faut `SELECT classe, COUNT(*) FROM eleve GROUP BY classe;`."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "INSERT, UPDATE, DELETE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). On veut supprimer l'élève Diallo (id 1) de la base. Pourquoi la requête `DELETE FROM eleve WHERE id = 1;` est-elle refusée par le SGBD tant que la contrainte de clé étrangère est active ? Dans quel ordre faut-il procéder ?",
+      "corrige": [
+        "Trois lignes de la table `emprunt` référencent l'élève d'id 1 par leur clé étrangère id_eleve.",
+        "Supprimer Diallo laisserait ces emprunts pointer vers un élève inexistant : l'intégrité référentielle serait violée.",
+        "Il faut d'abord supprimer (ou réattribuer) ses emprunts : `DELETE FROM emprunt WHERE id_eleve = 1;`, puis `DELETE FROM eleve WHERE id = 1;`."
+      ],
+      "reponse": "Des emprunts référencent encore Diallo ; il faut d'abord supprimer ses emprunts, puis l'élève."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "clé primaire et schéma",
+      "enonce": "Un élève propose le schéma `emprunt(nom_eleve TEXTE, classe TEXTE, titre TEXTE, auteur TEXTE, date_emprunt DATE)`, sans table eleve ni livre. Donne deux défauts de ce schéma par rapport à celui de la bibliothèque (eleve, livre, emprunt avec clés étrangères).",
+      "corrige": [
+        "Redondance : le nom et la classe d'un élève sont recopiés à chaque emprunt ; si l'élève change de classe, il faut modifier plusieurs lignes, avec un risque d'incohérence.",
+        "Ambiguïté : deux élèves homonymes ou deux livres de même titre ne peuvent pas être distingués, faute de clé primaire.",
+        "Le schéma en trois tables évite ces problèmes : chaque information est stockée une seule fois et reliée par des clés."
+      ],
+      "reponse": "Données répétées (risque d'incohérence) et pas d'identifiant unique pour distinguer élèves ou livres homonymes."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "jointure (clé étrangère)",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que renvoie cette requête ?\n\n```sql\nSELECT DISTINCT livre.auteur\nFROM livre JOIN emprunt ON livre.id = emprunt.id_livre\nJOIN eleve ON eleve.id = emprunt.id_eleve\nWHERE eleve.classe = 'TG1'\nORDER BY livre.auteur;\n```\n\nLe mot-clé DISTINCT supprime les lignes en double du résultat.",
+      "corrige": [
+        "Les emprunts d'élèves de TG1 sont ceux de Diallo (livres 2, 4, 3) et de Nguyen (livre 1).",
+        "Les auteurs correspondants sont Voltaire, Hugo, Zola et Zola.",
+        "DISTINCT supprime le doublon Zola ; le tri alphabétique donne Hugo, Voltaire, Zola."
+      ],
+      "reponse": "Hugo, Voltaire, Zola."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui affiche, pour chaque auteur, le nombre de livres et l'année du plus ancien. Donne la ligne correspondant à Zola.",
+      "corrige": [
+        "On regroupe les livres par auteur : `GROUP BY auteur`.",
+        "Pour chaque groupe : `COUNT(*)` pour le nombre de livres, `MIN(annee)` pour le plus ancien.",
+        "Zola : Germinal (1885) et Nana (1880)."
+      ],
+      "reponse": "`SELECT auteur, COUNT(*), MIN(annee) FROM livre GROUP BY auteur;` → Zola, 2, 1880."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "SELECT et WHERE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Que renvoie la requête ci-dessous ? Réécris-la sans NOT.\n\n```sql\nSELECT nom FROM eleve WHERE NOT (classe = 'TG1');\n```",
+      "corrige": [
+        "NOT inverse la condition : on garde les élèves qui ne sont pas en TG1.",
+        "Ce sont Martin et Benali.",
+        "Sans NOT : `SELECT nom FROM eleve WHERE classe <> 'TG1';` (l'opérateur <> signifie « différent de »)."
+      ],
+      "reponse": "Martin, Benali ; réécriture : `SELECT nom FROM eleve WHERE classe <> 'TG1';`."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "clé primaire et schéma",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Pourquoi l'attribut id_eleve ne peut-il pas servir de clé primaire de la table emprunt ? Et le couple (id_eleve, id_livre) ?",
+      "corrige": [
+        "Une clé primaire doit être unique. Or un même élève peut emprunter plusieurs livres : id_eleve vaut 1 sur trois lignes (Diallo).",
+        "Le couple (id_eleve, id_livre) est unique dans les données actuelles, mais un élève pourrait emprunter le même livre une seconde fois plus tard : ce couple se répéterait.",
+        "C'est pourquoi on utilise un identifiant propre à chaque emprunt (id)."
+      ],
+      "reponse": "id_eleve se répète (Diallo a 3 emprunts) ; le couple pourrait aussi se répéter si un élève réemprunte un livre ; d'où l'attribut id."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "jointure et agrégation",
+      "enonce": "On utilise la base de la bibliothèque du lycée : eleve(id, nom, classe), livre(id, titre, auteur, annee) et emprunt(id, id_eleve, id_livre, date_emprunt), où id_eleve et id_livre sont des clés étrangères vers eleve.id et livre.id. Contenu :\n\n```text\neleve\nid | nom    | classe\n1  | Diallo | TG1\n2  | Martin | TG2\n3  | Nguyen | TG1\n4  | Benali | TG2\n5  | Petit  | TG1\n\nlivre\nid | titre          | auteur   | annee\n1  | Germinal       | Zola     | 1885\n2  | Candide        | Voltaire | 1759\n3  | Nana           | Zola     | 1880\n4  | Les Misérables | Hugo     | 1862\n\nemprunt\nid | id_eleve | id_livre | date_emprunt\n1  | 1        | 2        | 2026-09-14\n2  | 3        | 1        | 2026-09-15\n3  | 1        | 4        | 2026-09-20\n4  | 2        | 2        | 2026-09-21\n5  | 1        | 3        | 2026-09-28\n```\n\nÉcris la requête qui affiche le nom de chaque élève ayant emprunté au moins un livre et le nombre de ses emprunts, du plus grand nombre au plus petit. Donne le résultat complet.",
+      "corrige": [
+        "On joint eleve et emprunt sur la clé étrangère : `eleve.id = emprunt.id_eleve`.",
+        "On regroupe par élève (`GROUP BY eleve.id, eleve.nom`) et on compte avec `COUNT(*) AS nb`.",
+        "On trie avec `ORDER BY nb DESC`. Diallo a 3 emprunts, Nguyen et Martin 1 chacun (leur ordre relatif n'est pas fixé, car ils sont à égalité)."
+      ],
+      "reponse": "`SELECT eleve.nom, COUNT(*) AS nb FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve GROUP BY eleve.id, eleve.nom ORDER BY nb DESC;` → Diallo 3, puis Nguyen 1 et Martin 1."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "INSERT, UPDATE, DELETE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Nguyen (id 3) emprunte « Candide » (id 2) le 2 octobre 2026. Écris la requête d'insertion (le nouvel emprunt aura l'id 6), puis la requête qui compte combien de fois « Candide » a été emprunté. Quel nombre obtient-on après l'insertion ?",
+      "corrige": [
+        "`INSERT INTO emprunt (id, id_eleve, id_livre, date_emprunt) VALUES (6, 3, 2, '2026-10-02');`",
+        "Pour compter : `SELECT COUNT(*) FROM emprunt WHERE id_livre = 2;` (ou avec une jointure sur le titre).",
+        "Candide avait été emprunté 2 fois (emprunts 1 et 4) ; avec le nouvel emprunt, cela fait 3."
+      ],
+      "reponse": "Insertion `VALUES (6, 3, 2, '2026-10-02')` ; le comptage donne 3."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "clé primaire et schéma",
+      "enonce": "On veut gérer les notes des élèves : chaque note a une valeur, une matière, une date et appartient à un élève. Propose le schéma d'une table note (attributs et types), en indiquant sa clé primaire et sa clé étrangère vers `eleve(id, nom, classe)`.",
+      "corrige": [
+        "Chaque note doit être identifiée de façon unique : on ajoute un identifiant, clé primaire.",
+        "Le lien avec l'élève se fait par un attribut qui référence eleve.id : c'est la clé étrangère.",
+        "Exemple de réponse : `note(id ENTIER, id_eleve ENTIER, matiere TEXTE, valeur DECIMAL, date_note DATE)`, clé primaire id, clé étrangère id_eleve → eleve.id."
+      ],
+      "reponse": "`note(id, id_eleve, matiere, valeur, date_note)` : clé primaire id, clé étrangère id_eleve vers eleve.id."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "jointure (clé étrangère)",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Le CDI veut savoir quels élèves de TG1 n'ont emprunté aucun livre de Zola. Écris une requête qui affiche les noms des élèves de TG1 ayant emprunté au moins un livre de Zola, puis déduis-en la réponse à la question du CDI.",
+      "corrige": [
+        "On joint les trois tables et on filtre sur la classe et l'auteur :",
+        "`SELECT DISTINCT eleve.nom FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve JOIN livre ON livre.id = emprunt.id_livre WHERE eleve.classe = 'TG1' AND livre.auteur = 'Zola';`",
+        "Diallo a emprunté Nana et Nguyen Germinal : la requête renvoie Diallo et Nguyen.",
+        "Les élèves de TG1 sont Diallo, Nguyen et Petit : seul Petit n'a emprunté aucun livre de Zola."
+      ],
+      "reponse": "La requête renvoie Diallo et Nguyen ; l'élève de TG1 sans livre de Zola est Petit."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Écris la requête qui calcule le nombre total d'emprunts du mois de septembre 2026, puis celle qui donne la date du dernier emprunt. Donne les deux résultats.",
+      "corrige": [
+        "Les dates de septembre 2026 sont comprises entre '2026-09-01' et '2026-09-30' (format AAAA-MM-JJ, comparable comme du texte).",
+        "`SELECT COUNT(*) FROM emprunt WHERE date_emprunt >= '2026-09-01' AND date_emprunt <= '2026-09-30';` donne 5.",
+        "`SELECT MAX(date_emprunt) FROM emprunt;` donne '2026-09-28'."
+      ],
+      "reponse": "5 emprunts ; dernier emprunt le 2026-09-28."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "modèle relationnel (vocabulaire)",
+      "enonce": "Un club de sport gère des adhérents, des activités (judo, tennis…) et des inscriptions : un adhérent peut s'inscrire à plusieurs activités et une activité accueille plusieurs adhérents. Propose un schéma relationnel en trois tables, avec clés primaires et clés étrangères, puis écris la requête qui liste les noms des adhérents inscrits au judo.",
+      "corrige": [
+        "Tables : `adherent(id, nom)`, `activite(id, libelle)`, `inscription(id_adherent, id_activite)`.",
+        "Clés primaires : adherent.id et activite.id ; dans inscription, id_adherent et id_activite sont des clés étrangères (le couple peut servir de clé primaire).",
+        "Requête : `SELECT adherent.nom FROM adherent JOIN inscription ON adherent.id = inscription.id_adherent JOIN activite ON activite.id = inscription.id_activite WHERE activite.libelle = 'judo';`"
+      ],
+      "reponse": "adherent(id, nom), activite(id, libelle), inscription(id_adherent, id_activite) ; requête avec deux jointures et `WHERE activite.libelle = 'judo'`."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "INSERT, UPDATE, DELETE",
+      "enonce": "On reprend la base de la bibliothèque (tables eleve, livre et emprunt données plus haut). Un élève exécute par erreur `UPDATE livre SET auteur = 'Hugo';`. Décris l'effet de cette requête, puis écris la requête qui aurait dû être exécutée pour corriger seulement l'auteur du livre d'id 2 en 'Voltaire'.",
+      "corrige": [
+        "Sans WHERE, la requête modifie toutes les lignes de livre : les 4 livres auraient Hugo pour auteur.",
+        "Les informations d'origine sont perdues (il faudrait une sauvegarde pour les retrouver).",
+        "La bonne requête cible une seule ligne par sa clé primaire : `UPDATE livre SET auteur = 'Voltaire' WHERE id = 2;`"
+      ],
+      "reponse": "Les 4 livres prennent l'auteur Hugo ; il fallait `UPDATE livre SET auteur = 'Voltaire' WHERE id = 2;`."
     }
   ]
 }

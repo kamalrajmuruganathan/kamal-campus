@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "fréquence et période",
       "enonce": "Un diapason produit un son pur de période T = 2,5 ms. Calcule sa fréquence f. Ce son est-il audible par l'oreille humaine (20 Hz à 20 000 Hz) ?",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "longueur d'onde",
       "enonce": "Dans l'air, la vitesse du son est v ≈ 340 m·s⁻¹. Calcule la longueur d'onde λ d'un son de fréquence f = 170 Hz.",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "hauteur et intensité",
       "enonce": "On compare deux sons. Le son A a une fréquence de 200 Hz et une grande amplitude ; le son B a une fréquence de 800 Hz et une petite amplitude. Lequel est le plus aigu ? Lequel est le plus fort ? Justifie.",
       "corrige": [
@@ -50,7 +50,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "octave et quinte",
       "enonce": "Un la de référence a une fréquence de 440 Hz. a) Quelle est la fréquence du la à l'octave supérieure ? b) Quelle est la fréquence de la note située une quinte au-dessus (rapport 3/2) ?",
       "corrige": [
@@ -63,7 +63,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "gamme de Pythagore",
       "enonce": "On part d'une note à 300 Hz et on empile deux quintes (rapport 3/2 à chaque fois). a) Quelle fréquence obtient-on ? b) Cette fréquence dépasse l'octave (600 Hz). Ramène-la dans l'octave [300 ; 600[ en divisant par 2.",
       "corrige": [
@@ -75,7 +75,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "numérisation d'un son",
       "enonce": "Un CD audio échantillonne le son à 44 100 échantillons par seconde et code chaque échantillon sur 16 bits (voie mono). a) Combien de niveaux de quantification sont possibles avec 16 bits ? b) Calcule le nombre de bits nécessaires pour 1 seconde de son. c) Convertis ce résultat en kilo-octets (1 octet = 8 bits, 1 ko = 1000 octets).",
       "corrige": [
@@ -88,7 +88,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "fréquence et période",
       "enonce": "Un diapason vibre avec une période T = 0,004 s (soit 4 ms). a) Rappelle la relation entre fréquence et période. b) Calcule sa fréquence. c) Cette note (environ 250 Hz) est-elle grave ou aiguë par rapport à un son de 2000 Hz ?",
       "corrige": [
@@ -100,7 +100,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "longueur d'onde et vitesse du son",
       "enonce": "Le son se propage dans l'air à environ 340 m/s. Un son a une fréquence de 170 Hz. a) Rappelle la relation entre longueur d'onde, vitesse et fréquence. b) Calcule la longueur d'onde. c) Le son se propage-t-il dans le vide ?",
       "corrige": [
@@ -112,7 +112,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "octave et rapport de fréquences",
       "enonce": "Un la a une fréquence de 440 Hz. a) Quel rapport de fréquences correspond à une octave ? b) Quelle est la fréquence du la une octave au-dessus ? et une octave en dessous ? c) Deux notes séparées d'une octave sont-elles perçues comme proches ?",
       "corrige": [
@@ -124,7 +124,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "numérisation d'un son (échantillonnage)",
       "enonce": "On numérise un son en relevant sa valeur 44 100 fois par seconde, chaque valeur étant codée sur 16 bits, en stéréo (2 voies). a) Nomme les deux étapes de la numérisation. b) Combien de bits par seconde pour une voie ? c) Estime la taille (en Mo) d'un extrait de 60 s en stéréo (1 octet = 8 bits).",
       "corrige": [
@@ -133,6 +133,451 @@
         "Deux voies : 705 600 × 2 = 1 411 200 bits/s. Sur 60 s : 1 411 200 × 60 = 84 672 000 bits, soit ÷ 8 = 10 584 000 octets, environ 10,6 Mo (soit à peu près 10 Mo)."
       ],
       "reponse": "Échantillonnage + quantification ; 705 600 bits/s par voie ; environ 10,6 Mo pour 60 s en stéréo (non compressé)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "propagation du son",
+      "enonce": "Vrai ou faux ? « Dans l'espace, on entendrait le bruit d'une explosion lointaine. » Justifie.",
+      "corrige": [
+        "Un son est une vibration qui se propage de proche en proche dans un milieu matériel.",
+        "L'espace est quasiment vide : le son ne peut pas s'y propager."
+      ],
+      "reponse": "Faux : le son ne se propage pas dans le vide."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "propagation du son",
+      "enonce": "Cite trois milieux dans lesquels le son peut se propager.",
+      "corrige": [
+        "Le son a besoin d'un milieu matériel dont il fait vibrer les particules.",
+        "Exemples : l'air, l'eau, un solide (bois, métal…)."
+      ],
+      "reponse": "Par exemple l'air, l'eau et un solide comme le métal."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "hauteur et intensité",
+      "enonce": "Complète : « Un son est d'autant plus aigu que sa … est grande ; il est d'autant plus fort que l'… de la vibration est grande. »",
+      "corrige": [
+        "La hauteur (grave ou aigu) dépend de la fréquence.",
+        "L'intensité (faible ou fort) dépend de l'amplitude."
+      ],
+      "reponse": "fréquence ; amplitude."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "fréquence et période",
+      "enonce": "Quelle est l'unité de la fréquence ? Que signifie « un son de 500 Hz » ?",
+      "corrige": [
+        "La fréquence s'exprime en hertz (Hz).",
+        "500 Hz signifie que la source effectue 500 vibrations par seconde."
+      ],
+      "reponse": "Le hertz ; 500 vibrations par seconde."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "hauteur et intensité",
+      "enonce": "Entre quelles fréquences l'oreille humaine perçoit-elle les sons ? Un son de 30 000 Hz est-il audible par l'être humain ?",
+      "corrige": [
+        "L'oreille humaine perçoit environ de 20 Hz à 20 000 Hz.",
+        "30 000 Hz dépasse 20 000 Hz : ce son n'est pas audible pour nous."
+      ],
+      "reponse": "De 20 Hz à 20 000 Hz environ ; 30 000 Hz n'est pas audible."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "numérisation d'un son",
+      "enonce": "Nomme les deux étapes de la numérisation d'un son et dis en une phrase ce que fait chacune.",
+      "corrige": [
+        "L'échantillonnage : on mesure la valeur du signal à intervalles de temps réguliers.",
+        "La quantification : chaque valeur mesurée est arrondie et codée en binaire."
+      ],
+      "reponse": "Échantillonnage (mesures régulières) puis quantification (valeurs arrondies codées en binaire)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "fréquence et période",
+      "enonce": "Calcule la fréquence d'un son dont la période vaut 5,0 ms.",
+      "corrige": [
+        "On convertit : 5,0 ms = 5,0 × 10⁻³ s.",
+        "f = 1 / T = 1 / 0,005 = 200 Hz."
+      ],
+      "reponse": "200 Hz."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "fréquence et période",
+      "enonce": "Calcule la période d'un son de fréquence 1 000 Hz, en millisecondes.",
+      "corrige": [
+        "T = 1 / f = 1 / 1 000 = 0,001 s.",
+        "0,001 s = 1 ms."
+      ],
+      "reponse": "1 ms."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "fréquence et période",
+      "enonce": "Sur l'écran d'un oscilloscope, on compte 4 motifs complets d'un son pur en 10 ms. Calcule la période puis la fréquence.",
+      "corrige": [
+        "Un motif dure 10 / 4 = 2,5 ms, donc T = 2,5 × 10⁻³ s.",
+        "f = 1 / T = 1 / 0,0025 = 400 Hz."
+      ],
+      "reponse": "T = 2,5 ms ; f = 400 Hz."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "longueur d'onde",
+      "enonce": "Calcule la longueur d'onde dans l'air d'un son de 680 Hz (v = 340 m·s⁻¹).",
+      "corrige": [
+        "λ = v / f = 340 / 680.",
+        "λ = 0,50 m."
+      ],
+      "reponse": "0,50 m."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "longueur d'onde",
+      "enonce": "Calcule les longueurs d'onde dans l'air du son le plus grave (20 Hz) et du son le plus aigu (20 000 Hz) audibles par l'être humain.",
+      "corrige": [
+        "Pour 20 Hz : λ = 340 / 20 = 17 m.",
+        "Pour 20 000 Hz : λ = 340 / 20 000 = 0,017 m = 1,7 cm."
+      ],
+      "reponse": "17 m et 1,7 cm."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "hauteur et intensité",
+      "enonce": "Un musicien joue la même note au piano, d'abord doucement puis très fort. Qu'est-ce qui change dans le signal sonore, et qu'est-ce qui reste identique ?",
+      "corrige": [
+        "Jouer plus fort augmente l'amplitude des vibrations : l'intensité augmente.",
+        "La note est la même : la fréquence (et donc la hauteur) ne change pas."
+      ],
+      "reponse": "L'amplitude augmente ; la fréquence reste la même."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "timbre et harmoniques",
+      "enonce": "Une flûte et un violon jouent la même note, avec la même intensité. Pourquoi les distingue-t-on à l'oreille ?",
+      "corrige": [
+        "Les deux sons ont la même fréquence fondamentale (même hauteur).",
+        "Ils diffèrent par leurs harmoniques, fréquences multiples de la fondamentale, présentes avec des importances différentes : c'est le timbre."
+      ],
+      "reponse": "Par leur timbre, dû à des harmoniques différentes."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "timbre et harmoniques",
+      "enonce": "La fréquence fondamentale d'une note vaut 220 Hz. Calcule les fréquences des trois harmoniques suivantes.",
+      "corrige": [
+        "Les harmoniques ont des fréquences multiples de la fondamentale : 2 × 220, 3 × 220, 4 × 220.",
+        "On obtient 440 Hz, 660 Hz et 880 Hz."
+      ],
+      "reponse": "440 Hz, 660 Hz et 880 Hz."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "octave et quinte",
+      "enonce": "Un do a une fréquence de 262 Hz. Quelle est la fréquence du do à l'octave supérieure ? À l'octave inférieure ?",
+      "corrige": [
+        "Monter d'une octave multiplie la fréquence par 2 : 262 × 2 = 524 Hz.",
+        "Descendre d'une octave divise la fréquence par 2 : 262 / 2 = 131 Hz."
+      ],
+      "reponse": "524 Hz et 131 Hz."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "octave et quinte",
+      "enonce": "Une note a pour fréquence 200 Hz. Quelle est la fréquence de la note située une quinte au-dessus ?",
+      "corrige": [
+        "Une quinte correspond à un rapport de fréquences de 3/2.",
+        "200 × 3/2 = 300 Hz."
+      ],
+      "reponse": "300 Hz."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "quantification en binaire",
+      "enonce": "Combien de niveaux de quantification permettent 8 bits ? Et 3 bits ?",
+      "corrige": [
+        "Avec n bits, on dispose de 2ⁿ niveaux.",
+        "2⁸ = 256 niveaux ; 2³ = 8 niveaux."
+      ],
+      "reponse": "256 niveaux et 8 niveaux."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "numérisation d'un son",
+      "enonce": "Un CD utilise une fréquence d'échantillonnage de 44,1 kHz. Combien de mesures du signal sont faites en 1 seconde ? En 1 minute ?",
+      "corrige": [
+        "44,1 kHz = 44 100 mesures par seconde.",
+        "En 60 s : 44 100 × 60 = 2 646 000 mesures."
+      ],
+      "reponse": "44 100 mesures par seconde ; 2 646 000 en une minute."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "octave et quinte",
+      "enonce": "Corrige l'erreur : « Le la vaut 440 Hz ; une octave plus haut, on ajoute 440 Hz, donc deux octaves plus haut il est à 1 320 Hz. »",
+      "corrige": [
+        "Une octave multiplie la fréquence par 2 : ce n'est pas une différence fixe mais un rapport.",
+        "Une octave au-dessus : 880 Hz ; deux octaves au-dessus : 880 × 2 = 1 760 Hz."
+      ],
+      "reponse": "Deux octaves au-dessus : 440 × 4 = 1 760 Hz (et non 1 320 Hz)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "octave et quinte",
+      "enonce": "Deux notes ont pour fréquences 330 Hz et 495 Hz. Calcule le rapport de leurs fréquences. Quel intervalle forment-elles ?",
+      "corrige": [
+        "495 / 330 = 1,5.",
+        "1,5 = 3/2 : c'est le rapport d'une quinte."
+      ],
+      "reponse": "Rapport 3/2 : une quinte."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "octave et quinte",
+      "enonce": "Deux notes ont pour fréquences 294 Hz et 588 Hz. Quel intervalle forment-elles ? Pourquoi sonnent-elles bien ensemble ?",
+      "corrige": [
+        "588 / 294 = 2 : c'est une octave.",
+        "Leur rapport de fréquences est très simple (2), ce qui les rend consonantes."
+      ],
+      "reponse": "Une octave ; leur rapport de fréquences est simple (2)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "gamme de Pythagore",
+      "enonce": "On part d'un do à 256 Hz et on monte d'une quinte, puis d'une autre quinte. Calcule les deux fréquences obtenues, puis ramène la seconde dans l'octave [256 Hz ; 512 Hz[.",
+      "corrige": [
+        "Première quinte : 256 × 3/2 = 384 Hz (le sol), déjà dans l'octave.",
+        "Deuxième quinte : 384 × 3/2 = 576 Hz, qui dépasse 512 Hz.",
+        "On divise par 2 : 576 / 2 = 288 Hz (le ré)."
+      ],
+      "reponse": "384 Hz puis 576 Hz, ramenée à 288 Hz."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "gamme de Pythagore",
+      "enonce": "En continuant la construction précédente (do 256 Hz, sol 384 Hz, ré 288 Hz), calcule les deux notes suivantes de la gamme de Pythagore, ramenées dans l'octave [256 Hz ; 512 Hz[.",
+      "corrige": [
+        "Quinte au-dessus de 288 Hz : 288 × 3/2 = 432 Hz (le la), dans l'octave.",
+        "Quinte au-dessus de 432 Hz : 432 × 3/2 = 648 Hz, trop haut ; divisé par 2 : 324 Hz (le mi)."
+      ],
+      "reponse": "432 Hz puis 324 Hz."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "gamme de Pythagore",
+      "enonce": "Explique en deux phrases comment est construite la gamme de Pythagore.",
+      "corrige": [
+        "On empile des quintes : on multiplie successivement la fréquence par 3/2.",
+        "Chaque fois qu'une note sort de l'octave de départ, on la ramène dedans en divisant (ou en multipliant) sa fréquence par 2."
+      ],
+      "reponse": "On empile des quintes (×3/2) et on ramène les notes dans une même octave (÷2 ou ×2)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "longueur d'onde",
+      "enonce": "Dans l'eau, le son se propage à environ 1 500 m·s⁻¹. Calcule la longueur d'onde d'un son de 1 500 Hz dans l'eau, puis dans l'air (340 m·s⁻¹).",
+      "corrige": [
+        "Dans l'eau : λ = 1 500 / 1 500 = 1,0 m.",
+        "Dans l'air : λ = 340 / 1 500 ≈ 0,23 m."
+      ],
+      "reponse": "1,0 m dans l'eau ; environ 0,23 m dans l'air."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "longueur d'onde",
+      "enonce": "Un son a une longueur d'onde de 0,85 m dans l'air. Calcule sa fréquence.",
+      "corrige": [
+        "De λ = v / f, on tire f = v / λ.",
+        "f = 340 / 0,85 = 400 Hz."
+      ],
+      "reponse": "400 Hz."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "propagation du son",
+      "enonce": "Un randonneur crie face à une falaise et entend l'écho 2,0 s plus tard. Le son a fait l'aller-retour à 340 m·s⁻¹. À quelle distance est la falaise ?",
+      "corrige": [
+        "Distance parcourue par le son : 340 × 2,0 = 680 m (aller et retour).",
+        "La falaise est à la moitié : 680 / 2 = 340 m."
+      ],
+      "reponse": "340 m."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "hauteur et intensité",
+      "enonce": "Lis cette affirmation : « Un son grave est forcément un son faible. » Est-elle juste ? Donne un contre-exemple.",
+      "corrige": [
+        "La hauteur dépend de la fréquence, l'intensité de l'amplitude : ce sont deux grandeurs indépendantes.",
+        "Exemple de contre-exemple : une grosse caisse frappée fort produit un son à la fois grave et fort."
+      ],
+      "reponse": "Non : hauteur et intensité sont indépendantes (exemple : une grosse caisse, grave et forte)."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "timbre et harmoniques",
+      "enonce": "Un son contient des composantes à 300 Hz, 600 Hz, 900 Hz et 1 200 Hz. Quelle est sa fréquence fondamentale ? Quelle hauteur perçoit-on ?",
+      "corrige": [
+        "Les fréquences sont toutes des multiples de 300 Hz (1, 2, 3 et 4 fois 300).",
+        "La fondamentale est 300 Hz : c'est elle qui donne la hauteur perçue."
+      ],
+      "reponse": "Fondamentale 300 Hz : on perçoit la hauteur d'un son de 300 Hz."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "quantification en binaire",
+      "enonce": "Un CD code chaque échantillon sur 16 bits. Vérifie par le calcul qu'on obtient 65 536 niveaux.",
+      "corrige": [
+        "Avec n bits, on a 2ⁿ niveaux.",
+        "2¹⁶ = 2⁸ × 2⁸ = 256 × 256 = 65 536."
+      ],
+      "reponse": "2¹⁶ = 65 536 niveaux."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "quantification en binaire",
+      "enonce": "Un enregistreur code les échantillons sur 24 bits. Combien de fois plus de niveaux qu'un CD (16 bits) cela donne-t-il ?",
+      "corrige": [
+        "Le rapport vaut 2²⁴ / 2¹⁶ = 2⁸.",
+        "2⁸ = 256 : il y a 256 fois plus de niveaux."
+      ],
+      "reponse": "256 fois plus."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "numérisation d'un son",
+      "enonce": "Quelle durée sépare deux mesures successives lors d'un échantillonnage à 44 100 Hz ? Donne le résultat en microsecondes.",
+      "corrige": [
+        "La durée entre deux échantillons vaut 1 / 44 100 s.",
+        "1 / 44 100 ≈ 2,27 × 10⁻⁵ s, soit environ 22,7 µs."
+      ],
+      "reponse": "Environ 22,7 µs."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "numérisation d'un son",
+      "enonce": "Vrai ou faux ? « Avec une fréquence d'échantillonnage assez élevée, le son numérique devient strictement identique au son analogique. » Justifie.",
+      "corrige": [
+        "Une fréquence d'échantillonnage plus élevée améliore la fidélité.",
+        "Mais le signal reste mesuré à des instants séparés et arrondi à des niveaux : il n'est jamais strictement identique au signal continu."
+      ],
+      "reponse": "Faux : la fidélité s'améliore, mais le signal numérique reste une approximation."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "numérisation d'un son",
+      "enonce": "Calcule la taille, en mégaoctets, d'un enregistrement de 3 minutes au format CD (44 100 échantillons par seconde, 16 bits, stéréo). On prend 1 Mo = 10⁶ octets.",
+      "corrige": [
+        "Bits par seconde : 44 100 × 16 × 2 = 1 411 200 bits/s.",
+        "Pour 180 s : 1 411 200 × 180 = 254 016 000 bits.",
+        "En octets : 254 016 000 / 8 = 31 752 000 octets, soit environ 31,8 Mo."
+      ],
+      "reponse": "Environ 31,8 Mo."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "numérisation d'un son",
+      "enonce": "Un studio enregistre à 48 000 échantillons par seconde sur 24 bits, en mono. Calcule le débit en bits par seconde, puis compare ce débit à celui d'une voie de CD (705 600 bits/s).",
+      "corrige": [
+        "Débit : 48 000 × 24 = 1 152 000 bits/s.",
+        "Rapport : 1 152 000 / 705 600 ≈ 1,6 : le débit est environ 1,6 fois plus élevé."
+      ],
+      "reponse": "1 152 000 bits/s, environ 1,6 fois le débit d'une voie de CD."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "numérisation d'un son",
+      "enonce": "Pourquoi, malgré la petite perte d'information qu'elle entraîne, la numérisation est-elle si utilisée pour la musique ?",
+      "corrige": [
+        "Une fois numérisé, le son est une suite de nombres.",
+        "On peut alors le stocker, le copier et le transmettre sans dégradation supplémentaire, contrairement à un signal analogique qui s'abîme à chaque copie."
+      ],
+      "reponse": "Le son numérique se stocke, se copie et se transmet sans dégradation supplémentaire."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "gamme de Pythagore",
+      "enonce": "Une note à 400 Hz : calcule la fréquence de la note obtenue en montant de deux quintes, puis en redescendant d'une octave. Vérifie que le résultat est compris entre 400 Hz et 800 Hz.",
+      "corrige": [
+        "Deux quintes : 400 × 3/2 × 3/2 = 400 × 9/4 = 900 Hz.",
+        "Une octave plus bas : 900 / 2 = 450 Hz.",
+        "450 Hz est bien entre 400 Hz et 800 Hz."
+      ],
+      "reponse": "900 Hz puis 450 Hz, compris dans l'octave."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "fréquence et période",
+      "enonce": "Une corde de guitare émet un la à 110 Hz. Combien de vibrations effectue-t-elle en 0,5 s ? Quelle est sa période en millisecondes (au dixième près) ?",
+      "corrige": [
+        "Nombre de vibrations : 110 × 0,5 = 55.",
+        "T = 1 / 110 ≈ 0,00909 s ≈ 9,1 ms."
+      ],
+      "reponse": "55 vibrations ; T ≈ 9,1 ms."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "octave et quinte",
+      "enonce": "Synthèse : en quoi peut-on dire que « la musique met en jeu des rapports de nombres entiers » ? Appuie-toi sur deux intervalles du cours.",
+      "corrige": [
+        "Les notes qui sonnent bien ensemble ont des fréquences dans un rapport simple.",
+        "L'octave correspond au rapport 2 (2/1) et la quinte au rapport 3/2 : ce sont des rapports de petits nombres entiers.",
+        "La gamme de Pythagore est construite uniquement à partir de ces rapports."
+      ],
+      "reponse": "Les intervalles consonants sont des rapports simples : octave = 2, quinte = 3/2 (base de la gamme de Pythagore)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "longueur d'onde",
+      "enonce": "Un haut-parleur émet un son de 1 700 Hz. a) Calcule sa période et sa longueur d'onde dans l'air. b) Ce son est-il audible ? Est-il plus aigu qu'un son de 440 Hz ?",
+      "corrige": [
+        "a) T = 1 / 1 700 ≈ 5,9 × 10⁻⁴ s ; λ = 340 / 1 700 = 0,20 m.",
+        "b) 1 700 Hz est entre 20 Hz et 20 000 Hz : il est audible.",
+        "Sa fréquence est plus grande que 440 Hz : il est plus aigu."
+      ],
+      "reponse": "a) T ≈ 0,59 ms ; λ = 0,20 m. b) Audible, et plus aigu qu'un son de 440 Hz."
     }
   ]
 }

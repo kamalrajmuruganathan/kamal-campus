@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese-oeil-correction",
       "enonce": "Lina, 16 ans, passe un bilan visuel. On modélise son œil par une seule lentille convergente (l'ensemble cornée + cristallin) qui forme l'image sur la rétine. Pour voir net un objet éloigné, la vergence de l'ensemble œil + verre éventuel doit valoir $V_0 = 60\\ \\delta$. Au repos (vision de loin), l'œil de Lina a une vergence $V_{\\text{œil}} = 61{,}25\\ \\delta$. Elle se plaint de voir flou de loin, mais lit sans peine de près. On modélise l'œil corrigé par le verre correcteur accolé à l'œil (leurs vergences s'ajoutent). 1. Décrire le trajet de la lumière dans l'œil, de l'entrée jusqu'au fond, et préciser où se forme l'image nette. 2. L'image formée sur la rétine est-elle réelle ou virtuelle ? droite ou renversée ? Justifier. 3. Lina voit flou de loin : nommer son défaut de vision et expliquer, en comparant $V_{\\text{œil}}$ à $V_0$, pourquoi l'image d'un objet éloigné ne se forme pas sur la rétine. 4. Calculer la vergence $V_{\\text{verre}}$ du verre qui, accolé à l'œil, ramène la vergence totale à $V_0 = 60\\ \\delta$. En déduire la nature du verre. 5. Calculer la distance focale $f'$ de ce verre (en m puis en cm). 6. Sans lunettes, Lina lit pourtant net de près : expliquer par quel mécanisme son œil y parvient, et pourquoi ce mécanisme deviendra insuffisant avec l'âge.",
       "corrige": [
@@ -140,6 +140,461 @@
         "6. Pour voir net de près, le cristallin de Lina se bombe : sa vergence augmente, ce qui ramène l'image sur la rétine malgré la proximité de l'objet. C'est l'accommodation. Avec l'âge, le cristallin perd sa souplesse et accommode de moins en moins (presbytie) : la vision de près deviendra difficile et demandera à son tour une correction par un verre convergent."
       ],
       "reponse": "1. cornée → pupille → cristallin → image sur la rétine. 2. Image réelle et renversée. 3. Myopie : $V_{\\text{œil}} = 61{,}25\\ \\delta > 60\\ \\delta$, œil trop convergent, image avant la rétine. 4. $V_{\\text{verre}} = -1{,}25\\ \\delta$, verre divergent. 5. $f' = -0{,}80\\ \\text{m} = -80\\ \\text{cm}$. 6. Vision de près nette grâce à l'accommodation (cristallin qui se bombe), qui diminuera avec l'âge (presbytie)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "propagation-vision",
+      "enonce": "Remettre dans l'ordre de traversée par la lumière les éléments suivants de l'œil : rétine, cristallin, cornée, pupille.",
+      "corrige": [
+        "La lumière entre d'abord par la cornée, passe par la pupille (l'ouverture de l'iris), traverse le cristallin, puis atteint la rétine au fond de l'œil."
+      ],
+      "reponse": "Cornée → pupille → cristallin → rétine."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "propagation-vision",
+      "enonce": "Une feuille de papier n'émet pas de lumière. Pourquoi peut-on pourtant la voir dans une pièce éclairée ?",
+      "corrige": [
+        "Un objet est visible si de la lumière partant de lui entre dans l'œil.",
+        "La feuille éclairée **diffuse** dans toutes les directions la lumière qu'elle reçoit : une partie de cette lumière entre dans l'œil."
+      ],
+      "reponse": "Elle diffuse la lumière qu'elle reçoit, et une partie de cette lumière entre dans l'œil."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "types-lentilles",
+      "enonce": "Une lentille a des bords épais et un centre mince. Est-elle convergente ou divergente ? Que fait-elle à un faisceau de rayons parallèles ?",
+      "corrige": [
+        "Une lentille plus fine au centre qu'aux bords est **divergente**.",
+        "Elle fait s'écarter les rayons d'un faisceau parallèle."
+      ],
+      "reponse": "Divergente : elle écarte les rayons."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "propagation-vision",
+      "enonce": "Le soir, la lumière d'une chambre de patient est baissée. Comment réagit la pupille de ses yeux ? À quel élément d'un appareil photo peut-on la comparer ?",
+      "corrige": [
+        "La pupille se ferme à la lumière vive et s'ouvre dans la pénombre, pour régler la quantité de lumière qui entre dans l'œil.",
+        "Elle joue le rôle du **diaphragme**."
+      ],
+      "reponse": "Elle s'ouvre (se dilate) ; elle joue le rôle d'un diaphragme."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "types-lentilles",
+      "enonce": "Classer en lentilles convergentes et divergentes : une loupe, le cristallin, un verre correcteur de myopie, un verre « pour lire » de presbyte.",
+      "corrige": [
+        "La loupe et le cristallin rassemblent la lumière : ils sont convergents.",
+        "La myopie se corrige avec un verre divergent ; la presbytie avec un verre convergent."
+      ],
+      "reponse": "Convergentes : loupe, cristallin, verre de presbyte. Divergente : verre de myope."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "distance-focale-vergence",
+      "enonce": "Une lentille convergente a une distance focale $f' = 50$ cm. Calculer sa vergence.",
+      "corrige": [
+        "On convertit en mètres : $f' = 0{,}50$ m.",
+        "$V = \\dfrac{1}{f'} = \\dfrac{1}{0{,}50} = 2{,}0\\ \\delta$."
+      ],
+      "reponse": "$V = 2{,}0\\ \\delta$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "distance-focale-vergence",
+      "enonce": "Un verre correcteur a une vergence $V = +4{,}0\\ \\delta$. Calculer sa distance focale en mètres puis en centimètres. Quelle est sa nature ?",
+      "corrige": [
+        "$f' = \\dfrac{1}{V} = \\dfrac{1}{4{,}0} = 0{,}25$ m, soit $25$ cm.",
+        "$V > 0$ : le verre est convergent."
+      ],
+      "reponse": "$f' = 0{,}25$ m $= 25$ cm ; verre convergent."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "distance-focale-vergence",
+      "enonce": "Une lentille a une distance focale $f' = -12{,}5$ cm. Calculer sa vergence et donner sa nature.",
+      "corrige": [
+        "$f' = -12{,}5$ cm $= -0{,}125$ m.",
+        "$V = \\dfrac{1}{-0{,}125} = -8\\ \\delta$ : la vergence est négative, la lentille est divergente."
+      ],
+      "reponse": "$V = -8\\ \\delta$ ; lentille divergente."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "types-lentilles",
+      "enonce": "Compléter, pour une lentille convergente : a) un rayon qui passe par le centre optique O… ; b) un rayon qui arrive parallèle à l'axe optique… ; c) un rayon qui passe par le foyer objet F…",
+      "corrige": [
+        "Ce sont les trois rayons utiles pour construire une image.",
+        "a) n'est pas dévié ; b) ressort en passant par le foyer image F' ; c) ressort parallèle à l'axe optique."
+      ],
+      "reponse": "a) n'est pas dévié ; b) passe par F' ; c) ressort parallèle à l'axe."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "propagation-vision",
+      "enonce": "La rétine porte deux sortes de photorécepteurs. Lesquels permettent de distinguer les couleurs ? Lesquels servent surtout à voir en faible lumière ? Quel organe interprète finalement l'image ?",
+      "corrige": [
+        "Les **cônes** permettent la vision des couleurs ; les **bâtonnets** servent à la vision en faible lumière.",
+        "Le signal nerveux est transmis par le nerf optique au **cerveau**, qui interprète l'image."
+      ],
+      "reponse": "Cônes : couleurs ; bâtonnets : faible lumière ; le cerveau interprète l'image."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "distance-focale-vergence",
+      "enonce": "Un élève écrit : « $f' = 25$ cm, donc $V = \\dfrac{1}{25} = 0{,}04\\ \\delta$. » Trouver l'erreur et corriger.",
+      "corrige": [
+        "Dans $V = \\dfrac{1}{f'}$, la distance focale doit être en **mètres** pour obtenir des dioptries.",
+        "$f' = 0{,}25$ m, donc $V = \\dfrac{1}{0{,}25} = 4{,}0\\ \\delta$."
+      ],
+      "reponse": "Il fallait convertir $f'$ en mètres : $V = 4{,}0\\ \\delta$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "distance-focale-vergence",
+      "enonce": "On dispose de deux loupes : $L_1$ de vergence $5{,}0\\ \\delta$ et $L_2$ de vergence $10\\ \\delta$. 1) Calculer leurs distances focales. 2) Laquelle fait converger la lumière le plus fortement ?",
+      "corrige": [
+        "$f'_1 = \\dfrac{1}{5{,}0} = 0{,}20$ m $= 20$ cm et $f'_2 = \\dfrac{1}{10} = 0{,}10$ m $= 10$ cm.",
+        "Plus la vergence est grande (et la distance focale courte), plus la lentille fait converger : c'est $L_2$."
+      ],
+      "reponse": "$f'_1 = 20$ cm, $f'_2 = 10$ cm ; $L_2$ est la plus convergente."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "lentilles-accolees",
+      "enonce": "On accole deux lentilles convergentes de vergences $V_1 = +3{,}0\\ \\delta$ et $V_2 = +2{,}0\\ \\delta$. Calculer la vergence de l'ensemble puis sa distance focale.",
+      "corrige": [
+        "Les vergences s'ajoutent : $V = 3{,}0 + 2{,}0 = 5{,}0\\ \\delta$.",
+        "$f' = \\dfrac{1}{5{,}0} = 0{,}20$ m $= 20$ cm."
+      ],
+      "reponse": "$V = 5{,}0\\ \\delta$ ; $f' = 20$ cm."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "lentilles-accolees",
+      "enonce": "On accole une lentille de distance focale $f'_1 = 20$ cm et une lentille de distance focale $f'_2 = -50$ cm. Un élève annonce une distance focale totale de $20 + (-50) = -30$ cm. 1) Expliquer son erreur. 2) Calculer la vraie distance focale de l'ensemble.",
+      "corrige": [
+        "Ce sont les **vergences** qui s'additionnent, jamais les distances focales.",
+        "$V_1 = \\dfrac{1}{0{,}20} = 5{,}0\\ \\delta$ et $V_2 = \\dfrac{1}{-0{,}50} = -2{,}0\\ \\delta$, donc $V = 3{,}0\\ \\delta$.",
+        "$f' = \\dfrac{1}{3{,}0} \\approx 0{,}33$ m, soit environ $33$ cm : l'ensemble est convergent."
+      ],
+      "reponse": "On additionne les vergences : $V = 3{,}0\\ \\delta$, $f' \\approx 33$ cm (convergent)."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "lentilles-accolees",
+      "enonce": "On accole deux lentilles identiques de vergence $-4{,}0\\ \\delta$ chacune. Donner la vergence, la distance focale et la nature de l'ensemble.",
+      "corrige": [
+        "$V = -4{,}0 + (-4{,}0) = -8{,}0\\ \\delta$.",
+        "$f' = \\dfrac{1}{-8{,}0} = -0{,}125$ m $= -12{,}5$ cm. La vergence est négative : l'ensemble est divergent."
+      ],
+      "reponse": "$V = -8{,}0\\ \\delta$, $f' = -12{,}5$ cm, divergent."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "lentilles-accolees",
+      "enonce": "Quelle lentille faut-il accoler à une lentille de vergence $+2{,}5\\ \\delta$ pour que l'ensemble ne dévie plus du tout les rayons (vergence totale nulle) ?",
+      "corrige": [
+        "On veut $V_1 + V_2 = 0$, donc $V_2 = -V_1 = -2{,}5\\ \\delta$.",
+        "Il faut donc une lentille **divergente** de vergence $-2{,}5\\ \\delta$ (distance focale $-0{,}40$ m) : les deux effets se compensent."
+      ],
+      "reponse": "Une lentille divergente de $-2{,}5\\ \\delta$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "grandissement",
+      "enonce": "Une lentille donne d'un objet une image de grandissement $\\gamma = -0{,}50$. Décrire l'image : sens, taille, nature.",
+      "corrige": [
+        "$\\gamma < 0$ : l'image est renversée, donc réelle.",
+        "$|\\gamma| = 0{,}50 < 1$ : l'image est réduite, deux fois plus petite que l'objet."
+      ],
+      "reponse": "Image réelle, renversée, deux fois plus petite."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "grandissement",
+      "enonce": "Un objet de $2{,}0$ cm donne, à travers une lentille, une image de grandissement $\\gamma = +2{,}5$. Calculer la taille de l'image et préciser si elle est droite ou renversée, réelle ou virtuelle.",
+      "corrige": [
+        "$\\overline{A'B'} = \\gamma \\times \\overline{AB} = 2{,}5 \\times 2{,}0 = 5{,}0$ cm.",
+        "$\\gamma > 0$ : l'image est droite, donc virtuelle."
+      ],
+      "reponse": "$A'B' = 5{,}0$ cm ; image droite et virtuelle."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "grandissement",
+      "enonce": "Un arbre de $5{,}0$ m de haut donne sur la rétine d'un observateur une image renversée de $1{,}0$ mm. Calculer le grandissement (attention aux unités).",
+      "corrige": [
+        "On exprime les deux longueurs dans la même unité : $1{,}0$ mm $= 1{,}0 \\times 10^{-3}$ m ; l'image étant renversée, $\\overline{A'B'} = -1{,}0 \\times 10^{-3}$ m.",
+        "$\\gamma = \\dfrac{-1{,}0 \\times 10^{-3}}{5{,}0} = -2{,}0 \\times 10^{-4}$ : image renversée et beaucoup plus petite que l'objet."
+      ],
+      "reponse": "$\\gamma = -2{,}0 \\times 10^{-4}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "image-reelle-virtuelle",
+      "enonce": "Vrai ou faux ? a) Une image virtuelle peut être recueillie sur un écran. b) Une lentille divergente donne toujours une image virtuelle. c) Une image réelle donnée par une lentille est renversée.",
+      "corrige": [
+        "a) Faux : une image virtuelle se forme à l'intersection des prolongements des rayons ; on la voit à travers la lentille mais on ne peut pas la poser sur un écran.",
+        "b) Vrai : l'image donnée par une lentille divergente est toujours virtuelle, droite et plus petite.",
+        "c) Vrai : les rayons se croisent réellement et l'image est à l'envers."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Vrai."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "image-reelle-virtuelle",
+      "enonce": "Lors d'un TP, on obtient une image nette d'une lettre lumineuse sur un écran placé derrière une lentille convergente. 1) Cette image est-elle réelle ou virtuelle ? 2) Est-elle droite ou renversée ? 3) Où se trouvait l'objet par rapport au foyer objet F ?",
+      "corrige": [
+        "Une image recueillie sur un écran est **réelle** : les rayons s'y croisent vraiment.",
+        "Une image réelle donnée par une lentille est **renversée**.",
+        "Une lentille convergente donne une image réelle quand l'objet est placé **au-delà** du foyer objet F."
+      ],
+      "reponse": "Réelle, renversée ; l'objet était au-delà de F."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "accommodation",
+      "enonce": "Une infirmière lève les yeux de son dossier pour regarder l'horloge au fond du couloir. Décrire ce que fait son cristallin et comment varie sa vergence.",
+      "corrige": [
+        "Pour voir de près (le dossier), le cristallin est bombé : sa vergence est grande.",
+        "Pour regarder au loin, les muscles se relâchent : le cristallin redevient peu bombé et sa vergence **diminue** jusqu'à sa valeur minimale (œil au repos)."
+      ],
+      "reponse": "Le cristallin se relâche (moins bombé) : sa vergence diminue."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "accommodation",
+      "enonce": "Définir le punctum proximum et le punctum remotum, et donner leur position pour l'œil normal d'un jeune adulte.",
+      "corrige": [
+        "Le **punctum proximum** est le point le plus proche vu net (environ $25$ cm pour un jeune adulte).",
+        "Le **punctum remotum** est le point le plus éloigné vu net (à l'infini pour un œil normal)."
+      ],
+      "reponse": "PP : point le plus proche vu net (≈ $25$ cm) ; PR : point le plus éloigné vu net (à l'infini)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "defauts-correction",
+      "enonce": "Une ordonnance indique : œil droit $-1{,}75\\ \\delta$ ; œil gauche $+0{,}75\\ \\delta$. Donner la nature de chaque verre et un défaut qu'il peut corriger.",
+      "corrige": [
+        "Œil droit : vergence négative, verre **divergent** : correction de myopie.",
+        "Œil gauche : vergence positive, verre **convergent** : correction d'hypermétropie (ou de presbytie)."
+      ],
+      "reponse": "Droit : divergent (myopie) ; gauche : convergent (hypermétropie ou presbytie)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "defauts-correction",
+      "enonce": "M. Durand, $55$ ans, voit toujours bien de loin, mais il doit éloigner son journal pour arriver à le lire. 1) Quel est son défaut de vision ? 2) Quelle en est la cause ? 3) Quel type de verre lui faut-il pour lire ?",
+      "corrige": [
+        "La vision de près devient difficile avec l'âge : c'est la **presbytie**.",
+        "Le cristallin perd sa souplesse : l'accommodation diminue.",
+        "On corrige la vision de près avec un verre **convergent** ($V > 0$)."
+      ],
+      "reponse": "Presbytie (perte de souplesse du cristallin) ; verre convergent."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "accommodation",
+      "enonce": "L'œil d'un adulte de $45$ ans a une vergence de $60\\ \\delta$ au repos ; en accommodant au maximum, il atteint $64\\ \\delta$. 1) De combien sa vergence peut-elle augmenter ? 2) Comment évoluera cette capacité avec l'âge, et quelle en sera la conséquence ?",
+      "corrige": [
+        "Augmentation possible : $64 - 60 = 4\\ \\delta$ : c'est sa capacité d'accommodation.",
+        "Avec l'âge, le cristallin perd sa souplesse : cette augmentation possible diminue, et la vision de près devient floue (presbytie)."
+      ],
+      "reponse": "$4\\ \\delta$ ; elle diminuera avec l'âge (presbytie : vision de près difficile)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "defauts-correction",
+      "enonce": "Un œil hypermétrope au repos a une vergence $V_{\\text{œil}} = 58{,}5\\ \\delta$, alors qu'il faudrait $V_0 = 60\\ \\delta$ pour voir net de loin sans effort. Le verre est modélisé comme accolé à l'œil. 1) Calculer la vergence du verre correcteur. 2) Calculer sa distance focale.",
+      "corrige": [
+        "$V_{\\text{verre}} = V_0 - V_{\\text{œil}} = 60 - 58{,}5 = +1{,}5\\ \\delta$ : verre convergent, qui ajoute la vergence manquante.",
+        "$f' = \\dfrac{1}{1{,}5} \\approx 0{,}67$ m, soit environ $67$ cm."
+      ],
+      "reponse": "$V_{\\text{verre}} = +1{,}5\\ \\delta$ ; $f' \\approx 0{,}67$ m."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "defauts-correction",
+      "enonce": "Un œil au repos a une vergence de $63\\ \\delta$ ($V_0 = 60\\ \\delta$ pour voir net de loin). 1) L'œil est-il myope ou hypermétrope ? 2) Calculer la vergence et la distance focale du verre correcteur (accolé à l'œil).",
+      "corrige": [
+        "$63\\ \\delta > 60\\ \\delta$ : l'œil est trop convergent, il est **myope**.",
+        "$V_{\\text{verre}} = 60 - 63 = -3{,}0\\ \\delta$ (verre divergent) ; $f' = \\dfrac{1}{-3{,}0} \\approx -0{,}33$ m $\\approx -33$ cm."
+      ],
+      "reponse": "Myope ; $V_{\\text{verre}} = -3{,}0\\ \\delta$, $f' \\approx -33$ cm."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "defauts-correction",
+      "enonce": "Sur la fiche d'un patient myope, on lit : « verre correcteur de $+2{,}5\\ \\delta$ ». Expliquer pourquoi cette indication est forcément fausse et proposer la correction probable.",
+      "corrige": [
+        "Un œil myope est trop convergent : il faut lui **retirer** de la vergence, avec un verre divergent de vergence **négative**.",
+        "Un verre de $+2{,}5\\ \\delta$ est convergent et aggraverait le défaut. L'indication correcte est probablement $-2{,}5\\ \\delta$."
+      ],
+      "reponse": "Un verre de myope est divergent ($V < 0$) : il faut lire $-2{,}5\\ \\delta$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "loupe",
+      "enonce": "Une loupe a une vergence de $8{,}0\\ \\delta$. 1) Calculer sa distance focale. 2) À quelle distance de la loupe peut-on placer une étiquette de médicament pour la lire agrandie et à l'endroit ? Donner un exemple de distance qui convient.",
+      "corrige": [
+        "$f' = \\dfrac{1}{8{,}0} = 0{,}125$ m $= 12{,}5$ cm.",
+        "Pour une image virtuelle, droite et agrandie, l'objet doit être entre la loupe et son foyer objet F, donc à moins de $12{,}5$ cm. Exemple : $10$ cm."
+      ],
+      "reponse": "$f' = 12{,}5$ cm ; l'étiquette doit être à moins de $12{,}5$ cm (par exemple $10$ cm)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "loupe",
+      "enonce": "On compare deux loupes de vergences $10\\ \\delta$ et $25\\ \\delta$. 1) Laquelle grossit le plus ? 2) Calculer leurs distances focales. 3) Pour la plus puissante, à quelle distance maximale faut-il placer l'objet ?",
+      "corrige": [
+        "Plus la vergence d'une loupe est grande, plus le grossissement est fort : celle de $25\\ \\delta$.",
+        "$f' = \\dfrac{1}{10} = 0{,}10$ m $= 10$ cm et $f' = \\dfrac{1}{25} = 0{,}040$ m $= 4{,}0$ cm.",
+        "L'objet doit être placé entre la loupe et le foyer, donc à moins de $4{,}0$ cm de la loupe de $25\\ \\delta$."
+      ],
+      "reponse": "La loupe de $25\\ \\delta$ ; focales $10$ cm et $4{,}0$ cm ; objet à moins de $4{,}0$ cm."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "grandissement",
+      "enonce": "À travers une loupe, une écharde de $2{,}0$ mm paraît agrandie avec un grandissement $\\gamma = +3{,}0$. 1) Calculer la taille de l'image en millimètres puis en centimètres. 2) Pourquoi $\\gamma$ est-il positif ?",
+      "corrige": [
+        "$\\overline{A'B'} = 3{,}0 \\times 2{,}0 = 6{,}0$ mm $= 0{,}60$ cm.",
+        "L'image donnée par une loupe est droite (virtuelle) : $\\gamma > 0$."
+      ],
+      "reponse": "$6{,}0$ mm $= 0{,}60$ cm ; $\\gamma > 0$ car l'image est droite (virtuelle)."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "image-reelle-virtuelle",
+      "enonce": "Une lentille convergente a une distance focale de $15$ cm. Décrire l'image d'un petit objet placé à : a) $40$ cm ; b) $15$ cm ; c) $6{,}0$ cm de la lentille.",
+      "corrige": [
+        "a) $40$ cm $> 15$ cm : objet au-delà de F, image réelle et renversée.",
+        "b) Objet exactement sur le foyer objet F : les rayons ressortent parallèles, l'image est rejetée à l'infini.",
+        "c) $6{,}0$ cm $< 15$ cm : objet entre O et F, image virtuelle, droite et agrandie (usage en loupe)."
+      ],
+      "reponse": "a) réelle, renversée ; b) rejetée à l'infini ; c) virtuelle, droite, agrandie."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "types-lentilles",
+      "enonce": "Un opticien regarde un texte à travers un verre de lunettes inconnu tenu près de la page. Les lettres paraissent plus petites et à l'endroit. 1) Le verre est-il convergent ou divergent ? 2) Pour quel défaut de vision est-il prévu ?",
+      "corrige": [
+        "Une lentille divergente donne toujours une image virtuelle, **droite et plus petite** : c'est ce que l'on observe. (Une convergente tenue près de la page agrandirait le texte, comme une loupe.)",
+        "Un verre divergent corrige la **myopie**."
+      ],
+      "reponse": "Divergent ; il corrige une myopie."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "lentilles-accolees",
+      "enonce": "Pour trouver la bonne correction, un ophtalmologiste place devant l'œil d'un patient trois verres d'essai accolés : $+1{,}00\\ \\delta$, $+0{,}50\\ \\delta$ et $-0{,}25\\ \\delta$. 1) Quelle vergence totale teste-t-il ? 2) Quelle est la distance focale correspondante ?",
+      "corrige": [
+        "Les vergences s'additionnent : $V = 1{,}00 + 0{,}50 - 0{,}25 = 1{,}25\\ \\delta$.",
+        "$f' = \\dfrac{1}{1{,}25} = 0{,}80$ m $= 80$ cm (convergent)."
+      ],
+      "reponse": "$V = +1{,}25\\ \\delta$ ; $f' = 0{,}80$ m."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "synthese-oeil-correction",
+      "enonce": "Mme Petit, $62$ ans, voyait parfaitement de près et de loin dans sa jeunesse. Aujourd'hui, elle lit difficilement sa notice de médicament. Son opticien lui propose des verres de vergence $+2{,}5\\ \\delta$. 1) Nommer son défaut et en expliquer la cause. 2) Les verres sont-ils convergents ou divergents ? 3) Calculer leur distance focale. 4) Pourquoi doit-elle les retirer pour regarder au loin ?",
+      "corrige": [
+        "1) C'est la **presbytie** : avec l'âge, le cristallin perd sa souplesse et l'accommodation diminue ; la vision de près devient difficile.",
+        "2) $V = +2{,}5\\ \\delta > 0$ : verres convergents, qui ajoutent la vergence que le cristallin ne fournit plus.",
+        "3) $f' = \\dfrac{1}{2{,}5} = 0{,}40$ m $= 40$ cm.",
+        "4) De loin, son œil fonctionne normalement au repos : la vergence ajoutée par le verre le rendrait trop convergent et l'image se formerait avant la rétine (flou)."
+      ],
+      "reponse": "Presbytie ; verres convergents ; $f' = 0{,}40$ m ; de loin, ils rendraient l'œil trop convergent."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "synthese-oeil-correction",
+      "enonce": "Tom, $14$ ans, ne lit plus le tableau depuis le fond de la classe. Son œil au repos a une vergence $V_{\\text{œil}} = 61{,}75\\ \\delta$, alors qu'il faut $V_0 = 60\\ \\delta$ pour voir net de loin. 1) Nommer son défaut. 2) Où se forme l'image du tableau sans correction ? 3) Calculer la vergence du verre (accolé à l'œil) et sa nature. 4) Calculer sa distance focale.",
+      "corrige": [
+        "1) Flou de loin, œil trop convergent ($61{,}75 > 60$) : **myopie**.",
+        "2) L'image d'un objet éloigné se forme **avant** la rétine.",
+        "3) $V_{\\text{verre}} = 60 - 61{,}75 = -1{,}75\\ \\delta$ : verre divergent.",
+        "4) $f' = \\dfrac{1}{-1{,}75} \\approx -0{,}57$ m, soit environ $-57$ cm."
+      ],
+      "reponse": "Myopie ; image avant la rétine ; $V_{\\text{verre}} = -1{,}75\\ \\delta$ (divergent) ; $f' \\approx -0{,}57$ m."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "synthese-oeil-correction",
+      "enonce": "Sarah, $20$ ans, ressent une fatigue visuelle en fin de journée, surtout après avoir lu. Son œil au repos a une vergence de $59\\ \\delta$ (il faudrait $60\\ \\delta$ pour voir net de loin sans effort). 1) Son œil est-il trop ou pas assez convergent ? Nommer le défaut. 2) Où se forme l'image d'un objet éloigné quand son œil est au repos ? 3) Pourquoi est-elle fatiguée ? 4) Calculer la vergence et la distance focale du verre correcteur accolé.",
+      "corrige": [
+        "1) $59 < 60$ : l'œil n'est pas assez convergent : **hypermétropie**.",
+        "2) L'image se forme **derrière** la rétine.",
+        "3) Pour ramener l'image sur la rétine, elle doit accommoder en permanence (cristallin bombé), même de loin, et encore plus de près : c'est fatigant.",
+        "4) $V_{\\text{verre}} = 60 - 59 = +1{,}0\\ \\delta$ (convergent) ; $f' = \\dfrac{1}{1{,}0} = 1{,}0$ m."
+      ],
+      "reponse": "Hypermétropie ; image derrière la rétine ; accommodation permanente ; verre de $+1{,}0\\ \\delta$, $f' = 1{,}0$ m."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "grandissement",
+      "enonce": "Lors d'un TP, on utilise une lentille convergente de distance focale $f' = 20$ cm. Un objet lumineux de $3{,}0$ cm donne sur un écran une image nette de $1{,}5$ cm, à l'envers. 1) Calculer la vergence de la lentille. 2) Calculer le grandissement. 3) Décrire l'image. 4) L'objet était-il à plus ou à moins de $20$ cm de la lentille ? Justifier.",
+      "corrige": [
+        "1) $V = \\dfrac{1}{0{,}20} = 5{,}0\\ \\delta$.",
+        "2) Image renversée : $\\overline{A'B'} = -1{,}5$ cm, donc $\\gamma = \\dfrac{-1{,}5}{3{,}0} = -0{,}50$.",
+        "3) $\\gamma < 0$ et $|\\gamma| < 1$ : image réelle, renversée, deux fois plus petite.",
+        "4) Une image réelle (sur écran) n'est obtenue que si l'objet est au-delà du foyer objet F : il était à plus de $20$ cm."
+      ],
+      "reponse": "$V = 5{,}0\\ \\delta$ ; $\\gamma = -0{,}50$ ; image réelle, renversée, réduite ; objet à plus de $20$ cm."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese-oeil-correction",
+      "enonce": "Un opticien cherche la correction d'un patient qui voit flou de loin. Avec un verre d'essai de $-1{,}00\\ \\delta$, la vision s'améliore mais reste un peu floue ; en accolant un second verre de $-0{,}50\\ \\delta$, elle devient nette. 1) Quelle est la vergence totale du verre à prescrire ? 2) Quel est le défaut du patient ? 3) Calculer la distance focale du verre prescrit. 4) Sachant qu'il faut $V_0 = 60\\ \\delta$ pour voir net de loin, quelle est la vergence de l'œil du patient au repos ?",
+      "corrige": [
+        "1) Vergences accolées : $V = -1{,}00 + (-0{,}50) = -1{,}50\\ \\delta$.",
+        "2) Flou de loin corrigé par un verre divergent : **myopie**.",
+        "3) $f' = \\dfrac{1}{-1{,}50} \\approx -0{,}67$ m, soit environ $-67$ cm.",
+        "4) $V_0 = V_{\\text{œil}} + V_{\\text{verre}}$, donc $V_{\\text{œil}} = 60 - (-1{,}50) = 61{,}5\\ \\delta$."
+      ],
+      "reponse": "$-1{,}50\\ \\delta$ ; myopie ; $f' \\approx -0{,}67$ m ; $V_{\\text{œil}} = 61{,}5\\ \\delta$."
     }
   ]
 }

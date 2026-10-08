@@ -12,9 +12,9 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "signal analogique / numérique",
-      "enonce": "Indique pour chaque signal s'il est analogique ou numérique : (a) la tension continue délivrée par un microphone, (b) une suite de 0 et de 1 sur une liaison USB, (c) l'onde sonore captée dans l'air.",
+      "enonce": "Indique pour chaque signal s'il est analogique ou numérique : (a) la tension délivrée par un microphone, qui varie continûment avec le son, (b) une suite de 0 et de 1 sur une liaison USB, (c) l'onde sonore captée dans l'air.",
       "corrige": [
         "Un signal analogique varie de façon continue ; un signal numérique ne prend que des valeurs discrètes (0/1).",
         "(a) Tension du microphone : varie continûment → analogique.",
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "débit binaire",
       "enonce": "Une liaison transmet un fichier de 2 Mo (mégaoctets) en 16 secondes. Calcule le débit binaire en bits par seconde. (On prend 1 octet = 8 bits et 1 Mo = 1 000 000 octets.)",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "temps de transmission",
       "enonce": "On veut transmettre un fichier de 5 Mo sur une liaison de débit 2 Mbit/s. Calcule le temps de transmission. (1 Mo = 8 Mbit.)",
       "corrige": [
@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "numérisation d'un son",
       "enonce": "On numérise un son avec une fréquence d'échantillonnage fe = 44 100 Hz et une résolution de 16 bits par échantillon, en stéréo (2 voies). Calcule le débit binaire brut nécessaire, en kbit/s (arrondi).",
       "corrige": [
@@ -61,7 +61,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "atténuation et décibels",
       "enonce": "Un signal entre dans une fibre optique avec une puissance Pe = 1 mW et ressort avec Ps = 0,01 mW. L'atténuation en décibels vaut A = 10 × log(Pe / Ps). Calcule cette atténuation. (log 100 = 2.)",
       "corrige": [
@@ -74,7 +74,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "contrôle de parité",
       "enonce": "Pour fiabiliser une transmission, on ajoute un bit de parité paire à chaque octet de 7 bits de données (le bit de parité rend pair le nombre total de 1). (a) Donne le bit de parité pour la donnée 1010011. (b) À la réception on lit 10100110 : la trame est-elle correcte ? (c) Cette méthode détecte-t-elle une erreur portant sur 2 bits ?",
       "corrige": [
@@ -87,7 +87,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "nombre de valeurs codées",
       "enonce": "Combien de valeurs différentes peut-on coder avec 8 bits ? Avec 10 bits ?",
       "corrige": [
@@ -99,7 +99,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "temps de transmission",
       "enonce": "Combien de temps faut-il pour transmettre un fichier de 5 Mbit à un débit de 1 Mbit/s ?",
       "corrige": [
@@ -111,7 +111,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "bit de parité",
       "enonce": "On utilise une parité paire. Quel bit de parité faut-il ajouter à la donnée 1101 ? Que détecte-t-on à la réception ?",
       "corrige": [
@@ -124,7 +124,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "résolution d'un capteur",
       "enonce": "Un capteur mesure une tension de 0 à 10 V et la numérise sur 8 bits. Quel est le plus petit écart de tension mesurable (le « pas ») ?",
       "corrige": [
@@ -134,6 +134,454 @@
         "Soit environ 39 mV. Avec plus de bits, le pas serait plus fin (meilleure résolution)."
       ],
       "reponse": "Le pas vaut environ 10 / 256 ≈ 0,039 V, soit 39 mV."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "chaîne d'information",
+      "enonce": "Remets dans l'ordre les trois fonctions de la chaîne d'information : communiquer, acquérir, traiter. Associe à chacune un composant : microcontrôleur, capteur, module Wi-Fi.",
+      "corrige": [
+        "On capte d'abord la grandeur, on la traite, puis on transmet le résultat.",
+        "Acquérir : le capteur ; traiter : le microcontrôleur ; communiquer : le module Wi-Fi."
+      ],
+      "reponse": "Acquérir (capteur) → traiter (microcontrôleur) → communiquer (module Wi-Fi)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "signal analogique / numérique",
+      "enonce": "Complète : « Un signal analogique peut prendre une … de valeurs ; un signal numérique ne prend qu'un nombre … de valeurs, codées en … »",
+      "corrige": [
+        "Le signal analogique varie de façon continue.",
+        "Le signal numérique est discret et codé en binaire (0 et 1)."
+      ],
+      "reponse": "infinité ; fini ; binaire."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "nombre de valeurs codées",
+      "enonce": "Un élève affirme qu'avec 4 bits on peut coder 4 valeurs. Corrige-le.",
+      "corrige": [
+        "Avec n bits, on code $2^n$ valeurs.",
+        "$2^4 = 16$ valeurs, de 0 à 15."
+      ],
+      "reponse": "Avec 4 bits, on code 16 valeurs (de 0 à 15)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "supports de transmission",
+      "enonce": "Classe ces liaisons selon leur support (filaire cuivre, fibre optique, sans fil) : Bluetooth, câble Ethernet à paires torsadées, liaison 5G, câble à fibre optique.",
+      "corrige": [
+        "Bluetooth et 5G utilisent des ondes radio : sans fil.",
+        "Le câble Ethernet à paires torsadées est un support filaire en cuivre.",
+        "La fibre optique transporte la lumière dans un fil de verre."
+      ],
+      "reponse": "Sans fil : Bluetooth, 5G ; filaire cuivre : Ethernet ; fibre optique : câble à fibre optique."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "signal analogique / numérique",
+      "enonce": "Donne deux avantages d'un signal numérique par rapport à un signal analogique.",
+      "corrige": [
+        "Il est plus robuste au bruit : tant que l'on distingue 0 et 1, on peut le régénérer.",
+        "Il est facile à traiter, stocker et transmettre par un ordinateur ou un microcontrôleur."
+      ],
+      "reponse": "Plus robuste au bruit (régénérable) et facile à traiter par un ordinateur."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "signal analogique / numérique",
+      "enonce": "Quelles sont les deux opérations réalisées par un convertisseur analogique-numérique (CAN) ? Explique chacune en une phrase.",
+      "corrige": [
+        "L'échantillonnage : on relève la valeur du signal à intervalles de temps réguliers.",
+        "La quantification : chaque valeur relevée est arrondie à l'un des niveaux disponibles, codé en binaire."
+      ],
+      "reponse": "Échantillonnage (relevés réguliers) puis quantification (arrondi sur un nombre fini de niveaux)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "codage binaire",
+      "enonce": "Convertis en décimal l'octet 10010110.",
+      "corrige": [
+        "Les bits à 1 ont pour poids 128, 16, 4 et 2.",
+        "128 + 16 + 4 + 2 = 150."
+      ],
+      "reponse": "150"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "codage binaire",
+      "enonce": "Convertis en décimal l'octet 10110001.",
+      "corrige": [
+        "Les bits à 1 ont pour poids 128, 32, 16 et 1.",
+        "128 + 32 + 16 + 1 = 177."
+      ],
+      "reponse": "177"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "codage binaire",
+      "enonce": "Écris le nombre 200 en binaire sur 8 bits.",
+      "corrige": [
+        "200 = 128 + 64 + 8.",
+        "Les bits de poids 128, 64 et 8 valent 1, les autres 0."
+      ],
+      "reponse": "11001000"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "nombre de valeurs codées",
+      "enonce": "Quelle est la plus grande valeur que l'on peut coder sur 10 bits ?",
+      "corrige": [
+        "Avec 10 bits, on code $2^{10} = 1\\,024$ valeurs.",
+        "Elles vont de 0 à 1 023."
+      ],
+      "reponse": "1 023"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "débit binaire",
+      "enonce": "Une liaison transmet 3 000 000 de bits en 2 s. Calcule son débit.",
+      "corrige": [
+        "$D = \\dfrac{3\\,000\\,000}{2} = 1\\,500\\,000$ bit/s."
+      ],
+      "reponse": "1,5 Mbit/s"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "temps de transmission",
+      "enonce": "Combien de temps faut-il pour envoyer une photo de 4 Mo sur une liaison à 20 Mbit/s (1 Mo = 8 Mbit) ?",
+      "corrige": [
+        "4 Mo = 32 Mbit.",
+        "$t = \\dfrac{32}{20} = 1{,}6$ s."
+      ],
+      "reponse": "1,6 s"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "débit binaire",
+      "enonce": "Un élève dit : « Ma connexion fait 100 Mbit, donc je peux télécharger 100 Mbit. » Quelle confusion fait-il ?",
+      "corrige": [
+        "100 Mbit/s est un débit : une quantité d'information par seconde.",
+        "La quantité totale téléchargeable dépend aussi de la durée : en 10 s, on peut recevoir jusqu'à 1 000 Mbit."
+      ],
+      "reponse": "Il confond débit (bit/s) et quantité d'information (bits)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "résolution d'un capteur",
+      "enonce": "Un capteur mesure de 0 à 5 V et numérise sur 10 bits. Calcule le pas de mesure (arrondi au centième de mV).",
+      "corrige": [
+        "$\\text{pas} = \\dfrac{5}{2^{10}} = \\dfrac{5}{1\\,024} \\approx 0{,}004\\,88$ V.",
+        "Soit environ 4,88 mV."
+      ],
+      "reponse": "Environ 4,88 mV."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "bit de parité",
+      "enonce": "Avec une parité paire, quel bit faut-il ajouter à la donnée 0110100 ?",
+      "corrige": [
+        "La donnée contient trois 1 : c'est un nombre impair.",
+        "On ajoute un 1 pour que le nombre total de 1 soit pair (quatre)."
+      ],
+      "reponse": "1 (mot transmis : 01101001)."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "bit de parité",
+      "enonce": "En parité paire, on reçoit le mot 11010110. Une erreur est-elle détectée ?",
+      "corrige": [
+        "On compte les 1 : 1+1+0+1+0+1+1+0 = 5.",
+        "5 est impair alors que la parité devait être paire : une erreur est détectée."
+      ],
+      "reponse": "Oui : cinq 1 (nombre impair), une erreur est détectée."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "résolution d'un capteur",
+      "enonce": "Un capteur mesure de 0 à 10 V et numérise sur 12 bits. Calcule le pas (arrondi au centième de mV) et compare avec un codage sur 8 bits (39 mV).",
+      "corrige": [
+        "$\\dfrac{10}{2^{12}} = \\dfrac{10}{4\\,096} \\approx 0{,}002\\,44$ V, soit environ 2,44 mV.",
+        "Le pas est 16 fois plus petit qu'avec 8 bits : la résolution est bien meilleure."
+      ],
+      "reponse": "Environ 2,44 mV, 16 fois plus fin qu'avec 8 bits."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "résolution d'un capteur",
+      "enonce": "Un capteur 0–10 V codé sur 8 bits (pas = 10/256 V) renvoie le code 128. À quelle tension cela correspond-il ?",
+      "corrige": [
+        "$U = 128 \\times \\dfrac{10}{256} = 5$ V."
+      ],
+      "reponse": "5 V"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "résolution d'un capteur",
+      "enonce": "On veut mesurer une tension de 0 à 5 V avec un pas inférieur ou égal à 1 mV (pas = 5 V / 2ⁿ). Combien de bits faut-il au minimum ?",
+      "corrige": [
+        "Il faut $\\dfrac{5}{2^n} \\le 0{,}001$, soit $2^n \\ge 5\\,000$.",
+        "$2^{12} = 4\\,096$ est insuffisant ; $2^{13} = 8\\,192$ convient.",
+        "Il faut donc 13 bits."
+      ],
+      "reponse": "13 bits"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "temps de transmission",
+      "enonce": "Une vidéo de 1 Go (1 Go = 8 000 Mbit) est téléchargée à 100 Mbit/s. Combien de temps dure le téléchargement ?",
+      "corrige": [
+        "$t = \\dfrac{8\\,000}{100} = 80$ s."
+      ],
+      "reponse": "80 s (1 min 20 s)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "débit binaire",
+      "enonce": "Une liaison à 500 kbit/s fonctionne pendant une minute. Quelle quantité d'information transmet-elle, en Mo (1 octet = 8 bits, 1 Mo = 10⁶ octets) ?",
+      "corrige": [
+        "Bits transmis : $500\\,000 \\times 60 = 30\\,000\\,000$ bits.",
+        "En octets : $\\dfrac{30\\,000\\,000}{8} = 3\\,750\\,000$ octets, soit 3,75 Mo."
+      ],
+      "reponse": "3,75 Mo"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "numérisation d'un son",
+      "enonce": "Le téléphone fixe numérise la voix à 8 000 échantillons par seconde sur 8 bits, en mono. Calcule le débit brut.",
+      "corrige": [
+        "$D = 8\\,000 \\times 8 \\times 1 = 64\\,000$ bit/s."
+      ],
+      "reponse": "64 kbit/s"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "numérisation d'un son",
+      "enonce": "Pourquoi le son numérisé sur 16 bits est-il plus fidèle que sur 8 bits ?",
+      "corrige": [
+        "Avec 16 bits, on dispose de $2^{16} = 65\\,536$ niveaux contre $2^8 = 256$ niveaux.",
+        "Les valeurs sont arrondies beaucoup plus finement : la résolution est meilleure, le son est plus proche de l'original."
+      ],
+      "reponse": "Plus de niveaux (65 536 contre 256) : meilleure résolution."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "atténuation et décibels",
+      "enonce": "Un signal entre dans un câble avec une puissance de 10 mW et en ressort avec 1 mW. Calcule l'atténuation en décibels avec A = 10 × log(Pe / Ps).",
+      "corrige": [
+        "$\\dfrac{P_e}{P_s} = \\dfrac{10}{1} = 10$.",
+        "$A = 10 \\times \\log 10 = 10 \\times 1 = 10$ dB."
+      ],
+      "reponse": "10 dB"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "atténuation et décibels",
+      "enonce": "Une fibre optique atténue le signal de 0,2 dB par kilomètre. Quelle est l'atténuation sur 50 km ? Quel rapport Pe/Ps cela représente-t-il ?",
+      "corrige": [
+        "$A = 0{,}2 \\times 50 = 10$ dB.",
+        "$10 \\times \\log \\dfrac{P_e}{P_s} = 10$ donne $\\log \\dfrac{P_e}{P_s} = 1$, donc $\\dfrac{P_e}{P_s} = 10$."
+      ],
+      "reponse": "10 dB : la puissance est divisée par 10."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "bruit et protection",
+      "enonce": "Pourquoi un signal numérique bruité peut-il souvent être retrouvé intact, alors qu'un signal analogique bruité reste dégradé ?",
+      "corrige": [
+        "En numérique, il suffit de savoir si chaque niveau est un 0 ou un 1 : tant que le bruit ne fait pas confondre les deux, on régénère le signal parfait.",
+        "En analogique, toutes les valeurs sont possibles : on ne peut pas distinguer le bruit du signal utile."
+      ],
+      "reponse": "Le numérique se régénère tant qu'on distingue 0 et 1 ; l'analogique garde le bruit."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "supports de transmission",
+      "enonce": "Pour relier deux bâtiments d'une usine où fonctionnent de gros moteurs électriques (forts parasites électromagnétiques), quel support conseilles-tu ? Justifie.",
+      "corrige": [
+        "Les câbles en cuivre sont sensibles aux perturbations électromagnétiques.",
+        "La fibre optique transporte de la lumière : elle y est insensible et offre un très haut débit avec peu de pertes."
+      ],
+      "reponse": "La fibre optique, insensible aux parasites électromagnétiques."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "supports de transmission",
+      "enonce": "Donne un avantage et deux inconvénients d'une liaison sans fil (Wi-Fi, Bluetooth) par rapport à une liaison filaire.",
+      "corrige": [
+        "Avantage : la mobilité, aucun câble à tirer.",
+        "Inconvénients : la liaison est sensible aux obstacles (murs) et la bande de fréquences est partagée entre plusieurs utilisateurs, ce qui peut réduire le débit."
+      ],
+      "reponse": "Avantage : mobilité ; inconvénients : sensibilité aux obstacles et partage de la bande."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "protocole et modulation",
+      "enonce": "Qu'est-ce qu'un protocole de communication ? Cite deux éléments qu'il définit.",
+      "corrige": [
+        "Un protocole est un ensemble de règles communes qui permettent à deux systèmes de se comprendre.",
+        "Il définit par exemple la forme de la trame, l'adresse du destinataire et le contrôle d'erreur."
+      ],
+      "reponse": "Un ensemble de règles communes ; par exemple la trame et l'adresse (ou le contrôle d'erreur)."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "protocole et modulation",
+      "enonce": "À quoi sert la modulation dans une transmission radio ?",
+      "corrige": [
+        "Le signal à transmettre n'est pas directement adapté au support radio.",
+        "On modifie une onde porteuse en fonction de l'information pour adapter le signal au support."
+      ],
+      "reponse": "À adapter le signal au support en modulant une onde porteuse."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "bit de parité",
+      "enonce": "En parité paire, donne le bit de parité de chacune des trois données de 7 bits : 1000001 ; 1111111 ; 0000000.",
+      "corrige": [
+        "1000001 contient deux 1 (pair) : bit de parité 0.",
+        "1111111 contient sept 1 (impair) : bit de parité 1.",
+        "0000000 ne contient aucun 1 (zéro est pair) : bit de parité 0."
+      ],
+      "reponse": "0 ; 1 ; 0."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "bit de parité",
+      "enonce": "En parité paire, on envoie la donnée 1100101 avec son bit de parité. Pendant le transport, deux bits sont inversés et l'on reçoit 10101010. L'erreur est-elle détectée ? Explique la limite de cette méthode.",
+      "corrige": [
+        "La donnée 1100101 contient quatre 1 : le bit de parité vaut 0, on envoie 11001010.",
+        "Le mot reçu 10101010 contient quatre 1 : la parité est paire, aucune erreur n'est signalée.",
+        "Deux inversions conservent la parité : le bit de parité ne détecte qu'un nombre impair d'erreurs."
+      ],
+      "reponse": "Non : deux erreurs conservent la parité ; la méthode ne détecte qu'un nombre impair d'erreurs."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "numérisation d'un son",
+      "enonce": "Un morceau de musique de 3 minutes est enregistré en qualité CD (44 100 Hz, 16 bits, stéréo). Calcule la taille du fichier non compressé en Mo (1 Mo = 10⁶ octets, arrondie au dixième).",
+      "corrige": [
+        "Débit : $44\\,100 \\times 16 \\times 2 = 1\\,411\\,200$ bit/s.",
+        "Pour 180 s : $1\\,411\\,200 \\times 180 = 254\\,016\\,000$ bits.",
+        "En octets : $\\dfrac{254\\,016\\,000}{8} = 31\\,752\\,000$ octets, soit environ 31,8 Mo."
+      ],
+      "reponse": "Environ 31,8 Mo."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "débit binaire",
+      "enonce": "Une station météo mesure la température toutes les 10 s, sur 12 bits. Combien de bits produit-elle en une heure ? Quel débit moyen cela représente-t-il ?",
+      "corrige": [
+        "En une heure : 3 600 ÷ 10 = 360 mesures.",
+        "$360 \\times 12 = 4\\,320$ bits.",
+        "Débit moyen : $\\dfrac{4\\,320}{3\\,600} = 1{,}2$ bit/s."
+      ],
+      "reponse": "4 320 bits par heure, soit 1,2 bit/s en moyenne."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "temps de transmission",
+      "enonce": "Une caméra de surveillance produit un flux de 4 Mbit/s. Elle l'envoie par une liaison dont le débit utile est de 3 Mbit/s. Que se passe-t-il ? Propose une solution.",
+      "corrige": [
+        "La caméra produit plus d'information par seconde que la liaison ne peut en transporter : les données s'accumulent ou sont perdues.",
+        "Solutions : compresser la vidéo (ou réduire la résolution) pour descendre sous 3 Mbit/s, ou choisir une liaison de débit supérieur."
+      ],
+      "reponse": "La liaison est saturée ; il faut compresser le flux ou augmenter le débit de la liaison."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "chaîne d'information",
+      "enonce": "Un thermostat connecté mesure la température, décide d'allumer ou non la chaudière et envoie la température au téléphone de l'utilisateur. Associe chaque action à une fonction de la chaîne d'information, et indique où se trouve la conversion analogique → numérique.",
+      "corrige": [
+        "Mesurer la température : acquérir (sonde de température).",
+        "Décider d'allumer la chaudière : traiter (microcontrôleur).",
+        "Envoyer l'ordre à la chaudière et la valeur au téléphone : communiquer.",
+        "La conversion analogique → numérique se fait entre l'acquisition et le traitement, par le CAN."
+      ],
+      "reponse": "Acquérir (mesure), traiter (décision), communiquer (ordre et envoi) ; le CAN est entre acquérir et traiter."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "résolution d'un capteur",
+      "enonce": "Un capteur de température délivre 0 V à 0 °C et 10 V à 100 °C ; sa sortie est numérisée sur 10 bits (pas = 10 V / 2¹⁰). Quel est le pas en tension, puis la plus petite variation de température détectable (arrondie au centième de degré) ?",
+      "corrige": [
+        "Pas : $\\dfrac{10}{1\\,024} \\approx 0{,}009\\,77$ V, soit environ 9,77 mV.",
+        "Le capteur délivre 0,1 V par °C, soit 100 mV/°C.",
+        "Variation minimale : $\\dfrac{9{,}77}{100} \\approx 0{,}10$ °C."
+      ],
+      "reponse": "Pas ≈ 9,77 mV, soit environ 0,10 °C."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "temps de transmission",
+      "enonce": "On transmet un fichier de 12 Mo (1 Mo = 8 Mbit) par une liaison radio à 24 Mbit/s. Le protocole ajoute 20 % de bits supplémentaires (adresses, contrôle d'erreur). Calcule la durée de transmission.",
+      "corrige": [
+        "Données utiles : 12 × 8 = 96 Mbit.",
+        "Avec 20 % de bits ajoutés : $96 \\times 1{,}2 = 115{,}2$ Mbit.",
+        "$t = \\dfrac{115{,}2}{24} = 4{,}8$ s."
+      ],
+      "reponse": "4,8 s"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "atténuation et décibels",
+      "enonce": "Une liaison par fibre optique de 80 km atténue de 0,25 dB/km. Le récepteur a besoin d'au moins 0,01 mW et l'émetteur injecte 1 mW. La liaison fonctionne-t-elle ? (A = 10 × log(Pe/Ps).)",
+      "corrige": [
+        "Atténuation : $0{,}25 \\times 80 = 20$ dB.",
+        "$10 \\log \\dfrac{P_e}{P_s} = 20$ donne $\\dfrac{P_e}{P_s} = 100$, donc $P_s = \\dfrac{1}{100} = 0{,}01$ mW.",
+        "La puissance reçue vaut exactement le minimum requis : la liaison fonctionne, mais sans aucune marge."
+      ],
+      "reponse": "Oui, de justesse : on reçoit 0,01 mW, exactement le minimum."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "signal analogique / numérique",
+      "enonce": "Analyse ce court texte : « Le microphone d'un téléphone produit une tension variable. Le téléphone la convertit en nombres, l'envoie par radio, et le haut-parleur du correspondant reproduit le son. » Repère où le signal est analogique, où il est numérique, et nomme les deux conversions.",
+      "corrige": [
+        "La tension du microphone et le signal qui alimente le haut-parleur sont analogiques.",
+        "Les nombres transmis par radio forment un signal numérique.",
+        "Conversions : un CAN dans le téléphone qui émet, un CNA dans celui qui reçoit."
+      ],
+      "reponse": "Analogique au micro et au haut-parleur, numérique pendant la transmission ; CAN à l'émission, CNA à la réception."
     }
   ]
 }

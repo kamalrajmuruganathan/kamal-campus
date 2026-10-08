@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "temps-attente",
       "enonce": "Un service d'assistance téléphonique étudie le parcours d'un client. On s'intéresse d'abord au temps d'attente avant qu'un conseiller décroche, puis à la durée de l'appel.\n\n**Partie A — Temps d'attente.** Le temps d'attente $T$ (en minutes) avant qu'un conseiller réponde suit une loi exponentielle de paramètre $\\lambda$. Le temps d'attente moyen constaté est de $2$ minutes.\n**1.** Déterminer $\\lambda$, puis donner l'expression de la densité $f$ de $T$ pour $t\\geqslant 0$.\n**2.** Calculer la probabilité qu'un client attende plus de $3$ minutes (valeur approchée au millième).\n**3.** Un client patiente déjà depuis $2$ minutes. Quelle est la probabilité qu'il attende encore plus de $3$ minutes supplémentaires ? On nommera la propriété utilisée.\n\n**Partie B — Durée de l'appel.** La durée $D$ (en minutes) de l'appel avec le conseiller est modélisée par une loi uniforme sur $[4\\,;12]$.\n**4.** Calculer $P(D\\leqslant 6)$.\n**5.** Déterminer la durée moyenne d'un appel.\n**6.** Sachant qu'un appel dure au moins $8$ minutes, calculer la probabilité qu'il dure au moins $10$ minutes.",
       "corrige": [
@@ -138,6 +138,439 @@
         "6. Comme $\\{D\\geqslant 10\\}\\subset\\{D\\geqslant 8\\}$, on a $P_{D\\geqslant 8}(D\\geqslant 10)=\\dfrac{P(D\\geqslant 10)}{P(D\\geqslant 8)}$. Avec $P(D\\geqslant t)=\\dfrac{b-t}{b-a}$ : $P(D\\geqslant 10)=\\dfrac{12-10}{8}=\\dfrac{2}{8}$ et $P(D\\geqslant 8)=\\dfrac{12-8}{8}=\\dfrac{4}{8}$, d'où $\\dfrac{2/8}{4/8}=\\dfrac24=0{,}5.$"
       ],
       "reponse": "Partie A : $\\lambda=0{,}5$, $f(t)=0{,}5e^{-0{,}5t}$ ; $P(T>3)=e^{-1{,}5}\\approx 0{,}223$ ; par absence de mémoire, la probabilité d'attendre encore $3$ min vaut aussi $\\approx 0{,}223$. Partie B : $P(D\\leqslant 6)=0{,}25$ ; $E(D)=8$ min ; $P_{D\\geqslant 8}(D\\geqslant 10)=0{,}5.$"
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "valeur-isolee",
+      "enonce": "$X$ suit une loi à densité sur $[0\\,;10]$. Que vaut $P(X=4)$ ? Justifier.",
+      "corrige": [
+        "$P(X=4)=\\displaystyle\\int_4^4 f(x)\\,dx=0$ : l'aire sur un segment réduit à un point est nulle."
+      ],
+      "reponse": "$P(X=4)=0$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "valeur-isolee",
+      "enonce": "$X$ suit une loi à densité et $P(2\\leqslant X\\leqslant 5)=0{,}4$. Que vaut $P(2<X<5)$ ?",
+      "corrige": [
+        "Pour une loi à densité, $P(X=2)=P(X=5)=0$ : les inégalités strictes ou larges donnent la même probabilité."
+      ],
+      "reponse": "$0{,}4$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "valeur-isolee",
+      "enonce": "$X$ suit une loi à densité et $P(X\\leqslant 3)=0{,}7$. Calculer $P(X>3)$ et $P(X\\geqslant 3)$.",
+      "corrige": [
+        "$P(X>3)=1-P(X\\leqslant 3)=0{,}3$.",
+        "$P(X=3)=0$, donc $P(X\\geqslant 3)=P(X>3)=0{,}3$."
+      ],
+      "reponse": "$0{,}3$ et $0{,}3$"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "valeur-isolee",
+      "enonce": "Un élève écrit, pour une loi à densité : « $P(X<5)=P(X\\leqslant 5)-P(X=5)$, donc $P(X<5)<P(X\\leqslant 5)$. » Qu'en penser ?",
+      "corrige": [
+        "La première égalité est juste, mais $P(X=5)=0$ pour une loi à densité.",
+        "Donc $P(X<5)=P(X\\leqslant 5)$ : la conclusion de l'élève (inégalité stricte) est fausse."
+      ],
+      "reponse": "Faux : $P(X<5)=P(X\\leqslant 5)$ car $P(X=5)=0$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "loi-a-densite",
+      "enonce": "Vérifier que $f(x)=\\dfrac{3}{8}x^{2}$ est une densité de probabilité sur $[0\\,;2]$.",
+      "corrige": [
+        "$f$ est continue et positive sur $[0\\,;2]$.",
+        "$\\displaystyle\\int_0^2 \\dfrac{3}{8}x^{2}\\,dx=\\left[\\dfrac{x^{3}}{8}\\right]_0^2=\\dfrac{8}{8}=1$."
+      ],
+      "reponse": "$f$ est une densité (aire totale égale à $1$)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "loi-a-densite",
+      "enonce": "$X$ a pour densité $f(x)=\\dfrac{3}{8}x^{2}$ sur $[0\\,;2]$. Calculer $P(X\\leqslant 1)$.",
+      "corrige": [
+        "$P(X\\leqslant 1)=\\displaystyle\\int_0^1\\dfrac{3}{8}x^{2}\\,dx=\\left[\\dfrac{x^{3}}{8}\\right]_0^1=\\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}=0{,}125$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "loi-a-densite",
+      "enonce": "$X$ a pour densité $f(x)=2x$ sur $[0\\,;1]$. Calculer $P(X\\geqslant 0{,}5)$.",
+      "corrige": [
+        "$P(X\\geqslant 0{,}5)=\\displaystyle\\int_{0{,}5}^{1}2x\\,dx=\\big[x^{2}\\big]_{0{,}5}^{1}=1-0{,}25=0{,}75$."
+      ],
+      "reponse": "$0{,}75$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "loi-a-densite",
+      "enonce": "La fonction $g(x)=x$ est-elle une densité de probabilité sur $[0\\,;1]$ ? Et sur $[0\\,;\\sqrt{2}]$ ?",
+      "corrige": [
+        "$g$ est continue et positive sur ces intervalles. $\\displaystyle\\int_0^1 x\\,dx=\\dfrac{1}{2}\\neq 1$ : pas une densité sur $[0\\,;1]$.",
+        "$\\displaystyle\\int_0^{\\sqrt{2}}x\\,dx=\\dfrac{(\\sqrt{2})^{2}}{2}=1$ : c'est une densité sur $[0\\,;\\sqrt{2}]$."
+      ],
+      "reponse": "Non sur $[0\\,;1]$ ; oui sur $[0\\,;\\sqrt{2}]$."
+    },
+    {
+      "id": 19,
+      "difficulte": "approfondissement",
+      "notion": "loi-a-densite",
+      "enonce": "Soit $f(x)=6x(1-x)$ sur $[0\\,;1]$. Vérifier que $f$ est une densité, puis calculer $P(X\\leqslant 0{,}5)$.",
+      "corrige": [
+        "Sur $[0\\,;1]$, $x\\geqslant 0$ et $1-x\\geqslant 0$ : $f\\geqslant 0$ ; $f$ est continue.",
+        "$\\displaystyle\\int_0^1 (6x-6x^{2})\\,dx=\\big[3x^{2}-2x^{3}\\big]_0^1=3-2=1$ : c'est une densité.",
+        "$P(X\\leqslant 0{,}5)=3\\times 0{,}25-2\\times 0{,}125=0{,}75-0{,}25=0{,}5$."
+      ],
+      "reponse": "Densité ; $P(X\\leqslant 0{,}5)=0{,}5$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$X$ a pour densité $f(x)=\\dfrac{3}{8}x^{2}$ sur $[0\\,;2]$. Calculer $E(X)$.",
+      "corrige": [
+        "$E(X)=\\displaystyle\\int_0^2 x\\times\\dfrac{3}{8}x^{2}\\,dx=\\int_0^2\\dfrac{3}{8}x^{3}\\,dx$.",
+        "$=\\left[\\dfrac{3x^{4}}{32}\\right]_0^2=\\dfrac{48}{32}=\\dfrac{3}{2}$."
+      ],
+      "reponse": "$E(X)=\\dfrac{3}{2}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "$X$ a pour densité $f(x)=2-2x$ sur $[0\\,;1]$. Calculer $E(X)$.",
+      "corrige": [
+        "$E(X)=\\displaystyle\\int_0^1 x(2-2x)\\,dx=\\int_0^1 (2x-2x^{2})\\,dx$.",
+        "$=\\left[x^{2}-\\dfrac{2x^{3}}{3}\\right]_0^1=1-\\dfrac{2}{3}=\\dfrac{1}{3}$."
+      ],
+      "reponse": "$E(X)=\\dfrac{1}{3}$"
+    },
+    {
+      "id": 22,
+      "difficulte": "decouverte",
+      "notion": "esperance",
+      "enonce": "$X$ suit la loi uniforme sur $[4\\,;16]$. Donner $E(X)$ sans calcul d'intégrale.",
+      "corrige": [
+        "L'espérance d'une loi uniforme est le milieu de l'intervalle : $\\dfrac{4+16}{2}=10$."
+      ],
+      "reponse": "$E(X)=10$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "La durée de vie $X$ d'un appareil suit une loi exponentielle de paramètre $\\lambda=0{,}125$ (par an). Quelle est sa durée de vie moyenne ?",
+      "corrige": [
+        "$E(X)=\\dfrac{1}{\\lambda}=\\dfrac{1}{0{,}125}=8$."
+      ],
+      "reponse": "$8$ ans"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Un élève affirme : « pour la loi uniforme sur $[2\\,;6]$, l'espérance vaut $\\dfrac{1}{6-2}=0{,}25$. » Corriger.",
+      "corrige": [
+        "$\\dfrac{1}{b-a}$ est la valeur de la densité, pas l'espérance.",
+        "L'espérance est le milieu : $E(X)=\\dfrac{2+6}{2}=4$."
+      ],
+      "reponse": "$E(X)=4$"
+    },
+    {
+      "id": 25,
+      "difficulte": "decouverte",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[0\\,;8]$. Donner l'expression de sa densité.",
+      "corrige": [
+        "Densité constante $\\dfrac{1}{b-a}=\\dfrac{1}{8-0}$ sur $[0\\,;8]$ (et nulle ailleurs)."
+      ],
+      "reponse": "$f(x)=\\dfrac{1}{8}$ sur $[0\\,;8]$"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[2\\,;7]$. Calculer $P(3\\leqslant X\\leqslant 5)$.",
+      "corrige": [
+        "$P(3\\leqslant X\\leqslant 5)=\\dfrac{5-3}{7-2}=\\dfrac{2}{5}=0{,}4$."
+      ],
+      "reponse": "$0{,}4$"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[0\\,;60]$. Calculer $P(X>45)$ et $P(X\\leqslant 15)$.",
+      "corrige": [
+        "$P(X>45)=\\dfrac{60-45}{60}=0{,}25$.",
+        "$P(X\\leqslant 15)=\\dfrac{15-0}{60}=0{,}25$."
+      ],
+      "reponse": "$0{,}25$ et $0{,}25$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[-1\\,;3]$. Calculer $P(X\\leqslant 0)$ et $P(-2\\leqslant X\\leqslant 1)$.",
+      "corrige": [
+        "$P(X\\leqslant 0)=\\dfrac{0-(-1)}{3-(-1)}=\\dfrac{1}{4}$.",
+        "$X$ ne prend pas de valeur en dessous de $-1$ : $P(-2\\leqslant X\\leqslant 1)=P(-1\\leqslant X\\leqslant 1)=\\dfrac{2}{4}=\\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{4}$ et $\\dfrac{1}{2}$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[0\\,;b]$ avec $b>0$, et $P(X\\leqslant 3)=0{,}2$. Déterminer $b$.",
+      "corrige": [
+        "$P(X\\leqslant 3)=\\dfrac{3}{b}=0{,}2$.",
+        "Donc $b=\\dfrac{3}{0{,}2}=15$."
+      ],
+      "reponse": "$b=15$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "loi-uniforme",
+      "enonce": "Un train arrive à un instant aléatoire entre $8$ h et $8$ h $30$, modélisé par la loi uniforme sur $[0\\,;30]$ (en minutes après $8$ h). Quelle est la probabilité qu'il arrive entre $8$ h $10$ et $8$ h $16$ ?",
+      "corrige": [
+        "Cela correspond à $10\\leqslant X\\leqslant 16$.",
+        "$P(10\\leqslant X\\leqslant 16)=\\dfrac{16-10}{30}=\\dfrac{6}{30}=0{,}2$."
+      ],
+      "reponse": "$0{,}2$"
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[a\\,;b]$, avec $E(X)=5$ et $P(X\\leqslant 4)=0{,}25$. Déterminer $a$ et $b$.",
+      "corrige": [
+        "$E(X)=\\dfrac{a+b}{2}=5$, donc $a+b=10$.",
+        "$4$ est situé avant le milieu $5$ ; $P(X\\leqslant 4)=\\dfrac{4-a}{b-a}=0{,}25$ : la distance de $a$ à $4$ est le quart de la longueur $b-a$.",
+        "Le milieu $5$ est à la moitié : $5-a=\\dfrac{b-a}{2}$, et $4-a=\\dfrac{b-a}{4}$. En soustrayant : $1=\\dfrac{b-a}{4}$, donc $b-a=4$. Avec $a+b=10$ : $a=3$ et $b=7$."
+      ],
+      "reponse": "$a=3$ et $b=7$"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit la loi exponentielle de paramètre $\\lambda=0{,}5$. Calculer $P(X>1)$ et $P(X\\leqslant 1)$ (valeurs approchées au millième).",
+      "corrige": [
+        "$P(X>1)=e^{-0{,}5\\times 1}=e^{-0{,}5}\\approx 0{,}607$.",
+        "$P(X\\leqslant 1)=1-e^{-0{,}5}\\approx 0{,}393$."
+      ],
+      "reponse": "$P(X>1)\\approx 0{,}607$ ; $P(X\\leqslant 1)\\approx 0{,}393$"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit la loi exponentielle de paramètre $\\lambda=0{,}1$. Calculer $P(2\\leqslant X\\leqslant 6)$ (valeur exacte puis approchée au millième).",
+      "corrige": [
+        "$P(2\\leqslant X\\leqslant 6)=e^{-0{,}1\\times 2}-e^{-0{,}1\\times 6}=e^{-0{,}2}-e^{-0{,}6}$.",
+        "$\\approx 0{,}270$."
+      ],
+      "reponse": "$e^{-0{,}2}-e^{-0{,}6}\\approx 0{,}270$"
+    },
+    {
+      "id": 34,
+      "difficulte": "decouverte",
+      "notion": "loi-exponentielle",
+      "enonce": "Écrire la densité de la loi exponentielle de paramètre $\\lambda=3$.",
+      "corrige": [
+        "La densité est $f(t)=\\lambda e^{-\\lambda t}$ pour $t\\geqslant 0$ (et $0$ pour $t<0$)."
+      ],
+      "reponse": "$f(t)=3e^{-3t}$ pour $t\\geqslant 0$"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "loi-exponentielle",
+      "enonce": "Un élève écrit, pour $\\lambda=0{,}2$ : « $P(X>5)=e^{0{,}2\\times 5}=e\\approx 2{,}718$ ». Montrer que ce résultat est absurde et le corriger.",
+      "corrige": [
+        "Une probabilité est comprise entre $0$ et $1$ : $2{,}718$ est impossible. L'élève a oublié le signe moins.",
+        "$P(X>5)=e^{-0{,}2\\times 5}=e^{-1}\\approx 0{,}368$."
+      ],
+      "reponse": "$P(X>5)=e^{-1}\\approx 0{,}368$"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda$. Montrer que $P(X>t)$ diminue quand $t$ augmente, et donner sa limite quand $t\\to+\\infty$.",
+      "corrige": [
+        "$P(X>t)=e^{-\\lambda t}$ et $\\lambda>0$ : la fonction $t\\mapsto e^{-\\lambda t}$ a pour dérivée $-\\lambda e^{-\\lambda t}<0$, elle est décroissante.",
+        "Quand $t\\to+\\infty$, $-\\lambda t\\to-\\infty$, donc $e^{-\\lambda t}\\to 0$."
+      ],
+      "reponse": "Décroissante ; limite $0$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit la loi exponentielle de paramètre $\\lambda=0{,}25$. Déterminer le réel $t$ tel que $P(X\\leqslant t)=0{,}5$ (valeur exacte puis approchée au centième).",
+      "corrige": [
+        "$1-e^{-0{,}25t}=0{,}5\\iff e^{-0{,}25t}=0{,}5\\iff -0{,}25t=\\ln 0{,}5$.",
+        "$t=\\dfrac{\\ln 0{,}5}{-0{,}25}=4\\ln 2\\approx 2{,}77$."
+      ],
+      "reponse": "$t=4\\ln 2\\approx 2{,}77$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda$. Vérifier que $P(X\\leqslant t)+P(X>t)=1$ et montrer que $P(X>2t)=\\big(P(X>t)\\big)^{2}$.",
+      "corrige": [
+        "$(1-e^{-\\lambda t})+e^{-\\lambda t}=1$.",
+        "$P(X>2t)=e^{-2\\lambda t}=\\left(e^{-\\lambda t}\\right)^{2}=\\big(P(X>t)\\big)^{2}$."
+      ],
+      "reponse": "Les deux égalités sont vraies."
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "absence-de-memoire",
+      "enonce": "La durée de vie $X$ (en années) d'un appareil suit la loi exponentielle de paramètre $\\lambda=0{,}2$. L'appareil fonctionne depuis $3$ ans. Quelle est la probabilité qu'il fonctionne encore au moins $2$ ans ?",
+      "corrige": [
+        "Par absence de mémoire, $P_{X>3}(X>5)=P(X>2)$.",
+        "$P(X>2)=e^{-0{,}4}\\approx 0{,}670$."
+      ],
+      "reponse": "$e^{-0{,}4}\\approx 0{,}670$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "absence-de-memoire",
+      "enonce": "Une loi uniforme sur $[0\\,;10]$ a-t-elle la propriété d'absence de mémoire ? Comparer $P_{X>5}(X>8)$ et $P(X>3)$.",
+      "corrige": [
+        "$P_{X>5}(X>8)=\\dfrac{P(X>8)}{P(X>5)}=\\dfrac{2/10}{5/10}=0{,}4$.",
+        "$P(X>3)=\\dfrac{7}{10}=0{,}7$. Les deux nombres diffèrent : la loi uniforme n'est pas sans mémoire."
+      ],
+      "reponse": "Non : $0{,}4\\neq 0{,}7$"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "absence-de-memoire",
+      "enonce": "Un client attend déjà depuis $10$ minutes à un guichet ; l'attente suit une loi exponentielle. Il pense : « J'ai déjà beaucoup attendu, mon tour va forcément arriver plus vite. » Que répondre ?",
+      "corrige": [
+        "La loi exponentielle est sans mémoire : $P_{X>10}(X>10+t)=P(X>t)$.",
+        "Le temps déjà écoulé ne change pas la loi du temps qui reste à attendre."
+      ],
+      "reponse": "Son raisonnement est faux : le temps restant a la même loi qu'au départ."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "absence-de-memoire",
+      "enonce": "$X$ suit la loi exponentielle de paramètre $\\lambda=0{,}05$. Calculer $P_{X>20}(X>30)$ de deux façons : avec la définition de la probabilité conditionnelle, puis avec l'absence de mémoire.",
+      "corrige": [
+        "Définition : $\\dfrac{P(X>30)}{P(X>20)}=\\dfrac{e^{-1{,}5}}{e^{-1}}=e^{-0{,}5}$.",
+        "Absence de mémoire : $P_{X>20}(X>20+10)=P(X>10)=e^{-0{,}5}\\approx 0{,}607$."
+      ],
+      "reponse": "$e^{-0{,}5}\\approx 0{,}607$"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "modelisation-temps-attente",
+      "enonce": "Pour chaque situation, choisir entre loi uniforme et loi exponentielle : a) l'heure d'arrivée d'un livreur annoncé « entre $14$ h et $16$ h », sans autre précision ; b) la durée de vie d'un composant électronique qui ne s'use pas.",
+      "corrige": [
+        "a) Plage bornée, sans moment privilégié : loi uniforme sur $[14\\,;16]$.",
+        "b) Durée non bornée, sans vieillissement : loi exponentielle."
+      ],
+      "reponse": "a) uniforme ; b) exponentielle"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "modelisation-temps-attente",
+      "enonce": "Le temps (en minutes) entre deux clients à une caisse suit une loi exponentielle de moyenne $2$ minutes. Calculer la probabilité qu'aucun client n'arrive pendant $4$ minutes.",
+      "corrige": [
+        "$\\lambda=\\dfrac{1}{2}=0{,}5$.",
+        "$P(X>4)=e^{-0{,}5\\times 4}=e^{-2}\\approx 0{,}135$."
+      ],
+      "reponse": "$e^{-2}\\approx 0{,}135$"
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "modelisation-temps-attente",
+      "enonce": "La durée de vie d'une batterie (en années) suit une loi exponentielle de moyenne $5$ ans. Quelle est la probabilité qu'elle tombe en panne avant $5$ ans ?",
+      "corrige": [
+        "$\\lambda=\\dfrac{1}{5}=0{,}2$.",
+        "$P(X\\leqslant 5)=1-e^{-0{,}2\\times 5}=1-e^{-1}\\approx 0{,}632$."
+      ],
+      "reponse": "$1-e^{-1}\\approx 0{,}632$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "modelisation-temps-attente",
+      "enonce": "Un élève dit : « la durée de vie moyenne d'un appareil est $5$ ans, donc il y a une chance sur deux qu'il dure plus de $5$ ans. » Vérifier pour une loi exponentielle.",
+      "corrige": [
+        "$\\lambda=0{,}2$ et $P(X>5)=e^{-1}\\approx 0{,}368$.",
+        "Ce n'est pas $0{,}5$ : la moyenne n'est pas la valeur qui partage les probabilités en deux."
+      ],
+      "reponse": "Faux : $P(X>5)\\approx 0{,}368$"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "modelisation-temps-attente",
+      "enonce": "La durée de vie $X$ (en heures) d'une ampoule suit une loi exponentielle ; on sait que $P(X>1000)=e^{-2}$. 1. Déterminer $\\lambda$ et la durée de vie moyenne. 2. Calculer la probabilité qu'une ampoule dure entre $500$ et $1000$ h. 3. Une ampoule a déjà fonctionné $1000$ h : probabilité qu'elle dure encore au moins $500$ h ?",
+      "corrige": [
+        "1. $e^{-1000\\lambda}=e^{-2}$ donc $\\lambda=0{,}002$ ; moyenne $\\dfrac{1}{0{,}002}=500$ h.",
+        "2. $P(500\\leqslant X\\leqslant 1000)=e^{-1}-e^{-2}\\approx 0{,}233$.",
+        "3. Absence de mémoire : $P_{X>1000}(X>1500)=P(X>500)=e^{-1}\\approx 0{,}368$."
+      ],
+      "reponse": "1. $\\lambda=0{,}002$, moyenne $500$ h. 2. $\\approx 0{,}233$. 3. $\\approx 0{,}368$"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "parametre-lambda",
+      "enonce": "La durée d'attente moyenne à un arrêt de taxi est de $8$ minutes ; on la modélise par une loi exponentielle. Donner $\\lambda$.",
+      "corrige": [
+        "$E(X)=\\dfrac{1}{\\lambda}=8$, donc $\\lambda=\\dfrac{1}{8}=0{,}125$."
+      ],
+      "reponse": "$\\lambda=0{,}125$"
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "parametre-lambda",
+      "enonce": "$X$ suit une loi exponentielle et $P(X\\leqslant 10)=0{,}5$. Déterminer $\\lambda$ (valeur exacte puis approchée au millième).",
+      "corrige": [
+        "$1-e^{-10\\lambda}=0{,}5\\iff e^{-10\\lambda}=0{,}5\\iff -10\\lambda=\\ln 0{,}5=-\\ln 2$.",
+        "$\\lambda=\\dfrac{\\ln 2}{10}\\approx 0{,}069$."
+      ],
+      "reponse": "$\\lambda=\\dfrac{\\ln 2}{10}\\approx 0{,}069$"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "parametre-lambda",
+      "enonce": "$X$ suit une loi exponentielle et $P(X>5)=0{,}6$. Déterminer $\\lambda$ puis l'espérance de $X$ (arrondis au centième).",
+      "corrige": [
+        "$e^{-5\\lambda}=0{,}6\\iff\\lambda=-\\dfrac{\\ln 0{,}6}{5}\\approx 0{,}10$.",
+        "$E(X)=\\dfrac{1}{\\lambda}=-\\dfrac{5}{\\ln 0{,}6}\\approx 9{,}79$."
+      ],
+      "reponse": "$\\lambda\\approx 0{,}10$ ; $E(X)\\approx 9{,}79$"
     }
   ]
 }

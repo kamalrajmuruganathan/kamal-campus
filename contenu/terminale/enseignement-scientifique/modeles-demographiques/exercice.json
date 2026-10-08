@@ -68,7 +68,7 @@
         "b) L'année $2030$ correspond à $n = 3$ : $u_3 = 50 \\times 1{,}2^{\\,3} = 50 \\times 1{,}728 = 86{,}4$, soit environ $86\\,400$ habitants prévus.",
         "c) Le réel ($79$) est nettement en dessous de la prévision ($86{,}4$) : l'écart vaut $\\dfrac{86{,}4 - 79}{79} \\approx 9{,}4\\,\\%$. La croissance a ralenti par rapport au modèle : le modèle exponentiel, valable sur les décennies $2000$–$2020$, n'est plus valide sur $2020$–$2030$. Il faut le corriger (taux plus faible), car aucune population ne croît indéfiniment au même rythme : le modèle n'est valable que sur un domaine limité."
       ],
-      "reponse": "a) quotients constants $= 1{,}2$, donc $u_n = 50 \\times 1{,}2^{\\,n}$ ; b) $u_3 = 86{,}4$ (soit $\\approx 86\\,400$ habitants) ; c) le réel ($79$) est $\\approx 9{,}4\\,\\%$ en dessous : la croissance ralentit, le modèle exponentiel n'est plus valable et doit être révisé."
+      "reponse": "a) quotients constants $= 1{,}2$, donc $u_n = 50 \\times 1{,}2^{\\,n}$ ; b) $u_3 = 86{,}4$ (soit $\\approx 86\\,400$ habitants) ; c) le réel ($79$) est nettement en dessous de la prévision (écart $\\dfrac{86{,}4 - 79}{79} \\approx 9{,}4\\,\\%$) : la croissance ralentit, le modèle exponentiel n'est plus valable et doit être révisé."
     },
     {
       "id": 6,
@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Sur une île, les recensements donnent la population (en milliers d'habitants) : $250$ en $2000$, $300$ en $2010$, $360$ en $2020$. On note $u_n$ la population $n$ décennies après $2000$, avec $u_0 = 250$. Les ressources alimentaires de l'île peuvent nourrir $R_n$ milliers de personnes, avec $R_n = 400 + 30\\,n$ ($400$ milliers en $2000$, $+30$ milliers par décennie). 1. Montrer que la population suit un modèle exponentiel et donner l'expression de $u_n$. 2. Quelle population le modèle prévoit-il pour $2030$ et $2040$ ? 3. Au bout de combien de temps la population double-t-elle (on utilisera $N = \\dfrac{\\ln 2}{\\ln q}$) ? 4. À la manière de Malthus, comparer $u_n$ et $R_n$ pour $n = 0$, puis déterminer la première décennie où la population dépasse les ressources. 5. Le recensement de $2030$ donne finalement $410$ (milliers). Comparer à la prévision et conclure sur la validité du modèle. 6. Que peut-on dire de la thèse de Malthus et de sa limite au vu de cet exemple ?",
       "corrige": [
@@ -132,6 +132,465 @@
         "6. Cet exemple illustre la thèse de Malthus : une population en croissance exponentielle finit par rattraper puis dépasser des ressources en croissance seulement linéaire, malgré l'avance initiale de ces ressources ($400$ contre $250$). Mais sa limite apparaît aussitôt : dès $2030$ la croissance réelle ralentit (question 5). Aucune population ne croît indéfiniment au même rythme ; le modèle exponentiel n'est valable que sur un domaine limité, et la catastrophe annoncée par Malthus n'est donc pas une prophétie certaine."
       ],
       "reponse": "1. quotients constants $= 1{,}2$, donc $u_n = 250 \\times 1{,}2^{\\,n}$ ; 2. $u_3 = 432$ et $u_4 = 518{,}4$ (milliers), soit $\\approx 432\\,000$ en $2030$ et $\\approx 518\\,400$ en $2040$ ; 3. $N = \\dfrac{\\ln 2}{\\ln 1{,}2} \\approx 3{,}8$ décennies ($\\approx 38$ ans) ; 4. les ressources dominent jusqu'à $n = 4$, la population les dépasse à $n = 5$ (année $2050$) ; 5. réel $410 <$ prévu $432$ ($\\approx 5{,}4\\,\\%$ d'écart) : la croissance ralentit, le modèle doit être révisé ; 6. Malthus (l'exponentielle dépasse le linéaire) se vérifie, mais son modèle de croissance illimitée n'est valable que sur un domaine limité."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "variation-absolue-relative",
+      "enonce": "Une ville passe de $40\\,000$ à $41\\,200$ habitants en un an. Calculer la variation absolue, puis la variation relative en pourcentage.",
+      "corrige": [
+        "Variation absolue : $41\\,200 - 40\\,000 = 1\\,200$ habitants.",
+        "Variation relative : $\\dfrac{1\\,200}{40\\,000} = 0{,}03$, soit $3\\,\\%$."
+      ],
+      "reponse": "$+1\\,200$ habitants, soit $+3\\,\\%$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "modele-lineaire",
+      "enonce": "Une population suit le modèle linéaire $u_{n+1} = u_n + 150$ avec $u_0 = 2\\,000$. Calculer $u_1$, $u_2$ et $u_3$.",
+      "corrige": [
+        "On ajoute 150 à chaque étape.",
+        "$u_1 = 2\\,150$ ; $u_2 = 2\\,300$ ; $u_3 = 2\\,450$."
+      ],
+      "reponse": "$u_1 = 2\\,150$, $u_2 = 2\\,300$, $u_3 = 2\\,450$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "modele-exponentiel",
+      "enonce": "Donner le coefficient multiplicateur $q$ associé à chaque évolution : (a) hausse de $6\\,\\%$ ; (b) baisse de $15\\,\\%$ ; (c) hausse de $0{,}5\\,\\%$ ; (d) baisse de $3\\,\\%$.",
+      "corrige": [
+        "Une hausse de $t\\,\\%$ donne $q = 1 + \\dfrac{t}{100}$ ; une baisse de $t\\,\\%$ donne $q = 1 - \\dfrac{t}{100}$.",
+        "(a) $1{,}06$ ; (b) $0{,}85$ ; (c) $1{,}005$ ; (d) $0{,}97$."
+      ],
+      "reponse": "(a) $1{,}06$ ; (b) $0{,}85$ ; (c) $1{,}005$ ; (d) $0{,}97$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "choix-du-modele",
+      "enonce": "Vrai ou faux ? « Si une population augmente de $2\\,\\%$ par an, elle gagne chaque année le même nombre d'habitants. » Justifier.",
+      "corrige": [
+        "Faux : $2\\,\\%$ d'une population plus grande représente plus d'habitants.",
+        "C'est la variation relative qui est constante, pas la variation absolue : le modèle est exponentiel, pas linéaire."
+      ],
+      "reponse": "Faux : le pourcentage est constant, mais le nombre d'habitants gagnés augmente chaque année (modèle exponentiel)."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "temps-de-doublement",
+      "enonce": "Une population croît de $7\\,\\%$ par an. À l'aide de la « règle de 70 », estimer son temps de doublement.",
+      "corrige": [
+        "La règle de 70 donne $N \\approx \\dfrac{70}{t}$, avec $t$ en %.",
+        "$N \\approx \\dfrac{70}{7} = 10$ ans."
+      ],
+      "reponse": "Environ 10 ans."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "variation-absolue-relative",
+      "enonce": "Traduire chaque coefficient multiplicateur en taux d'évolution (hausse ou baisse, en %) : (a) $q = 1{,}12$ ; (b) $q = 0{,}93$ ; (c) $q = 1{,}005$ ; (d) $q = 2$.",
+      "corrige": [
+        "On utilise $t = (q - 1) \\times 100$.",
+        "(a) $+12\\,\\%$ ; (b) $-7\\,\\%$ ; (c) $+0{,}5\\,\\%$ ; (d) $+100\\,\\%$ (la population double)."
+      ],
+      "reponse": "(a) $+12\\,\\%$ ; (b) $-7\\,\\%$ ; (c) $+0{,}5\\,\\%$ ; (d) $+100\\,\\%$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "modele-lineaire",
+      "enonce": "Une commune de $15\\,000$ habitants perd $250$ habitants par an (modèle linéaire). 1) Donner le terme général $u_n$. 2) Calculer $u_{12}$.",
+      "corrige": [
+        "La raison est négative : $r = -250$, donc $u_n = 15\\,000 - 250\\,n$.",
+        "$u_{12} = 15\\,000 - 250 \\times 12 = 12\\,000$."
+      ],
+      "reponse": "1) $u_n = 15\\,000 - 250\\,n$. 2) $u_{12} = 12\\,000$ habitants."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population de $8\\,000$ individus augmente de $5\\,\\%$ par an. Calculer l'effectif au bout de $3$ ans.",
+      "corrige": [
+        "Coefficient multiplicateur : $q = 1{,}05$, donc $u_n = 8\\,000 \\times 1{,}05^{\\,n}$.",
+        "$u_3 = 8\\,000 \\times 1{,}05^{\\,3} = 8\\,000 \\times 1{,}157\\,625 = 9\\,261$."
+      ],
+      "reponse": "$9\\,261$ individus."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "choix-du-modele",
+      "enonce": "Effectifs relevés sur quatre années : $2\\,000$ ; $2\\,200$ ; $2\\,420$ ; $2\\,662$. Le modèle est-il linéaire ou exponentiel ? Donner son terme général.",
+      "corrige": [
+        "Différences : $+200$, $+220$, $+242$ : elles ne sont pas constantes.",
+        "Quotients : $\\dfrac{2\\,200}{2\\,000} = \\dfrac{2\\,420}{2\\,200} = \\dfrac{2\\,662}{2\\,420} = 1{,}1$ : ils sont constants.",
+        "Le modèle est exponentiel : $u_n = 2\\,000 \\times 1{,}1^{\\,n}$."
+      ],
+      "reponse": "Exponentiel : $u_n = 2\\,000 \\times 1{,}1^{\\,n}$ (hausse de $10\\,\\%$ par an)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "choix-du-modele",
+      "enonce": "Effectifs relevés sur quatre années : $3\\,200$ ; $3\\,080$ ; $2\\,960$ ; $2\\,840$. Le modèle est-il linéaire ou exponentiel ? Donner son terme général.",
+      "corrige": [
+        "Différences : $-120$ à chaque fois : elles sont constantes.",
+        "Le modèle est linéaire, de raison $r = -120$ : $u_n = 3\\,200 - 120\\,n$."
+      ],
+      "reponse": "Linéaire : $u_n = 3\\,200 - 120\\,n$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "modele-exponentiel",
+      "enonce": "Pour une population de $5\\,000$ habitants qui augmente de $4\\,\\%$ par an, un élève écrit $u_n = 5\\,000 \\times 1{,}04 \\times n$ et trouve $u_{10} = 52\\,000$. Repérer l'erreur, corriger la formule et calculer le bon $u_{10}$.",
+      "corrige": [
+        "Dans un modèle exponentiel, le coefficient $q$ est élevé à la puissance $n$ ; il n'est pas multiplié par $n$.",
+        "Formule correcte : $u_n = 5\\,000 \\times 1{,}04^{\\,n}$.",
+        "$u_{10} = 5\\,000 \\times 1{,}04^{\\,10} \\approx 7\\,401$ habitants."
+      ],
+      "reponse": "$u_n = 5\\,000 \\times 1{,}04^{\\,n}$ et $u_{10} \\approx 7\\,401$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "temps-de-doublement",
+      "enonce": "Une ville de $10\\,000$ habitants et une métropole de $1\\,000\\,000$ d'habitants croissent toutes deux de $2\\,\\%$ par an. Laquelle doublera la première ? Justifier.",
+      "corrige": [
+        "Le temps de doublement vérifie $q^{\\,N} = 2$ : l'effectif de départ $u_0$ se simplifie.",
+        "$N = \\dfrac{\\ln 2}{\\ln 1{,}02} \\approx 35$ ans pour les deux : elles doublent en même temps."
+      ],
+      "reponse": "Aucune : elles doublent toutes les deux en environ 35 ans, car $N$ ne dépend que du taux."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "modele-de-malthus",
+      "enonce": "Compléter le principe de Malthus : « Une population laissée à elle-même croît de façon … , alors que les ressources ne croissent que de façon … . » Associer à chaque croissance le type de suite correspondant.",
+      "corrige": [
+        "Population : croissance géométrique (exponentielle), modélisée par une suite géométrique $u_n = u_0\\,q^{\\,n}$.",
+        "Ressources : croissance arithmétique (linéaire), modélisée par une suite arithmétique $R_n = R_0 + n\\,r$."
+      ],
+      "reponse": "Population : géométrique (suite géométrique) ; ressources : arithmétique (suite arithmétique)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "variation-absolue-relative",
+      "enonce": "Un village de $1\\,250$ habitants en gagne $50$ en un an. Un élève conclut : « La population a augmenté de $50\\,\\%$. » Corriger son erreur.",
+      "corrige": [
+        "$50$ est une variation absolue, en habitants, pas un pourcentage.",
+        "Variation relative : $\\dfrac{50}{1\\,250} = 0{,}04$, soit $4\\,\\%$."
+      ],
+      "reponse": "La hausse est de 50 habitants, soit $4\\,\\%$ (et non $50\\,\\%$)."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "modele-exponentiel",
+      "enonce": "Une région de $60\\,000$ habitants perd $0{,}8\\,\\%$ de sa population chaque année. 1) Donner $q$ et le terme général. 2) Estimer l'effectif au bout de $20$ ans (arrondi à la centaine).",
+      "corrige": [
+        "1) Baisse de $0{,}8\\,\\%$ : $q = 1 - 0{,}008 = 0{,}992$, donc $u_n = 60\\,000 \\times 0{,}992^{\\,n}$.",
+        "2) $u_{20} = 60\\,000 \\times 0{,}992^{\\,20} \\approx 51\\,096$, soit environ $51\\,100$ habitants."
+      ],
+      "reponse": "1) $q = 0{,}992$, $u_n = 60\\,000 \\times 0{,}992^{\\,n}$. 2) Environ $51\\,100$ habitants."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population augmente de $10\\,\\%$ une année, puis encore de $10\\,\\%$ l'année suivante. A-t-elle augmenté de $20\\,\\%$ en deux ans ? Justifier par le calcul.",
+      "corrige": [
+        "Sur deux ans, on multiplie par $1{,}1$ puis encore par $1{,}1$ : $1{,}1^{\\,2} = 1{,}21$.",
+        "La hausse totale est donc de $21\\,\\%$, et non de $20\\,\\%$ : la seconde hausse s'applique à une population déjà plus grande."
+      ],
+      "reponse": "Non : $1{,}1^{\\,2} = 1{,}21$, soit $+21\\,\\%$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "modele-lineaire",
+      "enonce": "Une ville de $9\\,500$ habitants gagne $350$ habitants par an (modèle linéaire). Au bout de combien d'années complètes dépassera-t-elle $15\\,000$ habitants ?",
+      "corrige": [
+        "On résout $9\\,500 + 350\\,n \\geqslant 15\\,000$, soit $350\\,n \\geqslant 5\\,500$, d'où $n \\geqslant 15{,}7$.",
+        "Il faut donc $n = 16$ ans : $u_{16} = 9\\,500 + 350 \\times 16 = 15\\,100$ (alors que $u_{15} = 14\\,750$)."
+      ],
+      "reponse": "Au bout de 16 ans."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population de $12\\,000$ habitants croît de $2{,}5\\,\\%$ par an. À l'aide de la calculatrice, déterminer au bout de combien d'années elle dépassera $15\\,000$ habitants.",
+      "corrige": [
+        "On cherche le premier $n$ tel que $12\\,000 \\times 1{,}025^{\\,n} > 15\\,000$.",
+        "$u_9 \\approx 14\\,986$ (encore en dessous) et $u_{10} \\approx 15\\,361$ (au-dessus)."
+      ],
+      "reponse": "Au bout de 10 ans."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "choix-du-modele",
+      "enonce": "Deux villes comptent $20\\,000$ habitants. La ville A gagne $600$ habitants par an ; la ville B gagne $3\\,\\%$ par an. 1) Comparer leurs effectifs au bout d'un an. 2) Comparer leurs effectifs au bout de $20$ ans. 3) Que montre cette comparaison ?",
+      "corrige": [
+        "1) A : $20\\,000 + 600 = 20\\,600$ ; B : $20\\,000 \\times 1{,}03 = 20\\,600$ : égalité.",
+        "2) A : $20\\,000 + 600 \\times 20 = 32\\,000$ ; B : $20\\,000 \\times 1{,}03^{\\,20} \\approx 36\\,122$.",
+        "3) Le modèle exponentiel finit par dépasser le modèle linéaire, même s'ils démarrent pareil."
+      ],
+      "reponse": "1) $20\\,600$ chacune. 2) $32\\,000$ contre environ $36\\,122$. 3) L'exponentiel finit par dépasser le linéaire."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "temps-de-doublement",
+      "enonce": "Comparer le temps de doublement exact $N = \\dfrac{\\ln 2}{\\ln q}$ et l'estimation $\\dfrac{70}{t}$ pour un taux de $1\\,\\%$ par an, puis pour un taux de $10\\,\\%$ par an. Pour quel taux la règle de 70 est-elle la plus précise ?",
+      "corrige": [
+        "$t = 1\\,\\%$ : $N = \\dfrac{\\ln 2}{\\ln 1{,}01} \\approx 69{,}7$ ans ; règle : $70$ ans.",
+        "$t = 10\\,\\%$ : $N = \\dfrac{\\ln 2}{\\ln 1{,}1} \\approx 7{,}3$ ans ; règle : $7$ ans.",
+        "L'écart relatif est plus faible pour $1\\,\\%$ : la règle de 70 est d'autant plus précise que le taux est petit."
+      ],
+      "reponse": "$69{,}7$ ans contre 70 ; $7{,}3$ ans contre 7 : la règle est plus précise pour les petits taux."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "temps-de-doublement",
+      "enonce": "Une population double tous les $50$ ans. 1) Estimer son taux de croissance annuel avec la règle de 70. 2) Par combien est-elle multipliée en $150$ ans ?",
+      "corrige": [
+        "1) $t \\approx \\dfrac{70}{50} = 1{,}4\\,\\%$ par an.",
+        "2) $150$ ans correspondent à $3$ doublements : $2^{3} = 8$."
+      ],
+      "reponse": "1) Environ $1{,}4\\,\\%$ par an. 2) Par 8."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "modele-de-malthus",
+      "enonce": "On modélise une population par $u_n = 2\\,000 \\times 1{,}05^{\\,n}$ et ses ressources (nombre de personnes qu'elles peuvent nourrir) par $R_n = 6\\,000 + 150\\,n$. 1) Comparer $u_n$ et $R_n$ pour $n = 10$ et $n = 30$. 2) Au tableur, on trouve $u_{35} \\approx 11\\,032$ et $u_{36} \\approx 11\\,584$. En déduire la première année où la population dépasse les ressources.",
+      "corrige": [
+        "1) $u_{10} \\approx 3\\,258 < R_{10} = 7\\,500$ ; $u_{30} \\approx 8\\,644 < R_{30} = 10\\,500$.",
+        "2) $R_{35} = 11\\,250 > u_{35}$ et $R_{36} = 11\\,400 < u_{36}$.",
+        "La population dépasse les ressources pour la première fois à $n = 36$."
+      ],
+      "reponse": "1) Les ressources dominent encore à $n = 10$ et $n = 30$. 2) À $n = 36$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "ajustement",
+      "enonce": "Remettre dans l'ordre les étapes de l'ajustement d'un modèle à des recensements : (a) déterminer les paramètres du modèle ; (b) placer les points $(n\\,;\\,u_n)$ dans un repère ; (c) tracer la courbe de tendance et la superposer au nuage ; (d) repérer si ce sont les différences ou les quotients qui sont à peu près constants.",
+      "corrige": [
+        "On commence par représenter les données (b), puis on repère la forme (d).",
+        "On calcule ensuite les paramètres ($r$, ou $q$ et $u_0$) (a), puis on trace la courbe de tendance (c)."
+      ],
+      "reponse": "(b) → (d) → (a) → (c)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "ajustement",
+      "enonce": "Une ville compte $8\\,000$ habitants en $2000$, $8\\,400$ en $2005$ et $8\\,820$ en $2010$. 1) Montrer que la tendance est exponentielle et donner le coefficient par période de $5$ ans. 2) Donner $u_n$ en précisant ce que compte $n$. 3) Quelle population le modèle prévoit-il pour $2020$ ?",
+      "corrige": [
+        "1) $\\dfrac{8\\,400}{8\\,000} = 1{,}05$ et $\\dfrac{8\\,820}{8\\,400} = 1{,}05$ : quotients constants, $q = 1{,}05$ par période de 5 ans.",
+        "2) $u_n = 8\\,000 \\times 1{,}05^{\\,n}$, où $n$ compte les périodes de 5 ans depuis 2000.",
+        "3) 2020 correspond à $n = 4$ : $u_4 = 8\\,000 \\times 1{,}05^{\\,4} \\approx 9\\,724$."
+      ],
+      "reponse": "1) $q = 1{,}05$ par période de 5 ans. 2) $u_n = 8\\,000 \\times 1{,}05^{\\,n}$ ($n$ en périodes de 5 ans). 3) Environ $9\\,724$ habitants."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "validation-du-modele",
+      "enonce": "Le modèle $u_n = 5\\,000 \\times 1{,}04^{\\,n}$ a été ajusté sur les premières années d'un suivi. Le recensement de l'année $4$ donne $5\\,830$ habitants. Calculer la prévision du modèle et l'écart relatif. Le modèle est-il validé sur cette période ?",
+      "corrige": [
+        "Prévision : $u_4 = 5\\,000 \\times 1{,}04^{\\,4} \\approx 5\\,849$.",
+        "Écart relatif : $\\dfrac{5\\,849 - 5\\,830}{5\\,849} \\approx 0{,}3\\,\\%$.",
+        "L'écart est minime : le modèle est validé sur cette période."
+      ],
+      "reponse": "Prévision $\\approx 5\\,849$, écart $\\approx 0{,}3\\,\\%$ : modèle validé."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "variation-absolue-relative",
+      "enonce": "Une ville compte $50\\,000$ habitants en 2019, $51\\,000$ en 2020 et $52\\,000$ en 2021. 1) Calculer les variations absolues et relatives de chaque année. 2) Quel modèle convient ?",
+      "corrige": [
+        "1) Variations absolues : $+1\\,000$ puis $+1\\,000$.",
+        "Variations relatives : $\\dfrac{1\\,000}{50\\,000} = 2\\,\\%$, puis $\\dfrac{1\\,000}{51\\,000} \\approx 1{,}96\\,\\%$.",
+        "2) C'est la variation absolue qui est constante : le modèle linéaire convient ($r = 1\\,000$)."
+      ],
+      "reponse": "1) $+1\\,000$ et $+1\\,000$ ; $2\\,\\%$ puis environ $1{,}96\\,\\%$. 2) Modèle linéaire."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "modele-lineaire",
+      "enonce": "Une population est modélisée par $u_n = 30\\,000 - 400\\,n$. 1) Interpréter les nombres $30\\,000$ et $-400$. 2) En combien d'années la population atteindra-t-elle $24\\,000$ habitants ?",
+      "corrige": [
+        "1) $30\\,000$ est l'effectif de départ $u_0$ ; $-400$ est la raison : la population perd 400 habitants par an.",
+        "2) $30\\,000 - 400\\,n = 24\\,000$, d'où $n = \\dfrac{6\\,000}{400} = 15$."
+      ],
+      "reponse": "1) $u_0 = 30\\,000$ ; baisse de 400 habitants par an. 2) En 15 ans."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population suit un modèle exponentiel : $u_0 = 50\\,000$ et $u_2 = 54\\,080$. Déterminer le coefficient multiplicateur annuel $q$ et le taux annuel.",
+      "corrige": [
+        "$u_2 = u_0 \\times q^{\\,2}$, donc $q^{\\,2} = \\dfrac{54\\,080}{50\\,000} = 1{,}0816$.",
+        "$q = \\sqrt{1{,}0816} = 1{,}04$ (car $q > 0$), soit une hausse de $4\\,\\%$ par an."
+      ],
+      "reponse": "$q = 1{,}04$, soit $+4\\,\\%$ par an."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population augmente de $20\\,\\%$ par décennie. 1) Quel est le coefficient multiplicateur par décennie ? 2) À la calculatrice, déterminer le coefficient annuel $q$ tel que $q^{\\,10}$ soit égal à ce coefficient, puis le taux annuel. 3) Pourquoi ce taux n'est-il pas $2\\,\\%$ ?",
+      "corrige": [
+        "1) $1{,}2$ par décennie.",
+        "2) $q = 1{,}2^{\\,1/10} \\approx 1{,}0184$, soit environ $1{,}84\\,\\%$ par an.",
+        "3) Les hausses se composent (on multiplie, on n'additionne pas) : $1{,}02^{\\,10} \\approx 1{,}219$, ce qui ferait plus de $20\\,\\%$."
+      ],
+      "reponse": "1) $1{,}2$. 2) $q \\approx 1{,}0184$, soit environ $1{,}84\\,\\%$ par an. 3) Les taux se composent par multiplication."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "choix-du-modele",
+      "enonce": "Une population croît de $10\\,\\%$ par période de $5$ ans. Pour prévoir l'effectif dans $20$ ans, un élève calcule $u_0 \\times 1{,}1^{\\,20}$. 1) Quelle est son erreur ? 2) Par combien la population est-elle réellement multipliée en $20$ ans ? Et selon le calcul de l'élève ?",
+      "corrige": [
+        "1) Ici $n$ compte des périodes de 5 ans : 20 ans correspondent à $n = 4$, pas à $n = 20$.",
+        "2) Vrai coefficient : $1{,}1^{\\,4} \\approx 1{,}46$. Calcul de l'élève : $1{,}1^{\\,20} \\approx 6{,}73$, une prévision très exagérée."
+      ],
+      "reponse": "1) Il confond années et périodes de 5 ans ($n = 4$). 2) $\\times 1{,}46$ environ, contre $\\times 6{,}73$ dans son calcul."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "temps-de-doublement",
+      "enonce": "Une population diminue de $3\\,\\%$ par an. En adaptant la méthode du temps de doublement, calculer au bout de combien d'années elle aura diminué de moitié.",
+      "corrige": [
+        "On cherche $N$ tel que $0{,}97^{\\,N} = 0{,}5$.",
+        "En prenant le logarithme népérien : $N = \\dfrac{\\ln 0{,}5}{\\ln 0{,}97} \\approx 22{,}8$ ans."
+      ],
+      "reponse": "Environ 23 ans."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "modele-de-malthus",
+      "enonce": "Rédiger un court paragraphe (3 ou 4 phrases) qui présente la conclusion de Malthus, le raisonnement mathématique sur lequel elle repose, et la principale limite de son modèle.",
+      "corrige": [
+        "Conclusion : une pénurie serait inévitable.",
+        "Raisonnement : une croissance exponentielle (population) finit toujours par dépasser une croissance linéaire (ressources), quelle que soit l'avance initiale des ressources.",
+        "Limite : aucune population ne croît indéfiniment à taux constant ; le modèle exponentiel n'est valable que sur un domaine limité, et la réalité freine la croissance avant la catastrophe annoncée."
+      ],
+      "reponse": "Exemple de réponse : « Malthus annonçait une pénurie inévitable, car une population qui croît de façon exponentielle finit toujours par dépasser des ressources qui croissent de façon linéaire. Mais une croissance à taux constant n'est jamais tenable : le modèle n'est valable que sur un domaine limité. »"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "validation-du-modele",
+      "enonce": "Une ville de $100\\,000$ habitants croît de $3\\,\\%$ par an. Un élève prolonge le modèle sur $300$ ans. 1) Calculer l'effectif prévu. 2) Que penser de ce résultat ? Que montre-t-il sur le modèle exponentiel ?",
+      "corrige": [
+        "1) $u_{300} = 100\\,000 \\times 1{,}03^{\\,300} \\approx 7{,}1 \\times 10^{8}$ habitants, soit environ 710 millions.",
+        "2) C'est absurde pour une ville : l'espace et les ressources imposent un plafond.",
+        "Le modèle exponentiel n'est valable que sur un domaine limité ; on ne peut pas le prolonger indéfiniment."
+      ],
+      "reponse": "1) Environ $7{,}1 \\times 10^{8}$ habitants. 2) Résultat absurde : le modèle n'est valable que sur une période limitée."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "ajustement",
+      "enonce": "Recensements successifs (un tous les 10 ans) : $5\\,000$ ; $5\\,980$ ; $7\\,210$ ; $8\\,640$. 1) Calculer les différences et les quotients successifs (quotients arrondis au centième). 2) Quelle tendance retenir ? Proposer un modèle $u_n$. 3) Comparer $u_3$ à la valeur observée.",
+      "corrige": [
+        "1) Différences : $980$, $1\\,230$, $1\\,430$ (non constantes). Quotients : $1{,}20$ ; $1{,}21$ ; $1{,}20$ (presque constants).",
+        "2) Tendance exponentielle de coefficient environ $1{,}2$ par décennie : $u_n = 5\\,000 \\times 1{,}2^{\\,n}$.",
+        "3) $u_3 = 5\\,000 \\times 1{,}728 = 8\\,640$ : le modèle colle à la valeur observée."
+      ],
+      "reponse": "1) Différences croissantes, quotients $\\approx 1{,}2$. 2) $u_n = 5\\,000 \\times 1{,}2^{\\,n}$. 3) $u_3 = 8\\,640$, égal à l'observation."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "validation-du-modele",
+      "enonce": "Recensements : $20\\,000$ en 2000, $23\\,000$ en 2010, $26\\,500$ en 2020 ($n$ en décennies). On propose le modèle L : $L_n = 20\\,000 + 3\\,000\\,n$ et le modèle E : $E_n = 20\\,000 \\times 1{,}15^{\\,n}$. 1) Calculer $L_1$, $L_2$, $E_1$, $E_2$. 2) Quel modèle décrit le mieux les données ? 3) Que prévoit chacun pour 2030 ?",
+      "corrige": [
+        "1) $L_1 = 23\\,000$, $L_2 = 26\\,000$ ; $E_1 = 23\\,000$, $E_2 = 26\\,450$.",
+        "2) En 2020, l'écart est de $500$ pour L et de $50$ pour E : le modèle E est le meilleur.",
+        "3) $L_3 = 29\\,000$ ; $E_3 \\approx 30\\,418$."
+      ],
+      "reponse": "1) $23\\,000$ ; $26\\,000$ ; $23\\,000$ ; $26\\,450$. 2) Le modèle E. 3) L : $29\\,000$ ; E : environ $30\\,418$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "modele-lineaire",
+      "enonce": "Le village A compte $6\\,000$ habitants et en gagne $200$ par an ; le village B compte $9\\,000$ habitants et en perd $100$ par an. Au bout de combien d'années auront-ils le même nombre d'habitants ? Lequel ?",
+      "corrige": [
+        "$a_n = 6\\,000 + 200\\,n$ et $b_n = 9\\,000 - 100\\,n$.",
+        "$6\\,000 + 200\\,n = 9\\,000 - 100\\,n$ donne $300\\,n = 3\\,000$, soit $n = 10$.",
+        "$a_{10} = b_{10} = 8\\,000$."
+      ],
+      "reponse": "Au bout de 10 ans, avec $8\\,000$ habitants chacun."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "modele-exponentiel",
+      "enonce": "Un village de $2\\,400$ habitants perd $5\\,\\%$ de sa population une année, puis en regagne $5\\,\\%$ l'année suivante. Retrouve-t-il ses $2\\,400$ habitants ? Justifier.",
+      "corrige": [
+        "Sur deux ans, on multiplie par $0{,}95$ puis par $1{,}05$ : $0{,}95 \\times 1{,}05 = 0{,}9975$.",
+        "$2\\,400 \\times 0{,}9975 = 2\\,394$ : il manque 6 habitants, car la hausse de $5\\,\\%$ s'applique à une population plus petite."
+      ],
+      "reponse": "Non : il compte $2\\,394$ habitants ($\\times 0{,}9975$)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Problème — Une ville compte $150\\,000$ habitants en 2020 et croît de $1{,}5\\,\\%$ par an. Elle dispose de logements pour $160\\,000$ personnes, et on en construit pour $1\\,500$ personnes supplémentaires chaque année. 1) Modéliser la population $u_n$ et la capacité de logement $L_n$ ($n$ en années depuis 2020). 2) Calculer $u_{10}$ et $L_{10}$, puis $u_{11}$ et $L_{11}$ (arrondis à l'unité). 3) En quelle année la population dépasse-t-elle la capacité de logement ? 4) Calculer le temps de doublement de la population.",
+      "corrige": [
+        "1) $u_n = 150\\,000 \\times 1{,}015^{\\,n}$ (exponentiel) et $L_n = 160\\,000 + 1\\,500\\,n$ (linéaire).",
+        "2) $u_{10} \\approx 174\\,081$ et $L_{10} = 175\\,000$ ; $u_{11} \\approx 176\\,692$ et $L_{11} = 176\\,500$.",
+        "3) Le dépassement a lieu pour $n = 11$, c'est-à-dire en 2031.",
+        "4) $N = \\dfrac{\\ln 2}{\\ln 1{,}015} \\approx 46{,}6$ ans."
+      ],
+      "reponse": "1) $u_n = 150\\,000 \\times 1{,}015^{\\,n}$ ; $L_n = 160\\,000 + 1\\,500\\,n$. 2) $174\\,081$ / $175\\,000$ ; $176\\,692$ / $176\\,500$. 3) En 2031. 4) Environ 47 ans."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "modele-de-malthus",
+      "enonce": "Problème — On compare une population $u_n = 100 \\times 1{,}01^{\\,n}$ (hausse de $1\\,\\%$ par période) et des ressources $R_n = 1\\,000 + 10\\,n$. 1) Calculer $u_{100}$ et $R_{100}$, puis $u_{200}$ et $R_{200}$. 2) Un tableur indique que la population dépasse les ressources pour la première fois à $n = 392$. Que montre cet exemple sur la conclusion de Malthus ? 3) Pourquoi ce résultat a-t-il peu de sens dans la réalité ?",
+      "corrige": [
+        "1) $u_{100} \\approx 270$ contre $R_{100} = 2\\,000$ ; $u_{200} \\approx 732$ contre $R_{200} = 3\\,000$.",
+        "2) Même avec un taux faible et une énorme avance des ressources, l'exponentielle finit toujours par dépasser la droite : c'est le cœur du raisonnement de Malthus.",
+        "3) Sur 392 périodes, aucune population ne garde un taux constant : le modèle n'est valable que sur un domaine limité."
+      ],
+      "reponse": "1) $u_{100} \\approx 270$ / $2\\,000$ ; $u_{200} \\approx 732$ / $3\\,000$. 2) L'exponentielle finit toujours par dépasser le linéaire. 3) Un taux constant sur si longtemps n'est pas réaliste."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "validation-du-modele",
+      "enonce": "Problème — Recensements d'une région (en milliers d'habitants) : $40$ en 1990, $46$ en 2000, $52{,}9$ en 2010. 1) Montrer que la tendance est exponentielle et donner $u_n$ ($n$ en décennies depuis 1990). 2) Quelle population le modèle prévoit-il pour 2020 ? 3) Le recensement de 2020 donne $58$ milliers : calculer l'écart relatif par rapport à la prévision et conclure. 4) Avec ce modèle, quel serait le temps de doublement ?",
+      "corrige": [
+        "1) $\\dfrac{46}{40} = 1{,}15$ et $\\dfrac{52{,}9}{46} = 1{,}15$ : $u_n = 40 \\times 1{,}15^{\\,n}$.",
+        "2) $u_3 = 40 \\times 1{,}15^{\\,3} \\approx 60{,}8$ milliers.",
+        "3) $\\dfrac{60{,}8 - 58}{60{,}8} \\approx 4{,}7\\,\\%$ : le modèle surestime ; la croissance ralentit, il faut le réviser.",
+        "4) $N = \\dfrac{\\ln 2}{\\ln 1{,}15} \\approx 5{,}0$ décennies, soit environ 50 ans."
+      ],
+      "reponse": "1) $u_n = 40 \\times 1{,}15^{\\,n}$. 2) Environ $60{,}8$ milliers. 3) Écart d'environ $4{,}7\\,\\%$ : modèle à réviser. 4) Environ 50 ans."
     }
   ]
 }

@@ -134,7 +134,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "produit-scalaire-plan",
       "enonce": "On munit le plan d'un repère orthonormé. Un architecte place trois piliers aux points $\\mathrm{A}(2\\,;\\,1)$, $\\mathrm{B}(6\\,;\\,3)$ et $\\mathrm{C}(4\\,;\\,7)$ (les unités sont en dizaines de mètres). 1. Calculer le produit scalaire $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ et préciser ce que son signe indique sur l'angle $\\widehat{\\mathrm{BAC}}$. 2. Calculer $\\|\\overrightarrow{\\mathrm{AB}}\\|$ et $\\|\\overrightarrow{\\mathrm{AC}}\\|$, puis déterminer la mesure exacte de l'angle $\\widehat{\\mathrm{BAC}}$. 3. Démontrer que le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$. 4. Retrouver la longueur $\\mathrm{BC}$ à l'aide du théorème d'Al-Kashi appliqué à l'angle $\\widehat{\\mathrm{A}}$. 5. On veut installer un projecteur $\\mathrm{I}$ à égale distance des trois piliers. Déterminer les coordonnées de $\\mathrm{I}$ et cette distance commune.",
       "corrige": [
@@ -152,6 +152,459 @@
         "5. Vérification : $\\overrightarrow{\\mathrm{IB}}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ donne $\\mathrm{IB} = \\sqrt{3^2 + (-1)^2} = \\sqrt{10}$, égale à $\\mathrm{IA} = \\mathrm{IC} = \\sqrt{10}$ : $\\mathrm{I}$ est bien équidistant des trois piliers."
       ],
       "reponse": "1. $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 20 > 0$, l'angle $\\widehat{\\mathrm{BAC}}$ est aigu. 2. $\\widehat{\\mathrm{BAC}} = 45°$. 3. Rectangle en $\\mathrm{B}$ car $\\overrightarrow{\\mathrm{BA}} \\cdot \\overrightarrow{\\mathrm{BC}} = 0$. 4. $\\mathrm{BC} = 2\\sqrt{5}$. 5. $\\mathrm{I}(3\\,;\\,4)$, distance $\\sqrt{10} \\approx 3{,}16$ dizaines de mètres (soit environ $31{,}6$ m)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "coordonnees",
+      "enonce": "En base orthonormée, on donne $\\vec{u}\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$. Calculer $\\vec{u} \\cdot \\vec{v}$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = xx' + yy' = 2 \\times 3 + 5 \\times (-1)$.",
+        "$\\vec{u} \\cdot \\vec{v} = 6 - 5 = 1$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 1$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "norme",
+      "enonce": "En base orthonormée, calculer la norme de $\\vec{u}\\begin{pmatrix} 6 \\\\ -8 \\end{pmatrix}$.",
+      "corrige": [
+        "$\\|\\vec{u}\\| = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100}$."
+      ],
+      "reponse": "$\\|\\vec{u}\\| = 10$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "angle",
+      "enonce": "$\\|\\vec{u}\\| = 2$, $\\|\\vec{v}\\| = 3$ et l'angle entre $\\vec{u}$ et $\\vec{v}$ mesure $60°$. Calculer $\\vec{u} \\cdot \\vec{v}$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\times \\|\\vec{v}\\| \\times \\cos 60°$.",
+        "$\\vec{u} \\cdot \\vec{v} = 2 \\times 3 \\times \\dfrac{1}{2} = 3$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 3$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "signe-angle",
+      "enonce": "Deux vecteurs non nuls vérifient $\\vec{u} \\cdot \\vec{v} = -7$. L'angle entre eux est-il aigu, droit ou obtus ?",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\,\\|\\vec{v}\\|\\cos\\theta$ avec des normes strictement positives : $\\cos\\theta$ a le signe du produit scalaire.",
+        "$\\cos\\theta < 0$ : l'angle est obtus."
+      ],
+      "reponse": "Obtus."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(0\\,;1)$, $\\mathrm{B}(3\\,;5)$ et $\\mathrm{C}(-2\\,;4)$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} -2 \\\\ 3 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 3 \\times (-2) + 4 \\times 3 = -6 + 12 = 6$."
+      ],
+      "reponse": "$6$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "proprietes",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 1 \\\\ -2 \\end{pmatrix}$, $\\vec{v}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ et $\\vec{w}\\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix}$. Calculer $\\vec{u} \\cdot (\\vec{v} + \\vec{w})$ de deux façons et vérifier la bilinéarité.",
+      "corrige": [
+        "$\\vec{v} + \\vec{w}\\begin{pmatrix} 2 \\\\ 6 \\end{pmatrix}$, donc $\\vec{u} \\cdot (\\vec{v} + \\vec{w}) = 2 - 12 = -10$.",
+        "$\\vec{u} \\cdot \\vec{v} = 3 - 8 = -5$ et $\\vec{u} \\cdot \\vec{w} = -1 - 4 = -5$.",
+        "$\\vec{u} \\cdot \\vec{v} + \\vec{u} \\cdot \\vec{w} = -10$ : on retrouve le même résultat."
+      ],
+      "reponse": "$\\vec{u} \\cdot (\\vec{v} + \\vec{w}) = \\vec{u} \\cdot \\vec{v} + \\vec{u} \\cdot \\vec{w} = -10$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "norme",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$. Calculer le carré scalaire $\\vec{u} \\cdot \\vec{u}$, puis $\\|\\vec{u}\\|$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{u} = 3 \\times 3 + (-1) \\times (-1) = 10$.",
+        "$\\|\\vec{u}\\|^2 = \\vec{u} \\cdot \\vec{u} = 10$, donc $\\|\\vec{u}\\| = \\sqrt{10}$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{u} = 10$ et $\\|\\vec{u}\\| = \\sqrt{10}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "norme",
+      "enonce": "On sait que $\\|\\vec{u}\\| = 3$. Calculer $(2\\vec{u}) \\cdot (2\\vec{u})$ puis $\\|2\\vec{u}\\|$.",
+      "corrige": [
+        "Par bilinéarité, $(2\\vec{u}) \\cdot (2\\vec{u}) = 4\\,(\\vec{u} \\cdot \\vec{u}) = 4 \\times 3^2 = 36$.",
+        "$\\|2\\vec{u}\\| = \\sqrt{36} = 6$."
+      ],
+      "reponse": "$36$ et $\\|2\\vec{u}\\| = 6$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "angle",
+      "enonce": "$\\|\\vec{u}\\| = 4$, $\\|\\vec{v}\\| = \\sqrt{2}$ et l'angle entre $\\vec{u}$ et $\\vec{v}$ mesure $45°$. Calculer $\\vec{u} \\cdot \\vec{v}$.",
+      "corrige": [
+        "$\\cos 45° = \\dfrac{\\sqrt{2}}{2}$.",
+        "$\\vec{u} \\cdot \\vec{v} = 4 \\times \\sqrt{2} \\times \\dfrac{\\sqrt{2}}{2} = 4 \\times \\dfrac{2}{2} = 4$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 4$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "angle",
+      "enonce": "$\\|\\vec{u}\\| = 6$, $\\|\\vec{v}\\| = 5$ et l'angle entre $\\vec{u}$ et $\\vec{v}$ mesure $150°$. Calculer la valeur exacte de $\\vec{u} \\cdot \\vec{v}$.",
+      "corrige": [
+        "$\\cos 150° = -\\dfrac{\\sqrt{3}}{2}$.",
+        "$\\vec{u} \\cdot \\vec{v} = 6 \\times 5 \\times \\left(-\\dfrac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = -15\\sqrt{3}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "angle",
+      "enonce": "On sait que $\\vec{u} \\cdot \\vec{v} = 6$, $\\|\\vec{u}\\| = 3$ et $\\|\\vec{v}\\| = 4$. Déterminer la mesure de l'angle entre $\\vec{u}$ et $\\vec{v}$.",
+      "corrige": [
+        "$\\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\times \\|\\vec{v}\\|} = \\dfrac{6}{12} = \\dfrac{1}{2}$.",
+        "L'angle entre deux vecteurs est compris entre $0°$ et $180°$ : $\\cos\\theta = \\dfrac{1}{2}$ donne $\\theta = 60°$."
+      ],
+      "reponse": "$\\theta = 60°$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "signe-angle",
+      "enonce": "Dans un repère orthonormé, $\\mathrm{A}(0\\,;0)$, $\\mathrm{B}(5\\,;1)$ et $\\mathrm{C}(1\\,;3)$. L'angle $\\widehat{\\mathrm{BAC}}$ est-il aigu, droit ou obtus ?",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 5 \\\\ 1 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 5 + 3 = 8 > 0$."
+      ],
+      "reponse": "L'angle $\\widehat{\\mathrm{BAC}}$ est aigu."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "signe-angle",
+      "enonce": "Dans un repère orthonormé, $\\mathrm{A}(1\\,;1)$, $\\mathrm{B}(4\\,;2)$ et $\\mathrm{C}(0\\,;3)$. L'angle $\\widehat{\\mathrm{BAC}}$ est-il aigu, droit ou obtus ?",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = -3 + 2 = -1 < 0$."
+      ],
+      "reponse": "L'angle $\\widehat{\\mathrm{BAC}}$ est obtus."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "orthogonalite",
+      "enonce": "En base orthonormée, les vecteurs $\\vec{u}\\begin{pmatrix} 6 \\\\ -4 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ sont-ils orthogonaux ?",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = 6 \\times 2 + (-4) \\times 3 = 12 - 12 = 0$."
+      ],
+      "reponse": "Oui, $\\vec{u} \\perp \\vec{v}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "orthogonalite",
+      "enonce": "En base orthonormée, donner un vecteur non nul orthogonal à $\\vec{u}\\begin{pmatrix} 3 \\\\ 7 \\end{pmatrix}$ et vérifier par le calcul.",
+      "corrige": [
+        "On échange les coordonnées et on change un signe : $\\vec{v}\\begin{pmatrix} 7 \\\\ -3 \\end{pmatrix}$.",
+        "$\\vec{u} \\cdot \\vec{v} = 3 \\times 7 + 7 \\times (-3) = 21 - 21 = 0$."
+      ],
+      "reponse": "Par exemple $\\vec{v}\\begin{pmatrix} 7 \\\\ -3 \\end{pmatrix}$ (tout vecteur colinéaire non nul convient)."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "On sait que $\\|\\vec{u}\\| = 3$, $\\|\\vec{v}\\| = 2$ et $\\vec{u} \\cdot \\vec{v} = 1$. Calculer $\\|\\vec{u} + \\vec{v}\\|$.",
+      "corrige": [
+        "$\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u} \\cdot \\vec{v} + \\|\\vec{v}\\|^2 = 9 + 2 + 4 = 15$.",
+        "$\\|\\vec{u} + \\vec{v}\\| = \\sqrt{15}$."
+      ],
+      "reponse": "$\\|\\vec{u} + \\vec{v}\\| = \\sqrt{15}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "On sait que $\\|\\vec{u}\\| = 5$, $\\|\\vec{v}\\| = 4$ et $\\vec{u} \\cdot \\vec{v} = 6$. Calculer $\\|\\vec{u} - \\vec{v}\\|$.",
+      "corrige": [
+        "$\\|\\vec{u} - \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 - 2\\,\\vec{u} \\cdot \\vec{v} + \\|\\vec{v}\\|^2 = 25 - 12 + 16 = 29$.",
+        "$\\|\\vec{u} - \\vec{v}\\| = \\sqrt{29}$."
+      ],
+      "reponse": "$\\|\\vec{u} - \\vec{v}\\| = \\sqrt{29}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle $\\mathrm{ABC}$, $\\mathrm{AC} = 5$, $\\mathrm{AB} = 8$ et $\\widehat{\\mathrm{A}} = 60°$. Calculer $\\mathrm{BC}$.",
+      "corrige": [
+        "Al-Kashi : $\\mathrm{BC}^2 = \\mathrm{AC}^2 + \\mathrm{AB}^2 - 2 \\times \\mathrm{AC} \\times \\mathrm{AB} \\times \\cos\\widehat{\\mathrm{A}}$.",
+        "$\\mathrm{BC}^2 = 25 + 64 - 2 \\times 5 \\times 8 \\times \\dfrac{1}{2} = 89 - 40 = 49$.",
+        "$\\mathrm{BC} = 7$."
+      ],
+      "reponse": "$\\mathrm{BC} = 7$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle $\\mathrm{ABC}$, $\\mathrm{AC} = 3$, $\\mathrm{AB} = 5$ et $\\widehat{\\mathrm{A}} = 120°$. Calculer $\\mathrm{BC}$.",
+      "corrige": [
+        "$\\cos 120° = -\\dfrac{1}{2}$.",
+        "$\\mathrm{BC}^2 = 9 + 25 - 2 \\times 3 \\times 5 \\times \\left(-\\dfrac{1}{2}\\right) = 34 + 15 = 49$.",
+        "$\\mathrm{BC} = 7$."
+      ],
+      "reponse": "$\\mathrm{BC} = 7$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "lieu-geometrique",
+      "enonce": "Dans un repère orthonormé, $\\mathrm{A}(-2\\,;1)$, $\\mathrm{B}(4\\,;1)$ et $\\mathrm{M}(1\\,;4)$. Le point $\\mathrm{M}$ appartient-il au cercle de diamètre $[\\mathrm{AB}]$ ?",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{MA}}\\begin{pmatrix} -3 \\\\ -3 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{MB}}\\begin{pmatrix} 3 \\\\ -3 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = -9 + 9 = 0$."
+      ],
+      "reponse": "Oui, $\\mathrm{M}$ appartient au cercle de diamètre $[\\mathrm{AB}]$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} x \\\\ 3 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix}$. Déterminer $x$ pour que $\\vec{u} \\cdot \\vec{v} = 7$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = 2x + 3 \\times (-1) = 2x - 3$.",
+        "$2x - 3 = 7 \\iff 2x = 10 \\iff x = 5$."
+      ],
+      "reponse": "$x = 5$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees",
+      "enonce": "Pour $\\vec{u}\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$, un élève écrit : « $\\vec{u} \\cdot \\vec{v} = \\begin{pmatrix} 6 \\\\ -5 \\end{pmatrix}$ ». Expliquer son erreur et donner le bon résultat.",
+      "corrige": [
+        "Le produit scalaire est un nombre réel, pas un vecteur : l'élève a multiplié les coordonnées sans les additionner.",
+        "$\\vec{u} \\cdot \\vec{v} = 2 \\times 3 + 5 \\times (-1) = 6 - 5 = 1$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 1$ (un nombre)."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "angle",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 1 \\\\ \\sqrt{3} \\end{pmatrix}$. Déterminer la mesure de l'angle entre $\\vec{u}$ et $\\vec{v}$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = 1 \\times 1 + 0 \\times \\sqrt{3} = 1$.",
+        "$\\|\\vec{u}\\| = 1$ et $\\|\\vec{v}\\| = \\sqrt{1 + 3} = 2$.",
+        "$\\cos\\theta = \\dfrac{1}{1 \\times 2} = \\dfrac{1}{2}$, donc $\\theta = 60°$."
+      ],
+      "reponse": "$\\theta = 60°$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "angle",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$. Déterminer la mesure de l'angle entre $\\vec{u}$ et $\\vec{v}$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = 3 + 2 = 5$ ; $\\|\\vec{u}\\| = \\sqrt{5}$ et $\\|\\vec{v}\\| = \\sqrt{10}$.",
+        "$\\cos\\theta = \\dfrac{5}{\\sqrt{5} \\times \\sqrt{10}} = \\dfrac{5}{\\sqrt{50}} = \\dfrac{5}{5\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$.",
+        "Donc $\\theta = 45°$."
+      ],
+      "reponse": "$\\theta = 45°$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "angle",
+      "enonce": "$\\mathrm{ABC}$ est un triangle équilatéral de côté $4$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
+      "corrige": [
+        "$\\mathrm{AB} = \\mathrm{AC} = 4$ et l'angle $\\widehat{\\mathrm{BAC}}$ mesure $60°$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 4 \\times 4 \\times \\cos 60° = 16 \\times \\dfrac{1}{2} = 8$."
+      ],
+      "reponse": "$8$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "orthogonalite",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} m \\\\ 2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} m \\\\ -8 \\end{pmatrix}$. Déterminer les valeurs de $m$ pour lesquelles $\\vec{u}$ et $\\vec{v}$ sont orthogonaux.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = m^2 - 16$.",
+        "$m^2 - 16 = 0 \\iff m^2 = 16 \\iff m = 4$ ou $m = -4$."
+      ],
+      "reponse": "$m = 4$ ou $m = -4$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "orthogonalite",
+      "enonce": "Dans un repère orthonormé, $\\mathrm{A}(1\\,;0)$, $\\mathrm{B}(3\\,;4)$ et $\\mathrm{C}(-3\\,;2)$. Démontrer que le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$.",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} -4 \\\\ 2 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = -8 + 8 = 0$ : les droites $(\\mathrm{AB})$ et $(\\mathrm{AC})$ sont perpendiculaires."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 0$ : $\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "On sait que $\\|\\vec{u}\\| = 2$, $\\|\\vec{v}\\| = 1$ et $\\vec{u} \\cdot \\vec{v} = -1$. Calculer $(\\vec{u} + 2\\vec{v}) \\cdot (\\vec{u} - \\vec{v})$.",
+      "corrige": [
+        "On développe par bilinéarité : $\\vec{u} \\cdot \\vec{u} - \\vec{u} \\cdot \\vec{v} + 2\\,\\vec{v} \\cdot \\vec{u} - 2\\,\\vec{v} \\cdot \\vec{v}$.",
+        "$= \\|\\vec{u}\\|^2 + \\vec{u} \\cdot \\vec{v} - 2\\|\\vec{v}\\|^2 = 4 + (-1) - 2 \\times 1$.",
+        "$= 1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Un élève affirme : « pour tous vecteurs, $\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2$ ». Dans quel cas a-t-il raison ? Donner la formule générale.",
+      "corrige": [
+        "La formule générale est $\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u} \\cdot \\vec{v} + \\|\\vec{v}\\|^2$.",
+        "L'égalité de l'élève n'est vraie que si $\\vec{u} \\cdot \\vec{v} = 0$, c'est-à-dire si $\\vec{u}$ et $\\vec{v}$ sont orthogonaux : c'est le théorème de Pythagore."
+      ],
+      "reponse": "Seulement si $\\vec{u} \\perp \\vec{v}$ ; en général il faut ajouter $2\\,\\vec{u} \\cdot \\vec{v}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "normes-seules",
+      "enonce": "On sait que $\\|\\vec{u}\\| = 3$, $\\|\\vec{v}\\| = 5$ et $\\|\\vec{u} + \\vec{v}\\| = 7$. Calculer $\\vec{u} \\cdot \\vec{v}$, puis la mesure de l'angle entre $\\vec{u}$ et $\\vec{v}$.",
+      "corrige": [
+        "$\\vec{u} \\cdot \\vec{v} = \\dfrac{1}{2}\\left(\\|\\vec{u} + \\vec{v}\\|^2 - \\|\\vec{u}\\|^2 - \\|\\vec{v}\\|^2\\right) = \\dfrac{1}{2}(49 - 9 - 25) = 7{,}5$.",
+        "$\\cos\\theta = \\dfrac{7{,}5}{3 \\times 5} = \\dfrac{1}{2}$, donc $\\theta = 60°$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 7{,}5$ et $\\theta = 60°$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "normes-seules",
+      "enonce": "Dans un triangle $\\mathrm{ABC}$, $\\mathrm{AB} = 4$, $\\mathrm{AC} = 6$ et $\\mathrm{BC} = 5$. En écrivant $\\overrightarrow{\\mathrm{BC}} = \\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}$, calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
+      "corrige": [
+        "$\\mathrm{BC}^2 = \\|\\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}\\|^2 = \\mathrm{AC}^2 - 2\\,\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} + \\mathrm{AB}^2$.",
+        "$25 = 36 - 2\\,\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} + 16$, donc $2\\,\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 27$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 13{,}5$."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 13{,}5$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "al-kashi",
+      "enonce": "Un triangle $\\mathrm{ABC}$ a pour côtés $\\mathrm{BC} = 7$, $\\mathrm{AC} = 5$ et $\\mathrm{AB} = 8$. Déterminer la mesure de l'angle $\\widehat{\\mathrm{A}}$.",
+      "corrige": [
+        "Al-Kashi donne $\\cos\\widehat{\\mathrm{A}} = \\dfrac{\\mathrm{AC}^2 + \\mathrm{AB}^2 - \\mathrm{BC}^2}{2 \\times \\mathrm{AC} \\times \\mathrm{AB}}$.",
+        "$\\cos\\widehat{\\mathrm{A}} = \\dfrac{25 + 64 - 49}{80} = \\dfrac{40}{80} = \\dfrac{1}{2}$.",
+        "Donc $\\widehat{\\mathrm{A}} = 60°$."
+      ],
+      "reponse": "$\\widehat{\\mathrm{A}} = 60°$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "al-kashi",
+      "enonce": "Un triangle a des côtés de longueurs $4$, $5$ et $6$. Calculer le cosinus de son plus grand angle, puis une mesure de cet angle arrondie au dixième de degré.",
+      "corrige": [
+        "Le plus grand angle est opposé au plus grand côté, de longueur $6$.",
+        "$\\cos\\alpha = \\dfrac{4^2 + 5^2 - 6^2}{2 \\times 4 \\times 5} = \\dfrac{16 + 25 - 36}{40} = \\dfrac{5}{40} = \\dfrac{1}{8}$.",
+        "À la calculatrice : $\\alpha \\approx 82{,}8°$."
+      ],
+      "reponse": "$\\cos\\alpha = \\dfrac{1}{8}$ ; $\\alpha \\approx 82{,}8°$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle $\\mathrm{ABC}$, $\\mathrm{AC} = 4$, $\\mathrm{AB} = 6$ et $\\widehat{\\mathrm{A}} = 45°$. Donner la valeur exacte de $\\mathrm{BC}^2$, puis une valeur approchée de $\\mathrm{BC}$ au centième.",
+      "corrige": [
+        "$\\mathrm{BC}^2 = 16 + 36 - 2 \\times 4 \\times 6 \\times \\dfrac{\\sqrt{2}}{2} = 52 - 24\\sqrt{2}$.",
+        "$\\mathrm{BC} = \\sqrt{52 - 24\\sqrt{2}} \\approx 4{,}25$."
+      ],
+      "reponse": "$\\mathrm{BC}^2 = 52 - 24\\sqrt{2}$ et $\\mathrm{BC} \\approx 4{,}25$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "lieu-geometrique",
+      "enonce": "Dans un repère orthonormé, $\\mathrm{A}(0\\,;0)$ et $\\mathrm{B}(6\\,;8)$. Décrire l'ensemble des points $\\mathrm{M}$ tels que $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$ (centre et rayon).",
+      "corrige": [
+        "C'est le cercle de diamètre $[\\mathrm{AB}]$.",
+        "Son centre est le milieu de $[\\mathrm{AB}]$ : $(3\\,;4)$.",
+        "$\\mathrm{AB} = \\sqrt{36 + 64} = 10$, donc le rayon vaut $5$."
+      ],
+      "reponse": "Le cercle de centre $(3\\,;4)$ et de rayon $5$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "angle",
+      "enonce": "$\\mathrm{ABCD}$ est un carré de côté $3$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AD}}$, $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ et $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{CD}}$.",
+      "corrige": [
+        "$(\\mathrm{AB}) \\perp (\\mathrm{AD})$, donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AD}} = 0$.",
+        "$\\mathrm{AC} = 3\\sqrt{2}$ et $\\widehat{\\mathrm{BAC}} = 45°$ : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 3 \\times 3\\sqrt{2} \\times \\dfrac{\\sqrt{2}}{2} = 9$.",
+        "$\\overrightarrow{\\mathrm{CD}} = -\\overrightarrow{\\mathrm{AB}}$, donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{CD}} = -\\mathrm{AB}^2 = -9$."
+      ],
+      "reponse": "$0$ ; $9$ ; $-9$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "orthogonalite",
+      "enonce": "Démontrer que, si $\\|\\vec{u}\\| = \\|\\vec{v}\\|$, alors les vecteurs $\\vec{u} + \\vec{v}$ et $\\vec{u} - \\vec{v}$ sont orthogonaux. Interpréter dans un losange.",
+      "corrige": [
+        "On développe : $(\\vec{u} + \\vec{v}) \\cdot (\\vec{u} - \\vec{v}) = \\vec{u} \\cdot \\vec{u} - \\vec{u} \\cdot \\vec{v} + \\vec{v} \\cdot \\vec{u} - \\vec{v} \\cdot \\vec{v} = \\|\\vec{u}\\|^2 - \\|\\vec{v}\\|^2$.",
+        "Si $\\|\\vec{u}\\| = \\|\\vec{v}\\|$, ce produit est nul : les vecteurs sont orthogonaux.",
+        "Dans un losange construit sur $\\vec{u}$ et $\\vec{v}$ (côtés de même longueur), les diagonales portent $\\vec{u} + \\vec{v}$ et $\\vec{u} - \\vec{v}$ : elles sont perpendiculaires."
+      ],
+      "reponse": "$(\\vec{u} + \\vec{v}) \\cdot (\\vec{u} - \\vec{v}) = \\|\\vec{u}\\|^2 - \\|\\vec{v}\\|^2 = 0$ : les diagonales d'un losange sont perpendiculaires."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "developpement",
+      "enonce": "Démontrer que $\\vec{u} \\cdot \\vec{v} = \\dfrac{1}{4}\\left(\\|\\vec{u} + \\vec{v}\\|^2 - \\|\\vec{u} - \\vec{v}\\|^2\\right)$, puis calculer $\\vec{u} \\cdot \\vec{v}$ lorsque $\\|\\vec{u} + \\vec{v}\\| = 7$ et $\\|\\vec{u} - \\vec{v}\\| = 5$.",
+      "corrige": [
+        "$\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u} \\cdot \\vec{v} + \\|\\vec{v}\\|^2$ et $\\|\\vec{u} - \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 - 2\\,\\vec{u} \\cdot \\vec{v} + \\|\\vec{v}\\|^2$.",
+        "Par différence : $\\|\\vec{u} + \\vec{v}\\|^2 - \\|\\vec{u} - \\vec{v}\\|^2 = 4\\,\\vec{u} \\cdot \\vec{v}$, d'où la formule.",
+        "Application : $\\vec{u} \\cdot \\vec{v} = \\dfrac{49 - 25}{4} = 6$."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 6$."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "lieu-geometrique",
+      "enonce": "$\\mathrm{I}$ est le milieu d'un segment $[\\mathrm{AB}]$ de longueur $10$. On admet que $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = \\mathrm{MI}^2 - \\mathrm{IA}^2$. Calculer $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}}$ lorsque $\\mathrm{MI} = 7$, puis lorsque $\\mathrm{MI} = 3$. Que peut-on dire de l'angle $\\widehat{\\mathrm{AMB}}$ dans chaque cas ?",
+      "corrige": [
+        "$\\mathrm{IA} = 5$, donc $\\mathrm{IA}^2 = 25$.",
+        "Si $\\mathrm{MI} = 7$ : $49 - 25 = 24 > 0$, l'angle $\\widehat{\\mathrm{AMB}}$ est aigu ($\\mathrm{M}$ est hors du cercle de diamètre $[\\mathrm{AB}]$).",
+        "Si $\\mathrm{MI} = 3$ : $9 - 25 = -16 < 0$, l'angle est obtus ($\\mathrm{M}$ est à l'intérieur du cercle ; il est plat si $\\mathrm{M}$ est sur le segment $[\\mathrm{AB}]$)."
+      ],
+      "reponse": "$24$ (angle aigu) et $-16$ (angle obtus)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "al-kashi",
+      "enonce": "Deux bateaux quittent le même port. Le premier parcourt $12$ km en ligne droite, le second $10$ km en ligne droite, et leurs directions forment un angle de $60°$. Quelle distance sépare alors les deux bateaux ? Arrondir au dixième de kilomètre.",
+      "corrige": [
+        "Le port et les deux bateaux forment un triangle dont on connaît deux côtés ($12$ et $10$ km) et l'angle compris ($60°$).",
+        "Al-Kashi : $d^2 = 12^2 + 10^2 - 2 \\times 12 \\times 10 \\times \\cos 60° = 144 + 100 - 120 = 124$.",
+        "$d = \\sqrt{124} \\approx 11{,}1$ km."
+      ],
+      "reponse": "Environ $11{,}1$ km."
     }
   ]
 }

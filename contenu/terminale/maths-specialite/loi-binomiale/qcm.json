@@ -92,7 +92,7 @@
         "$\\binom{n}{k}\\,p^{\\,k}(1-p)^{\\,k}$"
       ],
       "reponse": 1,
-      "explication": "L'exposant de $p$ est le **nombre de succès** $k$, celui de $1-p$ le nombre d'échecs $n-k$, et $\\binom{n}{k}$ compte les chemins. Le choix 1 **intervertit** les exposants, le choix 3 **oublie** le coefficient, le choix 4 se trompe sur le nombre d'échecs."
+      "explication": "L'exposant de $p$ est le **nombre de succès** $k$, celui de $1-p$ le nombre d'échecs $n-k$, et $\\binom{n}{k}$ compte les chemins. Le choix $\\binom{n}{k}\\,p^{\\,n-k}(1-p)^{k}$ **intervertit** les exposants, le choix $p^{\\,k}(1-p)^{\\,n-k}$ **oublie** le coefficient, le choix $\\binom{n}{k}\\,p^{\\,k}(1-p)^{\\,k}$ se trompe sur le nombre d'échecs."
     },
     {
       "id": 7,
@@ -106,7 +106,7 @@
         "$P(X=8)+P(X=9)$"
       ],
       "reponse": 1,
-      "explication": "« Au moins 8 » signifie $X=8$, $9$ **ou** $10$ : on somme ces trois probabilités. Le piège n°1 est de répondre $P(X=8)$ (« exactement 8 ») : « exactement » ≠ « au moins ». Le choix 4 oublie $X=10$."
+      "explication": "« Au moins 8 » signifie $X=8$, $9$ **ou** $10$ : on somme ces trois probabilités. Le piège n°1 est de répondre $P(X=8)$ (« exactement 8 ») : « exactement » ≠ « au moins ». Le choix $P(X=8)+P(X=9)$ oublie $X=10$."
     },
     {
       "id": 8,
@@ -120,7 +120,7 @@
         "$1-\\left(\\dfrac{1}{6}\\right)^{5}$"
       ],
       "reponse": 0,
-      "explication": "« Au moins un » passe par le **complémentaire** : $P(X\\geqslant 1)=1-P(X=0)=1-\\left(\\tfrac{5}{6}\\right)^5$. Le choix 2 est « que des 6 », le choix 3 est l'espérance $np$, le choix 4 soustrait la mauvaise probabilité (il faut $P(X=0)=(1-p)^n$, pas $p^n$)."
+      "explication": "« Au moins un » passe par le **complémentaire** : $P(X\\geqslant 1)=1-P(X=0)=1-\\left(\\tfrac{5}{6}\\right)^5$. Le choix $\\left(\\tfrac{1}{6}\\right)^{5}$ est « que des 6 », le choix $5\\times\\tfrac{1}{6}$ est l'espérance $np$, le choix $1-\\left(\\tfrac{1}{6}\\right)^{5}$ soustrait la mauvaise probabilité (il faut $P(X=0)=(1-p)^n$, pas $p^n$)."
     },
     {
       "id": 9,
@@ -260,7 +260,7 @@
         "$P(X = 0) + P(X = 1)$"
       ],
       "reponse": 1,
-      "explication": "« Au plus 2 » signifie $X \\leqslant 2$, soit $P(X = 0) + P(X = 1) + P(X = 2)$. Le piège $P(X = 2)$ est « exactement 2 » ; le dernier choix ($P(X=0)+P(X=1)$) est « au plus 1 » et oublie le terme $P(X = 2)$."
+      "explication": "« Au plus 2 » signifie $X \\leqslant 2$, soit $P(X = 0) + P(X = 1) + P(X = 2)$. Le piège $P(X = 2)$ est « exactement 2 » ; le choix $P(X=0)+P(X=1)$ est « au plus 1 » et oublie le terme $P(X = 2)$."
     },
     {
       "id": 19,

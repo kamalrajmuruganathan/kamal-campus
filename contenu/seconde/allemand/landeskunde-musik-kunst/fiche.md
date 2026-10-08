@@ -41,7 +41,7 @@ relu_par: null
 Le **Bauhaus** est une célèbre école d'**art**, d'**architecture** et de **design**,
 fondée par **Walter Gropius** en **1919** à **Weimar**, puis installée à **Dessau**.
 
-- Devise : « **Form follows function** » — la **forme** suit la **fonction**.
+- Formule qui résume son esprit : « **Form follows function** » — la **forme** suit la **fonction** (formule de l'architecte américain Louis Sullivan, rendue célèbre par le Bauhaus).
 - Style **épuré**, lignes géométriques, matériaux modernes (acier, verre).
 - Artistes liés au Bauhaus : **Wassily Kandinsky** et **Paul Klee** (enseignants).
 - Le Bauhaus a profondément marqué l'**architecture** et le **design** modernes.

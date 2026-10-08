@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "vocabulaire des tables (descripteurs, enregistrements)",
       "enonce": "On considère une table stockée dans un fichier CSV dont la première ligne est : nom,prenom,age,ville. Combien y a-t-il de descripteurs (colonnes) ? Comment appelle-t-on une ligne de données autre que l'en-tête ?",
       "corrige": [
@@ -24,9 +24,9 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "table comme liste de dictionnaires",
-      "enonce": "Une table est représentée par :\ntable = [\n    {\"nom\": \"Ba\", \"age\": 15},\n    {\"nom\": \"Ka\", \"age\": 16},\n    {\"nom\": \"Sy\", \"age\": 15}\n]\nQue renvoie len(table) ? Que renvoie table[1][\"nom\"] ?",
+      "enonce": "Une table est représentée par :\n\n```python\ntable = [\n    {\"nom\": \"Ba\", \"age\": 15},\n    {\"nom\": \"Ka\", \"age\": 16},\n    {\"nom\": \"Sy\", \"age\": 15}\n]\n```\n\nQue renvoie len(table) ? Que renvoie table[1][\"nom\"] ?",
       "corrige": [
         "table est une liste dont chaque élément est un enregistrement (dictionnaire).",
         "len(table) compte le nombre d'enregistrements : il y en a 3.",
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "lecture d'un champ",
       "enonce": "Avec la table de l'exercice 2, écris une expression qui donne l'âge du premier enregistrement, et une autre qui donne le nom du dernier enregistrement.",
       "corrige": [
@@ -47,7 +47,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "filtrage (sélection d'enregistrements)",
       "enonce": "Avec la table de l'exercice 2, écris une compréhension de liste qui renvoie les noms des élèves âgés de 15 ans, et donne le résultat.",
       "corrige": [
@@ -59,9 +59,9 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "tri d'une table selon un descripteur",
-      "enonce": "On veut trier la table :\ntable = [\n    {\"nom\": \"Ba\", \"age\": 16},\n    {\"nom\": \"Ka\", \"age\": 15},\n    {\"nom\": \"Sy\", \"age\": 17}\n]\npar âge croissant, avec sorted et une clé. Écris l'instruction et donne l'ordre des noms obtenu.",
+      "enonce": "On veut trier la table ci-dessous par âge croissant, avec sorted et une clé.\n\n```python\ntable = [\n    {\"nom\": \"Ba\", \"age\": 16},\n    {\"nom\": \"Ka\", \"age\": 15},\n    {\"nom\": \"Sy\", \"age\": 17}\n]\n```\n\nÉcris l'instruction et donne l'ordre des noms obtenu.",
       "corrige": [
         "sorted trie sans modifier la table de départ ; on précise le critère avec le paramètre key.",
         "La clé est une fonction qui, pour un enregistrement e, renvoie la valeur à comparer : key = lambda e: e[\"age\"].",
@@ -72,9 +72,9 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "calcul d'agrégat (moyenne d'une colonne)",
-      "enonce": "On dispose de la table :\nnotes = [\n    {\"eleve\": \"A\", \"note\": 12},\n    {\"eleve\": \"B\", \"note\": 8},\n    {\"eleve\": \"C\", \"note\": 16},\n    {\"eleve\": \"D\", \"note\": 14}\n]\nÉcris un code qui calcule la moyenne de la colonne \"note\", puis donne le nombre d'élèves au-dessus de cette moyenne.",
+      "enonce": "On dispose de la table :\n\n```python\nnotes = [\n    {\"eleve\": \"A\", \"note\": 12},\n    {\"eleve\": \"B\", \"note\": 8},\n    {\"eleve\": \"C\", \"note\": 16},\n    {\"eleve\": \"D\", \"note\": 14}\n]\n```\n\nÉcris un code qui calcule la moyenne de la colonne \"note\", puis donne le nombre d'élèves au-dessus de cette moyenne.",
       "corrige": [
         "On extrait les notes : valeurs = [e[\"note\"] for e in notes] → [12, 8, 16, 14].",
         "On calcule la moyenne : moyenne = sum(valeurs) / len(valeurs) = (12+8+16+14)/4 = 50/4 = 12.5.",
@@ -85,7 +85,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "accès à un enregistrement",
       "enonce": "On a la table : table = [ {\"nom\": \"Diallo\", \"ville\": \"Lyon\"}, {\"nom\": \"Nguyen\", \"ville\": \"Paris\"} ]. Que renvoie table[1][\"nom\"] ?",
       "corrige": [
@@ -97,7 +97,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "filtrer des lignes",
       "enonce": "La table est une liste de dictionnaires ayant les clés \"nom\" et \"ville\". Écris une compréhension de liste qui renvoie les lignes dont la ville est \"Paris\".",
       "corrige": [
@@ -110,7 +110,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "trier une table",
       "enonce": "Une table a une colonne \"age\" (valeurs lues d'un CSV, donc des chaînes). Écris l'instruction qui la trie par âge décroissant.",
       "corrige": [
@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "calculer une moyenne à partir d'un CSV",
       "enonce": "Une table chargée depuis un CSV a une colonne \"age\" : table = [ {\"age\": \"16\"}, {\"age\": \"17\"}, {\"age\": \"15\"} ]. Écris le code qui calcule l'âge moyen et donne le résultat.",
       "corrige": [
@@ -133,6 +133,477 @@
         "Ici sum = 16 + 17 + 15 = 48 et len = 3, donc 48 / 3 = 16.0."
       ],
       "reponse": "ages = [int(ligne[\"age\"]) for ligne in table] puis sum(ages)/len(ages) = 48/3 = 16.0."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire des tables (descripteurs, enregistrements)",
+      "enonce": "On considère la table suivante :\n\n```python\ntable = [\n    {\"nom\": \"Diallo\", \"age\": 16, \"ville\": \"Lyon\"},\n    {\"nom\": \"Nguyen\", \"age\": 17, \"ville\": \"Paris\"},\n    {\"nom\": \"Martin\", \"age\": 15, \"ville\": \"Lyon\"},\n    {\"nom\": \"Benali\", \"age\": 18, \"ville\": \"Nantes\"},\n]\n```\n\nCombien a-t-elle d'enregistrements ? Quels sont ses descripteurs ?",
+      "corrige": [
+        "Chaque dictionnaire de la liste est un enregistrement (une ligne) : il y en a 4.",
+        "Les clés communes à tous les dictionnaires sont les descripteurs (les colonnes) : nom, age et ville."
+      ],
+      "reponse": "4 enregistrements ; descripteurs : nom, age, ville."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "format CSV",
+      "enonce": "Que signifie le sigle CSV ? Un fichier CSV contient-il des couleurs, des polices ou des formules comme un tableur ?",
+      "corrige": [
+        "CSV signifie Comma Separated Values : « valeurs séparées par des virgules ».",
+        "C'est un simple fichier texte : il ne contient que les données, sans aucune mise en forme."
+      ],
+      "reponse": "Comma Separated Values ; non, un CSV ne contient que les données (fichier texte sans mise en forme)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "format CSV",
+      "enonce": "Écris le contenu du fichier CSV (séparateur virgule, avec en-tête) correspondant à ce tableau : nom | prix | stock ; stylo | 2 | 150 ; cahier | 3 | 80.",
+      "corrige": [
+        "La première ligne est l'en-tête : les noms des colonnes séparés par des virgules.",
+        "Chaque ligne suivante est un enregistrement, avec ses champs dans le même ordre.",
+        "On obtient trois lignes : nom,prix,stock puis stylo,2,150 puis cahier,3,80."
+      ],
+      "reponse": "Trois lignes : `nom,prix,stock` ; `stylo,2,150` ; `cahier,3,80`."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "accès à un enregistrement",
+      "enonce": "Avec la table ci-dessous, que valent `table[2][\"ville\"]` et `table[-1][\"age\"]` ?\n\n```python\ntable = [\n    {\"nom\": \"Diallo\", \"age\": 16, \"ville\": \"Lyon\"},\n    {\"nom\": \"Nguyen\", \"age\": 17, \"ville\": \"Paris\"},\n    {\"nom\": \"Martin\", \"age\": 15, \"ville\": \"Lyon\"},\n    {\"nom\": \"Benali\", \"age\": 18, \"ville\": \"Nantes\"},\n]\n```",
+      "corrige": [
+        "`table[2]` est le 3e enregistrement (les indices commencent à 0) : celui de Martin, dont la ville est Lyon.",
+        "`table[-1]` est le dernier enregistrement : celui de Benali, dont l'âge est 18."
+      ],
+      "reponse": "`table[2][\"ville\"]` vaut \"Lyon\" et `table[-1][\"age\"]` vaut 18."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "filtrage (sélection d'enregistrements)",
+      "enonce": "Avec la table de 4 élèves (Diallo 16 ans Lyon, Nguyen 17 ans Paris, Martin 15 ans Lyon, Benali 18 ans Nantes), que vaut la liste suivante ?\n\n```python\n[ligne[\"nom\"] for ligne in table if ligne[\"ville\"] == \"Lyon\"]\n```",
+      "corrige": [
+        "La compréhension parcourt toutes les lignes et ne garde que celles dont la ville vaut \"Lyon\".",
+        "Diallo et Martin habitent à Lyon ; pour chacune de ces lignes, on garde seulement le nom."
+      ],
+      "reponse": "`['Diallo', 'Martin']`"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "tri d'une table selon un descripteur",
+      "enonce": "Avec la même table de 4 élèves, quel est l'ordre des noms dans `sorted(table, key=lambda ligne: ligne[\"nom\"])` ?",
+      "corrige": [
+        "La clé de tri est le nom : on range les lignes par ordre alphabétique des noms.",
+        "Benali < Diallo < Martin < Nguyen."
+      ],
+      "reponse": "Benali, Diallo, Martin, Nguyen."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "table comme liste de dictionnaires",
+      "enonce": "Représente en Python, sous forme de liste de dictionnaires, la table suivante : titre | annee ; Le Petit Prince | 1943 ; Les Misérables | 1862.",
+      "corrige": [
+        "Chaque ligne devient un dictionnaire dont les clés sont les descripteurs titre et annee.",
+        "La table est la liste de ces dictionnaires.",
+        "Exemple de réponse : `livres = [{\"titre\": \"Le Petit Prince\", \"annee\": 1943}, {\"titre\": \"Les Misérables\", \"annee\": 1862}]`."
+      ],
+      "reponse": "`[{\"titre\": \"Le Petit Prince\", \"annee\": 1943}, {\"titre\": \"Les Misérables\", \"annee\": 1862}]`"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "conversion des valeurs lues dans un CSV",
+      "enonce": "Une valeur lue dans un fichier CSV vaut `\"17\"`. Quel est son type ? Que donnent `\"17\" + \"1\"` et `int(\"17\") + 1` ?",
+      "corrige": [
+        "Toutes les valeurs lues dans un CSV sont des chaînes de caractères (type `str`).",
+        "Avec deux chaînes, `+` les met bout à bout (concaténation) : \"171\".",
+        "Après conversion avec `int`, on fait une vraie addition : 18."
+      ],
+      "reponse": "Type `str` ; `\"17\" + \"1\"` donne \"171\" et `int(\"17\") + 1` donne 18."
+    },
+    {
+      "id": 19,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire des tables (descripteurs, enregistrements)",
+      "enonce": "Une table décrit les élèves d'une classe : une ligne par élève, avec son nom, sa date de naissance et sa moyenne. Dans cette table, « la ligne de l'élève Inès » est-elle un enregistrement ou un descripteur ? Et « moyenne » ?",
+      "corrige": [
+        "Un enregistrement est une ligne : il décrit un élément (ici un élève).",
+        "Un descripteur est une colonne : il nomme une caractéristique commune à toutes les lignes (ici la moyenne)."
+      ],
+      "reponse": "La ligne d'Inès est un enregistrement ; « moyenne » est un descripteur."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "accès à un enregistrement",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ntable = [{\"nom\": \"Ba\", \"age\": 15}, {\"nom\": \"Ka\", \"age\": 16}]\ntable[0][\"age\"] = 16\ntable.append({\"nom\": \"Sy\", \"age\": 17})\nprint(len(table), table[0])\n```",
+      "corrige": [
+        "`table[0][\"age\"] = 16` modifie l'âge du premier enregistrement (Ba).",
+        "`append` ajoute un nouvel enregistrement à la fin : la table en compte maintenant 3."
+      ],
+      "reponse": "`3 {'nom': 'Ba', 'age': 16}`"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "conversion des valeurs lues dans un CSV",
+      "enonce": "Qu'affiche ce code ? Explique le premier résultat.\n\n```python\nprint(\"9\" > \"18\")\nprint(9 > 18)\n```",
+      "corrige": [
+        "Entre deux chaînes, Python compare caractère par caractère : le premier caractère \"9\" est plus grand que \"1\", donc \"9\" > \"18\" est vrai.",
+        "Entre deux entiers, la comparaison est numérique : 9 > 18 est faux.",
+        "C'est pourquoi il faut convertir les valeurs d'un CSV avec `int` avant de les comparer."
+      ],
+      "reponse": "`True` puis `False`."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "conversion des valeurs lues dans un CSV",
+      "enonce": "Une table lue dans un CSV contient les âges \"9\", \"15\" et \"12\" (des chaînes). Un élève trie avec `sorted(table, key=lambda l: l[\"age\"])`. Dans quel ordre les âges sont-ils rangés ? Comment corriger ?",
+      "corrige": [
+        "Les âges sont comparés comme des chaînes, caractère par caractère : \"12\" < \"15\" < \"9\" (car \"1\" < \"9\").",
+        "L'ordre obtenu est donc 12, 15, 9, ce qui est faux numériquement.",
+        "Correction : convertir dans la clé, `key=lambda l: int(l[\"age\"])`, ce qui donne 9, 12, 15."
+      ],
+      "reponse": "Ordre obtenu : 12, 15, 9 ; il faut écrire `key=lambda l: int(l[\"age\"])`."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "format CSV",
+      "enonce": "On lit ce fichier CSV avec `csv.DictReader`. Qu'affiche le programme ?\n\n```python\nimport csv, io\ntexte = \"\"\"nom,note\nLina,14\nTom,9\nSami,17\n\"\"\"\ntable = list(csv.DictReader(io.StringIO(texte)))\nprint(len(table))\nprint(table[1])\n```",
+      "corrige": [
+        "`DictReader` utilise la première ligne comme en-tête : les clés sont nom et note.",
+        "Les trois lignes suivantes donnent trois dictionnaires, donc `len(table)` vaut 3.",
+        "`table[1]` est la ligne de Tom ; la note est une chaîne : '9'."
+      ],
+      "reponse": "`3` puis `{'nom': 'Tom', 'note': '9'}`."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "format CSV",
+      "enonce": "Un fichier CSV français utilise le point-virgule comme séparateur : `nom;ville` puis `Diallo;Lyon`. Pourquoi le point-virgule est-il souvent préféré à la virgule en France ? Comment l'indiquer à `csv.DictReader` ?",
+      "corrige": [
+        "En France, la virgule sert de séparateur décimal (12,5) : elle risquerait d'être confondue avec le séparateur de champs.",
+        "On indique le séparateur avec le paramètre `delimiter` : `csv.DictReader(f, delimiter=\";\")`."
+      ],
+      "reponse": "La virgule sert déjà aux nombres décimaux ; on écrit `csv.DictReader(f, delimiter=\";\")`."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "filtrage (sélection d'enregistrements)",
+      "enonce": "Avec la table de 4 élèves (Diallo 16 ans Lyon, Nguyen 17 ans Paris, Martin 15 ans Lyon, Benali 18 ans Nantes), écris une compréhension de liste qui donne les noms des élèves de Lyon âgés d'au moins 16 ans. Quel est le résultat ?",
+      "corrige": [
+        "Il faut combiner deux conditions avec `and`.",
+        "Exemple de réponse : `[l[\"nom\"] for l in table if l[\"ville\"] == \"Lyon\" and l[\"age\"] >= 16]`.",
+        "Diallo (Lyon, 16) convient ; Martin (Lyon, 15) est trop jeune."
+      ],
+      "reponse": "`['Diallo']`"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "filtrage (sélection d'enregistrements)",
+      "enonce": "Écris la même sélection sans compréhension de liste, avec une boucle `for` et la méthode `append`, pour obtenir la liste des noms des élèves majeurs (18 ans ou plus). Quel est le résultat avec la table des 4 élèves ?",
+      "corrige": [
+        "On part d'une liste vide, puis on ajoute le nom de chaque ligne qui vérifie la condition.",
+        "Exemple de réponse : `majeurs = []`, puis `for l in table:` et `if l[\"age\"] >= 18: majeurs.append(l[\"nom\"])`.",
+        "Seul Benali a 18 ans ou plus."
+      ],
+      "reponse": "`['Benali']`"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "tri d'une table selon un descripteur",
+      "enonce": "Qu'affiche ce programme ? La table d'origine a-t-elle été modifiée ?\n\n```python\ntable = [\n    {\"nom\": \"Diallo\", \"age\": 16, \"ville\": \"Lyon\"},\n    {\"nom\": \"Nguyen\", \"age\": 17, \"ville\": \"Paris\"},\n    {\"nom\": \"Martin\", \"age\": 15, \"ville\": \"Lyon\"},\n    {\"nom\": \"Benali\", \"age\": 18, \"ville\": \"Nantes\"},\n]\njeunes = sorted(table, key=lambda l: l[\"age\"])\nprint(jeunes[0][\"nom\"], table[0][\"nom\"])\n```",
+      "corrige": [
+        "`sorted` renvoie une nouvelle liste triée par âge croissant : le premier est Martin (15 ans).",
+        "La table d'origine n'est pas modifiée : `table[0]` est toujours Diallo."
+      ],
+      "reponse": "`Martin Diallo` ; la table d'origine est inchangée."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "tri d'une table selon un descripteur",
+      "enonce": "Avec la table de 4 élèves, écris l'instruction qui donne les noms des deux élèves les plus âgés, du plus âgé au moins âgé.",
+      "corrige": [
+        "On trie par âge décroissant avec `reverse=True`.",
+        "On garde les deux premières lignes avec une tranche `[:2]`, puis on extrait les noms.",
+        "Exemple de réponse : `[l[\"nom\"] for l in sorted(table, key=lambda l: l[\"age\"], reverse=True)[:2]]`."
+      ],
+      "reponse": "`['Benali', 'Nguyen']`"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "calcul d'agrégat (moyenne d'une colonne)",
+      "enonce": "Avec la table de 4 élèves (âges 16, 17, 15 et 18), écris le code qui calcule l'âge maximal, puis l'âge moyen. Donne les deux valeurs.",
+      "corrige": [
+        "On extrait la colonne : `ages = [l[\"age\"] for l in table]`, soit [16, 17, 15, 18].",
+        "`max(ages)` donne 18.",
+        "`sum(ages) / len(ages)` donne 66 / 4 = 16.5."
+      ],
+      "reponse": "Âge maximal : 18 ; âge moyen : 16,5 (Python affiche 16.5)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "calcul d'agrégat (moyenne d'une colonne)",
+      "enonce": "Qu'affiche ce programme, qui compte les élèves par ville ?\n\n```python\ntable = [\n    {\"nom\": \"Diallo\", \"age\": 16, \"ville\": \"Lyon\"},\n    {\"nom\": \"Nguyen\", \"age\": 17, \"ville\": \"Paris\"},\n    {\"nom\": \"Martin\", \"age\": 15, \"ville\": \"Lyon\"},\n    {\"nom\": \"Benali\", \"age\": 18, \"ville\": \"Nantes\"},\n]\ncompte = {}\nfor l in table:\n    v = l[\"ville\"]\n    if v in compte:\n        compte[v] = compte[v] + 1\n    else:\n        compte[v] = 1\nprint(compte)\n```",
+      "corrige": [
+        "Le dictionnaire `compte` associe à chaque ville le nombre d'élèves rencontrés.",
+        "Lyon apparaît deux fois (Diallo, Martin), Paris et Nantes une fois chacune.",
+        "Les clés sont ajoutées dans l'ordre de première apparition : Lyon, Paris, Nantes."
+      ],
+      "reponse": "`{'Lyon': 2, 'Paris': 1, 'Nantes': 1}`"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "projection (extraire une colonne)",
+      "enonce": "Écris une fonction `colonne(table, descripteur)` qui renvoie la liste des valeurs d'une colonne. Que renvoie `colonne(table, \"ville\")` pour la table des 4 élèves ?",
+      "corrige": [
+        "Il suffit de parcourir les lignes et de garder la valeur associée au descripteur.",
+        "Exemple de réponse : `def colonne(table, descripteur): return [l[descripteur] for l in table]`.",
+        "On obtient les villes dans l'ordre des lignes, avec les répétitions."
+      ],
+      "reponse": "`['Lyon', 'Paris', 'Lyon', 'Nantes']`"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "projection (extraire une colonne)",
+      "enonce": "À partir de la table des 4 élèves, comment obtenir la liste des villes SANS doublon, triée par ordre alphabétique ? Donne le résultat.",
+      "corrige": [
+        "On extrait la colonne ville, puis on supprime les doublons avec `set`.",
+        "`sorted` transforme l'ensemble en liste triée.",
+        "Exemple de réponse : `sorted(set(l[\"ville\"] for l in table))`."
+      ],
+      "reponse": "`['Lyon', 'Nantes', 'Paris']`"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "vocabulaire des tables (descripteurs, enregistrements)",
+      "enonce": "Un élève propose la table `[{\"nom\": \"Ba\", \"note\": 12, \"note\": 15}]` pour stocker deux notes. Qu'obtient-on réellement en Python ? Quelle règle sur les descripteurs n'est pas respectée ?",
+      "corrige": [
+        "Dans un dictionnaire, une clé est unique : si on l'écrit deux fois, la seconde valeur remplace la première.",
+        "On obtient `[{'nom': 'Ba', 'note': 15}]` : la note 12 est perdue.",
+        "Un descripteur doit avoir un nom unique : il faut par exemple `note1` et `note2`."
+      ],
+      "reponse": "`[{'nom': 'Ba', 'note': 15}]` ; deux descripteurs ne peuvent pas avoir le même nom."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "accès à un enregistrement",
+      "enonce": "Écris une fonction `chercher(table, nom)` qui renvoie l'enregistrement dont le nom est donné, ou `None` s'il n'existe pas. Que renvoie `chercher(table, \"Nguyen\")[\"ville\"]` avec la table des 4 élèves ?",
+      "corrige": [
+        "On parcourt les lignes et on renvoie la première dont le champ nom correspond.",
+        "Exemple de réponse : `for l in table: if l[\"nom\"] == nom: return l`, puis `return None` après la boucle.",
+        "La ligne de Nguyen a pour ville Paris."
+      ],
+      "reponse": "\"Paris\""
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "fusion de deux tables",
+      "enonce": "On dispose de deux tables :\n\n```python\neleves = [{\"nom\": \"Lina\", \"classe\": \"1A\"}, {\"nom\": \"Tom\", \"classe\": \"1B\"}]\nclasses = [{\"classe\": \"1A\", \"salle\": \"B12\"}, {\"classe\": \"1B\", \"salle\": \"C04\"}]\n```\n\nQuel descripteur commun permet de les fusionner ? Quelle table obtient-on en associant chaque élève à sa salle ?",
+      "corrige": [
+        "Le descripteur présent dans les deux tables est `classe`.",
+        "Pour chaque élève, on cherche dans `classes` la ligne qui a la même classe, et on réunit les champs.",
+        "Lina (1A) est associée à B12, Tom (1B) à C04."
+      ],
+      "reponse": "Descripteur commun : classe ; résultat : `[{'nom': 'Lina', 'classe': '1A', 'salle': 'B12'}, {'nom': 'Tom', 'classe': '1B', 'salle': 'C04'}]`."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "fusion de deux tables",
+      "enonce": "Complète la fonction de fusion ci-dessous (reprends les tables `eleves` et `classes` de l'exercice précédent).\n\n```python\ndef fusion(eleves, classes):\n    res = []\n    for e in eleves:\n        for c in classes:\n            if ...:\n                res.append({\"nom\": e[\"nom\"], \"classe\": e[\"classe\"], \"salle\": c[\"salle\"]})\n    return res\n```",
+      "corrige": [
+        "On associe un élève et une classe quand ils ont la même valeur pour le descripteur commun.",
+        "La condition est donc `e[\"classe\"] == c[\"classe\"]`.",
+        "Pour chaque couple qui correspond, on construit un nouveau dictionnaire qui réunit les champs."
+      ],
+      "reponse": "`e[\"classe\"] == c[\"classe\"]`"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "fusion de deux tables",
+      "enonce": "Avec la fonction `fusion` de l'exercice précédent, on ajoute à `eleves` l'élève `{\"nom\": \"Zoé\", \"classe\": \"1C\"}`, mais aucune ligne de `classes` ne concerne la 1C. Que devient Zoé dans le résultat ? Est-ce gênant ?",
+      "corrige": [
+        "Zoé n'est associée à aucune ligne de `classes` : la condition n'est jamais vraie pour elle.",
+        "Aucun dictionnaire n'est ajouté pour Zoé : elle disparaît du résultat.",
+        "C'est gênant si l'on voulait la liste complète des élèves : il faut vérifier la cohérence des deux tables (ou ajouter Zoé avec une salle inconnue)."
+      ],
+      "reponse": "Zoé n'apparaît pas dans la table fusionnée, faute de classe correspondante."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "tri d'une table selon un descripteur",
+      "enonce": "On veut trier une table par ville, puis, pour une même ville, par âge croissant. Une clé de tri peut renvoyer un tuple : les tuples sont comparés élément par élément. Écris l'instruction et donne l'ordre des noms pour la table des 4 élèves.",
+      "corrige": [
+        "La clé renvoie le couple (ville, âge) : `key=lambda l: (l[\"ville\"], l[\"age\"])`.",
+        "On compare d'abord les villes : Lyon < Nantes < Paris.",
+        "À Lyon, Martin (15) passe avant Diallo (16)."
+      ],
+      "reponse": "`sorted(table, key=lambda l: (l[\"ville\"], l[\"age\"]))` donne Martin, Diallo, Benali, Nguyen."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "calcul d'agrégat (moyenne d'une colonne)",
+      "enonce": "Écris une fonction `moyenne_ville(table, ville)` qui renvoie l'âge moyen des élèves d'une ville, ou `None` s'il n'y en a aucun. Que renvoie-t-elle pour \"Lyon\" et pour \"Brest\" avec la table des 4 élèves ?",
+      "corrige": [
+        "On sélectionne d'abord les âges des élèves de la ville : `ages = [l[\"age\"] for l in table if l[\"ville\"] == ville]`.",
+        "Si la liste est vide, on renvoie `None` pour éviter une division par zéro.",
+        "Sinon on renvoie `sum(ages) / len(ages)` : pour Lyon, (16 + 15) / 2 = 15.5."
+      ],
+      "reponse": "15.5 pour \"Lyon\" ; `None` pour \"Brest\"."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "conversion des valeurs lues dans un CSV",
+      "enonce": "Ce programme plante. Explique pourquoi et corrige-le.\n\n```python\nimport csv, io\ntexte = \"\"\"article,prix\nstylo,2\ncahier,3\n\"\"\"\ntable = list(csv.DictReader(io.StringIO(texte)))\ntotal = 0\nfor l in table:\n    total = total + l[\"prix\"]\nprint(total)\n```",
+      "corrige": [
+        "Les valeurs lues dans un CSV sont des chaînes : `l[\"prix\"]` vaut \"2\" puis \"3\".",
+        "`0 + \"2\"` additionne un entier et une chaîne : Python lève une erreur `TypeError`.",
+        "Correction : `total = total + int(l[\"prix\"])` ; le programme affiche alors 5."
+      ],
+      "reponse": "Les prix sont des chaînes (`TypeError`) ; avec `int(l[\"prix\"])`, on obtient 5."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "projection (extraire une colonne)",
+      "enonce": "On veut une nouvelle table ne gardant que les descripteurs nom et ville de la table des 4 élèves. Écris une compréhension de liste qui la construit et donne sa première ligne.",
+      "corrige": [
+        "Pour chaque ligne, on construit un nouveau dictionnaire avec seulement les deux clés voulues.",
+        "Exemple de réponse : `[{\"nom\": l[\"nom\"], \"ville\": l[\"ville\"]} for l in table]`.",
+        "La première ligne est celle de Diallo."
+      ],
+      "reponse": "Première ligne : `{'nom': 'Diallo', 'ville': 'Lyon'}`."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "vocabulaire des tables (descripteurs, enregistrements)",
+      "enonce": "Un fichier CSV contient la ligne `Diallo,16,Lyon,Paris` alors que l'en-tête est `nom,age,ville`. Quel problème présente cette ligne ? Pourquoi la cohérence des données est-elle importante avant un traitement ?",
+      "corrige": [
+        "L'en-tête annonce 3 descripteurs, mais la ligne contient 4 champs : elle est incohérente (une valeur en trop, peut-être une erreur de saisie).",
+        "Les traitements (sélections, tris, moyennes) supposent que chaque enregistrement a les mêmes descripteurs, avec des valeurs du bon type.",
+        "Une ligne mal formée peut fausser les résultats ou faire planter le programme : il faut vérifier les données avant de les utiliser."
+      ],
+      "reponse": "La ligne a 4 champs pour 3 descripteurs ; des données incohérentes faussent les traitements."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "filtrage (sélection d'enregistrements)",
+      "enonce": "Écris une fonction générale `selection(table, descripteur, valeur)` qui renvoie la nouvelle table des lignes dont le descripteur a la valeur donnée. Combien de lignes renvoie `selection(table, \"ville\", \"Lyon\")` pour la table des 4 élèves ?",
+      "corrige": [
+        "Le nom du descripteur est un paramètre : on l'utilise comme clé, `l[descripteur]`.",
+        "Exemple de réponse : `def selection(table, descripteur, valeur): return [l for l in table if l[descripteur] == valeur]`.",
+        "Deux élèves habitent Lyon : Diallo et Martin."
+      ],
+      "reponse": "2 lignes (Diallo et Martin)."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "filtrage (sélection d'enregistrements)",
+      "enonce": "Une médiathèque stocke ses livres dans une table :\n\n```python\nlivres = [\n    {\"titre\": \"Germinal\", \"auteur\": \"Zola\", \"annee\": 1885, \"dispo\": True},\n    {\"titre\": \"Bel-Ami\", \"auteur\": \"Maupassant\", \"annee\": 1885, \"dispo\": False},\n    {\"titre\": \"Nana\", \"auteur\": \"Zola\", \"annee\": 1880, \"dispo\": True},\n    {\"titre\": \"Candide\", \"auteur\": \"Voltaire\", \"annee\": 1759, \"dispo\": True},\n]\n```\n\nÉcris une fonction `disponibles(livres, auteur)` qui renvoie la liste des titres disponibles d'un auteur, triés par année. Que renvoie-t-elle pour \"Zola\" ?",
+      "corrige": [
+        "On sélectionne d'abord les livres de l'auteur qui sont disponibles : `[l for l in livres if l[\"auteur\"] == auteur and l[\"dispo\"]]`.",
+        "On trie cette sélection par année avec `sorted(..., key=lambda l: l[\"annee\"])`.",
+        "Enfin, on extrait les titres. Pour Zola : Nana (1880), puis Germinal (1885)."
+      ],
+      "reponse": "`['Nana', 'Germinal']`"
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "calcul d'agrégat (moyenne d'une colonne)",
+      "enonce": "Avec la table `livres` de l'exercice précédent, écris un programme qui construit un dictionnaire donnant, pour chaque auteur, le nombre de ses livres. Donne le résultat.",
+      "corrige": [
+        "On part d'un dictionnaire vide et on parcourt les livres.",
+        "Pour chaque livre, on augmente le compteur de son auteur, en le créant à 0 s'il n'existe pas encore.",
+        "Exemple de réponse : `n = {}`, puis `for l in livres: n[l[\"auteur\"]] = n.get(l[\"auteur\"], 0) + 1`."
+      ],
+      "reponse": "`{'Zola': 2, 'Maupassant': 1, 'Voltaire': 1}`"
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "format CSV",
+      "enonce": "Écris un programme qui lit le fichier releves.csv (séparateur virgule, en-tête `ville,temperature`) et affiche la ville la plus chaude. On suppose que le fichier contient : Lille,14 ; Nice,23 ; Brest,16 (une ligne par ville). Quel est l'affichage ?",
+      "corrige": [
+        "On charge la table avec `csv.DictReader` : `table = list(csv.DictReader(f))`.",
+        "Les températures sont des chaînes : on les convertit dans la clé, `max(table, key=lambda l: int(l[\"temperature\"]))`.",
+        "On affiche le champ ville de la ligne obtenue : Nice (23)."
+      ],
+      "reponse": "Nice"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "fusion de deux tables",
+      "enonce": "Un magasin a une table `ventes` (produit, quantite) et une table `tarifs` (produit, prix) :\n\n```python\nventes = [{\"produit\": \"stylo\", \"quantite\": 3}, {\"produit\": \"cahier\", \"quantite\": 2}, {\"produit\": \"stylo\", \"quantite\": 1}]\ntarifs = [{\"produit\": \"stylo\", \"prix\": 2}, {\"produit\": \"cahier\", \"prix\": 4}]\n```\n\nEn fusionnant les deux tables sur le descripteur produit, calcule le chiffre d'affaires total (en euros).",
+      "corrige": [
+        "Pour chaque vente, on cherche le prix du produit dans `tarifs` (descripteur commun : produit).",
+        "Ventes : 3 stylos × 2 € = 6 € ; 2 cahiers × 4 € = 8 € ; 1 stylo × 2 € = 2 €.",
+        "Total : 6 + 8 + 2 = 16 €."
+      ],
+      "reponse": "16 €"
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "tri d'une table selon un descripteur",
+      "enonce": "On a la table des résultats d'un cross :\n\n```python\ncourse = [\n    {\"nom\": \"Inès\", \"temps\": 742},\n    {\"nom\": \"Hugo\", \"temps\": 715},\n    {\"nom\": \"Maya\", \"temps\": 698},\n    {\"nom\": \"Noah\", \"temps\": 760},\n]\n```\n\nLe temps est en secondes. Écris le code qui affiche le podium (les 3 premiers, du plus rapide au moins rapide) et donne l'affichage obtenu.",
+      "corrige": [
+        "Le plus rapide a le plus petit temps : on trie par temps croissant avec `sorted(course, key=lambda l: l[\"temps\"])`.",
+        "On garde les 3 premiers avec `[:3]` et on affiche leurs noms.",
+        "Temps rangés : 698 (Maya), 715 (Hugo), 742 (Inès), 760 (Noah)."
+      ],
+      "reponse": "Maya, Hugo, Inès."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "calcul d'agrégat (moyenne d'une colonne)",
+      "enonce": "Avec la table `course` de l'exercice précédent, écris un code qui calcule le temps moyen, puis la liste des coureurs plus rapides que la moyenne. Donne les résultats.",
+      "corrige": [
+        "Temps moyen : (742 + 715 + 698 + 760) / 4 = 2 915 / 4 = 728,75 secondes.",
+        "Plus rapide que la moyenne signifie un temps strictement inférieur à 728,75.",
+        "Exemple de réponse : `m = sum(l[\"temps\"] for l in course) / len(course)`, puis `[l[\"nom\"] for l in course if l[\"temps\"] < m]`."
+      ],
+      "reponse": "Moyenne : 728,75 s (728.75 en Python) ; plus rapides : Hugo et Maya."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "format CSV",
+      "enonce": "On veut enregistrer une table au format CSV. Qu'affiche ce programme ?\n\n```python\ntable = [{\"nom\": \"Lina\", \"note\": 14}, {\"nom\": \"Tom\", \"note\": 9}]\nlignes = [\"nom,note\"]\nfor l in table:\n    lignes.append(l[\"nom\"] + \",\" + str(l[\"note\"]))\nfor ligne in lignes:\n    print(ligne)\n```",
+      "corrige": [
+        "La première ligne est l'en-tête nom,note.",
+        "Pour chaque enregistrement, on assemble les champs séparés par une virgule ; `str` convertit la note en chaîne, sinon la concaténation provoquerait une erreur.",
+        "On obtient exactement le contenu d'un fichier CSV."
+      ],
+      "reponse": "Trois lignes : `nom,note`, `Lina,14` et `Tom,9`."
     }
   ]
 }

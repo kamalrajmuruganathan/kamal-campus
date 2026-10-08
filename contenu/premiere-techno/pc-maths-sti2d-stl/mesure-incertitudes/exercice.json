@@ -131,9 +131,9 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme-mesure-complet",
-      "enonce": "TP — détermination expérimentale de l'intensité de la pesanteur $g$.\n\\nUn groupe d'élèves mesure $g$ par une méthode de chute libre. Il réalise $n = 5$ mesures indépendantes (en $\\mathrm{m\\cdot s^{-2}}$) : $9{,}7$ ; $10{,}1$ ; $9{,}9$ ; $9{,}8$ ; $10{,}0$. L'écart-type de cette série est $s = 0{,}15\\ \\mathrm{m\\cdot s^{-2}}$. La valeur de référence est $g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$.\n\n1. Calcule la meilleure estimation de $g$ à partir de la série.\n2. Calcule l'incertitude-type de type A associée.\n3. Écris le résultat de la mesure sous la forme correcte.\n4. Le résultat du groupe est-il compatible avec la valeur de référence ? Justifie.\n5. Un second groupe trouve $\\bar{g}_B = 9{,}60\\ \\mathrm{m\\cdot s^{-2}}$ avec $s_B = 0{,}05\\ \\mathrm{m\\cdot s^{-2}}$ (toujours $n = 5$). Compare les deux groupes en termes de justesse et de fidélité.\n6. Le premier groupe veut diviser son incertitude-type par $2$ sans changer de méthode. Combien de mesures doit-il réaliser au total ?",
+      "enonce": "TP — détermination expérimentale de l'intensité de la pesanteur $g$.\n\nUn groupe d'élèves mesure $g$ par une méthode de chute libre. Il réalise $n = 5$ mesures indépendantes (en $\\mathrm{m\\cdot s^{-2}}$) : $9{,}7$ ; $10{,}1$ ; $9{,}9$ ; $9{,}8$ ; $10{,}0$. L'écart-type de cette série est $s = 0{,}15\\ \\mathrm{m\\cdot s^{-2}}$. La valeur de référence est $g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$.\n\n1. Calcule la meilleure estimation de $g$ à partir de la série.\n2. Calcule l'incertitude-type de type A associée.\n3. Écris le résultat de la mesure sous la forme correcte.\n4. Le résultat du groupe est-il compatible avec la valeur de référence ? Justifie.\n5. Un second groupe trouve $\\bar{g}_B = 9{,}60\\ \\mathrm{m\\cdot s^{-2}}$ avec $s_B = 0{,}05\\ \\mathrm{m\\cdot s^{-2}}$ (toujours $n = 5$). Compare les deux groupes en termes de justesse et de fidélité.\n6. Le premier groupe veut diviser son incertitude-type par $2$ sans changer de méthode. Combien de mesures doit-il réaliser au total ?",
       "corrige": [
         "1. La meilleure estimation est la moyenne : $\\bar{g} = \\dfrac{9{,}7 + 10{,}1 + 9{,}9 + 9{,}8 + 10{,}0}{5} = \\dfrac{49{,}5}{5} = 9{,}90\\ \\mathrm{m\\cdot s^{-2}}$.",
         "2. Incertitude-type de type A : $u = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}15}{\\sqrt{5}}$. Avec $\\sqrt{5} \\approx 2{,}24$, on obtient $u \\approx 0{,}067$, arrondi à un chiffre significatif : $u \\approx 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$.",
@@ -143,6 +143,459 @@
         "6. À $s$ constant, $u$ varie en $\\dfrac{1}{\\sqrt{n}}$ : diviser $u$ par $2$ impose de multiplier $n$ par $2^2 = 4$. Il faut donc $n = 4 \\times 5 = 20$ mesures au total."
       ],
       "reponse": "$\\bar{g} = 9{,}90\\ \\mathrm{m\\cdot s^{-2}}$, $u \\approx 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$, soit $g = 9{,}90 \\pm 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$ ; compatible avec $9{,}81$ (écart $\\approx 1{,}3\\,u < 2\\,u$). Groupe A plus juste, groupe B plus fidèle mais entaché d'une erreur systématique. Pour diviser $u$ par $2$ : $20$ mesures."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "unites-si",
+      "enonce": "Citer les sept unités de base du Système international, en précisant pour chacune la grandeur correspondante et le symbole.",
+      "corrige": [
+        "Les cinq les plus utilisées en TP : mètre (longueur), kilogramme (masse), seconde (temps), ampère (intensité électrique), kelvin (température thermodynamique).",
+        "Les deux qu'on oublie souvent : la mole (quantité de matière) et la candela (intensité lumineuse)."
+      ],
+      "reponse": "m (longueur), kg (masse), s (temps), A (intensité électrique), K (température), mol (quantité de matière), cd (intensité lumineuse)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "unites-si",
+      "enonce": "Parmi les unités suivantes, lesquelles sont des unités de base du SI ? newton, kelvin, volt, mole, watt, candela, ampère.",
+      "corrige": [
+        "Les sept unités de base sont : m, kg, s, A, K, mol, cd.",
+        "Le newton, le volt et le watt sont des unités dérivées : elles s'expriment à partir des unités de base (par exemple $1\\ \\mathrm{N} = 1\\ \\mathrm{kg\\cdot m\\cdot s^{-2}}$)."
+      ],
+      "reponse": "Kelvin, mole, candela et ampère."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "grandeur-valeur-unite",
+      "enonce": "Dans la phrase « la masse de l'échantillon vaut $12{,}5\\ \\mathrm{g}$ », identifier la grandeur, la valeur et l'unité.",
+      "corrige": [
+        "La grandeur est ce que l'on mesure : ici une masse.",
+        "La valeur est le nombre obtenu : $12{,}5$ ; l'unité est la référence de comparaison : le gramme."
+      ],
+      "reponse": "Grandeur : la masse ; valeur : $12{,}5$ ; unité : le gramme (g)."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "prefixes",
+      "enonce": "Convertir dans l'unité SI : a) $4{,}7\\ \\mathrm{k\\Omega}$ ; b) $220\\ \\mathrm{\\mu F}$ ; c) $2{,}5\\ \\mathrm{GHz}$ ; d) $350\\ \\mathrm{nm}$.",
+      "corrige": [
+        "On remplace chaque préfixe par sa puissance de dix : kilo $= 10^{3}$, micro $= 10^{-6}$, giga $= 10^{9}$, nano $= 10^{-9}$.",
+        "a) $4{,}7 \\times 10^{3} = 4\\,700\\ \\Omega$ ; b) $220 \\times 10^{-6} = 2{,}2 \\times 10^{-4}\\ \\mathrm{F}$ ; c) $2{,}5 \\times 10^{9}\\ \\mathrm{Hz}$ ; d) $350 \\times 10^{-9} = 3{,}5 \\times 10^{-7}\\ \\mathrm{m}$."
+      ],
+      "reponse": "a) $4\\,700\\ \\Omega$ ; b) $2{,}2 \\times 10^{-4}\\ \\mathrm{F}$ ; c) $2{,}5 \\times 10^{9}\\ \\mathrm{Hz}$ ; d) $3{,}5 \\times 10^{-7}\\ \\mathrm{m}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "prefixes",
+      "enonce": "Convertir : a) $0{,}035\\ \\mathrm{A}$ en milliampères ; b) $1{,}2 \\times 10^{6}\\ \\mathrm{W}$ en mégawatts ; c) $5 \\times 10^{-3}\\ \\mathrm{s}$ en millisecondes.",
+      "corrige": [
+        "a) $1\\ \\mathrm{mA} = 10^{-3}\\ \\mathrm{A}$, donc $0{,}035\\ \\mathrm{A} = 35\\ \\mathrm{mA}$.",
+        "b) $1\\ \\mathrm{MW} = 10^{6}\\ \\mathrm{W}$, donc $1{,}2 \\times 10^{6}\\ \\mathrm{W} = 1{,}2\\ \\mathrm{MW}$.",
+        "c) $10^{-3}\\ \\mathrm{s} = 1\\ \\mathrm{ms}$, donc $5 \\times 10^{-3}\\ \\mathrm{s} = 5\\ \\mathrm{ms}$."
+      ],
+      "reponse": "a) $35\\ \\mathrm{mA}$ ; b) $1{,}2\\ \\mathrm{MW}$ ; c) $5\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "erreurs-aleatoires-systematiques",
+      "enonce": "Classer chaque cause d'erreur en « aléatoire » ou « systématique » : a) le zéro d'une balance est décalé de $0{,}2\\ \\mathrm{g}$ ; b) l'œil ne se place pas toujours de la même façon pour lire une graduation ; c) un chronomètre est déclenché à la main, avec un temps de réaction variable ; d) un thermomètre indique toujours $1\\ \\mathrm{°C}$ de trop.",
+      "corrige": [
+        "Une erreur systématique est un défaut constant, qui décale toutes les mesures dans le même sens : c'est le cas de a) et d).",
+        "Une erreur aléatoire varie de façon imprévisible d'une mesure à l'autre : c'est le cas de b) et c)."
+      ],
+      "reponse": "a) systématique ; b) aléatoire ; c) aléatoire ; d) systématique."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "erreurs-aleatoires-systematiques",
+      "enonce": "Un élève utilise une balance dont le zéro est décalé. Pour améliorer son résultat, il répète $50$ fois la pesée et fait la moyenne. A-t-il amélioré la justesse de sa mesure ? Que faudrait-il faire ?",
+      "corrige": [
+        "Le décalage du zéro est une erreur systématique : toutes les pesées sont décalées de la même quantité, dans le même sens.",
+        "Répéter les mesures réduit seulement l'erreur aléatoire : la moyenne reste décalée, la justesse n'est pas améliorée.",
+        "Il faut étalonner la balance (régler son zéro, la tarer) avant de mesurer."
+      ],
+      "reponse": "Non : la répétition ne corrige pas une erreur systématique ; il faut étalonner (régler le zéro de) la balance."
+    },
+    {
+      "id": 18,
+      "difficulte": "decouverte",
+      "notion": "justesse-fidelite",
+      "enonce": "Sur une cible, les impacts d'un tireur sont très groupés, mais loin du centre. Qualifier ce tir en termes de justesse et de fidélité, puis donner l'équivalent pour une série de mesures.",
+      "corrige": [
+        "Des impacts groupés signifient une faible dispersion : le tir est fidèle.",
+        "Leur centre est loin du but : le tir n'est pas juste.",
+        "Pour des mesures : un faible écart-type, mais une moyenne éloignée de la valeur vraie, signe d'une erreur systématique."
+      ],
+      "reponse": "Fidèle mais pas juste : mesures resserrées mais décalées (erreur systématique)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "serie-mesures",
+      "enonce": "Cinq mesures d'une longueur donnent, en centimètres : $12{,}4$ ; $12{,}6$ ; $12{,}5$ ; $12{,}3$ ; $12{,}7$. Quelle est la meilleure estimation de la longueur ?",
+      "corrige": [
+        "La meilleure estimation est la moyenne $\\bar{x} = \\dfrac{1}{n}\\sum x_i$.",
+        "$\\bar{x} = \\dfrac{12{,}4 + 12{,}6 + 12{,}5 + 12{,}3 + 12{,}7}{5} = \\dfrac{62{,}5}{5} = 12{,}5\\ \\mathrm{cm}$."
+      ],
+      "reponse": "$\\bar{x} = 12{,}5\\ \\mathrm{cm}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "incertitude-type-a",
+      "enonce": "On mesure $25$ fois la tension aux bornes d'un capteur. L'écart-type de la série vaut $s = 1{,}5\\ \\mathrm{mV}$. Calculer l'incertitude-type de type A.",
+      "corrige": [
+        "Pour $n$ mesures indépendantes : $u = \\dfrac{s}{\\sqrt{n}}$.",
+        "$u = \\dfrac{1{,}5}{\\sqrt{25}} = \\dfrac{1{,}5}{5} = 0{,}3\\ \\mathrm{mV}$."
+      ],
+      "reponse": "$u = 0{,}3\\ \\mathrm{mV}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "incertitude-type-a",
+      "enonce": "On chronomètre $36$ fois la période d'un pendule. L'écart-type des mesures est $s = 0{,}12\\ \\mathrm{s}$. Calculer l'incertitude-type sur la période.",
+      "corrige": [
+        "Évaluation de type A : $u = \\dfrac{s}{\\sqrt{n}}$, avec $\\sqrt{36} = 6$.",
+        "$u = \\dfrac{0{,}12}{6} = 0{,}02\\ \\mathrm{s}$."
+      ],
+      "reponse": "$u = 0{,}02\\ \\mathrm{s}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "mesure-unique",
+      "enonce": "On réalise une seule mesure avec chacun des instruments suivants. Estimer l'incertitude-type : a) une règle graduée au millimètre ; b) une éprouvette graduée tous les $2\\ \\mathrm{mL}$.",
+      "corrige": [
+        "Avec une seule mesure, on ne peut pas faire de statistique : on estime $u$ d'après l'instrument.",
+        "Pour un instrument gradué, on prend couramment la moitié de la plus petite graduation : a) $\\dfrac{1\\ \\mathrm{mm}}{2} = 0{,}5\\ \\mathrm{mm}$ ; b) $\\dfrac{2\\ \\mathrm{mL}}{2} = 1\\ \\mathrm{mL}$."
+      ],
+      "reponse": "a) $u \\approx 0{,}5\\ \\mathrm{mm}$ ; b) $u \\approx 1\\ \\mathrm{mL}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "ecriture-resultat",
+      "enonce": "Le calcul d'une période donne $T = 1{,}4382\\ \\mathrm{s}$, avec une incertitude-type $u = 0{,}02\\ \\mathrm{s}$. Écrire correctement le résultat.",
+      "corrige": [
+        "L'incertitude, à un chiffre significatif, porte sur le centième de seconde.",
+        "On arrondit donc la valeur au centième : $1{,}4382 \\approx 1{,}44$."
+      ],
+      "reponse": "$T = 1{,}44 \\pm 0{,}02\\ \\mathrm{s}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "ecriture-resultat",
+      "enonce": "Un compte rendu indique : « $U = 5{,}2316 \\pm 0{,}0347\\ \\mathrm{V}$ ». Corriger cette écriture.",
+      "corrige": [
+        "L'incertitude s'écrit avec un seul chiffre significatif : $0{,}0347 \\approx 0{,}03\\ \\mathrm{V}$.",
+        "La valeur s'arrondit au même rang, ici le centième : $5{,}2316 \\approx 5{,}23$."
+      ],
+      "reponse": "$U = 5{,}23 \\pm 0{,}03\\ \\mathrm{V}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "ecriture-resultat",
+      "enonce": "Un résultat s'écrit $I = 152 \\pm 3\\ \\mathrm{mA}$. Entre quelles valeurs l'intensité se situe-t-elle très probablement ?",
+      "corrige": [
+        "L'écriture $X \\pm u$ indique l'étendue des valeurs raisonnablement attribuables à la grandeur.",
+        "$152 - 3 = 149\\ \\mathrm{mA}$ et $152 + 3 = 155\\ \\mathrm{mA}$."
+      ],
+      "reponse": "Entre $149\\ \\mathrm{mA}$ et $155\\ \\mathrm{mA}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "chiffres-significatifs",
+      "enonce": "Indiquer le nombre de chiffres significatifs de chaque valeur : a) $0{,}0250\\ \\mathrm{m}$ ; b) $2{,}50 \\times 10^{3}\\ \\mathrm{Hz}$ ; c) $3{,}07\\ \\mathrm{V}$ ; d) $0{,}4\\ \\mathrm{A}$.",
+      "corrige": [
+        "Les zéros placés à gauche du premier chiffre non nul ne comptent pas ; les zéros à droite, eux, comptent.",
+        "a) $0{,}0250$ : chiffres $2$, $5$, $0$, donc $3$ ; b) $2{,}50$ : $3$ ; c) $3{,}07$ : $3$ (le zéro entre deux chiffres compte) ; d) $0{,}4$ : $1$."
+      ],
+      "reponse": "a) 3 ; b) 3 ; c) 3 ; d) 1."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "chiffres-significatifs",
+      "enonce": "On mesure $U = 12{,}0\\ \\mathrm{V}$ et $I = 0{,}35\\ \\mathrm{A}$. La calculatrice affiche $R = \\dfrac{U}{I} = 34{,}285\\,714\\ldots\\ \\Omega$. Quel résultat faut-il écrire ?",
+      "corrige": [
+        "Pour un quotient, on garde le nombre de chiffres significatifs du facteur le moins précis.",
+        "$12{,}0$ en a $3$, $0{,}35$ en a $2$ : on garde $2$ chiffres significatifs.",
+        "$34{,}285\\ldots$ s'arrondit à $34$."
+      ],
+      "reponse": "$R \\approx 34\\ \\Omega$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "chiffres-significatifs",
+      "enonce": "On ajoute deux masses mesurées : $m_1 = 12{,}32\\ \\mathrm{g}$ et $m_2 = 4{,}2\\ \\mathrm{g}$. Écrire la masse totale avec le bon nombre de décimales.",
+      "corrige": [
+        "Pour une somme, on garde le nombre de décimales du terme le moins précis : $4{,}2$ n'a qu'une décimale.",
+        "$12{,}32 + 4{,}2 = 16{,}52$, arrondi au dixième : $16{,}5\\ \\mathrm{g}$."
+      ],
+      "reponse": "$m = 16{,}5\\ \\mathrm{g}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "valeur-reference",
+      "enonce": "On mesure la célérité du son dans l'air à $20\\ \\mathrm{°C}$ : $v = 346\\ \\mathrm{m/s}$, avec $u = 4\\ \\mathrm{m/s}$. La valeur de référence est $343\\ \\mathrm{m/s}$. Le résultat est-il compatible ?",
+      "corrige": [
+        "Écart : $|346 - 343| = 3\\ \\mathrm{m/s}$.",
+        "En nombre d'incertitudes-types : $\\dfrac{3}{4} = 0{,}75$.",
+        "$0{,}75 < 2$ : le résultat est compatible avec la référence."
+      ],
+      "reponse": "Oui : l'écart vaut $0{,}75\\,u < 2\\,u$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "valeur-reference",
+      "enonce": "Des élèves mesurent la masse volumique d'un échantillon d'aluminium : $\\rho = 2{,}62\\ \\mathrm{g/cm^3}$, avec $u = 0{,}03\\ \\mathrm{g/cm^3}$. La valeur de référence est $2{,}70\\ \\mathrm{g/cm^3}$. Conclure.",
+      "corrige": [
+        "Écart : $|2{,}62 - 2{,}70| = 0{,}08\\ \\mathrm{g/cm^3}$.",
+        "En nombre d'incertitudes-types : $\\dfrac{0{,}08}{0{,}03} \\approx 2{,}7$.",
+        "$2{,}7 > 2$ : le résultat n'est pas compatible ; il faut chercher une erreur systématique ou une incertitude sous-estimée."
+      ],
+      "reponse": "Non compatible : écart d'environ $2{,}7\\,u > 2\\,u$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "incertitude-type-a",
+      "enonce": "Six mesures d'une tension donnent, en volts : $4{,}98$ ; $5{,}02$ ; $5{,}01$ ; $4{,}99$ ; $5{,}03$ ; $4{,}97$. L'écart-type de la série est $s = 0{,}024\\ \\mathrm{V}$. Calculer la moyenne, l'incertitude-type de type A, puis écrire le résultat.",
+      "corrige": [
+        "Moyenne : $\\bar{U} = \\dfrac{30{,}00}{6} = 5{,}000\\ \\mathrm{V}$.",
+        "Incertitude-type : $u = \\dfrac{0{,}024}{\\sqrt{6}} \\approx 0{,}0098\\ \\mathrm{V}$, soit $0{,}01\\ \\mathrm{V}$ avec un chiffre significatif.",
+        "On arrondit la valeur au centième, comme l'incertitude."
+      ],
+      "reponse": "$U = 5{,}00 \\pm 0{,}01\\ \\mathrm{V}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "justesse-fidelite",
+      "enonce": "Deux thermomètres sont plongés dix fois dans de la glace fondante (référence : $0\\ \\mathrm{°C}$). Thermomètre A : moyenne $0{,}9\\ \\mathrm{°C}$, écart-type $0{,}1\\ \\mathrm{°C}$. Thermomètre B : moyenne $0{,}1\\ \\mathrm{°C}$, écart-type $0{,}6\\ \\mathrm{°C}$. Pour chacun, quel défaut domine, et comment le réduire ?",
+      "corrige": [
+        "A : mesures très resserrées mais décalées de près d'un degré : il est fidèle mais pas juste. Le défaut est une erreur systématique ; on la corrige en étalonnant le thermomètre.",
+        "B : moyenne proche de la référence mais grande dispersion : il est juste mais peu fidèle. Le défaut est une erreur aléatoire ; on la réduit en répétant les mesures et en faisant la moyenne."
+      ],
+      "reponse": "A : erreur systématique (fidèle, pas juste) → étalonner. B : erreur aléatoire (juste, peu fidèle) → répéter et moyenner."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "incertitude-type-a",
+      "enonce": "Avec $10$ mesures, on obtient une incertitude-type de type A $u$. Combien de mesures faudrait-il, l'écart-type restant le même, pour diviser $u$ par $3$ ?",
+      "corrige": [
+        "$u = \\dfrac{s}{\\sqrt{n}}$ : pour diviser $u$ par $3$, il faut multiplier $\\sqrt{n}$ par $3$.",
+        "Il faut donc multiplier $n$ par $3^{2} = 9$ : $n = 9 \\times 10 = 90$ mesures."
+      ],
+      "reponse": "$90$ mesures."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "incertitude-type-a",
+      "enonce": "Après $16$ mesures d'écart-type $s = 0{,}4\\ \\mathrm{mm}$, un élève écrit : « l'incertitude-type vaut $0{,}4\\ \\mathrm{mm}$ ». Corriger son erreur.",
+      "corrige": [
+        "L'élève a oublié la racine de $n$ : l'incertitude-type de type A vaut $u = \\dfrac{s}{\\sqrt{n}}$, et non $s$.",
+        "$u = \\dfrac{0{,}4}{\\sqrt{16}} = \\dfrac{0{,}4}{4} = 0{,}1\\ \\mathrm{mm}$."
+      ],
+      "reponse": "$u = 0{,}1\\ \\mathrm{mm}$ (et non $0{,}4\\ \\mathrm{mm}$)."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "valeur-reference",
+      "enonce": "On mesure $16$ fois la célérité du son dans l'air. Moyenne : $338\\ \\mathrm{m/s}$ ; écart-type : $s = 8\\ \\mathrm{m/s}$. La valeur de référence, pour la température annoncée de $20\\ \\mathrm{°C}$, est $343\\ \\mathrm{m/s}$. Calculer $u$, conclure, et proposer une explication si le résultat n'est pas compatible.",
+      "corrige": [
+        "$u = \\dfrac{8}{\\sqrt{16}} = 2\\ \\mathrm{m/s}$.",
+        "Écart : $|338 - 343| = 5\\ \\mathrm{m/s}$, soit $\\dfrac{5}{2} = 2{,}5$ incertitudes-types : c'est plus que $2$, le résultat n'est pas compatible.",
+        "Explications possibles : erreur systématique (distance mal mesurée, retard constant du déclenchement), ou température de la salle différente de $20\\ \\mathrm{°C}$, ce qui change la valeur de référence."
+      ],
+      "reponse": "$u = 2\\ \\mathrm{m/s}$ ; écart de $2{,}5\\,u > 2\\,u$ : non compatible (erreur systématique ou référence inadaptée)."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "mesure-unique",
+      "enonce": "Pour vérifier un multimètre, on mesure une tension étalon de référence $5{,}000\\ \\mathrm{V}$. L'appareil affiche $4{,}93\\ \\mathrm{V}$ ; sa notice indique une incertitude-type de $0{,}02\\ \\mathrm{V}$ pour cette mesure unique. Conclure.",
+      "corrige": [
+        "Écart : $|4{,}93 - 5{,}000| = 0{,}07\\ \\mathrm{V}$.",
+        "En nombre d'incertitudes-types : $\\dfrac{0{,}07}{0{,}02} = 3{,}5 > 2$.",
+        "L'écart n'est pas compatible avec l'incertitude annoncée : le multimètre présente probablement une erreur systématique et doit être étalonné."
+      ],
+      "reponse": "Non compatible ($3{,}5\\,u$) : le multimètre est à étalonner."
+    },
+    {
+      "id": 37,
+      "difficulte": "decouverte",
+      "notion": "grandeur-valeur-unite",
+      "enonce": "Un compte rendu indique : « la période du pendule vaut $1{,}42$ ». Que manque-t-il ? Réécrire le résultat sachant que l'incertitude-type vaut $0{,}02\\ \\mathrm{s}$.",
+      "corrige": [
+        "Un résultat de mesure comporte trois éléments : la valeur, l'unité et l'incertitude-type. Ici manquent l'unité et l'incertitude.",
+        "Sans unité, le résultat est faux, pas seulement incomplet."
+      ],
+      "reponse": "L'unité et l'incertitude : $T = 1{,}42 \\pm 0{,}02\\ \\mathrm{s}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "unites-si",
+      "enonce": "Le joule est égal à un newton multiplié par un mètre. Sachant que $1\\ \\mathrm{N} = 1\\ \\mathrm{kg\\cdot m\\cdot s^{-2}}$, exprimer le joule en unités de base du SI.",
+      "corrige": [
+        "$1\\ \\mathrm{J} = 1\\ \\mathrm{N} \\times 1\\ \\mathrm{m}$.",
+        "On remplace le newton : $1\\ \\mathrm{J} = 1\\ \\mathrm{kg\\cdot m\\cdot s^{-2}} \\times 1\\ \\mathrm{m} = 1\\ \\mathrm{kg\\cdot m^{2}\\cdot s^{-2}}$."
+      ],
+      "reponse": "$1\\ \\mathrm{J} = 1\\ \\mathrm{kg\\cdot m^{2}\\cdot s^{-2}}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "serie-mesures",
+      "enonce": "Deux séries de mesures d'une même grandeur ont la même moyenne. L'histogramme de la série A est étroit et haut ; celui de la série B est large et aplati. Quelle série est la plus fidèle ? Laquelle a le plus grand écart-type ?",
+      "corrige": [
+        "Un histogramme étroit signifie des valeurs resserrées : la série A est la plus fidèle.",
+        "L'écart-type mesure la dispersion : c'est la série B, plus étalée, qui a le plus grand écart-type."
+      ],
+      "reponse": "A est la plus fidèle ; B a le plus grand écart-type."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "serie-mesures",
+      "enonce": "Huit mesures d'une durée donnent, en secondes : $2{,}01$ ; $1{,}98$ ; $2{,}03$ ; $2{,}00$ ; $1{,}99$ ; $2{,}02$ ; $1{,}97$ ; $2{,}00$. L'écart-type vaut $s = 0{,}020\\ \\mathrm{s}$. Écrire le résultat de la mesure.",
+      "corrige": [
+        "Moyenne : la somme vaut $16{,}00\\ \\mathrm{s}$, donc $\\bar{t} = \\dfrac{16{,}00}{8} = 2{,}000\\ \\mathrm{s}$.",
+        "Incertitude-type : $u = \\dfrac{0{,}020}{\\sqrt{8}} \\approx 0{,}007\\ \\mathrm{s}$.",
+        "On arrondit la valeur au millième, comme l'incertitude."
+      ],
+      "reponse": "$t = 2{,}000 \\pm 0{,}007\\ \\mathrm{s}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "erreurs-aleatoires-systematiques",
+      "enonce": "Quand on ferme un pied à coulisse sans objet, il indique $0{,}3\\ \\mathrm{mm}$ au lieu de $0$. Dix mesures d'une pièce donnent une moyenne de $25{,}6\\ \\mathrm{mm}$. Quelle valeur faut-il retenir ?",
+      "corrige": [
+        "Le décalage du zéro est une erreur systématique : chaque lecture est trop grande de $0{,}3\\ \\mathrm{mm}$, et la moyenne aussi.",
+        "On corrige la moyenne : $25{,}6 - 0{,}3 = 25{,}3\\ \\mathrm{mm}$."
+      ],
+      "reponse": "$25{,}3\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "chiffres-significatifs",
+      "enonce": "Un chariot parcourt $d = 1{,}50\\ \\mathrm{m}$ en $t = 0{,}62\\ \\mathrm{s}$. Calculer sa vitesse moyenne et l'écrire avec le bon nombre de chiffres significatifs.",
+      "corrige": [
+        "$v = \\dfrac{d}{t} = \\dfrac{1{,}50}{0{,}62} \\approx 2{,}419\\ \\mathrm{m/s}$ à la calculatrice.",
+        "Quotient : on garde le nombre de chiffres significatifs de la donnée la moins précise, $0{,}62$ (deux chiffres)."
+      ],
+      "reponse": "$v \\approx 2{,}4\\ \\mathrm{m/s}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "type-a-et-reference",
+      "enonce": "On mesure dix fois, avec un ohmmètre, une résistance étalon dont la valeur de référence est $220{,}0\\ \\Omega$. Résultats (en $\\Omega$) : $221{,}0$ ; $219{,}8$ ; $220{,}6$ ; $221{,}4$ ; $220{,}2$ ; $220{,}8$ ; $221{,}2$ ; $220{,}4$ ; $219{,}6$ ; $221{,}0$. L'écart-type vaut $s = 0{,}60\\ \\Omega$. 1. Calculer la moyenne. 2. Calculer l'incertitude-type de type A et écrire le résultat. 3. Le résultat est-il compatible avec la référence ? Que conclure sur l'ohmmètre ?",
+      "corrige": [
+        "1. La somme vaut $2\\,206{,}0\\ \\Omega$, donc $\\bar{R} = 220{,}6\\ \\Omega$.",
+        "2. $u = \\dfrac{0{,}60}{\\sqrt{10}} \\approx 0{,}19\\ \\Omega$, arrondi à $0{,}2\\ \\Omega$ : $R = 220{,}6 \\pm 0{,}2\\ \\Omega$.",
+        "3. Écart : $|220{,}6 - 220{,}0| = 0{,}6\\ \\Omega$, soit environ $3\\,u$ : c'est plus que $2\\,u$, le résultat n'est pas compatible.",
+        "L'ohmmètre présente probablement une erreur systématique : il faut l'étalonner."
+      ],
+      "reponse": "1. $220{,}6\\ \\Omega$ ; 2. $R = 220{,}6 \\pm 0{,}2\\ \\Omega$ ; 3. écart d'environ $3\\,u > 2\\,u$ : non compatible, ohmmètre à étalonner."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "justesse-fidelite",
+      "enonce": "Deux groupes mesurent l'intensité de la pesanteur ($g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$), chacun avec $10$ mesures. Groupe A (pendule) : moyenne $9{,}79$, écart-type $0{,}10$. Groupe B (chute libre) : moyenne $9{,}95$, écart-type $0{,}04$ (valeurs en $\\mathrm{m\\cdot s^{-2}}$). 1. Calculer l'incertitude-type de chaque groupe. 2. Tester la compatibilité de chaque résultat avec la référence. 3. Quelle méthode est la plus fidèle ? la plus juste ?",
+      "corrige": [
+        "1. $u_A = \\dfrac{0{,}10}{\\sqrt{10}} \\approx 0{,}03$ et $u_B = \\dfrac{0{,}04}{\\sqrt{10}} \\approx 0{,}013$ (en $\\mathrm{m\\cdot s^{-2}}$).",
+        "2. A : écart $0{,}02$, soit environ $0{,}6\\,u_A$ : compatible. B : écart $0{,}14$, soit environ $11\\,u_B$ : non compatible.",
+        "3. B est la plus fidèle (plus petit écart-type), mais A est la plus juste. B souffre d'une erreur systématique (frottements, retard de déclenchement…)."
+      ],
+      "reponse": "$u_A \\approx 0{,}03$, $u_B \\approx 0{,}013$ ; A compatible, B non ; B plus fidèle, A plus juste."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "incertitude-type-a",
+      "enonce": "L'écart-type d'une série de mesures de longueur vaut $s = 0{,}2\\ \\mathrm{mm}$. Combien de mesures faut-il réaliser au minimum pour obtenir une incertitude-type de type A inférieure ou égale à $0{,}05\\ \\mathrm{mm}$ ?",
+      "corrige": [
+        "On veut $\\dfrac{s}{\\sqrt{n}} \\leqslant 0{,}05$, soit $\\sqrt{n} \\geqslant \\dfrac{0{,}2}{0{,}05} = 4$.",
+        "Donc $n \\geqslant 4^{2} = 16$."
+      ],
+      "reponse": "Au moins $16$ mesures."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "valeur-reference",
+      "enonce": "Un ohmmètre donne $R = 0{,}48 \\pm 0{,}01\\ \\mathrm{k\\Omega}$ pour une résistance dont la valeur de référence est $470\\ \\Omega$. Le résultat est-il compatible ?",
+      "corrige": [
+        "On convertit avant de comparer : $R = 480 \\pm 10\\ \\Omega$.",
+        "Écart : $|480 - 470| = 10\\ \\Omega$, soit $\\dfrac{10}{10} = 1$ incertitude-type.",
+        "$1 < 2$ : le résultat est compatible."
+      ],
+      "reponse": "Oui : écart de $1\\,u < 2\\,u$ (après conversion en ohms)."
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "unites-si",
+      "enonce": "Corriger les écritures suivantes : « $m = 3{,}2$ Kg » ; « $t = 5$ S » ; « $I = 0{,}2$ a ».",
+      "corrige": [
+        "Les symboles d'unités ont une casse imposée : le kilogramme s'écrit kg (k minuscule), la seconde s, l'ampère A (majuscule, car l'unité porte le nom d'un savant)."
+      ],
+      "reponse": "$m = 3{,}2\\ \\mathrm{kg}$ ; $t = 5\\ \\mathrm{s}$ ; $I = 0{,}2\\ \\mathrm{A}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "decouverte",
+      "notion": "erreurs-aleatoires-systematiques",
+      "enonce": "Vrai ou faux ? a) Répéter une mesure corrige une erreur systématique. b) La moyenne d'une série est la meilleure estimation de la valeur mesurée. c) Plus on fait de mesures, plus l'incertitude-type de type A diminue.",
+      "corrige": [
+        "a) Faux : un défaut constant se répète à chaque mesure ; seule la répétition réduit l'erreur aléatoire.",
+        "b) Vrai. c) Vrai : $u = \\dfrac{s}{\\sqrt{n}}$ diminue quand $n$ augmente (mais lentement)."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Vrai."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "ecriture-resultat",
+      "enonce": "Parmi ces écritures, laquelle est correcte ? a) $m = 12{,}4567 \\pm 0{,}2\\ \\mathrm{g}$ ; b) $m = 12{,}5 \\pm 0{,}2\\ \\mathrm{g}$ ; c) $m = 12{,}5\\ \\mathrm{g}$ ; d) $m = 12{,}5 \\pm 0{,}2$.",
+      "corrige": [
+        "a) La valeur a trop de chiffres : l'incertitude porte sur le dixième. c) L'incertitude manque. d) L'unité manque.",
+        "Seule b) comporte la valeur arrondie au bon rang, l'incertitude à un chiffre significatif et l'unité."
+      ],
+      "reponse": "b) $m = 12{,}5 \\pm 0{,}2\\ \\mathrm{g}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "valeur-reference",
+      "enonce": "Un résultat diffère de la valeur de référence de $3{,}5$ incertitudes-types. Citer trois causes possibles de cet écart.",
+      "corrige": [
+        "Un écart supérieur à $2\\,u$ signifie que le résultat n'est pas compatible avec la référence.",
+        "Causes possibles : une erreur systématique (appareil mal étalonné), une incertitude-type sous-estimée, ou un modèle utilisé en dehors de son domaine de validité."
+      ],
+      "reponse": "Erreur systématique, incertitude sous-estimée, modèle hors de son domaine de validité."
     }
   ]
 }

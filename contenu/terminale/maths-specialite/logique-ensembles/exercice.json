@@ -138,6 +138,459 @@
         "5. La propriété « $2^n > 2n$ » dépend de l'entier $n$ et se démontre de proche en proche : c'est le raisonnement par récurrence (prérequis, développé en détail dans le chapitre « Suites »). Initialisation en $n = 3$ : $2^3 = 8$ et $2 \\times 3 = 6$, donc $8 > 6$ : l'initialisation est vérifiée. L'hérédité $\\big(2^n > 2n \\Rightarrow 2^{n+1} > 2(n+1)\\big)$ relève du chapitre « Suites ». La récurrence étant valide, $A$ est vraie (et sa négation de la question 1 est donc fausse)."
       ],
       "reponse": "1. $\\text{non}\\,A : \\exists n \\in \\mathbb{N},\\ (n \\geqslant 3 \\text{ et } 2^n \\leqslant 2n)$. 2. $n^2 + 3n$ est pair : $2(2p^2 + 3p)$ si $n = 2p$, $2(2p^2 + 5p + 2)$ si $n = 2p + 1$. 3. Contraposée : $n$ impair $\\Rightarrow 5n + 2 = 2(5p + 3) + 1$ impair ; l'implication est vraie. 4. $\\sqrt{3}$ irrationnel (contradiction : $3$ diviserait $p$ et $q$ irréductibles). 5. Raisonnement par récurrence (chapitre « Suites ») ; initialisation vraie en $n = 3$ ($8 > 6$) ; $A$ est vraie."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "ensembles",
+      "enonce": "Écrire en extension les ensembles $A=\\{n\\in\\mathbb{N}\\mid n<5\\}$ et $B=\\{x\\in\\mathbb{R}\\mid x^2=4\\}$.",
+      "corrige": [
+        "$A$ contient les entiers naturels strictement inférieurs à $5$ : $0, 1, 2, 3, 4$.",
+        "$x^2=4\\iff x=2$ ou $x=-2$, donc $B=\\{-2, 2\\}$."
+      ],
+      "reponse": "$A=\\{0, 1, 2, 3, 4\\}$ et $B=\\{-2, 2\\}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "ensembles",
+      "enonce": "Vrai ou faux ? a) $0\\in\\varnothing$ ; b) $\\varnothing\\subset\\{1, 2\\}$ ; c) $\\{0\\}=\\varnothing$.",
+      "corrige": [
+        "a) Faux : l'ensemble vide n'a aucun élément.",
+        "b) Vrai : l'ensemble vide est inclus dans tout ensemble.",
+        "c) Faux : $\\{0\\}$ possède un élément, le nombre $0$, alors que $\\varnothing$ n'en a aucun."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Faux."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "propositions",
+      "enonce": "Parmi les énoncés suivants, lesquels sont des propositions ? Donner alors leur valeur de vérité. a) « $12$ est divisible par $5$ » ; b) « $2x+1$ » ; c) « pour tout réel $x$, $x+0=x$ » ; d) « $x>2$ ».",
+      "corrige": [
+        "a) Proposition fausse. c) Proposition vraie.",
+        "b) Ce n'est pas un énoncé qu'on peut déclarer vrai ou faux : ce n'est pas une proposition.",
+        "d) Énoncé dépendant de la variable $x$ (un prédicat) : sa vérité dépend de $x$, ce n'est pas une proposition tant que $x$ n'est pas fixé ou quantifié."
+      ],
+      "reponse": "a) proposition fausse ; c) proposition vraie ; b) et d) ne sont pas des propositions."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "ensembles",
+      "enonce": "Un élève écrit « $2\\subset\\{1, 2, 3\\}$ ». Corriger cette écriture de deux façons différentes.",
+      "corrige": [
+        "$2$ est un élément et non un ensemble : on écrit $2\\in\\{1, 2, 3\\}$.",
+        "On peut aussi parler de l'ensemble $\\{2\\}$, qui est inclus : $\\{2\\}\\subset\\{1, 2, 3\\}$."
+      ],
+      "reponse": "$2\\in\\{1, 2, 3\\}$ ou $\\{2\\}\\subset\\{1, 2, 3\\}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "ensembles",
+      "enonce": "Compléter par $\\in$ ou $\\notin$ : $-3\\ \\ldots\\ \\mathbb{N}$ ; $-3\\ \\ldots\\ \\mathbb{Z}$ ; $\\dfrac{1}{2}\\ \\ldots\\ \\mathbb{Z}$ ; $\\dfrac{1}{2}\\ \\ldots\\ \\mathbb{Q}$ ; $\\pi\\ \\ldots\\ \\mathbb{R}$.",
+      "corrige": [
+        "$-3$ est un entier négatif : $-3\\notin\\mathbb{N}$ mais $-3\\in\\mathbb{Z}$.",
+        "$\\dfrac{1}{2}$ n'est pas entier : $\\dfrac{1}{2}\\notin\\mathbb{Z}$, mais c'est un quotient d'entiers : $\\dfrac{1}{2}\\in\\mathbb{Q}$. Enfin $\\pi\\in\\mathbb{R}$."
+      ],
+      "reponse": "$\\notin$ ; $\\in$ ; $\\notin$ ; $\\in$ ; $\\in$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "propositions",
+      "enonce": "On considère le prédicat $P(x)$ : « $x^2>x$ ». Donner la valeur de vérité de $P(2)$, $P\\left(\\dfrac{1}{2}\\right)$ et $P(1)$.",
+      "corrige": [
+        "$P(2)$ : $4>2$, vraie. $P\\left(\\dfrac{1}{2}\\right)$ : $\\dfrac{1}{4}>\\dfrac{1}{2}$, fausse.",
+        "$P(1)$ : $1>1$, fausse (l'inégalité est stricte)."
+      ],
+      "reponse": "$P(2)$ vraie ; $P\\left(\\dfrac{1}{2}\\right)$ et $P(1)$ fausses."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "propositions",
+      "enonce": "Quantifier le prédicat « $x^2=9$ » (avec $x\\in\\mathbb{R}$) de façon à obtenir une proposition vraie, puis une proposition fausse.",
+      "corrige": [
+        "$\\exists x\\in\\mathbb{R},\\ x^2=9$ est vraie (par exemple $x=3$).",
+        "$\\forall x\\in\\mathbb{R},\\ x^2=9$ est fausse (elle échoue pour $x=0$)."
+      ],
+      "reponse": "Vraie : $\\exists x\\in\\mathbb{R},\\ x^2=9$ ; fausse : $\\forall x\\in\\mathbb{R},\\ x^2=9$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "quantificateurs",
+      "enonce": "Traduire avec des quantificateurs : a) « Tout réel a un carré positif ou nul » ; b) « Il existe un entier naturel dont le carré vaut $25$ ».",
+      "corrige": [
+        "a) « Tout » se traduit par $\\forall$ : $\\forall x\\in\\mathbb{R},\\ x^2\\geqslant 0$.",
+        "b) « Il existe » se traduit par $\\exists$ : $\\exists n\\in\\mathbb{N},\\ n^2=25$."
+      ],
+      "reponse": "a) $\\forall x\\in\\mathbb{R},\\ x^2\\geqslant 0$ ; b) $\\exists n\\in\\mathbb{N},\\ n^2=25$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "quantificateurs",
+      "enonce": "Vrai ou faux ? a) $\\forall x\\in\\mathbb{R},\\ x+1>x$ ; b) $\\exists x\\in\\mathbb{R},\\ x^2<0$ ; c) $\\exists n\\in\\mathbb{N}$, $n$ est pair et premier.",
+      "corrige": [
+        "a) Vrai : $x+1-x=1>0$ pour tout $x$.",
+        "b) Faux : un carré de réel est toujours positif ou nul.",
+        "c) Vrai : $n=2$ est pair et premier ; un seul exemple suffit pour un « il existe »."
+      ],
+      "reponse": "a) Vrai ; b) Faux ; c) Vrai."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "connecteurs",
+      "enonce": "Soit $n$ un entier, $P$ : « $n$ est pair » et $Q$ : « $n>10$ ». Pour $n=12$, $n=7$ et $n=4$, dire si « $P$ et $Q$ » puis « $P$ ou $Q$ » sont vraies.",
+      "corrige": [
+        "$n=12$ : $P$ et $Q$ vraies, donc « $P$ et $Q$ » vraie et « $P$ ou $Q$ » vraie.",
+        "$n=7$ : $P$ et $Q$ fausses, donc les deux propositions sont fausses.",
+        "$n=4$ : $P$ vraie, $Q$ fausse, donc « $P$ et $Q$ » fausse et « $P$ ou $Q$ » vraie."
+      ],
+      "reponse": "$n=12$ : vraie, vraie ; $n=7$ : fausse, fausse ; $n=4$ : fausse, vraie."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "negation",
+      "enonce": "Écrire la négation de la phrase : « Tous les élèves de la classe ont la moyenne. »",
+      "corrige": [
+        "Nier un « pour tout », c'est affirmer l'existence d'un contre-exemple.",
+        "La négation n'est pas « aucun élève n'a la moyenne », mais : « Au moins un élève de la classe n'a pas la moyenne »."
+      ],
+      "reponse": "« Au moins un élève de la classe n'a pas la moyenne. »"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "negation",
+      "enonce": "Écrire la négation de : a) « $x<3$ » ; b) « $x=0$ ou $y=0$ ».",
+      "corrige": [
+        "a) Le contraire de $x<3$ est $x\\geqslant 3$.",
+        "b) La négation échange « ou » et « et » : « $x\\neq 0$ et $y\\neq 0$ »."
+      ],
+      "reponse": "a) $x\\geqslant 3$ ; b) $x\\neq 0$ et $y\\neq 0$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "implication",
+      "enonce": "On considère l'implication : « Si un quadrilatère est un carré, alors c'est un rectangle. » Est-elle vraie ? Énoncer sa réciproque et dire si elle est vraie.",
+      "corrige": [
+        "Tout carré a quatre angles droits : c'est un rectangle. L'implication est vraie.",
+        "Réciproque : « Si un quadrilatère est un rectangle, alors c'est un carré. » Elle est fausse : un rectangle de côtés $2$ et $5$ n'est pas un carré."
+      ],
+      "reponse": "Implication vraie ; réciproque fausse."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "implication",
+      "enonce": "Pour $x$ réel, l'implication « $x>2\\Rightarrow x^2>4$ » est vraie. Sa réciproque est-elle vraie ?",
+      "corrige": [
+        "Réciproque : « $x^2>4\\Rightarrow x>2$ ».",
+        "Contre-exemple : $x=-3$ donne $x^2=9>4$ mais $x<2$. La réciproque est fausse."
+      ],
+      "reponse": "Non (contre-exemple $x=-3$)."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "equivalence",
+      "enonce": "Un élève écrit : « $x^2=4\\iff x=2$ ». Quelle implication est vraie ? Laquelle est fausse ? Corriger.",
+      "corrige": [
+        "« $x=2\\Rightarrow x^2=4$ » est vraie.",
+        "« $x^2=4\\Rightarrow x=2$ » est fausse : $x=-2$ convient aussi.",
+        "Écriture correcte : $x^2=4\\iff(x=2$ ou $x=-2)$."
+      ],
+      "reponse": "$x^2=4\\iff(x=2$ ou $x=-2)$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "contre-exemple",
+      "enonce": "Montrer que la proposition « Tout nombre premier est impair » est fausse.",
+      "corrige": [
+        "Pour réfuter un « pour tout », il suffit d'un seul contre-exemple.",
+        "$2$ est premier (ses seuls diviseurs sont $1$ et $2$) et il est pair."
+      ],
+      "reponse": "Fausse : $2$ est premier et pair."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "implication",
+      "enonce": "Une implication $P\\Rightarrow Q$ n'est fausse que dans un seul cas. Lequel ? En déduire la valeur de vérité de « si $2>3$, alors $5$ est pair ».",
+      "corrige": [
+        "$P\\Rightarrow Q$ est fausse uniquement lorsque $P$ est vraie et $Q$ fausse.",
+        "Ici $P$ : « $2>3$ » est fausse ; on n'est donc pas dans ce cas : l'implication est vraie (même si $Q$ est fausse)."
+      ],
+      "reponse": "Fausse seulement si $P$ vraie et $Q$ fausse ; l'implication proposée est vraie."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "ensembles",
+      "enonce": "Soit $A=\\{x\\in\\mathbb{R}\\mid x>3\\}$ et $B=\\{x\\in\\mathbb{R}\\mid x>1\\}$. A-t-on $A\\subset B$ ? $B\\subset A$ ?",
+      "corrige": [
+        "Si $x\\in A$, alors $x>3>1$, donc $x\\in B$ : $A\\subset B$.",
+        "$2\\in B$ mais $2\\notin A$ : $B$ n'est pas inclus dans $A$."
+      ],
+      "reponse": "$A\\subset B$, mais $B\\not\\subset A$ (contre-exemple : $2$)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "quantificateurs",
+      "enonce": "Vrai ou faux ? a) $\\forall x\\in\\mathbb{R},\\ \\exists y\\in\\mathbb{R},\\ x+y=0$ ; b) $\\exists y\\in\\mathbb{R},\\ \\forall x\\in\\mathbb{R},\\ x+y=0$.",
+      "corrige": [
+        "a) Vrai : pour chaque $x$, on choisit $y=-x$.",
+        "b) Faux : un même $y$ devrait vérifier $x+y=0$ pour tous les $x$ ; avec $x=0$ on aurait $y=0$, puis avec $x=1$, $1+0=0$, impossible."
+      ],
+      "reponse": "a) Vrai ; b) Faux."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "quantificateurs",
+      "enonce": "Vrai ou faux ? a) $\\forall x\\in\\,]0\\,;1[,\\ x^2<x$ ; b) $\\forall x\\in\\mathbb{R},\\ x^2\\geqslant x$.",
+      "corrige": [
+        "a) Vrai : pour $0<x<1$, on multiplie $x<1$ par $x>0$ : $x^2<x$.",
+        "b) Faux : pour $x=\\dfrac{1}{2}$, $x^2=\\dfrac{1}{4}<\\dfrac{1}{2}$."
+      ],
+      "reponse": "a) Vrai ; b) Faux (contre-exemple $x=\\dfrac{1}{2}$)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "connecteurs",
+      "enonce": "Pour $x$ réel, décrire l'ensemble des $x$ vérifiant « $x\\leqslant 2$ ou $x\\geqslant 1$ », puis celui des $x$ vérifiant « $x\\leqslant 1$ et $x\\geqslant 2$ ».",
+      "corrige": [
+        "Tout réel vérifie au moins l'une des conditions $x\\leqslant 2$ ou $x\\geqslant 1$ : le premier ensemble est $\\mathbb{R}$.",
+        "Aucun réel n'est à la fois inférieur ou égal à $1$ et supérieur ou égal à $2$ : le second ensemble est $\\varnothing$."
+      ],
+      "reponse": "$\\mathbb{R}$ et $\\varnothing$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "connecteurs",
+      "enonce": "La proposition « $6$ est pair ou $6$ est un multiple de $3$ » est-elle vraie ? Le « ou » est-il ici exclusif ?",
+      "corrige": [
+        "$6$ est pair et $6$ est multiple de $3$ : les deux propositions sont vraies.",
+        "Le « ou » mathématique est inclusif : la proposition est vraie, même si les deux parties le sont."
+      ],
+      "reponse": "Vraie ; le « ou » mathématique est inclusif."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "connecteurs",
+      "enonce": "Écrire la négation de « $x>0$ et $y>0$ », où $x$ et $y$ sont deux réels. Donner un couple $(x\\,;y)$ qui vérifie cette négation.",
+      "corrige": [
+        "Loi de De Morgan : non$(P$ et $Q)\\iff($non $P)$ ou $($non $Q)$.",
+        "Négation : « $x\\leqslant 0$ ou $y\\leqslant 0$ ». Exemple de réponse : $(x\\,;y)=(-1\\,;5)$."
+      ],
+      "reponse": "« $x\\leqslant 0$ ou $y\\leqslant 0$ » ; par exemple $(-1\\,;5)$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "negation",
+      "enonce": "Écrire la négation de « $\\exists x\\in\\mathbb{R},\\ e^x\\leqslant 0$ ». Laquelle des deux propositions est vraie ?",
+      "corrige": [
+        "Négation : $\\forall x\\in\\mathbb{R},\\ e^x>0$.",
+        "Cette négation est vraie (l'exponentielle est strictement positive), donc la proposition de départ est fausse."
+      ],
+      "reponse": "$\\forall x\\in\\mathbb{R},\\ e^x>0$ ; c'est elle qui est vraie."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "implication",
+      "enonce": "Écrire la négation de l'implication « Si $n$ est divisible par $6$, alors $n$ est divisible par $4$ ». L'implication est-elle vraie pour tout entier $n$ ?",
+      "corrige": [
+        "non$(P\\Rightarrow Q)\\iff(P$ et non $Q)$ : « $n$ est divisible par $6$ et $n$ n'est pas divisible par $4$ ».",
+        "$n=6$ vérifie cette négation : l'implication est fausse pour $n=6$, donc elle n'est pas vraie pour tout entier."
+      ],
+      "reponse": "« $n$ divisible par $6$ et non divisible par $4$ » ; implication fausse (exemple $n=6$)."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "implication",
+      "enonce": "Écrire la contraposée de l'implication « si $x^2\\neq 1$, alors $x\\neq 1$ ». Est-elle vraie ?",
+      "corrige": [
+        "La contraposée de $P\\Rightarrow Q$ est non $Q\\Rightarrow$ non $P$ : « si $x=1$, alors $x^2=1$ ».",
+        "Elle est évidemment vraie ; l'implication de départ, qui lui est équivalente, l'est donc aussi."
+      ],
+      "reponse": "« Si $x=1$, alors $x^2=1$ » : vraie."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "implication",
+      "enonce": "Pour l'implication vraie « si $x=3$, alors $x^2=9$ », un élève propose comme contraposée : « si $x\\neq 3$, alors $x^2\\neq 9$ ». Est-ce correct ?",
+      "corrige": [
+        "Non : il a seulement nié $P$ et $Q$ sans les échanger. La contraposée est « si $x^2\\neq 9$, alors $x\\neq 3$ ».",
+        "Sa phrase est d'ailleurs fausse : $x=-3$ vérifie $x\\neq 3$ et $x^2=9$. Elle n'est donc pas équivalente à l'implication de départ (c'est la contraposée de la réciproque)."
+      ],
+      "reponse": "Non ; la contraposée est « si $x^2\\neq 9$, alors $x\\neq 3$ »."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "equivalence",
+      "enonce": "Vrai ou faux, pour $x$ réel ? a) $(x-1)(x-2)=0\\iff(x=1$ ou $x=2)$ ; b) $x^2=x\\iff x=1$.",
+      "corrige": [
+        "a) Vrai : un produit est nul si et seulement si l'un de ses facteurs est nul.",
+        "b) Faux : l'implication « $x=1\\Rightarrow x^2=x$ » est vraie, mais $x=0$ vérifie $x^2=x$ sans être égal à $1$."
+      ],
+      "reponse": "a) Vrai ; b) Faux (contre-exemple $x=0$)."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "equivalence",
+      "enonce": "Pour démontrer une équivalence $P\\iff Q$, que faut-il prouver ? Appliquer à : « pour $x$ réel, $2x+3=7\\iff x=2$ ».",
+      "corrige": [
+        "Il faut prouver les deux implications $P\\Rightarrow Q$ et $Q\\Rightarrow P$.",
+        "Si $2x+3=7$, alors $2x=4$ et $x=2$. Réciproquement, si $x=2$, alors $2x+3=7$. L'équivalence est vraie."
+      ],
+      "reponse": "Les deux implications ; ici l'équivalence est vraie."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "raisonnement-cas",
+      "enonce": "Montrer par disjonction de cas que, pour tout réel $x$, $|x|+x\\geqslant 0$.",
+      "corrige": [
+        "Cas 1 : $x\\geqslant 0$. Alors $|x|=x$ et $|x|+x=2x\\geqslant 0$.",
+        "Cas 2 : $x<0$. Alors $|x|=-x$ et $|x|+x=0\\geqslant 0$.",
+        "Les deux cas couvrent tous les réels : l'inégalité est démontrée."
+      ],
+      "reponse": "Vraie pour tout réel (cas $x\\geqslant 0$ et $x<0$)."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "raisonnement-contraposee",
+      "enonce": "Démontrer par contraposée : « si $n^2$ est impair, alors $n$ est impair » ($n$ entier).",
+      "corrige": [
+        "Contraposée : « si $n$ est pair, alors $n^2$ est pair ».",
+        "Si $n=2k$, alors $n^2=4k^2=2(2k^2)$ est pair. La contraposée est vraie, donc l'implication de départ aussi."
+      ],
+      "reponse": "Démontré via « $n$ pair $\\Rightarrow n^2$ pair »."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "raisonnement-contraposee",
+      "enonce": "Soit $a$ et $b$ deux réels. Démontrer par contraposée : « si $a+b>2$, alors $a>1$ ou $b>1$ ».",
+      "corrige": [
+        "La négation de « $a>1$ ou $b>1$ » est « $a\\leqslant 1$ et $b\\leqslant 1$ ». La contraposée s'écrit : « si $a\\leqslant 1$ et $b\\leqslant 1$, alors $a+b\\leqslant 2$ ».",
+        "En additionnant les deux inégalités, on obtient $a+b\\leqslant 2$ : la contraposée est vraie, donc l'énoncé l'est aussi."
+      ],
+      "reponse": "Démontré par la contraposée « $a\\leqslant 1$ et $b\\leqslant 1\\Rightarrow a+b\\leqslant 2$ »."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "raisonnement-absurde",
+      "enonce": "Démontrer par l'absurde qu'il n'existe pas de plus grand entier naturel.",
+      "corrige": [
+        "Supposons qu'il existe un plus grand entier naturel $N$.",
+        "Alors $N+1$ est aussi un entier naturel et $N+1>N$, ce qui contredit le fait que $N$ soit le plus grand.",
+        "La supposition est absurde : il n'existe pas de plus grand entier naturel."
+      ],
+      "reponse": "Contradiction avec $N+1>N$ : il n'y a pas de plus grand entier."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "raisonnement-absurde",
+      "enonce": "Démontrer par l'absurde qu'il n'existe aucun réel $y$ tel que $0\\times y=1$.",
+      "corrige": [
+        "Supposons qu'un tel réel $y$ existe.",
+        "Or $0\\times y=0$ pour tout réel $y$ ; on obtiendrait $0=1$, ce qui est absurde.",
+        "Donc aucun réel ne vérifie $0\\times y=1$ : $0$ n'a pas d'inverse."
+      ],
+      "reponse": "La supposition mène à $0=1$ : un tel $y$ n'existe pas."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "contre-exemple",
+      "enonce": "On considère $P(n)$ : « $n^2+n+41$ est un nombre premier ». On vérifie que $P(0)$ et $P(1)$ sont vraies ($41$ et $43$ sont premiers). La proposition « $\\forall n\\in\\mathbb{N},\\ P(n)$ » est-elle vraie ? Étudier $n=40$.",
+      "corrige": [
+        "Pour $n=40$ : $40^2+40+41=1\\,600+40+41=1\\,681$.",
+        "Or $1\\,681=41^2$ n'est pas premier : $P(40)$ est fausse, et la proposition universelle est fausse.",
+        "Des exemples, même nombreux, ne prouvent jamais un « pour tout »."
+      ],
+      "reponse": "Fausse : $40^2+40+41=41^2$ n'est pas premier."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "negation",
+      "enonce": "Écrire la négation de la proposition $\\forall\\varepsilon>0,\\ \\exists n\\in\\mathbb{N}^*,\\ \\dfrac{1}{n}<\\varepsilon$.",
+      "corrige": [
+        "On échange chaque quantificateur ($\\forall\\leftrightarrow\\exists$) en gardant l'ordre, puis on nie la propriété finale.",
+        "Négation : $\\exists\\varepsilon>0,\\ \\forall n\\in\\mathbb{N}^*,\\ \\dfrac{1}{n}\\geqslant\\varepsilon$."
+      ],
+      "reponse": "$\\exists\\varepsilon>0,\\ \\forall n\\in\\mathbb{N}^*,\\ \\dfrac{1}{n}\\geqslant\\varepsilon$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "raisonnement-cas",
+      "enonce": "Montrer que, pour tout entier $n$, le reste de la division de $n^2$ par $3$ vaut $0$ ou $1$ (jamais $2$). On distinguera $n=3k$, $n=3k+1$ et $n=3k+2$.",
+      "corrige": [
+        "Si $n=3k$ : $n^2=9k^2=3(3k^2)$, reste $0$.",
+        "Si $n=3k+1$ : $n^2=9k^2+6k+1=3(3k^2+2k)+1$, reste $1$.",
+        "Si $n=3k+2$ : $n^2=9k^2+12k+4=3(3k^2+4k+1)+1$, reste $1$. Les trois cas couvrent tous les entiers."
+      ],
+      "reponse": "Le reste vaut $0$ ou $1$, jamais $2$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "raisonnement-contraposee",
+      "enonce": "Soit $n$ un entier. Démontrer par contraposée : « si $n^2-1$ n'est pas divisible par $8$, alors $n$ est pair ».",
+      "corrige": [
+        "Contraposée : « si $n$ est impair, alors $n^2-1$ est divisible par $8$ ».",
+        "Si $n=2k+1$ : $n^2-1=4k^2+4k=4k(k+1)$.",
+        "$k$ et $k+1$ sont deux entiers consécutifs, l'un est pair : $k(k+1)=2m$, donc $n^2-1=8m$ est divisible par $8$. La contraposée est vraie, donc l'énoncé aussi."
+      ],
+      "reponse": "Démontré via « $n$ impair $\\Rightarrow 8$ divise $n^2-1$ »."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "raisonnement-absurde",
+      "enonce": "Démontrer par l'absurde qu'il n'existe pas d'entiers $a$ et $b$ tels que $6a+4b=1$.",
+      "corrige": [
+        "Supposons qu'il existe des entiers $a$ et $b$ tels que $6a+4b=1$.",
+        "Or $6a+4b=2(3a+2b)$ est pair, alors que $1$ est impair : contradiction.",
+        "De tels entiers n'existent donc pas."
+      ],
+      "reponse": "$6a+4b$ est toujours pair, il ne peut pas valoir $1$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "raisonnement-cas",
+      "enonce": "Pour deux réels $a$ et $b$, on note $\\max(a, b)$ le plus grand des deux. Démontrer par disjonction de cas que $\\max(a, b)=\\dfrac{a+b+|a-b|}{2}$, puis vérifier avec $a=3$ et $b=7$.",
+      "corrige": [
+        "Cas 1 : $a\\geqslant b$. Alors $|a-b|=a-b$ et $\\dfrac{a+b+a-b}{2}=a=\\max(a, b)$.",
+        "Cas 2 : $a<b$. Alors $|a-b|=b-a$ et $\\dfrac{a+b+b-a}{2}=b=\\max(a, b)$.",
+        "Vérification : $\\dfrac{3+7+|3-7|}{2}=\\dfrac{10+4}{2}=7=\\max(3, 7)$."
+      ],
+      "reponse": "Formule démontrée dans les deux cas ; pour $a=3$, $b=7$ on trouve $7$."
     }
   ]
 }

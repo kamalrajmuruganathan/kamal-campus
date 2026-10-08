@@ -125,7 +125,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "transition-energetique",
       "enonce": "Une commune doit chauffer une école et compare deux solutions. **Option A** : chaudière au gaz naturel, assimilé au méthane $\\mathrm{CH_4}$, qui en consomme $6{,}0$ t par an. **Option B** : pompe à chaleur électrique, alimentée par un mix électrique bas-carbone dont le facteur d'émission est $60$ g CO₂/kWh ; elle consomme $1{,}0 \\times 10^{4}$ kWh par an. Données : combustion du méthane $\\mathrm{CH_4} + 2\\,\\mathrm{O_2} \\rightarrow \\mathrm{CO_2} + 2\\,\\mathrm{H_2O}$ ; $M(\\mathrm{CH_4}) = 16$ g·mol⁻¹, $M(\\mathrm{CO_2}) = 44$ g·mol⁻¹.\n\n1. Le gaz naturel est-il une source de type stock ou flux ? Et le mix électrique bas-carbone (nucléaire et renouvelables) : à quels types de sources fait-il appel ?\n2. Écris le rapport massique CO₂/méthane et calcule la masse de CO₂ émise par an avec l'option A.\n3. Calcule la masse de CO₂ émise par an avec l'option B.\n4. Compare les deux options : quelle masse de CO₂ la commune économise-t-elle par an, puis sur $20$ ans ?\n5. Quel(s) levier(s) de la transition écologique le passage de A à B illustre-t-il ?",
       "corrige": [
@@ -136,6 +136,456 @@
         "5. Le passage A → B illustre surtout la **décarbonation du mix** (on remplace un stock fossile par une électricité bas-carbone) et l'**efficacité énergétique** (la pompe à chaleur restitue plus de chaleur qu'elle ne consomme d'électricité). La sobriété (consommer moins) resterait un levier complémentaire."
       ],
       "reponse": "1. Gaz = stock fossile ; mix bas-carbone = stock fissile (nucléaire) + flux renouvelables. 2. Rapport $44/16 = 2{,}75$, soit $16{,}5$ t CO₂/an. 3. $0{,}60$ t CO₂/an. 4. Économie ≈ 16 t/an, soit ≈ 320 t sur 20 ans. 5. Décarbonation du mix et efficacité énergétique (la sobriété en complément)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "sources-primaires",
+      "enonce": "Parmi les formes d'énergie suivantes, lesquelles sont des sources d'énergie primaire et lesquelles sont des énergies secondaires : charbon, électricité, vent, essence, uranium ?",
+      "corrige": [
+        "Une source primaire est disponible dans la nature avant toute transformation par l'être humain : charbon, vent, uranium.",
+        "Une énergie secondaire est obtenue en transformant une source primaire : l'électricité (produite dans des centrales) et l'essence (obtenue par raffinage du pétrole)."
+      ],
+      "reponse": "Primaires : charbon, vent, uranium. Secondaires : électricité, essence."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "sources-primaires",
+      "enonce": "Vrai ou faux ? « Le nucléaire est une énergie renouvelable puisqu'il émet très peu de CO₂. » Justifier.",
+      "corrige": [
+        "Faux : l'uranium est un minerai en quantité finie, c'est un stock fissile, donc non renouvelable.",
+        "Le fait d'émettre peu de CO₂ relève d'un autre classement (émetteur ou non de CO₂) : il ne faut pas confondre les deux."
+      ],
+      "reponse": "Faux : l'uranium est un stock non renouvelable ; « peu émetteur » et « renouvelable » sont deux classements différents."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "cycle-carbone",
+      "enonce": "Ranger les quatre grands réservoirs de carbone (atmosphère, biosphère, océans, lithosphère) du plus petit contenu en carbone au plus grand.",
+      "corrige": [
+        "Ordres de grandeur du cours : atmosphère $\\sim 9 \\times 10^{2}$ Gt C ; biosphère $\\sim 2$ à $3 \\times 10^{3}$ Gt C ; océans $\\sim 4 \\times 10^{4}$ Gt C ; lithosphère $\\sim 10^{7}$ à $10^{8}$ Gt C.",
+        "On les range donc par puissances de 10 croissantes."
+      ],
+      "reponse": "Atmosphère < biosphère < océans < lithosphère."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "cycle-carbone",
+      "enonce": "Pour chaque processus, indiquer s'il prélève du CO₂ dans l'atmosphère ou s'il en rejette : photosynthèse ; respiration ; décomposition de la matière organique ; combustion du pétrole ; dissolution du CO₂ dans l'océan.",
+      "corrige": [
+        "La photosynthèse et la dissolution dans l'océan retirent du CO₂ de l'atmosphère.",
+        "La respiration, la décomposition et la combustion en rejettent."
+      ],
+      "reponse": "Prélèvent : photosynthèse, dissolution dans l'océan. Rejettent : respiration, décomposition, combustion du pétrole."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "empreinte-carbone",
+      "enonce": "Définir l'empreinte carbone d'une personne et donner son unité.",
+      "corrige": [
+        "C'est la quantité totale de gaz à effet de serre émise pour satisfaire sa consommation, importations comprises.",
+        "Elle s'exprime en tonnes de CO₂ équivalent (t CO₂eq), car les autres gaz (méthane, protoxyde d'azote…) sont convertis en équivalent CO₂."
+      ],
+      "reponse": "Masse totale de gaz à effet de serre émise pour sa consommation (importations comprises), en t CO₂eq."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "sources-primaires",
+      "enonce": "Pour chacune de ces sources renouvelables, indiquer le flux naturel qui l'alimente : éolien ; hydraulique ; biomasse ; géothermie.",
+      "corrige": [
+        "Éolien : le vent, c'est-à-dire des déplacements d'air d'origine solaire.",
+        "Hydraulique : le cycle de l'eau, entretenu par l'évaporation due au Soleil.",
+        "Biomasse : la photosynthèse. Géothermie : la chaleur interne de la Terre."
+      ],
+      "reponse": "Éolien : vent ; hydraulique : cycle de l'eau ; biomasse : photosynthèse ; géothermie : chaleur interne de la Terre."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "sources-primaires",
+      "enonce": "Un élève affirme : « L'énergie solaire est un stock, car le Soleil finira un jour par s'éteindre. » Corriger son raisonnement.",
+      "corrige": [
+        "La distinction stock/flux se fait à l'échelle humaine.",
+        "Le rayonnement solaire arrive en continu et se renouvelle chaque jour : c'est un flux, donc une source renouvelable.",
+        "Un stock, au contraire, est une réserve finie qui se vide à l'échelle humaine (charbon, pétrole, uranium)."
+      ],
+      "reponse": "Faux : à l'échelle humaine, le rayonnement solaire se renouvelle en continu ; c'est un flux renouvelable."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "combustion-co2",
+      "enonce": "Quelle masse de CO₂ produit la combustion complète de $2{,}0$ kg de carbone pur ? Données : $M(\\mathrm{C}) = 12$ g·mol⁻¹, $M(\\mathrm{CO_2}) = 44$ g·mol⁻¹.",
+      "corrige": [
+        "L'équation $\\mathrm{C} + \\mathrm{O_2} \\rightarrow \\mathrm{CO_2}$ montre qu'une mole de carbone donne une mole de CO₂.",
+        "$m(\\mathrm{CO_2}) = 2{,}0 \\times \\dfrac{44}{12} \\approx 7{,}3$ kg."
+      ],
+      "reponse": "Environ $7{,}3$ kg de CO₂."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "combustion-co2",
+      "enonce": "Une cuisinière brûle $50$ kg de gaz naturel (assimilé au méthane) en un an. Combustion : $\\mathrm{CH_4} + 2\\,\\mathrm{O_2} \\rightarrow \\mathrm{CO_2} + 2\\,\\mathrm{H_2O}$ ; $M(\\mathrm{CH_4}) = 16$ g·mol⁻¹, $M(\\mathrm{CO_2}) = 44$ g·mol⁻¹. Quelle masse de CO₂ est émise ?",
+      "corrige": [
+        "Une mole de méthane donne une mole de CO₂ : le rapport massique vaut $\\dfrac{44}{16} = 2{,}75$.",
+        "$m(\\mathrm{CO_2}) = 50 \\times 2{,}75 = 137{,}5$ kg."
+      ],
+      "reponse": "Environ $1{,}4 \\times 10^{2}$ kg de CO₂ (137,5 kg)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "combustion-co2",
+      "enonce": "Le cours indique qu'un litre d'essence émet environ $2{,}3$ kg de CO₂. Quelle masse de CO₂ émet la combustion d'un plein de $50$ L ?",
+      "corrige": [
+        "On multiplie le volume par la masse de CO₂ émise par litre.",
+        "$m(\\mathrm{CO_2}) = 50 \\times 2{,}3 = 115$ kg."
+      ],
+      "reponse": "Environ $1{,}2 \\times 10^{2}$ kg de CO₂ (115 kg)."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "unite-tep",
+      "enonce": "Convertir $3{,}0$ tep en joules, sachant que $1$ tep $\\approx 4{,}2 \\times 10^{10}$ J.",
+      "corrige": [
+        "On multiplie le nombre de tep par l'énergie d'une tep.",
+        "$3{,}0 \\times 4{,}2 \\times 10^{10} = 1{,}26 \\times 10^{11}$ J."
+      ],
+      "reponse": "Environ $1{,}3 \\times 10^{11}$ J."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "unite-tep",
+      "enonce": "Sachant que $1$ tep $\\approx 4{,}2 \\times 10^{10}$ J et que $1$ kWh $= 3{,}6 \\times 10^{6}$ J, vérifier que $1$ tep vaut environ $1{,}2 \\times 10^{4}$ kWh.",
+      "corrige": [
+        "Pour passer des joules aux kilowattheures, on divise par $3{,}6 \\times 10^{6}$.",
+        "$\\dfrac{4{,}2 \\times 10^{10}}{3{,}6 \\times 10^{6}} \\approx 1{,}17 \\times 10^{4}$ kWh, soit environ $1{,}2 \\times 10^{4}$ kWh."
+      ],
+      "reponse": "$1$ tep $\\approx 1{,}17 \\times 10^{4}$ kWh $\\approx 1{,}2 \\times 10^{4}$ kWh."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "empreinte-carbone",
+      "enonce": "Dans l'empreinte carbone d'une personne, qui vaut $10$ t CO₂eq par an, le logement représente $2{,}5$ t CO₂eq. Quelle est la part du logement, en pourcentage ?",
+      "corrige": [
+        "Part = émissions du poste / empreinte totale × 100.",
+        "$\\dfrac{2{,}5}{10} \\times 100 = 25\\ \\%$."
+      ],
+      "reponse": "25 %."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "cycle-carbone",
+      "enonce": "L'atmosphère contient environ $870$ Gt C. Exprimer cette masse en tonnes, puis en kilogrammes ($1$ Gt $= 10^{9}$ t).",
+      "corrige": [
+        "$870$ Gt $= 870 \\times 10^{9}$ t $= 8{,}7 \\times 10^{11}$ t.",
+        "Une tonne vaut $10^{3}$ kg : $8{,}7 \\times 10^{11} \\times 10^{3} = 8{,}7 \\times 10^{14}$ kg."
+      ],
+      "reponse": "$8{,}7 \\times 10^{11}$ t, soit $8{,}7 \\times 10^{14}$ kg de carbone."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "empreinte-carbone",
+      "enonce": "Pour chaque grandeur, indiquer s'il faut l'exprimer en « t CO₂ » ou en « t CO₂eq » : (a) la masse de CO₂ produite par la combustion de $1\\,000$ L d'essence ; (b) l'empreinte carbone d'un Français ; (c) les émissions d'un élevage bovin, qui rejette du CO₂ et du méthane.",
+      "corrige": [
+        "Une masse de CO₂ issue d'une combustion se compte en t CO₂ : (a).",
+        "Dès qu'on agrège plusieurs gaz à effet de serre, on convertit en équivalent CO₂ : (b) et (c)."
+      ],
+      "reponse": "(a) t CO₂ ; (b) t CO₂eq ; (c) t CO₂eq."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "combustion-co2",
+      "enonce": "Le butane brûle selon l'équation $a\\,\\mathrm{C_4H_{10}} + b\\,\\mathrm{O_2} \\rightarrow c\\,\\mathrm{CO_2} + d\\,\\mathrm{H_2O}$. 1) Trouver les plus petits coefficients entiers $a$, $b$, $c$, $d$. 2) Une bouteille domestique contient $13$ kg de butane : quelle masse de CO₂ sa combustion produit-elle ? Données : $M(\\mathrm{C_4H_{10}}) = 58$ g·mol⁻¹, $M(\\mathrm{CO_2}) = 44$ g·mol⁻¹.",
+      "corrige": [
+        "1) Conservation des atomes : avec $a = 2$, il faut $c = 8$ (carbone) et $d = 10$ (hydrogène) ; les oxygènes à droite valent $16 + 10 = 26$, donc $b = 13$.",
+        "2) Une mole de butane donne 4 moles de CO₂ : rapport massique $\\dfrac{4 \\times 44}{58} = \\dfrac{176}{58} \\approx 3{,}03$.",
+        "$m(\\mathrm{CO_2}) = 13 \\times 3{,}03 \\approx 39$ kg."
+      ],
+      "reponse": "1) $2\\,\\mathrm{C_4H_{10}} + 13\\,\\mathrm{O_2} \\rightarrow 8\\,\\mathrm{CO_2} + 10\\,\\mathrm{H_2O}$. 2) Environ 39 kg de CO₂."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "combustion-co2",
+      "enonce": "Quelle fraction de la masse d'une molécule de CO₂ provient de l'atome de carbone ? En déduire d'où vient le reste de la masse du CO₂ émis par une combustion. Données : $M(\\mathrm{C}) = 12$ g·mol⁻¹, $M(\\mathrm{CO_2}) = 44$ g·mol⁻¹.",
+      "corrige": [
+        "Fraction due au carbone : $\\dfrac{12}{44} \\approx 0{,}27$, soit environ 27 %.",
+        "Les 73 % restants proviennent des deux atomes d'oxygène, pris au dioxygène de l'air pendant la combustion."
+      ],
+      "reponse": "Environ 27 % ; le reste (73 %) vient des deux atomes d'oxygène pris à l'air."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "combustion-co2",
+      "enonce": "Un charbon contient $80\\ \\%$ de carbone en masse. Quelle masse de CO₂ libère la combustion complète d'une tonne de ce charbon ? ($\\dfrac{M(\\mathrm{CO_2})}{M(\\mathrm{C})} = \\dfrac{44}{12}$)",
+      "corrige": [
+        "Masse de carbone dans une tonne de charbon : $0{,}80 \\times 1{,}0 = 0{,}80$ t.",
+        "Masse de CO₂ : $0{,}80 \\times \\dfrac{44}{12} \\approx 2{,}9$ t."
+      ],
+      "reponse": "Environ $2{,}9$ t de CO₂."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "cycle-carbone",
+      "enonce": "Le cours indique que les émissions anthropiques valent environ $10$ Gt C par an, soit environ $37$ Gt CO₂ par an. Vérifier par le calcul que ces deux valeurs sont cohérentes.",
+      "corrige": [
+        "Pour passer d'une masse de carbone à une masse de CO₂, on multiplie par $\\dfrac{44}{12}$.",
+        "$10 \\times \\dfrac{44}{12} \\approx 36{,}7$ Gt CO₂, soit environ $37$ Gt CO₂ : les deux valeurs sont cohérentes."
+      ],
+      "reponse": "$10 \\times \\dfrac{44}{12} \\approx 37$ Gt CO₂ : cohérent."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "cycle-carbone",
+      "enonce": "Un camarade dit : « 10 Gt C par an, c'est ridicule à côté des 38 000 Gt C de l'océan ; cela ne peut pas perturber le cycle du carbone. » Rédiger une réponse argumentée en deux ou trois phrases.",
+      "corrige": [
+        "L'océan échange lentement avec l'atmosphère : il faut des siècles pour qu'il absorbe le surplus.",
+        "Le carbone fossile, lui, passe de la lithosphère (réservoir très lent) à l'atmosphère en quelques décennies.",
+        "C'est la vitesse du transfert, pas seulement la quantité, qui déséquilibre le cycle : environ la moitié du surplus s'accumule dans l'atmosphère."
+      ],
+      "reponse": "Exemple de réponse : « Ce qui compte, c'est la vitesse : l'océan met des siècles à absorber ce carbone, alors que nous le transférons en quelques décennies ; la moitié s'accumule donc dans l'atmosphère. »"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "unite-tep",
+      "enonce": "Un foyer consomme $1{,}5$ tep d'énergie par an. Exprimer cette consommation en gigajoules puis en kilowattheures ($1$ tep $\\approx 42$ GJ $\\approx 1{,}2 \\times 10^{4}$ kWh).",
+      "corrige": [
+        "En gigajoules : $1{,}5 \\times 42 = 63$ GJ.",
+        "En kilowattheures : $1{,}5 \\times 1{,}2 \\times 10^{4} = 1{,}8 \\times 10^{4}$ kWh."
+      ],
+      "reponse": "63 GJ, soit environ $1{,}8 \\times 10^{4}$ kWh."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "empreinte-carbone",
+      "enonce": "Un aller-retour Paris–New York émet de l'ordre de $1$ t CO₂eq par passager. Quelle part (en %) représente-t-il : 1) du budget « soutenable » de $2$ t CO₂eq par an ? 2) de l'empreinte annuelle moyenne d'un Français, prise égale à $9{,}5$ t CO₂eq ?",
+      "corrige": [
+        "1) $\\dfrac{1}{2} \\times 100 = 50\\ \\%$.",
+        "2) $\\dfrac{1}{9{,}5} \\times 100 \\approx 11\\ \\%$."
+      ],
+      "reponse": "1) 50 %. 2) Environ 11 %."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "empreinte-carbone",
+      "enonce": "Pour respecter l'accord de Paris, l'empreinte d'un Français devrait passer d'environ $10$ t CO₂eq par an à environ $2$ t CO₂eq par an. 1) Par combien faut-il la diviser ? 2) Quelle baisse cela représente-t-il en pourcentage ?",
+      "corrige": [
+        "1) $\\dfrac{10}{2} = 5$ : il faut la diviser par 5.",
+        "2) La baisse vaut $10 - 2 = 8$ t, soit $\\dfrac{8}{10} \\times 100 = 80\\ \\%$."
+      ],
+      "reponse": "1) Par 5. 2) Une baisse de 80 %."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "scenarios-transition",
+      "enonce": "Associer chaque action au levier de transition correspondant (sobriété, efficacité ou décarbonation du mix) : (a) remplacer des ampoules à incandescence par des LED ; (b) remplacer une centrale à charbon par un parc éolien ; (c) faire moins de trajets en voiture en regroupant ses courses ; (d) installer des panneaux photovoltaïques à la place d'une production au fioul.",
+      "corrige": [
+        "La sobriété consiste à consommer moins : (c).",
+        "L'efficacité consiste à obtenir le même service avec moins d'énergie : (a).",
+        "La décarbonation remplace des sources fossiles par des sources bas-carbone : (b) et (d)."
+      ],
+      "reponse": "(a) efficacité ; (b) décarbonation ; (c) sobriété ; (d) décarbonation."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "scenarios-transition",
+      "enonce": "Vrai ou faux ? « Un scénario de transition est une prédiction de ce qui va se passer. » Justifier en une ou deux phrases.",
+      "corrige": [
+        "Faux : un scénario est une hypothèse cohérente, une trajectoire chiffrée possible.",
+        "On l'évalue par des calculs d'ordres de grandeur (émissions évitées, énergie à produire, budget carbone restant), sans prétendre prévoir l'avenir."
+      ],
+      "reponse": "Faux : c'est une trajectoire hypothétique cohérente, évaluée par des ordres de grandeur, pas une prévision."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "sources-primaires",
+      "enonce": "Compléter le tableau en indiquant pour chaque source : « stock » ou « flux », puis « émet du CO₂ en fonctionnement » ou « quasi non émettrice » : charbon ; uranium ; éolien ; gaz naturel.",
+      "corrige": [
+        "Charbon et gaz naturel : stocks fossiles, émetteurs de CO₂ quand on les brûle.",
+        "Uranium : stock fissile, mais le nucléaire est quasi non émetteur de CO₂.",
+        "Éolien : flux renouvelable, quasi non émetteur. Les deux classements sont indépendants."
+      ],
+      "reponse": "Charbon : stock, émetteur ; uranium : stock, quasi non émetteur ; éolien : flux, quasi non émetteur ; gaz naturel : stock, émetteur."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "sources-primaires",
+      "enonce": "Le cours rappelle que « renouvelable » ne veut pas dire « illimité à tout instant ». Expliquer cette phrase à l'aide de deux exemples de sources renouvelables.",
+      "corrige": [
+        "Une source renouvelable se reconstitue à l'échelle humaine, mais sa production dépend des conditions du moment.",
+        "Une éolienne ne produit rien sans vent ; des panneaux photovoltaïques ne produisent rien la nuit."
+      ],
+      "reponse": "Exemple de réponse : l'éolien s'arrête sans vent, le photovoltaïque la nuit ; le flux est renouvelable mais pas disponible en permanence."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "combustion-co2",
+      "enonce": "On compare trois combustibles : carbone pur (rapport $\\dfrac{44}{12} \\approx 3{,}7$), méthane (rapport $\\dfrac{44}{16} = 2{,}75$) et octane (rapport $\\approx 3{,}1$). 1) Ranger ces combustibles selon la masse de CO₂ émise par kilogramme brûlé. 2) Pourquoi le méthane émet-il moins de CO₂ par kilogramme que le carbone pur ?",
+      "corrige": [
+        "1) Par kilogramme brûlé : méthane (2,75 kg) < octane (3,1 kg) < carbone pur (3,7 kg).",
+        "2) Une partie de la masse du méthane est due à l'hydrogène, qui donne de l'eau et non du CO₂ : il y a moins de carbone par kilogramme de combustible."
+      ],
+      "reponse": "1) Méthane < octane < carbone pur. 2) Le méthane contient de l'hydrogène (qui forme de l'eau), donc moins de carbone par kilogramme."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "combustion-co2",
+      "enonce": "Une voiture à essence est annoncée à $120$ g de CO₂ par kilomètre. Sachant qu'un litre d'essence émet environ $2{,}3$ kg de CO₂, estimer sa consommation en litres aux $100$ km.",
+      "corrige": [
+        "Sur 100 km, la voiture émet $120 \\times 100 = 12\\,000$ g, soit $12$ kg de CO₂.",
+        "Volume d'essence correspondant : $\\dfrac{12}{2{,}3} \\approx 5{,}2$ L."
+      ],
+      "reponse": "Environ $5{,}2$ L aux 100 km."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "cycle-carbone",
+      "enonce": "Chaque année, environ $10$ Gt C sont émises par les activités humaines et la moitié s'accumule dans l'atmosphère, qui contient environ $870$ Gt C. Si ce rythme restait constant pendant $10$ ans, de combien de gigatonnes de carbone et de quel pourcentage le réservoir atmosphérique augmenterait-il (par rapport à $870$ Gt C) ?",
+      "corrige": [
+        "Accumulation annuelle : $\\dfrac{10}{2} = 5$ Gt C par an, donc $50$ Gt C en 10 ans.",
+        "Pourcentage : $\\dfrac{50}{870} \\times 100 \\approx 5{,}7\\ \\%$."
+      ],
+      "reponse": "Environ $+50$ Gt C, soit une hausse d'environ $5{,}7\\ \\%$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "cycle-carbone",
+      "enonce": "Le CO₂ se dissout mieux dans l'eau froide que dans l'eau chaude. D'après le cours, l'océan absorbe ou relâche du CO₂ selon la température. Expliquer comment un réchauffement des océans pourrait aggraver l'accumulation de CO₂ dans l'atmosphère.",
+      "corrige": [
+        "Une eau plus chaude dissout moins de CO₂ : l'océan en absorbe moins, voire en relâche (dégazage).",
+        "Une plus grande part du CO₂ émis reste alors dans l'atmosphère, ce qui renforce l'effet de serre et le réchauffement : l'effet s'entretient."
+      ],
+      "reponse": "Un océan plus chaud absorbe moins de CO₂ (ou en relâche) : davantage de CO₂ reste dans l'atmosphère, ce qui amplifie le réchauffement."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "unite-tep",
+      "enonce": "Un bâtiment consomme $1{,}2 \\times 10^{5}$ kWh d'énergie par an. Exprimer cette consommation en tep, sachant que $1$ kWh $= 3{,}6 \\times 10^{6}$ J et $1$ tep $\\approx 4{,}2 \\times 10^{10}$ J.",
+      "corrige": [
+        "En joules : $1{,}2 \\times 10^{5} \\times 3{,}6 \\times 10^{6} = 4{,}32 \\times 10^{11}$ J.",
+        "En tep : $\\dfrac{4{,}32 \\times 10^{11}}{4{,}2 \\times 10^{10}} \\approx 10$ tep."
+      ],
+      "reponse": "Environ 10 tep."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "empreinte-carbone",
+      "enonce": "Voici l'empreinte carbone (fictive, valeurs arrondies) d'une personne, en t CO₂eq par an : transports $2{,}8$ ; alimentation $2{,}2$ ; logement $1{,}8$ ; achats de biens $1{,}6$ ; services publics $1{,}1$. 1) Calculer l'empreinte totale. 2) Quel est le poste le plus important et quelle est sa part ? 3) Quelle est la part de l'alimentation ?",
+      "corrige": [
+        "1) Total : $2{,}8 + 2{,}2 + 1{,}8 + 1{,}6 + 1{,}1 = 9{,}5$ t CO₂eq.",
+        "2) Les transports : $\\dfrac{2{,}8}{9{,}5} \\times 100 \\approx 29\\ \\%$.",
+        "3) Alimentation : $\\dfrac{2{,}2}{9{,}5} \\times 100 \\approx 23\\ \\%$."
+      ],
+      "reponse": "1) 9,5 t CO₂eq. 2) Les transports, environ 29 %. 3) Environ 23 %."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "scenarios-transition",
+      "enonce": "Un scénario fait baisser l'empreinte d'une personne de façon linéaire, de $10$ t CO₂eq par an aujourd'hui à $2$ t CO₂eq par an dans $30$ ans. 1) De combien l'empreinte baisse-t-elle chaque année ? 2) Quelle masse totale de gaz à effet de serre cette personne aura-t-elle émise pendant ces $30$ ans ? (Aire d'un trapèze.)",
+      "corrige": [
+        "1) Baisse annuelle : $\\dfrac{10 - 2}{30} \\approx 0{,}27$ t CO₂eq par an.",
+        "2) Les émissions cumulées sont l'aire du trapèze sous la courbe : $\\dfrac{(10 + 2) \\times 30}{2} = 180$ t CO₂eq."
+      ],
+      "reponse": "1) Environ $0{,}27$ t CO₂eq par an. 2) 180 t CO₂eq."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "scenarios-transition",
+      "enonce": "Le budget carbone mondial restant pour $+1{,}5\\,$°C est estimé à environ $500$ Gt CO₂. Les émissions valent environ $37$ Gt CO₂ par an. Si elles baissaient de façon linéaire jusqu'à zéro, en combien d'années faudrait-il atteindre zéro pour respecter exactement ce budget ? (Les émissions cumulées sont l'aire d'un triangle.)",
+      "corrige": [
+        "Les émissions cumulées valent $\\dfrac{37 \\times N}{2}$, où $N$ est la durée en années.",
+        "On résout $\\dfrac{37 \\times N}{2} = 500$, d'où $N = \\dfrac{1\\,000}{37} \\approx 27$ ans."
+      ],
+      "reponse": "Environ 27 ans."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "transition-energetique",
+      "enonce": "Une maison est chauffée au fioul : elle en brûle $2\\,000$ L par an, et chaque litre émet environ $2{,}7$ kg de CO₂. On la chauffe ensuite avec une pompe à chaleur qui consomme $6\\,000$ kWh d'électricité par an, avec un facteur d'émission de $60$ g CO₂/kWh. 1) Calculer les émissions annuelles dans les deux cas. 2) De quel pourcentage les émissions baissent-elles ?",
+      "corrige": [
+        "1) Fioul : $2\\,000 \\times 2{,}7 = 5\\,400$ kg, soit $5{,}4$ t de CO₂. Pompe à chaleur : $6\\,000 \\times 60 = 360\\,000$ g, soit $0{,}36$ t de CO₂.",
+        "2) Baisse : $\\dfrac{5{,}4 - 0{,}36}{5{,}4} \\times 100 \\approx 93\\ \\%$."
+      ],
+      "reponse": "1) 5,4 t contre 0,36 t de CO₂ par an. 2) Une baisse d'environ 93 %."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "transition-energetique",
+      "enonce": "On compare, à l'usage seulement (sans compter la fabrication), une voiture à essence qui consomme $5{,}0$ L aux $100$ km ($2{,}3$ kg de CO₂ par litre) et une voiture électrique qui consomme $15$ kWh aux $100$ km avec une électricité à $60$ g CO₂/kWh. 1) Calculer les émissions de chaque voiture en grammes de CO₂ par kilomètre. 2) Calculer les émissions de chacune pour $12\\,000$ km parcourus dans l'année.",
+      "corrige": [
+        "1) Essence : $5{,}0 \\times 2{,}3 = 11{,}5$ kg pour 100 km, soit $115$ g/km. Électrique : $15 \\times 60 = 900$ g pour 100 km, soit $9$ g/km.",
+        "2) Essence : $115 \\times 12\\,000 = 1\\,380\\,000$ g $\\approx 1{,}4$ t. Électrique : $9 \\times 12\\,000 = 108\\,000$ g $\\approx 0{,}11$ t."
+      ],
+      "reponse": "1) 115 g/km contre 9 g/km. 2) Environ 1,4 t contre 0,11 t de CO₂ par an."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "transition-energetique",
+      "enonce": "Problème — Une centrale électrique à charbon consomme $3{,}0 \\times 10^{6}$ t de charbon par an. Ce charbon contient $80\\ \\%$ de carbone en masse. 1) Le charbon est-il un stock ou un flux ? 2) Calculer la masse de CO₂ émise par an ($\\dfrac{M(\\mathrm{CO_2})}{M(\\mathrm{C})} = \\dfrac{44}{12}$). 3) À combien d'empreintes carbone annuelles de Français (environ $10$ t CO₂eq chacune) cela correspond-il ? 4) Quel levier de transition consisterait à la remplacer par un parc éolien ?",
+      "corrige": [
+        "1) Le charbon est un stock fossile, non renouvelable.",
+        "2) Carbone brûlé : $0{,}80 \\times 3{,}0 \\times 10^{6} = 2{,}4 \\times 10^{6}$ t ; CO₂ : $2{,}4 \\times 10^{6} \\times \\dfrac{44}{12} = 8{,}8 \\times 10^{6}$ t, soit 8,8 Mt.",
+        "3) $\\dfrac{8{,}8 \\times 10^{6}}{10} = 8{,}8 \\times 10^{5}$ : environ 880 000 empreintes annuelles.",
+        "4) La décarbonation du mix : remplacer un stock fossile par un flux renouvelable."
+      ],
+      "reponse": "1) Stock fossile. 2) $8{,}8 \\times 10^{6}$ t de CO₂ par an. 3) Environ 880 000 empreintes. 4) Décarbonation du mix."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "cycle-carbone",
+      "enonce": "Problème — On brûle $1{,}0$ Gt de charbon contenant $75\\ \\%$ de carbone. 1) De quel réservoir vient ce carbone, et vers quel réservoir est-il transféré ? Comparer la vitesse habituelle des échanges de ces deux réservoirs. 2) Quelle masse de carbone (en Gt C) est transférée ? 3) Si la moitié reste dans l'atmosphère, de quel pourcentage le réservoir atmosphérique ($870$ Gt C) augmente-t-il ?",
+      "corrige": [
+        "1) Le carbone vient de la lithosphère (échanges très lents, millions d'années) et part vers l'atmosphère (échanges rapides) : on court-circuite un cycle très lent.",
+        "2) $0{,}75 \\times 1{,}0 = 0{,}75$ Gt C.",
+        "3) Il reste $0{,}375$ Gt C dans l'atmosphère : $\\dfrac{0{,}375}{870} \\times 100 \\approx 0{,}043\\ \\%$."
+      ],
+      "reponse": "1) De la lithosphère (lente) vers l'atmosphère (rapide). 2) 0,75 Gt C. 3) Environ $0{,}043\\ \\%$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "empreinte-carbone",
+      "enonce": "Problème — Une élève a une empreinte de $9{,}0$ t CO₂eq par an. Elle renonce à un aller-retour en avion long-courrier ($-1{,}0$ t), réduit sa consommation de viande ($-0{,}6$ t) et achète moins de vêtements neufs ($-0{,}4$ t). 1) Calculer sa nouvelle empreinte et la baisse en pourcentage. 2) Est-elle proche de l'objectif de $2$ t ? Que faut-il en conclure sur les leviers de la transition ?",
+      "corrige": [
+        "1) Nouvelle empreinte : $9{,}0 - 1{,}0 - 0{,}6 - 0{,}4 = 7{,}0$ t CO₂eq ; baisse : $\\dfrac{2{,}0}{9{,}0} \\times 100 \\approx 22\\ \\%$.",
+        "2) Non : 7 t reste loin de 2 t. Les gestes individuels (sobriété) ne suffisent pas : il faut les combiner avec l'efficacité et la décarbonation du mix (électricité, transports, chauffage), qui dépendent aussi de choix collectifs."
+      ],
+      "reponse": "1) 7,0 t CO₂eq, soit environ −22 %. 2) Non : il faut combiner sobriété, efficacité et décarbonation."
     }
   ]
 }

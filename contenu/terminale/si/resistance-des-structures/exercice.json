@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "types de sollicitations",
       "enonce": "Associe chaque élément à sa sollicitation principale : (a) un poteau qui soutient un toit, (b) une poutre horizontale chargée en son milieu, (c) l'arbre de transmission qui transmet un couple. Choix : compression, flexion, torsion.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "contrainte normale",
       "enonce": "Un poteau de section carrée 50 mm × 50 mm supporte une charge de compression F = 75 000 N. Calcule la contrainte normale de compression en MPa.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "condition de résistance",
       "enonce": "Un tirant subit une contrainte de service σ = 85 MPa. Le matériau a une contrainte admissible Rp = 120 MPa. La condition de résistance est-elle vérifiée ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "coefficient de sécurité et dimensionnement",
       "enonce": "Un câble en acier de limite élastique Re = 400 MPa supporte F = 20 000 N. On impose un coefficient de sécurité s = 5. Calcule la contrainte admissible, puis la section minimale du câble.",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "moment fléchissant",
       "enonce": "Une poutre horizontale de longueur L = 4 m repose sur deux appuis à ses extrémités. Une charge ponctuelle F = 6000 N est appliquée au milieu. Calcule les réactions d'appui, puis le moment fléchissant maximal au milieu (Mmax = F·L / 4).",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "flexion et contrainte dans une poutre",
       "enonce": "La poutre précédente (Mmax = 6000 N·m) a une section rectangulaire de largeur b = 60 mm et de hauteur h = 120 mm. Le module de flexion vaut I/v = b·h² / 6. Calcule ce module, puis la contrainte maximale de flexion σ = Mmax / (I/v). Conclus si le matériau, de contrainte admissible Rp = 150 MPa, convient.",
       "corrige": [
@@ -87,7 +87,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "contrainte normale",
       "enonce": "Une pièce de section S = 30 mm² supporte un effort de traction F = 6000 N. Calcule la contrainte σ en MPa.",
       "corrige": [
@@ -99,7 +99,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "condition de résistance",
       "enonce": "La contrainte admissible d'un acier est σ_adm = 100 MPa. Une pièce subit σ = 90 MPa, une autre σ = 130 MPa. Lesquelles sont validées ?",
       "corrige": [
@@ -112,7 +112,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "coefficient de sécurité",
       "enonce": "Un acier a une limite élastique R_e = 360 MPa. On choisit un coefficient de sécurité s = 3. Calcule la contrainte admissible.",
       "corrige": [
@@ -124,7 +124,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "dimensionnement de la section minimale",
       "enonce": "Une pièce en traction doit reprendre F = 9000 N. La contrainte admissible du matériau est σ_adm = 150 MPa. Calcule la section minimale nécessaire.",
       "corrige": [
@@ -134,6 +134,454 @@
         "S_min = 60 mm²."
       ],
       "reponse": "Il faut une section d'au moins 60 mm² (S_min = 9000 / 150)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "types de sollicitations",
+      "enonce": "Indique la sollicitation principale : (a) le câble d'un ascenseur ; (b) une goupille qui relie deux pièces tirées en sens opposés ; (c) une étagère chargée de livres.",
+      "corrige": [
+        "(a) Le câble est tiré dans le sens de sa longueur : traction.",
+        "(b) Deux forces opposées tendent à trancher la goupille : cisaillement.",
+        "(c) L'étagère plie sous une charge transversale : flexion."
+      ],
+      "reponse": "(a) traction ; (b) cisaillement ; (c) flexion."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "unités",
+      "enonce": "Complète : « 1 MPa = … Pa = 1 N/… ».",
+      "corrige": [
+        "1 MPa = $10^6$ Pa.",
+        "Comme 1 m² = $10^6$ mm², 1 MPa = 1 N/mm²."
+      ],
+      "reponse": "1 MPa = 1 000 000 Pa = 1 N/mm²."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "types de sollicitations",
+      "enonce": "Quel risque particulier court une pièce élancée (longue et fine) soumise à de la compression ?",
+      "corrige": [
+        "Une pièce élancée comprimée peut se courber brusquement sur le côté.",
+        "Ce phénomène s'appelle le flambage."
+      ],
+      "reponse": "Le flambage."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "limite élastique",
+      "enonce": "Que se passe-t-il quand la contrainte dans une pièce dépasse la limite élastique R_e ?",
+      "corrige": [
+        "En dessous de R_e, la pièce revient à sa forme initiale quand on relâche l'effort.",
+        "Au-delà, elle se déforme de façon permanente (déformation plastique), puis peut se rompre."
+      ],
+      "reponse": "La pièce se déforme de façon permanente (déformation plastique), puis peut se rompre."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Quelle est l'unité de l'allongement relatif ε ? Justifie.",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{\\Delta L}{L_0}$ est le quotient de deux longueurs exprimées dans la même unité.",
+        "Les unités se simplifient : ε est sans unité."
+      ],
+      "reponse": "Aucune : ε est sans unité."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "contrainte normale",
+      "enonce": "Un câble de section 12 mm² supporte 1 800 N. Calcule la contrainte en MPa.",
+      "corrige": [
+        "$\\sigma = \\dfrac{F}{S} = \\dfrac{1\\,800}{12} = 150$ N/mm² = 150 MPa."
+      ],
+      "reponse": "150 MPa"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "unités",
+      "enonce": "Un pilier de section 0,0025 m² supporte un effort de compression de 50 kN. Calcule la contrainte en Pa puis en MPa.",
+      "corrige": [
+        "$\\sigma = \\dfrac{50\\,000}{0{,}0025} = 20\\,000\\,000$ Pa.",
+        "Soit $20 \\times 10^6$ Pa = 20 MPa."
+      ],
+      "reponse": "20 000 000 Pa, soit 20 MPa."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "unités",
+      "enonce": "Un élève calcule la contrainte dans une tige de 25 mm² tirée par 4 500 N et écrit « σ = 180 Pa ». Corrige-le.",
+      "corrige": [
+        "Avec F en N et S en mm², le quotient est en N/mm².",
+        "$\\dfrac{4\\,500}{25} = 180$ N/mm² = 180 MPa, et non 180 Pa."
+      ],
+      "reponse": "σ = 180 MPa (car 1 N/mm² = 1 MPa)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "contrainte normale",
+      "enonce": "Un tube en acier de section 1 500 mm² supporte 90 kN en compression. Calcule la contrainte.",
+      "corrige": [
+        "$\\sigma = \\dfrac{90\\,000}{1\\,500} = 60$ MPa."
+      ],
+      "reponse": "60 MPa"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "contrainte normale",
+      "enonce": "Une tige ronde de diamètre 16 mm est tirée par 25 000 N. Calcule sa section puis la contrainte (arrondie au dixième).",
+      "corrige": [
+        "$S = \\dfrac{\\pi \\times 16^2}{4} \\approx 201{,}1$ mm².",
+        "$\\sigma = \\dfrac{25\\,000}{201{,}1} \\approx 124{,}3$ MPa."
+      ],
+      "reponse": "S ≈ 201,1 mm² ; σ ≈ 124,3 MPa."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "contrainte normale",
+      "enonce": "On double le diamètre d'une tige ronde, l'effort restant le même. Par combien la contrainte est-elle divisée ? Justifie.",
+      "corrige": [
+        "La section vaut $S = \\dfrac{\\pi d^2}{4}$ : si d double, S est multipliée par $2^2 = 4$.",
+        "Comme $\\sigma = \\dfrac{F}{S}$, la contrainte est divisée par 4."
+      ],
+      "reponse": "Par 4."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Une barre de 2,5 m s'allonge de 1,5 mm. Calcule l'allongement relatif.",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{\\Delta L}{L_0} = \\dfrac{1{,}5}{2\\,500} = 0{,}000\\,6$."
+      ],
+      "reponse": "ε = 0,0006"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Un acier (E = 210 GPa) subit un allongement relatif de 0,0006 dans le domaine élastique. Calcule la contrainte.",
+      "corrige": [
+        "E = 210 GPa = 210 000 MPa.",
+        "$\\sigma = E \\times \\varepsilon = 210\\,000 \\times 0{,}000\\,6 = 126$ MPa."
+      ],
+      "reponse": "126 MPa"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Un élève applique la loi de Hooke à une pièce qui a été déformée bien au-delà de sa limite élastique. Pourquoi son résultat est-il faux ?",
+      "corrige": [
+        "La loi de Hooke $\\sigma = E \\varepsilon$ n'est valable que dans le domaine élastique.",
+        "Au-delà de R_e, la déformation devient plastique et la contrainte n'est plus proportionnelle à la déformation."
+      ],
+      "reponse": "La loi de Hooke ne s'applique que dans le domaine élastique."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "coefficient de sécurité",
+      "enonce": "Un acier a une limite élastique de 235 MPa. On impose un coefficient de sécurité de 2. Calcule la contrainte admissible.",
+      "corrige": [
+        "$\\sigma_{\\text{adm}} = \\dfrac{R_e}{s} = \\dfrac{235}{2} = 117{,}5$ MPa."
+      ],
+      "reponse": "117,5 MPa"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Une pièce doit reprendre 24 000 N en traction ; la contrainte admissible vaut 120 MPa. Calcule la section minimale.",
+      "corrige": [
+        "$S_{\\min} = \\dfrac{F}{\\sigma_{\\text{adm}}} = \\dfrac{24\\,000}{120} = 200$ mm²."
+      ],
+      "reponse": "200 mm²"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Une barre d'aluminium (E = 70 GPa) de 3 m subit une contrainte de 35 MPa. Calcule son allongement relatif puis son allongement en mm.",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{\\sigma}{E} = \\dfrac{35}{70\\,000} = 0{,}000\\,5$.",
+        "$\\Delta L = 0{,}000\\,5 \\times 3\\,000 = 1{,}5$ mm."
+      ],
+      "reponse": "ε = 0,0005 ; ΔL = 1,5 mm."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Lors d'un essai dans le domaine élastique, une éprouvette subit 84 MPa pour un allongement relatif de 0,0004. Calcule le module de Young et identifie le matériau parmi l'acier et l'aluminium.",
+      "corrige": [
+        "$E = \\dfrac{\\sigma}{\\varepsilon} = \\dfrac{84}{0{,}000\\,4} = 210\\,000$ MPa = 210 GPa.",
+        "Cette valeur correspond à l'acier."
+      ],
+      "reponse": "E = 210 GPa : c'est de l'acier."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "déformation et loi de Hooke",
+      "enonce": "Une barre en acier (E ≈ 210 GPa) et une barre en aluminium (E ≈ 70 GPa), de mêmes dimensions, subissent la même contrainte. Laquelle s'allonge le plus, et combien de fois plus ?",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{\\sigma}{E}$ : à contrainte égale, la déformation est inversement proportionnelle à E.",
+        "$\\dfrac{210}{70} = 3$ : l'aluminium s'allonge 3 fois plus."
+      ],
+      "reponse": "L'aluminium, environ 3 fois plus."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "condition de résistance",
+      "enonce": "Un acier a R_e = 235 MPa. Une pièce travaille à 200 MPa ; un élève la valide car 200 < 235. Le bureau d'études impose s = 1,5. A-t-il raison ?",
+      "corrige": [
+        "L'élève confond limite élastique et contrainte admissible.",
+        "$\\sigma_{\\text{adm}} = \\dfrac{235}{1{,}5} \\approx 156{,}7$ MPa.",
+        "200 MPa > 156,7 MPa : la pièce doit être refusée."
+      ],
+      "reponse": "Non : la contrainte admissible est d'environ 156,7 MPa ; la pièce est refusée."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "coefficient de sécurité",
+      "enonce": "Une pièce en acier (R_e = 355 MPa) travaille à 71 MPa. Quel coefficient de sécurité réel offre-t-elle ?",
+      "corrige": [
+        "$s = \\dfrac{R_e}{\\sigma} = \\dfrac{355}{71} = 5$."
+      ],
+      "reponse": "s = 5"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "coefficient de sécurité",
+      "enonce": "Un camarade affirme : « Avec un coefficient de sécurité de 3, la pièce est trois fois plus solide, pas besoin de calcul. » Explique son erreur.",
+      "corrige": [
+        "Le coefficient de sécurité sert à fixer la contrainte admissible : $\\sigma_{\\text{adm}} = \\dfrac{R_e}{3}$.",
+        "Il faut ensuite calculer la contrainte réelle et vérifier qu'elle reste inférieure à cette valeur ; sans ce calcul, rien ne garantit la tenue."
+      ],
+      "reponse": "Le coefficient fixe la contrainte admissible ; il faut toujours vérifier la contrainte réelle par le calcul."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Une tige ronde doit reprendre 12 kN avec une contrainte admissible de 80 MPa. Calcule la section minimale puis le diamètre minimal ; choisis un diamètre entier en millimètres.",
+      "corrige": [
+        "$S_{\\min} = \\dfrac{12\\,000}{80} = 150$ mm².",
+        "$d = \\sqrt{\\dfrac{4 S}{\\pi}} = \\sqrt{\\dfrac{600}{\\pi}} \\approx 13{,}8$ mm.",
+        "On choisit d = 14 mm."
+      ],
+      "reponse": "150 mm² ; d ≥ 13,8 mm, donc 14 mm."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Une tige de diamètre 10 mm a une contrainte admissible de 120 MPa. Quel effort maximal peut-elle supporter en traction (arrondi au newton) ?",
+      "corrige": [
+        "$S = \\dfrac{\\pi \\times 10^2}{4} \\approx 78{,}54$ mm².",
+        "$F_{\\max} = 120 \\times 78{,}54 \\approx 9\\,425$ N."
+      ],
+      "reponse": "Environ 9 425 N."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Un poteau de section carrée doit reprendre 72 kN en compression avec une contrainte admissible de 50 MPa. Calcule la section minimale et le côté minimal du carré (choisis un nombre entier de millimètres).",
+      "corrige": [
+        "$S_{\\min} = \\dfrac{72\\,000}{50} = 1\\,440$ mm².",
+        "Côté : $\\sqrt{1\\,440} \\approx 37{,}9$ mm.",
+        "On choisit 38 mm de côté."
+      ],
+      "reponse": "1 440 mm² ; côté de 38 mm."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "types de sollicitations",
+      "enonce": "Un boulon relie une chape à une patte ; la patte est tirée et la chape retenue. Quelle sollicitation subit la tige du boulon ? Et un arbre qui transmet le couple d'un moteur ?",
+      "corrige": [
+        "Le boulon est soumis à deux efforts opposés qui tendent à le trancher : cisaillement.",
+        "L'arbre est vrillé autour de son axe : torsion."
+      ],
+      "reponse": "Boulon : cisaillement ; arbre : torsion."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "moment fléchissant",
+      "enonce": "Une poutre de 2 m sur deux appuis d'extrémité porte une charge de 1 000 N en son milieu. Calcule les réactions d'appui et le moment fléchissant maximal (Mmax = F·L/4).",
+      "corrige": [
+        "Par symétrie, chaque appui reprend 1 000 ÷ 2 = 500 N.",
+        "$M_{\\max} = \\dfrac{1\\,000 \\times 2}{4} = 500$ N·m."
+      ],
+      "reponse": "500 N par appui ; Mmax = 500 N·m."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "moment fléchissant",
+      "enonce": "Une poutre de 3 m sur deux appuis d'extrémité porte 4 000 N en son milieu. Calcule les réactions d'appui et le moment fléchissant maximal.",
+      "corrige": [
+        "Chaque appui reprend 2 000 N.",
+        "$M_{\\max} = \\dfrac{4\\,000 \\times 3}{4} = 3\\,000$ N·m."
+      ],
+      "reponse": "2 000 N par appui ; Mmax = 3 000 N·m."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "flexion et contrainte dans une poutre",
+      "enonce": "La poutre précédente (Mmax = 3 000 N·m) a une section rectangulaire b = 50 mm, h = 100 mm, posée sur chant (h vertical). Calcule le module de flexion b·h²/6 puis la contrainte maximale de flexion.",
+      "corrige": [
+        "$\\dfrac{I}{v} = \\dfrac{50 \\times 100^2}{6} \\approx 83\\,333$ mm³.",
+        "$M_{\\max} = 3\\,000$ N·m = 3 000 000 N·mm.",
+        "$\\sigma = \\dfrac{3\\,000\\,000}{83\\,333} = 36$ MPa."
+      ],
+      "reponse": "Module ≈ 83 333 mm³ ; σ = 36 MPa."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "flexion et contrainte dans une poutre",
+      "enonce": "On pose la même poutre à plat (b = 100 mm, h = 50 mm). Calcule le nouveau module de flexion et la nouvelle contrainte maximale. Que conclure sur le sens de pose ?",
+      "corrige": [
+        "$\\dfrac{I}{v} = \\dfrac{100 \\times 50^2}{6} \\approx 41\\,667$ mm³.",
+        "$\\sigma = \\dfrac{3\\,000\\,000}{41\\,667} = 72$ MPa.",
+        "La contrainte double : une poutre rectangulaire résiste mieux en flexion posée sur chant (grande hauteur verticale)."
+      ],
+      "reponse": "Module ≈ 41 667 mm³ ; σ = 72 MPa : il vaut mieux poser la poutre sur chant."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "flexion et contrainte dans une poutre",
+      "enonce": "Une planche d'étagère en bois de 1 m repose sur deux appuis d'extrémité et porte 300 N en son milieu. Sa section fait 250 mm × 20 mm (posée à plat : b = 250 mm, h = 20 mm). Le bois a une contrainte admissible de 10 MPa. L'étagère tient-elle ?",
+      "corrige": [
+        "$M_{\\max} = \\dfrac{300 \\times 1}{4} = 75$ N·m = 75 000 N·mm.",
+        "$\\dfrac{I}{v} = \\dfrac{250 \\times 20^2}{6} \\approx 16\\,667$ mm³.",
+        "$\\sigma = \\dfrac{75\\,000}{16\\,667} = 4{,}5$ MPa ≤ 10 MPa."
+      ],
+      "reponse": "Oui : σ = 4,5 MPa, inférieure à 10 MPa."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "flexion et contrainte dans une poutre",
+      "enonce": "Une poutre de module de flexion 144 000 mm³ a une contrainte admissible de 150 MPa. Elle mesure 4 m et repose sur deux appuis d'extrémité. Quelle charge maximale peut-on poser en son milieu ?",
+      "corrige": [
+        "$M_{\\max} = 150 \\times 144\\,000 = 21\\,600\\,000$ N·mm = 21 600 N·m.",
+        "$M_{\\max} = \\dfrac{F L}{4}$, donc $F = \\dfrac{4 \\times 21\\,600}{4} = 21\\,600$ N."
+      ],
+      "reponse": "21 600 N"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "contrainte normale",
+      "enonce": "Deux câbles sont comparés : A, de diamètre 6 mm, porte 3 kN ; B, de diamètre 4 mm, porte 1,5 kN. Lequel est le plus sollicité ? Calcule les contraintes (arrondies au dixième).",
+      "corrige": [
+        "A : $S = \\dfrac{\\pi \\times 6^2}{4} \\approx 28{,}27$ mm², donc $\\sigma \\approx \\dfrac{3\\,000}{28{,}27} \\approx 106{,}1$ MPa.",
+        "B : $S = \\dfrac{\\pi \\times 4^2}{4} \\approx 12{,}57$ mm², donc $\\sigma \\approx \\dfrac{1\\,500}{12{,}57} \\approx 119{,}4$ MPa.",
+        "Le câble B porte moins d'effort mais il est plus sollicité."
+      ],
+      "reponse": "Le câble B (≈ 119,4 MPa contre ≈ 106,1 MPa)."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "condition de résistance",
+      "enonce": "Une barre en alliage d'aluminium (R_e = 275 MPa, E = 70 GPa) de diamètre 12 mm et de longueur 0,8 m est tirée par 8 kN. On impose s = 2. Vérifie la condition de résistance puis calcule l'allongement (arrondi au centième de mm).",
+      "corrige": [
+        "$S \\approx 113{,}1$ mm², donc $\\sigma = \\dfrac{8\\,000}{113{,}1} \\approx 70{,}7$ MPa.",
+        "$\\sigma_{\\text{adm}} = \\dfrac{275}{2} = 137{,}5$ MPa : la condition est vérifiée.",
+        "$\\varepsilon = \\dfrac{70{,}7}{70\\,000} \\approx 0{,}001\\,01$, donc $\\Delta L \\approx 0{,}001\\,01 \\times 800 \\approx 0{,}81$ mm."
+      ],
+      "reponse": "σ ≈ 70,7 MPa ≤ 137,5 MPa : validé ; ΔL ≈ 0,81 mm."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "choix du matériau",
+      "enonce": "On compare un acier (R_e = 355 MPa, masse volumique 7 850 kg/m³) et un alliage d'aluminium (R_e = 275 MPa, masse volumique 2 700 kg/m³). Calcule pour chacun le rapport R_e / masse volumique et dis lequel est le plus intéressant pour une structure légère.",
+      "corrige": [
+        "Acier : $\\dfrac{355}{7\\,850} \\approx 0{,}045$.",
+        "Aluminium : $\\dfrac{275}{2\\,700} \\approx 0{,}102$.",
+        "L'alliage d'aluminium offre plus de résistance par kilogramme : il est préféré quand la masse compte (aéronautique)."
+      ],
+      "reponse": "Acier ≈ 0,045 ; aluminium ≈ 0,102 : l'aluminium."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "choix du matériau",
+      "enonce": "Un tirant de 2 m doit reprendre 10 kN. En acier, la contrainte admissible vaut 150 MPa (7 850 kg/m³) ; en aluminium, 90 MPa (2 700 kg/m³). Calcule la section minimale et la masse du tirant pour chaque matériau (arrondies au centième de kg).",
+      "corrige": [
+        "Acier : $S = \\dfrac{10\\,000}{150} \\approx 66{,}7$ mm² ; volume ≈ $66{,}7 \\times 10^{-6} \\times 2 \\approx 1{,}33 \\times 10^{-4}$ m³ ; masse ≈ 1,05 kg.",
+        "Aluminium : $S = \\dfrac{10\\,000}{90} \\approx 111{,}1$ mm² ; volume ≈ $2{,}22 \\times 10^{-4}$ m³ ; masse ≈ 0,60 kg.",
+        "Même plus épais, le tirant en aluminium est plus léger."
+      ],
+      "reponse": "Acier : ≈ 66,7 mm², ≈ 1,05 kg ; aluminium : ≈ 111,1 mm², ≈ 0,60 kg."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Un tirant en acier (R_e = 235 MPa, s = 2, E = 210 GPa) de 1,5 m doit reprendre 30 kN. Les diamètres disponibles sont 16, 18 et 20 mm. Lequel choisir ? Calcule ensuite l'allongement avec ce diamètre (arrondi au centième de mm).",
+      "corrige": [
+        "$\\sigma_{\\text{adm}} = 117{,}5$ MPa, donc $S_{\\min} = \\dfrac{30\\,000}{117{,}5} \\approx 255{,}3$ mm².",
+        "18 mm donne $S \\approx 254{,}5$ mm², légèrement insuffisant ; 20 mm donne $S \\approx 314{,}2$ mm² : on choisit 20 mm.",
+        "$\\sigma = \\dfrac{30\\,000}{314{,}2} \\approx 95{,}5$ MPa, $\\varepsilon = \\dfrac{95{,}5}{210\\,000} \\approx 0{,}000\\,455$, donc $\\Delta L \\approx 0{,}68$ mm."
+      ],
+      "reponse": "Diamètre 20 mm (18 mm est juste insuffisant) ; ΔL ≈ 0,68 mm."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Le câble d'un ascenseur doit soutenir une cabine de 500 kg chargée de 630 kg (g = 9,81 N/kg). L'acier du câble a R_e = 1 200 MPa et la norme impose un coefficient de sécurité de 10. Calcule l'effort, la contrainte admissible et la section métallique minimale (arrondie au dixième).",
+      "corrige": [
+        "$F = (500 + 630) \\times 9{,}81 \\approx 11\\,085$ N.",
+        "$\\sigma_{\\text{adm}} = \\dfrac{1\\,200}{10} = 120$ MPa.",
+        "$S_{\\min} = \\dfrac{11\\,085}{120} \\approx 92{,}4$ mm²."
+      ],
+      "reponse": "F ≈ 11 085 N ; 120 MPa ; S ≥ 92,4 mm²."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Un pilier en béton doit reprendre 1,2 MN en compression ; la contrainte admissible du béton est de 12 MPa. Calcule la section minimale et le côté minimal d'un pilier carré (arrondi au mm supérieur).",
+      "corrige": [
+        "$S_{\\min} = \\dfrac{1\\,200\\,000}{12} = 100\\,000$ mm².",
+        "Côté : $\\sqrt{100\\,000} \\approx 316{,}2$ mm, donc au moins 317 mm (on prendra en pratique 320 mm)."
+      ],
+      "reponse": "100 000 mm² ; côté d'au moins 317 mm."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "choix du matériau",
+      "enonce": "Pour la rambarde d'un ponton en bord de mer, on hésite entre un acier non protégé et un acier inoxydable de résistances voisines. Lequel choisir ? Justifie avec les critères de choix d'un matériau.",
+      "corrige": [
+        "La résistance mécanique n'est pas le seul critère : la tenue à la corrosion compte aussi.",
+        "En bord de mer, l'air salin fait rouiller rapidement un acier non protégé, ce qui réduit sa section et donc sa résistance au fil du temps.",
+        "On choisit l'acier inoxydable, plus cher mais durable."
+      ],
+      "reponse": "L'acier inoxydable, pour sa tenue à la corrosion en milieu salin."
     }
   ]
 }

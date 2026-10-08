@@ -134,7 +134,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme-synthese",
       "enonce": "En travaux pratiques, un binôme mesure l'intensité de la pesanteur $g$ avec un pendule simple. Il mesure la longueur du fil : $L = 0{,}994\\ \\mathrm{m}$ avec $u(L) = 0{,}005\\ \\mathrm{m}$. Pour la période, il chronomètre la durée de $10$ oscillations : $\\Delta t = 20{,}1\\ \\mathrm{s}$ avec $u(\\Delta t) = 0{,}2\\ \\mathrm{s}$. La relation du pendule donne $g = \\dfrac{4\\pi^2 L}{T^2}$, où $T$ est la période. Données fournies : $u(T) = \\dfrac{u(\\Delta t)}{10}$ ; $\\dfrac{u(g)}{g} = \\sqrt{\\left(\\dfrac{u(L)}{L}\\right)^2 + \\left(2\\,\\dfrac{u(T)}{T}\\right)^2}$ ; écart normalisé $z = \\dfrac{|g_{\\text{mes}} - g_{\\text{réf}}|}{u(g)}$, seuil usuel $2$ ; valeur de référence $g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$.\n\n1. Calcule la période $T$ et son incertitude $u(T)$.\n2. Calcule la valeur de $g$.\n3. Calcule l'incertitude-type composée $u(g)$.\n4. Écris le résultat de la mesure de $g$ avec un nombre de chiffres significatifs adapté.\n5. La mesure est-elle compatible avec la valeur de référence ? Justifie par l'écart normalisé.\n6. Quelle grandeur pèse le plus dans l'incertitude, et comment améliorer la mesure ?",
       "corrige": [
@@ -146,6 +146,455 @@
         "6. C'est la période qui pèse le plus : elle intervient au carré (sa relative compte double, $1{,}99\\,\\%$) alors que la longueur ne pèse que $0{,}50\\,\\%$. Le point faible est le temps de réaction au chronomètre. Pour améliorer la mesure, on chronomètre davantage d'oscillations (par exemple $20$ ou $50$), ce qui réduit d'autant $u(T)$ et donc $u(g)$."
       ],
       "reponse": "$T = 2{,}01 \\pm 0{,}02\\ \\mathrm{s}$ ; $g = 9{,}7 \\pm 0{,}2\\ \\mathrm{m\\cdot s^{-2}}$ ; $z \\approx 0{,}5 \\leqslant 2$ : mesure compatible avec $9{,}81\\ \\mathrm{m\\cdot s^{-2}}$. L'incertitude est dominée par la période (élevée au carré) ; chronométrer plus d'oscillations l'améliorerait."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire",
+      "enonce": "On mesure $U$ et $I$, puis on calcule $R = \\dfrac{U}{I}$. Quelles grandeurs sont mesurées, laquelle est calculée ? Comment appelle-t-on l'incertitude-type de $R$ ?",
+      "corrige": [
+        "$U$ et $I$ sont mesurées directement ; $R$ est calculée à partir d'elles.",
+        "Les incertitudes sur $U$ et $I$ se propagent à $R$ : l'incertitude obtenue est l'incertitude-type composée $u(R)$."
+      ],
+      "reponse": "$U$ et $I$ mesurées, $R$ calculée ; $u(R)$ est l'incertitude-type composée."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "rappels-type-a",
+      "enonce": "Rappel de première : $9$ mesures répétées d'une longueur ont un écart-type $s = 0{,}3\\ \\mathrm{mm}$. Calculer l'incertitude-type de type A.",
+      "corrige": [
+        "$u = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}3}{\\sqrt{9}} = \\dfrac{0{,}3}{3} = 0{,}1\\ \\mathrm{mm}$."
+      ],
+      "reponse": "$u = 0{,}1\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "incertitude-relative",
+      "enonce": "Calculer l'incertitude relative, en pourcentage : a) $U = 10{,}0\\ \\mathrm{V}$ avec $u(U) = 0{,}2\\ \\mathrm{V}$ ; b) $L = 250\\ \\mathrm{mm}$ avec $u(L) = 0{,}5\\ \\mathrm{mm}$.",
+      "corrige": [
+        "L'incertitude relative est le quotient $\\dfrac{u(X)}{X}$, sans unité.",
+        "a) $\\dfrac{0{,}2}{10{,}0} = 0{,}02 = 2\\,\\%$ ; b) $\\dfrac{0{,}5}{250} = 0{,}002 = 0{,}2\\,\\%$."
+      ],
+      "reponse": "a) $2\\,\\%$ ; b) $0{,}2\\,\\%$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "propagation-somme-difference",
+      "enonce": "Une pièce est formée de deux tronçons de longueurs $L_1 = 125{,}4\\ \\mathrm{mm}$ et $L_2 = 74{,}8\\ \\mathrm{mm}$, chacune mesurée avec $u = 0{,}2\\ \\mathrm{mm}$. Calculer la longueur totale et son incertitude-type, puis écrire le résultat. Donnée : pour $y = a + b$ ou $y = a - b$, $u(y) = \\sqrt{u(a)^2 + u(b)^2}$.",
+      "corrige": [
+        "$L = 125{,}4 + 74{,}8 = 200{,}2\\ \\mathrm{mm}$.",
+        "$u(L) = \\sqrt{0{,}2^2 + 0{,}2^2} = \\sqrt{0{,}08} \\approx 0{,}28$, soit $0{,}3\\ \\mathrm{mm}$ à un chiffre significatif."
+      ],
+      "reponse": "$L = 200{,}2 \\pm 0{,}3\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "propagation-somme-difference",
+      "enonce": "L'eau d'un calorimètre passe de $T_1 = 21{,}7\\ ^\\circ\\mathrm{C}$ à $T_2 = 63{,}4\\ ^\\circ\\mathrm{C}$, chaque lecture ayant $u = 0{,}2\\ ^\\circ\\mathrm{C}$. Calculer l'élévation de température $\\Delta T = T_2 - T_1$ et écrire le résultat. Donnée : pour $y = a + b$ ou $y = a - b$, $u(y) = \\sqrt{u(a)^2 + u(b)^2}$.",
+      "corrige": [
+        "$\\Delta T = 63{,}4 - 21{,}7 = 41{,}7\\ ^\\circ\\mathrm{C}$ (soit $41{,}7\\ \\mathrm{K}$).",
+        "$u(\\Delta T) = \\sqrt{0{,}2^2 + 0{,}2^2} \\approx 0{,}3\\ ^\\circ\\mathrm{C}$ (même formule que pour une somme)."
+      ],
+      "reponse": "$\\Delta T = 41{,}7 \\pm 0{,}3\\ ^\\circ\\mathrm{C}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "propagation-somme-difference",
+      "enonce": "Pour $\\Delta T = T_2 - T_1$ avec $u(T_1) = u(T_2) = 0{,}2\\ ^\\circ\\mathrm{C}$, un élève écrit : « $u(\\Delta T) = 0{,}2 - 0{,}2 = 0$, le résultat est parfaitement connu ». Corriger.",
+      "corrige": [
+        "Les incertitudes ne se soustraient jamais : un doute ne peut pas en annuler un autre.",
+        "Pour une différence comme pour une somme : $u(\\Delta T) = \\sqrt{0{,}2^2 + 0{,}2^2} \\approx 0{,}3\\ ^\\circ\\mathrm{C}$."
+      ],
+      "reponse": "$u(\\Delta T) \\approx 0{,}3\\ ^\\circ\\mathrm{C}$, et non $0$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "propagation-produit-quotient",
+      "enonce": "Un radiateur est alimenté sous $U = 230 \\pm 2\\ \\mathrm{V}$ et parcouru par $I = 4{,}35 \\pm 0{,}05\\ \\mathrm{A}$. Calculer $P = U \\times I$ et son incertitude-type, puis écrire le résultat. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "$P = 230 \\times 4{,}35 \\approx 1\\,000{,}5\\ \\mathrm{W}$.",
+        "$\\dfrac{u(P)}{P} = \\sqrt{\\left(\\dfrac{2}{230}\\right)^2 + \\left(\\dfrac{0{,}05}{4{,}35}\\right)^2} \\approx \\sqrt{0{,}008\\,7^2 + 0{,}011\\,5^2} \\approx 0{,}014\\,4$.",
+        "$u(P) \\approx 1\\,000{,}5 \\times 0{,}014\\,4 \\approx 14\\ \\mathrm{W}$, soit $1 \\times 10^{1}\\ \\mathrm{W}$ à un chiffre significatif ; on arrondit $P$ à la dizaine."
+      ],
+      "reponse": "$P = (1{,}00 \\pm 0{,}01) \\times 10^{3}\\ \\mathrm{W}$, soit $1\\,000 \\pm 10\\ \\mathrm{W}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "propagation-produit-quotient",
+      "enonce": "On mesure $m = 135{,}2 \\pm 0{,}1\\ \\mathrm{g}$ et $V = 50{,}0 \\pm 0{,}5\\ \\mathrm{mL}$ pour un solide. Calculer $\\rho = \\dfrac{m}{V}$ et $u(\\rho)$, écrire le résultat, puis dire quelle mesure limite la précision. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "$\\rho = \\dfrac{135{,}2}{50{,}0} \\approx 2{,}704\\ \\mathrm{g/mL}$.",
+        "Relatives : $\\dfrac{0{,}1}{135{,}2} \\approx 0{,}07\\,\\%$ et $\\dfrac{0{,}5}{50{,}0} = 1\\,\\%$ ; composée : $\\sqrt{0{,}000\\,7^2 + 0{,}01^2} \\approx 1{,}0\\,\\%$.",
+        "$u(\\rho) \\approx 2{,}704 \\times 0{,}010 \\approx 0{,}03\\ \\mathrm{g/mL}$ ; c'est la mesure du volume qui limite la précision."
+      ],
+      "reponse": "$\\rho = 2{,}70 \\pm 0{,}03\\ \\mathrm{g/mL}$ ; le volume limite la précision."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "propagation-produit-quotient",
+      "enonce": "Dans un quotient $y = \\dfrac{a}{b}$, les incertitudes relatives valent $3\\,\\%$ sur $a$ et $4\\,\\%$ sur $b$. Calculer l'incertitude relative sur $y$ et la comparer à la somme $3 + 4 = 7\\,\\%$. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "$\\dfrac{u(y)}{y} = \\sqrt{0{,}03^2 + 0{,}04^2} = \\sqrt{0{,}002\\,5} = 0{,}05 = 5\\,\\%$.",
+        "La composition en quadrature donne moins que la somme ($7\\,\\%$), mais plus que la plus grande des deux ($4\\,\\%$)."
+      ],
+      "reponse": "$5\\,\\%$ (et non $7\\,\\%$)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "propagation-constante",
+      "enonce": "Le diamètre d'un disque vaut $d = 25{,}0 \\pm 0{,}1\\ \\mathrm{mm}$. Calculer son périmètre $C = \\pi d$ et l'incertitude associée. Donnée : pour $y = k\\,a$ ($k$ constante exacte), $u(y) = |k|\\,u(a)$.",
+      "corrige": [
+        "$C = \\pi \\times 25{,}0 \\approx 78{,}54\\ \\mathrm{mm}$ ; $\\pi$ est une constante exacte.",
+        "$u(C) = \\pi \\times 0{,}1 \\approx 0{,}31$, soit $0{,}3\\ \\mathrm{mm}$."
+      ],
+      "reponse": "$C = 78{,}5 \\pm 0{,}3\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "propagation-constante",
+      "enonce": "Pour mesurer l'épaisseur d'une feuille de papier, on mesure une pile de $100$ feuilles : $10{,}2 \\pm 0{,}1\\ \\mathrm{mm}$. En déduire l'épaisseur d'une feuille et son incertitude-type. Donnée : pour $y = k\\,a$ ($k$ constante exacte), $u(y) = |k|\\,u(a)$.",
+      "corrige": [
+        "$e = \\dfrac{10{,}2}{100} = 0{,}102\\ \\mathrm{mm}$.",
+        "$u(e) = \\dfrac{0{,}1}{100} = 0{,}001\\ \\mathrm{mm}$ : mesurer $100$ feuilles d'un coup divise l'incertitude par $100$."
+      ],
+      "reponse": "$e = 0{,}102 \\pm 0{,}001\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "propagation-constante",
+      "enonce": "Le côté d'un carré mesure $c = 12{,}5 \\pm 0{,}1\\ \\mathrm{cm}$. Pour le périmètre $P = 4c$, un élève calcule $u(P) = \\sqrt{4 \\times 0{,}1^2} = 0{,}2\\ \\mathrm{cm}$. Corriger. Donnée : pour $y = k\\,a$ ($k$ constante exacte), $u(y) = |k|\\,u(a)$.",
+      "corrige": [
+        "La composition en quadrature vaut pour des mesures indépendantes ; ici, c'est la même mesure multipliée par une constante exacte.",
+        "$u(P) = 4 \\times 0{,}1 = 0{,}4\\ \\mathrm{cm}$ et $P = 4 \\times 12{,}5 = 50{,}0\\ \\mathrm{cm}$."
+      ],
+      "reponse": "$P = 50{,}0 \\pm 0{,}4\\ \\mathrm{cm}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "propagation-puissance",
+      "enonce": "Le côté d'une plaque carrée vaut $c = 20{,}0 \\pm 0{,}2\\ \\mathrm{cm}$. Calculer son aire $A = c^2$ et l'incertitude associée. Donnée : pour $y = a^n$, $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$.",
+      "corrige": [
+        "$A = 20{,}0^2 = 400\\ \\mathrm{cm^2}$ ; incertitude relative sur $c$ : $\\dfrac{0{,}2}{20{,}0} = 1\\,\\%$.",
+        "Avec $n = 2$ : $\\dfrac{u(A)}{A} = 2 \\times 1\\,\\% = 2\\,\\%$, donc $u(A) = 0{,}02 \\times 400 = 8\\ \\mathrm{cm^2}$."
+      ],
+      "reponse": "$A = 400 \\pm 8\\ \\mathrm{cm^2}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "propagation-puissance",
+      "enonce": "Un conducteur ohmique $R = 47{,}0 \\pm 0{,}5\\ \\Omega$ est soumis à $U = 12{,}0 \\pm 0{,}1\\ \\mathrm{V}$. Calculer $P = \\dfrac{U^2}{R}$ et son incertitude-type. Donnée : pour $y = a^n$, $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$. Pour un quotient, les incertitudes relatives se composent en quadrature.",
+      "corrige": [
+        "$P = \\dfrac{12{,}0^2}{47{,}0} \\approx 3{,}064\\ \\mathrm{W}$.",
+        "Relative sur $U^2$ : $2 \\times \\dfrac{0{,}1}{12{,}0} \\approx 1{,}67\\,\\%$ ; sur $R$ : $\\dfrac{0{,}5}{47{,}0} \\approx 1{,}06\\,\\%$.",
+        "$\\dfrac{u(P)}{P} = \\sqrt{0{,}016\\,7^2 + 0{,}010\\,6^2} \\approx 1{,}98\\,\\%$, d'où $u(P) \\approx 0{,}06\\ \\mathrm{W}$."
+      ],
+      "reponse": "$P = 3{,}06 \\pm 0{,}06\\ \\mathrm{W}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "methode-propagation",
+      "enonce": "Un coureur parcourt $d = 100{,}0 \\pm 0{,}2\\ \\mathrm{m}$ en $t = 12{,}85 \\pm 0{,}05\\ \\mathrm{s}$ (chronométrage manuel). Calculer sa vitesse moyenne et écrire le résultat. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "$v = \\dfrac{100{,}0}{12{,}85} \\approx 7{,}782\\ \\mathrm{m\\cdot s^{-1}}$.",
+        "Relatives : $0{,}2\\,\\%$ sur $d$ et $\\dfrac{0{,}05}{12{,}85} \\approx 0{,}39\\,\\%$ sur $t$ ; composée : $\\sqrt{0{,}002^2 + 0{,}003\\,9^2} \\approx 0{,}44\\,\\%$.",
+        "$u(v) \\approx 7{,}78 \\times 0{,}004\\,4 \\approx 0{,}03\\ \\mathrm{m\\cdot s^{-1}}$."
+      ],
+      "reponse": "$v = 7{,}78 \\pm 0{,}03\\ \\mathrm{m\\cdot s^{-1}}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "methode-propagation",
+      "enonce": "Une impulsion sonore parcourt $d = 0{,}85 \\pm 0{,}01\\ \\mathrm{m}$ en $t = 2{,}5 \\pm 0{,}1\\ \\mathrm{ms}$. Un élève calcule $v = \\dfrac{0{,}85}{2{,}5} = 0{,}34\\ \\mathrm{m\\cdot s^{-1}}$. 1. Repérer son erreur. 2. Calculer $v$ et $u(v)$. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "1. La durée n'a pas été convertie : $t = 2{,}5 \\times 10^{-3}\\ \\mathrm{s}$. Son résultat est $1\\,000$ fois trop petit (et absurde pour la vitesse du son).",
+        "2. $v = \\dfrac{0{,}85}{2{,}5 \\times 10^{-3}} = 340\\ \\mathrm{m\\cdot s^{-1}}$ ; relatives : $\\dfrac{0{,}01}{0{,}85} \\approx 1{,}2\\,\\%$ et $\\dfrac{0{,}1}{2{,}5} = 4\\,\\%$ ; composée $\\approx 4{,}2\\,\\%$.",
+        "$u(v) \\approx 340 \\times 0{,}042 \\approx 14\\ \\mathrm{m\\cdot s^{-1}}$, arrondi à $1 \\times 10^{1}\\ \\mathrm{m\\cdot s^{-1}}$."
+      ],
+      "reponse": "1. Durée non convertie en secondes ; 2. $v = (3{,}4 \\pm 0{,}1) \\times 10^{2}\\ \\mathrm{m\\cdot s^{-1}}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "ecriture-resultat",
+      "enonce": "Un calcul donne $g = 9{,}783\\,4\\ \\mathrm{m\\cdot s^{-2}}$ et $u(g) = 0{,}152\\,3\\ \\mathrm{m\\cdot s^{-2}}$. Écrire correctement le résultat.",
+      "corrige": [
+        "L'incertitude s'arrondit à un chiffre significatif : $0{,}2\\ \\mathrm{m\\cdot s^{-2}}$ (rang des dixièmes).",
+        "La valeur s'arrondit au même rang : $9{,}8$."
+      ],
+      "reponse": "$g = 9{,}8 \\pm 0{,}2\\ \\mathrm{m\\cdot s^{-2}}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "ecriture-resultat",
+      "enonce": "Parmi ces écritures, laquelle est correcte ? a) $R = 47{,}26 \\pm 0{,}4\\ \\Omega$ ; b) $R = 47 \\pm 0{,}4\\ \\Omega$ ; c) $R = 47{,}3 \\pm 0{,}4\\ \\Omega$ ; d) $R = 47{,}3 \\pm 0{,}43\\ \\Omega$.",
+      "corrige": [
+        "a) Valeur trop précise pour l'incertitude ; b) valeur arrondie plus grossièrement que l'incertitude ; d) incertitude à deux chiffres significatifs.",
+        "c) Incertitude à un chiffre significatif, valeur au même rang (le dixième)."
+      ],
+      "reponse": "c) $R = 47{,}3 \\pm 0{,}4\\ \\Omega$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "ecriture-resultat",
+      "enonce": "Un calcul d'énergie donne $E = 1\\,528{,}4\\ \\mathrm{J}$ avec $u(E) = 23{,}6\\ \\mathrm{J}$. Écrire le résultat.",
+      "corrige": [
+        "À un chiffre significatif, $u(E) = 2 \\times 10^{1}\\ \\mathrm{J}$ : le rang est celui des dizaines.",
+        "La valeur arrondie à la dizaine est $1\\,530\\ \\mathrm{J}$."
+      ],
+      "reponse": "$E = (1{,}53 \\pm 0{,}02) \\times 10^{3}\\ \\mathrm{J}$, soit $1\\,530 \\pm 20\\ \\mathrm{J}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "chiffres-significatifs",
+      "enonce": "Sans incertitude chiffrée, donner avec le bon nombre de chiffres significatifs : a) $2{,}4 \\times 1{,}3$ ; b) $\\dfrac{15{,}0}{3{,}2}$.",
+      "corrige": [
+        "Pour un produit ou un quotient, on garde autant de chiffres significatifs que la donnée qui en a le moins.",
+        "a) $3{,}12 \\to 3{,}1$ (deux chiffres) ; b) $4{,}687\\,5 \\to 4{,}7$ (deux chiffres, à cause de $3{,}2$)."
+      ],
+      "reponse": "a) $3{,}1$ ; b) $4{,}7$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "validite-ecart-normalise",
+      "enonce": "Un groupe obtient $g = 9{,}62 \\pm 0{,}12\\ \\mathrm{m\\cdot s^{-2}}$. La référence vaut $9{,}81\\ \\mathrm{m\\cdot s^{-2}}$. Le résultat est-il compatible ? Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "$z = \\dfrac{|9{,}62 - 9{,}81|}{0{,}12} = \\dfrac{0{,}19}{0{,}12} \\approx 1{,}6$.",
+        "$z \\leqslant 2$ : le résultat est compatible avec la référence."
+      ],
+      "reponse": "Oui : $z \\approx 1{,}6 \\leqslant 2$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "validite-ecart-normalise",
+      "enonce": "On mesure la célérité du son dans l'eau : $v = 1\\,430 \\pm 20\\ \\mathrm{m\\cdot s^{-1}}$. La valeur de référence, pour la température de l'eau du TP, est $1\\,480\\ \\mathrm{m\\cdot s^{-1}}$. Conclure, puis proposer une explication. Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "$z = \\dfrac{|1\\,430 - 1\\,480|}{20} = 2{,}5 > 2$ : résultat non compatible.",
+        "Pistes : erreur systématique (distance mal mesurée, retard de déclenchement), incertitude sous-estimée, ou référence inadaptée (eau à une autre température que celle prévue)."
+      ],
+      "reponse": "Non compatible ($z = 2{,}5$) ; erreur systématique, $u$ sous-estimée ou référence inadaptée."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "validite-ecart-normalise",
+      "enonce": "Deux groupes mesurent la masse volumique de l'aluminium ($2{,}70\\ \\mathrm{g/cm^3}$). Groupe A : $2{,}72 \\pm 0{,}05$ ; groupe B : $2{,}61 \\pm 0{,}02$ (en $\\mathrm{g/cm^3}$). Calculer l'écart normalisé de chacun et conclure. Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "A : $z = \\dfrac{0{,}02}{0{,}05} = 0{,}4$ : compatible.",
+        "B : $z = \\dfrac{0{,}09}{0{,}02} = 4{,}5$ : non compatible.",
+        "B est plus précis (incertitude plus petite), mais son résultat est probablement entaché d'une erreur systématique."
+      ],
+      "reponse": "A compatible ($z = 0{,}4$) ; B non compatible ($z = 4{,}5$)."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "interpretation-ecart",
+      "enonce": "Des élèves mesurent la célérité du son un jour où il fait $30\\ ^\\circ\\mathrm{C}$ et la comparent à la valeur de référence $343\\ \\mathrm{m\\cdot s^{-1}}$, valable à $20\\ ^\\circ\\mathrm{C}$ ; ils trouvent $z = 6$. Quelles sont les trois pistes à examiner ? Laquelle semble la plus probable ici ?",
+      "corrige": [
+        "Un écart normalisé supérieur à $2$ peut venir d'une erreur systématique, d'une incertitude sous-estimée, ou d'une référence (modèle) utilisée hors de son domaine de validité.",
+        "Ici, la référence correspond à $20\\ ^\\circ\\mathrm{C}$ alors que l'expérience est faite à $30\\ ^\\circ\\mathrm{C}$ : la célérité du son dépend de la température, la référence n'est pas adaptée."
+      ],
+      "reponse": "Erreur systématique, incertitude sous-estimée, référence hors domaine ; ici, surtout la référence prise à une autre température."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "validite-ecart-normalise",
+      "enonce": "On mesure $R = 104\\ \\Omega$ pour une résistance de référence $100\\ \\Omega$. Quelle incertitude-type minimale faudrait-il pour que le résultat soit jugé compatible ? Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "Compatible si $z = \\dfrac{|104 - 100|}{u} \\leqslant 2$, soit $u \\geqslant \\dfrac{4}{2} = 2\\ \\Omega$.",
+        "Avec une incertitude plus petite (mesure plus précise), l'écart de $4\\ \\Omega$ deviendrait significatif."
+      ],
+      "reponse": "$u(R) \\geqslant 2\\ \\Omega$."
+    },
+    {
+      "id": 36,
+      "difficulte": "probleme",
+      "notion": "methode-propagation",
+      "enonce": "Au banc d'essai, un moteur fournit un couple $M = 12{,}0 \\pm 0{,}3\\ \\mathrm{N\\cdot m}$ à $\\omega = 157 \\pm 2\\ \\mathrm{rad/s}$. 1. Calculer $P = M\\,\\omega$. 2. Calculer $u(P)$ et écrire le résultat. 3. La plaque annonce $1{,}9\\ \\mathrm{kW}$ : le résultat est-il compatible ? Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$. Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "1. $P = 12{,}0 \\times 157 = 1\\,884\\ \\mathrm{W}$.",
+        "2. Relatives : $\\dfrac{0{,}3}{12{,}0} = 2{,}5\\,\\%$ et $\\dfrac{2}{157} \\approx 1{,}3\\,\\%$ ; composée $\\approx 2{,}8\\,\\%$ ; $u(P) \\approx 53\\ \\mathrm{W}$, soit $5 \\times 10^{1}\\ \\mathrm{W}$ : $P = 1\\,880 \\pm 50\\ \\mathrm{W}$.",
+        "3. $z = \\dfrac{|1\\,880 - 1\\,900|}{50} = 0{,}4 \\leqslant 2$ : compatible."
+      ],
+      "reponse": "$P = 1\\,880 \\pm 50\\ \\mathrm{W}$ ; $z = 0{,}4$ : compatible avec $1{,}9\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "probleme",
+      "notion": "propagation-produit-quotient",
+      "enonce": "Un moteur absorbe $P_a = 1\\,000 \\pm 10\\ \\mathrm{W}$ et fournit $P_u = 850 \\pm 20\\ \\mathrm{W}$. 1. Calculer le rendement $\\eta = \\dfrac{P_u}{P_a}$. 2. Calculer $u(\\eta)$ et écrire le résultat. 3. Le constructeur annonce $\\eta = 0{,}90$ : conclure. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$. Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "1. $\\eta = \\dfrac{850}{1\\,000} = 0{,}85$.",
+        "2. $\\dfrac{u(\\eta)}{\\eta} = \\sqrt{\\left(\\dfrac{20}{850}\\right)^2 + \\left(\\dfrac{10}{1\\,000}\\right)^2} \\approx 2{,}6\\,\\%$, donc $u(\\eta) \\approx 0{,}02$ : $\\eta = 0{,}85 \\pm 0{,}02$.",
+        "3. Avec la valeur non arrondie $u(\\eta) \\approx 0{,}022$ : $z = \\dfrac{|0{,}85 - 0{,}90|}{0{,}022} \\approx 2{,}3 > 2$ : non compatible ; le moteur est peut-être usé, ou la mesure biaisée."
+      ],
+      "reponse": "$\\eta = 0{,}85 \\pm 0{,}02$ ; $z > 2$ : non compatible avec $0{,}90$."
+    },
+    {
+      "id": 38,
+      "difficulte": "probleme",
+      "notion": "methode-propagation",
+      "enonce": "On chauffe $m = 0{,}500 \\pm 0{,}005\\ \\mathrm{kg}$ d'eau de $T_1 = 20{,}1\\ ^\\circ\\mathrm{C}$ à $T_2 = 45{,}2\\ ^\\circ\\mathrm{C}$ ($u = 0{,}2\\ ^\\circ\\mathrm{C}$ pour chaque lecture). L'énergie reçue est $E = m\\,c\\,\\Delta T$ avec $c = 4\\,185\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$ (valeur exacte ici). 1. Calculer $\\Delta T$ et $u(\\Delta T)$. 2. Calculer $E$. 3. Calculer $u(E)$ et écrire le résultat. Donnée : pour $y = a + b$ ou $y = a - b$, $u(y) = \\sqrt{u(a)^2 + u(b)^2}$. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "1. $\\Delta T = 25{,}1\\ \\mathrm{K}$ et $u(\\Delta T) = \\sqrt{0{,}2^2 + 0{,}2^2} \\approx 0{,}28\\ \\mathrm{K}$.",
+        "2. $E = 0{,}500 \\times 4\\,185 \\times 25{,}1 \\approx 52\\,522\\ \\mathrm{J}$.",
+        "3. Relatives : $1\\,\\%$ sur $m$, $\\dfrac{0{,}28}{25{,}1} \\approx 1{,}1\\,\\%$ sur $\\Delta T$ ; composée $\\approx 1{,}5\\,\\%$, soit $u(E) \\approx 790\\ \\mathrm{J}$, arrondi à $8 \\times 10^{2}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$\\Delta T = 25{,}1 \\pm 0{,}3\\ \\mathrm{K}$ ; $E = (5{,}25 \\pm 0{,}08) \\times 10^{4}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "propagation-puissance",
+      "enonce": "Un cube a pour arête $a = 2{,}00 \\pm 0{,}02\\ \\mathrm{cm}$ et pour masse $m = 21{,}6 \\pm 0{,}1\\ \\mathrm{g}$. 1. Calculer $V = a^3$ et son incertitude relative. 2. Calculer $\\rho = \\dfrac{m}{V}$ et $u(\\rho)$. Donnée : pour $y = a^n$, $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$. Pour un quotient, les incertitudes relatives se composent en quadrature.",
+      "corrige": [
+        "1. $V = 2{,}00^3 = 8{,}00\\ \\mathrm{cm^3}$ ; $\\dfrac{u(V)}{V} = 3 \\times \\dfrac{0{,}02}{2{,}00} = 3\\,\\%$.",
+        "2. $\\rho = \\dfrac{21{,}6}{8{,}00} = 2{,}70\\ \\mathrm{g/cm^3}$ ; $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}03^2 + \\left(\\dfrac{0{,}1}{21{,}6}\\right)^2} \\approx 3{,}0\\,\\%$, soit $u(\\rho) \\approx 0{,}08\\ \\mathrm{g/cm^3}$."
+      ],
+      "reponse": "$V = 8{,}00\\ \\mathrm{cm^3}$ ($3\\,\\%$) ; $\\rho = 2{,}70 \\pm 0{,}08\\ \\mathrm{g/cm^3}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "methode-propagation",
+      "enonce": "Dans l'exercice précédent ($\\rho = \\dfrac{m}{a^3}$, $u(a)/a = 1\\,\\%$, $u(m)/m \\approx 0{,}5\\,\\%$), quelle mesure faut-il améliorer en priorité ? Que devient $u(\\rho)$ si l'on mesure l'arête à $0{,}01\\ \\mathrm{cm}$ près ?",
+      "corrige": [
+        "L'arête intervient au cube : sa contribution relative vaut $3 \\times 1\\,\\% = 3\\,\\%$, contre environ $0{,}5\\,\\%$ pour la masse. C'est l'arête qu'il faut mieux mesurer.",
+        "Avec $u(a) = 0{,}01\\ \\mathrm{cm}$ : contribution $3 \\times 0{,}5\\,\\% = 1{,}5\\,\\%$ ; composée $\\sqrt{0{,}015^2 + 0{,}004\\,6^2} \\approx 1{,}6\\,\\%$, soit $u(\\rho) \\approx 0{,}04\\ \\mathrm{g/cm^3}$."
+      ],
+      "reponse": "L'arête ; $u(\\rho)$ passe d'environ $0{,}08$ à environ $0{,}04\\ \\mathrm{g/cm^3}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "propagation-somme-difference",
+      "enonce": "Pour $y = a + b$ avec $u(a) = 0{,}3$ et $u(b) = 0{,}4$ (même unité), comparer la formule fournie à la simple somme des incertitudes. Donnée : pour $y = a + b$ ou $y = a - b$, $u(y) = \\sqrt{u(a)^2 + u(b)^2}$.",
+      "corrige": [
+        "Formule : $u(y) = \\sqrt{0{,}09 + 0{,}16} = \\sqrt{0{,}25} = 0{,}5$.",
+        "La somme donnerait $0{,}7$ : elle surestime l'incertitude, car il est peu probable que les deux erreurs soient maximales dans le même sens."
+      ],
+      "reponse": "$u(y) = 0{,}5$ (contre $0{,}7$ pour la simple somme)."
+    },
+    {
+      "id": 42,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire",
+      "enonce": "Vrai ou faux ? a) Dans une différence, les incertitudes se soustraient. b) Une incertitude relative n'a pas d'unité. c) Au bac, la formule de propagation est fournie dans l'énoncé.",
+      "corrige": [
+        "a) Faux : elles se composent en quadrature, comme pour une somme.",
+        "b) Vrai : c'est le quotient de deux grandeurs de même unité. c) Vrai : il faut savoir l'utiliser, pas la retenir."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Vrai."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "methode-propagation",
+      "enonce": "Un chariot parcourt $d = 2{,}000 \\pm 0{,}005\\ \\mathrm{m}$. On chronomètre $16$ fois le parcours : moyenne $1{,}25\\ \\mathrm{s}$, écart-type $0{,}08\\ \\mathrm{s}$. 1. Calculer $u(t)$ (type A). 2. Calculer $v = \\dfrac{d}{t}$ et $u(v)$. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "1. $u(t) = \\dfrac{0{,}08}{\\sqrt{16}} = 0{,}02\\ \\mathrm{s}$.",
+        "2. $v = \\dfrac{2{,}000}{1{,}25} = 1{,}60\\ \\mathrm{m\\cdot s^{-1}}$ ; relatives : $0{,}25\\,\\%$ et $1{,}6\\,\\%$ ; composée $\\approx 1{,}6\\,\\%$, donc $u(v) \\approx 0{,}03\\ \\mathrm{m\\cdot s^{-1}}$."
+      ],
+      "reponse": "$u(t) = 0{,}02\\ \\mathrm{s}$ ; $v = 1{,}60 \\pm 0{,}03\\ \\mathrm{m\\cdot s^{-1}}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "propagation-produit-quotient",
+      "enonce": "Une plaque rectangulaire mesure $L = 30{,}0 \\pm 0{,}1\\ \\mathrm{cm}$ et $\\ell = 20{,}0 \\pm 0{,}1\\ \\mathrm{cm}$. Calculer son aire et l'incertitude-type associée. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "$A = 30{,}0 \\times 20{,}0 = 600\\ \\mathrm{cm^2}$.",
+        "$\\dfrac{u(A)}{A} = \\sqrt{\\left(\\dfrac{0{,}1}{30{,}0}\\right)^2 + \\left(\\dfrac{0{,}1}{20{,}0}\\right)^2} \\approx 0{,}6\\,\\%$, donc $u(A) \\approx 3{,}6$, soit $4\\ \\mathrm{cm^2}$."
+      ],
+      "reponse": "$A = 600 \\pm 4\\ \\mathrm{cm^2}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "ecriture-resultat",
+      "enonce": "Écrire correctement : $T = 0{,}023\\,456\\,7\\ \\mathrm{s}$ avec $u(T) = 0{,}000\\,42\\ \\mathrm{s}$.",
+      "corrige": [
+        "À un chiffre significatif : $u(T) = 0{,}000\\,4\\ \\mathrm{s}$ (rang des dix-millièmes).",
+        "On arrondit $T$ au même rang : $0{,}023\\,5\\ \\mathrm{s}$. On peut aussi écrire en millisecondes."
+      ],
+      "reponse": "$T = 0{,}023\\,5 \\pm 0{,}000\\,4\\ \\mathrm{s}$, soit $23{,}5 \\pm 0{,}4\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "propagation-constante",
+      "enonce": "Le déclenchement manuel d'un chronomètre entraîne $u(\\Delta t) = 0{,}2\\ \\mathrm{s}$. La période d'un pendule vaut environ $2\\ \\mathrm{s}$. Comparer l'incertitude relative sur $T$ si l'on chronomètre $1$ période, puis $10$ périodes ($T = \\dfrac{\\Delta t}{10}$). Donnée : pour $y = k\\,a$ ($k$ constante exacte), $u(y) = |k|\\,u(a)$.",
+      "corrige": [
+        "Une période : $u(T) = 0{,}2\\ \\mathrm{s}$, soit $\\dfrac{0{,}2}{2} = 10\\,\\%$.",
+        "Dix périodes : $u(T) = \\dfrac{0{,}2}{10} = 0{,}02\\ \\mathrm{s}$, soit $1\\,\\%$ : l'incertitude relative est divisée par $10$."
+      ],
+      "reponse": "$10\\,\\%$ pour une période, $1\\,\\%$ pour dix périodes."
+    },
+    {
+      "id": 47,
+      "difficulte": "decouverte",
+      "notion": "incertitude-relative",
+      "enonce": "Une incertitude de $1\\ \\mathrm{cm}$ porte sur une longueur de $2\\ \\mathrm{m}$, une autre de $1\\ \\mathrm{cm}$ sur une longueur de $5\\ \\mathrm{cm}$. Comparer la qualité des deux mesures.",
+      "corrige": [
+        "$\\dfrac{1}{200} = 0{,}5\\,\\%$ contre $\\dfrac{1}{5} = 20\\,\\%$.",
+        "La même incertitude absolue correspond à une très bonne mesure dans le premier cas, à une mauvaise dans le second."
+      ],
+      "reponse": "$0{,}5\\,\\%$ (bonne mesure) contre $20\\,\\%$ (mauvaise mesure)."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "propagation-somme-difference",
+      "enonce": "On additionne trois masses mesurées chacune avec $u = 0{,}1\\ \\mathrm{g}$. Quelle est l'incertitude-type sur la masse totale ? (La formule de la somme se généralise : $u(y) = \\sqrt{u(a)^2 + u(b)^2 + u(c)^2}$.)",
+      "corrige": [
+        "$u = \\sqrt{0{,}1^2 + 0{,}1^2 + 0{,}1^2} = \\sqrt{0{,}03} \\approx 0{,}17$, soit $0{,}2\\ \\mathrm{g}$."
+      ],
+      "reponse": "$u \\approx 0{,}2\\ \\mathrm{g}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "probleme-synthese",
+      "enonce": "Pour mesurer $g$, on utilise un pendule de longueur $L = 0{,}500 \\pm 0{,}002\\ \\mathrm{m}$ ; $20$ oscillations durent $\\Delta t = 28{,}4 \\pm 0{,}2\\ \\mathrm{s}$. On a $g = \\dfrac{4\\pi^2 L}{T^2}$. 1. Calculer $T$ et $u(T)$. 2. Calculer $g$. 3. Calculer $u(g)$ avec $\\dfrac{u(g)}{g} = \\sqrt{\\left(\\dfrac{u(L)}{L}\\right)^2 + \\left(2\\,\\dfrac{u(T)}{T}\\right)^2}$, puis écrire le résultat. 4. Comparer à $9{,}81\\ \\mathrm{m\\cdot s^{-2}}$. Donnée : $z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$, seuil usuel $2$.",
+      "corrige": [
+        "1. $T = \\dfrac{28{,}4}{20} = 1{,}42\\ \\mathrm{s}$ et $u(T) = \\dfrac{0{,}2}{20} = 0{,}01\\ \\mathrm{s}$.",
+        "2. $g = \\dfrac{4\\pi^2 \\times 0{,}500}{1{,}42^2} \\approx 9{,}79\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "3. Relatives : $0{,}4\\,\\%$ pour $L$ et $2 \\times 0{,}70\\,\\% = 1{,}4\\,\\%$ pour $T$ ; composée $\\approx 1{,}5\\,\\%$, donc $u(g) \\approx 0{,}14$, arrondi à $0{,}1$ : $g = 9{,}8 \\pm 0{,}1\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "4. $z = \\dfrac{|9{,}79 - 9{,}81|}{0{,}14} \\approx 0{,}1 \\leqslant 2$ : compatible."
+      ],
+      "reponse": "$T = 1{,}42 \\pm 0{,}01\\ \\mathrm{s}$ ; $g = 9{,}8 \\pm 0{,}1\\ \\mathrm{m\\cdot s^{-2}}$ ; compatible avec $9{,}81$."
+    },
+    {
+      "id": 50,
+      "difficulte": "intermediaire",
+      "notion": "propagation-produit-quotient",
+      "enonce": "Un circuit comporte $R = 10{,}0 \\pm 0{,}1\\ \\mathrm{k\\Omega}$ et $C = 100 \\pm 5\\ \\mathrm{\\mu F}$. Calculer la constante de temps $\\tau = RC$ et son incertitude-type. Donnée : pour un produit ou un quotient, $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$.",
+      "corrige": [
+        "Conversions : $R = 1{,}00 \\times 10^{4}\\ \\Omega$ et $C = 1{,}00 \\times 10^{-4}\\ \\mathrm{F}$, d'où $\\tau = 1{,}00\\ \\mathrm{s}$.",
+        "Relatives : $1\\,\\%$ sur $R$ et $5\\,\\%$ sur $C$ ; composée $\\sqrt{0{,}01^2 + 0{,}05^2} \\approx 5{,}1\\,\\%$, donc $u(\\tau) \\approx 0{,}05\\ \\mathrm{s}$ : c'est le condensateur qui limite la précision."
+      ],
+      "reponse": "$\\tau = 1{,}00 \\pm 0{,}05\\ \\mathrm{s}$."
     }
   ]
 }

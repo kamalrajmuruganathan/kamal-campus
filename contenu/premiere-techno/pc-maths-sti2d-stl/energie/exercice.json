@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "chaine-energetique-vehicule",
       "enonce": "**Étude d'une voiture électrique.** Une voiture électrique est équipée d'une batterie de capacité $E_{\\text{batt}} = 50\\ \\mathrm{kWh}$. L'ensemble moteur + transmission a un rendement $\\eta_{\\text{m}} = 0{,}80$. En usage urbain, la voiture demande une puissance mécanique moyenne $P = 8\\ \\mathrm{kW}$ à la roue. Pour la recharge, le chargeur a un rendement $\\eta_{\\text{c}} = 0{,}90$ et l'électricité est facturée $0{,}20$ € le kWh. 1. Exprimer la capacité de la batterie en joules. 2. Calculer l'énergie mécanique utile transmise aux roues lorsque la batterie, pleine, se décharge entièrement. 3. En déduire l'autonomie de la voiture, c'est-à-dire la durée de fonctionnement possible, en usage urbain. 4. Sous quelle forme, et en quelle quantité (en kWh), l'énergie non transmise aux roues est-elle perdue ? 5. Quelle énergie électrique faut-il prélever sur le réseau pour recharger complètement la batterie ? En déduire le coût d'une recharge complète. 6. Décrire la chaîne énergétique du réseau jusqu'à la roue et calculer le rendement global correspondant.",
       "corrige": [
@@ -139,6 +139,474 @@
         "6. Chaîne énergétique : réseau (énergie **électrique**) $\\rightarrow$ chargeur $\\rightarrow$ batterie (énergie **chimique**) $\\rightarrow$ moteur (énergie **mécanique**) $\\rightarrow$ roue, avec des pertes **thermiques** à chaque convertisseur. Le rendement global du réseau à la roue est le produit des rendements : $\\eta_{\\text{global}} = \\eta_{\\text{c}} \\times \\eta_{\\text{m}} = 0{,}90 \\times 0{,}80 = 0{,}72$, soit $72\\,\\%$."
       ],
       "reponse": "1. $E_{\\text{batt}} = 1{,}8 \\times 10^{8}\\ \\mathrm{J}$. 2. $E_{\\text{utile}} = 40\\ \\mathrm{kWh}$. 3. autonomie $\\Delta t = 5\\ \\mathrm{h}$. 4. $E_{\\text{dissipée}} = 10\\ \\mathrm{kWh}$ (thermique). 5. $E_{\\text{réseau}} \\approx 55{,}6\\ \\mathrm{kWh}$, coût $\\approx 11{,}1$ €. 6. $\\eta_{\\text{global}} = 0{,}72$ ($72\\,\\%$)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "formes-energie",
+      "enonce": "Indiquer la forme d'énergie mise en jeu dans chaque cas : a) l'énergie contenue dans l'essence d'un réservoir ; b) l'énergie d'une voiture qui roule ; c) l'énergie de l'eau retenue derrière un barrage ; d) la lumière émise par le Soleil.",
+      "corrige": [
+        "L'essence libère de l'énergie lors d'une combustion : c'est une énergie stockée dans les liaisons, donc chimique.",
+        "Un objet en mouvement possède de l'énergie mécanique, ici cinétique ; l'eau en hauteur possède de l'énergie mécanique potentielle (de pesanteur) liée à sa position.",
+        "La lumière transporte de l'énergie rayonnante."
+      ],
+      "reponse": "a) chimique ; b) mécanique (cinétique) ; c) mécanique (potentielle de pesanteur) ; d) rayonnante."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "conversions",
+      "enonce": "Lorsqu'un téléphone fonctionne sur sa batterie, quelle conversion d'énergie la batterie réalise-t-elle ? Nommer le type de conversion.",
+      "corrige": [
+        "La batterie stocke de l'énergie sous forme chimique.",
+        "En se déchargeant, elle fournit de l'énergie électrique au téléphone : chimique $\\rightarrow$ électrique.",
+        "Une conversion entre énergie chimique et énergie électrique est une conversion électrochimique."
+      ],
+      "reponse": "Énergie chimique $\\rightarrow$ énergie électrique : conversion électrochimique."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "puissance-ou-energie",
+      "enonce": "Parmi les valeurs suivantes, lesquelles sont des énergies et lesquelles sont des puissances ? $5\\ \\mathrm{kW}$ ; $3\\ \\mathrm{kWh}$ ; $200\\ \\mathrm{J}$ ; $60\\ \\mathrm{W}$ ; $1{,}2\\ \\mathrm{MJ}$.",
+      "corrige": [
+        "Le watt (et ses multiples kW, MW) est l'unité de la puissance.",
+        "Le joule (et le mégajoule) est l'unité SI de l'énergie ; le kilowattheure est aussi une énergie, malgré le « watt » dans son nom ($1\\ \\mathrm{kWh} = 3{,}6 \\times 10^{6}\\ \\mathrm{J}$)."
+      ],
+      "reponse": "Énergies : $3\\ \\mathrm{kWh}$, $200\\ \\mathrm{J}$, $1{,}2\\ \\mathrm{MJ}$. Puissances : $5\\ \\mathrm{kW}$, $60\\ \\mathrm{W}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "energie-puissance-duree",
+      "enonce": "Un four électrique de puissance $2\\ \\mathrm{kW}$ fonctionne pendant $45\\ \\mathrm{min}$. Calculer l'énergie consommée en joules, puis en kilowattheures.",
+      "corrige": [
+        "En joules, la durée doit être en secondes : $\\Delta t = 45 \\times 60 = 2\\,700\\ \\mathrm{s}$, et $P = 2\\,000\\ \\mathrm{W}$.",
+        "$E = P \\times \\Delta t = 2\\,000 \\times 2\\,700 = 5{,}4 \\times 10^{6}\\ \\mathrm{J}$.",
+        "En kWh, on garde $P$ en kW et $\\Delta t$ en h : $E = 2\\ \\mathrm{kW} \\times 0{,}75\\ \\mathrm{h} = 1{,}5\\ \\mathrm{kWh}$ (on vérifie : $1{,}5 \\times 3{,}6 \\times 10^{6} = 5{,}4 \\times 10^{6}\\ \\mathrm{J}$)."
+      ],
+      "reponse": "$E = 5{,}4 \\times 10^{6}\\ \\mathrm{J} = 1{,}5\\ \\mathrm{kWh}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "energie-kwh",
+      "enonce": "Convertir : a) $7{,}2 \\times 10^{6}\\ \\mathrm{J}$ en kilowattheures ; b) $0{,}5\\ \\mathrm{kWh}$ en joules.",
+      "corrige": [
+        "On utilise $1\\ \\mathrm{kWh} = 1\\,000\\ \\mathrm{W} \\times 3\\,600\\ \\mathrm{s} = 3{,}6 \\times 10^{6}\\ \\mathrm{J}$.",
+        "a) On divise par $3{,}6 \\times 10^{6}$ : $\\dfrac{7{,}2 \\times 10^{6}}{3{,}6 \\times 10^{6}} = 2\\ \\mathrm{kWh}$.",
+        "b) On multiplie : $0{,}5 \\times 3{,}6 \\times 10^{6} = 1{,}8 \\times 10^{6}\\ \\mathrm{J}$."
+      ],
+      "reponse": "a) $2\\ \\mathrm{kWh}$ ; b) $1{,}8 \\times 10^{6}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "energie-puissance-duree",
+      "enonce": "Un chargeur transfère $54\\ \\mathrm{kJ}$ à la batterie d'un téléphone en $1\\ \\mathrm{h}\\ 30\\ \\mathrm{min}$. Calculer la puissance moyenne de cette charge.",
+      "corrige": [
+        "On utilise $P = \\dfrac{E}{\\Delta t}$ avec $E$ en joules et $\\Delta t$ en secondes.",
+        "$E = 54\\,000\\ \\mathrm{J}$ et $\\Delta t = 1{,}5 \\times 3\\,600 = 5\\,400\\ \\mathrm{s}$.",
+        "$P = \\dfrac{54\\,000}{5\\,400} = 10\\ \\mathrm{W}$, un ordre de grandeur cohérent pour un chargeur de téléphone."
+      ],
+      "reponse": "$P = 10\\ \\mathrm{W}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "puissance-electrique",
+      "enonce": "Un sèche-cheveux branché sur le secteur ($U = 230\\ \\mathrm{V}$) est parcouru par une intensité $I = 8{,}0\\ \\mathrm{A}$. Calculer la puissance électrique qu'il reçoit.",
+      "corrige": [
+        "La puissance électrique reçue par un dipôle est $P = U \\times I$.",
+        "$P = 230 \\times 8{,}0 = 1\\,840\\ \\mathrm{W}$, soit environ $1{,}8\\ \\mathrm{kW}$."
+      ],
+      "reponse": "$P = 1\\,840\\ \\mathrm{W}$ (environ $1{,}8\\ \\mathrm{kW}$)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "puissance-electrique",
+      "enonce": "Une lampe LED de puissance $5\\ \\mathrm{W}$ est alimentée sous $230\\ \\mathrm{V}$. Calculer l'intensité du courant qui la traverse, en milliampères.",
+      "corrige": [
+        "De $P = U \\times I$, on tire $I = \\dfrac{P}{U}$.",
+        "$I = \\dfrac{5}{230} \\approx 0{,}022\\ \\mathrm{A}$.",
+        "En milliampères : $0{,}022\\ \\mathrm{A} = 22\\ \\mathrm{mA}$."
+      ],
+      "reponse": "$I \\approx 22\\ \\mathrm{mA}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "rendement",
+      "enonce": "Un moteur électrique reçoit $2{,}5\\ \\mathrm{kJ}$ d'énergie électrique et fournit $2{,}2\\ \\mathrm{kJ}$ d'énergie mécanique. Calculer son rendement et l'énergie dissipée.",
+      "corrige": [
+        "Rendement : $\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{fournie}}} = \\dfrac{2{,}2}{2{,}5} = 0{,}88$, soit $88\\,\\%$ (valeur typique d'un moteur électrique).",
+        "Conservation de l'énergie : $E_{\\text{dissipée}} = E_{\\text{fournie}} - E_{\\text{utile}} = 2{,}5 - 2{,}2 = 0{,}3\\ \\mathrm{kJ}$."
+      ],
+      "reponse": "$\\eta = 0{,}88$ ($88\\,\\%$) ; $E_{\\text{dissipée}} = 0{,}3\\ \\mathrm{kJ} = 300\\ \\mathrm{J}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "conservation",
+      "enonce": "Lors d'un trajet, le moteur thermique d'une voiture reçoit $100\\ \\mathrm{kJ}$ d'énergie chimique du carburant et fournit $35\\ \\mathrm{kJ}$ d'énergie mécanique. Quelle énergie est dissipée, et sous quelle forme principalement ?",
+      "corrige": [
+        "Conservation de l'énergie : $E_{\\text{fournie}} = E_{\\text{utile}} + E_{\\text{dissipée}}$.",
+        "$E_{\\text{dissipée}} = 100 - 35 = 65\\ \\mathrm{kJ}$.",
+        "Elle est transférée à l'environnement surtout sous forme thermique (gaz d'échappement chauds, circuit de refroidissement, frottements). Le rendement, $35\\,\\%$, est typique d'un moteur thermique."
+      ],
+      "reponse": "$65\\ \\mathrm{kJ}$ dissipés, principalement sous forme thermique."
+    },
+    {
+      "id": 21,
+      "difficulte": "decouverte",
+      "notion": "ordres-de-grandeur",
+      "enonce": "Associer chaque système à l'ordre de grandeur de sa puissance : lampe LED, four électrique, TGV, réacteur nucléaire ; puissances proposées : $1\\ \\mathrm{GW}$, $5\\ \\mathrm{W}$, $10\\ \\mathrm{MW}$, $2\\ \\mathrm{kW}$.",
+      "corrige": [
+        "On classe les systèmes du moins puissant au plus puissant et on fait de même pour les valeurs : $5\\ \\mathrm{W} < 2\\ \\mathrm{kW} < 10\\ \\mathrm{MW} < 1\\ \\mathrm{GW}$.",
+        "Une LED consomme quelques watts, un four environ $2\\ \\mathrm{kW}$, un TGV environ $10\\ \\mathrm{MW}$ et un réacteur nucléaire environ $1\\ \\mathrm{GW}$."
+      ],
+      "reponse": "LED : $5\\ \\mathrm{W}$ ; four : $2\\ \\mathrm{kW}$ ; TGV : $10\\ \\mathrm{MW}$ ; réacteur : $1\\ \\mathrm{GW}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "ordres-de-grandeur",
+      "enonce": "Un élève annonce qu'une bouilloire électrique domestique a une puissance de $2\\ \\mathrm{MW}$. Ce résultat est-il plausible ? Proposer l'erreur probable.",
+      "corrige": [
+        "Une bouilloire a une puissance de l'ordre de $2\\ \\mathrm{kW}$ ; $2\\ \\mathrm{MW}$, c'est mille fois plus, de l'ordre de la puissance de plusieurs centaines de fours.",
+        "Le résultat n'est pas plausible : l'élève a sans doute confondu les préfixes kilo ($10^{3}$) et méga ($10^{6}$)."
+      ],
+      "reponse": "Non : l'ordre de grandeur attendu est $2\\ \\mathrm{kW}$ ; erreur de préfixe (méga au lieu de kilo)."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "energie-puissance-duree",
+      "enonce": "Pour un radiateur de $1\\,500\\ \\mathrm{W}$ fonctionnant $2\\ \\mathrm{h}$, un élève écrit : « $E = 1\\,500 \\times 2 = 3\\,000\\ \\mathrm{J}$ ». Trouver l'erreur et donner le bon résultat en joules et en kWh.",
+      "corrige": [
+        "Le produit $1\\,500\\ \\mathrm{W} \\times 2\\ \\mathrm{h}$ donne des wattheures, pas des joules : pour des joules, la durée doit être en secondes.",
+        "$\\Delta t = 2 \\times 3\\,600 = 7\\,200\\ \\mathrm{s}$, donc $E = 1\\,500 \\times 7\\,200 = 1{,}08 \\times 10^{7}\\ \\mathrm{J}$.",
+        "En kWh : $E = 1{,}5\\ \\mathrm{kW} \\times 2\\ \\mathrm{h} = 3\\ \\mathrm{kWh}$ ; l'élève avait en fait trouvé $3\\,000\\ \\mathrm{Wh}$, avec une mauvaise unité."
+      ],
+      "reponse": "Durée non convertie en secondes : $E = 1{,}08 \\times 10^{7}\\ \\mathrm{J} = 3\\ \\mathrm{kWh}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "Un moteur reçoit une puissance électrique de $1\\,000\\ \\mathrm{W}$ et fournit une puissance mécanique de $800\\ \\mathrm{W}$. Un élève écrit $\\eta = \\dfrac{1\\,000}{800} = 1{,}25$. Corriger.",
+      "corrige": [
+        "Un rendement ne peut jamais dépasser $1$ : le résultat $1{,}25$ doit alerter.",
+        "Le rendement est le rapport de l'utile sur le fourni : $\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{fournie}}} = \\dfrac{800}{1\\,000} = 0{,}80$.",
+        "L'élève a inversé le rapport ; le moteur a un rendement de $80\\,\\%$."
+      ],
+      "reponse": "$\\eta = \\dfrac{800}{1\\,000} = 0{,}80$ ($80\\,\\%$) ; l'élève avait inversé le rapport."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "chaine-rendement",
+      "enonce": "Une chaîne comporte un transformateur ($\\eta_1 = 0{,}95$), un moteur ($\\eta_2 = 0{,}90$) et un réducteur mécanique ($\\eta_3 = 0{,}80$). Calculer le rendement global.",
+      "corrige": [
+        "Les rendements d'une chaîne se multiplient : $\\eta_{\\text{global}} = \\eta_1 \\times \\eta_2 \\times \\eta_3$.",
+        "$\\eta_{\\text{global}} = 0{,}95 \\times 0{,}90 \\times 0{,}80 = 0{,}684$.",
+        "Le rendement global ($68{,}4\\,\\%$) est inférieur au plus petit des rendements, ce qui est toujours le cas."
+      ],
+      "reponse": "$\\eta_{\\text{global}} = 0{,}684$, soit environ $68\\,\\%$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "chaine-rendement",
+      "enonce": "Deux convertisseurs de rendements $90\\,\\%$ et $70\\,\\%$ sont placés l'un après l'autre. Un élève annonce un rendement global de $80\\,\\%$ (la moyenne). Expliquer son erreur et calculer le bon résultat.",
+      "corrige": [
+        "Le second convertisseur ne reçoit que $90\\,\\%$ de l'énergie de départ, et n'en restitue que $70\\,\\%$ : les rendements se multiplient, ils ne se moyennent ni ne s'additionnent.",
+        "$\\eta_{\\text{global}} = 0{,}90 \\times 0{,}70 = 0{,}63$."
+      ],
+      "reponse": "$\\eta_{\\text{global}} = 0{,}63$, soit $63\\,\\%$ (et non $80\\,\\%$)."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "effet-joule",
+      "enonce": "Une rallonge électrique a une résistance totale $R = 0{,}20\\ \\Omega$. Elle est parcourue par une intensité $I = 16\\ \\mathrm{A}$. Calculer la puissance perdue par effet Joule dans la rallonge.",
+      "corrige": [
+        "Puissance dissipée par effet Joule : $P_\\mathrm{J} = R\\,I^{2}$.",
+        "$P_\\mathrm{J} = 0{,}20 \\times 16^{2} = 0{,}20 \\times 256 = 51{,}2\\ \\mathrm{W}$.",
+        "Cette chaleur est ici parasite : elle fait chauffer le câble."
+      ],
+      "reponse": "$P_\\mathrm{J} \\approx 51\\ \\mathrm{W}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "effet-joule",
+      "enonce": "La résistance chauffante d'une bouilloire vaut $R = 23\\ \\Omega$ ; elle est soumise à la tension $U = 230\\ \\mathrm{V}$. Calculer la puissance dissipée par effet Joule.",
+      "corrige": [
+        "Connaissant $U$ et $R$, on utilise $P_\\mathrm{J} = \\dfrac{U^{2}}{R}$.",
+        "$P_\\mathrm{J} = \\dfrac{230^{2}}{23} = \\dfrac{52\\,900}{23} = 2\\,300\\ \\mathrm{W}$.",
+        "Ici l'effet Joule est utile : il chauffe l'eau."
+      ],
+      "reponse": "$P_\\mathrm{J} = 2\\,300\\ \\mathrm{W} = 2{,}3\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "effet-joule",
+      "enonce": "Dans un câble, l'intensité passe de $2\\ \\mathrm{A}$ à $6\\ \\mathrm{A}$, la résistance restant la même. Par quel nombre sont multipliées les pertes par effet Joule ?",
+      "corrige": [
+        "Les pertes valent $P_\\mathrm{J} = R\\,I^{2}$ : elles sont proportionnelles au carré de l'intensité.",
+        "L'intensité est multipliée par $3$, donc les pertes sont multipliées par $3^{2} = 9$."
+      ],
+      "reponse": "Les pertes sont multipliées par $9$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "loi-ohm",
+      "enonce": "Un conducteur ohmique de résistance $R = 50\\ \\Omega$ est soumis à une tension $U = 12\\ \\mathrm{V}$. Calculer l'intensité qui le traverse, puis la puissance qu'il dissipe.",
+      "corrige": [
+        "Loi d'Ohm : $U = R \\times I$, donc $I = \\dfrac{U}{R} = \\dfrac{12}{50} = 0{,}24\\ \\mathrm{A}$.",
+        "Puissance : $P = U \\times I = 12 \\times 0{,}24 = 2{,}88\\ \\mathrm{W}$ (on retrouve $R\\,I^{2} = 50 \\times 0{,}24^{2} = 2{,}88\\ \\mathrm{W}$)."
+      ],
+      "reponse": "$I = 0{,}24\\ \\mathrm{A}$ et $P \\approx 2{,}9\\ \\mathrm{W}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "loi-ohm",
+      "enonce": "Un conducteur ohmique est soumis à une tension de $6{,}0\\ \\mathrm{V}$ et parcouru par un courant de $0{,}50\\ \\mathrm{A}$. Calculer sa résistance et la puissance qu'il reçoit.",
+      "corrige": [
+        "Loi d'Ohm : $R = \\dfrac{U}{I} = \\dfrac{6{,}0}{0{,}50} = 12\\ \\Omega$.",
+        "Puissance : $P = U \\times I = 6{,}0 \\times 0{,}50 = 3{,}0\\ \\mathrm{W}$, entièrement dissipée par effet Joule."
+      ],
+      "reponse": "$R = 12\\ \\Omega$ et $P = 3{,}0\\ \\mathrm{W}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "decouverte",
+      "notion": "stockage",
+      "enonce": "Pour chaque procédé de stockage, indiquer la forme sous laquelle l'énergie est stockée : a) batterie d'accumulateurs ; b) volant d'inertie ; c) station de pompage (eau remontée dans un bassin en hauteur) ; d) condensateur.",
+      "corrige": [
+        "Une batterie stocke l'énergie dans des réactifs chimiques ; un volant d'inertie la stocke dans son mouvement de rotation.",
+        "L'eau remontée en hauteur stocke de l'énergie potentielle de pesanteur ; un condensateur stocke de l'énergie électrique."
+      ],
+      "reponse": "a) chimique ; b) cinétique ; c) potentielle de pesanteur ; d) électrique."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "stockage",
+      "enonce": "Lors d'un freinage, un bus perd $300\\ \\mathrm{kJ}$ d'énergie cinétique. Un volant d'inertie en récupère une partie avec un rendement de $70\\,\\%$. Calculer l'énergie stockée et expliquer l'intérêt par rapport à un freinage classique.",
+      "corrige": [
+        "Énergie stockée : $E_{\\text{stockée}} = 0{,}70 \\times 300 = 210\\ \\mathrm{kJ}$, sous forme cinétique (rotation du volant).",
+        "Les $90\\ \\mathrm{kJ}$ restants sont dissipés.",
+        "Avec un freinage classique, la totalité des $300\\ \\mathrm{kJ}$ serait dissipée en chaleur dans les plaquettes ; ici, $210\\ \\mathrm{kJ}$ pourront être réutilisés au redémarrage."
+      ],
+      "reponse": "$210\\ \\mathrm{kJ}$ stockés sous forme cinétique, réutilisables au redémarrage au lieu d'être perdus en chaleur."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "chaine-energetique",
+      "enonce": "Un panneau photovoltaïque charge directement une lampe LED. Décrire la chaîne énergétique : forme d'énergie à chaque transfert, convertisseurs et pertes.",
+      "corrige": [
+        "Le Soleil fournit de l'énergie rayonnante au panneau, qui la convertit en énergie électrique (conversion photoélectrique).",
+        "La LED convertit l'énergie électrique en énergie rayonnante (lumière).",
+        "Chaque convertisseur dissipe une partie de l'énergie reçue sous forme thermique vers l'environnement : il faut faire figurer ces pertes sur le schéma."
+      ],
+      "reponse": "Rayonnante $\\rightarrow$ (panneau) $\\rightarrow$ électrique $\\rightarrow$ (LED) $\\rightarrow$ rayonnante, avec des pertes thermiques à chaque convertisseur."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "chaine-energetique",
+      "enonce": "Dans une centrale hydroélectrique, l'eau d'un barrage descend dans une conduite, fait tourner une turbine reliée à un alternateur, qui alimente le réseau. Écrire la chaîne énergétique et nommer la conversion réalisée par l'alternateur.",
+      "corrige": [
+        "L'eau retenue possède de l'énergie potentielle de pesanteur, qui devient cinétique lors de la descente ; la turbine la transforme en énergie mécanique de rotation.",
+        "L'alternateur convertit l'énergie mécanique en énergie électrique : c'est une conversion électromécanique.",
+        "À chaque étape, une partie de l'énergie est dissipée sous forme thermique (frottements, effet Joule)."
+      ],
+      "reponse": "Potentielle $\\rightarrow$ cinétique (eau) $\\rightarrow$ mécanique (turbine) $\\rightarrow$ électrique (alternateur, conversion électromécanique) + pertes thermiques."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "rendement-photovoltaique",
+      "enonce": "Un panneau photovoltaïque de surface $1{,}6\\ \\mathrm{m^2}$ reçoit un éclairement de $800\\ \\mathrm{W/m^2}$ et fournit une puissance électrique de $240\\ \\mathrm{W}$. Calculer son rendement.",
+      "corrige": [
+        "Puissance rayonnante reçue : $P_{\\text{reçue}} = 800 \\times 1{,}6 = 1\\,280\\ \\mathrm{W}$.",
+        "Rendement : $\\eta = \\dfrac{240}{1\\,280} \\approx 0{,}19$.",
+        "Soit environ $19\\,\\%$, valeur typique d'un panneau (entre $15$ et $22\\,\\%$)."
+      ],
+      "reponse": "$\\eta \\approx 0{,}19$, soit environ $19\\,\\%$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "rendement-photovoltaique",
+      "enonce": "On veut installer des panneaux photovoltaïques de rendement $20\\,\\%$ capables de fournir $3\\ \\mathrm{kW}$ électriques sous un éclairement de $1\\,000\\ \\mathrm{W/m^2}$. Quelle surface de panneaux faut-il ?",
+      "corrige": [
+        "La puissance électrique vaut $P_{\\text{utile}} = \\eta \\times E_{\\text{s}} \\times S$, où $E_{\\text{s}}$ est l'éclairement (en $\\mathrm{W/m^2}$) et $S$ la surface.",
+        "On isole la surface : $S = \\dfrac{P_{\\text{utile}}}{\\eta \\times E_{\\text{s}}} = \\dfrac{3\\,000}{0{,}20 \\times 1\\,000} = 15\\ \\mathrm{m^2}$.",
+        "C'est l'ordre de grandeur d'une installation sur le toit d'une maison."
+      ],
+      "reponse": "$S = 15\\ \\mathrm{m^2}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "energie-kwh",
+      "enonce": "Un réfrigérateur consomme en moyenne une puissance de $25\\ \\mathrm{W}$, en continu. Calculer l'énergie consommée en un an ($365$ jours), en kWh, puis le coût annuel si le kWh coûte $0{,}20$ €.",
+      "corrige": [
+        "Durée : $\\Delta t = 365 \\times 24 = 8\\,760\\ \\mathrm{h}$.",
+        "Énergie : $E = 0{,}025\\ \\mathrm{kW} \\times 8\\,760\\ \\mathrm{h} = 219\\ \\mathrm{kWh}$.",
+        "Coût : $219 \\times 0{,}20 = 43{,}80$ €."
+      ],
+      "reponse": "$E = 219\\ \\mathrm{kWh}$ par an, soit $43{,}80$ €."
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "energie-puissance-duree",
+      "enonce": "La batterie d'un vélo électrique stocke $500\\ \\mathrm{Wh}$. Le moteur prélève en moyenne $250\\ \\mathrm{W}$. Quelle est la durée d'utilisation possible si l'on décharge entièrement la batterie ?",
+      "corrige": [
+        "De $E = P \\times \\Delta t$, on tire $\\Delta t = \\dfrac{E}{P}$.",
+        "Avec $E$ en Wh et $P$ en W, on obtient des heures : $\\Delta t = \\dfrac{500}{250} = 2\\ \\mathrm{h}$."
+      ],
+      "reponse": "$\\Delta t = 2\\ \\mathrm{h}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "effet-joule",
+      "enonce": "Une ligne de résistance $R = 10\\ \\Omega$ transporte une puissance de $1\\ \\mathrm{MW}$. Calculer l'intensité et les pertes par effet Joule sous $20\\ \\mathrm{kV}$, puis sous $400\\ \\mathrm{kV}$. Exprimer chaque perte en pourcentage de la puissance transportée.",
+      "corrige": [
+        "Sous $20\\ \\mathrm{kV}$ : $I = \\dfrac{P}{U} = \\dfrac{10^{6}}{20\\,000} = 50\\ \\mathrm{A}$ et $P_\\mathrm{J} = R\\,I^{2} = 10 \\times 50^{2} = 25\\,000\\ \\mathrm{W}$, soit $2{,}5\\,\\%$ de $1\\ \\mathrm{MW}$.",
+        "Sous $400\\ \\mathrm{kV}$ : $I = \\dfrac{10^{6}}{400\\,000} = 2{,}5\\ \\mathrm{A}$ et $P_\\mathrm{J} = 10 \\times 2{,}5^{2} = 62{,}5\\ \\mathrm{W}$, soit $0{,}006\\,25\\,\\%$.",
+        "La tension est multipliée par $20$, l'intensité divisée par $20$, donc les pertes divisées par $20^{2} = 400$."
+      ],
+      "reponse": "$20\\ \\mathrm{kV}$ : $50\\ \\mathrm{A}$, $25\\ \\mathrm{kW}$ ($2{,}5\\,\\%$) ; $400\\ \\mathrm{kV}$ : $2{,}5\\ \\mathrm{A}$, $62{,}5\\ \\mathrm{W}$ (pertes divisées par $400$)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "chaine-rendement",
+      "enonce": "Une pompe à eau est entraînée par un moteur électrique de rendement $0{,}90$ ; la pompe elle-même a un rendement de $0{,}70$. La puissance hydraulique utile fournie à l'eau est de $1{,}26\\ \\mathrm{kW}$. Quelle puissance électrique le moteur absorbe-t-il ?",
+      "corrige": [
+        "Rendement global : $\\eta = 0{,}90 \\times 0{,}70 = 0{,}63$.",
+        "On remonte de l'utile vers le fourni : $P_{\\text{fournie}} = \\dfrac{P_{\\text{utile}}}{\\eta} = \\dfrac{1{,}26}{0{,}63} = 2{,}0\\ \\mathrm{kW}$."
+      ],
+      "reponse": "$P_{\\text{électrique}} = 2{,}0\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "energie-rendement",
+      "enonce": "Pour porter l'eau d'une bouilloire à ébullition, il faut lui transmettre $3{,}6 \\times 10^{5}\\ \\mathrm{J}$. La bouilloire a une puissance électrique de $2\\,000\\ \\mathrm{W}$ et un rendement de $90\\,\\%$. Combien de temps faut-il ?",
+      "corrige": [
+        "Puissance utile transmise à l'eau : $P_{\\text{utile}} = 0{,}90 \\times 2\\,000 = 1\\,800\\ \\mathrm{W}$.",
+        "Durée : $\\Delta t = \\dfrac{E_{\\text{utile}}}{P_{\\text{utile}}} = \\dfrac{3{,}6 \\times 10^{5}}{1\\,800} = 200\\ \\mathrm{s}$.",
+        "Soit $3\\ \\mathrm{min}\\ 20\\ \\mathrm{s}$."
+      ],
+      "reponse": "$\\Delta t = 200\\ \\mathrm{s}$, soit $3\\ \\mathrm{min}\\ 20\\ \\mathrm{s}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "rendement-comparaison",
+      "enonce": "Dans une usine, un moteur de rendement $0{,}80$ fournit une puissance mécanique de $7{,}6\\ \\mathrm{kW}$ pendant $2\\,000\\ \\mathrm{h}$ par an. On le remplace par un moteur de rendement $0{,}95$ qui fournit la même puissance utile. Calculer l'énergie électrique économisée par an et l'économie réalisée à $0{,}20$ € le kWh.",
+      "corrige": [
+        "Puissances absorbées : ancien moteur $\\dfrac{7{,}6}{0{,}80} = 9{,}5\\ \\mathrm{kW}$ ; nouveau moteur $\\dfrac{7{,}6}{0{,}95} = 8{,}0\\ \\mathrm{kW}$.",
+        "Puissance économisée : $9{,}5 - 8{,}0 = 1{,}5\\ \\mathrm{kW}$, donc sur un an $1{,}5 \\times 2\\,000 = 3\\,000\\ \\mathrm{kWh}$.",
+        "Économie financière : $3\\,000 \\times 0{,}20 = 600$ € par an."
+      ],
+      "reponse": "$3\\,000\\ \\mathrm{kWh}$ économisés par an, soit $600$ €."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "rendement-photovoltaique",
+      "enonce": "Un lampadaire solaire comporte un panneau de $0{,}50\\ \\mathrm{m^2}$ (rendement $18\\,\\%$), une batterie et une lampe LED de $20\\ \\mathrm{W}$. Dans la journée, le panneau reçoit en moyenne $600\\ \\mathrm{W/m^2}$ pendant $6\\ \\mathrm{h}$. La batterie restitue $85\\,\\%$ de l'énergie qu'elle reçoit. 1. Calculer l'énergie électrique produite par le panneau en une journée (en Wh). 2. Calculer l'énergie disponible pour la lampe. 3. Pendant combien d'heures la lampe peut-elle éclairer la nuit suivante ?",
+      "corrige": [
+        "1. Puissance électrique : $0{,}18 \\times 600 \\times 0{,}50 = 54\\ \\mathrm{W}$ ; énergie : $54 \\times 6 = 324\\ \\mathrm{Wh}$.",
+        "2. La batterie restitue $85\\,\\%$ : $0{,}85 \\times 324 \\approx 275\\ \\mathrm{Wh}$.",
+        "3. $\\Delta t = \\dfrac{E}{P} = \\dfrac{275}{20} \\approx 13{,}8\\ \\mathrm{h}$, ce qui suffit pour une nuit."
+      ],
+      "reponse": "1. $324\\ \\mathrm{Wh}$ ; 2. environ $275\\ \\mathrm{Wh}$ ; 3. environ $13{,}8\\ \\mathrm{h}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "chaine-energetique-vehicule",
+      "enonce": "Une voiture à essence consomme $6\\ \\mathrm{L}$ aux $100\\ \\mathrm{km}$. On donne : la combustion d'un litre d'essence libère $3{,}2 \\times 10^{7}\\ \\mathrm{J}$ ; le rendement du moteur est de $30\\,\\%$. 1. Calculer l'énergie chimique consommée sur $100\\ \\mathrm{km}$, en joules puis en kWh. 2. Calculer l'énergie mécanique utile (en kWh). 3. Quelle énergie est dissipée, et sous quelle forme ?",
+      "corrige": [
+        "1. $E_{\\text{chimique}} = 6 \\times 3{,}2 \\times 10^{7} = 1{,}92 \\times 10^{8}\\ \\mathrm{J}$, soit $\\dfrac{1{,}92 \\times 10^{8}}{3{,}6 \\times 10^{6}} \\approx 53{,}3\\ \\mathrm{kWh}$.",
+        "2. $E_{\\text{utile}} = 0{,}30 \\times 53{,}3 \\approx 16\\ \\mathrm{kWh}$.",
+        "3. $E_{\\text{dissipée}} \\approx 53{,}3 - 16 = 37{,}3\\ \\mathrm{kWh}$, perdus surtout sous forme thermique (gaz d'échappement, refroidissement, frottements)."
+      ],
+      "reponse": "1. $1{,}92 \\times 10^{8}\\ \\mathrm{J} \\approx 53\\ \\mathrm{kWh}$ ; 2. $16\\ \\mathrm{kWh}$ ; 3. environ $37\\ \\mathrm{kWh}$ dissipés sous forme thermique."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "chaine-rendement",
+      "enonce": "Une station de transfert d'énergie par pompage (STEP) consomme $100\\ \\mathrm{MWh}$ électriques la nuit pour remonter de l'eau dans un bassin en hauteur (rendement du pompage : $0{,}85$). Le jour, l'eau redescend dans les turbines et les alternateurs (rendement : $0{,}90$). 1. Sous quelle forme l'énergie est-elle stockée ? 2. Calculer le rendement global du stockage. 3. Quelle énergie électrique est restituée au réseau ?",
+      "corrige": [
+        "1. L'eau remontée en hauteur stocke de l'énergie potentielle de pesanteur.",
+        "2. Les rendements se multiplient : $\\eta = 0{,}85 \\times 0{,}90 = 0{,}765$.",
+        "3. $E_{\\text{restituée}} = 0{,}765 \\times 100 = 76{,}5\\ \\mathrm{MWh}$. Le stockage a un coût énergétique, mais il permet de produire de l'électricité aux heures de forte demande."
+      ],
+      "reponse": "1. Potentielle de pesanteur ; 2. $\\eta = 0{,}765$ ; 3. $76{,}5\\ \\mathrm{MWh}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "puissance-electrique",
+      "enonce": "Une multiprise supporte au maximum $16\\ \\mathrm{A}$ sous $230\\ \\mathrm{V}$. Peut-on y brancher en même temps un radiateur de $2\\,000\\ \\mathrm{W}$ et une bouilloire de $2\\,200\\ \\mathrm{W}$ ? Justifier.",
+      "corrige": [
+        "Puissance maximale admissible : $P_{\\max} = U \\times I_{\\max} = 230 \\times 16 = 3\\,680\\ \\mathrm{W}$.",
+        "Puissance demandée : $2\\,000 + 2\\,200 = 4\\,200\\ \\mathrm{W}$, supérieure à $3\\,680\\ \\mathrm{W}$.",
+        "L'intensité dépasserait $16\\ \\mathrm{A}$ ($\\dfrac{4\\,200}{230} \\approx 18{,}3\\ \\mathrm{A}$) : risque d'échauffement par effet Joule."
+      ],
+      "reponse": "Non : $4\\,200\\ \\mathrm{W} > 3\\,680\\ \\mathrm{W}$ (intensité d'environ $18\\ \\mathrm{A}$)."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "energie-kwh",
+      "enonce": "Un TGV de puissance $10\\ \\mathrm{MW}$ roule pendant $2\\ \\mathrm{h}$ à pleine puissance. Calculer l'énergie consommée en mégawattheures, puis en joules.",
+      "corrige": [
+        "En gardant les MW et les heures : $E = 10\\ \\mathrm{MW} \\times 2\\ \\mathrm{h} = 20\\ \\mathrm{MWh}$.",
+        "En joules : $1\\ \\mathrm{MWh} = 10^{6}\\ \\mathrm{W} \\times 3\\,600\\ \\mathrm{s} = 3{,}6 \\times 10^{9}\\ \\mathrm{J}$, donc $E = 20 \\times 3{,}6 \\times 10^{9} = 7{,}2 \\times 10^{10}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$E = 20\\ \\mathrm{MWh} = 7{,}2 \\times 10^{10}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "decouverte",
+      "notion": "conservation",
+      "enonce": "Vrai ou faux ? a) Dans un moteur réel, toute l'énergie électrique reçue devient de l'énergie mécanique. b) L'énergie dissipée n'est pas détruite : elle est transférée à l'environnement, surtout sous forme thermique. c) Un très bon moteur peut atteindre un rendement de $105\\,\\%$.",
+      "corrige": [
+        "a) Faux : tout convertisseur réel dissipe une partie de l'énergie (effet Joule, frottements).",
+        "b) Vrai : l'énergie se conserve, elle ne se crée ni ne se détruit.",
+        "c) Faux : l'énergie utile ne peut pas dépasser l'énergie fournie, donc $\\eta \\leqslant 1$."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Faux."
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "conversions",
+      "enonce": "Nommer le type de conversion réalisée par chacun de ces convertisseurs : a) alternateur ; b) panneau photovoltaïque ; c) électrolyseur ; d) moteur à explosion.",
+      "corrige": [
+        "a) L'alternateur transforme de l'énergie mécanique en énergie électrique : conversion électromécanique.",
+        "b) Le panneau transforme l'énergie rayonnante en énergie électrique : conversion photoélectrique.",
+        "c) L'électrolyseur utilise l'énergie électrique pour produire une transformation chimique : conversion électrochimique.",
+        "d) Le moteur à explosion est une machine thermique : conversion thermodynamique."
+      ],
+      "reponse": "a) électromécanique ; b) photoélectrique ; c) électrochimique ; d) thermodynamique."
     }
   ]
 }

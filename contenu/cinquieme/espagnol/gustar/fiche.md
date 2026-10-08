@@ -64,7 +64,7 @@ De nombreux verbes suivent exactement la même construction :
 - **doler** (avoir mal) : *Me duele la cabeza.* (J'ai mal à la tête.) — o → ue !
 - **interesar** (intéresser) : *Me interesan las ciencias.*
 - **faltar** (manquer) : *Me faltan dos euros.*
-- **encantar** ne s'emploie pas avec *mucho* : on dit *me encanta*, pas *me gusta mucho mucho*.
+- **encantar** exprime déjà un goût très fort : on dit *me encanta*, sans ajouter *mucho* (on ne dit pas *me encanta mucho*).
 
 ## 5. Les erreurs à éviter
 

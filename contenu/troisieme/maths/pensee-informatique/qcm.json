@@ -64,7 +64,7 @@
         "`n ≤ 10 et n ≥ 20`"
       ],
       "reponse": 0,
-      "explication": "Un encadrement se coupe en **deux** comparaisons reliées par `et`, car la machine ne compare que deux nombres à la fois, et « bornes comprises » impose $\\geqslant$ et $\\leqslant$. Le piège est le `ou` : la troisième condition est vraie pour **tous** les nombres ($100$ n'est pas $\\leqslant 20$, mais il est $\\geqslant 10$, et un seul « vrai » suffit). La deuxième exclut $10$ et $20$, la quatrième n'est vraie pour personne."
+      "explication": "Un encadrement se coupe en **deux** comparaisons reliées par `et`, car la machine ne compare que deux nombres à la fois, et « bornes comprises » impose $\\geqslant$ et $\\leqslant$. Le piège est le `ou` : `n ≥ 10 ou n ≤ 20` est vraie pour **tous** les nombres ($100$ n'est pas $\\leqslant 20$, mais il est $\\geqslant 10$, et un seul « vrai » suffit). `n > 10 et n < 20` exclut $10$ et $20$, et `n ≤ 10 et n ≥ 20` n'est vraie pour personne."
     },
     {
       "id": 5,
@@ -106,7 +106,7 @@
         "Parce que `n` vaut $10$, $7$, $4$, $1$, $-2$, $-5$, … et jamais exactement $0$"
       ],
       "reponse": 3,
-      "explication": "`n` est bien initialisée et bien modifiée à chaque tour : les deux premières causes classiques sont écartées. Mais en avançant de $3$ en $3$ à partir de $10$, elle **enjambe** le $0$, seule valeur qui rendrait la condition fausse. Le piège est de croire qu'il suffit que la variable change pour que la boucle s'arrête. Avec `n > 0`, le programme s'arrête dès $-2$ : un test d'inégalité pardonne, un test d'égalité non."
+      "explication": "`n` est bien initialisée et bien modifiée à chaque tour : les causes « non initialisée » et « variable testée non modifiée » sont écartées. Mais en avançant de $3$ en $3$ à partir de $10$, elle **enjambe** le $0$, seule valeur qui rendrait la condition fausse. Le piège est de croire qu'il suffit que la variable change pour que la boucle s'arrête. Avec `n > 0`, le programme s'arrête dès $-2$ : un test d'inégalité pardonne, un test d'égalité non."
     },
     {
       "id": 8,
@@ -148,7 +148,7 @@
         "```\nmettre 7 dans m\nrépéter 7 fois\n    mettre m + 7 dans m\nfin répéter\nafficher m\n```"
       ],
       "reponse": 0,
-      "explication": "Tout se joue sur le cas limite où `n` est **déjà** un multiple de $7$ : avec $n = 28$, la condition `m ≤ n` est vraie ($28 \\leqslant 28$), donc un tour de plus donne $35$, strictement supérieur ✓ ; avec `m < n`, le programme s'arrête sur $28$ et rate le « strictement ». La troisième condition est inversée : avec $n = 30$, $7 \\geqslant 30$ est faux d'entrée et le programme affiche $7$. La quatrième fait un nombre de tours fixé à l'avance, alors qu'ici il dépend de `n` : c'est bien une boucle **conditionnelle** qu'il faut."
+      "explication": "Tout se joue sur le cas limite où `n` est **déjà** un multiple de $7$ : avec $n = 28$, la condition `m ≤ n` est vraie ($28 \\leqslant 28$), donc un tour de plus donne $35$, strictement supérieur ✓ ; avec `m < n`, le programme s'arrête sur $28$ et rate le « strictement ». La condition `m ≥ n` est inversée : avec $n = 30$, $7 \\geqslant 30$ est faux d'entrée et le programme affiche $7$. Le programme `répéter 7 fois` fait un nombre de tours fixé à l'avance, alors qu'ici il dépend de `n` : c'est bien une boucle **conditionnelle** qu'il faut."
     },
     {
       "id": 11,
@@ -190,7 +190,7 @@
         "`mettre a dans b`, puis `mettre t dans a`"
       ],
       "reponse": 0,
-      "explication": "Il faut une **variable temporaire** : `t` garde le $3$ de `a` avant qu'il ne soit écrasé, `a` reçoit $8$, puis `b` récupère le $3$ rangé dans `t`. Le piège est la deuxième suite, sans temporaire : `mettre b dans a` détruit le $3$, et `mettre a dans b` recopie alors $8$ — les deux finissent à $8$."
+      "explication": "Il faut une **variable temporaire** : `t` garde le $3$ de `a` avant qu'il ne soit écrasé, `a` reçoit $8$, puis `b` récupère le $3$ rangé dans `t`. Le piège est la suite `mettre b dans a`, puis `mettre a dans b`, sans temporaire : `mettre b dans a` détruit le $3$, et `mettre a dans b` recopie alors $8$ — les deux finissent à $8$."
     },
     {
       "id": 14,
@@ -204,7 +204,7 @@
         "`n < 5 et n > 12`"
       ],
       "reponse": 0,
-      "explication": "Un encadrement se coupe en **deux** comparaisons reliées par `et`, et « bornes exclues » impose $>$ et $<$ (stricts). Le piège est le `ou` : `n > 5 ou n < 12` est vraie pour **tous** les nombres ($100$ n'est pas $< 12$, mais il est $> 5$, et un seul « vrai » suffit). La troisième inclut les bornes, la quatrième n'est vraie pour personne."
+      "explication": "Un encadrement se coupe en **deux** comparaisons reliées par `et`, et « bornes exclues » impose $>$ et $<$ (stricts). Le piège est le `ou` : `n > 5 ou n < 12` est vraie pour **tous** les nombres ($100$ n'est pas $< 12$, mais il est $> 5$, et un seul « vrai » suffit). `n ≥ 5 et n ≤ 12` inclut les bornes, et `n < 5 et n > 12` n'est vraie pour personne."
     },
     {
       "id": 15,
@@ -260,7 +260,7 @@
         "```\nmettre 5 dans n\ntant que n < 20 faire\n    mettre n * 2 dans n\nfin tant que\n```"
       ],
       "reponse": 1,
-      "explication": "Dans le deuxième programme, le bloc modifie `s` mais **jamais `i`**, la variable testée : `i` vaut $1$ pour toujours, donc `i ≤ 5` reste vraie à chaque test — il manque `mettre i + 1 dans i` dans la boucle. Les trois autres font bien progresser la variable testée vers une condition qui devient fausse. Le piège est de croire qu'une variable qui bouge (`s`) suffit : c'est **la variable du test** qui doit évoluer."
+      "explication": "Dans le programme qui calcule `s + i`, le bloc modifie `s` mais **jamais `i`**, la variable testée : `i` vaut $1$ pour toujours, donc `i ≤ 5` reste vraie à chaque test — il manque `mettre i + 1 dans i` dans la boucle. Les trois autres font bien progresser la variable testée vers une condition qui devient fausse. Le piège est de croire qu'une variable qui bouge (`s`) suffit : c'est **la variable du test** qui doit évoluer."
     },
     {
       "id": 19,

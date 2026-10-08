@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "vocabulaire et représentation",
       "enonce": "On considère le graphe non orienté d'arêtes {A-B, A-C, B-C, C-D}. Donne l'ordre (nombre de sommets), le nombre d'arêtes, et le degré de chaque sommet. Le graphe est-il connexe ?",
       "corrige": [
@@ -26,7 +26,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "matrice d'adjacence",
       "enonce": "Un graphe orienté a pour sommets [0,1,2] et pour arcs 0->1, 1->2, 2->0, 0->2. Écris sa matrice d'adjacence M (lignes = départ, colonnes = arrivée), où M[i][j]=1 s'il existe un arc de i vers j.",
       "corrige": [
@@ -40,13 +40,12 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "dictionnaire d'adjacence",
       "enonce": "On représente un graphe non orienté par un dictionnaire d'adjacence en Python :\n\ng = {'A': ['B','C'], 'B': ['A','C'], 'C': ['A','B','D'], 'D': ['C']}\n\nÉcris une fonction voisins(g, s) qui renvoie la liste des voisins de s, et donne le résultat de voisins(g,'C').",
       "corrige": [
         "Dans cette représentation, g[s] est déjà la liste des voisins de s.",
-        "def voisins(g, s):",
-        "    return g[s]",
+        "Code : `def voisins(g, s): return g[s]` (sur deux lignes, avec `return g[s]` indenté).",
         "Appel : voisins(g,'C') renvoie la valeur associée à la clé 'C'.",
         "g['C'] vaut ['A','B','D']."
       ],
@@ -54,7 +53,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "parcours en largeur (BFS)",
       "enonce": "On effectue un parcours en largeur (BFS) du graphe g = {'A':['B','C'], 'B':['A','D'], 'C':['A','D'], 'D':['B','C']} en partant de 'A'. Les voisins sont explorés dans l'ordre des listes. Donne l'ordre de découverte des sommets.",
       "corrige": [
@@ -68,9 +67,9 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "parcours en profondeur (DFS) récursif",
-      "enonce": "Complète et trace ce parcours en profondeur récursif sur le même graphe g = {'A':['B','C'], 'B':['A','D'], 'C':['A','D'], 'D':['B','C']} depuis 'A' :\n\ndef dfs(g, s, vus):\n    vus.append(s)\n    for v in g[s]:\n        if v not in vus:\n            dfs(g, v, vus)\n    return vus\n\nDonne le contenu final de vus pour dfs(g,'A',[]).",
+      "enonce": "Complète et trace ce parcours en profondeur récursif sur le même graphe g = {'A':['B','C'], 'B':['A','D'], 'C':['A','D'], 'D':['B','C']} depuis 'A' :\n\n```python\ndef dfs(g, s, vus):\n    vus.append(s)\n    for v in g[s]:\n        if v not in vus:\n            dfs(g, v, vus)\n    return vus\n```\n\nDonne le contenu final de vus pour dfs(g,'A',[]).",
       "corrige": [
         "Appel dfs(A) : vus=[A]. Voisins de A : B (non vu) -> on descend.",
         "Appel dfs(B) : vus=[A,B]. Voisins de B : A (vu), D (non vu) -> on descend.",
@@ -82,7 +81,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "détection de cycle / plus court chemin",
       "enonce": "Le graphe non orienté g = {'A':['B','C'], 'B':['A','C'], 'C':['A','B','D'], 'D':['C']} contient-il un cycle ? Justifie. Puis, à l'aide d'un BFS depuis 'A', donne la distance (en nombre d'arêtes) de 'A' à 'D' et un plus court chemin.",
       "corrige": [
@@ -96,7 +95,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "degré d'un sommet",
       "enonce": "Un graphe non orienté est donné par g = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\"], \"C\": [\"A\", \"D\"], \"D\": [\"B\", \"C\"]}. Quel est le degré du sommet A ? du sommet D ?",
       "corrige": [
@@ -108,7 +107,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "matrice d'adjacence",
       "enonce": "Un graphe orienté a les sommets 0, 1, 2 et les arcs 0→1, 1→2 et 0→2. Donne sa matrice d'adjacence M (M[i][j] = 1 s'il existe un arc de i vers j).",
       "corrige": [
@@ -121,7 +120,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "parcours en largeur (BFS)",
       "enonce": "Avec g = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\"], \"C\": [\"A\", \"D\"], \"D\": [\"B\", \"C\"]}, donne l'ordre de visite d'un parcours en largeur partant de A (on suit l'ordre des voisins donné).",
       "corrige": [
@@ -134,7 +133,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "plus court chemin (BFS) et cycles",
       "enonce": "Dans un graphe non pondéré, on veut le plus court chemin (en nombre d'arêtes) de A à D pour g = {\"A\": [\"B\", \"C\"], \"B\": [\"D\"], \"C\": [\"D\"], \"D\": []}. Quel parcours utiliser, quelle est la longueur du plus court chemin, et pourquoi faut-il marquer les sommets visités ?",
       "corrige": [
@@ -144,6 +143,486 @@
         "Marquer les sommets visités évite de retraiter un sommet : sur un graphe comportant un cycle, l'oubli ferait tourner le parcours indéfiniment."
       ],
       "reponse": "On utilise un BFS : le plus court chemin A→D vaut 2 arêtes ; marquer les visités empêche les boucles infinies sur les cycles."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire et représentation",
+      "enonce": "Dans un réseau social où « être ami » est réciproque, on représente les personnes et leurs amitiés par un graphe. Que sont les sommets ? Les arêtes ? Le graphe est-il orienté ?",
+      "corrige": [
+        "Les objets du réseau sont les personnes : ce sont les sommets.",
+        "Les liens sont les amitiés : ce sont les arêtes.",
+        "L'amitié est réciproque (si A est ami de B, B est ami de A) : le graphe est non orienté."
+      ],
+      "reponse": "Sommets : les personnes ; arêtes : les amitiés ; graphe non orienté."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "graphe orienté",
+      "enonce": "Le Web peut être vu comme un graphe : les pages sont les sommets et un lien hypertexte de la page P vers la page Q est un arc. Pourquoi ce graphe est-il orienté ? Donne un exemple concret.",
+      "corrige": [
+        "Un lien hypertexte a un sens : il mène de P vers Q.",
+        "La page Q ne contient pas forcément de lien vers P.",
+        "Exemple : la page d'un blog renvoie vers une encyclopédie en ligne, mais l'encyclopédie ne renvoie pas vers ce blog."
+      ],
+      "reponse": "Un lien de P vers Q n'implique pas un lien de Q vers P : le graphe est orienté."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire et représentation",
+      "enonce": "Associe chaque mot à sa définition : degré, chemin, cycle, connexe. Définitions : (1) suite de sommets reliés de proche en proche ; (2) nombre de voisins d'un sommet ; (3) on peut aller de n'importe quel sommet à n'importe quel autre ; (4) chemin qui revient à son point de départ.",
+      "corrige": [
+        "Le degré compte les voisins d'un sommet : (2).",
+        "Un chemin relie des sommets de proche en proche : (1) ; un cycle est un chemin qui revient au départ : (4).",
+        "Un graphe connexe permet d'aller de tout sommet à tout autre : (3)."
+      ],
+      "reponse": "Degré → (2) ; chemin → (1) ; cycle → (4) ; connexe → (3)."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "dictionnaire d'adjacence",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nQuels sont les voisins de B ? Quel est le degré de chaque sommet ? Combien le graphe a-t-il d'arêtes ?",
+      "corrige": [
+        "Les voisins de B sont dans `g[\"B\"]` : A, D et E.",
+        "Degrés (longueur de chaque liste) : A 2, B 3, C 2, D 1, E 2, F 2.",
+        "Chaque arête est comptée deux fois (une fois par extrémité) : somme des degrés 12, donc 12 / 2 = 6 arêtes."
+      ],
+      "reponse": "Voisins de B : A, D, E ; degrés A 2, B 3, C 2, D 1, E 2, F 2 ; 6 arêtes."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "matrice d'adjacence",
+      "enonce": "Écris la matrice d'adjacence du graphe non orienté de sommets 0, 1, 2, 3 et d'arêtes 0-1, 0-2, 1-2, 2-3. Pourquoi est-elle symétrique ?",
+      "corrige": [
+        "Pour chaque arête i-j d'un graphe non orienté, on met 1 en M[i][j] ET en M[j][i].",
+        "Ligne 0 : [0, 1, 1, 0] ; ligne 1 : [1, 0, 1, 0] ; ligne 2 : [1, 1, 0, 1] ; ligne 3 : [0, 0, 1, 0].",
+        "Chaque arête est dans les deux sens, donc M[i][j] = M[j][i] : la matrice est symétrique."
+      ],
+      "reponse": "M = [[0, 1, 1, 0], [1, 0, 1, 0], [1, 1, 0, 1], [0, 0, 1, 0]], symétrique car le graphe est non orienté."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "matrice d'adjacence",
+      "enonce": "On donne la matrice d'adjacence d'un graphe orienté de sommets 0, 1, 2 : `M = [[0, 1, 0], [0, 0, 1], [1, 1, 0]]`. Liste tous les arcs. Le sommet 1 a-t-il un arc vers 0 ?",
+      "corrige": [
+        "M[i][j] = 1 signifie qu'il existe un arc de i vers j.",
+        "Ligne 0 : arc 0→1. Ligne 1 : arc 1→2. Ligne 2 : arcs 2→0 et 2→1.",
+        "M[1][0] = 0 : il n'y a pas d'arc de 1 vers 0 (alors qu'il y en a un de 0 vers 1)."
+      ],
+      "reponse": "Arcs : 0→1, 1→2, 2→0, 2→1 ; non, pas d'arc de 1 vers 0."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "dictionnaire d'adjacence",
+      "enonce": "Écris le dictionnaire d'adjacence du graphe orienté dont les arcs sont : A→B, A→C, B→C, C→A, D→C.",
+      "corrige": [
+        "On associe à chaque sommet la liste des sommets vers lesquels il a un arc.",
+        "A → [B, C] ; B → [C] ; C → [A] ; D → [C].",
+        "Aucun arc ne mène à D, mais D figure comme clé car c'est un sommet."
+      ],
+      "reponse": "`{\"A\": [\"B\", \"C\"], \"B\": [\"C\"], \"C\": [\"A\"], \"D\": [\"C\"]}`"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nDonne l'ordre de visite du parcours en largeur `parcours_largeur(g, \"A\")` du cours.",
+      "corrige": [
+        "On enfile A. On défile A et on enfile ses voisins B et C. File : B, C.",
+        "On défile B : D et E sont nouveaux. File : C, D, E. On défile C : F est nouveau. File : D, E, F.",
+        "On défile D, E puis F : leurs voisins sont déjà vus."
+      ],
+      "reponse": "A, B, C, D, E, F."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "parcours en profondeur (DFS)",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nDonne l'ordre de visite d'un parcours en profondeur récursif depuis A (on visite chaque voisin non vu, dans l'ordre de la liste, avant de passer au suivant).",
+      "corrige": [
+        "Depuis A, on descend vers B (premier voisin), puis depuis B vers D (A est déjà vu).",
+        "D n'a pas d'autre voisin : on revient à B et on descend vers E, puis de E vers F.",
+        "Depuis F, on atteint C. Tous les sommets sont alors visités."
+      ],
+      "reponse": "A, B, D, E, F, C."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "graphe pondéré",
+      "enonce": "Un graphe pondéré représente des villes et les distances routières : A-B 5 km, B-C 3 km, A-C 10 km. Quel est le chemin le plus court de A à C en kilomètres ? Et en nombre d'arêtes ?",
+      "corrige": [
+        "En kilomètres : A-B-C fait 5 + 3 = 8 km, contre 10 km pour A-C directement.",
+        "En nombre d'arêtes : A-C n'utilise qu'une arête, contre deux pour A-B-C.",
+        "Les deux critères ne donnent pas le même chemin : un BFS, qui compte les arêtes, donnerait A-C."
+      ],
+      "reponse": "En km : A-B-C (8 km) ; en nombre d'arêtes : A-C (1 arête)."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "vocabulaire et représentation",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nLes sommets A et D sont-ils adjacents ? Donne un chemin de D à C. Ce graphe contient-il un cycle ?",
+      "corrige": [
+        "A et D ne sont pas voisins (D n'apparaît pas dans la liste de A) : ils ne sont pas adjacents.",
+        "Un chemin de D à C : D - B - A - C.",
+        "A - B - E - F - C - A est un chemin qui revient à son point de départ : c'est un cycle."
+      ],
+      "reponse": "Non ; D-B-A-C ; oui, le cycle A-B-E-F-C-A."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nDonne le parcours en largeur depuis F, en précisant le contenu de la file après le traitement de chaque sommet.",
+      "corrige": [
+        "Départ : file [F]. On traite F : on enfile C et E → file [C, E].",
+        "On traite C : on enfile A → [E, A]. On traite E : on enfile B → [A, B].",
+        "On traite A : rien de nouveau → [B]. On traite B : on enfile D → [D]. On traite D → file vide."
+      ],
+      "reponse": "Ordre : F, C, E, A, B, D."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "plus court chemin (BFS)",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nÀ l'aide d'un parcours en largeur depuis A, donne la distance (en nombre d'arêtes) de A à chacun des autres sommets.",
+      "corrige": [
+        "Niveau 1 (voisins de A) : B et C, à distance 1.",
+        "Niveau 2 (voisins nouveaux de B et C) : D et E (par B), F (par C), à distance 2.",
+        "Le parcours en largeur découvre les sommets par distance croissante."
+      ],
+      "reponse": "B : 1 ; C : 1 ; D : 2 ; E : 2 ; F : 2."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "plus court chemin (BFS)",
+      "enonce": "On modifie le parcours en largeur pour mémoriser le prédécesseur de chaque sommet découvert. Qu'affiche ce programme ?\n\n```python\nfrom collections import deque\ng = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\", \"E\"], \"C\": [\"A\", \"F\"],\n     \"D\": [\"B\"], \"E\": [\"B\", \"F\"], \"F\": [\"C\", \"E\"]}\n\ndef chemin(g, depart, arrivee):\n    pred = {depart: None}\n    file = deque([depart])\n    while file:\n        s = file.popleft()\n        for v in g[s]:\n            if v not in pred:\n                pred[v] = s\n                file.append(v)\n    res = [arrivee]\n    while pred[res[-1]] is not None:\n        res.append(pred[res[-1]])\n    return res[::-1]\n\nprint(chemin(g, \"D\", \"F\"))\n```",
+      "corrige": [
+        "Le BFS depuis D découvre B (pred D), puis A et E (pred B), puis C (pred A) et F (pred E).",
+        "On remonte depuis F : F ← E ← B ← D, puis on renverse la liste.",
+        "Le chemin obtenu a 3 arêtes, ce qui est la plus courte distance de D à F."
+      ],
+      "reponse": "`['D', 'B', 'E', 'F']`"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "parcours en profondeur (DFS)",
+      "enonce": "Voici une version itérative du parcours en profondeur, avec une pile. Qu'affiche-t-elle pour le graphe ci-dessous ?\n\n```python\ndef dfs_pile(g, depart):\n    vus = []\n    pile = [depart]\n    while pile:\n        s = pile.pop()\n        if s not in vus:\n            vus.append(s)\n            for v in g[s]:\n                if v not in vus:\n                    pile.append(v)\n    return vus\n\ng = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\"], \"C\": [\"A\", \"D\"], \"D\": [\"B\", \"C\"]}\nprint(dfs_pile(g, \"A\"))\n```",
+      "corrige": [
+        "On dépile A : on l'ajoute aux vus et on empile B puis C. Pile : [B, C].",
+        "On dépile C (dernier empilé) : vu ; on empile D. Pile : [B, D]. On dépile D : vu ; on empile B. Pile : [B, B].",
+        "On dépile B : vu. Le B restant est déjà vu, il est ignoré."
+      ],
+      "reponse": "`['A', 'C', 'D', 'B']`"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "Pourquoi le parcours en largeur utilise-t-il une file et non une pile ? Que se passerait-il si l'on remplaçait la file par une pile ?",
+      "corrige": [
+        "Une file (FIFO) fait sortir les sommets dans l'ordre où ils ont été découverts : on traite tous les sommets à distance 1, puis tous ceux à distance 2, etc.",
+        "C'est ce qui donne l'exploration « par cercles » et le plus court chemin en nombre d'arêtes.",
+        "Avec une pile (LIFO), on traiterait d'abord le dernier sommet découvert : on s'enfoncerait dans le graphe, ce qui donne un parcours en profondeur."
+      ],
+      "reponse": "La file traite les sommets par distance croissante ; avec une pile, on obtiendrait un parcours en profondeur."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "matrice d'adjacence",
+      "enonce": "Écris une fonction `degre(M, i)` qui renvoie le degré du sommet i d'un graphe non orienté donné par sa matrice d'adjacence. Que renvoie-t-elle pour le sommet 2 de `M = [[0, 1, 1, 0], [1, 0, 1, 0], [1, 1, 0, 1], [0, 0, 1, 0]]` ?",
+      "corrige": [
+        "Le degré de i est le nombre de 1 sur la ligne i.",
+        "Exemple de réponse : `def degre(M, i): return sum(M[i])`.",
+        "Ligne 2 : [1, 1, 0, 1], dont la somme vaut 3."
+      ],
+      "reponse": "3"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "dictionnaire d'adjacence",
+      "enonce": "Écris une fonction `matrice_vers_dico(M)` qui convertit une matrice d'adjacence (sommets numérotés 0, 1, …) en dictionnaire d'adjacence. Que renvoie-t-elle pour `[[0, 1, 1], [0, 0, 1], [1, 0, 0]]` ?",
+      "corrige": [
+        "Pour chaque sommet i, ses voisins sont les j tels que M[i][j] = 1.",
+        "Exemple de réponse : `return {i: [j for j in range(len(M)) if M[i][j] == 1] for i in range(len(M))}`.",
+        "Ligne 0 : 1 et 2 ; ligne 1 : 2 ; ligne 2 : 0."
+      ],
+      "reponse": "`{0: [1, 2], 1: [2], 2: [0]}`"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "connexité",
+      "enonce": "Le graphe `h = {\"A\": [\"B\"], \"B\": [\"A\"], \"C\": [\"D\"], \"D\": [\"C\"], \"E\": []}` est-il connexe ? Comment le vérifier avec un parcours ?",
+      "corrige": [
+        "Un parcours (largeur ou profondeur) depuis A ne visite que A et B.",
+        "Les sommets C, D et E ne sont pas atteints : le graphe n'est pas connexe.",
+        "Méthode : un graphe non orienté est connexe si un parcours depuis n'importe quel sommet visite tous les sommets."
+      ],
+      "reponse": "Non : depuis A on n'atteint que B ; un parcours doit visiter tous les sommets pour que le graphe soit connexe."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "cycles",
+      "enonce": "Parmi ces graphes non orientés, lesquels contiennent un cycle ? G1 : arêtes A-B, B-C, C-D. G2 : arêtes A-B, B-C, C-A. G3 : arêtes A-B, A-C, A-D, C-D.",
+      "corrige": [
+        "G1 est une chaîne A-B-C-D : on ne peut pas revenir au départ sans réutiliser une arête, pas de cycle.",
+        "G2 : A-B-C-A est un cycle.",
+        "G3 : A-C-D-A est un cycle (arêtes A-C, C-D, D-A)."
+      ],
+      "reponse": "G2 et G3 contiennent un cycle ; G1 n'en contient pas."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "vocabulaire et représentation",
+      "enonce": "Un graphe non orienté a 5 sommets de degrés 3, 2, 2, 2 et 1. Combien a-t-il d'arêtes ? Peut-il exister un graphe non orienté à 3 sommets de degrés 1, 1 et 1 ?",
+      "corrige": [
+        "Chaque arête est comptée deux fois dans la somme des degrés (une fois par extrémité).",
+        "Somme : 3 + 2 + 2 + 2 + 1 = 10, donc 10 / 2 = 5 arêtes.",
+        "Pour les degrés 1, 1, 1, la somme vaut 3, nombre impair : impossible, car la somme des degrés est toujours paire."
+      ],
+      "reponse": "5 arêtes ; non, car la somme des degrés (3) doit être paire."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "parcours en profondeur (DFS)",
+      "enonce": "Pourquoi le parcours en profondeur doit-il marquer les sommets visités ? Que se passerait-il avec la fonction récursive du cours, sans marquage, sur le graphe `{\"A\": [\"B\"], \"B\": [\"A\"]}` ?",
+      "corrige": [
+        "Sans marquage, depuis A on appelle le parcours sur B, puis depuis B sur A, puis à nouveau sur B…",
+        "Les appels s'enchaînent sans fin à cause du cycle A-B-A.",
+        "En Python, cela provoque une erreur de récursion (RecursionError) quand la pile d'appels est pleine."
+      ],
+      "reponse": "Il tournerait indéfiniment (A, B, A, B…) jusqu'à une erreur RecursionError."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "matrice d'adjacence",
+      "enonce": "Le graphe non orienté de sommets 0, 1, 2, 3 est donné par `g = {0: [1, 3], 1: [0, 2], 2: [1], 3: [0]}`. Écris sa matrice d'adjacence, puis une fonction `dico_vers_matrice(g, n)` qui la construit.",
+      "corrige": [
+        "Pour chaque sommet i et chaque voisin j de i, on met M[i][j] = 1.",
+        "Exemple de réponse : `M = [[0] * n for i in range(n)]`, puis `for i in g: for j in g[i]: M[i][j] = 1`, puis `return M`.",
+        "On obtient [[0, 1, 0, 1], [1, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]]."
+      ],
+      "reponse": "`[[0, 1, 0, 1], [1, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]]`"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "cycles",
+      "enonce": "On veut détecter un cycle dans un graphe non orienté par un parcours en profondeur. Complète l'idée : en explorant depuis s, si l'on rencontre un voisin déjà visité qui n'est pas … , alors le graphe contient un cycle. Applique-la au graphe A-B, B-C, C-A.",
+      "corrige": [
+        "Le voisin dont on vient (le parent de s dans le parcours) est forcément déjà visité : ce n'est pas un cycle.",
+        "Il faut donc compléter par : « qui n'est pas le sommet dont on vient (le parent) ».",
+        "Depuis A : on va en B (parent A), puis en C (parent B) ; C a pour voisin A, déjà visité et différent de son parent B : il y a un cycle."
+      ],
+      "reponse": "« … qui n'est pas le parent de s » ; dans A-B-C-A, en C on retrouve A déjà visité : cycle détecté."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "plus court chemin (BFS)",
+      "enonce": "Écris une fonction `distances(g, depart)` qui renvoie un dictionnaire donnant la distance (en nombre d'arêtes) de depart à chaque sommet accessible, en adaptant le parcours en largeur. Que renvoie-t-elle pour le graphe en étoile `{\"C\": [\"N\", \"S\", \"E\"], \"N\": [\"C\"], \"S\": [\"C\"], \"E\": [\"C\"]}` depuis \"N\" ?",
+      "corrige": [
+        "On remplace l'ensemble `vus` par un dictionnaire `d` : `d = {depart: 0}`.",
+        "Quand on découvre un voisin v de s non encore dans d, on pose `d[v] = d[s] + 1` et on enfile v.",
+        "Depuis N : C à distance 1, puis S et E à distance 2."
+      ],
+      "reponse": "`{'N': 0, 'C': 1, 'S': 2, 'E': 2}`"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "matrice d'adjacence",
+      "enonce": "Un réseau comporte 10 000 sommets et chaque sommet a environ 5 voisins. Compare la place mémoire nécessaire (nombre de cases ou d'éléments à stocker) pour une matrice d'adjacence et pour des listes d'adjacence. Laquelle choisir ?",
+      "corrige": [
+        "Matrice : 10 000 × 10 000 = 100 000 000 de cases, presque toutes à 0.",
+        "Listes d'adjacence : environ 10 000 × 5 = 50 000 voisins à stocker (chaque arête apparaît deux fois en non orienté).",
+        "Le graphe est creux : les listes d'adjacence sont bien plus économes. La matrice reste intéressante pour tester très vite si deux sommets sont reliés, mais coûte trop de place ici."
+      ],
+      "reponse": "Matrice : 10^8 cases ; listes : environ 50 000 éléments ; on choisit les listes d'adjacence (graphe creux)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "matrice d'adjacence",
+      "enonce": "Avec une matrice d'adjacence M de n sommets, quel est le coût pour tester si i et j sont reliés ? Et pour obtenir la liste des voisins de i ? Compare avec les listes d'adjacence (dictionnaire).",
+      "corrige": [
+        "Matrice : tester M[i][j] se fait en temps constant, O(1). Trouver les voisins de i demande de parcourir toute la ligne : O(n).",
+        "Listes d'adjacence : obtenir les voisins de i est immédiat (`g[i]`), et les parcourir coûte O(degré de i).",
+        "En revanche, tester si j est voisin de i demande de parcourir la liste de i : O(degré de i)."
+      ],
+      "reponse": "Matrice : test O(1), voisins O(n) ; listes : voisins O(degré), test O(degré)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "On fait un parcours en largeur sur un graphe orienté : `g = {1: [2, 3], 2: [4], 3: [4], 4: [1], 5: [1]}` depuis le sommet 1. Quels sommets sont visités ? Le sommet 5 est-il atteint ? Pourquoi ?",
+      "corrige": [
+        "Depuis 1 : on découvre 2 et 3, puis 4 (depuis 2). 4 mène à 1, déjà vu.",
+        "Ordre de visite : 1, 2, 3, 4.",
+        "5 a un arc vers 1, mais aucun arc ne mène à 5 : dans un graphe orienté, on ne peut suivre les arcs que dans leur sens, donc 5 n'est pas atteint."
+      ],
+      "reponse": "Visités : 1, 2, 3, 4 ; 5 n'est pas atteint (aucun arc n'arrive en 5)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "parcours en profondeur (DFS)",
+      "enonce": "Dans le parcours en profondeur récursif, où se trouve la pile ? Explique le lien entre les appels récursifs et la pile utilisée explicitement dans la version itérative.",
+      "corrige": [
+        "Chaque appel récursif est placé sur la pile d'appels du programme ; il en sort quand l'appel se termine.",
+        "Quand un sommet n'a plus de voisin non visité, son appel se termine : on « remonte » vers l'appel précédent, c'est le retour en arrière.",
+        "La version itérative reproduit ce comportement avec une liste utilisée comme pile (`append` / `pop`), sans appels récursifs."
+      ],
+      "reponse": "C'est la pile d'appels : chaque appel récursif est empilé, la fin d'un appel correspond au retour en arrière."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "applications (labyrinthe)",
+      "enonce": "Un labyrinthe est une grille de 3 × 3 cases numérotées de 0 à 8 (ligne par ligne). Les passages sont : 0-1, 1-2, 2-5, 5-8, 0-3, 3-6, 6-7. Modélise-le par un graphe, puis donne le plus court chemin de 0 à 8 et sa longueur.",
+      "corrige": [
+        "Sommets : les cases ; arêtes : les passages. Dictionnaire : 0 : [1, 3] ; 1 : [0, 2] ; 2 : [1, 5] ; 3 : [0, 6] ; 5 : [2, 8] ; 6 : [3, 7] ; 7 : [6] ; 8 : [5] (la case 4 est isolée).",
+        "Un BFS depuis 0 donne : 1 et 3 (distance 1), 2 et 6 (2), 5 et 7 (3), 8 (4).",
+        "En remontant les prédécesseurs : 8 ← 5 ← 2 ← 1 ← 0."
+      ],
+      "reponse": "Chemin 0-1-2-5-8, de longueur 4."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "graphe pondéré",
+      "enonce": "Un livreur compte les temps de trajet : A-B 4 min, A-C 1 min, C-B 2 min, B-D 1 min, C-D 6 min. Un BFS depuis A donne-t-il le trajet le plus rapide vers D ? Trouve ce trajet en examinant les chemins possibles.",
+      "corrige": [
+        "Un BFS ne compte que le nombre d'arêtes : il donnerait A-B-D ou A-C-D (2 arêtes), sans tenir compte des durées.",
+        "Durées : A-B-D = 4 + 1 = 5 min ; A-C-D = 1 + 6 = 7 min ; A-C-B-D = 1 + 2 + 1 = 4 min.",
+        "Le plus rapide est A-C-B-D (4 min), qui a pourtant 3 arêtes : il faut un algorithme qui tient compte des poids (par exemple l'algorithme de Dijkstra)."
+      ],
+      "reponse": "Non ; le trajet le plus rapide est A-C-B-D (4 min)."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "parcours en profondeur (DFS)",
+      "enonce": "On considère le graphe non orienté suivant, donné par ses listes d'adjacence (les voisins sont explorés dans l'ordre des listes) :\n\n```python\ng = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\", \"E\"],\n    \"C\": [\"A\", \"F\"],\n    \"D\": [\"B\"],\n    \"E\": [\"B\", \"F\"],\n    \"F\": [\"C\", \"E\"],\n}\n```\n\nDonne l'ordre de visite du parcours en profondeur récursif depuis D, puis compare-le à l'ordre du parcours en largeur depuis D.",
+      "corrige": [
+        "Profondeur : D, puis B ; de B on va en A (premier voisin non vu), puis de A en C, de C en F, de F en E. On remonte ensuite jusqu'à D.",
+        "Ordre en profondeur : D, B, A, C, F, E.",
+        "Largeur : D, puis B (distance 1), puis A et E (distance 2), puis C et F (distance 3) : D, B, A, E, C, F."
+      ],
+      "reponse": "Profondeur : D, B, A, C, F, E ; largeur : D, B, A, E, C, F."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "connexité",
+      "enonce": "Écris une fonction `est_connexe(g)` qui renvoie `True` si le graphe non orienté g (dictionnaire d'adjacence) est connexe, en utilisant `parcours_largeur` du cours. Teste-la sur `{\"A\": [\"B\"], \"B\": [\"A\", \"C\"], \"C\": [\"B\"]}` et sur `{\"A\": [\"B\"], \"B\": [\"A\"], \"C\": []}`.",
+      "corrige": [
+        "On choisit un sommet quelconque, par exemple le premier : `depart = list(g)[0]`.",
+        "On fait un parcours depuis ce sommet et on compare le nombre de sommets visités au nombre total de sommets.",
+        "Exemple de réponse : `return len(parcours_largeur(g, list(g)[0])) == len(g)`."
+      ],
+      "reponse": "`True` pour le premier graphe, `False` pour le second (C est isolé)."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "applications (labyrinthe)",
+      "enonce": "On représente un labyrinthe par une grille : `\"#\"` est un mur, `\".\"` une case libre. Les cases voisines sont en haut, en bas, à gauche et à droite. Qu'affiche ce programme ?\n\n```python\nfrom collections import deque\ngrille = [\"..#\",\n          \"#..\",\n          \"...\"]\n\ndef voisins(case):\n    i, j = case\n    res = []\n    for di, dj in [(-1, 0), (1, 0), (0, -1), (0, 1)]:\n        a, b = i + di, j + dj\n        if 0 <= a < 3 and 0 <= b < 3 and grille[a][b] == \".\":\n            res.append((a, b))\n    return res\n\ndist = {(0, 0): 0}\nfile = deque([(0, 0)])\nwhile file:\n    c = file.popleft()\n    for v in voisins(c):\n        if v not in dist:\n            dist[v] = dist[c] + 1\n            file.append(v)\nprint(dist[(2, 2)], len(dist))\n```",
+      "corrige": [
+        "Chaque case libre est un sommet ; deux cases libres côte à côte sont reliées : c'est un graphe, construit à la volée par `voisins`.",
+        "Le BFS depuis (0, 0) : (0, 1) à 1 ; (1, 1) à 2 ; (1, 2) et (2, 1) à 3 ; (2, 2) et (2, 0) à 4.",
+        "Les 7 cases libres sont toutes atteintes."
+      ],
+      "reponse": "`4 7` : la sortie (2, 2) est à 4 pas, et les 7 cases libres sont accessibles."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "dictionnaire d'adjacence",
+      "enonce": "Écris une fonction `ajouter_arete(g, a, b)` qui ajoute une arête non orientée entre a et b dans un dictionnaire d'adjacence, en créant les sommets s'ils n'existent pas. Quel dictionnaire obtient-on en partant de `{}` et en ajoutant les arêtes (A, B), (B, C), (A, C) ?",
+      "corrige": [
+        "Si a n'est pas une clé, on crée `g[a] = []` ; de même pour b.",
+        "Comme l'arête est non orientée, on ajoute b aux voisins de a ET a aux voisins de b.",
+        "Exemple de réponse : `if a not in g: g[a] = []`, `if b not in g: g[b] = []`, puis `g[a].append(b)` et `g[b].append(a)`."
+      ],
+      "reponse": "`{'A': ['B', 'C'], 'B': ['A', 'C'], 'C': ['B', 'A']}`"
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "plus court chemin (BFS)",
+      "enonce": "Dans un réseau social (graphe non orienté), on appelle « degré de séparation » entre deux personnes la longueur du plus court chemin qui les relie. Avec `amis = {\"Léa\": [\"Max\", \"Noé\"], \"Max\": [\"Léa\", \"Inès\"], \"Noé\": [\"Léa\"], \"Inès\": [\"Max\", \"Tom\"], \"Tom\": [\"Inès\"]}`, quel est le degré de séparation entre Noé et Tom ? Quel algorithme utiliser ?",
+      "corrige": [
+        "Le graphe n'est pas pondéré : le parcours en largeur donne le plus court chemin en nombre d'arêtes.",
+        "Depuis Noé : Léa (1), Max (2), Inès (3), Tom (4).",
+        "Chemin : Noé - Léa - Max - Inès - Tom."
+      ],
+      "reponse": "4 (chemin Noé - Léa - Max - Inès - Tom), trouvé par un parcours en largeur."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "graphe orienté",
+      "enonce": "Pour s'inscrire à des cours, il faut avoir suivi certains cours avant : « Algo » avant « Graphes », « Python » avant « Algo », « Python » avant « Web ». On modélise ces dépendances par un graphe orienté (arc de X vers Y si X doit précéder Y). Écris son dictionnaire d'adjacence et propose un ordre possible pour suivre les 4 cours. Que se passerait-il si on ajoutait l'arc Graphes → Python ?",
+      "corrige": [
+        "Dictionnaire : `{\"Python\": [\"Algo\", \"Web\"], \"Algo\": [\"Graphes\"], \"Web\": [], \"Graphes\": []}`.",
+        "Un ordre possible : Python, Algo, Web, Graphes (chaque cours vient après ceux dont il dépend ; Python, Web, Algo, Graphes convient aussi).",
+        "Avec Graphes → Python, on aurait le cycle Python → Algo → Graphes → Python : aucun ordre ne serait possible, chaque cours attendant l'autre."
+      ],
+      "reponse": "Ordre possible : Python, Algo, Web, Graphes ; l'arc Graphes → Python créerait un cycle rendant tout ordre impossible."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "parcours en profondeur (DFS)",
+      "enonce": "Écris une fonction récursive `existe_chemin(g, a, b, vus)` qui renvoie `True` s'il existe un chemin de a vers b dans le graphe orienté g, en s'inspirant du parcours en profondeur. Teste-la sur `g = {\"A\": [\"B\"], \"B\": [\"C\"], \"C\": [], \"D\": [\"A\"]}` pour (A, C) et (A, D).",
+      "corrige": [
+        "Cas de base : si a == b, on a trouvé un chemin.",
+        "Sinon, on marque a, puis pour chaque voisin non visité v, si `existe_chemin(g, v, b, vus)` est vrai, on renvoie `True`.",
+        "Si aucun voisin ne mène à b, on renvoie `False`. De A, on atteint B puis C ; aucun arc ne mène à D."
+      ],
+      "reponse": "`True` pour (A, C) ; `False` pour (A, D)."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "Quel est le coût du parcours en largeur sur un graphe de n sommets et m arêtes représenté par listes d'adjacence ? Justifie, sachant que `popleft` et `append` d'un `deque` sont en temps constant et que le test `voisin not in vus` sur un ensemble est en temps constant en moyenne.",
+      "corrige": [
+        "Chaque sommet est enfilé et défilé au plus une fois : O(n) opérations sur la file.",
+        "Pour chaque sommet défilé, on parcourt sa liste de voisins : au total, on examine chaque arête au plus deux fois (une par extrémité) en non orienté, soit O(m).",
+        "Le coût total est donc O(n + m)."
+      ],
+      "reponse": "O(n + m) : chaque sommet passe une fois dans la file et chaque arête est examinée au plus deux fois."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "cycles",
+      "enonce": "On admet qu'un graphe non orienté connexe à n sommets sans cycle (un arbre) possède exactement n − 1 arêtes, et qu'un graphe connexe à n sommets ayant plus de n − 1 arêtes contient au moins un cycle. Un réseau connexe relie 8 bornes par 10 câbles. Contient-il un cycle ? Combien de câbles peut-on retirer au maximum en le gardant connexe ?",
+      "corrige": [
+        "Un arbre à 8 sommets a 8 − 1 = 7 arêtes ; ici il y a 10 câbles, plus que 7 : le réseau contient au moins un cycle.",
+        "Un graphe connexe à 8 sommets a au moins 7 arêtes : on peut donc retirer au plus 10 − 7 = 3 câbles.",
+        "Il faut les choisir dans des cycles (en retirer un qui n'est sur aucun cycle déconnecterait le réseau)."
+      ],
+      "reponse": "Oui, il contient un cycle ; on peut retirer au plus 3 câbles (bien choisis) en le gardant connexe."
     }
   ]
 }

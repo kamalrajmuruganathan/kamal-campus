@@ -137,7 +137,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "etude-fonctions",
       "enonce": "On charge un condensateur à travers une résistance sous une tension d'alimentation $E = 5$ V. La tension aux bornes du condensateur est modélisée par $u(t) = 5\\left(1 - e^{-t/2}\\right)$, où $t$ est le temps en secondes ($\\tau = 2$ s est la constante de temps du circuit).\n1. Calculer $u(0)$ et déterminer $\\lim\\limits_{t \\to +\\infty} u(t)$. Interpréter ces deux résultats.\n2. Montrer que $u'(t) = 2{,}5\\,e^{-t/2}$, puis en déduire le sens de variation de $u$ sur $[0\\,;+\\infty[$.\n3. Vérifier qu'à $t = \\tau$ la tension atteint environ $63\\,\\%$ de $E$.\n4. Déterminer, à la seconde près, l'instant où la tension atteint $90\\,\\%$ de sa valeur finale ($4{,}5$ V).\n5. En électronique, on considère le condensateur « chargé » au bout de $5\\tau$. Calculer $u(5\\tau)$ et le pourcentage de $E$ alors atteint.",
       "corrige": [
@@ -149,6 +149,451 @@
         "5. $5\\tau = 10$ s : $u(10) = 5\\left(1 - e^{-10/2}\\right) = 5\\left(1 - e^{-5}\\right)$. Or $e^{-5} \\approx 0{,}0067$, donc $u(10) \\approx 5 \\times 0{,}9933 \\approx 4{,}97$ V, soit environ $99{,}3\\,\\%$ de $E$. Après $5\\tau$ la tension est à moins de $1\\,\\%$ de sa valeur finale : le condensateur est bien considéré comme chargé."
       ],
       "reponse": "1. $u(0) = 0$ V (condensateur déchargé), $u(t) \\to 5$ V $= E$ (chargé) ; 2. $u'(t) = 2{,}5\\,e^{-t/2} > 0$, $u$ strictement croissante ; 3. $u(\\tau) = 5(1 - e^{-1}) \\approx 3{,}16$ V $\\approx 63\\,\\%$ de $E$ ; 4. $t = 2\\ln 10 \\approx 4{,}6$ s ; 5. $u(5\\tau) \\approx 4{,}97$ V, soit $\\approx 99{,}3\\,\\%$ de $E$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "valeurs-signe",
+      "enonce": "Donner sans calculatrice : $e^{0}$ ; $\\ln 1$ ; $\\ln e$ ; $e^{\\ln 5}$ ; $\\ln\\left(e^{-3}\\right)$.",
+      "corrige": [
+        "$e^{0} = 1$ donc $\\ln 1 = 0$ ; $e^{1} = e$ donc $\\ln e = 1$.",
+        "$\\exp$ et $\\ln$ sont réciproques : $e^{\\ln 5} = 5$ et $\\ln\\left(e^{-3}\\right) = -3$."
+      ],
+      "reponse": "$1$ ; $0$ ; $1$ ; $5$ ; $-3$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "valeurs-signe",
+      "enonce": "Vrai ou faux ? a) $e^{-100} > 0$. b) $\\ln(-2)$ existe. c) $\\ln 0{,}5 < 0$.",
+      "corrige": [
+        "a) Vrai : une exponentielle est strictement positive, même minuscule.",
+        "b) Faux : $\\ln a$ n'existe que pour $a > 0$. c) Vrai : $\\ln x < 0$ pour $0 < x < 1$ ($\\ln 0{,}5 = -\\ln 2 \\approx -0{,}69$)."
+      ],
+      "reponse": "a) Vrai ; b) Faux ; c) Vrai."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "proprietes-exp",
+      "enonce": "Simplifier : a) $e^{2x} \\times e^{3 - x}$ ; b) $\\left(e^{x}\\right)^3$ ; c) $\\dfrac{e^{5}}{e^{2}}$.",
+      "corrige": [
+        "a) $e^{a} \\times e^{b} = e^{a+b}$ : $e^{2x + 3 - x} = e^{x + 3}$.",
+        "b) $\\left(e^{a}\\right)^n = e^{na}$ : $e^{3x}$. c) $\\dfrac{e^{a}}{e^{b}} = e^{a-b}$ : $e^{3}$."
+      ],
+      "reponse": "a) $e^{x+3}$ ; b) $e^{3x}$ ; c) $e^{3}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "proprietes-exp",
+      "enonce": "Un élève écrit $\\left(e^{x}\\right)^2 = e^{x^2}$. Tester en $x = 1$ et corriger.",
+      "corrige": [
+        "En $x = 1$ : $\\left(e^{1}\\right)^2 = e^{2} \\approx 7{,}39$, alors que $e^{1^2} = e \\approx 2{,}72$.",
+        "On multiplie les exposants : $\\left(e^{x}\\right)^2 = e^{2x}$."
+      ],
+      "reponse": "$\\left(e^{x}\\right)^2 = e^{2x}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "proprietes-ln",
+      "enonce": "Exprimer : a) $\\ln 16$ en fonction de $\\ln 2$ ; b) $\\ln\\dfrac{1}{9}$ en fonction de $\\ln 3$ ; c) $\\ln\\sqrt{5}$ en fonction de $\\ln 5$.",
+      "corrige": [
+        "a) $\\ln 16 = \\ln\\left(2^4\\right) = 4\\ln 2$.",
+        "b) $\\ln\\dfrac{1}{9} = -\\ln 9 = -2\\ln 3$. c) $\\ln\\sqrt{5} = \\dfrac{1}{2}\\ln 5$."
+      ],
+      "reponse": "a) $4\\ln 2$ ; b) $-2\\ln 3$ ; c) $\\dfrac{1}{2}\\ln 5$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "proprietes-ln",
+      "enonce": "Écrire $\\ln 6 + \\ln 5 - \\ln 3$ sous la forme d'un seul logarithme.",
+      "corrige": [
+        "$\\ln a + \\ln b = \\ln(ab)$ et $\\ln a - \\ln b = \\ln\\dfrac{a}{b}$.",
+        "$\\ln\\dfrac{6 \\times 5}{3} = \\ln 10$."
+      ],
+      "reponse": "$\\ln 10$."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-ln",
+      "enonce": "Un élève écrit $\\ln(2 + 3) = \\ln 2 + \\ln 3$. Vérifier à la calculatrice et expliquer l'erreur.",
+      "corrige": [
+        "$\\ln 5 \\approx 1{,}609$ alors que $\\ln 2 + \\ln 3 = \\ln 6 \\approx 1{,}792$ : l'égalité est fausse.",
+        "Le logarithme transforme les produits en sommes : $\\ln(2 \\times 3) = \\ln 2 + \\ln 3$, mais il n'existe pas de formule pour $\\ln(a + b)$."
+      ],
+      "reponse": "Faux : $\\ln 2 + \\ln 3 = \\ln 6$, pas $\\ln 5$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-ln",
+      "enonce": "Exprimer $\\ln 72$ en fonction de $\\ln 2$ et $\\ln 3$.",
+      "corrige": [
+        "$72 = 8 \\times 9 = 2^3 \\times 3^2$.",
+        "$\\ln 72 = \\ln\\left(2^3\\right) + \\ln\\left(3^2\\right) = 3\\ln 2 + 2\\ln 3$."
+      ],
+      "reponse": "$\\ln 72 = 3\\ln 2 + 2\\ln 3$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Dériver : a) $f(x) = e^{-3x}$ ; b) $g(x) = 2e^{x/2}$ ; c) $h(x) = 7 - 4e^{0{,}5x}$.",
+      "corrige": [
+        "On utilise $\\left(e^{kx}\\right)' = k\\,e^{kx}$ : le coefficient $k$ descend en facteur.",
+        "a) $f'(x) = -3e^{-3x}$ ; b) $g'(x) = 2 \\times \\dfrac{1}{2}e^{x/2} = e^{x/2}$ ; c) $h'(x) = -4 \\times 0{,}5\\,e^{0{,}5x} = -2e^{0{,}5x}$."
+      ],
+      "reponse": "a) $-3e^{-3x}$ ; b) $e^{x/2}$ ; c) $-2e^{0{,}5x}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Dériver sur $]0\\,;+\\infty[$ la fonction $f(x) = 3\\ln x + x^2$.",
+      "corrige": [
+        "$(\\ln x)' = \\dfrac{1}{x}$ et $\\left(x^2\\right)' = 2x$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{3}{x} + 2x$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "Dériver $f(x) = x^2\\,e^{x}$ et factoriser le résultat.",
+      "corrige": [
+        "Produit $uv$ avec $u = x^2$, $v = e^{x}$ : $f'(x) = 2x\\,e^{x} + x^2\\,e^{x}$.",
+        "On factorise par $e^{x}$ : $f'(x) = \\left(x^2 + 2x\\right)e^{x} = x(x + 2)\\,e^{x}$."
+      ],
+      "reponse": "$f'(x) = x(x + 2)\\,e^{x}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "La tension de décharge d'un condensateur est $u(t) = 10\\,e^{-t/0{,}2}$ ($t$ en s, $u$ en V). Calculer $u'(t)$, puis $u'(0)$ ; interpréter le signe.",
+      "corrige": [
+        "$u(t) = 10\\,e^{-5t}$, donc $u'(t) = 10 \\times (-5)\\,e^{-5t} = -50\\,e^{-5t}$.",
+        "$u'(0) = -50\\ \\mathrm{V/s}$ : la dérivée est négative, la tension diminue (décharge)."
+      ],
+      "reponse": "$u'(t) = -50\\,e^{-5t}$ ; $u'(0) = -50\\ \\mathrm{V/s}$ : la tension décroît."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Donner les limites : a) $e^{x}$ en $-\\infty$ ; b) $e^{x}$ en $+\\infty$ ; c) $e^{-x}$ en $+\\infty$.",
+      "corrige": [
+        "a) $0$ (la courbe colle à l'axe des abscisses) ; b) $+\\infty$.",
+        "c) Quand $x \\to +\\infty$, $-x \\to -\\infty$, donc $e^{-x} \\to 0$."
+      ],
+      "reponse": "a) $0$ ; b) $+\\infty$ ; c) $0$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer : a) $\\lim\\limits_{x \\to +\\infty} \\dfrac{e^{x}}{x^3}$ ; b) $\\lim\\limits_{x \\to -\\infty} x^2\\,e^{x}$.",
+      "corrige": [
+        "a) Forme indéterminée $\\dfrac{\\infty}{\\infty}$ : par croissance comparée, l'exponentielle l'emporte, la limite est $+\\infty$.",
+        "b) Forme $\\infty \\times 0$ : par croissance comparée, $x^n e^{x} \\to 0$ en $-\\infty$."
+      ],
+      "reponse": "a) $+\\infty$ ; b) $0$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer : a) $\\lim\\limits_{x \\to 0^+} \\ln x$ ; b) $\\lim\\limits_{x \\to +\\infty} \\ln x$ ; c) $\\lim\\limits_{x \\to +\\infty} \\left(3 - 2e^{-x}\\right)$.",
+      "corrige": [
+        "a) $-\\infty$ (asymptote verticale $x = 0$) ; b) $+\\infty$.",
+        "c) $e^{-x} \\to 0$, donc $3 - 2e^{-x} \\to 3$."
+      ],
+      "reponse": "a) $-\\infty$ ; b) $+\\infty$ ; c) $3$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "equations-exp",
+      "enonce": "Résoudre $e^{x} = 4$. Donner la valeur exacte et une valeur approchée au centième.",
+      "corrige": [
+        "$4 > 0$ : on prend le logarithme des deux membres, $x = \\ln 4 = 2\\ln 2$."
+      ],
+      "reponse": "$x = \\ln 4 = 2\\ln 2 \\approx 1{,}39$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "equations-exp",
+      "enonce": "Résoudre $e^{-0{,}5x} = 0{,}2$.",
+      "corrige": [
+        "$-0{,}5x = \\ln 0{,}2 = -\\ln 5$.",
+        "$x = \\dfrac{\\ln 5}{0{,}5} = 2\\ln 5 \\approx 3{,}22$."
+      ],
+      "reponse": "$x = 2\\ln 5 \\approx 3{,}22$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "equations-exp",
+      "enonce": "Résoudre : a) $e^{4x} = 0$ ; b) $e^{x + 1} = e^{3}$.",
+      "corrige": [
+        "a) Une exponentielle ne s'annule jamais : aucune solution.",
+        "b) $\\exp$ est strictement croissante : $e^{x+1} = e^{3} \\iff x + 1 = 3 \\iff x = 2$."
+      ],
+      "reponse": "a) aucune solution ; b) $x = 2$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "equations-exp",
+      "enonce": "Résoudre $3e^{2x} - 5 = 7$.",
+      "corrige": [
+        "On isole l'exponentielle : $3e^{2x} = 12$, donc $e^{2x} = 4$.",
+        "$2x = \\ln 4 = 2\\ln 2$, donc $x = \\ln 2 \\approx 0{,}69$."
+      ],
+      "reponse": "$x = \\ln 2 \\approx 0{,}69$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "equations-exp",
+      "enonce": "Pour résoudre $e^{2x} = 6$, un élève écrit $x = \\ln 3$. Corriger.",
+      "corrige": [
+        "$e^{2x} = 6 \\iff 2x = \\ln 6 \\iff x = \\dfrac{\\ln 6}{2}$ : on divise le logarithme par $2$, pas l'intérieur du logarithme.",
+        "$\\dfrac{\\ln 6}{2} \\approx 0{,}90$, alors que $\\ln 3 \\approx 1{,}10$."
+      ],
+      "reponse": "$x = \\dfrac{\\ln 6}{2} \\approx 0{,}90$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "equations-ln",
+      "enonce": "Résoudre : a) $\\ln x = 2$ ; b) $\\ln x = -2$.",
+      "corrige": [
+        "$\\ln x = b \\iff x = e^{b}$, pour tout réel $b$.",
+        "a) $x = e^{2} \\approx 7{,}39$ ; b) $x = e^{-2} \\approx 0{,}135$ (une valeur de $b$ négative ne pose aucun problème)."
+      ],
+      "reponse": "a) $x = e^{2}$ ; b) $x = e^{-2}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "equations-ln",
+      "enonce": "Résoudre $\\ln(2x - 1) = 0$.",
+      "corrige": [
+        "Condition d'existence : $2x - 1 > 0$, soit $x > \\dfrac{1}{2}$.",
+        "$\\ln(2x - 1) = 0 \\iff 2x - 1 = e^{0} = 1 \\iff x = 1$, qui vérifie bien $x > \\dfrac{1}{2}$."
+      ],
+      "reponse": "$x = 1$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "equations-ln",
+      "enonce": "Résoudre $2\\ln x + 1 = 5$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$2\\ln x = 4$, donc $\\ln x = 2$.",
+        "$x = e^{2} \\approx 7{,}39$."
+      ],
+      "reponse": "$x = e^{2}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "inequations",
+      "enonce": "Résoudre $\\ln x < 1$.",
+      "corrige": [
+        "$\\ln$ est strictement croissante : $\\ln x < \\ln e \\iff x < e$.",
+        "Sans oublier la condition d'existence $x > 0$ : $0 < x < e$."
+      ],
+      "reponse": "$S = \\left]0\\,;e\\right[$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Résoudre $e^{-0{,}1t} < 0{,}01$ pour $t \\geqslant 0$.",
+      "corrige": [
+        "On prend le logarithme (fonction croissante, l'ordre est conservé) : $-0{,}1t < \\ln 0{,}01 = -2\\ln 10$.",
+        "En divisant par $-0{,}1$ (négatif), on change le sens : $t > 20\\ln 10 \\approx 46{,}1$."
+      ],
+      "reponse": "$t > 20\\ln 10 \\approx 46{,}1$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Résoudre $e^{3x} \\geqslant 2$.",
+      "corrige": [
+        "$3x \\geqslant \\ln 2$ (le logarithme conserve l'ordre).",
+        "$x \\geqslant \\dfrac{\\ln 2}{3} \\approx 0{,}23$."
+      ],
+      "reponse": "$S = \\left[\\dfrac{\\ln 2}{3}\\,;+\\infty\\right[$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "log-decimal",
+      "enonce": "a) Donner $\\log 1\\,000$. b) Calculer $\\log 50$ à l'aide de la relation $\\log x = \\dfrac{\\ln x}{\\ln 10}$.",
+      "corrige": [
+        "a) $1\\,000 = 10^{3}$, donc $\\log 1\\,000 = 3$.",
+        "b) $\\log 50 = \\dfrac{\\ln 50}{\\ln 10} \\approx \\dfrac{3{,}912}{2{,}303} \\approx 1{,}70$."
+      ],
+      "reponse": "a) $3$ ; b) $\\log 50 \\approx 1{,}70$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "log-decimal",
+      "enonce": "Le pH d'une solution est donné par $\\mathrm{pH} = -\\log\\left[\\mathrm{H_3O^+}\\right]$. Calculer le pH pour $\\left[\\mathrm{H_3O^+}\\right] = 10^{-4}\\ \\mathrm{mol/L}$, puis pour $2{,}5 \\times 10^{-4}\\ \\mathrm{mol/L}$.",
+      "corrige": [
+        "$\\log\\left(10^{-4}\\right) = -4$, donc $\\mathrm{pH} = 4$.",
+        "$\\log\\left(2{,}5 \\times 10^{-4}\\right) = \\log 2{,}5 - 4 \\approx 0{,}40 - 4 = -3{,}60$, donc $\\mathrm{pH} \\approx 3{,}6$."
+      ],
+      "reponse": "$\\mathrm{pH} = 4$ puis $\\mathrm{pH} \\approx 3{,}6$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonctions",
+      "enonce": "Soit $f(x) = e^{x} - x$ sur $\\mathbb{R}$. 1. Calculer $f'(x)$ et étudier son signe. 2. En déduire le minimum de $f$. 3. Montrer que $e^{x} > x$ pour tout réel $x$.",
+      "corrige": [
+        "1. $f'(x) = e^{x} - 1$ ; $e^{x} - 1 \\geqslant 0 \\iff e^{x} \\geqslant 1 \\iff x \\geqslant 0$.",
+        "2. $f$ décroît sur $]-\\infty\\,;0]$, croît sur $[0\\,;+\\infty[$ : minimum $f(0) = 1$.",
+        "3. Pour tout $x$, $f(x) \\geqslant 1 > 0$, donc $e^{x} > x$."
+      ],
+      "reponse": "$f'(x) = e^{x} - 1$ ; minimum $f(0) = 1$ ; donc $e^{x} - x \\geqslant 1 > 0$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonctions",
+      "enonce": "Soit $g(x) = x - \\ln x$ sur $]0\\,;+\\infty[$. Calculer $g'(x)$, étudier les variations de $g$ et donner son minimum.",
+      "corrige": [
+        "$g'(x) = 1 - \\dfrac{1}{x} = \\dfrac{x - 1}{x}$ ; comme $x > 0$, $g'(x)$ a le signe de $x - 1$.",
+        "$g$ décroît sur $]0\\,;1]$ et croît sur $[1\\,;+\\infty[$ : minimum $g(1) = 1 - 0 = 1$."
+      ],
+      "reponse": "$g'(x) = \\dfrac{x - 1}{x}$ ; minimum $g(1) = 1$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonctions",
+      "enonce": "Soit $f(x) = (2 - x)\\,e^{x}$ sur $\\mathbb{R}$. Montrer que $f'(x) = (1 - x)\\,e^{x}$, puis dresser le tableau de variations et préciser l'extremum.",
+      "corrige": [
+        "$f'(x) = -1 \\times e^{x} + (2 - x)\\,e^{x} = (1 - x)\\,e^{x}$.",
+        "$e^{x} > 0$ : $f'$ a le signe de $1 - x$, positive sur $]-\\infty\\,;1]$, négative sur $[1\\,;+\\infty[$.",
+        "Maximum en $x = 1$ : $f(1) = e \\approx 2{,}72$."
+      ],
+      "reponse": "$f$ croît sur $]-\\infty\\,;1]$, décroît sur $[1\\,;+\\infty[$ ; maximum $f(1) = e$."
+    },
+    {
+      "id": 42,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "La tension de charge d'un condensateur est $u(t) = 12\\left(1 - e^{-t/3}\\right)$ ($t$ en s, $u$ en V). 1. Calculer $u(3)$. 2. Montrer que $u$ est croissante. 3. Déterminer la limite de $u$ en $+\\infty$. 4. À quel instant la tension atteint-elle $11\\ \\mathrm{V}$ ?",
+      "corrige": [
+        "1. $u(3) = 12(1 - e^{-1}) \\approx 7{,}6\\ \\mathrm{V}$.",
+        "2. $u'(t) = 12 \\times \\dfrac{1}{3}e^{-t/3} = 4e^{-t/3} > 0$ : $u$ est strictement croissante.",
+        "3. $e^{-t/3} \\to 0$, donc $u(t) \\to 12\\ \\mathrm{V}$.",
+        "4. $12\\left(1 - e^{-t/3}\\right) = 11 \\iff e^{-t/3} = \\dfrac{1}{12} \\iff t = 3\\ln 12 \\approx 7{,}5\\ \\mathrm{s}$."
+      ],
+      "reponse": "1. $\\approx 7{,}6\\ \\mathrm{V}$ ; 2. $u'(t) = 4e^{-t/3} > 0$ ; 3. $12\\ \\mathrm{V}$ ; 4. $t = 3\\ln 12 \\approx 7{,}5\\ \\mathrm{s}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "L'iode 131, utilisé en médecine, a une demi-vie d'environ $8{,}0$ jours. Le nombre de noyaux suit $N(t) = N_0\\,e^{-\\lambda t}$ ($t$ en jours). 1. Calculer $\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$. 2. Quelle fraction des noyaux reste-t-il au bout de $24$ jours ? 3. Au bout de combien de jours reste-t-il moins de $1\\,\\%$ des noyaux ?",
+      "corrige": [
+        "1. $\\lambda = \\dfrac{\\ln 2}{8{,}0} \\approx 0{,}087\\ \\mathrm{j^{-1}}$.",
+        "2. $24$ jours $= 3$ demi-vies : $e^{-3\\ln 2} = \\dfrac{1}{8}$ ; il reste $12{,}5\\,\\%$ des noyaux.",
+        "3. $e^{-\\lambda t} < 0{,}01 \\iff t > \\dfrac{\\ln 100}{\\lambda} = \\dfrac{8{,}0 \\times \\ln 100}{\\ln 2} \\approx 53$ jours."
+      ],
+      "reponse": "1. $\\lambda \\approx 0{,}087\\ \\mathrm{j^{-1}}$ ; 2. $\\dfrac{1}{8}$ ; 3. environ $53$ jours."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "L'amplitude d'une oscillation amortie décroît selon $A(t) = 5\\,e^{-0{,}2t}$ ($A$ en cm, $t$ en s). 1. Calculer $A(5)$. 2. Montrer que $A$ est décroissante. 3. À partir de quel instant l'amplitude est-elle inférieure à $0{,}5\\ \\mathrm{cm}$ ?",
+      "corrige": [
+        "1. $A(5) = 5e^{-1} \\approx 1{,}8\\ \\mathrm{cm}$.",
+        "2. $A'(t) = -e^{-0{,}2t} < 0$.",
+        "3. $5e^{-0{,}2t} < 0{,}5 \\iff e^{-0{,}2t} < 0{,}1 \\iff -0{,}2t < -\\ln 10 \\iff t > 5\\ln 10 \\approx 11{,}5\\ \\mathrm{s}$."
+      ],
+      "reponse": "1. $\\approx 1{,}8\\ \\mathrm{cm}$ ; 2. $A'(t) = -e^{-0{,}2t} < 0$ ; 3. $t > 5\\ln 10 \\approx 11{,}5\\ \\mathrm{s}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "log-decimal",
+      "enonce": "Le niveau sonore est $L = 10\\log\\dfrac{I}{I_0}$ (en dB), avec $I_0 = 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$. 1. Calculer $L$ pour $I = 10^{-5}\\ \\mathrm{W\\cdot m^{-2}}$. 2. Montrer que doubler l'intensité ajoute $10\\log 2$ au niveau, et calculer cette valeur. 3. Quelle intensité correspond à $L = 90\\ \\mathrm{dB}$ ?",
+      "corrige": [
+        "1. $\\dfrac{I}{I_0} = 10^{7}$, donc $L = 10 \\times 7 = 70\\ \\mathrm{dB}$.",
+        "2. $10\\log\\dfrac{2I}{I_0} = 10\\log 2 + 10\\log\\dfrac{I}{I_0}$ : on ajoute $10\\log 2 \\approx 3\\ \\mathrm{dB}$.",
+        "3. $\\log\\dfrac{I}{I_0} = 9$, donc $I = 10^{9} \\times 10^{-12} = 10^{-3}\\ \\mathrm{W\\cdot m^{-2}}$."
+      ],
+      "reponse": "1. $70\\ \\mathrm{dB}$ ; 2. environ $+3\\ \\mathrm{dB}$ ; 3. $I = 10^{-3}\\ \\mathrm{W\\cdot m^{-2}}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-exp",
+      "enonce": "Montrer que pour tout réel $x$, $\\left(e^{x} - 1\\right)\\left(e^{x} + 1\\right) = e^{2x} - 1$.",
+      "corrige": [
+        "Identité remarquable $(a - b)(a + b) = a^2 - b^2$ avec $a = e^{x}$ et $b = 1$.",
+        "$\\left(e^{x}\\right)^2 - 1 = e^{2x} - 1$."
+      ],
+      "reponse": "$\\left(e^{x}\\right)^2 - 1^2 = e^{2x} - 1$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "equations-exp",
+      "enonce": "Résoudre $e^{2x} - 3e^{x} + 2 = 0$ en posant $X = e^{x}$.",
+      "corrige": [
+        "Comme $e^{2x} = \\left(e^{x}\\right)^2$, l'équation devient $X^2 - 3X + 2 = 0$, de racines $X = 1$ et $X = 2$ (discriminant $\\Delta = 1$).",
+        "$e^{x} = 1 \\iff x = 0$ ; $e^{x} = 2 \\iff x = \\ln 2$."
+      ],
+      "reponse": "$x = 0$ ou $x = \\ln 2$."
+    },
+    {
+      "id": 48,
+      "difficulte": "decouverte",
+      "notion": "valeurs-signe",
+      "enonce": "Sans calculatrice, en utilisant $e \\approx 2{,}718$, $\\ln 2 \\approx 0{,}693$ et $\\ln 10 \\approx 2{,}303$, ranger dans l'ordre croissant : $e$ ; $\\ln 10$ ; $e^{0}$ ; $\\ln 2$.",
+      "corrige": [
+        "$e^{0} = 1$.",
+        "$0{,}693 < 1 < 2{,}303 < 2{,}718$."
+      ],
+      "reponse": "$\\ln 2 < e^{0} < \\ln 10 < e$."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "sens-variation",
+      "enonce": "Dire si chaque fonction est croissante ou décroissante sur $\\mathbb{R}$ : a) $e^{0{,}3x}$ ; b) $5e^{-2x}$ ; c) $-e^{x}$ ; d) $3 - e^{-x}$.",
+      "corrige": [
+        "$\\left(e^{kx}\\right)' = k\\,e^{kx}$ a le signe de $k$.",
+        "a) dérivée $0{,}3e^{0{,}3x} > 0$ : croissante ; b) $-10e^{-2x} < 0$ : décroissante ; c) $-e^{x} < 0$ : décroissante ; d) $e^{-x} > 0$ : croissante."
+      ],
+      "reponse": "a) croissante ; b) décroissante ; c) décroissante ; d) croissante."
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "limites",
+      "enonce": "Déterminer : a) $\\lim\\limits_{x \\to +\\infty} x\\,e^{-x}$ ; b) $\\lim\\limits_{x \\to +\\infty} \\left(e^{x} - x\\right)$, en factorisant par $e^{x}$.",
+      "corrige": [
+        "a) $x\\,e^{-x} = \\dfrac{x}{e^{x}}$ : par croissance comparée, la limite est $0$.",
+        "b) $e^{x} - x = e^{x}\\left(1 - \\dfrac{x}{e^{x}}\\right)$ ; $\\dfrac{x}{e^{x}} \\to 0$, donc la parenthèse tend vers $1$ et le produit vers $+\\infty$."
+      ],
+      "reponse": "a) $0$ ; b) $+\\infty$."
     }
   ]
 }

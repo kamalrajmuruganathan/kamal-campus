@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "adresse IP et masque",
       "enonce": "Une machine a l'adresse IPv4 192.168.1.37 avec le masque 255.255.255.0. Donne l'adresse du réseau auquel elle appartient et le nombre d'adresses d'hôtes disponibles dans ce réseau.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "conversion binaire d'un octet",
       "enonce": "Convertis l'octet 192 (premier octet d'une adresse privée) en binaire sur 8 bits, puis vérifie ton résultat.",
       "corrige": [
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "débit et temps de transfert",
       "enonce": "On télécharge un fichier de 30 Mo (mégaoctets) sur une liaison de 20 Mbit/s (mégabits par seconde). En ignorant les pertes, estime la durée du transfert.",
       "corrige": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "appartenance à un réseau",
       "enonce": "Deux machines A = 10.0.5.12 et B = 10.0.6.3 utilisent le masque /24 (255.255.255.0). Peuvent-elles communiquer directement sans routeur ? Justifie.",
       "corrige": [
@@ -64,7 +64,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "routage par plus court chemin",
       "enonce": "Un réseau relie des routeurs par des liaisons de coûts : A-B (2), A-C (5), B-C (1), B-D (7), C-D (3). Détermine le chemin de coût minimal de A vers D et son coût total.",
       "corrige": [
@@ -78,7 +78,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "table de routage et protocoles",
       "enonce": "1) Explique la différence entre le protocole RIP (routage à vecteur de distance, métrique = nombre de sauts) et OSPF (état de liens, métrique liée au débit). 2) Sur le réseau A-B (1 saut), B-C (1 saut), A-C direct mais lien très lent (1 saut), quel chemin A->C choisirait RIP, et pourquoi OSPF pourrait-il en préférer un autre ?",
       "corrige": [
@@ -92,7 +92,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "adresse IPv4 valide",
       "enonce": "Parmi ces adresses, lesquelles sont des adresses IPv4 valides : 192.168.1.10 ; 256.1.1.1 ; 10.0.0.255 ? Justifie.",
       "corrige": [
@@ -105,7 +105,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "conversion d'un octet en binaire",
       "enonce": "Convertis en binaire sur 8 bits les deux premiers octets de l'adresse 192.168.x.x, c'est-à-dire 192 et 168.",
       "corrige": [
@@ -117,7 +117,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "débit et temps de transfert",
       "enonce": "Combien de temps faut-il pour transférer un fichier de 10 Mbit à un débit de 2 Mbit/s ?",
       "corrige": [
@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "choisir une route : RIP ou OSPF",
       "enonce": "Pour aller de A à B, deux routes existent : la route 1 traverse 2 routeurs mais des liens lents ; la route 2 traverse 3 routeurs mais des liens rapides (coût total plus faible). Quelle route choisit RIP ? Quelle route choisit OSPF ?",
       "corrige": [
@@ -139,6 +139,482 @@
         "La route 2 a un coût plus faible (liens rapides) : OSPF choisit la route 2."
       ],
       "reponse": "RIP choisit la route 1 (moins de sauts) ; OSPF choisit la route 2 (coût plus faible, liens rapides)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "commutation de paquets",
+      "enonce": "Explique ce qu'est la commutation de paquets et pourquoi elle rend Internet robuste aux pannes.",
+      "corrige": [
+        "Un message est découpé en paquets qui voyagent indépendamment, chacun avec l'adresse de destination, et sont réassemblés à l'arrivée.",
+        "Les paquets peuvent emprunter des chemins différents.",
+        "Si un lien tombe en panne, les paquets suivants sont réacheminés par un autre chemin, sans couper la communication."
+      ],
+      "reponse": "Message découpé en paquets routés indépendamment ; en cas de panne, ils passent par un autre chemin."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "rôle des protocoles",
+      "enonce": "Associe chaque protocole à son rôle : IP, RIP, OSPF. Rôles : (1) choisir la route de plus faible coût lié au débit ; (2) adresser et acheminer les paquets ; (3) choisir la route ayant le moins de sauts.",
+      "corrige": [
+        "IP attribue les adresses et achemine les paquets : (2).",
+        "RIP et OSPF servent aux routeurs à construire leurs tables de routage.",
+        "RIP minimise le nombre de sauts : (3) ; OSPF minimise un coût lié au débit : (1)."
+      ],
+      "reponse": "IP → (2) ; RIP → (3) ; OSPF → (1)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "table de routage",
+      "enonce": "Qu'est-ce qu'un routeur ? Que contient sa table de routage ?",
+      "corrige": [
+        "Un routeur est un appareil qui relie plusieurs réseaux et fait passer les paquets de l'un à l'autre.",
+        "Sa table de routage indique, pour chaque destination, vers quel voisin envoyer le paquet (le prochain saut), souvent avec une distance ou un coût."
+      ],
+      "reponse": "Il relie des réseaux ; sa table donne, pour chaque destination, le prochain saut (et une distance ou un coût)."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "adresse IPv4 valide",
+      "enonce": "Pour chaque adresse, dis si c'est une adresse IPv4 correctement écrite : a) 172.16.300.1 ; b) 8.8.8.8 ; c) 192.168.1 ; d) 0.0.0.0.",
+      "corrige": [
+        "Une adresse IPv4 est formée de quatre nombres entre 0 et 255 séparés par des points.",
+        "a) 300 > 255 : invalide. b) Quatre nombres entre 0 et 255 : valide.",
+        "c) Seulement trois nombres : invalide. d) Quatre nombres entre 0 et 255 : bien écrite (c'est une adresse particulière, qui n'est pas attribuée à une machine)."
+      ],
+      "reponse": "a) non ; b) oui ; c) non ; d) oui (adresse correctement écrite)."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "conversion binaire d'un octet",
+      "enonce": "Convertis l'adresse 10.1.255.130 en binaire (quatre octets de 8 bits).",
+      "corrige": [
+        "10 = 8 + 2 → 00001010 ; 1 → 00000001.",
+        "255 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 → 11111111.",
+        "130 = 128 + 2 → 10000010."
+      ],
+      "reponse": "00001010.00000001.11111111.10000010"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "conversion binaire d'un octet",
+      "enonce": "Convertis en décimal l'adresse écrite en binaire 11000000.10101000.00001010.00000001.",
+      "corrige": [
+        "11000000 = 128 + 64 = 192 ; 10101000 = 128 + 32 + 8 = 168.",
+        "00001010 = 8 + 2 = 10 ; 00000001 = 1."
+      ],
+      "reponse": "192.168.10.1"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "adresse IP et masque",
+      "enonce": "Une machine a l'adresse 172.16.45.200 avec le masque 255.255.0.0 (noté /16). Quelle est l'adresse du réseau ? Quelle est la partie machine de l'adresse ?",
+      "corrige": [
+        "Le masque /16 indique que les 16 premiers bits (les deux premiers octets) forment la partie réseau.",
+        "On garde 172.16 et on met la partie machine à 0 : adresse du réseau 172.16.0.0.",
+        "La partie machine est formée des deux derniers octets : 45.200."
+      ],
+      "reponse": "Réseau 172.16.0.0 ; partie machine 45.200."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "débit et temps de transfert",
+      "enonce": "Une vidéo de 450 Mo est envoyée sur une connexion de 100 Mbit/s. Estime la durée du transfert (en ignorant les pertes).",
+      "corrige": [
+        "Le fichier est en octets, le débit en bits par seconde : 450 Mo × 8 = 3 600 Mbit.",
+        "Durée = quantité ÷ débit = 3 600 ÷ 100 = 36 s."
+      ],
+      "reponse": "Environ 36 secondes."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "protocole RIP",
+      "enonce": "On considère un réseau de six routeurs A, B, C, D, E et F reliés par les liaisons suivantes (débits indiqués) : A-B 10 Mbit/s ; A-C 100 Mbit/s ; B-D 10 Mbit/s ; C-E 100 Mbit/s ; E-D 100 Mbit/s ; D-F 100 Mbit/s ; B-F 1 Mbit/s. Combien de sauts compte la route A-B-F ? Et la route A-C-E-D-F ? Laquelle RIP choisit-il pour aller de A à F ?",
+      "corrige": [
+        "RIP compte le nombre de liaisons traversées (sauts).",
+        "A-B-F : 2 sauts. A-C-E-D-F : 4 sauts.",
+        "RIP choisit la route ayant le moins de sauts : A-B-F."
+      ],
+      "reponse": "2 sauts contre 4 : RIP choisit A-B-F."
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "adresse IPv4 valide",
+      "enonce": "Combien d'octets et combien de bits une adresse IPv4 occupe-t-elle ? Combien d'adresses IPv4 différentes existe-t-il en théorie ?",
+      "corrige": [
+        "Une adresse IPv4 est formée de quatre nombres de 0 à 255 : chacun tient sur un octet, soit 4 octets.",
+        "4 octets = 4 × 8 = 32 bits.",
+        "Il y a donc 2^32 = 4 294 967 296 adresses possibles, environ 4,3 milliards."
+      ],
+      "reponse": "4 octets, 32 bits, 2^32 ≈ 4,3 milliards d'adresses."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "appartenance à un réseau",
+      "enonce": "Les machines 192.168.0.12/24 et 192.168.0.200/24 peuvent-elles communiquer directement, sans routeur ?",
+      "corrige": [
+        "Avec /24, la partie réseau est formée des trois premiers octets.",
+        "Les deux adresses ont la même partie réseau, 192.168.0 : réseau 192.168.0.0/24.",
+        "Elles sont sur le même réseau local : elles communiquent directement."
+      ],
+      "reponse": "Oui : elles sont toutes deux dans le réseau 192.168.0.0/24."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "débit et temps de transfert",
+      "enonce": "Combien de temps faut-il pour envoyer une photo de 5 Mo sur une liaison à 8 Mbit/s ?",
+      "corrige": [
+        "On convertit la taille en bits : 5 Mo × 8 = 40 Mbit.",
+        "Durée = 40 Mbit ÷ 8 Mbit/s = 5 s."
+      ],
+      "reponse": "5 secondes."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "protocole OSPF",
+      "enonce": "On considère un réseau de six routeurs A, B, C, D, E et F reliés par les liaisons suivantes (débits indiqués) : A-B 10 Mbit/s ; A-C 100 Mbit/s ; B-D 10 Mbit/s ; C-E 100 Mbit/s ; E-D 100 Mbit/s ; D-F 100 Mbit/s ; B-F 1 Mbit/s. Avec OSPF, on prend comme coût d'une liaison 10^8 / débit (débit en bit/s), soit 100 / débit en Mbit/s. Calcule le coût de chaque liaison, puis le coût des routes A-B-F et A-C-E-D-F. Quelle route OSPF choisit-il ?",
+      "corrige": [
+        "Coûts : 10 Mbit/s → 10 ; 100 Mbit/s → 1 ; 1 Mbit/s → 100. Donc A-B 10, A-C 1, B-D 10, C-E 1, E-D 1, D-F 1, B-F 100.",
+        "A-B-F : 10 + 100 = 110. A-C-E-D-F : 1 + 1 + 1 + 1 = 4.",
+        "OSPF choisit la route de plus faible coût : A-C-E-D-F, malgré ses 4 sauts."
+      ],
+      "reponse": "A-B-F coûte 110, A-C-E-D-F coûte 4 : OSPF choisit A-C-E-D-F."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "protocole RIP",
+      "enonce": "On considère un réseau de six routeurs A, B, C, D, E et F reliés par les liaisons suivantes (débits indiqués) : A-B 10 Mbit/s ; A-C 100 Mbit/s ; B-D 10 Mbit/s ; C-E 100 Mbit/s ; E-D 100 Mbit/s ; D-F 100 Mbit/s ; B-F 1 Mbit/s. Donne la table de routage RIP du routeur A : pour chaque destination, le prochain saut et le nombre de sauts.",
+      "corrige": [
+        "Destinations à 1 saut : B (par B) et C (par C).",
+        "À 2 sauts : D (par B, route A-B-D), E (par C), F (par B, route A-B-F).",
+        "Remarque : D est aussi à 3 sauts par C-E-D, mais RIP retient la route la plus courte en sauts."
+      ],
+      "reponse": "B : B, 1 ; C : C, 1 ; D : B, 2 ; E : C, 2 ; F : B, 2."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "protocole OSPF",
+      "enonce": "On considère un réseau de six routeurs A, B, C, D, E et F reliés par les liaisons suivantes (débits indiqués) : A-B 10 Mbit/s ; A-C 100 Mbit/s ; B-D 10 Mbit/s ; C-E 100 Mbit/s ; E-D 100 Mbit/s ; D-F 100 Mbit/s ; B-F 1 Mbit/s. Avec les coûts OSPF (100 / débit en Mbit/s), donne la table de routage du routeur A : pour chaque destination, le prochain saut et le coût total.",
+      "corrige": [
+        "Coûts des liaisons : A-B 10, A-C 1, B-D 10, C-E 1, E-D 1, D-F 1, B-F 100.",
+        "C : 1 (direct) ; E : 2 (par C) ; D : 3 (A-C-E-D) ; F : 4 (A-C-E-D-F) ; B : 10 (direct, car A-C-E-D-B coûterait 1 + 1 + 1 + 10 = 13).",
+        "Le prochain saut est C pour C, E, D et F, et B pour B."
+      ],
+      "reponse": "B : B, 10 ; C : C, 1 ; D : C, 3 ; E : C, 2 ; F : C, 4."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "appartenance à un réseau",
+      "enonce": "Le réseau d'un lycée est 192.168.20.0/24. Parmi ces machines, lesquelles appartiennent à ce réseau ? 192.168.20.17 ; 192.168.21.17 ; 192.168.20.254 ; 192.169.20.5.",
+      "corrige": [
+        "Avec /24, les trois premiers octets doivent être 192.168.20.",
+        "192.168.20.17 et 192.168.20.254 conviennent.",
+        "192.168.21.17 (3e octet 21) et 192.169.20.5 (2e octet 169) appartiennent à d'autres réseaux."
+      ],
+      "reponse": "192.168.20.17 et 192.168.20.254."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "adresse IP et masque",
+      "enonce": "Un réseau a pour adresse 10.4.0.0/16. Combien d'adresses de machines peut-il contenir (on retire l'adresse du réseau et l'adresse de diffusion) ? Quelle est l'adresse de diffusion ?",
+      "corrige": [
+        "La partie machine occupe 32 − 16 = 16 bits : 2^16 = 65 536 adresses au total.",
+        "On retire l'adresse du réseau (10.4.0.0) et celle de diffusion : 65 534 machines.",
+        "L'adresse de diffusion a tous les bits machine à 1 : 10.4.255.255."
+      ],
+      "reponse": "65 534 machines ; diffusion 10.4.255.255."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "adresse IP et masque",
+      "enonce": "Écris en binaire le masque 255.255.255.0, puis explique pourquoi on le note /24. Comment note-t-on le masque 255.255.255.128 ?",
+      "corrige": [
+        "255 = 11111111 : le masque s'écrit 11111111.11111111.11111111.00000000.",
+        "Il commence par 24 bits à 1 (la partie réseau) : on le note /24.",
+        "255.255.255.128 = 11111111.11111111.11111111.10000000 : 25 bits à 1, noté /25."
+      ],
+      "reponse": "24 bits à 1 (/24) ; 255.255.255.128 se note /25."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "débit et temps de transfert",
+      "enonce": "Sur un réseau Ethernet, un paquet IP fait au plus 1 500 octets. Combien faut-il de paquets, au minimum, pour transporter un fichier de 3 Mo (3 000 000 d'octets), en ignorant les en-têtes ?",
+      "corrige": [
+        "On divise la taille du fichier par la taille maximale d'un paquet.",
+        "3 000 000 ÷ 1 500 = 2 000.",
+        "Il faut donc au moins 2 000 paquets (en réalité un peu plus, car chaque paquet contient aussi des en-têtes)."
+      ],
+      "reponse": "Au moins 2 000 paquets."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "commutation de paquets",
+      "enonce": "Les paquets d'un même message ont suivi des chemins différents ; ils arrivent dans le désordre (3, 1, 4, 2). Comment le destinataire peut-il reconstituer le message ? Quel protocole est chargé de cette tâche ?",
+      "corrige": [
+        "Chaque paquet porte un numéro d'ordre : le destinataire les remet dans l'ordre avant de réassembler le message.",
+        "Si un paquet manque, il peut en demander le renvoi.",
+        "C'est le rôle de TCP, qui assure que les données arrivent complètes et dans l'ordre (IP, lui, se contente d'acheminer les paquets)."
+      ],
+      "reponse": "Grâce aux numéros des paquets, qu'il remet dans l'ordre ; c'est le rôle de TCP."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "routage par plus court chemin",
+      "enonce": "On modélise un réseau par un graphe. Que représentent les sommets ? Les arêtes ? Le poids d'une arête pour RIP ? Pour OSPF ?",
+      "corrige": [
+        "Les sommets sont les routeurs, les arêtes les liaisons entre routeurs.",
+        "Pour RIP, chaque arête a le poids 1 (un saut) : on cherche le chemin avec le moins d'arêtes.",
+        "Pour OSPF, le poids est un coût lié au débit de la liaison : on cherche le chemin de poids total minimal."
+      ],
+      "reponse": "Sommets : routeurs ; arêtes : liaisons ; poids 1 pour RIP, coût lié au débit pour OSPF."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "table de routage",
+      "enonce": "Voici un extrait de la table de routage du routeur R1. Vers quel voisin R1 envoie-t-il un paquet destiné au réseau 10.2.0.0/16 ? Et un paquet pour 10.3.0.0/16 ?\n\n```text\ndestination     prochain saut   distance\n10.1.0.0/16     direct          0\n10.2.0.0/16     R2              1\n10.3.0.0/16     R3              2\n10.4.0.0/16     R2              2\n```",
+      "corrige": [
+        "Le routeur cherche la ligne de la destination et lit le prochain saut.",
+        "10.2.0.0/16 : prochain saut R2 (à 1 saut).",
+        "10.3.0.0/16 : prochain saut R3 (à 2 sauts) ; R1 ne connaît pas toute la route, seulement le voisin suivant."
+      ],
+      "reponse": "Vers R2 pour 10.2.0.0/16 ; vers R3 pour 10.3.0.0/16."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "protocole RIP",
+      "enonce": "Avec RIP, une route est considérée comme inaccessible au-delà de 15 sauts (16 représente l'infini). Que se passe-t-il pour une destination située à 17 routeurs de distance ? Quelle limite de RIP cela montre-t-il ?",
+      "corrige": [
+        "Une route de plus de 15 sauts n'est pas utilisable avec RIP : la destination est considérée comme inaccessible.",
+        "RIP est donc réservé à des réseaux de taille limitée.",
+        "Sur de grands réseaux, on utilise plutôt des protocoles comme OSPF."
+      ],
+      "reponse": "La destination est jugée inaccessible ; RIP ne convient qu'aux réseaux de taille limitée."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "commutation de paquets",
+      "enonce": "Pourquoi chaque paquet doit-il contenir l'adresse IP de destination, et pas seulement le premier paquet du message ?",
+      "corrige": [
+        "Chaque paquet est routé indépendamment : chaque routeur traversé doit savoir où l'envoyer.",
+        "Les paquets d'un même message peuvent suivre des chemins différents : un paquet sans adresse ne pourrait pas être acheminé.",
+        "L'adresse IP joue le rôle de l'adresse postale écrite sur chaque enveloppe."
+      ],
+      "reponse": "Parce que chaque paquet voyage seul et peut suivre son propre chemin : chaque routeur lit l'adresse de chaque paquet."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "protocole OSPF",
+      "enonce": "Trois routeurs X, Y, Z : X-Y à 10 Mbit/s, Y-Z à 100 Mbit/s, X-Z à 1 Mbit/s. Avec le coût OSPF 100 / débit (en Mbit/s), quelle route OSPF choisit-il de X vers Z ? Et RIP ?",
+      "corrige": [
+        "Coûts : X-Y 10, Y-Z 1, X-Z 100.",
+        "Route directe X-Z : 100 ; route X-Y-Z : 10 + 1 = 11. OSPF choisit X-Y-Z.",
+        "RIP choisit la route directe X-Z (1 saut contre 2)."
+      ],
+      "reponse": "OSPF : X-Y-Z (coût 11) ; RIP : X-Z (1 saut)."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "protocole RIP",
+      "enonce": "Le routeur R1 reçoit de son voisin R2 (à 1 saut) la table suivante : réseau N1 à 2 sauts, réseau N2 à 5 sauts, réseau N3 à 1 saut. La table de R1 contenait : N1 à 4 sauts (par R4), N2 à 3 sauts (par R5) et ne connaissait pas N3. Mets à jour la table de R1 selon le principe de RIP.",
+      "corrige": [
+        "Passer par R2 ajoute 1 saut : N1 à 2 + 1 = 3, N2 à 5 + 1 = 6, N3 à 1 + 1 = 2.",
+        "N1 : 3 < 4, on remplace par « via R2, 3 sauts ». N2 : 6 > 3, on garde « via R5, 3 sauts ».",
+        "N3 est inconnu : on l'ajoute « via R2, 2 sauts »."
+      ],
+      "reponse": "N1 : R2, 3 ; N2 : R5, 3 ; N3 : R2, 2."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "protocole OSPF",
+      "enonce": "Avec un coût OSPF égal à 10^8 / débit (en bit/s), calcule le coût d'une liaison Ethernet à 100 Mbit/s, d'une liaison à 10 Mbit/s et d'une liaison ADSL à 2 Mbit/s. Que remarque-t-on pour une liaison à 1 Gbit/s ?",
+      "corrige": [
+        "100 Mbit/s = 10^8 bit/s : coût 10^8 / 10^8 = 1.",
+        "10 Mbit/s = 10^7 bit/s : coût 10. 2 Mbit/s = 2 × 10^6 bit/s : coût 50.",
+        "1 Gbit/s = 10^9 bit/s : coût 0,1. Avec cette formule, toutes les liaisons plus rapides que 100 Mbit/s ont un coût inférieur à 1, et on les distingue mal ; en pratique on ajuste la référence 10^8."
+      ],
+      "reponse": "1 ; 10 ; 50 ; 0,1 pour 1 Gbit/s (coût inférieur à 1)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "routage par plus court chemin",
+      "enonce": "On considère un réseau de six routeurs A, B, C, D, E et F reliés par les liaisons suivantes (débits indiqués) : A-B 10 Mbit/s ; A-C 100 Mbit/s ; B-D 10 Mbit/s ; C-E 100 Mbit/s ; E-D 100 Mbit/s ; D-F 100 Mbit/s ; B-F 1 Mbit/s. La liaison C-E tombe en panne. Quelle est la nouvelle route choisie par OSPF de A vers F, et son coût ? Et celle de RIP ?",
+      "corrige": [
+        "Coûts OSPF restants : A-B 10, A-C 1, B-D 10, E-D 1, D-F 1, B-F 100 ; C n'est plus relié qu'à A.",
+        "OSPF : A-B-D-F coûte 10 + 10 + 1 = 21, A-B-F coûte 110 : la route choisie est A-B-D-F (21).",
+        "RIP : A-B-F (2 sauts) reste la plus courte en sauts, elle ne change pas."
+      ],
+      "reponse": "OSPF : A-B-D-F (coût 21) ; RIP : A-B-F inchangée."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "appartenance à un réseau",
+      "enonce": "Deux machines ont les adresses 192.168.5.70/26 et 192.168.5.130/26. Sont-elles sur le même réseau ? Détaille le calcul sur le dernier octet.",
+      "corrige": [
+        "/26 : les 26 premiers bits forment le réseau, soit les trois premiers octets et les 2 premiers bits du dernier.",
+        "70 = 01000110 → bits réseau 01, adresse réseau 192.168.5.64.",
+        "130 = 10000010 → bits réseau 10, adresse réseau 192.168.5.128. Les réseaux sont différents."
+      ],
+      "reponse": "Non : réseaux 192.168.5.64/26 et 192.168.5.128/26."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "adresse IP et masque",
+      "enonce": "Un administrateur doit créer un réseau pour 50 machines. Quel est le masque le plus grand (le plus de bits réseau) qui convient : /24, /25, /26 ou /27 ? Justifie.",
+      "corrige": [
+        "Avec /p, il y a 2^(32 − p) adresses, dont 2 réservées (réseau et diffusion).",
+        "/27 : 2^5 − 2 = 30 machines, insuffisant. /26 : 2^6 − 2 = 62 machines, suffisant.",
+        "/26 est donc le masque le plus grand qui convient (/25 et /24 conviennent aussi, mais gaspillent des adresses)."
+      ],
+      "reponse": "/26 (62 adresses de machines)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "rôle des protocoles",
+      "enonce": "Un élève dit : « C'est OSPF qui transporte mes paquets jusqu'au serveur. » Corrige cette phrase en précisant le rôle du protocole IP, d'OSPF et du routeur.",
+      "corrige": [
+        "OSPF ne transporte pas les paquets : c'est un protocole de routage, qui permet aux routeurs de construire et de mettre à jour leurs tables.",
+        "IP adresse et achemine les paquets ; chaque routeur traversé consulte sa table pour choisir le prochain saut.",
+        "Phrase corrigée : « Mes paquets sont acheminés par IP de routeur en routeur ; les routeurs choisissent le prochain saut grâce à des tables construites par OSPF. »"
+      ],
+      "reponse": "IP achemine les paquets ; OSPF sert seulement à construire les tables de routage utilisées par les routeurs."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "débit et temps de transfert",
+      "enonce": "Sur la route A-C-E-D-F du réseau à six routeurs, les liaisons ont toutes un débit de 100 Mbit/s ; sur la route A-B-F, le débit est limité par la liaison la plus lente (1 Mbit/s). Compare la durée d'envoi d'un fichier de 25 Mo par chacune des deux routes (en ne tenant compte que du débit le plus faible de la route).",
+      "corrige": [
+        "Taille : 25 Mo × 8 = 200 Mbit.",
+        "Route A-C-E-D-F (100 Mbit/s) : 200 / 100 = 2 s.",
+        "Route A-B-F (limitée à 1 Mbit/s) : 200 / 1 = 200 s. La route la plus courte en sauts est ici 100 fois plus lente."
+      ],
+      "reponse": "2 s par A-C-E-D-F contre 200 s par A-B-F."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "table de routage",
+      "enonce": "Pourquoi un routeur n'a-t-il pas besoin de connaître la route complète jusqu'à la destination ? Explique avec la notion de « prochain saut ».",
+      "corrige": [
+        "Chaque routeur ne décide que de l'étape suivante : il envoie le paquet au voisin indiqué par sa table (le prochain saut).",
+        "Ce voisin, à son tour, consulte sa propre table et choisit l'étape suivante.",
+        "De proche en proche, le paquet se rapproche de sa destination : la route complète résulte de ces décisions locales."
+      ],
+      "reponse": "Chaque routeur choisit seulement le voisin suivant ; la route complète se construit de proche en proche."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "routage par plus court chemin",
+      "enonce": "Ce programme calcule, à partir de A, le nombre de sauts vers chaque routeur, comme le ferait RIP. Qu'affiche-t-il ?\n\n```python\nfrom collections import deque\nreseau = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\", \"F\"], \"C\": [\"A\", \"E\"],\n          \"D\": [\"B\", \"E\", \"F\"], \"E\": [\"C\", \"D\"], \"F\": [\"B\", \"D\"]}\n\ndef sauts(g, depart):\n    dist = {depart: 0}\n    file = deque([depart])\n    while file:\n        r = file.popleft()\n        for v in g[r]:\n            if v not in dist:\n                dist[v] = dist[r] + 1\n                file.append(v)\n    return dist\n\nprint(sauts(reseau, \"A\"))\n```",
+      "corrige": [
+        "C'est un parcours en largeur : il découvre les routeurs par nombre de sauts croissant.",
+        "B et C sont à 1 saut ; D et F (par B) et E (par C) à 2 sauts.",
+        "Les clés sont ajoutées dans l'ordre de découverte."
+      ],
+      "reponse": "`{'A': 0, 'B': 1, 'C': 1, 'D': 2, 'F': 2, 'E': 2}`"
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "adresse IP et masque",
+      "enonce": "Écris une fonction Python `adresse_reseau(ip, masque)` qui reçoit deux chaînes comme \"192.168.1.37\" et \"255.255.255.0\" et renvoie l'adresse du réseau. Indication : l'opérateur `&` réalise l'opération ET bit à bit entre deux entiers. Que renvoie-t-elle pour (\"172.16.45.200\", \"255.255.240.0\") ?",
+      "corrige": [
+        "On découpe chaque chaîne avec `split(\".\")` et on convertit les morceaux en entiers.",
+        "Pour chaque octet, l'octet du réseau est `int(a) & int(m)` : l'opération ET garde les bits de l'adresse là où le masque vaut 1.",
+        "Exemple : `return \".\".join(str(int(a) & int(m)) for a, m in zip(ip.split(\".\"), masque.split(\".\")))`. Pour le 3e octet : 45 & 240 = 00101101 & 11110000 = 00100000 = 32."
+      ],
+      "reponse": "\"172.16.32.0\""
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "protocole OSPF",
+      "enonce": "Un réseau relie les routeurs R1 à R5. Liaisons et débits : R1-R2 100 Mbit/s ; R1-R3 10 Mbit/s ; R2-R4 10 Mbit/s ; R3-R4 100 Mbit/s ; R2-R3 100 Mbit/s ; R4-R5 1 Mbit/s ; R3-R5 10 Mbit/s. Avec le coût OSPF 100 / débit (en Mbit/s), détermine la meilleure route de R1 vers R5 et son coût. Quelle route choisirait RIP ?",
+      "corrige": [
+        "Coûts : R1-R2 1 ; R1-R3 10 ; R2-R4 10 ; R3-R4 1 ; R2-R3 1 ; R4-R5 100 ; R3-R5 10.",
+        "Routes possibles vers R5 : R1-R3-R5 = 20 ; R1-R2-R3-R5 = 1 + 1 + 10 = 12 ; R1-R2-R4-R5 = 111 ; R1-R2-R3-R4-R5 = 103.",
+        "OSPF choisit R1-R2-R3-R5 (coût 12). RIP choisit une route de 2 sauts : R1-R3-R5."
+      ],
+      "reponse": "OSPF : R1-R2-R3-R5, coût 12 ; RIP : R1-R3-R5 (2 sauts)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "commutation de paquets",
+      "enonce": "Un fichier de 6 000 octets est découpé en paquets de 1 500 octets de données. Pendant le transfert, le lien principal tombe en panne après le passage des deux premiers paquets. Décris ce qui se passe pour les paquets suivants, puis pour le destinataire.",
+      "corrige": [
+        "6 000 ÷ 1 500 = 4 paquets.",
+        "Les routeurs mettent à jour leurs tables (grâce au protocole de routage) : les paquets 3 et 4 sont réacheminés par un autre chemin.",
+        "Le destinataire reçoit les 4 paquets, éventuellement dans le désordre et avec un délai, puis les remet dans l'ordre et réassemble le fichier : la communication n'est pas coupée."
+      ],
+      "reponse": "4 paquets ; les paquets 3 et 4 prennent un autre chemin ; le fichier est réassemblé à l'arrivée."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "appartenance à un réseau",
+      "enonce": "Écris une fonction `meme_reseau(ip1, ip2, masque)` qui renvoie `True` si les deux adresses sont dans le même réseau, en utilisant `adresse_reseau` (exercice précédent sur l'adresse du réseau). Que renvoie-t-elle pour (\"10.0.5.12\", \"10.0.6.3\", \"255.255.0.0\") ? Compare avec le résultat obtenu avec le masque /24 dans l'exercice 4.",
+      "corrige": [
+        "Deux adresses sont dans le même réseau si elles ont la même adresse de réseau.",
+        "Code : `return adresse_reseau(ip1, masque) == adresse_reseau(ip2, masque)`.",
+        "Avec 255.255.0.0, les deux adresses donnent 10.0.0.0 : la fonction renvoie True, alors qu'avec /24 elles étaient sur deux réseaux différents. Le masque change tout."
+      ],
+      "reponse": "`True` avec 255.255.0.0 (réseau 10.0.0.0), alors qu'avec /24 elles ne sont pas sur le même réseau."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "protocole RIP",
+      "enonce": "Dans un réseau en ligne R1 - R2 - R3 - R4, R1 annonce le réseau N (directement relié, distance 0). Avec RIP, chaque routeur transmet sa table à ses voisins toutes les 30 secondes. En supposant que chaque routeur met à jour sa table dès qu'il reçoit une annonce, combien d'échanges successifs faut-il pour que R4 connaisse N ? À quelle distance ?",
+      "corrige": [
+        "1er échange : R2 apprend N par R1, à distance 1.",
+        "2e échange : R3 l'apprend par R2, à distance 2. 3e échange : R4 l'apprend par R3, à distance 3.",
+        "Il faut donc 3 échanges (jusqu'à environ 1 min 30 avec des annonces toutes les 30 s) : RIP converge lentement sur les grands réseaux."
+      ],
+      "reponse": "3 échanges ; R4 connaît N à 3 sauts (par R3)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "table de routage",
+      "enonce": "On considère un réseau de six routeurs A, B, C, D, E et F reliés par les liaisons suivantes (débits indiqués) : A-B 10 Mbit/s ; A-C 100 Mbit/s ; B-D 10 Mbit/s ; C-E 100 Mbit/s ; E-D 100 Mbit/s ; D-F 100 Mbit/s ; B-F 1 Mbit/s. Construis la table de routage RIP du routeur D (destination, prochain saut, nombre de sauts), puis celle obtenue avec OSPF (coût 100 / débit en Mbit/s).",
+      "corrige": [
+        "RIP : B, E et F sont voisins (1 saut) ; A est à 2 sauts par B (D-B-A) ; C est à 2 sauts par E (D-E-C).",
+        "OSPF (coûts A-B 10, A-C 1, B-D 10, C-E 1, E-D 1, D-F 1, B-F 100) : E 1 (direct), F 1 (direct), C 2 (par E), A 3 (D-E-C-A, par E), B 10 (direct, car D-E-C-A-B coûterait 13).",
+        "Les deux tables diffèrent pour A : RIP passe par B, OSPF par E."
+      ],
+      "reponse": "RIP : A (B, 2), B (B, 1), C (E, 2), E (E, 1), F (F, 1). OSPF : A (E, 3), B (B, 10), C (E, 2), E (E, 1), F (F, 1)."
     }
   ]
 }

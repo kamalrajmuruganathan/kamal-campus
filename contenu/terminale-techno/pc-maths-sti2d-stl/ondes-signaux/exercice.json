@@ -135,6 +135,447 @@
         "6. Conversion : $\\lambda' = 532$ nm $= 5{,}32 \\times 10^{-7}$ m. Puis $f' = \\dfrac{c}{\\lambda'} = \\dfrac{3{,}00 \\times 10^{8}}{5{,}32 \\times 10^{-7}} \\approx 5{,}6 \\times 10^{14}$ Hz. Comme $400$ nm $< 532$ nm $< 800$ nm, cette lumière appartient bien au domaine **visible** (couleur verte)."
       ],
       "reponse": "1. Fondamental $55$ Hz ; harmoniques de rangs $2$ ($110$ Hz) et $3$ ($165$ Hz) ; $f = 55$ Hz, $T \\approx 18$ ms. 2. Son composé ; timbre = composition en harmoniques. 3. $I \\approx 1{,}6 \\times 10^{-2}$ W·m⁻², $L \\approx 102$ dB. 4. $L' \\approx 108$ dB à $5{,}0$ m ($+6$ dB), sous le seuil de douleur mais dangereux. 5. $\\lambda \\approx 0{,}43$ m ; propagation libre. 6. $f' \\approx 5{,}6 \\times 10^{14}$ Hz, domaine visible."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "signal-sinusoidal",
+      "enonce": "Pour le signal $s(t) = 3{,}0\\cos\\left(2\\pi \\times 50\\,t + \\dfrac{\\pi}{4}\\right)$ (en V), donner l'amplitude, la fréquence, la phase à l'origine et la période.",
+      "corrige": [
+        "Par identification avec $A\\cos(2\\pi f t + \\varphi)$ : $A = 3{,}0\\ \\mathrm{V}$, $f = 50\\ \\mathrm{Hz}$, $\\varphi = \\dfrac{\\pi}{4}$.",
+        "$T = \\dfrac{1}{f} = 0{,}020\\ \\mathrm{s} = 20\\ \\mathrm{ms}$."
+      ],
+      "reponse": "$A = 3{,}0\\ \\mathrm{V}$ ; $f = 50\\ \\mathrm{Hz}$ ; $\\varphi = \\dfrac{\\pi}{4}$ ; $T = 20\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "harmoniques",
+      "enonce": "Un signal périodique a pour fondamental $f_1 = 150\\ \\mathrm{Hz}$. Donner les fréquences des harmoniques de rangs $2$, $3$ et $4$.",
+      "corrige": [
+        "$f_n = n \\times f_1$."
+      ],
+      "reponse": "$300\\ \\mathrm{Hz}$, $450\\ \\mathrm{Hz}$ et $600\\ \\mathrm{Hz}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "harmoniques",
+      "enonce": "Un signal périodique a une fréquence de $200\\ \\mathrm{Hz}$. Son spectre peut-il contenir une raie à $500\\ \\mathrm{Hz}$ ? à $600\\ \\mathrm{Hz}$ ?",
+      "corrige": [
+        "Les composantes d'un signal périodique de fréquence $f_1$ sont aux multiples entiers de $f_1$.",
+        "$\\dfrac{500}{200} = 2{,}5$ n'est pas entier : impossible. $\\dfrac{600}{200} = 3$ : c'est l'harmonique de rang $3$."
+      ],
+      "reponse": "Pas à $500\\ \\mathrm{Hz}$ ; oui à $600\\ \\mathrm{Hz}$ (rang $3$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "spectre-amplitude",
+      "enonce": "Décrire le spectre d'amplitude d'une tension sinusoïdale pure de fréquence $1{,}0\\ \\mathrm{kHz}$ et d'amplitude $2{,}0\\ \\mathrm{V}$.",
+      "corrige": [
+        "Un signal sinusoïdal pur ne contient qu'une seule composante.",
+        "Le spectre présente une seule raie, à $1{,}0\\ \\mathrm{kHz}$, de hauteur $2{,}0\\ \\mathrm{V}$."
+      ],
+      "reponse": "Une seule raie : $(1{,}0\\ \\mathrm{kHz}\\,;2{,}0\\ \\mathrm{V})$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "spectre-amplitude",
+      "enonce": "Soit $u(t) = 4{,}0\\cos(2\\pi \\times 50\\,t) + 2{,}0\\cos(2\\pi \\times 100\\,t) + 1{,}0\\cos(2\\pi \\times 150\\,t)$ (en V). Décrire son spectre, puis donner la fréquence et la période du signal.",
+      "corrige": [
+        "Trois raies : $(50\\ \\mathrm{Hz}\\,;4{,}0\\ \\mathrm{V})$, $(100\\ \\mathrm{Hz}\\,;2{,}0\\ \\mathrm{V})$, $(150\\ \\mathrm{Hz}\\,;1{,}0\\ \\mathrm{V})$.",
+        "Le fondamental est à $50\\ \\mathrm{Hz}$ (harmoniques de rangs $2$ et $3$) : $f = 50\\ \\mathrm{Hz}$ et $T = 20\\ \\mathrm{ms}$."
+      ],
+      "reponse": "Raies à $50$, $100$ et $150\\ \\mathrm{Hz}$ ; $f = 50\\ \\mathrm{Hz}$, $T = 20\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "spectre-amplitude",
+      "enonce": "Un spectre présente des raies à $300\\ \\mathrm{Hz}$ (amplitude $1{,}0$), $600\\ \\mathrm{Hz}$ (amplitude $3{,}0$) et $900\\ \\mathrm{Hz}$ (amplitude $0{,}5$). Quelle est la fréquence du signal ?",
+      "corrige": [
+        "La fréquence du signal est celle du fondamental, la raie de plus basse fréquence, même si une autre raie est plus haute.",
+        "$f = 300\\ \\mathrm{Hz}$ ; $600$ et $900\\ \\mathrm{Hz}$ sont les harmoniques de rangs $2$ et $3$."
+      ],
+      "reponse": "$f = 300\\ \\mathrm{Hz}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "spectre-amplitude",
+      "enonce": "Le spectre d'un son comporte des raies à $400$, $800$ et $1\\,200\\ \\mathrm{Hz}$. Un élève affirme que la fréquence du son est $1\\,200\\ \\mathrm{Hz}$. Corriger et calculer la période.",
+      "corrige": [
+        "La fréquence du signal est celle du fondamental, c'est-à-dire la raie de plus basse fréquence : $400\\ \\mathrm{Hz}$ ($1\\,200\\ \\mathrm{Hz}$ est l'harmonique de rang $3$).",
+        "$T = \\dfrac{1}{400} = 2{,}5 \\times 10^{-3}\\ \\mathrm{s} = 2{,}5\\ \\mathrm{ms}$."
+      ],
+      "reponse": "$f = 400\\ \\mathrm{Hz}$ ; $T = 2{,}5\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "harmoniques",
+      "enonce": "L'harmonique de rang $4$ d'un son est à $880\\ \\mathrm{Hz}$. Quelle est la fréquence du fondamental ? Où se trouve l'harmonique de rang $3$ ?",
+      "corrige": [
+        "$f_4 = 4f_1$, donc $f_1 = \\dfrac{880}{4} = 220\\ \\mathrm{Hz}$.",
+        "$f_3 = 3 \\times 220 = 660\\ \\mathrm{Hz}$."
+      ],
+      "reponse": "$f_1 = 220\\ \\mathrm{Hz}$ ; $f_3 = 660\\ \\mathrm{Hz}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "hauteur-timbre",
+      "enonce": "Une flûte et un violon jouent la même note, de fondamental $440\\ \\mathrm{Hz}$. Les sons ont-ils la même hauteur ? le même timbre ? Justifier.",
+      "corrige": [
+        "La hauteur est fixée par la fréquence du fondamental : même fondamental, donc même hauteur.",
+        "Le timbre dépend des harmoniques (nombre et amplitudes relatives), différents pour les deux instruments : timbres différents."
+      ],
+      "reponse": "Même hauteur (même fondamental), timbres différents (harmoniques différents)."
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "hauteur-timbre",
+      "enonce": "Spectre A : une raie à $330\\ \\mathrm{Hz}$. Spectre B : raies à $330$, $660$ et $990\\ \\mathrm{Hz}$. Comparer les deux sons (pur ou composé, hauteur, timbre).",
+      "corrige": [
+        "A n'a qu'une raie : son pur. B en a plusieurs : son composé.",
+        "Même fondamental ($330\\ \\mathrm{Hz}$) : même hauteur ; spectres différents : timbres différents."
+      ],
+      "reponse": "A pur, B composé ; même hauteur ; timbres différents."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "hauteur-timbre",
+      "enonce": "Le fondamental d'un do vaut environ $262\\ \\mathrm{Hz}$, celui du do de l'octave supérieure environ $523\\ \\mathrm{Hz}$. Lequel est le plus aigu ? Quel est le rapport des fréquences ?",
+      "corrige": [
+        "Le son le plus aigu a le fondamental de plus grande fréquence : $523\\ \\mathrm{Hz}$.",
+        "$\\dfrac{523}{262} \\approx 2$ : passer à l'octave supérieure double la fréquence."
+      ],
+      "reponse": "Le do à $523\\ \\mathrm{Hz}$ ; rapport environ $2$."
+    },
+    {
+      "id": 22,
+      "difficulte": "approfondissement",
+      "notion": "spectre-amplitude",
+      "enonce": "Sur un oscillogramme, un signal périodique non sinusoïdal a une période de $2{,}5\\ \\mathrm{ms}$. À quelles fréquences peut-on attendre des raies dans son spectre ?",
+      "corrige": [
+        "$f_1 = \\dfrac{1}{T} = \\dfrac{1}{2{,}5 \\times 10^{-3}} = 400\\ \\mathrm{Hz}$.",
+        "Le signal n'étant pas sinusoïdal, il contient aussi des harmoniques, aux multiples de $400\\ \\mathrm{Hz}$."
+      ],
+      "reponse": "À $400$, $800$, $1\\,200\\ \\mathrm{Hz}$… (multiples de $400\\ \\mathrm{Hz}$)."
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "signal-sinusoidal",
+      "enonce": "Combien de raies comporte le spectre de $v(t) = 6{,}0\\cos(2\\pi \\times 50\\,t) + 8{,}0\\sin(2\\pi \\times 50\\,t)$ (en V) ? Préciser la fréquence et l'amplitude. (Rappel de maths : $a\\cos(\\omega t) + b\\sin(\\omega t) = A\\cos(\\omega t + \\varphi)$ avec $A = \\sqrt{a^2 + b^2}$.)",
+      "corrige": [
+        "Les deux termes ont la même fréquence : leur somme est une seule sinusoïde de fréquence $50\\ \\mathrm{Hz}$.",
+        "Amplitude : $A = \\sqrt{6{,}0^2 + 8{,}0^2} = 10\\ \\mathrm{V}$."
+      ],
+      "reponse": "Une seule raie : $(50\\ \\mathrm{Hz}\\,;10\\ \\mathrm{V})$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Calculer le niveau sonore correspondant à $I = 1{,}0 \\times 10^{-6}\\ \\mathrm{W\\cdot m^{-2}}$. Donnée : $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+      "corrige": [
+        "$\\dfrac{I}{I_0} = \\dfrac{10^{-6}}{10^{-12}} = 10^{6}$.",
+        "$L = 10\\log\\left(10^{6}\\right) = 10 \\times 6 = 60\\ \\mathrm{dB}$ (une conversation)."
+      ],
+      "reponse": "$L = 60\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Quelle intensité acoustique correspond à un niveau de $100\\ \\mathrm{dB}$ ? Donnée : $I = I_0 \\times 10^{L/10}$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+      "corrige": [
+        "$I = 10^{-12} \\times 10^{100/10} = 10^{-12} \\times 10^{10} = 1{,}0 \\times 10^{-2}\\ \\mathrm{W\\cdot m^{-2}}$."
+      ],
+      "reponse": "$I = 1{,}0 \\times 10^{-2}\\ \\mathrm{W\\cdot m^{-2}}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Dans une chambre calme, on mesure $I = 3{,}2 \\times 10^{-9}\\ \\mathrm{W\\cdot m^{-2}}$. Calculer le niveau sonore. Donnée : $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+      "corrige": [
+        "$\\dfrac{I}{I_0} = 3{,}2 \\times 10^{3}$.",
+        "$L = 10\\log\\left(3{,}2 \\times 10^{3}\\right) \\approx 10 \\times 3{,}505 \\approx 35\\ \\mathrm{dB}$."
+      ],
+      "reponse": "$L \\approx 35\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Pour $I = 1{,}0 \\times 10^{-6}\\ \\mathrm{W\\cdot m^{-2}}$, un élève trouve $L \\approx 138\\ \\mathrm{dB}$. Il a utilisé la touche « ln ». Corriger.",
+      "corrige": [
+        "Le niveau sonore utilise le logarithme décimal (touche « log ») : $10\\ln\\left(10^{6}\\right) \\approx 138$ est faux.",
+        "$L = 10\\log\\left(10^{6}\\right) = 60\\ \\mathrm{dB}$. Contrôle : $138\\ \\mathrm{dB}$ dépasserait le seuil de douleur, absurde pour une conversation."
+      ],
+      "reponse": "$L = 60\\ \\mathrm{dB}$ (logarithme décimal)."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "reflexes-db",
+      "enonce": "Comment varie le niveau sonore quand l'intensité acoustique est : a) multipliée par $100$ ; b) divisée par $10$ ; c) multipliée par $2$ ?",
+      "corrige": [
+        "$L$ varie de $10\\log(k)$ quand $I$ est multipliée par $k$.",
+        "a) $10\\log 100 = +20\\ \\mathrm{dB}$ ; b) $10\\log 0{,}1 = -10\\ \\mathrm{dB}$ ; c) $10\\log 2 \\approx +3\\ \\mathrm{dB}$."
+      ],
+      "reponse": "a) $+20\\ \\mathrm{dB}$ ; b) $-10\\ \\mathrm{dB}$ ; c) $+3\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "reflexes-db",
+      "enonce": "Par combien l'intensité acoustique est-elle multipliée quand le niveau passe de $75\\ \\mathrm{dB}$ à $85\\ \\mathrm{dB}$ ? de $75\\ \\mathrm{dB}$ à $81\\ \\mathrm{dB}$ ?",
+      "corrige": [
+        "$+10\\ \\mathrm{dB}$ correspond à une intensité multipliée par $10$.",
+        "$+6\\ \\mathrm{dB} = 3 + 3\\ \\mathrm{dB}$ : intensité multipliée par $2 \\times 2 = 4$."
+      ],
+      "reponse": "Par $10$, puis par $4$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "sources-multiples",
+      "enonce": "Deux haut-parleurs produisent chacun $60\\ \\mathrm{dB}$ au même point. Un élève annonce $120\\ \\mathrm{dB}$ au total. Corriger.",
+      "corrige": [
+        "Ce sont les intensités qui s'ajoutent, pas les niveaux : deux sources identiques doublent l'intensité.",
+        "Doubler $I$ ajoute $10\\log 2 \\approx 3\\ \\mathrm{dB}$ : $L = 63\\ \\mathrm{dB}$."
+      ],
+      "reponse": "$L \\approx 63\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "sources-multiples",
+      "enonce": "Quatre machines identiques produisent chacune $78\\ \\mathrm{dB}$ au poste de travail. Le niveau total dépasse-t-il le seuil de $85\\ \\mathrm{dB}$ ?",
+      "corrige": [
+        "Les intensités s'ajoutent : quatre machines donnent une intensité $4$ fois plus grande.",
+        "$L = 78 + 10\\log 4 \\approx 78 + 6{,}0 = 84\\ \\mathrm{dB}$ : juste sous le seuil."
+      ],
+      "reponse": "Non : environ $84\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "approfondissement",
+      "notion": "sources-multiples",
+      "enonce": "Une source A produit $70\\ \\mathrm{dB}$ et une source B $80\\ \\mathrm{dB}$ au même point. Calculer le niveau total. Données : $I = I_0 \\times 10^{L/10}$ et $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+      "corrige": [
+        "$I_A = 10^{-12} \\times 10^{7} = 1{,}0 \\times 10^{-5}\\ \\mathrm{W\\cdot m^{-2}}$ et $I_B = 1{,}0 \\times 10^{-4}\\ \\mathrm{W\\cdot m^{-2}}$.",
+        "$I = 1{,}1 \\times 10^{-4}\\ \\mathrm{W\\cdot m^{-2}}$, donc $L = 10\\log\\left(1{,}1 \\times 10^{8}\\right) \\approx 80{,}4\\ \\mathrm{dB}$ : la source la plus forte impose presque seule le niveau."
+      ],
+      "reponse": "$L \\approx 80{,}4\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "intensite-distance",
+      "enonce": "À $2\\ \\mathrm{m}$ d'une source isotrope, le niveau sonore vaut $90\\ \\mathrm{dB}$. Que vaut-il à $4\\ \\mathrm{m}$ ?",
+      "corrige": [
+        "$I = \\dfrac{P}{4\\pi d^2}$ : doubler la distance divise l'intensité par $4$.",
+        "Diviser $I$ par $4$ retire $10\\log 4 \\approx 6\\ \\mathrm{dB}$ : $L \\approx 84\\ \\mathrm{dB}$."
+      ],
+      "reponse": "Environ $84\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "intensite-distance",
+      "enonce": "Une source isotrope rayonne $P = 0{,}10\\ \\mathrm{W}$. Calculer l'intensité et le niveau sonore à $10\\ \\mathrm{m}$. Données : $I = \\dfrac{P}{4\\pi d^2}$ ; $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+      "corrige": [
+        "$I = \\dfrac{0{,}10}{4\\pi \\times 10^2} \\approx 8{,}0 \\times 10^{-5}\\ \\mathrm{W\\cdot m^{-2}}$.",
+        "$L = 10\\log\\left(\\dfrac{8{,}0 \\times 10^{-5}}{10^{-12}}\\right) \\approx 79\\ \\mathrm{dB}$."
+      ],
+      "reponse": "$I \\approx 8{,}0 \\times 10^{-5}\\ \\mathrm{W\\cdot m^{-2}}$ ; $L \\approx 79\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "intensite-distance",
+      "enonce": "Une enceinte isotrope rayonne $P = 1{,}0\\ \\mathrm{W}$. À partir de quelle distance le niveau sonore descend-il sous $85\\ \\mathrm{dB}$ ? Données : $I = \\dfrac{P}{4\\pi d^2}$ ; $I = I_0 \\times 10^{L/10}$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+      "corrige": [
+        "$85\\ \\mathrm{dB}$ correspond à $I = 10^{-12} \\times 10^{8{,}5} \\approx 3{,}2 \\times 10^{-4}\\ \\mathrm{W\\cdot m^{-2}}$.",
+        "$\\dfrac{P}{4\\pi d^2} \\leqslant 3{,}2 \\times 10^{-4} \\iff d^2 \\geqslant \\dfrac{1{,}0}{4\\pi \\times 3{,}2 \\times 10^{-4}} \\approx 252$, soit $d \\geqslant 16\\ \\mathrm{m}$ environ."
+      ],
+      "reponse": "Au-delà d'environ $16\\ \\mathrm{m}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "decouverte",
+      "notion": "ordres-de-grandeur",
+      "enonce": "Associer chaque situation à son niveau sonore indicatif : seuil d'audibilité, conversation, concert, seuil de douleur ; niveaux : $120\\ \\mathrm{dB}$, $0\\ \\mathrm{dB}$, $60\\ \\mathrm{dB}$, $100\\ \\mathrm{dB}$.",
+      "corrige": [
+        "On range les situations du plus faible au plus fort, ainsi que les niveaux."
+      ],
+      "reponse": "Seuil d'audibilité : $0\\ \\mathrm{dB}$ ; conversation : $60\\ \\mathrm{dB}$ ; concert : $100\\ \\mathrm{dB}$ ; seuil de douleur : $120\\ \\mathrm{dB}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "ondes-em-transmission",
+      "enonce": "Un réseau mobile utilise une onde de fréquence $800\\ \\mathrm{MHz}$. Calculer sa longueur d'onde ($c = 3{,}00 \\times 10^{8}\\ \\mathrm{m\\cdot s^{-1}}$).",
+      "corrige": [
+        "$f = 800 \\times 10^{6} = 8{,}00 \\times 10^{8}\\ \\mathrm{Hz}$.",
+        "$\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00 \\times 10^{8}}{8{,}00 \\times 10^{8}} = 0{,}375\\ \\mathrm{m}$."
+      ],
+      "reponse": "$\\lambda = 0{,}375\\ \\mathrm{m} = 37{,}5\\ \\mathrm{cm}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "ondes-em-transmission",
+      "enonce": "Un laser de fibre optique émet à $\\lambda = 1\\,310\\ \\mathrm{nm}$. Calculer la fréquence de cette lumière et préciser son domaine.",
+      "corrige": [
+        "$f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}00 \\times 10^{8}}{1\\,310 \\times 10^{-9}} \\approx 2{,}29 \\times 10^{14}\\ \\mathrm{Hz}$.",
+        "$1\\,310\\ \\mathrm{nm} > 800\\ \\mathrm{nm}$ : c'est de l'infrarouge."
+      ],
+      "reponse": "$f \\approx 2{,}29 \\times 10^{14}\\ \\mathrm{Hz}$ ; infrarouge."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "ondes-em-transmission",
+      "enonce": "Pour une radio FM à $95\\ \\mathrm{MHz}$, un élève calcule $\\lambda = \\dfrac{3{,}00 \\times 10^{8}}{95} \\approx 3{,}2 \\times 10^{6}\\ \\mathrm{m}$. Corriger.",
+      "corrige": [
+        "La fréquence n'a pas été convertie : $95\\ \\mathrm{MHz} = 9{,}5 \\times 10^{7}\\ \\mathrm{Hz}$.",
+        "$\\lambda = \\dfrac{3{,}00 \\times 10^{8}}{9{,}5 \\times 10^{7}} \\approx 3{,}2\\ \\mathrm{m}$, un ordre de grandeur cohérent pour la radio FM."
+      ],
+      "reponse": "$\\lambda \\approx 3{,}2\\ \\mathrm{m}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "spectre-em",
+      "enonce": "Classer par fréquence croissante : l'onde d'un réseau Wi-Fi, la lumière verte, l'onde d'une radio FM, les rayons X.",
+      "corrige": [
+        "Ordre des domaines par fréquence croissante : radio, micro-ondes, infrarouge, visible, ultraviolet, X, gamma.",
+        "La radio FM ($\\approx 100\\ \\mathrm{MHz}$) est une onde radio ; le Wi-Fi ($2{,}4\\ \\mathrm{GHz}$) une micro-onde."
+      ],
+      "reponse": "Radio FM $<$ Wi-Fi $<$ lumière verte $<$ rayons X."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "canal-transmission",
+      "enonce": "Classer en propagation libre ou guidée : Wi-Fi, fibre optique, câble coaxial, téléphonie 5G, Bluetooth, réception de la télévision par antenne.",
+      "corrige": [
+        "Propagation libre : onde électromagnétique dans l'air (ondes hertziennes).",
+        "Propagation guidée : onde confinée dans un guide (câble, fibre)."
+      ],
+      "reponse": "Libre : Wi-Fi, 5G, Bluetooth, télévision par antenne ; guidée : fibre optique, câble coaxial."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "canal-transmission",
+      "enonce": "Pourquoi les liaisons à très longue distance (par exemple sous les océans) utilisent-elles la fibre optique plutôt que la propagation libre ?",
+      "corrige": [
+        "Dans une fibre optique, l'onde est guidée : elle ne se disperse pas dans l'espace.",
+        "L'atténuation y est très faible : le signal garde une amplitude suffisante sur de grandes distances."
+      ],
+      "reponse": "Propagation guidée et très faible atténuation."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "canal-transmission",
+      "enonce": "Un opérateur hésite entre une porteuse de basse fréquence et une porteuse de haute fréquence pour un réseau mobile. Présenter le compromis.",
+      "corrige": [
+        "Une porteuse de fréquence élevée permet de transporter plus d'informations par seconde.",
+        "Mais elle est plus facilement absorbée par les obstacles (murs, végétation) : la portée et la couverture intérieure sont moins bonnes."
+      ],
+      "reponse": "Haute fréquence : plus de débit mais plus d'absorption ; basse fréquence : moins de débit mais meilleure portée."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "canal-transmission",
+      "enonce": "On admet que, dans une fibre donnée, l'amplitude d'un signal est divisée par $2$ tous les $15\\ \\mathrm{km}$. Par combien est-elle divisée au bout de $60\\ \\mathrm{km}$ ? Pourquoi installe-t-on des amplificateurs sur les longues liaisons ?",
+      "corrige": [
+        "$60\\ \\mathrm{km} = 4 \\times 15\\ \\mathrm{km}$ : l'amplitude est divisée par $2^4 = 16$.",
+        "L'atténuation s'accumule avec la distance : il faut régulièrement amplifier le signal pour qu'il reste exploitable par le récepteur."
+      ],
+      "reponse": "Par $16$ ; pour compenser l'atténuation."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Lors d'un concert, une note de basse a un spectre à $110$, $220$ et $330\\ \\mathrm{Hz}$. À $10\\ \\mathrm{m}$ des enceintes (supposées isotropes), le niveau sonore est de $100\\ \\mathrm{dB}$. Données : $I = I_0 \\times 10^{L/10}$ avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$ ; $I = \\dfrac{P}{4\\pi d^2}$. 1. Donner la hauteur (fréquence) de la note et le rang des harmoniques. 2. Calculer l'intensité à $10\\ \\mathrm{m}$. 3. À quelle distance faut-il se placer pour ne recevoir que $85\\ \\mathrm{dB}$ ?",
+      "corrige": [
+        "1. Fondamental $110\\ \\mathrm{Hz}$ (hauteur) ; harmoniques de rangs $2$ et $3$.",
+        "2. $I = 10^{-12} \\times 10^{10} = 1{,}0 \\times 10^{-2}\\ \\mathrm{W\\cdot m^{-2}}$.",
+        "3. Passer de $100$ à $85\\ \\mathrm{dB}$ divise $I$ par $10^{1{,}5} \\approx 31{,}6$ ; comme $I$ varie en $\\dfrac{1}{d^2}$, la distance est multipliée par $\\sqrt{31{,}6} \\approx 5{,}6$ : environ $56\\ \\mathrm{m}$."
+      ],
+      "reponse": "1. $110\\ \\mathrm{Hz}$, rangs $2$ et $3$ ; 2. $1{,}0 \\times 10^{-2}\\ \\mathrm{W\\cdot m^{-2}}$ ; 3. environ $56\\ \\mathrm{m}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "sources-multiples",
+      "enonce": "Dans un atelier, trois machines identiques produisent chacune $82\\ \\mathrm{dB}$ au poste de travail. 1. Calculer le niveau sonore total. 2. Faut-il imposer des protections auditives (seuil : $85\\ \\mathrm{dB}$) ? 3. On arrête une machine : quel est le nouveau niveau ?",
+      "corrige": [
+        "1. L'intensité est multipliée par $3$ : $L = 82 + 10\\log 3 \\approx 86{,}8\\ \\mathrm{dB}$.",
+        "2. Oui, $86{,}8\\ \\mathrm{dB} > 85\\ \\mathrm{dB}$.",
+        "3. Deux machines : $L = 82 + 10\\log 2 \\approx 85\\ \\mathrm{dB}$, exactement à la limite ; il reste prudent de porter des protections."
+      ],
+      "reponse": "1. $\\approx 86{,}8\\ \\mathrm{dB}$ ; 2. oui ; 3. $\\approx 85\\ \\mathrm{dB}$ (à la limite)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "ondes-em-transmission",
+      "enonce": "Sur une scène, un micro sans fil émet à $600\\ \\mathrm{MHz}$ vers un récepteur ; le son numérisé part ensuite vers la régie par une fibre optique de $2{,}0\\ \\mathrm{km}$, parcourue par une lumière de $850\\ \\mathrm{nm}$ qui s'y propage à $2{,}0 \\times 10^{8}\\ \\mathrm{m\\cdot s^{-1}}$. 1. Calculer la longueur d'onde de l'onde du micro. 2. Calculer la fréquence de la lumière dans la fibre et son domaine. 3. Calculer la durée de propagation dans la fibre. 4. Nommer le type de propagation de chaque maillon.",
+      "corrige": [
+        "1. $\\lambda = \\dfrac{3{,}00 \\times 10^{8}}{6{,}00 \\times 10^{8}} = 0{,}50\\ \\mathrm{m}$.",
+        "2. La fréquence est fixée par la source (calculée dans le vide) : $f = \\dfrac{3{,}00 \\times 10^{8}}{850 \\times 10^{-9}} \\approx 3{,}5 \\times 10^{14}\\ \\mathrm{Hz}$ ; $850\\ \\mathrm{nm} > 800\\ \\mathrm{nm}$ : infrarouge.",
+        "3. $\\Delta t = \\dfrac{2{,}0 \\times 10^{3}}{2{,}0 \\times 10^{8}} = 1{,}0 \\times 10^{-5}\\ \\mathrm{s} = 10\\ \\mathrm{\\mu s}$.",
+        "4. Micro : propagation libre ; fibre : propagation guidée."
+      ],
+      "reponse": "1. $0{,}50\\ \\mathrm{m}$ ; 2. $\\approx 3{,}5 \\times 10^{14}\\ \\mathrm{Hz}$, infrarouge ; 3. $10\\ \\mathrm{\\mu s}$ ; 4. libre puis guidée."
+    },
+    {
+      "id": 48,
+      "difficulte": "decouverte",
+      "notion": "reflexes-db",
+      "enonce": "Vrai ou faux ? a) Deux sources de $60\\ \\mathrm{dB}$ donnent ensemble $120\\ \\mathrm{dB}$. b) Doubler la distance à une source isotrope divise l'intensité par $4$. c) Le niveau sonore se calcule avec le logarithme népérien.",
+      "corrige": [
+        "a) Faux : les intensités s'ajoutent, le niveau monte de $3\\ \\mathrm{dB}$ seulement ($63\\ \\mathrm{dB}$).",
+        "b) Vrai : $I$ varie en $\\dfrac{1}{d^2}$. c) Faux : c'est le logarithme décimal."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Faux."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Que signifie un niveau sonore de $0\\ \\mathrm{dB}$ ? Est-ce l'absence totale de son ?",
+      "corrige": [
+        "$L = 0 \\iff \\log\\left(\\dfrac{I}{I_0}\\right) = 0 \\iff I = I_0 = 1{,}0 \\times 10^{-12}\\ \\mathrm{W\\cdot m^{-2}}$.",
+        "C'est le seuil d'audibilité : le son le plus faible que l'oreille perçoit, pas l'absence de son."
+      ],
+      "reponse": "$I = I_0$ : seuil d'audibilité, et non silence absolu."
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "hauteur-timbre",
+      "enonce": "Avec un égaliseur, on double l'amplitude de l'harmonique de rang $3$ d'une note de fondamental $200\\ \\mathrm{Hz}$. La hauteur change-t-elle ? le timbre ? Quelle raie est modifiée ?",
+      "corrige": [
+        "La raie modifiée est celle de $3 \\times 200 = 600\\ \\mathrm{Hz}$.",
+        "Le fondamental est inchangé : même hauteur. La composition en harmoniques change : le timbre est modifié."
+      ],
+      "reponse": "Raie à $600\\ \\mathrm{Hz}$ ; hauteur inchangée, timbre modifié."
     }
   ]
 }

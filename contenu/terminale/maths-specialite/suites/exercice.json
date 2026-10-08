@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "recurrence",
       "enonce": "Une plateforme de streaming compte $10$ milliers d'abonnés au $1^{\\text{er}}$ janvier $2026$. On modélise le nombre d'abonnés, en milliers, par la suite $(u_n)$, où $u_n$ désigne le nombre d'abonnés au $1^{\\text{er}}$ janvier de l'année $2026 + n$. Chaque année, la plateforme conserve $70\\,\\%$ de ses abonnés et en gagne $6$ milliers de nouveaux. On a donc $u_0 = 10$ et, pour tout entier $n \\geq 0$, $u_{n+1} = 0{,}7\\,u_n + 6$. 1. Calculer $u_1$ et $u_2$. 2. Démontrer par récurrence que, pour tout entier $n \\geq 0$, $u_n < 20$. 3. Étudier le sens de variation de $(u_n)$, puis justifier qu'elle est convergente. 4. On pose $v_n = u_n - 20$. Montrer que $(v_n)$ est géométrique, préciser sa raison et son premier terme, puis exprimer $v_n$, et enfin $u_n$, en fonction de $n$. 5. Déterminer $\\lim\\limits_{n \\to +\\infty} u_n$ et interpréter le résultat dans le contexte. 6. Déterminer le plus petit entier $n$ pour lequel $u_n \\geq 19{,}5$, et écrire un algorithme de seuil qui renvoie cette valeur.",
       "corrige": [
@@ -141,6 +141,480 @@
         "6. On résout l'inéquation $u_n \\geq 19{,}5$ : $20 - 10 \\times 0{,}7^{\\,n} \\geq 19{,}5 \\iff 10 \\times 0{,}7^{\\,n} \\leq 0{,}5 \\iff 0{,}7^{\\,n} \\leq 0{,}05$. À la calculatrice, $0{,}7^{\\,8} \\approx 0{,}0576 > 0{,}05$ tandis que $0{,}7^{\\,9} \\approx 0{,}0404 \\leq 0{,}05$ : le plus petit entier convenable est $n = 9$ (soit le $1^{\\text{er}}$ janvier $2035$). Algorithme de seuil correspondant : $n \\gets 0$ ; $u \\gets 10$ ; tant que $u < 19{,}5$, faire $u \\gets 0{,}7 \\times u + 6$ puis $n \\gets n + 1$ ; en sortie de boucle, afficher $n$. Cet algorithme renvoie $n = 9$."
       ],
       "reponse": "1. $u_1 = 13$ et $u_2 = 15{,}1$. 2-3. $u_n < 20$ pour tout $n$, la suite est croissante donc convergente. 4. $v_n = -10 \\times 0{,}7^{\\,n}$ et $u_n = 20 - 10 \\times 0{,}7^{\\,n}$. 5. $u_n \\to 20$ (stabilisation vers $20\\,000$ abonnés). 6. On a $u_n \\geq 19{,}5$ pour la première fois au rang $n = 9$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition-limite",
+      "enonce": "Pour chacune des suites suivantes (définies pour $n \\geq 1$), dire si elle est convergente ou divergente, en précisant sa limite si elle existe : a) $u_n = 5 + \\dfrac{1}{n}$ ; b) $v_n = n^2$ ; c) $w_n = (-1)^n$.",
+      "corrige": [
+        "a) $\\dfrac{1}{n} \\to 0$, donc $u_n \\to 5$ : limite finie, la suite converge vers $5$.",
+        "b) $v_n \\to +\\infty$ : elle a une limite, mais infinie, donc elle diverge.",
+        "c) $w_n$ vaut alternativement $-1$ et $1$ : elle n'a pas de limite, elle diverge."
+      ],
+      "reponse": "a) converge vers $5$ ; b) diverge vers $+\\infty$ ; c) diverge (pas de limite)."
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "definition-limite",
+      "enonce": "On considère la suite $u_n = n^2$. À partir de quel rang a-t-on $u_n \\geq 10\\,000$ ?",
+      "corrige": [
+        "$n^2 \\geq 10\\,000 \\iff n \\geq 100$ (car $n \\geq 0$).",
+        "À partir du rang $100$, tous les termes dépassent $10\\,000$ : c'est l'idée de la définition de « tendre vers $+\\infty$ »."
+      ],
+      "reponse": "À partir du rang $n = 100$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "definition-limite",
+      "enonce": "On considère la suite définie pour $n \\geq 1$ par $u_n = 2 + \\dfrac{1}{n}$. À partir de quel rang tous les termes sont-ils dans l'intervalle ouvert $]1{,}99\\,;\\,2{,}01[$ ?",
+      "corrige": [
+        "On a toujours $u_n > 2 > 1{,}99$. Il reste à avoir $u_n < 2{,}01$, c'est-à-dire $\\dfrac{1}{n} < 0{,}01$, soit $n > 100$.",
+        "À partir du rang $101$, tous les termes sont dans l'intervalle et y restent : cela illustre la convergence vers $2$."
+      ],
+      "reponse": "À partir du rang $n = 101$."
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "definition-limite",
+      "enonce": "On considère la suite $u_n = 3n - 7$. Déterminer le plus petit entier $n$ tel que $u_n \\geq 1000$.",
+      "corrige": [
+        "$3n - 7 \\geq 1000 \\iff 3n \\geq 1007 \\iff n \\geq \\dfrac{1007}{3} \\approx 335{,}7$.",
+        "Le plus petit entier qui convient est $n = 336$. Vérification : $u_{335} = 998$ et $u_{336} = 1001$."
+      ],
+      "reponse": "$n = 336$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "definition-limite",
+      "enonce": "Vrai ou faux ? « Une suite qui tend vers $+\\infty$ est forcément croissante. » Justifier avec la suite $u_n = n + 2(-1)^n$.",
+      "corrige": [
+        "Premiers termes : $u_0 = 2$, $u_1 = -1$, $u_2 = 4$, $u_3 = 1$ : la suite n'est pas croissante ($u_1 < u_0$).",
+        "Pourtant $u_n \\geq n - 2$ et $n - 2 \\to +\\infty$, donc par comparaison $u_n \\to +\\infty$.",
+        "L'affirmation est fausse : « croissante non majorée » est une condition suffisante, pas nécessaire."
+      ],
+      "reponse": "Faux : $u_n = n + 2(-1)^n$ tend vers $+\\infty$ sans être croissante."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "comparaison",
+      "enonce": "Déterminer la limite de la suite $u_n = n^2 + \\sin n$.",
+      "corrige": [
+        "Comme $\\sin n \\geq -1$, on a $u_n \\geq n^2 - 1$.",
+        "Or $n^2 - 1 \\to +\\infty$, donc par comparaison $u_n \\to +\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "comparaison",
+      "enonce": "Déterminer la limite de la suite $u_n = -n + \\cos n$.",
+      "corrige": [
+        "Comme $\\cos n \\leq 1$, on a $u_n \\leq -n + 1$.",
+        "Or $-n + 1 \\to -\\infty$, donc par comparaison (version $-\\infty$) $u_n \\to -\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "comparaison",
+      "enonce": "Déterminer la limite de la suite $u_n = \\left(2 + (-1)^n\\right)n$.",
+      "corrige": [
+        "$2 + (-1)^n$ vaut $1$ ou $3$, donc $2 + (-1)^n \\geq 1$, et comme $n \\geq 0$ : $u_n \\geq n$.",
+        "Or $n \\to +\\infty$, donc par comparaison $u_n \\to +\\infty$ (la suite n'est pourtant pas croissante)."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 19,
+      "difficulte": "approfondissement",
+      "notion": "comparaison",
+      "enonce": "Pour $n \\geq 1$, on pose $u_n = \\dfrac{1}{\\sqrt{1}} + \\dfrac{1}{\\sqrt{2}} + \\dots + \\dfrac{1}{\\sqrt{n}}$. 1) Montrer que $u_n \\geq \\sqrt{n}$. 2) En déduire la limite de $(u_n)$.",
+      "corrige": [
+        "1) Pour $1 \\leq k \\leq n$, $\\sqrt{k} \\leq \\sqrt{n}$, donc $\\dfrac{1}{\\sqrt{k}} \\geq \\dfrac{1}{\\sqrt{n}}$.",
+        "La somme compte $n$ termes, chacun au moins égal à $\\dfrac{1}{\\sqrt{n}}$ : $u_n \\geq n\\times\\dfrac{1}{\\sqrt{n}} = \\sqrt{n}$.",
+        "2) $\\sqrt{n} \\to +\\infty$, donc par comparaison $u_n \\to +\\infty$."
+      ],
+      "reponse": "$u_n \\geq \\sqrt{n}$, donc $u_n \\to +\\infty$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "gendarmes",
+      "enonce": "Déterminer la limite de la suite définie pour $n \\geq 1$ par $v_n = \\dfrac{\\cos n}{n^2}$.",
+      "corrige": [
+        "$-1 \\leq \\cos n \\leq 1$ ; on divise par $n^2 > 0$ : $-\\dfrac{1}{n^2} \\leq v_n \\leq \\dfrac{1}{n^2}$.",
+        "Les deux bornes tendent vers $0$ : d'après le théorème des gendarmes, $v_n \\to 0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "gendarmes",
+      "enonce": "Déterminer la limite de la suite définie pour $n \\geq 1$ par $v_n = \\dfrac{n + \\sin n}{n}$.",
+      "corrige": [
+        "On écrit $v_n = 1 + \\dfrac{\\sin n}{n}$, et $-\\dfrac{1}{n} \\leq \\dfrac{\\sin n}{n} \\leq \\dfrac{1}{n}$.",
+        "Donc $1 - \\dfrac{1}{n} \\leq v_n \\leq 1 + \\dfrac{1}{n}$ ; les deux bornes tendent vers $1$.",
+        "Par le théorème des gendarmes, $v_n \\to 1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "gendarmes",
+      "enonce": "Déterminer la limite de la suite $v_n = \\dfrac{2n + (-1)^n}{n + 1}$.",
+      "corrige": [
+        "Comme $-1 \\leq (-1)^n \\leq 1$ et $n + 1 > 0$ : $\\dfrac{2n - 1}{n + 1} \\leq v_n \\leq \\dfrac{2n + 1}{n + 1}$.",
+        "En factorisant par $n$ : $\\dfrac{2n - 1}{n + 1} = \\dfrac{2 - \\frac{1}{n}}{1 + \\frac{1}{n}} \\to 2$, et de même $\\dfrac{2n + 1}{n + 1} \\to 2$.",
+        "Par le théorème des gendarmes, $v_n \\to 2$."
+      ],
+      "reponse": "$2$."
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "gendarmes",
+      "enonce": "Déterminer la limite de la suite $v_n = (3 + \\sin n)\\times 0{,}5^{\\,n}$.",
+      "corrige": [
+        "$2 \\leq 3 + \\sin n \\leq 4$ et $0{,}5^{\\,n} > 0$, donc $2\\times 0{,}5^{\\,n} \\leq v_n \\leq 4\\times 0{,}5^{\\,n}$.",
+        "Comme $-1 < 0{,}5 < 1$, $0{,}5^{\\,n} \\to 0$ : les deux bornes tendent vers $0$.",
+        "Par le théorème des gendarmes, $v_n \\to 0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 24,
+      "difficulte": "decouverte",
+      "notion": "operations-limites",
+      "enonce": "Parmi les écritures suivantes, lesquelles conduisent à une forme indéterminée quand $n \\to +\\infty$ ? a) $n^2 + n$ ; b) $n^2 - n^3$ ; c) $n\\times\\dfrac{1}{n^2}$ ; d) $\\dfrac{n + 1}{n^2}$.",
+      "corrige": [
+        "a) $+\\infty + (+\\infty)$ : pas d'indétermination, la limite est $+\\infty$.",
+        "b) $+\\infty - (+\\infty)$ : forme indéterminée « $\\infty - \\infty$ ».",
+        "c) $+\\infty\\times 0$ : forme indéterminée « $0\\times\\infty$ ». d) $\\dfrac{+\\infty}{+\\infty}$ : forme indéterminée."
+      ],
+      "reponse": "b), c) et d)."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de $u_n = n^3 - 2n^2$.",
+      "corrige": [
+        "C'est une forme indéterminée $\\infty - \\infty$ : on factorise par $n^2$.",
+        "$u_n = n^2(n - 2)$ avec $n^2 \\to +\\infty$ et $n - 2 \\to +\\infty$.",
+        "Par produit, $u_n \\to +\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de la suite définie pour $n \\geq 1$ par $u_n = 5 - \\dfrac{2}{n^2} + \\dfrac{3}{\\sqrt{n}}$.",
+      "corrige": [
+        "$\\dfrac{2}{n^2} \\to 0$ et $\\dfrac{3}{\\sqrt{n}} \\to 0$ (les dénominateurs tendent vers $+\\infty$).",
+        "Par somme : $u_n \\to 5 - 0 + 0 = 5$. Il n'y a aucune indétermination."
+      ],
+      "reponse": "$5$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de $u_n = \\dfrac{4n - 1}{2n + 3}$.",
+      "corrige": [
+        "Forme $\\dfrac{\\infty}{\\infty}$ : on factorise par $n$ en haut et en bas.",
+        "$u_n = \\dfrac{4 - \\frac{1}{n}}{2 + \\frac{3}{n}}$ ; le numérateur tend vers $4$, le dénominateur vers $2$.",
+        "Par quotient, $u_n \\to \\dfrac{4}{2} = 2$."
+      ],
+      "reponse": "$2$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de $u_n = \\dfrac{n^2 + 1}{n + 1}$.",
+      "corrige": [
+        "Forme $\\dfrac{\\infty}{\\infty}$ : on factorise par $n$ au dénominateur et par $n^2$ au numérateur.",
+        "$u_n = \\dfrac{n^2\\left(1 + \\frac{1}{n^2}\\right)}{n\\left(1 + \\frac{1}{n}\\right)} = n\\times\\dfrac{1 + \\frac{1}{n^2}}{1 + \\frac{1}{n}}$.",
+        "La fraction tend vers $1$ et $n \\to +\\infty$ : par produit, $u_n \\to +\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de $u_n = \\dfrac{n + 2}{n^2 + 1}$.",
+      "corrige": [
+        "Forme $\\dfrac{\\infty}{\\infty}$ : on factorise par $n$ au numérateur et par $n^2$ au dénominateur.",
+        "$u_n = \\dfrac{n\\left(1 + \\frac{2}{n}\\right)}{n^2\\left(1 + \\frac{1}{n^2}\\right)} = \\dfrac{1}{n}\\times\\dfrac{1 + \\frac{2}{n}}{1 + \\frac{1}{n^2}}$.",
+        "$\\dfrac{1}{n} \\to 0$ et la fraction tend vers $1$ : $u_n \\to 0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "operations-limites",
+      "enonce": "On pose $u_n = \\sqrt{n + 1} - \\sqrt{n}$. 1) Quelle forme indéterminée obtient-on ? 2) Montrer que $u_n = \\dfrac{1}{\\sqrt{n + 1} + \\sqrt{n}}$. 3) En déduire la limite de $(u_n)$.",
+      "corrige": [
+        "1) $\\sqrt{n + 1} \\to +\\infty$ et $\\sqrt{n} \\to +\\infty$ : forme $\\infty - \\infty$.",
+        "2) On multiplie et on divise par $\\sqrt{n + 1} + \\sqrt{n}$ : $u_n = \\dfrac{(\\sqrt{n+1} - \\sqrt{n})(\\sqrt{n+1} + \\sqrt{n})}{\\sqrt{n+1} + \\sqrt{n}} = \\dfrac{(n + 1) - n}{\\sqrt{n+1} + \\sqrt{n}} = \\dfrac{1}{\\sqrt{n+1} + \\sqrt{n}}$.",
+        "3) Le dénominateur tend vers $+\\infty$, donc $u_n \\to 0$."
+      ],
+      "reponse": "Forme $\\infty - \\infty$ ; $u_n \\to 0$."
+    },
+    {
+      "id": 31,
+      "difficulte": "decouverte",
+      "notion": "suite-geometrique",
+      "enonce": "Donner la limite éventuelle de chacune des suites : a) $0{,}99^{\\,n}$ ; b) $1{,}01^{\\,n}$ ; c) $(-0{,}5)^{n}$ ; d) $(-1)^{n}$.",
+      "corrige": [
+        "a) $-1 < 0{,}99 < 1$ : limite $0$. b) $1{,}01 > 1$ : limite $+\\infty$.",
+        "c) $-1 < -0{,}5 < 1$ : limite $0$ (les termes changent de signe mais se rapprochent de $0$).",
+        "d) $q = -1 \\leq -1$ : pas de limite."
+      ],
+      "reponse": "a) $0$ ; b) $+\\infty$ ; c) $0$ ; d) pas de limite."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "suite-geometrique",
+      "enonce": "Déterminer la limite de $u_n = 3\\times 2^n - 5$.",
+      "corrige": [
+        "$2 > 1$, donc $2^n \\to +\\infty$, puis $3\\times 2^n \\to +\\infty$.",
+        "Par somme, $u_n \\to +\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "suite-geometrique",
+      "enonce": "Déterminer la limite de $u_n = 4 - 5\\times 0{,}6^{\\,n}$.",
+      "corrige": [
+        "$-1 < 0{,}6 < 1$, donc $0{,}6^{\\,n} \\to 0$.",
+        "Donc $u_n \\to 4 - 5\\times 0 = 4$ : la suite converge vers $4$."
+      ],
+      "reponse": "$4$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Déterminer la limite de $u_n = \\dfrac{2^n + 3^n}{3^n}$.",
+      "corrige": [
+        "Forme $\\dfrac{\\infty}{\\infty}$ : on sépare la fraction, $u_n = \\dfrac{2^n}{3^n} + 1 = \\left(\\dfrac{2}{3}\\right)^{n} + 1$.",
+        "$-1 < \\dfrac{2}{3} < 1$, donc $\\left(\\dfrac{2}{3}\\right)^{n} \\to 0$ et $u_n \\to 1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "On pose $S_n = 1 + \\dfrac{1}{2} + \\dfrac{1}{4} + \\dots + \\left(\\dfrac{1}{2}\\right)^{n}$. Exprimer $S_n$ en fonction de $n$, puis déterminer sa limite.",
+      "corrige": [
+        "C'est la somme des $n + 1$ premiers termes d'une suite géométrique de premier terme $1$ et de raison $\\dfrac{1}{2}$ : $S_n = \\dfrac{1 - \\left(\\frac{1}{2}\\right)^{n+1}}{1 - \\frac{1}{2}} = 2\\left(1 - \\left(\\dfrac{1}{2}\\right)^{n+1}\\right)$.",
+        "Comme $-1 < \\dfrac{1}{2} < 1$, $\\left(\\dfrac{1}{2}\\right)^{n+1} \\to 0$, donc $S_n \\to 2$."
+      ],
+      "reponse": "$S_n = 2\\left(1 - \\left(\\dfrac{1}{2}\\right)^{n+1}\\right)$ ; limite $2$."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "suite-geometrique",
+      "enonce": "Un patient reçoit une dose de $50$ mg d'un médicament. Chaque heure, l'organisme en élimine $40\\,\\%$. On note $Q_n$ la quantité (en mg) présente après $n$ heures, avec $Q_0 = 50$. 1) Exprimer $Q_n$ en fonction de $n$. 2) Calculer $Q_3$. 3) Déterminer la limite de $(Q_n)$ et interpréter.",
+      "corrige": [
+        "1) Retirer $40\\,\\%$, c'est multiplier par $0{,}6$ : $(Q_n)$ est géométrique de raison $0{,}6$, donc $Q_n = 50\\times 0{,}6^{\\,n}$.",
+        "2) $Q_3 = 50\\times 0{,}216 = 10{,}8$ mg.",
+        "3) $-1 < 0{,}6 < 1$, donc $Q_n \\to 0$ : le médicament finit par être presque entièrement éliminé."
+      ],
+      "reponse": "$Q_n = 50\\times 0{,}6^{\\,n}$ ; $Q_3 = 10{,}8$ mg ; limite $0$."
+    },
+    {
+      "id": 37,
+      "difficulte": "decouverte",
+      "notion": "convergence-monotone",
+      "enonce": "Vrai ou faux ? « Une suite croissante et majorée par $10$ converge vers $10$. » Justifier avec la suite définie pour $n \\geq 1$ par $u_n = 5 - \\dfrac{1}{n}$.",
+      "corrige": [
+        "$u_n = 5 - \\dfrac{1}{n}$ est croissante (on retire de moins en moins) et majorée par $10$ (et même par $5$).",
+        "Elle converge, mais vers $5$, pas vers $10$.",
+        "L'affirmation est fausse : le théorème garantit l'existence d'une limite, pas sa valeur ; un majorant n'est pas forcément la limite."
+      ],
+      "reponse": "Faux : $5 - \\dfrac{1}{n}$ est croissante, majorée par $10$, et converge vers $5$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "convergence-monotone",
+      "enonce": "On pose $u_n = 1 - \\dfrac{1}{n + 1}$ pour $n \\geq 0$. Montrer que $(u_n)$ est croissante et majorée, et conclure.",
+      "corrige": [
+        "$u_{n+1} - u_n = \\dfrac{1}{n + 1} - \\dfrac{1}{n + 2} = \\dfrac{1}{(n + 1)(n + 2)} > 0$ : la suite est croissante.",
+        "$\\dfrac{1}{n + 1} > 0$, donc $u_n < 1$ : la suite est majorée par $1$.",
+        "Croissante et majorée, elle converge d'après le théorème de convergence monotone (ici, on voit directement que sa limite est $1$)."
+      ],
+      "reponse": "Croissante, majorée par $1$ : elle converge (vers $1$)."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "convergence-monotone",
+      "enonce": "Une suite $(u_n)$ est décroissante et tous ses termes sont positifs. Que peut-on en déduire ? Peut-on affirmer que sa limite vaut $0$ ?",
+      "corrige": [
+        "Tous les termes sont positifs : la suite est minorée par $0$. Décroissante et minorée, elle converge vers un réel $\\ell \\geq 0$.",
+        "On ne peut pas affirmer que $\\ell = 0$ : par exemple $u_n = 1 + \\dfrac{1}{n + 1}$ est décroissante, positive, et converge vers $1$."
+      ],
+      "reponse": "Elle converge vers un réel $\\ell \\geq 0$, pas forcément $0$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "convergence-monotone",
+      "enonce": "Pour $n \\geq 1$, on pose $S_n = 1 + \\dfrac{1}{2^2} + \\dfrac{1}{3^2} + \\dots + \\dfrac{1}{n^2}$. On admet que $S_n \\leq 2$ pour tout $n \\geq 1$. Montrer que $(S_n)$ converge. Que peut-on dire de sa limite ?",
+      "corrige": [
+        "$S_{n+1} - S_n = \\dfrac{1}{(n + 1)^2} > 0$ : la suite est croissante.",
+        "Elle est majorée par $2$ (admis). Croissante et majorée, elle converge d'après le théorème de convergence monotone.",
+        "Sa limite $\\ell$ vérifie $\\ell \\leq 2$, mais le théorème ne donne pas sa valeur."
+      ],
+      "reponse": "$(S_n)$ croissante et majorée par $2$ : elle converge vers une limite $\\ell \\leq 2$."
+    },
+    {
+      "id": 41,
+      "difficulte": "probleme",
+      "notion": "convergence-monotone",
+      "enonce": "On définit $u_0 = 0$ et $u_{n+1} = 0{,}5\\,u_n + 1$. 1) Montrer par récurrence que $0 \\leq u_n \\leq u_{n+1} \\leq 2$ pour tout $n \\geq 0$. 2) En déduire que $(u_n)$ converge. 3) On pose $v_n = u_n - 2$. Montrer que $(v_n)$ est géométrique, puis déterminer la limite de $(u_n)$.",
+      "corrige": [
+        "1) Initialisation : $u_0 = 0$ et $u_1 = 1$, donc $0 \\leq 0 \\leq 1 \\leq 2$. Hérédité : si $0 \\leq u_k \\leq u_{k+1} \\leq 2$, on multiplie par $0{,}5$ puis on ajoute $1$ : $1 \\leq u_{k+1} \\leq u_{k+2} \\leq 2$, donc a fortiori $0 \\leq u_{k+1} \\leq u_{k+2} \\leq 2$.",
+        "2) La suite est croissante et majorée par $2$ : elle converge.",
+        "3) $v_{n+1} = u_{n+1} - 2 = 0{,}5\\,u_n - 1 = 0{,}5(u_n - 2) = 0{,}5\\,v_n$ : géométrique de raison $0{,}5$ et de premier terme $v_0 = -2$.",
+        "$v_n = -2\\times 0{,}5^{\\,n} \\to 0$, donc $u_n = 2 + v_n \\to 2$."
+      ],
+      "reponse": "$(u_n)$ est croissante, majorée par $2$, et $u_n = 2 - 2\\times 0{,}5^{\\,n} \\to 2$."
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "recurrence",
+      "enonce": "On définit $u_0 = 3$ et $u_{n+1} = u_n + 2$. Démontrer par récurrence que $u_n = 3 + 2n$ pour tout $n \\geq 0$.",
+      "corrige": [
+        "Initialisation : $u_0 = 3$ et $3 + 2\\times 0 = 3$ : la propriété est vraie au rang $0$.",
+        "Hérédité : supposons $u_k = 3 + 2k$ pour un $k \\geq 0$ fixé. Alors $u_{k+1} = u_k + 2 = 3 + 2k + 2 = 3 + 2(k + 1)$ : la propriété est vraie au rang $k + 1$.",
+        "Conclusion : par récurrence, $u_n = 3 + 2n$ pour tout $n \\geq 0$."
+      ],
+      "reponse": "Initialisation au rang $0$ et hérédité vérifiées : $u_n = 3 + 2n$."
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "recurrence",
+      "enonce": "Démontrer par récurrence que, pour tout $n \\geq 1$, $1 + 3 + 5 + \\dots + (2n - 1) = n^2$.",
+      "corrige": [
+        "Initialisation : pour $n = 1$, la somme vaut $1$ et $1^2 = 1$.",
+        "Hérédité : supposons $1 + 3 + \\dots + (2k - 1) = k^2$. En ajoutant le terme suivant $2(k + 1) - 1 = 2k + 1$ : la somme vaut $k^2 + 2k + 1 = (k + 1)^2$.",
+        "Conclusion : par récurrence, la somme des $n$ premiers nombres impairs vaut $n^2$ pour tout $n \\geq 1$."
+      ],
+      "reponse": "Propriété démontrée : $1 + 3 + \\dots + (2n - 1) = n^2$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "recurrence",
+      "enonce": "Démontrer par récurrence que, pour tout entier $n \\geq 0$, $3^n \\geq 1 + 2n$.",
+      "corrige": [
+        "Initialisation : $3^0 = 1$ et $1 + 0 = 1$, donc $1 \\geq 1$.",
+        "Hérédité : supposons $3^k \\geq 1 + 2k$. Alors $3^{k+1} = 3\\times 3^k \\geq 3(1 + 2k) = 3 + 6k$.",
+        "Or $3 + 6k \\geq 3 + 2k = 1 + 2(k + 1)$ car $k \\geq 0$. Donc $3^{k+1} \\geq 1 + 2(k + 1)$.",
+        "Conclusion : par récurrence, $3^n \\geq 1 + 2n$ pour tout $n \\geq 0$."
+      ],
+      "reponse": "Propriété démontrée : $3^n \\geq 1 + 2n$ pour tout $n \\geq 0$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "recurrence",
+      "enonce": "On définit $u_0 = 1$ et $u_{n+1} = \\sqrt{u_n + 2}$. Démontrer par récurrence que $0 < u_n < 2$ pour tout $n \\geq 0$.",
+      "corrige": [
+        "Initialisation : $u_0 = 1$ et $0 < 1 < 2$.",
+        "Hérédité : supposons $0 < u_k < 2$. Alors $2 < u_k + 2 < 4$, et la fonction racine carrée étant strictement croissante, $\\sqrt{2} < u_{k+1} < 2$.",
+        "Comme $\\sqrt{2} > 0$, on a bien $0 < u_{k+1} < 2$.",
+        "Conclusion : par récurrence, $0 < u_n < 2$ pour tout $n \\geq 0$."
+      ],
+      "reponse": "Propriété démontrée : $0 < u_n < 2$ pour tout $n$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "recurrence",
+      "enonce": "On considère la propriété $P(n)$ : « $4^n + 1$ est divisible par $3$ ». 1) Montrer que si $P(k)$ est vraie, alors $P(k + 1)$ est vraie. 2) Calculer $4^0 + 1$, $4^1 + 1$ et $4^2 + 1$. 3) Que peut-on conclure ?",
+      "corrige": [
+        "1) Si $4^k + 1 = 3m$ avec $m$ entier, alors $4^{k+1} + 1 = 4(4^k + 1) - 3 = 12m - 3 = 3(4m - 1)$ : divisible par $3$. L'hérédité est vraie.",
+        "2) $4^0 + 1 = 2$, $4^1 + 1 = 5$, $4^2 + 1 = 17$ : aucun n'est divisible par $3$.",
+        "3) L'initialisation n'est jamais vérifiée : on ne peut rien conclure par récurrence (et $P(n)$ est d'ailleurs fausse). Une hérédité seule ne prouve rien."
+      ],
+      "reponse": "Hérédité vraie, mais aucune initialisation : la propriété est fausse ; l'initialisation est indispensable."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "recurrence",
+      "enonce": "Démontrer par récurrence que, pour tout $n \\geq 1$, $1^2 + 2^2 + \\dots + n^2 = \\dfrac{n(n + 1)(2n + 1)}{6}$.",
+      "corrige": [
+        "Initialisation : pour $n = 1$, $1^2 = 1$ et $\\dfrac{1\\times 2\\times 3}{6} = 1$.",
+        "Hérédité : supposons la formule vraie au rang $k$. Alors $1^2 + \\dots + k^2 + (k + 1)^2 = \\dfrac{k(k + 1)(2k + 1)}{6} + (k + 1)^2 = \\dfrac{(k + 1)\\left(k(2k + 1) + 6(k + 1)\\right)}{6}$.",
+        "Or $k(2k + 1) + 6(k + 1) = 2k^2 + 7k + 6 = (k + 2)(2k + 3)$ : la somme vaut $\\dfrac{(k + 1)(k + 2)(2k + 3)}{6}$, c'est la formule au rang $k + 1$.",
+        "Conclusion : par récurrence, la formule est vraie pour tout $n \\geq 1$."
+      ],
+      "reponse": "Formule démontrée pour tout $n \\geq 1$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "recurrence",
+      "enonce": "On définit $u_0 = 1$ et $u_{n+1} = \\dfrac{u_n}{1 + u_n}$. 1) Démontrer par récurrence que $u_n = \\dfrac{1}{n + 1}$ pour tout $n \\geq 0$. 2) En déduire la limite de $(u_n)$.",
+      "corrige": [
+        "1) Initialisation : $u_0 = 1 = \\dfrac{1}{0 + 1}$.",
+        "Hérédité : si $u_k = \\dfrac{1}{k + 1}$, alors $u_{k+1} = \\dfrac{\\frac{1}{k+1}}{1 + \\frac{1}{k+1}} = \\dfrac{\\frac{1}{k+1}}{\\frac{k+2}{k+1}} = \\dfrac{1}{k + 2}$ : c'est la formule au rang $k + 1$.",
+        "Conclusion : $u_n = \\dfrac{1}{n + 1}$ pour tout $n \\geq 0$.",
+        "2) $n + 1 \\to +\\infty$, donc $u_n \\to 0$."
+      ],
+      "reponse": "$u_n = \\dfrac{1}{n + 1}$ ; limite $0$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "recurrence",
+      "enonce": "On définit $u_0 = 0$ et $u_{n+1} = \\sqrt{3u_n + 4}$. 1) Démontrer par récurrence que $0 \\leq u_n \\leq u_{n+1} \\leq 4$ pour tout $n \\geq 0$. 2) En déduire que la suite converge, et donner un majorant de sa limite.",
+      "corrige": [
+        "1) Initialisation : $u_0 = 0$ et $u_1 = \\sqrt{4} = 2$ : $0 \\leq 0 \\leq 2 \\leq 4$.",
+        "Hérédité : supposons $0 \\leq u_k \\leq u_{k+1} \\leq 4$. La fonction $x \\mapsto \\sqrt{3x + 4}$ est croissante sur $[0\\,;+\\infty[$, donc $\\sqrt{4} \\leq u_{k+1} \\leq u_{k+2} \\leq \\sqrt{16}$, soit $2 \\leq u_{k+1} \\leq u_{k+2} \\leq 4$, et a fortiori $0 \\leq u_{k+1} \\leq u_{k+2} \\leq 4$.",
+        "Conclusion : la propriété est vraie pour tout $n \\geq 0$.",
+        "2) La suite est croissante et majorée par $4$ : elle converge, vers une limite $\\ell \\leq 4$."
+      ],
+      "reponse": "$(u_n)$ est croissante et majorée par $4$ : elle converge vers $\\ell \\leq 4$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "recurrence",
+      "enonce": "Soit $a > 0$. 1) Démontrer par récurrence que $(1 + a)^n \\geq 1 + na$ pour tout $n \\geq 0$ (inégalité de Bernoulli). 2) En déduire que $q^n \\to +\\infty$ lorsque $q > 1$.",
+      "corrige": [
+        "1) Initialisation : $(1 + a)^0 = 1$ et $1 + 0\\times a = 1$.",
+        "Hérédité : si $(1 + a)^k \\geq 1 + ka$, on multiplie par $1 + a > 0$ : $(1 + a)^{k+1} \\geq (1 + ka)(1 + a) = 1 + (k + 1)a + ka^2 \\geq 1 + (k + 1)a$, car $ka^2 \\geq 0$.",
+        "Conclusion : $(1 + a)^n \\geq 1 + na$ pour tout $n \\geq 0$.",
+        "2) Si $q > 1$, on pose $a = q - 1 > 0$ : $q^n \\geq 1 + n(q - 1)$, et $1 + n(q - 1) \\to +\\infty$ ; par comparaison, $q^n \\to +\\infty$."
+      ],
+      "reponse": "$(1 + a)^n \\geq 1 + na$ ; par comparaison, $q^n \\to +\\infty$ si $q > 1$."
     }
   ]
 }

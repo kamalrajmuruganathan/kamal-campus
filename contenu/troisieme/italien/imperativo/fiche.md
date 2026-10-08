@@ -82,7 +82,7 @@ Autres : essere → *sii* ; avere → *abbi*.
 Avec l'impératif affirmatif (tu, noi, voi), le pronom se **colle à la fin** du verbe :
 
 - *Guarda**mi**!* → Regarde-moi !
-- *Dì**mmi** tutto!* → Dis-moi tout ! (les verbes courts doublent la consonne : di' + mi → dimmi)
+- *Di**mmi** tutto!* → Dis-moi tout ! (les verbes courts doublent la consonne : di' + mi → dimmi)
 - *Alza**ti**!* → Lève-toi !
 
 Avec le vouvoiement (Lei), le pronom se place **avant** : *Mi dica!* (Dites-moi !)

@@ -15,22 +15,24 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { chapitreParId } from '../contenu-index';
 import { parlerSequence, arreterParole, texteBrut } from '../parole';
+import { useFiche } from '../useFiche';
 
 export default function Podcast({ route }) {
   const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
+  const { fiche } = useFiche(route.params.id);
 
   // Construit la playlist : cours + cartes (recto/verso).
   const segments = useMemo(() => {
     if (!chapitre) return [];
-    const segs = [{ titre: 'Cours', texte: texteBrut(chapitre.fiche) }];
+    const segs = fiche ? [{ titre: 'Cours', texte: texteBrut(fiche) }] : [];
     const cartes = chapitre.flashcards?.cartes ?? [];
     cartes.forEach((c, i) => {
       segs.push({ titre: `Carte ${i + 1} — question`, texte: c.recto });
       segs.push({ titre: `Carte ${i + 1} — réponse`, texte: c.verso });
     });
     return segs;
-  }, [chapitre]);
+  }, [chapitre, fiche]);
 
   const [enLecture, setEnLecture] = useState(false);
   const [courant, setCourant] = useState(-1);

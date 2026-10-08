@@ -133,7 +133,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "applications",
       "enonce": "Une tasse de café est servie à $90\\,^{\\circ}\\text{C}$ dans une pièce maintenue à $20\\,^{\\circ}\\text{C}$. Sa température (en degrés Celsius) au bout de $t$ minutes est modélisée par $T(t) = 20 + 70\\,e^{-0{,}05 t}$, pour $t\\geqslant 0$.\n\n1. Vérifier que $T(0) = 90$ et interpréter.\n2. Déterminer $\\lim\\limits_{t\\to +\\infty} T(t)$ et interpréter ce résultat dans le contexte.\n3. Étudier le sens de variation de $T$ sur $[0\\,;+\\infty[$.\n4. Déterminer, à la minute près, l'instant où la température atteint $55\\,^{\\circ}\\text{C}$. On donne $\\ln 2 \\approx 0{,}69$.\n5. Déterminer au bout de combien de temps la température devient inférieure à $30\\,^{\\circ}\\text{C}$. On donne $\\ln 7 \\approx 1{,}95$.",
       "corrige": [
@@ -144,6 +144,446 @@
         "5. On résout $T(t) < 30$ : $20 + 70\\,e^{-0{,}05t} < 30$, soit $70\\,e^{-0{,}05t} < 10$, puis $e^{-0{,}05t} < \\dfrac{10}{70} = \\dfrac{1}{7}$. On applique $\\ln$ (strictement croissante, sens conservé) : $-0{,}05t < \\ln\\!\\left(\\dfrac{1}{7}\\right) = -\\ln 7$. On divise ensuite par $-0{,}05<0$, ce qui **inverse** le sens de l'inégalité : $t > \\dfrac{\\ln 7}{0{,}05} = 20\\ln 7 \\approx 20\\times 1{,}95 = 39$. La température passe sous $30\\,^{\\circ}\\text{C}$ au bout d'environ $39$ minutes (pour $t>39$ min)."
       ],
       "reponse": "$T(0)=90\\,^{\\circ}\\text{C}$ ; $\\lim\\limits_{+\\infty} T = 20\\,^{\\circ}\\text{C}$ (asymptote, température de la pièce) ; $T$ strictement décroissante car $T'(t)=-3{,}5\\,e^{-0{,}05t}<0$ ; $T=55\\,^{\\circ}\\text{C}$ pour $t=20\\ln 2\\approx 14$ min ; $T<30\\,^{\\circ}\\text{C}$ pour $t>20\\ln 7\\approx 39$ min."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "rappels-exponentielle",
+      "enonce": "Simplifier $\\dfrac{e^{3}\\times e^{-1}}{e^{4}}$ sous la forme $e^{k}$.",
+      "corrige": [
+        "Au numérateur : $e^{3}\\times e^{-1}=e^{3-1}=e^{2}$.",
+        "Puis $\\dfrac{e^{2}}{e^{4}}=e^{2-4}=e^{-2}$."
+      ],
+      "reponse": "$e^{-2}$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "rappels-exponentielle",
+      "enonce": "Simplifier $\\left(e^{2}\\right)^{3}\\times e^{-5}$.",
+      "corrige": [
+        "$\\left(e^{2}\\right)^{3}=e^{6}$.",
+        "$e^{6}\\times e^{-5}=e^{1}=e$."
+      ],
+      "reponse": "$e$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "rappels-exponentielle",
+      "enonce": "Un élève écrit : « $e^{2}+e^{3}=e^{5}$ ». A-t-il raison ? Justifier par une valeur approchée.",
+      "corrige": [
+        "La règle $e^{a}\\times e^{b}=e^{a+b}$ concerne un produit, pas une somme.",
+        "$e^{2}+e^{3}\\approx 7{,}39+20{,}09=27{,}48$, alors que $e^{5}\\approx 148{,}41$."
+      ],
+      "reponse": "Non : $e^{2}+e^{3}\\neq e^{5}$ (c'est $e^{2}\\times e^{3}=e^{5}$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "rappels-exponentielle",
+      "enonce": "Quel est le signe de $f(x)=(x-4)\\,e^{x}$ selon les valeurs de $x$ ?",
+      "corrige": [
+        "Pour tout réel $x$, $e^{x}>0$ : $f(x)$ a le signe de $x-4$.",
+        "$f(x)<0$ pour $x<4$, $f(4)=0$, $f(x)>0$ pour $x>4$."
+      ],
+      "reponse": "Négatif sur $]-\\infty\\,;4[$, nul en $4$, positif sur $]4\\,;+\\infty[$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "rappels-exponentielle",
+      "enonce": "Montrer que, pour tout réel $x$, $\\dfrac{e^{2x}-1}{e^{x}}=e^{x}-e^{-x}$.",
+      "corrige": [
+        "On sépare la fraction : $\\dfrac{e^{2x}}{e^{x}}-\\dfrac{1}{e^{x}}$.",
+        "$\\dfrac{e^{2x}}{e^{x}}=e^{2x-x}=e^{x}$ et $\\dfrac{1}{e^{x}}=e^{-x}$."
+      ],
+      "reponse": "L'égalité est vraie pour tout réel $x$."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "definition-ln",
+      "enonce": "Donner sans calculatrice : $\\ln 1$, $\\ln e$, $\\ln\\left(e^{7}\\right)$ et $e^{\\ln 3}$.",
+      "corrige": [
+        "$\\ln 1=0$ car $e^{0}=1$ ; $\\ln e=1$ car $e^{1}=e$.",
+        "$\\ln$ et $\\exp$ se compensent : $\\ln\\left(e^{7}\\right)=7$ et $e^{\\ln 3}=3$."
+      ],
+      "reponse": "$0$ ; $1$ ; $7$ ; $3$"
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "definition-ln",
+      "enonce": "Parmi les nombres $\\ln 5$, $\\ln(-2)$, $\\ln 0$ et $\\ln(0{,}3)$, lesquels existent ? Donner le signe de ceux qui existent.",
+      "corrige": [
+        "$\\ln$ n'est défini que sur $]0\\,;+\\infty[$ : $\\ln(-2)$ et $\\ln 0$ n'existent pas.",
+        "$\\ln 5>0$ car $5>1$ ; $\\ln(0{,}3)<0$ car $0<0{,}3<1$."
+      ],
+      "reponse": "$\\ln 5>0$ et $\\ln(0{,}3)<0$ existent ; $\\ln(-2)$ et $\\ln 0$ n'existent pas."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "definition-ln",
+      "enonce": "Déterminer l'ensemble de définition de $f(x)=\\ln(2x-6)$.",
+      "corrige": [
+        "Il faut $2x-6>0$, soit $x>3$."
+      ],
+      "reponse": "$]3\\,;+\\infty[$"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "definition-ln",
+      "enonce": "Calculer $e^{\\ln 3+\\ln 2}$ et $e^{-\\ln 4}$.",
+      "corrige": [
+        "$\\ln 3+\\ln 2=\\ln 6$, donc $e^{\\ln 6}=6$.",
+        "$-\\ln 4=\\ln\\dfrac{1}{4}$, donc $e^{-\\ln 4}=\\dfrac{1}{4}$."
+      ],
+      "reponse": "$6$ et $\\dfrac{1}{4}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "definition-ln",
+      "enonce": "Déterminer l'ensemble de définition de $g(x)=\\ln(x^{2}-9)$.",
+      "corrige": [
+        "Il faut $x^{2}-9>0$, soit $(x-3)(x+3)>0$.",
+        "Ce produit est positif à l'extérieur des racines : $x<-3$ ou $x>3$."
+      ],
+      "reponse": "$]-\\infty\\,;-3[\\,\\cup\\,]3\\,;+\\infty[$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Exprimer $\\ln 12$ en fonction de $\\ln 2$ et $\\ln 3$.",
+      "corrige": [
+        "$12=2^{2}\\times 3$.",
+        "$\\ln 12=\\ln\\left(2^{2}\\right)+\\ln 3=2\\ln 2+\\ln 3$."
+      ],
+      "reponse": "$\\ln 12=2\\ln 2+\\ln 3$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Exprimer $\\ln\\dfrac{1}{8}$ en fonction de $\\ln 2$.",
+      "corrige": [
+        "$\\ln\\dfrac{1}{8}=-\\ln 8$.",
+        "$8=2^{3}$, donc $-\\ln 8=-3\\ln 2$."
+      ],
+      "reponse": "$-3\\ln 2$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier $B=\\ln 50-\\ln 2$, puis l'exprimer en fonction de $\\ln 5$.",
+      "corrige": [
+        "$B=\\ln\\dfrac{50}{2}=\\ln 25$.",
+        "$25=5^{2}$, donc $B=2\\ln 5$."
+      ],
+      "reponse": "$B=2\\ln 5$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Un élève écrit : « $\\ln(3x^{2})=2\\ln(3x)$ » pour $x>0$. Corriger.",
+      "corrige": [
+        "Seul $x$ est au carré : $\\ln(3x^{2})=\\ln 3+\\ln(x^{2})$.",
+        "Pour $x>0$, $\\ln(x^{2})=2\\ln x$. Donc $\\ln(3x^{2})=\\ln 3+2\\ln x$."
+      ],
+      "reponse": "$\\ln(3x^{2})=\\ln 3+2\\ln x$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Calculer $\\ln\\sqrt{e}$ et simplifier $C=\\ln\\left(e^{3}\\right)-\\ln\\left(\\dfrac{1}{e^{2}}\\right)$.",
+      "corrige": [
+        "$\\ln\\sqrt{e}=\\dfrac{1}{2}\\ln e=\\dfrac{1}{2}$.",
+        "$\\ln\\left(e^{3}\\right)=3$ et $\\ln\\left(\\dfrac{1}{e^{2}}\\right)=-2$, donc $C=3-(-2)=5$."
+      ],
+      "reponse": "$\\ln\\sqrt{e}=\\dfrac{1}{2}$ ; $C=5$"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=e^{-3x+1}$.",
+      "corrige": [
+        "$f=e^{u}$ avec $u=-3x+1$, $u'=-3$.",
+        "$f'(x)=u'e^{u}=-3e^{-3x+1}$."
+      ],
+      "reponse": "$f'(x)=-3e^{-3x+1}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=\\ln(2x+5)$ sur $\\left]-\\dfrac{5}{2}\\,;+\\infty\\right[$.",
+      "corrige": [
+        "$f=\\ln u$ avec $u=2x+5>0$ et $u'=2$.",
+        "$f'(x)=\\dfrac{u'}{u}=\\dfrac{2}{2x+5}$."
+      ],
+      "reponse": "$f'(x)=\\dfrac{2}{2x+5}$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=x^{2}e^{x}$ et factoriser le résultat.",
+      "corrige": [
+        "Formule du produit : $f'(x)=2x\\,e^{x}+x^{2}e^{x}$.",
+        "$f'(x)=x(x+2)\\,e^{x}$."
+      ],
+      "reponse": "$f'(x)=x(x+2)\\,e^{x}$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=x\\ln x$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "Formule du produit avec $u=x$, $v=\\ln x$ : $u'=1$, $v'=\\dfrac{1}{x}$.",
+        "$f'(x)=\\ln x+x\\times\\dfrac{1}{x}=\\ln x+1$."
+      ],
+      "reponse": "$f'(x)=\\ln x+1$"
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "derivees",
+      "enonce": "Soit $f(x)=(\\ln x)^{2}$ sur $]0\\,;+\\infty[$. Calculer $f'(x)$ et étudier son signe.",
+      "corrige": [
+        "$f=u^{2}$ avec $u=\\ln x$ : $f'=2u'u=\\dfrac{2\\ln x}{x}$.",
+        "$x>0$ : $f'(x)$ a le signe de $\\ln x$, négatif sur $]0\\,;1[$, positif sur $]1\\,;+\\infty[$."
+      ],
+      "reponse": "$f'(x)=\\dfrac{2\\ln x}{x}$ ; négative sur $]0\\,;1[$, positive sur $]1\\,;+\\infty[$"
+    },
+    {
+      "id": 31,
+      "difficulte": "decouverte",
+      "notion": "limites",
+      "enonce": "Donner les limites : $\\displaystyle\\lim_{x\\to-\\infty}e^{x}$, $\\displaystyle\\lim_{x\\to+\\infty}e^{x}$, $\\displaystyle\\lim_{x\\to 0^{+}}\\ln x$ et $\\displaystyle\\lim_{x\\to+\\infty}\\ln x$.",
+      "corrige": [
+        "Ce sont les limites de référence de la fiche."
+      ],
+      "reponse": "$0$ ; $+\\infty$ ; $-\\infty$ ; $+\\infty$"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(3-2e^{-x}\\right)$.",
+      "corrige": [
+        "Quand $x\\to+\\infty$, $-x\\to-\\infty$, donc $e^{-x}\\to 0$.",
+        "La limite vaut $3-0=3$."
+      ],
+      "reponse": "$3$"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 0^{+}}\\left(x^{2}-5+\\ln x\\right)$.",
+      "corrige": [
+        "$x^{2}-5\\to -5$ et $\\ln x\\to-\\infty$ quand $x\\to 0^{+}$.",
+        "Par somme, la limite vaut $-\\infty$."
+      ],
+      "reponse": "$-\\infty$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "La courbe de $f(x)=2+e^{x}$ admet-elle une asymptote horizontale ? Si oui, en quelle borne et avec quelle équation ?",
+      "corrige": [
+        "$\\displaystyle\\lim_{x\\to-\\infty}e^{x}=0$, donc $\\displaystyle\\lim_{x\\to-\\infty}f(x)=2$ : asymptote $y=2$ en $-\\infty$.",
+        "En $+\\infty$, $f(x)\\to+\\infty$ : pas d'asymptote horizontale de ce côté."
+      ],
+      "reponse": "Oui, $y=2$ en $-\\infty$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $\\ln x=-1$.",
+      "corrige": [
+        "Existence : $x>0$.",
+        "$\\ln x=-1\\iff x=e^{-1}$, qui est bien positif."
+      ],
+      "reponse": "$x=e^{-1}=\\dfrac{1}{e}$"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $e^{3x-2}=7$.",
+      "corrige": [
+        "On applique $\\ln$ : $3x-2=\\ln 7$.",
+        "$x=\\dfrac{2+\\ln 7}{3}$."
+      ],
+      "reponse": "$x=\\dfrac{2+\\ln 7}{3}$"
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $\\ln(x+2)=\\ln(2x-1)$.",
+      "corrige": [
+        "Existence : $x+2>0$ et $2x-1>0$, soit $x>\\dfrac{1}{2}$.",
+        "$\\ln$ est strictement croissante : $x+2=2x-1$, donc $x=3$.",
+        "$3>\\dfrac{1}{2}$ : la solution convient."
+      ],
+      "reponse": "$S=\\{3\\}$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $\\ln x+\\ln(x-1)=\\ln 6$.",
+      "corrige": [
+        "Existence : $x>0$ et $x-1>0$, soit $x>1$.",
+        "$\\ln\\big(x(x-1)\\big)=\\ln 6\\iff x^{2}-x-6=0\\iff (x-3)(x+2)=0$.",
+        "$x=3$ convient ; $x=-2$ ne vérifie pas $x>1$ : on le rejette."
+      ],
+      "reponse": "$S=\\{3\\}$"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "equations",
+      "enonce": "En posant $X=e^{x}$, résoudre l'équation $e^{2x}-5e^{x}+6=0$.",
+      "corrige": [
+        "$e^{2x}=\\left(e^{x}\\right)^{2}=X^{2}$ : l'équation devient $X^{2}-5X+6=0$, soit $(X-2)(X-3)=0$.",
+        "$e^{x}=2\\iff x=\\ln 2$ ; $e^{x}=3\\iff x=\\ln 3$."
+      ],
+      "reponse": "$S=\\{\\ln 2\\,;\\ln 3\\}$"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "inequations",
+      "enonce": "Résoudre l'inéquation $\\ln x<2$.",
+      "corrige": [
+        "Existence : $x>0$.",
+        "$\\exp$ est strictement croissante : $x<e^{2}$."
+      ],
+      "reponse": "$S=\\left]0\\,;e^{2}\\right[$"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "inequations",
+      "enonce": "Résoudre l'inéquation $e^{x}>5$.",
+      "corrige": [
+        "$\\ln$ est strictement croissante sur $]0\\,;+\\infty[$ : $x>\\ln 5$."
+      ],
+      "reponse": "$S=\\left]\\ln 5\\,;+\\infty\\right[$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Résoudre l'inéquation $1-2\\ln x\\geqslant 0$.",
+      "corrige": [
+        "Existence : $x>0$.",
+        "$1-2\\ln x\\geqslant 0\\iff \\ln x\\leqslant\\dfrac{1}{2}\\iff x\\leqslant e^{1/2}=\\sqrt{e}$."
+      ],
+      "reponse": "$S=\\left]0\\,;\\sqrt{e}\\right]$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "inequations",
+      "enonce": "Déterminer le plus petit entier $n$ tel que $0{,}9^{n}<0{,}5$. On donne $\\ln 0{,}5\\approx -0{,}693$ et $\\ln 0{,}9\\approx -0{,}105$.",
+      "corrige": [
+        "On applique $\\ln$ (croissante) : $n\\ln 0{,}9<\\ln 0{,}5$.",
+        "$\\ln 0{,}9<0$ : en divisant, le sens change : $n>\\dfrac{\\ln 0{,}5}{\\ln 0{,}9}\\approx 6{,}58$.",
+        "Le plus petit entier est $7$."
+      ],
+      "reponse": "$n=7$"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{e^{x}}{x^{3}}$.",
+      "corrige": [
+        "Croissances comparées : l'exponentielle l'emporte sur toute puissance de $x$."
+      ],
+      "reponse": "$+\\infty$"
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 0^{+}} x\\ln x$ et $\\displaystyle\\lim_{x\\to-\\infty}x^{2}e^{x}$.",
+      "corrige": [
+        "Ce sont deux croissances comparées de la fiche : $x^{n}\\ln x\\to 0$ en $0^{+}$ et $x^{n}e^{x}\\to 0$ en $-\\infty$."
+      ],
+      "reponse": "$0$ et $0$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "croissances-comparees",
+      "enonce": "Un élève écrit : « $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{\\ln x}{x}=1$, car numérateur et dénominateur tendent tous deux vers $+\\infty$. » Corriger.",
+      "corrige": [
+        "$\\dfrac{\\infty}{\\infty}$ est une forme indéterminée : on ne peut pas conclure « $1$ ».",
+        "Par croissances comparées, la puissance l'emporte sur le logarithme : la limite vaut $0$."
+      ],
+      "reponse": "La limite vaut $0$."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "applications",
+      "enonce": "Un capital de $1000$ € est placé à $5\\,\\%$ par an (intérêts composés). Au bout de combien d'années complètes aura-t-il dépassé $10\\,000$ € ? On donne $\\dfrac{\\ln 10}{\\ln 1{,}05}\\approx 47{,}19$.",
+      "corrige": [
+        "On cherche le plus petit entier $n$ tel que $1000\\times 1{,}05^{n}>10\\,000$, soit $1{,}05^{n}>10$.",
+        "$n\\ln 1{,}05>\\ln 10$ ; $\\ln 1{,}05>0$ : $n>\\dfrac{\\ln 10}{\\ln 1{,}05}\\approx 47{,}19$."
+      ],
+      "reponse": "Au bout de $48$ ans"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "applications",
+      "enonce": "Une population augmente selon $P(t)=P_0\\,e^{0{,}05t}$ ($t$ en années). Calculer le temps de doublement, valeur exacte puis arrondie au dixième.",
+      "corrige": [
+        "On cherche $t$ tel que $P_0\\,e^{0{,}05t}=2P_0$, soit $e^{0{,}05t}=2$.",
+        "$0{,}05t=\\ln 2$, donc $t=\\dfrac{\\ln 2}{0{,}05}=20\\ln 2\\approx 13{,}9$ ans."
+      ],
+      "reponse": "$t=20\\ln 2\\approx 13{,}9$ ans"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "applications",
+      "enonce": "Un médicament est éliminé par l'organisme : la quantité restante (en mg) au bout de $t$ heures est $Q(t)=80\\,e^{-0{,}2t}$. 1. Quelle est la quantité initiale ? 2. Étudier le sens de variation de $Q$. 3. Au bout de combien de temps reste-t-il moins de $10$ mg ? Donner la valeur exacte puis arrondir au dixième d'heure ($\\ln 8\\approx 2{,}079$).",
+      "corrige": [
+        "1. $Q(0)=80\\,e^{0}=80$ mg.",
+        "2. $Q'(t)=80\\times(-0{,}2)\\,e^{-0{,}2t}=-16\\,e^{-0{,}2t}<0$ : $Q$ est strictement décroissante.",
+        "3. $80\\,e^{-0{,}2t}<10\\iff e^{-0{,}2t}<\\dfrac{1}{8}\\iff -0{,}2t<-\\ln 8\\iff t>5\\ln 8\\approx 10{,}4$ h (on divise par $-0{,}2$ : le sens change)."
+      ],
+      "reponse": "1. $80$ mg. 2. Décroissante. 3. Pour $t>5\\ln 8\\approx 10{,}4$ h."
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "etude-de-fonction",
+      "enonce": "Soit $f(x)=x\\ln x$ sur $]0\\,;+\\infty[$, avec $f'(x)=\\ln x+1$. Étudier les variations de $f$ et donner la valeur exacte de son minimum.",
+      "corrige": [
+        "$f'(x)\\geqslant 0\\iff \\ln x\\geqslant -1\\iff x\\geqslant e^{-1}$.",
+        "$f$ décroît sur $\\left]0\\,;e^{-1}\\right]$ et croît sur $\\left[e^{-1}\\,;+\\infty\\right[$.",
+        "Minimum : $f\\left(e^{-1}\\right)=e^{-1}\\times(-1)=-\\dfrac{1}{e}$."
+      ],
+      "reponse": "Minimum $-\\dfrac{1}{e}$ atteint en $x=\\dfrac{1}{e}$"
     }
   ]
 }

@@ -69,8 +69,10 @@ L'adjectif s'accorde en **genre** (masculin/féminin) et en **nombre** (singulie
 
 Exemples : *El niño es alt**o**.* / *La niña es alt**a**.* / *Los niños son alt**os**.*
 
-Les adjectifs qui finissent par **-e** ou consonne ne changent pas au féminin :
-*Él es inteligent**e** / Ella es inteligent**e**.*
+Les adjectifs qui finissent par **-e** (et la plupart de ceux en consonne) ne changent pas au féminin :
+*Él es inteligent**e** / Ella es inteligent**e**.* — *Él es joven / Ella es joven.*
+
+Attention : ceux en **-or** prennent un **-a** : *hablador → habladora*, *trabajador → trabajadora*.
 
 ## 4. Le caractère
 

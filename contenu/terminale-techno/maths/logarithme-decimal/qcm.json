@@ -75,7 +75,7 @@
         "$x = \\dfrac{\\log 50}{\\log 2}$",
         "$x = \\log\\dfrac{50}{2}$",
         "$x = \\dfrac{50}{2}$",
-        "$x = \\log 50 - \\log 2$"
+        "$x = \\dfrac{\\log 2}{\\log 50}$"
       ],
       "reponse": 0,
       "explication": "On prend le log des deux membres : $x\\log 2 = \\log 50$, d'où $x = \\dfrac{\\log 50}{\\log 2} \\approx 5{,}64$. Le piège : écrire $\\log\\dfrac{50}{2} = \\log 25$ (qui vaut $\\log 50 - \\log 2 \\approx 1{,}4$) — le quotient DES logs n'est pas le log DU quotient."
@@ -148,7 +148,7 @@
         "$\\log\\dfrac{a}{b} = \\dfrac{\\log a}{\\log b}$"
       ],
       "reponse": 2,
-      "explication": "La seule vraie est $\\log(ab) = \\log a + \\log b$ : le log transforme les produits en sommes. Le piège n°1 du chapitre est le premier choix, $\\log(a+b) = \\log a + \\log b$ : teste $a = b = 10$, $\\log 20 \\approx 1{,}3$ alors que $\\log 10 + \\log 10 = 2$. De même le log d'un quotient est une DIFFÉRENCE de logs, pas un quotient."
+      "explication": "La seule vraie est $\\log(ab) = \\log a + \\log b$ : le log transforme les produits en sommes. Le piège n°1 du chapitre est $\\log(a+b) = \\log a + \\log b$ : teste $a = b = 10$, $\\log 20 \\approx 1{,}3$ alors que $\\log 10 + \\log 10 = 2$. De même le log d'un quotient est une DIFFÉRENCE de logs, pas un quotient."
     },
     {
       "id": 11,
@@ -260,7 +260,7 @@
         "$x = 5$ ans"
       ],
       "reponse": 0,
-      "explication": "On résout $0{,}9^x = 0{,}5$, soit $x = \\dfrac{\\log 0{,}5}{\\log 0{,}9} = \\dfrac{-0{,}301}{-0{,}0458} \\approx 6{,}6$ ans. Les deux logs sont **négatifs** (nombres $< 1$), donc leur quotient est bien positif. Le piège : confondre le quotient des logs avec le log du quotient (troisième choix, absurde car négatif)."
+      "explication": "On résout $0{,}9^x = 0{,}5$, soit $x = \\dfrac{\\log 0{,}5}{\\log 0{,}9} = \\dfrac{-0{,}301}{-0{,}0458} \\approx 6{,}6$ ans. Les deux logs sont **négatifs** (nombres $< 1$), donc leur quotient est bien positif. Le piège : confondre le quotient des logs avec le log du quotient ($\\log\\frac{0{,}5}{0{,}9} \\approx -0{,}26$, absurde car négatif)."
     },
     {
       "id": 19,

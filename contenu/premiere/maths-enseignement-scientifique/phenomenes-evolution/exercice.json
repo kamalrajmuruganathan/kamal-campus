@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Une nouvelle plateforme de streaming lance son service. Le tableau ci-dessous donne le nombre d'abonnés (en milliers) au bout de $n$ mois : pour $n = 0$, $50$ ; pour $n = 1$, $60$ ; pour $n = 2$, $72$ ; pour $n = 3$, $86{,}4$.\n\n1. Montrer que l'évolution du nombre d'abonnés n'est pas affine, puis qu'elle est exponentielle, et préciser le pourcentage d'augmentation mensuel.\n2. En déduire l'expression de $f(n)$, nombre d'abonnés (en milliers) au bout de $n$ mois.\n3. Prévoir, selon ce modèle, le nombre d'abonnés au bout de $6$ mois.\n4. Un service concurrent modélise sa croissance par $g(n) = 80 + 15n$ (en milliers). Comparer les deux plateformes au bout de $12$ mois et commenter l'évolution de leur écart.\n5. Peut-on raisonnablement utiliser $f$ pour prévoir le nombre d'abonnés au bout de $5$ ans (soit $60$ mois) ? Justifier.",
       "corrige": [
@@ -139,6 +139,457 @@
         "5. Au bout de $60$ mois, $f(60) = 50 \\times 1{,}2^{60} \\approx 2{,}8$ milliards d'abonnés (car $1{,}2^{60} \\approx 56\\,000$). Ce nombre dépasse toute clientèle réaliste : le modèle exponentiel n'est **pas valable** à si long terme. Comme tout modèle, il ne décrit correctement le phénomène que dans son **domaine de validité** — ici les premiers mois — car une croissance de $+20\\,\\%$ par mois ne peut se poursuivre indéfiniment."
       ],
       "reponse": "1. non affine, exponentielle de raison $1{,}2$ ($+20\\,\\%$/mois). 2. $f(n) = 50 \\times 1{,}2^{\\,n}$. 3. environ $149\\,300$ abonnés à $6$ mois. 4. à $12$ mois, $\\approx 446$ milliers contre $260$ milliers : l'exponentielle dépasse l'affine. 5. non, le modèle sort de son domaine de validité (résultat absurde à $60$ mois)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "modele-affine",
+      "enonce": "Une grandeur est modélisée par $f(x) = 3x + 12$. Quelle est sa valeur initiale ? De combien augmente-t-elle à chaque période ?",
+      "corrige": [
+        "Dans $f(x) = ax + b$, $b$ est la valeur initiale et $a$ le taux d'accroissement.",
+        "Ici $b = 12$ et $a = 3$ : la grandeur part de $12$ et augmente de $3$ à chaque période."
+      ],
+      "reponse": "Valeur initiale $12$ ; elle augmente de $3$ par période."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "modele-exponentiel",
+      "enonce": "Une grandeur augmente de $3\\,\\%$ par an. Quelle est la raison $q$ du modèle exponentiel $f(n) = f(0) \\times q^{\\,n}$ ?",
+      "corrige": [
+        "Augmenter de $3\\,\\%$, c'est multiplier par $1 + \\dfrac{3}{100}$.",
+        "$q = 1{,}03$."
+      ],
+      "reponse": "$q = 1{,}03$"
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "demi-vie",
+      "enonce": "Quelle fraction d'un échantillon radioactif reste-t-il au bout de deux demi-vies ?",
+      "corrige": [
+        "Chaque demi-vie divise par $2$ ce qui reste : $\\dfrac{1}{2} \\times \\dfrac{1}{2} = \\dfrac{1}{4}$.",
+        "Il reste un quart, soit $25\\,\\%$ : tout n'a pas disparu."
+      ],
+      "reponse": "$\\dfrac{1}{4}$, soit $25\\,\\%$"
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "second-degre",
+      "enonce": "La fonction $f(x) = -3x^2 + 12x + 1$ admet-elle un maximum ou un minimum ? Justifier.",
+      "corrige": [
+        "Le coefficient de $x^2$ est $a = -3 < 0$ : la parabole est tournée vers le bas.",
+        "La fonction admet donc un maximum."
+      ],
+      "reponse": "Un maximum, car $a < 0$."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "r0",
+      "enonce": "Le taux de reproduction d'une épidémie vaut $R_0 = 0{,}8$. L'épidémie va-t-elle croître ou s'éteindre ?",
+      "corrige": [
+        "$R_0 < 1$ : chaque malade contamine en moyenne moins d'une personne.",
+        "Le nombre de cas diminue à chaque génération : l'épidémie s'éteint."
+      ],
+      "reponse": "Elle s'éteint ($R_0 < 1$)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "modele-affine",
+      "enonce": "Une salle de sport demande $15$ € d'inscription, puis $2$ € par séance. Exprimer le coût $f(x)$ pour $x$ séances, puis calculer le coût de $10$ séances.",
+      "corrige": [
+        "Le coût augmente de la même quantité ($2$ €) à chaque séance : modèle affine $f(x) = 2x + 15$.",
+        "$f(10) = 2 \\times 10 + 15 = 35$."
+      ],
+      "reponse": "$f(x) = 2x + 15$ ; $35$ € pour $10$ séances."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "modele-exponentiel",
+      "enonce": "Une voiture achetée $15\\,000$ € perd $20\\,\\%$ de sa valeur chaque année. Écrire le modèle $f(n)$ de sa valeur après $n$ années, puis calculer sa valeur au bout de $2$ ans.",
+      "corrige": [
+        "Baisse de $20\\,\\%$ par an : $q = 0{,}8$, donc $f(n) = 15\\,000 \\times 0{,}8^{\\,n}$.",
+        "$f(2) = 15\\,000 \\times 0{,}64 = 9\\,600$."
+      ],
+      "reponse": "$f(n) = 15\\,000 \\times 0{,}8^{\\,n}$ ; $9\\,600$ €."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "reconnaitre-modele",
+      "enonce": "Une grandeur prend, à intervalles réguliers, les valeurs $5$ ; $8$ ; $11$ ; $14$. Son évolution est-elle affine ou exponentielle ? Donner le modèle.",
+      "corrige": [
+        "Différences successives : $3$ ; $3$ ; $3$. Elles sont constantes : évolution affine.",
+        "$f(n) = 3n + 5$."
+      ],
+      "reponse": "Affine : $f(n) = 3n + 5$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "reconnaitre-modele",
+      "enonce": "Une grandeur prend, à intervalles réguliers, les valeurs $100$ ; $80$ ; $64$ ; $51{,}2$. Son évolution est-elle affine ou exponentielle ? Donner le modèle.",
+      "corrige": [
+        "Différences : $-20$ ; $-16$ ; $-12{,}8$, non constantes.",
+        "Quotients : $\\dfrac{80}{100} = \\dfrac{64}{80} = \\dfrac{51{,}2}{64} = 0{,}8$, constants : évolution exponentielle.",
+        "$f(n) = 100 \\times 0{,}8^{\\,n}$ (baisse de $20\\,\\%$ par période)."
+      ],
+      "reponse": "Exponentielle : $f(n) = 100 \\times 0{,}8^{\\,n}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "taux-marginal",
+      "enonce": "On utilise un barème d'impôt simplifié (fictif) : $0\\,\\%$ sur la part du revenu jusqu'à $10\\,000$ € ; $10\\,\\%$ sur la part comprise entre $10\\,000$ € et $25\\,000$ € ; $30\\,\\%$ sur la part au-delà de $25\\,000$ €. Calculer l'impôt pour un revenu de $20\\,000$ €, puis le taux moyen et le taux marginal.",
+      "corrige": [
+        "Tranche à $0\\,\\%$ : $10\\,000$ € → $0$ €. Tranche à $10\\,\\%$ : $20\\,000 - 10\\,000 = 10\\,000$ € → $1\\,000$ €.",
+        "Taux moyen : $\\dfrac{1\\,000}{20\\,000} = 5\\,\\%$. Taux marginal (dernière tranche atteinte) : $10\\,\\%$."
+      ],
+      "reponse": "Impôt $1\\,000$ € ; taux moyen $5\\,\\%$ ; taux marginal $10\\,\\%$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "demi-vie",
+      "enonce": "L'iode 131 a une demi-vie d'environ $8$ jours. Quelle masse reste-t-il, au bout de $24$ jours, d'un échantillon de $80$ mg d'iode 131 ?",
+      "corrige": [
+        "$24$ jours correspondent à $\\dfrac{24}{8} = 3$ demi-vies.",
+        "$80 \\to 40 \\to 20 \\to 10$ mg."
+      ],
+      "reponse": "Environ $10$ mg"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "second-degre",
+      "enonce": "Soit $f(x) = x^2 - 6x + 5$. Calculer l'abscisse du sommet, puis la valeur de l'extremum. Est-ce un maximum ou un minimum ?",
+      "corrige": [
+        "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-6}{2} = 3$.",
+        "$f(3) = 9 - 18 + 5 = -4$. Comme $a = 1 > 0$, c'est un minimum."
+      ],
+      "reponse": "Sommet en $x = 3$ ; minimum $-4$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "r0",
+      "enonce": "On compte $100$ malades au départ d'une épidémie de taux de reproduction $R_0 = 1{,}5$. Combien de nouveaux malades le modèle $f(n) = 100 \\times 1{,}5^{\\,n}$ prévoit-il à la génération $2$ ?",
+      "corrige": [
+        "$f(2) = 100 \\times 1{,}5^2 = 100 \\times 2{,}25$.",
+        "$f(2) = 225$."
+      ],
+      "reponse": "$225$ malades"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "point-equilibre",
+      "enonce": "L'offre est modélisée par $O(p) = 2p - 10$ et la demande par $D(p) = -p + 50$, où $p$ est le prix en euros. Déterminer le prix d'équilibre et la quantité échangée.",
+      "corrige": [
+        "À l'équilibre, $O(p) = D(p)$ : $2p - 10 = -p + 50$, donc $3p = 60$ et $p = 20$.",
+        "Quantité : $O(20) = 40 - 10 = 30$ (et $D(20) = 30$)."
+      ],
+      "reponse": "$p = 20$ € ; $30$ unités."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "point-equilibre",
+      "enonce": "Avec l'offre $O(p) = 2p - 10$ et la demande $D(p) = -p + 50$, comparer l'offre et la demande pour un prix de $10$ €. Que se passe-t-il sur le marché ?",
+      "corrige": [
+        "$O(10) = 10$ et $D(10) = 40$.",
+        "La demande dépasse l'offre : il y a pénurie, le prix est inférieur au prix d'équilibre ($20$ €)."
+      ],
+      "reponse": "Offre $10$, demande $40$ : pénurie."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "malthus",
+      "enonce": "Une population croît exponentiellement et les ressources croissent de façon affine, avec au départ des ressources bien supérieures aux besoins. Selon le raisonnement de Malthus, que se passe-t-il à long terme ?",
+      "corrige": [
+        "À long terme, une croissance exponentielle dépasse toujours une croissance affine, même très forte au départ.",
+        "La population finit donc par dépasser les ressources."
+      ],
+      "reponse": "La population finit toujours par dépasser les ressources."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "modele-affine",
+      "enonce": "Une bougie neuve mesure $20$ cm et raccourcit de $1{,}5$ cm par heure. Exprimer sa hauteur $h(t)$ après $t$ heures, puis déterminer au bout de combien de temps elle est entièrement consumée.",
+      "corrige": [
+        "Diminution constante : $h(t) = 20 - 1{,}5t$.",
+        "$h(t) = 0$ pour $t = \\dfrac{20}{1{,}5} \\approx 13{,}33$ h, soit $13$ h $20$ min."
+      ],
+      "reponse": "$h(t) = 20 - 1{,}5t$ ; environ $13$ h $20$ min."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "modele-affine",
+      "enonce": "Le nombre d'adhérents d'une association est de $300$ en $2010$ et de $360$ en $2020$. On suppose une évolution affine. Calculer le taux d'accroissement annuel, écrire le modèle $f(t)$ ($t$ = années depuis $2010$), puis estimer le nombre d'adhérents en $2030$.",
+      "corrige": [
+        "Coefficient directeur : $a = \\dfrac{360 - 300}{2020 - 2010} = \\dfrac{60}{10} = 6$ adhérents par an.",
+        "$f(t) = 6t + 300$, donc $f(20) = 6 \\times 20 + 300 = 420$."
+      ],
+      "reponse": "$+6$ par an ; $f(t) = 6t + 300$ ; $420$ adhérents en $2030$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "modele-exponentiel",
+      "enonce": "Une grandeur est modélisée par $f(n) = 1000 \\times 1{,}1^{\\,n}$. Calculer $f(3)$ et donner le pourcentage d'évolution par période.",
+      "corrige": [
+        "$f(3) = 1000 \\times 1{,}1^3 = 1000 \\times 1{,}331 = 1331$.",
+        "$q = 1{,}1$ correspond à une hausse de $10\\,\\%$ par période."
+      ],
+      "reponse": "$f(3) = 1331$ ; $+10\\,\\%$ par période."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "reconnaitre-modele",
+      "enonce": "Une grandeur prend les valeurs $2$ ; $4$ ; $8$ ; $14$. Un élève affirme qu'elle double à chaque étape. A-t-il raison ? L'évolution est-elle affine, exponentielle, ou aucun des deux ?",
+      "corrige": [
+        "Différences : $2$ ; $4$ ; $6$, non constantes : pas affine.",
+        "Quotients : $2$ ; $2$ ; $1{,}75$, non constants : pas exponentielle. L'élève s'est fié aux premières valeurs seulement."
+      ],
+      "reponse": "Non ; l'évolution n'est ni affine ni exponentielle."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "taux-marginal",
+      "enonce": "On utilise un barème d'impôt simplifié (fictif) : $0\\,\\%$ sur la part du revenu jusqu'à $10\\,000$ € ; $10\\,\\%$ sur la part comprise entre $10\\,000$ € et $25\\,000$ € ; $30\\,\\%$ sur la part au-delà de $25\\,000$ €. Calculer l'impôt pour un revenu de $35\\,000$ €, puis le taux moyen (arrondi au centième de pourcentage).",
+      "corrige": [
+        "Tranche à $10\\,\\%$ : $15\\,000$ € → $1\\,500$ €. Tranche à $30\\,\\%$ : $35\\,000 - 25\\,000 = 10\\,000$ € → $3\\,000$ €.",
+        "Impôt : $4\\,500$ €. Taux moyen : $\\dfrac{4\\,500}{35\\,000} \\approx 12{,}86\\,\\%$, bien inférieur au taux marginal de $30\\,\\%$."
+      ],
+      "reponse": "Impôt $4\\,500$ € ; taux moyen $\\approx 12{,}86\\,\\%$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "taux-marginal",
+      "enonce": "On utilise un barème d'impôt simplifié (fictif) : $0\\,\\%$ sur la part du revenu jusqu'à $10\\,000$ € ; $10\\,\\%$ sur la part comprise entre $10\\,000$ € et $25\\,000$ € ; $30\\,\\%$ sur la part au-delà de $25\\,000$ €. Un salarié gagnant $24\\,000$ € refuse une augmentation à $26\\,000$ € : « je passerais dans la tranche à $30\\,\\%$ et je paierais $30\\,\\%$ sur tout ». Calculer son revenu après impôt dans les deux cas et conclure.",
+      "corrige": [
+        "À $24\\,000$ € : impôt $= 0{,}1 \\times 14\\,000 = 1\\,400$ € ; il reste $22\\,600$ €.",
+        "À $26\\,000$ € : impôt $= 1\\,500 + 0{,}3 \\times 1\\,000 = 1\\,800$ € ; il reste $24\\,200$ €.",
+        "Seuls les $1\\,000$ € au-delà de $25\\,000$ € sont taxés à $30\\,\\%$ : il a intérêt à accepter."
+      ],
+      "reponse": "$22\\,600$ € contre $24\\,200$ € : il a tort de refuser."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "demi-vie",
+      "enonce": "Un échantillon contient $N_0 = 6\\,400$ noyaux radioactifs de demi-vie $2$ heures. À l'aide de $N(t) = N_0 \\times \\left(\\dfrac{1}{2}\\right)^{t / t_{1/2}}$, calculer le nombre de noyaux restants au bout de $10$ heures.",
+      "corrige": [
+        "$\\dfrac{t}{t_{1/2}} = \\dfrac{10}{2} = 5$ demi-vies.",
+        "$N(10) = 6\\,400 \\times \\left(\\dfrac{1}{2}\\right)^5 = \\dfrac{6\\,400}{32} = 200$."
+      ],
+      "reponse": "$200$ noyaux"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "second-degre",
+      "enonce": "Le bénéfice (en euros) d'un artisan qui fabrique $x$ objets est modélisé par $B(x) = -2x^2 + 80x - 600$. Combien d'objets doit-il fabriquer pour que le bénéfice soit maximal ? Quel est ce bénéfice ?",
+      "corrige": [
+        "$a = -2 < 0$ : il y a un maximum, atteint en $\\alpha = -\\dfrac{80}{2 \\times (-2)} = 20$.",
+        "$B(20) = -2 \\times 400 + 1\\,600 - 600 = 200$."
+      ],
+      "reponse": "$20$ objets ; bénéfice maximal de $200$ €."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "r0",
+      "enonce": "On part de $1\\,000$ malades. Comparer le nombre de nouveaux malades à la $3^{\\text{e}}$ génération si $R_0 = 1{,}2$, puis si $R_0 = 0{,}9$.",
+      "corrige": [
+        "Avec $R_0 = 1{,}2$ : $1\\,000 \\times 1{,}2^3 = 1\\,000 \\times 1{,}728 = 1\\,728$.",
+        "Avec $R_0 = 0{,}9$ : $1\\,000 \\times 0{,}9^3 = 729$.",
+        "Un petit écart de part et d'autre du seuil $1$ change complètement la dynamique : hausse dans un cas, baisse dans l'autre."
+      ],
+      "reponse": "$1\\,728$ contre $729$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "point-equilibre",
+      "enonce": "Déterminer le point d'équilibre pour l'offre $O(p) = 4p - 8$ et la demande $D(p) = 40 - 2p$.",
+      "corrige": [
+        "$4p - 8 = 40 - 2p$, donc $6p = 48$ et $p = 8$.",
+        "Quantité : $O(8) = 32 - 8 = 24$."
+      ],
+      "reponse": "$p = 8$ € ; $24$ unités."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "malthus",
+      "enonce": "La population d'un territoire est modélisée par $P(n) = 1\\,000 \\times 1{,}02^{\\,n}$ et les ressources (en nombre de personnes nourries) par $R(n) = 1\\,500 + 20n$. On donne $1{,}02^{40} \\approx 2{,}208$ et $1{,}02^{50} \\approx 2{,}692$. Comparer $P$ et $R$ pour $n = 40$ et $n = 50$.",
+      "corrige": [
+        "$n = 40$ : $P \\approx 2\\,208$ et $R = 2\\,300$ : les ressources suffisent encore.",
+        "$n = 50$ : $P \\approx 2\\,692$ et $R = 2\\,500$ : la population a dépassé les ressources."
+      ],
+      "reponse": "Ressources suffisantes à $n = 40$, insuffisantes à $n = 50$."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "modele-exponentiel",
+      "enonce": "Une colonie de $200$ bactéries double toutes les heures. Combien y a-t-il de bactéries au bout de $4$ heures ? Au bout de combien d'heures entières la colonie dépasse-t-elle $10\\,000$ bactéries ?",
+      "corrige": [
+        "Modèle : $f(n) = 200 \\times 2^{\\,n}$. $f(4) = 200 \\times 16 = 3\\,200$.",
+        "$f(5) = 6\\,400 < 10\\,000$ et $f(6) = 12\\,800 > 10\\,000$."
+      ],
+      "reponse": "$3\\,200$ bactéries ; au bout de $6$ heures."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "reconnaitre-modele",
+      "enonce": "Associer à chaque situation le modèle adapté (affine, exponentiel ou second degré) : a) un salaire augmenté de $50$ € chaque année ; b) une épargne qui rapporte $2\\,\\%$ par an, intérêts réinvestis ; c) la hauteur d'un plongeur qui monte puis redescend.",
+      "corrige": [
+        "a) Accroissement constant en valeur : affine.",
+        "b) Pourcentage constant : exponentiel.",
+        "c) Il y a un maximum (optimum) : second degré."
+      ],
+      "reponse": "a) affine ; b) exponentiel ; c) second degré."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "taux-marginal",
+      "enonce": "On utilise un barème d'impôt simplifié (fictif) : $0\\,\\%$ sur la part du revenu jusqu'à $10\\,000$ € ; $10\\,\\%$ sur la part comprise entre $10\\,000$ € et $25\\,000$ € ; $30\\,\\%$ sur la part au-delà de $25\\,000$ €. Pour un revenu $R$ compris entre $10\\,000$ € et $25\\,000$ €, exprimer l'impôt $I(R)$ en fonction de $R$. Vérifier avec $R = 20\\,000$ €.",
+      "corrige": [
+        "Seule la part au-dessus de $10\\,000$ € est taxée, à $10\\,\\%$ : $I(R) = 0{,}1 \\times (R - 10\\,000) = 0{,}1R - 1\\,000$.",
+        "C'est un morceau affine de la fonction impôt. Vérification : $I(20\\,000) = 2\\,000 - 1\\,000 = 1\\,000$ €."
+      ],
+      "reponse": "$I(R) = 0{,}1R - 1\\,000$ ; $I(20\\,000) = 1\\,000$ €."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "demi-vie",
+      "enonce": "Un morceau de bois ancien contient encore $25\\,\\%$ du carbone 14 qu'il possédait à l'origine. Sachant que la demi-vie du carbone 14 vaut environ $5\\,730$ ans, estimer son âge.",
+      "corrige": [
+        "$25\\,\\% = \\dfrac{1}{4} = \\left(\\dfrac{1}{2}\\right)^2$ : deux demi-vies se sont écoulées.",
+        "Âge : $2 \\times 5\\,730 = 11\\,460$ ans environ."
+      ],
+      "reponse": "Environ $11\\,460$ ans"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "second-degre",
+      "enonce": "Une balle est lancée depuis le haut d'un mur. Sa hauteur (en m) est modélisée par $h(t) = -5t^2 + 10t + 15$, $t$ en secondes. 1. De quelle hauteur est-elle lancée ? 2. Quelle hauteur maximale atteint-elle, et à quel instant ? 3. Vérifier qu'elle touche le sol à $t = 3$ s.",
+      "corrige": [
+        "1. $h(0) = 15$ m.",
+        "2. $\\alpha = -\\dfrac{10}{2 \\times (-5)} = 1$ ; $h(1) = -5 + 10 + 15 = 20$ m.",
+        "3. $h(3) = -45 + 30 + 15 = 0$ : la balle touche le sol à $t = 3$ s."
+      ],
+      "reponse": "1. $15$ m ; 2. $20$ m à $t = 1$ s ; 3. $h(3) = 0$."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "r0",
+      "enonce": "Une épidémie démarre avec $3$ malades et $R_0 = 2$. Le modèle donne $f(n) = 3 \\times 2^{\\,n}$ nouveaux malades à la génération $n$. À partir de quelle génération dépasse-t-on $1\\,000$ nouveaux malades ?",
+      "corrige": [
+        "$f(8) = 3 \\times 256 = 768 < 1\\,000$.",
+        "$f(9) = 3 \\times 512 = 1\\,536 > 1\\,000$."
+      ],
+      "reponse": "À la génération $9$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "point-equilibre",
+      "enonce": "Sur un graphique, l'offre $O(p) = 1{,}5p$ et la demande $D(p) = 60 - 0{,}5p$ sont deux droites. Que représente leur point d'intersection ? Calculer ses coordonnées.",
+      "corrige": [
+        "L'intersection est le point d'équilibre : prix pour lequel l'offre égale la demande.",
+        "$1{,}5p = 60 - 0{,}5p$, donc $2p = 60$ et $p = 30$ ; quantité $1{,}5 \\times 30 = 45$."
+      ],
+      "reponse": "Le point d'équilibre $(30 ; 45)$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "malthus",
+      "enonce": "Historiquement, la prédiction de Malthus ne s'est pas réalisée. Pourquoi ? Quelle leçon en tirer sur les modèles ?",
+      "corrige": [
+        "Les rendements agricoles ont eux aussi fortement progressé : les ressources n'ont pas suivi une croissance seulement affine.",
+        "Un modèle n'est valable que dans un certain domaine : il faut se demander jusqu'où il reste crédible."
+      ],
+      "reponse": "Les rendements agricoles ont progressé ; tout modèle a un domaine de validité."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "malthus",
+      "enonce": "Une ville de $1$ million d'habitants voit sa population doubler tous les $25$ ans. Selon ce modèle, combien d'habitants compterait-elle dans $100$ ans ? Dans $500$ ans ? Commenter.",
+      "corrige": [
+        "$100$ ans = $4$ doublements : $2^4 = 16$ millions d'habitants.",
+        "$500$ ans = $20$ doublements : $2^{20} = 1\\,048\\,576$, soit plus d'un million de millions d'habitants.",
+        "Ce dernier résultat dépasse largement la population mondiale : le modèle est extrapolé hors de son domaine de validité."
+      ],
+      "reponse": "$16$ millions ; plus de $10^{12}$ habitants, ce qui est absurde : le modèle n'est plus valable."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Deux offres de location : offre A, $30$ € le premier mois puis $2$ € de plus chaque mois, soit $A(n) = 30 + 2n$ au mois $n$ ; offre B, $25$ € le premier mois puis $5\\,\\%$ de plus chaque mois, soit $B(n) = 25 \\times 1{,}05^{\\,n}$. On donne $1{,}05^6 \\approx 1{,}340$ et $1{,}05^{24} \\approx 3{,}225$. 1. Quel est le type de chaque modèle ? 2. Comparer les prix au mois $6$ puis au mois $24$. 3. Conclure.",
+      "corrige": [
+        "1. A : accroissement constant (affine) ; B : pourcentage constant (exponentiel).",
+        "2. Mois $6$ : $A = 42$ € et $B \\approx 25 \\times 1{,}340 = 33{,}50$ €. Mois $24$ : $A = 78$ € et $B \\approx 25 \\times 3{,}225 \\approx 80{,}63$ €.",
+        "3. B est moins chère au début, mais l'exponentielle finit par dépasser l'affine : sur une longue durée, A devient plus avantageuse."
+      ],
+      "reponse": "B moins chère au mois $6$ ($33{,}50$ € contre $42$ €), plus chère au mois $24$ ($80{,}63$ € contre $78$ €)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Le nombre de visiteurs d'un site web (en milliers) vaut $1\\,200$ ; $1\\,260$ ; $1\\,323$ ; $1\\,389{,}15$ sur quatre mois consécutifs. 1. Montrer que l'évolution est exponentielle et donner le pourcentage mensuel. 2. Écrire le modèle $f(n)$. 3. Estimer le nombre de visiteurs au mois $n = 10$ (on donne $1{,}05^{10} \\approx 1{,}629$). 4. Peut-on utiliser ce modèle pour prévoir le nombre de visiteurs dans $50$ ans ?",
+      "corrige": [
+        "1. Quotients : $\\dfrac{1\\,260}{1\\,200} = \\dfrac{1\\,323}{1\\,260} = \\dfrac{1\\,389{,}15}{1\\,323} = 1{,}05$ : pourcentage constant de $+5\\,\\%$ par mois.",
+        "2. $f(n) = 1\\,200 \\times 1{,}05^{\\,n}$.",
+        "3. $f(10) \\approx 1\\,200 \\times 1{,}629 \\approx 1\\,955$ milliers de visiteurs.",
+        "4. Non : une croissance de $5\\,\\%$ par mois ne peut pas durer indéfiniment ; ce serait sortir du domaine de validité du modèle."
+      ],
+      "reponse": "1. $+5\\,\\%$ par mois. 2. $f(n) = 1\\,200 \\times 1{,}05^{\\,n}$. 3. Environ $1\\,955$ milliers. 4. Non."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Le césium 137 a une demi-vie d'environ $30$ ans. 1. Quel pourcentage d'un échantillon reste-t-il au bout de $90$ ans ? 2. Combien de demi-vies faut-il pour qu'il en reste moins de $1\\,\\%$ ? En déduire une durée. 3. Pourquoi ne restera-t-il jamais exactement $0\\,\\%$ selon ce modèle ?",
+      "corrige": [
+        "1. $90$ ans = $3$ demi-vies : $\\left(\\dfrac{1}{2}\\right)^3 = 12{,}5\\,\\%$.",
+        "2. $\\left(\\dfrac{1}{2}\\right)^6 \\approx 1{,}56\\,\\%$ et $\\left(\\dfrac{1}{2}\\right)^7 \\approx 0{,}78\\,\\%$ : il faut $7$ demi-vies, soit environ $210$ ans.",
+        "3. Chaque demi-vie divise par $2$ ce qui reste : on se rapproche de $0$ sans jamais l'atteindre."
+      ],
+      "reponse": "1. $12{,}5\\,\\%$. 2. $7$ demi-vies, environ $210$ ans. 3. On divise toujours par $2$ ce qui reste."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Une entreprise vend $x$ objets ($0 \\leqslant x \\leqslant 40$). La recette est $R(x) = 50x$ et le coût $C(x) = x^2 + 10x + 300$ (en euros). 1. Montrer que le bénéfice vaut $B(x) = -x^2 + 40x - 300$. 2. Pour quelle quantité est-il maximal ? Combien vaut-il ? 3. Calculer $B(10)$ et $B(30)$ et interpréter.",
+      "corrige": [
+        "1. $B(x) = R(x) - C(x) = 50x - x^2 - 10x - 300 = -x^2 + 40x - 300$.",
+        "2. $a = -1 < 0$ : maximum en $\\alpha = -\\dfrac{40}{-2} = 20$ ; $B(20) = -400 + 800 - 300 = 100$ €.",
+        "3. $B(10) = -100 + 400 - 300 = 0$ et $B(30) = -900 + 1\\,200 - 300 = 0$ : l'entreprise est rentable entre $10$ et $30$ objets."
+      ],
+      "reponse": "2. $20$ objets, $100$ € ; 3. $B(10) = B(30) = 0$ : bénéfice positif entre $10$ et $30$ objets."
     }
   ]
 }

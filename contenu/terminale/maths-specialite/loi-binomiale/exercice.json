@@ -132,7 +132,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "loi-binomiale",
       "enonce": "Une entreprise de livraison affirme que chacun de ses colis est livré dans les temps avec la probabilité $0{,}9$, indépendamment des autres colis. Un client passe une commande composée de $10$ colis. On note $X$ le nombre de colis livrés dans les temps. **1.** Justifier que $X$ suit une loi binomiale et préciser ses paramètres. **2.** Calculer la probabilité que les $10$ colis soient livrés dans les temps (valeur approchée au millième). **3.** Calculer $P(X = 9)$. **4.** En déduire $P(X \\geqslant 9)$, puis, par passage au complémentaire, $P(X \\leqslant 8)$ (que l'on interprétera). **5.** Calculer l'espérance $E(X)$ et interpréter le résultat dans le contexte. **6.** Le service qualité veut être « presque sûr » de repérer un défaut de ponctualité : déterminer le plus petit nombre $n$ de colis à contrôler pour que la probabilité d'observer au moins un colis en retard soit supérieure à $0{,}95$.",
       "corrige": [
@@ -144,6 +144,454 @@
         "**6.** Sur $n$ colis, notons $Y$ le nombre de colis en retard : $Y \\sim B(n\\,;\\,0{,}1)$. « Au moins un retard » a pour probabilité $P(Y \\geqslant 1) = 1 - P(Y = 0) = 1 - (0{,}9)^n$. La condition $P(Y \\geqslant 1) > 0{,}95$ équivaut à $(0{,}9)^n < 0{,}05$. En testant les entiers : $(0{,}9)^{28} \\approx 0{,}0523 > 0{,}05$ alors que $(0{,}9)^{29} \\approx 0{,}0471 < 0{,}05$. Le plus petit entier convenable est donc $n = 29$."
       ],
       "reponse": "$X \\sim B(10\\,;\\,0{,}9)$ ; $P(X = 10) \\approx 0{,}349$ ; $P(X = 9) \\approx 0{,}387$ ; $P(X \\geqslant 9) \\approx 0{,}736$ et $P(X \\leqslant 8) \\approx 0{,}264$ ; $E(X) = 9$ ; il faut contrôler au moins $n = 29$ colis."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "succession-epreuves",
+      "enonce": "On lance un dé équilibré à six faces, puis une pièce équilibrée. Les deux expériences sont indépendantes. Quelle est la probabilité d'obtenir « $6$ puis Pile » ?",
+      "corrige": [
+        "Pour des épreuves indépendantes, la probabilité d'une issue est le produit des probabilités.",
+        "$P(6\\,;\\text{Pile})=\\dfrac{1}{6}\\times\\dfrac{1}{2}=\\dfrac{1}{12}$."
+      ],
+      "reponse": "$\\dfrac{1}{12}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "loi-bernoulli",
+      "enonce": "On lance un dé équilibré à six faces. On appelle succès « obtenir un multiple de $3$ ». Donner le paramètre $p$ de cette épreuve de Bernoulli, puis $P(X=1)$ et $P(X=0)$.",
+      "corrige": [
+        "Les multiples de $3$ sur un dé sont $3$ et $6$ : $p=\\dfrac{2}{6}=\\dfrac{1}{3}$.",
+        "$P(X=1)=p=\\dfrac{1}{3}$ et $P(X=0)=1-p=\\dfrac{2}{3}$."
+      ],
+      "reponse": "$p=\\dfrac{1}{3}$ ; $P(X=1)=\\dfrac{1}{3}$, $P(X=0)=\\dfrac{2}{3}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "succession-epreuves",
+      "enonce": "Une urne contient $4$ boules rouges et $6$ boules bleues. On tire une boule, on la remet, puis on en tire une seconde. Calculer la probabilité d'obtenir deux boules rouges, puis celle d'obtenir une boule de chaque couleur.",
+      "corrige": [
+        "Avec remise, les tirages sont indépendants, et $P(R)=0{,}4$, $P(B)=0{,}6$. $P(R\\,;R)=0{,}4\\times 0{,}4=0{,}16$.",
+        "« Une de chaque couleur » regroupe deux chemins : $(R\\,;B)$ et $(B\\,;R)$, chacun de probabilité $0{,}4\\times 0{,}6=0{,}24$. Total : $0{,}48$."
+      ],
+      "reponse": "$0{,}16$ et $0{,}48$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "succession-epreuves",
+      "enonce": "Sur un trajet, un automobiliste rencontre trois feux tricolores qui fonctionnent indépendamment. À chacun, la probabilité de le trouver au vert est $0{,}4$. Quelle est la probabilité de trouver les trois feux au vert ?",
+      "corrige": [
+        "Les trois épreuves sont indépendantes : on multiplie les probabilités le long du chemin.",
+        "$0{,}4\\times 0{,}4\\times 0{,}4=0{,}4^3=0{,}064$."
+      ],
+      "reponse": "$0{,}064$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "loi-bernoulli",
+      "enonce": "Soit $X$ une variable de Bernoulli de paramètre $p$. Calculer son espérance à partir de la définition $E(X)=0\\times P(X=0)+1\\times P(X=1)$.",
+      "corrige": [
+        "$E(X)=0\\times(1-p)+1\\times p$.",
+        "Donc $E(X)=p$ : en moyenne, une épreuve de Bernoulli « rapporte » $p$ succès."
+      ],
+      "reponse": "$E(X)=p$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "loi-bernoulli",
+      "enonce": "On tire une carte au hasard dans un jeu de $32$ cartes (quatre couleurs de $8$ cartes). Succès : « la carte est un cœur ». Quel est le paramètre $p$ ?",
+      "corrige": [
+        "Il y a $8$ cœurs sur $32$ cartes, toutes équiprobables.",
+        "$p=\\dfrac{8}{32}=\\dfrac{1}{4}=0{,}25$."
+      ],
+      "reponse": "$p=\\dfrac{1}{4}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "schema-bernoulli",
+      "enonce": "Un élève répond au hasard aux $10$ questions d'un QCM ; chaque question a $4$ réponses dont une seule est juste. Justifier que le nombre $X$ de bonnes réponses suit une loi binomiale et donner ses paramètres.",
+      "corrige": [
+        "Chaque question est une épreuve à deux issues : succès « bonne réponse », de probabilité $\\dfrac{1}{4}$, ou échec.",
+        "Les réponses données au hasard sont indépendantes et $p$ est le même pour chaque question : c'est un schéma de Bernoulli. $X$ compte les succès : $X\\sim B\\left(10\\,;\\dfrac{1}{4}\\right)$."
+      ],
+      "reponse": "$X\\sim B(10\\,;0{,}25)$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "schema-bernoulli",
+      "enonce": "On tire successivement et sans remise $3$ cartes d'un jeu de $32$ cartes et on compte le nombre d'as obtenus. Peut-on utiliser la loi binomiale ? Justifier.",
+      "corrige": [
+        "Sans remise, la composition du paquet change après chaque tirage : la probabilité de tirer un as n'est plus la même ($\\dfrac{4}{32}$ au premier tirage, puis $\\dfrac{3}{31}$ ou $\\dfrac{4}{31}$).",
+        "Les épreuves ne sont pas indépendantes : ce n'est pas un schéma de Bernoulli, la loi binomiale ne s'applique pas."
+      ],
+      "reponse": "Non : tirage sans remise, donc épreuves dépendantes."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "Soit $X\\sim B(3\\,;0{,}5)$. Donner la loi de $X$ (toutes les valeurs $P(X=k)$).",
+      "corrige": [
+        "$P(X=k)=\\dbinom{3}{k}\\times 0{,}5^3=\\dbinom{3}{k}\\times\\dfrac{1}{8}$.",
+        "$\\dbinom{3}{0}=1$, $\\dbinom{3}{1}=3$, $\\dbinom{3}{2}=3$, $\\dbinom{3}{3}=1$."
+      ],
+      "reponse": "$P(X=0)=\\dfrac{1}{8}$, $P(X=1)=\\dfrac{3}{8}$, $P(X=2)=\\dfrac{3}{8}$, $P(X=3)=\\dfrac{1}{8}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "On lance $6$ fois une pièce équilibrée. Quelle est la probabilité d'obtenir exactement $3$ Piles ?",
+      "corrige": [
+        "$X\\sim B(6\\,;0{,}5)$ et $P(X=3)=\\dbinom{6}{3}\\times 0{,}5^3\\times 0{,}5^3=20\\times\\dfrac{1}{64}$.",
+        "$P(X=3)=\\dfrac{20}{64}=\\dfrac{5}{16}=0{,}3125$."
+      ],
+      "reponse": "$\\dfrac{5}{16}=0{,}3125$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "Soit $X\\sim B(10\\,;0{,}3)$. Calculer $P(X=0)$ et $P(X=10)$ (valeurs approchées).",
+      "corrige": [
+        "$P(X=0)=(1-p)^n=0{,}7^{10}\\approx 0{,}028$.",
+        "$P(X=10)=p^n=0{,}3^{10}\\approx 5{,}9\\times 10^{-6}$ : ces deux cas extrêmes n'ont pas besoin de coefficient binomial (il vaut $1$)."
+      ],
+      "reponse": "$P(X=0)\\approx 0{,}028$ et $P(X=10)\\approx 5{,}9\\times 10^{-6}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "complementaire",
+      "enonce": "On lance $8$ fois une pièce équilibrée. Quelle est la probabilité d'obtenir au moins un Pile ?",
+      "corrige": [
+        "$X\\sim B(8\\,;0{,}5)$. « Au moins un » : on passe par le complémentaire $P(X\\geqslant 1)=1-P(X=0)$.",
+        "$P(X=0)=0{,}5^8=\\dfrac{1}{256}$, donc $P(X\\geqslant 1)=\\dfrac{255}{256}\\approx 0{,}996$."
+      ],
+      "reponse": "$\\dfrac{255}{256}\\approx 0{,}996$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "cumul",
+      "enonce": "Soit $X\\sim B(3\\,;0{,}2)$. Calculer $P(X\\leqslant 1)$.",
+      "corrige": [
+        "$P(X=0)=0{,}8^3=0{,}512$ et $P(X=1)=3\\times 0{,}2\\times 0{,}8^2=0{,}384$.",
+        "$P(X\\leqslant 1)=0{,}512+0{,}384=0{,}896$."
+      ],
+      "reponse": "$0{,}896$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "intervalle",
+      "enonce": "Soit $X\\sim B(4\\,;0{,}5)$. Calculer $P(1\\leqslant X\\leqslant 3)$.",
+      "corrige": [
+        "Les probabilités valent $\\dbinom{4}{k}\\times\\dfrac{1}{16}$, soit $\\dfrac{1}{16}, \\dfrac{4}{16}, \\dfrac{6}{16}, \\dfrac{4}{16}, \\dfrac{1}{16}$ pour $k=0$ à $4$.",
+        "$P(1\\leqslant X\\leqslant 3)=\\dfrac{4+6+4}{16}=\\dfrac{14}{16}=\\dfrac{7}{8}$ (ou $1-P(X=0)-P(X=4)$)."
+      ],
+      "reponse": "$\\dfrac{7}{8}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "esperance-variance",
+      "enonce": "Soit $X\\sim B(50\\,;0{,}2)$. Calculer $E(X)$ et $V(X)$.",
+      "corrige": [
+        "$E(X)=np=50\\times 0{,}2=10$.",
+        "$V(X)=np(1-p)=50\\times 0{,}2\\times 0{,}8=8$."
+      ],
+      "reponse": "$E(X)=10$ et $V(X)=8$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "esperance-variance",
+      "enonce": "Un élève répond au hasard aux $20$ questions d'un QCM à $4$ choix (une seule bonne réponse par question). Combien de bonnes réponses peut-il espérer en moyenne ?",
+      "corrige": [
+        "Le nombre $X$ de bonnes réponses suit $B(20\\,;0{,}25)$.",
+        "$E(X)=20\\times 0{,}25=5$ : en moyenne, $5$ bonnes réponses."
+      ],
+      "reponse": "$5$ bonnes réponses en moyenne."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "succession-epreuves",
+      "enonce": "Une urne contient $3$ boules rouges et $2$ vertes. On tire deux boules successivement et sans remise. Calculer la probabilité d'obtenir deux rouges. Comparer avec le tirage avec remise.",
+      "corrige": [
+        "Sans remise : $P(R_1)=\\dfrac{3}{5}$, puis il reste $2$ rouges sur $4$ boules : $P_{R_1}(R_2)=\\dfrac{2}{4}$. Donc $P(R\\,;R)=\\dfrac{3}{5}\\times\\dfrac{2}{4}=\\dfrac{3}{10}$.",
+        "Avec remise : $\\dfrac{3}{5}\\times\\dfrac{3}{5}=\\dfrac{9}{25}$. Les résultats diffèrent car, sans remise, la seconde épreuve dépend de la première."
+      ],
+      "reponse": "$\\dfrac{3}{10}$ sans remise, contre $\\dfrac{9}{25}$ avec remise."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "loi-bernoulli",
+      "enonce": "Parmi les expériences suivantes, lesquelles sont des épreuves de Bernoulli ? a) Lancer un dé et noter le résultat. b) Lancer un dé et noter si le résultat est pair ou impair. c) Interroger un élève et noter s'il est demi-pensionnaire ou non.",
+      "corrige": [
+        "Une épreuve de Bernoulli n'a que deux issues.",
+        "a) Six issues : non. b) Deux issues (pair / impair) : oui. c) Deux issues (oui / non) : oui."
+      ],
+      "reponse": "b) et c)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "schema-bernoulli",
+      "enonce": "Dans un schéma de Bernoulli de paramètres $n=3$ et $p=0{,}7$, calculer la probabilité du chemin $(S\\,;S\\,;\\overline{S})$, puis le nombre de chemins comportant exactement $2$ succès. En déduire $P(X=2)$.",
+      "corrige": [
+        "$P(S\\,;S\\,;\\overline{S})=0{,}7\\times 0{,}7\\times 0{,}3=0{,}147$.",
+        "Les chemins à $2$ succès sont $(S\\,;S\\,;\\overline{S})$, $(S\\,;\\overline{S}\\,;S)$ et $(\\overline{S}\\,;S\\,;S)$ : il y en a $\\dbinom{3}{2}=3$, tous de probabilité $0{,}147$.",
+        "$P(X=2)=3\\times 0{,}147=0{,}441$."
+      ],
+      "reponse": "$0{,}147$ ; $3$ chemins ; $P(X=2)=0{,}441$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "schema-bernoulli",
+      "enonce": "On lance $3$ fois une pièce équilibrée. Lister les chemins de l'arbre qui comportent exactement un Pile, puis retrouver la probabilité d'obtenir exactement un Pile.",
+      "corrige": [
+        "En notant P pour Pile et F pour Face : (P ; F ; F), (F ; P ; F) et (F ; F ; P), soit $3=\\dbinom{3}{1}$ chemins.",
+        "Chaque chemin a pour probabilité $\\left(\\dfrac{1}{2}\\right)^3=\\dfrac{1}{8}$, d'où $\\dfrac{3}{8}$."
+      ],
+      "reponse": "$3$ chemins ; probabilité $\\dfrac{3}{8}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "Soit $X\\sim B(4\\,;0{,}1)$. Donner la loi de $X$ et vérifier que la somme des probabilités vaut $1$.",
+      "corrige": [
+        "$P(X=0)=0{,}9^4=0{,}6561$ ; $P(X=1)=4\\times 0{,}1\\times 0{,}9^3=0{,}2916$ ; $P(X=2)=6\\times 0{,}01\\times 0{,}81=0{,}0486$.",
+        "$P(X=3)=4\\times 0{,}001\\times 0{,}9=0{,}0036$ ; $P(X=4)=0{,}0001$.",
+        "Somme : $0{,}6561+0{,}2916+0{,}0486+0{,}0036+0{,}0001=1$."
+      ],
+      "reponse": "$0{,}6561$ ; $0{,}2916$ ; $0{,}0486$ ; $0{,}0036$ ; $0{,}0001$ (somme $1$)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "Pour $X\\sim B(4\\,;0{,}3)$, un élève calcule $P(X=1)=0{,}3\\times 0{,}7^3=0{,}1029$. Quelle est son erreur ? Donner le bon résultat.",
+      "corrige": [
+        "Il a calculé la probabilité d'un seul chemin. Or il y a $\\dbinom{4}{1}=4$ chemins comportant exactement un succès.",
+        "$P(X=1)=4\\times 0{,}1029=0{,}4116$."
+      ],
+      "reponse": "Il a oublié $\\dbinom{4}{1}=4$ : $P(X=1)=0{,}4116$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "Pour $X\\sim B(5\\,;0{,}2)$, un élève écrit $P(X=4)=5\\times 0{,}8^4\\times 0{,}2\\approx 0{,}41$. Repérer l'erreur et corriger.",
+      "corrige": [
+        "L'exposant de $p$ doit être le nombre de succès : il a interverti $p=0{,}2$ et $1-p=0{,}8$.",
+        "$P(X=4)=\\dbinom{5}{4}\\times 0{,}2^4\\times 0{,}8=5\\times 0{,}0016\\times 0{,}8=0{,}0064$."
+      ],
+      "reponse": "$P(X=4)=0{,}0064$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "Soit $X\\sim B(10\\,;0{,}1)$. Calculer $P(X\\geqslant 2)$ (valeur approchée au millième).",
+      "corrige": [
+        "$P(X\\geqslant 2)=1-P(X\\leqslant 1)=1-P(X=0)-P(X=1)$.",
+        "$P(X=0)=0{,}9^{10}\\approx 0{,}3487$ et $P(X=1)=10\\times 0{,}1\\times 0{,}9^9\\approx 0{,}3874$.",
+        "$P(X\\geqslant 2)\\approx 1-0{,}3487-0{,}3874\\approx 0{,}264$."
+      ],
+      "reponse": "$\\approx 0{,}264$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "Soit $X\\sim B(10\\,;0{,}6)$. Calculer $P(X\\leqslant 9)$ sans additionner dix termes.",
+      "corrige": [
+        "Le contraire de « $X\\leqslant 9$ » est « $X=10$ ».",
+        "$P(X\\leqslant 9)=1-P(X=10)=1-0{,}6^{10}\\approx 1-0{,}0060=0{,}994$."
+      ],
+      "reponse": "$1-0{,}6^{10}\\approx 0{,}994$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "cumul",
+      "enonce": "Soit $X\\sim B(5\\,;0{,}5)$. Calculer $P(X\\leqslant 2)$ et expliquer pourquoi le résultat était prévisible.",
+      "corrige": [
+        "$P(X\\leqslant 2)=\\dfrac{\\dbinom{5}{0}+\\dbinom{5}{1}+\\dbinom{5}{2}}{32}=\\dfrac{1+5+10}{32}=\\dfrac{1}{2}$.",
+        "Avec $p=0{,}5$, la loi est symétrique : $P(X\\leqslant 2)=P(X\\geqslant 3)$, et ces deux probabilités ont pour somme $1$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "cumul",
+      "enonce": "On lance $10$ fois une pièce équilibrée. Quelle est la probabilité d'obtenir au plus un Pile ?",
+      "corrige": [
+        "$X\\sim B(10\\,;0{,}5)$ ; « au plus un » signifie $X\\leqslant 1$.",
+        "$P(X\\leqslant 1)=0{,}5^{10}+10\\times 0{,}5^{10}=\\dfrac{11}{1\\,024}\\approx 0{,}011$."
+      ],
+      "reponse": "$\\dfrac{11}{1\\,024}\\approx 0{,}011$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "intervalle",
+      "enonce": "Soit $X\\sim B(20\\,;0{,}3)$. La calculatrice donne $P(X\\leqslant 4)\\approx 0{,}2375$ et $P(X\\leqslant 8)\\approx 0{,}8867$. En déduire $P(X>8)$ et $P(5\\leqslant X\\leqslant 8)$.",
+      "corrige": [
+        "$P(X>8)=1-P(X\\leqslant 8)\\approx 1-0{,}8867=0{,}1133$.",
+        "$P(5\\leqslant X\\leqslant 8)=P(X\\leqslant 8)-P(X\\leqslant 4)\\approx 0{,}8867-0{,}2375=0{,}6492$ (on retire bien $P(X\\leqslant 4)$, c'est-à-dire avec la borne $5-1$)."
+      ],
+      "reponse": "$P(X>8)\\approx 0{,}1133$ et $P(5\\leqslant X\\leqslant 8)\\approx 0{,}6492$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "intervalle",
+      "enonce": "Un élève écrit : « $P(3\\leqslant X\\leqslant 6)=P(X\\leqslant 6)-P(X\\leqslant 3)$ ». Expliquer son erreur et corriger.",
+      "corrige": [
+        "$P(X\\leqslant 6)-P(X\\leqslant 3)$ correspond aux valeurs $4$, $5$ et $6$ : la valeur $X=3$ a été retirée par erreur.",
+        "Il faut écrire $P(3\\leqslant X\\leqslant 6)=P(X\\leqslant 6)-P(X\\leqslant 2)$."
+      ],
+      "reponse": "$P(3\\leqslant X\\leqslant 6)=P(X\\leqslant 6)-P(X\\leqslant 2)$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "esperance-variance",
+      "enonce": "Une variable $X$ suit une loi binomiale avec $E(X)=12$ et $V(X)=3$. Déterminer $n$ et $p$.",
+      "corrige": [
+        "$E(X)=np=12$ et $V(X)=np(1-p)=3$. En divisant : $1-p=\\dfrac{3}{12}=\\dfrac{1}{4}$, donc $p=\\dfrac{3}{4}$.",
+        "Puis $n=\\dfrac{12}{p}=\\dfrac{12}{0{,}75}=16$."
+      ],
+      "reponse": "$n=16$ et $p=0{,}75$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "esperance-variance",
+      "enonce": "À un jeu, on effectue $10$ parties indépendantes ; chaque partie est gagnée avec la probabilité $0{,}3$ et rapporte alors $2$ €. Quel gain moyen peut-on espérer ?",
+      "corrige": [
+        "Le nombre $X$ de parties gagnées suit $B(10\\,;0{,}3)$, donc $E(X)=3$.",
+        "Le gain vaut $G=2X$, d'où $E(G)=2E(X)=6$."
+      ],
+      "reponse": "$6$ € en moyenne."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Dans un magasin, $15\\,\\%$ des clients paient en espèces. On observe $12$ clients, dont les choix sont supposés indépendants. Quelle est la probabilité qu'exactement $2$ d'entre eux paient en espèces ?",
+      "corrige": [
+        "$X\\sim B(12\\,;0{,}15)$, $X$ comptant les clients qui paient en espèces.",
+        "$P(X=2)=\\dbinom{12}{2}\\times 0{,}15^2\\times 0{,}85^{10}=66\\times 0{,}0225\\times 0{,}85^{10}\\approx 0{,}292$."
+      ],
+      "reponse": "$\\approx 0{,}292$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "seuil",
+      "enonce": "Un composant tombe en panne au cours d'un test avec la probabilité $0{,}1$, indépendamment des autres. Combien de composants faut-il tester au minimum pour que la probabilité d'observer au moins une panne soit supérieure ou égale à $0{,}9$ ?",
+      "corrige": [
+        "Avec $n$ composants : $P(X\\geqslant 1)=1-0{,}9^n$. On veut $1-0{,}9^n\\geqslant 0{,}9$, soit $0{,}9^n\\leqslant 0{,}1$.",
+        "$n\\ln(0{,}9)\\leqslant\\ln(0{,}1)$, et comme $\\ln(0{,}9)<0$ : $n\\geqslant\\dfrac{\\ln(0{,}1)}{\\ln(0{,}9)}\\approx 21{,}85$.",
+        "Il faut tester au moins $22$ composants."
+      ],
+      "reponse": "$22$ composants."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "complementaire",
+      "enonce": "On lance $4$ fois un dé équilibré. Quelle est la probabilité d'obtenir au moins un $6$ ? Donner la fraction puis une valeur approchée au millième.",
+      "corrige": [
+        "$X\\sim B\\left(4\\,;\\dfrac{1}{6}\\right)$ et $P(X\\geqslant 1)=1-\\left(\\dfrac{5}{6}\\right)^4=1-\\dfrac{625}{1\\,296}$.",
+        "$P(X\\geqslant 1)=\\dfrac{671}{1\\,296}\\approx 0{,}518$ : un peu plus d'une chance sur deux."
+      ],
+      "reponse": "$\\dfrac{671}{1\\,296}\\approx 0{,}518$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "cumul",
+      "enonce": "Compléter la fonction Python suivante pour qu'elle renvoie $P(X\\leqslant s)$ lorsque $X\\sim B(n, p)$, puis donner la valeur renvoyée par `cumul(4, 0.5, 2)`.\n```python\nfrom math import comb\n\ndef cumul(n, p, s):\n    total = 0\n    for k in range(...):\n        total = total + ...\n    return total\n```\n",
+      "corrige": [
+        "On additionne $P(X=k)$ pour $k$ allant de $0$ à $s$ inclus : `range(s + 1)`, et le terme ajouté est `comb(n, k) * p**k * (1 - p)**(n - k)`.",
+        "Pour $n=4$, $p=0{,}5$, $s=2$ : $\\dfrac{1+4+6}{16}=\\dfrac{11}{16}=0{,}6875$."
+      ],
+      "reponse": "`range(s + 1)` et `comb(n, k) * p**k * (1 - p)**(n - k)` ; `cumul(4, 0.5, 2)` renvoie `0.6875`."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un footballeur réussit un tir au but avec la probabilité $0{,}8$, indépendamment d'un tir à l'autre. Il tire $5$ fois. Quelle est la probabilité qu'il en réussisse au moins $4$ ?",
+      "corrige": [
+        "$X\\sim B(5\\,;0{,}8)$ et $P(X\\geqslant 4)=P(X=4)+P(X=5)$.",
+        "$P(X=4)=5\\times 0{,}8^4\\times 0{,}2=0{,}4096$ et $P(X=5)=0{,}8^5=0{,}32768$.",
+        "$P(X\\geqslant 4)=0{,}73728\\approx 0{,}737$."
+      ],
+      "reponse": "$\\approx 0{,}737$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Une machine produit $2\\,\\%$ de pièces défectueuses. On prélève $50$ pièces, ce que l'on assimile à des tirages indépendants. On note $X$ le nombre de pièces défectueuses. Calculer $P(X=0)$, puis $P(X\\leqslant 2)$ (valeurs approchées au millième).",
+      "corrige": [
+        "$X\\sim B(50\\,;0{,}02)$. $P(X=0)=0{,}98^{50}\\approx 0{,}364$.",
+        "$P(X=1)=50\\times 0{,}02\\times 0{,}98^{49}\\approx 0{,}372$ et $P(X=2)=\\dbinom{50}{2}\\times 0{,}02^2\\times 0{,}98^{48}\\approx 0{,}186$.",
+        "$P(X\\leqslant 2)\\approx 0{,}922$."
+      ],
+      "reponse": "$P(X=0)\\approx 0{,}364$ et $P(X\\leqslant 2)\\approx 0{,}922$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "seuil",
+      "enonce": "Soit $X\\sim B(20\\,;0{,}5)$. La calculatrice donne $P(X\\leqslant 13)\\approx 0{,}942$ et $P(X\\leqslant 14)\\approx 0{,}979$. Déterminer le plus petit entier $s$ tel que $P(X\\leqslant s)\\geqslant 0{,}95$.",
+      "corrige": [
+        "La suite des $P(X\\leqslant s)$ est croissante en $s$.",
+        "$P(X\\leqslant 13)<0{,}95$ et $P(X\\leqslant 14)\\geqslant 0{,}95$ : le plus petit entier convenable est $14$."
+      ],
+      "reponse": "$s=14$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "Un élève répond au hasard aux $10$ questions d'un QCM ; chaque question a $4$ réponses, dont une seule est juste. 1) Quelle loi suit le nombre $X$ de bonnes réponses ? 2) Calculer $E(X)$. 3) On donne $P(X\\leqslant 4)\\approx 0{,}922$. Quelle est la probabilité qu'il obtienne au moins $5$ bonnes réponses ? Commenter.",
+      "corrige": [
+        "1) Dix épreuves indépendantes à deux issues, de même probabilité de succès $0{,}25$ : $X\\sim B(10\\,;0{,}25)$.",
+        "2) $E(X)=10\\times 0{,}25=2{,}5$.",
+        "3) $P(X\\geqslant 5)=1-P(X\\leqslant 4)\\approx 1-0{,}922=0{,}078$ : répondre au hasard ne permet d'avoir la moitié des points qu'environ $8$ fois sur $100$."
+      ],
+      "reponse": "$B(10\\,;0{,}25)$ ; $E(X)=2{,}5$ ; $P(X\\geqslant 5)\\approx 0{,}078$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "seuil",
+      "enonce": "On lance $n$ fois un dé équilibré. Déterminer le plus petit entier $n$ tel que la probabilité d'obtenir au moins un $6$ dépasse $0{,}99$.",
+      "corrige": [
+        "$P(\\text{au moins un } 6)=1-\\left(\\dfrac{5}{6}\\right)^n$. On veut $\\left(\\dfrac{5}{6}\\right)^n<0{,}01$.",
+        "En appliquant $\\ln$ : $n\\ln\\left(\\dfrac{5}{6}\\right)<\\ln(0{,}01)$, et $\\ln\\left(\\dfrac{5}{6}\\right)<0$ donc $n>\\dfrac{\\ln(0{,}01)}{\\ln\\left(\\frac{5}{6}\\right)}\\approx 25{,}3$.",
+        "Le plus petit entier est $n=26$."
+      ],
+      "reponse": "$n=26$."
     }
   ]
 }

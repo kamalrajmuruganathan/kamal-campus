@@ -132,7 +132,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Une application de sport enregistre le nombre de pas effectués chaque jour d'une semaine. On stocke ces relevés dans la liste Python :\n```python\npas = [8200, 10500, 6300, 12000, 9800, 4500, 11000]\n```\nLes sept valeurs correspondent, dans l'ordre, aux jours de **lundi** (indice $0$) à **dimanche** (indice $6$). L'objectif quotidien fixé par l'utilisateur est de $10000$ pas.\n\n**1.** Donne les valeurs de `pas[0]`, `pas[-1]` et `len(pas)`. À quel jour correspond `pas[3]`, et que vaut cette valeur ?\n**2.** Écris **en compréhension avec un filtre** la liste `objectif_atteint` des relevés supérieurs ou égaux à $10000$, puis donne cette liste.\n**3.** En itérant sur les éléments avec un **accumulateur**, écris le code qui calcule le **nombre total** de pas de la semaine, puis la **moyenne** quotidienne. Donne les deux valeurs.\n**4.** On cherche l'**indice** du jour le plus actif. Complète le parcours **par indices** suivant, puis donne l'indice trouvé et le jour correspondant :\n```python\nimeilleur = 0\nfor i in range(1, len(pas)):\n    if pas[i] > pas[imeilleur]:\n        imeilleur = ...\n```\n**5.** Écris une fonction `nb_objectifs(L, objectif)` qui renvoie le **nombre de jours** où le relevé atteint l'objectif (relevé $\\geqslant$ objectif), à l'aide d'un compteur. Applique-la à `pas` avec un objectif de $10000$.",
       "corrige": [
@@ -143,6 +143,451 @@
         "5. On parcourt la liste avec un compteur, incrémenté chaque fois que le relevé atteint l'objectif :\n```python\ndef nb_objectifs(L, objectif):\n    compteur = 0\n    for x in L:\n        if x >= objectif:\n            compteur = compteur + 1\n    return compteur\n```\nSur `pas` avec `objectif = 10000`, les jours retenus sont ceux à $10500$, $12000$ et $11000$ : `nb_objectifs(pas, 10000)` renvoie $3$."
       ],
       "reponse": "1. `pas[0] = 8200`, `pas[-1] = 11000`, `len(pas) = 7`, `pas[3] = 12000` (jeudi). 2. `objectif_atteint = [10500, 12000, 11000]`. 3. total $= 62300$ pas, moyenne $= 8900{,}0$ pas/jour. 4. `imeilleur = 3` (jeudi). 5. `nb_objectifs(pas, 10000)` renvoie $3$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "liste-vs-ensemble",
+      "enonce": "On considère la liste `L = [2, 5, 2, 7]`. Que vaut `len(L)` ? Combien d'éléments possède l'ensemble mathématique $\\{2, 5, 2, 7\\}$ ? Expliquer la différence.",
+      "corrige": [
+        "`len(L)` compte tous les éléments de la liste, doublons compris : `len(L)` vaut $4$.",
+        "Dans un ensemble, un élément répété ne compte qu'une fois : $\\{2, 5, 2, 7\\}=\\{2, 5, 7\\}$, qui possède $3$ éléments."
+      ],
+      "reponse": "`len(L)` vaut $4$ ; l'ensemble a $3$ éléments (une liste autorise les répétitions)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "liste-vs-ensemble",
+      "enonce": "Que renvoie, en Python, le test `[1, 2] == [2, 1]` ? Les ensembles $\\{1, 2\\}$ et $\\{2, 1\\}$ sont-ils égaux ?",
+      "corrige": [
+        "Deux listes sont égales si elles ont les mêmes éléments dans le même ordre : ici l'ordre diffère, le test renvoie `False`.",
+        "Un ensemble ne tient pas compte de l'ordre : $\\{1, 2\\}=\\{2, 1\\}$."
+      ],
+      "reponse": "`False` pour les listes ; les ensembles sont égaux."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "range",
+      "enonce": "Écrire la liste des entiers produits par `range(4)`, par `range(2, 7)` et par `range(1, 10, 3)`.",
+      "corrige": [
+        "`range(4)` va de $0$ à $3$ (la borne $4$ est exclue) : `0, 1, 2, 3`.",
+        "`range(2, 7)` va de $2$ à $6$ : `2, 3, 4, 5, 6`.",
+        "`range(1, 10, 3)` part de $1$ avec un pas de $3$ et s'arrête avant $10$ : `1, 4, 7`."
+      ],
+      "reponse": "`[0, 1, 2, 3]`, `[2, 3, 4, 5, 6]` et `[1, 4, 7]`."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "indices",
+      "enonce": "On pose `L = ['a', 'b', 'c', 'd']`. Donner `L[1]`, `L[3]` et `L[-2]`.",
+      "corrige": [
+        "Les indices commencent à $0$ : `'a'` est à l'indice $0$, `'b'` à l'indice $1$, `'c'` à l'indice $2$, `'d'` à l'indice $3$.",
+        "`L[-1]` est le dernier élément, donc `L[-2]` est l'avant-dernier : `'c'`."
+      ],
+      "reponse": "`L[1]` vaut `'b'`, `L[3]` vaut `'d'`, `L[-2]` vaut `'c'`."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "liste-vs-ensemble",
+      "enonce": "On pose `L = [3, 1, 3, 3, 2]`. Combien d'éléments a la liste ? Combien d'éléments a l'ensemble des valeurs qui y apparaissent ?",
+      "corrige": [
+        "`len(L)` vaut $5$ : chaque case compte.",
+        "Les valeurs distinctes sont $1$, $2$ et $3$ : l'ensemble $\\{1, 2, 3\\}$ a $3$ éléments."
+      ],
+      "reponse": "$5$ éléments dans la liste, $3$ dans l'ensemble."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "range",
+      "enonce": "Quel appel à `range` produit exactement les entiers $5, 10, 15, \\ldots, 50$ ?",
+      "corrige": [
+        "On part de $5$, avec un pas de $5$.",
+        "La borne de droite est exclue : il faut une borne strictement supérieure à $50$ et au plus égale à $55$, par exemple $51$."
+      ],
+      "reponse": "`range(5, 51, 5)` (par exemple)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "range",
+      "enonce": "Combien d'entiers `range(3, 15)` produit-il ? Quel est le dernier ?",
+      "corrige": [
+        "`range(3, 15)` produit $3, 4, \\ldots, 14$ : la borne $15$ est exclue.",
+        "Il y en a $15-3=12$, et le dernier est $14$."
+      ],
+      "reponse": "$12$ entiers ; le dernier est $14$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "indices",
+      "enonce": "On pose `L = [4, 8, 15, 16, 23, 42]`. Quel est l'indice du dernier élément ? Que vaut `L[len(L) - 1]` ? Que se passe-t-il si on écrit `L[6]` ?",
+      "corrige": [
+        "`len(L)` vaut $6$ ; les indices vont de $0$ à $5$. Le dernier indice est donc $5$ et `L[len(L) - 1]` vaut `L[5]`, soit `42`.",
+        "L'indice $6$ n'existe pas : `L[6]` provoque une erreur `IndexError`."
+      ],
+      "reponse": "Dernier indice $5$ ; `L[len(L) - 1]` vaut `42` ; `L[6]` provoque une `IndexError`."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "indices",
+      "enonce": "On pose `L = [5, 7, 9, 11]` puis on exécute `L[0] = L[3] - L[1]`. Que contient `L` ?",
+      "corrige": [
+        "`L[3]` vaut `11` et `L[1]` vaut `7` : on calcule `11 - 7`, soit `4`.",
+        "On écrit `4` dans la case d'indice $0$ ; les autres cases ne changent pas."
+      ],
+      "reponse": "`L = [4, 7, 9, 11]`."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "comprehension",
+      "enonce": "Quelle liste est produite par `[2*x + 1 for x in range(5)]` ?",
+      "corrige": [
+        "$x$ prend les valeurs $0, 1, 2, 3, 4$.",
+        "On calcule $2x+1$ pour chacune : $1, 3, 5, 7, 9$."
+      ],
+      "reponse": "`[1, 3, 5, 7, 9]`."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "comprehension",
+      "enonce": "Écrire en compréhension la liste des multiples de $7$ compris entre $0$ et $49$ inclus, de deux façons : avec une règle de calcul, puis avec un filtre `if`.",
+      "corrige": [
+        "Avec une règle : $7k$ pour $k$ allant de $0$ à $7$, soit `[7*k for k in range(8)]`.",
+        "Avec un filtre : on garde les $x$ de $0$ à $49$ dont le reste dans la division par $7$ est nul, soit `[x for x in range(50) if x % 7 == 0]`.",
+        "Les deux donnent `[0, 7, 14, 21, 28, 35, 42, 49]`."
+      ],
+      "reponse": "`[7*k for k in range(8)]` ou `[x for x in range(50) if x % 7 == 0]`, qui valent `[0, 7, 14, 21, 28, 35, 42, 49]`."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "manipulation",
+      "enonce": "On part de `L = [1, 2, 3]` et on exécute `L.append(4)` puis `L.append(L[0])`. Que contient `L` ?",
+      "corrige": [
+        "`L.append(4)` ajoute `4` à la fin : `[1, 2, 3, 4]`.",
+        "`L[0]` vaut `1`, donc `L.append(L[0])` ajoute `1` à la fin : `[1, 2, 3, 4, 1]`."
+      ],
+      "reponse": "`L = [1, 2, 3, 4, 1]`."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "manipulation",
+      "enonce": "On a `L = ['lun', 'mar', 'jeu']`. Quelle instruction permet d'insérer `'mer'` à la bonne place pour obtenir `['lun', 'mar', 'mer', 'jeu']` ?",
+      "corrige": [
+        "`'mer'` doit occuper l'indice $2$ (troisième position).",
+        "`L.insert(2, 'mer')` l'insère à l'indice $2$ et décale `'jeu'` vers la droite."
+      ],
+      "reponse": "`L.insert(2, 'mer')`."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "manipulation-ajouts",
+      "enonce": "Quelle liste construit le code suivant ?\n```python\nL = []\nfor i in range(4):\n    L.append(10*i)\n```\n",
+      "corrige": [
+        "`i` prend les valeurs $0$, $1$, $2$, $3$ ; à chaque tour on ajoute $10i$ à la fin de la liste.",
+        "On ajoute successivement `0`, `10`, `20` et `30`."
+      ],
+      "reponse": "`L = [0, 10, 20, 30]`."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "appartenance-suppression",
+      "enonce": "On pose `L = [2, 4, 6]`. Que renvoient `5 in L` et `4 in L` ?",
+      "corrige": [
+        "`x in L` vaut `True` si la valeur `x` figure dans la liste, `False` sinon.",
+        "`5` n'est pas dans `L` ; `4` y est."
+      ],
+      "reponse": "`5 in L` vaut `False` et `4 in L` vaut `True`."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "iteration-accumulateur",
+      "enonce": "Que vaut `p` après l'exécution de ce code ? Pourquoi initialise-t-on `p` à $1$ et non à $0$ ?\n```python\np = 1\nfor x in [2, 3, 5]:\n    p = p * x\n```\n",
+      "corrige": [
+        "`p` vaut successivement $1\\times 2=2$, puis $2\\times 3=6$, puis $6\\times 5=30$.",
+        "On calcule un produit : la valeur de départ doit être neutre pour la multiplication, c'est-à-dire $1$. Avec $0$, le produit resterait égal à $0$."
+      ],
+      "reponse": "`p` vaut $30$ ; on part de $1$, élément neutre de la multiplication."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "combinatoire",
+      "enonce": "On lance trois fois une pièce. Écrire en compréhension la liste des issues `(a, b, c)`, chaque lettre valant `'P'` ou `'F'`, et donner sa longueur.",
+      "corrige": [
+        "`issues = [(a, b, c) for a in ['P', 'F'] for b in ['P', 'F'] for c in ['P', 'F']]`.",
+        "Il y a $2$ choix pour chaque lancer : $2\\times 2\\times 2=8$, donc `len(issues)` vaut $8$."
+      ],
+      "reponse": "`len(issues)` vaut $8=2^3$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "debogage",
+      "enonce": "On pose `L = [5, 6, 7]` et on écrit `print(L[3])` pour afficher le dernier élément. Que se passe-t-il ? Corriger.",
+      "corrige": [
+        "La liste a $3$ éléments, d'indices $0$, $1$ et $2$ : l'indice $3$ n'existe pas et Python renvoie une erreur `IndexError`.",
+        "Le dernier élément s'obtient avec `L[2]`, ou plus généralement `L[len(L) - 1]` ou `L[-1]`."
+      ],
+      "reponse": "Erreur `IndexError` ; il faut écrire `print(L[-1])` (ou `L[2]`)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "range",
+      "enonce": "Un élève veut la liste des entiers de $1$ à $10$ et écrit `[k for k in range(1, 10)]`. Quel est le problème ? Corriger.",
+      "corrige": [
+        "La borne de droite est exclue : `range(1, 10)` s'arrête à $9$, il manque $10$.",
+        "Il faut écrire `range(1, 11)`."
+      ],
+      "reponse": "`[k for k in range(1, 11)]`."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "indices",
+      "enonce": "On pose `L = [3, 6, 9]` puis on exécute, dans l'ordre :\n```python\nL[-1] = L[-1] * 2\nL[0] = L[-2]\n```\nQue contient `L` à la fin ?",
+      "corrige": [
+        "Première ligne : `L[-1]` (le dernier, `9`) devient `18` : `L = [3, 6, 18]`.",
+        "Deuxième ligne : `L[-2]` est l'avant-dernier, `6` ; on l'écrit dans la case d'indice $0$ : `L = [6, 6, 18]`."
+      ],
+      "reponse": "`L = [6, 6, 18]`."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "indices",
+      "enonce": "Que contient `L` après l'exécution de ce code ? Quel est son rôle ?\n```python\nL = [1, 2, 3, 4]\ntmp = L[0]\nL[0] = L[3]\nL[3] = tmp\n```\n",
+      "corrige": [
+        "`tmp` mémorise `1`. Puis `L[0]` reçoit `L[3]`, soit `4` : `[4, 2, 3, 4]`.",
+        "Enfin `L[3]` reçoit `tmp`, soit `1` : `[4, 2, 3, 1]`. Le code échange le premier et le dernier élément ; la variable `tmp` évite de perdre la valeur `1`."
+      ],
+      "reponse": "`L = [4, 2, 3, 1]` : on a échangé le premier et le dernier élément."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "comprehension",
+      "enonce": "Quelle liste produit `[x for x in range(1, 21) if 20 % x == 0]` ? Que représente-t-elle ?",
+      "corrige": [
+        "`20 % x == 0` signifie que le reste de la division de $20$ par $x$ est nul, c'est-à-dire que $x$ divise $20$.",
+        "On garde donc les diviseurs de $20$ entre $1$ et $20$ : $1, 2, 4, 5, 10, 20$."
+      ],
+      "reponse": "`[1, 2, 4, 5, 10, 20]` : la liste des diviseurs de $20$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "comprehension",
+      "enonce": "Quelle liste produit `[n*n for n in range(1, 8) if n % 2 == 1]` ?",
+      "corrige": [
+        "Le filtre garde les $n$ impairs de $1$ à $7$ : $1, 3, 5, 7$.",
+        "On calcule leurs carrés : $1, 9, 25, 49$."
+      ],
+      "reponse": "`[1, 9, 25, 49]`."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "manipulation",
+      "enonce": "On part de `L = [8, 3, 5]` et on exécute, dans l'ordre :\n```python\nL.insert(0, 1)\ndel L[2]\nL.append(L[1])\n```\nDonner le contenu de `L` après chaque ligne.",
+      "corrige": [
+        "`L.insert(0, 1)` place `1` en tête : `[1, 8, 3, 5]`.",
+        "`del L[2]` supprime l'élément d'indice $2$, c'est-à-dire `3` : `[1, 8, 5]`.",
+        "`L[1]` vaut `8`, on l'ajoute à la fin : `[1, 8, 5, 8]`."
+      ],
+      "reponse": "`[1, 8, 3, 5]`, puis `[1, 8, 5]`, puis `[1, 8, 5, 8]`."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "manipulation",
+      "enonce": "On part de `L = [2, 4, 6, 8]` et on exécute `del L[-1]` puis `L.insert(1, L[-1])`. Que contient `L` et que vaut `len(L)` ?",
+      "corrige": [
+        "`del L[-1]` supprime le dernier élément : `[2, 4, 6]`.",
+        "`L[-1]` vaut maintenant `6` ; on l'insère à l'indice $1$ : `[2, 6, 4, 6]`, de longueur $4$."
+      ],
+      "reponse": "`L = [2, 6, 4, 6]` et `len(L)` vaut $4$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "manipulation-ajouts",
+      "enonce": "La suite $(u_n)$ est définie par $u_0=0$ et $u_{n+1}=2u_n+1$. Quelle liste construit le code suivant ?\n```python\nL = [0]\nfor i in range(5):\n    L.append(2*L[-1] + 1)\n```\n",
+      "corrige": [
+        "`L[-1]` est toujours le dernier terme calculé : on ajoute le terme suivant de la suite.",
+        "On obtient successivement $1$, $3$, $7$, $15$, $31$ : la liste contient les termes $u_0$ à $u_5$."
+      ],
+      "reponse": "`[0, 1, 3, 7, 15, 31]`."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "manipulation-ajouts",
+      "enonce": "Réécrire la liste en compréhension `[3*x for x in range(4)]` par ajouts successifs, et donner la liste obtenue.",
+      "corrige": [
+        "On part d'une liste vide, puis on ajoute $3x$ à chaque tour de boucle :\n```python\nL = []\nfor x in range(4):\n    L.append(3*x)\n```\n",
+        "$x$ vaut $0, 1, 2, 3$, donc on obtient $0, 3, 6, 9$."
+      ],
+      "reponse": "Le code par ajouts donne `[0, 3, 6, 9]`."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "appartenance-suppression",
+      "enonce": "On part de `L = [7, 1, 7, 3, 7]` et on exécute deux fois `L.remove(7)`. Que contient `L` ?",
+      "corrige": [
+        "`remove(7)` supprime seulement la première occurrence de `7` : après le premier appel, `[1, 7, 3, 7]`.",
+        "Le second appel supprime à nouveau la première occurrence restante : `[1, 3, 7]`."
+      ],
+      "reponse": "`L = [1, 3, 7]`."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "appartenance-suppression",
+      "enonce": "On part de `L = [1, 5, 1, 9]`. Que donne `del L[1]` ? Et, en repartant de la même liste, que donne `L.remove(1)` ? Expliquer la différence.",
+      "corrige": [
+        "`del L[1]` supprime l'élément d'indice $1$, c'est-à-dire `5` : `[1, 1, 9]`.",
+        "`L.remove(1)` supprime la première valeur égale à `1`, c'est-à-dire celle d'indice $0$ : `[5, 1, 9]`.",
+        "`del` agit sur une position (un indice), `remove` sur une valeur."
+      ],
+      "reponse": "`del L[1]` donne `[1, 1, 9]` ; `L.remove(1)` donne `[5, 1, 9]`."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "parcours",
+      "enonce": "Le code suivant compte les « montées » d'une liste. Que vaut `c` pour `L = [3, 5, 4, 6, 8]` ? Pourquoi la boucle s'arrête-t-elle à `len(L) - 1` ?\n```python\nc = 0\nfor i in range(len(L) - 1):\n    if L[i] < L[i+1]:\n        c = c + 1\n```\n",
+      "corrige": [
+        "On compare chaque élément au suivant : $3<5$ oui, $5<4$ non, $4<6$ oui, $6<8$ oui. Donc `c` vaut $3$.",
+        "On utilise `L[i+1]` : pour le dernier indice `len(L) - 1`, `L[i+1]` n'existerait pas. `range(len(L) - 1)` s'arrête donc à l'avant-dernier indice."
+      ],
+      "reponse": "`c` vaut $3$ ; on s'arrête avant le dernier indice pour que `L[i+1]` existe."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "parcours",
+      "enonce": "Que renvoie ce code pour `L = [7, 2, 9, 2, 5]` ?\n```python\nimin = 0\nfor i in range(1, len(L)):\n    if L[i] < L[imin]:\n        imin = i\n```\n",
+      "corrige": [
+        "`imin` est l'indice du plus petit élément rencontré. Au départ `imin = 0` (valeur $7$).",
+        "En $i=1$, $2<7$ : `imin = 1`. En $i=2$, $9<2$ est faux. En $i=3$, $2<2$ est faux (inégalité stricte). En $i=4$, $5<2$ est faux.",
+        "On obtient l'indice de la première occurrence du minimum."
+      ],
+      "reponse": "`imin` vaut $1$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "iteration-accumulateur",
+      "enonce": "Écrire un code qui calcule la moyenne des notes `notes = [11, 14, 9, 16, 15]` en itérant sur les éléments, et donner le résultat.",
+      "corrige": [
+        "Accumulateur :\n```python\ntotal = 0\nfor n in notes:\n    total = total + n\nmoyenne = total / len(notes)\n```\n",
+        "`total` vaut $65$ et `len(notes)` vaut $5$, donc `moyenne` vaut `13.0`."
+      ],
+      "reponse": "`moyenne` vaut `13.0`."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "algorithme-comptage",
+      "enonce": "Écrire un code qui compte les nombres pairs de la liste `L = [3, 8, 10, 7, 4, 1]`, puis donner le résultat.",
+      "corrige": [
+        "Un entier `x` est pair si `x % 2 == 0`.\n```python\ncompteur = 0\nfor x in L:\n    if x % 2 == 0:\n        compteur = compteur + 1\n```\n",
+        "Les nombres pairs sont $8$, $10$ et $4$ : `compteur` vaut $3$."
+      ],
+      "reponse": "`compteur` vaut $3$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "combinatoire",
+      "enonce": "Que vaut la longueur de la liste `[(a, b) for a in range(1, 5) for b in range(1, 5) if a != b]` ? Quel nombre de la combinatoire retrouve-t-on ?",
+      "corrige": [
+        "Il y a $4\\times 4=16$ couples, dont $4$ ont $a=b$ : il en reste $12$.",
+        "Ce sont les couples d'éléments distincts, où l'ordre compte : $A_4^2=4\\times 3=12$."
+      ],
+      "reponse": "$12=A_4^2$ (arrangements de $2$ éléments parmi $4$)."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "debogage",
+      "enonce": "Un élève écrit `L = []` puis `L = L.append(3)`. Il pense obtenir `[3]`, mais `print(L)` affiche `None`. Expliquer et corriger.",
+      "corrige": [
+        "`append` modifie la liste sur place et ne renvoie rien (`None`).",
+        "En écrivant `L = L.append(3)`, on remplace la liste par `None`. Il faut écrire simplement `L.append(3)`."
+      ],
+      "reponse": "Écrire `L.append(3)` sans réaffecter `L`."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "debogage",
+      "enonce": "Ce code doit calculer $1+2+\\cdots+10=55$, mais il affiche $45$. Trouver l'erreur et la corriger.\n```python\ntotal = 0\nfor k in range(10):\n    total = total + k\nprint(total)\n```\n",
+      "corrige": [
+        "`range(10)` parcourt $0, 1, \\ldots, 9$ : il manque $10$, d'où $0+1+\\cdots+9=45$.",
+        "Il faut parcourir de $1$ à $10$ : `range(1, 11)`."
+      ],
+      "reponse": "Remplacer `range(10)` par `range(1, 11)` ; le résultat est alors $55$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "iteration-accumulateur",
+      "enonce": "Que contient `s` à la fin de ce code ? Donner la valeur exacte sous forme de fraction.\n```python\ns = 0\nfor k in range(1, 5):\n    s = s + 1/k\n```\n",
+      "corrige": [
+        "`k` prend les valeurs $1$, $2$, $3$, $4$ : `s` vaut $1+\\dfrac{1}{2}+\\dfrac{1}{3}+\\dfrac{1}{4}$.",
+        "Au dénominateur commun $12$ : $\\dfrac{12+6+4+3}{12}=\\dfrac{25}{12}$. Python affiche une valeur approchée, environ `2.083`."
+      ],
+      "reponse": "$s=\\dfrac{25}{12}\\approx 2{,}083$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "combinatoire",
+      "enonce": "Que vaut `[(a, b) for a in range(1, 5) for b in range(1, 5) if a < b]` ? Quel coefficient binomial sa longueur représente-t-elle ?",
+      "corrige": [
+        "La condition `a < b` garde chaque paire d'éléments distincts une seule fois.",
+        "On obtient `[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]`, de longueur $6=\\dbinom{4}{2}$."
+      ],
+      "reponse": "$6$ couples ; $6=\\dbinom{4}{2}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "parcours",
+      "enonce": "Écrire une fonction `est_croissante(L)` qui renvoie `True` si chaque élément de la liste est inférieur ou égal au suivant, et `False` sinon. Que renvoie-t-elle pour `[1, 3, 3, 8]` et pour `[2, 5, 4]` ?",
+      "corrige": [
+        "On parcourt les indices jusqu'à l'avant-dernier et on s'arrête dès qu'une « descente » apparaît :\n```python\ndef est_croissante(L):\n    for i in range(len(L) - 1):\n        if L[i] > L[i+1]:\n            return False\n    return True\n```\n",
+        "Pour `[1, 3, 3, 8]`, aucune descente ($3\\leqslant 3$ est accepté) : `True`. Pour `[2, 5, 4]`, $5>4$ : `False`."
+      ],
+      "reponse": "`True` pour `[1, 3, 3, 8]`, `False` pour `[2, 5, 4]`."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "algorithme-comptage",
+      "enonce": "On simule $6$ lancers d'un dé, enregistrés dans `lancers = [1, 6, 3, 6, 6, 2]`. Écrire un code qui calcule le nombre de $6$ obtenus, puis la fréquence d'apparition du $6$. Donner les deux résultats.",
+      "corrige": [
+        "On compte avec un accumulateur :\n```python\nnb = 0\nfor x in lancers:\n    if x == 6:\n        nb = nb + 1\nfreq = nb / len(lancers)\n```\n",
+        "Il y a trois $6$, donc `nb` vaut $3$ et `freq` vaut $\\dfrac{3}{6}=0{,}5$ (Python affiche `0.5`)."
+      ],
+      "reponse": "$3$ six ; fréquence $0{,}5$."
     }
   ]
 }

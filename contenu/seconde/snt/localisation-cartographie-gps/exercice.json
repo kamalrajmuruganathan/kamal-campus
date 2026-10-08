@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "coordonnées géographiques",
       "enonce": "a) Quelles sont les deux coordonnées géographiques qui permettent de repérer un point sur Terre ? b) Que vaut la latitude à l'équateur ? c) La position (48.85 N, 2.35 E) se situe-t-elle dans l'hémisphère Nord ou Sud ? Justifie.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "principe du GPS",
       "enonce": "a) Que veut dire le sigle GPS ? b) Grâce à quels objets en orbite fonctionne-t-il ? c) Le récepteur GPS d'un téléphone émet-il un signal vers les satellites, ou reçoit-il seulement ? Explique la conséquence.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "carte numérique",
       "enonce": "a) Cite un avantage d'une carte numérique par rapport à une carte papier. b) Qu'est-ce que l'échelle d'une carte ? c) Sur une carte à l'échelle 1/100 000, 1 cm sur la carte représente combien de km sur le terrain ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "vitesse, distance, temps",
       "enonce": "Une application GPS indique qu'il reste 45 km à parcourir et estime une vitesse moyenne de 90 km/h. a) Quelle durée de trajet l'application affiche-t-elle ? b) Si un bouchon fait tomber la vitesse moyenne à 30 km/h, quelle est la nouvelle durée ? c) Comment l'application connaît-elle l'existence du bouchon en temps réel ?",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "protocole NMEA / données de position",
       "enonce": "Un récepteur GPS fournit une trame contenant : l'heure, la latitude, la longitude et le nombre de satellites captés. a) Pourquoi indiquer le nombre de satellites captés est-il utile ? b) Pourquoi la position est-elle parfois fausse dans un tunnel ou entre de hauts immeubles ? c) Cite une donnée de mouvement que le GPS peut déduire en comparant deux positions successives.",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "trilatération",
       "enonce": "Un récepteur mesure sa distance à plusieurs satellites pour se localiser. a) Comment s'appelle cette méthode de localisation par les distances ? b) Avec un seul satellite à distance d connue, sur quelle figure géométrique se trouve le récepteur ? c) Explique pourquoi il faut au moins 3 (voire 4) satellites pour déterminer une position sur Terre.",
       "corrige": [
@@ -84,7 +84,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "latitude et longitude",
       "enonce": "On donne la position de Paris : latitude 48,85° Nord, longitude 2,35° Est. a) Que mesure la latitude ? b) Que mesure la longitude ? c) Quelle est la latitude d'un point situé sur l'équateur ?",
       "corrige": [
@@ -96,7 +96,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "vitesse moyenne à partir de positions",
       "enonce": "Un GPS enregistre qu'un cycliste parcourt 12 km en 30 minutes. a) Calcule sa vitesse moyenne en km/h. b) À cette vitesse, quelle distance parcourt-il en 1 h 15 ? c) Comment le GPS estime-t-il cette vitesse à partir des positions ?",
       "corrige": [
@@ -108,7 +108,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "satellites et synchronisation",
       "enonce": "Le GPS repose sur des satellites et des horloges très précises. a) Pourquoi les satellites émettent-ils l'heure exacte ? b) Comment le récepteur en déduit-il sa distance à un satellite ? c) Pourquoi faut-il au moins 4 satellites (et non 3) ?",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "trilatération",
       "enonce": "Un récepteur mesure sa distance à trois satellites. a) Que représente géométriquement « être à distance d d'un satellite » dans l'espace ? b) Combien de sphères faut-il croiser pour fixer un point ? c) Pourquoi parle-t-on de trilatération et non de triangulation ?",
       "corrige": [
@@ -129,6 +129,449 @@
         "On mesure des distances (et non des angles) : croiser des distances s'appelle trilatération, tandis que la triangulation utilise des angles."
       ],
       "reponse": "Chaque distance = une sphère ; trois sphères se croisent en un point ; on mesure des distances -> trilatération (pas triangulation)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "latitude et longitude",
+      "enonce": "Complète : « La latitude se mesure à partir de … ; elle va de 0° à …° Nord ou Sud. La longitude se mesure à partir du … ; elle va de 0° à …° Est ou Ouest. »",
+      "corrige": [
+        "La latitude part de l'équateur (0°) et va jusqu'aux pôles (90°).",
+        "La longitude part du méridien de Greenwich (0°) et va jusqu'à 180° vers l'est ou vers l'ouest."
+      ],
+      "reponse": "l'équateur ; 90 ; méridien de Greenwich ; 180."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "coordonnées géographiques",
+      "enonce": "Pour chaque ville, indique l'hémisphère (Nord ou Sud) et si elle est à l'est ou à l'ouest du méridien de Greenwich : a) Sydney (33,87° S ; 151,21° E) ; b) New York (40,71° N ; 74,01° O).",
+      "corrige": [
+        "La lettre de la latitude (N ou S) donne l'hémisphère ; la lettre de la longitude (E ou O) donne le côté du méridien de Greenwich."
+      ],
+      "reponse": "a) Sud, à l'est ; b) Nord, à l'ouest."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "latitude et longitude",
+      "enonce": "Corrige l'erreur : « La longitude de Paris est 48,85° N. »",
+      "corrige": [
+        "Une valeur suivie de N (Nord) ou S (Sud) est une latitude, mesurée depuis l'équateur.",
+        "Pour Paris, la latitude est 48,85° N et la longitude 2,35° E."
+      ],
+      "reponse": "48,85° N est la latitude de Paris ; sa longitude est 2,35° E."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "coordonnées géographiques",
+      "enonce": "Parmi ces couples (latitude ; longitude), lesquels sont impossibles ? Justifie. a) (95° N ; 10° E) ; b) (45° S ; 170° O) ; c) (30° N ; 200° E) ; d) (0° ; 0°).",
+      "corrige": [
+        "La latitude ne dépasse pas 90° : a) est impossible.",
+        "La longitude ne dépasse pas 180° : c) est impossible.",
+        "b) et d) sont possibles ; d) est le point où l'équateur croise le méridien de Greenwich."
+      ],
+      "reponse": "a) et c) sont impossibles (latitude > 90°, longitude > 180°)."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "coordonnées géographiques",
+      "enonce": "Un degré se divise en 60 minutes. Convertis en degrés décimaux : a) 45°30' N ; b) 2°15' E.",
+      "corrige": [
+        "On divise les minutes par 60 et on les ajoute aux degrés.",
+        "a) 30 / 60 = 0,5, donc 45,5° N. b) 15 / 60 = 0,25, donc 2,25° E."
+      ],
+      "reponse": "a) 45,5° N ; b) 2,25° E."
+    },
+    {
+      "id": 16,
+      "difficulte": "approfondissement",
+      "notion": "coordonnées géographiques",
+      "enonce": "Qu'affiche ce programme ? Que fait la fonction decimal ?\n\n```python\ndef decimal(degres, minutes):\n    return degres + minutes / 60\n\nprint(decimal(48, 51))\nprint(decimal(45, 30))\nprint(round(decimal(43, 18), 2))\n```",
+      "corrige": [
+        "La fonction convertit une coordonnée écrite en degrés et minutes en degrés décimaux (1 degré = 60 minutes).",
+        "48 + 51/60 = 48,85 ; 45 + 30/60 = 45,5 ; 43 + 18/60 = 43,3. Python écrit les décimaux avec un point."
+      ],
+      "reponse": "48.85, 45.5 et 43.3 : elle convertit degrés et minutes en degrés décimaux."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "principe du GPS",
+      "enonce": "Vrai ou faux ? « Le GPS de mon téléphone envoie ma position aux satellites. » Justifie.",
+      "corrige": [
+        "Faux : le récepteur GPS ne fait que recevoir les signaux des satellites ; il calcule lui-même sa position.",
+        "Ce sont éventuellement des applications, via Internet, qui transmettent la position à quelqu'un."
+      ],
+      "reponse": "Faux : le récepteur ne fait que recevoir ; il n'envoie rien aux satellites."
+    },
+    {
+      "id": 18,
+      "difficulte": "decouverte",
+      "notion": "systèmes GNSS",
+      "enonce": "Associe chaque système de géolocalisation par satellites à son origine : GPS, Galileo, GLONASS, Beidou. Origines : Chine, Europe, Russie, États-Unis. Quel sigle désigne l'ensemble de ces systèmes ?",
+      "corrige": [
+        "GPS est américain, Galileo européen, GLONASS russe et Beidou chinois.",
+        "On les regroupe sous le nom de GNSS (systèmes de navigation par satellites)."
+      ],
+      "reponse": "GPS : États-Unis ; Galileo : Europe ; GLONASS : Russie ; Beidou : Chine. Sigle : GNSS."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "systèmes GNSS",
+      "enonce": "Le GPS est un système américain. Propose une raison pour laquelle l'Europe a développé son propre système, Galileo.",
+      "corrige": [
+        "Exemple de réponse : pour ne pas dépendre d'un système contrôlé par un autre pays, qui pourrait en limiter l'accès ou la précision.",
+        "Disposer de plusieurs systèmes permet aussi aux récepteurs de capter davantage de satellites."
+      ],
+      "reponse": "Exemple : ne pas dépendre d'un système contrôlé par un autre pays."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "satellites et synchronisation",
+      "enonce": "Un satellite GPS est à environ 20 200 km du récepteur. Le signal se propage à environ 300 000 km/s. Combien de temps met-il pour arriver ?",
+      "corrige": [
+        "Durée = distance / vitesse = 20 200 / 300 000 ≈ 0,067 s.",
+        "Soit environ 67 millisecondes."
+      ],
+      "reponse": "Environ 0,067 s (67 ms)."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "satellites et synchronisation",
+      "enonce": "Le signal d'un satellite met 0,07 s pour atteindre un récepteur. À quelle distance se trouve le satellite ? (vitesse du signal : 300 000 km/s)",
+      "corrige": [
+        "Distance = vitesse × durée = 300 000 × 0,07 = 21 000 km."
+      ],
+      "reponse": "21 000 km."
+    },
+    {
+      "id": 22,
+      "difficulte": "approfondissement",
+      "notion": "satellites et synchronisation",
+      "enonce": "L'horloge d'un récepteur se trompe d'une microseconde (0,000 001 s). Quelle erreur sur la distance au satellite cela provoque-t-il ? Explique pourquoi les satellites embarquent des horloges extrêmement précises.",
+      "corrige": [
+        "Erreur = vitesse × erreur de temps = 300 000 km/s × 0,000 001 s = 0,3 km = 300 m.",
+        "Une infime erreur de temps se traduit par une grande erreur de distance, car le signal va très vite : il faut des horloges très précises (et un 4e satellite pour corriger l'horloge du récepteur)."
+      ],
+      "reponse": "300 m d'erreur ; une toute petite erreur de temps donne une grande erreur de distance."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "trilatération",
+      "enonce": "Sur une carte (donc dans un plan), on connaît la distance d'un point inconnu à des émetteurs. Combien de positions possibles reste-t-il, en général, si l'on connaît la distance : a) à un seul émetteur ; b) à deux émetteurs ; c) à trois émetteurs ?",
+      "corrige": [
+        "a) Être à une distance d d'un émetteur, c'est être sur un cercle : une infinité de positions.",
+        "b) Deux cercles se coupent en général en 2 points.",
+        "c) Le troisième cercle passe par un seul de ces 2 points : la position est unique."
+      ],
+      "reponse": "a) une infinité (un cercle) ; b) 2 points ; c) 1 point."
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "trilatération",
+      "enonce": "Dans un plan, deux émetteurs sont en A(0 ; 0) et B(6 ; 0) (unités en km). Le récepteur est à 5 km de chacun : il est en (3 ; 4) ou en (3 ; −4). Un troisième émetteur est en C(0 ; 8) et le récepteur mesure une distance de 5 km jusqu'à C. Qu'affiche ce programme ? Où est le récepteur ?\n\n```python\nfrom math import sqrt\n\ndef distance(x1, y1, x2, y2):\n    return sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)\n\nprint(distance(3, 4, 0, 8))\nprint(round(distance(3, -4, 0, 8), 1))\n```",
+      "corrige": [
+        "Le programme calcule la distance de chacun des deux points possibles à C.",
+        "Pour (3 ; 4) : √(9 + 16) = √25 = 5 km. Pour (3 ; −4) : √(9 + 144) = √153 ≈ 12,4 km.",
+        "Seul (3 ; 4) est à 5 km de C : c'est la position du récepteur."
+      ],
+      "reponse": "5.0 puis 12.4 ; le récepteur est en (3 ; 4)."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "vitesse, distance, temps",
+      "enonce": "Une application GPS annonce 150 km à parcourir à une vitesse moyenne de 100 km/h. Quelle durée affiche-t-elle ?",
+      "corrige": [
+        "Durée = distance / vitesse = 150 / 100 = 1,5 h.",
+        "0,5 h = 30 min, donc 1 h 30 min."
+      ],
+      "reponse": "1 h 30 min."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "vitesse, distance, temps",
+      "enonce": "Une voiture part à 8 h 15 pour un trajet de 60 km. L'application prévoit une vitesse moyenne de 80 km/h. À quelle heure annonce-t-elle l'arrivée ?",
+      "corrige": [
+        "Durée = 60 / 80 = 0,75 h = 45 min.",
+        "8 h 15 + 45 min = 9 h 00."
+      ],
+      "reponse": "9 h 00."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "vitesse moyenne à partir de positions",
+      "enonce": "Un GPS relève la position d'une voiture à 10 h 00 min 00 s, puis à 10 h 00 min 10 s : elle a parcouru 150 m. Calcule sa vitesse moyenne en m/s puis en km/h.",
+      "corrige": [
+        "Vitesse = 150 m / 10 s = 15 m/s.",
+        "En km/h : 15 × 3,6 = 54 km/h."
+      ],
+      "reponse": "15 m/s, soit 54 km/h."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "vitesse moyenne à partir de positions",
+      "enonce": "Un GPS de vélo enregistre la distance totale parcourue toutes les 10 secondes. Qu'affiche ce programme ? Quelle est la vitesse moyenne sur les 40 secondes, en km/h ?\n\n```python\ndistances = [0, 120, 250, 370, 500]\nfor i in range(1, len(distances)):\n    v = (distances[i] - distances[i - 1]) / 10\n    print(v, \"m/s\")\nprint(distances[-1] / 40 * 3.6, \"km/h\")\n```",
+      "corrige": [
+        "Sur chaque intervalle de 10 s, la vitesse est la distance parcourue divisée par 10 : 120/10 = 12 ; 130/10 = 13 ; 120/10 = 12 ; 130/10 = 13 m/s.",
+        "Sur l'ensemble : 500 m en 40 s, soit 12,5 m/s ; × 3,6 = 45 km/h."
+      ],
+      "reponse": "12.0, 13.0, 12.0, 13.0 m/s puis 45.0 km/h."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "carte numérique",
+      "enonce": "Sur une carte de randonnée à l'échelle 1/25 000, quelle distance réelle représentent 4 cm ?",
+      "corrige": [
+        "1 cm sur la carte représente 25 000 cm réels, soit 250 m.",
+        "4 cm représentent 4 × 250 = 1 000 m = 1 km."
+      ],
+      "reponse": "1 km."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "carte numérique",
+      "enonce": "Une carte numérique permet de superposer des couches d'informations. Quelle couche afficher pour : a) un cycliste qui cherche un itinéraire sûr ; b) un randonneur qui veut connaître les montées ; c) un automobiliste pressé ?",
+      "corrige": [
+        "Exemple de réponse : a) la couche des pistes cyclables ; b) la couche du relief ; c) la couche du trafic en temps réel."
+      ],
+      "reponse": "a) pistes cyclables ; b) relief ; c) trafic."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "carte numérique",
+      "enonce": "Qu'est-ce qui distingue OpenStreetMap de nombreuses autres cartes numériques ?",
+      "corrige": [
+        "OpenStreetMap est une carte libre et collaborative : chacun peut contribuer à l'enrichir, et ses données sont réutilisables librement."
+      ],
+      "reponse": "C'est une carte libre et collaborative, que chacun peut enrichir."
+    },
+    {
+      "id": 32,
+      "difficulte": "decouverte",
+      "notion": "calcul d'itinéraire",
+      "enonce": "Pour calculer un itinéraire, une application représente le réseau routier par un graphe. Que représentent les sommets ? les arêtes ? le nombre écrit sur chaque arête ?",
+      "corrige": [
+        "Les sommets sont les carrefours, les arêtes les routes qui les relient.",
+        "Chaque arête est pondérée par une distance ou une durée de parcours."
+      ],
+      "reponse": "Sommets : carrefours ; arêtes : routes ; poids : distance ou durée."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "calcul d'itinéraire",
+      "enonce": "Routes et longueurs : A–B 4 km ; B–D 3 km ; A–C 2 km ; C–D 6 km ; C–B 1 km. Quel est le plus court chemin de A à D et quelle est sa longueur ?",
+      "corrige": [
+        "On compare les chemins : A–B–D = 4 + 3 = 7 km ; A–C–D = 2 + 6 = 8 km ; A–C–B–D = 2 + 1 + 3 = 6 km.",
+        "Le chemin qui passe par le plus de routes est ici le plus court."
+      ],
+      "reponse": "A–C–B–D, 6 km."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "calcul d'itinéraire",
+      "enonce": "Pour aller d'une ville à une autre, on peut prendre une nationale de 24 km roulée à 80 km/h, ou une autoroute de 30 km roulée à 120 km/h. a) Quel est le chemin le plus court ? b) Quel est le plus rapide ? c) Pourquoi une application propose-t-elle souvent l'autoroute ?",
+      "corrige": [
+        "a) La nationale est plus courte : 24 km contre 30 km.",
+        "b) Nationale : 24 / 80 = 0,3 h = 18 min. Autoroute : 30 / 120 = 0,25 h = 15 min. L'autoroute est plus rapide.",
+        "c) Si les arêtes du graphe sont pondérées par le temps, le chemin le plus rapide n'est pas forcément le plus court."
+      ],
+      "reponse": "a) la nationale ; b) l'autoroute (15 min contre 18 min) ; c) elle cherche souvent le chemin le plus rapide."
+    },
+    {
+      "id": 35,
+      "difficulte": "probleme",
+      "notion": "calcul d'itinéraire",
+      "enonce": "On compare trois chemins de A à D, donnés par les longueurs de leurs tronçons. Qu'affiche ce programme ? Quel chemin une application choisirait-elle pour minimiser la distance ?\n\n```python\nchemins = {\"A-B-D\": [4, 3], \"A-C-D\": [2, 6], \"A-C-B-D\": [2, 1, 3]}\nmeilleur = None\nfor nom in chemins:\n    longueur = sum(chemins[nom])\n    print(nom, longueur)\n    if meilleur is None or longueur < sum(chemins[meilleur]):\n        meilleur = nom\nprint(\"Plus court :\", meilleur)\n```",
+      "corrige": [
+        "sum additionne les longueurs des tronçons de chaque chemin : 7, 8 et 6.",
+        "Le programme garde le chemin de plus petite longueur : A-C-B-D."
+      ],
+      "reponse": "A-B-D 7, A-C-D 8, A-C-B-D 6, puis « Plus court : A-C-B-D »."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "géocodage et métadonnées",
+      "enonce": "Qu'est-ce que le géocodage ? Donne un exemple de géocodage et un exemple de l'opération inverse.",
+      "corrige": [
+        "Le géocodage transforme une adresse en coordonnées (latitude, longitude).",
+        "Exemple : taper l'adresse d'un cinéma pour le placer sur la carte. Inverse : toucher un point de la carte et obtenir l'adresse correspondante."
+      ],
+      "reponse": "Transformer une adresse en coordonnées ; exemple : placer l'adresse d'un cinéma sur la carte ; inverse : obtenir l'adresse d'un point touché."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "géocodage et métadonnées",
+      "enonce": "Les métadonnées d'une photo publiée par Hugo indiquent : 43,2965° N ; 5,3698° E, le 3 juillet à 19 h 10. Ces coordonnées correspondent à un lieu de Marseille. Quelles informations un inconnu peut-il en tirer ? Comment Hugo aurait-il pu l'éviter ?",
+      "corrige": [
+        "Avec les coordonnées et l'heure, on sait où Hugo se trouvait, et quand ; si la photo est prise chez lui, on connaît son adresse.",
+        "Il aurait pu désactiver la géolocalisation de l'appareil photo ou supprimer les coordonnées des métadonnées avant de publier."
+      ],
+      "reponse": "Le lieu et le moment de la prise de vue ; il fallait désactiver la géolocalisation ou effacer les coordonnées GPS."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "vie privée et géolocalisation",
+      "enonce": "Pour chaque application, propose une autorisation de localisation raisonnable (« jamais » ou « pendant l'utilisation ») : a) une application de navigation routière ; b) une lampe torche ; c) un jeu de cartes ; d) une application de météo locale.",
+      "corrige": [
+        "Exemple de réponse : la navigation et la météo locale ont besoin de la position, mais seulement quand on les utilise (a, d).",
+        "Une lampe torche et un jeu de cartes n'en ont aucun besoin : « jamais » (b, c)."
+      ],
+      "reponse": "a) et d) pendant l'utilisation ; b) et c) jamais."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "vie privée et géolocalisation",
+      "enonce": "Léa partage sa position en continu avec ses 200 abonnés sur une application. Quelles habitudes ces abonnés peuvent-ils découvrir en une semaine ? Pourquoi est-ce risqué ?",
+      "corrige": [
+        "Les positions répétées révèlent le domicile (la nuit), le lycée (en journée), les trajets et les horaires habituels.",
+        "Parmi 200 personnes, certaines ne sont pas des proches : elles pourraient la suivre ou savoir quand son logement est vide."
+      ],
+      "reponse": "Son domicile, son lycée, ses trajets et ses horaires ; des inconnus pourraient la suivre ou savoir quand elle est absente."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "vie privée et géolocalisation",
+      "enonce": "Le récepteur GPS d'un téléphone n'envoie rien. Comment se fait-il alors qu'une application de livraison connaisse la position du livreur en temps réel ?",
+      "corrige": [
+        "Le téléphone calcule sa position grâce aux signaux reçus des satellites.",
+        "L'application lit cette position et l'envoie, par Internet, aux serveurs de l'entreprise, qui la transmettent au client : c'est l'usage combiné avec Internet qui transmet la position."
+      ],
+      "reponse": "L'application lit la position calculée par le téléphone et l'envoie par Internet."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "précision et limites",
+      "enonce": "Pourquoi la position GPS est-elle souvent imprécise dans un bâtiment ou un tunnel ? Comment un téléphone peut-il améliorer sa localisation dans ces situations ?",
+      "corrige": [
+        "Le signal des satellites passe mal à travers les murs et les tunnels : le récepteur capte trop peu de satellites.",
+        "Le téléphone combine alors le GPS avec les antennes-relais du réseau mobile et les réseaux Wi-Fi proches."
+      ],
+      "reponse": "Le signal des satellites est bloqué ; le téléphone s'aide des antennes-relais et des réseaux Wi-Fi."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "précision et limites",
+      "enonce": "La précision courante du GPS est de quelques mètres. Le GPS suffit-il : a) pour savoir sur quelle route roule une voiture ? b) pour savoir sur laquelle de deux places de parking voisines, larges de 2,5 m, elle est garée ? Justifie.",
+      "corrige": [
+        "a) Oui : une erreur de quelques mètres ne fait pas confondre deux routes en général.",
+        "b) Pas toujours : l'erreur (quelques mètres) est du même ordre que la largeur d'une place, la voiture peut être placée sur la place voisine."
+      ],
+      "reponse": "a) oui ; b) pas toujours, car l'erreur est comparable à la largeur d'une place."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "protocole NMEA / données de position",
+      "enonce": "Voici un extrait de trame transmise par un récepteur GPS : `GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M`. Les champs sont, dans l'ordre : type de trame, heure (hhmmss), latitude (degrés et minutes), N ou S, longitude (degrés et minutes), E ou O (W en anglais), qualité, nombre de satellites, précision, altitude, unité. Donne : a) l'heure ; b) l'hémisphère ; c) le nombre de satellites captés ; d) l'altitude.",
+      "corrige": [
+        "123519 se lit 12 h 35 min 19 s. La lettre après la latitude est N : hémisphère Nord.",
+        "Le champ 08 indique 8 satellites ; l'altitude est 545,4 m (unité M pour mètres)."
+      ],
+      "reponse": "a) 12 h 35 min 19 s ; b) Nord ; c) 8 satellites ; d) 545,4 m."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "protocole NMEA / données de position",
+      "enonce": "Dans une trame GPS, la latitude « 4807.038 » signifie 48 degrés et 7,038 minutes. Qu'affiche ce programme qui la convertit en degrés décimaux ?\n\n```python\nchamp = \"4807.038\"\ndegres = int(champ[:2])\nminutes = float(champ[2:])\nprint(degres, minutes)\nprint(round(degres + minutes / 60, 4))\n```",
+      "corrige": [
+        "champ[:2] prend les deux premiers caractères, « 48 » ; champ[2:] prend le reste, « 07.038 », converti en 7.038.",
+        "48 + 7,038 / 60 = 48 + 0,1173 = 48,1173 (arrondi à 4 décimales)."
+      ],
+      "reponse": "48 7.038 puis 48.1173."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "vitesse, distance, temps",
+      "enonce": "Une randonneuse part à 9 h 00. À 12 h 00, son GPS indique 13,5 km parcourus ; il lui reste 9 km. a) Quelle est sa vitesse moyenne ? b) Si elle garde cette vitesse, à quelle heure arrivera-t-elle ? c) Le soleil se couche à 18 h : a-t-elle de la marge ?",
+      "corrige": [
+        "a) 13,5 km en 3 h : 13,5 / 3 = 4,5 km/h.",
+        "b) Durée restante : 9 / 4,5 = 2 h ; arrivée à 14 h 00.",
+        "c) Oui : elle arrivera 4 heures avant le coucher du soleil."
+      ],
+      "reponse": "a) 4,5 km/h ; b) 14 h 00 ; c) oui, 4 h de marge."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "trilatération",
+      "enonce": "Remets dans l'ordre les étapes qui permettent à un téléphone d'afficher sa position : a) il calcule sa position par trilatération ; b) il reçoit les signaux d'au moins quatre satellites ; c) il place un point sur la carte numérique ; d) il calcule la durée de trajet de chaque signal ; e) il en déduit sa distance à chaque satellite.",
+      "corrige": [
+        "Il faut d'abord recevoir les signaux (b), qui contiennent l'heure d'émission : on en tire la durée de trajet (d).",
+        "Distance = vitesse × durée (e), puis les distances permettent la trilatération (a), et la position s'affiche sur la carte (c)."
+      ],
+      "reponse": "b, d, e, a, c."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "coordonnées géographiques",
+      "enonce": "Dunkerque (51,03° N ; 2,38° E) et Paris (48,85° N ; 2,35° E) ont presque la même longitude. Sachant qu'un degré de latitude correspond à environ 111 km, estime la distance à vol d'oiseau entre ces deux villes.",
+      "corrige": [
+        "Les longitudes étant presque égales, les villes sont presque sur le même méridien : on utilise l'écart de latitude.",
+        "Écart : 51,03 − 48,85 = 2,18°.",
+        "Distance ≈ 2,18 × 111 ≈ 242 km."
+      ],
+      "reponse": "Environ 242 km."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "vie privée et géolocalisation",
+      "enonce": "Ton ami utilise une application de course à pied qui publie chacun de ses parcours, et il part toujours de chez lui. Rédige trois conseils pour protéger sa vie privée, en justifiant chacun.",
+      "corrige": [
+        "Exemple de réponse : 1) Rendre ses parcours visibles seulement par ses amis, car un parcours public peut être vu par n'importe qui.",
+        "2) Masquer le début et la fin des parcours (ou démarrer l'enregistrement plus loin), car ils révèlent son domicile.",
+        "3) Régler l'autorisation de localisation sur « pendant l'utilisation », pour que l'application ne le suive pas en permanence."
+      ],
+      "reponse": "Exemple : limiter la visibilité, masquer le départ et l'arrivée, autoriser la localisation seulement pendant l'utilisation."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "principe du GPS",
+      "enonce": "En mode avion, avec le GPS activé, un téléphone peut encore calculer sa position, alors qu'il n'a ni réseau mobile ni Wi-Fi. Explique pourquoi. Qu'est-ce qui risque pourtant de manquer à l'écran ?",
+      "corrige": [
+        "Le récepteur GPS ne fait que recevoir les signaux des satellites : il n'a besoin d'aucune connexion pour calculer sa position.",
+        "En revanche, si la carte n'a pas été téléchargée à l'avance, le fond de carte, qui vient d'Internet, peut ne pas s'afficher."
+      ],
+      "reponse": "Le GPS ne fait que recevoir, sans connexion ; mais le fond de carte peut manquer s'il n'a pas été téléchargé."
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "carte numérique",
+      "enonce": "Deux villages sont distants de 3,2 km. Quelle distance les sépare sur une carte à l'échelle 1/50 000 ?",
+      "corrige": [
+        "3,2 km = 320 000 cm.",
+        "Sur la carte : 320 000 / 50 000 = 6,4 cm."
+      ],
+      "reponse": "6,4 cm."
     }
   ]
 }

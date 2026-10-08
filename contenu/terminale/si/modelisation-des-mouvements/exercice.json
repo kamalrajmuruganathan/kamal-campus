@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "vitesse moyenne",
       "enonce": "Un mobile parcourt 240 m en 30 s à vitesse constante. Calcule sa vitesse moyenne en m/s, puis convertis-la en km/h.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "accélération",
       "enonce": "Une voiture passe de 0 à 20 m/s en 8 s, de façon uniforme. Calcule son accélération.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "mouvement de rotation",
       "enonce": "Un arbre tourne à N = 1500 tr/min. Calcule sa vitesse angulaire ω en rad/s. (Rappel : ω = 2π N / 60.)",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "vitesse linéaire et angulaire",
       "enonce": "Une roue de rayon R = 0,3 m tourne à ω = 20 rad/s sans glisser sur le sol. Calcule la vitesse linéaire d'un point de la jante, qui est aussi la vitesse d'avance du véhicule.",
       "corrige": [
@@ -61,7 +61,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "mouvement uniformément accéléré",
       "enonce": "Un train démarre du repos avec une accélération constante a = 0,5 m/s². Calcule la distance parcourue au bout de t = 20 s, puis la vitesse atteinte. (Rappel : d = ½ a t², v = a t.)",
       "corrige": [
@@ -74,7 +74,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "principe fondamental de la dynamique",
       "enonce": "Un chariot de masse m = 300 kg est tiré horizontalement par une force motrice F = 900 N. Les frottements exercent une force résistante f = 300 N opposée au mouvement. Calcule l'accélération du chariot, puis la vitesse atteinte après 5 s de départ à l'arrêt.",
       "corrige": [
@@ -87,7 +87,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "vitesse moyenne",
       "enonce": "Un chariot parcourt 120 m en 8 s à vitesse constante. Calcule sa vitesse moyenne.",
       "corrige": [
@@ -99,7 +99,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "mouvement uniformément accéléré (MRUV)",
       "enonce": "Un chariot part du repos (v₀ = 0) avec une accélération constante a = 3 m/s². Calcule sa vitesse et la distance parcourue au bout de t = 4 s.",
       "corrige": [
@@ -112,7 +112,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "vitesse linéaire et vitesse angulaire",
       "enonce": "Une roue de rayon R = 0,25 m tourne à une vitesse angulaire ω = 8 rad/s. Calcule la vitesse d'un point de la jante.",
       "corrige": [
@@ -124,7 +124,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "principe fondamental de la dynamique",
       "enonce": "Un solide de masse m = 10 kg est soumis à une force motrice de 60 N et à un frottement de 20 N opposé au mouvement. Calcule la résultante des forces puis l'accélération.",
       "corrige": [
@@ -134,6 +134,451 @@
         "a = 4 m/s²."
       ],
       "reponse": "La résultante vaut 40 N et l'accélération a = 40 / 10 = 4 m/s²."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "liaisons et degrés de liberté",
+      "enonce": "Combien de degrés de liberté possède un solide libre dans l'espace ? Détaille-les.",
+      "corrige": [
+        "Un solide libre peut se translater selon x, y et z : 3 translations.",
+        "Il peut aussi tourner autour de x, y et z : 3 rotations."
+      ],
+      "reponse": "6 degrés de liberté : 3 translations et 3 rotations."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "liaisons et degrés de liberté",
+      "enonce": "Associe chaque exemple à la liaison qui le modélise : (a) un tiroir de bureau ; (b) une porte sur ses gonds ; (c) deux pièces soudées entre elles.",
+      "corrige": [
+        "(a) Le tiroir ne peut que coulisser : liaison glissière (une translation).",
+        "(b) La porte ne peut que tourner : liaison pivot (une rotation).",
+        "(c) Les pièces soudées sont solidaires : liaison encastrement (aucun mouvement)."
+      ],
+      "reponse": "(a) glissière ; (b) pivot ; (c) encastrement."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "vitesse moyenne",
+      "enonce": "Donne les unités SI de la position, de la vitesse et de l'accélération.",
+      "corrige": [
+        "La position s'exprime en mètres (m).",
+        "La vitesse en mètres par seconde (m/s) et l'accélération en mètres par seconde au carré (m/s²)."
+      ],
+      "reponse": "m ; m/s ; m/s²."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "accélération",
+      "enonce": "Une voiture roule sur autoroute à 130 km/h, sa vitesse restant parfaitement constante en ligne droite. Un élève affirme que son accélération est grande puisqu'elle va vite. Corrige-le.",
+      "corrige": [
+        "L'accélération est la variation de la vitesse, pas la vitesse elle-même.",
+        "La vitesse ne varie pas : l'accélération est nulle (mouvement rectiligne uniforme)."
+      ],
+      "reponse": "Faux : la vitesse est constante, donc l'accélération est nulle."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "liaisons et degrés de liberté",
+      "enonce": "Combien de degrés de liberté une liaison pivot supprime-t-elle ? Et une liaison encastrement ?",
+      "corrige": [
+        "La liaison pivot laisse une seule rotation : elle supprime 6 − 1 = 5 degrés de liberté.",
+        "La liaison encastrement n'en laisse aucun : elle supprime les 6."
+      ],
+      "reponse": "Pivot : 5 supprimés ; encastrement : 6 supprimés."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "accélération",
+      "enonce": "Un scooter passe uniformément de 10 m/s à 16 m/s en 4 s. Calcule son accélération.",
+      "corrige": [
+        "$a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{16 - 10}{4} = 1{,}5$ m/s²."
+      ],
+      "reponse": "1,5 m/s²"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "liaisons et degrés de liberté",
+      "enonce": "La roue d'une brouette tourne autour d'un axe fixé au châssis. Quelle liaison modélise le contact roue/châssis, et quel mouvement laisse-t-elle possible ?",
+      "corrige": [
+        "La roue ne peut que tourner autour de son axe par rapport au châssis.",
+        "C'est une liaison pivot : elle laisse un seul degré de liberté, une rotation."
+      ],
+      "reponse": "Une liaison pivot : une seule rotation autour de l'axe."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "vitesse moyenne",
+      "enonce": "Convertis 90 km/h en m/s.",
+      "corrige": [
+        "1 km/h = $\\dfrac{1\\,000}{3\\,600}$ m/s, donc on divise par 3,6.",
+        "$\\dfrac{90}{3{,}6} = 25$ m/s."
+      ],
+      "reponse": "25 m/s"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "mouvement rectiligne uniforme",
+      "enonce": "La position d'un chariot est $x(t) = 2t + 5$ (x en m, t en s). Quelle est sa vitesse ? Où se trouve-t-il à t = 10 s ?",
+      "corrige": [
+        "C'est un MRU de la forme $x = v t + x_0$ avec v = 2 m/s et $x_0 = 5$ m.",
+        "$x(10) = 2 \\times 10 + 5 = 25$ m."
+      ],
+      "reponse": "v = 2 m/s ; x = 25 m."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "mouvement rectiligne uniforme",
+      "enonce": "Un convoyeur avance à vitesse constante de 0,5 m/s. Combien de temps met un colis pour parcourir 12 m ?",
+      "corrige": [
+        "En MRU, $t = \\dfrac{d}{v} = \\dfrac{12}{0{,}5} = 24$ s."
+      ],
+      "reponse": "24 s"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "mouvement rectiligne uniforme",
+      "enonce": "Un chariot est repéré à intervalles réguliers : à t = 0 s, x = 0 m ; à t = 1 s, x = 2 m ; à t = 2 s, x = 4 m ; à t = 3 s, x = 6 m. Quel est le type de mouvement et sa vitesse ?",
+      "corrige": [
+        "La position augmente de 2 m chaque seconde : la vitesse est constante.",
+        "C'est un mouvement rectiligne uniforme à 2 m/s."
+      ],
+      "reponse": "MRU à 2 m/s."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "dérivée et cinématique",
+      "enonce": "La position d'un mobile est $x(t) = 3t^2 + 2t$ (x en m, t en s). Exprime $v(t)$ et $a(t)$, puis calcule v à t = 2 s.",
+      "corrige": [
+        "$v(t) = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 6t + 2$.",
+        "$a(t) = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 6$ m/s² (constante).",
+        "$v(2) = 6 \\times 2 + 2 = 14$ m/s."
+      ],
+      "reponse": "v(t) = 6t + 2 ; a = 6 m/s² ; v(2) = 14 m/s."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "dérivée et cinématique",
+      "enonce": "La vitesse d'un mobile est $v(t) = 4t + 1$ (v en m/s, t en s). Quelle est son accélération ? Quelle est sa vitesse initiale ? Nomme le type de mouvement.",
+      "corrige": [
+        "$a = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 4$ m/s², constante.",
+        "À t = 0 : $v_0 = 1$ m/s.",
+        "L'accélération est constante : c'est un MRUV."
+      ],
+      "reponse": "a = 4 m/s² ; v₀ = 1 m/s ; MRUV."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "On relève la vitesse d'un chariot : 0 m/s à t = 0 s ; 3 m/s à 1 s ; 6 m/s à 2 s ; 9 m/s à 3 s. Quel est le type de mouvement ? Calcule l'accélération.",
+      "corrige": [
+        "La vitesse augmente de 3 m/s chaque seconde : l'accélération est constante.",
+        "C'est un MRUV avec a = 3 m/s²."
+      ],
+      "reponse": "MRUV ; a = 3 m/s²."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "Un mobile a une vitesse initiale $v_0 = 5$ m/s et une accélération constante $a = 2$ m/s². Calcule sa vitesse et la distance parcourue au bout de 4 s.",
+      "corrige": [
+        "$v = a t + v_0 = 2 \\times 4 + 5 = 13$ m/s.",
+        "$x = \\dfrac{1}{2} a t^2 + v_0 t = \\dfrac{1}{2} \\times 2 \\times 16 + 5 \\times 4 = 36$ m."
+      ],
+      "reponse": "v = 13 m/s ; x = 36 m."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "Une cabine d'ascenseur part du repos avec une accélération de 1 m/s² jusqu'à 2 m/s. Combien de temps dure cette phase et quelle distance parcourt-elle ?",
+      "corrige": [
+        "$t = \\dfrac{v}{a} = \\dfrac{2}{1} = 2$ s.",
+        "$x = \\dfrac{1}{2} \\times 1 \\times 2^2 = 2$ m."
+      ],
+      "reponse": "2 s ; 2 m."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "Une voiture roulant à 20 m/s freine avec une décélération constante de 5 m/s². Calcule la durée du freinage et la distance d'arrêt.",
+      "corrige": [
+        "$v = v_0 + a t$ avec $a = -5$ m/s² : $0 = 20 - 5t$, donc $t = 4$ s.",
+        "$x = v_0 t + \\dfrac{1}{2} a t^2 = 20 \\times 4 - \\dfrac{1}{2} \\times 5 \\times 16 = 40$ m."
+      ],
+      "reponse": "4 s ; 40 m."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "Un élève calcule la distance parcourue par une voiture qui accélère de 0 à 20 m/s en 10 s en écrivant d = v × t = 20 × 10 = 200 m. Corrige-le.",
+      "corrige": [
+        "La formule d = v × t n'est valable qu'en MRU ; ici la vitesse varie.",
+        "$a = \\dfrac{20}{10} = 2$ m/s², donc $x = \\dfrac{1}{2} \\times 2 \\times 10^2 = 100$ m."
+      ],
+      "reponse": "La voiture parcourt 100 m (MRUV), pas 200 m."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "mouvement de rotation",
+      "enonce": "Un moteur tourne à 3 000 tr/min. Calcule sa vitesse angulaire en rad/s (arrondie au dixième).",
+      "corrige": [
+        "$\\omega = N \\times \\dfrac{2\\pi}{60} = 3\\,000 \\times \\dfrac{2\\pi}{60} = 100\\pi$.",
+        "ω ≈ 314,2 rad/s."
+      ],
+      "reponse": "Environ 314,2 rad/s (100π rad/s)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "vitesse linéaire et angulaire",
+      "enonce": "Un disque de rayon 0,1 m tourne à 3 000 tr/min. Calcule la vitesse d'un point de sa périphérie (arrondie au dixième).",
+      "corrige": [
+        "$\\omega = 3\\,000 \\times \\dfrac{2\\pi}{60} \\approx 314{,}2$ rad/s.",
+        "$v = R \\omega = 0{,}1 \\times 314{,}2 \\approx 31{,}4$ m/s."
+      ],
+      "reponse": "Environ 31,4 m/s."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "vitesse linéaire et angulaire",
+      "enonce": "Un vélo roule à 18 km/h. Ses roues ont un rayon de 0,35 m et roulent sans glisser. Calcule la vitesse angulaire des roues en rad/s, puis en tr/min (arrondies au dixième).",
+      "corrige": [
+        "$v = \\dfrac{18}{3{,}6} = 5$ m/s.",
+        "$\\omega = \\dfrac{v}{R} = \\dfrac{5}{0{,}35} \\approx 14{,}3$ rad/s.",
+        "$N = \\omega \\times \\dfrac{60}{2\\pi} \\approx 136{,}4$ tr/min."
+      ],
+      "reponse": "Environ 14,3 rad/s, soit 136,4 tr/min."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "vitesse linéaire et angulaire",
+      "enonce": "Un élève calcule la vitesse d'un point d'une roue de rayon 0,2 m tournant à 600 tr/min en écrivant v = 0,2 × 600 = 120 m/s. Quelle est son erreur ? Donne le bon résultat (arrondi au centième).",
+      "corrige": [
+        "Dans $v = R\\omega$, ω doit être en rad/s, pas en tr/min.",
+        "$\\omega = 600 \\times \\dfrac{2\\pi}{60} = 20\\pi \\approx 62{,}83$ rad/s, donc $v = 0{,}2 \\times 62{,}83 \\approx 12{,}57$ m/s."
+      ],
+      "reponse": "Il faut convertir en rad/s : v ≈ 12,57 m/s."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "bilan des actions mécaniques",
+      "enonce": "Calcule le poids d'une personne de 80 kg (g = 9,81 m/s²) et donne sa direction et son sens.",
+      "corrige": [
+        "$P = m g = 80 \\times 9{,}81 = 784{,}8$ N.",
+        "Il est vertical, dirigé vers le bas."
+      ],
+      "reponse": "784,8 N, vertical vers le bas."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "bilan des actions mécaniques",
+      "enonce": "Dans quel sens agissent toujours les forces de frottement ?",
+      "corrige": [
+        "Les frottements s'opposent toujours au mouvement (ou à la tendance au mouvement)."
+      ],
+      "reponse": "Dans le sens opposé au mouvement."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Quelle force résultante faut-il pour donner une accélération de 2 m/s² à une voiture de 1 200 kg ?",
+      "corrige": [
+        "$\\sum F = m a = 1\\,200 \\times 2 = 2\\,400$ N."
+      ],
+      "reponse": "2 400 N"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Une force résultante de 50 N agit sur un objet de 25 kg. Calcule son accélération.",
+      "corrige": [
+        "$a = \\dfrac{F}{m} = \\dfrac{50}{25} = 2$ m/s²."
+      ],
+      "reponse": "2 m/s²"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Une lampe est suspendue, immobile, au plafond. Que vaut la somme des forces qui s'exercent sur elle ? Justifie avec le PFD.",
+      "corrige": [
+        "La lampe est immobile : son accélération est nulle.",
+        "D'après le PFD, $\\sum \\vec{F} = m \\vec{a} = \\vec{0}$ : son poids et la tension du fil se compensent."
+      ],
+      "reponse": "La somme des forces est nulle (équilibre)."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "bilan des actions mécaniques",
+      "enonce": "On pousse une caisse sur un sol horizontal avec une force horizontale de 150 N ; elle avance à vitesse constante. Que vaut la force de frottement ? Justifie.",
+      "corrige": [
+        "Vitesse constante en ligne droite : MRU, donc l'accélération est nulle.",
+        "Le PFD donne $\\sum \\vec{F} = \\vec{0}$ horizontalement : le frottement compense exactement la poussée."
+      ],
+      "reponse": "150 N, opposée au mouvement."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Une cabine d'ascenseur de 800 kg monte à vitesse constante. Calcule la tension du câble (g = 9,81 m/s²).",
+      "corrige": [
+        "Vitesse constante : $a = 0$, donc $T - m g = 0$.",
+        "$T = 800 \\times 9{,}81 = 7\\,848$ N."
+      ],
+      "reponse": "7 848 N"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "La même cabine (800 kg) démarre vers le haut avec une accélération de 1 m/s². Calcule la tension du câble (g = 9,81 m/s²) et compare avec le cas à vitesse constante.",
+      "corrige": [
+        "PFD sur l'axe vertical orienté vers le haut : $T - m g = m a$.",
+        "$T = m (g + a) = 800 \\times (9{,}81 + 1) = 8\\,648$ N.",
+        "La tension est plus grande qu'à vitesse constante (7 848 N) : il faut en plus accélérer la cabine."
+      ],
+      "reponse": "8 648 N, soit 800 N de plus qu'à vitesse constante."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Une voiture de 1 200 kg passe de 0 à 100 km/h en 10 s, avec une accélération supposée constante. Calcule l'accélération (arrondie au centième) et la force résultante nécessaire (arrondie à la dizaine de newtons).",
+      "corrige": [
+        "$v = \\dfrac{100}{3{,}6} \\approx 27{,}78$ m/s, donc $a = \\dfrac{27{,}78}{10} \\approx 2{,}78$ m/s².",
+        "$F = m a = 1\\,200 \\times 2{,}778 \\approx 3\\,330$ N."
+      ],
+      "reponse": "a ≈ 2,78 m/s² ; F ≈ 3 330 N."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Une voiture de 1 000 kg roulant à 25 m/s freine avec une force de freinage constante de 6 000 N (on néglige les autres forces horizontales). Calcule la décélération, la durée et la distance de freinage (arrondies au centième).",
+      "corrige": [
+        "$a = \\dfrac{6\\,000}{1\\,000} = 6$ m/s² (décélération).",
+        "$t = \\dfrac{25}{6} \\approx 4{,}17$ s.",
+        "$x = 25 \\times 4{,}167 - \\dfrac{1}{2} \\times 6 \\times 4{,}167^2 \\approx 52{,}08$ m."
+      ],
+      "reponse": "6 m/s² ; environ 4,17 s ; environ 52,08 m."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "dynamique en rotation",
+      "enonce": "Un volant de moment d'inertie $J = 0{,}02$ kg·m² reçoit un couple moteur de 0,5 N·m (frottements négligés). Calcule son accélération angulaire, puis sa vitesse angulaire après 4 s en partant de l'arrêt.",
+      "corrige": [
+        "$\\sum \\mathcal{M} = J \\dot\\omega$, donc $\\dot\\omega = \\dfrac{0{,}5}{0{,}02} = 25$ rad/s².",
+        "$\\omega = \\dot\\omega \\times t = 25 \\times 4 = 100$ rad/s."
+      ],
+      "reponse": "25 rad/s² ; 100 rad/s."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "dynamique en rotation",
+      "enonce": "Un moteur passe de l'arrêt à 1 500 tr/min en 2 s, avec une accélération angulaire constante. Calcule cette accélération angulaire (arrondie au dixième).",
+      "corrige": [
+        "$\\omega = 1\\,500 \\times \\dfrac{2\\pi}{60} = 50\\pi \\approx 157{,}1$ rad/s.",
+        "$\\dot\\omega = \\dfrac{157{,}1}{2} \\approx 78{,}5$ rad/s²."
+      ],
+      "reponse": "Environ 78,5 rad/s²."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "Un chariot doit parcourir 2 m : il accélère à 0,5 m/s² jusqu'à 0,5 m/s, roule à vitesse constante, puis décélère à 0,5 m/s² jusqu'à l'arrêt. Calcule la durée de chaque phase et le temps de cycle total.",
+      "corrige": [
+        "Accélération : $t_1 = \\dfrac{0{,}5}{0{,}5} = 1$ s, distance $\\dfrac{1}{2} \\times 0{,}5 \\times 1^2 = 0{,}25$ m ; la décélération est symétrique (1 s ; 0,25 m).",
+        "Il reste $2 - 0{,}5 = 1{,}5$ m à vitesse constante : $t_2 = \\dfrac{1{,}5}{0{,}5} = 3$ s.",
+        "Temps total : 1 + 3 + 1 = 5 s."
+      ],
+      "reponse": "1 s + 3 s + 1 s = 5 s."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Un drone de 1,5 kg décolle verticalement ; ses hélices fournissent une poussée verticale de 20 N. On néglige la résistance de l'air. Fais le bilan des forces et calcule l'accélération (g = 9,81 m/s², arrondie au centième).",
+      "corrige": [
+        "Forces : la poussée (20 N vers le haut) et le poids $P = 1{,}5 \\times 9{,}81 = 14{,}715$ N (vers le bas).",
+        "PFD vertical : $20 - 14{,}715 = 1{,}5 \\times a$.",
+        "$a = \\dfrac{5{,}285}{1{,}5} \\approx 3{,}52$ m/s² vers le haut."
+      ],
+      "reponse": "Environ 3,52 m/s² vers le haut."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "principe fondamental de la dynamique",
+      "enonce": "Un chariot de 50 kg, initialement à l'arrêt, est tiré par une force de 120 N ; les frottements valent 20 N. Calcule son accélération, puis sa vitesse et la distance parcourue après 3 s.",
+      "corrige": [
+        "$\\sum F = 120 - 20 = 100$ N, donc $a = \\dfrac{100}{50} = 2$ m/s².",
+        "$v = 2 \\times 3 = 6$ m/s.",
+        "$x = \\dfrac{1}{2} \\times 2 \\times 3^2 = 9$ m."
+      ],
+      "reponse": "a = 2 m/s² ; v = 6 m/s ; x = 9 m."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "vitesse linéaire et angulaire",
+      "enonce": "Un tapis roulant est entraîné par un rouleau de rayon 0,05 m. Le tapis doit avancer à 0,8 m/s. À quelle vitesse doit tourner le rouleau, en rad/s puis en tr/min (arrondie au dixième) ?",
+      "corrige": [
+        "$\\omega = \\dfrac{v}{R} = \\dfrac{0{,}8}{0{,}05} = 16$ rad/s.",
+        "$N = 16 \\times \\dfrac{60}{2\\pi} \\approx 152{,}8$ tr/min."
+      ],
+      "reponse": "16 rad/s, soit environ 152,8 tr/min."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "vitesse linéaire et angulaire",
+      "enonce": "Un treuil enroule son câble sur un tambour de rayon 0,1 m. La charge doit monter à 0,5 m/s. Calcule la vitesse de rotation du tambour en rad/s et en tr/min (arrondie au dixième).",
+      "corrige": [
+        "$\\omega = \\dfrac{0{,}5}{0{,}1} = 5$ rad/s.",
+        "$N = 5 \\times \\dfrac{60}{2\\pi} \\approx 47{,}7$ tr/min."
+      ],
+      "reponse": "5 rad/s, soit environ 47,7 tr/min."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "mouvement uniformément accéléré",
+      "enonce": "Une navette automatique doit parcourir 100 m en partant de l'arrêt. Elle accélère à 1 m/s² jusqu'à 10 m/s, puis roule à vitesse constante. Combien de temps met-elle pour parcourir les 100 m ?",
+      "corrige": [
+        "Phase d'accélération : $t_1 = \\dfrac{10}{1} = 10$ s, distance $\\dfrac{1}{2} \\times 1 \\times 10^2 = 50$ m.",
+        "Il reste 50 m à 10 m/s : $t_2 = 5$ s.",
+        "Durée totale : 10 + 5 = 15 s."
+      ],
+      "reponse": "15 s"
     }
   ]
 }

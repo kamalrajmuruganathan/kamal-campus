@@ -135,7 +135,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese-additive-soustractive-codage-couleur-objet",
       "enonce": "**Un logo pour l'écran et pour l'affiche.** Léa conçoit un logo représentant un **soleil jaune** sur un **fond cyan**. Elle veut d'abord l'afficher sur un site web (écran), puis l'imprimer sur une affiche. On rappelle qu'un écran mélange des lumières et qu'une imprimante superpose des encres sur du papier blanc. \n\n1. Sur l'**écran**, chaque pixel est fait de trois sous-pixels Rouge, Vert et Bleu. Quels sous-pixels faut-il allumer pour obtenir le **jaune** du soleil ? pour obtenir le **cyan** du fond ? De quel type de synthèse s'agit-il ? \n2. Dans le fichier, le jaune vif est codé $(255,\\ 255,\\ 0)$ et le cyan $(0,\\ 255,\\ 255)$. Donne le code **hexadécimal** `#RRVVBB` de chacune de ces deux couleurs. \n3. Chaque canal est codé sur un octet ($8$ bits). Combien de niveaux différents cela fait-il par canal, et combien de couleurs différentes au total ? \n4. Pour l'**affiche** imprimée, quelle(s) encre(s) parmi Cyan, Magenta, Jaune faut-il pour obtenir le soleil jaune ? le fond cyan ? De quel type de synthèse s'agit-il cette fois ? \n5. On éclaire l'affiche terminée avec une lampe qui n'émet que de la lumière **bleue**. De quelle couleur apparaissent alors le soleil (jaune sur l'affiche) et le fond (cyan) ?",
       "corrige": [
@@ -146,6 +146,463 @@
         "5. Couleur perçue = lumière incidente − lumière absorbée ; la lampe n'émet que du **bleu**. Le soleil **jaune** diffuse Rouge + Vert et absorbe le bleu : il n'a aucun bleu à renvoyer et absorbe le seul bleu reçu → il apparaît **noir**. Le fond **cyan** diffuse Vert + Bleu et absorbe le rouge : il diffuse le bleu qu'il reçoit → il apparaît **bleu**."
       ],
       "reponse": "1. Additive : jaune = R+V, cyan = V+B. 2. `#FFFF00` (jaune) et `#00FFFF` (cyan). 3. $256$ niveaux par canal, $256^3 = 16\\,777\\,216 \\approx 16{,}7$ millions de couleurs. 4. Soustractive : encre Jaune pour le soleil, encre Cyan pour le fond. 5. Sous lumière bleue, le soleil apparaît **noir** et le fond **bleu**."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "modele-oeil",
+      "enonce": "Associe chaque élément de l'œil à son modèle optique : cristallin, rétine, iris. Modèles proposés : écran, diaphragme, lentille convergente.",
+      "corrige": [
+        "Le cristallin (avec la cornée) fait converger la lumière : c'est une lentille convergente.",
+        "La rétine reçoit l'image : c'est l'écran. L'iris règle la quantité de lumière : c'est un diaphragme."
+      ],
+      "reponse": "Cristallin : lentille convergente ; rétine : écran ; iris : diaphragme."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "photorecepteurs",
+      "enonce": "Vrai ou faux ? (a) Les bâtonnets permettent de distinguer les couleurs. (b) La rétine humaine possède trois types de cônes. (c) Les cônes fonctionnent surtout en lumière vive.",
+      "corrige": [
+        "(a) Faux : il n'existe qu'un seul type de bâtonnet, ils ne distinguent pas les couleurs.",
+        "(b) Vrai : cônes S, M et L. (c) Vrai : les cônes assurent la vision de jour."
+      ],
+      "reponse": "(a) Faux ; (b) vrai ; (c) vrai."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "synthese-additive",
+      "enonce": "Quelles sont les trois couleurs primaires de la synthèse additive ? Quelle couleur obtient-on quand aucune lumière n'est émise ?",
+      "corrige": [
+        "Les primaires additives sont celles des trois types de cônes : rouge, vert et bleu.",
+        "Sans aucune lumière, on obtient du noir : c'est le point de départ de la synthèse additive (écran éteint)."
+      ],
+      "reponse": "Rouge, vert, bleu ; noir."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "synthese-soustractive",
+      "enonce": "Quelles sont les trois couleurs primaires de la synthèse soustractive ? De quelle couleur part-on ?",
+      "corrige": [
+        "Les primaires soustractives sont le cyan, le magenta et le jaune (CMJ) : chacune absorbe une primaire additive.",
+        "On part du blanc (lumière blanche ou papier blanc) et on retire des couleurs."
+      ],
+      "reponse": "Cyan, magenta, jaune ; on part du blanc."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "modele-oeil",
+      "enonce": "Tu lis un livre puis tu regardes par la fenêtre un arbre lointain. Qu'est-ce qui change dans ton œil pour que l'arbre soit net ? Qu'est-ce qui ne change pas ?",
+      "corrige": [
+        "L'œil accommode : les muscles déforment le cristallin, ce qui modifie sa distance focale.",
+        "La distance entre le cristallin et la rétine reste quasiment fixe : c'est la focale qui s'adapte pour ramener l'image sur la rétine."
+      ],
+      "reponse": "La distance focale du cristallin change ; la distance cristallin-rétine ne change pas."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "photorecepteurs",
+      "enonce": "Quel type de cône est surtout sensible à une lumière de $530\\ \\text{nm}$ ? Et à une lumière de $420\\ \\text{nm}$ ?",
+      "corrige": [
+        "Les cônes M (moyennes longueurs d'onde) sont surtout sensibles vers $530\\ \\text{nm}$ : couleur associée, le vert.",
+        "Les cônes S (courtes longueurs d'onde) sont surtout sensibles vers $420\\ \\text{nm}$ : couleur associée, le bleu."
+      ],
+      "reponse": "$530\\ \\text{nm}$ : cônes M (vert) ; $420\\ \\text{nm}$ : cônes S (bleu)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "spectre-longueur-onde",
+      "enonce": "Un pointeur laser émet une lumière de longueur d'onde $\\lambda = 650\\ \\text{nm}$. Exprime-la en mètres et indique si elle est visible et de quelle couleur.",
+      "corrige": [
+        "$1\\ \\text{nm} = 10^{-9}\\ \\text{m}$, donc $\\lambda = 650\\times 10^{-9}\\ \\text{m} = 6{,}50\\times 10^{-7}\\ \\text{m}$.",
+        "$650\\ \\text{nm}$ est compris entre $400$ et $800\\ \\text{nm}$ : la lumière est visible, du côté rouge du spectre."
+      ],
+      "reponse": "$\\lambda = 6{,}50\\times 10^{-7}\\ \\text{m}$ ; visible, rouge."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "spectre-longueur-onde",
+      "enonce": "Deux rayonnements ont pour longueurs d'onde $\\lambda_1 = 3{,}5\\times 10^{-7}\\ \\text{m}$ et $\\lambda_2 = 1{,}2\\times 10^{-6}\\ \\text{m}$. Convertis-les en nm. Sont-ils visibles ?",
+      "corrige": [
+        "$\\lambda_1 = 3{,}5\\times 10^{-7}\\ \\text{m} = 350\\ \\text{nm}$ : inférieure à $400\\ \\text{nm}$, elle n'est pas visible (domaine ultraviolet).",
+        "$\\lambda_2 = 1{,}2\\times 10^{-6}\\ \\text{m} = 1200\\ \\text{nm}$ : supérieure à $800\\ \\text{nm}$, elle n'est pas visible (domaine infrarouge)."
+      ],
+      "reponse": "$350\\ \\text{nm}$ et $1200\\ \\text{nm}$ : aucun des deux n'est visible."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "synthese-additive",
+      "enonce": "Sur un écran, quels sous-pixels faut-il allumer pour afficher : (a) du magenta ? (b) du cyan ? (c) du blanc ?",
+      "corrige": [
+        "L'écran fonctionne en synthèse additive : on superpose des lumières.",
+        "(a) Magenta = rouge + bleu ; (b) cyan = vert + bleu ; (c) blanc = rouge + vert + bleu."
+      ],
+      "reponse": "(a) R et B ; (b) V et B ; (c) R, V et B."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "synthese-soustractive",
+      "enonce": "Un filtre jaune est éclairé en lumière blanche. Quelle couleur absorbe-t-il ? Quelles couleurs laisse-t-il passer ?",
+      "corrige": [
+        "Chaque primaire soustractive absorbe une primaire additive : le jaune absorbe le bleu.",
+        "Il laisse passer le rouge et le vert, dont la superposition donne bien du jaune."
+      ],
+      "reponse": "Il absorbe le bleu ; il laisse passer le rouge et le vert."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "synthese-soustractive",
+      "enonce": "Un peintre superpose une couche d'encre magenta et une couche d'encre jaune sur un papier blanc. Quelle couleur obtient-il ? Justifie.",
+      "corrige": [
+        "Le magenta absorbe le vert ; le jaune absorbe le bleu.",
+        "Il ne reste que le rouge à être diffusé par le papier : on obtient du rouge."
+      ],
+      "reponse": "Du rouge."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "couleur-objet",
+      "enonce": "Une chemise blanche et un pantalon noir sont éclairés uniquement en lumière rouge. De quelle couleur apparaît chacun d'eux ?",
+      "corrige": [
+        "Un objet blanc diffuse toutes les couleurs qu'il reçoit : ici il ne reçoit que du rouge, il apparaît rouge.",
+        "Un objet noir absorbe toutes les couleurs : il reste noir."
+      ],
+      "reponse": "Chemise : rouge ; pantalon : noir."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "codage-rvb",
+      "enonce": "Donne le code hexadécimal de la couleur RVB $(0,\\ 0,\\ 128)$ (un bleu marine).",
+      "corrige": [
+        "On convertit chaque canal : $0 = 0\\times 16 + 0 \\Rightarrow$ 00.",
+        "$128 = 8\\times 16 + 0 \\Rightarrow$ 80.",
+        "Code : #000080."
+      ],
+      "reponse": "#000080."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "codage-rvb",
+      "enonce": "Un pixel a pour code #808080. Donne son triplet RVB décimal et nomme sa couleur.",
+      "corrige": [
+        "$80_{16} = 8\\times 16 + 0 = 128$ pour chacun des trois canaux.",
+        "Triplet $(128,\\ 128,\\ 128)$ : trois canaux égaux et intermédiaires, c'est un gris moyen."
+      ],
+      "reponse": "$(128,\\ 128,\\ 128)$ : gris moyen."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "daltonisme",
+      "enonce": "Quelles cellules de la rétine sont en cause dans le daltonisme ? Pourquoi touche-t-il beaucoup plus les hommes que les femmes ?",
+      "corrige": [
+        "Le daltonisme vient d'un type de cône absent ou déficient : ce sont les cônes qui codent la couleur, pas les bâtonnets.",
+        "Il est héréditaire et lié au chromosome X : il touche environ $8\\ \\%$ des hommes contre moins de $1\\ \\%$ des femmes."
+      ],
+      "reponse": "Les cônes ; transmission liée au chromosome X."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "codage-rvb",
+      "enonce": "Convertis la couleur $(18,\\ 52,\\ 86)$ en code hexadécimal.",
+      "corrige": [
+        "$18 = 1\\times 16 + 2 \\Rightarrow$ 12.",
+        "$52 = 3\\times 16 + 4 \\Rightarrow$ 34.",
+        "$86 = 5\\times 16 + 6 \\Rightarrow$ 56. Code : #123456."
+      ],
+      "reponse": "#123456."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "codage-rvb",
+      "enonce": "Retrouve le triplet RVB décimal de la couleur #A52A2A. Quelle composante domine ?",
+      "corrige": [
+        "$\\text{A5} = 10\\times 16 + 5 = 165$.",
+        "$\\text{2A} = 2\\times 16 + 10 = 42$ (pour le vert et pour le bleu).",
+        "Triplet $(165,\\ 42,\\ 42)$ : le rouge domine, c'est un rouge brun."
+      ],
+      "reponse": "$(165,\\ 42,\\ 42)$ ; le rouge domine."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "codage-rvb",
+      "enonce": "Avec un octet par canal, combien de gris différents (du noir au blanc) le codage RVB peut-il représenter ? Justifie.",
+      "corrige": [
+        "Un gris s'obtient avec trois canaux égaux : $(n,\\ n,\\ n)$.",
+        "$n$ peut prendre toutes les valeurs entières de $0$ à $255$, soit $256$ valeurs : $256$ gris, du noir $(0,0,0)$ au blanc $(255,255,255)$."
+      ],
+      "reponse": "$256$ gris."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "synthese-soustractive",
+      "enonce": "Une lumière blanche traverse un filtre magenta, puis un filtre cyan. Quelle couleur sort ? Détaille.",
+      "corrige": [
+        "Le filtre magenta absorbe le vert : il laisse passer rouge et bleu.",
+        "Le filtre cyan absorbe le rouge : du rouge et du bleu reçus, il ne laisse passer que le bleu.",
+        "La lumière qui sort est bleue."
+      ],
+      "reponse": "Bleue."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "synthese-soustractive",
+      "enonce": "On superpose trois filtres cyan, magenta et jaune devant une lampe blanche. Qu'observe-t-on ? Justifie.",
+      "corrige": [
+        "Le cyan absorbe le rouge, le magenta absorbe le vert, le jaune absorbe le bleu.",
+        "Les trois primaires additives sont absorbées : aucune lumière ne passe, on observe du noir."
+      ],
+      "reponse": "Du noir (plus aucune lumière ne passe)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "couleur-objet",
+      "enonce": "Une banane est jaune en lumière blanche (elle diffuse le rouge et le vert). De quelle couleur apparaît-elle éclairée (a) en lumière bleue ? (b) en lumière rouge ?",
+      "corrige": [
+        "(a) La lumière bleue est absorbée par la banane, qui ne diffuse ni rouge ni vert puisqu'elle n'en reçoit pas : elle apparaît noire.",
+        "(b) La banane diffuse le rouge qu'elle reçoit : elle apparaît rouge."
+      ],
+      "reponse": "(a) Noire ; (b) rouge."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "couleur-objet",
+      "enonce": "Un drapeau bleu, blanc, rouge est éclairé uniquement en lumière rouge. Décris ce que l'on voit.",
+      "corrige": [
+        "La bande bleue absorbe le rouge : elle apparaît noire.",
+        "La bande blanche diffuse tout ce qu'elle reçoit, ici du rouge : elle apparaît rouge.",
+        "La bande rouge diffuse le rouge : elle apparaît rouge. On voit une bande noire et deux bandes rouges."
+      ],
+      "reponse": "Bleu → noir ; blanc → rouge ; rouge → rouge."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "photorecepteurs",
+      "enonce": "Une lumière jaune pure (une seule longueur d'onde) et un mélange de lumière rouge et de lumière verte donnent la même sensation de « jaune ». Explique pourquoi, à partir du fonctionnement des cônes.",
+      "corrige": [
+        "La vision des couleurs est trichromatique : le cerveau reconstruit la couleur à partir des trois signaux des cônes S, M et L.",
+        "Les deux lumières excitent les cônes L et M de la même façon (et très peu les cônes S) : les signaux sont identiques, donc la sensation aussi. Les écrans exploitent ce phénomène."
+      ],
+      "reponse": "Les deux lumières produisent les mêmes signaux sur les cônes L et M : le cerveau perçoit la même couleur."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "daltonisme",
+      "enonce": "Un graphique utilise une courbe rouge et une courbe verte. Pourquoi une personne atteinte de daltonisme rouge-vert a-t-elle du mal à le lire ? Propose une solution.",
+      "corrige": [
+        "Chez cette personne, les cônes L et M répondent de façon trop semblable : un rouge et un vert donnent presque le même signal.",
+        "Exemple de solution : utiliser deux couleurs qui se distinguent aussi par la composante bleue (par exemple bleu et orange), ou des traits de styles différents (plein et pointillé)."
+      ],
+      "reponse": "Rouge et vert donnent des signaux presque identiques ; utiliser par exemple bleu et orange, ou des pointillés."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "spectre-longueur-onde",
+      "enonce": "On envoie un faisceau de lumière blanche sur un prisme. Qu'observe-t-on sur l'écran placé derrière ? Quelle couleur est la plus déviée ?",
+      "corrige": [
+        "Le prisme décompose la lumière blanche : on observe un spectre continu de couleurs, du violet au rouge.",
+        "Le violet ($\\approx 400\\ \\text{nm}$) est le plus dévié, le rouge ($\\approx 800\\ \\text{nm}$) le moins."
+      ],
+      "reponse": "Un spectre continu du violet au rouge ; le violet est le plus dévié."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "synthese-additive",
+      "enonce": "Trois projecteurs rouge, vert et bleu éclairent un écran blanc ; leurs taches se chevauchent partiellement, comme trois cercles qui se recouvrent. Donne la couleur de chaque zone : les trois zones éclairées par un seul projecteur, les trois zones de recouvrement deux à deux, et la zone centrale.",
+      "corrige": [
+        "Zones simples : rouge, vert et bleu.",
+        "Recouvrements deux à deux : rouge + vert = jaune ; vert + bleu = cyan ; rouge + bleu = magenta.",
+        "Centre, éclairé par les trois : blanc."
+      ],
+      "reponse": "Rouge, vert, bleu ; jaune, cyan, magenta ; blanc au centre."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "synthese-additive",
+      "enonce": "Compare : (a) on superpose sur un écran blanc une lumière jaune et une lumière bleue ; (b) on mélange une peinture jaune et une encre cyan sur du papier blanc. Quelle couleur obtient-on dans chaque cas ?",
+      "corrige": [
+        "(a) Synthèse additive : jaune = rouge + vert ; en ajoutant le bleu on a rouge + vert + bleu, soit du blanc.",
+        "(b) Synthèse soustractive : le jaune absorbe le bleu, le cyan absorbe le rouge ; il reste le vert.",
+        "Ajouter des lumières éclaircit, superposer des pigments assombrit : il ne faut pas confondre les deux synthèses."
+      ],
+      "reponse": "(a) Blanc ; (b) vert."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "couleur-objet",
+      "enonce": "Une feuille d'arbre est verte en lumière blanche (elle diffuse seulement le vert). De quelle couleur apparaît-elle éclairée (a) en lumière cyan ? (b) en lumière jaune ? (c) en lumière bleue ?",
+      "corrige": [
+        "(a) La lumière cyan contient du vert et du bleu : la feuille diffuse le vert, elle apparaît verte.",
+        "(b) La lumière jaune contient du rouge et du vert : la feuille diffuse le vert, elle apparaît verte.",
+        "(c) La lumière bleue ne contient pas de vert : la feuille ne diffuse rien, elle apparaît noire."
+      ],
+      "reponse": "(a) Verte ; (b) verte ; (c) noire."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "couleur-objet",
+      "enonce": "Un objet apparaît rouge en lumière rouge, noir en lumière verte et bleu en lumière bleue. Quelle est sa couleur en lumière blanche ? Justifie.",
+      "corrige": [
+        "L'objet diffuse le rouge et le bleu (il les renvoie quand il les reçoit) et absorbe le vert.",
+        "En lumière blanche, il diffuse donc rouge + bleu : il apparaît magenta."
+      ],
+      "reponse": "Magenta."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "codage-rvb",
+      "enonce": "Un pixel jaune a pour code #FFFF00. (a) Quels sous-pixels sont allumés ? (b) On veut un jaune deux fois moins lumineux, en divisant environ par deux les composantes allumées (on prend $128$) : écris le nouveau code.",
+      "corrige": [
+        "(a) FF $= 255$ pour le rouge et le vert, 00 pour le bleu : les sous-pixels rouge et vert sont allumés à fond.",
+        "(b) Nouveau triplet $(128,\\ 128,\\ 0)$ ; $128 = 8\\times 16 + 0 \\Rightarrow$ 80, d'où le code #808000 (un jaune foncé)."
+      ],
+      "reponse": "(a) Rouge et vert ; (b) #808000."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "modele-oeil",
+      "enonce": "Compare la mise au point dans l'œil et dans un appareil photo. Dans les deux cas, où se forme l'image et quel est son sens ?",
+      "corrige": [
+        "Appareil photo : on déplace l'objectif pour que l'image tombe sur le capteur. Œil : la distance cristallin-rétine est fixe, c'est la focale du cristallin qui change (accommodation).",
+        "Dans les deux cas, l'image est réelle et renversée, formée sur l'écran (capteur ou rétine) ; pour l'œil, c'est le cerveau qui remet l'image à l'endroit."
+      ],
+      "reponse": "Appareil : l'objectif se déplace ; œil : la focale change. Image réelle et renversée sur l'écran dans les deux cas."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "photorecepteurs",
+      "enonce": "Pour chacune des lumières suivantes, indique quels cônes sont surtout excités : (a) $450\\ \\text{nm}$ ; (b) $650\\ \\text{nm}$ ; (c) $580\\ \\text{nm}$ (jaune). Pour (c), explique pourquoi on perçoit du jaune.",
+      "corrige": [
+        "(a) $450\\ \\text{nm}$ est proche du maximum des cônes S : surtout les cônes S (bleu).",
+        "(b) $650\\ \\text{nm}$ est dans les grandes longueurs d'onde : surtout les cônes L (rouge).",
+        "(c) $580\\ \\text{nm}$ est proche du maximum des cônes L ($560\\ \\text{nm}$) sans être loin de celui des cônes M ($530\\ \\text{nm}$) : elle excite fortement les cônes L et assez fortement les cônes M ; cette combinaison est interprétée comme du jaune, comme un mélange rouge + vert."
+      ],
+      "reponse": "(a) Cônes S ; (b) cônes L ; (c) cônes L et M, interprété comme du jaune."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "synthese-soustractive",
+      "enonce": "**Une imprimante couleur.** Une imprimante dispose d'encres cyan, magenta, jaune et noire (K), sur du papier blanc. (a) Quelles encres superposer pour imprimer du rouge ? du vert ? du bleu ? (b) Comment obtenir du blanc ? (c) Pourquoi ajoute-t-on une encre noire alors que C + M + J donne du noir ?",
+      "corrige": [
+        "(a) Rouge : magenta + jaune (on retire le vert et le bleu). Vert : cyan + jaune (on retire rouge et bleu). Bleu : cyan + magenta (on retire rouge et vert).",
+        "(b) On ne dépose aucune encre : le papier blanc diffuse toute la lumière.",
+        "(c) L'encre noire permet d'économiser les encres de couleur et d'obtenir un vrai noir, plus profond."
+      ],
+      "reponse": "(a) Rouge : M + J ; vert : C + J ; bleu : C + M. (b) Pas d'encre. (c) Économie d'encre et vrai noir."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "couleur-objet",
+      "enonce": "**Observer à travers un filtre.** Une pièce est éclairée en lumière blanche. On regarde, à travers un filtre cyan : (a) une feuille de papier blanc ; (b) une balle rouge ; (c) une balle verte. Quelle couleur voit-on pour chacune ?",
+      "corrige": [
+        "Le filtre cyan absorbe le rouge et laisse passer le vert et le bleu.",
+        "(a) Le papier blanc diffuse toutes les couleurs ; après le filtre, il reste vert + bleu : il paraît cyan.",
+        "(b) La balle rouge ne diffuse que du rouge, absorbé par le filtre : elle paraît noire.",
+        "(c) La balle verte diffuse du vert, transmis par le filtre : elle paraît verte."
+      ],
+      "reponse": "(a) Cyan ; (b) noire ; (c) verte."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "codage-rvb",
+      "enonce": "**Palette d'un site web.** (a) Convertis l'orange $(255,\\ 165,\\ 0)$ en hexadécimal. (b) Convertis #4B0082 en décimal. (c) Parmi #4B0082, #777777 et #FFA500, lequel est un gris ? Justifie.",
+      "corrige": [
+        "(a) $255 \\Rightarrow$ FF ; $165 = 10\\times 16 + 5 \\Rightarrow$ A5 ; $0 \\Rightarrow$ 00. Code : #FFA500.",
+        "(b) $\\text{4B} = 4\\times 16 + 11 = 75$ ; 00 $= 0$ ; $\\text{82} = 8\\times 16 + 2 = 130$. Triplet $(75,\\ 0,\\ 130)$, un violet foncé.",
+        "(c) #777777 : les trois canaux sont égaux ($119$ chacun), c'est un gris."
+      ],
+      "reponse": "(a) #FFA500 ; (b) $(75,\\ 0,\\ 130)$ ; (c) #777777."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "couleur-objet",
+      "enonce": "**Éclairage de théâtre.** Sur scène, un comédien porte une veste rouge et une chemise blanche. Le metteur en scène veut, avec un seul projecteur, que la veste paraisse noire et la chemise bleue. Quelle couleur de lumière doit-il choisir ? Justifie.",
+      "corrige": [
+        "La chemise blanche diffuse toutes les couleurs reçues : pour qu'elle paraisse bleue, la lumière doit être bleue.",
+        "La veste rouge ne diffuse que le rouge ; sous une lumière bleue, elle n'a rien à diffuser et paraît noire : les deux conditions sont réunies."
+      ],
+      "reponse": "Une lumière bleue."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "daltonisme",
+      "enonce": "**Daltonisme dans une classe.** Une classe compte $15$ garçons et $17$ filles. Le daltonisme touche environ $8\\ \\%$ des hommes et moins de $1\\ \\%$ des femmes. (a) Estime le nombre de garçons daltoniens attendu. (b) Pourquoi l'écart entre garçons et filles est-il si grand ? (c) Quel type de confusion est le plus probable ?",
+      "corrige": [
+        "(a) $0{,}08 \\times 15 = 1{,}2$ : on s'attend à environ $1$ garçon daltonien (chez les filles, moins de $0{,}2$, donc probablement aucune).",
+        "(b) Le daltonisme est héréditaire et lié au chromosome X, d'où une fréquence bien plus forte chez les hommes.",
+        "(c) La confusion rouge/vert (cônes L ou M déficients), la plus courante."
+      ],
+      "reponse": "(a) Environ $1$ garçon ; (b) lien avec le chromosome X ; (c) rouge/vert."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "synthese-additive",
+      "enonce": "**Pixels à la loupe.** On observe à la loupe quatre pixels d'un écran ; on donne l'état de leurs sous-pixels (R, V, B) en valeurs de $0$ à $255$ : P1 $(255,\\ 0,\\ 255)$ ; P2 $(0,\\ 0,\\ 0)$ ; P3 $(255,\\ 255,\\ 255)$ ; P4 $(0,\\ 255,\\ 255)$. Quelle couleur perçoit-on de loin pour chacun ? De quelle synthèse s'agit-il ?",
+      "corrige": [
+        "P1 : rouge + bleu = magenta ; P2 : tout éteint = noir.",
+        "P3 : rouge + vert + bleu = blanc ; P4 : vert + bleu = cyan.",
+        "L'écran superpose des lumières : c'est la synthèse additive."
+      ],
+      "reponse": "P1 magenta ; P2 noir ; P3 blanc ; P4 cyan ; synthèse additive."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "synthese-soustractive",
+      "enonce": "**Filtres inconnus.** On éclaire deux filtres A et B en lumière blanche. A laisse passer le rouge et le vert ; B n'absorbe que le vert. (a) Donne la couleur de chaque filtre. (b) Quelle couleur sort si on les superpose ? (c) Et si l'on éclaire la superposition en lumière bleue ?",
+      "corrige": [
+        "(a) A transmet rouge + vert : il est jaune. B transmet rouge + bleu : il est magenta.",
+        "(b) A retire le bleu, B retire le vert : seul le rouge sort.",
+        "(c) La lumière bleue est absorbée dès le filtre A : rien ne sort, on voit du noir."
+      ],
+      "reponse": "(a) A jaune, B magenta ; (b) rouge ; (c) noir."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese-soustractive",
+      "enonce": "**De l'écran à l'affiche.** Un logo comporte quatre zones dont les codes RVB à l'écran sont : $(255,\\ 0,\\ 0)$, $(0,\\ 0,\\ 255)$, $(255,\\ 255,\\ 255)$ et $(0,\\ 0,\\ 0)$. Pour l'imprimer avec des encres C, M, J et K sur papier blanc, quelles encres faut-il déposer dans chaque zone ?",
+      "corrige": [
+        "Rouge : il faut retirer le vert et le bleu, donc magenta + jaune.",
+        "Bleu : il faut retirer le rouge et le vert, donc cyan + magenta.",
+        "Blanc : aucune encre (le papier diffuse tout). Noir : encre noire K (ou C + M + J)."
+      ],
+      "reponse": "Rouge : M + J ; bleu : C + M ; blanc : aucune encre ; noir : K."
     }
   ]
 }

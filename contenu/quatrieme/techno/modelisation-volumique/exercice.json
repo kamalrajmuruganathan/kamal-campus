@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Définition et 3D",
       "enonce": "Qu'est-ce qu'un modèle volumique ? Cite les trois dimensions d'un objet 3D et donne le nom du type de logiciel utilisé pour le créer.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Formes de base",
       "enonce": "Cite trois formes de base (primitives) utilisées pour construire un volume, puis indique par quelle forme de base on commencerait pour modéliser une canette de boisson.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Les cotes",
       "enonce": "Une cote indique « 40 mm ». Que représente une cote et quelle est l'unité utilisée ici ? Si on modélise un côté à 40 mm, quelle sera la taille du côté sur l'objet fabriqué ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Opérations de construction",
       "enonce": "On veut modéliser une rondelle (un disque épais percé d'un trou au centre). Décris les deux étapes en nommant l'opération utilisée pour créer le trou, et explique pourquoi on n'« ajoute » pas un trou.",
       "corrige": [
@@ -61,7 +61,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Extrusion et révolution",
       "enonce": "Explique la différence entre l'extrusion et la révolution. Pour chacune, propose un objet simple qu'on peut fabriquer avec cette opération à partir d'une forme plane.",
       "corrige": [
@@ -74,7 +74,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Chaîne numérique",
       "enonce": "Un élève a une idée d'objet et veut le fabriquer avec une imprimante 3D. Décris dans l'ordre les étapes de la chaîne numérique, de l'idée jusqu'à l'objet réel, en nommant le format de fichier d'export et le rôle du logiciel qui découpe le modèle en couches. Précise enfin la différence entre « modéliser » et « fabriquer ».",
       "corrige": [
@@ -89,7 +89,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "le logiciel de CAO",
       "enonce": "Que signifie l'abréviation CAO ? Cite un exemple de logiciel utilisé pour modéliser un objet en 3D.",
       "corrige": [
@@ -101,7 +101,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "2D et 3D",
       "enonce": "Explique la différence entre un croquis sur papier et un modèle volumique fait en CAO. Cite les dimensions de chacun.",
       "corrige": [
@@ -113,7 +113,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "opérations pour un porte-clé",
       "enonce": "On veut modéliser un porte-clé : une plaque rectangulaire percée d'un trou pour l'anneau. (a) De quelle forme de base part-on ? (b) Quelle opération crée le trou ? (c) Le trou s'ajoute-t-il ou s'enlève-t-il ?",
       "corrige": [
@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "modéliser un support de téléphone",
       "enonce": "On modélise un support de téléphone : une base plate, un dossier incliné pour poser le téléphone, et une fente pour le câble. Décris les formes de base et les opérations (extrusion, union, soustraction) que tu utiliserais.",
       "corrige": [
@@ -137,6 +137,447 @@
         "On vérifie enfin les cotes (en mm) avant d'exporter le fichier pour l'imprimante 3D."
       ],
       "reponse": "Base et dossier = deux pavés par extrusion ; on les réunit par une union, puis on crée la fente du câble par soustraction ; on vérifie les cotes en mm avant l'export."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "Définition et 3D",
+      "enonce": "Vrai ou faux : « Un modèle volumique est une simple image de l'objet. » Justifie.",
+      "corrige": [
+        "Un modèle volumique est un objet numérique défini par des dimensions exactes.",
+        "L'ordinateur connaît précisément ses cotes : on peut le mesurer, le tourner, le couper."
+      ],
+      "reponse": "Faux : c'est un objet numérique coté, dont l'ordinateur connaît les dimensions exactes."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "Définition et 3D",
+      "enonce": "Cite trois actions que l'on peut faire avec un modèle 3D dans un logiciel de CAO, et qu'on ne peut pas faire avec un dessin sur papier.",
+      "corrige": [
+        "Le modèle 3D peut être manipulé à l'écran.",
+        "On peut le tourner dans tous les sens, le mesurer et le couper pour voir l'intérieur."
+      ],
+      "reponse": "Le tourner dans tous les sens, le mesurer, le couper pour voir l'intérieur."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "Formes de base",
+      "enonce": "Quel est le nom donné aux formes de base (cube, cylindre, sphère, cône, pyramide) dans un logiciel de CAO ?",
+      "corrige": [
+        "Ce sont les volumes simples à partir desquels on construit des objets plus complexes."
+      ],
+      "reponse": "Des primitives."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "Formes de base",
+      "enonce": "Quelle forme de base choisir pour modéliser : (a) un dé à jouer ; (b) une balle ; (c) un chapeau de fête pointu ?",
+      "corrige": [
+        "On cherche la primitive la plus proche de la forme de chaque objet."
+      ],
+      "reponse": "(a) un cube ; (b) une sphère ; (c) un cône."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "Les cotes",
+      "enonce": "Quelle unité utilise-t-on le plus souvent pour les cotes d'un modèle volumique ?",
+      "corrige": [
+        "Les cotes des pièces techniques sont généralement exprimées dans une petite unité de longueur."
+      ],
+      "reponse": "Le millimètre (mm)."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "Opérations de construction",
+      "enonce": "Associe chaque opération à son effet : extrusion, révolution, union, soustraction, répétition — (1) enlever de la matière ; (2) réunir plusieurs volumes ; (3) tirer une forme plate pour l'épaissir ; (4) copier une forme régulièrement ; (5) faire tourner un profil autour d'un axe.",
+      "corrige": [
+        "Ce sont les opérations présentées dans le tableau du cours."
+      ],
+      "reponse": "Extrusion → (3) ; révolution → (5) ; union → (2) ; soustraction → (1) ; répétition → (4)."
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "Chaîne numérique",
+      "enonce": "Quel format de fichier est très utilisé pour envoyer un modèle 3D vers une imprimante 3D ?",
+      "corrige": [
+        "On exporte le modèle terminé dans un format compris par les logiciels d'impression."
+      ],
+      "reponse": "Le format STL."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "Les cotes",
+      "enonce": "Une cote indique 6 cm. Convertis cette cote en millimètres pour la saisir dans le logiciel.",
+      "corrige": [
+        "1 cm = 10 mm.",
+        "6 × 10 = 60 mm."
+      ],
+      "reponse": "60 mm."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "Les cotes",
+      "enonce": "Un élève saisit « 25 » pour la longueur d'une pièce qui doit mesurer 25 cm, alors que le logiciel travaille en millimètres. Quelle sera la longueur de la pièce imprimée ? Quelle erreur a-t-il commise ?",
+      "corrige": [
+        "Le logiciel interprète 25 comme 25 mm.",
+        "Il aurait dû saisir 250 mm : la pièce sera 10 fois trop petite."
+      ],
+      "reponse": "25 mm (2,5 cm) au lieu de 25 cm : il a oublié de tenir compte de l'unité (il fallait saisir 250 mm)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "Les cotes",
+      "enonce": "Une rondelle a un diamètre extérieur de 20 mm et un trou de diamètre 8 mm au centre. Quelle est la largeur de l'anneau de matière, de chaque côté du trou ?",
+      "corrige": [
+        "Rayon extérieur : 20 ÷ 2 = 10 mm ; rayon du trou : 8 ÷ 2 = 4 mm.",
+        "Largeur de matière : 10 − 4 = 6 mm."
+      ],
+      "reponse": "6 mm."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "Extrusion et révolution",
+      "enonce": "Quelle opération utiliser pour obtenir un vase à partir de son profil (la moitié de sa silhouette) ?",
+      "corrige": [
+        "Un vase est un objet de forme ronde autour d'un axe vertical.",
+        "On fait tourner le profil autour de cet axe : c'est une révolution."
+      ],
+      "reponse": "Une révolution."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "Extrusion et révolution",
+      "enonce": "On dessine un carré de 30 mm de côté, puis on l'extrude de 30 mm. Quel volume obtient-on ?",
+      "corrige": [
+        "L'extrusion donne de l'épaisseur à la forme plane.",
+        "Un carré de 30 mm extrudé de 30 mm donne un volume dont les trois dimensions valent 30 mm."
+      ],
+      "reponse": "Un cube de 30 mm de côté."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "Opérations de construction",
+      "enonce": "Pour modéliser une grille de barbecue avec 10 barreaux identiques et régulièrement espacés, quelle opération évite de dessiner les barreaux un par un ?",
+      "corrige": [
+        "On dessine un seul barreau.",
+        "La répétition copie cette forme plusieurs fois, avec un écart régulier."
+      ],
+      "reponse": "La répétition."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "Opérations de construction",
+      "enonce": "Pour modéliser un bonhomme de neige en une seule pièce, avec deux sphères posées l'une sur l'autre, quelle opération utilise-t-on pour obtenir un seul volume ?",
+      "corrige": [
+        "Les deux sphères sont deux volumes séparés.",
+        "L'union (assemblage) les réunit en un seul volume."
+      ],
+      "reponse": "L'union (assemblage)."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "2D et 3D",
+      "enonce": "Une plaque est cotée 60 mm de long et 40 mm de large. Quelle cote manque-t-il pour en faire un modèle volumique ?",
+      "corrige": [
+        "Un modèle volumique a trois dimensions : longueur, largeur et hauteur.",
+        "Il manque l'épaisseur (la hauteur) de la plaque."
+      ],
+      "reponse": "Son épaisseur (la hauteur), par exemple 3 mm."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "le logiciel de CAO",
+      "enonce": "Classe ces logiciels : Tinkercad, un traitement de texte, FreeCAD, un tableur, SolidWorks. Lesquels sont des logiciels de CAO ?",
+      "corrige": [
+        "Un logiciel de CAO sert à concevoir et modéliser des objets.",
+        "Le traitement de texte et le tableur servent à écrire et à calculer."
+      ],
+      "reponse": "Tinkercad, FreeCAD et SolidWorks."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "Avantages de la modélisation",
+      "enonce": "Cite trois avantages de la modélisation 3D avant de fabriquer un objet.",
+      "corrige": [
+        "Le cours présente six avantages : visualiser, vérifier, modifier facilement, économiser, communiquer, fabriquer.",
+        "Exemple de réponse : visualiser l'objet sous tous les angles, vérifier les dimensions, éviter le gaspillage de matière."
+      ],
+      "reponse": "Exemple : visualiser l'objet sous tous les angles, vérifier ses dimensions, économiser de la matière."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "Avantages de la modélisation",
+      "enonce": "Une entreprise fabrique un prototype en bois de chaque nouvelle chaise, et en jette beaucoup car ils sont ratés. Explique comment la modélisation 3D l'aiderait.",
+      "corrige": [
+        "Le modèle 3D permet de vérifier les dimensions, l'assemblage et la solidité avant de fabriquer.",
+        "On corrige les erreurs à l'écran : moins de prototypes ratés, donc moins de bois gaspillé."
+      ],
+      "reponse": "Elle pourrait vérifier et corriger la chaise à l'écran avant de la fabriquer, ce qui évite de gaspiller du bois sur des prototypes ratés."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "Avantages de la modélisation",
+      "enonce": "Un designer en France et un fabricant en Allemagne travaillent sur la même pièce. Quel avantage de la modélisation 3D leur est utile ?",
+      "corrige": [
+        "Le modèle numérique peut être partagé facilement.",
+        "Tous travaillent sur le même fichier, avec les mêmes cotes : c'est l'avantage « communiquer »."
+      ],
+      "reponse": "Communiquer : ils partagent le même modèle numérique, avec les mêmes cotes."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "Avantages de la modélisation",
+      "enonce": "Le client demande d'agrandir le trou d'un support de 8 mm à 10 mm. Pourquoi est-ce rapide avec un modèle 3D ?",
+      "corrige": [
+        "Dans un logiciel de CAO, on modifie simplement la cote du trou.",
+        "Le modèle se met à jour sans qu'on ait à tout redessiner."
+      ],
+      "reponse": "Il suffit de changer la cote du trou (de 8 mm à 10 mm) sans tout recommencer."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "Opérations de construction",
+      "enonce": "Décris les opérations pour modéliser un dé à coudre simple : un cylindre creux fermé d'un côté.",
+      "corrige": [
+        "On part d'un cylindre plein.",
+        "On soustrait un cylindre plus petit, moins haut, placé du côté ouvert : il reste une paroi et un fond."
+      ],
+      "reponse": "Un cylindre plein, puis la soustraction d'un cylindre plus petit et moins haut pour creuser l'intérieur."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "Opérations de construction",
+      "enonce": "Pour modéliser une boîte à crayons, un élève crée un pavé puis ajoute un autre pavé à l'intérieur pour faire le creux. Explique son erreur.",
+      "corrige": [
+        "Un creux est un manque de matière.",
+        "Il faut soustraire le pavé intérieur, et non l'ajouter (sinon la boîte reste pleine)."
+      ],
+      "reponse": "Le creux s'obtient par soustraction du pavé intérieur, pas par ajout."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "Opérations de construction",
+      "enonce": "Une pièce est formée d'une plaque de 60 mm × 40 mm percée de quatre trous identiques aux quatre coins. Quelles opérations utilises-tu ?",
+      "corrige": [
+        "Extrusion d'un rectangle de 60 mm × 40 mm pour obtenir la plaque.",
+        "Soustraction d'un cylindre pour un trou, et répétition (ou copie) pour les trois autres."
+      ],
+      "reponse": "Extrusion du rectangle, puis soustraction de cylindres pour les trous (avec répétition pour les reproduire)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "Les cotes",
+      "enonce": "Une boîte modélisée mesure 80 mm × 50 mm × 30 mm. Calcule son volume extérieur en mm³ puis en cm³.",
+      "corrige": [
+        "Volume d'un pavé : longueur × largeur × hauteur.",
+        "80 × 50 × 30 = 120 000 mm³.",
+        "1 cm³ = 1 000 mm³, donc 120 000 mm³ = 120 cm³."
+      ],
+      "reponse": "120 000 mm³, soit 120 cm³."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "Chaîne numérique",
+      "enonce": "Remets dans l'ordre les étapes de la chaîne numérique : fichier STL, croquis, fabrication, idée, modèle 3D (CAO).",
+      "corrige": [
+        "On part de l'idée, on la dessine à la main, puis on la modélise, on exporte et on fabrique."
+      ],
+      "reponse": "Idée → croquis → modèle 3D (CAO) → fichier STL → fabrication."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "Chaîne numérique",
+      "enonce": "Quel est le rôle du trancheur (slicer) dans la chaîne numérique ?",
+      "corrige": [
+        "L'imprimante 3D dépose la matière couche par couche.",
+        "Le trancheur découpe le modèle en couches et prépare les instructions pour l'imprimante."
+      ],
+      "reponse": "Il découpe le modèle en couches et prépare les instructions pour l'imprimante 3D."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "2D et 3D",
+      "enonce": "Un élève dit : « Mon croquis papier est coté, donc c'est un modèle volumique. » A-t-il raison ?",
+      "corrige": [
+        "Un croquis papier reste en 2D, même s'il porte des cotes.",
+        "Un modèle volumique est un objet numérique en 3D, réalisé avec un logiciel de CAO."
+      ],
+      "reponse": "Non : un croquis papier est en 2D ; le modèle volumique est un objet numérique en 3D réalisé en CAO."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "Chaîne numérique",
+      "enonce": "Une pièce de 30 mm de haut est imprimée avec des couches de 0,2 mm d'épaisseur. Combien de couches l'imprimante doit-elle déposer ?",
+      "corrige": [
+        "Nombre de couches = hauteur ÷ épaisseur d'une couche.",
+        "30 ÷ 0,2 = 150."
+      ],
+      "reponse": "150 couches."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "Chaîne numérique",
+      "enonce": "Une imprimante 3D met environ 20 secondes par couche pour une petite pièce de 12 mm de haut, imprimée en couches de 0,2 mm. Estime la durée d'impression.",
+      "corrige": [
+        "Nombre de couches : 12 ÷ 0,2 = 60.",
+        "Durée : 60 × 20 = 1 200 s, soit 20 minutes."
+      ],
+      "reponse": "Environ 1 200 s, soit 20 minutes."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "Chaîne numérique",
+      "enonce": "Qu'est-ce que le prototypage rapide ? Pourquoi l'imprimante 3D y est-elle très utile ?",
+      "corrige": [
+        "Le prototypage rapide consiste à fabriquer vite un premier exemplaire pour le tester.",
+        "L'imprimante 3D fabrique directement à partir du fichier, sans outillage spécial : on obtient rapidement un objet à essayer."
+      ],
+      "reponse": "Fabriquer rapidement un premier exemplaire pour le tester ; l'imprimante 3D le fabrique directement à partir du fichier."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "Extrusion et révolution",
+      "enonce": "Pour chaque objet, choisis entre extrusion et révolution : (a) une règle plate ; (b) une toupie ; (c) une lettre « T » épaisse ; (d) un bol.",
+      "corrige": [
+        "Les objets de forme ronde autour d'un axe s'obtiennent par révolution.",
+        "Les objets à section constante (forme plate épaissie) s'obtiennent par extrusion."
+      ],
+      "reponse": "(a) extrusion ; (b) révolution ; (c) extrusion ; (d) révolution."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "Les cotes",
+      "enonce": "Le cylindre d'un support de crayon a un diamètre de 70 mm et une hauteur de 100 mm. Calcule son volume en cm³ (prendre π ≈ 3,14 et arrondir à l'unité).",
+      "corrige": [
+        "Rayon : 70 ÷ 2 = 35 mm = 3,5 cm ; hauteur : 10 cm.",
+        "Volume = π × r² × h ≈ 3,14 × 3,5 × 3,5 × 10 ≈ 384,65 cm³.",
+        "Arrondi à l'unité : environ 385 cm³."
+      ],
+      "reponse": "Environ 385 cm³."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "modéliser un objet",
+      "enonce": "Décris les étapes pour modéliser un dé à jouer à six faces, avec des points creux.",
+      "corrige": [
+        "On part d'un cube (par exemple de 16 mm de côté).",
+        "Pour chaque point, on soustrait une petite sphère (ou un petit cylindre) sur la face.",
+        "On peut utiliser la répétition pour placer plusieurs points identiques."
+      ],
+      "reponse": "Un cube, puis la soustraction de petites sphères pour creuser les points (avec répétition pour les reproduire)."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "modéliser un objet",
+      "enonce": "Pour modéliser une bouteille, un élève empile un cylindre pour le corps, un cône tronqué pour l'épaule et un petit cylindre pour le goulot. Quelle opération réunit ces formes ? Quelle autre méthode, plus simple, pourrait donner toute la bouteille d'un coup ?",
+      "corrige": [
+        "Pour réunir les trois formes en une seule pièce, on utilise l'union.",
+        "Une bouteille est ronde autour de son axe : on peut aussi dessiner son profil et faire une révolution."
+      ],
+      "reponse": "L'union ; ou bien une révolution du profil de la bouteille autour de son axe."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "modéliser un objet",
+      "enonce": "Tu modélises un porte-clé en forme de plaque de 50 mm × 30 mm, épaisse de 4 mm, avec un trou de 5 mm de diamètre et tes initiales en relief. Liste les opérations dans l'ordre.",
+      "corrige": [
+        "Extrusion d'un rectangle de 50 mm × 30 mm sur 4 mm d'épaisseur.",
+        "Soustraction d'un cylindre de 5 mm de diamètre pour le trou.",
+        "Extrusion des lettres, puis union avec la plaque pour les initiales en relief."
+      ],
+      "reponse": "Extrusion de la plaque → soustraction du trou de 5 mm → extrusion des lettres → union avec la plaque."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "Les cotes",
+      "enonce": "Une imprimante 3D a un plateau de 220 mm × 220 mm et une hauteur maximale de 250 mm. Un élève modélise une tour de 30 cm de haut. Peut-elle être imprimée en une fois ? Propose une solution.",
+      "corrige": [
+        "30 cm = 300 mm.",
+        "300 mm > 250 mm : la tour est trop haute pour l'imprimante.",
+        "Solution : la couper en deux parties dans le logiciel, les imprimer séparément puis les assembler."
+      ],
+      "reponse": "Non (300 mm > 250 mm) ; on peut la diviser en deux pièces imprimées séparément puis assemblées."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "Chaîne numérique",
+      "enonce": "Un élève imprime une pièce et constate que le trou prévu pour une vis de 4 mm est trop petit. À quelle étape de la chaîne numérique doit-il revenir, et que doit-il faire ?",
+      "corrige": [
+        "L'objet fabriqué respecte les cotes du modèle : l'erreur vient du modèle 3D.",
+        "Il retourne dans le logiciel de CAO, augmente le diamètre du trou (par exemple 4,5 mm), exporte un nouveau fichier STL et réimprime."
+      ],
+      "reponse": "Il revient au modèle 3D (CAO), augmente la cote du trou, réexporte le fichier STL puis réimprime."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "Avantages de la modélisation",
+      "enonce": "Comparer : fabriquer directement un boîtier en bois sans modèle, ou le modéliser d'abord en CAO. Donne deux arguments pour la modélisation et un inconvénient.",
+      "corrige": [
+        "Arguments : vérifier les dimensions et l'assemblage avant de couper le bois ; modifier facilement une cote ; économiser la matière.",
+        "Inconvénient : il faut un ordinateur, un logiciel et du temps pour apprendre à modéliser."
+      ],
+      "reponse": "Pour : vérifier avant de fabriquer et économiser le bois, modifier facilement. Inconvénient : il faut du matériel et du temps pour modéliser."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "Opérations de construction",
+      "enonce": "Une roue de petite voiture doit avoir 6 trous identiques répartis régulièrement autour du centre. Décris la méthode de modélisation et calcule l'angle entre deux trous voisins.",
+      "corrige": [
+        "On crée la roue (cylindre), puis on soustrait un premier trou.",
+        "On utilise la répétition circulaire pour obtenir 6 trous identiques autour du centre.",
+        "Angle entre deux trous : 360 ÷ 6 = 60 degrés."
+      ],
+      "reponse": "Cylindre, soustraction d'un trou puis répétition autour du centre ; 60° entre deux trous voisins."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "Les cotes",
+      "enonce": "Une pièce de 40 mm × 20 mm × 10 mm doit être agrandie deux fois dans chaque dimension. Donne les nouvelles cotes, puis compare les volumes.",
+      "corrige": [
+        "Nouvelles cotes : 80 mm × 40 mm × 20 mm.",
+        "Volume initial : 40 × 20 × 10 = 8 000 mm³ ; nouveau : 80 × 40 × 20 = 64 000 mm³.",
+        "64 000 ÷ 8 000 = 8 : le volume est multiplié par 8 (2 × 2 × 2)."
+      ],
+      "reponse": "80 mm × 40 mm × 20 mm ; le volume passe de 8 000 mm³ à 64 000 mm³, soit 8 fois plus."
     }
   ]
 }

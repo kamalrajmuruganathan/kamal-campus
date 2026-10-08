@@ -64,7 +64,7 @@
         "$2x\\sqrt{x^2+1}$"
       ],
       "reponse": 2,
-      "explication": "Forme $\\sqrt{u}$ : dérivée $\\dfrac{u'}{2\\sqrt{u}}$ avec $u' = 2x$, soit $\\dfrac{2x}{2\\sqrt{x^2+1}} = \\dfrac{x}{\\sqrt{x^2+1}}$. Le premier choix oublie le $u' = 2x$ au numérateur."
+      "explication": "Forme $\\sqrt{u}$ : dérivée $\\dfrac{u'}{2\\sqrt{u}}$ avec $u' = 2x$, soit $\\dfrac{2x}{2\\sqrt{x^2+1}} = \\dfrac{x}{\\sqrt{x^2+1}}$. Le choix $\\dfrac{1}{2\\sqrt{x^2+1}}$ oublie le $u' = 2x$ au numérateur."
     },
     {
       "id": 5,
@@ -148,7 +148,7 @@
         "$2x\\,\\mathrm{e}^{-x^2}$"
       ],
       "reponse": 0,
-      "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = -x^2$ et $u' = -2x$, soit $-2x\\,\\mathrm{e}^{-x^2}$. Le choix $\\mathrm{e}^{-x^2}$ oublie le facteur $u'$ ; le dernier choix perd le signe moins de $u'$."
+      "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = -x^2$ et $u' = -2x$, soit $-2x\\,\\mathrm{e}^{-x^2}$. Le choix $\\mathrm{e}^{-x^2}$ oublie le facteur $u'$ ; le choix $2x\\,\\mathrm{e}^{-x^2}$ perd le signe moins de $u'$."
     },
     {
       "id": 11,
@@ -176,7 +176,7 @@
         "$\\dfrac{-1}{(x^2+1)^2}$"
       ],
       "reponse": 0,
-      "explication": "Forme $\\dfrac{1}{u}$ : dérivée $-\\dfrac{u'}{u^2}$ avec $u = x^2+1$ et $u' = 2x$, soit $\\dfrac{-2x}{(x^2+1)^2}$. Le choix positif oublie le signe moins ; le dernier oublie le facteur $u' = 2x$ au numérateur."
+      "explication": "Forme $\\dfrac{1}{u}$ : dérivée $-\\dfrac{u'}{u^2}$ avec $u = x^2+1$ et $u' = 2x$, soit $\\dfrac{-2x}{(x^2+1)^2}$. Le choix positif oublie le signe moins ; le choix $\\dfrac{-1}{(x^2+1)^2}$ oublie le facteur $u' = 2x$ au numérateur."
     },
     {
       "id": 13,
@@ -204,7 +204,7 @@
         "$16x(2x^2-3)^4$"
       ],
       "reponse": 0,
-      "explication": "Forme $u^n$ : dérivée $n\\,u'\\,u^{n-1} = 4 \\times 4x \\times (2x^2-3)^3 = 16x(2x^2-3)^3$, car $u' = 4x$. Le choix $4(2x^2-3)^3$ oublie complètement $u'$ ; le dernier garde l'exposant $4$ au lieu de $3$."
+      "explication": "Forme $u^n$ : dérivée $n\\,u'\\,u^{n-1} = 4 \\times 4x \\times (2x^2-3)^3 = 16x(2x^2-3)^3$, car $u' = 4x$. Le choix $4(2x^2-3)^3$ oublie complètement $u'$ ; le choix $16x(2x^2-3)^4$ garde l'exposant $4$ au lieu de $3$."
     },
     {
       "id": 15,
@@ -246,7 +246,7 @@
         "$(3x-1)\\,\\mathrm{e}^{3x-1}$"
       ],
       "reponse": 1,
-      "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = 3x-1$ et $u' = 3$, soit $3\\,\\mathrm{e}^{3x-1}$. Le premier choix oublie le facteur $u' = 3$ ; l'exposant, lui, reste inchangé quand on dérive une exponentielle."
+      "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = 3x-1$ et $u' = 3$, soit $3\\,\\mathrm{e}^{3x-1}$. Le choix $\\mathrm{e}^{3x-1}$ oublie le facteur $u' = 3$ ; l'exposant, lui, reste inchangé quand on dérive une exponentielle."
     },
     {
       "id": 18,
@@ -288,7 +288,7 @@
         "$\\mathrm{e}^x(\\mathrm{e}^x+1)^2$"
       ],
       "reponse": 1,
-      "explication": "Forme $u^n$ avec $u = \\mathrm{e}^x + 1$, $u' = \\mathrm{e}^x$, $n = 3$ : dérivée $n\\,u'\\,u^{n-1} = 3\\,\\mathrm{e}^x(\\mathrm{e}^x+1)^2$. Le premier choix oublie $u' = \\mathrm{e}^x$ ; le troisième garde l'exposant $3$ au lieu de le baisser à $2$."
+      "explication": "Forme $u^n$ avec $u = \\mathrm{e}^x + 1$, $u' = \\mathrm{e}^x$, $n = 3$ : dérivée $n\\,u'\\,u^{n-1} = 3\\,\\mathrm{e}^x(\\mathrm{e}^x+1)^2$. Le choix $3(\\mathrm{e}^x+1)^2$ oublie $u' = \\mathrm{e}^x$ ; le choix $3\\,\\mathrm{e}^x(\\mathrm{e}^x+1)^3$ garde l'exposant $3$ au lieu de le baisser à $2$."
     }
   ]
 }

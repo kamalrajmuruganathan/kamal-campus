@@ -133,7 +133,7 @@
         "```\nafficher a\nafficher b\n```"
       ],
       "reponse": 1,
-      "explication": "Il faut une sortie **dans les deux cas** : sans `sinon`, le premier programme n'affiche rien quand $a \\leqslant b$. Le troisième affiche systématiquement le plus **petit** : la condition et les actions sont inversées. Le dernier n'effectue aucun test. Contrôle du cas limite : si $a = b$, le bon programme part dans `sinon` et affiche `b`, qui est bien le maximum."
+      "explication": "Il faut une sortie **dans les deux cas** : sans `sinon`, le programme réduit au seul `si` n'affiche rien quand $a \\leqslant b$. Celui qui affiche `b` quand `a > b` donne systématiquement le plus **petit** : la condition et les actions sont inversées. Celui qui affiche `a` puis `b` n'effectue aucun test. Contrôle du cas limite : si $a = b$, le bon programme part dans `sinon` et affiche `b`, qui est bien le maximum."
     },
     {
       "id": 11,
@@ -233,7 +233,7 @@
         "```\nafficher a\nafficher b\n```"
       ],
       "reponse": 1,
-      "explication": "Si `a > b`, le plus petit est `b`, sinon c'est `a` : c'est exactement le deuxième programme. Le premier affiche le plus **grand** (actions à l'envers). Contrôle du cas limite $a = b$ : on part dans `sinon` et on affiche `a`, qui vaut bien le minimum. Le dernier programme n'effectue aucun test."
+      "explication": "Si `a > b`, le plus petit est `b`, sinon c'est `a` : c'est exactement le programme « si `a > b` alors afficher `b`, sinon afficher `a` ». Les deux autres programmes avec `si … sinon` affichent le plus **grand**. Contrôle du cas limite $a = b$ : on part dans `sinon` et on affiche `a`, qui vaut bien le minimum. Celui qui affiche `a` puis `b` n'effectue aucun test."
     }
   ]
 }

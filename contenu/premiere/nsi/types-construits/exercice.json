@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "indexation d'une liste",
       "enonce": "On a la liste : notes = [12, 8, 15, 9, 17]. Que valent notes[0], notes[2] et notes[-1] ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "tuple et non-modifiabilité",
       "enonce": "On écrit : point = (3, 5). Que renvoie point[1] ? Que se passe-t-il si on exécute ensuite point[0] = 9 ?",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "accès dans un dictionnaire",
       "enonce": "On a : eleve = {\"nom\": \"Diallo\", \"age\": 16, \"classe\": \"1G2\"}. Que renvoie eleve[\"age\"] ? Comment obtenir la liste des clés ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "construction de liste par compréhension",
       "enonce": "Donne le contenu de la liste construite par : carres = [n*n for n in range(1, 6)]. Explique la trace.",
       "corrige": [
@@ -60,9 +60,9 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "parcours de dictionnaire et comptage",
-      "enonce": "Trace l'exécution de ce code et donne la valeur finale de total :\nstock = {\"stylo\": 12, \"gomme\": 5, \"regle\": 8}\ntotal = 0\nfor article in stock:\n    total = total + stock[article]",
+      "enonce": "Trace l'exécution de ce code et donne la valeur finale de total :\n\n```python\nstock = {\"stylo\": 12, \"gomme\": 5, \"regle\": 8}\ntotal = 0\nfor article in stock:\n    total = total + stock[article]\n```",
       "corrige": [
         "La boucle for parcourt les clés du dictionnaire : 'stylo', 'gomme', 'regle'.",
         "Pour chaque clé, stock[article] donne la valeur : on ajoute donc successivement 12, 5 puis 8.",
@@ -72,11 +72,11 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "structure imbriquée (liste de dictionnaires)",
-      "enonce": "On a une liste de dictionnaires :\neleves = [\n    {\"nom\": \"Ana\", \"moyenne\": 14},\n    {\"nom\": \"Bilal\", \"moyenne\": 9},\n    {\"nom\": \"Chloe\", \"moyenne\": 16}\n]\nÉcris une expression Python qui renvoie la liste des noms des élèves ayant une moyenne ≥ 10, et donne le résultat.",
+      "enonce": "On a une liste de dictionnaires :\n\n```python\neleves = [\n    {\"nom\": \"Ana\", \"moyenne\": 14},\n    {\"nom\": \"Bilal\", \"moyenne\": 9},\n    {\"nom\": \"Chloe\", \"moyenne\": 16}\n]\n```\n\nÉcris une expression Python qui renvoie la liste des noms des élèves ayant une moyenne ≥ 10, et donne le résultat.",
       "corrige": [
-        "Chaque élément de eleves est un dictionnaire ; on accède au nom par e[\"nom\"] et à la moyenne par e[\"moyenne\"].",
+        "Chaque élément de la liste eleves est un dictionnaire ; on accède au nom par e[\"nom\"] et à la moyenne par e[\"moyenne\"].",
         "On filtre avec une condition dans une compréhension de liste : [e[\"nom\"] for e in eleves if e[\"moyenne\"] >= 10].",
         "On teste chaque élève : Ana (14 ≥ 10) gardée, Bilal (9 ≥ 10 faux) écartée, Chloe (16 ≥ 10) gardée.",
         "Il reste donc les noms 'Ana' et 'Chloe'."
@@ -85,7 +85,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "longueur et tranchage d'une liste",
       "enonce": "On a notes = [12, 8, 15, 9, 17]. Que valent len(notes) et notes[1:3] ?",
       "corrige": [
@@ -97,7 +97,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "modifier une liste",
       "enonce": "On a panier = [\"pomme\", \"pain\"]. On exécute panier.append(\"lait\") puis panier.append(\"oeuf\"). Que vaut panier ?",
       "corrige": [
@@ -109,7 +109,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "ajouter et modifier dans un dictionnaire",
       "enonce": "On a stock = {\"stylo\": 12, \"gomme\": 5}. On exécute stock[\"regle\"] = 8 puis stock[\"gomme\"] = 3. Que vaut stock ?",
       "corrige": [
@@ -121,7 +121,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "compréhension construisant un dictionnaire",
       "enonce": "Donne le contenu du dictionnaire construit par : carres = {n: n*n for n in range(1, 5)}.",
       "corrige": [
@@ -130,6 +130,480 @@
         "On obtient les couples 1:1, 2:4, 3:9, 4:16."
       ],
       "reponse": "carres vaut {1: 1, 2: 4, 3: 9, 4: 16}."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "choisir le type adapté",
+      "enonce": "Pour chaque donnée, choisis le type le plus adapté (tuple, liste ou dictionnaire) : a) les coordonnées (latitude, longitude) d'une ville ; b) la liste des courses, qu'on complète au fil de la semaine ; c) la fiche d'un livre (titre, auteur, année).",
+      "corrige": [
+        "a) Deux valeurs dans un ordre fixe, qui ne changent pas : un tuple.",
+        "b) Une suite ordonnée que l'on modifie (ajouts) : une liste.",
+        "c) Des valeurs associées à des noms : un dictionnaire, avec les clés titre, auteur, annee."
+      ],
+      "reponse": "a) tuple ; b) liste ; c) dictionnaire."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "indexation d'une liste",
+      "enonce": "On a `jours = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\"]`. Quel est l'indice de \"jeudi\" ? Quel est le dernier indice valide de cette liste ?",
+      "corrige": [
+        "L'indexation commence à 0 : lundi a l'indice 0, mardi 1, mercredi 2, jeudi 3.",
+        "La liste contient 5 éléments : le dernier indice vaut len(jours) − 1 = 4."
+      ],
+      "reponse": "\"jeudi\" a l'indice 3 ; le dernier indice valide est 4."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "tuple et non-modifiabilité",
+      "enonce": "Vrai ou faux ? a) Un tuple s'écrit entre crochets. b) On peut ajouter un élément à une liste avec `append`. c) On peut changer la valeur associée à une clé d'un dictionnaire. d) On peut modifier un élément d'un tuple.",
+      "corrige": [
+        "a) Faux : un tuple s'écrit entre parenthèses, une liste entre crochets.",
+        "b) Vrai : une liste est modifiable.",
+        "c) Vrai : un dictionnaire est modifiable. d) Faux : un tuple est immuable."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Vrai ; d) Faux."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "affectation multiple (déballage)",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ndate = (14, 7, 1789)\njour, mois, annee = date\nprint(mois, annee - 1000)\n```",
+      "corrige": [
+        "L'affectation multiple range chaque élément du tuple dans une variable, dans l'ordre : jour = 14, mois = 7, annee = 1789.",
+        "annee − 1000 vaut 789."
+      ],
+      "reponse": "`7 789`"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "accès dans un dictionnaire",
+      "enonce": "On a `capitales = {\"France\": \"Paris\", \"Italie\": \"Rome\", \"Espagne\": \"Madrid\"}`. Écris l'expression qui donne la capitale de l'Italie, puis l'instruction qui ajoute le Portugal avec sa capitale Lisbonne.",
+      "corrige": [
+        "On accède à une valeur par sa clé : `capitales[\"Italie\"]` vaut \"Rome\".",
+        "Affecter une valeur à une clé qui n'existe pas encore l'ajoute : `capitales[\"Portugal\"] = \"Lisbonne\"`."
+      ],
+      "reponse": "`capitales[\"Italie\"]` (qui vaut \"Rome\") ; `capitales[\"Portugal\"] = \"Lisbonne\"`."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "modifier une liste",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nt = [4, 8, 15]\nt[1] = 9\nt.append(16)\nprint(t, len(t))\n```",
+      "corrige": [
+        "`t[1] = 9` remplace l'élément d'indice 1 (8) par 9 : [4, 9, 15].",
+        "`append(16)` ajoute 16 à la fin : [4, 9, 15, 16], qui contient 4 éléments."
+      ],
+      "reponse": "`[4, 9, 15, 16] 4`"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "parcours d'une liste",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nnotes = [12, 15, 9, 18]\ns = 0\nfor n in notes:\n    if n >= 12:\n        s = s + 1\nprint(s)\n```",
+      "corrige": [
+        "La boucle parcourt les notes une par une.",
+        "Le compteur s augmente pour chaque note supérieure ou égale à 12 : 12, 15 et 18.",
+        "9 ne compte pas."
+      ],
+      "reponse": "`3`"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "construction de liste par compréhension",
+      "enonce": "Donne le contenu de chaque liste : a) `[2 * k for k in range(4)]` ; b) `[k for k in range(1, 11) if k % 3 == 0]`.",
+      "corrige": [
+        "a) k prend les valeurs 0, 1, 2, 3 ; on garde 2 × k : [0, 2, 4, 6].",
+        "b) k va de 1 à 10 ; on ne garde que les multiples de 3 : [3, 6, 9]."
+      ],
+      "reponse": "a) [0, 2, 4, 6] ; b) [3, 6, 9]."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "tableaux de tableaux (matrices)",
+      "enonce": "On a `m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]`. Que valent `m[0][2]`, `m[2][0]` et `m[1]` ?",
+      "corrige": [
+        "`m[i]` est la ligne d'indice i, et `m[i][j]` l'élément de cette ligne en colonne j.",
+        "`m[0][2]` : 1re ligne, 3e colonne, soit 3. `m[2][0]` : 3e ligne, 1re colonne, soit 7.",
+        "`m[1]` est toute la 2e ligne : [4, 5, 6]."
+      ],
+      "reponse": "`m[0][2]` vaut 3, `m[2][0]` vaut 7 et `m[1]` vaut [4, 5, 6]."
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "accès dans un dictionnaire",
+      "enonce": "On a `fruit = {\"nom\": \"pomme\", \"prix\": 2, \"bio\": True}`. Combien ce dictionnaire contient-il de clés ? Que renvoie `fruit[\"prix\"]` ?",
+      "corrige": [
+        "Le dictionnaire contient trois couples clé-valeur : les clés sont \"nom\", \"prix\" et \"bio\" ; `len(fruit)` vaut 3.",
+        "`fruit[\"prix\"]` renvoie la valeur associée à la clé \"prix\", soit 2."
+      ],
+      "reponse": "3 clés ; `fruit[\"prix\"]` renvoie 2."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "longueur et tranchage d'une liste",
+      "enonce": "Que valent `len([[1, 2], [3, 4, 5]])`, `len([])` et `len(\"NSI\")` ?",
+      "corrige": [
+        "`len` compte les éléments de premier niveau : la liste contient 2 éléments, qui sont eux-mêmes des listes.",
+        "La liste vide ne contient aucun élément : 0.",
+        "Pour une chaîne, `len` compte les caractères : 3."
+      ],
+      "reponse": "2 ; 0 ; 3."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "indexation d'une liste",
+      "enonce": "Ce programme provoque une erreur. Laquelle, et pourquoi ? Corrige-le pour qu'il affiche le dernier élément.\n\n```python\nnotes = [12, 8, 15]\nprint(notes[len(notes)])\n```",
+      "corrige": [
+        "`len(notes)` vaut 3, mais les indices valides vont de 0 à 2.",
+        "`notes[3]` n'existe pas : Python lève une erreur `IndexError` (indice hors limites).",
+        "Il faut écrire `notes[len(notes) - 1]` ou, plus simplement, `notes[-1]`, qui vaut 15."
+      ],
+      "reponse": "`IndexError` : le dernier indice est `len(notes) - 1` ; on écrit `notes[-1]` (15)."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "longueur et tranchage d'une liste",
+      "enonce": "On a `t = [10, 20, 30, 40, 50, 60]`. Que valent `t[:2]`, `t[3:]` et `t[1:5]` ?",
+      "corrige": [
+        "`t[:2]` prend les éléments d'indices 0 et 1 : [10, 20].",
+        "`t[3:]` prend les éléments à partir de l'indice 3 jusqu'à la fin : [40, 50, 60].",
+        "`t[1:5]` prend les indices 1 à 4 (5 est exclu) : [20, 30, 40, 50]."
+      ],
+      "reponse": "[10, 20] ; [40, 50, 60] ; [20, 30, 40, 50]."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "tuple et non-modifiabilité",
+      "enonce": "On a `point = (3, 5)` et on veut obtenir le point de même ordonnée mais d'abscisse 10. Le tuple ne pouvant pas être modifié, écris une instruction qui crée ce nouveau point à partir de `point`.",
+      "corrige": [
+        "On ne peut pas écrire `point[0] = 10` (TypeError).",
+        "On construit un nouveau tuple en réutilisant l'ordonnée : `nouveau = (10, point[1])`.",
+        "On obtient (10, 5) ; on peut aussi réaffecter la variable : `point = (10, point[1])`."
+      ],
+      "reponse": "`nouveau = (10, point[1])`, qui vaut (10, 5)."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "affectation multiple (déballage)",
+      "enonce": "Qu'affiche ce programme ? Explique la deuxième ligne.\n\n```python\na, b = 3, 8\na, b = b, a\nprint(a, b)\n```",
+      "corrige": [
+        "La première ligne affecte 3 à a et 8 à b.",
+        "Dans `a, b = b, a`, Python évalue d'abord le tuple de droite (8, 3), puis le déballe dans a et b.",
+        "Les deux valeurs sont donc échangées, sans variable intermédiaire."
+      ],
+      "reponse": "`8 3` (les valeurs ont été échangées)."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "parcours de dictionnaire et comptage",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nages = {\"Ana\": 15, \"Bilal\": 17, \"Chloé\": 16}\nfor nom, age in ages.items():\n    if age > 15:\n        print(nom)\n```",
+      "corrige": [
+        "`items()` donne les couples (clé, valeur) : on récupère à chaque tour le nom et l'âge.",
+        "On n'affiche que les noms dont l'âge est strictement supérieur à 15 : Bilal (17) et Chloé (16).",
+        "Les clés sont parcourues dans l'ordre d'insertion."
+      ],
+      "reponse": "`Bilal` puis `Chloé`."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "parcours de dictionnaire et comptage",
+      "enonce": "Complète ce programme qui compte le nombre d'apparitions de chaque lettre d'un mot, puis donne le dictionnaire obtenu pour \"banane\".\n\n```python\ndef compter(mot):\n    occ = {}\n    for c in mot:\n        if c in occ:\n            ...\n        else:\n            occ[c] = 1\n    return occ\n```",
+      "corrige": [
+        "Si la lettre est déjà une clé, on augmente sa valeur de 1 : `occ[c] = occ[c] + 1`.",
+        "Sinon, on crée la clé avec la valeur 1.",
+        "« banane » : b une fois, a deux fois, n deux fois, e une fois."
+      ],
+      "reponse": "`occ[c] = occ[c] + 1` ; résultat : `{'b': 1, 'a': 2, 'n': 2, 'e': 1}`."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "accès dans un dictionnaire",
+      "enonce": "On a `eleve = {\"nom\": \"Diallo\", \"age\": 16}`. Un élève écrit `eleve[0]` pour obtenir le nom. Que se passe-t-il ? Quelle est la bonne écriture ? Comment tester, sans erreur, si la clé \"ville\" existe ?",
+      "corrige": [
+        "Un dictionnaire ne s'indexe pas par position : 0 n'est pas une clé, donc `eleve[0]` lève une erreur `KeyError`.",
+        "On accède au nom par sa clé : `eleve[\"nom\"]`.",
+        "Le test `\"ville\" in eleve` renvoie `True` ou `False` (ici `False`) sans provoquer d'erreur."
+      ],
+      "reponse": "`KeyError` ; il faut écrire `eleve[\"nom\"]` ; le test `\"ville\" in eleve` renvoie `False`."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "construction de liste par compréhension",
+      "enonce": "Réécris ce programme avec une compréhension de liste, puis donne le résultat.\n\n```python\nmots = [\"chat\", \"éléphant\", \"rat\", \"girafe\"]\nlongs = []\nfor m in mots:\n    if len(m) > 4:\n        longs.append(m.upper())\n```",
+      "corrige": [
+        "La compréhension réunit la boucle, la condition et l'expression ajoutée en une seule ligne.",
+        "Réécriture : `longs = [m.upper() for m in mots if len(m) > 4]`.",
+        "Seuls « éléphant » (8 lettres) et « girafe » (6 lettres) ont plus de 4 lettres ; `upper` les met en majuscules."
+      ],
+      "reponse": "`[m.upper() for m in mots if len(m) > 4]` donne ['ÉLÉPHANT', 'GIRAFE']."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "tableaux de tableaux (matrices)",
+      "enonce": "Qu'affiche ce programme, qui parcourt une grille ligne par ligne ?\n\n```python\ngrille = [[2, 0, 1], [5, 3, 0]]\ntotal = 0\nfor ligne in grille:\n    for x in ligne:\n        total = total + x\nprint(total, len(grille), len(grille[0]))\n```",
+      "corrige": [
+        "La première boucle parcourt les lignes, la seconde les éléments de chaque ligne.",
+        "total = 2 + 0 + 1 + 5 + 3 + 0 = 11.",
+        "La grille a 2 lignes (`len(grille)`) et 3 colonnes (`len(grille[0])`)."
+      ],
+      "reponse": "`11 2 3`"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "tableaux de tableaux (matrices)",
+      "enonce": "Écris une compréhension de liste qui construit un tableau de 3 lignes et 4 colonnes rempli de 0. Puis on exécute `t[1][2] = 7` : donne le tableau obtenu.",
+      "corrige": [
+        "Chaque ligne est une liste de 4 zéros : `[0 for j in range(4)]`.",
+        "On répète pour 3 lignes : `t = [[0 for j in range(4)] for i in range(3)]` ; chaque ligne est une liste distincte.",
+        "`t[1][2] = 7` modifie la 2e ligne, 3e colonne seulement."
+      ],
+      "reponse": "`[[0, 0, 0, 0], [0, 0, 7, 0], [0, 0, 0, 0]]`"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "structure imbriquée (liste de dictionnaires)",
+      "enonce": "On a `classe = {\"nom\": \"1G3\", \"eleves\": [\"Ana\", \"Bilal\", \"Chloé\"]}`. Écris les expressions qui donnent : a) le nombre d'élèves ; b) le deuxième élève. Puis l'instruction qui ajoute \"Dara\".",
+      "corrige": [
+        "La valeur associée à la clé \"eleves\" est une liste : `classe[\"eleves\"]`.",
+        "a) `len(classe[\"eleves\"])` vaut 3. b) `classe[\"eleves\"][1]` vaut \"Bilal\".",
+        "On ajoute avec `classe[\"eleves\"].append(\"Dara\")` : la liste, modifiable, est complétée dans le dictionnaire."
+      ],
+      "reponse": "a) `len(classe[\"eleves\"])` (3) ; b) `classe[\"eleves\"][1]` (\"Bilal\") ; `classe[\"eleves\"].append(\"Dara\")`."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "choisir le type adapté",
+      "enonce": "On veut mémoriser le numéro de téléphone de chaque ami pour le retrouver à partir de son prénom. Un élève propose une liste de tuples `[(\"Ana\", \"0601020304\"), (\"Tom\", \"0611223344\")]`. Quel type serait plus adapté ? Écris-le.",
+      "corrige": [
+        "Avec une liste de tuples, il faut parcourir la liste pour retrouver un prénom.",
+        "Un dictionnaire associe directement une valeur (le numéro) à une clé (le prénom).",
+        "`repertoire = {\"Ana\": \"0601020304\", \"Tom\": \"0611223344\"}` ; on obtient le numéro de Tom avec `repertoire[\"Tom\"]`."
+      ],
+      "reponse": "Un dictionnaire : `{\"Ana\": \"0601020304\", \"Tom\": \"0611223344\"}`."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "parcours d'une liste",
+      "enonce": "Qu'affiche ce programme ? Que calcule-t-il ?\n\n```python\nt = [14, 9, 17, 11]\ni_max = 0\nfor i in range(1, len(t)):\n    if t[i] > t[i_max]:\n        i_max = i\nprint(i_max, t[i_max])\n```",
+      "corrige": [
+        "On parcourt les indices de 1 à 3 en gardant dans i_max l'indice de la plus grande valeur vue jusqu'ici.",
+        "i = 1 : 9 < 14 ; i = 2 : 17 > 14, donc i_max = 2 ; i = 3 : 11 < 17.",
+        "Le programme calcule la position et la valeur du maximum."
+      ],
+      "reponse": "`2 17` : l'indice et la valeur du maximum."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "construction de liste par compréhension",
+      "enonce": "Que vaut `[(x, y) for x in range(1, 3) for y in range(1, 4) if x != y]` ? Combien d'éléments contient-elle ?",
+      "corrige": [
+        "La compréhension a deux boucles : pour chaque x (1 puis 2), y prend les valeurs 1, 2, 3.",
+        "On garde le couple (x, y) seulement si x ≠ y.",
+        "x = 1 : (1, 2), (1, 3) ; x = 2 : (2, 1), (2, 3)."
+      ],
+      "reponse": "[(1, 2), (1, 3), (2, 1), (2, 3)] : 4 éléments."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "compréhension construisant un dictionnaire",
+      "enonce": "On a `notes = {\"Ana\": 14, \"Bilal\": 8, \"Chloé\": 11}`. Écris une compréhension de dictionnaire qui associe à chaque élève \"admis\" si sa note est au moins 10, \"refusé\" sinon. Donne le résultat.",
+      "corrige": [
+        "On parcourt les couples avec `notes.items()`.",
+        "La valeur se choisit avec une expression conditionnelle : `\"admis\" if n >= 10 else \"refusé\"`.",
+        "Exemple de réponse : `{nom: (\"admis\" if n >= 10 else \"refusé\") for nom, n in notes.items()}`."
+      ],
+      "reponse": "`{'Ana': 'admis', 'Bilal': 'refusé', 'Chloé': 'admis'}`"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "tableaux de tableaux (matrices)",
+      "enonce": "Écris une fonction `colonne(m, j)` qui renvoie la liste des éléments de la colonne j d'un tableau à deux dimensions. Que renvoie `colonne([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1)` ?",
+      "corrige": [
+        "La colonne j contient l'élément d'indice j de chaque ligne.",
+        "Exemple de réponse : `def colonne(m, j): return [ligne[j] for ligne in m]`.",
+        "Pour j = 1 : 2, 5 et 8."
+      ],
+      "reponse": "[2, 5, 8]"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "tableaux de tableaux (matrices)",
+      "enonce": "Écris un programme qui calcule la somme des éléments de la diagonale (m[0][0], m[1][1], …) d'un tableau carré. Que donne-t-il pour `m = [[2, 7, 1], [0, 5, 3], [4, 6, 9]]` ?",
+      "corrige": [
+        "Les éléments de la diagonale ont le même indice de ligne et de colonne : m[i][i].",
+        "Exemple de réponse : `s = 0`, puis `for i in range(len(m)): s = s + m[i][i]`.",
+        "2 + 5 + 9 = 16."
+      ],
+      "reponse": "16"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "structure imbriquée (liste de dictionnaires)",
+      "enonce": "On a la liste de dictionnaires suivante :\n\n```python\nfilms = [\n    {\"titre\": \"Film A\", \"notes\": [4, 5, 3]},\n    {\"titre\": \"Film B\", \"notes\": [2, 3]},\n]\n```\n\nÉcris le code qui affiche, pour chaque film, son titre et la moyenne de ses notes. Qu'obtient-on ?",
+      "corrige": [
+        "Pour chaque dictionnaire f, `f[\"notes\"]` est une liste : on calcule `sum(f[\"notes\"]) / len(f[\"notes\"])`.",
+        "Exemple de réponse : `for f in films: print(f[\"titre\"], sum(f[\"notes\"]) / len(f[\"notes\"]))`.",
+        "Film A : 12 / 3 = 4.0 ; Film B : 5 / 2 = 2.5."
+      ],
+      "reponse": "`Film A 4.0` puis `Film B 2.5`."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "tuple et non-modifiabilité",
+      "enonce": "Une fonction peut renvoyer plusieurs valeurs sous forme de tuple. Qu'affiche ce programme ?\n\n```python\ndef min_max(t):\n    return (min(t), max(t))\n\nbas, haut = min_max([7, 2, 9, 4])\nprint(haut - bas)\n```",
+      "corrige": [
+        "`min_max` renvoie le tuple (2, 9).",
+        "L'affectation multiple range 2 dans bas et 9 dans haut.",
+        "On affiche 9 − 2 = 7."
+      ],
+      "reponse": "`7`"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "accès dans un dictionnaire",
+      "enonce": "On a `d = {(0, 0): \"départ\", (2, 3): \"trésor\"}`. Pourquoi peut-on utiliser des tuples comme clés, mais pas des listes ? Que vaut `d[(2, 3)]` ?",
+      "corrige": [
+        "Les clés d'un dictionnaire doivent être immuables (non modifiables).",
+        "Un tuple est immuable : il peut servir de clé. Une liste est modifiable : Python refuse de l'utiliser comme clé (TypeError).",
+        "`d[(2, 3)]` vaut \"trésor\"."
+      ],
+      "reponse": "Les clés doivent être immuables (tuple oui, liste non) ; `d[(2, 3)]` vaut \"trésor\"."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "longueur et tranchage d'une liste",
+      "enonce": "Que valent `t[::-1]` et `t[::2]` pour `t = [1, 2, 3, 4, 5]` ? Le tranchage modifie-t-il t ?",
+      "corrige": [
+        "Un tranchage peut avoir un pas : `t[début:fin:pas]`.",
+        "Avec un pas de −1, on parcourt la liste à l'envers : [5, 4, 3, 2, 1].",
+        "Avec un pas de 2, on prend un élément sur deux à partir de l'indice 0 : [1, 3, 5]. Le tranchage crée une nouvelle liste : t n'est pas modifiée."
+      ],
+      "reponse": "[5, 4, 3, 2, 1] et [1, 3, 5] ; t reste inchangée."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "parcours de dictionnaire et comptage",
+      "enonce": "Écris une fonction `inverser(d)` qui échange clés et valeurs d'un dictionnaire (on suppose les valeurs toutes différentes). Que renvoie `inverser({\"un\": 1, \"deux\": 2, \"trois\": 3})` ?",
+      "corrige": [
+        "On parcourt les couples (clé, valeur) et on crée une entrée valeur → clé.",
+        "Exemple de réponse : `def inverser(d): return {v: k for k, v in d.items()}`.",
+        "Si deux clés avaient la même valeur, l'une écraserait l'autre, puisque les clés sont uniques."
+      ],
+      "reponse": "`{1: 'un', 2: 'deux', 3: 'trois'}`"
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "parcours d'une liste",
+      "enonce": "Écris une fonction `positions(t, x)` qui renvoie la liste des indices où la valeur x apparaît dans la liste t. Que renvoie `positions([3, 1, 3, 3, 2], 3)` ?",
+      "corrige": [
+        "Il faut parcourir les indices, pas seulement les valeurs : `for i in range(len(t))`.",
+        "Exemple de réponse : `return [i for i in range(len(t)) if t[i] == x]`.",
+        "3 se trouve aux indices 0, 2 et 3."
+      ],
+      "reponse": "[0, 2, 3]"
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "tableaux de tableaux (matrices)",
+      "enonce": "On représente un plateau de morpion par une liste de 3 listes contenant \"X\", \"O\" ou \" \" (case vide). Écris une fonction `ligne_gagnante(p, joueur)` qui renvoie `True` si une ligne (horizontale) est entièrement remplie par le joueur. Que renvoie-t-elle pour le plateau `[[\"O\", \" \", \"X\"], [\"X\", \"X\", \"X\"], [\"O\", \"O\", \" \"]]` et le joueur \"X\" ?",
+      "corrige": [
+        "On parcourt les lignes du plateau ; une ligne est gagnante si elle est égale à [joueur, joueur, joueur].",
+        "Exemple de réponse : `for ligne in p: if ligne == [joueur] * 3: return True`, puis `return False` après la boucle.",
+        "La 2e ligne vaut [\"X\", \"X\", \"X\"] : la fonction renvoie `True`."
+      ],
+      "reponse": "`True` (la 2e ligne est remplie de \"X\")."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "structure imbriquée (liste de dictionnaires)",
+      "enonce": "Un carnet de notes est un dictionnaire dont les valeurs sont des listes : `carnet = {\"Ana\": [12, 15], \"Bilal\": [9, 11, 10], \"Chloé\": [17]}`. Écris un programme qui affiche le nom de l'élève qui a la meilleure moyenne, et cette moyenne.",
+      "corrige": [
+        "Pour chaque élève, la moyenne est `sum(notes) / len(notes)` : Ana 13.5, Bilal 10.0, Chloé 17.0.",
+        "On garde la meilleure dans deux variables `meilleur` et `m_max`, mises à jour pendant le parcours de `carnet.items()`.",
+        "Exemple de réponse : `meilleur, m_max = None, -1`, puis `for nom, notes in carnet.items():` calculer m et, si `m > m_max`, mettre à jour."
+      ],
+      "reponse": "Chloé, avec 17.0."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "modifier une liste",
+      "enonce": "Écris une fonction `doubler(t)` qui multiplie par 2 chaque élément d'une liste, en modifiant la liste elle-même (sans en créer une nouvelle). Pourquoi la boucle `for x in t: x = 2 * x` ne convient-elle pas ? Que devient `[3, 0, 5]` ?",
+      "corrige": [
+        "Dans `for x in t`, x reçoit une copie de la valeur de chaque élément : changer x ne change pas la case de la liste.",
+        "Il faut passer par les indices pour modifier les cases : `for i in range(len(t)): t[i] = 2 * t[i]`.",
+        "La liste [3, 0, 5] devient [6, 0, 10]."
+      ],
+      "reponse": "Boucle sur les indices avec `t[i] = 2 * t[i]` ; [3, 0, 5] devient [6, 0, 10]."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "compréhension construisant un dictionnaire",
+      "enonce": "On a deux listes de même longueur : `pays = [\"France\", \"Japon\", \"Brésil\"]` et `capitales = [\"Paris\", \"Tokyo\", \"Brasília\"]`. Construis, avec une compréhension, le dictionnaire qui associe chaque pays à sa capitale.",
+      "corrige": [
+        "Les éléments qui se correspondent ont le même indice.",
+        "On parcourt les indices : `{pays[i]: capitales[i] for i in range(len(pays))}`.",
+        "On obtient un dictionnaire de 3 entrées."
+      ],
+      "reponse": "`{'France': 'Paris', 'Japon': 'Tokyo', 'Brésil': 'Brasília'}`"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "choisir le type adapté",
+      "enonce": "On veut programmer un petit jeu : on mémorise la position du joueur sur une grille (ligne, colonne), la liste des objets qu'il a ramassés (elle s'allonge pendant la partie) et sa fiche (pseudo, points de vie, niveau). Propose un type Python pour chacune de ces trois données et écris un exemple pour chacune.",
+      "corrige": [
+        "La position est un couple fixe de deux nombres : un tuple, par exemple `position = (2, 5)` (on en crée un nouveau à chaque déplacement).",
+        "Les objets ramassés forment une suite qui s'allonge : une liste, par exemple `sac = [\"clé\", \"torche\"]`, complétée avec `append`.",
+        "La fiche associe des valeurs à des noms : un dictionnaire, par exemple `fiche = {\"pseudo\": \"Zed\", \"vie\": 10, \"niveau\": 1}`."
+      ],
+      "reponse": "Position : tuple ; objets : liste ; fiche : dictionnaire (exemples dans le corrigé)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "parcours d'une liste",
+      "enonce": "Écris une fonction `sans_doublons(t)` qui renvoie une nouvelle liste contenant les éléments de t sans répétition, dans l'ordre de leur première apparition. Que renvoie `sans_doublons([4, 2, 4, 1, 2, 4])` ?",
+      "corrige": [
+        "On parcourt t et on ajoute un élément au résultat seulement s'il n'y est pas déjà.",
+        "Exemple de réponse : `res = []`, puis `for x in t: if x not in res: res.append(x)`, puis `return res`.",
+        "4, puis 2, puis 1 apparaissent pour la première fois ; les autres sont des répétitions."
+      ],
+      "reponse": "[4, 2, 1]"
     }
   ]
 }

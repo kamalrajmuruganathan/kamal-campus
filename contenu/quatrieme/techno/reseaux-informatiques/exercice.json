@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "LAN et WAN",
       "enonce": "Donne la signification simple d'un réseau local (LAN) et d'un réseau étendu (WAN). Pour chacun, donne un exemple. À quel type appartient Internet ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Supports de transmission",
       "enonce": "Classe ces supports en filaire ou sans fil : a) câble Ethernet (RJ45), b) Wi-Fi, c) fibre optique, d) Bluetooth.",
       "corrige": [
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Adresse IP",
       "enonce": "À quoi sert une adresse IP ? Parmi ces écritures, laquelle ressemble à une adresse IP : « 192.168.1.15 » ou « MotDePasse2024 » ? Justifie.",
       "corrige": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Switch ou routeur",
       "enonce": "Explique la différence entre un switch (commutateur) et un routeur. Dans une maison, lequel relie ta box à Internet en choisissant le chemin des données, et lequel relie plusieurs ordinateurs du même réseau local ?",
       "corrige": [
@@ -64,7 +64,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Client / serveur et paquets",
       "enonce": "Tu ouvres une page web dans ton navigateur. Explique le modèle client / serveur dans cette situation, puis explique pourquoi on dit que les données ne voyagent pas d'un seul bloc. Que contient un paquet ?",
       "corrige": [
@@ -78,7 +78,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Internet, Web et sécurité",
       "enonce": "Un camarade affirme : « Le Web, c'est Internet, et le Wi-Fi, c'est aussi Internet. » Corrige ces deux affirmations en expliquant précisément chaque terme. Enfin, explique à quoi sert le HTTPS et pourquoi il rassure quand on saisit un mot de passe.",
       "corrige": [
@@ -93,7 +93,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "équipements d'interconnexion",
       "enonce": "Associe chaque équipement à son rôle : (a) le switch ; (b) le routeur ; (c) le serveur.",
       "corrige": [
@@ -106,7 +106,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "les protocoles",
       "enonce": "Qu'est-ce qu'un protocole de communication ? Donne deux exemples de protocoles et dis pourquoi deux machines ne pourraient pas dialoguer sans protocole commun.",
       "corrige": [
@@ -118,7 +118,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "filaire ou sans fil",
       "enonce": "Classe ces liaisons en filaire ou sans fil et donne un avantage de chaque type : la fibre optique, le Wi-Fi, le câble Ethernet, la 4G/5G.",
       "corrige": [
@@ -131,7 +131,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "trajet d'une page web entre deux machines",
       "enonce": "Tu demandes une page web. (a) Comment le message est-il découpé pour voyager ? (b) Qu'est-ce qui permet à chaque morceau d'arriver au bon endroit ? (c) Quel équipement choisit le chemin entre les réseaux ? (d) Qui « demande » et qui « répond » ?",
       "corrige": [
@@ -141,6 +141,440 @@
         "(d) Le client (ton navigateur) demande la page ; le serveur répond en l'envoyant."
       ],
       "reponse": "(a) en paquets réassemblés à l'arrivée ; (b) l'adresse IP de départ et d'arrivée sur chaque paquet ; (c) le routeur ; (d) le client demande, le serveur répond."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "définition d'un réseau",
+      "enonce": "Qu'est-ce qu'un réseau informatique ? Cite deux ressources que l'on peut partager grâce à lui.",
+      "corrige": [
+        "Un réseau relie des appareils pour échanger des données et partager des ressources.",
+        "Exemples de ressources : des fichiers, une imprimante, la connexion Internet."
+      ],
+      "reponse": "Un ensemble d'appareils reliés pour échanger des données ; exemples de ressources partagées : une imprimante et la connexion Internet."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "définition d'un réseau",
+      "enonce": "Complète : « Internet est un réseau de … reliés à l'échelle … »",
+      "corrige": [
+        "Internet relie entre eux une multitude de réseaux."
+      ],
+      "reponse": "Un réseau de réseaux reliés à l'échelle mondiale."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "LAN et WAN",
+      "enonce": "Le réseau de la salle informatique du collège est-il un LAN ou un WAN ? Justifie.",
+      "corrige": [
+        "Un LAN couvre un seul lieu ; un WAN couvre une région, un pays ou le monde.",
+        "La salle informatique est un seul lieu."
+      ],
+      "reponse": "Un LAN (réseau local), car il couvre un seul lieu."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "Supports de transmission",
+      "enonce": "Quel support filaire transporte les données sous forme de lumière dans un fil de verre ?",
+      "corrige": [
+        "Le cours présente deux supports filaires : le câble Ethernet et un câble très rapide qui utilise la lumière."
+      ],
+      "reponse": "La fibre optique."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "Supports de transmission",
+      "enonce": "Quel moyen sans fil est le plus adapté pour relier un casque audio à un téléphone, à courte distance ?",
+      "corrige": [
+        "Le cours distingue Wi-Fi (dans un bâtiment), Bluetooth (courte distance) et 4G/5G (à l'extérieur)."
+      ],
+      "reponse": "Le Bluetooth."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "Adresse IP",
+      "enonce": "Complète la comparaison du cours : « L'adresse IP joue le même rôle qu'une … : sans elle, le facteur ne saurait pas à qui livrer le courrier. »",
+      "corrige": [
+        "L'adresse IP permet de livrer les données au bon appareil."
+      ],
+      "reponse": "Une adresse postale."
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "Internet et Web",
+      "enonce": "Vrai ou faux : « Le Web et Internet, c'est la même chose. » Justifie.",
+      "corrige": [
+        "Internet est le réseau physique mondial.",
+        "Le Web est un service (les pages reliées par des liens) qui circule sur Internet."
+      ],
+      "reponse": "Faux : Internet est le réseau ; le Web n'est qu'un des services qui l'utilisent."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "équipements d'interconnexion",
+      "enonce": "Quel équipement faut-il pour relier entre eux les 15 ordinateurs d'une même salle de classe ?",
+      "corrige": [
+        "Les ordinateurs appartiennent au même réseau local.",
+        "C'est le switch (commutateur) qui relie plusieurs appareils d'un même réseau local."
+      ],
+      "reponse": "Un switch (commutateur)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "équipements d'interconnexion",
+      "enonce": "À la maison, quel équipement donne accès à Internet et diffuse le Wi-Fi ?",
+      "corrige": [
+        "Cet équipement relie le réseau de la maison au réseau de l'opérateur et diffuse le Wi-Fi."
+      ],
+      "reponse": "La box (point d'accès Wi-Fi)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "équipements d'interconnexion",
+      "enonce": "Où est stockée la vidéo que tu regardes sur une plateforme en ligne ? Quel nom porte cette machine ?",
+      "corrige": [
+        "La vidéo est fournie par une machine puissante qui rend ce service à de nombreux clients."
+      ],
+      "reponse": "Sur un serveur."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "Supports de transmission",
+      "enonce": "Pour chaque situation, choisis le support adapté : (a) consulter ses messages dans le bus ; (b) relier un ordinateur fixe à la box par un câble ; (c) relier la tablette au réseau de la maison sans câble.",
+      "corrige": [
+        "(a) À l'extérieur, en déplacement : réseau mobile 4G/5G.",
+        "(b) Câble entre ordinateur et box : câble Ethernet (RJ45).",
+        "(c) Dans un bâtiment, sans fil : Wi-Fi."
+      ],
+      "reponse": "(a) 4G/5G ; (b) câble Ethernet (RJ45) ; (c) Wi-Fi."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Dans chaque situation, qui est le client et qui est le serveur ? (a) tu ouvres une page d'un site d'actualités ; (b) ton application de messagerie récupère tes nouveaux messages.",
+      "corrige": [
+        "Le client demande une ressource ; le serveur répond en l'envoyant.",
+        "(a) le navigateur demande la page au serveur du site. (b) l'application demande les messages au serveur de messagerie."
+      ],
+      "reponse": "(a) client : ton navigateur ; serveur : le serveur du site. (b) client : l'application ; serveur : le serveur de messagerie."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Cite les trois informations que contient chaque paquet de données.",
+      "corrige": [
+        "Un paquet doit savoir d'où il vient, où il va, et transporter une partie du message."
+      ],
+      "reponse": "L'adresse de départ, l'adresse d'arrivée et un morceau du message."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "les protocoles",
+      "enonce": "Associe chaque protocole à son rôle : HTTP/HTTPS et IP — (1) l'adressage des machines ; (2) l'échange des pages web.",
+      "corrige": [
+        "HTTP/HTTPS sert aux pages web ; IP sert à l'adressage."
+      ],
+      "reponse": "HTTP/HTTPS → (2) les pages web ; IP → (1) l'adressage."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "sécurité et bon usage",
+      "enonce": "Que signifie le petit cadenas affiché devant l'adresse d'un site qui commence par « https » ?",
+      "corrige": [
+        "HTTPS est la version sécurisée de HTTP.",
+        "Il chiffre les données échangées pour qu'un tiers ne puisse pas les lire."
+      ],
+      "reponse": "Que la connexion est en HTTPS : les données échangées sont chiffrées."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "Adresse IP",
+      "enonce": "Un élève dit : « Mon adresse IP, c'est le code secret pour entrer sur le Wi-Fi. » Corrige.",
+      "corrige": [
+        "L'adresse IP identifie la machine sur le réseau.",
+        "Le code pour se connecter au Wi-Fi est un mot de passe, qui protège l'accès."
+      ],
+      "reponse": "Faux : l'adresse IP identifie l'appareil ; le code du Wi-Fi est un mot de passe."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "Adresse IP",
+      "enonce": "Deux ordinateurs d'un même réseau local ont reçu la même adresse IP, 192.168.1.20. Quel problème cela pose-t-il ?",
+      "corrige": [
+        "Chaque appareil doit avoir une adresse unique sur le réseau.",
+        "Avec la même adresse, le réseau ne sait pas à quel ordinateur livrer les données."
+      ],
+      "reponse": "Les données ne peuvent pas être livrées correctement : chaque appareil doit avoir une adresse IP unique."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Un message de 6 000 octets est découpé en paquets de 1 500 octets de données chacun. Combien de paquets faut-il ?",
+      "corrige": [
+        "Nombre de paquets = taille du message ÷ taille d'un paquet.",
+        "6 000 ÷ 1 500 = 4."
+      ],
+      "reponse": "4 paquets."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Les paquets d'un message arrivent dans l'ordre 3, 1, 4, 2. Le message est-il perdu ? Explique.",
+      "corrige": [
+        "Les paquets peuvent prendre des chemins différents et arriver dans le désordre.",
+        "À l'arrivée, ils sont réassemblés dans le bon ordre (1, 2, 3, 4)."
+      ],
+      "reponse": "Non : les paquets sont réassemblés dans l'ordre à l'arrivée."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Pourquoi découpe-t-on les données en paquets plutôt que d'envoyer un seul gros bloc ?",
+      "corrige": [
+        "De petits paquets peuvent emprunter des chemins différents et partager le réseau avec d'autres échanges.",
+        "Si un paquet se perd, il suffit de le renvoyer lui seul, pas tout le message."
+      ],
+      "reponse": "Les paquets peuvent prendre différents chemins et, si l'un se perd, on ne renvoie que lui."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "Switch ou routeur",
+      "enonce": "Dans un collège, on relie le réseau de la salle informatique au réseau du CDI et à Internet. Quel équipement relie ces réseaux différents ? Lequel relie les postes à l'intérieur de chaque salle ?",
+      "corrige": [
+        "Relier des réseaux différents et choisir le chemin : c'est le rôle du routeur.",
+        "Relier les appareils d'un même réseau local : c'est le rôle du switch."
+      ],
+      "reponse": "Le routeur relie les réseaux entre eux ; un switch relie les postes dans chaque salle."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "Switch ou routeur",
+      "enonce": "Trouve l'erreur : « Pour connecter le réseau de la maison à Internet, il suffit d'un switch. »",
+      "corrige": [
+        "Le switch relie seulement des appareils d'un même réseau local.",
+        "Pour relier le réseau de la maison à un autre réseau (Internet), il faut un routeur (intégré dans la box)."
+      ],
+      "reponse": "Faux : il faut un routeur (dans la box) ; le switch ne relie que les appareils du réseau local."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "Internet et Web",
+      "enonce": "Classe ces usages en « Web » ou « autre service d'Internet » : consulter une encyclopédie en ligne dans un navigateur, jouer à un jeu en ligne sur console, lire un article sur un site, passer un appel vidéo avec une application.",
+      "corrige": [
+        "Le Web, ce sont les pages reliées par des liens et consultées avec un navigateur.",
+        "Les jeux en ligne et les appels vidéo par application utilisent Internet sans être des pages web."
+      ],
+      "reponse": "Web : l'encyclopédie en ligne, l'article sur un site. Autres services : le jeu en ligne, l'appel vidéo."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "Internet et Web",
+      "enonce": "La connexion Internet d'une box est coupée, mais son Wi-Fi fonctionne encore entre la tablette et l'imprimante. Peut-on imprimer ? Peut-on aller sur Internet ?",
+      "corrige": [
+        "Le Wi-Fi relie les appareils du réseau local : l'impression reste possible.",
+        "Sans liaison de la box vers Internet, il n'y a pas d'accès à Internet : le Wi-Fi n'est pas Internet."
+      ],
+      "reponse": "On peut imprimer (réseau local), mais pas aller sur Internet."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "sécurité et bon usage",
+      "enonce": "Cite trois moyens de protéger un réseau ou ses échanges, d'après le cours.",
+      "corrige": [
+        "Le cours cite le mot de passe du Wi-Fi, les comptes utilisateurs et le HTTPS."
+      ],
+      "reponse": "Un mot de passe pour le Wi-Fi, des comptes utilisateurs, et le HTTPS qui chiffre les données."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "filaire ou sans fil",
+      "enonce": "Un joueur en ligne hésite entre le Wi-Fi et un câble Ethernet relié à la box. Lequel lui conseiller pour une liaison stable ? Cite un inconvénient de ce choix.",
+      "corrige": [
+        "Le câble offre une liaison plus stable et généralement plus rapide.",
+        "Inconvénient : il faut tirer un câble, on ne peut pas se déplacer librement."
+      ],
+      "reponse": "Le câble Ethernet (plus stable) ; inconvénient : on est attaché au câble."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "filaire ou sans fil",
+      "enonce": "Une connexion par fibre optique permet de télécharger environ 100 Mo par seconde ; une connexion plus lente, environ 5 Mo par seconde. Combien de temps faut-il pour télécharger un fichier de 500 Mo avec chacune ?",
+      "corrige": [
+        "Durée = taille du fichier ÷ débit.",
+        "Fibre : 500 ÷ 100 = 5 s.",
+        "Connexion lente : 500 ÷ 5 = 100 s (1 min 40 s)."
+      ],
+      "reponse": "5 s avec la fibre ; 100 s (1 min 40 s) avec la connexion lente."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "trajet d'une page web",
+      "enonce": "Remets dans l'ordre les étapes de l'affichage d'une page web : (a) les paquets sont réassemblés ; (b) le navigateur envoie une demande au serveur ; (c) le serveur découpe la page en paquets et les envoie ; (d) la page s'affiche ; (e) les routeurs choisissent le chemin des paquets.",
+      "corrige": [
+        "Le client demande d'abord ; le serveur répond en paquets.",
+        "Les paquets circulent via les routeurs, sont réassemblés, puis la page s'affiche."
+      ],
+      "reponse": "(b) → (c) → (e) → (a) → (d)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "trajet d'une page web",
+      "enonce": "Ton ordinateur a l'adresse A, le serveur d'un site a l'adresse B. Dans le paquet de ta demande, quelles sont l'adresse de départ et l'adresse d'arrivée ? Et dans le paquet de la réponse du serveur ?",
+      "corrige": [
+        "La demande part de ton ordinateur vers le serveur : départ A, arrivée B.",
+        "La réponse fait le chemin inverse : départ B, arrivée A."
+      ],
+      "reponse": "Demande : départ A, arrivée B. Réponse : départ B, arrivée A."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "les protocoles",
+      "enonce": "Un site s'ouvre en « http » sans cadenas. Pourquoi est-il déconseillé d'y saisir un mot de passe ?",
+      "corrige": [
+        "Avec HTTP, les données circulent sans être chiffrées.",
+        "Un tiers qui intercepte les paquets pourrait lire le mot de passe ; HTTPS chiffre les données et empêche cela."
+      ],
+      "reponse": "Sans HTTPS, les données ne sont pas chiffrées : un tiers pourrait lire le mot de passe."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "sécurité et bon usage",
+      "enonce": "Pourquoi faut-il réfléchir avant de publier une photo sur un réseau social, d'après le cours ?",
+      "corrige": [
+        "Chaque échange laisse des traces : les données personnelles sont stockées sur des serveurs.",
+        "Une fois partagée, la photo peut être copiée et diffusée ; on ne la contrôle plus."
+      ],
+      "reponse": "Parce que chaque échange laisse des traces (données personnelles) que l'on ne maîtrise plus une fois partagées."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "LAN et WAN",
+      "enonce": "Classe ces réseaux en LAN ou WAN : (a) le réseau d'une maison avec sa box ; (b) le réseau qui relie toutes les agences d'une banque dans le pays ; (c) le réseau d'une entreprise dans un seul bâtiment ; (d) Internet.",
+      "corrige": [
+        "LAN : un seul lieu. WAN : une région, un pays ou le monde."
+      ],
+      "reponse": "(a) LAN ; (b) WAN ; (c) LAN ; (d) WAN."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "définition d'un réseau",
+      "enonce": "Dans une classe, 25 élèves impriment sur une seule imprimante grâce au réseau. Quel avantage du réseau est illustré ici ?",
+      "corrige": [
+        "Le réseau permet de partager des ressources entre plusieurs appareils.",
+        "Une seule imprimante suffit pour toute la classe."
+      ],
+      "reponse": "Le partage d'une ressource (l'imprimante) entre tous les postes."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "équipements d'interconnexion",
+      "enonce": "Propose le schéma du réseau d'une petite salle informatique : 12 ordinateurs, une imprimante réseau, un serveur de fichiers et un accès à Internet. Indique les équipements et les liaisons.",
+      "corrige": [
+        "Les 12 ordinateurs, l'imprimante et le serveur sont reliés par câbles Ethernet à un switch (réseau local).",
+        "Le switch est relié au routeur, qui relie le réseau local à Internet et choisit le chemin des données."
+      ],
+      "reponse": "Ordinateurs, imprimante et serveur → câbles Ethernet → switch → routeur → Internet."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Une photo de 3 000 000 octets est envoyée en paquets de 1 500 octets de données. Combien de paquets faut-il ? Si 2 paquets se perdent, faut-il renvoyer toute la photo ?",
+      "corrige": [
+        "3 000 000 ÷ 1 500 = 2 000 paquets.",
+        "Chaque paquet est identifié : seuls les paquets perdus sont renvoyés, pas toute la photo."
+      ],
+      "reponse": "2 000 paquets ; non, on renvoie seulement les 2 paquets perdus."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "trajet d'une page web",
+      "enonce": "Tu tapes l'adresse d'un site sur ta tablette, connectée en Wi-Fi à ta box. Décris le trajet de ta demande jusqu'au serveur, en citant le support et les équipements.",
+      "corrige": [
+        "La tablette (client) envoie la demande en Wi-Fi (ondes radio) à la box.",
+        "Le routeur de la box l'envoie vers Internet (souvent par fibre optique) ; d'autres routeurs choisissent le chemin.",
+        "La demande arrive au serveur, grâce à son adresse IP, et le serveur répond."
+      ],
+      "reponse": "Tablette → Wi-Fi → box (routeur) → fibre ou câble → routeurs d'Internet → serveur du site (repéré par son adresse IP)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "Internet et Web",
+      "enonce": "Un camarade dit : « Sans le Web, plus personne ne pourrait envoyer un courriel. » Analyse cette phrase avec le vocabulaire du cours.",
+      "corrige": [
+        "La messagerie est un service d'Internet distinct du Web.",
+        "Même si le Web ne fonctionnait plus, Internet pourrait toujours transporter les courriels par une application de messagerie."
+      ],
+      "reponse": "Faux : la messagerie est un autre service d'Internet ; elle ne dépend pas du Web."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "sécurité et bon usage",
+      "enonce": "Une famille laisse son Wi-Fi sans mot de passe. Explique deux risques et propose une solution.",
+      "corrige": [
+        "N'importe qui à proximité peut se connecter au réseau local et utiliser la connexion.",
+        "Une personne connectée pourrait tenter d'accéder aux appareils partagés de la maison.",
+        "Solution : activer un mot de passe Wi-Fi long et difficile à deviner."
+      ],
+      "reponse": "Risques : utilisation de la connexion par des inconnus, accès aux appareils partagés. Solution : un mot de passe Wi-Fi solide."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "Switch ou routeur",
+      "enonce": "Un élève compare le switch à un « carrefour de quartier » et le routeur à un « échangeur d'autoroute entre villes ». Cette comparaison est-elle juste ? Explique.",
+      "corrige": [
+        "Le switch relie des appareils dans un même réseau local, comme un carrefour relie des rues d'un même quartier.",
+        "Le routeur relie des réseaux différents et choisit le chemin, comme un échangeur oriente les voitures entre les villes."
+      ],
+      "reponse": "Oui : le switch relie les machines d'un même réseau local ; le routeur relie des réseaux différents et choisit la route."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "les protocoles",
+      "enonce": "Deux appareils sont reliés par un câble, mais n'utilisent pas le même protocole. Peuvent-ils échanger des données ? Compare avec une situation humaine.",
+      "corrige": [
+        "Un protocole est un ensemble de règles communes pour se comprendre.",
+        "Sans protocole commun, ils reçoivent des signaux mais ne savent pas les interpréter, comme deux personnes qui ne parlent pas la même langue au téléphone."
+      ],
+      "reponse": "Non : le câble transporte les signaux, mais sans règles communes ils ne se comprennent pas (comme deux personnes sans langue commune)."
     }
   ]
 }

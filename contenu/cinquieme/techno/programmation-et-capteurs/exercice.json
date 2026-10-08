@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "capteur ou actionneur",
       "enonce": "Classe ces composants en « capteur » (entrée) ou « actionneur » (sortie) : un moteur, une photorésistance, un buzzer, un bouton-poussoir.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "logique ou analogique",
       "enonce": "Dis si l'information est logique (tout ou rien) ou analogique (valeur continue) : (a) un bouton appuyé/relâché ; (b) une température de 19,3 °C ; (c) une luminosité plus ou moins forte.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "chaîne d'information",
       "enonce": "Nomme les trois fonctions de la chaîne d'information et donne, pour chacune, un exemple d'élément qui la réalise.",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "structure de test",
       "enonce": "Écris, avec « SI… ALORS… SINON… », le traitement d'un lampadaire automatique : la lampe doit s'allumer quand la luminosité est faible, et s'éteindre sinon.",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "boucle et condition",
       "enonce": "Un portail automatique doit avancer « tant que » le portail n'est pas complètement ouvert. (a) Quelle structure de programmation utilise-t-on ? (b) Écris l'instruction. (c) Le capteur de fin de course est-il une entrée ou une sortie ?",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "algorithme d'arrosage automatique",
       "enonce": "Écris l'algorithme d'un système d'arrosage qui, en boucle permanente, lit un capteur d'humidité du sol et arrose seulement si le sol est trop sec. Identifie le capteur (entrée), l'actionneur (sortie), le test et la boucle.",
       "corrige": [
@@ -86,7 +86,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "associer capteur et grandeur",
       "enonce": "Associe chaque capteur à la grandeur qu'il mesure ou détecte : (a) photorésistance ; (b) capteur ultrason ; (c) capteur de température ; (d) bouton-poussoir.",
       "corrige": [
@@ -99,7 +99,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "séquence d'un programme",
       "enonce": "Un lutin doit dire « bonjour », attendre 2 secondes, puis avancer de 100 pas. Ces instructions forment une séquence. Écris-les dans l'ordre et explique ce qu'est une séquence.",
       "corrige": [
@@ -111,7 +111,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "répéter n fois ou tant que",
       "enonce": "Distingue les deux types de boucles : (a) « répéter 4 fois » ; (b) « répéter tant que le bouton n'est pas appuyé ». Explique quand chaque boucle s'arrête.",
       "corrige": [
@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "algorithme d'une porte automatique",
       "enonce": "Écris l'algorithme d'une porte automatique de magasin qui, en boucle permanente, ouvre la porte quand un capteur de présence détecte quelqu'un, puis la referme sinon. Identifie le capteur (entrée) et l'actionneur (sortie).",
       "corrige": [
@@ -133,6 +133,443 @@
         "Le capteur de présence est l'entrée ; le moteur de la porte est l'actionneur (sortie)."
       ],
       "reponse": "Répéter indéfiniment : [ lire le capteur de présence ; SI présence ALORS ouvrir la porte SINON fermer la porte ]. Capteur = détecteur de présence (entrée) ; actionneur = moteur de la porte (sortie)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "capteur ou actionneur",
+      "enonce": "Complète : « Un capteur … une information (c'est une entrée) ; un actionneur … une action (c'est une sortie). »",
+      "corrige": [
+        "Le capteur recueille une information sur l'environnement ; l'actionneur agit."
+      ],
+      "reponse": "Un capteur détecte une information ; un actionneur produit une action."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "capteur ou actionneur",
+      "enonce": "Une LED, un buzzer et un moteur sont-ils des capteurs ou des actionneurs ?",
+      "corrige": [
+        "Ces trois composants produisent une action (lumière, son, mouvement) : ce sont des sorties."
+      ],
+      "reponse": "Ce sont des actionneurs."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "associer capteur et grandeur",
+      "enonce": "Quel capteur choisir pour qu'un robot mesure la distance qui le sépare d'un mur ?",
+      "corrige": [
+        "Le cours cite le capteur à ultrason pour mesurer la distance d'un obstacle."
+      ],
+      "reponse": "Un capteur de distance à ultrason."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "associer capteur et grandeur",
+      "enonce": "Quel type de capteur déclenche l'ouverture d'une porte automatique quand un client approche ?",
+      "corrige": [
+        "Il faut détecter l'arrivée d'une personne."
+      ],
+      "reponse": "Un capteur de présence (ou de mouvement)."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "chaîne d'information",
+      "enonce": "Remets dans l'ordre les trois fonctions de la chaîne d'information : traiter, communiquer/agir, acquérir.",
+      "corrige": [
+        "On recueille d'abord l'information, on décide ensuite, puis on transmet la consigne."
+      ],
+      "reponse": "Acquérir → traiter → communiquer/agir."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "algorithme et programme",
+      "enonce": "Quelle est la différence entre un algorithme et un programme ?",
+      "corrige": [
+        "L'algorithme est une suite d'instructions ordonnées qui décrit comment résoudre un problème.",
+        "Le programme est la traduction de cet algorithme dans un langage compris par la machine (blocs Scratch ou texte)."
+      ],
+      "reponse": "L'algorithme décrit la suite d'instructions ; le programme le traduit dans un langage compris par la machine."
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "logique ou analogique",
+      "enonce": "Combien d'états peut prendre une information logique ? Donne deux façons de les nommer.",
+      "corrige": [
+        "Une information logique est « tout ou rien »."
+      ],
+      "reponse": "Deux états : oui/non ou 1/0 (appuyé/relâché)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "algorithme et programme",
+      "enonce": "Nomme les trois structures qui permettent d'enchaîner les instructions d'un programme, et décris chacune en une phrase.",
+      "corrige": [
+        "Le cours présente la séquence, le test et la boucle."
+      ],
+      "reponse": "La séquence (instructions l'une après l'autre), le test (SI… ALORS… SINON…) et la boucle (répétition d'instructions)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "logique ou analogique",
+      "enonce": "Dis si l'information est logique ou analogique : (a) une porte ouverte ou fermée ; (b) une distance de 37 cm mesurée par un ultrason ; (c) la présence ou l'absence d'une personne.",
+      "corrige": [
+        "Logique : deux états seulement ; analogique : valeur qui varie de façon continue.",
+        "La distance peut prendre de nombreuses valeurs ; les deux autres n'ont que deux états."
+      ],
+      "reponse": "(a) logique ; (b) analogique ; (c) logique."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "logique ou analogique",
+      "enonce": "Un élève dit : « Un capteur de température donne une information logique. » Corrige-le.",
+      "corrige": [
+        "La température varie de façon continue (19,3 °C, 19,4 °C…).",
+        "C'est donc une information analogique."
+      ],
+      "reponse": "Faux : la température est une information analogique (valeur continue)."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "capteur ou actionneur",
+      "enonce": "Dans une alarme de maison, repère le capteur et l'actionneur : un détecteur de mouvement et une sirène.",
+      "corrige": [
+        "Le détecteur de mouvement repère un intrus : c'est une entrée.",
+        "La sirène produit un son : c'est une sortie."
+      ],
+      "reponse": "Capteur : le détecteur de mouvement ; actionneur : la sirène."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "chaîne d'information",
+      "enonce": "Pour un thermostat de radiateur, donne l'élément qui assure chacune des fonctions : acquérir, traiter, agir.",
+      "corrige": [
+        "Acquérir : un capteur de température mesure la température de la pièce.",
+        "Traiter : le programme de la carte compare cette température à la consigne. Agir : il commande la mise en marche ou l'arrêt du chauffage."
+      ],
+      "reponse": "Acquérir : capteur de température ; traiter : programme de la carte ; agir : mise en marche ou arrêt du chauffage."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "séquence d'un programme",
+      "enonce": "Un programme exécute : « allumer la LED ; attendre 1 s ; éteindre la LED ; attendre 1 s ». Combien de temps dure cette séquence, et combien de fois la LED s'allume-t-elle ?",
+      "corrige": [
+        "Les instructions s'exécutent une fois, l'une après l'autre.",
+        "Il y a deux attentes de 1 s : 2 s au total, et un seul allumage."
+      ],
+      "reponse": "Environ 2 s ; la LED s'allume une fois."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "répéter n fois ou tant que",
+      "enonce": "Un lutin exécute : « répéter 5 fois : avancer de 20 pas ». De combien de pas a-t-il avancé à la fin ?",
+      "corrige": [
+        "La boucle répète 5 fois l'instruction.",
+        "5 × 20 = 100 pas."
+      ],
+      "reponse": "100 pas."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "répéter n fois ou tant que",
+      "enonce": "Pour dessiner un carré, on écrit : « répéter … fois : avancer de 100 pas ; tourner de … degrés ». Complète.",
+      "corrige": [
+        "Un carré a 4 côtés égaux et 4 angles droits.",
+        "À chaque coin, le lutin tourne d'un angle droit, soit 90 degrés."
+      ],
+      "reponse": "Répéter 4 fois : avancer de 100 pas ; tourner de 90 degrés."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "structure de test",
+      "enonce": "Écris avec « SI… ALORS… SINON… » le traitement d'une sonnette : le buzzer sonne quand le bouton est appuyé, il se tait sinon.",
+      "corrige": [
+        "La condition porte sur l'état du bouton (appuyé ou non).",
+        "Si elle est vraie, on fait sonner ; sinon, on arrête le buzzer."
+      ],
+      "reponse": "SI le bouton est appuyé ALORS faire sonner le buzzer, SINON arrêter le buzzer."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "structure de test",
+      "enonce": "Programme d'un ventilateur : « SI température > 28 °C ALORS allumer le ventilateur SINON l'éteindre ». Que se passe-t-il à 30 °C ? à 25 °C ?",
+      "corrige": [
+        "À 30 °C, la condition 30 > 28 est vraie : on exécute ALORS.",
+        "À 25 °C, la condition est fausse : on exécute SINON."
+      ],
+      "reponse": "À 30 °C, le ventilateur s'allume ; à 25 °C, il est éteint."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "structure de test",
+      "enonce": "Un lampadaire suit le test : « SI luminosité < 200 ALORS allumer SINON éteindre ». Le capteur mesure successivement 450, 180, 200. Indique l'état de la lampe à chaque mesure.",
+      "corrige": [
+        "On teste la condition « luminosité < 200 » pour chaque valeur.",
+        "450 < 200 est faux → éteinte ; 180 < 200 est vrai → allumée ; 200 < 200 est faux → éteinte."
+      ],
+      "reponse": "450 : éteinte ; 180 : allumée ; 200 : éteinte."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "structure de test",
+      "enonce": "Repère l'erreur dans ce test : « SI ALORS allumer la lampe SINON éteindre la lampe ».",
+      "corrige": [
+        "Un test a besoin d'une condition claire, vraie ou fausse, après « SI ».",
+        "Il manque la condition, par exemple « la luminosité est faible »."
+      ],
+      "reponse": "Il manque la condition après « SI » (par exemple : SI la luminosité est faible)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "boucle et condition",
+      "enonce": "Dans le programme d'un lampadaire, on oublie la boucle : le capteur est lu une seule fois au démarrage. Quel problème cela pose-t-il le soir venu ?",
+      "corrige": [
+        "Sans boucle, la vérification n'a lieu qu'une fois.",
+        "Si l'on démarre le système le jour, la lampe reste éteinte : la nuit tombée n'est jamais détectée."
+      ],
+      "reponse": "La luminosité n'est plus vérifiée : la lampe ne s'allumera pas à la tombée de la nuit."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "répéter n fois ou tant que",
+      "enonce": "Choisis la boucle adaptée (« répéter n fois » ou « répéter tant que ») : (a) faire clignoter une LED 10 fois ; (b) faire avancer un robot tant qu'il n'y a pas d'obstacle.",
+      "corrige": [
+        "Si le nombre de tours est connu, on utilise « répéter n fois ».",
+        "Si l'arrêt dépend d'une condition, on utilise « répéter tant que »."
+      ],
+      "reponse": "(a) répéter 10 fois ; (b) répéter tant que."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "séquence d'un programme",
+      "enonce": "Ces instructions d'un feu de chantier sont dans le désordre : « attendre 3 s ; allumer le vert ; éteindre le rouge ; allumer le rouge ; éteindre le vert ; attendre 30 s ». Remets-les dans l'ordre pour : rouge allumé 30 s, puis vert allumé 3 s.",
+      "corrige": [
+        "On allume d'abord le rouge et on attend 30 s.",
+        "On éteint le rouge, on allume le vert, on attend 3 s, puis on éteint le vert."
+      ],
+      "reponse": "Allumer le rouge ; attendre 30 s ; éteindre le rouge ; allumer le vert ; attendre 3 s ; éteindre le vert."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information",
+      "enonce": "Une barrière de parking s'ouvre quand on présente un ticket devant un lecteur. Identifie l'acquisition, le traitement et l'action.",
+      "corrige": [
+        "Acquérir : le lecteur lit le ticket.",
+        "Traiter : le programme vérifie si le ticket est valable.",
+        "Agir : il commande le moteur qui lève la barrière."
+      ],
+      "reponse": "Acquérir : le lecteur de ticket ; traiter : la vérification par le programme ; agir : le moteur lève la barrière."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "chaîne d'information",
+      "enonce": "Explique la différence entre chaîne d'énergie et chaîne d'information pour un ventilateur automatique qui démarre quand il fait chaud.",
+      "corrige": [
+        "La chaîne d'information mesure la température, décide et donne l'ordre de démarrer.",
+        "La chaîne d'énergie fournit et convertit l'énergie électrique en mouvement des pales."
+      ],
+      "reponse": "La chaîne d'information décide quand démarrer (capteur, programme) ; la chaîne d'énergie fait tourner les pales (alimentation, moteur)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "capteur ou actionneur",
+      "enonce": "Un robot éviteur d'obstacles comporte : un capteur ultrason, deux moteurs, une LED rouge et un bouton de démarrage. Classe ces éléments en entrées et sorties.",
+      "corrige": [
+        "Les entrées recueillent une information ; les sorties produisent une action.",
+        "Le capteur ultrason et le bouton sont des entrées ; les moteurs et la LED sont des sorties."
+      ],
+      "reponse": "Entrées : capteur ultrason, bouton de démarrage. Sorties : les deux moteurs, la LED rouge."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "associer capteur et grandeur",
+      "enonce": "Pour chaque besoin, propose un capteur : (a) savoir si une serre est trop chaude ; (b) savoir si un visiteur appuie sur la sonnette ; (c) savoir s'il fait nuit.",
+      "corrige": [
+        "On choisit le capteur qui mesure la grandeur concernée."
+      ],
+      "reponse": "(a) capteur de température ; (b) bouton-poussoir ; (c) capteur de lumière (photorésistance)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "algorithme d'une porte automatique",
+      "enonce": "Écris l'algorithme d'un robot qui avance tant que la distance mesurée par son capteur ultrason est supérieure à 20 cm, puis s'arrête.",
+      "corrige": [
+        "On utilise une boucle « tant que » dont la condition porte sur la distance.",
+        "Quand la condition devient fausse (distance de 20 cm ou moins), on sort de la boucle et on arrête les moteurs."
+      ],
+      "reponse": "TANT QUE distance > 20 cm : faire avancer le robot. Ensuite : arrêter les moteurs."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "algorithme d'une porte automatique",
+      "enonce": "Un robot exécute en boucle : « lire la distance ; SI distance < 15 cm ALORS tourner à droite SINON avancer ». Les mesures successives sont 40 cm, 12 cm, 30 cm. Décris les actions du robot.",
+      "corrige": [
+        "À chaque tour de boucle, on teste « distance < 15 cm ».",
+        "40 cm : faux → avancer ; 12 cm : vrai → tourner à droite ; 30 cm : faux → avancer."
+      ],
+      "reponse": "Il avance, puis tourne à droite, puis avance."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "boucle et condition",
+      "enonce": "Un élève écrit : « répéter tant que le bouton n'est pas appuyé : faire clignoter la LED ». Quand la LED arrête-t-elle de clignoter ? Le bouton est-il une entrée ou une sortie ?",
+      "corrige": [
+        "La boucle « tant que » continue tant que la condition est vraie.",
+        "Dès que l'on appuie sur le bouton, la condition devient fausse : la boucle s'arrête. Le bouton détecte un appui : c'est une entrée."
+      ],
+      "reponse": "Elle s'arrête quand on appuie sur le bouton ; le bouton est une entrée."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "répéter n fois ou tant que",
+      "enonce": "Un lutin exécute : « répéter 3 fois : avancer de 50 pas ; tourner de 120 degrés ». Quelle figure dessine-t-il, et quelle est la longueur totale du tracé ?",
+      "corrige": [
+        "Trois côtés de même longueur et un même angle de rotation à chaque coin : c'est un triangle équilatéral (3 × 120° = 360°).",
+        "Longueur totale : 3 × 50 = 150 pas."
+      ],
+      "reponse": "Un triangle équilatéral ; 150 pas au total."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "logique ou analogique",
+      "enonce": "Une photorésistance donne une valeur de luminosité entre 0 et 1 000. Le programme en déduit « jour » ou « nuit ». Quelle information est analogique, laquelle est logique ?",
+      "corrige": [
+        "La valeur de luminosité peut prendre beaucoup de valeurs : elle est analogique.",
+        "Le résultat « jour » ou « nuit » n'a que deux états : il est logique."
+      ],
+      "reponse": "La valeur de luminosité est analogique ; l'information « jour/nuit » est logique."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "algorithme d'arrosage automatique",
+      "enonce": "Corrige l'erreur de cet algorithme d'arrosage : « Répéter indéfiniment : SI le sol est trop sec ALORS arrêter la pompe SINON mettre la pompe en marche ».",
+      "corrige": [
+        "L'arrosage doit se faire quand le sol est sec.",
+        "Les deux actions ont été inversées."
+      ],
+      "reponse": "Répéter indéfiniment : SI le sol est trop sec ALORS mettre la pompe en marche SINON arrêter la pompe."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "séquence d'un programme",
+      "enonce": "Un lutin exécute : « aller à x = 0, y = 0 ; avancer de 100 pas ; tourner de 90 degrés ; avancer de 100 pas ». Si l'on échange les deux dernières instructions, le résultat est-il le même ? Pourquoi ?",
+      "corrige": [
+        "Dans une séquence, l'ordre des instructions compte.",
+        "Si le lutin avance avant de tourner, il ne va pas dans la même direction : il ne trace pas la même figure (il avance deux fois tout droit, puis tourne)."
+      ],
+      "reponse": "Non : dans une séquence, l'ordre compte ; le lutin n'arriverait pas au même endroit."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "algorithme d'arrosage automatique",
+      "enonce": "Écris l'algorithme d'une veilleuse de chambre : en boucle permanente, si la luminosité est faible ET qu'une présence est détectée, la lampe s'allume ; sinon elle s'éteint. Identifie les entrées et la sortie.",
+      "corrige": [
+        "Les deux capteurs sont lus à chaque tour de boucle.",
+        "Le test combine deux conditions qui doivent être vraies en même temps.",
+        "Entrées : capteur de lumière, capteur de présence ; sortie : la lampe."
+      ],
+      "reponse": "Répéter indéfiniment : lire la luminosité et la présence ; SI luminosité faible ET présence ALORS allumer la lampe SINON l'éteindre. Entrées : deux capteurs ; sortie : la lampe."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "algorithme d'une porte automatique",
+      "enonce": "Une serre doit ouvrir sa fenêtre quand la température dépasse 30 °C et la fermer en dessous. Écris l'algorithme en précisant le capteur, l'actionneur, le test et la boucle.",
+      "corrige": [
+        "Capteur : capteur de température (entrée). Actionneur : moteur de la fenêtre (sortie).",
+        "Test : SI température > 30 °C ALORS ouvrir SINON fermer.",
+        "Boucle : on répète indéfiniment pour surveiller en permanence."
+      ],
+      "reponse": "Répéter indéfiniment : lire la température ; SI température > 30 °C ALORS ouvrir la fenêtre SINON la fermer."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "boucle et condition",
+      "enonce": "Un programme de feu tricolore pour un jeu de maquette doit enchaîner vert 5 s, orange 2 s, rouge 5 s, et recommencer sans fin. Écris ce programme, puis dis combien de temps dure un cycle.",
+      "corrige": [
+        "On place une séquence dans une boucle infinie.",
+        "Chaque couleur est allumée, on attend, puis on l'éteint.",
+        "Durée d'un cycle : 5 + 2 + 5 = 12 s."
+      ],
+      "reponse": "Répéter indéfiniment : vert 5 s, puis orange 2 s, puis rouge 5 s ; un cycle dure 12 s."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "répéter n fois ou tant que",
+      "enonce": "Une LED doit clignoter 20 fois : allumée 0,5 s, éteinte 0,5 s. Écris la boucle et calcule la durée totale.",
+      "corrige": [
+        "Le nombre de répétitions est connu : on utilise « répéter 20 fois ».",
+        "Un clignotement dure 0,5 + 0,5 = 1 s, donc 20 × 1 = 20 s."
+      ],
+      "reponse": "Répéter 20 fois : allumer, attendre 0,5 s, éteindre, attendre 0,5 s. Durée : 20 s."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "chaîne d'information",
+      "enonce": "Une poubelle automatique ouvre son couvercle quand une main passe au-dessus, puis le referme après 5 s. Décris sa chaîne d'information et l'algorithme.",
+      "corrige": [
+        "Acquérir : un capteur de présence (ou de distance) détecte la main.",
+        "Traiter : le programme teste la présence. Agir : le moteur ouvre le couvercle.",
+        "Algorithme : répéter indéfiniment : SI présence ALORS ouvrir, attendre 5 s, fermer."
+      ],
+      "reponse": "Capteur de présence (acquérir) → programme (traiter) → moteur du couvercle (agir). Répéter : SI présence ALORS ouvrir, attendre 5 s, fermer."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "capteur ou actionneur",
+      "enonce": "Dans un téléphone, cite un capteur et un actionneur, en précisant ce que chacun détecte ou produit.",
+      "corrige": [
+        "Un téléphone possède plusieurs entrées (écran tactile, micro, capteur de luminosité) et sorties (écran, haut-parleur, vibreur).",
+        "Exemple de réponse : le capteur de luminosité règle l'écran ; le vibreur produit une vibration."
+      ],
+      "reponse": "Exemple : capteur : le capteur de luminosité (détecte la lumière ambiante) ; actionneur : le vibreur (produit une vibration)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "structure de test",
+      "enonce": "Un sèche-mains s'allume quand des mains sont détectées et s'arrête 2 s après leur départ. Un élève écrit seulement : « SI mains détectées ALORS souffler ». Qu'a-t-il oublié ?",
+      "corrige": [
+        "Il manque le SINON : arrêter le souffle (après 2 s) quand il n'y a plus de mains.",
+        "Il manque aussi la boucle qui répète la lecture du capteur en permanence."
+      ],
+      "reponse": "La partie SINON (arrêter après 2 s) et la boucle qui répète la lecture du capteur."
     }
   ]
 }

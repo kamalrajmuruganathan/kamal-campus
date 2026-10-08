@@ -77,7 +77,7 @@ Exemple : *Mi piace il calcio ma non mi piace il tennis.* → J'aime le foot mai
 - *Mi piace* + singulier / infinitif ; *mi piacciono* + pluriel : *Mi piacciono i videogiochi*.
 - « faire du sport » se dit *fare sport* ; *fare nuoto* (faire de la natation).
 - Ne confonds pas *la partita* (le match) et *la squadra* (l'équipe).
-- Attention aux doubles consonnes : *il ca**lc**io*, *la palla**c**anestro*, *la palla**v**olo*, *sq**u**adra*.
+- Attention à l'orthographe : *la pa**ll**acanestro* et *la pa**ll**avolo* (deux l), *il calcio* (un seul c avant le i final), *la sq**u**adra* (qu).
 
 ## À retenir
 

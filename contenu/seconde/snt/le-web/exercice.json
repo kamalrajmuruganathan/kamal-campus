@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "structure d'une URL",
       "enonce": "On donne l'URL : https://www.lycee.fr/snt/web.html . a) Quel est le protocole utilisé ? b) Quel est le nom de domaine ? c) Que désigne la fin /snt/web.html ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "HTML et hyperliens",
       "enonce": "a) Que signifie le sigle HTML et à quoi sert ce langage ? b) Qu'est-ce qu'un hyperlien ? c) Dans le code <a href=\"page2.html\">Suite</a>, quel texte l'internaute voit-il et vers quoi le lien mène-t-il ?",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "navigateur, client et serveur",
       "enonce": "Pour afficher une page, ton navigateur envoie une demande à un serveur qui répond. a) Comment appelle-t-on le rôle du navigateur dans cet échange ? b) Comment appelle-t-on le rôle de la machine qui héberge et envoie la page ? c) Quel protocole est utilisé pour cet échange de pages Web ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "moteur de recherche et indexation",
       "enonce": "a) Comment un moteur de recherche découvre-t-il les pages du Web ? b) Qu'est-ce que l'index d'un moteur de recherche ? c) Cite un facteur qui influence le classement des résultats.",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "évaluer une source",
       "enonce": "Tu trouves un article affirmant qu'un aliment guérit une maladie. Donne trois questions ou vérifications concrètes à te poser avant de le croire ou de le partager.",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "requête HTTP et échange client-serveur",
       "enonce": "Une page HTML contient : du texte, deux images et un fichier de style CSS. a) Combien de requêtes HTTP le navigateur envoie-t-il au minimum pour tout afficher ? Détaille. b) Que signifie le code de réponse 404 renvoyé par un serveur ? c) Pourquoi préférer HTTPS à HTTP quand on saisit un mot de passe ?",
       "corrige": [
@@ -84,7 +84,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "hyperlien et hypertexte",
       "enonce": "Sur une page Web, un mot souligné en bleu mène à une autre page. a) Comment appelle-t-on ce lien ? b) Quelle balise HTML sert à le créer ? c) Qu'appelle-t-on l'hypertexte ?",
       "corrige": [
@@ -96,7 +96,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "structure d'une page HTML",
       "enonce": "On veut une page avec un titre principal et un paragraphe. a) Quelle balise pour le titre de niveau 1 ? b) Quelle balise pour un paragraphe ? c) À quoi sert le CSS, distinct du HTML ?",
       "corrige": [
@@ -108,7 +108,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "moteur de recherche : indexation et pertinence",
       "enonce": "Un moteur de recherche renvoie des milliers de résultats en une fraction de seconde. a) Comment le moteur connaît-il autant de pages ? b) Qu'est-ce qu'un robot d'indexation ? c) Sur quels critères classe-t-il les résultats ?",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "requête HTTP et code de réponse",
       "enonce": "Un navigateur demande la page d'un site. a) Quel type de requête HTTP envoie-t-il pour lire une page ? b) Que signifient les codes de réponse 200 et 404 ? c) Que garantit la version HTTPS par rapport à HTTP ?",
       "corrige": [
@@ -129,6 +129,449 @@
         "HTTPS chiffre les échanges entre le navigateur et le serveur (grâce à TLS) : on ne peut ni lire ni modifier les données en transit, ce qui protège mots de passe et informations."
       ],
       "reponse": "GET pour lire ; 200 = trouvée, 404 = introuvable ; HTTPS chiffre l'échange (confidentialité et intégrité)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "naissance du Web",
+      "enonce": "Qui a inventé le Web ? Dans quel organisme et à quelle période ?",
+      "corrige": [
+        "Le Web a été inventé par Tim Berners-Lee, au CERN, en 1989-1990."
+      ],
+      "reponse": "Tim Berners-Lee, au CERN, en 1989-1990."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "naissance du Web",
+      "enonce": "Que signifie l'expression World Wide Web ? Cite les trois inventions sur lesquelles repose le Web.",
+      "corrige": [
+        "World Wide Web signifie « toile mondiale » : les pages forment une toile grâce aux liens qui les relient.",
+        "Le Web repose sur les adresses URL, le protocole HTTP et le langage HTML."
+      ],
+      "reponse": "« Toile mondiale » ; URL, HTTP et HTML."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "naissance du Web",
+      "enonce": "Vrai ou faux ? « Le Web a été inventé avant Internet. » Justifie avec les dates du cours.",
+      "corrige": [
+        "Internet est né dans les années 1970 (à partir d'ARPANET) ; le Web a été inventé en 1989-1990.",
+        "Le Web est un service qui fonctionne grâce à Internet : il ne pouvait pas exister avant lui."
+      ],
+      "reponse": "Faux : Internet date des années 1970, le Web de 1989-1990."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "structure d'une URL",
+      "enonce": "On donne l'URL : `https://www.musee-exemple.fr/expositions/2025/affiche.png`. a) Quel est le protocole ? b) Quel est le nom de domaine ? c) Quel est le chemin ? d) D'après son extension, quel type de ressource est demandé ?",
+      "corrige": [
+        "Le protocole est avant « :// » : https. Le nom de domaine suit : www.musee-exemple.fr.",
+        "Le chemin est tout ce qui suit le nom de domaine : /expositions/2025/affiche.png.",
+        "L'extension .png désigne une image."
+      ],
+      "reponse": "a) https ; b) www.musee-exemple.fr ; c) /expositions/2025/affiche.png ; d) une image."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "structure d'une URL",
+      "enonce": "Écris l'URL complète d'une page dont le protocole est https, le nom de domaine www.cdi-lycee.fr et le chemin /livres/romans.html.",
+      "corrige": [
+        "On écrit le protocole suivi de « :// », puis le nom de domaine, puis le chemin, qui commence par « / »."
+      ],
+      "reponse": "https://www.cdi-lycee.fr/livres/romans.html"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "structure d'une URL",
+      "enonce": "Ces deux adresses contiennent chacune une erreur. Trouve-la et corrige-la : a) `https//www.exemple.fr/page.html` ; b) `htps://www.exemple.fr/page.html`.",
+      "corrige": [
+        "a) Après le protocole, il faut « :// » : il manque les deux-points.",
+        "b) Le protocole est mal écrit : c'est https, avec deux t."
+      ],
+      "reponse": "a) il manque « : » → https://www.exemple.fr/page.html ; b) « htps » → https://www.exemple.fr/page.html."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "structure d'une URL",
+      "enonce": "Qu'affiche ce programme ? Explique comment il retrouve le nom de domaine.\n\n```python\nurl = \"https://www.lycee.fr/snt/web.html\"\nmorceaux = url.split(\"/\")\nprint(morceaux)\nprint(morceaux[2])\nprint(morceaux[-1])\n```",
+      "corrige": [
+        "split(\"/\") coupe l'adresse à chaque barre oblique. Entre les deux barres de « // » il n'y a rien : on obtient une chaîne vide.",
+        "La liste est ['https:', '', 'www.lycee.fr', 'snt', 'web.html'] : l'élément d'indice 2 est le nom de domaine, le dernier (indice -1) est le nom du fichier."
+      ],
+      "reponse": "['https:', '', 'www.lycee.fr', 'snt', 'web.html'], puis www.lycee.fr, puis web.html."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "navigateur, client et serveur",
+      "enonce": "Classe en « client » ou « serveur » : a) le navigateur Firefox ; b) l'ordinateur qui héberge le site du lycée ; c) le navigateur Chrome d'un téléphone ; d) la machine qui stocke et envoie les vidéos d'une plateforme.",
+      "corrige": [
+        "Le client est le programme qui demande les pages : le navigateur (a, c).",
+        "Le serveur héberge les ressources et les envoie sur demande (b, d)."
+      ],
+      "reponse": "Clients : a, c. Serveurs : b, d."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "navigateur, client et serveur",
+      "enonce": "Le navigateur reçoit ce code. Que fait-il de ce code, et qu'affiche-t-il à l'écran ?\n\n```html\n<h1>Club d'échecs</h1>\n<p>Rendez-vous au CDI le jeudi.</p>\n```",
+      "corrige": [
+        "Le navigateur interprète le code HTML : il n'affiche pas les balises, mais le contenu mis en forme selon leur rôle.",
+        "Il affiche un grand titre « Club d'échecs », puis un paragraphe « Rendez-vous au CDI le jeudi. »"
+      ],
+      "reponse": "Il interprète le HTML : un grand titre « Club d'échecs » puis le paragraphe « Rendez-vous au CDI le jeudi. »"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "structure d'une page HTML",
+      "enonce": "Écris le code HTML d'un titre principal « Mon club de théâtre » suivi d'un paragraphe « Répétition le mercredi à 14 h. »",
+      "corrige": [
+        "Le titre principal utilise la balise h1, le paragraphe la balise p.",
+        "Chaque balise ouvrante a sa balise fermante, avec une barre oblique."
+      ],
+      "reponse": "`<h1>Mon club de théâtre</h1>` puis `<p>Répétition le mercredi à 14 h.</p>`"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "structure d'une page HTML",
+      "enonce": "Trouve l'erreur dans ce code HTML et corrige-la : `<h1>Recettes de saison</p>`",
+      "corrige": [
+        "Une balise ouverte doit être fermée par la balise de même nom : on a ouvert un titre h1 mais fermé un paragraphe p."
+      ],
+      "reponse": "`<h1>Recettes de saison</h1>`"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "HTML et hyperliens",
+      "enonce": "Écris le code HTML d'un lien dont le texte affiché est « Voir le programme » et qui mène à la page `programme.html`.",
+      "corrige": [
+        "Un lien se crée avec la balise a ; l'attribut href donne la destination.",
+        "Le texte cliquable se place entre la balise ouvrante et la balise fermante."
+      ],
+      "reponse": "`<a href=\"programme.html\">Voir le programme</a>`"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "structure d'une page HTML",
+      "enonce": "Pour chaque élément d'une page, dis s'il relève du HTML (contenu et structure) ou du CSS (mise en forme) : a) la couleur du texte ; b) la présence d'un titre ; c) la police utilisée ; d) un paragraphe de texte ; e) la largeur des marges.",
+      "corrige": [
+        "Le HTML décrit ce que contient la page et comment elle est organisée : le titre et le paragraphe (b, d).",
+        "Le CSS gère l'apparence : couleur, police, disposition (a, c, e)."
+      ],
+      "reponse": "HTML : b, d. CSS : a, c, e."
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "structure d'une page HTML",
+      "enonce": "Voici un extrait de page :\n\n```html\n<h1>Sorties scolaires</h1>\n<p>Visite du musée le 12 mai.</p>\n<p>Programme : <a href=\"programme.html\">cliquer ici</a></p>\n<a href=\"inscription.html\">S'inscrire</a>\n```\n\na) Combien de paragraphes contient-il ? b) Combien de liens ? c) Vers quelles pages mènent-ils ? d) Quel texte faut-il cliquer pour s'inscrire ?",
+      "corrige": [
+        "On compte les balises p : 2 paragraphes.",
+        "On compte les balises a : 2 liens, vers programme.html et inscription.html.",
+        "Le texte cliquable du second lien est « S'inscrire »."
+      ],
+      "reponse": "a) 2 ; b) 2 ; c) programme.html et inscription.html ; d) « S'inscrire »."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "hyperlien et hypertexte",
+      "enonce": "Pourquoi appelle-t-on le Web la « toile » ? Quel élément des pages crée cette toile ?",
+      "corrige": [
+        "Les pages sont reliées entre elles par des liens hypertexte, y compris d'un site à un autre.",
+        "Ce maillage de liens ressemble à une toile d'araignée et permet de naviguer de page en page."
+      ],
+      "reponse": "Parce que les liens hypertexte relient les pages comme les fils d'une toile."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "hyperlien et hypertexte",
+      "enonce": "Trois pages sont reliées ainsi : la page A contient des liens vers B et vers C ; la page B contient un lien vers C ; la page C contient un lien vers A. a) Depuis B, combien de clics faut-il au minimum pour atteindre A ? b) Quelle page reçoit le plus de liens ?",
+      "corrige": [
+        "B ne pointe que vers C, et C pointe vers A : il faut 2 clics (B → C → A).",
+        "Liens reçus : A en reçoit 1 (depuis C), B en reçoit 1 (depuis A), C en reçoit 2 (depuis A et B)."
+      ],
+      "reponse": "a) 2 clics ; b) la page C (2 liens)."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "requête HTTP et échange client-serveur",
+      "enonce": "Remets dans l'ordre : a) le serveur renvoie la page dans sa réponse ; b) l'utilisateur clique sur un lien ; c) le navigateur affiche la page ; d) le navigateur envoie une requête HTTP au serveur ; e) le serveur cherche la ressource demandée.",
+      "corrige": [
+        "Tout commence par le clic (b), qui déclenche la requête du client (d).",
+        "Le serveur cherche la ressource (e) et la renvoie (a) ; le navigateur l'affiche (c)."
+      ],
+      "reponse": "b, d, e, a, c."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "requête HTTP et échange client-serveur",
+      "enonce": "Une page Web utilise 1 fichier HTML, 2 fichiers CSS, 5 images et 1 vidéo, tous stockés sur le serveur. Combien de requêtes HTTP le navigateur envoie-t-il au minimum pour tout récupérer ?",
+      "corrige": [
+        "Le navigateur demande d'abord le fichier HTML, puis une ressource par requête pour chaque fichier lié.",
+        "Total : 1 + 2 + 5 + 1 = 9 requêtes."
+      ],
+      "reponse": "9 requêtes."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "requête HTTP et code de réponse",
+      "enonce": "Un élève tape une adresse correcte et la page s'affiche. Il tape ensuite une adresse dont le chemin contient une faute de frappe, et le serveur répond qu'il ne trouve pas la ressource. Quel code de réponse le serveur a-t-il renvoyé dans chaque cas ?",
+      "corrige": [
+        "Quand la ressource est trouvée et envoyée, le code est 200 (OK).",
+        "Quand elle est introuvable, le code est 404 (Not Found)."
+      ],
+      "reponse": "200 puis 404."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "requête HTTP et code de réponse",
+      "enonce": "Qu'affiche ce programme ? Combien de ressources ont été trouvées ?\n\n```python\ncodes = {200: \"OK\", 404: \"Not Found\"}\nreponses = [200, 404, 200, 200]\ntrouvees = 0\nfor c in reponses:\n    print(c, codes[c])\n    if c == 200:\n        trouvees = trouvees + 1\nprint(trouvees)\n```",
+      "corrige": [
+        "Le dictionnaire associe chaque code à son sens. La boucle affiche chaque code suivi de sa signification.",
+        "Le compteur augmente pour chaque code 200 : il y en a 3."
+      ],
+      "reponse": "200 OK, 404 Not Found, 200 OK, 200 OK, puis 3 : trois ressources trouvées."
+    },
+    {
+      "id": 31,
+      "difficulte": "decouverte",
+      "notion": "HTTPS et sécurité",
+      "enonce": "Que signale le petit cadenas affiché dans la barre d'adresse du navigateur ?",
+      "corrige": [
+        "Le cadenas indique que le site utilise HTTPS : les échanges entre le navigateur et le serveur sont chiffrés."
+      ],
+      "reponse": "Que la connexion utilise HTTPS : les échanges sont chiffrés."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "HTTPS et sécurité",
+      "enonce": "Vrai ou faux ? « Un site en HTTPS dit forcément la vérité. » Justifie.",
+      "corrige": [
+        "HTTPS garantit le chiffrement de la connexion : personne ne peut lire les données pendant le trajet.",
+        "Il ne garantit rien sur le contenu : un site trompeur peut très bien utiliser HTTPS."
+      ],
+      "reponse": "Faux : HTTPS chiffre la connexion, mais ne garantit pas l'honnêteté du contenu."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "HTTPS et sécurité",
+      "enonce": "Parmi ces sites, lesquels échangent des données sensibles qui doivent absolument être chiffrées ? a) le site de ta banque ; b) une messagerie en ligne ; c) une boutique où l'on paie par carte ; d) une page qui affiche la météo sans compte.",
+      "corrige": [
+        "Les mots de passe, les messages privés et les numéros de carte sont des données sensibles : HTTPS est indispensable pour a, b et c.",
+        "La page météo sans compte n'échange pas de données personnelles (HTTPS reste toutefois recommandé partout)."
+      ],
+      "reponse": "a, b et c."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "HTTPS et sécurité",
+      "enonce": "Dans un café, sur un Wi-Fi public, Sami se connecte à un site dont l'adresse commence par `http://` (sans « s ») et tape son mot de passe. Quel risque prend-il ? Que lui conseilles-tu ?",
+      "corrige": [
+        "En HTTP, les données circulent en clair : une personne qui intercepte le trafic du réseau peut lire le mot de passe.",
+        "Il ne faut saisir un mot de passe que sur un site en HTTPS (cadenas) ; si le site ne le propose pas, mieux vaut ne pas s'y connecter."
+      ],
+      "reponse": "Son mot de passe circule en clair et peut être intercepté ; il ne doit le saisir que sur un site en HTTPS."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "moteur de recherche et indexation",
+      "enonce": "Remets dans l'ordre les trois étapes de fonctionnement d'un moteur de recherche : a) classer les résultats par pertinence ; b) parcourir le Web en suivant les liens ; c) indexer les pages trouvées.",
+      "corrige": [
+        "Les robots parcourent d'abord le Web (b), puis les pages trouvées sont rangées dans l'index (c).",
+        "Lors d'une requête, le moteur classe les résultats (a)."
+      ],
+      "reponse": "b, c, a."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "moteur de recherche et indexation",
+      "enonce": "Vrai ou faux ? « Un moteur de recherche connaît toutes les pages du Web. » Justifie.",
+      "corrige": [
+        "Un moteur ne cherche que dans son index, qu'il a construit en faisant parcourir le Web par ses robots.",
+        "Les pages qu'aucun robot n'a visitées (récentes, sans lien qui y mène, protégées) ne sont pas indexées."
+      ],
+      "reponse": "Faux : il ne connaît que les pages qu'il a indexées."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "moteur de recherche : indexation et pertinence",
+      "enonce": "Un mini-index associe chaque mot aux pages qui le contiennent. Qu'affiche ce programme ? Quelle page correspond à la requête « chat noir » ?\n\n```python\nindex = {\"chat\": {\"p1\", \"p3\"}, \"noir\": {\"p2\", \"p3\"}, \"jardin\": {\"p1\"}}\nprint(index[\"chat\"] & index[\"noir\"])\nprint(index[\"chat\"] & index[\"jardin\"])\n```",
+      "corrige": [
+        "L'opérateur & donne les pages communes aux deux ensembles.",
+        "« chat » et « noir » ne sont tous deux que dans p3 ; « chat » et « jardin » ne sont tous deux que dans p1."
+      ],
+      "reponse": "{'p3'} puis {'p1'} : la page p3 correspond à « chat noir »."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "moteur de recherche : indexation et pertinence",
+      "enonce": "Quatre pages sont reliées par ces liens : A → C, B → C, D → C, C → A, D → A. a) Compte le nombre de liens reçus par chaque page. b) Si un moteur classait seulement selon ce critère, dans quel ordre afficherait-il les pages ?",
+      "corrige": [
+        "Liens reçus : A en reçoit 2 (depuis C et D), B en reçoit 0, C en reçoit 3 (depuis A, B, D), D en reçoit 0.",
+        "Classement par nombre de liens reçus : C, puis A, puis B et D à égalité."
+      ],
+      "reponse": "a) A : 2, B : 0, C : 3, D : 0 ; b) C, A, puis B et D à égalité."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "moteur de recherche : indexation et pertinence",
+      "enonce": "Inès vient de publier une page sur son blog. Le lendemain, elle ne la trouve pas en tapant son titre exact dans un moteur de recherche. Explique pourquoi.",
+      "corrige": [
+        "Le moteur cherche dans son index, pas en direct sur le Web.",
+        "Tant qu'aucun robot n'est passé sur la nouvelle page (en suivant un lien qui y mène), elle n'est pas indexée et ne peut pas apparaître dans les résultats."
+      ],
+      "reponse": "La page n'a pas encore été visitée par les robots, donc elle n'est pas dans l'index."
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "évaluer une source",
+      "enonce": "Classe ces indices en « plutôt rassurant » ou « signal d'alerte » pour juger la fiabilité d'un article : a) l'auteur est identifié ; b) le titre est en majuscules avec des points d'exclamation ; c) les sources sont citées ; d) le site vend le produit dont il fait l'éloge ; e) l'article est daté ; f) aucune source n'est donnée.",
+      "corrige": [
+        "Un auteur identifié, des sources citées et une date permettent de vérifier : a, c, e sont rassurants.",
+        "Le sensationnalisme, l'intérêt commercial et l'absence de sources doivent alerter : b, d, f."
+      ],
+      "reponse": "Rassurants : a, c, e. Alertes : b, d, f."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "évaluer une source",
+      "enonce": "Analyse ce message trouvé sur un site : « INCROYABLE !!! Les médecins vous le cachent : l'eau citronnée fait perdre 10 kg en une semaine. Commandez vite notre cure ! » Relève trois signaux qui doivent te rendre méfiant.",
+      "corrige": [
+        "Exemple de réponse : le ton sensationnel (majuscules, points d'exclamation, « incroyable ») ;",
+        "l'absence de source et d'auteur, avec l'idée d'un secret caché par les médecins ;",
+        "le but commercial (vendre une cure) et une promesse irréaliste (10 kg en une semaine)."
+      ],
+      "reponse": "Exemple : ton sensationnel, aucune source, but commercial et promesse irréaliste."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "évaluer une source",
+      "enonce": "Que veut dire « croiser les informations » ? Décris une méthode concrète pour vérifier une information lue sur un réseau social avant de la partager.",
+      "corrige": [
+        "Croiser, c'est comparer l'information avec plusieurs autres sources, fiables et indépendantes les unes des autres.",
+        "Exemple de méthode : chercher l'information sur des sites de presse reconnus ou d'organismes officiels, vérifier la date et l'auteur d'origine, et ne la partager que si plusieurs sources sérieuses la confirment."
+      ],
+      "reponse": "La comparer avec plusieurs sources fiables et indépendantes ; ne la partager que si elles la confirment."
+    },
+    {
+      "id": 43,
+      "difficulte": "decouverte",
+      "notion": "traces, cookies et publicité",
+      "enonce": "Cite deux traces que laisse la navigation sur le Web.",
+      "corrige": [
+        "Le cours cite les cookies (petits fichiers déposés par les sites) et l'historique de navigation."
+      ],
+      "reponse": "Les cookies et l'historique de navigation."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "traces, cookies et publicité",
+      "enonce": "Après avoir cherché des chaussures de randonnée sur un site, Inès voit des publicités pour ces chaussures sur d'autres sites. Explique ce phénomène.",
+      "corrige": [
+        "Sa navigation a laissé des traces (cookies notamment) qui renseignent sur ses centres d'intérêt.",
+        "Ces informations servent à construire un profil et à lui montrer une publicité ciblée, adaptée à ce qu'elle a consulté."
+      ],
+      "reponse": "Ses traces de navigation (cookies) ont servi à lui afficher une publicité ciblée."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "traces, cookies et publicité",
+      "enonce": "Beaucoup de sites sont gratuits pour l'utilisateur. Comment se financent-ils, d'après le cours ? Quel lien avec les traces de navigation ?",
+      "corrige": [
+        "De nombreux sites gratuits se financent par la publicité.",
+        "Une publicité adaptée au profil de l'utilisateur rapporte davantage : les traces de navigation servent à établir ce profil."
+      ],
+      "reponse": "Par la publicité, ciblée grâce aux traces laissées par les utilisateurs."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "traces, cookies et publicité",
+      "enonce": "Propose deux actions concrètes pour limiter les traces que l'on laisse en naviguant, et explique l'effet de chacune.",
+      "corrige": [
+        "Exemple de réponse : refuser les cookies non nécessaires quand un site le demande, ce qui limite le suivi publicitaire.",
+        "Effacer régulièrement l'historique et les cookies du navigateur, ce qui supprime les traces déjà enregistrées sur l'appareil."
+      ],
+      "reponse": "Exemple : refuser les cookies non nécessaires ; effacer l'historique et les cookies."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "structure d'une URL",
+      "enonce": "Lina clique sur un lien vers `https://www.bibliotheque-exemple.fr/catalogue/recherche.html`. a) Donne le protocole, le nom de domaine et le chemin. b) Qui joue le rôle de client, qui joue le rôle de serveur ? c) Décris l'échange qui suit. d) Quel code de réponse attend-on si tout se passe bien ?",
+      "corrige": [
+        "a) Protocole https ; nom de domaine www.bibliotheque-exemple.fr ; chemin /catalogue/recherche.html.",
+        "b) Le navigateur de Lina est le client ; l'ordinateur qui héberge le site de la bibliothèque est le serveur.",
+        "c) Le navigateur envoie une requête HTTPS demandant la page ; le serveur renvoie une réponse contenant le code HTML ; le navigateur l'interprète et l'affiche.",
+        "d) Le code 200 (OK)."
+      ],
+      "reponse": "a) https, www.bibliotheque-exemple.fr, /catalogue/recherche.html ; b) navigateur = client, machine du site = serveur ; c) requête puis réponse, puis affichage ; d) 200."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "évaluer une source",
+      "enonce": "Pour un exposé, Tom tape « vitesse de la lumière » dans un moteur de recherche. Il obtient : 1) une publicité pour un abonnement Internet « à la vitesse de la lumière » ; 2) un forum où un anonyme répond « environ 1 000 km/s » ; 3) la page d'un organisme scientifique qui donne environ 300 000 km/s. a) Quel résultat doit-il retenir ? b) Pourquoi ne doit-il pas se fier au premier résultat ? c) Que doit-il faire pour confirmer la valeur ?",
+      "corrige": [
+        "a) La page de l'organisme scientifique : source identifiée et sérieuse. La valeur juste est bien d'environ 300 000 km/s.",
+        "b) Le premier résultat est une publicité : le classement mesure une pertinence algorithmique, pas la vérité.",
+        "c) Il doit croiser avec une autre source fiable (manuel, encyclopédie avec sources)."
+      ],
+      "reponse": "a) l'organisme scientifique (≈ 300 000 km/s) ; b) c'est une publicité ; c) vérifier dans une autre source fiable."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "structure d'une page HTML",
+      "enonce": "Écris le code HTML d'une petite page qui contient : un titre principal « Fête du lycée », un paragraphe « Rendez-vous le 20 juin dans la cour. » et un lien « Voir le plan » vers la page plan.html. Indique ensuite quel langage permettrait d'afficher le titre en rouge.",
+      "corrige": [
+        "On utilise h1 pour le titre, p pour le paragraphe et a avec l'attribut href pour le lien.",
+        "Exemple de réponse : `<h1>Fête du lycée</h1>` `<p>Rendez-vous le 20 juin dans la cour.</p>` `<a href=\"plan.html\">Voir le plan</a>`.",
+        "La couleur relève de la mise en forme : c'est le rôle du CSS."
+      ],
+      "reponse": "`<h1>Fête du lycée</h1>`, `<p>Rendez-vous le 20 juin dans la cour.</p>`, `<a href=\"plan.html\">Voir le plan</a>` ; la couleur se règle en CSS."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "requête HTTP et échange client-serveur",
+      "enonce": "Une page est composée d'un fichier HTML de 50 ko, d'un fichier CSS de 10 ko et de 4 images de 300 ko chacune. a) Combien de requêtes HTTP faut-il au minimum ? b) Quelle quantité de données le serveur envoie-t-il, en ko puis en Mo ? c) Avec une connexion de 10 Mbit/s, combien de temps faut-il environ pour tout recevoir ? (1 Mo = 1 000 ko, 1 octet = 8 bits)",
+      "corrige": [
+        "a) 1 + 1 + 4 = 6 requêtes.",
+        "b) 50 + 10 + 4 × 300 = 1 260 ko, soit 1,26 Mo.",
+        "c) 1,26 Mo × 8 = 10,08 Mbit ; 10,08 / 10 ≈ 1 s."
+      ],
+      "reponse": "a) 6 requêtes ; b) 1 260 ko = 1,26 Mo ; c) environ 1 seconde."
     }
   ]
 }

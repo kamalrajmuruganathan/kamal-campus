@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "cercle-trigonometrique",
       "enonce": "Une grande roue est modélisée par le cercle trigonométrique de centre $\\mathrm{O}$ et de rayon $1$, orienté dans le sens positif. La position d'une nacelle est repérée par le réel $x$ (en radians) associé, par enroulement, au point $\\mathrm{M}$ du cercle. On rappelle que $\\mathrm{M}(\\cos x\\,;\\,\\sin x)$.\n\n1. Une nacelle est à la position correspondant à l'angle $210°$. Convertir cet angle en radians.\n2. Déterminer les coordonnées exactes du point $\\mathrm{M}$ associé à $x = \\dfrac{7\\pi}{6}$.\n3. Une autre nacelle $\\mathrm{P}$ a pour abscisse $\\cos x = -\\dfrac{4}{5}$ et se situe dans le troisième quadrant (ordonnée négative). Déterminer la valeur exacte de son ordonnée $\\sin x$.\n4. Déterminer tous les réels $x$ de l'intervalle $[0\\,;2\\pi[$ pour lesquels $\\cos x = \\dfrac{1}{2}$.\n5. Le point associé à $x = \\dfrac{5\\pi}{6}$ et le point $\\mathrm{M}$ de la question 2 sont symétriques par rapport à un axe du repère. Préciser lequel et le justifier.",
       "corrige": [
@@ -139,6 +139,452 @@
         "5. Le point associé à $\\dfrac{5\\pi}{6} = \\pi - \\dfrac{\\pi}{6}$ a pour coordonnées $\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,\\dfrac{1}{2}\\right)$, tandis que $\\mathrm{M}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,-\\dfrac{1}{2}\\right)$. Les deux points ont la même abscisse et des ordonnées opposées : ils sont symétriques par rapport à l'axe des abscisses. (C'est cohérent avec $\\dfrac{7\\pi}{6} = -\\dfrac{5\\pi}{6} + 2\\pi$, la relation $-x$ correspondant justement à cette symétrie.)"
       ],
       "reponse": "1. $210° = \\dfrac{7\\pi}{6}$. 2. $\\mathrm{M}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,-\\dfrac{1}{2}\\right)$. 3. $\\sin x = -\\dfrac{3}{5}$. 4. $x = \\dfrac{\\pi}{3}$ ou $x = \\dfrac{5\\pi}{3}$. 5. Symétrie par rapport à l'axe des abscisses."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "radian",
+      "enonce": "Convertir en radians : $45°$ et $150°$.",
+      "corrige": [
+        "radians $=$ degrés $\\times \\dfrac{\\pi}{180}$.",
+        "$45 \\times \\dfrac{\\pi}{180} = \\dfrac{\\pi}{4}$ et $150 \\times \\dfrac{\\pi}{180} = \\dfrac{5\\pi}{6}$."
+      ],
+      "reponse": "$\\dfrac{\\pi}{4}$ et $\\dfrac{5\\pi}{6}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "radian",
+      "enonce": "Convertir en degrés : $\\dfrac{\\pi}{9}$ rad et $\\dfrac{3\\pi}{2}$ rad.",
+      "corrige": [
+        "$\\pi$ rad $= 180°$ : on remplace $\\pi$ par $180°$.",
+        "$\\dfrac{180°}{9} = 20°$ et $\\dfrac{3 \\times 180°}{2} = 270°$."
+      ],
+      "reponse": "$20°$ et $270°$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "cercle-trigonometrique",
+      "enonce": "Donner les coordonnées des points du cercle trigonométrique associés aux réels $0$, $\\dfrac{\\pi}{2}$, $\\pi$ et $-\\dfrac{\\pi}{2}$.",
+      "corrige": [
+        "Le point associé à $x$ est $\\mathrm{M}(\\cos x\\,;\\sin x)$.",
+        "$0 \\to (1\\,;0)$ ; $\\dfrac{\\pi}{2} \\to (0\\,;1)$ ; $\\pi \\to (-1\\,;0)$ ; $-\\dfrac{\\pi}{2} \\to (0\\,;-1)$."
+      ],
+      "reponse": "$(1\\,;0)$, $(0\\,;1)$, $(-1\\,;0)$, $(0\\,;-1)$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "valeurs-remarquables",
+      "enonce": "Donner les valeurs exactes de $\\sin\\left(\\dfrac{\\pi}{4}\\right)$, $\\cos\\left(\\dfrac{\\pi}{2}\\right)$ et $\\sin(\\pi)$.",
+      "corrige": [
+        "$\\sin\\left(\\dfrac{\\pi}{4}\\right) = \\dfrac{\\sqrt{2}}{2}$.",
+        "Le point associé à $\\dfrac{\\pi}{2}$ est $(0\\,;1)$, donc $\\cos\\left(\\dfrac{\\pi}{2}\\right) = 0$ ; celui associé à $\\pi$ est $(-1\\,;0)$, donc $\\sin(\\pi) = 0$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt{2}}{2}$ ; $0$ ; $0$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "Combien de degrés mesure un angle de $1$ radian ? Arrondir au dixième.",
+      "corrige": [
+        "$1$ rad $= \\dfrac{180°}{\\pi}$.",
+        "$\\dfrac{180}{\\pi} \\approx 57{,}3$."
+      ],
+      "reponse": "Environ $57{,}3°$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "Sur le cercle trigonométrique, quelle est la longueur de l'arc intercepté par un angle de $72°$ ? Donner la valeur exacte puis une valeur approchée au millième.",
+      "corrige": [
+        "Sur le cercle de rayon $1$, la longueur de l'arc est égale à la mesure de l'angle en radians.",
+        "$72 \\times \\dfrac{\\pi}{180} = \\dfrac{2\\pi}{5} \\approx 1{,}257$."
+      ],
+      "reponse": "$\\dfrac{2\\pi}{5} \\approx 1{,}257$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "En $20$ minutes, de quel angle (en radians) tourne la grande aiguille d'une horloge ?",
+      "corrige": [
+        "En $60$ minutes, la grande aiguille fait un tour complet, soit $2\\pi$ rad.",
+        "$20$ minutes représentent un tiers de tour : $\\dfrac{2\\pi}{3}$ rad (dans le sens des aiguilles d'une montre, donc le sens négatif)."
+      ],
+      "reponse": "$\\dfrac{2\\pi}{3}$ rad."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "cercle-trigonometrique",
+      "enonce": "Donner le réel de l'intervalle $[0\\,;2\\pi[$ associé au même point du cercle trigonométrique que $-\\dfrac{\\pi}{3}$.",
+      "corrige": [
+        "On ajoute un tour complet : $-\\dfrac{\\pi}{3} + 2\\pi = \\dfrac{-\\pi + 6\\pi}{3} = \\dfrac{5\\pi}{3}$.",
+        "$\\dfrac{5\\pi}{3}$ appartient bien à $[0\\,;2\\pi[$."
+      ],
+      "reponse": "$\\dfrac{5\\pi}{3}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "cercle-trigonometrique",
+      "enonce": "Donner les coordonnées exactes du point $\\mathrm{M}$ du cercle trigonométrique associé au réel $\\dfrac{\\pi}{4}$.",
+      "corrige": [
+        "$\\mathrm{M}\\left(\\cos\\dfrac{\\pi}{4}\\,;\\sin\\dfrac{\\pi}{4}\\right)$.",
+        "$\\cos\\dfrac{\\pi}{4} = \\sin\\dfrac{\\pi}{4} = \\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$\\mathrm{M}\\left(\\dfrac{\\sqrt{2}}{2}\\,;\\dfrac{\\sqrt{2}}{2}\\right)$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "periodicite",
+      "enonce": "Déterminer le réel de $[0\\,;2\\pi[$ associé au même point que $\\dfrac{17\\pi}{3}$.",
+      "corrige": [
+        "$\\dfrac{17\\pi}{3} = \\dfrac{12\\pi}{3} + \\dfrac{5\\pi}{3} = 4\\pi + \\dfrac{5\\pi}{3}$.",
+        "$4\\pi$ représente deux tours complets."
+      ],
+      "reponse": "$\\dfrac{5\\pi}{3}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "periodicite",
+      "enonce": "Déterminer le réel de $[0\\,;2\\pi[$ associé au même point que $-\\dfrac{7\\pi}{4}$.",
+      "corrige": [
+        "$-\\dfrac{7\\pi}{4} + 2\\pi = \\dfrac{-7\\pi + 8\\pi}{4} = \\dfrac{\\pi}{4}$."
+      ],
+      "reponse": "$\\dfrac{\\pi}{4}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Calculer $A = 2\\cos\\left(\\dfrac{\\pi}{3}\\right) - \\sin\\left(\\dfrac{\\pi}{2}\\right)$.",
+      "corrige": [
+        "$\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$ et $\\sin\\left(\\dfrac{\\pi}{2}\\right) = 1$.",
+        "$A = 2 \\times \\dfrac{1}{2} - 1 = 0$."
+      ],
+      "reponse": "$A = 0$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\cos x = \\dfrac{3}{5}$ et $x \\in \\left]0\\,;\\dfrac{\\pi}{2}\\right[$. Calculer $\\sin x$.",
+      "corrige": [
+        "$\\sin^2 x = 1 - \\cos^2 x = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}$.",
+        "Sur $\\left]0\\,;\\dfrac{\\pi}{2}\\right[$, $\\sin x > 0$, donc $\\sin x = \\dfrac{4}{5}$."
+      ],
+      "reponse": "$\\sin x = \\dfrac{4}{5}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "angles-associes",
+      "enonce": "Calculer les valeurs exactes de $\\cos\\left(\\dfrac{2\\pi}{3}\\right)$ et $\\sin\\left(\\dfrac{2\\pi}{3}\\right)$.",
+      "corrige": [
+        "$\\dfrac{2\\pi}{3} = \\pi - \\dfrac{\\pi}{3}$ : symétrique de $\\dfrac{\\pi}{3}$ par rapport à l'axe des ordonnées.",
+        "$\\cos\\left(\\dfrac{2\\pi}{3}\\right) = -\\cos\\left(\\dfrac{\\pi}{3}\\right) = -\\dfrac{1}{2}$ et $\\sin\\left(\\dfrac{2\\pi}{3}\\right) = \\sin\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$-\\dfrac{1}{2}$ et $\\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "angles-associes",
+      "enonce": "Calculer les valeurs exactes de $\\cos\\left(\\dfrac{3\\pi}{4}\\right)$ et $\\sin\\left(-\\dfrac{\\pi}{6}\\right)$.",
+      "corrige": [
+        "$\\cos\\left(\\dfrac{3\\pi}{4}\\right) = \\cos\\left(\\pi - \\dfrac{\\pi}{4}\\right) = -\\cos\\left(\\dfrac{\\pi}{4}\\right) = -\\dfrac{\\sqrt{2}}{2}$.",
+        "$\\sin\\left(-\\dfrac{\\pi}{6}\\right) = -\\sin\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$ ($\\sin$ est impaire)."
+      ],
+      "reponse": "$-\\dfrac{\\sqrt{2}}{2}$ et $-\\dfrac{1}{2}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "angles-associes",
+      "enonce": "Calculer les valeurs exactes de $\\cos\\left(\\dfrac{4\\pi}{3}\\right)$ et $\\sin\\left(\\dfrac{5\\pi}{4}\\right)$.",
+      "corrige": [
+        "$\\dfrac{4\\pi}{3} = \\pi + \\dfrac{\\pi}{3}$ : $\\cos\\left(\\dfrac{4\\pi}{3}\\right) = -\\cos\\left(\\dfrac{\\pi}{3}\\right) = -\\dfrac{1}{2}$.",
+        "$\\dfrac{5\\pi}{4} = \\pi + \\dfrac{\\pi}{4}$ : $\\sin\\left(\\dfrac{5\\pi}{4}\\right) = -\\sin\\left(\\dfrac{\\pi}{4}\\right) = -\\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$-\\dfrac{1}{2}$ et $-\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "parite",
+      "enonce": "En utilisant la parité, calculer $\\cos\\left(-\\dfrac{\\pi}{4}\\right)$ et $\\sin\\left(-\\dfrac{\\pi}{3}\\right)$.",
+      "corrige": [
+        "$\\cos$ est paire : $\\cos\\left(-\\dfrac{\\pi}{4}\\right) = \\cos\\left(\\dfrac{\\pi}{4}\\right) = \\dfrac{\\sqrt{2}}{2}$.",
+        "$\\sin$ est impaire : $\\sin\\left(-\\dfrac{\\pi}{3}\\right) = -\\sin\\left(\\dfrac{\\pi}{3}\\right) = -\\dfrac{\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt{2}}{2}$ et $-\\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Résoudre dans $[0\\,;2\\pi[$ l'équation $\\cos x = 0$.",
+      "corrige": [
+        "On cherche les points du cercle d'abscisse $0$ : ce sont $(0\\,;1)$ et $(0\\,;-1)$.",
+        "Ils correspondent à $\\dfrac{\\pi}{2}$ et $\\dfrac{3\\pi}{2}$."
+      ],
+      "reponse": "$S = \\left\\{\\dfrac{\\pi}{2}\\,;\\dfrac{3\\pi}{2}\\right\\}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Résoudre dans $[0\\,;2\\pi[$ les équations $\\cos x = 2$ et $\\sin x = -1$.",
+      "corrige": [
+        "Pour tout réel $x$, $-1 \\leqslant \\cos x \\leqslant 1$ : l'équation $\\cos x = 2$ n'a aucune solution.",
+        "$\\sin x = -1$ : seul le point $(0\\,;-1)$ convient, associé à $\\dfrac{3\\pi}{2}$."
+      ],
+      "reponse": "Aucune solution pour $\\cos x = 2$ ; $S = \\left\\{\\dfrac{3\\pi}{2}\\right\\}$ pour $\\sin x = -1$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "lecture-cercle",
+      "enonce": "Sans calculer de valeur, donner le signe de $\\cos x$ et de $\\sin x$ pour $x = \\dfrac{2\\pi}{3}$, puis pour $x = \\dfrac{5\\pi}{4}$.",
+      "corrige": [
+        "$\\dfrac{2\\pi}{3} \\in \\left]\\dfrac{\\pi}{2}\\,;\\pi\\right[$ : point en haut à gauche, $\\cos x < 0$ et $\\sin x > 0$.",
+        "$\\dfrac{5\\pi}{4} \\in \\left]\\pi\\,;\\dfrac{3\\pi}{2}\\right[$ : point en bas à gauche, $\\cos x < 0$ et $\\sin x < 0$."
+      ],
+      "reponse": "$\\dfrac{2\\pi}{3}$ : $\\cos < 0$, $\\sin > 0$ ; $\\dfrac{5\\pi}{4}$ : $\\cos < 0$, $\\sin < 0$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "cercle-trigonometrique",
+      "enonce": "Les réels $\\dfrac{\\pi}{6}$, $\\dfrac{13\\pi}{6}$ et $-\\dfrac{11\\pi}{6}$ sont-ils associés au même point du cercle trigonométrique ?",
+      "corrige": [
+        "$\\dfrac{13\\pi}{6} - \\dfrac{\\pi}{6} = \\dfrac{12\\pi}{6} = 2\\pi$ : même point.",
+        "$-\\dfrac{11\\pi}{6} - \\dfrac{\\pi}{6} = -\\dfrac{12\\pi}{6} = -2\\pi$ : même point.",
+        "Deux réels qui diffèrent d'un multiple de $2\\pi$ ont le même point image."
+      ],
+      "reponse": "Oui, les trois réels sont associés au même point."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "periodicite",
+      "enonce": "Calculer la valeur exacte de $\\cos\\left(\\dfrac{25\\pi}{4}\\right)$.",
+      "corrige": [
+        "$\\dfrac{25\\pi}{4} = \\dfrac{24\\pi}{4} + \\dfrac{\\pi}{4} = 6\\pi + \\dfrac{\\pi}{4}$, soit $3$ tours complets plus $\\dfrac{\\pi}{4}$.",
+        "$\\cos\\left(\\dfrac{25\\pi}{4}\\right) = \\cos\\left(\\dfrac{\\pi}{4}\\right) = \\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "periodicite",
+      "enonce": "Calculer la valeur exacte de $\\sin\\left(-\\dfrac{17\\pi}{6}\\right)$.",
+      "corrige": [
+        "$-\\dfrac{17\\pi}{6} + 4\\pi = \\dfrac{-17\\pi + 24\\pi}{6} = \\dfrac{7\\pi}{6}$.",
+        "$\\sin\\left(\\dfrac{7\\pi}{6}\\right) = \\sin\\left(\\pi + \\dfrac{\\pi}{6}\\right) = -\\sin\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$."
+      ],
+      "reponse": "$-\\dfrac{1}{2}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "valeurs-remarquables",
+      "enonce": "Un élève écrit : « $\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{\\sqrt{3}}{2}$ ». Corriger son erreur à l'aide du cercle trigonométrique.",
+      "corrige": [
+        "Le point associé à $\\dfrac{\\pi}{3}$ (soit $60°$) est plus proche de l'axe des ordonnées que de l'axe des abscisses : son abscisse est la plus petite des deux coordonnées.",
+        "Donc $\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$ et c'est $\\sin\\left(\\dfrac{\\pi}{3}\\right)$ qui vaut $\\dfrac{\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "valeurs-remarquables",
+      "enonce": "Dans un triangle rectangle, l'hypoténuse mesure $10$ cm et l'un des angles aigus mesure $\\dfrac{\\pi}{6}$ rad. Calculer les longueurs exactes des deux autres côtés.",
+      "corrige": [
+        "Côté opposé à l'angle : $10 \\times \\sin\\left(\\dfrac{\\pi}{6}\\right) = 10 \\times \\dfrac{1}{2} = 5$ cm.",
+        "Côté adjacent : $10 \\times \\cos\\left(\\dfrac{\\pi}{6}\\right) = 10 \\times \\dfrac{\\sqrt{3}}{2} = 5\\sqrt{3}$ cm."
+      ],
+      "reponse": "$5$ cm et $5\\sqrt{3}$ cm."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\sin x = \\dfrac{1}{3}$ et $x \\in \\left]\\dfrac{\\pi}{2}\\,;\\pi\\right[$. Calculer la valeur exacte de $\\cos x$.",
+      "corrige": [
+        "$\\cos^2 x = 1 - \\dfrac{1}{9} = \\dfrac{8}{9}$.",
+        "Sur $\\left]\\dfrac{\\pi}{2}\\,;\\pi\\right[$, le point est à gauche de l'axe des ordonnées : $\\cos x < 0$.",
+        "$\\cos x = -\\sqrt{\\dfrac{8}{9}} = -\\dfrac{2\\sqrt{2}}{3}$."
+      ],
+      "reponse": "$\\cos x = -\\dfrac{2\\sqrt{2}}{3}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "Existe-t-il un réel $x$ tel que $\\cos x = 0{,}6$ et $\\sin x = 0{,}7$ ?",
+      "corrige": [
+        "On devrait avoir $\\cos^2 x + \\sin^2 x = 1$.",
+        "Or $0{,}6^2 + 0{,}7^2 = 0{,}36 + 0{,}49 = 0{,}85 \\neq 1$."
+      ],
+      "reponse": "Non, c'est impossible."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Simplifier, pour tout réel $x$, $A(x) = \\cos(\\pi - x) + \\cos(-x)$.",
+      "corrige": [
+        "$\\cos(\\pi - x) = -\\cos x$ et $\\cos(-x) = \\cos x$.",
+        "$A(x) = -\\cos x + \\cos x = 0$."
+      ],
+      "reponse": "$A(x) = 0$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Simplifier, pour tout réel $x$, $B(x) = \\sin(-x) + \\sin(\\pi - x) + \\cos\\left(\\dfrac{\\pi}{2} - x\\right)$.",
+      "corrige": [
+        "$\\sin(-x) = -\\sin x$, $\\sin(\\pi - x) = \\sin x$ et $\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin x$.",
+        "$B(x) = -\\sin x + \\sin x + \\sin x = \\sin x$."
+      ],
+      "reponse": "$B(x) = \\sin x$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "parite",
+      "enonce": "La fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = x\\sin x$ est-elle paire, impaire ou ni l'une ni l'autre ?",
+      "corrige": [
+        "Pour tout réel $x$, $-x$ est aussi dans $\\mathbb{R}$, et $f(-x) = (-x)\\sin(-x) = (-x)(-\\sin x) = x\\sin x$.",
+        "Donc $f(-x) = f(x)$."
+      ],
+      "reponse": "$f$ est paire."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre dans $]-\\pi\\,;\\pi]$ l'équation $\\cos x = \\dfrac{1}{2}$.",
+      "corrige": [
+        "$\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$ et, par parité, $\\cos\\left(-\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$.",
+        "La droite verticale d'équation $x = \\dfrac{1}{2}$ coupe le cercle en deux points seulement."
+      ],
+      "reponse": "$S = \\left\\{-\\dfrac{\\pi}{3}\\,;\\dfrac{\\pi}{3}\\right\\}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre dans $[0\\,;2\\pi[$ l'équation $\\sin x = \\dfrac{\\sqrt{2}}{2}$.",
+      "corrige": [
+        "$\\sin\\left(\\dfrac{\\pi}{4}\\right) = \\dfrac{\\sqrt{2}}{2}$ et $\\sin\\left(\\pi - \\dfrac{\\pi}{4}\\right) = \\sin\\left(\\dfrac{\\pi}{4}\\right)$.",
+        "Les deux solutions sont $\\dfrac{\\pi}{4}$ et $\\dfrac{3\\pi}{4}$."
+      ],
+      "reponse": "$S = \\left\\{\\dfrac{\\pi}{4}\\,;\\dfrac{3\\pi}{4}\\right\\}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre dans $[0\\,;2\\pi[$ l'équation $\\sin x = -\\dfrac{1}{2}$.",
+      "corrige": [
+        "$\\sin\\left(-\\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$ et $\\sin\\left(\\pi + \\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$.",
+        "Dans $[0\\,;2\\pi[$ : $-\\dfrac{\\pi}{6} + 2\\pi = \\dfrac{11\\pi}{6}$ et $\\pi + \\dfrac{\\pi}{6} = \\dfrac{7\\pi}{6}$."
+      ],
+      "reponse": "$S = \\left\\{\\dfrac{7\\pi}{6}\\,;\\dfrac{11\\pi}{6}\\right\\}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "lecture-cercle",
+      "enonce": "On sait que $x \\in \\left]\\dfrac{\\pi}{2}\\,;\\pi\\right[$. Donner le signe de $\\cos x$, de $\\sin x$ et de $\\cos(\\pi - x)$.",
+      "corrige": [
+        "Le point associé à $x$ est en haut à gauche du cercle : $\\cos x < 0$ et $\\sin x > 0$.",
+        "$\\cos(\\pi - x) = -\\cos x > 0$."
+      ],
+      "reponse": "$\\cos x < 0$ ; $\\sin x > 0$ ; $\\cos(\\pi - x) > 0$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "relation-fondamentale",
+      "enonce": "Démontrer que, pour tout réel $x$, $(\\cos x + \\sin x)^2 + (\\cos x - \\sin x)^2 = 2$.",
+      "corrige": [
+        "$(\\cos x + \\sin x)^2 = \\cos^2 x + 2\\cos x \\sin x + \\sin^2 x$ et $(\\cos x - \\sin x)^2 = \\cos^2 x - 2\\cos x \\sin x + \\sin^2 x$.",
+        "En additionnant, les doubles produits s'annulent : on obtient $2(\\cos^2 x + \\sin^2 x)$.",
+        "Comme $\\cos^2 x + \\sin^2 x = 1$, la somme vaut $2$."
+      ],
+      "reponse": "La somme vaut $2(\\cos^2 x + \\sin^2 x) = 2$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\cos x = -\\dfrac{\\sqrt{5}}{5}$ et $x \\in \\,]-\\pi\\,;0[$. Calculer la valeur exacte de $\\sin x$.",
+      "corrige": [
+        "$\\cos^2 x = \\dfrac{5}{25} = \\dfrac{1}{5}$, donc $\\sin^2 x = 1 - \\dfrac{1}{5} = \\dfrac{4}{5}$.",
+        "Sur $]-\\pi\\,;0[$, le point est sous l'axe des abscisses : $\\sin x < 0$.",
+        "$\\sin x = -\\dfrac{2}{\\sqrt{5}} = -\\dfrac{2\\sqrt{5}}{5}$."
+      ],
+      "reponse": "$\\sin x = -\\dfrac{2\\sqrt{5}}{5}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "angles-associes",
+      "enonce": "On admet que $\\cos\\left(\\dfrac{\\pi}{5}\\right) \\approx 0{,}809$. En déduire des valeurs approchées de $\\cos\\left(\\dfrac{4\\pi}{5}\\right)$, $\\cos\\left(\\dfrac{6\\pi}{5}\\right)$ et $\\sin\\left(\\dfrac{3\\pi}{10}\\right)$.",
+      "corrige": [
+        "$\\dfrac{4\\pi}{5} = \\pi - \\dfrac{\\pi}{5}$, donc $\\cos\\left(\\dfrac{4\\pi}{5}\\right) = -\\cos\\left(\\dfrac{\\pi}{5}\\right) \\approx -0{,}809$.",
+        "$\\dfrac{6\\pi}{5} = \\pi + \\dfrac{\\pi}{5}$, donc $\\cos\\left(\\dfrac{6\\pi}{5}\\right) = -\\cos\\left(\\dfrac{\\pi}{5}\\right) \\approx -0{,}809$.",
+        "$\\dfrac{3\\pi}{10} = \\dfrac{\\pi}{2} - \\dfrac{\\pi}{5}$, donc $\\sin\\left(\\dfrac{3\\pi}{10}\\right) = \\cos\\left(\\dfrac{\\pi}{5}\\right) \\approx 0{,}809$."
+      ],
+      "reponse": "$-0{,}809$ ; $-0{,}809$ ; $0{,}809$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\cos x = -\\dfrac{\\sqrt{3}}{2}$.",
+      "corrige": [
+        "$\\cos\\left(\\dfrac{5\\pi}{6}\\right) = -\\cos\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$ et, par parité, $\\cos\\left(-\\dfrac{5\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$.",
+        "Ce sont les deux solutions dans $]-\\pi\\,;\\pi]$ ; on ajoute tous les multiples de $2\\pi$."
+      ],
+      "reponse": "$x = \\dfrac{5\\pi}{6} + 2k\\pi$ ou $x = -\\dfrac{5\\pi}{6} + 2k\\pi$, avec $k \\in \\mathbb{Z}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "cercle-trigonometrique",
+      "enonce": "Sur le cercle trigonométrique, $\\mathrm{M}$ est associé à $\\dfrac{\\pi}{3}$ et $\\mathrm{N}$ à $\\dfrac{5\\pi}{6}$. Donner les coordonnées exactes de $\\mathrm{M}$ et $\\mathrm{N}$, montrer que le triangle $\\mathrm{OMN}$ est rectangle en $\\mathrm{O}$, puis calculer $\\mathrm{MN}$.",
+      "corrige": [
+        "$\\mathrm{M}\\left(\\dfrac{1}{2}\\,;\\dfrac{\\sqrt{3}}{2}\\right)$ et $\\mathrm{N}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\dfrac{1}{2}\\right)$.",
+        "$\\overrightarrow{\\mathrm{OM}} \\cdot \\overrightarrow{\\mathrm{ON}} = -\\dfrac{\\sqrt{3}}{4} + \\dfrac{\\sqrt{3}}{4} = 0$ : l'angle en $\\mathrm{O}$ est droit (on passe de $\\dfrac{\\pi}{3}$ à $\\dfrac{5\\pi}{6}$ en ajoutant $\\dfrac{\\pi}{2}$).",
+        "$\\mathrm{OM} = \\mathrm{ON} = 1$, donc par Pythagore $\\mathrm{MN}^2 = 1 + 1 = 2$ et $\\mathrm{MN} = \\sqrt{2}$."
+      ],
+      "reponse": "$\\mathrm{M}\\left(\\dfrac{1}{2}\\,;\\dfrac{\\sqrt{3}}{2}\\right)$, $\\mathrm{N}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\dfrac{1}{2}\\right)$ ; $\\mathrm{OMN}$ rectangle en $\\mathrm{O}$ ; $\\mathrm{MN} = \\sqrt{2}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "cercle-trigonometrique",
+      "enonce": "On place sur le cercle trigonométrique les points $\\mathrm{A}_k$ associés aux réels $\\dfrac{k\\pi}{3}$, pour $k = 0, 1, \\ldots, 5$. Donner les coordonnées exactes de $\\mathrm{A}_0$, $\\mathrm{A}_1$ et $\\mathrm{A}_2$, calculer $\\mathrm{A}_0\\mathrm{A}_1$, puis en déduire le périmètre de l'hexagone $\\mathrm{A}_0\\mathrm{A}_1 \\ldots \\mathrm{A}_5$.",
+      "corrige": [
+        "$\\mathrm{A}_0(1\\,;0)$, $\\mathrm{A}_1\\left(\\dfrac{1}{2}\\,;\\dfrac{\\sqrt{3}}{2}\\right)$, $\\mathrm{A}_2\\left(-\\dfrac{1}{2}\\,;\\dfrac{\\sqrt{3}}{2}\\right)$.",
+        "$\\mathrm{A}_0\\mathrm{A}_1^2 = \\left(\\dfrac{1}{2} - 1\\right)^2 + \\left(\\dfrac{\\sqrt{3}}{2}\\right)^2 = \\dfrac{1}{4} + \\dfrac{3}{4} = 1$, donc $\\mathrm{A}_0\\mathrm{A}_1 = 1$.",
+        "Les points sont régulièrement espacés de $\\dfrac{\\pi}{3}$ : les six côtés ont la même longueur $1$, et le périmètre vaut $6$."
+      ],
+      "reponse": "$\\mathrm{A}_0\\mathrm{A}_1 = 1$ ; périmètre $6$ (hexagone régulier)."
     }
   ]
 }

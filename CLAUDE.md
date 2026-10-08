@@ -172,3 +172,32 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Valeurs vérifiées et conservées : solubilité du sucre ≈ 2 000 g/L, bicarbonate 96 g/L (20 °C) ; K(FeSCN²⁺) ≈ 10²,
   K(Fe²⁺/Ag⁺) ≈ 3,2, K(Cu/Ag⁺) ≈ 2,2 × 10¹⁵ ; estérification K = 4 (eau comptée) ; saut de pH en 1re (dans la fiche).
 - Nombres en lettres : orthographe de 1990 (CP–CE2) et traditionnelle (CM) — les deux sont correctes, conservées.
+- **Publié le 05/10/2026** (PR #4, main `e69d0eb`, contrôle qualité et déploiement Pages verts).
+
+## 13. Chantiers du 05/10/2026 (après la PR #4) — sur `upgrade-sdk57`, non publiés
+- **Amis en temps réel** : `ecouterAmities` (cloud/social.js) + rechargement toutes les 60 s (Accueil, Amis).
+  Pour l'instantané, Kamal doit exécuter **une fois** `outils/sql/realtime_amities.sql` dans Supabase (SQL Editor).
+- **Ordre des chapitres** : `contenu/<niveau>/<parcours>/ordre.json` (143 fichiers, ordre de l'année scolaire),
+  lu par `app/scripts/generer-index.mjs` (chapitre absent → fin de liste + avertissement).
+- **50 exercices partout — TERMINÉ (05/10)** : les 956 chapitres ont 50 exercices (hors maths/PC : 10 d'origine
+  gardés + 40 écrits à la main). Vérif : `python3 scripts/verifier_json.py <chemin>` (50 → ≥ 6 notions, ≤ 15/notion,
+  ≥ 3 difficultés) → 776 chapitres, 0 problème. Une trentaine de fiches corrigées au passage (Descartes, BRICS,
+  haute mer, Hadès/Apollon, Bauhaus, mégapole/mégalopole, fiches de langues…).
+- **Audit des 956 QCM (≈ 19 000 questions) terminé** : ~20 bonnes réponses mal indexées corrigées, ~600 retouches
+  (deux bonnes réponses, explications « choix A » alors que l'appli mélange les choix, unités, langues).
+- Difficultés « decouverte » et « probleme » ont maintenant une étiquette dans `Exercices.js`.
+
+## 14. Sept nouveautés (06-07/10/2026) — PR #5, non publiées
+- **Appli plus rapide** : les fiches et exercices ne sont plus dans le bundle (40 Mo → 15 Mo). `generer-index.mjs`
+  génère `src/contenu-lourd.{web,native}.js` (`chargerFiche(id)`, `chargerExercices(id)`) et copie les fichiers dans
+  `app/public/donnees/` (ignoré par git, recréé par `npm run preparer`, étape ajoutée dans `pages.yml`). Hook `src/useFiche.js`.
+- **Formules** : `app/lib/markdownmath` protège les `$…$` avant markdown-it (corrige `\\` des matrices et `\,` des milliers).
+- **Exercices interactifs** : `app/lib/autocorrection` + `Exercices.js` (saisie, « Vérifier », +5 XP par exo réussi, `exosReussis`).
+- **Je révise mon contrôle** : `app/lib/controle` + écran `Controle.js` (plan jour par jour, `profil.controles`).
+- **Rappels web** : `src/notifications.web.js` (API Notification, appli ouverte seulement) ; PWA installable
+  (`public/manifest.json`, `sw.js`, icônes).
+- **Classement entre amis** (`Classement.js`, `app/lib/classement`) et **Espace parent** (`EspaceParent.js`,
+  `cloud/parents.js`, `app/lib/parent`).
+- **SQL à exécuter une fois par Kamal dans Supabase** : `outils/sql/realtime_amities.sql`,
+  `outils/sql/classement_amis.sql`, `outils/sql/espace_parent.sql` (sans eux, l'appli affiche « pas encore activé »).
+- Testé dans Chromium (téléphone simulé) : 4e racine carrée, 2de vecteurs, exercices, contrôle, classement, parent : OK.

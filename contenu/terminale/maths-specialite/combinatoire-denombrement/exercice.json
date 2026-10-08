@@ -137,6 +137,455 @@
         "5. On passe par l'événement contraire « aucune femme », c'est-à-dire $4$ hommes parmi $6$ : $\\binom{6}{4} = \\binom{6}{2} = 15$ bureaux, de probabilité $\\dfrac{15}{1365} = \\dfrac{1}{91}$. D'où $P(\\text{au moins une femme}) = 1 - \\dfrac{1}{91} = \\dfrac{90}{91} \\approx 0{,}99$."
       ],
       "reponse": "1) $\\binom{15}{4} = 1365$ bureaux. 2) $\\binom{9}{4} = 126$. 3) $\\binom{9}{2}\\binom{6}{2} = 540$. 4) $\\dfrac{540}{1365} = \\dfrac{36}{91} \\approx 0{,}40$. 5) $1 - \\dfrac{1}{91} = \\dfrac{90}{91} \\approx 0{,}99$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "cardinal-ensembles",
+      "enonce": "On note $E$ l'ensemble des lettres utilisées pour écrire le mot « ANANAS ». Écrire $E$ en extension et donner $\\mathrm{Card}(E)$.",
+      "corrige": [
+        "Un ensemble ne contient chaque élément qu'une fois : les lettres utilisées sont A, N et S.",
+        "$E=\\{A, N, S\\}$, donc $\\mathrm{Card}(E)=3$ (et non $6$, nombre de lettres du mot)."
+      ],
+      "reponse": "$E=\\{A, N, S\\}$ et $\\mathrm{Card}(E)=3$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "factorielle",
+      "enonce": "Calculer $4!$, $6!$ et $0!$.",
+      "corrige": [
+        "$4!=1\\times 2\\times 3\\times 4=24$ et $6!=4!\\times 5\\times 6=24\\times 30=720$.",
+        "Par convention, $0!=1$."
+      ],
+      "reponse": "$4!=24$, $6!=720$, $0!=1$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "principe-additif",
+      "enonce": "Sur une étagère, il y a $5$ romans policiers et $7$ bandes dessinées, tous différents. Lucas veut emprunter un seul livre. Combien de choix a-t-il ?",
+      "corrige": [
+        "Il choisit soit un roman policier, soit une bande dessinée : ces deux cas n'ont aucun livre en commun.",
+        "Principe additif : $5+7=12$ choix."
+      ],
+      "reponse": "$12$ choix."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "cardinal-ensembles",
+      "enonce": "On lance deux dés équilibrés à six faces, un rouge et un bleu, et on note le couple (résultat du rouge ; résultat du bleu). À l'aide d'un tableau à double entrée, dire combien il y a de couples possibles, puis combien donnent une somme égale à $7$.",
+      "corrige": [
+        "Le tableau a $6$ lignes et $6$ colonnes : il y a $6\\times 6=36$ couples.",
+        "Somme $7$ : $(1\\,;6)$, $(2\\,;5)$, $(3\\,;4)$, $(4\\,;3)$, $(5\\,;2)$, $(6\\,;1)$, soit une diagonale de $6$ cases."
+      ],
+      "reponse": "$36$ couples, dont $6$ de somme $7$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "principe-additif",
+      "enonce": "Dans une classe de $32$ élèves, $20$ pratiquent le football, $15$ la natation et $8$ pratiquent les deux. Combien d'élèves pratiquent au moins un de ces deux sports ? Combien n'en pratiquent aucun ?",
+      "corrige": [
+        "Les deux groupes se chevauchent : $\\mathrm{Card}(F\\cup N)=20+15-8=27$.",
+        "Ceux qui ne pratiquent aucun des deux : $32-27=5$."
+      ],
+      "reponse": "$27$ élèves pratiquent au moins un sport ; $5$ n'en pratiquent aucun."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "factorielle",
+      "enonce": "Calculer $\\dfrac{10!}{8!}$ sans calculatrice.",
+      "corrige": [
+        "$10!=10\\times 9\\times 8!$, donc $\\dfrac{10!}{8!}=10\\times 9$.",
+        "On obtient $90$ : on simplifie avant de multiplier."
+      ],
+      "reponse": "$90$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "factorielle",
+      "enonce": "Soit $n$ un entier naturel. Simplifier $\\dfrac{(n+1)!}{n!}$.",
+      "corrige": [
+        "$(n+1)!=1\\times 2\\times\\cdots\\times n\\times(n+1)=n!\\times(n+1)$.",
+        "Donc $\\dfrac{(n+1)!}{n!}=n+1$."
+      ],
+      "reponse": "$n+1$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "p-liste",
+      "enonce": "Un QCM comporte $10$ questions ; pour chacune, on coche une seule réponse parmi $4$. Combien de grilles de réponses différentes peut-on remplir ?",
+      "corrige": [
+        "Une grille est une suite ordonnée de $10$ réponses, chacune prise parmi $4$, avec répétition possible : c'est une $10$-liste d'un ensemble à $4$ éléments.",
+        "Nombre de grilles : $4^{10}=1\\,048\\,576$."
+      ],
+      "reponse": "$4^{10}=1\\,048\\,576$ grilles."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "p-liste",
+      "enonce": "On lance trois fois de suite un dé à six faces et on note la suite des résultats, par exemple $(2\\,;5\\,;2)$. Combien de suites de résultats sont possibles ?",
+      "corrige": [
+        "L'ordre compte et un même résultat peut revenir : c'est une $3$-liste de $\\{1, 2, 3, 4, 5, 6\\}$.",
+        "$6^3=216$ suites."
+      ],
+      "reponse": "$216$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "permutation",
+      "enonce": "Combien d'anagrammes (ayant un sens ou non) peut-on écrire avec les cinq lettres du mot « MATHS » ?",
+      "corrige": [
+        "Les cinq lettres sont toutes différentes ; une anagramme est un rangement de toutes ces lettres : c'est une permutation.",
+        "$5!=120$ anagrammes (le mot « MATHS » lui-même compris)."
+      ],
+      "reponse": "$120$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "permutation",
+      "enonce": "Six amis s'assoient sur six chaises alignées pour une photo. De combien de façons peuvent-ils se placer ?",
+      "corrige": [
+        "On range les six personnes, toutes, dans un ordre : $6$ choix pour la première chaise, $5$ pour la deuxième, etc.",
+        "$6!=720$ placements."
+      ],
+      "reponse": "$720$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "arrangement",
+      "enonce": "Un identifiant est formé de $3$ lettres majuscules distinctes, choisies parmi les $26$ lettres de l'alphabet (par exemple « KZB »). Combien d'identifiants différents existe-t-il ?",
+      "corrige": [
+        "L'ordre compte (« KZB » et « BZK » sont différents) et les lettres sont distinctes : c'est un arrangement de $3$ éléments parmi $26$.",
+        "$A_{26}^3=26\\times 25\\times 24=15\\,600$."
+      ],
+      "reponse": "$15\\,600$ identifiants."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "arrangement",
+      "enonce": "Calculer $A_7^2$ et $A_5^5$. Que représente $A_5^5$ ?",
+      "corrige": [
+        "$A_7^2=7\\times 6=42$.",
+        "$A_5^5=\\dfrac{5!}{0!}=120$ : un arrangement de tous les éléments est une permutation, donc $A_n^n=n!$."
+      ],
+      "reponse": "$A_7^2=42$ ; $A_5^5=5!=120$ (permutations de $5$ éléments)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "combinaison",
+      "enonce": "Calculer $\\dbinom{6}{2}$ et $\\dbinom{7}{3}$ en simplifiant avant de multiplier.",
+      "corrige": [
+        "$\\dbinom{6}{2}=\\dfrac{6\\times 5}{2}=15$.",
+        "$\\dbinom{7}{3}=\\dfrac{7\\times 6\\times 5}{3\\times 2\\times 1}=\\dfrac{210}{6}=35$."
+      ],
+      "reponse": "$\\dbinom{6}{2}=15$ et $\\dbinom{7}{3}=35$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "coefficient-binomial",
+      "enonce": "Donner de tête $\\dbinom{12}{0}$, $\\dbinom{12}{1}$, $\\dbinom{12}{11}$ et $\\dbinom{12}{12}$, en justifiant chaque valeur par une phrase.",
+      "corrige": [
+        "$\\dbinom{12}{0}=1$ (une seule façon de ne rien choisir) et $\\dbinom{12}{12}=1$ (une seule façon de tout prendre).",
+        "$\\dbinom{12}{1}=12$ (choisir un seul élément) et $\\dbinom{12}{11}=\\dbinom{12}{1}=12$ (choisir les $11$ qu'on prend revient à choisir celui qu'on laisse)."
+      ],
+      "reponse": "$1$, $12$, $12$, $1$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide de la symétrie des coefficients binomiaux, calculer $\\dbinom{20}{18}$ et $\\dbinom{100}{98}$.",
+      "corrige": [
+        "$\\dbinom{20}{18}=\\dbinom{20}{2}=\\dfrac{20\\times 19}{2}=190$.",
+        "$\\dbinom{100}{98}=\\dbinom{100}{2}=\\dfrac{100\\times 99}{2}=4\\,950$."
+      ],
+      "reponse": "$190$ et $4\\,950$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "triangle-pascal",
+      "enonce": "La ligne $5$ du triangle de Pascal est : $1\\quad 5\\quad 10\\quad 10\\quad 5\\quad 1$. Écrire la ligne $6$.",
+      "corrige": [
+        "Chaque nombre est la somme des deux nombres situés au-dessus de lui (relation de Pascal), et chaque ligne commence et finit par $1$.",
+        "$1$, $1+5=6$, $5+10=15$, $10+10=20$, $10+5=15$, $5+1=6$, $1$."
+      ],
+      "reponse": "$1\\quad 6\\quad 15\\quad 20\\quad 15\\quad 6\\quad 1$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "triangle-pascal",
+      "enonce": "Sachant que $\\dbinom{7}{3}=35$ et $\\dbinom{7}{4}=35$, calculer $\\dbinom{8}{4}$ sans utiliser de factorielle.",
+      "corrige": [
+        "Relation de Pascal avec $n=8$ et $p=4$ : $\\dbinom{8}{4}=\\dbinom{7}{3}+\\dbinom{7}{4}$.",
+        "$\\dbinom{8}{4}=35+35=70$."
+      ],
+      "reponse": "$70$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "choix-du-modele",
+      "enonce": "Pour chaque situation, dire s'il s'agit d'une $p$-liste, d'une permutation, d'un arrangement ou d'une combinaison : a) le tiercé (trois premiers dans l'ordre) d'une course de $15$ chevaux ; b) une main de $5$ cartes tirée d'un jeu de $32$ ; c) un code de carte bancaire à $4$ chiffres ; d) l'ordre de passage des $25$ élèves d'une classe à un oral.",
+      "corrige": [
+        "On se pose deux questions : l'ordre compte-t-il ? peut-on répéter ?",
+        "a) ordre, pas de répétition, $3$ parmi $15$ : arrangement. b) sans ordre : combinaison. c) ordre et répétition possible : $p$-liste. d) on range tous les élèves : permutation."
+      ],
+      "reponse": "a) arrangement ; b) combinaison ; c) $p$-liste ; d) permutation."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "choix-du-modele",
+      "enonce": "Pour désigner $3$ délégués (sans fonction particulière) parmi $25$ élèves, un élève répond : « $25\\times 24\\times 23=13\\,800$ possibilités ». Expliquer son erreur et donner le bon nombre.",
+      "corrige": [
+        "Le produit $25\\times 24\\times 23$ compte des triplets ordonnés : chaque groupe de $3$ délégués est compté $3!=6$ fois.",
+        "Comme l'ordre ne compte pas, il faut diviser par $3!$ : $\\dbinom{25}{3}=\\dfrac{13\\,800}{6}=2\\,300$."
+      ],
+      "reponse": "$\\dbinom{25}{3}=2\\,300$ (il a oublié de diviser par $3!$)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "principe-multiplicatif",
+      "enonce": "On s'intéresse aux plaques formées de $2$ lettres, puis $3$ chiffres, puis $2$ lettres (comme AB-123-CD). En supposant que les $26$ lettres et les $10$ chiffres sont tous autorisés à chaque position, combien de plaques différentes peut-on former ?",
+      "corrige": [
+        "Chaque position est une étape indépendante : $26$ choix pour chaque lettre, $10$ pour chaque chiffre.",
+        "$26^2\\times 10^3\\times 26^2=26^4\\times 1\\,000=456\\,976\\,000$."
+      ],
+      "reponse": "$456\\,976\\,000$ plaques."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "principe-multiplicatif",
+      "enonce": "Combien y a-t-il d'entiers naturels qui s'écrivent avec exactement $3$ chiffres (de $100$ à $999$) ? Retrouver ce nombre par le principe multiplicatif.",
+      "corrige": [
+        "Le chiffre des centaines ne peut pas être $0$ : $9$ choix ; dizaines et unités : $10$ choix chacun.",
+        "$9\\times 10\\times 10=900$, ce qui correspond bien à $999-100+1=900$."
+      ],
+      "reponse": "$900$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "arrangement",
+      "enonce": "Combien d'entiers de $3$ chiffres (de $100$ à $999$) ont leurs trois chiffres tous différents ?",
+      "corrige": [
+        "Centaines : $9$ choix (pas de $0$). Dizaines : tout chiffre sauf celui des centaines, soit $9$ choix ($0$ redevient possible).",
+        "Unités : $8$ choix (différent des deux premiers). Total : $9\\times 9\\times 8=648$."
+      ],
+      "reponse": "$648$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "On sait qu'il y a $900$ entiers de $3$ chiffres, dont $648$ ont trois chiffres tous différents. Combien d'entiers de $3$ chiffres ont au moins deux chiffres égaux ?",
+      "corrige": [
+        "« Au moins deux chiffres égaux » est le contraire de « trois chiffres tous différents ».",
+        "On passe par le complémentaire : $900-648=252$."
+      ],
+      "reponse": "$252$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "combinaison",
+      "enonce": "Lors d'une réunion, $12$ personnes se saluent : chacune serre une fois la main de chacune des autres. Combien de poignées de main sont échangées ?",
+      "corrige": [
+        "Une poignée de main correspond à une paire de personnes, sans ordre : c'est une combinaison de $2$ parmi $12$.",
+        "$\\dbinom{12}{2}=\\dfrac{12\\times 11}{2}=66$."
+      ],
+      "reponse": "$66$ poignées de main."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "combinaison",
+      "enonce": "Dans un jeu de loterie, on coche $5$ numéros parmi $49$, puis un numéro « chance » parmi $10$. Combien de grilles différentes existe-t-il ?",
+      "corrige": [
+        "L'ordre des $5$ numéros n'a pas d'importance : $\\dbinom{49}{5}=1\\,906\\,884$ choix.",
+        "Le numéro chance est une étape indépendante : $1\\,906\\,884\\times 10=19\\,068\\,840$ grilles."
+      ],
+      "reponse": "$19\\,068\\,840$ grilles."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "principe-multiplicatif",
+      "enonce": "Un groupe compte $6$ filles et $5$ garçons. On forme un comité de $4$ personnes comprenant exactement $1$ garçon. Combien de comités sont possibles ?",
+      "corrige": [
+        "On choisit le garçon ($\\dbinom{5}{1}=5$ choix) et les $3$ filles ($\\dbinom{6}{3}=20$ choix) : deux étapes indépendantes.",
+        "$5\\times 20=100$ comités."
+      ],
+      "reponse": "$100$ comités."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "Un carton contient $10$ ampoules dont $3$ défectueuses. On en prélève $4$ simultanément. Combien de prélèvements contiennent au moins une ampoule défectueuse ?",
+      "corrige": [
+        "Nombre total de prélèvements : $\\dbinom{10}{4}=210$. Prélèvements sans ampoule défectueuse ($4$ parmi les $7$ bonnes) : $\\dbinom{7}{4}=35$.",
+        "Par complémentaire : $210-35=175$."
+      ],
+      "reponse": "$175$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "arrangement",
+      "enonce": "Une course réunit $10$ chevaux. 1) Combien de tiercés « dans l'ordre » (les $3$ premiers avec leur rang) sont possibles ? 2) Combien de tiercés « dans le désordre » (les $3$ premiers, sans leur rang) ? 3) Retrouver le lien entre les deux résultats.",
+      "corrige": [
+        "1) L'ordre compte : $A_{10}^3=10\\times 9\\times 8=720$.",
+        "2) L'ordre ne compte pas : $\\dbinom{10}{3}=120$.",
+        "3) Chaque groupe de $3$ chevaux peut être rangé de $3!=6$ façons : $720=120\\times 6$, c'est la relation $A_n^p=\\dbinom{n}{p}\\times p!$."
+      ],
+      "reponse": "1) $720$ ; 2) $120$ ; 3) $720=120\\times 3!$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "permutation",
+      "enonce": "On range $5$ livres différents sur une étagère, dont $2$ livres de mathématiques qui doivent rester côte à côte. Combien de rangements sont possibles ?",
+      "corrige": [
+        "On « colle » les deux livres de mathématiques en un bloc : on range alors $4$ objets ($3$ livres et le bloc), soit $4!=24$ façons.",
+        "À l'intérieur du bloc, les deux livres peuvent être dans $2!=2$ ordres : $24\\times 2=48$."
+      ],
+      "reponse": "$48$ rangements."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "permutation",
+      "enonce": "Quatre garçons et trois filles s'assoient sur un banc de $7$ places en alternant : G F G F G F G. Combien de placements sont possibles ?",
+      "corrige": [
+        "Les places des garçons et des filles sont imposées. On range les $4$ garçons sur leurs $4$ places : $4!=24$ façons ; les $3$ filles sur les leurs : $3!=6$ façons.",
+        "Principe multiplicatif : $24\\times 6=144$."
+      ],
+      "reponse": "$144$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "coefficient-binomial",
+      "enonce": "Un polygone convexe a $n$ sommets ($n\\geqslant 4$). 1) Combien de segments relient deux de ses sommets ? 2) En déduire le nombre de diagonales, puis l'appliquer à l'octogone ($n=8$).",
+      "corrige": [
+        "1) Un segment correspond à une paire de sommets : $\\dbinom{n}{2}=\\dfrac{n(n-1)}{2}$.",
+        "2) Parmi ces segments, $n$ sont des côtés : il reste $\\dfrac{n(n-1)}{2}-n=\\dfrac{n(n-3)}{2}$ diagonales.",
+        "Pour $n=8$ : $\\dfrac{8\\times 5}{2}=20$ diagonales."
+      ],
+      "reponse": "$\\dbinom{n}{2}$ segments, $\\dfrac{n(n-3)}{2}$ diagonales ; $20$ pour l'octogone."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "coefficient-binomial",
+      "enonce": "Pour $1\\leqslant p\\leqslant n$, montrer avec les factorielles que $p\\dbinom{n}{p}=n\\dbinom{n-1}{p-1}$, puis vérifier l'égalité pour $n=5$ et $p=2$.",
+      "corrige": [
+        "$p\\dbinom{n}{p}=\\dfrac{p\\times n!}{p!\\,(n-p)!}=\\dfrac{n!}{(p-1)!\\,(n-p)!}$ car $\\dfrac{p}{p!}=\\dfrac{1}{(p-1)!}$.",
+        "$n\\dbinom{n-1}{p-1}=\\dfrac{n\\times(n-1)!}{(p-1)!\\,(n-p)!}=\\dfrac{n!}{(p-1)!\\,(n-p)!}$ : c'est la même expression.",
+        "Vérification : $2\\times\\dbinom{5}{2}=2\\times 10=20$ et $5\\times\\dbinom{4}{1}=5\\times 4=20$."
+      ],
+      "reponse": "Les deux membres valent $\\dfrac{n!}{(p-1)!\\,(n-p)!}$ ; pour $n=5$, $p=2$ : $20=20$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "probabilite",
+      "enonce": "On tire au hasard une main de $5$ cartes dans un jeu de $32$ cartes (toutes les mains sont équiprobables). Quelle est la probabilité d'obtenir les quatre as ?",
+      "corrige": [
+        "Nombre de mains : $\\dbinom{32}{5}=201\\,376$.",
+        "Mains favorables : les $4$ as, puis $1$ carte parmi les $28$ autres : $\\dbinom{4}{4}\\times\\dbinom{28}{1}=28$.",
+        "$P=\\dfrac{28}{201\\,376}=\\dfrac{1}{7\\,192}$."
+      ],
+      "reponse": "$\\dfrac{1}{7\\,192}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "probabilite",
+      "enonce": "Un code à $4$ chiffres (de $0000$ à $9999$) est choisi au hasard, tous les codes étant équiprobables. Quelle est la probabilité que ses quatre chiffres soient tous différents ?",
+      "corrige": [
+        "Nombre de codes : $10^4=10\\,000$ ($4$-listes).",
+        "Codes à chiffres distincts : $A_{10}^4=10\\times 9\\times 8\\times 7=5\\,040$.",
+        "$P=\\dfrac{5\\,040}{10\\,000}=0{,}504$."
+      ],
+      "reponse": "$0{,}504$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "complementaire",
+      "enonce": "On lance $5$ fois un dé équilibré à six faces. 1) Combien de suites de $5$ résultats sont possibles ? 2) Combien ne contiennent aucun $6$ ? 3) En déduire la probabilité d'obtenir au moins un $6$ (fraction, puis valeur arrondie au centième).",
+      "corrige": [
+        "1) $6^5=7\\,776$ suites ($5$-listes).",
+        "2) Sans $6$, chaque lancer a $5$ résultats possibles : $5^5=3\\,125$.",
+        "3) $P=1-\\dfrac{3\\,125}{7\\,776}=\\dfrac{4\\,651}{7\\,776}\\approx 0{,}60$."
+      ],
+      "reponse": "1) $7\\,776$ ; 2) $3\\,125$ ; 3) $\\dfrac{4\\,651}{7\\,776}\\approx 0{,}60$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "probabilite",
+      "enonce": "Une urne contient $5$ boules rouges et $3$ boules vertes. On tire simultanément $3$ boules. Quelle est la probabilité d'obtenir exactement $2$ boules rouges ?",
+      "corrige": [
+        "Tirages possibles : $\\dbinom{8}{3}=56$.",
+        "Tirages favorables : $2$ rouges parmi $5$ et $1$ verte parmi $3$, soit $\\dbinom{5}{2}\\times\\dbinom{3}{1}=10\\times 3=30$.",
+        "$P=\\dfrac{30}{56}=\\dfrac{15}{28}\\approx 0{,}54$."
+      ],
+      "reponse": "$\\dfrac{15}{28}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "combinaison",
+      "enonce": "Sur un quadrillage, une fourmi part du point $(0\\,;0)$ et doit rejoindre le point $(5\\,;3)$ en ne faisant que des pas d'une unité vers la droite (D) ou vers le haut (H). 1) Combien de pas fait-elle en tout ? 2) Combien de chemins différents peut-elle suivre ?",
+      "corrige": [
+        "1) Elle doit faire $5$ pas D et $3$ pas H, soit $8$ pas.",
+        "2) Un chemin est une suite de $8$ lettres contenant $3$ fois H. Il est entièrement déterminé par le choix des $3$ positions des H parmi les $8$ : $\\dbinom{8}{3}=56$."
+      ],
+      "reponse": "1) $8$ pas ; 2) $56$ chemins."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "p-liste",
+      "enonce": "On écrit des « mots » de $5$ lettres avec uniquement les lettres A et B (par exemple ABBAB). 1) Combien de mots peut-on écrire ? 2) Combien contiennent exactement $2$ fois la lettre A ? 3) Combien contiennent au moins une fois la lettre A ?",
+      "corrige": [
+        "1) Ordre et répétition : $2^5=32$ mots.",
+        "2) On choisit les $2$ positions des A parmi $5$ : $\\dbinom{5}{2}=10$ mots.",
+        "3) Un seul mot ne contient aucun A (BBBBB) : $32-1=31$."
+      ],
+      "reponse": "1) $32$ ; 2) $10$ ; 3) $31$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "cardinal-ensembles",
+      "enonce": "On considère l'ensemble $E=\\{1, 2, \\ldots, 20\\}$. On note $A$ l'ensemble des multiples de $2$ de $E$ et $B$ celui des multiples de $3$. Déterminer $\\mathrm{Card}(A)$, $\\mathrm{Card}(B)$, $\\mathrm{Card}(A\\cap B)$, puis le nombre d'éléments de $E$ multiples de $2$ ou de $3$.",
+      "corrige": [
+        "$\\mathrm{Card}(A)=10$ ($2, 4, \\ldots, 20$) et $\\mathrm{Card}(B)=6$ ($3, 6, \\ldots, 18$).",
+        "$A\\cap B$ contient les multiples de $6$ : $6$, $12$, $18$, donc $\\mathrm{Card}(A\\cap B)=3$.",
+        "$\\mathrm{Card}(A\\cup B)=10+6-3=13$."
+      ],
+      "reponse": "$10$, $6$, $3$ ; $13$ éléments multiples de $2$ ou de $3$."
     }
   ]
 }

@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme-etude-optimisation",
       "enonce": "Un mobile se déplace sur un axe gradué en mètres. À l'instant $t$ (en secondes), avec $t \\in [0\\,;\\,2\\pi]$, son abscisse est donnée par $x(t) = 2\\sin(t) - t$. On souhaite savoir à quel instant le mobile est le plus à droite (abscisse maximale). 1. Calculer la vitesse $v(t) = x'(t)$. 2. Résoudre l'équation $v(t) = 0$ sur $[0\\,;\\,2\\pi]$. 3. Étudier le signe de $v(t)$ et dresser le tableau de variations de $x$ sur $[0\\,;\\,2\\pi]$. 4. En déduire l'instant où l'abscisse est maximale et donner cette abscisse (valeur exacte puis valeur approchée au centième). 5. Le mobile repasse-t-il par sa position de départ ? Justifier.",
       "corrige": [
@@ -138,6 +138,451 @@
         "5. La position de départ est $x(0) = 2\\sin(0) - 0 = 0$. Après $t = \\dfrac{\\pi}{3}$, $x$ décroît continûment de $\\approx 0{,}69$ jusqu'à $x\\!\\left(\\dfrac{5\\pi}{3}\\right) = 2\\sin\\!\\left(\\dfrac{5\\pi}{3}\\right) - \\dfrac{5\\pi}{3} = -\\sqrt{3} - \\dfrac{5\\pi}{3} \\approx -6{,}97 < 0$ : par continuité, $x$ prend à nouveau la valeur $0$ entre $\\dfrac{\\pi}{3}$ et $\\dfrac{5\\pi}{3}$. Le mobile repasse donc bien une fois par sa position de départ (puis s'en éloigne vers la gauche)."
       ],
       "reponse": "$v(t) = 2\\cos(t) - 1$ ; $v(t) = 0$ pour $t = \\dfrac{\\pi}{3}$ et $t = \\dfrac{5\\pi}{3}$. $x$ croît sur $\\left[0\\,;\\,\\dfrac{\\pi}{3}\\right]$, décroît sur $\\left[\\dfrac{\\pi}{3}\\,;\\,\\dfrac{5\\pi}{3}\\right]$, croît sur $\\left[\\dfrac{5\\pi}{3}\\,;\\,2\\pi\\right]$. Abscisse maximale en $t = \\dfrac{\\pi}{3}$ s : $x = \\sqrt{3} - \\dfrac{\\pi}{3} \\approx 0{,}69$ m. Oui, le mobile repasse une fois par $x = 0$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Sur le cercle trigonométrique, placer le point $M$ associé au réel $\\pi$. En déduire $\\cos(\\pi)$ et $\\sin(\\pi)$.",
+      "corrige": [
+        "Le réel $\\pi$ correspond à un demi-tour : $M$ est le point $(-1\\,;0)$.",
+        "$\\cos(\\pi)$ est l'abscisse de $M$ et $\\sin(\\pi)$ son ordonnée."
+      ],
+      "reponse": "$\\cos(\\pi)=-1$ et $\\sin(\\pi)=0$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Existe-t-il un réel $x$ tel que $\\sin(x)=1{,}2$ ? Justifier.",
+      "corrige": [
+        "Pour tout réel $x$, $-1\\leqslant\\sin(x)\\leqslant 1$, car $\\sin(x)$ est l'ordonnée d'un point du cercle de rayon $1$.",
+        "Or $1{,}2>1$ : aucun réel ne convient."
+      ],
+      "reponse": "Non, car $\\sin(x)\\leqslant 1$ pour tout $x$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "valeurs-remarquables",
+      "enonce": "Donner les valeurs exactes de $\\cos\\left(\\dfrac{\\pi}{3}\\right)$, $\\sin\\left(\\dfrac{\\pi}{6}\\right)$, $\\cos\\left(\\dfrac{\\pi}{4}\\right)$ et $\\sin\\left(\\dfrac{\\pi}{2}\\right)$.",
+      "corrige": [
+        "Ce sont des valeurs remarquables lues sur le cercle trigonométrique.",
+        "$\\cos\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{1}{2}$, $\\sin\\left(\\dfrac{\\pi}{6}\\right)=\\dfrac{1}{2}$, $\\cos\\left(\\dfrac{\\pi}{4}\\right)=\\dfrac{\\sqrt{2}}{2}$, $\\sin\\left(\\dfrac{\\pi}{2}\\right)=1$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$ ; $\\dfrac{1}{2}$ ; $\\dfrac{\\sqrt{2}}{2}$ ; $1$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Calculer $\\cos\\left(\\dfrac{2\\pi}{3}\\right)$ et $\\sin\\left(\\dfrac{3\\pi}{4}\\right)$.",
+      "corrige": [
+        "Le point associé à $\\dfrac{2\\pi}{3}$ est le symétrique de celui de $\\dfrac{\\pi}{3}$ par rapport à l'axe des ordonnées : même ordonnée, abscisse opposée. Donc $\\cos\\left(\\dfrac{2\\pi}{3}\\right)=-\\dfrac{1}{2}$.",
+        "De même, $\\dfrac{3\\pi}{4}$ est symétrique de $\\dfrac{\\pi}{4}$ par rapport à l'axe des ordonnées : $\\sin\\left(\\dfrac{3\\pi}{4}\\right)=\\sin\\left(\\dfrac{\\pi}{4}\\right)=\\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$-\\dfrac{1}{2}$ et $\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Calculer $\\cos\\left(\\dfrac{5\\pi}{6}\\right)$ et $\\sin\\left(-\\dfrac{\\pi}{6}\\right)$.",
+      "corrige": [
+        "$\\dfrac{5\\pi}{6}$ est symétrique de $\\dfrac{\\pi}{6}$ par rapport à l'axe des ordonnées : $\\cos\\left(\\dfrac{5\\pi}{6}\\right)=-\\cos\\left(\\dfrac{\\pi}{6}\\right)=-\\dfrac{\\sqrt{3}}{2}$.",
+        "$\\sin$ est impaire : $\\sin\\left(-\\dfrac{\\pi}{6}\\right)=-\\dfrac{1}{2}$."
+      ],
+      "reponse": "$-\\dfrac{\\sqrt{3}}{2}$ et $-\\dfrac{1}{2}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Calculer $A=\\sin(\\pi)+\\cos(0)+\\cos(\\pi)$.",
+      "corrige": [
+        "$\\sin(\\pi)=0$, $\\cos(0)=1$ et $\\cos(\\pi)=-1$.",
+        "$A=0+1-1=0$."
+      ],
+      "reponse": "$A=0$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "On sait que $\\sin(x)=-\\dfrac{5}{13}$ et que $x\\in\\left[-\\dfrac{\\pi}{2}\\,;0\\right]$. Déterminer $\\cos(x)$.",
+      "corrige": [
+        "Relation de Pythagore : $\\cos^2(x)=1-\\sin^2(x)=1-\\dfrac{25}{169}=\\dfrac{144}{169}$.",
+        "Sur $\\left[-\\dfrac{\\pi}{2}\\,;0\\right]$, le cosinus est positif : $\\cos(x)=\\dfrac{12}{13}$."
+      ],
+      "reponse": "$\\cos(x)=\\dfrac{12}{13}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Montrer que, pour tout réel $x$, $\\big(\\cos(x)+\\sin(x)\\big)^2+\\big(\\cos(x)-\\sin(x)\\big)^2=2$.",
+      "corrige": [
+        "En développant : $\\cos^2 x+2\\cos x\\sin x+\\sin^2 x+\\cos^2 x-2\\cos x\\sin x+\\sin^2 x$.",
+        "Les doubles produits s'éliminent : il reste $2\\left(\\cos^2 x+\\sin^2 x\\right)=2\\times 1=2$."
+      ],
+      "reponse": "L'expression vaut $2$ pour tout réel $x$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "parite-periodicite",
+      "enonce": "Calculer $\\cos\\left(-\\dfrac{\\pi}{4}\\right)$ et $\\sin\\left(-\\dfrac{\\pi}{2}\\right)$ en utilisant la parité.",
+      "corrige": [
+        "$\\cos$ est paire : $\\cos\\left(-\\dfrac{\\pi}{4}\\right)=\\cos\\left(\\dfrac{\\pi}{4}\\right)=\\dfrac{\\sqrt{2}}{2}$.",
+        "$\\sin$ est impaire : $\\sin\\left(-\\dfrac{\\pi}{2}\\right)=-\\sin\\left(\\dfrac{\\pi}{2}\\right)=-1$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt{2}}{2}$ et $-1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "parite-periodicite",
+      "enonce": "Montrer que la fonction $f$ définie sur $\\mathbb{R}$ par $f(x)=x\\sin(x)$ est paire.",
+      "corrige": [
+        "$\\mathbb{R}$ est symétrique par rapport à $0$. Pour tout $x$, $f(-x)=(-x)\\sin(-x)=(-x)\\big(-\\sin(x)\\big)$.",
+        "Donc $f(-x)=x\\sin(x)=f(x)$ : $f$ est paire."
+      ],
+      "reponse": "$f(-x)=f(x)$ : $f$ est paire."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "parite-periodicite",
+      "enonce": "Montrer que la fonction $g$ définie sur $\\mathbb{R}$ par $g(x)=\\sin(x)+x^3$ est impaire. Que peut-on dire de sa courbe ?",
+      "corrige": [
+        "$g(-x)=\\sin(-x)+(-x)^3=-\\sin(x)-x^3=-g(x)$ : $g$ est impaire.",
+        "Sa courbe est symétrique par rapport à l'origine du repère."
+      ],
+      "reponse": "$g$ est impaire ; courbe symétrique par rapport à l'origine."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "periodicite",
+      "enonce": "Calculer la valeur exacte de $\\cos\\left(\\dfrac{25\\pi}{3}\\right)$.",
+      "corrige": [
+        "$\\dfrac{25\\pi}{3}=\\dfrac{\\pi}{3}+\\dfrac{24\\pi}{3}=\\dfrac{\\pi}{3}+4\\times 2\\pi$.",
+        "Par périodicité ($2\\pi$) : $\\cos\\left(\\dfrac{25\\pi}{3}\\right)=\\cos\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "periodicite",
+      "enonce": "Calculer la valeur exacte de $\\sin\\left(\\dfrac{13\\pi}{4}\\right)$.",
+      "corrige": [
+        "$\\dfrac{13\\pi}{4}=\\dfrac{5\\pi}{4}+2\\pi$, donc $\\sin\\left(\\dfrac{13\\pi}{4}\\right)=\\sin\\left(\\dfrac{5\\pi}{4}\\right)$.",
+        "Le point associé à $\\dfrac{5\\pi}{4}$ est le symétrique de celui de $\\dfrac{\\pi}{4}$ par rapport à l'origine : $\\sin\\left(\\dfrac{5\\pi}{4}\\right)=-\\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$-\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "limites-en-0",
+      "enonce": "Sachant que $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin(x)}{x}=1$, déterminer $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin(x)}{3x}$.",
+      "corrige": [
+        "$\\dfrac{\\sin(x)}{3x}=\\dfrac{1}{3}\\times\\dfrac{\\sin(x)}{x}$.",
+        "La limite vaut $\\dfrac{1}{3}\\times 1=\\dfrac{1}{3}$."
+      ],
+      "reponse": "$\\dfrac{1}{3}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=2\\cos(x)-3\\sin(x)$.",
+      "corrige": [
+        "$\\cos'(x)=-\\sin(x)$ et $\\sin'(x)=\\cos(x)$.",
+        "$f'(x)=2\\big(-\\sin(x)\\big)-3\\cos(x)=-2\\sin(x)-3\\cos(x)$."
+      ],
+      "reponse": "$f'(x)=-2\\sin(x)-3\\cos(x)$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=x^2+\\sin(x)$, puis le coefficient directeur de la tangente à sa courbe au point d'abscisse $0$.",
+      "corrige": [
+        "$f'(x)=2x+\\cos(x)$.",
+        "$f'(0)=0+\\cos(0)=1$."
+      ],
+      "reponse": "$f'(x)=2x+\\cos(x)$ ; coefficient directeur $1$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Calculer la dérivée de $f(x)=\\sin(5x)$.",
+      "corrige": [
+        "C'est $\\sin(ax+b)$ avec $a=5$ et $b=0$ : $\\big(\\sin(ax+b)\\big)'=a\\cos(ax+b)$.",
+        "$f'(x)=5\\cos(5x)$."
+      ],
+      "reponse": "$f'(x)=5\\cos(5x)$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Calculer la dérivée de $f(x)=\\cos\\left(3x+\\dfrac{\\pi}{4}\\right)$.",
+      "corrige": [
+        "$\\big(\\cos(ax+b)\\big)'=-a\\sin(ax+b)$ avec $a=3$.",
+        "$f'(x)=-3\\sin\\left(3x+\\dfrac{\\pi}{4}\\right)$."
+      ],
+      "reponse": "$f'(x)=-3\\sin\\left(3x+\\dfrac{\\pi}{4}\\right)$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Calculer la dérivée de $f(t)=4\\sin(\\pi t)$.",
+      "corrige": [
+        "Avec $a=\\pi$ : $\\big(\\sin(\\pi t)\\big)'=\\pi\\cos(\\pi t)$.",
+        "$f'(t)=4\\pi\\cos(\\pi t)$."
+      ],
+      "reponse": "$f'(t)=4\\pi\\cos(\\pi t)$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "equation-cos",
+      "enonce": "Résoudre l'équation $\\cos(x)=\\dfrac{\\sqrt{2}}{2}$ sur $[-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "Angle de référence : $\\alpha=\\dfrac{\\pi}{4}$, car $\\cos\\left(\\dfrac{\\pi}{4}\\right)=\\dfrac{\\sqrt{2}}{2}$.",
+        "Par parité du cosinus, $-\\dfrac{\\pi}{4}$ est aussi solution."
+      ],
+      "reponse": "$S=\\left\\{-\\dfrac{\\pi}{4}\\,;\\dfrac{\\pi}{4}\\right\\}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "equation-cos",
+      "enonce": "Résoudre sur $[-\\pi\\,;\\pi]$ : a) $\\cos(x)=2$ ; b) $\\cos(x)=-1$.",
+      "corrige": [
+        "a) Le cosinus reste entre $-1$ et $1$ : aucune solution.",
+        "b) $\\cos(x)=-1$ lorsque le point est en $(-1\\,;0)$ : $x=\\pi$ ou $x=-\\pi$, qui appartiennent tous deux à $[-\\pi\\,;\\pi]$."
+      ],
+      "reponse": "a) $S=\\varnothing$ ; b) $S=\\{-\\pi\\,;\\pi\\}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "definition",
+      "enonce": "On sait que $\\cos(x)=-\\dfrac{1}{3}$ et que $x\\in\\left[\\dfrac{\\pi}{2}\\,;\\pi\\right]$. Déterminer la valeur exacte de $\\sin(x)$.",
+      "corrige": [
+        "$\\sin^2(x)=1-\\cos^2(x)=1-\\dfrac{1}{9}=\\dfrac{8}{9}$.",
+        "Sur $\\left[\\dfrac{\\pi}{2}\\,;\\pi\\right]$, $\\sin(x)\\geqslant 0$, donc $\\sin(x)=\\sqrt{\\dfrac{8}{9}}=\\dfrac{2\\sqrt{2}}{3}$."
+      ],
+      "reponse": "$\\sin(x)=\\dfrac{2\\sqrt{2}}{3}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "parite-periodicite",
+      "enonce": "Soit $f(x)=\\cos(x)+\\sin(x)$. Calculer $f\\left(\\dfrac{\\pi}{2}\\right)$, $f\\left(-\\dfrac{\\pi}{2}\\right)$ et $f(0)$. La fonction $f$ est-elle paire ? impaire ?",
+      "corrige": [
+        "$f\\left(\\dfrac{\\pi}{2}\\right)=0+1=1$, $f\\left(-\\dfrac{\\pi}{2}\\right)=0-1=-1$ et $f(0)=1$.",
+        "$f\\left(-\\dfrac{\\pi}{2}\\right)\\neq f\\left(\\dfrac{\\pi}{2}\\right)$ : $f$ n'est pas paire.",
+        "Une fonction impaire définie en $0$ vérifie $f(0)=-f(0)$, donc $f(0)=0$ ; ici $f(0)=1$ : $f$ n'est pas impaire."
+      ],
+      "reponse": "Ni paire ni impaire."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "parite-periodicite",
+      "enonce": "On connaît la courbe de $\\sin$ sur $[0\\,;\\pi]$. Expliquer comment en déduire la courbe sur $[-\\pi\\,;0]$, puis sur $\\mathbb{R}$ tout entier.",
+      "corrige": [
+        "$\\sin$ est impaire : sur $[-\\pi\\,;0]$, la courbe est la symétrique de celle sur $[0\\,;\\pi]$ par rapport à l'origine.",
+        "On obtient la courbe sur $[-\\pi\\,;\\pi]$, intervalle de longueur $2\\pi$ ; par périodicité, on la reproduit par translations de vecteur $2\\pi\\,\\vec{i}$ (et ses multiples)."
+      ],
+      "reponse": "Symétrie par rapport à l'origine (imparité), puis translations de vecteurs $2k\\pi\\,\\vec{i}$ (périodicité)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "periodicite",
+      "enonce": "Montrer que la fonction $f(x)=\\cos(2x)$ vérifie $f(x+\\pi)=f(x)$ pour tout réel $x$. Que peut-on en déduire pour sa courbe ?",
+      "corrige": [
+        "$f(x+\\pi)=\\cos\\big(2(x+\\pi)\\big)=\\cos(2x+2\\pi)=\\cos(2x)=f(x)$, par $2\\pi$-périodicité du cosinus.",
+        "La courbe de $f$ se répète à l'identique par translation de vecteur $\\pi\\,\\vec{i}$ : il suffit de l'étudier sur un intervalle de longueur $\\pi$."
+      ],
+      "reponse": "$f$ est périodique de période $\\pi$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "limites-en-0",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin(2x)}{x}$. On pourra poser $X=2x$.",
+      "corrige": [
+        "$\\dfrac{\\sin(2x)}{x}=2\\times\\dfrac{\\sin(2x)}{2x}=2\\times\\dfrac{\\sin(X)}{X}$ avec $X=2x$.",
+        "Quand $x\\to 0$, $X\\to 0$ et $\\dfrac{\\sin X}{X}\\to 1$ : la limite vaut $2$."
+      ],
+      "reponse": "$2$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "limites-en-0",
+      "enonce": "Exprimer le taux d'accroissement de $\\sin$ entre $0$ et $h$ ($h\\neq 0$), puis utiliser une limite du cours pour retrouver $\\sin'(0)$. En déduire la tangente à la courbe de $\\sin$ en $0$.",
+      "corrige": [
+        "Taux d'accroissement : $\\dfrac{\\sin(h)-\\sin(0)}{h}=\\dfrac{\\sin(h)}{h}$.",
+        "$\\displaystyle\\lim_{h\\to 0}\\dfrac{\\sin(h)}{h}=1$, donc $\\sin'(0)=1$.",
+        "Tangente en $0$ : $y=\\sin'(0)(x-0)+\\sin(0)=x$."
+      ],
+      "reponse": "$\\sin'(0)=1$ ; tangente $y=x$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=x\\cos(x)$.",
+      "corrige": [
+        "Dérivée d'un produit $uv$ avec $u(x)=x$ et $v(x)=\\cos(x)$ : $u'v+uv'$.",
+        "$f'(x)=1\\times\\cos(x)+x\\times\\big(-\\sin(x)\\big)=\\cos(x)-x\\sin(x)$."
+      ],
+      "reponse": "$f'(x)=\\cos(x)-x\\sin(x)$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=\\sin^2(x)$, c'est-à-dire $\\big(\\sin(x)\\big)^2$.",
+      "corrige": [
+        "Forme $u^2$ avec $u=\\sin$ : $(u^2)'=2u'u$.",
+        "$f'(x)=2\\cos(x)\\sin(x)$."
+      ],
+      "reponse": "$f'(x)=2\\sin(x)\\cos(x)$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "derivees",
+      "enonce": "Calculer la dérivée de $f(x)=e^x\\sin(x)$ et factoriser le résultat.",
+      "corrige": [
+        "Produit : $f'(x)=e^x\\sin(x)+e^x\\cos(x)$.",
+        "$f'(x)=e^x\\big(\\sin(x)+\\cos(x)\\big)$."
+      ],
+      "reponse": "$f'(x)=e^x\\big(\\sin(x)+\\cos(x)\\big)$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "derivee-composee",
+      "enonce": "Un élève écrit : « $\\big(\\cos(2x)\\big)'=-\\sin(2x)$ ». Corriger son erreur.",
+      "corrige": [
+        "$\\cos(2x)$ est une composée $\\cos(ax+b)$ avec $a=2$ : sa dérivée est $-a\\sin(ax+b)$.",
+        "L'élève a oublié le facteur $2$ : $\\big(\\cos(2x)\\big)'=-2\\sin(2x)$."
+      ],
+      "reponse": "$\\big(\\cos(2x)\\big)'=-2\\sin(2x)$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "derivee-composee",
+      "enonce": "Calculer la dérivée de $f(x)=e^{\\cos(x)}$.",
+      "corrige": [
+        "Forme $e^u$ avec $u(x)=\\cos(x)$ et $u'(x)=-\\sin(x)$.",
+        "$f'(x)=u'(x)\\,e^{u(x)}=-\\sin(x)\\,e^{\\cos(x)}$."
+      ],
+      "reponse": "$f'(x)=-\\sin(x)\\,e^{\\cos(x)}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "equation-cos",
+      "enonce": "Résoudre l'équation $\\cos(x)=-\\dfrac{\\sqrt{3}}{2}$ sur $[-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "Angle de référence dans $[0\\,;\\pi]$ : $\\alpha=\\dfrac{5\\pi}{6}$, car $\\cos\\left(\\dfrac{5\\pi}{6}\\right)=-\\dfrac{\\sqrt{3}}{2}$.",
+        "Par parité, $-\\dfrac{5\\pi}{6}$ est aussi solution."
+      ],
+      "reponse": "$S=\\left\\{-\\dfrac{5\\pi}{6}\\,;\\dfrac{5\\pi}{6}\\right\\}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "inequation-cos",
+      "enonce": "Résoudre l'inéquation $\\cos(x)\\leqslant 0$ sur $[-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "$\\cos(x)=0$ pour $x=-\\dfrac{\\pi}{2}$ et $x=\\dfrac{\\pi}{2}$ ($\\alpha=\\dfrac{\\pi}{2}$).",
+        "$\\cos(x)\\leqslant a$ correspond aux bords de l'intervalle : $x\\in\\left[-\\pi\\,;-\\dfrac{\\pi}{2}\\right]\\cup\\left[\\dfrac{\\pi}{2}\\,;\\pi\\right]$ (le point est à gauche de l'axe des ordonnées)."
+      ],
+      "reponse": "$S=\\left[-\\pi\\,;-\\dfrac{\\pi}{2}\\right]\\cup\\left[\\dfrac{\\pi}{2}\\,;\\pi\\right]$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "inequation-cos",
+      "enonce": "Résoudre l'inéquation $\\cos(x)>-\\dfrac{1}{2}$ sur $[-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "$\\cos(x)=-\\dfrac{1}{2}$ pour $x=\\pm\\dfrac{2\\pi}{3}$.",
+        "Le cosinus est plus grand que $-\\dfrac{1}{2}$ quand $x$ est proche de $0$, c'est-à-dire entre $-\\dfrac{2\\pi}{3}$ et $\\dfrac{2\\pi}{3}$, bornes exclues (inégalité stricte)."
+      ],
+      "reponse": "$S=\\left]-\\dfrac{2\\pi}{3}\\,;\\dfrac{2\\pi}{3}\\right[$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "equation-cos",
+      "enonce": "Résoudre l'équation $2\\cos^2(x)-\\cos(x)-1=0$ sur $[-\\pi\\,;\\pi]$. On pourra poser $X=\\cos(x)$.",
+      "corrige": [
+        "$2X^2-X-1=0$ a pour discriminant $9$ : $X=1$ ou $X=-\\dfrac{1}{2}$.",
+        "$\\cos(x)=1\\iff x=0$ sur $[-\\pi\\,;\\pi]$.",
+        "$\\cos(x)=-\\dfrac{1}{2}\\iff x=\\pm\\dfrac{2\\pi}{3}$."
+      ],
+      "reponse": "$S=\\left\\{-\\dfrac{2\\pi}{3}\\,;0\\,;\\dfrac{2\\pi}{3}\\right\\}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "inequation-cos",
+      "enonce": "Résoudre l'inéquation $2\\cos(x)-\\sqrt{3}\\leqslant 0$ sur $[-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "L'inéquation équivaut à $\\cos(x)\\leqslant\\dfrac{\\sqrt{3}}{2}$, avec $\\alpha=\\dfrac{\\pi}{6}$.",
+        "D'après la méthode du cours : $x\\in\\left[-\\pi\\,;-\\dfrac{\\pi}{6}\\right]\\cup\\left[\\dfrac{\\pi}{6}\\,;\\pi\\right]$."
+      ],
+      "reponse": "$S=\\left[-\\pi\\,;-\\dfrac{\\pi}{6}\\right]\\cup\\left[\\dfrac{\\pi}{6}\\,;\\pi\\right]$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "etude-de-fonction",
+      "enonce": "Soit $f(x)=x-\\sin(x)$ sur $[0\\,;+\\infty[$. Étudier le sens de variation de $f$ et en déduire que $\\sin(x)\\leqslant x$ pour tout $x\\geqslant 0$.",
+      "corrige": [
+        "$f'(x)=1-\\cos(x)\\geqslant 0$ car $\\cos(x)\\leqslant 1$ : $f$ est croissante sur $[0\\,;+\\infty[$.",
+        "Donc pour $x\\geqslant 0$, $f(x)\\geqslant f(0)=0$, soit $x-\\sin(x)\\geqslant 0$."
+      ],
+      "reponse": "$f$ est croissante et $f(0)=0$, donc $\\sin(x)\\leqslant x$ pour $x\\geqslant 0$."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "etude-de-fonction",
+      "enonce": "Soit $f(x)=x+\\sqrt{2}\\sin(x)$ sur $[0\\,;\\pi]$. Étudier les variations de $f$ et déterminer son maximum.",
+      "corrige": [
+        "$f'(x)=1+\\sqrt{2}\\cos(x)$, qui s'annule lorsque $\\cos(x)=-\\dfrac{\\sqrt{2}}{2}$, soit $x=\\dfrac{3\\pi}{4}$ sur $[0\\,;\\pi]$.",
+        "Le cosinus décroît sur $[0\\,;\\pi]$ : $f'(x)>0$ sur $\\left[0\\,;\\dfrac{3\\pi}{4}\\right[$ et $f'(x)<0$ sur $\\left]\\dfrac{3\\pi}{4}\\,;\\pi\\right]$.",
+        "Maximum : $f\\left(\\dfrac{3\\pi}{4}\\right)=\\dfrac{3\\pi}{4}+\\sqrt{2}\\times\\dfrac{\\sqrt{2}}{2}=1+\\dfrac{3\\pi}{4}\\approx 3{,}36$."
+      ],
+      "reponse": "$f$ croît sur $\\left[0\\,;\\dfrac{3\\pi}{4}\\right]$, décroît sur $\\left[\\dfrac{3\\pi}{4}\\,;\\pi\\right]$ ; maximum $1+\\dfrac{3\\pi}{4}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "etude-de-fonction",
+      "enonce": "Une masse accrochée à un ressort oscille. Sa position (en cm) à l'instant $t$ (en s) est $x(t)=5\\cos(2t)$. 1) Calculer la vitesse $v(t)=x'(t)$. 2) Sur $[0\\,;\\pi]$, à quels instants la vitesse est-elle nulle ? 3) Quelle est la vitesse maximale en valeur absolue, et à quels instants de $[0\\,;\\pi]$ est-elle atteinte ?",
+      "corrige": [
+        "1) $v(t)=5\\times\\big(-2\\sin(2t)\\big)=-10\\sin(2t)$ (en cm/s).",
+        "2) $v(t)=0\\iff\\sin(2t)=0\\iff 2t\\in\\{0\\,;\\pi\\,;2\\pi\\}$ pour $t\\in[0\\,;\\pi]$, soit $t=0$, $t=\\dfrac{\\pi}{2}$ ou $t=\\pi$ : ce sont les instants où la masse est aux extrémités ($x=\\pm 5$).",
+        "3) $|v(t)|=10|\\sin(2t)|\\leqslant 10$, avec égalité si $\\sin(2t)=\\pm 1$, soit $2t=\\dfrac{\\pi}{2}$ ou $\\dfrac{3\\pi}{2}$ : $t=\\dfrac{\\pi}{4}$ ou $t=\\dfrac{3\\pi}{4}$ (la masse passe alors par $x=0$)."
+      ],
+      "reponse": "$v(t)=-10\\sin(2t)$ ; nulle en $0$, $\\dfrac{\\pi}{2}$, $\\pi$ ; vitesse maximale $10$ cm/s en $\\dfrac{\\pi}{4}$ et $\\dfrac{3\\pi}{4}$."
     }
   ]
 }

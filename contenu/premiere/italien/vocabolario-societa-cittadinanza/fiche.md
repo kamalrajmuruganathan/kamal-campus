@@ -53,7 +53,7 @@ relu_par: null
 
 ## 3. Les erreurs à éviter
 
-- **la manifestazione** = la manifestation (dans la rue) ; c'est aussi une « démonstration », attention au contexte.
+- **la manifestazione** = la manifestation (dans la rue).
 - **il diritto** = le droit ; ne pas confondre avec *diretto* (direct).
 - **la legge** (double g) = la loi : soigne la double consonne.
 - On dit **andare a votare** ou **votare**, pas *« fare il voto »* dans ce sens.

@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme",
       "enonce": "Une petite entreprise fabrique et vend un article. Lorsqu'elle produit et vend $x$ centaines d'articles (avec $0 \\leqslant x \\leqslant 10$), son bénéfice, exprimé en milliers d'euros, est donné par $B(x) = -2x^2 + 16x - 24$.\n\n1. Mettre $B(x)$ sous forme canonique.\n2. Résoudre l'équation $B(x) = 0$ et interpréter les solutions (seuils de rentabilité).\n3. Étudier le signe de $B(x)$ sur $[0\\,;\\,10]$ et en déduire les productions pour lesquelles l'entreprise réalise un bénéfice strictement positif.\n4. Déterminer la production qui rend le bénéfice maximal et calculer ce bénéfice maximal.\n5. Combien d'articles l'entreprise doit-elle vendre, et quel bénéfice maximal en euros peut-elle espérer ?",
       "corrige": [
@@ -134,6 +134,458 @@
         "5. $x = 4$ correspond à $400$ articles, et $B(4) = 8$ milliers d'euros, soit $8\\,000$ €. L'entreprise doit vendre $400$ articles pour un bénéfice maximal de $8\\,000$ €."
       ],
       "reponse": "$B(x) = -2(x-4)^2 + 8$ ; seuils de rentabilité en $x = 2$ et $x = 6$ (200 et 600 articles) ; bénéfice positif pour $x \\in \\,]2\\,;\\,6[$ ; bénéfice maximal de $8\\,000$ € pour $400$ articles ($x = 4$)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Parmi les fonctions suivantes, définies sur $\\mathbb{R}$, lesquelles sont des fonctions polynômes du second degré ? $f(x) = 3x^2 - x$ ; $g(x) = (x + 1)^2 - x^2$ ; $h(x) = 5 - 2x^2$ ; $k(x) = x(x - 4)$.",
+      "corrige": [
+        "$f$ : $a = 3 \\neq 0$, c'est un trinôme. $h$ : $a = -2 \\neq 0$. $k(x) = x^2 - 4x$ : $a = 1 \\neq 0$.",
+        "$g(x) = x^2 + 2x + 1 - x^2 = 2x + 1$ : le terme en $x^2$ disparaît, $g$ est affine."
+      ],
+      "reponse": "$f$, $h$ et $k$ ; $g$ est affine."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Donner les coefficients $a$, $b$ et $c$ de $f(x) = -2x^2 + 7$, puis de $g(x) = (x - 3)(2x + 1)$.",
+      "corrige": [
+        "$f(x) = -2x^2 + 0x + 7$ : $a = -2$, $b = 0$, $c = 7$.",
+        "On développe $g$ : $g(x) = 2x^2 + x - 6x - 3 = 2x^2 - 5x - 3$, donc $a = 2$, $b = -5$, $c = -3$."
+      ],
+      "reponse": "$f$ : $a = -2$, $b = 0$, $c = 7$ ; $g$ : $a = 2$, $b = -5$, $c = -3$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "forme-factorisee",
+      "enonce": "Quelles sont les racines de $f(x) = -2(x - 4)(x + 7)$ ?",
+      "corrige": [
+        "Un produit est nul si et seulement si l'un de ses facteurs est nul, et $-2 \\neq 0$.",
+        "$x - 4 = 0 \\iff x = 4$ ; $x + 7 = 0 \\iff x = -7$."
+      ],
+      "reponse": "$4$ et $-7$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "forme-factorisee",
+      "enonce": "Donner la forme factorisée puis la forme développée du trinôme de coefficient $a = 2$ dont les racines sont $1$ et $-3$.",
+      "corrige": [
+        "Forme factorisée : $f(x) = a(x - x_1)(x - x_2) = 2(x - 1)(x + 3)$.",
+        "On développe : $2(x^2 + 3x - x - 3) = 2(x^2 + 2x - 3)$."
+      ],
+      "reponse": "$f(x) = 2(x - 1)(x + 3) = 2x^2 + 4x - 6$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "forme-factorisee",
+      "enonce": "Un élève factorise $f(x) = 3x^2 - 12x + 9$ en écrivant « $f(x) = (x - 1)(x - 3)$ ». Ses racines sont-elles justes ? Sa factorisation l'est-elle ? Corriger.",
+      "corrige": [
+        "$f(1) = 3 - 12 + 9 = 0$ et $f(3) = 27 - 36 + 9 = 0$ : les racines $1$ et $3$ sont justes.",
+        "Mais $(x - 1)(x - 3) = x^2 - 4x + 3$, qui n'est pas $f(x)$ : il manque le coefficient $a = 3$.",
+        "La forme factorisée est $a(x - x_1)(x - x_2) = 3(x - 1)(x - 3)$."
+      ],
+      "reponse": "Racines justes, factorisation fausse : $f(x) = 3(x - 1)(x - 3)$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "racine-evidente",
+      "enonce": "Vérifier que $1$ est racine de $f(x) = x^2 + 4x - 5$, puis en déduire l'autre racine sans calculer de discriminant.",
+      "corrige": [
+        "$f(1) = 1 + 4 - 5 = 0$ : $1$ est racine.",
+        "Produit des racines : $x_1 x_2 = \\dfrac{c}{a} = -5$, donc $x_2 = \\dfrac{-5}{1} = -5$."
+      ],
+      "reponse": "Racines $1$ et $-5$ ; $f(x) = (x - 1)(x + 5)$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "racine-evidente",
+      "enonce": "Trouver une racine évidente de $f(x) = 2x^2 - 7x + 5$, puis la seconde racine.",
+      "corrige": [
+        "On teste $x = 1$ : $f(1) = 2 - 7 + 5 = 0$.",
+        "$x_2 = \\dfrac{c}{a\\,x_1} = \\dfrac{5}{2 \\times 1} = \\dfrac{5}{2}$."
+      ],
+      "reponse": "Racines $1$ et $\\dfrac{5}{2}$ ; $f(x) = 2(x - 1)\\left(x - \\dfrac{5}{2}\\right)$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "somme-produit",
+      "enonce": "Trouver deux nombres dont la somme vaut $10$ et le produit $21$.",
+      "corrige": [
+        "Ce sont les racines de $x^2 - 10x + 21 = 0$.",
+        "On cherche deux entiers de produit $21$ et de somme $10$ : $3$ et $7$ conviennent ($3 + 7 = 10$, $3 \\times 7 = 21$)."
+      ],
+      "reponse": "$3$ et $7$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "somme-produit",
+      "enonce": "Factoriser $f(x) = x^2 - x - 12$ en utilisant la somme et le produit des racines.",
+      "corrige": [
+        "$S = -\\dfrac{b}{a} = 1$ et $P = \\dfrac{c}{a} = -12$.",
+        "Deux nombres de produit $-12$ et de somme $1$ : $4$ et $-3$."
+      ],
+      "reponse": "$f(x) = (x - 4)(x + 3)$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "identite-remarquable",
+      "enonce": "Factoriser $f(x) = x^2 - 10x + 25$ et donner sa ou ses racines.",
+      "corrige": [
+        "On reconnaît $a^2 - 2ab + b^2$ avec $a = x$ et $b = 5$.",
+        "$f(x) = (x - 5)^2$ : une racine double."
+      ],
+      "reponse": "$f(x) = (x - 5)^2$ ; racine double $5$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "identite-remarquable",
+      "enonce": "Factoriser $f(x) = (x + 2)^2 - 16$, puis résoudre $f(x) = 0$.",
+      "corrige": [
+        "On reconnaît $A^2 - B^2 = (A - B)(A + B)$ avec $A = x + 2$ et $B = 4$.",
+        "$f(x) = (x + 2 - 4)(x + 2 + 4) = (x - 2)(x + 6)$.",
+        "$f(x) = 0 \\iff x = 2$ ou $x = -6$."
+      ],
+      "reponse": "$f(x) = (x - 2)(x + 6)$ ; $S = \\{-6\\,;2\\}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "discriminant",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $x^2 - 3x - 10 = 0$ à l'aide du discriminant.",
+      "corrige": [
+        "$\\Delta = (-3)^2 - 4 \\times 1 \\times (-10) = 9 + 40 = 49 > 0$, $\\sqrt{\\Delta} = 7$.",
+        "$x_1 = \\dfrac{3 - 7}{2} = -2$ et $x_2 = \\dfrac{3 + 7}{2} = 5$."
+      ],
+      "reponse": "$S = \\{-2\\,;5\\}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "discriminant",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $x^2 + 2x + 5 = 0$.",
+      "corrige": [
+        "$\\Delta = 2^2 - 4 \\times 1 \\times 5 = 4 - 20 = -16 < 0$.",
+        "L'équation n'a aucune solution réelle."
+      ],
+      "reponse": "$S = \\varnothing$ (pas de solution dans $\\mathbb{R}$)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "discriminant",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $3x^2 - 6x + 3 = 0$.",
+      "corrige": [
+        "$\\Delta = 36 - 4 \\times 3 \\times 3 = 0$ : une racine double.",
+        "$x_0 = -\\dfrac{b}{2a} = \\dfrac{6}{6} = 1$. (On pouvait aussi écrire $3(x^2 - 2x + 1) = 3(x - 1)^2$.)"
+      ],
+      "reponse": "$S = \\{1\\}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "discriminant",
+      "enonce": "Sans calculer de discriminant, résoudre $x^2 - 7x = 0$ puis $x^2 - 16 = 0$. Quelle stratégie est la plus rapide dans chaque cas ?",
+      "corrige": [
+        "$x^2 - 7x = x(x - 7)$ : on factorise par $x$, solutions $0$ et $7$.",
+        "$x^2 - 16 = (x - 4)(x + 4)$ : identité remarquable, solutions $-4$ et $4$.",
+        "Quand $c = 0$ ou $b = 0$, le discriminant est inutile."
+      ],
+      "reponse": "$\\{0\\,;7\\}$ et $\\{-4\\,;4\\}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "forme-canonique",
+      "enonce": "Mettre $f(x) = x^2 + 4x + 1$ sous forme canonique et donner le sommet de sa parabole.",
+      "corrige": [
+        "$x^2 + 4x = (x + 2)^2 - 4$.",
+        "$f(x) = (x + 2)^2 - 4 + 1 = (x + 2)^2 - 3$."
+      ],
+      "reponse": "$f(x) = (x + 2)^2 - 3$ ; sommet $(-2\\,;-3)$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "forme-canonique",
+      "enonce": "Mettre $f(x) = 2x^2 - 8x + 3$ sous forme canonique.",
+      "corrige": [
+        "$\\alpha = -\\dfrac{b}{2a} = \\dfrac{8}{4} = 2$ et $\\beta = f(2) = 8 - 16 + 3 = -5$.",
+        "$f(x) = a(x - \\alpha)^2 + \\beta = 2(x - 2)^2 - 5$."
+      ],
+      "reponse": "$f(x) = 2(x - 2)^2 - 5$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "forme-canonique",
+      "enonce": "Déterminer le sommet de la parabole représentant $f(x) = -x^2 + 6x - 5$. S'agit-il d'un minimum ou d'un maximum ?",
+      "corrige": [
+        "$\\alpha = -\\dfrac{6}{2 \\times (-1)} = 3$ et $\\beta = f(3) = -9 + 18 - 5 = 4$.",
+        "$a = -1 < 0$ : la parabole est tournée vers le bas."
+      ],
+      "reponse": "Sommet $(3\\,;4)$ : maximum $4$ atteint en $x = 3$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $f(x) = 2x^2 - x - 1$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Racine évidente $1$ ; l'autre est $\\dfrac{c}{a \\times 1} = -\\dfrac{1}{2}$.",
+        "$a = 2 > 0$ : $f(x)$ est positif à l'extérieur des racines, négatif entre elles."
+      ],
+      "reponse": "$f(x) > 0$ sur $\\left]-\\infty\\,;-\\dfrac{1}{2}\\right[ \\cup \\,]1\\,;+\\infty[$ ; $f(x) < 0$ sur $\\left]-\\dfrac{1}{2}\\,;1\\right[$ ; $f$ s'annule en $-\\dfrac{1}{2}$ et $1$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $f(x) = x^2 + x + 1$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$\\Delta = 1 - 4 = -3 < 0$ : pas de racine.",
+        "$f(x)$ est donc partout du signe de $a = 1 > 0$."
+      ],
+      "reponse": "$f(x) > 0$ pour tout réel $x$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $x^2 - 5x + 4 < 0$.",
+      "corrige": [
+        "Racines : $1$ (évidente) et $4$ (produit $4$). $a = 1 > 0$.",
+        "Le trinôme est négatif strictement entre ses racines."
+      ],
+      "reponse": "$S = \\,]1\\,;4[$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "forme-factorisee",
+      "enonce": "Déterminer le trinôme $f$ dont les racines sont $-1$ et $5$ et dont la courbe passe par le point $(0\\,;10)$.",
+      "corrige": [
+        "$f(x) = a(x + 1)(x - 5)$ avec $a$ à déterminer.",
+        "$f(0) = a \\times 1 \\times (-5) = -5a = 10$, donc $a = -2$."
+      ],
+      "reponse": "$f(x) = -2(x + 1)(x - 5)$, soit $f(x) = -2x^2 + 8x + 10$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "racine-evidente",
+      "enonce": "Trouver une racine évidente de $f(x) = 3x^2 + x - 2$, puis factoriser $f(x)$.",
+      "corrige": [
+        "$f(1) = 2 \\neq 0$, mais $f(-1) = 3 - 1 - 2 = 0$ : $-1$ est racine.",
+        "$x_2 = \\dfrac{c}{a\\,x_1} = \\dfrac{-2}{3 \\times (-1)} = \\dfrac{2}{3}$.",
+        "$f(x) = 3(x + 1)\\left(x - \\dfrac{2}{3}\\right) = (x + 1)(3x - 2)$."
+      ],
+      "reponse": "$f(x) = (x + 1)(3x - 2)$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "somme-produit",
+      "enonce": "Existe-t-il deux réels dont la somme vaut $4$ et le produit $5$ ?",
+      "corrige": [
+        "Ils seraient les racines de $x^2 - 4x + 5$.",
+        "Ils existent si et seulement si $s^2 - 4p \\geqslant 0$ ; or $s^2 - 4p = 16 - 20 = -4 < 0$."
+      ],
+      "reponse": "Non, de tels réels n'existent pas."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "identite-remarquable",
+      "enonce": "Factoriser $f(x) = 4x^2 + 12x + 9$ et en déduire sa racine.",
+      "corrige": [
+        "$4x^2 = (2x)^2$, $9 = 3^2$ et $12x = 2 \\times 2x \\times 3$.",
+        "$f(x) = (2x + 3)^2$, qui s'annule pour $x = -\\dfrac{3}{2}$."
+      ],
+      "reponse": "$f(x) = (2x + 3)^2$ ; racine double $-\\dfrac{3}{2}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "discriminant",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $x^2 - 4x + 1 = 0$. Donner les solutions sous forme exacte simplifiée.",
+      "corrige": [
+        "$\\Delta = 16 - 4 = 12 > 0$ et $\\sqrt{12} = 2\\sqrt{3}$.",
+        "$x = \\dfrac{4 \\pm 2\\sqrt{3}}{2} = 2 \\pm \\sqrt{3}$."
+      ],
+      "reponse": "$S = \\left\\{2 - \\sqrt{3}\\,;2 + \\sqrt{3}\\right\\}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "discriminant",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $-x^2 + x + 1 = 0$.",
+      "corrige": [
+        "$a = -1$, $b = 1$, $c = 1$ : $\\Delta = 1 - 4 \\times (-1) \\times 1 = 5 > 0$.",
+        "$x = \\dfrac{-1 \\pm \\sqrt{5}}{-2} = \\dfrac{1 \\mp \\sqrt{5}}{2}$."
+      ],
+      "reponse": "$S = \\left\\{\\dfrac{1 - \\sqrt{5}}{2}\\,;\\dfrac{1 + \\sqrt{5}}{2}\\right\\}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "discriminant",
+      "enonce": "Pour résoudre $2x^2 + x - 3 = 0$, un élève calcule « $\\Delta = 1 - 24 = -23$ » et conclut qu'il n'y a pas de solution. Trouver l'erreur et résoudre correctement.",
+      "corrige": [
+        "$\\Delta = b^2 - 4ac = 1 - 4 \\times 2 \\times (-3) = 1 + 24 = 25$ : l'élève a oublié que $c = -3$ est négatif.",
+        "$x_1 = \\dfrac{-1 - 5}{4} = -\\dfrac{3}{2}$ et $x_2 = \\dfrac{-1 + 5}{4} = 1$.",
+        "Remarque : $1$ était une racine évidente ($2 + 1 - 3 = 0$)."
+      ],
+      "reponse": "$\\Delta = 25$ ; $S = \\left\\{-\\dfrac{3}{2}\\,;1\\right\\}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "forme-canonique",
+      "enonce": "On donne $f(x) = -2(x - 1)^2 + 8$. Factoriser $f(x)$ à partir de cette forme canonique.",
+      "corrige": [
+        "$f(x) = -2\\left[(x - 1)^2 - 4\\right]$.",
+        "$(x - 1)^2 - 4 = (x - 1 - 2)(x - 1 + 2) = (x - 3)(x + 1)$."
+      ],
+      "reponse": "$f(x) = -2(x - 3)(x + 1)$ ; racines $3$ et $-1$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "forme-canonique",
+      "enonce": "Déterminer la fonction du second degré dont la parabole a pour sommet $\\mathrm{S}(2\\,;-3)$ et passe par le point $(0\\,;5)$.",
+      "corrige": [
+        "Forme canonique : $f(x) = a(x - 2)^2 - 3$.",
+        "$f(0) = 4a - 3 = 5$, donc $a = 2$."
+      ],
+      "reponse": "$f(x) = 2(x - 2)^2 - 3$, soit $f(x) = 2x^2 - 8x + 5$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $f(x) = -3x^2 + 12x - 12$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f(x) = -3(x^2 - 4x + 4) = -3(x - 2)^2$.",
+        "Un carré est positif ou nul, donc $f(x) \\leqslant 0$, avec égalité seulement en $x = 2$."
+      ],
+      "reponse": "$f(x) < 0$ pour $x \\neq 2$ et $f(2) = 0$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $-x^2 + 2x + 8 \\geqslant 0$.",
+      "corrige": [
+        "$\\Delta = 4 + 32 = 36$ : racines $\\dfrac{-2 - 6}{-2} = 4$ et $\\dfrac{-2 + 6}{-2} = -2$.",
+        "$a = -1 < 0$ : le trinôme est positif entre ses racines."
+      ],
+      "reponse": "$S = [-2\\,;4]$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $x^2 > 3x$.",
+      "corrige": [
+        "$x^2 > 3x \\iff x^2 - 3x > 0 \\iff x(x - 3) > 0$.",
+        "Racines $0$ et $3$, $a = 1 > 0$ : positif à l'extérieur des racines.",
+        "Attention : diviser par $x$ serait une erreur (on ne connaît pas son signe)."
+      ],
+      "reponse": "$S = \\,]-\\infty\\,;0[ \\cup \\,]3\\,;+\\infty[$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "somme-produit",
+      "enonce": "On note $x_1$ et $x_2$ les racines de $2x^2 - 6x + 1 = 0$ (on admet qu'elles existent). Sans les calculer, déterminer $x_1 + x_2$, $x_1 x_2$ puis $\\dfrac{1}{x_1} + \\dfrac{1}{x_2}$.",
+      "corrige": [
+        "$x_1 + x_2 = -\\dfrac{b}{a} = \\dfrac{6}{2} = 3$ et $x_1 x_2 = \\dfrac{c}{a} = \\dfrac{1}{2}$.",
+        "$\\dfrac{1}{x_1} + \\dfrac{1}{x_2} = \\dfrac{x_1 + x_2}{x_1 x_2} = \\dfrac{3}{1/2} = 6$."
+      ],
+      "reponse": "$x_1 + x_2 = 3$ ; $x_1 x_2 = \\dfrac{1}{2}$ ; $\\dfrac{1}{x_1} + \\dfrac{1}{x_2} = 6$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $2x^2 + 3 \\leqslant 5x$.",
+      "corrige": [
+        "$2x^2 + 3 \\leqslant 5x \\iff 2x^2 - 5x + 3 \\leqslant 0$.",
+        "Racine évidente $1$ ; l'autre vaut $\\dfrac{3}{2 \\times 1} = \\dfrac{3}{2}$.",
+        "$a = 2 > 0$ : le trinôme est négatif ou nul entre ses racines."
+      ],
+      "reponse": "$S = \\left[1\\,;\\dfrac{3}{2}\\right]$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "parametre",
+      "enonce": "Déterminer les réels $m$ pour lesquels $x^2 + mx + 9$ admet une racine double. Préciser cette racine dans chaque cas.",
+      "corrige": [
+        "Racine double $\\iff \\Delta = m^2 - 36 = 0 \\iff m = 6$ ou $m = -6$.",
+        "Si $m = 6$ : $x^2 + 6x + 9 = (x + 3)^2$, racine $-3$.",
+        "Si $m = -6$ : $x^2 - 6x + 9 = (x - 3)^2$, racine $3$."
+      ],
+      "reponse": "$m = 6$ (racine $-3$) ou $m = -6$ (racine $3$)."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "parametre",
+      "enonce": "Déterminer les réels $m$ pour lesquels $x^2 + 2x + m > 0$ pour tout réel $x$.",
+      "corrige": [
+        "$a = 1 > 0$ : le trinôme est strictement positif partout si et seulement s'il n'a pas de racine, c'est-à-dire $\\Delta < 0$.",
+        "$\\Delta = 4 - 4m < 0 \\iff m > 1$.",
+        "Si $m = 1$, le trinôme $(x + 1)^2$ s'annule en $-1$ : la valeur $1$ est exclue."
+      ],
+      "reponse": "$m > 1$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "somme-produit",
+      "enonce": "Un rectangle a un périmètre de $34$ m et une aire de $60$ m². Déterminer ses dimensions.",
+      "corrige": [
+        "La somme de la longueur et de la largeur vaut la moitié du périmètre : $17$ m ; leur produit vaut $60$ m².",
+        "Ce sont les racines de $x^2 - 17x + 60 = 0$.",
+        "$5 + 12 = 17$ et $5 \\times 12 = 60$ : les racines sont $5$ et $12$."
+      ],
+      "reponse": "$12$ m sur $5$ m."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "probleme",
+      "enonce": "On lance une balle vers le haut. Sa hauteur, en mètres, est modélisée par $h(t) = -5t^2 + 10t + 1{,}5$, avec $t$ en secondes. 1) Quelle hauteur maximale atteint-elle, et à quel instant ? 2) À quel instant touche-t-elle le sol ? Arrondir au centième.",
+      "corrige": [
+        "1) $\\alpha = -\\dfrac{10}{2 \\times (-5)} = 1$ et $h(1) = -5 + 10 + 1{,}5 = 6{,}5$ : comme $a < 0$, c'est un maximum.",
+        "2) On résout $-5t^2 + 10t + 1{,}5 = 0$ : $\\Delta = 100 + 30 = 130$.",
+        "La seule solution positive est $t = \\dfrac{-10 - \\sqrt{130}}{-10} = 1 + \\dfrac{\\sqrt{130}}{10} \\approx 2{,}14$ s."
+      ],
+      "reponse": "1) $6{,}5$ m à $t = 1$ s ; 2) au bout d'environ $2{,}14$ s."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "probleme",
+      "enonce": "Le produit de deux entiers consécutifs vaut $132$. Quels sont ces entiers ?",
+      "corrige": [
+        "On note $n$ le plus petit : $n(n + 1) = 132$, soit $n^2 + n - 132 = 0$.",
+        "$\\Delta = 1 + 528 = 529 = 23^2$ : $n = \\dfrac{-1 + 23}{2} = 11$ ou $n = \\dfrac{-1 - 23}{2} = -12$.",
+        "Deux couples conviennent."
+      ],
+      "reponse": "$11$ et $12$, ou $-12$ et $-11$."
     }
   ]
 }

@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "**Un smartphone photographe.**\n\nUn smartphone est équipé d'un objectif portant l'inscription « $5{,}4\\ \\text{mm}\\ 1{:}1{,}8$ » et d'un capteur CMOS de dimensions $7{,}6\\ \\text{mm} \\times 5{,}7\\ \\text{mm}$ (format $4{:}3$), de définition $12$ mégapixels. Sauf indication contraire, on prend $1\\ \\text{octet} = 8\\ \\text{bits}$, $1\\ \\text{Mo} = 10^6\\ \\text{o}$ et $1\\ \\text{Mbit} = 10^6\\ \\text{bits}$.\n\n**1.** Décode l'inscription de l'objectif : donne la distance focale $f'$ et le nombre d'ouverture maximal $N$. En déduis le diamètre $D$ du diaphragme à pleine ouverture.\n\n**2.** Le format $4{:}3$ signifie $\\dfrac{L}{H} = \\dfrac{4}{3}$. Détermine le nombre de pixels en largeur $L$ et en hauteur $H$, puis la taille (le côté) d'un pixel du capteur.\n\n**3.** Chaque pixel est codé en RVB, un octet par canal. Donne la profondeur de couleur d'un pixel (en octets et en bits) et le nombre de couleurs affichables.\n\n**4.** Calcule le poids brut (non compressé) d'une photo de ce capteur, en Mo.\n\n**5.** La photo est enregistrée en JPEG avec un taux de compression de $15$. Quel est le poids du fichier JPEG ?\n\n**6.** Ce fichier JPEG est envoyé par une connexion de débit binaire $12\\ \\text{Mbit/s}$. Combien de temps dure le transfert ?",
       "corrige": [
@@ -138,6 +138,462 @@
         "**6.** On convertit le poids en bits : $Q = 2{,}4\\times 10^6\\ \\text{o} \\times 8 = 19{,}2\\times 10^6\\ \\text{bits} = 19{,}2\\ \\text{Mbit}$. Avec $D = 12\\ \\text{Mbit/s}$ : $\\Delta t = \\dfrac{Q}{D} = \\dfrac{19{,}2}{12} = 1{,}6\\ \\text{s}$."
       ],
       "reponse": "**1.** $f' = 5{,}4\\ \\text{mm}$, $N = 1{,}8$, $D = 3{,}0\\ \\text{mm}$. **2.** $L = 4000\\ \\text{px}$, $H = 3000\\ \\text{px}$, pixel $= 1{,}9\\ \\mu\\text{m}$. **3.** $3$ octets $= 24$ bits, $\\approx 16{,}7$ M couleurs. **4.** $36\\ \\text{Mo}$. **5.** $2{,}4\\ \\text{Mo}$. **6.** $\\Delta t = 1{,}6\\ \\text{s}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "modele-appareil",
+      "enonce": "Dans le modèle simplifié de l'appareil photo numérique, par quoi modélise-t-on l'objectif ? Et le capteur ?",
+      "corrige": [
+        "L'objectif forme l'image de la scène : on le modélise par une lentille mince convergente de distance focale $f'$.",
+        "Le capteur reçoit cette image : on le modélise par un écran placé derrière la lentille."
+      ],
+      "reponse": "Objectif : lentille mince convergente ; capteur : écran."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "modele-appareil",
+      "enonce": "Un appareil photographie un arbre situé à $30\\ \\text{m}$. Donne les trois caractéristiques de l'image formée sur le capteur.",
+      "corrige": [
+        "L'objet est très loin, bien au-delà de $2F$ : une lentille convergente en donne alors une image réelle (elle se forme sur un écran).",
+        "Cette image est renversée et beaucoup plus petite que l'objet."
+      ],
+      "reponse": "Image réelle, renversée et réduite."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "codage-rvb",
+      "enonce": "Associe chaque triplet RVB à sa couleur : $(255,255,255)$ ; $(0,255,0)$ ; $(100,100,100)$ ; $(0,0,0)$. Couleurs proposées : vert, noir, blanc, gris.",
+      "corrige": [
+        "Les trois canaux au maximum donnent le blanc ; les trois à $0$ donnent le noir.",
+        "Seul le canal vert allumé donne le vert ; trois canaux égaux et intermédiaires donnent un gris."
+      ],
+      "reponse": "$(255,255,255)$ : blanc ; $(0,255,0)$ : vert ; $(100,100,100)$ : gris ; $(0,0,0)$ : noir."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "capteur-iso",
+      "enonce": "Complète : « Chaque … du capteur convertit la lumière reçue en charge électrique, puis en valeur numérique. Pour distinguer les couleurs, il est recouvert d'un filtre …, … ou … ».",
+      "corrige": [
+        "La cellule photosensible élémentaire du capteur s'appelle un photosite ; à chacun correspond un pixel de l'image.",
+        "Les filtres colorés correspondent aux trois canaux du modèle RVB."
+      ],
+      "reponse": "photosite ; rouge, vert ou bleu."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "nombre-ouverture",
+      "enonce": "Un objectif de distance focale $f' = 35\\ \\text{mm}$ a un diaphragme ouvert à $D = 10\\ \\text{mm}$. Calcule son nombre d'ouverture et écris-le sous la forme $f/N$.",
+      "corrige": [
+        "$N = \\dfrac{f'}{D}$, avec $f'$ et $D$ dans la même unité.",
+        "$N = \\dfrac{35}{10} = 3{,}5$ : réglage noté $f/3{,}5$. $N$ est sans unité."
+      ],
+      "reponse": "$N = 3{,}5$, soit $f/3{,}5$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "nombre-ouverture",
+      "enonce": "Un téléobjectif de focale $f' = 100\\ \\text{mm}$ est réglé à $f/2{,}8$. Quel est le diamètre $D$ de son diaphragme ?",
+      "corrige": [
+        "De $N = \\dfrac{f'}{D}$ on tire $D = \\dfrac{f'}{N}$.",
+        "$D = \\dfrac{100}{2{,}8} \\approx 36\\ \\text{mm}$."
+      ],
+      "reponse": "$D \\approx 36\\ \\text{mm}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Un appareil produit des images de $5472 \\times 3648$ pixels. Calcule la définition en pixels, puis en mégapixels.",
+      "corrige": [
+        "La définition est le nombre total de pixels : largeur $\\times$ hauteur.",
+        "$5472 \\times 3648 = 19\\,961\\,856\\ \\text{px} \\approx 20{,}0\\ \\text{Mpx}$."
+      ],
+      "reponse": "$19\\,961\\,856\\ \\text{px}$, soit environ $20\\ \\text{Mpx}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Une image a une définition de $2\\,073\\,600$ pixels et une largeur de $1920$ pixels. Quelle est sa hauteur en pixels ?",
+      "corrige": [
+        "Définition $= L_{px} \\times H_{px}$, donc $H_{px} = \\dfrac{\\text{définition}}{L_{px}}$.",
+        "$H_{px} = \\dfrac{2\\,073\\,600}{1920} = 1080\\ \\text{px}$ : c'est le format « Full HD » $1920 \\times 1080$."
+      ],
+      "reponse": "$1080$ pixels."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "resolution",
+      "enonce": "Une photo de $2400$ pixels de large est imprimée sur une largeur de $20\\ \\text{cm}$. Calcule sa résolution en px/cm, puis en ppp ($1\\ \\text{pouce} = 2{,}54\\ \\text{cm}$).",
+      "corrige": [
+        "Résolution $= \\dfrac{2400}{20} = 120\\ \\text{px/cm}$.",
+        "Un pouce mesure $2{,}54\\ \\text{cm}$ : il contient $120 \\times 2{,}54 \\approx 305$ pixels, soit environ $305$ ppp."
+      ],
+      "reponse": "$120\\ \\text{px/cm}$, soit environ $305$ ppp."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Une image en niveaux de gris mesure $1024 \\times 768$ pixels et n'est pas compressée. Calcule son poids en octets, puis en Mo ($1\\ \\text{Mo} = 10^{6}\\ \\text{o}$).",
+      "corrige": [
+        "En niveaux de gris, chaque pixel est codé sur $1$ octet.",
+        "Poids $= 1024 \\times 768 \\times 1 = 786\\,432\\ \\text{o} \\approx 0{,}79\\ \\text{Mo}$."
+      ],
+      "reponse": "$786\\,432\\ \\text{o} \\approx 0{,}79\\ \\text{Mo}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Une image en noir et blanc pur (chaque pixel est soit noir, soit blanc) mesure $1000 \\times 800$ pixels. Quel est son poids en bits, puis en ko ($1\\ \\text{ko} = 10^{3}\\ \\text{o}$) ?",
+      "corrige": [
+        "Deux états seulement : $1$ bit suffit par pixel.",
+        "Poids $= 1000 \\times 800 \\times 1 = 800\\,000$ bits.",
+        "En octets : $\\dfrac{800\\,000}{8} = 100\\,000\\ \\text{o} = 100\\ \\text{ko}$."
+      ],
+      "reponse": "$800\\,000$ bits, soit $100\\ \\text{ko}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "codage-rvb",
+      "enonce": "Certains appareils codent chaque canal sur $10$ bits au lieu de $8$. Combien de niveaux par canal cela donne-t-il ? Combien de couleurs au total en RVB ?",
+      "corrige": [
+        "Le nombre de niveaux vaut $2$ puissance le nombre de bits : $2^{10} = 1024$ niveaux par canal.",
+        "En RVB : $1024^{3} = 2^{30} \\approx 1{,}07\\times 10^{9}$ couleurs, soit environ un milliard."
+      ],
+      "reponse": "$1024$ niveaux par canal ; environ $1{,}07\\times 10^{9}$ couleurs."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "debit-binaire",
+      "enonce": "Une photo de $3{,}0\\ \\text{Mo}$ est envoyée avec un débit de $12\\ \\text{Mbit/s}$. Combien de temps dure le transfert ?",
+      "corrige": [
+        "On convertit le poids en bits : $Q = 3{,}0\\times 10^{6} \\times 8 = 24\\times 10^{6}$ bits.",
+        "$\\Delta t = \\dfrac{Q}{D} = \\dfrac{24\\times 10^{6}}{12\\times 10^{6}} = 2{,}0\\ \\text{s}$."
+      ],
+      "reponse": "$\\Delta t = 2{,}0\\ \\text{s}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "compression",
+      "enonce": "Une photo non compressée de $36\\ \\text{Mo}$ est enregistrée en JPEG ; le fichier obtenu pèse $4{,}5\\ \\text{Mo}$. Calcule le taux de compression. Peut-on retrouver exactement l'image d'origine à partir du JPEG ?",
+      "corrige": [
+        "Taux $= \\dfrac{\\text{poids non compressé}}{\\text{poids compressé}} = \\dfrac{36}{4{,}5} = 8$.",
+        "Non : la compression JPEG est avec perte, des détails ont été supprimés définitivement."
+      ],
+      "reponse": "Taux $= 8$ ; non, le JPEG est irréversible."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "temps-de-pose",
+      "enonce": "On compare deux temps de pose : $\\dfrac{1}{60}\\ \\text{s}$ et $\\dfrac{1}{500}\\ \\text{s}$. (a) Lequel fige le mieux un cycliste en mouvement ? (b) Lequel laisse entrer le plus de lumière, et environ combien de fois plus ?",
+      "corrige": [
+        "(a) Le plus court, $\\dfrac{1}{500}\\ \\text{s}$ : le sujet a moins le temps de se déplacer pendant la pose.",
+        "(b) Le plus long, $\\dfrac{1}{60}\\ \\text{s}$ ; la lumière est proportionnelle à $t$ : $\\dfrac{1/60}{1/500} = \\dfrac{500}{60} \\approx 8$ fois plus."
+      ],
+      "reponse": "(a) $\\dfrac{1}{500}\\ \\text{s}$ ; (b) $\\dfrac{1}{60}\\ \\text{s}$, environ $8$ fois plus de lumière."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "capteur-iso",
+      "enonce": "On passe la sensibilité de $200$ ISO à $1600$ ISO. Par combien la sensibilité est-elle multipliée ? Quel inconvénient cela entraîne-t-il ?",
+      "corrige": [
+        "Doubler l'ISO double la sensibilité : $\\dfrac{1600}{200} = 8$ (trois doublements).",
+        "En contrepartie, l'image présente davantage de bruit numérique (aspect « granuleux »)."
+      ],
+      "reponse": "Sensibilité $\\times 8$ ; davantage de bruit numérique."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "nombre-ouverture",
+      "enonce": "On passe de $f/2{,}8$ à $f/5{,}6$, sans changer la focale. (a) Le diaphragme s'ouvre-t-il ou se ferme-t-il ? (b) Par combien la quantité de lumière est-elle divisée ?",
+      "corrige": [
+        "(a) $N$ augmente, donc $D = \\dfrac{f'}{N}$ diminue : le diaphragme se ferme.",
+        "(b) La lumière est proportionnelle à $\\dfrac{1}{N^{2}}$ : $\\left(\\dfrac{5{,}6}{2{,}8}\\right)^{2} = 2^{2} = 4$. La lumière est divisée par $4$ (deux « diaphragmes »)."
+      ],
+      "reponse": "(a) Il se ferme ; (b) lumière divisée par $4$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "temps-de-pose",
+      "enonce": "Une photo est bien exposée à $f/8$ avec $t = \\dfrac{1}{60}\\ \\text{s}$. On ouvre à $f/4$ pour flouter l'arrière-plan. Quel temps de pose faut-il choisir pour garder la même exposition (ISO inchangé) ?",
+      "corrige": [
+        "L'exposition est proportionnelle à $\\dfrac{t}{N^{2}}$. Diviser $N$ par $2$ multiplie la lumière par $2^{2} = 4$.",
+        "Pour compenser, on divise $t$ par $4$ : $t = \\dfrac{1}{240}\\ \\text{s}$ ; en pratique on choisit la valeur proche $\\dfrac{1}{250}\\ \\text{s}$."
+      ],
+      "reponse": "$t = \\dfrac{1}{240}\\ \\text{s}$ (en pratique $\\dfrac{1}{250}\\ \\text{s}$)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "profondeur-de-champ",
+      "enonce": "Un photographe veut que les fleurs au premier plan et les montagnes au loin soient toutes nettes. Doit-il choisir $f/2$ ou $f/16$ ? Justifie, et indique une conséquence sur le temps de pose.",
+      "corrige": [
+        "Il veut une grande profondeur de champ : il faut un grand nombre d'ouverture, donc $f/16$ (diaphragme fermé).",
+        "Le diaphragme fermé laisse passer moins de lumière : il faut allonger le temps de pose (ou monter l'ISO), avec un pied si le temps devient long."
+      ],
+      "reponse": "$f/16$ ; temps de pose plus long."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "profondeur-de-champ",
+      "enonce": "Corrige l'erreur : « Pour faire un portrait avec un arrière-plan bien flou, je ferme le diaphragme à $f/22$. »",
+      "corrige": [
+        "Un arrière-plan flou correspond à une faible profondeur de champ.",
+        "Il faut pour cela un petit nombre d'ouverture, donc ouvrir le diaphragme (par exemple $f/1{,}8$ ou $f/2$) ; $f/22$ donnerait au contraire une grande profondeur de champ."
+      ],
+      "reponse": "Il faut ouvrir le diaphragme (petit $N$, par exemple $f/2$), pas le fermer."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "taille-pixel",
+      "enonce": "Un capteur mesure $23{,}5\\ \\text{mm} \\times 15{,}6\\ \\text{mm}$ et produit des images de $6000 \\times 4000$ pixels. Calcule la taille d'un pixel en $\\mu\\text{m}$, sur chacun des deux côtés.",
+      "corrige": [
+        "Largeur : $\\dfrac{23{,}5\\ \\text{mm}}{6000} \\approx 3{,}9\\times 10^{-3}\\ \\text{mm} = 3{,}9\\ \\mu\\text{m}$.",
+        "Hauteur : $\\dfrac{15{,}6\\ \\text{mm}}{4000} = 3{,}9\\times 10^{-3}\\ \\text{mm} = 3{,}9\\ \\mu\\text{m}$ : les pixels sont carrés."
+      ],
+      "reponse": "Environ $3{,}9\\ \\mu\\text{m}$ sur chaque côté."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "taille-pixel",
+      "enonce": "Les photosites d'un capteur sont des carrés de $4{,}0\\ \\mu\\text{m}$ de côté. Le capteur mesure $24\\ \\text{mm}$ de large. Combien de pixels l'image compte-t-elle en largeur ?",
+      "corrige": [
+        "On convertit dans la même unité : $24\\ \\text{mm} = 24\\times 10^{-3}\\ \\text{m}$ et $4{,}0\\ \\mu\\text{m} = 4{,}0\\times 10^{-6}\\ \\text{m}$.",
+        "Nombre de pixels $= \\dfrac{24\\times 10^{-3}}{4{,}0\\times 10^{-6}} = 6000$."
+      ],
+      "reponse": "$6000$ pixels."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "poids",
+      "enonce": "Une photo de $4000 \\times 3000$ pixels est codée en RVB, sans compression. Donne son poids en octets, en Mo (décimal) et en Mio ($1\\ \\text{Mio} = 2^{20}\\ \\text{o}$).",
+      "corrige": [
+        "Poids $= 4000 \\times 3000 \\times 3 = 36\\,000\\,000\\ \\text{o}$.",
+        "En Mo : $\\dfrac{36\\times 10^{6}}{10^{6}} = 36\\ \\text{Mo}$.",
+        "En Mio : $\\dfrac{36\\,000\\,000}{1\\,048\\,576} \\approx 34{,}3\\ \\text{Mio}$. Il faut toujours préciser la convention utilisée."
+      ],
+      "reponse": "$36\\,000\\,000\\ \\text{o} = 36\\ \\text{Mo} \\approx 34{,}3\\ \\text{Mio}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "debit-binaire",
+      "enonce": "On envoie $20$ photos JPEG de $4{,}0\\ \\text{Mo}$ chacune avec une connexion de $40\\ \\text{Mbit/s}$. Combien de temps dure l'envoi ?",
+      "corrige": [
+        "Poids total : $20 \\times 4{,}0 = 80\\ \\text{Mo} = 80\\times 10^{6}\\ \\text{o}$.",
+        "En bits : $Q = 80\\times 10^{6} \\times 8 = 640\\times 10^{6}$ bits.",
+        "$\\Delta t = \\dfrac{640\\times 10^{6}}{40\\times 10^{6}} = 16\\ \\text{s}$."
+      ],
+      "reponse": "$\\Delta t = 16\\ \\text{s}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "compression",
+      "enonce": "Pour chaque besoin, choisis entre JPEG, PNG et RAW : (a) publier une photo légère sur un site web ; (b) enregistrer un logo qui doit rester parfaitement net ; (c) garder toutes les données du capteur pour une retouche poussée.",
+      "corrige": [
+        "(a) Le JPEG (compression avec perte) donne des fichiers très légers : adapté au web.",
+        "(b) Le PNG compresse sans perte : l'image est retrouvée à l'identique.",
+        "(c) Le RAW stocke les données du capteur sans compression avec perte : idéal pour retoucher."
+      ],
+      "reponse": "(a) JPEG ; (b) PNG ; (c) RAW."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "resolution",
+      "enonce": "Une photo mesure $6000 \\times 4000$ pixels. On veut l'imprimer à $300$ ppp. Quelles sont les dimensions maximales du tirage, en cm ($1\\ \\text{pouce} = 2{,}54\\ \\text{cm}$) ?",
+      "corrige": [
+        "Largeur : $\\dfrac{6000}{300} = 20$ pouces, soit $20 \\times 2{,}54 = 50{,}8\\ \\text{cm}$.",
+        "Hauteur : $\\dfrac{4000}{300} \\approx 13{,}3$ pouces, soit environ $33{,}9\\ \\text{cm}$."
+      ],
+      "reponse": "Environ $50{,}8\\ \\text{cm} \\times 33{,}9\\ \\text{cm}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "codage-rvb",
+      "enonce": "En synthèse additive, quelle couleur affiche un pixel codé : (a) $(255,255,0)$ ? (b) $(0,255,255)$ ? (c) $(128,0,0)$ ?",
+      "corrige": [
+        "(a) Rouge et vert à fond, sans bleu : la superposition donne le jaune.",
+        "(b) Vert et bleu à fond : cyan.",
+        "(c) Seul le rouge, à environ la moitié de son maximum : un rouge sombre."
+      ],
+      "reponse": "(a) Jaune ; (b) cyan ; (c) rouge foncé."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "definition",
+      "enonce": "Une photo de $6000$ pixels de large est affichée une fois sur une largeur de $10\\ \\text{cm}$, une autre fois sur une affiche de $2\\ \\text{m}$. Calcule la résolution dans chaque cas. La définition a-t-elle changé ?",
+      "corrige": [
+        "Sur $10\\ \\text{cm}$ : $\\dfrac{6000}{10} = 600\\ \\text{px/cm}$, image très fine.",
+        "Sur $2\\ \\text{m} = 200\\ \\text{cm}$ : $\\dfrac{6000}{200} = 30\\ \\text{px/cm}$, image plus grossière vue de près.",
+        "La définition (le nombre total de pixels) n'a pas changé : seule la résolution dépend de la taille d'affichage."
+      ],
+      "reponse": "$600\\ \\text{px/cm}$ puis $30\\ \\text{px/cm}$ ; la définition est la même."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "debit-binaire",
+      "enonce": "Une vidéo « 4K » non compressée mesure $3840 \\times 2160$ pixels, en RVB, à $30$ images par seconde. (a) Calcule son débit binaire. (b) Un service de streaming la diffuse à $25\\ \\text{Mbit/s}$ : quel taux de compression utilise-t-il ?",
+      "corrige": [
+        "Une image : $3840 \\times 2160 \\times 3 = 24\\,883\\,200\\ \\text{o}$ ; par seconde : $\\times 30 = 746\\,496\\,000\\ \\text{o/s}$.",
+        "En bits : $746\\,496\\,000 \\times 8 \\approx 5{,}97\\times 10^{9}\\ \\text{bit/s}$, soit environ $6{,}0\\ \\text{Gbit/s}$.",
+        "(b) Taux $= \\dfrac{5{,}97\\times 10^{9}}{25\\times 10^{6}} \\approx 240$."
+      ],
+      "reponse": "(a) Environ $6{,}0\\ \\text{Gbit/s}$ ; (b) taux d'environ $240$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "capteur-iso",
+      "enonce": "De nuit, une photo prise à $f/2$, $t = \\dfrac{1}{30}\\ \\text{s}$ et $100$ ISO est $8$ fois trop sombre. L'objectif ne s'ouvre pas davantage et un temps de pose plus long donnerait un flou de bougé. Quel réglage modifier, et à quelle valeur ?",
+      "corrige": [
+        "Il reste la sensibilité ISO : il faut multiplier la sensibilité par $8$.",
+        "$100 \\times 8 = 800$ ISO (trois doublements : $200$, $400$, $800$). L'image sera plus bruitée."
+      ],
+      "reponse": "Passer à $800$ ISO."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "nombre-ouverture",
+      "enonce": "La suite des nombres d'ouverture est $f/2$ ; $f/2{,}8$ ; $f/4$ ; $f/5{,}6$ ; $f/8$ ; $f/11$ ; $f/16$. (a) Par quel nombre multiplie-t-on $N$ d'un cran au suivant ? (b) De $f/2$ à $f/16$, par combien la lumière est-elle divisée ?",
+      "corrige": [
+        "(a) On multiplie $N$ par $\\sqrt{2} \\approx 1{,}4$, ce qui divise la lumière par $2$ à chaque cran.",
+        "(b) Il y a $6$ crans, donc la lumière est divisée par $2^{6} = 64$. Vérification : $\\left(\\dfrac{16}{2}\\right)^{2} = 8^{2} = 64$."
+      ],
+      "reponse": "(a) Par $\\sqrt{2}$ ; (b) par $64$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "poids",
+      "enonce": "Une carte mémoire a une capacité de $64\\ \\text{Go}$ ($1\\ \\text{Go} = 10^{9}\\ \\text{o}$). Les photos JPEG de l'appareil pèsent en moyenne $8{,}0\\ \\text{Mo}$. Combien de photos peut-on stocker ?",
+      "corrige": [
+        "On exprime les deux grandeurs dans la même unité : $64\\ \\text{Go} = 64\\times 10^{9}\\ \\text{o}$ et $8{,}0\\ \\text{Mo} = 8{,}0\\times 10^{6}\\ \\text{o}$.",
+        "Nombre de photos $= \\dfrac{64\\times 10^{9}}{8{,}0\\times 10^{6}} = 8000$."
+      ],
+      "reponse": "Environ $8000$ photos."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "compression",
+      "enonce": "Une image $1920 \\times 1080$ en RVB est enregistrée en JPEG ; le fichier pèse $0{,}52\\ \\text{Mo}$. Calcule le taux de compression.",
+      "corrige": [
+        "Poids non compressé : $1920 \\times 1080 \\times 3 = 6\\,220\\,800\\ \\text{o} \\approx 6{,}22\\ \\text{Mo}$.",
+        "Taux $= \\dfrac{6{,}22}{0{,}52} \\approx 12$."
+      ],
+      "reponse": "Taux de compression d'environ $12$."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "debit-binaire",
+      "enonce": "**Visioconférence.** Une webcam filme en $1280 \\times 720$ pixels, RVB, à $30$ images par seconde. (a) Calcule le débit binaire non compressé. (b) La connexion ne permet d'envoyer que $2{,}0\\ \\text{Mbit/s}$. Quel taux de compression minimal faut-il ?",
+      "corrige": [
+        "Une image : $1280 \\times 720 \\times 3 = 2\\,764\\,800\\ \\text{o}$.",
+        "Débit : $2\\,764\\,800 \\times 30 \\times 8 = 663\\,552\\,000\\ \\text{bit/s} \\approx 664\\ \\text{Mbit/s}$.",
+        "(b) Taux minimal $= \\dfrac{663{,}6\\times 10^{6}}{2{,}0\\times 10^{6}} \\approx 332$ : sans compression, la visioconférence serait impossible."
+      ],
+      "reponse": "(a) Environ $664\\ \\text{Mbit/s}$ ; (b) taux d'au moins $332$ environ."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "temps-de-pose",
+      "enonce": "**Photo de sport.** Une scène est bien exposée à $f/8$, $t = \\dfrac{1}{125}\\ \\text{s}$, $100$ ISO. Pour figer un sprinteur, on choisit $t = \\dfrac{1}{1000}\\ \\text{s}$. (a) Par combien la lumière est-elle divisée ? (b) On ouvre à $f/4$ : combien de lumière récupère-t-on ? (c) Quelle sensibilité ISO compléter pour retrouver la bonne exposition ? (d) Quel effet a l'ouverture à $f/4$ sur l'arrière-plan ?",
+      "corrige": [
+        "(a) $\\dfrac{1/125}{1/1000} = 8$ : la lumière est divisée par $8$.",
+        "(b) Passer de $f/8$ à $f/4$ divise $N$ par $2$ : la lumière est multipliée par $2^{2} = 4$.",
+        "(c) Il manque un facteur $\\dfrac{8}{4} = 2$ : on double l'ISO, $200$ ISO.",
+        "(d) Le diaphragme plus ouvert réduit la profondeur de champ : l'arrière-plan est plus flou, ce qui détache le sprinteur."
+      ],
+      "reponse": "(a) $\\div 8$ ; (b) $\\times 4$ ; (c) $200$ ISO ; (d) arrière-plan plus flou."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "resolution",
+      "enonce": "**Imprimer une affiche.** On veut imprimer une affiche de $60\\ \\text{cm} \\times 40\\ \\text{cm}$ avec une résolution de $150$ ppp ($1\\ \\text{pouce} = 2{,}54\\ \\text{cm}$). (a) Combien de pixels faut-il en largeur et en hauteur ? (b) Une photo de smartphone de $4000 \\times 3000$ pixels convient-elle ?",
+      "corrige": [
+        "Largeur : $\\dfrac{60}{2{,}54} \\approx 23{,}6$ pouces, soit $23{,}6 \\times 150 \\approx 3543$ pixels.",
+        "Hauteur : $\\dfrac{40}{2{,}54} \\approx 15{,}7$ pouces, soit environ $2362$ pixels.",
+        "(b) $4000 > 3543$ et $3000 > 2362$ : la photo a assez de pixels dans les deux directions, elle convient."
+      ],
+      "reponse": "(a) Environ $3543 \\times 2362$ pixels ; (b) oui."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "poids",
+      "enonce": "**Numériser un document.** On scanne une feuille A4 ($21{,}0\\ \\text{cm} \\times 29{,}7\\ \\text{cm}$) à $300$ ppp. (a) Calcule la définition de l'image (arrondis au pixel). (b) Calcule son poids en niveaux de gris. (c) Calcule son poids en noir et blanc pur. Conclus sur le mode à choisir pour un texte.",
+      "corrige": [
+        "(a) $\\dfrac{21{,}0}{2{,}54} \\times 300 \\approx 2480$ px et $\\dfrac{29{,}7}{2{,}54} \\times 300 \\approx 3508$ px, soit $2480 \\times 3508 = 8\\,699\\,840$ pixels.",
+        "(b) Niveaux de gris, $1$ octet par pixel : $8\\,699\\,840\\ \\text{o} \\approx 8{,}7\\ \\text{Mo}$.",
+        "(c) Noir et blanc, $1$ bit par pixel : $\\dfrac{8\\,699\\,840}{8} = 1\\,087\\,480\\ \\text{o} \\approx 1{,}1\\ \\text{Mo}$.",
+        "Pour un texte noir sur fond blanc, le noir et blanc suffit et donne un fichier $8$ fois plus léger."
+      ],
+      "reponse": "(a) $2480 \\times 3508$ px ; (b) $\\approx 8{,}7\\ \\text{Mo}$ ; (c) $\\approx 1{,}1\\ \\text{Mo}$ : choisir le noir et blanc."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "debit-binaire",
+      "enonce": "**Partager un album.** On envoie $30$ photos de $12$ mégapixels en RVB, compressées en JPEG avec un taux de $10$, sur une connexion montante de $8{,}0\\ \\text{Mbit/s}$. (a) Quel est le poids d'une photo compressée ? (b) Combien de temps dure l'envoi ?",
+      "corrige": [
+        "Une photo brute : $12\\times 10^{6} \\times 3 = 36\\times 10^{6}\\ \\text{o} = 36\\ \\text{Mo}$ ; compressée : $\\dfrac{36}{10} = 3{,}6\\ \\text{Mo}$.",
+        "Album : $30 \\times 3{,}6 = 108\\ \\text{Mo}$, soit $108\\times 10^{6} \\times 8 = 864\\times 10^{6}$ bits.",
+        "(b) $\\Delta t = \\dfrac{864\\times 10^{6}}{8{,}0\\times 10^{6}} = 108\\ \\text{s}$, soit $1\\ \\text{min}\\ 48\\ \\text{s}$."
+      ],
+      "reponse": "(a) $3{,}6\\ \\text{Mo}$ ; (b) $108\\ \\text{s}$ (1 min 48 s)."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "taille-pixel",
+      "enonce": "**Deux capteurs de 12 mégapixels.** Un smartphone a des photosites de $1{,}9\\ \\mu\\text{m}$ de côté. Un appareil « plein format » de même définition a un capteur de $36\\ \\text{mm}$ de large pour $4256$ pixels. (a) Calcule la taille d'un photosite de l'appareil plein format. (b) Combien de fois sa surface est-elle plus grande que celle d'un photosite du smartphone ? (c) Lequel recueille le plus de lumière par pixel ?",
+      "corrige": [
+        "(a) $\\dfrac{36\\ \\text{mm}}{4256} \\approx 8{,}5\\times 10^{-3}\\ \\text{mm} = 8{,}5\\ \\mu\\text{m}$.",
+        "(b) Rapport des surfaces : $\\left(\\dfrac{8{,}5}{1{,}9}\\right)^{2} \\approx 20$.",
+        "(c) Le photosite du plein format, environ $20$ fois plus grand, reçoit environ $20$ fois plus de lumière : il a moins besoin de monter en ISO."
+      ],
+      "reponse": "(a) $\\approx 8{,}5\\ \\mu\\text{m}$ ; (b) environ $20$ fois ; (c) le plein format."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "compression",
+      "enonce": "**Mode rafale.** Un appareil de $24$ mégapixels (RVB) annonce une rafale de $10$ images par seconde. Sa carte mémoire peut écrire au plus $90\\ \\text{Mo/s}$. (a) Peut-il enregistrer la rafale en images non compressées ? (b) Et en JPEG avec un taux de compression de $10$ ?",
+      "corrige": [
+        "Une image brute : $24\\times 10^{6} \\times 3 = 72\\times 10^{6}\\ \\text{o} = 72\\ \\text{Mo}$ ; en rafale : $10 \\times 72 = 720\\ \\text{Mo/s}$.",
+        "(a) $720\\ \\text{Mo/s} > 90\\ \\text{Mo/s}$ : impossible sans compression.",
+        "(b) En JPEG : $7{,}2\\ \\text{Mo}$ par image, soit $72\\ \\text{Mo/s}$, inférieur à $90\\ \\text{Mo/s}$ : la rafale est possible."
+      ],
+      "reponse": "(a) Non ($720\\ \\text{Mo/s}$) ; (b) oui ($72\\ \\text{Mo/s}$)."
     }
   ]
 }

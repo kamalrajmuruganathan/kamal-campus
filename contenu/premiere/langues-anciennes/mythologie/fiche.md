@@ -19,7 +19,7 @@ relu_par: null
 > Les Romains ont largement repris les dieux grecs en leur donnant des noms latins. Connaître ces
 > correspondances et les grands héros permet de comprendre l'art, la littérature et la culture antiques.
 
-## 1. Les douze grands dieux et leurs correspondances
+## 1. Les grands dieux et leurs correspondances
 | Grec | Latin | Domaine |
 |---|---|---|
 | Zeus | Jupiter | roi des dieux, le ciel |
@@ -30,10 +30,14 @@ relu_par: null
 | Arès | Mars | la guerre |
 | Aphrodite | Vénus | l'amour, la beauté |
 | Héphaïstos | Vulcain | le feu, la forge |
+| Apollon | Apollon | la lumière, les arts, la divination |
 | Artémis | Diane | la chasse, la lune |
 | Hermès | Mercure | messager, commerce |
 | Déméter | Cérès | les moissons |
 | Dionysos | Bacchus | le vin, la fête |
+| Hestia | Vesta | le foyer |
+
+Les douze dieux de l'Olympe sont ceux du tableau, sauf **Hadès**, qui règne sur les Enfers et non sur l'Olympe. (Selon les listes, Dionysos remplace parfois Hestia.)
 
 Les dieux résident sur le mont **Olympe**.
 

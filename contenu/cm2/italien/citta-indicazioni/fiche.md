@@ -49,7 +49,8 @@ Voici comment indiquer une direction :
 | vai dritto | va tout droit |
 | è qui vicino | c'est tout près |
 
-Exemple : *Gira a sinistra, poi vai sempre dritto.* → Tourne à gauche, puis va tout droit.
+Exemple (à un camarade) : *Gira a sinistra, poi vai sempre dritto.* → Tourne à gauche, puis va tout droit.
+À un adulte, on vouvoie : *Giri a sinistra, poi vada sempre dritto.*
 
 ## 4. Les erreurs à éviter
 - « à droite » = **a destra** ; « à gauche » = **a sinistra**. Ne pas les confondre !

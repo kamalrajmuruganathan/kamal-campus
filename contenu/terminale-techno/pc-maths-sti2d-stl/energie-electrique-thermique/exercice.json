@@ -125,7 +125,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "energie-electrique-thermique",
       "enonce": "Un refuge de montagne isolé n'est pas raccordé au réseau : il produit toute son électricité. Son toit porte des panneaux photovoltaïques (surface totale $S = 15\\ \\mathrm{m}^2$, rendement $\\eta = 20\\,\\%$). L'énergie est stockée dans une batterie de $48\\ \\mathrm{V}$ ($Q = 200\\ \\mathrm{Ah}$), puis un onduleur la convertit en tension sinusoïdale ($U = 230\\ \\mathrm{V}$ efficace, $f = 50\\ \\mathrm{Hz}$) pour les appareils. En hiver, le refuge est chauffé électriquement. Données : $\\eta = \\dfrac{P_{\\text{élec}}}{E_{\\text{écl}} \\cdot S}$ avec $E_{\\text{écl}} = 1000\\ \\mathrm{W \\cdot m^{-2}}$ en plein soleil ; $P = U \\cdot I$ ; $P_{\\text{pertes}} = R \\cdot I^2$ ; câble panneaux→batterie de résistance $R = 0{,}040\\ \\Omega$ ; $U_{\\text{max}} = U\\sqrt{2}$ ; $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$ avec $R_{\\text{th}} = 0{,}025\\ \\mathrm{K \\cdot W^{-1}}$ (parois du refuge) ; $E = Q \\cdot U$ ; $1\\ \\mathrm{kWh} = 3{,}6 \\times 10^6\\ \\mathrm{J}$. \n\n1. Calcule la puissance électrique $P_{\\text{élec}}$ produite par les panneaux en plein soleil. \n2. Cette puissance charge la batterie $48\\ \\mathrm{V}$ à travers le câble. Calcule l'intensité dans le câble, puis les pertes Joule ; exprime-les en pourcentage de la puissance produite. \n3. L'onduleur délivre une tension sinusoïdale de $230\\ \\mathrm{V}$ efficace à $50\\ \\mathrm{Hz}$. Calcule sa valeur maximale $U_{\\text{max}}$ et sa période $T$. \n4. Le refuge est à $18\\ ^\\circ\\mathrm{C}$ quand il fait $-7\\ ^\\circ\\mathrm{C}$ dehors. Calcule le flux thermique $\\Phi$ à travers les parois : c'est la puissance que le chauffage doit fournir en permanence. \n5. La nuit, plus de soleil : seul le chauffage fonctionne sur la batterie. Calcule l'énergie stockée (en kWh) et l'autonomie du chauffage.",
       "corrige": [
@@ -136,6 +136,454 @@
         "5. Autonomie : énergie stockée $E = Q \\times U_{\\text{batt}} = 200 \\times 48 = 9600\\ \\mathrm{Wh} = 9{,}6\\ \\mathrm{kWh}$. Avec le seul chauffage ($1000\\ \\mathrm{W}$) : $t = \\dfrac{E}{P} = \\dfrac{9600}{1000} = 9{,}6\\ \\mathrm{h}$. La batterie tient donc une nuit d'hiver — à condition que la journée ensoleillée ait pu la recharger, ce qui suppose plusieurs heures de plein soleil équivalent."
       ],
       "reponse": "1. $P_{\\text{élec}} = 3{,}0\\ \\mathrm{kW}$. 2. $I = 62{,}5\\ \\mathrm{A}$, pertes $\\approx 156\\ \\mathrm{W}$ ($\\approx 5{,}2\\,\\%$). 3. $U_{\\text{max}} \\approx 325\\ \\mathrm{V}$, $T = 20\\ \\mathrm{ms}$. 4. $\\Phi = 1000\\ \\mathrm{W}$. 5. $E = 9{,}6\\ \\mathrm{kWh}$, autonomie $\\approx 9{,}6\\ \\mathrm{h}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "regime-sinusoidal",
+      "enonce": "a) Le secteur français a une fréquence de $50\\ \\mathrm{Hz}$ : quelle est sa période ? b) Aux États-Unis, la fréquence du réseau est $60\\ \\mathrm{Hz}$ : quelle est la période ?",
+      "corrige": [
+        "$T = \\dfrac{1}{f}$.",
+        "a) $T = \\dfrac{1}{50} = 0{,}020\\ \\mathrm{s} = 20\\ \\mathrm{ms}$ ; b) $T = \\dfrac{1}{60} \\approx 0{,}0167\\ \\mathrm{s} \\approx 16{,}7\\ \\mathrm{ms}$."
+      ],
+      "reponse": "a) $20\\ \\mathrm{ms}$ ; b) environ $16{,}7\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "valeur-efficace",
+      "enonce": "Un transformateur délivre une tension sinusoïdale de valeur efficace $24\\ \\mathrm{V}$. Quelle valeur maximale verra-t-on à l'oscilloscope ?",
+      "corrige": [
+        "$U = \\dfrac{U_{\\text{max}}}{\\sqrt{2}}$, donc $U_{\\text{max}} = U \\times \\sqrt{2}$.",
+        "$U_{\\text{max}} = 24 \\times \\sqrt{2} \\approx 33{,}9\\ \\mathrm{V}$."
+      ],
+      "reponse": "$U_{\\text{max}} \\approx 33{,}9\\ \\mathrm{V}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "valeur-efficace",
+      "enonce": "L'intensité dans un radiateur a une valeur maximale $I_{\\text{max}} = 7{,}1\\ \\mathrm{A}$. Calculer sa valeur efficace.",
+      "corrige": [
+        "La relation vaut aussi pour l'intensité : $I = \\dfrac{I_{\\text{max}}}{\\sqrt{2}}$.",
+        "$I = \\dfrac{7{,}1}{\\sqrt{2}} \\approx 5{,}0\\ \\mathrm{A}$."
+      ],
+      "reponse": "$I \\approx 5{,}0\\ \\mathrm{A}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "valeur-efficace",
+      "enonce": "On mesure la tension d'une prise avec un multimètre en mode alternatif, puis on l'observe à l'oscilloscope. Quelle valeur lit-on sur chaque appareil (environ) ?",
+      "corrige": [
+        "Le multimètre en mode AC affiche la valeur efficace : environ $230\\ \\mathrm{V}$.",
+        "L'oscilloscope montre la courbe : on y lit la valeur maximale, $U_{\\text{max}} = 230 \\times \\sqrt{2} \\approx 325\\ \\mathrm{V}$."
+      ],
+      "reponse": "Multimètre : $230\\ \\mathrm{V}$ (efficace) ; oscilloscope : $U_{\\text{max}} \\approx 325\\ \\mathrm{V}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "valeur-efficace",
+      "enonce": "Un élève lit $U_{\\text{max}} = 325\\ \\mathrm{V}$ à l'oscilloscope et écrit : « valeur efficace $= \\dfrac{325}{2} = 162{,}5\\ \\mathrm{V}$ ». Corriger.",
+      "corrige": [
+        "Pour une sinusoïde, on divise par $\\sqrt{2} \\approx 1{,}41$, pas par $2$.",
+        "$U = \\dfrac{325}{\\sqrt{2}} \\approx 230\\ \\mathrm{V}$."
+      ],
+      "reponse": "$U \\approx 230\\ \\mathrm{V}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "dephasage",
+      "enonce": "Les maxima de l'intensité arrivent $5\\ \\mathrm{ms}$ après ceux de la tension, de période $T = 20\\ \\mathrm{ms}$. Calculer le déphasage en radians.",
+      "corrige": [
+        "$\\varphi = 2\\pi \\times \\dfrac{\\Delta t}{T}$.",
+        "$\\varphi = 2\\pi \\times \\dfrac{5}{20} = \\dfrac{\\pi}{2}$ rad (un quart de période)."
+      ],
+      "reponse": "$\\varphi = \\dfrac{\\pi}{2}$ rad."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "dephasage",
+      "enonce": "Un dipôle est alimenté sous $U = 230\\ \\mathrm{V}$ (efficace) ; l'intensité efficace vaut $I = 10\\ \\mathrm{A}$ et le facteur de puissance $\\cos\\varphi = 0{,}80$. Calculer la puissance moyenne reçue.",
+      "corrige": [
+        "$P = U\\,I\\cos\\varphi$, avec des valeurs efficaces.",
+        "$P = 230 \\times 10 \\times 0{,}80 = 1\\,840\\ \\mathrm{W}$ (et non $2\\,300\\ \\mathrm{W}$ : le déphasage réduit la puissance)."
+      ],
+      "reponse": "$P = 1\\,840\\ \\mathrm{W}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "dephasage",
+      "enonce": "Un moteur alimenté sous $230\\ \\mathrm{V}$ (efficace) absorbe $6{,}0\\ \\mathrm{A}$ (efficace) et reçoit une puissance moyenne de $1\\,100\\ \\mathrm{W}$. Calculer son facteur de puissance.",
+      "corrige": [
+        "$P = U\\,I\\cos\\varphi$, donc $\\cos\\varphi = \\dfrac{P}{U\\,I}$.",
+        "$\\cos\\varphi = \\dfrac{1\\,100}{230 \\times 6{,}0} = \\dfrac{1\\,100}{1\\,380} \\approx 0{,}80$."
+      ],
+      "reponse": "$\\cos\\varphi \\approx 0{,}80$."
+    },
+    {
+      "id": 19,
+      "difficulte": "approfondissement",
+      "notion": "dephasage",
+      "enonce": "Sur le réseau à $50\\ \\mathrm{Hz}$, un moteur présente un déphasage $\\varphi = \\dfrac{\\pi}{6}$ rad. De combien de millisecondes l'intensité est-elle décalée par rapport à la tension ? Que vaut son facteur de puissance ?",
+      "corrige": [
+        "$\\Delta t = \\dfrac{\\varphi}{2\\pi} \\times T = \\dfrac{1}{12} \\times 20\\ \\mathrm{ms} \\approx 1{,}7\\ \\mathrm{ms}$.",
+        "$\\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2} \\approx 0{,}87$."
+      ],
+      "reponse": "$\\Delta t \\approx 1{,}7\\ \\mathrm{ms}$ ; $\\cos\\varphi \\approx 0{,}87$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "pertes-en-ligne",
+      "enonce": "Une ligne de résistance $R = 2{,}0\\ \\Omega$ est parcourue par une intensité efficace de $30\\ \\mathrm{A}$. Calculer les pertes par effet Joule.",
+      "corrige": [
+        "$P_{\\text{pertes}} = R\\,I^2$.",
+        "$P_{\\text{pertes}} = 2{,}0 \\times 30^2 = 2{,}0 \\times 900 = 1\\,800\\ \\mathrm{W}$."
+      ],
+      "reponse": "$P_{\\text{pertes}} = 1\\,800\\ \\mathrm{W}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "pertes-en-ligne",
+      "enonce": "Pour transporter la même puissance sur la même ligne, on multiplie la tension par $4$. Par combien sont divisées l'intensité et les pertes ?",
+      "corrige": [
+        "$P = U\\,I$ fixée : si $U$ est multipliée par $4$, $I$ est divisée par $4$.",
+        "$P_{\\text{pertes}} = R\\,I^2$ est divisée par $4^2 = 16$."
+      ],
+      "reponse": "Intensité divisée par $4$, pertes divisées par $16$."
+    },
+    {
+      "id": 22,
+      "difficulte": "approfondissement",
+      "notion": "pertes-en-ligne",
+      "enonce": "Une ligne de résistance $R = 8{,}0\\ \\Omega$ transporte $P = 50\\ \\mathrm{MW}$ sous $U = 225\\ \\mathrm{kV}$. Calculer l'intensité, les pertes, et leur pourcentage de la puissance transportée.",
+      "corrige": [
+        "$I = \\dfrac{P}{U} = \\dfrac{50 \\times 10^{6}}{225 \\times 10^{3}} \\approx 222\\ \\mathrm{A}$.",
+        "$P_{\\text{pertes}} = 8{,}0 \\times 222{,}2^2 \\approx 3{,}95 \\times 10^{5}\\ \\mathrm{W} \\approx 395\\ \\mathrm{kW}$.",
+        "$\\dfrac{0{,}395}{50} \\approx 0{,}79\\,\\%$ de la puissance transportée."
+      ],
+      "reponse": "$I \\approx 222\\ \\mathrm{A}$ ; pertes $\\approx 395\\ \\mathrm{kW}$, soit environ $0{,}8\\,\\%$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "energie-interne",
+      "enonce": "Calculer l'énergie à fournir pour chauffer $1{,}0\\ \\mathrm{L}$ d'eau ($1{,}0\\ \\mathrm{kg}$) de $20\\ ^\\circ\\mathrm{C}$ à $100\\ ^\\circ\\mathrm{C}$, sans ébullition. Donnée : $c_{\\text{eau}} = 4\\,185\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$.",
+      "corrige": [
+        "$\\Delta U = m\\,c\\,\\Delta T$, avec $\\Delta T = 100 - 20 = 80\\ \\mathrm{K}$.",
+        "$\\Delta U = 1{,}0 \\times 4\\,185 \\times 80 \\approx 3{,}35 \\times 10^{5}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$\\Delta U \\approx 3{,}35 \\times 10^{5}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "energie-interne",
+      "enonce": "Avant une trempe, on chauffe une pièce d'acier de $2{,}0\\ \\mathrm{kg}$ de $20\\ ^\\circ\\mathrm{C}$ à $820\\ ^\\circ\\mathrm{C}$. Calculer la variation de son énergie interne. Donnée : $c_{\\text{acier}} = 450\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$.",
+      "corrige": [
+        "$\\Delta T = 820 - 20 = 800\\ \\mathrm{K}$.",
+        "$\\Delta U = 2{,}0 \\times 450 \\times 800 = 7{,}2 \\times 10^{5}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$\\Delta U = 7{,}2 \\times 10^{5}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "energie-interne",
+      "enonce": "Pour chauffer $1{,}0\\ \\mathrm{kg}$ d'eau de $20\\ ^\\circ\\mathrm{C}$ à $100\\ ^\\circ\\mathrm{C}$, un élève écrit $\\Delta T = 80 + 273 = 353\\ \\mathrm{K}$. Corriger et donner $\\Delta U$ ($c_{\\text{eau}} = 4\\,185\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$).",
+      "corrige": [
+        "Un écart de température a la même valeur en kelvins et en degrés Celsius : on n'ajoute jamais $273$ à un écart.",
+        "$\\Delta T = 80\\ \\mathrm{K}$, donc $\\Delta U = 1{,}0 \\times 4\\,185 \\times 80 \\approx 3{,}35 \\times 10^{5}\\ \\mathrm{J}$ (l'élève aurait trouvé une valeur plus de quatre fois trop grande)."
+      ],
+      "reponse": "$\\Delta T = 80\\ \\mathrm{K}$ et $\\Delta U \\approx 3{,}35 \\times 10^{5}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "energie-interne",
+      "enonce": "Un bain contient $150\\ \\mathrm{L}$ d'eau ($150\\ \\mathrm{kg}$) chauffés de $15\\ ^\\circ\\mathrm{C}$ à $38\\ ^\\circ\\mathrm{C}$. Calculer l'énergie nécessaire en joules puis en kWh, et son coût à $0{,}20$ € le kWh ($c_{\\text{eau}} = 4\\,185\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$).",
+      "corrige": [
+        "$\\Delta U = 150 \\times 4\\,185 \\times 23 \\approx 1{,}44 \\times 10^{7}\\ \\mathrm{J}$.",
+        "En kWh : $\\dfrac{1{,}44 \\times 10^{7}}{3{,}6 \\times 10^{6}} \\approx 4{,}0\\ \\mathrm{kWh}$.",
+        "Coût : $4{,}0 \\times 0{,}20 \\approx 0{,}80$ €."
+      ],
+      "reponse": "$\\Delta U \\approx 1{,}44 \\times 10^{7}\\ \\mathrm{J} \\approx 4{,}0\\ \\mathrm{kWh}$, soit environ $0{,}80$ €."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "energie-interne",
+      "enonce": "Une pièce d'aluminium de $5{,}0\\ \\mathrm{kg}$, initialement à $20\\ ^\\circ\\mathrm{C}$, reçoit $1{,}8 \\times 10^{5}\\ \\mathrm{J}$. Quelle est sa température finale ? Donnée : $c_{\\text{alu}} = 900\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$.",
+      "corrige": [
+        "$\\Delta T = \\dfrac{\\Delta U}{m\\,c} = \\dfrac{1{,}8 \\times 10^{5}}{5{,}0 \\times 900} = 40\\ \\mathrm{K}$.",
+        "$T_{\\text{finale}} = 20 + 40 = 60\\ ^\\circ\\mathrm{C}$."
+      ],
+      "reponse": "$60\\ ^\\circ\\mathrm{C}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "energie-interne",
+      "enonce": "On fournit $1{,}0 \\times 10^{5}\\ \\mathrm{J}$ à $1{,}0\\ \\mathrm{kg}$ d'eau, puis la même énergie à $1{,}0\\ \\mathrm{kg}$ d'acier. Calculer l'élévation de température de chacun ($c_{\\text{eau}} = 4\\,185$ et $c_{\\text{acier}} = 450$, en $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$). Commenter.",
+      "corrige": [
+        "Eau : $\\Delta T = \\dfrac{10^{5}}{4\\,185} \\approx 24\\ \\mathrm{K}$ ; acier : $\\Delta T = \\dfrac{10^{5}}{450} \\approx 222\\ \\mathrm{K}$.",
+        "L'eau, de capacité thermique massique beaucoup plus grande, s'échauffe environ $9$ fois moins : elle a une grande inertie thermique (d'où son usage dans le chauffage central et le refroidissement)."
+      ],
+      "reponse": "Eau : environ $24\\ \\mathrm{K}$ ; acier : environ $222\\ \\mathrm{K}$ ; l'eau a une bien plus grande inertie thermique."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "resistance-thermique",
+      "enonce": "Calculer la résistance thermique d'une couche de laine de verre ($\\lambda = 0{,}040\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$) de $10\\ \\mathrm{cm}$ d'épaisseur et de $5{,}0\\ \\mathrm{m^2}$ de surface.",
+      "corrige": [
+        "$R_{\\text{th}} = \\dfrac{e}{\\lambda S}$, avec $e = 0{,}10\\ \\mathrm{m}$ (en mètres).",
+        "$R_{\\text{th}} = \\dfrac{0{,}10}{0{,}040 \\times 5{,}0} = 0{,}50\\ \\mathrm{K\\cdot W^{-1}}$."
+      ],
+      "reponse": "$R_{\\text{th}} = 0{,}50\\ \\mathrm{K\\cdot W^{-1}}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "flux-thermique",
+      "enonce": "Une paroi de résistance thermique $0{,}25\\ \\mathrm{K\\cdot W^{-1}}$ sépare une pièce à $20\\ ^\\circ\\mathrm{C}$ de l'extérieur à $5\\ ^\\circ\\mathrm{C}$. Calculer le flux thermique qui la traverse.",
+      "corrige": [
+        "$\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$, avec $\\Delta T = 15\\ \\mathrm{K}$.",
+        "$\\Phi = \\dfrac{15}{0{,}25} = 60\\ \\mathrm{W}$, du chaud vers le froid (de la pièce vers l'extérieur)."
+      ],
+      "reponse": "$\\Phi = 60\\ \\mathrm{W}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Pour un voile de béton ($\\lambda = 1{,}5\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$) de $5\\ \\mathrm{cm}$ d'épaisseur et de $10\\ \\mathrm{m^2}$, un élève calcule $R_{\\text{th}} = \\dfrac{5}{1{,}5 \\times 10} \\approx 0{,}33\\ \\mathrm{K\\cdot W^{-1}}$. Corriger.",
+      "corrige": [
+        "L'épaisseur doit être en mètres : $e = 0{,}05\\ \\mathrm{m}$.",
+        "$R_{\\text{th}} = \\dfrac{0{,}05}{1{,}5 \\times 10} \\approx 3{,}3 \\times 10^{-3}\\ \\mathrm{K\\cdot W^{-1}}$ : l'élève s'est trompé d'un facteur $100$."
+      ],
+      "reponse": "$R_{\\text{th}} \\approx 3{,}3 \\times 10^{-3}\\ \\mathrm{K\\cdot W^{-1}}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Quelle épaisseur de béton ($\\lambda = 1{,}5\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$) a la même résistance thermique que $4\\ \\mathrm{cm}$ de laine de verre ($\\lambda = 0{,}040\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$), pour une même surface ?",
+      "corrige": [
+        "À surface égale, il faut le même rapport $\\dfrac{e}{\\lambda}$ : $\\dfrac{e_{\\text{béton}}}{1{,}5} = \\dfrac{0{,}04}{0{,}040} = 1$.",
+        "$e_{\\text{béton}} = 1{,}5\\ \\mathrm{m}$ : le béton est un très mauvais isolant comparé à la laine de verre."
+      ],
+      "reponse": "$1{,}5\\ \\mathrm{m}$ de béton."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "flux-thermique",
+      "enonce": "Les combles d'une maison ($80\\ \\mathrm{m^2}$) sont isolés par $30\\ \\mathrm{cm}$ de laine de verre ($\\lambda = 0{,}040\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$). Il fait $20\\ ^\\circ\\mathrm{C}$ dedans et $0\\ ^\\circ\\mathrm{C}$ dans les combles. Calculer $R_{\\text{th}}$, le flux thermique, puis l'énergie perdue en $24\\ \\mathrm{h}$ (en kWh).",
+      "corrige": [
+        "$R_{\\text{th}} = \\dfrac{0{,}30}{0{,}040 \\times 80} \\approx 0{,}094\\ \\mathrm{K\\cdot W^{-1}}$.",
+        "$\\Phi = \\dfrac{20}{0{,}094} \\approx 213\\ \\mathrm{W}$.",
+        "En $24\\ \\mathrm{h}$ : $213 \\times 24 \\approx 5\\,100\\ \\mathrm{Wh}$, soit environ $5{,}1\\ \\mathrm{kWh}$."
+      ],
+      "reponse": "$R_{\\text{th}} \\approx 0{,}094\\ \\mathrm{K\\cdot W^{-1}}$ ; $\\Phi \\approx 213\\ \\mathrm{W}$ ; environ $5{,}1\\ \\mathrm{kWh}$ par jour."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "resistance-thermique",
+      "enonce": "Un mur de $12\\ \\mathrm{m^2}$ comporte $20\\ \\mathrm{cm}$ de briques ($\\lambda = 0{,}80\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$) et $8{,}0\\ \\mathrm{cm}$ de polystyrène ($\\lambda = 0{,}035\\ \\mathrm{W\\cdot m^{-1}\\cdot K^{-1}}$). Calculer la résistance thermique totale et le flux pour un écart de $18\\ \\mathrm{K}$.",
+      "corrige": [
+        "Briques : $R_1 = \\dfrac{0{,}20}{0{,}80 \\times 12} \\approx 0{,}021\\ \\mathrm{K\\cdot W^{-1}}$ ; polystyrène : $R_2 = \\dfrac{0{,}080}{0{,}035 \\times 12} \\approx 0{,}190\\ \\mathrm{K\\cdot W^{-1}}$.",
+        "Couches en série : $R_{\\text{th}} = R_1 + R_2 \\approx 0{,}211\\ \\mathrm{K\\cdot W^{-1}}$.",
+        "$\\Phi = \\dfrac{18}{0{,}211} \\approx 85\\ \\mathrm{W}$ ; l'isolant apporte l'essentiel de la résistance."
+      ],
+      "reponse": "$R_{\\text{th}} \\approx 0{,}21\\ \\mathrm{K\\cdot W^{-1}}$ ; $\\Phi \\approx 85\\ \\mathrm{W}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "decouverte",
+      "notion": "piles-accumulateurs",
+      "enonce": "Pile, accumulateur ou pile à combustible ? a) On peut le recharger en lui imposant un courant en sens inverse. b) Il débite tant qu'on l'alimente en dihydrogène et en dioxygène. c) Une fois ses réactifs consommés, il est hors d'usage.",
+      "corrige": [
+        "Dans un accumulateur, la réaction d'oxydoréduction est réversible : la charge reconstitue les réactifs.",
+        "La pile à combustible reçoit ses réactifs en continu de l'extérieur ; la pile ordinaire fonctionne à sens unique."
+      ],
+      "reponse": "a) accumulateur ; b) pile à combustible ; c) pile."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "piles-accumulateurs",
+      "enonce": "La batterie d'un smartphone porte les indications $3{,}7\\ \\mathrm{V}$ et $4\\,000\\ \\mathrm{mAh}$. Calculer l'énergie stockée en Wh puis en joules.",
+      "corrige": [
+        "$Q = 4\\,000\\ \\mathrm{mAh} = 4{,}0\\ \\mathrm{Ah}$.",
+        "$E = Q\\,U = 4{,}0 \\times 3{,}7 = 14{,}8\\ \\mathrm{Wh}$, et $14{,}8 \\times 3\\,600 \\approx 5{,}3 \\times 10^{4}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$E = 14{,}8\\ \\mathrm{Wh} \\approx 5{,}3 \\times 10^{4}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "piles-accumulateurs",
+      "enonce": "Un accumulateur débite $0{,}50\\ \\mathrm{A}$ pendant $8{,}0\\ \\mathrm{h}$. Quelle charge a-t-il fournie, en Ah puis en coulombs ?",
+      "corrige": [
+        "$Q = I\\,\\Delta t = 0{,}50 \\times 8{,}0 = 4{,}0\\ \\mathrm{Ah}$ ($\\Delta t$ en heures).",
+        "$1\\ \\mathrm{Ah} = 3\\,600\\ \\mathrm{C}$, donc $Q = 4{,}0 \\times 3\\,600 = 14\\,400\\ \\mathrm{C}$."
+      ],
+      "reponse": "$Q = 4{,}0\\ \\mathrm{Ah} = 1{,}44 \\times 10^{4}\\ \\mathrm{C}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "piles-accumulateurs",
+      "enonce": "Batterie A : $12\\ \\mathrm{V}$, $50\\ \\mathrm{Ah}$. Batterie B : $48\\ \\mathrm{V}$, $20\\ \\mathrm{Ah}$. Laquelle stocke le plus d'énergie ?",
+      "corrige": [
+        "On compare les énergies $E = Q\\,U$, pas les capacités.",
+        "$E_A = 50 \\times 12 = 600\\ \\mathrm{Wh}$ et $E_B = 20 \\times 48 = 960\\ \\mathrm{Wh}$."
+      ],
+      "reponse": "La batterie B ($960\\ \\mathrm{Wh}$ contre $600\\ \\mathrm{Wh}$), malgré une capacité plus faible."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "piles-accumulateurs",
+      "enonce": "Une batterie externe stocke $10\\ \\mathrm{Ah}$ sous $3{,}7\\ \\mathrm{V}$. Une recharge complète de téléphone demande $15\\ \\mathrm{Wh}$. Combien de recharges complètes peut-on espérer, en négligeant les pertes ?",
+      "corrige": [
+        "Énergie stockée : $E = 10 \\times 3{,}7 = 37\\ \\mathrm{Wh}$.",
+        "$\\dfrac{37}{15} \\approx 2{,}5$ : deux recharges complètes (en pratique un peu moins, à cause des pertes)."
+      ],
+      "reponse": "Deux recharges complètes."
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "photon",
+      "enonce": "Calculer l'énergie d'un photon de lumière rouge de longueur d'onde $650\\ \\mathrm{nm}$. Données : $h = 6{,}63 \\times 10^{-34}\\ \\mathrm{J\\cdot s}$ et $c = 3{,}00 \\times 10^{8}\\ \\mathrm{m\\cdot s^{-1}}$.",
+      "corrige": [
+        "$E = \\dfrac{h\\,c}{\\lambda}$ avec $\\lambda = 650 \\times 10^{-9}\\ \\mathrm{m}$.",
+        "$E = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^{8}}{6{,}50 \\times 10^{-7}} \\approx 3{,}06 \\times 10^{-19}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$E \\approx 3{,}06 \\times 10^{-19}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "photon",
+      "enonce": "Calculer l'énergie d'un photon de fréquence $\\nu = 7{,}5 \\times 10^{14}\\ \\mathrm{Hz}$ (lumière violette), avec $h = 6{,}63 \\times 10^{-34}\\ \\mathrm{J\\cdot s}$. Est-elle plus grande que celle d'un photon rouge ($3{,}06 \\times 10^{-19}\\ \\mathrm{J}$) ?",
+      "corrige": [
+        "$E = h\\,\\nu = 6{,}63 \\times 10^{-34} \\times 7{,}5 \\times 10^{14} \\approx 4{,}97 \\times 10^{-19}\\ \\mathrm{J}$.",
+        "Oui : la fréquence est plus élevée (longueur d'onde plus courte), donc l'énergie du photon est plus grande."
+      ],
+      "reponse": "$E \\approx 4{,}97 \\times 10^{-19}\\ \\mathrm{J}$, plus grande que pour le rouge."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "photon",
+      "enonce": "Pour un photon de $500\\ \\mathrm{nm}$, un élève calcule $E = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^{8}}{500} \\approx 4{,}0 \\times 10^{-28}\\ \\mathrm{J}$. Trouver l'erreur et corriger.",
+      "corrige": [
+        "La longueur d'onde a été laissée en nanomètres : il faut $\\lambda = 500 \\times 10^{-9} = 5{,}00 \\times 10^{-7}\\ \\mathrm{m}$.",
+        "$E = \\dfrac{1{,}989 \\times 10^{-25}}{5{,}00 \\times 10^{-7}} \\approx 3{,}98 \\times 10^{-19}\\ \\mathrm{J}$ : le résultat de l'élève était $10^{9}$ fois trop petit. Un photon visible transporte quelques $10^{-19}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$E \\approx 3{,}98 \\times 10^{-19}\\ \\mathrm{J}$ ($\\lambda$ doit être en mètres)."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "photon",
+      "enonce": "Un pointeur laser vert émet une puissance lumineuse de $1{,}0\\ \\mathrm{mW}$ à $532\\ \\mathrm{nm}$. Calculer l'énergie d'un photon, puis le nombre de photons émis par seconde. Données : $h = 6{,}63 \\times 10^{-34}\\ \\mathrm{J\\cdot s}$ et $c = 3{,}00 \\times 10^{8}\\ \\mathrm{m\\cdot s^{-1}}$.",
+      "corrige": [
+        "$E = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^{8}}{532 \\times 10^{-9}} \\approx 3{,}74 \\times 10^{-19}\\ \\mathrm{J}$.",
+        "Chaque seconde, le laser émet $1{,}0 \\times 10^{-3}\\ \\mathrm{J}$ : $N = \\dfrac{1{,}0 \\times 10^{-3}}{3{,}74 \\times 10^{-19}} \\approx 2{,}7 \\times 10^{15}$ photons."
+      ],
+      "reponse": "$E \\approx 3{,}74 \\times 10^{-19}\\ \\mathrm{J}$ ; environ $2{,}7 \\times 10^{15}$ photons par seconde."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "photovoltaique",
+      "enonce": "Un panneau de $1{,}7\\ \\mathrm{m^2}$ reçoit un éclairement de $1\\,000\\ \\mathrm{W\\cdot m^{-2}}$ et délivre $340\\ \\mathrm{W}$ électriques. Calculer son rendement.",
+      "corrige": [
+        "$P_{\\text{reçue}} = E_{\\text{écl}} \\times S = 1\\,000 \\times 1{,}7 = 1\\,700\\ \\mathrm{W}$.",
+        "$\\eta = \\dfrac{340}{1\\,700} = 0{,}20$, soit $20\\,\\%$."
+      ],
+      "reponse": "$\\eta = 20\\,\\%$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "photovoltaique",
+      "enonce": "Quelle surface de panneaux de rendement $21\\,\\%$ faut-il pour produire $3{,}0\\ \\mathrm{kW}$ électriques sous $1\\,000\\ \\mathrm{W\\cdot m^{-2}}$ ?",
+      "corrige": [
+        "$P_{\\text{élec}} = \\eta\\,E_{\\text{écl}}\\,S$, donc $S = \\dfrac{P_{\\text{élec}}}{\\eta\\,E_{\\text{écl}}}$.",
+        "$S = \\dfrac{3\\,000}{0{,}21 \\times 1\\,000} \\approx 14\\ \\mathrm{m^2}$."
+      ],
+      "reponse": "$S \\approx 14\\ \\mathrm{m^2}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "photovoltaique",
+      "enonce": "Des panneaux de $10\\ \\mathrm{m^2}$, de rendement $20\\,\\%$, reçoivent un éclairement moyen de $500\\ \\mathrm{W\\cdot m^{-2}}$ pendant $8\\ \\mathrm{h}$. Calculer l'énergie électrique produite, en kWh.",
+      "corrige": [
+        "$P_{\\text{élec}} = 0{,}20 \\times 500 \\times 10 = 1\\,000\\ \\mathrm{W} = 1{,}0\\ \\mathrm{kW}$.",
+        "$E = 1{,}0\\ \\mathrm{kW} \\times 8\\ \\mathrm{h} = 8{,}0\\ \\mathrm{kWh}$."
+      ],
+      "reponse": "$E = 8{,}0\\ \\mathrm{kWh}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "energie-interne",
+      "enonce": "Un chauffe-eau de $200\\ \\mathrm{L}$ porte l'eau de $15\\ ^\\circ\\mathrm{C}$ à $55\\ ^\\circ\\mathrm{C}$. Sa résistance a une puissance de $2{,}2\\ \\mathrm{kW}$ et $95\\,\\%$ de l'énergie électrique est transmise à l'eau. 1. Calculer $\\Delta U$ de l'eau ($c_{\\text{eau}} = 4\\,185\\ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$). 2. Calculer l'énergie électrique consommée. 3. Calculer la durée de chauffe.",
+      "corrige": [
+        "1. $\\Delta U = 200 \\times 4\\,185 \\times 40 \\approx 3{,}35 \\times 10^{7}\\ \\mathrm{J}$.",
+        "2. $E_{\\text{élec}} = \\dfrac{\\Delta U}{0{,}95} \\approx 3{,}52 \\times 10^{7}\\ \\mathrm{J}$ (soit environ $9{,}8\\ \\mathrm{kWh}$).",
+        "3. $\\Delta t = \\dfrac{E_{\\text{élec}}}{P} = \\dfrac{3{,}52 \\times 10^{7}}{2\\,200} \\approx 1{,}6 \\times 10^{4}\\ \\mathrm{s}$, soit environ $4\\ \\mathrm{h}\\ 27\\ \\mathrm{min}$."
+      ],
+      "reponse": "1. $\\approx 3{,}35 \\times 10^{7}\\ \\mathrm{J}$ ; 2. $\\approx 3{,}52 \\times 10^{7}\\ \\mathrm{J}$ ; 3. environ $4\\ \\mathrm{h}\\ 27\\ \\mathrm{min}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "flux-thermique",
+      "enonce": "L'enveloppe d'une maison mal isolée a une résistance thermique totale de $0{,}012\\,5\\ \\mathrm{K\\cdot W^{-1}}$. En hiver, il fait $20\\ ^\\circ\\mathrm{C}$ dedans et $0\\ ^\\circ\\mathrm{C}$ dehors. 1. Calculer le flux thermique perdu. 2. Quelle énergie faut-il fournir par jour pour maintenir la température (en kWh) ? Quel coût à $0{,}20$ € le kWh ? 3. Après travaux, la résistance thermique est doublée : quelle économie par jour ?",
+      "corrige": [
+        "1. $\\Phi = \\dfrac{20}{0{,}012\\,5} = 1\\,600\\ \\mathrm{W}$.",
+        "2. $E = 1{,}6\\ \\mathrm{kW} \\times 24\\ \\mathrm{h} = 38{,}4\\ \\mathrm{kWh}$, soit $38{,}4 \\times 0{,}20 \\approx 7{,}68$ € par jour.",
+        "3. Avec $R_{\\text{th}}$ doublée, le flux est divisé par $2$ : $800\\ \\mathrm{W}$, soit $19{,}2\\ \\mathrm{kWh}$ par jour ; économie : $19{,}2\\ \\mathrm{kWh}$, environ $3{,}84$ € par jour."
+      ],
+      "reponse": "1. $1\\,600\\ \\mathrm{W}$ ; 2. $38{,}4\\ \\mathrm{kWh}$, environ $7{,}68$ € ; 3. économie de $19{,}2\\ \\mathrm{kWh}$ (environ $3{,}84$ €) par jour."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "photovoltaique",
+      "enonce": "Un panneau de $1{,}6\\ \\mathrm{m^2}$ et de rendement $20\\,\\%$ reçoit $1\\,000\\ \\mathrm{W\\cdot m^{-2}}$. On modélise la lumière solaire par des photons de longueur d'onde moyenne $600\\ \\mathrm{nm}$. Données : $h = 6{,}63 \\times 10^{-34}\\ \\mathrm{J\\cdot s}$ et $c = 3{,}00 \\times 10^{8}\\ \\mathrm{m\\cdot s^{-1}}$. 1. Calculer la puissance lumineuse reçue. 2. Calculer l'énergie d'un photon de $600\\ \\mathrm{nm}$. 3. Estimer le nombre de photons reçus par seconde. 4. Calculer la puissance électrique produite.",
+      "corrige": [
+        "1. $P_{\\text{reçue}} = 1\\,000 \\times 1{,}6 = 1\\,600\\ \\mathrm{W}$.",
+        "2. $E = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^{8}}{6{,}00 \\times 10^{-7}} \\approx 3{,}3 \\times 10^{-19}\\ \\mathrm{J}$.",
+        "3. $N = \\dfrac{1\\,600}{3{,}3 \\times 10^{-19}} \\approx 4{,}8 \\times 10^{21}$ photons par seconde.",
+        "4. $P_{\\text{élec}} = 0{,}20 \\times 1\\,600 = 320\\ \\mathrm{W}$."
+      ],
+      "reponse": "1. $1\\,600\\ \\mathrm{W}$ ; 2. $\\approx 3{,}3 \\times 10^{-19}\\ \\mathrm{J}$ ; 3. $\\approx 4{,}8 \\times 10^{21}$ photons/s ; 4. $320\\ \\mathrm{W}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "decouverte",
+      "notion": "energie-interne",
+      "enonce": "a) Une eau passe de $20\\ ^\\circ\\mathrm{C}$ à $35\\ ^\\circ\\mathrm{C}$ : quel est l'écart de température en kelvins ? b) Quelle est la température $20\\ ^\\circ\\mathrm{C}$ exprimée en kelvins ?",
+      "corrige": [
+        "a) Un écart a la même valeur en °C et en K : $\\Delta T = 15\\ \\mathrm{K}$.",
+        "b) Pour convertir une température (et non un écart), on ajoute $273$ : $20 + 273 = 293\\ \\mathrm{K}$."
+      ],
+      "reponse": "a) $15\\ \\mathrm{K}$ ; b) $293\\ \\mathrm{K}$."
     }
   ]
 }

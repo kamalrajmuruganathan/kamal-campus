@@ -6,7 +6,7 @@
  */
 
 import { useTheme } from '../useTheme';
-import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet, ActivityIndicator } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -16,11 +16,13 @@ import BoutonEcouter from '../composants/BoutonEcouter';
 import { matiereParlante, texteBrut } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
+import { useFiche } from '../useFiche';
 
 export default function Chapitre({ route, navigation }) {
   const t = useTheme();
   const { profil, basculerFavori } = useProgression();
   const chapitre = chapitreParId(route.params.id);
+  const { fiche, etat, recharger } = useFiche(route.params.id);
 
   if (!chapitre) {
     return (
@@ -59,13 +61,29 @@ export default function Chapitre({ route, navigation }) {
           </View>
         )}
 
-        {matiereParlante(chapitre.matiere) && (
+        {matiereParlante(chapitre.matiere) && fiche && (
           <View style={{ paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}>
-            <BoutonEcouter t={t} matiere={chapitre.matiere} texte={texteBrut(chapitre.fiche)} libelle="Écouter la fiche" />
+            <BoutonEcouter t={t} matiere={chapitre.matiere} texte={texteBrut(fiche)} libelle="Écouter la fiche" />
           </View>
         )}
 
-        <VisionneuseFiche markdown={chapitre.fiche} />
+        {etat === 'chargement' && (
+          <View style={{ padding: t.espace.xl, alignItems: 'center' }}>
+            <ActivityIndicator color={accent} />
+            <Text style={{ color: t.couleur.attenue, marginTop: t.espace.s }}>Chargement de la fiche…</Text>
+          </View>
+        )}
+        {etat === 'erreur' && (
+          <View style={{ padding: t.espace.l, alignItems: 'center' }}>
+            <Text style={{ color: t.couleur.texte, textAlign: 'center' }}>
+              Impossible de charger la fiche. Vérifie ta connexion internet.
+            </Text>
+            <Pressable onPress={recharger} accessibilityRole="button" style={{ marginTop: t.espace.m, padding: t.espace.m }}>
+              <Text style={{ color: accent, fontWeight: '700' }}>Réessayer</Text>
+            </Pressable>
+          </View>
+        )}
+        {etat === 'ok' && <VisionneuseFiche markdown={fiche} />}
 
         <View style={{ paddingHorizontal: t.espace.l }}>
           <Pressable

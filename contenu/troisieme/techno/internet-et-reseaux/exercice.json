@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Réseau et Internet",
       "enonce": "Qu'est-ce qu'un réseau informatique ? Pourquoi dit-on qu'Internet est le « réseau des réseaux » ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Internet ≠ Web",
       "enonce": "Un camarade dit : « Internet et le Web, c'est la même chose. » A-t-il raison ? Explique la différence et cite un autre service qui fonctionne sur Internet.",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Client - serveur",
       "enonce": "Dans le modèle client - serveur, qui demande et qui répond ? Quand tu ouvres une page web, qui joue le rôle de client ?",
       "corrige": [
@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Paquets et routeurs",
       "enonce": "Explique pourquoi les données ne voyagent pas d'un seul bloc sur Internet. Décris ce qui arrive à un gros fichier envoyé à travers le réseau, et cite l'appareil qui aiguille le trafic.",
       "corrige": [
@@ -63,7 +63,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "DNS et adresse IP",
       "enonce": "Une adresse IP est un numéro comme « 192.168.1.10 », difficile à retenir. À quoi sert le DNS ? Explique la différence entre un nom de domaine (comme « college.fr ») et une adresse IP.",
       "corrige": [
@@ -76,7 +76,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Afficher une page web",
       "enonce": "Décris dans l'ordre les étapes qui se produisent quand tu tapes une adresse dans ton navigateur jusqu'à l'affichage de la page. Nomme à chaque fois l'élément qui intervient (client, DNS, adresse IP, serveur, HTTP/HTTPS, paquets, TCP/IP).",
       "corrige": [
@@ -91,7 +91,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "le réseau local (LAN)",
       "enonce": "Qu'est-ce qu'un réseau local (LAN) ? Donne un exemple de la vie courante.",
       "corrige": [
@@ -103,7 +103,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "le protocole TCP/IP",
       "enonce": "Sur Internet, les machines utilisent le protocole TCP/IP. (a) Qu'est-ce qu'un protocole ? (b) Que gère TCP/IP ? (c) Quel protocole le Web utilise-t-il en plus ?",
       "corrige": [
@@ -115,7 +115,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "sécurité des échanges",
       "enonce": "Sur un réseau, il faut protéger ses échanges. Cite trois moyens de se protéger et explique ce qu'apporte le HTTPS.",
       "corrige": [
@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "corriger des idées fausses sur Internet",
       "enonce": "Un camarade affirme : « Internet et le Web, c'est pareil », « un nom de domaine est l'adresse réelle de la machine » et « les données voyagent d'un seul bloc ». Corrige chacune de ces trois affirmations.",
       "corrige": [
@@ -136,6 +136,449 @@
         "3) Les données ne voyagent pas d'un seul bloc : elles sont découpées en paquets qui voyagent séparément puis sont réassemblés à l'arrivée."
       ],
       "reponse": "1) Faux : le Web n'est qu'un service d'Internet. 2) Faux : l'adresse réelle est l'adresse IP, le DNS traduit le nom de domaine en IP. 3) Faux : les données voyagent en paquets réassemblés à l'arrivée."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "réseau et Internet",
+      "enonce": "Complète : « Un réseau informatique est un ensemble d'appareils … entre eux pour échanger des … et partager des … . »",
+      "corrige": [
+        "Les appareils d'un réseau sont reliés.",
+        "Ils échangent des données et partagent des ressources (imprimante, connexion, fichiers)."
+      ],
+      "reponse": "Reliés ; données ; ressources."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "client et serveur",
+      "enonce": "Dans le modèle client – serveur, quelle machine stocke l'information et répond aux demandes ?",
+      "corrige": [
+        "Le client demande ; le serveur stocke et répond."
+      ],
+      "reponse": "Le serveur."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "adresse IP et DNS",
+      "enonce": "À quoi sert une adresse IP ?",
+      "corrige": [
+        "Chaque appareil relié à un réseau possède une adresse IP.",
+        "C'est un numéro unique qui permet de l'identifier et de lui envoyer les paquets, comme une adresse postale."
+      ],
+      "reponse": "À identifier un appareil sur le réseau pour pouvoir lui envoyer les paquets."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "paquets et routeurs",
+      "enonce": "Comment appelle-t-on les petits morceaux de données qui voyagent séparément sur Internet ?",
+      "corrige": [
+        "Les informations sont découpées avant d'être envoyées."
+      ],
+      "reponse": "Des paquets."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "Internet et le Web",
+      "enonce": "Cite trois services qui fonctionnent sur Internet.",
+      "corrige": [
+        "Internet est le réseau ; plusieurs services l'utilisent.",
+        "Le cours cite le Web, le courrier électronique, les jeux en ligne et la messagerie."
+      ],
+      "reponse": "Par exemple : le Web, le courrier électronique, les jeux en ligne (ou la messagerie)."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "protocoles",
+      "enonce": "Qu'est-ce qu'un protocole en informatique ?",
+      "corrige": [
+        "Des machines très différentes doivent se comprendre.",
+        "Elles respectent des règles communes de communication : les protocoles."
+      ],
+      "reponse": "Un ensemble de règles communes de communication entre machines."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "réseau et Internet",
+      "enonce": "Cite trois ressources qu'on peut partager grâce à un réseau.",
+      "corrige": [
+        "Un réseau permet de partager des ressources entre appareils.",
+        "Le cours cite une imprimante, une connexion et des fichiers."
+      ],
+      "reponse": "Une imprimante, une connexion à Internet, des fichiers."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "réseau et Internet",
+      "enonce": "Classe en réseau local ou Internet : (a) les ordinateurs d'une salle informatique reliés entre eux ; (b) le réseau mondial qui relie des millions de réseaux ; (c) la tablette, la télévision et l'imprimante d'une maison reliées à la box.",
+      "corrige": [
+        "Un réseau local est limité à un lieu (une maison, une salle).",
+        "Internet relie des réseaux du monde entier."
+      ],
+      "reponse": "(a) réseau local ; (b) Internet ; (c) réseau local."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "client et serveur",
+      "enonce": "Tu lances une vidéo sur une plateforme en ligne. Quel est le client ? Où se trouve la vidéo ?",
+      "corrige": [
+        "Le client est l'appareil qui demande le service : ton navigateur ou ton application.",
+        "La vidéo est stockée sur un serveur, qui l'envoie à la demande."
+      ],
+      "reponse": "Le client est ton navigateur (ou ton application) ; la vidéo est stockée sur un serveur."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "adresse IP et DNS",
+      "enonce": "Quel service traduit « college.fr » en adresse IP ? À quoi le compare-t-on ?",
+      "corrige": [
+        "Le DNS traduit les noms de domaine en adresses IP.",
+        "On le compare à un annuaire."
+      ],
+      "reponse": "Le DNS, qui joue le rôle d'annuaire."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "protocoles",
+      "enonce": "Associe chaque protocole à son rôle : TCP/IP, HTTP, HTTPS ; rôles : afficher des pages web, afficher des pages web de façon sécurisée, gérer l'envoi et le réassemblage des paquets.",
+      "corrige": [
+        "TCP/IP gère l'envoi et le réassemblage des paquets.",
+        "Le Web utilise HTTP ; HTTPS en est la version sécurisée."
+      ],
+      "reponse": "TCP/IP → paquets ; HTTP → pages web ; HTTPS → pages web sécurisées."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "protocoles",
+      "enonce": "Quel protocole le Web utilise-t-il ? Comment s'appelle sa version sécurisée ?",
+      "corrige": [
+        "Le Web utilise un protocole dédié aux pages web.",
+        "Sa version sécurisée ajoute un « S » (pour sécurisé)."
+      ],
+      "reponse": "HTTP ; sa version sécurisée est HTTPS."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "paquets et routeurs",
+      "enonce": "Quel appareil aiguille les paquets à travers le réseau ?",
+      "corrige": [
+        "Les paquets passent par des appareils qui choisissent leur direction."
+      ],
+      "reponse": "Le routeur."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "sécurité des échanges",
+      "enonce": "Classe ces mots de passe du plus faible au plus solide : « Kx7!pL2#qW9z », « 123456 », « chaton2010 ».",
+      "corrige": [
+        "« 123456 » est très court et très courant : le plus faible.",
+        "« chaton2010 » est un mot et une date : facile à deviner.",
+        "« Kx7!pL2#qW9z » est long, mélange majuscules, minuscules, chiffres et symboles : le plus solide."
+      ],
+      "reponse": "« 123456 » → « chaton2010 » → « Kx7!pL2#qW9z »."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "Internet et le Web",
+      "enonce": "Vrai ou faux : « Le courrier électronique et le Web sont un seul et même service. » Explique.",
+      "corrige": [
+        "Le courrier électronique est un service d'Internet.",
+        "Le Web est un autre service : les pages consultées dans un navigateur. On peut toutefois lire ses courriels sur une page web (messagerie en ligne)."
+      ],
+      "reponse": "Faux : ce sont deux services différents d'Internet (même si l'on peut lire ses courriels sur une page web)."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "paquets et routeurs",
+      "enonce": "Un fichier de 6 000 octets est découpé en paquets contenant chacun 1 500 octets de données. Combien de paquets faut-il ?",
+      "corrige": [
+        "On divise la taille du fichier par la taille des données d'un paquet.",
+        "6 000 ÷ 1 500 = 4."
+      ],
+      "reponse": "4 paquets."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "paquets et routeurs",
+      "enonce": "Une photo de 3 000 000 d'octets est envoyée en paquets de 1 500 octets de données. Combien de paquets sont nécessaires ?",
+      "corrige": [
+        "3 000 000 ÷ 1 500 = 2 000.",
+        "La photo voyage donc en 2 000 paquets, réassemblés à l'arrivée."
+      ],
+      "reponse": "2 000 paquets."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "paquets et routeurs",
+      "enonce": "Deux paquets d'un même message n'ont pas pris le même chemin et arrivent dans le désordre. Est-ce un problème ? Explique.",
+      "corrige": [
+        "Chaque paquet voyage séparément et peut passer par des routeurs différents.",
+        "À l'arrivée, les paquets sont réassemblés dans le bon ordre grâce au protocole TCP/IP."
+      ],
+      "reponse": "Non : les paquets sont remis dans l'ordre et réassemblés à l'arrivée (TCP/IP)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "paquets et routeurs",
+      "enonce": "Pourquoi le découpage en paquets rend-il la transmission plus fiable ? Imagine qu'un paquet soit perdu.",
+      "corrige": [
+        "Si un paquet est perdu, il suffit de renvoyer ce petit morceau, pas tout le fichier.",
+        "Les paquets peuvent aussi emprunter des chemins différents si une route est encombrée."
+      ],
+      "reponse": "Si un paquet se perd, on renvoie seulement ce paquet ; et les paquets peuvent contourner une route encombrée."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "client et serveur",
+      "enonce": "Corrige l'erreur : « Le serveur est l'ordinateur de l'élève qui demande une page web. »",
+      "corrige": [
+        "L'ordinateur (ou le navigateur) qui demande la page est le client.",
+        "Le serveur est la machine qui stocke la page et répond à la demande."
+      ],
+      "reponse": "Faux : l'ordinateur qui demande est le client ; le serveur stocke la page et répond."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "client et serveur",
+      "enonce": "Pourquoi un serveur doit-il être une machine puissante, souvent allumée en permanence ?",
+      "corrige": [
+        "Un serveur répond aux demandes de nombreux clients à la fois.",
+        "Il doit pouvoir répondre à tout moment, car les clients peuvent se connecter de jour comme de nuit."
+      ],
+      "reponse": "Parce qu'il répond à de nombreux clients à la fois, à tout moment."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "adresse IP et DNS",
+      "enonce": "Pourquoi utilise-t-on des noms de domaine plutôt que des adresses IP pour aller sur un site ?",
+      "corrige": [
+        "Une adresse IP est un numéro difficile à retenir.",
+        "Un nom de domaine est plus simple à retenir ; le DNS le traduit ensuite en adresse IP."
+      ],
+      "reponse": "Parce qu'un nom est plus facile à retenir qu'un numéro ; le DNS le traduit en adresse IP."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "adresse IP et DNS",
+      "enonce": "Compare l'adresse IP à une adresse postale : à quoi correspond la maison ? Le facteur ? Les lettres ?",
+      "corrige": [
+        "L'adresse IP identifie un appareil, comme l'adresse postale identifie une maison.",
+        "Les paquets sont comme les lettres ; les routeurs, qui les aiguillent, jouent le rôle du facteur et des centres de tri."
+      ],
+      "reponse": "La maison ↔ l'appareil ; les lettres ↔ les paquets ; le facteur (et le tri) ↔ les routeurs."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "protocoles",
+      "enonce": "Pourquoi des machines très différentes (un smartphone, un ordinateur, une console) peuvent-elles communiquer sur Internet ?",
+      "corrige": [
+        "Elles respectent les mêmes protocoles, c'est-à-dire les mêmes règles de communication.",
+        "Par exemple, toutes utilisent TCP/IP pour envoyer et réassembler les paquets."
+      ],
+      "reponse": "Parce qu'elles respectent des protocoles communs (comme TCP/IP)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "sécurité des échanges",
+      "enonce": "À quoi reconnaît-on, dans la barre d'adresse, qu'un site utilise une connexion sécurisée ? Pourquoi faut-il le vérifier avant de saisir un mot de passe ?",
+      "corrige": [
+        "L'adresse commence par « https » (souvent avec un cadenas).",
+        "La connexion HTTPS chiffre les données : un tiers ne peut pas lire le mot de passe pendant son transport."
+      ],
+      "reponse": "L'adresse commence par « https » ; les données (dont le mot de passe) sont chiffrées pendant le transport."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "sécurité des échanges",
+      "enonce": "Associe chaque outil à son rôle : pare-feu, antivirus, mot de passe solide ; rôles : empêcher qu'on devine l'accès à un compte, filtrer les connexions entrantes et sortantes, détecter les logiciels malveillants.",
+      "corrige": [
+        "Le pare-feu filtre les connexions.",
+        "L'antivirus détecte les logiciels malveillants.",
+        "Le mot de passe solide empêche qu'on devine l'accès à un compte."
+      ],
+      "reponse": "Pare-feu → filtrer les connexions ; antivirus → détecter les logiciels malveillants ; mot de passe solide → protéger l'accès au compte."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "afficher une page web",
+      "enonce": "Remets dans l'ordre : « le serveur renvoie la page en paquets » ; « le DNS donne l'adresse IP du serveur » ; « tu tapes l'adresse du site » ; « le navigateur réassemble et affiche la page » ; « le navigateur envoie une demande HTTPS au serveur ».",
+      "corrige": [
+        "On commence par taper l'adresse, puis le DNS trouve l'adresse IP.",
+        "Le navigateur peut alors envoyer sa demande au serveur, qui renvoie la page en paquets.",
+        "Enfin les paquets sont réassemblés et la page s'affiche."
+      ],
+      "reponse": "Tu tapes l'adresse → le DNS donne l'adresse IP → demande HTTPS → le serveur renvoie la page en paquets → réassemblage et affichage."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "afficher une page web",
+      "enonce": "Le DNS ne répond plus, mais tout le reste fonctionne. Peux-tu encore afficher « college.fr » en tapant son nom ? Explique.",
+      "corrige": [
+        "Sans DNS, le nom de domaine ne peut pas être traduit en adresse IP.",
+        "Le navigateur ne sait donc pas à quel serveur envoyer sa demande : la page ne s'affiche pas (sauf si l'on connaît et tape directement l'adresse IP)."
+      ],
+      "reponse": "Non : sans DNS, le nom ne peut pas être traduit en adresse IP, donc le navigateur ne sait pas quel serveur joindre."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "afficher une page web",
+      "enonce": "Lors de l'affichage d'une page web, indique à chaque étape qui est le client et qui est le serveur, puis quel protocole transporte la demande.",
+      "corrige": [
+        "Le client est le navigateur, qui demande la page.",
+        "Le serveur stocke la page et la renvoie.",
+        "La demande est transportée avec HTTP ou HTTPS ; les paquets circulent selon TCP/IP."
+      ],
+      "reponse": "Client : le navigateur ; serveur : la machine qui stocke la page ; demande en HTTP/HTTPS (paquets en TCP/IP)."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "Internet et le Web",
+      "enonce": "Lis : « Ce matin, Inès a envoyé un courriel, joué en ligne puis consulté le site du collège. » Combien de services d'Internet a-t-elle utilisés ? Lequel correspond au Web ?",
+      "corrige": [
+        "Le courriel, le jeu en ligne et le site sont trois services différents qui fonctionnent sur Internet.",
+        "Le site consulté dans un navigateur correspond au Web."
+      ],
+      "reponse": "Trois services ; le Web correspond à la consultation du site du collège."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "réseau et Internet",
+      "enonce": "Le réseau du collège relie 300 ordinateurs, et il est lui-même relié à Internet. Explique pourquoi on peut dire qu'Internet est le « réseau des réseaux » à partir de cet exemple.",
+      "corrige": [
+        "Le réseau du collège est un réseau local.",
+        "Internet relie ce réseau local à des millions d'autres réseaux (maisons, entreprises, autres établissements) : c'est un réseau de réseaux."
+      ],
+      "reponse": "Parce qu'Internet relie le réseau local du collège à des millions d'autres réseaux."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "sécurité des échanges",
+      "enonce": "Explique pourquoi il ne faut pas utiliser le même mot de passe pour tous ses comptes.",
+      "corrige": [
+        "Si un site se fait voler ses mots de passe, le pirate peut essayer le même mot de passe ailleurs.",
+        "Avec des mots de passe différents, un seul compte est touché."
+      ],
+      "reponse": "Si un mot de passe est volé sur un site, tous les autres comptes seraient menacés ; avec des mots de passe différents, un seul compte est touché."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "protocoles",
+      "enonce": "Corrige l'erreur : « HTTPS est un réseau, comme Internet. »",
+      "corrige": [
+        "HTTPS n'est pas un réseau : c'est un protocole, c'est-à-dire un ensemble de règles de communication.",
+        "C'est la version sécurisée de HTTP, utilisée par le Web."
+      ],
+      "reponse": "Faux : HTTPS est un protocole (la version sécurisée de HTTP), pas un réseau."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "paquets et routeurs",
+      "enonce": "Un message de 4 500 octets est découpé en paquets de 1 500 octets de données. Le 2e paquet est perdu en route. Combien de paquets arrivent ? Que se passe-t-il ensuite ?",
+      "corrige": [
+        "4 500 ÷ 1 500 = 3 paquets au départ.",
+        "Si le 2e est perdu, 2 paquets arrivent.",
+        "Le protocole TCP/IP permet de redemander le paquet manquant, puis le message est réassemblé."
+      ],
+      "reponse": "3 paquets envoyés, 2 arrivés ; le paquet manquant est renvoyé, puis le message est réassemblé."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "adresse IP et DNS",
+      "enonce": "Deux élèves regardent le même site au même moment depuis deux maisons différentes. Comment le serveur sait-il à qui envoyer chaque page ?",
+      "corrige": [
+        "Chaque appareil possède sa propre adresse IP.",
+        "Dans sa demande, chaque client indique son adresse : le serveur renvoie les paquets vers la bonne adresse IP."
+      ],
+      "reponse": "Grâce à l'adresse IP de chaque appareil, qui permet d'envoyer les paquets au bon destinataire."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "afficher une page web",
+      "enonce": "Rédige en 4 phrases ce qui se passe quand tu tapes l'adresse du site du collège, en utilisant les mots : DNS, adresse IP, serveur, paquets.",
+      "corrige": [
+        "On suit l'ordre : saisie, DNS, demande au serveur, réponse en paquets.",
+        "Exemple de réponse : « Je tape l'adresse du site dans mon navigateur. Le DNS traduit le nom de domaine en adresse IP. Mon navigateur envoie une demande au serveur. Le serveur renvoie la page en paquets, que mon navigateur réassemble et affiche. »"
+      ],
+      "reponse": "Exemple : saisie de l'adresse → le DNS donne l'adresse IP → demande au serveur → la page revient en paquets réassemblés."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "sécurité des échanges",
+      "enonce": "Lis : « Malo se connecte au Wi-Fi gratuit d'un café et tape le mot de passe de son compte sur un site dont l'adresse commence par http:// (sans s). » Quel est le risque ? Que lui conseilles-tu ?",
+      "corrige": [
+        "Avec HTTP, les données ne sont pas chiffrées : quelqu'un sur le même réseau pourrait lire le mot de passe.",
+        "Conseil : ne saisir un mot de passe que sur un site en HTTPS, et éviter les comptes importants sur un Wi-Fi public."
+      ],
+      "reponse": "Son mot de passe peut être lu car la connexion n'est pas chiffrée ; il ne doit le saisir que sur un site en HTTPS."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "réseau et Internet",
+      "enonce": "Chez toi, la box relie un ordinateur, deux smartphones et une imprimante. (a) De quel type de réseau s'agit-il ? (b) Quelle ressource est partagée ? (c) Comment ces appareils accèdent-ils à Internet ?",
+      "corrige": [
+        "(a) Le réseau est limité à la maison : c'est un réseau local.",
+        "(b) L'imprimante (et la connexion à Internet) est partagée.",
+        "(c) Par la box, qui relie le réseau local de la maison à Internet."
+      ],
+      "reponse": "(a) un réseau local ; (b) l'imprimante (et la connexion) ; (c) par la box, reliée à Internet."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "client et serveur",
+      "enonce": "Une plateforme de jeu en ligne compte 10 000 joueurs connectés en même temps. Chaque serveur peut gérer 2 500 joueurs. Combien de serveurs faut-il au minimum ? Qui sont les clients ?",
+      "corrige": [
+        "10 000 ÷ 2 500 = 4.",
+        "Les clients sont les appareils (consoles, ordinateurs) des joueurs, qui envoient des demandes aux serveurs."
+      ],
+      "reponse": "4 serveurs au minimum ; les clients sont les appareils des joueurs."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "Internet et le Web",
+      "enonce": "Explique, en une phrase pour chacun, ce qui ne fonctionnerait plus : (a) si le Web s'arrêtait mais qu'Internet fonctionnait ; (b) si Internet s'arrêtait.",
+      "corrige": [
+        "(a) Seules les pages web ne s'afficheraient plus ; le courriel ou la messagerie pourraient encore fonctionner.",
+        "(b) Sans Internet, aucun service en ligne ne fonctionnerait : ni le Web, ni le courriel, ni les jeux en ligne."
+      ],
+      "reponse": "(a) Seules les pages web seraient inaccessibles ; (b) tous les services d'Internet (Web, courriel, jeux en ligne…) s'arrêteraient."
     }
   ]
 }

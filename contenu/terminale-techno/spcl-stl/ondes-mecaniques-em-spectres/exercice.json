@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "**Une mission spatiale d'exploration.** Une sonde en orbite autour de la planète Mars communique avec la Terre et cartographie le relief martien. Un télescope de la mission analyse par ailleurs la lumière d'une étoile lointaine. On donne la célérité de la lumière dans le vide $c = 3{,}00\\times 10^{8}$ m·s⁻¹.\n\n**Partie A — Communications et altimétrie radar.**\n**1.** La sonde émet vers la Terre une onde radio de fréquence $f = 8{,}40$ GHz. Quelle est la nature de cette onde ? Peut-elle traverser le vide interplanétaire ? Calcule sa longueur d'onde $\\lambda$ et indique le domaine du spectre électromagnétique concerné.\n**2.** À cet instant, la distance Terre-Mars vaut $d = 2{,}25\\times 10^{11}$ m. Calcule la durée $\\Delta t$ que met le signal pour parcourir, en ligne droite, la distance de la sonde jusqu'à la Terre.\n**3.** Un altimètre radar embarqué envoie une impulsion vers le sol martien ; l'écho est reçu après une durée $\\Delta t' = 2{,}0$ ms. Calcule l'altitude $h$ de la sonde au-dessus du sol.\n\n**Partie B — Analyse de la lumière d'une étoile.**\n**4.** Le spectre de l'étoile présente de fines raies noires sur un fond continu coloré. De quel type de spectre s'agit-il et que révèlent ces raies ?\n**5.** Une raie de l'hydrogène, mesurée à $\\lambda_0 = 656{,}3$ nm au laboratoire, apparaît à $\\lambda = 657{,}8$ nm dans le spectre de l'étoile. Dans quel sens se fait le décalage ? Comment se nomme-t-il ? L'étoile se rapproche-t-elle ou s'éloigne-t-elle de la Terre ?\n**6.** Calcule la fréquence $f_0$ correspondant à la longueur d'onde $\\lambda_0 = 656{,}3$ nm.",
       "corrige": [
@@ -139,6 +139,456 @@
         "6. $f_0 = \\dfrac{c}{\\lambda_0}$. On convertit $\\lambda_0 = 656{,}3$ nm $= 6{,}563\\times 10^{-7}$ m, puis $f_0 = \\dfrac{3{,}00\\times 10^{8}}{6{,}563\\times 10^{-7}} = 4{,}57\\times 10^{14}$ Hz (domaine visible, lumière rouge)."
       ],
       "reponse": "1. onde EM (micro-ondes), $\\lambda = 3{,}6\\times 10^{-2}$ m ; 2. $\\Delta t = 750$ s ($12{,}5$ min, aller simple) ; 3. $h = 3{,}0\\times 10^{5}$ m $= 300$ km (aller-retour) ; 4. spectre d'absorption, identifie les éléments ; 5. décalage vers le rouge (Doppler), l'étoile s'éloigne ; 6. $f_0 = 4{,}57\\times 10^{14}$ Hz (visible)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "ondes-mecaniques",
+      "enonce": "Classe ces ondes en transversales ou longitudinales : (a) une vague à la surface de l'eau ; (b) le son dans l'air ; (c) une onde le long d'une corde secouée ; (d) une compression qui se propage le long d'un ressort.",
+      "corrige": [
+        "Transversale : la perturbation est perpendiculaire à la direction de propagation, c'est le cas de (a) et (c).",
+        "Longitudinale : la perturbation est parallèle à la propagation (compressions et dilatations), c'est le cas de (b) et (d)."
+      ],
+      "reponse": "Transversales : (a), (c) ; longitudinales : (b), (d)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "ondes-mecaniques",
+      "enonce": "Lors d'une « ola » dans un stade, chaque spectateur se lève puis se rassoit à sa place. Qu'est-ce qui se propage ? Les spectateurs se déplacent-ils le long des gradins ?",
+      "corrige": [
+        "Ce qui se propage, c'est la perturbation (le mouvement de se lever), avec de l'énergie.",
+        "Les spectateurs restent à leur place : une onde progressive ne transporte pas de matière."
+      ],
+      "reponse": "La perturbation se propage ; les spectateurs restent sur place."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "spectre-em",
+      "enonce": "Range ces domaines du spectre électromagnétique par longueur d'onde croissante : visible, rayons X, ondes radio, ultraviolet, micro-ondes, infrarouge.",
+      "corrige": [
+        "Les longueurs d'onde vont des rayons X (très courtes) aux ondes radio (très longues).",
+        "Ordre : rayons X, ultraviolet, visible, infrarouge, micro-ondes, ondes radio."
+      ],
+      "reponse": "X, UV, visible, IR, micro-ondes, radio."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "ondes-periodiques",
+      "enonce": "Donne la définition et l'unité SI de la période $T$, de la fréquence $f$ et de la longueur d'onde $\\lambda$ d'une onde périodique.",
+      "corrige": [
+        "$T$ : durée d'un motif, en secondes ; $f$ : nombre de motifs par seconde, en hertz, avec $f = \\dfrac{1}{T}$.",
+        "$\\lambda$ : distance parcourue par l'onde pendant une période (période spatiale), en mètres."
+      ],
+      "reponse": "$T$ en s, $f = \\dfrac{1}{T}$ en Hz, $\\lambda$ en m."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "ondes-mecaniques",
+      "enonce": "Pendant un orage, on entend le tonnerre $6{,}0\\ \\text{s}$ après avoir vu l'éclair. Le son se propage dans l'air à $340\\ \\text{m·s}^{-1}$ ; la durée de propagation de la lumière est négligeable. À quelle distance la foudre est-elle tombée ?",
+      "corrige": [
+        "La lumière arrive pratiquement instantanément : $6{,}0\\ \\text{s}$ est la durée du trajet du son.",
+        "$d = v \\times \\Delta t = 340 \\times 6{,}0 \\approx 2{,}0\\times 10^{3}\\ \\text{m}$, soit environ $2\\ \\text{km}$."
+      ],
+      "reponse": "Environ $2{,}0\\ \\text{km}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "ondes-mecaniques",
+      "enonce": "On frappe l'extrémité d'un rail d'acier de $1{,}00\\ \\text{km}$. Le son arrive à l'autre bout, par le rail, au bout de $0{,}17\\ \\text{s}$. Calcule la célérité du son dans l'acier et compare-la à celle dans l'air.",
+      "corrige": [
+        "$v = \\dfrac{d}{\\Delta t} = \\dfrac{1{,}00\\times 10^{3}}{0{,}17} \\approx 5{,}9\\times 10^{3}\\ \\text{m·s}^{-1}$.",
+        "C'est environ $17$ fois plus que dans l'air ($340\\ \\text{m·s}^{-1}$) : la célérité dépend du milieu."
+      ],
+      "reponse": "$v \\approx 5{,}9\\times 10^{3}\\ \\text{m·s}^{-1}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "ondes-periodiques",
+      "enonce": "Un signal sonore a une période $T = 2{,}5\\ \\text{ms}$. Calcule sa fréquence.",
+      "corrige": [
+        "On convertit : $T = 2{,}5\\times 10^{-3}\\ \\text{s}$.",
+        "$f = \\dfrac{1}{T} = \\dfrac{1}{2{,}5\\times 10^{-3}} = 400\\ \\text{Hz}$."
+      ],
+      "reponse": "$f = 400\\ \\text{Hz}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "ondes-periodiques",
+      "enonce": "Un sonar émet des ultrasons de fréquence $f = 50\\ \\text{kHz}$ dans l'eau de mer, où $v = 1{,}5\\times 10^{3}\\ \\text{m·s}^{-1}$. Calcule leur longueur d'onde.",
+      "corrige": [
+        "$f = 50\\times 10^{3}\\ \\text{Hz}$.",
+        "$\\lambda = \\dfrac{v}{f} = \\dfrac{1{,}5\\times 10^{3}}{50\\times 10^{3}} = 3{,}0\\times 10^{-2}\\ \\text{m} = 3{,}0\\ \\text{cm}$."
+      ],
+      "reponse": "$\\lambda = 3{,}0\\ \\text{cm}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Un routeur Wi-Fi émet à $f = 2{,}4\\ \\text{GHz}$. Calcule la longueur d'onde ($c = 3{,}00\\times 10^{8}\\ \\text{m·s}^{-1}$). Dans quel domaine se trouve cette onde ?",
+      "corrige": [
+        "$\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00\\times 10^{8}}{2{,}4\\times 10^{9}} = 0{,}125\\ \\text{m} \\approx 12{,}5\\ \\text{cm}$.",
+        "Entre $1\\ \\text{mm}$ et $1\\ \\text{m}$ : c'est le domaine des micro-ondes."
+      ],
+      "reponse": "$\\lambda \\approx 12{,}5\\ \\text{cm}$ : micro-ondes."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "spectre-em",
+      "enonce": "Indique le domaine de chacun de ces rayonnements : (a) $\\lambda = 254\\ \\text{nm}$ (lampe de stérilisation) ; (b) $\\lambda = 10\\ \\mu\\text{m}$ (rayonnement d'un corps humain) ; (c) $\\lambda = 0{,}1\\ \\text{nm}$ ; (d) $\\lambda = 3\\ \\text{m}$ ; (e) $\\lambda = 12\\ \\text{cm}$.",
+      "corrige": [
+        "(a) Entre $10$ et $400\\ \\text{nm}$ : ultraviolet. (b) Entre $800\\ \\text{nm}$ et $1\\ \\text{mm}$ : infrarouge.",
+        "(c) Entre $10\\ \\text{pm}$ et $10\\ \\text{nm}$ : rayons X. (d) Plus de $1\\ \\text{m}$ : ondes radio. (e) Entre $1\\ \\text{mm}$ et $1\\ \\text{m}$ : micro-ondes."
+      ],
+      "reponse": "(a) UV ; (b) IR ; (c) X ; (d) radio ; (e) micro-ondes."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "mesure-distance",
+      "enonce": "Un radar reçoit l'écho d'un avion $2{,}0\\times 10^{-4}\\ \\text{s}$ après l'émission de l'impulsion. À quelle distance se trouve l'avion ($c = 3{,}00\\times 10^{8}\\ \\text{m·s}^{-1}$) ?",
+      "corrige": [
+        "L'onde fait l'aller et le retour : $d = \\dfrac{c\\,\\Delta t}{2}$.",
+        "$d = \\dfrac{3{,}00\\times 10^{8} \\times 2{,}0\\times 10^{-4}}{2} = 3{,}0\\times 10^{4}\\ \\text{m} = 30\\ \\text{km}$."
+      ],
+      "reponse": "$d = 30\\ \\text{km}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "effet-doppler",
+      "enonce": "Un train klaxonne avec une fréquence de $500\\ \\text{Hz}$ en passant devant un voyageur resté sur le quai. Compare la fréquence perçue à $500\\ \\text{Hz}$ quand le train arrive, puis quand il s'éloigne. Comment s'appelle ce phénomène ?",
+      "corrige": [
+        "Quand la source se rapproche, la fréquence perçue est plus grande que $500\\ \\text{Hz}$ : le son paraît plus aigu.",
+        "Quand elle s'éloigne, la fréquence perçue est plus petite : le son paraît plus grave. C'est l'effet Doppler."
+      ],
+      "reponse": "Plus de $500\\ \\text{Hz}$ à l'approche, moins ensuite ; effet Doppler."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "spectres",
+      "enonce": "Quel type de spectre donne chacune de ces sources : (a) le filament chauffé d'une lampe à incandescence ; (b) une lampe à vapeur de sodium à basse pression ; (c) la lumière du Soleil analysée au spectroscope ?",
+      "corrige": [
+        "(a) Un corps dense chauffé donne un spectre continu. (b) Un gaz chaud à basse pression donne un spectre de raies d'émission.",
+        "(c) Le Soleil donne un spectre continu traversé de raies noires : un spectre d'absorption (raies de Fraunhofer)."
+      ],
+      "reponse": "(a) Continu ; (b) raies d'émission ; (c) continu avec raies d'absorption."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "ondes-periodiques",
+      "enonce": "Dans une cuve à ondes, un vibreur de fréquence $f = 10\\ \\text{Hz}$ crée des rides circulaires. On mesure $12\\ \\text{cm}$ entre la première et la cinquième crête. Calcule la longueur d'onde puis la célérité des ondes.",
+      "corrige": [
+        "Entre la première et la cinquième crête, il y a $4$ longueurs d'onde : $\\lambda = \\dfrac{12}{4} = 3{,}0\\ \\text{cm}$.",
+        "$v = \\lambda \\times f = 3{,}0\\times 10^{-2} \\times 10 = 0{,}30\\ \\text{m·s}^{-1}$."
+      ],
+      "reponse": "$\\lambda = 3{,}0\\ \\text{cm}$ ; $v = 0{,}30\\ \\text{m·s}^{-1}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "ondes-periodiques",
+      "enonce": "Un « la » grave de fréquence $440\\ \\text{Hz}$ et le « la » de l'octave supérieure, à $880\\ \\text{Hz}$, se propagent dans l'air ($v = 340\\ \\text{m·s}^{-1}$). Calcule leurs longueurs d'onde. Que remarques-tu ?",
+      "corrige": [
+        "$\\lambda_1 = \\dfrac{340}{440} \\approx 0{,}77\\ \\text{m}$ ; $\\lambda_2 = \\dfrac{340}{880} \\approx 0{,}39\\ \\text{m}$.",
+        "Dans le même milieu, doubler la fréquence divise la longueur d'onde par $2$."
+      ],
+      "reponse": "$0{,}77\\ \\text{m}$ et $0{,}39\\ \\text{m}$ : la longueur d'onde est divisée par $2$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "La raie rouge de l'hydrogène a une longueur d'onde $\\lambda = 656\\ \\text{nm}$. Calcule sa fréquence ($c = 3{,}00\\times 10^{8}\\ \\text{m·s}^{-1}$).",
+      "corrige": [
+        "On convertit : $\\lambda = 656\\times 10^{-9}\\ \\text{m} = 6{,}56\\times 10^{-7}\\ \\text{m}$.",
+        "$f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}00\\times 10^{8}}{6{,}56\\times 10^{-7}} \\approx 4{,}57\\times 10^{14}\\ \\text{Hz}$."
+      ],
+      "reponse": "$f \\approx 4{,}57\\times 10^{14}\\ \\text{Hz}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Les satellites GPS, à environ $20\\,200\\ \\text{km}$ d'altitude, émettent notamment à $f = 1{,}575\\ \\text{GHz}$. (a) Calcule la longueur d'onde et donne le domaine. (b) Combien de temps met le signal pour atteindre un récepteur situé à la verticale du satellite ?",
+      "corrige": [
+        "(a) $\\lambda = \\dfrac{3{,}00\\times 10^{8}}{1{,}575\\times 10^{9}} \\approx 0{,}19\\ \\text{m}$ : micro-ondes.",
+        "(b) Ici l'onde ne fait qu'un aller : $\\Delta t = \\dfrac{d}{c} = \\dfrac{2{,}02\\times 10^{7}}{3{,}00\\times 10^{8}} \\approx 6{,}7\\times 10^{-2}\\ \\text{s}$, soit environ $67\\ \\text{ms}$."
+      ],
+      "reponse": "(a) $\\lambda \\approx 19\\ \\text{cm}$, micro-ondes ; (b) environ $67\\ \\text{ms}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "mesure-distance",
+      "enonce": "Une chauve-souris émet un ultrason ; l'écho renvoyé par un insecte lui revient $12\\ \\text{ms}$ plus tard. Dans l'air, $v = 340\\ \\text{m·s}^{-1}$. À quelle distance se trouve l'insecte ?",
+      "corrige": [
+        "Durée aller-retour : $\\Delta t = 12\\times 10^{-3}\\ \\text{s}$.",
+        "$d = \\dfrac{v\\,\\Delta t}{2} = \\dfrac{340 \\times 12\\times 10^{-3}}{2} \\approx 2{,}0\\ \\text{m}$."
+      ],
+      "reponse": "$d \\approx 2{,}0\\ \\text{m}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "mesure-distance",
+      "enonce": "Un élève calcule la profondeur d'un fond marin : écho après $0{,}80\\ \\text{s}$, $v = 1{,}5\\times 10^{3}\\ \\text{m·s}^{-1}$. Il écrit $d = v\\,\\Delta t = 1{,}2\\times 10^{3}\\ \\text{m}$. Trouve l'erreur et corrige.",
+      "corrige": [
+        "La durée mesurée est celle de l'aller-retour : l'onde a parcouru deux fois la profondeur.",
+        "$d = \\dfrac{v\\,\\Delta t}{2} = \\dfrac{1{,}5\\times 10^{3} \\times 0{,}80}{2} = 6{,}0\\times 10^{2}\\ \\text{m}$."
+      ],
+      "reponse": "Il a oublié le facteur $2$ : $d = 600\\ \\text{m}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "effet-doppler",
+      "enonce": "Un radar routier émet une onde de fréquence fixe vers une voiture. L'onde réfléchie revient avec une fréquence légèrement plus grande que la fréquence émise. (a) La voiture s'approche-t-elle ou s'éloigne-t-elle ? (b) Que pourrait-on dire si le décalage de fréquence était plus important ?",
+      "corrige": [
+        "(a) Une fréquence perçue plus grande correspond à un rapprochement : la voiture s'approche du radar.",
+        "(b) Le décalage Doppler augmente avec la vitesse relative : un décalage plus grand signifierait une voiture plus rapide."
+      ],
+      "reponse": "(a) Elle s'approche ; (b) elle irait plus vite."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "spectres",
+      "enonce": "Un gaz chaud à basse pression émet un spectre de raies aux longueurs d'onde $656$, $486$ et $434\\ \\text{nm}$. On donne : hydrogène, raies à $656$, $486$, $434$ et $410\\ \\text{nm}$ ; sodium, raies à $589{,}0$ et $589{,}6\\ \\text{nm}$. Quel élément contient le gaz ? Justifie.",
+      "corrige": [
+        "Chaque élément a des raies à des longueurs d'onde précises, qui forment sa signature.",
+        "Les trois raies observées coïncident avec celles de l'hydrogène ; aucune ne correspond au sodium. Le gaz contient de l'hydrogène."
+      ],
+      "reponse": "De l'hydrogène."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "spectres",
+      "enonce": "Le spectre d'une étoile montre des raies noires à $656$ et $486\\ \\text{nm}$ sur un fond continu. Quel est ce type de spectre ? Quel élément l'atmosphère de l'étoile contient-elle (données de l'exercice précédent) ? Pourquoi les raies sont-elles aux mêmes positions qu'en émission ?",
+      "corrige": [
+        "C'est un spectre d'absorption : le gaz de l'atmosphère, plus froid, absorbe certaines longueurs d'onde de la lumière continue.",
+        "Les raies sont celles de l'hydrogène. Un gaz absorbe exactement les longueurs d'onde qu'il émettrait s'il était chaud : les raies d'absorption et d'émission d'un élément sont aux mêmes positions."
+      ],
+      "reponse": "Spectre d'absorption ; hydrogène ; un élément absorbe les longueurs d'onde qu'il émet."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "spectroscopies",
+      "enonce": "Le spectre IR d'un liquide présente une large bande entre $3200$ et $3600\\ \\text{cm}^{-1}$ et aucune bande vers $1700\\ \\text{cm}^{-1}$. (a) Quel groupe est présent ? lequel est absent ? (b) À quelle longueur d'onde, en µm, correspond un nombre d'onde de $1700\\ \\text{cm}^{-1}$ ? Dans quel domaine est-elle ?",
+      "corrige": [
+        "(a) La large bande vers $3200$–$3600\\ \\text{cm}^{-1}$ signale un O–H d'alcool ; l'absence de bande vers $1700\\ \\text{cm}^{-1}$ exclut le groupe C=O.",
+        "(b) $\\lambda = \\dfrac{1}{\\sigma} = \\dfrac{1}{1700}\\ \\text{cm} \\approx 5{,}9\\times 10^{-4}\\ \\text{cm} = 5{,}9\\ \\mu\\text{m}$ : c'est bien de l'infrarouge."
+      ],
+      "reponse": "(a) O–H présent, C=O absent (alcool) ; (b) $\\lambda \\approx 5{,}9\\ \\mu\\text{m}$, infrarouge."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "spectroscopies",
+      "enonce": "Une solution colorée de concentration $3{,}0\\times 10^{-4}\\ \\text{mol·L}^{-1}$ a une absorbance $A = 0{,}45$ à $\\lambda_{\\max}$. Dans les mêmes conditions, une autre solution du même colorant a $A = 0{,}27$. Quelle est sa concentration ?",
+      "corrige": [
+        "D'après Beer-Lambert, à $\\lambda$, $\\ell$ et espèce fixés, $A$ est proportionnelle à $c$.",
+        "$c = 3{,}0\\times 10^{-4} \\times \\dfrac{0{,}27}{0{,}45} = 1{,}8\\times 10^{-4}\\ \\text{mol·L}^{-1}$."
+      ],
+      "reponse": "$c = 1{,}8\\times 10^{-4}\\ \\text{mol·L}^{-1}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "ondes-mecaniques",
+      "enonce": "Lors d'un séisme, les ondes P (célérité $6{,}0\\ \\text{km·s}^{-1}$) arrivent à une station $20\\ \\text{s}$ avant les ondes S ($3{,}5\\ \\text{km·s}^{-1}$). À quelle distance de la station se trouve le foyer du séisme ?",
+      "corrige": [
+        "Les deux ondes parcourent la même distance $d$ : $\\dfrac{d}{3{,}5} - \\dfrac{d}{6{,}0} = 20$ (avec $d$ en km et les durées en s).",
+        "$d \\left(\\dfrac{1}{3{,}5} - \\dfrac{1}{6{,}0}\\right) = 20$, soit $d \\times 0{,}119 = 20$.",
+        "$d \\approx 168\\ \\text{km}$, soit environ $170\\ \\text{km}$."
+      ],
+      "reponse": "Environ $170\\ \\text{km}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "ondes-periodiques",
+      "enonce": "Deux micros captent le son d'un haut-parleur de fréquence $4{,}0\\ \\text{kHz}$. Partant d'une position où les deux signaux sont en phase, on éloigne le second micro : les signaux se retrouvent en phase $5$ fois de suite, la cinquième fois après un déplacement de $42{,}5\\ \\text{cm}$. Calcule la longueur d'onde et la célérité du son.",
+      "corrige": [
+        "Deux coïncidences successives correspondent à un déplacement d'une longueur d'onde : $5\\,\\lambda = 42{,}5\\ \\text{cm}$, donc $\\lambda = 8{,}5\\ \\text{cm}$.",
+        "$v = \\lambda f = 8{,}5\\times 10^{-2} \\times 4{,}0\\times 10^{3} = 340\\ \\text{m·s}^{-1}$."
+      ],
+      "reponse": "$\\lambda = 8{,}5\\ \\text{cm}$ ; $v = 340\\ \\text{m·s}^{-1}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Un four à micro-ondes fonctionne à $2{,}45\\ \\text{GHz}$. (a) Calcule la longueur d'onde et la période de l'onde. (b) Pourquoi un four et un routeur Wi-Fi ($2{,}4\\ \\text{GHz}$) peuvent-ils se gêner ?",
+      "corrige": [
+        "(a) $\\lambda = \\dfrac{3{,}00\\times 10^{8}}{2{,}45\\times 10^{9}} \\approx 0{,}122\\ \\text{m}$ ; $T = \\dfrac{1}{2{,}45\\times 10^{9}} \\approx 4{,}1\\times 10^{-10}\\ \\text{s}$.",
+        "(b) Leurs fréquences sont très proches (même domaine des micro-ondes) : les ondes qui s'échappent du four peuvent brouiller le signal Wi-Fi."
+      ],
+      "reponse": "(a) $\\lambda \\approx 12{,}2\\ \\text{cm}$, $T \\approx 4{,}1\\times 10^{-10}\\ \\text{s}$ ; (b) fréquences très proches."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "mesure-distance",
+      "enonce": "Un télémètre laser mesure la distance d'un mur situé à $25{,}0\\ \\text{m}$. (a) Quelle est la durée aller-retour de l'impulsion ? (b) Pour mesurer la distance au millimètre près, avec quelle précision faut-il mesurer cette durée ?",
+      "corrige": [
+        "(a) $\\Delta t = \\dfrac{2d}{c} = \\dfrac{2 \\times 25{,}0}{3{,}00\\times 10^{8}} \\approx 1{,}67\\times 10^{-7}\\ \\text{s}$.",
+        "(b) Une erreur de $1\\ \\text{mm}$ sur $d$ correspond à $\\dfrac{2 \\times 0{,}001}{3{,}00\\times 10^{8}} \\approx 6{,}7\\times 10^{-12}\\ \\text{s}$ : il faut une précision de quelques picosecondes."
+      ],
+      "reponse": "(a) $\\approx 1{,}67\\times 10^{-7}\\ \\text{s}$ ; (b) environ $7\\times 10^{-12}\\ \\text{s}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "effet-doppler",
+      "enonce": "Au laboratoire, la raie de l'hydrogène est à $656\\ \\text{nm}$. Dans la lumière d'une galaxie lointaine, on la mesure à $662\\ \\text{nm}$ ; dans celle de la galaxie d'Andromède, elle est décalée vers les courtes longueurs d'onde. Que peut-on dire du mouvement de ces deux galaxies par rapport à nous ?",
+      "corrige": [
+        "Galaxie lointaine : la raie est décalée vers les grandes longueurs d'onde (décalage vers le rouge) : elle s'éloigne de nous.",
+        "Andromède : décalage vers le bleu (longueur d'onde plus petite, fréquence plus grande) : elle se rapproche de nous."
+      ],
+      "reponse": "La galaxie lointaine s'éloigne ; Andromède se rapproche."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "spectroscopies",
+      "enonce": "Quelle méthode choisir pour : (a) doser un colorant alimentaire dans un sirop ; (b) vérifier qu'une molécule synthétisée contient un groupe C=O ; (c) identifier les éléments présents dans l'atmosphère d'une étoile ?",
+      "corrige": [
+        "(a) Spectroscopie UV-visible : l'absorbance est proportionnelle à la concentration (Beer-Lambert).",
+        "(b) Spectroscopie IR : la bande vers $1700\\ \\text{cm}^{-1}$ signale un C=O.",
+        "(c) Analyse du spectre d'absorption de l'étoile : ses raies sont la signature des éléments."
+      ],
+      "reponse": "(a) UV-visible ; (b) IR ; (c) spectre de raies (absorption)."
+    },
+    {
+      "id": 41,
+      "difficulte": "probleme",
+      "notion": "mesure-distance",
+      "enonce": "**Échographie.** Une sonde envoie des ultrasons dans un abdomen ($v = 1{,}54\\times 10^{3}\\ \\text{m·s}^{-1}$). Elle reçoit deux échos, renvoyés par l'avant et l'arrière d'un organe, après $65\\ \\mu\\text{s}$ et $195\\ \\mu\\text{s}$. (a) À quelles profondeurs se trouvent les deux faces ? (b) Quelle est l'épaisseur de l'organe ?",
+      "corrige": [
+        "(a) $d_1 = \\dfrac{1{,}54\\times 10^{3} \\times 65\\times 10^{-6}}{2} \\approx 5{,}0\\times 10^{-2}\\ \\text{m}$ ; $d_2 = \\dfrac{1{,}54\\times 10^{3} \\times 195\\times 10^{-6}}{2} \\approx 1{,}50\\times 10^{-1}\\ \\text{m}$.",
+        "(b) Épaisseur : $15{,}0 - 5{,}0 = 10\\ \\text{cm}$."
+      ],
+      "reponse": "(a) $5{,}0\\ \\text{cm}$ et $15\\ \\text{cm}$ ; (b) environ $10\\ \\text{cm}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "probleme",
+      "notion": "ondes-periodiques",
+      "enonce": "**Ultrasons et os.** Une sonde émet des ultrasons à $1{,}0\\ \\text{MHz}$. Ils traversent un gel ($v = 1{,}5\\times 10^{3}\\ \\text{m·s}^{-1}$) puis un os ($v \\approx 3{,}5\\times 10^{3}\\ \\text{m·s}^{-1}$). (a) Que devient la fréquence dans l'os ? (b) Calcule la longueur d'onde dans chaque milieu. (c) Dans quel milieu l'onde a-t-elle la plus grande longueur d'onde ? Pourquoi ?",
+      "corrige": [
+        "(a) La fréquence est imposée par la source : elle reste $1{,}0\\ \\text{MHz}$.",
+        "(b) Gel : $\\lambda = \\dfrac{1{,}5\\times 10^{3}}{1{,}0\\times 10^{6}} = 1{,}5\\ \\text{mm}$ ; os : $\\lambda = \\dfrac{3{,}5\\times 10^{3}}{1{,}0\\times 10^{6}} = 3{,}5\\ \\text{mm}$.",
+        "(c) Dans l'os : à fréquence égale, $\\lambda = \\dfrac{v}{f}$ est plus grande là où la célérité est la plus grande."
+      ],
+      "reponse": "(a) $1{,}0\\ \\text{MHz}$ ; (b) $1{,}5\\ \\text{mm}$ et $3{,}5\\ \\text{mm}$ ; (c) dans l'os."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "spectre-em",
+      "enonce": "**Télécommunications.** Une fibre optique transporte de la lumière de longueur d'onde $1550\\ \\text{nm}$ ; un téléphone 4G utilise une onde de $800\\ \\text{MHz}$. (a) Dans quel domaine se trouve chaque onde ? (b) Calcule la fréquence de la lumière de la fibre et la longueur d'onde de l'onde 4G. (c) Laquelle a la plus grande fréquence ?",
+      "corrige": [
+        "(a) $1550\\ \\text{nm} > 800\\ \\text{nm}$ : infrarouge. L'onde 4G : $\\lambda = \\dfrac{3{,}00\\times 10^{8}}{8{,}00\\times 10^{8}} = 0{,}375\\ \\text{m}$, soit le domaine des micro-ondes.",
+        "(b) Fibre : $f = \\dfrac{3{,}00\\times 10^{8}}{1{,}55\\times 10^{-6}} \\approx 1{,}94\\times 10^{14}\\ \\text{Hz}$ ; 4G : $\\lambda = 0{,}375\\ \\text{m}$.",
+        "(c) La lumière de la fibre, environ $240\\ 000$ fois plus haute en fréquence."
+      ],
+      "reponse": "(a) IR et micro-ondes ; (b) $1{,}94\\times 10^{14}\\ \\text{Hz}$ et $0{,}375\\ \\text{m}$ ; (c) la fibre."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "ondes-mecaniques",
+      "enonce": "**Mesurer la célérité du son.** Deux micros, distants de $1{,}00\\ \\text{m}$, sont alignés avec un claquement de mains. L'oscilloscope montre un décalage de $2{,}94\\ \\text{ms}$ entre les deux signaux. (a) Calcule la célérité du son. (b) Quelle serait la longueur d'onde d'un son de $2{,}0\\ \\text{kHz}$ dans cet air ? (c) Ce son pourrait-il se propager dans une cloche à vide ?",
+      "corrige": [
+        "(a) $v = \\dfrac{1{,}00}{2{,}94\\times 10^{-3}} \\approx 340\\ \\text{m·s}^{-1}$.",
+        "(b) $\\lambda = \\dfrac{v}{f} = \\dfrac{340}{2{,}0\\times 10^{3}} = 0{,}17\\ \\text{m}$.",
+        "(c) Non : le son est une onde mécanique, il a besoin d'un milieu matériel."
+      ],
+      "reponse": "(a) $340\\ \\text{m·s}^{-1}$ ; (b) $0{,}17\\ \\text{m}$ ; (c) non."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "spectres",
+      "enonce": "**Un élément découvert dans le Soleil.** En 1868, on observa dans le spectre solaire une raie jaune, vers $587{,}6\\ \\text{nm}$, qui ne correspondait à aucun élément connu sur Terre ; on l'attribua à un nouvel élément, nommé hélium. (a) Quel est le principe de l'identification d'un élément par son spectre ? (b) Calcule la fréquence de cette raie. (c) Pourquoi a-t-on pu détecter cet élément « sans aller » sur le Soleil ?",
+      "corrige": [
+        "(a) Chaque élément émet ou absorbe des raies à des longueurs d'onde précises, qui forment sa signature ; on compare les raies observées à des tables.",
+        "(b) $f = \\dfrac{3{,}00\\times 10^{8}}{587{,}6\\times 10^{-9}} \\approx 5{,}11\\times 10^{14}\\ \\text{Hz}$.",
+        "(c) La lumière transporte cette signature jusqu'à nous : l'analyse spectrale renseigne sur la composition d'une source à distance."
+      ],
+      "reponse": "(b) $f \\approx 5{,}11\\times 10^{14}\\ \\text{Hz}$ ; l'analyse spectrale identifie les éléments à distance."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "effet-doppler",
+      "enonce": "**Écho-Doppler sanguin.** Une sonde émet des ultrasons à $4{,}0\\ \\text{MHz}$ dans un vaisseau ($v = 1{,}54\\times 10^{3}\\ \\text{m·s}^{-1}$). (a) Calcule la longueur d'onde. (b) Les globules rouges qui s'approchent de la sonde renvoient une onde de fréquence plus grande ou plus petite que $4{,}0\\ \\text{MHz}$ ? (c) Quelle information médicale en tire-t-on ?",
+      "corrige": [
+        "(a) $\\lambda = \\dfrac{1{,}54\\times 10^{3}}{4{,}0\\times 10^{6}} \\approx 3{,}9\\times 10^{-4}\\ \\text{m} = 0{,}39\\ \\text{mm}$.",
+        "(b) Par effet Doppler, une cible qui s'approche renvoie une fréquence plus grande.",
+        "(c) Le décalage de fréquence indique le sens d'écoulement du sang et permet d'évaluer sa vitesse (rétrécissement d'une artère, par exemple)."
+      ],
+      "reponse": "(a) $\\approx 0{,}39\\ \\text{mm}$ ; (b) plus grande ; (c) sens et vitesse du flux sanguin."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "spectroscopies",
+      "enonce": "**Identifier un liquide.** Trois candidats : éthanol (alcool), propanone (cétone), acide éthanoïque (acide carboxylique). Spectre IR de l'échantillon : bande très large entre $2500$ et $3200\\ \\text{cm}^{-1}$ ; bande fine et intense vers $1710\\ \\text{cm}^{-1}$. En UV-visible, il n'absorbe pas dans le visible. (a) Identifie le liquide. (b) Pourquoi est-il incolore ?",
+      "corrige": [
+        "(a) La bande vers $1710\\ \\text{cm}^{-1}$ signale un C=O : l'éthanol est exclu. La bande très large entre $2500$ et $3200\\ \\text{cm}^{-1}$ est celle du O–H d'un acide : la propanone est exclue. C'est l'acide éthanoïque.",
+        "(b) Il n'absorbe aucune radiation visible : toute la lumière visible le traverse, il paraît incolore."
+      ],
+      "reponse": "(a) L'acide éthanoïque ; (b) il n'absorbe pas dans le visible."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "**Radar météorologique.** Un radar émet à $2{,}8\\ \\text{GHz}$. (a) Calcule la longueur d'onde. (b) Il reçoit un écho d'une zone de pluie après $8{,}0\\times 10^{-4}\\ \\text{s}$ : à quelle distance est la pluie ? (c) Pourquoi utilise-t-on une onde électromagnétique et non une onde sonore ?",
+      "corrige": [
+        "(a) $\\lambda = \\dfrac{3{,}00\\times 10^{8}}{2{,}8\\times 10^{9}} \\approx 0{,}11\\ \\text{m}$ (micro-ondes).",
+        "(b) $d = \\dfrac{c\\,\\Delta t}{2} = \\dfrac{3{,}00\\times 10^{8} \\times 8{,}0\\times 10^{-4}}{2} = 1{,}2\\times 10^{5}\\ \\text{m} = 120\\ \\text{km}$.",
+        "(c) L'onde électromagnétique va presque un million de fois plus vite que le son et porte bien plus loin dans l'atmosphère : la mesure est rapide et à grande distance."
+      ],
+      "reponse": "(a) $\\approx 11\\ \\text{cm}$ ; (b) $120\\ \\text{km}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "ondes-periodiques",
+      "enonce": "**Sonar de sous-marin.** Un sous-marin émet des ultrasons de fréquence $12\\ \\text{kHz}$ dans l'eau de mer ($v = 1{,}5\\times 10^{3}\\ \\text{m·s}^{-1}$). (a) Calcule la période et la longueur d'onde. (b) L'écho d'une épave revient après $2{,}4\\ \\text{s}$ : à quelle distance est-elle ? (c) Que deviendrait la longueur d'onde d'un signal de même fréquence émis dans l'air ($340\\ \\text{m·s}^{-1}$) ?",
+      "corrige": [
+        "(a) $T = \\dfrac{1}{12\\times 10^{3}} \\approx 8{,}3\\times 10^{-5}\\ \\text{s}$ ; $\\lambda = \\dfrac{1{,}5\\times 10^{3}}{12\\times 10^{3}} = 0{,}125\\ \\text{m}$.",
+        "(b) $d = \\dfrac{1{,}5\\times 10^{3} \\times 2{,}4}{2} = 1{,}8\\times 10^{3}\\ \\text{m}$.",
+        "(c) $\\lambda = \\dfrac{340}{12\\times 10^{3}} \\approx 2{,}8\\times 10^{-2}\\ \\text{m}$ : plus courte, car la célérité est plus faible."
+      ],
+      "reponse": "(a) $T \\approx 83\\ \\mu\\text{s}$, $\\lambda = 12{,}5\\ \\text{cm}$ ; (b) $1{,}8\\ \\text{km}$ ; (c) $\\approx 2{,}8\\ \\text{cm}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "spectre-em",
+      "enonce": "**Trois lampes.** On compare une lampe UV de stérilisation ($254\\ \\text{nm}$), un laser vert ($532\\ \\text{nm}$) et la diode d'une télécommande ($940\\ \\text{nm}$). (a) Donne le domaine de chaque rayonnement. (b) Calcule leurs fréquences. (c) Lequel est le plus énergétique ? Pourquoi faut-il se protéger les yeux et la peau de la lampe UV ?",
+      "corrige": [
+        "(a) $254\\ \\text{nm}$ : UV ; $532\\ \\text{nm}$ : visible (vert) ; $940\\ \\text{nm}$ : infrarouge.",
+        "(b) $f = \\dfrac{c}{\\lambda}$ : $1{,}18\\times 10^{15}$ ; $5{,}64\\times 10^{14}$ ; $3{,}19\\times 10^{14}\\ \\text{Hz}$.",
+        "(c) Le rayonnement UV, de plus grande fréquence, est le plus énergétique : il peut léser les yeux et la peau."
+      ],
+      "reponse": "(a) UV, visible, IR ; (b) $1{,}18\\times 10^{15}$, $5{,}64\\times 10^{14}$, $3{,}19\\times 10^{14}\\ \\text{Hz}$ ; (c) l'UV."
     }
   ]
 }

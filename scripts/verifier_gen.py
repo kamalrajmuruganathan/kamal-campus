@@ -18,8 +18,8 @@ CHAMPS = ("id", "difficulte", "notion", "enonce", "corrige", "reponse")
 DOUBLE_ESC = re.compile(r"\\\\[a-zA-Z]{2,}")
 DOLLAR = re.compile(r"(?<!\\)\$")
 # Élisions oubliées (hors formules) : « de oxygène », « le eau », « du aluminium »…
-ELISION = re.compile(r"\b(de|le|la|que|ne|se|je|du|au|ce|lorsque|puisque|jusque) (?=[aeiouéèêàâîôûœ][a-zéèêàâîôûç])", re.I)
-ELISION_OK = re.compile(r"^(un|une|uns|unes|onze|onzième|oui|ouest|yaourt|ou)\b", re.I)
+ELISION = re.compile(r"(?<![-\w])(de|le|la|que|ne|se|je|du|au|ce|lorsque|puisque|jusque) (?=[aeiouéèêàâîôûœ][a-zéèêàâîôûç])", re.I)
+ELISION_OK = re.compile(r"^((un|une|uns|unes|onze|onzième|oui|ouest|yaourt|ou)\b|(?-i:[IVXLC]+(e|er|re|es|ème)\b))", re.I)
 # Mots français courants écrits sans accent (liste volontairement courte et sûre).
 SANS_ACCENT = re.compile(r"\b(a cote|deja|tres|apres|etre|eleve|eleves|celerite|vitesse moyenne de|energie|electrique|reponse|resultat|equation|probabilite|frequence|periode|duree|temperature|numero|systeme|reel|reelle|derivee|carre|premiere|deuxieme|troisieme|regle|methode|repere|interet|ecart|evenement|experience|metre|kilometre|centimetre|millimetre)\b")
 SANS_ACCENT_EXCLUS = {"vitesse moyenne de"}

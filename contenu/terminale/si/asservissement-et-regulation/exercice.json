@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "boucle ouverte / boucle fermée",
       "enonce": "Un radiateur électrique est piloté de deux façons : (a) l'utilisateur règle manuellement la puissance sans mesurer la température, (b) un thermostat mesure la température de la pièce et coupe le radiateur au bon moment. Indique pour chacun s'il s'agit d'un système en boucle ouverte ou fermée, et pourquoi.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "erreur d'un asservissement",
       "enonce": "Dans un asservissement de position, la consigne est de 90° et le capteur mesure une position réelle de 84°. Calcule l'écart (erreur) et indique ce que fait le comparateur avec cette valeur.",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "constituants d'une boucle",
       "enonce": "Cite les quatre constituants principaux d'une chaîne d'asservissement, dans l'ordre du signal : comparateur, correcteur, actionneur (procédé), capteur. Indique le rôle du capteur.",
       "corrige": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "gain de boucle et régime permanent",
       "enonce": "Un moteur a un gain statique K = 0,5 (rad/s par volt). On applique une tension constante U = 8 V en boucle ouverte. Calcule la vitesse en régime permanent. Puis, si la charge fait chuter le gain à 0,45, calcule le nouvel écart de vitesse (en %).",
       "corrige": [
@@ -65,7 +65,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "fonction de transfert en boucle fermée",
       "enonce": "Un système a une fonction de transfert directe en régime permanent (gain) A = 100 et un retour unitaire (B = 1). La boucle fermée à retour unitaire a pour gain H = A / (1 + A·B). Calcule H. Que devient H si A tombe à 80 ? Commente la sensibilité.",
       "corrige": [
@@ -79,7 +79,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "précision et erreur statique",
       "enonce": "Un asservissement de vitesse à retour unitaire a un gain de chaîne directe A = 24. Pour une consigne C = 100 (unités de vitesse), la sortie en régime permanent vaut S = A·(C − S). Détermine la sortie S, puis l'erreur statique ε = C − S et exprime-la en pourcentage de la consigne. Que faudrait-il augmenter pour réduire cette erreur ?",
       "corrige": [
@@ -94,7 +94,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "calcul de l'écart",
       "enonce": "Un thermostat a pour consigne 20 °C. Le capteur mesure une température de 17 °C. Calcule l'écart ε et indique le rôle de ce signal.",
       "corrige": [
@@ -107,7 +107,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "fonction de transfert en boucle fermée",
       "enonce": "Un système a une chaîne directe de gain statique H = 9 et un retour unitaire. Calcule le gain de l'ensemble en boucle fermée.",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "constituants d'une boucle",
       "enonce": "Dans un régulateur de vitesse de voiture, associe chaque élément à sa fonction : (a) le capteur de vitesse ; (b) le calculateur qui compare et corrige ; (c) le moteur.",
       "corrige": [
@@ -133,7 +133,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "blocs en série et boucle fermée",
       "enonce": "Deux blocs de la chaîne directe ont pour gains H₁ = 2 et H₂ = 3, placés en série, avec un retour unitaire. Calcule le gain de la chaîne directe, puis le gain en boucle fermée.",
       "corrige": [
@@ -143,6 +143,459 @@
         "FTBF ≈ 0,857."
       ],
       "reponse": "Chaîne directe H = 6 ; en boucle fermée, gain = 6 / 7 ≈ 0,857."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "boucle ouverte / boucle fermée",
+      "enonce": "Quel composant indispensable manque à un système en boucle ouverte pour pouvoir corriger son action ?",
+      "corrige": [
+        "En boucle ouverte, on ne vérifie jamais le résultat obtenu.",
+        "Pour fermer la boucle, il faut un capteur qui mesure la sortie et la renvoie au comparateur."
+      ],
+      "reponse": "Un capteur (qui mesure la sortie)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "grandeurs d'un système asservi",
+      "enonce": "Associe chaque mot à sa définition : consigne, mesure, perturbation. Définitions : (1) valeur réelle de la sortie fournie par le capteur ; (2) grandeur extérieure non désirée qui éloigne la sortie de la consigne ; (3) valeur souhaitée pour la sortie.",
+      "corrige": [
+        "La consigne est ce que l'on demande.",
+        "La mesure est ce que l'on obtient réellement.",
+        "La perturbation est une action extérieure non voulue."
+      ],
+      "reponse": "Consigne → (3) ; mesure → (1) ; perturbation → (2)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "asservissement ou régulation",
+      "enonce": "Quelle différence fait-on entre un asservissement et une régulation ?",
+      "corrige": [
+        "Dans un asservissement, la consigne varie et la sortie doit la suivre.",
+        "Dans une régulation, la consigne est constante et le système doit la maintenir malgré les perturbations."
+      ],
+      "reponse": "Asservissement : suivre une consigne variable ; régulation : maintenir une consigne constante."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "asservissement ou régulation",
+      "enonce": "Classe en asservissement ou régulation : (a) un four maintenu à 180 °C ; (b) une antenne qui suit un satellite en mouvement ; (c) un aquarium maintenu à 25 °C ; (d) un bras de robot qui suit une trajectoire programmée.",
+      "corrige": [
+        "(a) et (c) : la consigne est constante, il faut la maintenir : régulation.",
+        "(b) et (d) : la consigne change en permanence, la sortie doit la suivre : asservissement."
+      ],
+      "reponse": "Régulation : (a) et (c) ; asservissement : (b) et (d)."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "grandeurs d'un système asservi",
+      "enonce": "Pour le régulateur de vitesse d'une voiture réglé à 110 km/h, cite deux perturbations possibles.",
+      "corrige": [
+        "Une perturbation éloigne la vitesse réelle de la consigne sans qu'on l'ait voulu.",
+        "Exemples : une montée (côte), une descente, un vent de face, une charge plus lourde dans le coffre."
+      ],
+      "reponse": "Exemple : une côte et un vent de face."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "calcul de l'écart",
+      "enonce": "La consigne d'un asservissement de position est 250 mm ; le capteur mesure 262 mm. Calcule l'écart $\\varepsilon$ et interprète son signe.",
+      "corrige": [
+        "$\\varepsilon = \\text{consigne} - \\text{mesure} = 250 - 262 = -12$ mm.",
+        "L'écart est négatif : la sortie a dépassé la consigne, le correcteur doit la faire reculer."
+      ],
+      "reponse": "ε = −12 mm : la position dépasse la consigne."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "calcul de l'écart",
+      "enonce": "Un système asservi a un écart nul. Que peut-on en déduire ?",
+      "corrige": [
+        "$\\varepsilon = \\text{consigne} - \\text{mesure} = 0$ signifie que la mesure est égale à la consigne.",
+        "Le système est au repos sur sa cible : il n'y a rien à corriger."
+      ],
+      "reponse": "La mesure est égale à la consigne : la cible est atteinte."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "boucle ouverte / boucle fermée",
+      "enonce": "Un grille-pain chauffe pendant une durée fixée par un bouton, sans mesurer la couleur du pain. Est-il en boucle ouverte ou fermée ? Donne un inconvénient de ce fonctionnement.",
+      "corrige": [
+        "Aucune mesure du résultat n'est renvoyée : c'est une boucle ouverte.",
+        "Inconvénient : si le pain est plus épais ou déjà chaud (perturbation), le grille-pain ne peut pas corriger : le pain risque d'être trop ou pas assez grillé."
+      ],
+      "reponse": "Boucle ouverte ; il ne peut pas corriger une perturbation (pain plus épais, déjà chaud…)."
+    },
+    {
+      "id": 19,
+      "difficulte": "decouverte",
+      "notion": "constituants d'une boucle",
+      "enonce": "Dans un schéma-blocs d'asservissement, quel bloc calcule la différence entre la consigne et la mesure ?",
+      "corrige": [
+        "Le comparateur reçoit la consigne et la mesure renvoyée par le capteur.",
+        "Il fournit l'écart, consigne moins mesure, au correcteur."
+      ],
+      "reponse": "Le comparateur."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "grandeurs d'un système asservi",
+      "enonce": "Corrige l'affirmation : « La consigne est la valeur mesurée par le capteur. »",
+      "corrige": [
+        "La valeur fournie par le capteur est la mesure (ce que l'on obtient).",
+        "La consigne est la valeur souhaitée (ce que l'on demande)."
+      ],
+      "reponse": "Faux : la valeur mesurée par le capteur est la mesure ; la consigne est la valeur demandée."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "gain de boucle et régime permanent",
+      "enonce": "Un moteur alimenté sous 12 V tourne en régime permanent à 300 rad/s. Calcule son gain statique (sortie ÷ entrée) en précisant l'unité.",
+      "corrige": [
+        "$H = \\dfrac{\\text{sortie}}{\\text{entrée}} = \\dfrac{300}{12} = 25$.",
+        "Unité : (rad/s)/V."
+      ],
+      "reponse": "25 (rad/s)/V"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "fonction de transfert en boucle fermée",
+      "enonce": "Un système de gain statique H = 19 est placé dans une boucle à retour unitaire. Calcule le gain en boucle fermée.",
+      "corrige": [
+        "$\\text{FTBF} = \\dfrac{H}{1 + H} = \\dfrac{19}{20} = 0{,}95$."
+      ],
+      "reponse": "0,95"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "blocs en série et boucle fermée",
+      "enonce": "Trois blocs en série ont pour gains 0,5 ; 40 et 2. Quel est le gain de la chaîne directe ?",
+      "corrige": [
+        "Des blocs en série se multiplient : $H = 0{,}5 \\times 40 \\times 2 = 40$."
+      ],
+      "reponse": "40"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "blocs en série et boucle fermée",
+      "enonce": "Un élève additionne les gains de deux blocs en série, H₁ = 4 et H₂ = 5, et trouve 9. Corrige-le.",
+      "corrige": [
+        "Pour des blocs en série, on multiplie les fonctions de transfert : $H = 4 \\times 5 = 20$."
+      ],
+      "reponse": "Le gain de la chaîne vaut 4 × 5 = 20."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "performances",
+      "enonce": "Cite les trois performances principales sur lesquelles on juge un système asservi, et la grandeur qui mesure chacune.",
+      "corrige": [
+        "La stabilité : la sortie converge vers une valeur finie.",
+        "La précision : mesurée par l'écart statique.",
+        "La rapidité : mesurée par le temps de réponse à 5 %."
+      ],
+      "reponse": "Stabilité ; précision (écart statique) ; rapidité (temps de réponse à 5 %)."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "performances",
+      "enonce": "Après un échelon de consigne, la sortie d'un système oscille de plus en plus fort. Quelle performance n'est pas respectée ?",
+      "corrige": [
+        "Un système stable converge vers une valeur finie.",
+        "Ici, les oscillations grandissent : la sortie diverge, le système est instable."
+      ],
+      "reponse": "La stabilité : le système est instable."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "correcteur PID",
+      "enonce": "Associe chaque action du correcteur PID à son effet principal : P, I, D. Effets : (1) annuler l'écart statique ; (2) anticiper et amortir les oscillations ; (3) commande proportionnelle à l'écart, qui augmente la rapidité.",
+      "corrige": [
+        "L'action proportionnelle agit directement sur l'écart.",
+        "L'action intégrale agit sur l'accumulation de l'écart et l'annule en régime permanent.",
+        "L'action dérivée agit sur la vitesse de variation de l'écart."
+      ],
+      "reponse": "P → (3) ; I → (1) ; D → (2)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "correcteur PID",
+      "enonce": "Un asservissement de température atteint 19,6 °C pour une consigne de 20 °C et y reste. Quelle action du correcteur faut-il ajouter pour atteindre exactement 20 °C ?",
+      "corrige": [
+        "L'écart statique vaut 0,4 °C.",
+        "L'action intégrale accumule cet écart au cours du temps et augmente la commande jusqu'à l'annuler."
+      ],
+      "reponse": "L'action intégrale (I)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "correcteur PID",
+      "enonce": "Un technicien augmente fortement le gain proportionnel d'un asservissement de position. Le système devient plus rapide, mais la sortie se met à osciller. Explique et propose une action corrective.",
+      "corrige": [
+        "Un gain proportionnel trop fort déstabilise le système : il réagit trop violemment et dépasse la consigne.",
+        "On peut réduire le gain P, ou ajouter une action dérivée (D), qui anticipe et amortit les oscillations."
+      ],
+      "reponse": "Le gain P est trop élevé ; il faut le réduire ou ajouter une action dérivée."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "fonction de transfert en boucle fermée",
+      "enonce": "Un système de chaîne directe H = 10 a une chaîne de retour K = 0,5. Calcule la fonction de transfert en boucle fermée (arrondie au centième).",
+      "corrige": [
+        "$\\text{FTBF} = \\dfrac{H}{1 + H K} = \\dfrac{10}{1 + 10 \\times 0{,}5} = \\dfrac{10}{6}$.",
+        "FTBF ≈ 1,67."
+      ],
+      "reponse": "Environ 1,67."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "fonction de transfert en boucle fermée",
+      "enonce": "Un capteur de vitesse renvoie 0,1 V par unité de vitesse (K = 0,1). La chaîne directe a un gain H = 20. Calcule le gain en boucle fermée (arrondi au centième).",
+      "corrige": [
+        "$\\text{FTBF} = \\dfrac{20}{1 + 20 \\times 0{,}1} = \\dfrac{20}{3}$.",
+        "FTBF ≈ 6,67."
+      ],
+      "reponse": "Environ 6,67."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "blocs en série et boucle fermée",
+      "enonce": "La chaîne directe d'un asservissement comprend trois blocs de gains 0,5 ; 40 et 2, avec un retour unitaire. Calcule le gain en boucle fermée (arrondi au millième).",
+      "corrige": [
+        "Chaîne directe : $H = 0{,}5 \\times 40 \\times 2 = 40$.",
+        "$\\text{FTBF} = \\dfrac{40}{41} \\approx 0{,}976$."
+      ],
+      "reponse": "Environ 0,976."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "précision et erreur statique",
+      "enonce": "Un système à retour unitaire a un gain de chaîne directe H = 9. Pour une consigne de 50, calcule la sortie en régime permanent, l'écart statique et l'écart en pourcentage de la consigne.",
+      "corrige": [
+        "$S = \\dfrac{H}{1 + H} \\times C = \\dfrac{9}{10} \\times 50 = 45$.",
+        "Écart statique : 50 − 45 = 5.",
+        "En pourcentage : $\\dfrac{5}{50} = 10$ %."
+      ],
+      "reponse": "S = 45 ; écart statique de 5, soit 10 %."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "précision et erreur statique",
+      "enonce": "Une régulation de température à retour unitaire a un gain de chaîne directe H = 39 et une consigne de 20 °C. Calcule la température atteinte en régime permanent et l'écart statique.",
+      "corrige": [
+        "$S = \\dfrac{39}{40} \\times 20 = 19{,}5$ °C.",
+        "Écart statique : 20 − 19,5 = 0,5 °C."
+      ],
+      "reponse": "19,5 °C ; écart statique de 0,5 °C."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "performances",
+      "enonce": "La sortie d'un système monte jusqu'à 112 mm avant de se stabiliser à 100 mm. Calcule le dépassement en pourcentage.",
+      "corrige": [
+        "Dépassement : $\\dfrac{112 - 100}{100} \\times 100 = 12$ %."
+      ],
+      "reponse": "12 %"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "performances",
+      "enonce": "La vitesse d'un moteur doit se stabiliser à 2 000 tr/min. Entre quelles valeurs doit-elle rester pour être dans la bande des ± 5 % ?",
+      "corrige": [
+        "5 % de 2 000 font 100 tr/min.",
+        "La bande va de 2 000 − 100 = 1 900 tr/min à 2 000 + 100 = 2 100 tr/min."
+      ],
+      "reponse": "Entre 1 900 et 2 100 tr/min."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "performances",
+      "enonce": "Réponse d'un moteur à un échelon (valeur finale : 2 000 tr/min) : à 0,1 s, 1 200 tr/min ; à 0,2 s, 1 750 tr/min ; à 0,3 s, 1 920 tr/min ; à 0,4 s, 1 980 tr/min ; à 0,5 s, 2 000 tr/min. La sortie ne dépasse jamais 2 000 tr/min. Estime le temps de réponse à 5 % à partir de ces mesures.",
+      "corrige": [
+        "La bande des ± 5 % va de 1 900 à 2 100 tr/min.",
+        "À 0,2 s, 1 750 tr/min est hors de la bande ; à 0,3 s, 1 920 tr/min y est, et la sortie n'en ressort plus.",
+        "La sortie entre donc dans la bande entre 0,2 s et 0,3 s : avec ces mesures, on retient environ 0,3 s."
+      ],
+      "reponse": "Environ 0,3 s (entrée dans la bande entre 0,2 s et 0,3 s)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "performances",
+      "enonce": "Une position doit se stabiliser à 1,00 m. Mesures : à 1 s, 0,80 m ; à 2 s, 1,15 m ; à 3 s, 0,92 m ; à 4 s, 1,03 m ; à 5 s, 0,99 m ; à 6 s, 1,00 m. Calcule le dépassement, puis estime le temps de réponse à 5 % d'après ces mesures.",
+      "corrige": [
+        "Dépassement : (1,15 − 1,00) ÷ 1,00 = 15 %.",
+        "La bande des ± 5 % va de 0,95 m à 1,05 m.",
+        "À 2 s (1,15 m) et à 3 s (0,92 m), la sortie est hors de la bande ; à partir de 4 s, elle y reste.",
+        "On estime le temps de réponse à 5 % à environ 4 s (la sortie entre définitivement dans la bande entre 3 s et 4 s)."
+      ],
+      "reponse": "Dépassement : 15 % ; temps de réponse à 5 % ≈ 4 s."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "gain de boucle et régime permanent",
+      "enonce": "Le moteur de gain statique 25 (rad/s)/V est commandé en boucle ouverte. Quelle tension faut-il appliquer pour obtenir 200 rad/s ? Pourquoi cette vitesse ne sera-t-elle pas garantie si la charge augmente ?",
+      "corrige": [
+        "$U = \\dfrac{200}{25} = 8$ V.",
+        "En boucle ouverte, aucun capteur ne vérifie la vitesse : si la charge augmente (perturbation), la vitesse baisse sans être corrigée."
+      ],
+      "reponse": "8 V ; sans mesure, une hausse de charge fait baisser la vitesse sans correction."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "performances",
+      "enonce": "Pour un ascenseur, on compare deux réglages : A (temps de réponse à 5 % : 2 s ; dépassement : 25 % ; écart statique nul) et B (temps de réponse à 5 % : 3 s ; aucun dépassement ; écart statique nul). Lequel choisir ? Justifie.",
+      "corrige": [
+        "Les deux réglages sont précis (écart statique nul).",
+        "A est plus rapide, mais un dépassement de 25 % ferait dépasser l'étage puis revenir : inconfortable et proche de l'instabilité.",
+        "B est un peu plus lent mais sans dépassement : c'est le meilleur compromis pour le confort des passagers."
+      ],
+      "reponse": "Le réglage B : sans dépassement, il est plus confortable malgré une rapidité un peu moindre."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "précision et erreur statique",
+      "enonce": "Un système à retour unitaire et sans action intégrale a un gain de chaîne directe H. Montre que l'écart statique relatif vaut 1/(1 + H), puis calcule-le pour H = 19.",
+      "corrige": [
+        "En régime permanent, $S = \\dfrac{H}{1 + H} C$, donc $\\varepsilon = C - S = C \\left(1 - \\dfrac{H}{1 + H}\\right) = \\dfrac{C}{1 + H}$.",
+        "L'écart relatif vaut $\\dfrac{\\varepsilon}{C} = \\dfrac{1}{1 + H}$.",
+        "Pour H = 19 : $\\dfrac{1}{20} = 0{,}05$, soit 5 %."
+      ],
+      "reponse": "ε/C = 1/(1 + H) ; pour H = 19, l'écart vaut 5 %."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "précision et erreur statique",
+      "enonce": "On veut un écart statique d'au plus 2 % avec un retour unitaire et sans action intégrale. Quel gain minimal H faut-il dans la chaîne directe ? Quel risque prend-on en l'augmentant beaucoup ?",
+      "corrige": [
+        "Il faut $\\dfrac{1}{1 + H} \\le 0{,}02$, soit $1 + H \\ge 50$.",
+        "Donc H ≥ 49.",
+        "Un gain trop élevé peut rendre le système oscillant, voire instable."
+      ],
+      "reponse": "H ≥ 49 ; un gain trop fort risque de déstabiliser le système."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "gain de boucle et régime permanent",
+      "enonce": "Le gain de la chaîne directe d'un système passe de 50 à 40 (usure, perte de 20 %). En boucle ouverte, de combien varie la sortie ? En boucle fermée à retour unitaire, calcule les deux gains et la variation relative (arrondie au dixième de %).",
+      "corrige": [
+        "En boucle ouverte, la sortie est proportionnelle au gain : elle baisse de 20 %.",
+        "En boucle fermée : $\\dfrac{50}{51} \\approx 0{,}980$ puis $\\dfrac{40}{41} \\approx 0{,}976$.",
+        "Variation : $\\dfrac{0{,}980 - 0{,}976}{0{,}980} \\approx 0{,}5$ %."
+      ],
+      "reponse": "Boucle ouverte : −20 % ; boucle fermée : environ −0,5 %."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "boucle ouverte / boucle fermée",
+      "enonce": "Un four est réglé en boucle ouverte sur une puissance qui donne 200 °C porte fermée. On ouvre la porte quelques instants. Compare ce qui se passe avec un four régulé en boucle fermée.",
+      "corrige": [
+        "L'ouverture de la porte est une perturbation qui fait chuter la température.",
+        "En boucle ouverte, la puissance reste la même : la température baisse et revient lentement, sans correction.",
+        "En boucle fermée, le capteur mesure la baisse, l'écart augmente et le correcteur augmente la puissance pour revenir rapidement à 200 °C."
+      ],
+      "reponse": "La boucle ouverte subit la perturbation ; la boucle fermée la détecte et la corrige."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "constituants d'une boucle",
+      "enonce": "Pour un drone qui doit garder une altitude de 30 m, identifie : la consigne, la grandeur de sortie, le capteur, l'actionneur et une perturbation.",
+      "corrige": [
+        "Consigne : 30 m d'altitude ; sortie : l'altitude réelle.",
+        "Capteur : un baromètre (ou un capteur à ultrasons) qui mesure l'altitude.",
+        "Actionneur : les moteurs et leurs hélices ; perturbation : une rafale de vent."
+      ],
+      "reponse": "Consigne : 30 m ; sortie : altitude ; capteur : baromètre ; actionneur : moteurs et hélices ; perturbation : rafale de vent."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "correcteur PID",
+      "enonce": "Pour un bras de robot qui manipule des objets fragiles, on veut éviter tout dépassement de la position demandée. Quelle action du PID faut-il renforcer, et quel compromis cela implique-t-il ?",
+      "corrige": [
+        "L'action dérivée anticipe l'évolution de l'écart et limite le dépassement.",
+        "On peut aussi diminuer le gain proportionnel.",
+        "Contrepartie : le système devient en général un peu plus lent (compromis rapidité ↔ stabilité)."
+      ],
+      "reponse": "Renforcer l'action dérivée (ou réduire P) ; le système sera moins nerveux mais plus lent."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "blocs en série et boucle fermée",
+      "enonce": "Un asservissement de vitesse comprend un correcteur de gain 8, un variateur de gain 2,5 et un moteur de gain 1, avec un retour unitaire. Calcule le gain de la chaîne directe, le gain en boucle fermée, puis la vitesse atteinte pour une consigne de 1 500 tr/min (arrondie au tr/min).",
+      "corrige": [
+        "$H = 8 \\times 2{,}5 \\times 1 = 20$.",
+        "$\\text{FTBF} = \\dfrac{20}{21} \\approx 0{,}952$.",
+        "Vitesse : $\\dfrac{20}{21} \\times 1\\,500 \\approx 1\\,429$ tr/min."
+      ],
+      "reponse": "H = 20 ; FTBF ≈ 0,952 ; environ 1 429 tr/min."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "précision et erreur statique",
+      "enonce": "Dans le système précédent (FTBF = 20/21, consigne 1 500 tr/min), quel est l'écart statique ? On ajoute une action intégrale : que devient-il ?",
+      "corrige": [
+        "Écart : $1\\,500 - 1\\,429 \\approx 71$ tr/min (soit environ 4,8 %).",
+        "L'action intégrale accumule l'écart et augmente la commande jusqu'à l'annuler : l'écart statique devient nul."
+      ],
+      "reponse": "Environ 71 tr/min ; avec l'action intégrale, il devient nul."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "fonction de transfert en boucle fermée",
+      "enonce": "Montre qu'avec un retour unitaire, le gain en boucle fermée se rapproche de 1 quand H devient grand : calcule-le pour H = 4, H = 20 et H = 200 (arrondi au millième).",
+      "corrige": [
+        "$\\dfrac{4}{5} = 0{,}800$ ; $\\dfrac{20}{21} \\approx 0{,}952$ ; $\\dfrac{200}{201} \\approx 0{,}995$.",
+        "Plus H est grand, plus la sortie est proche de la consigne : la boucle fermée « écrase » le gain vers 1."
+      ],
+      "reponse": "0,800 ; 0,952 ; 0,995 : le gain tend vers 1."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "asservissement ou régulation",
+      "enonce": "Analyse ce texte : « Le chauffe-eau mesure la température de l'eau toutes les secondes. Tant qu'elle est inférieure à 55 °C, la résistance chauffe ; un robinet ouvert fait entrer de l'eau froide. » Identifie la consigne, le capteur, l'actionneur, la perturbation, et dis s'il s'agit d'un asservissement ou d'une régulation.",
+      "corrige": [
+        "Consigne : 55 °C, constante.",
+        "Capteur : la sonde de température ; actionneur : la résistance chauffante.",
+        "Perturbation : l'arrivée d'eau froide quand on ouvre un robinet.",
+        "La consigne est constante et il faut la maintenir : c'est une régulation."
+      ],
+      "reponse": "Consigne 55 °C ; capteur : sonde ; actionneur : résistance ; perturbation : eau froide ; c'est une régulation."
     }
   ]
 }

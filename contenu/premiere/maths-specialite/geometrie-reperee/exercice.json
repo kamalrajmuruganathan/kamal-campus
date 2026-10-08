@@ -130,7 +130,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "geometrie-reperee-synthese",
       "enonce": "Le plan est muni d'un repère orthonormé (unité : $100$ m). Sur le plan d'un domaine, on place trois bornes de surveillance : $\\mathrm{A}(-1\\,;4)$, $\\mathrm{B}(3\\,;2)$ et $\\mathrm{C}(5\\,;6)$. Un chemin rectiligne relie $\\mathrm{A}$ et $\\mathrm{B}$. 1) Déterminer les coordonnées du milieu $\\mathrm{I}$ de $[\\mathrm{AB}]$ et la longueur $\\mathrm{AB}$. 2) Déterminer une équation de la droite $(\\mathrm{AB})$. 3) Un piquet est planté en $\\mathrm{D}(7\\,;0)$. Les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{D}$ sont-ils alignés ? 4) On installe une clôture circulaire $\\mathscr{C}$ de diamètre $[\\mathrm{AC}]$. Déterminer une équation de $\\mathscr{C}$. 5) Montrer que la borne $\\mathrm{B}$ est située sur cette clôture, puis en déduire la nature de l'angle $\\widehat{\\mathrm{ABC}}$.",
       "corrige": [
@@ -141,6 +141,462 @@
         "5. On teste $\\mathrm{B}(3\\,;2)$ dans l'équation de $\\mathscr{C}$ : $(3-2)^2 + (2-5)^2 = 1^2 + (-3)^2 = 1 + 9 = 10$. L'égalité est vérifiée, donc $\\mathrm{B} \\in \\mathscr{C}$. Comme $\\mathrm{B}$ appartient au cercle de diamètre $[\\mathrm{AC}]$ et est distinct de $\\mathrm{A}$ et de $\\mathrm{C}$, l'angle $\\widehat{\\mathrm{ABC}}$ est un angle droit."
       ],
       "reponse": "1. $\\mathrm{I}(1\\,;3)$, $\\mathrm{AB} = 2\\sqrt{5}$. 2. $(\\mathrm{AB}) : x + 2y - 7 = 0$. 3. Oui, $\\mathrm{A}$, $\\mathrm{B}$, $\\mathrm{D}$ sont alignés ($\\mathrm{D}$ appartient à $(\\mathrm{AB})$). 4. $\\mathscr{C} : (x-2)^2 + (y-5)^2 = 10$. 5. $\\mathrm{B} \\in \\mathscr{C}$, donc l'angle $\\widehat{\\mathrm{ABC}}$ est droit."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vecteur-normal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Donner un vecteur normal et un vecteur directeur de la droite $d : 2x + 7y - 3 = 0$.",
+      "corrige": [
+        "Pour $ax + by + c = 0$, un vecteur normal est $\\vec{n}\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ et un vecteur directeur est $\\vec{u}\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$.",
+        "Ici $a = 2$ et $b = 7$ : $\\vec{n}\\begin{pmatrix} 2 \\\\ 7 \\end{pmatrix}$ et $\\vec{u}\\begin{pmatrix} -7 \\\\ 2 \\end{pmatrix}$.",
+        "Vérification : $\\vec{n} \\cdot \\vec{u} = 2 \\times (-7) + 7 \\times 2 = 0$."
+      ],
+      "reponse": "$\\vec{n}\\begin{pmatrix} 2 \\\\ 7 \\end{pmatrix}$ et $\\vec{u}\\begin{pmatrix} -7 \\\\ 2 \\end{pmatrix}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "vecteur-normal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Donner un vecteur normal à la droite d'équation réduite $y = 3x + 1$.",
+      "corrige": [
+        "On écrit l'équation sous forme cartésienne : $3x - y + 1 = 0$.",
+        "Un vecteur normal est donc $\\vec{n}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$."
+      ],
+      "reponse": "$\\vec{n}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ (ou tout vecteur colinéaire non nul)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "equation-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Écrire une équation du cercle de centre $\\mathrm{O}$$(0\\,;0)$ et de rayon $3$.",
+      "corrige": [
+        "$(x - 0)^2 + (y - 0)^2 = 3^2$."
+      ],
+      "reponse": "$x^2 + y^2 = 9$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "distance-milieu",
+      "enonce": "Le plan est muni d'un repère orthonormé. Calculer la distance entre $\\mathrm{A}$$(1\\,;2)$ et $\\mathrm{B}$$(4\\,;6)$.",
+      "corrige": [
+        "$\\mathrm{AB} = \\sqrt{(4 - 1)^2 + (6 - 2)^2} = \\sqrt{9 + 16} = \\sqrt{25}$."
+      ],
+      "reponse": "$\\mathrm{AB} = 5$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "vecteur-normal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Le vecteur $\\vec{w}\\begin{pmatrix} 4 \\\\ -6 \\end{pmatrix}$ est-il normal à la droite $d : 2x - 3y + 5 = 0$ ? Justifier.",
+      "corrige": [
+        "Un vecteur normal à $d$ est $\\vec{n}\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}$.",
+        "$\\vec{w} = 2\\,\\vec{n}$ : $\\vec{w}$ est colinéaire à $\\vec{n}$ et non nul.",
+        "Donc $\\vec{w}$ est aussi normal à $d$."
+      ],
+      "reponse": "Oui, car $\\vec{w} = 2\\,\\vec{n}$ avec $\\vec{n}\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "vecteur-normal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Donner un vecteur normal à la droite $d$ d'équation $x = 4$, puis décrire cette droite.",
+      "corrige": [
+        "L'équation s'écrit $1 \\times x + 0 \\times y - 4 = 0$ : un vecteur normal est $\\vec{n}\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$.",
+        "Un vecteur directeur est $\\vec{u}\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$ : $d$ est parallèle à l'axe des ordonnées."
+      ],
+      "reponse": "$\\vec{n}\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ ; $d$ est la droite verticale passant par le point $(4\\,;0)$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "vecteur-normal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Une droite $d$ a pour vecteur directeur $\\vec{u}\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$. Donner un vecteur normal à $d$ et vérifier votre réponse.",
+      "corrige": [
+        "On échange les coordonnées et on change un signe : $\\vec{n}\\begin{pmatrix} 2 \\\\ -5 \\end{pmatrix}$.",
+        "Vérification : $\\vec{u} \\cdot \\vec{n} = 5 \\times 2 + 2 \\times (-5) = 0$, donc $\\vec{n}$ est orthogonal à $\\vec{u}$."
+      ],
+      "reponse": "$\\vec{n}\\begin{pmatrix} 2 \\\\ -5 \\end{pmatrix}$ (ou tout vecteur colinéaire non nul, comme $\\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "equation-droite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation cartésienne de la droite passant par $\\mathrm{A}$$(2\\,;-1)$ et de vecteur normal $\\vec{n}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$.",
+      "corrige": [
+        "$\\mathrm{M}(x\\,;y) \\in d \\iff \\overrightarrow{\\mathrm{AM}} \\cdot \\vec{n} = 0 \\iff 3(x - 2) + 4(y + 1) = 0$.",
+        "On développe : $3x - 6 + 4y + 4 = 0$."
+      ],
+      "reponse": "$3x + 4y - 2 = 0$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "equation-droite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation de la droite passant par $\\mathrm{A}$$(-3\\,;5)$ et de vecteur normal $\\vec{n}\\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}$.",
+      "corrige": [
+        "$0 \\times (x + 3) + 2(y - 5) = 0$, soit $2y - 10 = 0$.",
+        "En divisant par $2$ : $y = 5$. C'est une droite parallèle à l'axe des abscisses."
+      ],
+      "reponse": "$y = 5$ (ou $2y - 10 = 0$)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "equation-droite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Le point $\\mathrm{P}$$(2\\,;3)$ appartient-il à la droite $d : 5x - 2y - 4 = 0$ ?",
+      "corrige": [
+        "On remplace $x$ par $2$ et $y$ par $3$ : $5 \\times 2 - 2 \\times 3 - 4 = 10 - 6 - 4 = 0$.",
+        "L'équation est vérifiée."
+      ],
+      "reponse": "Oui, $\\mathrm{P}$ appartient à $d$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "equation-droite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation de la droite passant par $\\mathrm{A}$$(0\\,;3)$ et de vecteur normal $\\vec{n}\\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix}$, puis donner son équation réduite.",
+      "corrige": [
+        "$2(x - 0) - 1 \\times (y - 3) = 0$, soit $2x - y + 3 = 0$.",
+        "On isole $y$ : $y = 2x + 3$."
+      ],
+      "reponse": "$2x - y + 3 = 0$, soit $y = 2x + 3$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "perpendicularite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Les droites $d_1 : 2x + 3y - 1 = 0$ et $d_2 : 3x - 2y + 4 = 0$ sont-elles perpendiculaires ?",
+      "corrige": [
+        "Vecteurs normaux : $\\vec{n_1}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $\\vec{n_2}\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$.",
+        "$\\vec{n_1} \\cdot \\vec{n_2} = 2 \\times 3 + 3 \\times (-2) = 0$ : les vecteurs normaux sont orthogonaux."
+      ],
+      "reponse": "Oui, $d_1$ et $d_2$ sont perpendiculaires."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "equation-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Écrire une équation du cercle de centre $\\Omega(4\\,;-1)$ et de rayon $\\sqrt{5}$.",
+      "corrige": [
+        "On applique $(x - x_0)^2 + (y - y_0)^2 = R^2$ avec $x_0 = 4$, $y_0 = -1$.",
+        "$R^2 = \\left(\\sqrt{5}\\right)^2 = 5$."
+      ],
+      "reponse": "$(x - 4)^2 + (y + 1)^2 = 5$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "equation-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Donner le centre et le rayon du cercle d'équation $(x + 2)^2 + (y - 7)^2 = 36$.",
+      "corrige": [
+        "$(x + 2)^2 = (x - (-2))^2$ : l'abscisse du centre est $-2$ ; l'ordonnée est $7$.",
+        "$R^2 = 36$, donc $R = 6$."
+      ],
+      "reponse": "Centre $(-2\\,;7)$, rayon $6$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "equation-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Le point $\\mathrm{A}$$(1\\,;1)$ appartient-il au cercle $\\mathscr{C} : (x - 4)^2 + (y + 3)^2 = 25$ ?",
+      "corrige": [
+        "$(1 - 4)^2 + (1 + 3)^2 = 9 + 16 = 25$.",
+        "Les coordonnées de $\\mathrm{A}$ vérifient l'équation."
+      ],
+      "reponse": "Oui, $\\mathrm{A}$ appartient à $\\mathscr{C}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "forme-developpee",
+      "enonce": "Le plan est muni d'un repère orthonormé. Développer l'équation du cercle $(x - 1)^2 + (y + 4)^2 = 10$ pour l'écrire sous la forme $x^2 + y^2 + \\alpha x + \\beta y + \\gamma = 0$.",
+      "corrige": [
+        "$(x - 1)^2 = x^2 - 2x + 1$ et $(y + 4)^2 = y^2 + 8y + 16$.",
+        "$x^2 - 2x + 1 + y^2 + 8y + 16 - 10 = 0$."
+      ],
+      "reponse": "$x^2 + y^2 - 2x + 8y + 7 = 0$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "distance-milieu",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer les coordonnées du milieu $\\mathrm{I}$ de $[\\mathrm{AB}]$ avec $\\mathrm{A}$$(-2\\,;3)$ et $\\mathrm{B}$$(6\\,;-1)$.",
+      "corrige": [
+        "$x_\\mathrm{I} = \\dfrac{-2 + 6}{2} = 2$ et $y_\\mathrm{I} = \\dfrac{3 + (-1)}{2} = 1$."
+      ],
+      "reponse": "$\\mathrm{I}(2\\,;1)$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "distance-milieu",
+      "enonce": "Le plan est muni d'un repère orthonormé. Calculer la norme du vecteur $\\vec{u}\\begin{pmatrix} -5 \\\\ 12 \\end{pmatrix}$.",
+      "corrige": [
+        "$\\|\\vec{u}\\| = \\sqrt{(-5)^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169}$."
+      ],
+      "reponse": "$\\|\\vec{u}\\| = 13$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "vecteur-normal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Un élève affirme : « la droite $3x - 2y + 7 = 0$ a pour vecteur normal $\\vec{n}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ ». Expliquer son erreur.",
+      "corrige": [
+        "Le vecteur $\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ est un vecteur directeur de la droite : il est de la forme $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$ avec $a = 3$, $b = -2$.",
+        "Le vecteur normal se lit directement sur les coefficients : $\\vec{n}\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$.",
+        "L'élève a confondu vecteur normal et vecteur directeur."
+      ],
+      "reponse": "Il a donné un vecteur directeur ; un vecteur normal est $\\vec{n}\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "equation-droite",
+      "enonce": "Le plan est muni d'un repère orthonormé. On donne $\\mathrm{A}$$(1\\,;2)$, $\\mathrm{B}$$(4\\,;6)$ et $\\mathrm{C}$$(0\\,;1)$. Déterminer une équation de la droite passant par $\\mathrm{C}$ et perpendiculaire à $(\\mathrm{AB})$.",
+      "corrige": [
+        "Cette droite admet $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ pour vecteur normal.",
+        "$\\mathrm{M}(x\\,;y)$ lui appartient si et seulement si $3(x - 0) + 4(y - 1) = 0$.",
+        "Soit $3x + 4y - 4 = 0$."
+      ],
+      "reponse": "$3x + 4y - 4 = 0$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "perpendicularite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer le réel $m$ pour que les droites $d_1 : mx + 2y - 1 = 0$ et $d_2 : 3x - 6y + 2 = 0$ soient perpendiculaires.",
+      "corrige": [
+        "Vecteurs normaux : $\\vec{n_1}\\begin{pmatrix} m \\\\ 2 \\end{pmatrix}$ et $\\vec{n_2}\\begin{pmatrix} 3 \\\\ -6 \\end{pmatrix}$.",
+        "Les droites sont perpendiculaires si et seulement si $\\vec{n_1} \\cdot \\vec{n_2} = 0$, soit $3m - 12 = 0$.",
+        "Donc $m = 4$."
+      ],
+      "reponse": "$m = 4$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "perpendicularite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Soit le triangle de sommets $\\mathrm{A}$$(0\\,;0)$, $\\mathrm{B}$$(4\\,;2)$ et $\\mathrm{C}$$(1\\,;5)$. Déterminer une équation de la hauteur issue de $\\mathrm{C}$.",
+      "corrige": [
+        "La hauteur issue de $\\mathrm{C}$ passe par $\\mathrm{C}$ et est perpendiculaire à $(\\mathrm{AB})$ : elle admet $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ pour vecteur normal.",
+        "$4(x - 1) + 2(y - 5) = 0$, soit $4x + 2y - 14 = 0$.",
+        "En divisant par $2$ : $2x + y - 7 = 0$."
+      ],
+      "reponse": "$2x + y - 7 = 0$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "equation-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation du cercle de centre $\\Omega(1\\,;2)$ passant par $\\mathrm{A}$$(4\\,;6)$.",
+      "corrige": [
+        "Le rayon est $R = \\Omega\\mathrm{A} = \\sqrt{(4 - 1)^2 + (6 - 2)^2} = \\sqrt{9 + 16} = 5$.",
+        "Équation : $(x - 1)^2 + (y - 2)^2 = 25$."
+      ],
+      "reponse": "$(x - 1)^2 + (y - 2)^2 = 25$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "equation-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Pour le cercle de centre $(-3\\,;2)$ et de rayon $4$, un élève écrit : « $(x - 3)^2 + (y + 2)^2 = 4$ ». Relever ses deux erreurs et corriger.",
+      "corrige": [
+        "Première erreur : on soustrait les coordonnées du centre, donc $(x - (-3))^2 = (x + 3)^2$ et $(y - 2)^2$.",
+        "Seconde erreur : le second membre est $R^2 = 16$, pas $R = 4$."
+      ],
+      "reponse": "$(x + 3)^2 + (y - 2)^2 = 16$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "forme-developpee",
+      "enonce": "Le plan est muni d'un repère orthonormé. Montrer que l'équation $x^2 + y^2 - 4x - 10y + 20 = 0$ est celle d'un cercle dont on donnera le centre et le rayon.",
+      "corrige": [
+        "$x^2 - 4x = (x - 2)^2 - 4$ et $y^2 - 10y = (y - 5)^2 - 25$.",
+        "L'équation devient $(x - 2)^2 + (y - 5)^2 - 4 - 25 + 20 = 0$, soit $(x - 2)^2 + (y - 5)^2 = 9$.",
+        "Le second membre $9$ est strictement positif : c'est un cercle."
+      ],
+      "reponse": "Cercle de centre $(2\\,;5)$ et de rayon $3$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "forme-developpee",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer la nature de l'ensemble des points $\\mathrm{M}(x\\,;y)$ tels que $x^2 + y^2 + 6x + 8 = 0$.",
+      "corrige": [
+        "$x^2 + 6x = (x + 3)^2 - 9$.",
+        "L'équation devient $(x + 3)^2 - 9 + y^2 + 8 = 0$, soit $(x + 3)^2 + y^2 = 1$.",
+        "Le second membre est strictement positif."
+      ],
+      "reponse": "Cercle de centre $(-3\\,;0)$ et de rayon $1$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "distance-milieu",
+      "enonce": "Le plan est muni d'un repère orthonormé. Soit $\\mathrm{A}$$(0\\,;0)$, $\\mathrm{B}$$(6\\,;0)$ et $\\mathrm{C}$$(3\\,;4)$. Quelle est la nature du triangle $\\mathrm{ABC}$ ?",
+      "corrige": [
+        "$\\mathrm{AC} = \\sqrt{3^2 + 4^2} = 5$ et $\\mathrm{BC} = \\sqrt{(3 - 6)^2 + 4^2} = 5$.",
+        "$\\mathrm{AB} = 6$ : le triangle a deux côtés égaux, mais pas trois.",
+        "$\\mathrm{AC}^2 + \\mathrm{BC}^2 = 50 \\neq 36 = \\mathrm{AB}^2$ ; de même $\\mathrm{AB}^2 + \\mathrm{AC}^2 = 61 \\neq 25$ : il n'est pas rectangle."
+      ],
+      "reponse": "Triangle isocèle en $\\mathrm{C}$ (non rectangle)."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "distance-milieu",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer les coordonnées du point $\\mathrm{B}$, symétrique de $\\mathrm{A}$$(1\\,;3)$ par rapport à $\\mathrm{I}$$(4\\,;-1)$.",
+      "corrige": [
+        "$\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$ : $\\dfrac{1 + x_\\mathrm{B}}{2} = 4$ et $\\dfrac{3 + y_\\mathrm{B}}{2} = -1$.",
+        "$x_\\mathrm{B} = 8 - 1 = 7$ et $y_\\mathrm{B} = -2 - 3 = -5$."
+      ],
+      "reponse": "$\\mathrm{B}(7\\,;-5)$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "cercle-diametre",
+      "enonce": "Le plan est muni d'un repère orthonormé. Soit $\\mathrm{A}$$(-1\\,;0)$ et $\\mathrm{B}$$(3\\,;0)$. En traduisant $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$, déterminer une équation du cercle de diamètre $[\\mathrm{AB}]$.",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{MA}}\\begin{pmatrix} -1 - x \\\\ -y \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{MB}}\\begin{pmatrix} 3 - x \\\\ -y \\end{pmatrix}$, donc $(-1 - x)(3 - x) + y^2 = 0$.",
+        "On développe : $x^2 - 2x - 3 + y^2 = 0$.",
+        "Or $x^2 - 2x = (x - 1)^2 - 1$, d'où $(x - 1)^2 + y^2 = 4$."
+      ],
+      "reponse": "$(x - 1)^2 + y^2 = 4$ : centre $(1\\,;0)$, rayon $2$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "mediatrice",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation de la médiatrice du segment $[\\mathrm{AB}]$ avec $\\mathrm{A}$$(-1\\,;2)$ et $\\mathrm{B}$$(3\\,;6)$.",
+      "corrige": [
+        "La médiatrice passe par le milieu $\\mathrm{I}$$(1\\,;4)$ de $[\\mathrm{AB}]$ et admet $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ 4 \\end{pmatrix}$ pour vecteur normal.",
+        "$4(x - 1) + 4(y - 4) = 0$, soit $4x + 4y - 20 = 0$.",
+        "En divisant par $4$ : $x + y - 5 = 0$."
+      ],
+      "reponse": "$x + y - 5 = 0$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "forme-developpee",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer l'ensemble des points $\\mathrm{M}(x\\,;y)$ tels que $x^2 + y^2 - 2x + 4y + 5 = 0$.",
+      "corrige": [
+        "$x^2 - 2x = (x - 1)^2 - 1$ et $y^2 + 4y = (y + 2)^2 - 4$.",
+        "L'équation devient $(x - 1)^2 + (y + 2)^2 = 1 + 4 - 5 = 0$.",
+        "Une somme de deux carrés est nulle si et seulement si les deux carrés sont nuls : $x = 1$ et $y = -2$."
+      ],
+      "reponse": "Un seul point : $(1\\,;-2)$. Ce n'est pas un cercle."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "forme-developpee",
+      "enonce": "Le plan est muni d'un repère orthonormé. L'équation $x^2 + y^2 + 2x - 6y + 15 = 0$ est-elle celle d'un cercle ?",
+      "corrige": [
+        "$x^2 + 2x = (x + 1)^2 - 1$ et $y^2 - 6y = (y - 3)^2 - 9$.",
+        "L'équation devient $(x + 1)^2 + (y - 3)^2 = 1 + 9 - 15 = -5$.",
+        "Une somme de carrés ne peut pas être strictement négative : aucun point ne convient."
+      ],
+      "reponse": "Non : l'ensemble des points est vide."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "cercle-diametre",
+      "enonce": "Le plan est muni d'un repère orthonormé. Soit $\\mathrm{A}$$(1\\,;2)$, $\\mathrm{B}$$(5\\,;4)$ et $\\mathrm{C}$$(2\\,;5)$. Montrer que $\\mathrm{C}$ appartient au cercle de diamètre $[\\mathrm{AB}]$. Que peut-on en déduire pour le triangle $\\mathrm{ABC}$ ?",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{CA}}\\begin{pmatrix} -1 \\\\ -3 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{CB}}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{CA}} \\cdot \\overrightarrow{\\mathrm{CB}} = -1 \\times 3 + (-3) \\times (-1) = -3 + 3 = 0$ : $\\mathrm{C}$ est sur le cercle de diamètre $[\\mathrm{AB}]$.",
+        "Les vecteurs sont orthogonaux : le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{C}$."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{CA}} \\cdot \\overrightarrow{\\mathrm{CB}} = 0$ : $\\mathrm{C}$ est sur le cercle et $\\mathrm{ABC}$ est rectangle en $\\mathrm{C}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "cercle-diametre",
+      "enonce": "Le plan est muni d'un repère orthonormé. Soit $\\mathrm{A}$$(0\\,;2)$ et $\\mathrm{B}$$(4\\,;0)$. Déterminer une équation du cercle de diamètre $[\\mathrm{AB}]$, puis son centre et son rayon.",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = (0 - x)(4 - x) + (2 - y)(0 - y) = x^2 - 4x + y^2 - 2y$.",
+        "$x^2 - 4x = (x - 2)^2 - 4$ et $y^2 - 2y = (y - 1)^2 - 1$, d'où $(x - 2)^2 + (y - 1)^2 = 5$.",
+        "Contrôle : le centre $(2\\,;1)$ est bien le milieu de $[\\mathrm{AB}]$."
+      ],
+      "reponse": "$(x - 2)^2 + (y - 1)^2 = 5$ : centre $(2\\,;1)$, rayon $\\sqrt{5}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "tangente-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Le cercle $\\mathscr{C}$ a pour centre $\\Omega(1\\,;1)$ et passe par $\\mathrm{A}$$(4\\,;5)$. La tangente à $\\mathscr{C}$ en $\\mathrm{A}$ est la droite passant par $\\mathrm{A}$ et perpendiculaire au rayon $[\\Omega\\mathrm{A}]$. Déterminer son équation.",
+      "corrige": [
+        "La tangente admet $\\overrightarrow{\\Omega\\mathrm{A}}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ pour vecteur normal.",
+        "$3(x - 4) + 4(y - 5) = 0$, soit $3x + 4y - 32 = 0$."
+      ],
+      "reponse": "$3x + 4y - 32 = 0$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "tangente-cercle",
+      "enonce": "Le plan est muni d'un repère orthonormé. Vérifier que $\\mathrm{A}$$(3\\,;-4)$ appartient au cercle $x^2 + y^2 = 25$, puis déterminer une équation de la tangente au cercle en $\\mathrm{A}$ (droite passant par $\\mathrm{A}$ et perpendiculaire au rayon $[\\mathrm{OA}]$).",
+      "corrige": [
+        "$3^2 + (-4)^2 = 9 + 16 = 25$ : $\\mathrm{A}$ est sur le cercle de centre $\\mathrm{O}$ et de rayon $5$.",
+        "$\\overrightarrow{\\mathrm{OA}}\\begin{pmatrix} 3 \\\\ -4 \\end{pmatrix}$ est normal à la tangente : $3(x - 3) - 4(y + 4) = 0$.",
+        "Soit $3x - 4y - 25 = 0$."
+      ],
+      "reponse": "$3x - 4y - 25 = 0$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "mediatrice",
+      "enonce": "Le plan est muni d'un repère orthonormé. Soit $\\mathrm{O}$$(0\\,;0)$, $\\mathrm{A}$$(4\\,;0)$ et $\\mathrm{B}$$(0\\,;6)$. Déterminer le centre et le rayon du cercle circonscrit au triangle $\\mathrm{OAB}$ en utilisant deux médiatrices.",
+      "corrige": [
+        "La médiatrice de $[\\mathrm{OA}]$ passe par $(2\\,;0)$ avec le vecteur normal $\\begin{pmatrix} 4 \\\\ 0 \\end{pmatrix}$ : c'est $x = 2$. Celle de $[\\mathrm{OB}]$ est $y = 3$.",
+        "Le centre est leur point d'intersection $\\Omega(2\\,;3)$.",
+        "Rayon : $\\Omega\\mathrm{O} = \\sqrt{2^2 + 3^2} = \\sqrt{13}$."
+      ],
+      "reponse": "Centre $(2\\,;3)$, rayon $\\sqrt{13}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "reperage-configuration",
+      "enonce": "$\\mathrm{ABCD}$ est un carré de côté $4$. $\\mathrm{I}$ est le milieu de $[\\mathrm{BC}]$ et $\\mathrm{J}$ le milieu de $[\\mathrm{CD}]$. À l'aide du repère orthonormé d'origine $\\mathrm{A}$ dans lequel $\\mathrm{B}$$(4\\,;0)$ et $\\mathrm{D}$$(0\\,;4)$, démontrer que les droites $(\\mathrm{AI})$ et $(\\mathrm{BJ})$ sont perpendiculaires.",
+      "corrige": [
+        "Coordonnées : $\\mathrm{A}(0\\,;0)$, $\\mathrm{B}(4\\,;0)$, $\\mathrm{C}(4\\,;4)$, $\\mathrm{I}(4\\,;2)$ et $\\mathrm{J}(2\\,;4)$.",
+        "$\\overrightarrow{\\mathrm{AI}}\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{BJ}}\\begin{pmatrix} -2 \\\\ 4 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AI}} \\cdot \\overrightarrow{\\mathrm{BJ}} = 4 \\times (-2) + 2 \\times 4 = 0$ : les droites sont perpendiculaires."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{AI}} \\cdot \\overrightarrow{\\mathrm{BJ}} = 0$, donc $(\\mathrm{AI}) \\perp (\\mathrm{BJ})$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "reperage-configuration",
+      "enonce": "$\\mathrm{ABCD}$ est un rectangle avec $\\mathrm{AB} = 6$ cm et $\\mathrm{AD} = 3$ cm. En choisissant un repère orthonormé adapté, déterminer si ses diagonales sont perpendiculaires.",
+      "corrige": [
+        "Repère d'origine $\\mathrm{A}$, unité le cm, axes portés par $(\\mathrm{AB})$ et $(\\mathrm{AD})$ : $\\mathrm{B}(6\\,;0)$, $\\mathrm{C}(6\\,;3)$, $\\mathrm{D}(0\\,;3)$.",
+        "$\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 6 \\\\ 3 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{BD}}\\begin{pmatrix} -6 \\\\ 3 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{BD}} = -36 + 9 = -27 \\neq 0$."
+      ],
+      "reponse": "Non, les diagonales ne sont pas perpendiculaires (le produit scalaire vaut $-27$)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "reperage-configuration",
+      "enonce": "$\\mathrm{ABC}$ est un triangle rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = b$ et $\\mathrm{AC} = c$. $\\mathrm{M}$ est le milieu de l'hypoténuse $[\\mathrm{BC}]$. À l'aide d'un repère orthonormé d'origine $\\mathrm{A}$, démontrer que $\\mathrm{MA} = \\mathrm{MB} = \\mathrm{MC}$.",
+      "corrige": [
+        "On place $\\mathrm{A}(0\\,;0)$, $\\mathrm{B}(b\\,;0)$ et $\\mathrm{C}(0\\,;c)$ ; alors $\\mathrm{M}\\left(\\dfrac{b}{2}\\,;\\dfrac{c}{2}\\right)$.",
+        "$\\mathrm{MA} = \\sqrt{\\dfrac{b^2}{4} + \\dfrac{c^2}{4}} = \\dfrac{\\sqrt{b^2 + c^2}}{2}$, et $\\mathrm{MB} = \\mathrm{MC} = \\dfrac{\\mathrm{BC}}{2} = \\dfrac{\\sqrt{b^2 + c^2}}{2}$ car $\\mathrm{M}$ est le milieu de $[\\mathrm{BC}]$.",
+        "Les trois distances sont égales : $\\mathrm{M}$ est le centre du cercle circonscrit."
+      ],
+      "reponse": "$\\mathrm{MA} = \\mathrm{MB} = \\mathrm{MC} = \\dfrac{\\sqrt{b^2 + c^2}}{2}$."
     }
   ]
 }

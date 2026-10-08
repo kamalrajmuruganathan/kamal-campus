@@ -36,7 +36,7 @@
         "$2e^{a+b}$"
       ],
       "reponse": 1,
-      "explication": "Dans un produit d'exponentielles, les exposants s'ajoutent : $e^{a}\\times e^{b}=e^{a+b}$. Le piège du choix 1 est de multiplier les exposants au lieu de les additionner."
+      "explication": "Dans un produit d'exponentielles, les exposants s'ajoutent : $e^{a}\\times e^{b}=e^{a+b}$. Le piège $e^{ab}$ est de multiplier les exposants au lieu de les additionner."
     },
     {
       "id": 3,
@@ -50,7 +50,7 @@
         "$4\\ln 5$"
       ],
       "reponse": 0,
-      "explication": "$20 = 2^{2}\\times 5$, donc $\\ln 20 = \\ln(2^{2}) + \\ln 5 = 2\\ln 2 + \\ln 5$. Le piège du choix 2 : le logarithme d'un produit est une somme, jamais un produit de logarithmes."
+      "explication": "$20 = 2^{2}\\times 5$, donc $\\ln 20 = \\ln(2^{2}) + \\ln 5 = 2\\ln 2 + \\ln 5$. Le piège $\\ln 2 \\times \\ln 10$ : le logarithme d'un produit est une somme, jamais un produit de logarithmes."
     },
     {
       "id": 4,
@@ -64,7 +64,7 @@
         "$\\ln 4 \\times \\ln a$"
       ],
       "reponse": 2,
-      "explication": "$\\ln(a^{n}) = n\\ln a$ : l'exposant descend comme coefficient devant le $\\ln$. Le piège du choix 2 est de mettre le $\\ln$ à la puissance $4$ au lieu de le multiplier par $4$."
+      "explication": "$\\ln(a^{n}) = n\\ln a$ : l'exposant descend comme coefficient devant le $\\ln$. Le piège $(\\ln a)^{4}$ est de mettre le $\\ln$ à la puissance $4$ au lieu de le multiplier par $4$."
     },
     {
       "id": 5,
@@ -78,7 +78,7 @@
         "$-\\dfrac{1}{3}e^{-3x}$"
       ],
       "reponse": 1,
-      "explication": "$f$ est de la forme $e^{u}$ avec $u=-3x$, donc $f'=u'e^{u}=-3e^{-3x}$. Le piège du choix 1 est d'oublier le facteur $u'=-3$ apporté par la dérivée de la composée."
+      "explication": "$f$ est de la forme $e^{u}$ avec $u=-3x$, donc $f'=u'e^{u}=-3e^{-3x}$. Le piège $e^{-3x}$ est d'oublier le facteur $u'=-3$ apporté par la dérivée de la composée."
     },
     {
       "id": 6,
@@ -92,7 +92,7 @@
         "$+\\infty$"
       ],
       "reponse": 1,
-      "explication": "En $-\\infty$, $e^{x}$ tend vers $0$ par valeurs positives : la droite $y=0$ est asymptote horizontale. Le piège du choix 1 est de croire que $e^{x}$ devient négatif, or l'exponentielle est toujours strictement positive."
+      "explication": "En $-\\infty$, $e^{x}$ tend vers $0$ par valeurs positives : la droite $y=0$ est asymptote horizontale. Le piège $-\\infty$ est de croire que $e^{x}$ devient négatif, or l'exponentielle est toujours strictement positive."
     },
     {
       "id": 7,
@@ -120,7 +120,7 @@
         "$x = \\ln 7 - 2$"
       ],
       "reponse": 2,
-      "explication": "On applique $\\ln$ (réciproque de $\\exp$) : $\\ln(e^{2x}) = 2x = \\ln 7$, donc $x = \\dfrac{\\ln 7}{2}$. Le piège du choix 2 : multiplier par $2$ au lieu de diviser, en oubliant que le $2$ multipliait l'inconnue dans l'exposant."
+      "explication": "On applique $\\ln$ (réciproque de $\\exp$) : $\\ln(e^{2x}) = 2x = \\ln 7$, donc $x = \\dfrac{\\ln 7}{2}$. Le piège $x = 2\\ln 7$ : multiplier par $2$ au lieu de diviser, en oubliant que le $2$ multipliait l'inconnue dans l'exposant."
     },
     {
       "id": 9,
@@ -134,7 +134,7 @@
         "$]0\\,;2]$"
       ],
       "reponse": 2,
-      "explication": "$\\ln$ est strictement croissante, elle conserve le sens : $\\ln x \\leqslant 2 = \\ln(e^{2}) \\iff x \\leqslant e^{2}$. Il faut aussi $x>0$ (existence), d'où $]0\\,;e^{2}]$. Le piège du choix 1 : oublier la condition $x>0$."
+      "explication": "$\\ln$ est strictement croissante, elle conserve le sens : $\\ln x \\leqslant 2 = \\ln(e^{2}) \\iff x \\leqslant e^{2}$. Il faut aussi $x>0$ (existence), d'où $]0\\,;e^{2}]$. Le piège $]-\\infty\\,;e^{2}]$ : oublier la condition $x>0$."
     },
     {
       "id": 10,
@@ -190,7 +190,7 @@
         "$5$"
       ],
       "reponse": 1,
-      "explication": "$\\ln\\!\\left(\\dfrac{1}{5}\\right) = \\ln 1 - \\ln 5 = 0 - \\ln 5 = -\\ln 5$. Le piège du choix 3 est de confondre l'inverse d'un nombre avec l'inverse de son logarithme : un signe moins se cache dans le quotient, pas une fraction."
+      "explication": "$\\ln\\!\\left(\\dfrac{1}{5}\\right) = \\ln 1 - \\ln 5 = 0 - \\ln 5 = -\\ln 5$. Le piège $\\dfrac{1}{\\ln 5}$ est de confondre l'inverse d'un nombre avec l'inverse de son logarithme : un signe moins se cache dans le quotient, pas une fraction."
     },
     {
       "id": 14,
@@ -218,7 +218,7 @@
         "$2x\\ln(x^{2}+1)$"
       ],
       "reponse": 0,
-      "explication": "Avec $u = x^{2}+1 > 0$ et $u' = 2x$, on a $(\\ln u)' = \\dfrac{u'}{u} = \\dfrac{2x}{x^{2}+1}$. Le piège du choix 2 est d'oublier le facteur $u' = 2x$ au numérateur."
+      "explication": "Avec $u = x^{2}+1 > 0$ et $u' = 2x$, on a $(\\ln u)' = \\dfrac{u'}{u} = \\dfrac{2x}{x^{2}+1}$. Le piège $\\dfrac{1}{x^{2}+1}$ est d'oublier le facteur $u' = 2x$ au numérateur."
     },
     {
       "id": 16,
@@ -260,7 +260,7 @@
         "$12$"
       ],
       "reponse": 1,
-      "explication": "On applique $\\ln$ : $n\\ln 0{,}8 < \\ln 0{,}1$. En divisant par $\\ln 0{,}8 < 0$, le sens s'INVERSE : $n > \\dfrac{\\ln 0{,}1}{\\ln 0{,}8} \\approx \\dfrac{-2{,}30}{-0{,}22} \\approx 10{,}5$, d'où $n = 11$. Oublier d'inverser le sens est le piège reine des problèmes de décroissance."
+      "explication": "On applique $\\ln$ : $n\\ln 0{,}8 < \\ln 0{,}1$. En divisant par $\\ln 0{,}8 < 0$, le sens s'INVERSE : $n > \\dfrac{\\ln 0{,}1}{\\ln 0{,}8} \\approx \\dfrac{-2{,}30}{-0{,}22} \\approx 10{,}5$, d'où $n = 11$. Oublier d'inverser le sens est le piège classique des problèmes de décroissance."
     },
     {
       "id": 19,

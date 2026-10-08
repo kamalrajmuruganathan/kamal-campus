@@ -10,7 +10,8 @@
 import { useTheme } from '../useTheme';
 import { useState, useMemo, useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
-import { listerDemandesRecues } from '../cloud/social';
+import { listerDemandesRecues, ecouterAmities, publierScoreSiBesoin } from '../cloud/social';
+import { tacheDuJour } from '../../lib/controle';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -42,11 +43,21 @@ export default function Accueil({ navigation }) {
 
   // Demandes d'ami en attente : rechargées à chaque retour sur l'accueil (pastille sur « Amis »).
   const [nbDemandes, setNbDemandes] = useState(0);
+  // Mise à jour en direct (temps réel) + filet de sécurité toutes les 60 s tant que l'accueil est affiché.
   useFocusEffect(useCallback(() => {
     let actif = true;
-    listerDemandesRecues().then((d) => { if (actif) setNbDemandes(d.length); }).catch(() => {});
-    return () => { actif = false; };
+    const charger = () => listerDemandesRecues().then((d) => { if (actif) setNbDemandes(d.length); }).catch(() => {});
+    charger();
+    const arreter = ecouterAmities(charger);
+    const minuterie = setInterval(charger, 60000);
+    return () => { actif = false; arreter(); clearInterval(minuterie); };
   }, []));
+
+  // XP de la semaine publiés pour le classement entre amis (au plus toutes les 5 minutes).
+  useFocusEffect(useCallback(() => { publierScoreSiBesoin(profil); }, [profil]));
+
+  // Contrôle à préparer : tâche du jour du plan de révision le plus proche.
+  const ctrl = useMemo(() => tacheDuJour(profil, jourA), [profil, jourA]);
 
   const listeNiveaux = niveaux();
   const totalQuestions = CHAPITRES.reduce((s, c) => s + c.nbQuestions, 0);
@@ -102,6 +113,27 @@ export default function Accueil({ navigation }) {
               <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.minuscule, opacity: 0.9, marginTop: 1 }}>{action.sousTitre}</Text>
             </View>
             <Text style={{ color: t.couleur.accentTexte, fontSize: 22 }}>›</Text>
+          </Pressable>
+        )}
+
+        {/* Contrôle à préparer — tâche du jour du plan « Je révise mon contrôle » */}
+        {ctrl && (
+          <Pressable
+            onPress={() => navigation.navigate(ctrl.cible.ecran, ctrl.cible.params)}
+            accessibilityRole="button"
+            accessibilityLabel={ctrl.texte}
+            style={({ pressed }) => [{
+              marginTop: t.espace.m, borderRadius: t.rayon.l, padding: t.espace.l,
+              backgroundColor: t.couleur.surface, borderWidth: 2, borderColor: t.couleur.accent,
+              opacity: pressed ? 0.85 : 1, flexDirection: 'row', alignItems: 'center', gap: t.espace.m,
+            }]}
+          >
+            <Text style={{ fontSize: 28 }}>📝</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: t.couleur.accent, fontSize: t.police.minuscule, fontWeight: '800', letterSpacing: 0.5, textTransform: 'uppercase' }}>{ctrl.titre}</Text>
+              <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '700', marginTop: 2 }}>{ctrl.libelle}</Text>
+            </View>
+            <Text style={{ color: t.couleur.accent, fontSize: 22 }}>›</Text>
           </Pressable>
         )}
 
@@ -339,6 +371,30 @@ export default function Accueil({ navigation }) {
             sousTitre="Grimpe du Bronze au Diamant en gagnant des XP chaque semaine"
             couleur={t.couleur.alerte}
             onPress={() => navigation.navigate('Ligue')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="📝 Je révise mon contrôle"
+            sousTitre="Choisis tes chapitres et la date : un programme jour par jour"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Controle')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="🏆 Classement entre amis"
+            sousTitre="Qui a gagné le plus d'XP cette semaine ?"
+            couleur={t.couleur.alerte}
+            onPress={() => navigation.navigate('Classement')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="👨‍👩‍👧 Espace parent"
+            sousTitre="Un parent peut suivre ta progression avec un code"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('EspaceParent')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte

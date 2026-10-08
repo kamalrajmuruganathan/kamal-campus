@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probabilites-conditionnelles",
       "enonce": "Une entreprise assemble des vélos électriques sur deux lignes de production. La ligne 1 assemble $60\\,\\%$ des vélos, la ligne 2 les $40\\,\\%$ restants. Un vélo issu de la ligne 1 présente un défaut avec une probabilité de $0{,}05$ ; un vélo issu de la ligne 2 avec une probabilité de $0{,}02$. On prélève un vélo au hasard en sortie d'usine. On note $\\mathrm{L_1}$ « le vélo vient de la ligne 1 », $\\mathrm{L_2}$ « le vélo vient de la ligne 2 » et $\\mathrm{D}$ « le vélo est défectueux ». 1. Construire l'arbre pondéré traduisant la situation. 2. Calculer la probabilité qu'un vélo provienne de la ligne 1 et soit défectueux. 3. Montrer que la probabilité qu'un vélo soit défectueux est $P(\\mathrm{D}) = 0{,}038$. 4. Un vélo prélevé présente un défaut. Quelle est la probabilité qu'il provienne de la ligne 2 ? Interpréter. 5. Un contrôleur prélève $3$ vélos au hasard, de façon indépendante. Calculer la probabilité qu'aucun ne soit défectueux, puis la probabilité qu'au moins un le soit.",
       "corrige": [
@@ -138,6 +138,471 @@
         "5. Chaque vélo est défectueux avec la probabilité $0{,}038$, donc non défectueux avec la probabilité $1 - 0{,}038 = 0{,}962$. Les $3$ prélèvements étant indépendants, $P(\\text{aucun défectueux}) = 0{,}962^3 \\approx 0{,}890$. Par événement contraire, $P(\\text{au moins un défectueux}) = 1 - 0{,}962^3 \\approx 1 - 0{,}890 = 0{,}110$."
       ],
       "reponse": "2. $P(\\mathrm{L_1} \\cap \\mathrm{D}) = 0{,}03$. 3. $P(\\mathrm{D}) = 0{,}038$. 4. $P_\\mathrm{D}(\\mathrm{L_2}) = \\dfrac{0{,}008}{0{,}038} \\approx 0{,}211$. 5. $P(\\text{aucun}) = 0{,}962^3 \\approx 0{,}890$ et $P(\\text{au moins un}) \\approx 0{,}110$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Calculer $P_\\mathrm{A}(\\mathrm{B})$.",
+      "corrige": [
+        "Par définition, $P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})}$.",
+        "$P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{0{,}2}{0{,}5} = 0{,}4$."
+      ],
+      "reponse": "$P_\\mathrm{A}(\\mathrm{B}) = 0{,}4$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On lance un dé équilibré à six faces. Sachant que le résultat est pair, quelle est la probabilité d'avoir obtenu $6$ ?",
+      "corrige": [
+        "Sachant que le résultat est pair, il ne reste que trois issues équiprobables : $2$, $4$ et $6$.",
+        "Une seule d'entre elles est $6$ : la probabilité est $\\dfrac{1}{3}$.",
+        "Avec la formule : $\\dfrac{P(\\text{« 6 »})}{P(\\text{« pair »})} = \\dfrac{1/6}{1/2} = \\dfrac{1}{3}$."
+      ],
+      "reponse": "$\\dfrac{1}{3}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "arbre",
+      "enonce": "Dans un arbre pondéré, on lit $P(\\mathrm{A}) = 0{,}35$ et $P_\\mathrm{A}(\\mathrm{B}) = 0{,}8$. Compléter : $P(\\overline{\\mathrm{A}}) = \\ldots$ et $P_\\mathrm{A}(\\overline{\\mathrm{B}}) = \\ldots$",
+      "corrige": [
+        "La somme des probabilités des branches issues d'un même nœud vaut $1$.",
+        "$P(\\overline{\\mathrm{A}}) = 1 - 0{,}35 = 0{,}65$ et $P_\\mathrm{A}(\\overline{\\mathrm{B}}) = 1 - 0{,}8 = 0{,}2$."
+      ],
+      "reponse": "$P(\\overline{\\mathrm{A}}) = 0{,}65$ et $P_\\mathrm{A}(\\overline{\\mathrm{B}}) = 0{,}2$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "independance",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}5$, $P(\\mathrm{B}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils indépendants ?",
+      "corrige": [
+        "$P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}5 \\times 0{,}4 = 0{,}2$.",
+        "C'est égal à $P(\\mathrm{A} \\cap \\mathrm{B})$."
+      ],
+      "reponse": "Oui, $\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On tire au hasard une carte d'un jeu de $32$ cartes ($8$ cartes par couleur, dont un roi). On note $\\mathrm{C}$ : « la carte est un cœur » et $\\mathrm{R}$ : « la carte est un roi ». Calculer $P_\\mathrm{C}(\\mathrm{R})$ et $P_\\mathrm{R}(\\mathrm{C})$.",
+      "corrige": [
+        "$P(\\mathrm{C} \\cap \\mathrm{R}) = \\dfrac{1}{32}$ (le roi de cœur), $P(\\mathrm{C}) = \\dfrac{8}{32}$ et $P(\\mathrm{R}) = \\dfrac{4}{32}$.",
+        "$P_\\mathrm{C}(\\mathrm{R}) = \\dfrac{1/32}{8/32} = \\dfrac{1}{8}$ : parmi les $8$ cœurs, un seul est un roi.",
+        "$P_\\mathrm{R}(\\mathrm{C}) = \\dfrac{1/32}{4/32} = \\dfrac{1}{4}$ : parmi les $4$ rois, un seul est un cœur."
+      ],
+      "reponse": "$P_\\mathrm{C}(\\mathrm{R}) = \\dfrac{1}{8}$ et $P_\\mathrm{R}(\\mathrm{C}) = \\dfrac{1}{4}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "tableau",
+      "enonce": "Dans un lycée, $250$ élèves de première se répartissent ainsi : $140$ filles, dont $84$ pratiquent un sport en club, et $110$ garçons, dont $66$ pratiquent un sport en club. On choisit un élève au hasard. On note $\\mathrm{F}$ : « c'est une fille » et $\\mathrm{S}$ : « il pratique un sport en club ». Calculer $P_\\mathrm{F}(\\mathrm{S})$ puis $P_\\mathrm{S}(\\mathrm{F})$.",
+      "corrige": [
+        "Effectifs : $84$ filles sportives et $84 + 66 = 150$ élèves sportifs.",
+        "$P_\\mathrm{F}(\\mathrm{S}) = \\dfrac{84}{140} = 0{,}6$ : on se restreint aux $140$ filles.",
+        "$P_\\mathrm{S}(\\mathrm{F}) = \\dfrac{84}{150} = 0{,}56$ : on se restreint aux $150$ sportifs."
+      ],
+      "reponse": "$P_\\mathrm{F}(\\mathrm{S}) = 0{,}6$ et $P_\\mathrm{S}(\\mathrm{F}) = 0{,}56$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "tableau",
+      "enonce": "Une salle de sport compte $200$ adhérents : $80$ viennent le matin et $120$ le soir. Parmi ceux du matin, $36$ prennent un cours collectif ; parmi ceux du soir, $24$. On choisit un adhérent au hasard. Calculer la probabilité qu'il vienne le matin sachant qu'il prend un cours collectif.",
+      "corrige": [
+        "Nombre total d'adhérents qui prennent un cours collectif : $36 + 24 = 60$.",
+        "On se restreint à ces $60$ adhérents : $36$ viennent le matin.",
+        "$P = \\dfrac{36}{60} = 0{,}6$."
+      ],
+      "reponse": "$0{,}6$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "probabilites-composees",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}7$ et $P_\\mathrm{A}(\\mathrm{B}) = 0{,}2$. Calculer $P(\\mathrm{A} \\cap \\mathrm{B})$.",
+      "corrige": [
+        "Formule des probabilités composées : $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B})$.",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}7 \\times 0{,}2 = 0{,}14$."
+      ],
+      "reponse": "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}14$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "probabilites-composees",
+      "enonce": "Une urne contient $5$ boules rouges et $3$ boules vertes. On tire successivement deux boules, sans remise. Calculer la probabilité d'obtenir deux boules rouges.",
+      "corrige": [
+        "Premier tirage : $P(\\mathrm{R}_1) = \\dfrac{5}{8}$.",
+        "Sachant qu'une rouge est sortie, il reste $4$ rouges sur $7$ boules : $P_{\\mathrm{R}_1}(\\mathrm{R}_2) = \\dfrac{4}{7}$.",
+        "$P(\\mathrm{R}_1 \\cap \\mathrm{R}_2) = \\dfrac{5}{8} \\times \\dfrac{4}{7} = \\dfrac{20}{56} = \\dfrac{5}{14}$."
+      ],
+      "reponse": "$\\dfrac{5}{14}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "probabilites-composees",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}6$ et $P_\\mathrm{A}(\\overline{\\mathrm{B}}) = 0{,}25$. Calculer $P_\\mathrm{A}(\\mathrm{B})$ puis $P(\\mathrm{A} \\cap \\mathrm{B})$.",
+      "corrige": [
+        "Les branches issues du nœud $\\mathrm{A}$ ont une somme égale à $1$ : $P_\\mathrm{A}(\\mathrm{B}) = 1 - 0{,}25 = 0{,}75$.",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}6 \\times 0{,}75 = 0{,}45$."
+      ],
+      "reponse": "$P_\\mathrm{A}(\\mathrm{B}) = 0{,}75$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}45$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "arbre",
+      "enonce": "Un matin donné, il pleut avec une probabilité de $0{,}3$. S'il pleut, Léo prend le bus avec une probabilité de $0{,}9$ ; sinon, il le prend avec une probabilité de $0{,}2$. On note $\\mathrm{R}$ : « il pleut » et $\\mathrm{B}$ : « Léo prend le bus ». Construire l'arbre, puis calculer $P(\\mathrm{R} \\cap \\mathrm{B})$ et $P(\\mathrm{B})$.",
+      "corrige": [
+        "Arbre : $P(\\mathrm{R}) = 0{,}3$, $P(\\overline{\\mathrm{R}}) = 0{,}7$, $P_\\mathrm{R}(\\mathrm{B}) = 0{,}9$, $P_{\\overline{\\mathrm{R}}}(\\mathrm{B}) = 0{,}2$.",
+        "$P(\\mathrm{R} \\cap \\mathrm{B}) = 0{,}3 \\times 0{,}9 = 0{,}27$.",
+        "$P(\\mathrm{B}) = 0{,}27 + 0{,}7 \\times 0{,}2 = 0{,}27 + 0{,}14 = 0{,}41$."
+      ],
+      "reponse": "$P(\\mathrm{R} \\cap \\mathrm{B}) = 0{,}27$ et $P(\\mathrm{B}) = 0{,}41$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "arbre",
+      "enonce": "Un arbre pondéré indique $P(\\mathrm{A}) = 0{,}6$, $P_\\mathrm{A}(\\mathrm{B}) = 0{,}3$ et $P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}5$. Calculer les probabilités des deux chemins menant à $\\mathrm{B}$, puis $P(\\mathrm{B})$.",
+      "corrige": [
+        "Chemin $\\mathrm{A}$ puis $\\mathrm{B}$ : $0{,}6 \\times 0{,}3 = 0{,}18$.",
+        "Chemin $\\overline{\\mathrm{A}}$ puis $\\mathrm{B}$ : $P(\\overline{\\mathrm{A}}) = 0{,}4$, donc $0{,}4 \\times 0{,}5 = 0{,}2$.",
+        "$P(\\mathrm{B}) = 0{,}18 + 0{,}2 = 0{,}38$."
+      ],
+      "reponse": "$0{,}18$ et $0{,}2$ ; $P(\\mathrm{B}) = 0{,}38$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "probabilites-totales",
+      "enonce": "Un magasin achète $70\\,\\%$ de ses ampoules au fournisseur $\\mathrm{F}_1$ et $30\\,\\%$ au fournisseur $\\mathrm{F}_2$. $3\\,\\%$ des ampoules de $\\mathrm{F}_1$ et $6\\,\\%$ de celles de $\\mathrm{F}_2$ sont défectueuses. Calculer la probabilité qu'une ampoule prise au hasard soit défectueuse (événement $\\mathrm{D}$).",
+      "corrige": [
+        "Formule des probabilités totales : $P(\\mathrm{D}) = P(\\mathrm{F}_1) P_{\\mathrm{F}_1}(\\mathrm{D}) + P(\\mathrm{F}_2) P_{\\mathrm{F}_2}(\\mathrm{D})$.",
+        "$P(\\mathrm{D}) = 0{,}7 \\times 0{,}03 + 0{,}3 \\times 0{,}06 = 0{,}021 + 0{,}018 = 0{,}039$."
+      ],
+      "reponse": "$P(\\mathrm{D}) = 0{,}039$, soit $3{,}9\\,\\%$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "independance",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}3$, $P(\\mathrm{B}) = 0{,}6$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils indépendants ?",
+      "corrige": [
+        "$P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}3 \\times 0{,}6 = 0{,}18$.",
+        "$0{,}18 \\neq 0{,}2 = P(\\mathrm{A} \\cap \\mathrm{B})$."
+      ],
+      "reponse": "Non, ils ne sont pas indépendants."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "independance",
+      "enonce": "$\\mathrm{A}$ et $\\mathrm{B}$ sont deux événements indépendants avec $P(\\mathrm{A}) = 0{,}3$ et $P(\\mathrm{B}) = 0{,}5$. Calculer $P(\\mathrm{A} \\cap \\mathrm{B})$ puis $P(\\mathrm{A} \\cup \\mathrm{B})$.",
+      "corrige": [
+        "Par indépendance : $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}3 \\times 0{,}5 = 0{,}15$.",
+        "$P(\\mathrm{A} \\cup \\mathrm{B}) = P(\\mathrm{A}) + P(\\mathrm{B}) - P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}3 + 0{,}5 - 0{,}15 = 0{,}65$."
+      ],
+      "reponse": "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}15$ et $P(\\mathrm{A} \\cup \\mathrm{B}) = 0{,}65$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "succession-epreuves-independantes",
+      "enonce": "On lance un dé équilibré à six faces puis une pièce équilibrée, de façon indépendante. Calculer la probabilité d'obtenir $6$ et pile.",
+      "corrige": [
+        "Les deux épreuves sont indépendantes : on multiplie les probabilités.",
+        "$P = \\dfrac{1}{6} \\times \\dfrac{1}{2} = \\dfrac{1}{12}$."
+      ],
+      "reponse": "$\\dfrac{1}{12}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "succession-epreuves-independantes",
+      "enonce": "On lance deux dés équilibrés à six faces. Calculer la probabilité que la somme soit égale à $12$, puis qu'elle soit égale à $11$.",
+      "corrige": [
+        "Il y a $6 \\times 6 = 36$ couples équiprobables (on peut dresser un tableau à double entrée).",
+        "Somme $12$ : seul le couple $(6\\,;6)$, donc $P = \\dfrac{1}{36}$.",
+        "Somme $11$ : couples $(5\\,;6)$ et $(6\\,;5)$, donc $P = \\dfrac{2}{36} = \\dfrac{1}{18}$."
+      ],
+      "reponse": "$\\dfrac{1}{36}$ et $\\dfrac{1}{18}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "bernoulli",
+      "enonce": "On répète deux fois, de façon indépendante, une épreuve de Bernoulli de paramètre $p = 0{,}3$. Calculer la probabilité d'obtenir $0$, $1$ puis $2$ succès.",
+      "corrige": [
+        "$0$ succès : chemin ÉÉ, $0{,}7 \\times 0{,}7 = 0{,}49$.",
+        "$2$ succès : chemin SS, $0{,}3 \\times 0{,}3 = 0{,}09$.",
+        "$1$ succès : chemins SÉ et ÉS, $2 \\times 0{,}3 \\times 0{,}7 = 0{,}42$. Contrôle : $0{,}49 + 0{,}42 + 0{,}09 = 1$."
+      ],
+      "reponse": "$0{,}49$ ; $0{,}42$ ; $0{,}09$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "bernoulli",
+      "enonce": "Un QCM comporte $3$ questions ayant chacune $4$ réponses possibles, dont une seule est juste. Un élève répond au hasard à chaque question. Calculer la probabilité qu'il ait tout juste, puis qu'il ait tout faux.",
+      "corrige": [
+        "Chaque question est une épreuve de Bernoulli de paramètre $p = \\dfrac{1}{4}$, et les réponses sont indépendantes.",
+        "Tout juste : $\\left(\\dfrac{1}{4}\\right)^3 = \\dfrac{1}{64}$.",
+        "Tout faux : $\\left(\\dfrac{3}{4}\\right)^3 = \\dfrac{27}{64}$."
+      ],
+      "reponse": "$\\dfrac{1}{64}$ et $\\dfrac{27}{64}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}4$, $P(\\mathrm{B}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}1$. Calculer $P_\\mathrm{A}(\\mathrm{B})$ et $P_\\mathrm{B}(\\mathrm{A})$. Que remarque-t-on ?",
+      "corrige": [
+        "$P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{0{,}1}{0{,}4} = 0{,}25$.",
+        "$P_\\mathrm{B}(\\mathrm{A}) = \\dfrac{0{,}1}{0{,}5} = 0{,}2$.",
+        "Les deux probabilités sont différentes : on ne divise pas par la même probabilité."
+      ],
+      "reponse": "$P_\\mathrm{A}(\\mathrm{B}) = 0{,}25$ et $P_\\mathrm{B}(\\mathrm{A}) = 0{,}2$ : elles sont différentes."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Sur un arbre pondéré, la branche allant de $\\mathrm{A}$ vers $\\mathrm{B}$ porte $0{,}3$ et la branche issue de la racine vers $\\mathrm{A}$ porte $0{,}6$. Un élève écrit : « $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}3$ ». A-t-il raison ?",
+      "corrige": [
+        "Le nombre $0{,}3$ porté par la branche de $\\mathrm{A}$ vers $\\mathrm{B}$ est la probabilité conditionnelle $P_\\mathrm{A}(\\mathrm{B})$, pas celle de l'intersection.",
+        "$P(\\mathrm{A} \\cap \\mathrm{B})$ correspond au chemin entier : $P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B}) = 0{,}6 \\times 0{,}3 = 0{,}18$."
+      ],
+      "reponse": "Non : $0{,}3 = P_\\mathrm{A}(\\mathrm{B})$ ; en fait $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}18$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-composees",
+      "enonce": "On sait que $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}12$ et $P_\\mathrm{A}(\\mathrm{B}) = 0{,}3$. Calculer $P(\\mathrm{A})$.",
+      "corrige": [
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B})$, donc $P(\\mathrm{A}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P_\\mathrm{A}(\\mathrm{B})}$.",
+        "$P(\\mathrm{A}) = \\dfrac{0{,}12}{0{,}3} = 0{,}4$."
+      ],
+      "reponse": "$P(\\mathrm{A}) = 0{,}4$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Pour calculer la probabilité du chemin $\\mathrm{A}$ puis $\\mathrm{B}$ sur un arbre où $P(\\mathrm{A}) = 0{,}3$ et $P_\\mathrm{A}(\\mathrm{B}) = 0{,}9$, un élève écrit $0{,}3 + 0{,}9 = 1{,}2$. Expliquer pourquoi le résultat est forcément faux, puis corriger.",
+      "corrige": [
+        "Une probabilité est toujours comprise entre $0$ et $1$ : $1{,}2$ est impossible.",
+        "Le long d'un chemin, on multiplie les probabilités (on additionne seulement entre des chemins différents).",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}3 \\times 0{,}9 = 0{,}27$."
+      ],
+      "reponse": "Il fallait multiplier : $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}27$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "On sait que $P(\\mathrm{A}) = 0{,}4$, $P_\\mathrm{A}(\\mathrm{B}) = 0{,}8$ et $P(\\mathrm{B}) = 0{,}5$. Calculer $P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$.",
+      "corrige": [
+        "Probabilités totales : $P(\\mathrm{B}) = P(\\mathrm{A}) P_\\mathrm{A}(\\mathrm{B}) + P(\\overline{\\mathrm{A}}) P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$.",
+        "$0{,}5 = 0{,}4 \\times 0{,}8 + 0{,}6 \\times P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$, soit $0{,}5 = 0{,}32 + 0{,}6\\,P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$.",
+        "$P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = \\dfrac{0{,}18}{0{,}6} = 0{,}3$."
+      ],
+      "reponse": "$P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}3$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Avant un contrôle, Inès révise avec une probabilité de $0{,}6$. Si elle révise, elle obtient la moyenne avec une probabilité de $0{,}85$ ; sinon, avec une probabilité de $0{,}4$. Calculer la probabilité qu'elle obtienne la moyenne.",
+      "corrige": [
+        "On note $\\mathrm{R}$ : « elle révise » et $\\mathrm{M}$ : « elle a la moyenne ».",
+        "$P(\\mathrm{M}) = 0{,}6 \\times 0{,}85 + 0{,}4 \\times 0{,}4 = 0{,}51 + 0{,}16$."
+      ],
+      "reponse": "$P(\\mathrm{M}) = 0{,}67$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "inversion-conditionnement",
+      "enonce": "Le magasin achète $70\\,\\%$ de ses ampoules à $\\mathrm{F}_1$ ($3\\,\\%$ défectueuses) et $30\\,\\%$ à $\\mathrm{F}_2$ ($6\\,\\%$ défectueuses) ; on a calculé $P(\\mathrm{D}) = 0{,}039$. Une ampoule est défectueuse : quelle est la probabilité qu'elle vienne de $\\mathrm{F}_1$ ? Arrondir au millième.",
+      "corrige": [
+        "On cherche $P_\\mathrm{D}(\\mathrm{F}_1) = \\dfrac{P(\\mathrm{F}_1 \\cap \\mathrm{D})}{P(\\mathrm{D})}$.",
+        "$P(\\mathrm{F}_1 \\cap \\mathrm{D}) = 0{,}7 \\times 0{,}03 = 0{,}021$.",
+        "$P_\\mathrm{D}(\\mathrm{F}_1) = \\dfrac{0{,}021}{0{,}039} = \\dfrac{7}{13} \\approx 0{,}538$."
+      ],
+      "reponse": "$P_\\mathrm{D}(\\mathrm{F}_1) = \\dfrac{7}{13} \\approx 0{,}538$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "inversion-conditionnement",
+      "enonce": "Il pleut avec une probabilité de $0{,}3$ ; on a calculé que Léo prend le bus avec une probabilité $P(\\mathrm{B}) = 0{,}41$ et que $P(\\mathrm{R} \\cap \\mathrm{B}) = 0{,}27$. Sachant que Léo a pris le bus, quelle est la probabilité qu'il ait plu ? Arrondir au millième.",
+      "corrige": [
+        "On cherche $P_\\mathrm{B}(\\mathrm{R}) = \\dfrac{P(\\mathrm{R} \\cap \\mathrm{B})}{P(\\mathrm{B})}$.",
+        "$P_\\mathrm{B}(\\mathrm{R}) = \\dfrac{0{,}27}{0{,}41} \\approx 0{,}659$."
+      ],
+      "reponse": "$P_\\mathrm{B}(\\mathrm{R}) \\approx 0{,}659$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "Parmi $250$ élèves de première, $140$ sont des filles et $150$ pratiquent un sport en club ; $84$ filles pratiquent un sport en club. On choisit un élève au hasard. Les événements $\\mathrm{F}$ : « c'est une fille » et $\\mathrm{S}$ : « il pratique un sport en club » sont-ils indépendants ?",
+      "corrige": [
+        "$P(\\mathrm{F}) = \\dfrac{140}{250} = 0{,}56$ et $P(\\mathrm{S}) = \\dfrac{150}{250} = 0{,}6$.",
+        "$P(\\mathrm{F}) \\times P(\\mathrm{S}) = 0{,}56 \\times 0{,}6 = 0{,}336$ et $P(\\mathrm{F} \\cap \\mathrm{S}) = \\dfrac{84}{250} = 0{,}336$.",
+        "Les deux nombres sont égaux : dans ce lycée, être une fille ne change pas la probabilité de pratiquer un sport en club."
+      ],
+      "reponse": "Oui, $\\mathrm{F}$ et $\\mathrm{S}$ sont indépendants."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "$\\mathrm{A}$ et $\\mathrm{B}$ sont deux événements incompatibles avec $P(\\mathrm{A}) = 0{,}3$ et $P(\\mathrm{B}) = 0{,}4$. Sont-ils indépendants ?",
+      "corrige": [
+        "Incompatibles signifie $\\mathrm{A} \\cap \\mathrm{B} = \\varnothing$, donc $P(\\mathrm{A} \\cap \\mathrm{B}) = 0$.",
+        "$P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}12 \\neq 0$.",
+        "Ils ne sont pas indépendants : si $\\mathrm{A}$ est réalisé, on sait que $\\mathrm{B}$ ne l'est pas."
+      ],
+      "reponse": "Non : incompatibles (de probabilités non nulles), ils sont dépendants."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "succession-epreuves-independantes",
+      "enonce": "Sur son trajet, une cycliste rencontre deux feux, qui fonctionnent indépendamment. Le premier est vert avec une probabilité de $0{,}4$, le second avec une probabilité de $0{,}5$. Calculer la probabilité qu'au moins un des deux feux soit vert.",
+      "corrige": [
+        "L'événement contraire est « les deux feux ne sont pas verts ».",
+        "Par indépendance : $P(\\text{aucun vert}) = 0{,}6 \\times 0{,}5 = 0{,}3$.",
+        "$P(\\text{au moins un vert}) = 1 - 0{,}3 = 0{,}7$."
+      ],
+      "reponse": "$0{,}7$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "succession-epreuves-independantes",
+      "enonce": "Une urne contient $3$ boules rouges et $2$ bleues. On tire une boule, on la remet, puis on en tire une seconde. Calculer la probabilité d'obtenir deux boules de couleurs différentes.",
+      "corrige": [
+        "Avec remise, les deux tirages sont indépendants : $P(\\mathrm{R}) = 0{,}6$ et $P(\\mathrm{B}) = 0{,}4$ à chaque tirage.",
+        "Deux chemins conviennent : RB et BR, chacun de probabilité $0{,}6 \\times 0{,}4 = 0{,}24$.",
+        "$P = 2 \\times 0{,}24 = 0{,}48$."
+      ],
+      "reponse": "$0{,}48$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "bernoulli",
+      "enonce": "On lance trois fois une pièce équilibrée. Calculer la probabilité d'obtenir exactement deux fois pile.",
+      "corrige": [
+        "Chemins favorables : PPF, PFP, FPP, soit $3$ chemins.",
+        "Chacun a pour probabilité $\\left(\\dfrac{1}{2}\\right)^3 = \\dfrac{1}{8}$.",
+        "$P = 3 \\times \\dfrac{1}{8} = \\dfrac{3}{8}$."
+      ],
+      "reponse": "$\\dfrac{3}{8}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "bernoulli",
+      "enonce": "Un appareil tombe en panne un jour donné avec une probabilité de $0{,}1$, indépendamment d'un jour à l'autre. Calculer la probabilité qu'il tombe en panne au moins une fois sur $4$ jours.",
+      "corrige": [
+        "L'événement contraire est « aucune panne pendant les $4$ jours » : un seul chemin, de probabilité $0{,}9^4 = 0{,}6561$.",
+        "$P(\\text{au moins une panne}) = 1 - 0{,}6561 = 0{,}3439$."
+      ],
+      "reponse": "$0{,}3439$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "inversion-conditionnement",
+      "enonce": "Une maladie touche $1\\,\\%$ d'une population. Un test est positif chez $90\\,\\%$ des malades et chez $5\\,\\%$ des personnes saines. Une personne a un test positif : quelle est la probabilité qu'elle soit malade ? Arrondir au millième et commenter.",
+      "corrige": [
+        "On note $\\mathrm{M}$ : « malade » et $\\mathrm{T}$ : « test positif ». $P(\\mathrm{T}) = 0{,}01 \\times 0{,}9 + 0{,}99 \\times 0{,}05 = 0{,}009 + 0{,}0495 = 0{,}0585$.",
+        "$P_\\mathrm{T}(\\mathrm{M}) = \\dfrac{0{,}009}{0{,}0585} \\approx 0{,}154$.",
+        "Moins d'une personne positive sur six est malade : la maladie est rare, donc la plupart des tests positifs sont des faux positifs. Il ne faut pas confondre $P_\\mathrm{T}(\\mathrm{M})$ et $P_\\mathrm{M}(\\mathrm{T}) = 0{,}9$."
+      ],
+      "reponse": "$P_\\mathrm{T}(\\mathrm{M}) \\approx 0{,}154$, bien plus faible que $P_\\mathrm{M}(\\mathrm{T}) = 0{,}9$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "inversion-conditionnement",
+      "enonce": "Inès révise avec une probabilité de $0{,}6$ ; si elle révise, elle a la moyenne avec une probabilité de $0{,}85$, sinon de $0{,}4$. Elle a obtenu la moyenne : quelle est la probabilité qu'elle ait révisé ? Arrondir au millième.",
+      "corrige": [
+        "$P(\\mathrm{R} \\cap \\mathrm{M}) = 0{,}6 \\times 0{,}85 = 0{,}51$ et $P(\\mathrm{M}) = 0{,}51 + 0{,}4 \\times 0{,}4 = 0{,}67$.",
+        "$P_\\mathrm{M}(\\mathrm{R}) = \\dfrac{0{,}51}{0{,}67} \\approx 0{,}761$."
+      ],
+      "reponse": "$P_\\mathrm{M}(\\mathrm{R}) \\approx 0{,}761$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "independance",
+      "enonce": "On lance un dé équilibré à six faces. On note $\\mathrm{A}$ : « le résultat est pair » et $\\mathrm{B}$ : « le résultat est inférieur ou égal à $4$ ». Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils indépendants ?",
+      "corrige": [
+        "$P(\\mathrm{A}) = \\dfrac{3}{6} = \\dfrac{1}{2}$ et $P(\\mathrm{B}) = \\dfrac{4}{6} = \\dfrac{2}{3}$.",
+        "$\\mathrm{A} \\cap \\mathrm{B} = \\{2\\,;4\\}$, donc $P(\\mathrm{A} \\cap \\mathrm{B}) = \\dfrac{2}{6} = \\dfrac{1}{3}$.",
+        "$P(\\mathrm{A}) \\times P(\\mathrm{B}) = \\dfrac{1}{2} \\times \\dfrac{2}{3} = \\dfrac{1}{3}$ : l'égalité est vérifiée."
+      ],
+      "reponse": "Oui, $\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "independance",
+      "enonce": "$\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants, avec $P(\\mathrm{A}) = 0{,}4$ et $P(\\mathrm{B}) = 0{,}7$. Calculer $P(\\mathrm{A} \\cap \\overline{\\mathrm{B}})$ et vérifier que $\\mathrm{A}$ et $\\overline{\\mathrm{B}}$ sont aussi indépendants.",
+      "corrige": [
+        "$\\mathrm{A}$ est la réunion disjointe de $\\mathrm{A} \\cap \\mathrm{B}$ et $\\mathrm{A} \\cap \\overline{\\mathrm{B}}$, donc $P(\\mathrm{A} \\cap \\overline{\\mathrm{B}}) = P(\\mathrm{A}) - P(\\mathrm{A} \\cap \\mathrm{B})$.",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}4 \\times 0{,}7 = 0{,}28$, donc $P(\\mathrm{A} \\cap \\overline{\\mathrm{B}}) = 0{,}4 - 0{,}28 = 0{,}12$.",
+        "$P(\\mathrm{A}) \\times P(\\overline{\\mathrm{B}}) = 0{,}4 \\times 0{,}3 = 0{,}12$ : l'égalité est vérifiée."
+      ],
+      "reponse": "$P(\\mathrm{A} \\cap \\overline{\\mathrm{B}}) = 0{,}12 = P(\\mathrm{A}) \\times P(\\overline{\\mathrm{B}})$ : ils sont indépendants."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "On lance quatre fois une pièce équilibrée. Combien de chemins de l'arbre comportent exactement deux piles ? En déduire la probabilité d'obtenir exactement deux piles.",
+      "corrige": [
+        "Chemins favorables : PPFF, PFPF, PFFP, FPPF, FPFP, FFPP, soit $6$ chemins.",
+        "Chacun a pour probabilité $\\left(\\dfrac{1}{2}\\right)^4 = \\dfrac{1}{16}$.",
+        "$P = 6 \\times \\dfrac{1}{16} = \\dfrac{6}{16} = \\dfrac{3}{8}$."
+      ],
+      "reponse": "$6$ chemins ; $P = \\dfrac{3}{8}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "Une graine germe avec une probabilité de $0{,}7$, indépendamment des autres. On sème $3$ graines. Calculer la probabilité qu'au moins deux graines germent.",
+      "corrige": [
+        "« Au moins deux » signifie exactement $2$ ou exactement $3$.",
+        "Exactement $2$ : $3$ chemins (GGN, GNG, NGG), chacun de probabilité $0{,}7^2 \\times 0{,}3 = 0{,}147$, soit $0{,}441$.",
+        "Exactement $3$ : $0{,}7^3 = 0{,}343$. Total : $0{,}441 + 0{,}343 = 0{,}784$."
+      ],
+      "reponse": "$0{,}784$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "probabilites-totales",
+      "enonce": "On lance une pièce équilibrée. Si on obtient pile, on tire une boule dans l'urne $\\mathrm{U}_1$ ($2$ boules blanches et $3$ noires) ; si on obtient face, dans l'urne $\\mathrm{U}_2$ ($4$ blanches et $1$ noire). 1) Calculer la probabilité de tirer une boule blanche. 2) La boule tirée est blanche : quelle est la probabilité que l'on ait obtenu pile ?",
+      "corrige": [
+        "$P_{\\text{pile}}(\\mathrm{B}) = \\dfrac{2}{5} = 0{,}4$ et $P_{\\text{face}}(\\mathrm{B}) = \\dfrac{4}{5} = 0{,}8$.",
+        "1) $P(\\mathrm{B}) = 0{,}5 \\times 0{,}4 + 0{,}5 \\times 0{,}8 = 0{,}2 + 0{,}4 = 0{,}6$.",
+        "2) $P_\\mathrm{B}(\\text{pile}) = \\dfrac{P(\\text{pile} \\cap \\mathrm{B})}{P(\\mathrm{B})} = \\dfrac{0{,}2}{0{,}6} = \\dfrac{1}{3}$."
+      ],
+      "reponse": "1) $0{,}6$ ; 2) $\\dfrac{1}{3}$."
     }
   ]
 }

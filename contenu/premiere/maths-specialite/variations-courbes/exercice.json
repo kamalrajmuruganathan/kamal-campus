@@ -137,7 +137,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme",
       "enonce": "Une petite entreprise fabrique des articles. Lorsqu'elle en produit $x$ centaines (avec $0 \\leqslant x \\leqslant 8$), son bénéfice mensuel, exprimé en centaines d'euros, est modélisé par $B(x) = -x^3 + 6x^2 + 15x - 50$. 1. Calculer $B(0)$ et interpréter ce résultat dans le contexte. 2. Calculer $B'(x)$ et montrer que $B'(x) = -3(x-5)(x+1)$. 3. Étudier le signe de $B'(x)$ sur $[0\\,;8]$ et dresser le tableau de variations de $B$. 4. En déduire la production qui rend le bénéfice maximal, et donner ce bénéfice maximal en euros. 5. Déterminer une équation de la tangente $T$ à la courbe de $B$ au point d'abscisse $0$.",
       "corrige": [
@@ -148,6 +148,473 @@
         "5. La tangente au point d'abscisse $0$ a pour équation $y = B'(0)(x - 0) + B(0)$. Or $B'(0) = -3(0-5)(0+1) = 15$ et $B(0) = -50$, d'où $T : y = 15x - 50$."
       ],
       "reponse": "$B(0) = -50$ (coûts fixes de $5000$ €) ; $B'(x) = -3(x-5)(x+1)$ ; $B$ croît sur $[0\\,;5]$ puis décroît sur $[5\\,;8]$ ; bénéfice maximal de $5000$ € pour une production de $500$ articles ($x = 5$) ; tangente $T : y = 15x - 50$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "signe-derivee",
+      "enonce": "Une fonction $f$ dérivable sur $\\mathbb{R}$ vérifie $f'(x) = 2$ pour tout $x$, et une fonction $g$ vérifie $g'(x) = -x^2 - 1$. Donner le sens de variation de $f$ et de $g$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f'(x) = 2 > 0$ sur $\\mathbb{R}$ : $f$ est strictement croissante.",
+        "$g'(x) = -(x^2 + 1) < 0$ pour tout $x$, car $x^2 + 1 \\geqslant 1$ : $g$ est strictement décroissante."
+      ],
+      "reponse": "$f$ strictement croissante ; $g$ strictement décroissante sur $\\mathbb{R}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "signe-derivee",
+      "enonce": "La dérivée d'une fonction $f$ définie sur $\\mathbb{R}$ est $f'(x) = x - 4$. Donner les variations de $f$.",
+      "corrige": [
+        "$x - 4 < 0$ pour $x < 4$ et $x - 4 > 0$ pour $x > 4$.",
+        "$f$ est donc décroissante sur $]-\\infty\\,;4]$ puis croissante sur $[4\\,;+\\infty[$ : elle admet un minimum en $4$."
+      ],
+      "reponse": "Décroissante sur $]-\\infty\\,;4]$, croissante sur $[4\\,;+\\infty[$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "lecture-tableau",
+      "enonce": "Le tableau de variations d'une fonction $f$ définie sur $[-3\\,;4]$ indique : $f$ est strictement croissante sur $[-3\\,;1]$, de $f(-3) = -2$ à $f(1) = 5$, puis strictement décroissante sur $[1\\,;4]$, jusqu'à $f(4) = 0$. Donner le maximum et le minimum de $f$ sur $[-3\\,;4]$, ainsi que le signe de $f'(0)$ et de $f'(2)$.",
+      "corrige": [
+        "Le maximum est la plus grande valeur du tableau : $5$, atteint en $1$. Le minimum est la plus petite : $-2$, atteint en $-3$.",
+        "$f$ est croissante autour de $0$ : $f'(0) \\geqslant 0$. Elle est décroissante autour de $2$ : $f'(2) \\leqslant 0$."
+      ],
+      "reponse": "Maximum $5$ (en $1$), minimum $-2$ (en $-3$) ; $f'(0) \\geqslant 0$ et $f'(2) \\leqslant 0$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "extremum",
+      "enonce": "Vrai ou faux : « si $f'(a) = 0$, alors $f$ admet un extrémum en $a$ ». Justifier avec $f(x) = x^3$.",
+      "corrige": [
+        "$f'(x) = 3x^2$, donc $f'(0) = 0$.",
+        "Mais $f'(x) \\geqslant 0$ sur $\\mathbb{R}$ : $f$ est croissante, sans extrémum en $0$.",
+        "Le bon critère est le changement de signe de $f'$."
+      ],
+      "reponse": "Faux : $f'(0) = 0$ pour $x^3$, mais il n'y a pas d'extrémum en $0$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "signe-derivee",
+      "enonce": "Une fonction $f$ dérivable sur $\\mathbb{R}$ a pour dérivée $f'(x) = (x + 2)(3 - x)$. Étudier le signe de $f'(x)$ et en déduire les variations de $f$.",
+      "corrige": [
+        "$f'(x) = -(x + 2)(x - 3)$ est un trinôme de coefficient dominant $-1 < 0$, de racines $-2$ et $3$.",
+        "Il est négatif à l'extérieur des racines et positif entre elles.",
+        "$f$ est décroissante sur $]-\\infty\\,;-2]$, croissante sur $[-2\\,;3]$, décroissante sur $[3\\,;+\\infty[$."
+      ],
+      "reponse": "Décroissante, puis croissante sur $[-2\\,;3]$, puis décroissante."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "signe-derivee",
+      "enonce": "Une fonction $f$ dérivable sur $\\mathbb{R}$ a pour dérivée $f'(x) = (x - 1)^2$. $f$ admet-elle un extrémum en $1$ ?",
+      "corrige": [
+        "$f'(x) = (x - 1)^2 \\geqslant 0$, et $f'$ ne s'annule qu'en $1$ : $f$ est strictement croissante sur $\\mathbb{R}$.",
+        "$f'(1) = 0$, mais $f'$ ne change pas de signe en $1$ : il n'y a pas d'extrémum."
+      ],
+      "reponse": "Non : $f$ est croissante sur $\\mathbb{R}$, sans extrémum en $1$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "fonction-constante",
+      "enonce": "Soit $f(x) = (x + 1)^2 - (x - 1)^2 - 4x$ sur $\\mathbb{R}$. Calculer $f'(x)$ et en déduire $f(x)$ sans développer.",
+      "corrige": [
+        "$f'(x) = 2(x + 1) - 2(x - 1) - 4 = 2x + 2 - 2x + 2 - 4 = 0$.",
+        "La dérivée est nulle sur l'intervalle $\\mathbb{R}$ : $f$ est constante.",
+        "$f(0) = 1 - 1 - 0 = 0$, donc $f(x) = 0$ pour tout $x$."
+      ],
+      "reponse": "$f'(x) = 0$, donc $f$ est constante : $f(x) = 0$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = x^3 - 3x^2$ sur $\\mathbb{R}$ et préciser les extrémums locaux.",
+      "corrige": [
+        "$f'(x) = 3x^2 - 6x = 3x(x - 2)$ : positif à l'extérieur de $0$ et $2$, négatif entre.",
+        "$f$ croît sur $]-\\infty\\,;0]$, décroît sur $[0\\,;2]$, croît sur $[2\\,;+\\infty[$.",
+        "Maximum local $f(0) = 0$ ; minimum local $f(2) = 8 - 12 = -4$."
+      ],
+      "reponse": "Maximum local $0$ en $x = 0$ ; minimum local $-4$ en $x = 2$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = -x^3 + 3x + 1$ sur $\\mathbb{R}$ et préciser les extrémums locaux.",
+      "corrige": [
+        "$f'(x) = -3x^2 + 3 = -3(x - 1)(x + 1)$ : négatif à l'extérieur de $-1$ et $1$, positif entre.",
+        "$f$ décroît sur $]-\\infty\\,;-1]$, croît sur $[-1\\,;1]$, décroît sur $[1\\,;+\\infty[$.",
+        "Minimum local $f(-1) = 1 - 3 + 1 = -1$ ; maximum local $f(1) = -1 + 3 + 1 = 3$."
+      ],
+      "reponse": "Minimum local $-1$ en $x = -1$ ; maximum local $3$ en $x = 1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "lecture-tableau",
+      "enonce": "Le tableau de variations d'une fonction $f$ définie sur $[-3\\,;4]$ indique : $f$ est strictement croissante sur $[-3\\,;1]$, de $f(-3) = -2$ à $f(1) = 5$, puis strictement décroissante sur $[1\\,;4]$, jusqu'à $f(4) = 0$. Comparer $f(-1)$ et $f(0)$, puis $f(2)$ et $f(3)$.",
+      "corrige": [
+        "$-1$ et $0$ sont dans $[-3\\,;1]$, où $f$ est strictement croissante : $-1 < 0$ donne $f(-1) < f(0)$.",
+        "$2$ et $3$ sont dans $[1\\,;4]$, où $f$ est strictement décroissante : $2 < 3$ donne $f(2) > f(3)$."
+      ],
+      "reponse": "$f(-1) < f(0)$ et $f(2) > f(3)$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "lecture-tableau",
+      "enonce": "Le tableau de variations d'une fonction $f$ définie sur $[-3\\,;4]$ indique : $f$ est strictement croissante sur $[-3\\,;1]$, de $f(-3) = -2$ à $f(1) = 5$, puis strictement décroissante sur $[1\\,;4]$, jusqu'à $f(4) = 0$. Quel est le signe de $f(x)$ pour $x \\in [1\\,;4]$ ?",
+      "corrige": [
+        "Sur $[1\\,;4]$, $f$ décroît de $5$ à $0$ : pour $x$ dans cet intervalle, $f(4) \\leqslant f(x) \\leqslant f(1)$.",
+        "Donc $0 \\leqslant f(x) \\leqslant 5$, et $f(x) = 0$ seulement en $x = 4$."
+      ],
+      "reponse": "$f(x) \\geqslant 0$ sur $[1\\,;4]$ (nul seulement en $4$)."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "extremum",
+      "enonce": "Déterminer l'extrémum de $f(x) = x^2 - 6x + 2$ sur $\\mathbb{R}$ à l'aide de la dérivée.",
+      "corrige": [
+        "$f'(x) = 2x - 6$, qui s'annule en $3$ en passant du signe $-$ au signe $+$.",
+        "$f$ admet un minimum en $3$ : $f(3) = 9 - 18 + 2 = -7$."
+      ],
+      "reponse": "Minimum $-7$ en $x = 3$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "extremum",
+      "enonce": "Une fonction $f$ dérivable sur $\\mathbb{R}$ a pour dérivée $f'(x) = (x + 1)(x - 4)$, et l'on sait que $f(-1) = 5$ et $f(4) = -3$. Préciser la nature des extrémums locaux de $f$.",
+      "corrige": [
+        "$f'(x)$ est positif à l'extérieur de $-1$ et $4$, négatif entre.",
+        "En $-1$, $f'$ passe de $+$ à $-$ : maximum local $f(-1) = 5$.",
+        "En $4$, $f'$ passe de $-$ à $+$ : minimum local $f(4) = -3$."
+      ],
+      "reponse": "Maximum local $5$ en $-1$ ; minimum local $-3$ en $4$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "parite",
+      "enonce": "Étudier la parité des fonctions définies sur $\\mathbb{R}$ par $f(x) = x^4 - 3x^2 + 1$, $g(x) = 5x^3 + x$ et $h(x) = x^2 + x$.",
+      "corrige": [
+        "$f(-x) = x^4 - 3x^2 + 1 = f(x)$ : $f$ est paire.",
+        "$g(-x) = -5x^3 - x = -g(x)$ : $g$ est impaire.",
+        "$h(1) = 2$ et $h(-1) = 0$ : $h(-1) \\neq h(1)$ et $h(-1) \\neq -h(1)$, donc $h$ n'est ni paire ni impaire."
+      ],
+      "reponse": "$f$ paire ; $g$ impaire ; $h$ ni l'une ni l'autre."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "parite",
+      "enonce": "Montrer que la fonction $f(x) = \\dfrac{1}{x^2 + 4}$ est paire sur $\\mathbb{R}$. Que peut-on dire de sa courbe ?",
+      "corrige": [
+        "$\\mathbb{R}$ est symétrique par rapport à $0$ et $f(-x) = \\dfrac{1}{(-x)^2 + 4} = \\dfrac{1}{x^2 + 4} = f(x)$.",
+        "$f$ est paire : sa courbe est symétrique par rapport à l'axe des ordonnées."
+      ],
+      "reponse": "$f$ est paire ; courbe symétrique par rapport à l'axe des ordonnées."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "second-degre-derivation",
+      "enonce": "Par la dérivation, déterminer le sommet de la parabole représentant $f(x) = -2x^2 + 8x - 3$, et sa nature.",
+      "corrige": [
+        "$f'(x) = -4x + 8$ s'annule en $x = 2$, en passant de $+$ à $-$.",
+        "$f$ admet un maximum en $2$ : $f(2) = -8 + 16 - 3 = 5$."
+      ],
+      "reponse": "Sommet $(2\\,;5)$ : maximum."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "second-degre-derivation",
+      "enonce": "Soit $f(x) = x^2 + 6x + 5$. Trouver le sommet de la parabole par la dérivation, puis contrôler avec la forme canonique.",
+      "corrige": [
+        "$f'(x) = 2x + 6 = 0 \\iff x = -3$ ; $f(-3) = 9 - 18 + 5 = -4$ : minimum, car $a = 1 > 0$.",
+        "Forme canonique : $x^2 + 6x + 5 = (x + 3)^2 - 9 + 5 = (x + 3)^2 - 4$, de sommet $(-3\\,;-4)$.",
+        "Les deux méthodes concordent."
+      ],
+      "reponse": "Sommet $(-3\\,;-4)$ (minimum)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "signe-derivee",
+      "enonce": "Soit $f(x) = (x - 3)\\,\\mathrm{e}^x$ sur $\\mathbb{R}$. Montrer que $f'(x) = (x - 2)\\,\\mathrm{e}^x$, puis donner les variations de $f$ et son minimum.",
+      "corrige": [
+        "Produit : $f'(x) = 1 \\times \\mathrm{e}^x + (x - 3)\\,\\mathrm{e}^x = (x - 2)\\,\\mathrm{e}^x$.",
+        "$\\mathrm{e}^x > 0$, donc $f'(x)$ a le signe de $x - 2$ : $f$ décroît sur $]-\\infty\\,;2]$ et croît sur $[2\\,;+\\infty[$.",
+        "Minimum : $f(2) = -\\mathrm{e}^2$."
+      ],
+      "reponse": "Minimum $f(2) = -\\mathrm{e}^2$, atteint en $x = 2$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "signe-derivee",
+      "enonce": "Soit $f(x) = \\dfrac{3}{x}$ sur $]0\\,;+\\infty[$. Étudier son sens de variation.",
+      "corrige": [
+        "$f'(x) = 3 \\times \\left(-\\dfrac{1}{x^2}\\right) = -\\dfrac{3}{x^2}$.",
+        "$f'(x) < 0$ sur l'intervalle $]0\\,;+\\infty[$."
+      ],
+      "reponse": "$f$ est strictement décroissante sur $]0\\,;+\\infty[$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "fonction-constante",
+      "enonce": "Soit $f$ définie sur $\\mathbb{R}^*$ par $f(x) = -1$ si $x < 0$ et $f(x) = 1$ si $x > 0$. On a $f'(x) = 0$ pour tout $x \\neq 0$. Pourtant $f$ n'est pas constante sur $\\mathbb{R}^*$. Expliquer.",
+      "corrige": [
+        "Le théorème « $f' = 0$ implique $f$ constante » ne vaut que sur un intervalle.",
+        "$\\mathbb{R}^*$ n'est pas un intervalle : c'est la réunion de $]-\\infty\\,;0[$ et $]0\\,;+\\infty[$.",
+        "$f$ est constante sur chacun de ces deux intervalles, mais avec deux valeurs différentes."
+      ],
+      "reponse": "$\\mathbb{R}^*$ n'est pas un intervalle : $f$ est constante sur chaque morceau ($-1$ puis $1$), pas sur $\\mathbb{R}^*$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = x + \\dfrac{4}{x}$ sur $]0\\,;+\\infty[$ et donner son minimum.",
+      "corrige": [
+        "$f'(x) = 1 - \\dfrac{4}{x^2} = \\dfrac{x^2 - 4}{x^2} = \\dfrac{(x - 2)(x + 2)}{x^2}$.",
+        "Sur $]0\\,;+\\infty[$, $x + 2 > 0$ et $x^2 > 0$ : $f'(x)$ a le signe de $x - 2$.",
+        "$f$ décroît sur $]0\\,;2]$ et croît sur $[2\\,;+\\infty[$ : minimum $f(2) = 2 + 2 = 4$."
+      ],
+      "reponse": "Minimum $4$, atteint en $x = 2$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "etude-variations",
+      "enonce": "Soit $f(x) = 2x^3 - 9x^2 + 12x$ sur $[0\\,;3]$. Dresser son tableau de variations, puis donner le maximum et le minimum de $f$ sur $[0\\,;3]$.",
+      "corrige": [
+        "$f'(x) = 6x^2 - 18x + 12 = 6(x - 1)(x - 2)$ : $f$ croît sur $[0\\,;1]$, décroît sur $[1\\,;2]$, croît sur $[2\\,;3]$.",
+        "$f(0) = 0$, $f(1) = 5$, $f(2) = 16 - 36 + 24 = 4$, $f(3) = 54 - 81 + 36 = 9$.",
+        "On compare les valeurs aux extrémums locaux et aux bornes : le maximum est $9$, le minimum est $0$."
+      ],
+      "reponse": "Maximum $9$ (en $x = 3$) ; minimum $0$ (en $x = 0$)."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = \\dfrac{x}{x^2 + 1}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Quotient : $f'(x) = \\dfrac{1 \\times (x^2 + 1) - x \\times 2x}{(x^2 + 1)^2} = \\dfrac{1 - x^2}{(x^2 + 1)^2}$.",
+        "Le dénominateur est positif : $f'(x)$ a le signe de $1 - x^2$, positif entre $-1$ et $1$, négatif à l'extérieur.",
+        "$f$ décroît sur $]-\\infty\\,;-1]$, croît sur $[-1\\,;1]$, décroît sur $[1\\,;+\\infty[$ ; $f(-1) = -\\dfrac{1}{2}$ et $f(1) = \\dfrac{1}{2}$."
+      ],
+      "reponse": "Minimum local $-\\dfrac{1}{2}$ en $-1$ ; maximum local $\\dfrac{1}{2}$ en $1$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = x^3 + 3x^2 + 3x$ sur $\\mathbb{R}$. La fonction admet-elle un extrémum ?",
+      "corrige": [
+        "$f'(x) = 3x^2 + 6x + 3 = 3(x + 1)^2 \\geqslant 0$, nulle seulement en $-1$.",
+        "$f$ est strictement croissante sur $\\mathbb{R}$.",
+        "$f'(-1) = 0$ mais $f'$ ne change pas de signe : pas d'extrémum (tangente horizontale en $-1$)."
+      ],
+      "reponse": "$f$ est croissante sur $\\mathbb{R}$ ; aucun extrémum."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "lecture-tableau",
+      "enonce": "Une fonction $f$ dérivable sur $\\mathbb{R}$ vérifie : $f'(x) > 0$ sur $]-\\infty\\,;2[$, $f'(x) < 0$ sur $]2\\,;+\\infty[$, et $f(2) = 7$. Montrer que $f(x) \\leqslant 7$ pour tout réel $x$.",
+      "corrige": [
+        "$f$ est croissante sur $]-\\infty\\,;2]$ : pour $x \\leqslant 2$, $f(x) \\leqslant f(2) = 7$.",
+        "$f$ est décroissante sur $[2\\,;+\\infty[$ : pour $x \\geqslant 2$, $f(x) \\leqslant f(2) = 7$.",
+        "$7$ est donc le maximum de $f$ sur $\\mathbb{R}$."
+      ],
+      "reponse": "$f$ admet un maximum $7$ en $2$, donc $f(x) \\leqslant 7$ pour tout $x$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "extremum",
+      "enonce": "Une fonction $f$ dérivable sur $\\mathbb{R}$ a pour dérivée $f'(x) = x^2(x - 3)$. Déterminer les points où $f'$ s'annule et la nature de chacun.",
+      "corrige": [
+        "$f'(x) = 0 \\iff x = 0$ ou $x = 3$.",
+        "$x^2 \\geqslant 0$ : $f'(x)$ a le signe de $x - 3$ (sauf en $0$ où il est nul). Il est négatif sur $]-\\infty\\,;3[$, positif sur $]3\\,;+\\infty[$.",
+        "En $0$, $f'$ ne change pas de signe : pas d'extrémum. En $3$, $f'$ passe de $-$ à $+$ : minimum local."
+      ],
+      "reponse": "En $0$ : pas d'extrémum ; en $3$ : minimum local."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "extremum",
+      "enonce": "Soit $f(x) = x^3 - 3x + 2$. Déterminer les points de la courbe où la tangente est horizontale, puis préciser s'il s'agit d'extrémums.",
+      "corrige": [
+        "$f'(x) = 3x^2 - 3 = 3(x - 1)(x + 1)$ s'annule en $-1$ et $1$.",
+        "$f'$ passe de $+$ à $-$ en $-1$ : maximum local $f(-1) = -1 + 3 + 2 = 4$.",
+        "$f'$ passe de $-$ à $+$ en $1$ : minimum local $f(1) = 1 - 3 + 2 = 0$."
+      ],
+      "reponse": "Points $(-1\\,;4)$ (maximum local) et $(1\\,;0)$ (minimum local)."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "parite",
+      "enonce": "La fonction racine carrée peut-elle être paire ou impaire ?",
+      "corrige": [
+        "Elle est définie sur $[0\\,;+\\infty[$, qui n'est pas symétrique par rapport à $0$ : par exemple $1$ en fait partie, mais pas $-1$.",
+        "La parité n'a de sens que sur un ensemble symétrique par rapport à $0$."
+      ],
+      "reponse": "Non : son ensemble de définition n'est pas symétrique par rapport à $0$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "parite",
+      "enonce": "Montrer qu'une fonction impaire définie en $0$ vérifie $f(0) = 0$. La fonction $f(x) = x^3 + 1$ peut-elle être impaire ?",
+      "corrige": [
+        "Pour $x = 0$ : $f(-0) = -f(0)$, soit $f(0) = -f(0)$, donc $2f(0) = 0$ et $f(0) = 0$.",
+        "Pour $f(x) = x^3 + 1$ : $f(0) = 1 \\neq 0$, donc $f$ n'est pas impaire."
+      ],
+      "reponse": "$f(0) = 0$ ; $x^3 + 1$ n'est pas impaire car elle vaut $1$ en $0$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "parite",
+      "enonce": "$f$ est une fonction impaire sur $\\mathbb{R}$ telle que $f(3) = -4$. Calculer $f(-3)$ et décrire la symétrie de sa courbe.",
+      "corrige": [
+        "$f(-3) = -f(3) = 4$.",
+        "La courbe d'une fonction impaire est symétrique par rapport à l'origine : le point $(3\\,;-4)$ a pour symétrique $(-3\\,;4)$."
+      ],
+      "reponse": "$f(-3) = 4$ ; courbe symétrique par rapport à l'origine."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "inegalite",
+      "enonce": "Démontrer que, pour tout $x \\geqslant 0$, $x^3 \\geqslant 3x - 2$. On étudiera $g(x) = x^3 - 3x + 2$ sur $[0\\,;+\\infty[$.",
+      "corrige": [
+        "$g'(x) = 3x^2 - 3 = 3(x - 1)(x + 1)$ : sur $[0\\,;+\\infty[$, $g'(x) \\leqslant 0$ sur $[0\\,;1]$ et $g'(x) \\geqslant 0$ sur $[1\\,;+\\infty[$.",
+        "$g$ admet donc un minimum en $1$ : $g(1) = 1 - 3 + 2 = 0$.",
+        "Pour tout $x \\geqslant 0$, $g(x) \\geqslant 0$, c'est-à-dire $x^3 \\geqslant 3x - 2$."
+      ],
+      "reponse": "Le minimum de $g$ sur $[0\\,;+\\infty[$ est $g(1) = 0$, d'où l'inégalité."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = x\\,\\mathrm{e}^{-x}$ sur $\\mathbb{R}$ et donner son maximum.",
+      "corrige": [
+        "$f'(x) = \\mathrm{e}^{-x} + x \\times \\left(-\\mathrm{e}^{-x}\\right) = (1 - x)\\,\\mathrm{e}^{-x}$.",
+        "$\\mathrm{e}^{-x} > 0$ : $f'(x)$ a le signe de $1 - x$. $f$ croît sur $]-\\infty\\,;1]$ et décroît sur $[1\\,;+\\infty[$.",
+        "Maximum : $f(1) = \\mathrm{e}^{-1} = \\dfrac{1}{\\mathrm{e}}$."
+      ],
+      "reponse": "Maximum $\\dfrac{1}{\\mathrm{e}}$, atteint en $x = 1$."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "etude-variations",
+      "enonce": "Étudier les variations de $f(x) = \\sqrt{x} - x$ sur $[0\\,;+\\infty[$ et donner son maximum.",
+      "corrige": [
+        "Sur $]0\\,;+\\infty[$ : $f'(x) = \\dfrac{1}{2\\sqrt{x}} - 1 = \\dfrac{1 - 2\\sqrt{x}}{2\\sqrt{x}}$.",
+        "$f'(x) > 0 \\iff \\sqrt{x} < \\dfrac{1}{2} \\iff x < \\dfrac{1}{4}$ : $f$ croît sur $\\left[0\\,;\\dfrac{1}{4}\\right]$ et décroît sur $\\left[\\dfrac{1}{4}\\,;+\\infty\\right[$.",
+        "Maximum : $f\\left(\\dfrac{1}{4}\\right) = \\dfrac{1}{2} - \\dfrac{1}{4} = \\dfrac{1}{4}$."
+      ],
+      "reponse": "Maximum $\\dfrac{1}{4}$, atteint en $x = \\dfrac{1}{4}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "extremum",
+      "enonce": "Déterminer les réels $a$ et $b$ pour que $f(x) = x^2 + ax + b$ admette un minimum égal à $1$ en $x = 2$.",
+      "corrige": [
+        "En un extrémum, $f'(2) = 0$ : $f'(x) = 2x + a$, donc $4 + a = 0$ et $a = -4$.",
+        "$f(2) = 4 - 8 + b = 1$, donc $b = 5$.",
+        "Vérification : $f'(x) = 2x - 4$ passe de $-$ à $+$ en $2$, c'est bien un minimum."
+      ],
+      "reponse": "$a = -4$ et $b = 5$ : $f(x) = x^2 - 4x + 5$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "parite",
+      "enonce": "$f$ est une fonction paire sur $\\mathbb{R}$, strictement croissante sur $[0\\,;+\\infty[$, avec $f(2) = 5$. Que vaut $f(-2)$ ? Quelles sont les variations de $f$ sur $]-\\infty\\,;0]$ ?",
+      "corrige": [
+        "$f$ est paire : $f(-2) = f(2) = 5$.",
+        "Par symétrie par rapport à l'axe des ordonnées, la croissance sur $[0\\,;+\\infty[$ devient une décroissance sur $]-\\infty\\,;0]$.",
+        "Vérification : si $a < b \\leqslant 0$, alors $0 \\leqslant -b < -a$, donc $f(-b) < f(-a)$, soit $f(b) < f(a)$."
+      ],
+      "reponse": "$f(-2) = 5$ ; $f$ est strictement décroissante sur $]-\\infty\\,;0]$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "inegalite",
+      "enonce": "Démontrer que, pour tout réel $x > 0$, $x + \\dfrac{1}{x} \\geqslant 2$.",
+      "corrige": [
+        "Soit $g(x) = x + \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$ : $g'(x) = 1 - \\dfrac{1}{x^2} = \\dfrac{(x - 1)(x + 1)}{x^2}$, du signe de $x - 1$.",
+        "$g$ décroît sur $]0\\,;1]$ et croît sur $[1\\,;+\\infty[$ : son minimum est $g(1) = 2$.",
+        "Donc $g(x) \\geqslant 2$ pour tout $x > 0$."
+      ],
+      "reponse": "Le minimum de $x + \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$ vaut $2$ (en $x = 1$)."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "inegalite",
+      "enonce": "Démontrer que, pour tout $x \\geqslant 0$, $\\sqrt{x} \\leqslant \\dfrac{x + 1}{2}$.",
+      "corrige": [
+        "Soit $g(x) = \\dfrac{x + 1}{2} - \\sqrt{x}$. Sur $]0\\,;+\\infty[$ : $g'(x) = \\dfrac{1}{2} - \\dfrac{1}{2\\sqrt{x}} = \\dfrac{\\sqrt{x} - 1}{2\\sqrt{x}}$.",
+        "$g'(x) < 0$ pour $0 < x < 1$ et $g'(x) > 0$ pour $x > 1$ : $g$ admet un minimum en $1$, $g(1) = 1 - 1 = 0$.",
+        "Donc $g(x) \\geqslant 0$ pour tout $x \\geqslant 0$, ce qui donne l'inégalité."
+      ],
+      "reponse": "$g$ a pour minimum $g(1) = 0$, donc $\\sqrt{x} \\leqslant \\dfrac{x + 1}{2}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "probleme",
+      "enonce": "On veut fabriquer une boîte sans couvercle, à base carrée de côté $x$ dm, de volume $32$ dm³. 1) Exprimer la hauteur $h$ en fonction de $x$, puis montrer que l'aire de carton utilisée est $S(x) = x^2 + \\dfrac{128}{x}$. 2) Déterminer les dimensions qui minimisent la quantité de carton.",
+      "corrige": [
+        "1) $x^2 h = 32$ donne $h = \\dfrac{32}{x^2}$. Aire : fond $x^2$ et quatre faces $4xh = \\dfrac{128}{x}$.",
+        "2) $S'(x) = 2x - \\dfrac{128}{x^2} = \\dfrac{2(x^3 - 64)}{x^2}$, du signe de $x^3 - 64$ : négatif pour $x < 4$, positif pour $x > 4$.",
+        "Minimum en $x = 4$ : $h = \\dfrac{32}{16} = 2$ et $S(4) = 16 + 32 = 48$ dm²."
+      ],
+      "reponse": "Base de $4$ dm de côté, hauteur $2$ dm ; aire minimale $48$ dm²."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "probleme",
+      "enonce": "Un rectangle a deux sommets sur l'axe des abscisses, en $(-x\\,;0)$ et $(x\\,;0)$, et les deux autres sur la parabole d'équation $y = 12 - x^2$, avec $0 < x < 2\\sqrt{3}$. Exprimer son aire $A(x)$, puis déterminer son aire maximale.",
+      "corrige": [
+        "Largeur $2x$, hauteur $12 - x^2$ : $A(x) = 2x(12 - x^2) = 24x - 2x^3$.",
+        "$A'(x) = 24 - 6x^2 = 6(4 - x^2) = 6(2 - x)(2 + x)$ : positif sur $]0\\,;2[$, négatif sur $]2\\,;2\\sqrt{3}[$.",
+        "Maximum en $x = 2$ : $A(2) = 4 \\times 8 = 32$."
+      ],
+      "reponse": "Aire maximale $32$, pour $x = 2$ (rectangle de $4$ sur $8$)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "probleme",
+      "enonce": "La concentration d'un médicament dans le sang est modélisée par $C(t) = \\dfrac{10t}{t^2 + 1}$ (en mg/L, $t$ en heures, $t \\geqslant 0$). Montrer que $C'(t) = \\dfrac{10(1 - t^2)}{(t^2 + 1)^2}$, puis déterminer la concentration maximale et l'instant où elle est atteinte.",
+      "corrige": [
+        "Quotient avec $u = 10t$, $v = t^2 + 1$ : $C'(t) = \\dfrac{10(t^2 + 1) - 10t \\times 2t}{(t^2 + 1)^2} = \\dfrac{10(1 - t^2)}{(t^2 + 1)^2}$.",
+        "Pour $t \\geqslant 0$, $C'(t)$ a le signe de $1 - t$ : $C$ croît sur $[0\\,;1]$, décroît sur $[1\\,;+\\infty[$.",
+        "Maximum : $C(1) = \\dfrac{10}{2} = 5$ mg/L."
+      ],
+      "reponse": "Concentration maximale $5$ mg/L, au bout de $1$ heure."
     }
   ]
 }

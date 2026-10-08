@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme-orthogonalite-angles",
       "enonce": "Le plan est muni d'un repère orthonormé (unité : le mètre). Sur le plan d'une pièce mécanique, on repère quatre points $\\mathrm{A}(1\\,;\\,2)$, $\\mathrm{B}(5\\,;\\,0)$, $\\mathrm{C}(7\\,;\\,4)$ et $\\mathrm{D}(3\\,;\\,6)$. 1. Déterminer les coordonnées des vecteurs $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{DC}}$. Que peut-on en déduire pour le quadrilatère $\\mathrm{ABCD}$ ? 2. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{BC}}$ et en déduire la nature de l'angle en $\\mathrm{B}$. 3. Calculer les longueurs $\\mathrm{AB}$ et $\\mathrm{BC}$, puis conclure sur la nature précise du quadrilatère $\\mathrm{ABCD}$. 4. Déterminer une mesure de l'angle $\\widehat{\\mathrm{BAC}}$ entre le côté $[\\mathrm{AB}]$ et la diagonale $[\\mathrm{AC}]$. 5. Démontrer que les diagonales $(\\mathrm{AC})$ et $(\\mathrm{BD})$ sont perpendiculaires.",
       "corrige": [
@@ -140,6 +140,459 @@
         "5. On calcule $\\overrightarrow{\\mathrm{BD}}\\begin{pmatrix} 3-5 \\\\ 6-0 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 6 \\end{pmatrix}$, puis $\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{BD}} = 6 \\times (-2) + 2 \\times 6 = -12 + 12 = 0$. Le produit scalaire est nul : les diagonales $(\\mathrm{AC})$ et $(\\mathrm{BD})$ sont perpendiculaires, ce qui est cohérent avec la nature de carré établie à la question 3."
       ],
       "reponse": "1. $\\overrightarrow{\\mathrm{AB}} = \\overrightarrow{\\mathrm{DC}} = (4\\,;\\,-2)$ : $\\mathrm{ABCD}$ est un parallélogramme. 2. $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{BC}} = 0$ : angle droit en $\\mathrm{B}$, donc rectangle. 3. $\\mathrm{AB} = \\mathrm{BC} = 2\\sqrt{5}$ m : c'est un carré. 4. $\\widehat{\\mathrm{BAC}} = 45°$. 5. $\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{BD}} = 0$ : les diagonales sont perpendiculaires."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "signe-angle",
+      "enonce": "Dans chaque cas, préciser si l'angle entre $\\vec u$ et $\\vec v$ (vecteurs non nuls) est aigu, droit ou obtus : a) $\\vec u \\cdot \\vec v = -5$ ; b) $\\vec u \\cdot \\vec v = 0$ ; c) $\\vec u \\cdot \\vec v = 3$.",
+      "corrige": [
+        "Le signe du produit scalaire est celui de $\\cos\\theta$, puisque les normes sont positives.",
+        "Négatif : $\\cos\\theta < 0$, angle obtus ; nul : angle droit ; positif : angle aigu."
+      ],
+      "reponse": "a) obtus ; b) droit ; c) aigu."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "nature-resultat",
+      "enonce": "Un élève écrit : « $\\vec u \\cdot \\vec v = \\begin{pmatrix} 6 \\\\ -2 \\end{pmatrix}$ ». Pourquoi est-ce forcément faux ?",
+      "corrige": [
+        "Le produit scalaire de deux vecteurs est un nombre réel (d'où le nom « scalaire »), pas un vecteur.",
+        "Une réponse sous forme de coordonnées ne peut donc pas être un produit scalaire."
+      ],
+      "reponse": "Le produit scalaire est un nombre, pas un vecteur."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "expression-angle",
+      "enonce": "On donne $\\|\\vec u\\| = 5$, $\\|\\vec v\\| = 2$ et l'angle $\\theta = 120°$ entre ces vecteurs. Calculer $\\vec u \\cdot \\vec v$.",
+      "corrige": [
+        "$\\vec u \\cdot \\vec v = \\|\\vec u\\| \\times \\|\\vec v\\| \\times \\cos\\theta$, avec $\\cos 120° = -\\dfrac{1}{2}$.",
+        "$\\vec u \\cdot \\vec v = 5 \\times 2 \\times \\left(-\\dfrac{1}{2}\\right) = -5$ : négatif, cohérent avec un angle obtus."
+      ],
+      "reponse": "$\\vec u \\cdot \\vec v = -5$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "expression-angle",
+      "enonce": "On donne $\\|\\vec u\\| = 3$ et $\\|\\vec v\\| = 4$. Calculer $\\vec u \\cdot \\vec v$ lorsque l'angle entre les vecteurs vaut : a) $90°$ ; b) $0°$.",
+      "corrige": [
+        "a) $\\cos 90° = 0$, donc $\\vec u \\cdot \\vec v = 0$ : les vecteurs sont orthogonaux.",
+        "b) $\\cos 0° = 1$, donc $\\vec u \\cdot \\vec v = 3 \\times 4 = 12$ : pour des vecteurs de même sens, c'est le produit des normes."
+      ],
+      "reponse": "a) $0$ ; b) $12$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "expression-angle",
+      "enonce": "On donne $\\|\\vec u\\| = 4$, $\\|\\vec v\\| = \\sqrt{2}$ et l'angle $\\theta = 45°$. Calculer $\\vec u \\cdot \\vec v$.",
+      "corrige": [
+        "$\\cos 45° = \\dfrac{\\sqrt{2}}{2}$.",
+        "$\\vec u \\cdot \\vec v = 4 \\times \\sqrt{2} \\times \\dfrac{\\sqrt{2}}{2} = 4 \\times \\dfrac{2}{2} = 4$."
+      ],
+      "reponse": "$\\vec u \\cdot \\vec v = 4$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthonormé, calculer $\\vec u \\cdot \\vec v$ pour $\\vec u\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$.",
+      "corrige": [
+        "En repère orthonormé : $\\vec u \\cdot \\vec v = xx' + yy'$.",
+        "$\\vec u \\cdot \\vec v = 2 \\times 4 + 3 \\times (-1) = 8 - 3 = 5$."
+      ],
+      "reponse": "$\\vec u \\cdot \\vec v = 5$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthonormé, on donne $\\vec u\\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} 4 \\\\ 1 \\end{pmatrix}$. Calculer $\\vec u \\cdot \\vec v$ et préciser si l'angle entre ces vecteurs est aigu, droit ou obtus.",
+      "corrige": [
+        "$\\vec u \\cdot \\vec v = (-3) \\times 4 + 2 \\times 1 = -12 + 2 = -10$.",
+        "Le produit scalaire est négatif : l'angle est obtus."
+      ],
+      "reponse": "$\\vec u \\cdot \\vec v = -10$ ; angle obtus."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "norme",
+      "enonce": "Dans un repère orthonormé, calculer la norme de $\\vec u\\begin{pmatrix} 5 \\\\ 12 \\end{pmatrix}$ et de $\\vec v\\begin{pmatrix} -2 \\\\ -2 \\end{pmatrix}$.",
+      "corrige": [
+        "$\\|\\vec u\\| = \\sqrt{x^2 + y^2}$.",
+        "$\\|\\vec u\\| = \\sqrt{25 + 144} = \\sqrt{169} = 13$ ; $\\|\\vec v\\| = \\sqrt{4 + 4} = \\sqrt{8} = 2\\sqrt{2}$."
+      ],
+      "reponse": "$\\|\\vec u\\| = 13$ ; $\\|\\vec v\\| = 2\\sqrt{2}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "norme",
+      "enonce": "On sait que $\\vec u \\cdot \\vec u = 49$. Que vaut $\\|\\vec u\\|$ ?",
+      "corrige": [
+        "Le carré scalaire est le carré de la norme : $\\vec u \\cdot \\vec u = \\|\\vec u\\|^2$.",
+        "$\\|\\vec u\\|^2 = 49$ et une norme est positive, donc $\\|\\vec u\\| = 7$."
+      ],
+      "reponse": "$\\|\\vec u\\| = 7$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "orthogonalite",
+      "enonce": "Dans un repère orthonormé, les vecteurs $\\vec u\\begin{pmatrix} 3 \\\\ -6 \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ sont-ils orthogonaux ?",
+      "corrige": [
+        "Deux vecteurs sont orthogonaux si et seulement si leur produit scalaire est nul.",
+        "$\\vec u \\cdot \\vec v = 3 \\times 4 + (-6) \\times 2 = 12 - 12 = 0$."
+      ],
+      "reponse": "Oui, car $\\vec u \\cdot \\vec v = 0$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "orthogonalite",
+      "enonce": "Dans un repère orthonormé, déterminer le réel $x$ pour que $\\vec u\\begin{pmatrix} x \\\\ 3 \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} 2 \\\\ -4 \\end{pmatrix}$ soient orthogonaux.",
+      "corrige": [
+        "On écrit $\\vec u \\cdot \\vec v = 0$ : $2x + 3 \\times (-4) = 0$.",
+        "$2x - 12 = 0$, donc $x = 6$. Vérification : $6 \\times 2 + 3 \\times (-4) = 0$."
+      ],
+      "reponse": "$x = 6$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "orthogonalite",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(0\\,;1)$, $\\mathrm{B}(2\\,;6)$, $\\mathrm{C}(1\\,;0)$ et $\\mathrm{D}(6\\,;-2)$. Les droites $(\\mathrm{AB})$ et $(\\mathrm{CD})$ sont-elles perpendiculaires ?",
+      "corrige": [
+        "Vecteurs directeurs : $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{CD}}\\begin{pmatrix} 5 \\\\ -2 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{CD}} = 2 \\times 5 + 5 \\times (-2) = 0$ : les vecteurs directeurs sont orthogonaux."
+      ],
+      "reponse": "Oui, les droites sont perpendiculaires."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(1\\,;-1)$, $\\mathrm{B}(4\\,;3)$ et $\\mathrm{C}(-2\\,;5)$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
+      "corrige": [
+        "Coordonnées : $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 - 1 \\\\ 3 - (-1) \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} -3 \\\\ 6 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 3 \\times (-3) + 4 \\times 6 = -9 + 24 = 15$."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 15$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "calcul-angle",
+      "enonce": "Dans un repère orthonormé, déterminer l'angle entre $\\vec u\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$.",
+      "corrige": [
+        "$\\vec u \\cdot \\vec v = 1$, $\\|\\vec u\\| = 1$ et $\\|\\vec v\\| = \\sqrt{2}$.",
+        "$\\cos\\theta = \\dfrac{1}{1 \\times \\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$, donc $\\theta = 45°$."
+      ],
+      "reponse": "$\\theta = 45°$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "calcul-angle",
+      "enonce": "Dans un repère orthonormé, on donne $\\vec u\\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}$. Déterminer une mesure de l'angle entre ces vecteurs, arrondie au degré.",
+      "corrige": [
+        "$\\vec u \\cdot \\vec v = -2 + 3 = 1$ ; $\\|\\vec u\\| = \\sqrt{5}$ ; $\\|\\vec v\\| = \\sqrt{10}$.",
+        "$\\cos\\theta = \\dfrac{1}{\\sqrt{5} \\times \\sqrt{10}} = \\dfrac{1}{\\sqrt{50}} \\approx 0{,}141$.",
+        "À la calculatrice : $\\theta \\approx 82°$ (angle aigu, car le produit scalaire est positif)."
+      ],
+      "reponse": "$\\theta \\approx 82°$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "calcul-angle",
+      "enonce": "Dans un repère orthonormé, déterminer l'angle entre $\\vec u\\begin{pmatrix} 1 \\\\ \\sqrt{3} \\end{pmatrix}$ et $\\vec v\\begin{pmatrix} -1 \\\\ \\sqrt{3} \\end{pmatrix}$.",
+      "corrige": [
+        "$\\vec u \\cdot \\vec v = -1 + 3 = 2$ ; $\\|\\vec u\\| = \\|\\vec v\\| = \\sqrt{1 + 3} = 2$.",
+        "$\\cos\\theta = \\dfrac{2}{2 \\times 2} = \\dfrac{1}{2}$, donc $\\theta = 60°$."
+      ],
+      "reponse": "$\\theta = 60°$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "On donne $\\|\\vec u\\| = 3$, $\\|\\vec v\\| = 5$ et $\\vec u \\cdot \\vec v = -2$. Calculer $\\|\\vec u + \\vec v\\|$.",
+      "corrige": [
+        "$\\|\\vec u + \\vec v\\|^2 = \\|\\vec u\\|^2 + 2\\,\\vec u \\cdot \\vec v + \\|\\vec v\\|^2$ (sans oublier le facteur $2$).",
+        "$\\|\\vec u + \\vec v\\|^2 = 9 + 2 \\times (-2) + 25 = 30$, donc $\\|\\vec u + \\vec v\\| = \\sqrt{30}$."
+      ],
+      "reponse": "$\\|\\vec u + \\vec v\\| = \\sqrt{30} \\approx 5{,}48$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "En développant $(\\vec u - \\vec v) \\cdot (\\vec u - \\vec v)$ par bilinéarité, calculer $\\|\\vec u - \\vec v\\|$ sachant que $\\|\\vec u\\| = 2$, $\\|\\vec v\\| = 3$ et $\\vec u \\cdot \\vec v = 1$.",
+      "corrige": [
+        "$\\|\\vec u - \\vec v\\|^2 = \\|\\vec u\\|^2 - 2\\,\\vec u \\cdot \\vec v + \\|\\vec v\\|^2$.",
+        "$\\|\\vec u - \\vec v\\|^2 = 4 - 2 + 9 = 11$, donc $\\|\\vec u - \\vec v\\| = \\sqrt{11}$."
+      ],
+      "reponse": "$\\|\\vec u - \\vec v\\| = \\sqrt{11}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "proprietes",
+      "enonce": "On sait que $\\vec u \\cdot \\vec v = 4$ et $\\vec u \\cdot \\vec w = -1$. Calculer : a) $\\vec u \\cdot (\\vec v + \\vec w)$ ; b) $(3\\vec u) \\cdot \\vec v$ ; c) $\\vec u \\cdot (2\\vec v - \\vec w)$.",
+      "corrige": [
+        "a) Bilinéarité : $\\vec u \\cdot \\vec v + \\vec u \\cdot \\vec w = 4 - 1 = 3$.",
+        "b) $(3\\vec u) \\cdot \\vec v = 3 \\times 4 = 12$.",
+        "c) $2\\,\\vec u \\cdot \\vec v - \\vec u \\cdot \\vec w = 8 - (-1) = 9$."
+      ],
+      "reponse": "a) $3$ ; b) $12$ ; c) $9$."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "parallelogramme",
+      "enonce": "On donne $\\|\\vec u\\| = 3$, $\\|\\vec v\\| = 4$ et $\\|\\vec u + \\vec v\\| = 6$. À l'aide de l'égalité du parallélogramme, calculer $\\|\\vec u - \\vec v\\|$.",
+      "corrige": [
+        "$\\|\\vec u + \\vec v\\|^2 + \\|\\vec u - \\vec v\\|^2 = 2\\left(\\|\\vec u\\|^2 + \\|\\vec v\\|^2\\right)$.",
+        "$36 + \\|\\vec u - \\vec v\\|^2 = 2(9 + 16) = 50$, donc $\\|\\vec u - \\vec v\\|^2 = 14$."
+      ],
+      "reponse": "$\\|\\vec u - \\vec v\\| = \\sqrt{14}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle $\\mathrm{ABC}$, on donne $\\mathrm{AC} = 5$, $\\mathrm{AB} = 7$ et $\\widehat{\\mathrm{A}} = 120°$. Calculer $\\mathrm{BC}$.",
+      "corrige": [
+        "Al-Kashi avec l'angle $\\widehat{\\mathrm{A}}$, opposé à $\\mathrm{BC}$ : $\\mathrm{BC}^2 = \\mathrm{AC}^2 + \\mathrm{AB}^2 - 2 \\times \\mathrm{AC} \\times \\mathrm{AB} \\times \\cos\\widehat{\\mathrm{A}}$.",
+        "$\\mathrm{BC}^2 = 25 + 49 - 2 \\times 5 \\times 7 \\times \\left(-\\dfrac{1}{2}\\right) = 74 + 35 = 109$.",
+        "$\\mathrm{BC} = \\sqrt{109} \\approx 10{,}4$."
+      ],
+      "reponse": "$\\mathrm{BC} = \\sqrt{109} \\approx 10{,}4$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "al-kashi",
+      "enonce": "Un triangle $\\mathrm{ABC}$ a pour côtés $\\mathrm{BC} = 7$, $\\mathrm{AC} = 5$ et $\\mathrm{AB} = 8$. Déterminer l'angle $\\widehat{\\mathrm{A}}$.",
+      "corrige": [
+        "Al-Kashi : $\\mathrm{BC}^2 = \\mathrm{AC}^2 + \\mathrm{AB}^2 - 2 \\times \\mathrm{AC} \\times \\mathrm{AB} \\times \\cos\\widehat{\\mathrm{A}}$, d'où $\\cos\\widehat{\\mathrm{A}} = \\dfrac{\\mathrm{AC}^2 + \\mathrm{AB}^2 - \\mathrm{BC}^2}{2 \\times \\mathrm{AC} \\times \\mathrm{AB}}$.",
+        "$\\cos\\widehat{\\mathrm{A}} = \\dfrac{25 + 64 - 49}{2 \\times 5 \\times 8} = \\dfrac{40}{80} = \\dfrac{1}{2}$, donc $\\widehat{\\mathrm{A}} = 60°$."
+      ],
+      "reponse": "$\\widehat{\\mathrm{A}} = 60°$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "al-kashi",
+      "enonce": "Appliquer le théorème d'Al-Kashi à un triangle $\\mathrm{ABC}$ avec $\\mathrm{AC} = 3$, $\\mathrm{AB} = 4$ et $\\widehat{\\mathrm{A}} = 90°$. Quel théorème retrouve-t-on ?",
+      "corrige": [
+        "$\\mathrm{BC}^2 = 9 + 16 - 2 \\times 3 \\times 4 \\times \\cos 90° = 25 - 0 = 25$, donc $\\mathrm{BC} = 5$.",
+        "Avec un angle droit, le terme en cosinus disparaît : on retrouve le théorème de Pythagore, dont Al-Kashi est une généralisation."
+      ],
+      "reponse": "$\\mathrm{BC} = 5$ ; on retrouve le théorème de Pythagore."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle, $\\mathrm{AC} = 4$, $\\mathrm{AB} = 6$ et $\\widehat{\\mathrm{A}} = 60°$. Un élève écrit $\\mathrm{BC}^2 = 16 + 36 + 2 \\times 4 \\times 6 \\times \\cos 60° = 76$. Corriger.",
+      "corrige": [
+        "Le théorème d'Al-Kashi comporte un signe moins : $\\mathrm{BC}^2 = \\mathrm{AC}^2 + \\mathrm{AB}^2 - 2 \\times \\mathrm{AC} \\times \\mathrm{AB} \\times \\cos\\widehat{\\mathrm{A}}$.",
+        "$\\mathrm{BC}^2 = 16 + 36 - 24 = 28$, donc $\\mathrm{BC} = \\sqrt{28} = 2\\sqrt{7} \\approx 5{,}29$."
+      ],
+      "reponse": "$\\mathrm{BC}^2 = 28$, soit $\\mathrm{BC} = 2\\sqrt{7} \\approx 5{,}29$."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "travail",
+      "enonce": "Une force constante de $200\\ \\mathrm{N}$ agit sur un objet qui se déplace de $10\\ \\mathrm{m}$ en ligne droite. Calculer son travail si la force fait avec le déplacement un angle : a) de $0°$ ; b) de $60°$.",
+      "corrige": [
+        "$W = F \\times \\mathrm{AB} \\times \\cos\\alpha$.",
+        "a) $W = 200 \\times 10 \\times 1 = 2\\,000\\ \\mathrm{J}$ ; b) $W = 200 \\times 10 \\times \\dfrac{1}{2} = 1\\,000\\ \\mathrm{J}$."
+      ],
+      "reponse": "a) $2\\,000\\ \\mathrm{J}$ ; b) $1\\,000\\ \\mathrm{J}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "travail",
+      "enonce": "Une personne porte une valise de poids $150\\ \\mathrm{N}$ en marchant $20\\ \\mathrm{m}$ sur un sol horizontal, la valise restant à hauteur constante. Quel est le travail du poids de la valise ?",
+      "corrige": [
+        "Le poids est vertical, le déplacement horizontal : l'angle vaut $90°$.",
+        "$W = 150 \\times 20 \\times \\cos 90° = 0\\ \\mathrm{J}$ : une force perpendiculaire au déplacement ne travaille pas."
+      ],
+      "reponse": "$W = 0\\ \\mathrm{J}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "travail",
+      "enonce": "Un carton glisse sur $50\\ \\mathrm{m}$ ; la force de frottement, de $30\\ \\mathrm{N}$, est dirigée dans le sens opposé au déplacement. Calculer son travail. Est-il moteur ou résistant ?",
+      "corrige": [
+        "L'angle entre la force et le déplacement vaut $180°$, et $\\cos 180° = -1$.",
+        "$W = 30 \\times 50 \\times (-1) = -1\\,500\\ \\mathrm{J}$ : négatif, donc résistant (la force freine le carton)."
+      ],
+      "reponse": "$W = -1\\,500\\ \\mathrm{J}$, travail résistant."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "travail",
+      "enonce": "Dans un repère orthonormé (unités : newton et mètre), une force $\\vec F\\begin{pmatrix} 30 \\\\ -10 \\end{pmatrix}$ s'applique pendant le déplacement $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}$. Calculer le travail de $\\vec F$ et préciser sa nature.",
+      "corrige": [
+        "Le travail est un produit scalaire : $W = \\vec F \\cdot \\overrightarrow{\\mathrm{AB}} = 30 \\times 4 + (-10) \\times 3$.",
+        "$W = 120 - 30 = 90\\ \\mathrm{J}$ : positif, donc moteur."
+      ],
+      "reponse": "$W = 90\\ \\mathrm{J}$, travail moteur."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "projection",
+      "enonce": "$\\mathrm{ABCD}$ est un carré de côté $4$. En utilisant la projection orthogonale, calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
+      "corrige": [
+        "Le projeté orthogonal de $\\mathrm{C}$ sur la droite $(\\mathrm{AB})$ est $\\mathrm{B}$ (car $(\\mathrm{BC}) \\perp (\\mathrm{AB})$).",
+        "Donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AB}} = \\mathrm{AB}^2 = 16$ (le projeté est dans le même sens que $\\overrightarrow{\\mathrm{AB}}$)."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 16$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "projection",
+      "enonce": "Dans un triangle $\\mathrm{ABC}$, $\\mathrm{AB} = 6$ et $\\mathrm{H}$ est le projeté orthogonal de $\\mathrm{C}$ sur la droite $(\\mathrm{AB})$, avec $\\mathrm{AH} = 2$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ : a) si $\\mathrm{H}$ est sur le segment $[\\mathrm{AB}]$ ; b) si $\\mathrm{H}$ est situé de l'autre côté de $\\mathrm{A}$ par rapport à $\\mathrm{B}$.",
+      "corrige": [
+        "Par projection : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AH}}$, égal à $\\mathrm{AB} \\times \\mathrm{AH}$ au signe près.",
+        "a) $\\overrightarrow{\\mathrm{AH}}$ a le même sens que $\\overrightarrow{\\mathrm{AB}}$ : $6 \\times 2 = 12$.",
+        "b) $\\overrightarrow{\\mathrm{AH}}$ est de sens contraire : $-6 \\times 2 = -12$ (l'angle en $\\mathrm{A}$ est alors obtus)."
+      ],
+      "reponse": "a) $12$ ; b) $-12$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "travail",
+      "enonce": "Un skieur de poids $700\\ \\mathrm{N}$ descend une piste rectiligne sur $50\\ \\mathrm{m}$. L'angle entre le poids (vertical) et le déplacement vaut $70°$. Calculer le travail du poids ; est-il moteur ou résistant ?",
+      "corrige": [
+        "$W = P \\times \\mathrm{AB} \\times \\cos 70° = 700 \\times 50 \\times \\cos 70°$.",
+        "$\\cos 70° \\approx 0{,}342$, donc $W \\approx 1{,}2 \\times 10^{4}\\ \\mathrm{J}$.",
+        "$W > 0$ : le poids est moteur dans la descente (il fait accélérer le skieur)."
+      ],
+      "reponse": "$W \\approx 1{,}2 \\times 10^{4}\\ \\mathrm{J}$, moteur."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "calcul-angle",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(0\\,;0)$, $\\mathrm{B}(4\\,;0)$ et $\\mathrm{C}(1\\,;3)$. Déterminer l'angle $\\widehat{\\mathrm{BAC}}$ au degré près.",
+      "corrige": [
+        "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ 0 \\end{pmatrix}$, $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$ : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 4$.",
+        "$\\mathrm{AB} = 4$ et $\\mathrm{AC} = \\sqrt{10}$, donc $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{4}{4\\sqrt{10}} = \\dfrac{1}{\\sqrt{10}} \\approx 0{,}316$.",
+        "À la calculatrice : $\\widehat{\\mathrm{BAC}} \\approx 72°$."
+      ],
+      "reponse": "$\\widehat{\\mathrm{BAC}} \\approx 72°$."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "orthogonalite",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(1\\,;2)$ et $\\mathrm{B}(3\\,;5)$. Déterminer le point $\\mathrm{M}$ de l'axe des abscisses tel que $(\\mathrm{AM}) \\perp (\\mathrm{AB})$.",
+      "corrige": [
+        "$\\mathrm{M}(x\\,;0)$ ; $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AM}}\\begin{pmatrix} x - 1 \\\\ -2 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AM}} = 2(x - 1) + 3 \\times (-2) = 2x - 8$.",
+        "$2x - 8 = 0$, donc $x = 4$."
+      ],
+      "reponse": "$\\mathrm{M}(4\\,;0)$."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "travail",
+      "enonce": "Une voiture en panne est remorquée sur $2{,}0\\ \\mathrm{km}$ en ligne droite, sur une route horizontale. Le câble exerce une force de $800\\ \\mathrm{N}$ faisant un angle de $20°$ avec la route ; les frottements, de $600\\ \\mathrm{N}$, sont opposés au déplacement. 1. Calculer le travail de la traction. 2. Calculer le travail des frottements. 3. Quel est le travail du poids ? 4. En déduire le travail total.",
+      "corrige": [
+        "1. $W_1 = 800 \\times 2\\,000 \\times \\cos 20° \\approx 1{,}50 \\times 10^{6}\\ \\mathrm{J}$.",
+        "2. $W_2 = 600 \\times 2\\,000 \\times \\cos 180° = -1{,}20 \\times 10^{6}\\ \\mathrm{J}$.",
+        "3. Le poids est perpendiculaire au déplacement : $W_P = 0$.",
+        "4. Par bilinéarité, le travail de la résultante est la somme : $W \\approx 1{,}50 \\times 10^{6} - 1{,}20 \\times 10^{6} = 3{,}0 \\times 10^{5}\\ \\mathrm{J}$."
+      ],
+      "reponse": "1. $\\approx 1{,}50 \\times 10^{6}\\ \\mathrm{J}$ ; 2. $-1{,}20 \\times 10^{6}\\ \\mathrm{J}$ ; 3. $0$ ; 4. $\\approx 3{,}0 \\times 10^{5}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "probleme-orthogonalite-angles",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(-1\\,;1)$, $\\mathrm{B}(3\\,;-1)$, $\\mathrm{C}(4\\,;1)$ et $\\mathrm{D}(0\\,;3)$. 1. Montrer que $\\mathrm{ABCD}$ est un parallélogramme. 2. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AD}}$ et conclure sur la nature de $\\mathrm{ABCD}$. 3. Calculer $\\mathrm{AB}$, $\\mathrm{AD}$ et la diagonale $\\mathrm{AC}$.",
+      "corrige": [
+        "1. $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{DC}}\\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$ : ces vecteurs sont égaux, donc $\\mathrm{ABCD}$ est un parallélogramme.",
+        "2. $\\overrightarrow{\\mathrm{AD}}\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AD}} = 4 - 4 = 0$. Un parallélogramme ayant un angle droit est un rectangle.",
+        "3. $\\mathrm{AB} = \\sqrt{20} = 2\\sqrt{5}$, $\\mathrm{AD} = \\sqrt{5}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 5 \\\\ 0 \\end{pmatrix}$, donc $\\mathrm{AC} = 5$ (on vérifie : $20 + 5 = 25$)."
+      ],
+      "reponse": "1. $\\overrightarrow{\\mathrm{AB}} = \\overrightarrow{\\mathrm{DC}}$ ; 2. produit scalaire nul : rectangle ; 3. $\\mathrm{AB} = 2\\sqrt{5}$, $\\mathrm{AD} = \\sqrt{5}$, $\\mathrm{AC} = 5$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "al-kashi",
+      "enonce": "Un géomètre, placé en $\\mathrm{A}$, vise deux bornes $\\mathrm{B}$ et $\\mathrm{C}$ d'un terrain. Il mesure $\\mathrm{AB} = 120\\ \\mathrm{m}$, $\\mathrm{AC} = 80\\ \\mathrm{m}$ et l'angle $\\widehat{\\mathrm{BAC}} = 50°$. Calculer la distance $\\mathrm{BC}$, arrondie au mètre.",
+      "corrige": [
+        "Al-Kashi avec l'angle en $\\mathrm{A}$, opposé à $[\\mathrm{BC}]$ : $\\mathrm{BC}^2 = 120^2 + 80^2 - 2 \\times 120 \\times 80 \\times \\cos 50°$.",
+        "$\\mathrm{BC}^2 \\approx 14\\,400 + 6\\,400 - 19\\,200 \\times 0{,}643 \\approx 8\\,458$.",
+        "$\\mathrm{BC} \\approx 92\\ \\mathrm{m}$."
+      ],
+      "reponse": "$\\mathrm{BC} \\approx 92\\ \\mathrm{m}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "decouverte",
+      "notion": "proprietes",
+      "enonce": "On sait que $\\vec u \\cdot \\vec v = -3$. Donner $\\vec v \\cdot \\vec u$ et $(-\\vec u) \\cdot \\vec v$.",
+      "corrige": [
+        "Symétrie : $\\vec v \\cdot \\vec u = \\vec u \\cdot \\vec v = -3$.",
+        "Bilinéarité avec $k = -1$ : $(-\\vec u) \\cdot \\vec v = -(\\vec u \\cdot \\vec v) = 3$."
+      ],
+      "reponse": "$\\vec v \\cdot \\vec u = -3$ et $(-\\vec u) \\cdot \\vec v = 3$."
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "norme",
+      "enonce": "Dans un repère orthonormé, calculer la distance $\\mathrm{AB}$ pour $\\mathrm{A}(2\\,;-1)$ et $\\mathrm{B}(5\\,;3)$.",
+      "corrige": [
+        "$\\mathrm{AB} = \\|\\overrightarrow{\\mathrm{AB}}\\|$ avec $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$.",
+        "$\\mathrm{AB} = \\sqrt{9 + 16} = 5$."
+      ],
+      "reponse": "$\\mathrm{AB} = 5$."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Montrer que $(\\vec u + \\vec v) \\cdot (\\vec u - \\vec v) = \\|\\vec u\\|^2 - \\|\\vec v\\|^2$. En déduire que si $\\|\\vec u\\| = \\|\\vec v\\| = 5$, les vecteurs $\\vec u + \\vec v$ et $\\vec u - \\vec v$ sont orthogonaux.",
+      "corrige": [
+        "Par bilinéarité : $\\vec u \\cdot \\vec u - \\vec u \\cdot \\vec v + \\vec v \\cdot \\vec u - \\vec v \\cdot \\vec v$, et par symétrie les deux termes du milieu s'annulent.",
+        "Il reste $\\|\\vec u\\|^2 - \\|\\vec v\\|^2 = 25 - 25 = 0$ : le produit scalaire est nul, les vecteurs sont orthogonaux (les diagonales d'un losange sont perpendiculaires)."
+      ],
+      "reponse": "$(\\vec u + \\vec v) \\cdot (\\vec u - \\vec v) = 25 - 25 = 0$ : orthogonaux."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "probleme-orthogonalite-angles",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(1\\,;1)$, $\\mathrm{B}(5\\,;1)$ et $\\mathrm{C}(3\\,;4)$. 1. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$. 2. En déduire $\\cos\\widehat{\\mathrm{BAC}}$ puis l'angle au degré près. 3. Calculer $\\mathrm{BC}$ avec Al-Kashi, puis vérifier avec les coordonnées. Que peut-on dire du triangle ?",
+      "corrige": [
+        "1. $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ 0 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 8$.",
+        "2. $\\mathrm{AB} = 4$, $\\mathrm{AC} = \\sqrt{13}$ : $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{8}{4\\sqrt{13}} = \\dfrac{2}{\\sqrt{13}} \\approx 0{,}555$, soit environ $56°$.",
+        "3. $\\mathrm{BC}^2 = 13 + 16 - 2 \\times \\sqrt{13} \\times 4 \\times \\dfrac{2}{\\sqrt{13}} = 29 - 16 = 13$, donc $\\mathrm{BC} = \\sqrt{13}$. Avec $\\overrightarrow{\\mathrm{BC}}\\begin{pmatrix} -2 \\\\ 3 \\end{pmatrix}$, on trouve aussi $\\sqrt{13}$.",
+        "$\\mathrm{AC} = \\mathrm{BC}$ : le triangle est isocèle en $\\mathrm{C}$."
+      ],
+      "reponse": "1. $8$ ; 2. $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{2}{\\sqrt{13}}$, angle $\\approx 56°$ ; 3. $\\mathrm{BC} = \\sqrt{13}$, triangle isocèle en $\\mathrm{C}$."
     }
   ]
 }

@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "fonction-sinusoidale",
       "enonce": "Un petit alternateur délivre une tension modélisée par $u(t) = 12\\cos(50\\pi\\, t)$, où $t$ est en secondes et $u$ en volts. 1. Donner l'amplitude et la pulsation de ce signal, puis calculer sa période $T$ et sa fréquence $f$. 2. Calculer les valeurs exactes de $u(0)$, $u\\left(\\dfrac{T}{4}\\right)$, $u\\left(\\dfrac{T}{2}\\right)$ et $u\\left(\\dfrac{3T}{4}\\right)$. 3. Résoudre l'équation $u(t) = 0$ sur une période $[0\\,;T]$. 4. Déterminer les instants de $[0\\,;T]$ où la tension atteint son maximum $12$ V, puis ceux où elle atteint son minimum $-12$ V. 5. En utilisant la parité de la fonction cosinus, montrer que $u(-t) = u(t)$ pour tout réel $t$. 6. On superpose un second signal $v(t) = 12\\cos\\left(50\\pi\\, t + \\dfrac{\\pi}{2}\\right)$. Que représente le terme $\\dfrac{\\pi}{2}$ ? Montrer, à l'aide d'un angle associé, que $v(t) = -12\\sin(50\\pi\\, t)$, et calculer $v(0)$.",
       "corrige": [
@@ -139,6 +139,452 @@
         "6. Le terme $\\dfrac{\\pi}{2}$ est la phase à l'origine $\\varphi$ : il décale la courbe horizontalement, sans modifier ni l'amplitude ni la période. On utilise l'angle associé $\\cos\\left(\\dfrac{\\pi}{2} + X\\right) = -\\sin X$ avec $X = 50\\pi\\, t$ : $v(t) = 12\\cos\\left(\\dfrac{\\pi}{2} + 50\\pi\\, t\\right) = -12\\sin(50\\pi\\, t)$. Enfin $v(0) = -12\\sin(0) = 0$ V (on vérifie aussi $v(0) = 12\\cos\\left(\\dfrac{\\pi}{2}\\right) = 0$)."
       ],
       "reponse": "1. $A = 12$ V, $\\omega = 50\\pi$ rad·s⁻¹, $T = 0{,}04$ s, $f = 25$ Hz. 2. $u(0) = 12$, $u(T/4) = 0$, $u(T/2) = -12$, $u(3T/4) = 0$ (en volts). 3. Sur $[0\\,;T]$ : $t = 0{,}01$ s et $t = 0{,}03$ s. 4. Maximum en $t = 0$ et $t = 0{,}04$ s ; minimum en $t = 0{,}02$ s. 5. $u$ est paire car le cosinus l'est. 6. $\\dfrac{\\pi}{2}$ est la phase à l'origine ; $v(t) = -12\\sin(50\\pi\\, t)$ et $v(0) = 0$ V."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "radian",
+      "enonce": "Convertir en radians : $30°$ ; $90°$ ; $270°$.",
+      "corrige": [
+        "radians $=$ degrés $\\times \\dfrac{\\pi}{180}$.",
+        "$30 \\times \\dfrac{\\pi}{180} = \\dfrac{\\pi}{6}$ ; $90 \\times \\dfrac{\\pi}{180} = \\dfrac{\\pi}{2}$ ; $270 \\times \\dfrac{\\pi}{180} = \\dfrac{3\\pi}{2}$."
+      ],
+      "reponse": "$\\dfrac{\\pi}{6}$ ; $\\dfrac{\\pi}{2}$ ; $\\dfrac{3\\pi}{2}$ rad."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "radian",
+      "enonce": "Convertir en degrés : $\\dfrac{\\pi}{4}$ rad ; $\\dfrac{2\\pi}{3}$ rad ; $\\dfrac{\\pi}{5}$ rad.",
+      "corrige": [
+        "degrés $=$ radians $\\times \\dfrac{180}{\\pi}$ : il suffit de remplacer $\\pi$ par $180°$.",
+        "$\\dfrac{180}{4} = 45°$ ; $\\dfrac{2 \\times 180}{3} = 120°$ ; $\\dfrac{180}{5} = 36°$."
+      ],
+      "reponse": "$45°$ ; $120°$ ; $36°$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "valeurs-remarquables",
+      "enonce": "Donner sans calculatrice : $\\cos\\dfrac{\\pi}{3}$ ; $\\sin\\dfrac{\\pi}{6}$ ; $\\cos\\dfrac{\\pi}{4}$ ; $\\sin\\dfrac{\\pi}{2}$.",
+      "corrige": [
+        "On utilise le tableau des valeurs remarquables (la ligne du sinus est $\\dfrac{\\sqrt{0}}{2}, \\dfrac{\\sqrt{1}}{2}, \\dfrac{\\sqrt{2}}{2}, \\dfrac{\\sqrt{3}}{2}, \\dfrac{\\sqrt{4}}{2}$).",
+        "$\\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}$, $\\sin\\dfrac{\\pi}{6} = \\dfrac{1}{2}$, $\\cos\\dfrac{\\pi}{4} = \\dfrac{\\sqrt{2}}{2}$, $\\sin\\dfrac{\\pi}{2} = 1$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$ ; $\\dfrac{1}{2}$ ; $\\dfrac{\\sqrt{2}}{2}$ ; $1$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Donner les coordonnées des points du cercle trigonométrique associés aux réels $\\dfrac{\\pi}{6}$ et $\\pi$.",
+      "corrige": [
+        "Le point associé au réel $x$ est $\\mathrm{M}(\\cos x\\,;\\sin x)$ : l'abscisse est le cosinus, l'ordonnée le sinus.",
+        "Pour $\\dfrac{\\pi}{6}$ : $\\left(\\dfrac{\\sqrt{3}}{2}\\,;\\dfrac{1}{2}\\right)$ ; pour $\\pi$ : $(-1\\,;0)$."
+      ],
+      "reponse": "$\\left(\\dfrac{\\sqrt{3}}{2}\\,;\\dfrac{1}{2}\\right)$ et $(-1\\,;0)$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "Sur le cercle trigonométrique (rayon $1$), quelle est la longueur de l'arc intercepté par un angle de $\\dfrac{\\pi}{2}$ rad ? par un tour complet ?",
+      "corrige": [
+        "Le radian mesure l'angle par la longueur d'arc qu'il intercepte sur le cercle de rayon $1$ : un angle de $\\theta$ rad intercepte un arc de longueur $\\theta$.",
+        "$\\dfrac{\\pi}{2} \\approx 1{,}57$ ; un tour complet ($2\\pi$ rad) correspond au périmètre $2\\pi \\approx 6{,}28$."
+      ],
+      "reponse": "$\\dfrac{\\pi}{2} \\approx 1{,}57$ ; $2\\pi \\approx 6{,}28$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "parite-periodicite",
+      "enonce": "Calculer $\\cos\\left(-\\dfrac{\\pi}{3}\\right)$ et $\\sin\\left(-\\dfrac{\\pi}{4}\\right)$.",
+      "corrige": [
+        "Le cosinus est pair : $\\cos(-x) = \\cos x$ ; le sinus est impair : $\\sin(-x) = -\\sin x$.",
+        "$\\cos\\left(-\\dfrac{\\pi}{3}\\right) = \\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}$ et $\\sin\\left(-\\dfrac{\\pi}{4}\\right) = -\\sin\\dfrac{\\pi}{4} = -\\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$ et $-\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "parite-periodicite",
+      "enonce": "En utilisant la périodicité, calculer $\\cos\\left(2\\pi + \\dfrac{\\pi}{6}\\right)$ et $\\sin\\dfrac{13\\pi}{6}$.",
+      "corrige": [
+        "Les fonctions cosinus et sinus sont $2\\pi$-périodiques : ajouter $2\\pi$ ne change pas la valeur.",
+        "$\\cos\\left(2\\pi + \\dfrac{\\pi}{6}\\right) = \\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2}$.",
+        "$\\dfrac{13\\pi}{6} = 2\\pi + \\dfrac{\\pi}{6}$, donc $\\sin\\dfrac{13\\pi}{6} = \\sin\\dfrac{\\pi}{6} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt{3}}{2}$ et $\\dfrac{1}{2}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "angles-associes",
+      "enonce": "Calculer $\\cos\\dfrac{5\\pi}{6}$ et $\\sin\\dfrac{5\\pi}{6}$ en remarquant que $\\dfrac{5\\pi}{6} = \\pi - \\dfrac{\\pi}{6}$.",
+      "corrige": [
+        "Pour $\\pi - x$ : $\\cos(\\pi - x) = -\\cos x$ et $\\sin(\\pi - x) = \\sin x$ (symétrie par rapport à l'axe des ordonnées).",
+        "$\\cos\\dfrac{5\\pi}{6} = -\\dfrac{\\sqrt{3}}{2}$ et $\\sin\\dfrac{5\\pi}{6} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\cos\\dfrac{5\\pi}{6} = -\\dfrac{\\sqrt{3}}{2}$ ; $\\sin\\dfrac{5\\pi}{6} = \\dfrac{1}{2}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "angles-associes",
+      "enonce": "Calculer $\\cos\\dfrac{4\\pi}{3}$ et $\\sin\\dfrac{4\\pi}{3}$.",
+      "corrige": [
+        "$\\dfrac{4\\pi}{3} = \\pi + \\dfrac{\\pi}{3}$ ; pour $\\pi + x$, le cosinus et le sinus changent de signe (symétrie de centre $\\mathrm{O}$).",
+        "$\\cos\\dfrac{4\\pi}{3} = -\\cos\\dfrac{\\pi}{3} = -\\dfrac{1}{2}$ et $\\sin\\dfrac{4\\pi}{3} = -\\sin\\dfrac{\\pi}{3} = -\\dfrac{\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$-\\dfrac{1}{2}$ et $-\\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Calculer $\\cos\\left(-\\dfrac{2\\pi}{3}\\right)$ et $\\sin\\left(-\\dfrac{2\\pi}{3}\\right)$.",
+      "corrige": [
+        "D'abord $\\dfrac{2\\pi}{3} = \\pi - \\dfrac{\\pi}{3}$ : $\\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2}$ et $\\sin\\dfrac{2\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$.",
+        "Ensuite la parité : $\\cos\\left(-\\dfrac{2\\pi}{3}\\right) = \\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2}$ et $\\sin\\left(-\\dfrac{2\\pi}{3}\\right) = -\\sin\\dfrac{2\\pi}{3} = -\\dfrac{\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$-\\dfrac{1}{2}$ et $-\\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Simplifier $A = \\cos(\\pi - x) + \\cos(\\pi + x) + \\cos(-x)$.",
+      "corrige": [
+        "$\\cos(\\pi - x) = -\\cos x$, $\\cos(\\pi + x) = -\\cos x$ et $\\cos(-x) = \\cos x$.",
+        "$A = -\\cos x - \\cos x + \\cos x = -\\cos x$."
+      ],
+      "reponse": "$A = -\\cos x$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Simplifier $B = \\sin(\\pi - x) + \\sin(-x) + \\cos\\left(\\dfrac{\\pi}{2} - x\\right)$.",
+      "corrige": [
+        "$\\sin(\\pi - x) = \\sin x$ ; $\\sin(-x) = -\\sin x$ ; $\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin x$.",
+        "$B = \\sin x - \\sin x + \\sin x = \\sin x$."
+      ],
+      "reponse": "$B = \\sin x$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\cos x = 0{,}6$ et que $x \\in \\left[-\\dfrac{\\pi}{2}\\,;0\\right]$. Calculer $\\sin x$.",
+      "corrige": [
+        "$\\sin^2 x = 1 - \\cos^2 x = 1 - 0{,}36 = 0{,}64$, donc $\\sin x = 0{,}8$ ou $\\sin x = -0{,}8$.",
+        "Sur $\\left[-\\dfrac{\\pi}{2}\\,;0\\right]$, le point est sous l'axe des abscisses : $\\sin x \\leqslant 0$."
+      ],
+      "reponse": "$\\sin x = -0{,}8$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\sin x = -\\dfrac{1}{3}$ et que $x \\in \\left[\\pi\\,;\\dfrac{3\\pi}{2}\\right]$. Déterminer la valeur exacte de $\\cos x$.",
+      "corrige": [
+        "$\\cos^2 x = 1 - \\dfrac{1}{9} = \\dfrac{8}{9}$, donc $\\cos x = \\pm\\dfrac{\\sqrt{8}}{3} = \\pm\\dfrac{2\\sqrt{2}}{3}$.",
+        "Sur $\\left[\\pi\\,;\\dfrac{3\\pi}{2}\\right]$, le point est à gauche de l'axe des ordonnées : $\\cos x \\leqslant 0$."
+      ],
+      "reponse": "$\\cos x = -\\dfrac{2\\sqrt{2}}{3}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "Peut-il exister un réel $x$ tel que $\\cos x = 0{,}5$ et $\\sin x = 0{,}8$ ? Justifier.",
+      "corrige": [
+        "Pour tout réel $x$, $\\cos^2 x + \\sin^2 x = 1$.",
+        "Ici $0{,}5^2 + 0{,}8^2 = 0{,}25 + 0{,}64 = 0{,}89 \\neq 1$."
+      ],
+      "reponse": "Non, car $0{,}25 + 0{,}64 = 0{,}89 \\neq 1$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Résoudre $\\sin x = \\dfrac{1}{2}$ sur $[0\\,;2\\pi[$.",
+      "corrige": [
+        "On place $\\dfrac{1}{2}$ sur l'axe des ordonnées : la droite horizontale coupe le cercle en deux points.",
+        "Le premier correspond à $\\dfrac{\\pi}{6}$, le second, symétrique par rapport à l'axe des ordonnées, à $\\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$."
+      ],
+      "reponse": "$x = \\dfrac{\\pi}{6}$ ou $x = \\dfrac{5\\pi}{6}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Résoudre sur $[0\\,;2\\pi[$ : a) $\\cos x = 2$ ; b) $\\cos x = -1$.",
+      "corrige": [
+        "a) Le cosinus est toujours compris entre $-1$ et $1$ : aucune solution.",
+        "b) Seul le point $(-1\\,;0)$ du cercle a pour abscisse $-1$ : $x = \\pi$."
+      ],
+      "reponse": "a) aucune solution ; b) $x = \\pi$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre $\\sin x = -\\dfrac{\\sqrt{3}}{2}$ sur $[0\\,;2\\pi[$.",
+      "corrige": [
+        "$\\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$ ; on cherche les points d'ordonnée $-\\dfrac{\\sqrt{3}}{2}$, sous l'axe des abscisses.",
+        "Ce sont $\\pi + \\dfrac{\\pi}{3} = \\dfrac{4\\pi}{3}$ et $2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}$."
+      ],
+      "reponse": "$x = \\dfrac{4\\pi}{3}$ ou $x = \\dfrac{5\\pi}{3}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\cos x = \\dfrac{\\sqrt{3}}{2}$.",
+      "corrige": [
+        "Sur un tour, les solutions sont $\\dfrac{\\pi}{6}$ et $-\\dfrac{\\pi}{6}$ (points symétriques par rapport à l'axe des abscisses).",
+        "Sur $\\mathbb{R}$, on ajoute un nombre entier de tours : $+\\,2k\\pi$ avec $k$ entier."
+      ],
+      "reponse": "$x = \\dfrac{\\pi}{6} + 2k\\pi$ ou $x = -\\dfrac{\\pi}{6} + 2k\\pi$, $k \\in \\mathbb{Z}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "equation",
+      "enonce": "Résoudre $2\\cos x + 1 = 0$ sur $]-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "L'équation équivaut à $\\cos x = -\\dfrac{1}{2}$.",
+        "$\\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2}$, et le point symétrique par rapport à l'axe des abscisses correspond à $-\\dfrac{2\\pi}{3}$ ; ces deux valeurs sont dans $]-\\pi\\,;\\pi]$."
+      ],
+      "reponse": "$x = \\dfrac{2\\pi}{3}$ ou $x = -\\dfrac{2\\pi}{3}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "equation",
+      "enonce": "Résoudre $\\sin x = \\dfrac{\\sqrt{2}}{2}$ sur $]-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "$\\sin\\dfrac{\\pi}{4} = \\dfrac{\\sqrt{2}}{2}$ ; l'autre point de même ordonnée correspond à $\\pi - \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$.",
+        "Les deux valeurs appartiennent à $]-\\pi\\,;\\pi]$ ; aucune valeur négative ne convient (le sinus y est négatif)."
+      ],
+      "reponse": "$x = \\dfrac{\\pi}{4}$ ou $x = \\dfrac{3\\pi}{4}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "pulsation-frequence",
+      "enonce": "Calculer la pulsation d'un signal sinusoïdal de fréquence $50\\ \\mathrm{Hz}$.",
+      "corrige": [
+        "$\\omega = 2\\pi f$.",
+        "$\\omega = 2\\pi \\times 50 = 100\\pi \\approx 314\\ \\mathrm{rad\\cdot s^{-1}}$."
+      ],
+      "reponse": "$\\omega = 100\\pi \\approx 314\\ \\mathrm{rad\\cdot s^{-1}}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "pulsation-frequence",
+      "enonce": "Un signal a pour pulsation $\\omega = 200\\pi\\ \\mathrm{rad\\cdot s^{-1}}$. Calculer sa fréquence et sa période.",
+      "corrige": [
+        "$f = \\dfrac{\\omega}{2\\pi} = \\dfrac{200\\pi}{2\\pi} = 100\\ \\mathrm{Hz}$.",
+        "$T = \\dfrac{1}{f} = 0{,}01\\ \\mathrm{s}$ (on vérifie : $\\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{200\\pi} = 0{,}01$)."
+      ],
+      "reponse": "$f = 100\\ \\mathrm{Hz}$ et $T = 0{,}01\\ \\mathrm{s}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "pulsation-frequence",
+      "enonce": "Pour $u(t) = 10\\cos(100\\pi\\,t)$, un élève écrit : « $T = \\dfrac{\\omega}{2\\pi} = 50\\ \\mathrm{s}$ ». Trouver l'erreur et corriger.",
+      "corrige": [
+        "La formule est inversée : $\\dfrac{\\omega}{2\\pi}$ est la fréquence, pas la période.",
+        "$T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{100\\pi} = 0{,}02\\ \\mathrm{s}$ ; la fréquence vaut $50\\ \\mathrm{Hz}$."
+      ],
+      "reponse": "$T = 0{,}02\\ \\mathrm{s}$ (et $f = 50\\ \\mathrm{Hz}$)."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "fonction-sinusoidale",
+      "enonce": "On donne $u(t) = 5\\cos\\left(2\\,000\\pi\\,t - \\dfrac{\\pi}{4}\\right)$ ($u$ en volts, $t$ en secondes). Donner l'amplitude, la pulsation, la phase à l'origine, la fréquence et la période.",
+      "corrige": [
+        "Par identification avec $A\\cos(\\omega t + \\varphi)$ : $A = 5\\ \\mathrm{V}$, $\\omega = 2\\,000\\pi\\ \\mathrm{rad\\cdot s^{-1}}$, $\\varphi = -\\dfrac{\\pi}{4}$ rad.",
+        "$f = \\dfrac{\\omega}{2\\pi} = 1\\,000\\ \\mathrm{Hz}$ et $T = \\dfrac{1}{f} = 10^{-3}\\ \\mathrm{s} = 1\\ \\mathrm{ms}$."
+      ],
+      "reponse": "$A = 5\\ \\mathrm{V}$, $\\omega = 2\\,000\\pi\\ \\mathrm{rad\\cdot s^{-1}}$, $\\varphi = -\\dfrac{\\pi}{4}$, $f = 1\\ \\mathrm{kHz}$, $T = 1\\ \\mathrm{ms}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "fonction-sinusoidale",
+      "enonce": "Écrire l'expression $u(t) = A\\cos(\\omega t + \\varphi)$ d'une tension d'amplitude $10\\ \\mathrm{V}$, de fréquence $1\\ \\mathrm{kHz}$ et de phase à l'origine nulle.",
+      "corrige": [
+        "$A = 10$, $\\varphi = 0$ et $\\omega = 2\\pi f = 2\\pi \\times 1\\,000 = 2\\,000\\pi\\ \\mathrm{rad\\cdot s^{-1}}$."
+      ],
+      "reponse": "$u(t) = 10\\cos(2\\,000\\pi\\,t)$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "fonction-sinusoidale",
+      "enonce": "Sur un oscillogramme, une tension sinusoïdale varie entre $-6\\ \\mathrm{V}$ et $6\\ \\mathrm{V}$ ; on compte $5$ périodes en $10\\ \\mathrm{ms}$, et la tension est maximale à $t = 0$. Écrire $u(t)$.",
+      "corrige": [
+        "Amplitude : $A = 6\\ \\mathrm{V}$. Période : $T = \\dfrac{10\\ \\mathrm{ms}}{5} = 2\\ \\mathrm{ms}$, donc $f = 500\\ \\mathrm{Hz}$ et $\\omega = 2\\pi f = 1\\,000\\pi\\ \\mathrm{rad\\cdot s^{-1}}$.",
+        "Maximum à $t = 0$ : $\\cos\\varphi = 1$, donc $\\varphi = 0$."
+      ],
+      "reponse": "$u(t) = 6\\cos(1\\,000\\pi\\,t)$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "fonction-sinusoidale",
+      "enonce": "Soit $f(t) = 4\\cos\\left(\\dfrac{\\pi}{2}\\,t\\right)$. Calculer sa période, puis $f(0)$, $f(1)$ et $f(2)$.",
+      "corrige": [
+        "$\\omega = \\dfrac{\\pi}{2}$, donc $T = \\dfrac{2\\pi}{\\pi/2} = 4$.",
+        "$f(0) = 4\\cos 0 = 4$ ; $f(1) = 4\\cos\\dfrac{\\pi}{2} = 0$ ; $f(2) = 4\\cos\\pi = -4$."
+      ],
+      "reponse": "$T = 4$ ; $f(0) = 4$, $f(1) = 0$, $f(2) = -4$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "fonction-sinusoidale",
+      "enonce": "On compare $u_1(t) = 3\\cos(\\omega t)$ et $u_2(t) = 3\\cos\\left(\\omega t + \\dfrac{\\pi}{2}\\right)$. Ont-ils la même amplitude ? la même période ? Calculer $u_1(0)$ et $u_2(0)$, puis exprimer $u_2$ à l'aide d'un sinus.",
+      "corrige": [
+        "Même amplitude ($3$) et même pulsation, donc même période : seule la phase diffère, ce qui décale la courbe horizontalement.",
+        "$u_1(0) = 3$ et $u_2(0) = 3\\cos\\dfrac{\\pi}{2} = 0$.",
+        "Avec $\\cos\\left(\\dfrac{\\pi}{2} + x\\right) = -\\sin x$ : $u_2(t) = -3\\sin(\\omega t)$."
+      ],
+      "reponse": "Oui, oui ; $u_1(0) = 3$, $u_2(0) = 0$ ; $u_2(t) = -3\\sin(\\omega t)$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "variations",
+      "enonce": "Sans calculatrice, comparer : a) $\\cos 1$ et $\\cos 2$ ; b) $\\sin(-0{,}5)$ et $\\sin 0{,}3$.",
+      "corrige": [
+        "a) $1$ et $2$ sont dans $[0\\,;\\pi]$ (car $\\pi \\approx 3{,}14$), où le cosinus est décroissant : $1 < 2$ donne $\\cos 1 > \\cos 2$.",
+        "b) $-0{,}5$ et $0{,}3$ sont dans $\\left[-\\dfrac{\\pi}{2}\\,;\\dfrac{\\pi}{2}\\right]$, où le sinus est croissant : $\\sin(-0{,}5) < \\sin 0{,}3$."
+      ],
+      "reponse": "a) $\\cos 1 > \\cos 2$ ; b) $\\sin(-0{,}5) < \\sin 0{,}3$."
+    },
+    {
+      "id": 41,
+      "difficulte": "decouverte",
+      "notion": "variations",
+      "enonce": "Entre quelles valeurs varie $g(x) = 3\\cos x + 1$ ? Pour quelles valeurs de $x$ de $[0\\,;2\\pi[$ le maximum est-il atteint ?",
+      "corrige": [
+        "$-1 \\leqslant \\cos x \\leqslant 1$, donc $-3 \\leqslant 3\\cos x \\leqslant 3$ et $-2 \\leqslant g(x) \\leqslant 4$.",
+        "Le maximum $4$ est atteint quand $\\cos x = 1$, c'est-à-dire pour $x = 0$ sur $[0\\,;2\\pi[$."
+      ],
+      "reponse": "$g$ varie entre $-2$ et $4$ ; maximum en $x = 0$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "parite-periodicite",
+      "enonce": "Quelle symétrie possède la courbe de la fonction cosinus ? celle de la fonction sinus ? Vérifier la propriété du sinus avec $x = \\dfrac{\\pi}{2}$.",
+      "corrige": [
+        "Le cosinus est pair : sa courbe est symétrique par rapport à l'axe des ordonnées. Le sinus est impair : sa courbe est symétrique par rapport à l'origine.",
+        "Vérification : $\\sin\\left(-\\dfrac{\\pi}{2}\\right) = -1$ et $-\\sin\\dfrac{\\pi}{2} = -1$ : on a bien $\\sin(-x) = -\\sin x$."
+      ],
+      "reponse": "Cosinus : axe des ordonnées ; sinus : origine du repère ($\\sin(-\\tfrac{\\pi}{2}) = -1 = -\\sin\\tfrac{\\pi}{2}$)."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "equation",
+      "enonce": "Soit $u(t) = 10\\cos(100\\pi\\,t)$. Déterminer les instants $t$ de $[0\\,;0{,}02]$ (en secondes) où la tension s'annule.",
+      "corrige": [
+        "$u(t) = 0 \\iff \\cos(100\\pi\\,t) = 0 \\iff 100\\pi\\,t = \\dfrac{\\pi}{2} + k\\pi$, $k$ entier.",
+        "Donc $t = \\dfrac{1}{200} + \\dfrac{k}{100} = 0{,}005 + 0{,}01k$.",
+        "Dans $[0\\,;0{,}02]$ : $t = 0{,}005\\ \\mathrm{s}$ et $t = 0{,}015\\ \\mathrm{s}$ (deux annulations par période)."
+      ],
+      "reponse": "$t = 0{,}005\\ \\mathrm{s}$ et $t = 0{,}015\\ \\mathrm{s}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "fonction-sinusoidale",
+      "enonce": "La tension du secteur a une amplitude de $325\\ \\mathrm{V}$ et une fréquence de $50\\ \\mathrm{Hz}$ ; elle est maximale à $t = 0$. 1. Calculer la pulsation et la période, puis écrire $u(t)$. 2. Calculer $u(0{,}005)$ et $u(0{,}01)$. 3. Calculer la valeur exacte de $u\\left(\\dfrac{1}{300}\\right)$.",
+      "corrige": [
+        "1. $\\omega = 2\\pi \\times 50 = 100\\pi\\ \\mathrm{rad\\cdot s^{-1}}$, $T = 0{,}02\\ \\mathrm{s}$, et $u(t) = 325\\cos(100\\pi\\,t)$.",
+        "2. $u(0{,}005) = 325\\cos\\dfrac{\\pi}{2} = 0\\ \\mathrm{V}$ ; $u(0{,}01) = 325\\cos\\pi = -325\\ \\mathrm{V}$.",
+        "3. $u\\left(\\dfrac{1}{300}\\right) = 325\\cos\\dfrac{\\pi}{3} = \\dfrac{325}{2} = 162{,}5\\ \\mathrm{V}$."
+      ],
+      "reponse": "1. $\\omega = 100\\pi\\ \\mathrm{rad\\cdot s^{-1}}$, $T = 0{,}02\\ \\mathrm{s}$, $u(t) = 325\\cos(100\\pi\\,t)$ ; 2. $0\\ \\mathrm{V}$ et $-325\\ \\mathrm{V}$ ; 3. $162{,}5\\ \\mathrm{V}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "fonction-sinusoidale",
+      "enonce": "La position d'une pièce vibrante est $x(t) = 0{,}05\\cos(20\\pi\\,t)$ ($x$ en mètres, $t$ en secondes). 1. Donner l'amplitude en centimètres, la fréquence et la période. 2. Calculer $x(0{,}025)$ et $x\\left(\\dfrac{1}{60}\\right)$. 3. Déterminer le premier instant $t > 0$ où $x(t) = -0{,}025\\ \\mathrm{m}$.",
+      "corrige": [
+        "1. $A = 0{,}05\\ \\mathrm{m} = 5\\ \\mathrm{cm}$ ; $f = \\dfrac{20\\pi}{2\\pi} = 10\\ \\mathrm{Hz}$ ; $T = 0{,}1\\ \\mathrm{s}$.",
+        "2. $x(0{,}025) = 0{,}05\\cos\\dfrac{\\pi}{2} = 0$ ; $x\\left(\\dfrac{1}{60}\\right) = 0{,}05\\cos\\dfrac{\\pi}{3} = 0{,}025\\ \\mathrm{m}$.",
+        "3. $\\cos(20\\pi\\,t) = -\\dfrac{1}{2}$ : la plus petite valeur positive de l'angle est $\\dfrac{2\\pi}{3}$, donc $20\\pi\\,t = \\dfrac{2\\pi}{3}$ et $t = \\dfrac{1}{30}\\ \\mathrm{s}$."
+      ],
+      "reponse": "1. $5\\ \\mathrm{cm}$, $10\\ \\mathrm{Hz}$, $0{,}1\\ \\mathrm{s}$ ; 2. $0$ et $0{,}025\\ \\mathrm{m}$ ; 3. $t = \\dfrac{1}{30}\\ \\mathrm{s}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "fonction-sinusoidale",
+      "enonce": "Un capteur délivre $s(t) = 2\\cos(\\omega t + \\varphi)$, avec $\\varphi \\in\\, ]-\\pi\\,;\\pi]$. On mesure $s(0) = 1$ et $s\\left(\\dfrac{T}{4}\\right) = -\\sqrt{3}$. 1. Montrer que $\\omega \\times \\dfrac{T}{4} = \\dfrac{\\pi}{2}$. 2. En déduire $\\cos\\varphi$ et $\\sin\\varphi$. 3. Déterminer $\\varphi$.",
+      "corrige": [
+        "1. $T = \\dfrac{2\\pi}{\\omega}$, donc $\\omega \\times \\dfrac{T}{4} = \\dfrac{2\\pi}{4} = \\dfrac{\\pi}{2}$.",
+        "2. $s(0) = 2\\cos\\varphi = 1$ donne $\\cos\\varphi = \\dfrac{1}{2}$ ; $s\\left(\\dfrac{T}{4}\\right) = 2\\cos\\left(\\dfrac{\\pi}{2} + \\varphi\\right) = -2\\sin\\varphi = -\\sqrt{3}$ donne $\\sin\\varphi = \\dfrac{\\sqrt{3}}{2}$.",
+        "3. Le seul angle de $]-\\pi\\,;\\pi]$ ayant ce cosinus et ce sinus est $\\dfrac{\\pi}{3}$."
+      ],
+      "reponse": "$\\cos\\varphi = \\dfrac{1}{2}$, $\\sin\\varphi = \\dfrac{\\sqrt{3}}{2}$, donc $\\varphi = \\dfrac{\\pi}{3}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Calculer la valeur exacte de $\\cos\\dfrac{\\pi}{6} \\times \\sin\\dfrac{\\pi}{3}$ et de $\\cos^2\\dfrac{\\pi}{4}$.",
+      "corrige": [
+        "$\\cos\\dfrac{\\pi}{6} = \\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$, donc le produit vaut $\\dfrac{3}{4}$.",
+        "$\\cos^2\\dfrac{\\pi}{4} = \\left(\\dfrac{\\sqrt{2}}{2}\\right)^2 = \\dfrac{2}{4} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{3}{4}$ et $\\dfrac{1}{2}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "Une calculatrice affiche $\\cos(60) \\approx -0{,}952$. Dans quel mode est-elle réglée ? Quel mode faut-il utiliser pour calculer $\\cos\\dfrac{\\pi}{3}$ ?",
+      "corrige": [
+        "En degrés, $\\cos 60° = 0{,}5$ ; le résultat $-0{,}952$ correspond au cosinus de $60$ radians : la calculatrice est en mode radian.",
+        "Pour $\\cos\\dfrac{\\pi}{3}$, l'angle est en radians : il faut le mode radian, et l'on obtient $0{,}5$."
+      ],
+      "reponse": "Mode radian ; c'est aussi le mode à utiliser pour $\\cos\\dfrac{\\pi}{3}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "radian",
+      "enonce": "Combien de degrés mesure un angle de $1$ radian (arrondi au dixième) ?",
+      "corrige": [
+        "degrés $=$ radians $\\times \\dfrac{180}{\\pi}$.",
+        "$1 \\times \\dfrac{180}{\\pi} \\approx 57{,}3°$."
+      ],
+      "reponse": "Environ $57{,}3°$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "equation",
+      "enonce": "Résoudre $\\cos(2x) = \\dfrac{1}{2}$ sur $[0\\,;\\pi]$.",
+      "corrige": [
+        "On pose $X = 2x$ : si $x \\in [0\\,;\\pi]$, alors $X \\in [0\\,;2\\pi]$.",
+        "$\\cos X = \\dfrac{1}{2}$ sur $[0\\,;2\\pi]$ : $X = \\dfrac{\\pi}{3}$ ou $X = \\dfrac{5\\pi}{3}$.",
+        "On divise par $2$ : $x = \\dfrac{\\pi}{6}$ ou $x = \\dfrac{5\\pi}{6}$."
+      ],
+      "reponse": "$x = \\dfrac{\\pi}{6}$ ou $x = \\dfrac{5\\pi}{6}$."
     }
   ]
 }

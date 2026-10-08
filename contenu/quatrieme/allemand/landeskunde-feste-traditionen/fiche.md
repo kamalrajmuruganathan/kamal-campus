@@ -41,10 +41,10 @@ On y porte la **Tracht** : le **Dirndl** pour les femmes, la **Lederhose** pour 
 
 **Weihnachten** (Noël) est la fête la plus importante de l'hiver.
 
-- Avant Noël, les quatre dimanches de l'**Advent** (l'Avent) sont marqués par la
-  **Adventskranz** (la couronne de l'Avent) et ses quatre bougies.
+- Avant Noël, les quatre dimanches de l'**Advent** (l'Avent) sont marqués par
+  **der Adventskranz** (la couronne de l'Avent) et ses quatre bougies.
 - Les enfants ouvrent chaque jour une case du **Adventskalender** (calendrier de l'Avent).
-- Le **6 décembre**, c'est la **Nikolaustag** (la Saint-Nicolas).
+- Le **6 décembre**, c'est **der Nikolaustag** (la Saint-Nicolas).
 - On visite le **Weihnachtsmarkt** (marché de Noël), très célèbre à **Nürnberg** et
   **Dresden** (le **Striezelmarkt**).
 - Les cadeaux (*die Geschenke*) sont ouverts le soir du **24 décembre** (*Heiligabend*).

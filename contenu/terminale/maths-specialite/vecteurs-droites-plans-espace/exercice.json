@@ -132,7 +132,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "intersection-droite-plan",
       "enonce": "L'espace est muni d'un repère orthonormé $(O\\,;\\overrightarrow{i},\\overrightarrow{j},\\overrightarrow{k})$. On considère les points $A(1\\,;0\\,;1)$, $B(2\\,;2\\,;1)$, $C(0\\,;1\\,;3)$ et $D(1\\,;3\\,;3)$, ainsi que le point $S(-1\\,;3\\,;1)$ et le vecteur $\\overrightarrow{w}\\,(1\\,;0\\,;1)$.\n\n1. Calculer les coordonnées de $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$, puis montrer que les points $A$, $B$ et $C$ ne sont pas alignés.\n2. En déduire que $A$, $B$, $C$ définissent un plan, noté $(\\mathcal{P})$. Le point $D$ appartient-il à $(\\mathcal{P})$ ?\n3. On note $(d)$ la droite passant par $S$ et de vecteur directeur $\\overrightarrow{w}$. Donner une représentation paramétrique de $(d)$.\n4. Étudier la position relative de la droite $(d)$ et du plan $(\\mathcal{P})$.\n5. Déterminer les coordonnées du point d'intersection de $(d)$ et de $(\\mathcal{P})$.\n6. Que peut-on dire du point $D$ vis-à-vis de $(d)$ et de $(\\mathcal{P})$ ?",
       "corrige": [
@@ -144,6 +144,474 @@
         "6. Le point d'intersection trouvé à la question 5 est $(1\\,;3\\,;3)$, c'est-à-dire exactement le point $D$. On retrouve que $D \\in (\\mathcal{P})$ (question 2) et l'on constate de plus que $D \\in (d)$ (obtenu pour $k=2$) : $D$ est donc le point d'intersection de la droite $(d)$ et du plan $(\\mathcal{P})$."
       ],
       "reponse": "1. $\\overrightarrow{AB}(1\\,;2\\,;0)$, $\\overrightarrow{AC}(-1\\,;1\\,;2)$ non colinéaires, donc $A$, $B$, $C$ non alignés. 2. Ils définissent le plan $(\\mathcal{P})$ et $D \\in (\\mathcal{P})$ car $\\overrightarrow{AD} = \\overrightarrow{AB} + \\overrightarrow{AC}$. 3. $(d)$ : $x=-1+k$, $y=3$, $z=1+k$. 4. $(d)$ est sécante à $(\\mathcal{P})$. 5. Point d'intersection $(1\\,;3\\,;3)$. 6. Ce point est $D$ : $D$ est l'intersection de $(d)$ et $(\\mathcal{P})$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "chasles-translation",
+      "enonce": "Dans le cube $ABCDEFGH$, cite les trois arêtes (autres que $[AD]$) qui portent un vecteur égal à $\\overrightarrow{AD}$.",
+      "corrige": [
+        "Deux vecteurs sont égaux s'ils ont même direction, même sens et même longueur.",
+        "Les arêtes parallèles à $[AD]$, parcourues dans le même sens, sont $[BC]$, $[EH]$ et $[FG]$.",
+        "Donc $\\overrightarrow{AD} = \\overrightarrow{BC} = \\overrightarrow{EH} = \\overrightarrow{FG}$."
+      ],
+      "reponse": "$\\overrightarrow{BC}$, $\\overrightarrow{EH}$ et $\\overrightarrow{FG}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "chasles-translation",
+      "enonce": "Dans le cube $ABCDEFGH$, simplifie $\\overrightarrow{AB} + \\overrightarrow{BF} + \\overrightarrow{FG}$.",
+      "corrige": [
+        "On enchaîne la relation de Chasles : $\\overrightarrow{AB} + \\overrightarrow{BF} = \\overrightarrow{AF}$.",
+        "Puis $\\overrightarrow{AF} + \\overrightarrow{FG} = \\overrightarrow{AG}$ : c'est la grande diagonale du cube."
+      ],
+      "reponse": "$\\overrightarrow{AG}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "chasles-translation",
+      "enonce": "Dans le cube $ABCDEFGH$, simplifie $\\overrightarrow{HE} + \\overrightarrow{EA} + \\overrightarrow{AC}$.",
+      "corrige": [
+        "Chasles : $\\overrightarrow{HE} + \\overrightarrow{EA} = \\overrightarrow{HA}$.",
+        "Puis $\\overrightarrow{HA} + \\overrightarrow{AC} = \\overrightarrow{HC}$. Les points ne sont pas dans un même plan, mais la relation reste vraie dans l'espace."
+      ],
+      "reponse": "$\\overrightarrow{HC}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "chasles-translation",
+      "enonce": "Dans le cube $ABCDEFGH$, simplifie $\\overrightarrow{AG} - \\overrightarrow{AE}$.",
+      "corrige": [
+        "Soustraire $\\overrightarrow{AE}$, c'est ajouter $\\overrightarrow{EA}$ : $\\overrightarrow{AG} - \\overrightarrow{AE} = \\overrightarrow{EA} + \\overrightarrow{AG}$.",
+        "Par Chasles, $\\overrightarrow{EA} + \\overrightarrow{AG} = \\overrightarrow{EG}$ (une diagonale de la face du haut)."
+      ],
+      "reponse": "$\\overrightarrow{EG}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "chasles-translation",
+      "enonce": "Dans le cube $ABCDEFGH$, justifie que $\\overrightarrow{AB} = \\overrightarrow{HG}$, puis déduis-en la nature du quadrilatère $ABGH$.",
+      "corrige": [
+        "$[HG]$ est l'arête de la face du haut située au-dessus de $[DC]$, et $\\overrightarrow{AB} = \\overrightarrow{DC} = \\overrightarrow{HG}$ (même direction, même sens, même longueur).",
+        "Or $\\overrightarrow{AB} = \\overrightarrow{HG}$ signifie que $ABGH$ est un parallélogramme.",
+        "(On peut même préciser que c'est un rectangle, car $[AB]$ est perpendiculaire à la face $ADHE$, donc à $[AH]$.)"
+      ],
+      "reponse": "$ABGH$ est un parallélogramme (c'est même un rectangle)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, exprime $\\overrightarrow{AF}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "corrige": [
+        "Chasles : $\\overrightarrow{AF} = \\overrightarrow{AB} + \\overrightarrow{BF}$.",
+        "Or $\\overrightarrow{BF} = \\overrightarrow{AE}$ (montant vertical). Donc $\\overrightarrow{AF} = \\overrightarrow{AB} + \\overrightarrow{AE}$ (le coefficient de $\\overrightarrow{AD}$ est $0$)."
+      ],
+      "reponse": "$\\overrightarrow{AF} = \\overrightarrow{AB} + \\overrightarrow{AE}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, exprime $\\overrightarrow{CE}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "corrige": [
+        "Chasles : $\\overrightarrow{CE} = \\overrightarrow{CA} + \\overrightarrow{AE}$.",
+        "$\\overrightarrow{CA} = -\\overrightarrow{AC} = -(\\overrightarrow{AB} + \\overrightarrow{AD})$.",
+        "Donc $\\overrightarrow{CE} = -\\overrightarrow{AB} - \\overrightarrow{AD} + \\overrightarrow{AE}$."
+      ],
+      "reponse": "$\\overrightarrow{CE} = -\\overrightarrow{AB} - \\overrightarrow{AD} + \\overrightarrow{AE}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, on note $I$ le milieu de $[FG]$. Exprime $\\overrightarrow{AI}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "corrige": [
+        "Chasles : $\\overrightarrow{AI} = \\overrightarrow{AB} + \\overrightarrow{BF} + \\overrightarrow{FI}$.",
+        "$\\overrightarrow{BF} = \\overrightarrow{AE}$ et $\\overrightarrow{FI} = \\dfrac{1}{2}\\overrightarrow{FG} = \\dfrac{1}{2}\\overrightarrow{AD}$.",
+        "Donc $\\overrightarrow{AI} = \\overrightarrow{AB} + \\dfrac{1}{2}\\overrightarrow{AD} + \\overrightarrow{AE}$."
+      ],
+      "reponse": "$\\overrightarrow{AI} = \\overrightarrow{AB} + \\dfrac{1}{2}\\overrightarrow{AD} + \\overrightarrow{AE}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, on note $J$ le centre de la face $BCGF$. Exprime $\\overrightarrow{AJ}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "corrige": [
+        "$J$ est le milieu de la diagonale $[BG]$ de cette face, donc $\\overrightarrow{BJ} = \\dfrac{1}{2}\\overrightarrow{BG}$.",
+        "$\\overrightarrow{BG} = \\overrightarrow{BC} + \\overrightarrow{CG} = \\overrightarrow{AD} + \\overrightarrow{AE}$.",
+        "Donc $\\overrightarrow{AJ} = \\overrightarrow{AB} + \\dfrac{1}{2}\\overrightarrow{AD} + \\dfrac{1}{2}\\overrightarrow{AE}$."
+      ],
+      "reponse": "$\\overrightarrow{AJ} = \\overrightarrow{AB} + \\dfrac{1}{2}\\overrightarrow{AD} + \\dfrac{1}{2}\\overrightarrow{AE}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "approfondissement",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, on place le point $K$ tel que $\\overrightarrow{AK} = \\dfrac{1}{3}\\overrightarrow{AG}$. Exprime $\\overrightarrow{EK}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "corrige": [
+        "$\\overrightarrow{AK} = \\dfrac{1}{3}(\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE})$.",
+        "Chasles : $\\overrightarrow{EK} = \\overrightarrow{EA} + \\overrightarrow{AK} = -\\overrightarrow{AE} + \\dfrac{1}{3}\\overrightarrow{AB} + \\dfrac{1}{3}\\overrightarrow{AD} + \\dfrac{1}{3}\\overrightarrow{AE}$.",
+        "Donc $\\overrightarrow{EK} = \\dfrac{1}{3}\\overrightarrow{AB} + \\dfrac{1}{3}\\overrightarrow{AD} - \\dfrac{2}{3}\\overrightarrow{AE}$."
+      ],
+      "reponse": "$\\overrightarrow{EK} = \\dfrac{1}{3}\\overrightarrow{AB} + \\dfrac{1}{3}\\overrightarrow{AD} - \\dfrac{2}{3}\\overrightarrow{AE}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "decouverte",
+      "notion": "colinearite",
+      "enonce": "Dans le cube $ABCDEFGH$, les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{GH}$ sont-ils colinéaires ? Sont-ils égaux ?",
+      "corrige": [
+        "$\\overrightarrow{GH}$ a la même direction que $\\overrightarrow{AB}$ mais le sens contraire, avec la même longueur : $\\overrightarrow{GH} = -\\overrightarrow{AB}$.",
+        "Il existe donc $k = -1$ tel que $\\overrightarrow{GH} = k\\,\\overrightarrow{AB}$ : ils sont colinéaires, mais pas égaux (ils sont opposés)."
+      ],
+      "reponse": "Colinéaires ($\\overrightarrow{GH} = -\\overrightarrow{AB}$) mais pas égaux."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "colinearite",
+      "enonce": "Dans une base de l'espace, on donne $\\overrightarrow{u}\\,(2\\,;-4\\,;6)$ et $\\overrightarrow{v}\\,(-1\\,;2\\,;-3)$. Ces vecteurs sont-ils colinéaires ?",
+      "corrige": [
+        "On cherche $k$ tel que $\\overrightarrow{v} = k\\,\\overrightarrow{u}$ : $-1 = 2k$ donne $k = -\\dfrac{1}{2}$.",
+        "On vérifie les autres coordonnées : $-\\dfrac{1}{2}\\times(-4) = 2$ et $-\\dfrac{1}{2}\\times 6 = -3$ : le même $k$ convient partout.",
+        "Donc $\\overrightarrow{v} = -\\dfrac{1}{2}\\overrightarrow{u}$ : les vecteurs sont colinéaires."
+      ],
+      "reponse": "Oui : $\\overrightarrow{v} = -\\dfrac{1}{2}\\overrightarrow{u}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "colinearite",
+      "enonce": "Dans une base de l'espace, on donne $\\overrightarrow{u}\\,(2\\,;m\\,;-1)$ et $\\overrightarrow{v}\\,(6\\,;9\\,;-3)$. Détermine le réel $m$ pour que ces vecteurs soient colinéaires.",
+      "corrige": [
+        "Les première et troisième coordonnées donnent $\\overrightarrow{v} = 3\\,\\overrightarrow{u}$ ($6 = 3\\times 2$ et $-3 = 3\\times(-1)$).",
+        "Il faut donc aussi $9 = 3m$, soit $m = 3$."
+      ],
+      "reponse": "$m = 3$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "colinearite",
+      "enonce": "Dans une base de l'espace, on donne $\\overrightarrow{u}\\,(1\\,;a\\,;3)$ et $\\overrightarrow{v}\\,(b\\,;4\\,;6)$. Détermine les réels $a$ et $b$ pour que ces vecteurs soient colinéaires.",
+      "corrige": [
+        "La troisième coordonnée impose le coefficient : $6 = k\\times 3$, donc $k = 2$ et $\\overrightarrow{v} = 2\\,\\overrightarrow{u}$.",
+        "Alors $b = 2\\times 1 = 2$ et $4 = 2a$, soit $a = 2$."
+      ],
+      "reponse": "$a = 2$ et $b = 2$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "alignement",
+      "enonce": "Dans un repère de l'espace, les points $A(1\\,;2\\,;3)$, $B(2\\,;4\\,;4)$ et $C(4\\,;8\\,;6)$ sont-ils alignés ?",
+      "corrige": [
+        "$\\overrightarrow{AB}\\,(1\\,;2\\,;1)$ et $\\overrightarrow{AC}\\,(3\\,;6\\,;3)$.",
+        "$\\overrightarrow{AC} = 3\\,\\overrightarrow{AB}$ : les vecteurs sont colinéaires, donc $A$, $B$, $C$ sont alignés."
+      ],
+      "reponse": "Oui : $\\overrightarrow{AC} = 3\\,\\overrightarrow{AB}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "alignement",
+      "enonce": "Dans un repère de l'espace, les points $A(0\\,;1\\,;1)$, $B(1\\,;3\\,;0)$ et $C(3\\,;6\\,;-2)$ sont-ils alignés ?",
+      "corrige": [
+        "$\\overrightarrow{AB}\\,(1\\,;2\\,;-1)$ et $\\overrightarrow{AC}\\,(3\\,;5\\,;-3)$.",
+        "La première coordonnée imposerait $k = 3$, mais $3\\times 2 = 6 \\neq 5$ : aucun $k$ ne convient.",
+        "Les vecteurs ne sont pas colinéaires : les points ne sont pas alignés."
+      ],
+      "reponse": "Non, $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ ne sont pas colinéaires."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "alignement",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, on note $O$ le centre du cube, de coordonnées $\\left(\\dfrac{1}{2}\\,;\\dfrac{1}{2}\\,;\\dfrac{1}{2}\\right)$. Montre que $B$, $O$ et $H$ sont alignés.",
+      "corrige": [
+        "$B(1\\,;0\\,;0)$ et $H(0\\,;1\\,;1)$, donc $\\overrightarrow{BH}\\,(-1\\,;1\\,;1)$.",
+        "$\\overrightarrow{BO}\\,\\left(-\\dfrac{1}{2}\\,;\\dfrac{1}{2}\\,;\\dfrac{1}{2}\\right) = \\dfrac{1}{2}\\overrightarrow{BH}$.",
+        "Les vecteurs sont colinéaires : $B$, $O$, $H$ sont alignés ($O$ est même le milieu de la diagonale $[BH]$)."
+      ],
+      "reponse": "$\\overrightarrow{BO} = \\dfrac{1}{2}\\overrightarrow{BH}$ : alignés."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "alignement",
+      "enonce": "Dans un repère de l'espace, on donne $A(1\\,;0\\,;2)$, $B(3\\,;1\\,;0)$ et $C(7\\,;3\\,;z)$. Détermine $z$ pour que $A$, $B$, $C$ soient alignés.",
+      "corrige": [
+        "$\\overrightarrow{AB}\\,(2\\,;1\\,;-2)$ et $\\overrightarrow{AC}\\,(6\\,;3\\,;z - 2)$.",
+        "Les deux premières coordonnées donnent $\\overrightarrow{AC} = 3\\,\\overrightarrow{AB}$ s'il y a alignement.",
+        "Il faut alors $z - 2 = 3\\times(-2) = -6$, soit $z = -4$."
+      ],
+      "reponse": "$z = -4$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "droite-caracterisation",
+      "enonce": "Dans un repère, la droite $(d)$ passe par $A(1\\,;0\\,;2)$ et a pour vecteur directeur $\\overrightarrow{u}\\,(2\\,;1\\,;-1)$. Donne les coordonnées du point $M$ de $(d)$ tel que $\\overrightarrow{AM} = 3\\,\\overrightarrow{u}$.",
+      "corrige": [
+        "$3\\,\\overrightarrow{u}\\,(6\\,;3\\,;-3)$.",
+        "$M = A + 3\\,\\overrightarrow{u}$ : $M(1 + 6\\,;0 + 3\\,;2 - 3)$, soit $M(7\\,;3\\,;-1)$."
+      ],
+      "reponse": "$M(7\\,;3\\,;-1)$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "droite-caracterisation",
+      "enonce": "La droite $(d)$ passe par $A(1\\,;0\\,;2)$ et a pour vecteur directeur $\\overrightarrow{u}\\,(2\\,;1\\,;-1)$. Le point $M(5\\,;2\\,;0)$ appartient-il à $(d)$ ?",
+      "corrige": [
+        "$\\overrightarrow{AM}\\,(4\\,;2\\,;-2)$.",
+        "$\\overrightarrow{AM} = 2\\,\\overrightarrow{u}$ : il existe $t = 2$ tel que $\\overrightarrow{AM} = t\\,\\overrightarrow{u}$.",
+        "Donc $M\\in(d)$."
+      ],
+      "reponse": "Oui ($t = 2$)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "droite-caracterisation",
+      "enonce": "La droite $(d)$ passe par $A(1\\,;0\\,;2)$ et a pour vecteur directeur $\\overrightarrow{u}\\,(2\\,;1\\,;-1)$. Le point $N(3\\,;2\\,;1)$ appartient-il à $(d)$ ?",
+      "corrige": [
+        "$\\overrightarrow{AN}\\,(2\\,;2\\,;-1)$.",
+        "La première coordonnée imposerait $t = 1$, mais alors la deuxième vaudrait $1 \\neq 2$.",
+        "$\\overrightarrow{AN}$ et $\\overrightarrow{u}$ ne sont pas colinéaires : $N\\notin(d)$."
+      ],
+      "reponse": "Non."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "droite-caracterisation",
+      "enonce": "Dans le cube $ABCDEFGH$, un point $M$ est sur $(EG)$ si et seulement si $\\overrightarrow{EM} = t(\\overrightarrow{AB} + \\overrightarrow{AD})$. 1) Quelle valeur de $t$ correspond au milieu de $[EG]$ ? 2) Le point $C$ est-il sur $(EG)$ ?",
+      "corrige": [
+        "1) Le milieu $K$ vérifie $\\overrightarrow{EK} = \\dfrac{1}{2}\\overrightarrow{EG} = \\dfrac{1}{2}(\\overrightarrow{AB} + \\overrightarrow{AD})$ : $t = \\dfrac{1}{2}$.",
+        "2) $\\overrightarrow{EC} = \\overrightarrow{EA} + \\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD} - \\overrightarrow{AE}$.",
+        "Il contient $-\\overrightarrow{AE}$, qui n'apparaît pas dans $t(\\overrightarrow{AB} + \\overrightarrow{AD})$ : par unicité de la décomposition, aucun $t$ ne convient. $C$ n'est pas sur $(EG)$."
+      ],
+      "reponse": "1) $t = \\dfrac{1}{2}$ ; 2) non."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "plan-caracterisation",
+      "enonce": "Le plan $\\mathcal{P}$ passe par $A(1\\,;1\\,;0)$ et est dirigé par $\\overrightarrow{u}\\,(1\\,;0\\,;1)$ et $\\overrightarrow{v}\\,(0\\,;1\\,;2)$. Le point $M(3\\,;2\\,;4)$ appartient-il à $\\mathcal{P}$ ?",
+      "corrige": [
+        "On cherche $s$ et $t$ tels que $\\overrightarrow{AM} = s\\,\\overrightarrow{u} + t\\,\\overrightarrow{v}$, avec $\\overrightarrow{AM}\\,(2\\,;1\\,;4)$.",
+        "Abscisse : $s = 2$ ; ordonnée : $t = 1$ ; cote : $s + 2t = 2 + 2 = 4$ ✓.",
+        "Donc $\\overrightarrow{AM} = 2\\,\\overrightarrow{u} + \\overrightarrow{v}$ et $M\\in\\mathcal{P}$."
+      ],
+      "reponse": "Oui : $\\overrightarrow{AM} = 2\\,\\overrightarrow{u} + \\overrightarrow{v}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "plan-caracterisation",
+      "enonce": "Le plan $\\mathcal{P}$ passe par $A(1\\,;1\\,;0)$ et est dirigé par $\\overrightarrow{u}\\,(1\\,;0\\,;1)$ et $\\overrightarrow{v}\\,(0\\,;1\\,;2)$. Le point $N(2\\,;3\\,;1)$ appartient-il à $\\mathcal{P}$ ?",
+      "corrige": [
+        "$\\overrightarrow{AN}\\,(1\\,;2\\,;1)$. Abscisse : $s = 1$ ; ordonnée : $t = 2$.",
+        "Cote : $s + 2t = 1 + 4 = 5 \\neq 1$ : le système n'a pas de solution.",
+        "Donc $N\\notin\\mathcal{P}$."
+      ],
+      "reponse": "Non."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "plan-caracterisation",
+      "enonce": "Un élève affirme : « Le point $A(0\\,;0\\,;0)$ et les vecteurs $\\overrightarrow{u}\\,(1\\,;2\\,;3)$ et $\\overrightarrow{v}\\,(2\\,;4\\,;6)$ définissent un plan. » A-t-il raison ?",
+      "corrige": [
+        "$\\overrightarrow{v} = 2\\,\\overrightarrow{u}$ : les deux vecteurs sont colinéaires.",
+        "Ils ne donnent qu'une seule direction : avec $A$, ils définissent une droite, pas un plan. Il faut deux vecteurs non colinéaires."
+      ],
+      "reponse": "Non : $\\overrightarrow{u}$ et $\\overrightarrow{v}$ sont colinéaires, ils ne dirigent qu'une droite."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "plan-caracterisation",
+      "enonce": "Le plan $\\mathcal{P}$ passe par $A(1\\,;1\\,;0)$ et est dirigé par $\\overrightarrow{u}\\,(1\\,;0\\,;1)$ et $\\overrightarrow{v}\\,(0\\,;1\\,;2)$. Détermine $z$ pour que le point $M(2\\,;3\\,;z)$ appartienne à $\\mathcal{P}$.",
+      "corrige": [
+        "$\\overrightarrow{AM}\\,(1\\,;2\\,;z)$. Les deux premières coordonnées imposent $s = 1$ et $t = 2$.",
+        "La cote doit alors valoir $s + 2t = 1 + 4 = 5$, d'où $z = 5$."
+      ],
+      "reponse": "$z = 5$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "coplanarite",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, montre que les points $B$, $D$, $H$ et $F$ sont coplanaires.",
+      "corrige": [
+        "$\\overrightarrow{BD}\\,(-1\\,;1\\,;0)$, $\\overrightarrow{BF}\\,(0\\,;0\\,;1)$ et $\\overrightarrow{BH}\\,(-1\\,;1\\,;1)$.",
+        "$\\overrightarrow{BH} = \\overrightarrow{BD} + \\overrightarrow{BF}$ : $\\overrightarrow{BH}$ est combinaison linéaire de $\\overrightarrow{BD}$ et $\\overrightarrow{BF}$ (non colinéaires).",
+        "Les quatre points sont donc coplanaires : c'est un plan « diagonal » du cube."
+      ],
+      "reponse": "$\\overrightarrow{BH} = \\overrightarrow{BD} + \\overrightarrow{BF}$ : coplanaires."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "coplanarite",
+      "enonce": "Dans une base de l'espace, les vecteurs $\\overrightarrow{u}\\,(1\\,;0\\,;2)$, $\\overrightarrow{v}\\,(0\\,;1\\,;1)$ et $\\overrightarrow{w}\\,(2\\,;3\\,;7)$ sont-ils coplanaires ?",
+      "corrige": [
+        "On cherche $a$ et $b$ tels que $\\overrightarrow{w} = a\\,\\overrightarrow{u} + b\\,\\overrightarrow{v}$ : abscisse $a = 2$, ordonnée $b = 3$.",
+        "Cote : $2a + b = 4 + 3 = 7$ ✓. Donc $\\overrightarrow{w} = 2\\,\\overrightarrow{u} + 3\\,\\overrightarrow{v}$.",
+        "Les trois vecteurs sont coplanaires."
+      ],
+      "reponse": "Oui : $\\overrightarrow{w} = 2\\,\\overrightarrow{u} + 3\\,\\overrightarrow{v}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "base",
+      "enonce": "Dans une base de l'espace, les vecteurs $\\overrightarrow{u}\\,(1\\,;1\\,;0)$, $\\overrightarrow{v}\\,(0\\,;1\\,;1)$ et $\\overrightarrow{w}\\,(1\\,;0\\,;1)$ forment-ils une base ?",
+      "corrige": [
+        "$\\overrightarrow{u}$ et $\\overrightarrow{v}$ ne sont pas colinéaires. Cherchons $a$, $b$ tels que $\\overrightarrow{w} = a\\,\\overrightarrow{u} + b\\,\\overrightarrow{v}$.",
+        "Abscisse : $a = 1$ ; ordonnée : $a + b = 0$, donc $b = -1$ ; cote : $b = 1$. Contradiction.",
+        "$\\overrightarrow{w}$ n'est pas combinaison linéaire de $\\overrightarrow{u}$ et $\\overrightarrow{v}$ : les trois vecteurs ne sont pas coplanaires, ils forment une base."
+      ],
+      "reponse": "Oui, ils forment une base."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "coplanarite",
+      "enonce": "Dans un repère, on donne $A(1\\,;0\\,;0)$, $B(0\\,;1\\,;0)$, $C(0\\,;0\\,;1)$ et $D(m\\,;1\\,;1)$. Détermine $m$ pour que les quatre points soient coplanaires.",
+      "corrige": [
+        "$\\overrightarrow{AB}\\,(-1\\,;1\\,;0)$, $\\overrightarrow{AC}\\,(-1\\,;0\\,;1)$ (non colinéaires) et $\\overrightarrow{AD}\\,(m - 1\\,;1\\,;1)$.",
+        "On cherche $s$, $t$ tels que $\\overrightarrow{AD} = s\\,\\overrightarrow{AB} + t\\,\\overrightarrow{AC}$ : l'ordonnée donne $s = 1$, la cote donne $t = 1$.",
+        "L'abscisse doit alors valoir $-s - t = -2$ : $m - 1 = -2$, soit $m = -1$."
+      ],
+      "reponse": "$m = -1$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "coplanarite",
+      "enonce": "Dans le cube $ABCDEFGH$, $I$ est le milieu de $[AE]$ et $J$ le milieu de $[CG]$. En utilisant le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$, montre que $B$, $I$, $H$ et $J$ sont coplanaires.",
+      "corrige": [
+        "$B(1\\,;0\\,;0)$, $I\\left(0\\,;0\\,;\\dfrac{1}{2}\\right)$, $H(0\\,;1\\,;1)$, $J\\left(1\\,;1\\,;\\dfrac{1}{2}\\right)$.",
+        "$\\overrightarrow{BI}\\,\\left(-1\\,;0\\,;\\dfrac{1}{2}\\right)$, $\\overrightarrow{BJ}\\,\\left(0\\,;1\\,;\\dfrac{1}{2}\\right)$ (non colinéaires) et $\\overrightarrow{BH}\\,(-1\\,;1\\,;1)$.",
+        "$\\overrightarrow{BH} = \\overrightarrow{BI} + \\overrightarrow{BJ}$ : les quatre points sont coplanaires (et $BIHJ$ est même un parallélogramme)."
+      ],
+      "reponse": "$\\overrightarrow{BH} = \\overrightarrow{BI} + \\overrightarrow{BJ}$ : coplanaires."
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "base",
+      "enonce": "Dans le cube $ABCDEFGH$, les vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AC}$ et $\\overrightarrow{AD}$ forment-ils une base de l'espace ?",
+      "corrige": [
+        "$\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$ : l'un des vecteurs est combinaison linéaire des deux autres.",
+        "Les trois vecteurs sont coplanaires (ils sont tous dans la face $ABCD$) : ils ne forment pas une base."
+      ],
+      "reponse": "Non : $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$, ils sont coplanaires."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "base",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, montre que $\\overrightarrow{AE}$, $\\overrightarrow{AC}$ et $\\overrightarrow{AF}$ forment une base de l'espace.",
+      "corrige": [
+        "Coordonnées : $\\overrightarrow{AE}\\,(0\\,;0\\,;1)$, $\\overrightarrow{AC}\\,(1\\,;1\\,;0)$, $\\overrightarrow{AF}\\,(1\\,;0\\,;1)$.",
+        "Si $\\alpha\\overrightarrow{AE} + \\beta\\overrightarrow{AC} + \\gamma\\overrightarrow{AF} = \\overrightarrow{0}$ : l'ordonnée donne $\\beta = 0$, l'abscisse $\\beta + \\gamma = 0$ donc $\\gamma = 0$, la cote $\\alpha + \\gamma = 0$ donc $\\alpha = 0$.",
+        "Seule la combinaison nulle donne $\\overrightarrow{0}$ : aucun vecteur n'est combinaison des deux autres, ils sont non coplanaires et forment une base."
+      ],
+      "reponse": "Seule solution $\\alpha = \\beta = \\gamma = 0$ : c'est une base."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "base",
+      "enonce": "Dans une base de l'espace, on donne $\\overrightarrow{u}\\,(1\\,;2\\,;1)$, $\\overrightarrow{v}\\,(0\\,;1\\,;m)$ et $\\overrightarrow{w}\\,(1\\,;3\\,;2)$. Pour quelle valeur de $m$ ces vecteurs ne forment-ils pas une base ?",
+      "corrige": [
+        "$\\overrightarrow{u}$ et $\\overrightarrow{v}$ ne sont pas colinéaires (abscisses $1$ et $0$, ordonnées non nulles). Les vecteurs sont coplanaires si et seulement si $\\overrightarrow{w} = a\\,\\overrightarrow{u} + b\\,\\overrightarrow{v}$.",
+        "Abscisse : $a = 1$ ; ordonnée : $2 + b = 3$, donc $b = 1$ ; cote : $1 + m = 2$.",
+        "Donc les vecteurs sont coplanaires (pas de base) si et seulement si $m = 1$."
+      ],
+      "reponse": "$m = 1$."
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "decomposition",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, donne les coordonnées du vecteur $\\overrightarrow{EC}$ et celles du centre $P$ de la face $EFGH$.",
+      "corrige": [
+        "$E(0\\,;0\\,;1)$ et $C(1\\,;1\\,;0)$, donc $\\overrightarrow{EC}\\,(1\\,;1\\,;-1)$, c'est-à-dire $\\overrightarrow{EC} = \\overrightarrow{AB} + \\overrightarrow{AD} - \\overrightarrow{AE}$.",
+        "$P$ est le milieu de $[EG]$ : $P\\left(\\dfrac{0 + 1}{2}\\,;\\dfrac{0 + 1}{2}\\,;\\dfrac{1 + 1}{2}\\right) = \\left(\\dfrac{1}{2}\\,;\\dfrac{1}{2}\\,;1\\right)$."
+      ],
+      "reponse": "$\\overrightarrow{EC}\\,(1\\,;1\\,;-1)$ ; $P\\left(\\dfrac{1}{2}\\,;\\dfrac{1}{2}\\,;1\\right)$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Dans une base $(\\overrightarrow{i},\\overrightarrow{j},\\overrightarrow{k})$, on pose $\\overrightarrow{u} = 2\\overrightarrow{i} - \\overrightarrow{j} + 3\\overrightarrow{k}$ et $\\overrightarrow{v} = \\overrightarrow{i} + 2\\overrightarrow{j} - \\overrightarrow{k}$. Donne les coordonnées de $2\\overrightarrow{u} - 3\\overrightarrow{v}$.",
+      "corrige": [
+        "$\\overrightarrow{u}\\,(2\\,;-1\\,;3)$ et $\\overrightarrow{v}\\,(1\\,;2\\,;-1)$.",
+        "$2\\overrightarrow{u}\\,(4\\,;-2\\,;6)$ et $3\\overrightarrow{v}\\,(3\\,;6\\,;-3)$.",
+        "$2\\overrightarrow{u} - 3\\overrightarrow{v}\\,(4 - 3\\,;-2 - 6\\,;6 + 3) = (1\\,;-8\\,;9)$."
+      ],
+      "reponse": "$(1\\,;-8\\,;9)$."
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, donne la position relative de chaque couple de droites : a) $(AE)$ et $(CG)$ ; b) $(AB)$ et $(FG)$ ; c) $(EG)$ et $(AC)$.",
+      "corrige": [
+        "a) $\\overrightarrow{CG} = \\overrightarrow{AE}$ : directions identiques, et pas de point commun ; droites strictement parallèles.",
+        "b) $(AB)$ est dans la face du bas, $(FG)$ dans la face du haut : aucun point commun ; leurs directions ($\\overrightarrow{AB}$ et $\\overrightarrow{AD}$) ne sont pas colinéaires. Elles sont non coplanaires.",
+        "c) $\\overrightarrow{EG} = \\overrightarrow{AC}$ : strictement parallèles (l'une est en haut, l'autre en bas)."
+      ],
+      "reponse": "a) parallèles ; b) non coplanaires ; c) parallèles."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, précise : a) la position de la droite $(EF)$ par rapport au plan $(ABC)$ ; b) celle de la droite $(AG)$ par rapport au plan $(EFG)$ ; c) celle des plans $(ABF)$ et $(DCG)$.",
+      "corrige": [
+        "a) $\\overrightarrow{EF} = \\overrightarrow{AB}$ appartient à la direction de $(ABC)$, et $(EF)$ est dans la face du haut : $(EF)$ est strictement parallèle à $(ABC)$.",
+        "b) $\\overrightarrow{AG} = \\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$ n'est pas dans la direction $(\\overrightarrow{AB}, \\overrightarrow{AD})$ du plan $(EFG)$ : la droite est sécante au plan, en $G$.",
+        "c) $(ABF)$ est le plan de la face $ABFE$, $(DCG)$ celui de la face opposée $DCGH$ : même direction $(\\overrightarrow{AB}, \\overrightarrow{AE})$ et pas de point commun, plans strictement parallèles."
+      ],
+      "reponse": "a) parallèle ; b) sécante en $G$ ; c) plans strictement parallèles."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "positions-relatives",
+      "enonce": "Dans un repère, $(d)$ passe par $A(1\\,;0\\,;0)$, dirigée par $\\overrightarrow{u}\\,(1\\,;1\\,;0)$ ; $(d')$ passe par $B(0\\,;1\\,;1)$, dirigée par $\\overrightarrow{v}\\,(1\\,;-1\\,;0)$. Étudie leur position relative.",
+      "corrige": [
+        "$\\overrightarrow{u}$ et $\\overrightarrow{v}$ ne sont pas colinéaires ($1 = k$ et $1 = -k$ impossible) : les droites ne sont pas parallèles.",
+        "Un point de $(d)$ s'écrit $(1 + t\\,;t\\,;0)$, un point de $(d')$ s'écrit $(s\\,;1 - s\\,;1)$. Les cotes $0$ et $1$ ne sont jamais égales : pas de point commun.",
+        "Ni parallèles ni sécantes : les droites sont non coplanaires."
+      ],
+      "reponse": "Non coplanaires."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "positions-relatives",
+      "enonce": "Dans un repère, $(d)$ passe par $A(1\\,;2\\,;0)$, dirigée par $\\overrightarrow{u}\\,(1\\,;0\\,;1)$ ; $(d')$ passe par $B(3\\,;0\\,;0)$, dirigée par $\\overrightarrow{v}\\,(-1\\,;2\\,;1)$. 1) Montre que $(d)$ et $(d')$ ne sont pas parallèles. 2) Montre qu'elles sont sécantes et donne leur point d'intersection.",
+      "corrige": [
+        "1) La deuxième coordonnée de $\\overrightarrow{u}$ est nulle, pas celle de $\\overrightarrow{v}$, et $\\overrightarrow{v} \\neq \\overrightarrow{0}$ : ils ne sont pas colinéaires.",
+        "2) Points de $(d)$ : $(1 + t\\,;2\\,;t)$ ; points de $(d')$ : $(3 - s\\,;2s\\,;s)$. On résout $1 + t = 3 - s$, $2 = 2s$, $t = s$.",
+        "On trouve $s = 1$, puis $t = 1$, et la première équation est vérifiée : $2 = 2$ ✓.",
+        "Les droites sont sécantes au point $(2\\,;2\\,;1)$."
+      ],
+      "reponse": "Sécantes en $(2\\,;2\\,;1)$."
     }
   ]
 }

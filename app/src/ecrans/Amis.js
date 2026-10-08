@@ -4,7 +4,7 @@ import { useSombre } from '../useSombre';
 import { theme } from '../theme';
 import {
   assurerProfilPublic, definirPseudo, chercherParPseudo, envoyerDemande,
-  repondreDemande, supprimerAmi, listerAmis, listerDemandesRecues,
+  repondreDemande, supprimerAmi, listerAmis, listerDemandesRecues, ecouterAmities,
 } from '../cloud/social';
 
 export default function Amis({ navigation }) {
@@ -34,6 +34,14 @@ export default function Amis({ navigation }) {
       } catch (e) { Alert.alert('Oups', e.message ?? 'Erreur de chargement.'); }
       finally { setChargement(false); }
     })();
+  }, [rafraichir]);
+
+  // Demandes et amis mis à jour en direct (temps réel), avec un filet de sécurité toutes les 60 s.
+  useEffect(() => {
+    const recharger = () => { rafraichir().catch(() => {}); };
+    const arreter = ecouterAmities(recharger);
+    const minuterie = setInterval(recharger, 60000);
+    return () => { arreter(); clearInterval(minuterie); };
   }, [rafraichir]);
 
   async function enregistrerPseudo() {
@@ -121,7 +129,12 @@ export default function Amis({ navigation }) {
       )}
 
       <View style={carte}>
-        <Text style={titre}>Mes amis ({amis.length})</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' }}>
+          <Text style={titre}>Mes amis ({amis.length})</Text>
+          <Pressable onPress={() => navigation.navigate('Classement')} hitSlop={8}>
+            <Text style={{ color: C.accent, fontSize: 13, fontWeight: '700' }}>🏆 Classement ›</Text>
+          </Pressable>
+        </View>
         {amis.length === 0 ? (
           <Text style={{ color: C.texte, opacity: 0.6, fontSize: 13 }}>Pas encore d'amis. Cherche un pseudo ci-dessus pour envoyer une demande.</Text>
         ) : amis.map((a) => (

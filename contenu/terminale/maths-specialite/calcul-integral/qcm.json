@@ -106,7 +106,7 @@
         "$\\dfrac{1}{7}$"
       ],
       "reponse": 2,
-      "explication": "Échanger les bornes **change le signe** : $\\int_5^1 f = -\\int_1^5 f = -7$. Garder $7$ (choix A) est l'oubli classique du changement de signe quand on inverse le sens de parcours."
+      "explication": "Échanger les bornes **change le signe** : $\\int_5^1 f = -\\int_1^5 f = -7$. Garder $7$ est l'oubli classique du changement de signe quand on inverse le sens de parcours."
     },
     {
       "id": 8,
@@ -120,7 +120,7 @@
         "$36$"
       ],
       "reponse": 1,
-      "explication": "Une **aire est toujours positive**. Quand $f\\leqslant 0$, l'intégrale compte l'aire en négatif, donc l'aire vaut $-\\int_a^b f = -(-6)=6$. Répondre $-6$ (choix A) confond l'intégrale et l'aire."
+      "explication": "Une **aire est toujours positive**. Quand $f\\leqslant 0$, l'intégrale compte l'aire en négatif, donc l'aire vaut $-\\int_a^b f = -(-6)=6$. Répondre $-6$ confond l'intégrale et l'aire."
     },
     {
       "id": 9,
@@ -134,7 +134,7 @@
         "$\\dfrac{F(b)-F(a)}{2}$"
       ],
       "reponse": 2,
-      "explication": "La valeur moyenne est $\\mu=\\dfrac{1}{b-a}\\int_a^b f$. Le piège A oublie le facteur $\\frac{1}{b-a}$ ; le piège B (moyenne des valeurs aux bornes) ne tient pas compte de toute la courbe."
+      "explication": "La valeur moyenne est $\\mu=\\dfrac{1}{b-a}\\int_a^b f$. Le piège $\\int_a^b f(x)\\,dx$ seul oublie le facteur $\\frac{1}{b-a}$ ; le piège $\\frac{f(a)+f(b)}{2}$ (moyenne des valeurs aux bornes) ne tient pas compte de toute la courbe."
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
         "$\\displaystyle\\int_a^b \\big(f(x)+g(x)\\big)\\,dx$"
       ],
       "reponse": 0,
-      "explication": "On intègre « la courbe du haut moins celle du bas » : $\\int_a^b (f-g)$, positif car $f\\geqslant g$. Le piège B inverse $f$ et $g$ et donne une aire négative ; additionner (choix D) n'a pas de sens ici."
+      "explication": "On intègre « la courbe du haut moins celle du bas » : $\\int_a^b (f-g)$, positif car $f\\geqslant g$. Le piège $\\int_a^b (g-f)$ inverse $f$ et $g$ et donne une aire négative ; additionner $f+g$ n'a pas de sens ici."
     },
     {
       "id": 11,
@@ -162,7 +162,7 @@
         "$\\displaystyle\\int_0^1 f'(x)\\,dx$"
       ],
       "reponse": 2,
-      "explication": "La variable d'intégration est muette : $\\int_0^1 f(x)\\,dx = \\int_0^1 f(t)\\,dt$. Le piège du choix 1 échange les bornes (ce qui change le signe) ; le nom de la variable, lui, ne change jamais la valeur."
+      "explication": "La variable d'intégration est muette : $\\int_0^1 f(x)\\,dx = \\int_0^1 f(t)\\,dt$. Le piège $\\int_1^0 f(x)\\,dx$ échange les bornes (ce qui change le signe) ; le nom de la variable, lui, ne change jamais la valeur."
     },
     {
       "id": 12,
@@ -176,7 +176,7 @@
         "$2$"
       ],
       "reponse": 1,
-      "explication": "L'aire sous la fonction constante $2$ est celle d'un rectangle de largeur $3$ et de hauteur $2$ : $3\\times2 = 6$. On peut aussi écrire $[2x]_0^3 = 6-0 = 6$. Le piège du choix 1 additionne $3+2$ au lieu de multiplier."
+      "explication": "L'aire sous la fonction constante $2$ est celle d'un rectangle de largeur $3$ et de hauteur $2$ : $3\\times2 = 6$. On peut aussi écrire $[2x]_0^3 = 6-0 = 6$. Le piège $5$ additionne $3+2$ au lieu de multiplier."
     },
     {
       "id": 13,
@@ -190,7 +190,7 @@
         "$1$"
       ],
       "reponse": 2,
-      "explication": "Quand les deux bornes sont égales, l'intégrale est nulle : $\\int_a^a f = 0$ (l'aire sur un segment réduit à un point est nulle). Le piège du choix 1 confond l'intégrale avec la valeur de $f$ en ce point."
+      "explication": "Quand les deux bornes sont égales, l'intégrale est nulle : $\\int_a^a f = 0$ (l'aire sur un segment réduit à un point est nulle). Le piège $f(2)$ confond l'intégrale avec la valeur de $f$ en ce point."
     },
     {
       "id": 14,
@@ -204,7 +204,7 @@
         "$3$"
       ],
       "reponse": 1,
-      "explication": "Une primitive de $x^2$ est $\\dfrac{x^3}{3}$, donc $\\left[\\dfrac{x^3}{3}\\right]_0^1 = \\dfrac13 - 0 = \\dfrac13$. Le piège du choix 1 prend $\\dfrac{x^2}{2}$ (primitive de $x$, pas de $x^2$) ; il faut augmenter l'exposant de $1$ et diviser par le nouvel exposant."
+      "explication": "Une primitive de $x^2$ est $\\dfrac{x^3}{3}$, donc $\\left[\\dfrac{x^3}{3}\\right]_0^1 = \\dfrac13 - 0 = \\dfrac13$. Le piège $\\dfrac12$ prend $\\dfrac{x^2}{2}$ (primitive de $x$, pas de $x^2$) ; il faut augmenter l'exposant de $1$ et diviser par le nouvel exposant."
     },
     {
       "id": 15,
@@ -218,7 +218,7 @@
         "$e-1$"
       ],
       "reponse": 2,
-      "explication": "Une primitive de $\\dfrac1x$ est $\\ln x$, donc $\\big[\\ln x\\big]_1^{e} = \\ln e - \\ln 1 = 1 - 0 = 1$. Le piège du choix 4 confond avec l'intégrale de $e^x$ ; ici la primitive est le logarithme, et $\\ln e = 1$."
+      "explication": "Une primitive de $\\dfrac1x$ est $\\ln x$, donc $\\big[\\ln x\\big]_1^{e} = \\ln e - \\ln 1 = 1 - 0 = 1$. Le piège $e-1$ confond avec l'intégrale de $e^x$ ; ici la primitive est le logarithme, et $\\ln e = 1$."
     },
     {
       "id": 16,
@@ -232,7 +232,7 @@
         "$7$"
       ],
       "reponse": 3,
-      "explication": "Par linéarité, $\\int(2f-g) = 2\\int f - \\int g = 2\\times4 - 1 = 7$. Le piège du choix 1 oublie de soustraire $\\int g$ ; le facteur $2$ ne porte que sur $f$, et le signe $-$ sur $g$."
+      "explication": "Par linéarité, $\\int(2f-g) = 2\\int f - \\int g = 2\\times4 - 1 = 7$. Le piège $8$ oublie de soustraire $\\int g$ ; le facteur $2$ ne porte que sur $f$, et le signe $-$ sur $g$."
     },
     {
       "id": 17,
@@ -246,7 +246,7 @@
         "$-7$"
       ],
       "reponse": 1,
-      "explication": "Par Chasles, $\\int_0^4 f = \\int_0^1 f + \\int_1^4 f$, donc $\\int_1^4 f = 10 - 3 = 7$. Le piège du choix 1 additionne $10+3$ au lieu de soustraire ; on isole le morceau manquant en retranchant la partie connue."
+      "explication": "Par Chasles, $\\int_0^4 f = \\int_0^1 f + \\int_1^4 f$, donc $\\int_1^4 f = 10 - 3 = 7$. Le piège $13$ additionne $10+3$ au lieu de soustraire ; on isole le morceau manquant en retranchant la partie connue."
     },
     {
       "id": 18,
@@ -260,7 +260,7 @@
         "$1$"
       ],
       "reponse": 2,
-      "explication": "$\\mu = \\dfrac{1}{4-0}\\int_0^4 x\\,dx = \\dfrac14\\left[\\dfrac{x^2}{2}\\right]_0^4 = \\dfrac14\\times8 = 2$. Le piège du choix 1 oublie le facteur $\\dfrac{1}{b-a}$ et rend l'intégrale seule ($8$)."
+      "explication": "$\\mu = \\dfrac{1}{4-0}\\int_0^4 x\\,dx = \\dfrac14\\left[\\dfrac{x^2}{2}\\right]_0^4 = \\dfrac14\\times8 = 2$. Le piège $8$ oublie le facteur $\\dfrac{1}{b-a}$ et rend l'intégrale seule ($8$)."
     },
     {
       "id": 19,
@@ -274,7 +274,7 @@
         "$\\dfrac16$"
       ],
       "reponse": 3,
-      "explication": "L'aire vaut $\\int_0^1 (x-x^2)\\,dx = \\left[\\dfrac{x^2}{2}-\\dfrac{x^3}{3}\\right]_0^1 = \\dfrac12-\\dfrac13 = \\dfrac16$. Le piège du choix 3 additionne les deux intégrales ($\\dfrac12+\\dfrac13$) au lieu de soustraire « la courbe du haut moins celle du bas »."
+      "explication": "L'aire vaut $\\int_0^1 (x-x^2)\\,dx = \\left[\\dfrac{x^2}{2}-\\dfrac{x^3}{3}\\right]_0^1 = \\dfrac12-\\dfrac13 = \\dfrac16$. Le piège $\\dfrac56$ additionne les deux intégrales ($\\dfrac12+\\dfrac13$) au lieu de soustraire « la courbe du haut moins celle du bas »."
     },
     {
       "id": 20,
@@ -288,7 +288,7 @@
         "$0$"
       ],
       "reponse": 2,
-      "explication": "On pose $u=\\ln x$ ($u'=\\dfrac1x$) et $v'=1$ ($v=x$) : $\\int_1^{e}\\ln x\\,dx = \\big[x\\ln x\\big]_1^{e} - \\int_1^{e} 1\\,dx = (e-0) - (e-1) = 1$. Le piège du choix 2 s'arrête au terme tout intégré $[x\\ln x]$ sans retrancher $\\int_1^e 1\\,dx$."
+      "explication": "On pose $u=\\ln x$ ($u'=\\dfrac1x$) et $v'=1$ ($v=x$) : $\\int_1^{e}\\ln x\\,dx = \\big[x\\ln x\\big]_1^{e} - \\int_1^{e} 1\\,dx = (e-0) - (e-1) = 1$. Le piège $e$ s'arrête au terme tout intégré $[x\\ln x]$ sans retrancher $\\int_1^e 1\\,dx$."
     }
   ]
 }

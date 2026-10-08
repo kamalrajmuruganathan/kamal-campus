@@ -242,7 +242,7 @@ $$\boxed{z = \frac{\left| X_{\text{mes}} - X_{\text{réf}} \right|}{u(X)}}$$
 4. **Rendre $\rho = 7{,}8966 \pm 0{,}07$** : la valeur doit être arrondie **au
    rang de l'incertitude**, ici $7{,}90 \pm 0{,}07$.
 5. **Oublier une conversion avant de propager** : $t$ en ms et $d$ en m dans
-   $v = d/t$ donne un résultat mille fois trop grand — l'incertitude relative,
+   $v = d/t$ donne un résultat mille fois trop petit — l'incertitude relative,
    elle, semble normale, donc l'erreur passe inaperçue si tu ne vérifies pas
    l'ordre de grandeur.
 6. **Conclure « mesure fausse » dès que $X_{\text{mes}} \neq X_{\text{réf}}$**,

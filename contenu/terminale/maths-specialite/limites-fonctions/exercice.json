@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "croissances-comparees",
       "enonce": "On considère la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = (x^2 + x)\\,e^{-x} + 1$, et on note $\\mathcal{C}$ sa courbe représentative dans un repère. L'objectif est d'étudier le comportement de $\\mathcal{C}$ aux bornes de $\\mathbb{R}$.\n\n1. Déterminer $\\displaystyle\\lim_{x \\to +\\infty} (x^2 + x)\\,e^{-x}$. En déduire $\\displaystyle\\lim_{x \\to +\\infty} f(x)$ et l'existence d'une asymptote à $\\mathcal{C}$, dont on précisera l'équation.\n\n2. Déterminer $\\displaystyle\\lim_{x \\to -\\infty} x^2 e^{-x}$, puis, en factorisant $(x^2 + x)\\,e^{-x}$ par $x^2 e^{-x}$, déterminer $\\displaystyle\\lim_{x \\to -\\infty} f(x)$.\n\n3. La courbe $\\mathcal{C}$ admet-elle une asymptote horizontale en $-\\infty$ ? Justifier.\n\n4. Pour $x \\neq 0$, on pose $g(x) = \\dfrac{f(x) - 1}{x}$. Simplifier $g(x)$, puis déterminer $\\displaystyle\\lim_{x \\to +\\infty} g(x)$.",
       "corrige": [
@@ -139,6 +139,447 @@
         "4. Pour $x \\neq 0$ : $g(x) = \\dfrac{f(x) - 1}{x} = \\dfrac{(x^2 + x)\\,e^{-x}}{x} = \\dfrac{x(x + 1)\\,e^{-x}}{x} = (x + 1)\\,e^{-x} = x e^{-x} + e^{-x}$. Quand $x \\to +\\infty$, par croissance comparée $x e^{-x} \\to 0$ et $e^{-x} \\to 0$, donc $\\displaystyle\\lim_{x \\to +\\infty} g(x) = 0$."
       ],
       "reponse": "1. $\\displaystyle\\lim_{x \\to +\\infty} (x^2 + x)e^{-x} = 0$, donc $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 1$ et $\\mathcal{C}$ admet l'asymptote horizontale $y = 1$ en $+\\infty$. 2. $\\displaystyle\\lim_{x \\to -\\infty} x^2 e^{-x} = +\\infty$ et $\\displaystyle\\lim_{x \\to -\\infty} f(x) = +\\infty$. 3. Pas d'asymptote horizontale en $-\\infty$ (limite infinie). 4. $g(x) = (x + 1)e^{-x}$ et $\\displaystyle\\lim_{x \\to +\\infty} g(x) = 0$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition-limite",
+      "enonce": "Soit $f(x)=\\dfrac{1}{x^2}$. Calculer $f(10)$, $f(100)$ et $f(1\\,000)$. Quelle limite peut-on conjecturer en $+\\infty$ ?",
+      "corrige": [
+        "$f(10)=0{,}01$, $f(100)=0{,}000\\,1$ et $f(1\\,000)=0{,}000\\,001$.",
+        "Les valeurs se rapprochent de $0$ : on conjecture $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{1}{x^2}=0$, ce que confirme le cours."
+      ],
+      "reponse": "$0{,}01$ ; $0{,}000\\,1$ ; $0{,}000\\,001$ ; limite conjecturée : $0$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition-limite",
+      "enonce": "On sait que $\\displaystyle\\lim_{x\\to+\\infty}x^2=+\\infty$. À partir de quelle valeur de $x>0$ a-t-on $x^2>10^6$ ?",
+      "corrige": [
+        "Pour $x>0$, $x^2>10^6\\iff x>\\sqrt{10^6}=1\\,000$.",
+        "Dès que $x>1\\,000$, $x^2$ dépasse le seuil $10^6$ : c'est le sens de « $f(x)$ dépasse n'importe quel seuil dès que $x$ est assez grand »."
+      ],
+      "reponse": "Pour $x>1\\,000$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "fonctions-reference",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to-\\infty}x^4$ et $\\displaystyle\\lim_{x\\to-\\infty}x^7$.",
+      "corrige": [
+        "En $-\\infty$, la limite de $x^n$ dépend de la parité de $n$.",
+        "$4$ est pair : $x^4\\to+\\infty$. $7$ est impair : $x^7\\to-\\infty$."
+      ],
+      "reponse": "$+\\infty$ et $-\\infty$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "formes-indeterminees",
+      "enonce": "Parmi les limites suivantes en $+\\infty$, lesquelles se présentent sous une forme indéterminée ? a) $x^2-x$ ; b) $x^2+x$ ; c) $\\dfrac{1/x}{x}$ ; d) $e^x-x^3$.",
+      "corrige": [
+        "a) $+\\infty-\\infty$ : forme indéterminée. b) $+\\infty+\\infty=+\\infty$ : pas d'indétermination.",
+        "c) $\\dfrac{0}{+\\infty}$ : la limite vaut $0$, pas d'indétermination. d) $+\\infty-\\infty$ : forme indéterminée."
+      ],
+      "reponse": "a) et d)."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "definition-limite",
+      "enonce": "Soit $f(x)=2+\\dfrac{1}{x}$ pour $x>0$. Déterminer les valeurs de $x$ pour lesquelles l'écart $f(x)-2$ est inférieur à $0{,}01$. Quelle limite cela illustre-t-il ?",
+      "corrige": [
+        "$f(x)-2=\\dfrac{1}{x}$, et pour $x>0$ : $\\dfrac{1}{x}<0{,}01\\iff x>100$.",
+        "Dès que $x>100$, $f(x)$ est à moins de $0{,}01$ de $2$ ; on pourrait faire de même avec n'importe quel écart : $\\displaystyle\\lim_{x\\to+\\infty}f(x)=2$."
+      ],
+      "reponse": "Pour $x>100$ ; cela illustre $\\displaystyle\\lim_{x\\to+\\infty}f(x)=2$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "fonctions-reference",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\sqrt{x}$, $\\displaystyle\\lim_{x\\to 0^+}\\sqrt{x}$ et $\\displaystyle\\lim_{x\\to 0^+}\\dfrac{1}{x^3}$.",
+      "corrige": [
+        "Limites de référence : $\\sqrt{x}\\to+\\infty$ en $+\\infty$ et $\\sqrt{x}\\to 0$ en $0^+$.",
+        "$\\dfrac{1}{x^n}\\to+\\infty$ en $0^+$, ici avec $n=3$."
+      ],
+      "reponse": "$+\\infty$ ; $0$ ; $+\\infty$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "fonctions-reference",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}e^x$, $\\displaystyle\\lim_{x\\to-\\infty}e^x$ et $\\displaystyle\\lim_{x\\to-\\infty}\\dfrac{1}{x}$.",
+      "corrige": [
+        "Exponentielle : $+\\infty$ en $+\\infty$ et $0$ en $-\\infty$.",
+        "$\\dfrac{1}{x}$ tend vers $0$ en $-\\infty$ (par valeurs négatives)."
+      ],
+      "reponse": "$+\\infty$ ; $0$ ; $0$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "fonctions-reference",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to-\\infty}\\left(-3x^2\\right)$.",
+      "corrige": [
+        "$x^2\\to+\\infty$ en $-\\infty$ (exposant pair).",
+        "Multiplier par $-3<0$ change le signe : $-3x^2\\to-\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "fonctions-reference",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}e^{-x}$.",
+      "corrige": [
+        "On pose $X=-x$ : quand $x\\to+\\infty$, $X\\to-\\infty$.",
+        "Or $\\displaystyle\\lim_{X\\to-\\infty}e^X=0$, donc $e^{-x}\\to 0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(x^2+e^x\\right)$.",
+      "corrige": [
+        "$x^2\\to+\\infty$ et $e^x\\to+\\infty$.",
+        "Somme de deux limites $+\\infty$ : $+\\infty$ (pas d'indétermination)."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(3-\\dfrac{2}{x}\\right)\\left(5+\\dfrac{1}{x^2}\\right)$.",
+      "corrige": [
+        "$3-\\dfrac{2}{x}\\to 3$ et $5+\\dfrac{1}{x^2}\\to 5$.",
+        "Produit de limites finies : $3\\times 5=15$."
+      ],
+      "reponse": "$15$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(\\dfrac{1}{x}-x^3\\right)$.",
+      "corrige": [
+        "$\\dfrac{1}{x}\\to 0$ et $-x^3\\to-\\infty$.",
+        "Somme d'une limite finie et de $-\\infty$ : $-\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "formes-indeterminees",
+      "enonce": "Un élève écrit : « $\\displaystyle\\lim_{x\\to+\\infty}\\left(x^2-x\\right)=\\infty-\\infty=0$ ». Expliquer l'erreur et donner la bonne limite.",
+      "corrige": [
+        "« $\\infty-\\infty$ » est une forme indéterminée : on ne peut pas conclure sans transformer l'expression, et sûrement pas écrire $0$.",
+        "$x^2-x=x^2\\left(1-\\dfrac{1}{x}\\right)$ ; $x^2\\to+\\infty$ et la parenthèse tend vers $1$, donc la limite est $+\\infty$."
+      ],
+      "reponse": "$+\\infty$ (il fallait lever l'indétermination)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(-4x^3+2x^2+7\\right)$.",
+      "corrige": [
+        "Un polynôme a, en $+\\infty$, la limite de son terme de plus haut degré : $-4x^3$.",
+        "$x^3\\to+\\infty$, donc $-4x^3\\to-\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{2x^2-3}{5x^2+x}$.",
+      "corrige": [
+        "Forme $\\dfrac{\\infty}{\\infty}$. On garde les termes de plus haut degré : $\\dfrac{2x^2}{5x^2}=\\dfrac{2}{5}$."
+      ],
+      "reponse": "$\\dfrac{2}{5}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{x+1}{x^2+3}$.",
+      "corrige": [
+        "Quotient des termes de plus haut degré : $\\dfrac{x}{x^2}=\\dfrac{1}{x}$.",
+        "$\\dfrac{1}{x}\\to 0$, donc la limite vaut $0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "asymptote",
+      "enonce": "Soit $f(x)=\\dfrac{3x-1}{x+2}$, définie pour $x\\neq -2$. Déterminer la limite de $f$ en $+\\infty$ et en $-\\infty$, puis en $-2$ à gauche et à droite. En déduire les asymptotes de la courbe.",
+      "corrige": [
+        "En $\\pm\\infty$ : $\\dfrac{3x}{x}=3$, donc $f(x)\\to 3$ : asymptote horizontale $y=3$.",
+        "En $-2$ : le numérateur tend vers $-7$. Si $x\\to-2^+$, $x+2\\to 0^+$ et $f(x)\\to-\\infty$ ; si $x\\to-2^-$, $x+2\\to 0^-$ et $f(x)\\to+\\infty$.",
+        "Asymptote verticale $x=-2$."
+      ],
+      "reponse": "Asymptotes $y=3$ (en $\\pm\\infty$) et $x=-2$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "asymptote",
+      "enonce": "Soit $f(x)=1+e^x$. Déterminer $\\displaystyle\\lim_{x\\to-\\infty}f(x)$ et interpréter graphiquement.",
+      "corrige": [
+        "$e^x\\to 0$ en $-\\infty$, donc $f(x)\\to 1$.",
+        "La droite $y=1$ est asymptote horizontale à la courbe de $f$ en $-\\infty$."
+      ],
+      "reponse": "$1$ ; asymptote horizontale $y=1$ en $-\\infty$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{e^x}{x^5}$.",
+      "corrige": [
+        "Forme $\\dfrac{\\infty}{\\infty}$, levée par croissance comparée : $\\dfrac{e^x}{x^n}\\to+\\infty$ pour tout entier $n\\geqslant 1$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to-\\infty}x^2e^x$.",
+      "corrige": [
+        "Forme $\\infty\\times 0$ ($x^2\\to+\\infty$ et $e^x\\to 0$).",
+        "Par croissance comparée, $x^n e^x\\to 0$ en $-\\infty$, ici avec $n=2$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "limite-gauche-droite",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 3^+}\\dfrac{1}{x-3}$ et $\\displaystyle\\lim_{x\\to 3^-}\\dfrac{1}{x-3}$.",
+      "corrige": [
+        "Si $x\\to 3^+$, $x-3\\to 0$ en restant positif : $\\dfrac{1}{x-3}\\to+\\infty$.",
+        "Si $x\\to 3^-$, $x-3\\to 0$ en restant négatif : $\\dfrac{1}{x-3}\\to-\\infty$."
+      ],
+      "reponse": "$+\\infty$ à droite, $-\\infty$ à gauche."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to-\\infty}x^3\\left(e^x+2\\right)$.",
+      "corrige": [
+        "$x^3\\to-\\infty$ (exposant impair) et $e^x+2\\to 2$.",
+        "Produit de $-\\infty$ par $2>0$ : $-\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{5}{x^2+1}$ et $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{2x+1}{3+e^{-x}}$.",
+      "corrige": [
+        "$x^2+1\\to+\\infty$, donc $\\dfrac{5}{x^2+1}\\to 0$.",
+        "$2x+1\\to+\\infty$ et $3+e^{-x}\\to 3$ : le quotient tend vers $+\\infty$."
+      ],
+      "reponse": "$0$ et $+\\infty$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "formes-indeterminees",
+      "enonce": "Calculer en $+\\infty$ les limites de $x\\times\\dfrac{1}{x}$, $x^2\\times\\dfrac{1}{x}$ et $x\\times\\dfrac{1}{x^2}$. Toutes sont de la forme « $\\infty\\times 0$ ». Que montre cet exemple ?",
+      "corrige": [
+        "$x\\times\\dfrac{1}{x}=1\\to 1$ ; $x^2\\times\\dfrac{1}{x}=x\\to+\\infty$ ; $x\\times\\dfrac{1}{x^2}=\\dfrac{1}{x}\\to 0$.",
+        "Une même forme « $\\infty\\times 0$ » peut donner des résultats différents : c'est pourquoi on l'appelle indéterminée. Il faut transformer l'expression pour conclure."
+      ],
+      "reponse": "$1$, $+\\infty$ et $0$ : une forme indéterminée peut aboutir à n'importe quel résultat."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to-\\infty}\\dfrac{x^3-1}{2x+5}$.",
+      "corrige": [
+        "Quotient des termes de plus haut degré : $\\dfrac{x^3}{2x}=\\dfrac{x^2}{2}$.",
+        "En $-\\infty$, $x^2\\to+\\infty$, donc la limite est $+\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 3}\\dfrac{x^2-9}{x-3}$.",
+      "corrige": [
+        "Forme $\\dfrac{0}{0}$. On factorise : $x^2-9=(x-3)(x+3)$.",
+        "Pour $x\\neq 3$, $\\dfrac{x^2-9}{x-3}=x+3\\to 6$."
+      ],
+      "reponse": "$6$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(\\sqrt{x+4}-\\sqrt{x}\\right)$.",
+      "corrige": [
+        "Forme $\\infty-\\infty$. On multiplie et on divise par la quantité conjuguée $\\sqrt{x+4}+\\sqrt{x}$.",
+        "$\\sqrt{x+4}-\\sqrt{x}=\\dfrac{(x+4)-x}{\\sqrt{x+4}+\\sqrt{x}}=\\dfrac{4}{\\sqrt{x+4}+\\sqrt{x}}$.",
+        "Le dénominateur tend vers $+\\infty$, donc la limite vaut $0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "asymptote",
+      "enonce": "Soit $f(x)=\\dfrac{2}{x^2-1}$, définie pour $x\\neq -1$ et $x\\neq 1$. Donner toutes les asymptotes parallèles aux axes de sa courbe.",
+      "corrige": [
+        "En $\\pm\\infty$, $x^2-1\\to+\\infty$ donc $f(x)\\to 0$ : asymptote horizontale $y=0$.",
+        "En $1$ et en $-1$, le dénominateur tend vers $0$ et le numérateur vaut $2$ : $f$ tend vers $\\pm\\infty$ (selon le côté) ; d'où les asymptotes verticales $x=1$ et $x=-1$."
+      ],
+      "reponse": "$y=0$, $x=-1$ et $x=1$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "asymptote",
+      "enonce": "Vrai ou faux : « Si $\\displaystyle\\lim_{x\\to+\\infty}f(x)=+\\infty$, alors la courbe de $f$ a une asymptote verticale. » Justifier.",
+      "corrige": [
+        "Faux. Une asymptote verticale $x=a$ correspond à une limite infinie en un point $a$.",
+        "Une limite infinie en $+\\infty$ ne donne aucune asymptote parallèle aux axes (exemple : $x^2$)."
+      ],
+      "reponse": "Faux."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "asymptote",
+      "enonce": "Soit $f(x)=2+\\dfrac{1}{x-1}$ sur $]1\\,;+\\infty[$. Montrer que la droite $y=2$ est asymptote à la courbe en $+\\infty$, puis préciser la position de la courbe par rapport à cette droite.",
+      "corrige": [
+        "$\\dfrac{1}{x-1}\\to 0$ en $+\\infty$, donc $f(x)\\to 2$ : la droite $y=2$ est asymptote horizontale.",
+        "$f(x)-2=\\dfrac{1}{x-1}>0$ pour $x>1$ : la courbe est au-dessus de l'asymptote."
+      ],
+      "reponse": "Asymptote $y=2$ ; la courbe est au-dessus."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "comparaison",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(x^2+\\cos x\\right)$.",
+      "corrige": [
+        "$\\cos x$ n'a pas de limite en $+\\infty$, mais $\\cos x\\geqslant -1$, donc $x^2+\\cos x\\geqslant x^2-1$.",
+        "$x^2-1\\to+\\infty$ : par le théorème de comparaison, $x^2+\\cos x\\to+\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "comparaison",
+      "enonce": "À l'aide du théorème des gendarmes, déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{\\cos x}{x^2}$.",
+      "corrige": [
+        "Pour tout $x>0$ : $-1\\leqslant\\cos x\\leqslant 1$, donc $-\\dfrac{1}{x^2}\\leqslant\\dfrac{\\cos x}{x^2}\\leqslant\\dfrac{1}{x^2}$.",
+        "Les deux bornes tendent vers $0$ : par les gendarmes, la limite vaut $0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}x\\,e^{-x}$.",
+      "corrige": [
+        "$x\\,e^{-x}=\\dfrac{x}{e^x}=\\dfrac{1}{\\;\\dfrac{e^x}{x}\\;}$.",
+        "Par croissance comparée, $\\dfrac{e^x}{x}\\to+\\infty$, donc son inverse tend vers $0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "limite-gauche-droite",
+      "enonce": "Soit $f(x)=\\dfrac{x+1}{x-2}$. Déterminer les limites de $f$ en $2$ à droite et à gauche.",
+      "corrige": [
+        "Le numérateur tend vers $3>0$ et le dénominateur vers $0$.",
+        "$x\\to 2^+$ : $x-2\\to 0^+$, donc $f(x)\\to+\\infty$. $x\\to 2^-$ : $x-2\\to 0^-$, donc $f(x)\\to-\\infty$."
+      ],
+      "reponse": "$+\\infty$ à droite et $-\\infty$ à gauche de $2$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "limite-gauche-droite",
+      "enonce": "Soit $f(x)=\\dfrac{1}{(x-1)^2}$. Déterminer la limite de $f$ en $1$. Faut-il distinguer la gauche et la droite ?",
+      "corrige": [
+        "$(x-1)^2\\to 0$ en restant strictement positif, des deux côtés de $1$.",
+        "Donc $f(x)\\to+\\infty$ à gauche comme à droite : $\\displaystyle\\lim_{x\\to 1}f(x)=+\\infty$, et $x=1$ est asymptote verticale."
+      ],
+      "reponse": "$+\\infty$ des deux côtés."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sqrt{1+x}-1}{x}$ à l'aide de la quantité conjuguée.",
+      "corrige": [
+        "Forme $\\dfrac{0}{0}$. On multiplie haut et bas par $\\sqrt{1+x}+1$ : $\\dfrac{(1+x)-1}{x\\left(\\sqrt{1+x}+1\\right)}=\\dfrac{1}{\\sqrt{1+x}+1}$ pour $x\\neq 0$.",
+        "Quand $x\\to 0$, cette expression tend vers $\\dfrac{1}{1+1}=\\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "comparaison",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to-\\infty}(x+\\sin x)$.",
+      "corrige": [
+        "$\\sin x\\leqslant 1$, donc $x+\\sin x\\leqslant x+1$.",
+        "$x+1\\to-\\infty$ en $-\\infty$ : par comparaison (majoration par une fonction qui tend vers $-\\infty$), $x+\\sin x\\to-\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "comparaison",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}x\\left(2+\\sin x\\right)$.",
+      "corrige": [
+        "$\\sin x\\geqslant -1$, donc $2+\\sin x\\geqslant 1$ et, pour $x>0$, $x(2+\\sin x)\\geqslant x$.",
+        "$x\\to+\\infty$ : par comparaison, la limite est $+\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\left(x^3-e^x\\right)$.",
+      "corrige": [
+        "Forme $\\infty-\\infty$. On factorise par le terme qui l'emporte : $x^3-e^x=e^x\\left(\\dfrac{x^3}{e^x}-1\\right)$.",
+        "$\\dfrac{x^3}{e^x}\\to 0$ (inverse de $\\dfrac{e^x}{x^3}\\to+\\infty$), donc la parenthèse tend vers $-1$ et le produit vers $-\\infty$."
+      ],
+      "reponse": "$-\\infty$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "asymptote",
+      "enonce": "On considère $f(x)=\\dfrac{ax+1}{x-b}$, où $a$ et $b$ sont deux réels avec $ab+1\\neq 0$. Déterminer $a$ et $b$ pour que la courbe de $f$ admette la droite $y=2$ pour asymptote horizontale et la droite $x=3$ pour asymptote verticale. Vérifier ensuite.",
+      "corrige": [
+        "En $\\pm\\infty$, $f(x)$ a la limite de $\\dfrac{ax}{x}=a$ : l'asymptote horizontale est $y=a$, donc $a=2$.",
+        "La valeur interdite est $x=b$ ; en $b$, le numérateur tend vers $ab+1\\neq 0$ et le dénominateur vers $0$, donc $f$ tend vers l'infini : asymptote verticale $x=b$, d'où $b=3$.",
+        "Vérification : $f(x)=\\dfrac{2x+1}{x-3}$ ; en $3$, le numérateur vaut $7\\neq 0$ et $f(x)\\to\\pm\\infty$ ; en $\\pm\\infty$, $f(x)\\to 2$."
+      ],
+      "reponse": "$a=2$ et $b=3$."
     }
   ]
 }

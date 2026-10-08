@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "structure de la chaîne d'énergie",
       "enonce": "Cite dans l'ordre les quatre fonctions techniques de la chaîne d'énergie, puis associe à chacune un composant parmi : batterie, variateur, moteur, réducteur.",
       "corrige": [
@@ -26,7 +26,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "puissance électrique",
       "enonce": "Un moteur à courant continu est alimenté sous une tension U = 24 V et absorbe un courant I = 5 A. Calcule la puissance électrique absorbée.",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "énergie consommée",
       "enonce": "Ce même moteur (P = 120 W) fonctionne pendant 30 minutes. Calcule l'énergie électrique consommée en joules, puis en wattheures.",
       "corrige": [
@@ -50,7 +50,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "rendement",
       "enonce": "Le moteur précédent absorbe 120 W et fournit sur son arbre une puissance mécanique de 96 W. Calcule son rendement, puis la puissance perdue et indique sous quelle forme elle se dissipe.",
       "corrige": [
@@ -63,7 +63,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "rendement d'une chaîne",
       "enonce": "Une chaîne d'énergie comprend un variateur (rendement 0,95), un moteur (rendement 0,80) et un réducteur (rendement 0,90). La puissance entrant dans le variateur est de 500 W. Calcule le rendement global et la puissance disponible en sortie.",
       "corrige": [
@@ -75,7 +75,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "dimensionnement énergétique",
       "enonce": "Un chariot électrique doit lever une charge de masse m = 200 kg à la vitesse verticale v = 0,3 m/s. Le rendement global de sa chaîne d'énergie (moteur + transmission) est de 0,75. On prend g = 9,81 m/s². Calcule la puissance mécanique utile de levage, puis la puissance électrique que doit fournir la batterie.",
       "corrige": [
@@ -88,7 +88,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "puissance mécanique en translation",
       "enonce": "Un tapis roulant déplace un colis en exerçant une force F = 200 N à la vitesse v = 1,5 m/s. Calcule la puissance mécanique transmise.",
       "corrige": [
@@ -100,7 +100,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "énergie consommée",
       "enonce": "Un moteur reçoit une puissance électrique P = 36 W. Quelle énergie consomme-t-il en 5 minutes ? Donne le résultat en joules.",
       "corrige": [
@@ -113,7 +113,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "rendement d'une chaîne",
       "enonce": "Une chaîne d'énergie comporte un moteur de rendement η₁ = 0,85 suivi d'un réducteur de rendement η₂ = 0,90. Calcule le rendement global.",
       "corrige": [
@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "dimensionnement énergétique",
       "enonce": "Un système doit fournir une puissance utile de 60 W. Le rendement global de sa chaîne d'énergie est de 0,75. Quelle puissance doit fournir la source ?",
       "corrige": [
@@ -136,6 +136,457 @@
         "P_absorbée = 80 W : la source doit fournir 80 W (20 W seront perdus)."
       ],
       "reponse": "La source doit fournir 80 W (P_absorbée = 60 / 0,75)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "préactionneur, actionneur, effecteur",
+      "enonce": "Classe chacun de ces composants en préactionneur, actionneur ou effecteur : relais, vérin, pince d'un robot.",
+      "corrige": [
+        "Le préactionneur distribue l'énergie sur ordre : le relais.",
+        "L'actionneur convertit l'énergie en énergie mécanique : le vérin.",
+        "L'effecteur agit directement sur la matière d'œuvre : la pince."
+      ],
+      "reponse": "Relais : préactionneur ; vérin : actionneur ; pince : effecteur."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "puissance et énergie",
+      "enonce": "Donne l'unité de chaque grandeur dans le système international : énergie E, puissance P, couple C, vitesse angulaire ω.",
+      "corrige": [
+        "L'énergie se mesure en joules (J) et la puissance en watts (W).",
+        "Le couple s'exprime en newtons-mètres (N·m) et la vitesse angulaire en radians par seconde (rad/s)."
+      ],
+      "reponse": "E en J ; P en W ; C en N·m ; ω en rad/s."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "structure de la chaîne d'énergie",
+      "enonce": "Quelle fonction de la chaîne d'énergie laisse passer ou non l'énergie vers l'actionneur, sur ordre de la chaîne d'information ?",
+      "corrige": [
+        "C'est le rôle du préactionneur (relais, contacteur, variateur).",
+        "Cette fonction s'appelle « distribuer »."
+      ],
+      "reponse": "La fonction DISTRIBUER."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "structure de la chaîne d'énergie",
+      "enonce": "Remets dans l'ordre les fonctions de la chaîne d'énergie : convertir, alimenter, transmettre, distribuer.",
+      "corrige": [
+        "L'énergie est d'abord mise à disposition, puis dosée, puis transformée en énergie mécanique, enfin acheminée vers l'effecteur."
+      ],
+      "reponse": "Alimenter → distribuer → convertir → transmettre."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "puissance électrique",
+      "enonce": "Une alimentation fournit $U = 5$ V et $I = 2$ A à une carte électronique. Quelle puissance électrique délivre-t-elle ?",
+      "corrige": [
+        "$P = U \\times I = 5 \\times 2 = 10$ W."
+      ],
+      "reponse": "10 W"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "structure de la chaîne d'énergie",
+      "enonce": "Dans une installation pneumatique, l'air comprimé est produit par un compresseur puis stocké dans une cuve. Quelle fonction de la chaîne d'énergie la cuve d'air comprimé assure-t-elle pour le vérin ?",
+      "corrige": [
+        "La cuve met l'énergie pneumatique à disposition du reste de la chaîne.",
+        "C'est la fonction « alimenter »."
+      ],
+      "reponse": "ALIMENTER."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "préactionneur, actionneur, effecteur",
+      "enonce": "Sur un vélo à assistance électrique, quel élément est l'effecteur et quels éléments assurent la fonction « transmettre » ?",
+      "corrige": [
+        "L'effecteur agit directement sur la matière d'œuvre (le déplacement sur la route) : c'est la roue arrière.",
+        "La chaîne et les pignons acheminent l'énergie mécanique jusqu'à la roue : ils transmettent."
+      ],
+      "reponse": "Effecteur : la roue arrière ; transmettre : la chaîne et les pignons."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "puissance électrique",
+      "enonce": "Un moteur de ventilateur est alimenté sous $U = 230$ V et parcouru par un courant $I = 0{,}5$ A. Calcule la puissance électrique absorbée.",
+      "corrige": [
+        "On applique $P = U \\times I$.",
+        "$P = 230 \\times 0{,}5 = 115$ W."
+      ],
+      "reponse": "115 W"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "puissance électrique",
+      "enonce": "Un moteur de 240 W fonctionne sous une tension de 48 V. Quelle intensité absorbe-t-il ?",
+      "corrige": [
+        "De $P = U \\times I$, on tire $I = \\dfrac{P}{U}$.",
+        "$I = \\dfrac{240}{48} = 5$ A."
+      ],
+      "reponse": "5 A"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "puissance mécanique en rotation",
+      "enonce": "Un moteur fournit un couple $C = 2$ N·m à la vitesse angulaire $\\omega = 150$ rad/s. Calcule sa puissance mécanique.",
+      "corrige": [
+        "En rotation, $P = C \\times \\omega$.",
+        "$P = 2 \\times 150 = 300$ W."
+      ],
+      "reponse": "300 W"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "puissance mécanique en rotation",
+      "enonce": "Convertis une vitesse de rotation de 1 500 tr/min en rad/s (arrondi au dixième).",
+      "corrige": [
+        "Un tour vaut $2\\pi$ rad et une minute vaut 60 s.",
+        "$\\omega = \\dfrac{2\\pi \\times 1\\,500}{60} \\approx 157{,}1$ rad/s."
+      ],
+      "reponse": "Environ 157,1 rad/s."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "puissance mécanique en translation",
+      "enonce": "Un vérin pousse une pièce avec une force $F = 1\\,500$ N à la vitesse $v = 0{,}05$ m/s. Calcule la puissance mécanique développée.",
+      "corrige": [
+        "En translation, $P = F \\times v$.",
+        "$P = 1\\,500 \\times 0{,}05 = 75$ W."
+      ],
+      "reponse": "75 W"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "énergie consommée",
+      "enonce": "Une batterie de 500 Wh alimente un moteur qui absorbe 250 W. Combien de temps peut-il fonctionner (on suppose la batterie entièrement utilisable) ?",
+      "corrige": [
+        "De $E = P \\times t$, on tire $t = \\dfrac{E}{P}$.",
+        "$t = \\dfrac{500}{250} = 2$ h."
+      ],
+      "reponse": "2 h"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "rendement",
+      "enonce": "Un moteur absorbe 50 W et fournit 45 W de puissance mécanique. Calcule son rendement.",
+      "corrige": [
+        "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{absorbée}}}$.",
+        "$\\eta = \\dfrac{45}{50} = 0{,}9$, soit 90 %."
+      ],
+      "reponse": "0,9 (90 %)"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "rendement",
+      "enonce": "Un élève trouve un rendement de 1,2 pour un moteur. Que peux-tu lui dire ?",
+      "corrige": [
+        "Le rendement est toujours inférieur à 1 : on ne crée pas d'énergie.",
+        "Un résultat supérieur à 1 signale une erreur : il a sans doute inversé la puissance utile et la puissance absorbée."
+      ],
+      "reponse": "C'est impossible (η < 1) : il a probablement inversé puissance utile et puissance absorbée."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "puissance et énergie",
+      "enonce": "Une lampe de 10 W reste allumée 3 h ; un sèche-cheveux de 2 000 W fonctionne 6 min. Lequel consomme le plus d'énergie ?",
+      "corrige": [
+        "Lampe : $E = 10 \\times 3 = 30$ Wh.",
+        "Sèche-cheveux : 6 min = 0,1 h, donc $E = 2\\,000 \\times 0{,}1 = 200$ Wh.",
+        "Le sèche-cheveux est plus puissant et consomme ici plus d'énergie, même en fonctionnant moins longtemps."
+      ],
+      "reponse": "Le sèche-cheveux (200 Wh contre 30 Wh)."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "énergie consommée",
+      "enonce": "Convertis une énergie de 0,5 kWh en joules.",
+      "corrige": [
+        "1 Wh = 1 W × 3 600 s = 3 600 J, donc 1 kWh = 3 600 000 J.",
+        "$0{,}5 \\times 3\\,600\\,000 = 1\\,800\\,000$ J."
+      ],
+      "reponse": "1 800 000 J (1,8 MJ)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "énergie consommée",
+      "enonce": "Une batterie fournit une énergie de 72 kJ en 10 minutes, à puissance constante. Quelle est cette puissance ?",
+      "corrige": [
+        "10 min = 600 s et 72 kJ = 72 000 J.",
+        "$P = \\dfrac{E}{t} = \\dfrac{72\\,000}{600} = 120$ W."
+      ],
+      "reponse": "120 W"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "puissance mécanique en rotation",
+      "enonce": "Un moteur tourne à 3 000 tr/min en fournissant un couple de 0,5 N·m. Calcule sa puissance mécanique (arrondie au watt).",
+      "corrige": [
+        "$\\omega = \\dfrac{2\\pi \\times 3\\,000}{60} \\approx 314{,}2$ rad/s.",
+        "$P = C \\times \\omega = 0{,}5 \\times 314{,}2 \\approx 157$ W."
+      ],
+      "reponse": "Environ 157 W."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "Un moteur de rendement 0,85 absorbe 200 W. Calcule la puissance utile et la puissance perdue.",
+      "corrige": [
+        "$P_{\\text{utile}} = \\eta \\times P_{\\text{absorbée}} = 0{,}85 \\times 200 = 170$ W.",
+        "Puissance perdue : 200 − 170 = 30 W, dissipée surtout en chaleur."
+      ],
+      "reponse": "Puissance utile : 170 W ; pertes : 30 W."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "Deux moteurs sont comparés : le moteur A absorbe 200 W et fournit 150 W ; le moteur B absorbe 300 W et fournit 240 W. Lequel a le meilleur rendement ?",
+      "corrige": [
+        "$\\eta_A = \\dfrac{150}{200} = 0{,}75$.",
+        "$\\eta_B = \\dfrac{240}{300} = 0{,}80$.",
+        "Le moteur B perd proportionnellement moins d'énergie."
+      ],
+      "reponse": "Le moteur B (0,80 contre 0,75)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "rendement d'une chaîne",
+      "enonce": "Une chaîne comprend une alimentation (η = 0,92), un moteur (η = 0,85) et un réducteur (η = 0,95). Calcule le rendement global (arrondi au millième).",
+      "corrige": [
+        "Les rendements se multiplient : $\\eta = 0{,}92 \\times 0{,}85 \\times 0{,}95$.",
+        "$\\eta \\approx 0{,}743$, soit environ 74,3 %."
+      ],
+      "reponse": "Environ 0,743 (74,3 %)."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "rendement d'une chaîne",
+      "enonce": "Un élève écrit : « moteur 0,8 et réducteur 0,9, donc rendement global 0,8 + 0,9 = 1,7 ». Corrige son erreur.",
+      "corrige": [
+        "Les rendements ne s'additionnent jamais : ils se multiplient.",
+        "$\\eta = 0{,}8 \\times 0{,}9 = 0{,}72$, soit 72 %.",
+        "On remarque d'ailleurs que 1,7 > 1 est impossible."
+      ],
+      "reponse": "Le rendement global vaut 0,8 × 0,9 = 0,72 (72 %)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "rendement d'une chaîne",
+      "enonce": "Le rendement global d'un moteur suivi d'un réducteur vaut 0,60. Le moteur a un rendement de 0,75. Quel est le rendement du réducteur ?",
+      "corrige": [
+        "$\\eta_{\\text{global}} = \\eta_{\\text{moteur}} \\times \\eta_{\\text{réducteur}}$.",
+        "$\\eta_{\\text{réducteur}} = \\dfrac{0{,}60}{0{,}75} = 0{,}80$."
+      ],
+      "reponse": "0,80 (80 %)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "réducteur : couple et vitesse",
+      "enonce": "Un réducteur idéal de rapport $k = 20$ reçoit en entrée $\\omega_e = 300$ rad/s et $C_e = 0{,}4$ N·m. Calcule la vitesse et le couple de sortie.",
+      "corrige": [
+        "$\\omega_s = \\dfrac{\\omega_e}{k} = \\dfrac{300}{20} = 15$ rad/s.",
+        "$C_s = C_e \\times k = 0{,}4 \\times 20 = 8$ N·m.",
+        "Vérification : $0{,}4 \\times 300 = 8 \\times 15 = 120$ W, la puissance est conservée."
+      ],
+      "reponse": "ω_s = 15 rad/s ; C_s = 8 N·m."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "réducteur : couple et vitesse",
+      "enonce": "Un moteur tourne à 3 000 tr/min ; la sortie du réducteur tourne à 150 tr/min. Calcule le rapport de réduction k.",
+      "corrige": [
+        "$k = \\dfrac{\\omega_e}{\\omega_s} = \\dfrac{3\\,000}{150} = 20$."
+      ],
+      "reponse": "k = 20"
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "réducteur : couple et vitesse",
+      "enonce": "Vrai ou faux : « Un réducteur augmente la puissance, puisqu'il augmente le couple. » Justifie.",
+      "corrige": [
+        "Faux : un réducteur échange de la vitesse contre du couple.",
+        "Au mieux (sans pertes), $C \\times \\omega$ reste constant ; en réalité, une partie de la puissance est perdue."
+      ],
+      "reponse": "Faux : la puissance est au mieux conservée (elle diminue un peu à cause des pertes)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "réducteur : couple et vitesse",
+      "enonce": "Un moteur fournit 0,5 N·m à 3 000 tr/min. On veut obtenir 12 N·m en sortie avec un réducteur idéal. Quel rapport de réduction faut-il, et à quelle vitesse tournera la sortie ?",
+      "corrige": [
+        "$k = \\dfrac{C_s}{C_e} = \\dfrac{12}{0{,}5} = 24$.",
+        "$N_s = \\dfrac{3\\,000}{24} = 125$ tr/min."
+      ],
+      "reponse": "k = 24 ; la sortie tourne à 125 tr/min."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "réducteur : couple et vitesse",
+      "enonce": "Un réducteur réel de rapport $k = 10$ et de rendement 0,9 reçoit $C_e = 1{,}2$ N·m à $\\omega_e = 200$ rad/s. Calcule la puissance d'entrée, la puissance de sortie, la vitesse de sortie et le couple de sortie.",
+      "corrige": [
+        "$P_e = 1{,}2 \\times 200 = 240$ W et $P_s = 0{,}9 \\times 240 = 216$ W.",
+        "$\\omega_s = \\dfrac{200}{10} = 20$ rad/s.",
+        "$C_s = \\dfrac{P_s}{\\omega_s} = \\dfrac{216}{20} = 10{,}8$ N·m (un peu moins que les 12 N·m d'un réducteur idéal)."
+      ],
+      "reponse": "P_e = 240 W ; P_s = 216 W ; ω_s = 20 rad/s ; C_s = 10,8 N·m."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Une perceuse sans fil est alimentée sous 18 V et absorbe 10 A. Son rendement est de 0,70. Calcule la puissance mécanique fournie, puis le couple à 1 500 tr/min (arrondi au centième).",
+      "corrige": [
+        "$P_{\\text{abs}} = 18 \\times 10 = 180$ W, donc $P_{\\text{utile}} = 0{,}70 \\times 180 = 126$ W.",
+        "$\\omega = \\dfrac{2\\pi \\times 1\\,500}{60} \\approx 157{,}08$ rad/s.",
+        "$C = \\dfrac{P}{\\omega} = \\dfrac{126}{157{,}08} \\approx 0{,}80$ N·m."
+      ],
+      "reponse": "126 W ; couple d'environ 0,80 N·m."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Un ascenseur doit monter une charge de 630 kg à 1 m/s (on ne tient compte que de cette charge). Le rendement global de sa chaîne d'énergie vaut 0,70 (g = 9,81 N/kg). Calcule la puissance utile puis la puissance absorbée (en kW, arrondie au dixième).",
+      "corrige": [
+        "Force à vaincre : le poids, $F = m \\times g = 630 \\times 9{,}81 = 6\\,180{,}3$ N.",
+        "$P_{\\text{utile}} = F \\times v = 6\\,180{,}3 \\times 1 \\approx 6{,}2$ kW.",
+        "$P_{\\text{abs}} = \\dfrac{6\\,180{,}3}{0{,}70} \\approx 8\\,829$ W, soit environ 8,8 kW."
+      ],
+      "reponse": "Puissance utile ≈ 6,2 kW ; puissance absorbée ≈ 8,8 kW."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "énergie consommée",
+      "enonce": "Un monte-charge exerce une force de 2 000 N à 0,5 m/s pendant 12 s. Son rendement global vaut 0,8. Calcule l'énergie utile puis l'énergie absorbée.",
+      "corrige": [
+        "$P_{\\text{utile}} = 2\\,000 \\times 0{,}5 = 1\\,000$ W.",
+        "$E_{\\text{utile}} = 1\\,000 \\times 12 = 12\\,000$ J.",
+        "$E_{\\text{abs}} = \\dfrac{12\\,000}{0{,}8} = 15\\,000$ J."
+      ],
+      "reponse": "Énergie utile : 12 000 J ; énergie absorbée : 15 000 J."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "puissance mécanique en translation",
+      "enonce": "Un vélo à assistance électrique roule à 25 km/h. Son moteur absorbe 10 A sous 36 V avec un rendement de 0,85. Calcule la force motrice fournie par le moteur (arrondie à l'unité).",
+      "corrige": [
+        "$P_{\\text{abs}} = 36 \\times 10 = 360$ W et $P_{\\text{utile}} = 0{,}85 \\times 360 = 306$ W.",
+        "$v = \\dfrac{25}{3{,}6} \\approx 6{,}94$ m/s.",
+        "$F = \\dfrac{P}{v} = \\dfrac{306}{6{,}94} \\approx 44$ N."
+      ],
+      "reponse": "Environ 44 N."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "énergie consommée",
+      "enonce": "Un moteur d'atelier de 1,5 kW fonctionne 8 h par jour. Le kWh coûte 0,20 €. Calcule l'énergie consommée en une journée et son coût.",
+      "corrige": [
+        "$E = P \\times t = 1{,}5 \\times 8 = 12$ kWh.",
+        "Coût : $12 \\times 0{,}20 = 2{,}40$ €."
+      ],
+      "reponse": "12 kWh, soit 2,40 € par jour."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "rendement",
+      "enonce": "Un moteur absorbe 120 W avec un rendement de 0,8. Quelle énergie est dissipée en chaleur en une heure de fonctionnement ?",
+      "corrige": [
+        "Puissance perdue : 120 × (1 − 0,8) = 24 W.",
+        "$E = 24 \\times 3\\,600 = 86\\,400$ J."
+      ],
+      "reponse": "86 400 J (soit 24 Wh)."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "puissance mécanique en translation",
+      "enonce": "Un vérin pneumatique parcourt sa course de 0,2 m en 2 s en exerçant une force de 800 N. Calcule sa vitesse moyenne puis sa puissance mécanique moyenne.",
+      "corrige": [
+        "$v = \\dfrac{0{,}2}{2} = 0{,}1$ m/s.",
+        "$P = F \\times v = 800 \\times 0{,}1 = 80$ W."
+      ],
+      "reponse": "v = 0,1 m/s ; P = 80 W."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Un portail est mû par une chaîne alimentée par une batterie de 24 V qui débite 4 A. Variateur : η = 0,95 ; moteur : η = 0,80 ; réducteur : η = 0,90. Calcule la puissance absorbée, le rendement global, la puissance utile, puis la force exercée sur le vantail s'il se déplace à 0,2 m/s.",
+      "corrige": [
+        "$P_{\\text{abs}} = 24 \\times 4 = 96$ W.",
+        "$\\eta = 0{,}95 \\times 0{,}80 \\times 0{,}90 = 0{,}684$, donc $P_{\\text{utile}} = 0{,}684 \\times 96 \\approx 65{,}7$ W.",
+        "$F = \\dfrac{P}{v} = \\dfrac{65{,}7}{0{,}2} \\approx 328$ N."
+      ],
+      "reponse": "96 W ; η = 0,684 ; environ 65,7 W ; force d'environ 328 N."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Un tapis roulant doit exercer 150 N sur des colis à 0,8 m/s. Le rendement global vaut 0,6 et la chaîne est alimentée en 24 V. Calcule la puissance utile, la puissance absorbée et l'intensité du courant (arrondie au centième).",
+      "corrige": [
+        "$P_{\\text{utile}} = 150 \\times 0{,}8 = 120$ W.",
+        "$P_{\\text{abs}} = \\dfrac{120}{0{,}6} = 200$ W.",
+        "$I = \\dfrac{200}{24} \\approx 8{,}33$ A."
+      ],
+      "reponse": "120 W ; 200 W ; environ 8,33 A."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Une trottinette doit fournir 250 W de puissance utile pendant 1 h 30. Le rendement global vaut 0,8. Quelle batterie choisir parmi 360 Wh, 500 Wh et 700 Wh, en prenant la plus petite qui convient ?",
+      "corrige": [
+        "$P_{\\text{abs}} = \\dfrac{250}{0{,}8} = 312{,}5$ W.",
+        "$E = 312{,}5 \\times 1{,}5 = 468{,}75$ Wh.",
+        "360 Wh est insuffisant ; la plus petite batterie qui convient est celle de 500 Wh."
+      ],
+      "reponse": "La batterie de 500 Wh (besoin d'environ 469 Wh)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "structure de la chaîne d'énergie",
+      "enonce": "Décris la chaîne d'énergie d'une perceuse sans fil en associant à chaque fonction (alimenter, distribuer, convertir, transmettre) un composant, puis nomme l'effecteur.",
+      "corrige": [
+        "Alimenter : la batterie ; distribuer : la gâchette associée au variateur électronique.",
+        "Convertir : le moteur électrique ; transmettre : le réducteur à engrenages et le mandrin.",
+        "Effecteur : le foret, qui agit directement sur la pièce percée."
+      ],
+      "reponse": "Batterie → variateur (gâchette) → moteur → réducteur et mandrin ; effecteur : le foret."
     }
   ]
 }

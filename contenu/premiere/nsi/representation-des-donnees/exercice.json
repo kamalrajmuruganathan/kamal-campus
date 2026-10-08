@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "conversion binaire vers décimal",
       "enonce": "Convertis l'entier naturel écrit en binaire 1011 en base 10.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "conversion décimal vers binaire",
       "enonce": "Écris l'entier 42 en base 2 (sur 8 bits).",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "codage des caractères (ASCII)",
       "enonce": "Dans la table ASCII, le caractère 'A' a pour code 65 et les lettres majuscules se suivent. Quel est le code ASCII de 'D' ? Que renvoie ord('C') ?",
       "corrige": [
@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "conversion et écriture hexadécimale",
       "enonce": "Convertis l'octet binaire 1101 0110 en hexadécimal, puis donne sa valeur en base 10.",
       "corrige": [
@@ -63,7 +63,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "entier relatif en complément à deux",
       "enonce": "Sur 8 bits, en complément à deux, quel entier relatif représente le motif 1111 1011 ?",
       "corrige": [
@@ -77,7 +77,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "addition binaire et dépassement de capacité",
       "enonce": "On additionne deux entiers naturels codés sur 4 bits : 1011 + 0101. Effectue l'addition binaire, puis explique pourquoi le résultat provoque un dépassement de capacité (overflow) si l'on reste sur 4 bits.",
       "corrige": [
@@ -92,7 +92,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "conversion binaire vers décimal",
       "enonce": "Convertis en décimal les nombres binaires 1010 et 110.",
       "corrige": [
@@ -104,7 +104,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "conversion décimal vers binaire",
       "enonce": "Convertis 25 en binaire par la méthode des divisions successives par 2.",
       "corrige": [
@@ -117,7 +117,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "hexadécimal",
       "enonce": "Convertis l'octet 11111010 en hexadécimal, puis convertis 0x2C en décimal.",
       "corrige": [
@@ -130,7 +130,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "complément à deux",
       "enonce": "Code le nombre −12 sur 8 bits en complément à deux.",
       "corrige": [
@@ -140,6 +140,482 @@
         "Le bit de poids fort vaut 1 : le nombre est bien négatif."
       ],
       "reponse": "−12 s'écrit 11110100 sur 8 bits en complément à deux."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "bits et octets",
+      "enonce": "Combien de bits y a-t-il dans 3 octets ? Combien d'octets faut-il pour 48 bits ?",
+      "corrige": [
+        "Un octet est un groupe de 8 bits.",
+        "3 octets = 3 × 8 = 24 bits.",
+        "48 bits = 48 ÷ 8 = 6 octets."
+      ],
+      "reponse": "24 bits ; 6 octets."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "nombre de valeurs codables",
+      "enonce": "Combien de valeurs différentes peut-on coder avec 3 bits ? Écris-les toutes, en binaire, dans l'ordre croissant.",
+      "corrige": [
+        "Avec n bits, on code 2^n valeurs : 2^3 = 8 valeurs.",
+        "Ce sont les entiers de 0 à 7 : 000, 001, 010, 011, 100, 101, 110, 111."
+      ],
+      "reponse": "8 valeurs : 000, 001, 010, 011, 100, 101, 110, 111 (de 0 à 7)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "conversion binaire vers décimal",
+      "enonce": "Convertis en base 10 le nombre binaire 100101.",
+      "corrige": [
+        "On écrit les puissances de 2 sous chaque bit, de droite à gauche : 1, 2, 4, 8, 16, 32.",
+        "Les bits à 1 correspondent à 32, 4 et 1.",
+        "32 + 4 + 1 = 37."
+      ],
+      "reponse": "100101₂ = 37."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Convertis 19 en binaire par la méthode des divisions successives par 2. Vérifie ensuite ton résultat en le reconvertissant en décimal.",
+      "corrige": [
+        "19 = 2 × 9 + 1 ; 9 = 2 × 4 + 1 ; 4 = 2 × 2 + 0 ; 2 = 2 × 1 + 0 ; 1 = 2 × 0 + 1.",
+        "On lit les restes de bas en haut : 10011.",
+        "Vérification : 16 + 2 + 1 = 19."
+      ],
+      "reponse": "19 = 10011₂."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Écris 200 en binaire sur 8 bits, en utilisant les puissances de 2 (128, 64, 32, 16, 8, 4, 2, 1).",
+      "corrige": [
+        "200 ⩾ 128 : bit à 1, reste 72. 72 ⩾ 64 : bit à 1, reste 8.",
+        "8 < 32 et 8 < 16 : bits à 0. 8 ⩾ 8 : bit à 1, reste 0.",
+        "Les bits de 4, 2 et 1 valent 0 : 1100 1000."
+      ],
+      "reponse": "200 = 1100 1000₂."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "hexadécimal",
+      "enonce": "Convertis en décimal les nombres hexadécimaux 1F et B0.",
+      "corrige": [
+        "1F : 1 × 16 + F, avec F = 15 : 16 + 15 = 31.",
+        "B0 : B × 16 + 0, avec B = 11 : 11 × 16 = 176."
+      ],
+      "reponse": "1F₁₆ = 31 et B0₁₆ = 176."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "codage des caractères (ASCII)",
+      "enonce": "Le caractère 'a' a pour code ASCII 97 et les minuscules se suivent dans l'ordre alphabétique. Quels caractères correspondent aux codes 100 et 122 ?",
+      "corrige": [
+        "100 = 97 + 3 : c'est la 4e lettre, 'd'.",
+        "122 = 97 + 25 : c'est la 26e lettre, 'z'."
+      ],
+      "reponse": "100 → 'd' ; 122 → 'z'."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "booléens",
+      "enonce": "Qu'affiche ce programme Python ?\n\n```python\na = 7 > 3\nb = 2 == 5\nprint(a, b)\nprint(a and b, a or b, not b)\n```",
+      "corrige": [
+        "7 > 3 est vrai : a vaut True. 2 == 5 est faux : b vaut False.",
+        "a and b : il faut que les deux soient vrais, donc False. a or b : au moins un est vrai, donc True. not b : True."
+      ],
+      "reponse": "`True False` puis `False True True`."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "nombre de valeurs codables",
+      "enonce": "Quel est le plus grand entier naturel qu'on peut écrire avec 6 bits ? Et avec 10 bits ?",
+      "corrige": [
+        "Avec n bits, on code les entiers de 0 à 2^n - 1.",
+        "6 bits : 2^6 - 1 = 64 - 1 = 63 (111111₂).",
+        "10 bits : 2^10 - 1 = 1024 - 1 = 1023."
+      ],
+      "reponse": "63 avec 6 bits ; 1023 avec 10 bits."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "complément à deux",
+      "enonce": "Sur 8 bits en complément à deux, un nombre est-il positif ou négatif quand son premier bit (bit de poids fort) vaut 1 ? Classe les motifs suivants : 0111 0000 ; 1000 0001 ; 0000 0000 ; 1111 1111.",
+      "corrige": [
+        "En complément à deux, le bit de poids fort indique le signe : 0 pour un nombre positif (ou nul), 1 pour un nombre négatif.",
+        "0111 0000 et 0000 0000 commencent par 0 : positifs ou nul. 1000 0001 et 1111 1111 commencent par 1 : négatifs."
+      ],
+      "reponse": "Premier bit à 1 : négatif. 0111 0000 et 0000 0000 : positif ou nul ; 1000 0001 et 1111 1111 : négatifs."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "codage des caractères (ASCII)",
+      "enonce": "Sur combien de bits la table ASCII code-t-elle les caractères ? Combien de caractères contient-elle ? Peut-on y trouver la lettre « é » ?",
+      "corrige": [
+        "La table ASCII code chaque caractère sur 7 bits.",
+        "Avec 7 bits, on a 2^7 = 128 caractères possibles.",
+        "Elle ne contient que des lettres non accentuées, des chiffres et de la ponctuation : « é » n'y figure pas (il est présent dans Unicode)."
+      ],
+      "reponse": "7 bits, 128 caractères ; « é » n'y figure pas."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "hexadécimal",
+      "enonce": "Convertis 255, puis 171, en hexadécimal. Vérifie avec la fonction `hex` de Python : que renvoient `hex(255)` et `hex(171)` ?",
+      "corrige": [
+        "255 = 15 × 16 + 15 : les deux chiffres valent F, donc FF.",
+        "171 = 10 × 16 + 11 : A puis B, donc AB.",
+        "Python écrit les chiffres en minuscules, précédés de 0x."
+      ],
+      "reponse": "255 = FF₁₆ et 171 = AB₁₆ ; `hex(255)` renvoie '0xff' et `hex(171)` renvoie '0xab'."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "hexadécimal",
+      "enonce": "Convertis le nombre binaire 1011 1100 0111 en hexadécimal, sans passer par la base 10.",
+      "corrige": [
+        "Un chiffre hexadécimal correspond exactement à 4 bits : on traduit chaque groupe de 4.",
+        "1011 = 11 = B ; 1100 = 12 = C ; 0111 = 7.",
+        "On obtient BC7."
+      ],
+      "reponse": "1011 1100 0111₂ = BC7₁₆."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "hexadécimal",
+      "enonce": "En HTML/CSS, la couleur #FF8800 est codée par trois octets écrits en hexadécimal : rouge, vert, bleu. Donne la valeur décimale (de 0 à 255) de chacune des trois composantes.",
+      "corrige": [
+        "On découpe en trois octets de deux chiffres : FF, 88, 00.",
+        "FF = 15 × 16 + 15 = 255 ; 88 = 8 × 16 + 8 = 136 ; 00 = 0.",
+        "C'est un orange : beaucoup de rouge, un peu de vert, pas de bleu."
+      ],
+      "reponse": "Rouge 255, vert 136, bleu 0."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "complément à deux",
+      "enonce": "Code −1, puis −128, sur 8 bits en complément à deux.",
+      "corrige": [
+        "−1 : on part de 1 = 0000 0001, on inverse : 1111 1110, on ajoute 1 : 1111 1111.",
+        "−128 : on part de 128 = 1000 0000, on inverse : 0111 1111, on ajoute 1 : 1000 0000.",
+        "−128 est le plus petit entier représentable sur 8 bits en complément à deux."
+      ],
+      "reponse": "−1 → 1111 1111 ; −128 → 1000 0000."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "complément à deux",
+      "enonce": "Quel entier relatif est codé par 1110 0000 sur 8 bits en complément à deux ? Explique ta méthode.",
+      "corrige": [
+        "Le bit de poids fort vaut 1 : le nombre est négatif.",
+        "Pour trouver sa valeur absolue, on applique la même opération : inverser les bits (0001 1111) puis ajouter 1 (0010 0000).",
+        "0010 0000 = 32 : le nombre codé est −32."
+      ],
+      "reponse": "−32."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "addition binaire et dépassement de capacité",
+      "enonce": "Effectue l'addition binaire 0110 1101 + 0010 0110 et vérifie ton résultat en base 10.",
+      "corrige": [
+        "On additionne colonne par colonne de droite à gauche, avec 1 + 1 = 10 (on pose 0, retenue 1).",
+        "On obtient 1001 0011.",
+        "Vérification : 0110 1101 = 109, 0010 0110 = 38 et 109 + 38 = 147 = 1001 0011₂."
+      ],
+      "reponse": "1001 0011 (soit 147 = 109 + 38)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "addition binaire et dépassement de capacité",
+      "enonce": "Sur 8 bits non signés, on calcule 200 + 100. Quel résultat stocke-t-on si on ne garde que les 8 bits de droite ? Pourquoi est-ce un dépassement de capacité ?",
+      "corrige": [
+        "200 + 100 = 300, mais sur 8 bits non signés le maximum est 255.",
+        "300 = 1 0010 1100₂ : il faut 9 bits. En gardant les 8 bits de droite, on obtient 0010 1100 = 44.",
+        "Le résultat stocké (44) est faux : c'est un dépassement de capacité (overflow)."
+      ],
+      "reponse": "On obtient 44 (300 − 256) au lieu de 300 : dépassement de capacité."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "codage des caractères (ASCII)",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nmot = \"NSI\"\nfor c in mot:\n    print(ord(c), end=\" \")\nprint()\nprint(chr(ord(\"b\") - 32))\n```",
+      "corrige": [
+        "`ord` donne le code d'un caractère : N = 78, S = 83, I = 73.",
+        "`ord(\"b\")` vaut 98 ; 98 − 32 = 66, qui est le code de 'B'.",
+        "En ASCII, majuscules et minuscules sont décalées de 32."
+      ],
+      "reponse": "`78 83 73` puis `B`."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "Unicode et UTF-8",
+      "enonce": "Le mot « été » contient 3 caractères. En UTF-8, combien d'octets occupe-t-il, sachant que « é » est codé sur 2 octets et « t » sur 1 ? Que renvoie `len(\"été\".encode(\"utf-8\"))` en Python ?",
+      "corrige": [
+        "« t » est un caractère ASCII : 1 octet en UTF-8.",
+        "Chaque « é » (lettre accentuée, hors ASCII) est codé sur 2 octets.",
+        "Total : 2 + 1 + 2 = 5 octets ; `encode(\"utf-8\")` renvoie ces octets, et `len` les compte."
+      ],
+      "reponse": "5 octets ; l'expression renvoie 5."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "flottants",
+      "enonce": "Qu'affiche ce programme ? Pourquoi ?\n\n```python\nx = 0.1 + 0.2\nprint(x == 0.3)\nprint(abs(x - 0.3) < 1e-9)\n```",
+      "corrige": [
+        "Les flottants sont stockés de façon approchée : 0.1 + 0.2 vaut 0.30000000000000004 et non exactement 0.3.",
+        "Le test d'égalité stricte renvoie donc False.",
+        "La différence entre x et 0.3 est en revanche très petite (de l'ordre de 10^-17), donc le second test renvoie True : c'est la bonne façon de comparer des flottants."
+      ],
+      "reponse": "`False` puis `True`."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "conversion binaire vers décimal",
+      "enonce": "En Python, que renvoient `int(\"11111111\", 2)` et `int(\"10000000\", 2)` ? Explique.",
+      "corrige": [
+        "`int(chaine, 2)` interprète la chaîne comme un entier naturel écrit en base 2.",
+        "11111111 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255.",
+        "10000000 = 128."
+      ],
+      "reponse": "255 et 128."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Complète la fonction `binaire(n)` qui renvoie la chaîne des chiffres binaires d'un entier n > 0, par divisions successives. Que renvoie `binaire(13)` ?\n\n```python\ndef binaire(n):\n    s = \"\"\n    while n > 0:\n        s = str(n % 2) + s\n        n = ...\n    return s\n```",
+      "corrige": [
+        "À chaque tour, `n % 2` est le reste de la division par 2 : c'est le bit suivant, ajouté à gauche de la chaîne (lecture de bas en haut).",
+        "Il faut ensuite remplacer n par le quotient : `n = n // 2`.",
+        "Pour 13 : restes 1, 0, 1, 1, d'où la chaîne \"1101\"."
+      ],
+      "reponse": "`n = n // 2` ; `binaire(13)` renvoie \"1101\"."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "booléens",
+      "enonce": "On donne a = True et b = False. Évalue : a) `not a or b` ; b) `not (a or b)` ; c) `a and not b`.",
+      "corrige": [
+        "`not` est prioritaire sur `and`, lui-même prioritaire sur `or`.",
+        "a) `not a` vaut False, puis False or False = False.",
+        "b) a or b = True, puis not True = False.",
+        "c) `not b` vaut True, puis True and True = True."
+      ],
+      "reponse": "a) False ; b) False ; c) True."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Que renvoient en Python `bin(10)` et `bin(64)` ? Que signifie le préfixe affiché ?",
+      "corrige": [
+        "`bin` renvoie une chaîne contenant l'écriture binaire, précédée de 0b qui signale la base 2.",
+        "10 = 8 + 2 : 1010. 64 = 2^6 : un 1 suivi de six 0, soit 1000000."
+      ],
+      "reponse": "'0b1010' et '0b1000000' ; le préfixe 0b indique une écriture binaire."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "complément à deux",
+      "enonce": "Calcule −20 + 7 sur 8 bits en complément à deux : code les deux nombres, additionne-les en ignorant une éventuelle retenue au-delà du 8e bit, puis décode le résultat.",
+      "corrige": [
+        "20 = 0001 0100 ; on inverse (1110 1011) et on ajoute 1 : −20 = 1110 1100. 7 = 0000 0111.",
+        "1110 1100 + 0000 0111 = 1111 0011.",
+        "Décodage : le bit de poids fort vaut 1, donc négatif ; inverser donne 0000 1100, plus 1 donne 0000 1101 = 13. Le résultat est −13."
+      ],
+      "reponse": "1110 1100 + 0000 0111 = 1111 0011, qui code −13."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "complément à deux",
+      "enonce": "Pourquoi, sur 8 bits en complément à deux, peut-on coder −128 mais pas +128 ? Donne l'intervalle des entiers représentables sur 16 bits.",
+      "corrige": [
+        "Sur 8 bits, il y a 2^8 = 256 motifs : 128 commencent par 1 (négatifs) et 128 commencent par 0 (zéro et positifs).",
+        "Les négatifs vont donc de −1 à −128, mais zéro occupe une place parmi les motifs commençant par 0 : les positifs ne vont que jusqu'à 127.",
+        "Sur 16 bits : de −2^15 à 2^15 − 1, soit de −32 768 à 32 767."
+      ],
+      "reponse": "Le zéro occupe un motif « positif » ; sur 16 bits, on code de −32 768 à 32 767."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "addition binaire et dépassement de capacité",
+      "enonce": "Sur 8 bits en complément à deux, on calcule 100 + 50. Quel motif obtient-on et quel entier relatif représente-t-il ? Explique.",
+      "corrige": [
+        "100 = 0110 0100 et 50 = 0011 0010 ; leur somme binaire vaut 1001 0110.",
+        "Le bit de poids fort vaut 1 : ce motif est lu comme un nombre négatif. Inverser donne 0110 1001, plus 1 donne 0110 1010 = 106 : il représente −106.",
+        "Le vrai résultat, 150, dépasse 127 : c'est un dépassement de capacité, et deux positifs donnent un « négatif »."
+      ],
+      "reponse": "1001 0110, qui représente −106 : dépassement de capacité (150 > 127)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "nombre de valeurs codables",
+      "enonce": "Une image utilise une palette de 200 couleurs. Combien de bits faut-il au minimum pour coder le numéro de chaque couleur ? Et pour 1 000 couleurs ?",
+      "corrige": [
+        "Il faut le plus petit n tel que 2^n ⩾ nombre de couleurs.",
+        "2^7 = 128 < 200 ⩽ 256 = 2^8 : il faut 8 bits.",
+        "2^9 = 512 < 1 000 ⩽ 1 024 = 2^10 : il faut 10 bits."
+      ],
+      "reponse": "8 bits pour 200 couleurs ; 10 bits pour 1 000 couleurs."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "Unicode et UTF-8",
+      "enonce": "Un élève dit : « Unicode et UTF-8, c'est la même chose. » Corrige-le en expliquant le rôle de chacun, et dis pourquoi un texte ASCII est aussi un texte UTF-8 valide.",
+      "corrige": [
+        "Unicode est une table : elle attribue un numéro (point de code) à chaque caractère de toutes les langues.",
+        "UTF-8 est une façon d'encoder ces numéros en une suite d'octets (de 1 à 4 octets par caractère).",
+        "Les 128 caractères ASCII sont codés en UTF-8 sur un seul octet, avec la même valeur qu'en ASCII : un fichier ASCII est donc lu correctement en UTF-8."
+      ],
+      "reponse": "Unicode numérote les caractères, UTF-8 encode ces numéros en octets ; UTF-8 code les caractères ASCII sur 1 octet avec la même valeur."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "Unicode et UTF-8",
+      "enonce": "Qu'affiche ce programme ? Explique la différence entre les deux nombres.\n\n```python\ns = \"Noël 2€\"\nprint(len(s))\nprint(len(s.encode(\"utf-8\")))\n```",
+      "corrige": [
+        "`len(s)` compte les caractères : N, o, ë, l, espace, 2, € : 7 caractères.",
+        "En UTF-8, les caractères ASCII prennent 1 octet, « ë » en prend 2 et « € » en prend 3.",
+        "Total en octets : 5 × 1 + 2 + 3 = 10."
+      ],
+      "reponse": "7 puis 10 : 7 caractères, mais 10 octets en UTF-8."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "flottants",
+      "enonce": "Ce programme devrait s'arrêter après 10 tours, quand x vaut 1. Explique pourquoi il ne s'arrête jamais, et corrige la condition.\n\n```python\nx = 0\nwhile x != 1:\n    x = x + 0.1\n```",
+      "corrige": [
+        "0.1 n'est pas représentable exactement en binaire : après 10 additions, x vaut 0.9999999999999999 et non 1.",
+        "x n'est donc jamais exactement égal à 1 : la condition `x != 1` reste vraie et la boucle continue indéfiniment.",
+        "Correction : `while x < 1:` (ou mieux, compter les tours avec un entier : `for i in range(10)`)."
+      ],
+      "reponse": "x ne vaut jamais exactement 1 (0.9999999999999999 après 10 tours) ; il faut écrire `while x < 1`."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Sans poser de division, explique pourquoi l'écriture binaire d'un nombre pair se termine toujours par 0. Que fait la multiplication par 2 sur l'écriture binaire ? Donne l'écriture de 26 sachant que 13 = 1101₂.",
+      "corrige": [
+        "Le bit de droite a pour poids 1 (2^0) ; tous les autres bits ont pour poids des puissances de 2 paires (2, 4, 8…).",
+        "Un nombre est pair exactement quand le bit de droite vaut 0.",
+        "Multiplier par 2 décale tous les bits d'un rang vers la gauche et ajoute un 0 à droite : 26 = 2 × 13 = 11010₂."
+      ],
+      "reponse": "Le dernier bit indique la parité ; multiplier par 2 ajoute un 0 à droite : 26 = 11010₂."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "hexadécimal",
+      "enonce": "Combien de chiffres hexadécimaux faut-il pour écrire une valeur de 32 bits ? Quelle est la plus grande valeur de 32 bits, écrite en hexadécimal ?",
+      "corrige": [
+        "Un chiffre hexadécimal code exactement 4 bits.",
+        "32 bits = 8 groupes de 4 bits : il faut 8 chiffres hexadécimaux.",
+        "La plus grande valeur a tous ses bits à 1 : chaque groupe 1111 donne F, soit FFFFFFFF."
+      ],
+      "reponse": "8 chiffres ; la plus grande valeur est FFFFFFFF (soit 4 294 967 295)."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "complément à deux",
+      "enonce": "Écris une fonction `decode8(motif)` qui reçoit une chaîne de 8 caractères '0' ou '1' et renvoie l'entier relatif codé en complément à deux. Indication : si le premier bit vaut 1, la valeur est celle de l'entier naturel moins 256. Teste-la sur \"11111011\" et \"01111111\".",
+      "corrige": [
+        "On calcule d'abord la valeur de l'entier naturel avec `int(motif, 2)`.",
+        "Si motif[0] vaut '1', le nombre est négatif : on retire 2^8 = 256.",
+        "Exemple de réponse : `v = int(motif, 2)`, puis `if motif[0] == \"1\": v = v - 256`, puis `return v`.",
+        "\"11111011\" : 251 − 256 = −5 ; \"01111111\" : 127."
+      ],
+      "reponse": "`decode8(\"11111011\")` renvoie −5 et `decode8(\"01111111\")` renvoie 127."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "codage des caractères (ASCII)",
+      "enonce": "Le « code de César » de décalage 3 remplace chaque majuscule par la lettre située 3 rangs plus loin (X devient A, Y devient B, Z devient C). Qu'affiche ce programme ?\n\n```python\ndef cesar(mot):\n    res = \"\"\n    for c in mot:\n        n = ord(c) - 65\n        res = res + chr((n + 3) % 26 + 65)\n    return res\n\nprint(cesar(\"NSIXYZ\"))\n```",
+      "corrige": [
+        "`ord(c) - 65` donne le rang de la lettre (A → 0, B → 1, …, Z → 25).",
+        "On ajoute 3 et on prend le reste modulo 26 pour revenir au début après Z, puis on rajoute 65 pour retrouver un code ASCII.",
+        "N → Q, S → V, I → L, X → A, Y → B, Z → C."
+      ],
+      "reponse": "QVLABC"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "conversion binaire vers décimal",
+      "enonce": "Écris une fonction `decimal(s)` qui convertit une chaîne binaire en entier, sans utiliser `int(s, 2)`, en lisant les bits de gauche à droite (à chaque bit, on multiplie le total par 2 puis on ajoute le bit). Donne les valeurs successives du total pour \"1101\".",
+      "corrige": [
+        "Exemple de réponse : `total = 0`, puis `for b in s: total = 2 * total + int(b)`, puis `return total`.",
+        "Pour \"1101\" : 0 → 2 × 0 + 1 = 1 → 2 × 1 + 1 = 3 → 2 × 3 + 0 = 6 → 2 × 6 + 1 = 13.",
+        "On retrouve bien 1101₂ = 13."
+      ],
+      "reponse": "Totaux successifs : 1, 3, 6, 13 ; la fonction renvoie 13."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "nombre de valeurs codables",
+      "enonce": "Une adresse IPv4 est formée de 4 octets, écrits en décimal et séparés par des points (par exemple 192.168.1.20). Combien de valeurs différentes peut prendre chaque nombre ? Combien d'adresses IPv4 différentes existe-t-il en tout ? Écris 192 en binaire.",
+      "corrige": [
+        "Chaque nombre est un octet : 2^8 = 256 valeurs, de 0 à 255.",
+        "Une adresse fait 4 × 8 = 32 bits, d'où 2^32 = 4 294 967 296 adresses, environ 4,3 milliards.",
+        "192 = 128 + 64 : 1100 0000."
+      ],
+      "reponse": "256 valeurs par octet ; 2^32 = 4 294 967 296 adresses ; 192 = 1100 0000₂."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "flottants",
+      "enonce": "Un programme de caisse additionne les prix 0,10 €, 0,20 € et 0,30 € avec des flottants, puis teste si le total est égal à 0,60 €. Qu'affiche le code ? Propose une solution plus sûre pour manipuler des prix.\n\n```python\ntotal = 0.1 + 0.2 + 0.3\nprint(total)\nprint(total == 0.6)\n```",
+      "corrige": [
+        "Les flottants sont approchés : 0.1 + 0.2 + 0.3 vaut 0.6000000000000001.",
+        "Le test d'égalité renvoie donc False.",
+        "Solution : compter en centimes avec des entiers (10 + 20 + 30 = 60), qui sont exacts en Python, ou comparer avec une tolérance."
+      ],
+      "reponse": "`0.6000000000000001` puis `False` ; il vaut mieux calculer en centimes avec des entiers."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "addition binaire et dépassement de capacité",
+      "enonce": "Un compteur de visites est stocké sur 16 bits non signés. Quelle est la plus grande valeur qu'il peut afficher ? Que se passe-t-il à la visite suivante ? En Python, ce problème se pose-t-il avec le type `int` ?",
+      "corrige": [
+        "Sur 16 bits non signés, on code les entiers de 0 à 2^16 − 1 = 65 535.",
+        "À la visite suivante, 65 535 + 1 = 65 536 nécessite 17 bits : en gardant 16 bits, le compteur repasse à 0 (dépassement de capacité).",
+        "En Python, le type `int` a une précision illimitée : pas de dépassement, mais le problème existe dans la plupart des langages et au niveau matériel."
+      ],
+      "reponse": "65 535 au maximum ; ensuite il repasse à 0 ; en Python, `int` n'a pas ce problème (précision illimitée)."
     }
   ]
 }

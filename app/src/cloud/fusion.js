@@ -89,6 +89,15 @@ export function fusionnerProfils(a, b) {
   for (const e of [...(a.erreurs || []), ...(b.erreurs || [])]) if (e && e.cle != null) err[e.cle] = e;
   f.erreurs = Object.values(err).slice(-200);
 
+  // Exercices réussis : union par chapitre.
+  f.exosReussis = {};
+  for (const src of [a.exosReussis || {}, b.exosReussis || {}]) {
+    for (const id in src) {
+      if (!Array.isArray(src[id])) continue;
+      f.exosReussis[id] = [...new Set([...(f.exosReussis[id] || []), ...src[id]])];
+    }
+  }
+
   // Ligue : semaine la plus récente ; à semaine égale, max d'XP.
   const la = a.ligue || {};
   const lb = b.ligue || {};
@@ -101,6 +110,21 @@ export function fusionnerProfils(a, b) {
   // Onboarding : fait si l'un des deux l'a fait ; prénom non vide conservé.
   f.onboardingFait = !!(a.onboardingFait || b.onboardingFait);
   f.prenom = recent.prenom || autre.prenom || '';
+
+  // Plans « Je révise mon contrôle » : union par id, cases cochées réunies.
+  const plans = new Map();
+  for (const src of [autre.controles || [], recent.controles || []]) {
+    for (const pl of src) {
+      if (!pl || !pl.id) continue;
+      const deja = plans.get(pl.id);
+      if (!deja) { plans.set(pl.id, pl); continue; }
+      const faites = Array.isArray(pl.faites) || Array.isArray(deja.faites)
+        ? [...new Set([...(deja.faites || []), ...(pl.faites || [])])]
+        : { ...(deja.faites || {}), ...(pl.faites || {}) };
+      plans.set(pl.id, { ...deja, ...pl, faites });
+    }
+  }
+  if (plans.size) f.controles = [...plans.values()];
 
   return f;
 }

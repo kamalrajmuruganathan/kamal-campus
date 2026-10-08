@@ -49,7 +49,7 @@ Le narrateur adulte porte souvent un **regard rétrospectif** sur l'enfant qu'il
 | Mémoires | vie tournée vers l'Histoire et les événements publics | Chateaubriand, *Mémoires d'outre-tombe* |
 | Journal intime | notes datées, au jour le jour | Anne Frank, *Journal* |
 | Autoportrait | description de soi | Montaigne, *Essais* |
-| Autofiction | récit de soi mêlé de fiction | Nathalie Sarraute, *Enfance* |
+| Autofiction | récit de soi mêlé de fiction | Serge Doubrovsky, *Fils* (1977), qui a inventé le mot |
 
 ## 4. Les erreurs à éviter
 

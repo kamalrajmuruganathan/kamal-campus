@@ -130,7 +130,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "optimisation",
       "enonce": "On dispose d'une plaque de carton carrée de $12$ cm de côté. Dans chacun des quatre coins, on découpe un carré de côté $x$ (en cm), puis on relève les bords pour former une boîte ouverte (sans couvercle). On note $V(x)$ le volume de cette boîte, en cm³.\n\n1. Justifier que $x$ appartient à l'intervalle $]0\\,;6[$, et montrer que $V(x) = x(12 - 2x)^2$.\n2. Développer $V(x)$, puis montrer que $V'(x) = 12(x - 2)(x - 6)$.\n3. Étudier le signe de $V'(x)$ sur $]0\\,;6[$ et dresser le tableau de variations de $V$.\n4. En déduire la valeur de $x$ qui rend le volume maximal, ainsi que ce volume maximal.\n5. Déterminer l'équation de la tangente à la courbe de $V$ au point d'abscisse $x = 1$, et interpréter concrètement le nombre dérivé $V'(1)$.",
       "corrige": [
@@ -141,6 +141,480 @@
         "5. On calcule $V(1) = 1 \\times (12 - 2)^2 = 10^2 = 100$ et $V'(1) = 12(1 - 2)(1 - 6) = 12 \\times (-1) \\times (-5) = 60$. La tangente en $x = 1$ a pour équation $y = V'(1)(x - 1) + V(1) = 60(x - 1) + 100 = 60x + 40$. Le nombre dérivé $V'(1) = 60$ signifie qu'autour de $x = 1$ cm, le volume augmente d'environ $60$ cm³ par cm de découpe supplémentaire (vitesse instantanée de variation du volume)."
       ],
       "reponse": "Domaine $]0\\,;6[$ ; $V(x) = 4x^3 - 48x^2 + 144x$ et $V'(x) = 12(x-2)(x-6)$. $V$ croît sur $]0\\,;2]$ puis décroît sur $[2\\,;6[$ : le volume est maximal pour $x = 2$ cm et vaut $128$ cm³. Tangente en $x = 1$ : $y = 60x + 40$, et $V'(1) = 60$ cm³/cm."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "taux-de-variation",
+      "enonce": "Calculer le taux de variation de $f(x) = 3x^2 - 1$ entre $1$ et $3$.",
+      "corrige": [
+        "Le taux de variation entre $a$ et $b$ est $\\dfrac{f(b)-f(a)}{b-a}$.",
+        "$f(3) = 3 \\times 9 - 1 = 26$ et $f(1) = 3 - 1 = 2$.",
+        "$\\tau = \\dfrac{26 - 2}{3 - 1} = \\dfrac{24}{2} = 12$."
+      ],
+      "reponse": "$\\tau = 12$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "taux-de-variation",
+      "enonce": "Calculer le taux de variation de la fonction inverse $f(x) = \\dfrac{1}{x}$ entre $2$ et $4$. Que traduit son signe ?",
+      "corrige": [
+        "$f(2) = \\dfrac{1}{2}$ et $f(4) = \\dfrac{1}{4}$.",
+        "$\\tau = \\dfrac{\\frac{1}{4} - \\frac{1}{2}}{4 - 2} = \\dfrac{-\\frac{1}{4}}{2} = -\\dfrac{1}{8}$.",
+        "Le taux est négatif : la sécante descend, $f$ a diminué entre $2$ et $4$."
+      ],
+      "reponse": "$\\tau = -\\dfrac{1}{8}$ (négatif : $f(4) < f(2)$)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "nombre-derive",
+      "enonce": "On sait que $f(2) = 5$ et $f'(2) = -1$. Donner les coordonnées du point de contact de la tangente au point d'abscisse $2$, puis la pente de cette tangente.",
+      "corrige": [
+        "Le point de contact a pour abscisse $2$ et pour ordonnée $f(2) = 5$.",
+        "La pente de la tangente est le nombre dérivé $f'(2) = -1$.",
+        "Attention à ne pas confondre $f(2)$ (ordonnée) et $f'(2)$ (pente)."
+      ],
+      "reponse": "Point $(2\\,;5)$ ; pente $-1$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "derivees-usuelles",
+      "enonce": "Donner la dérivée de chacune des fonctions suivantes sur $\\mathbb{R}$ : $f(x) = x^7$, $g(x) = 4$, $k(x) = -3x$.",
+      "corrige": [
+        "$(x^n)' = n\\,x^{n-1}$ donc $f'(x) = 7x^6$.",
+        "La dérivée d'une constante est nulle : $g'(x) = 0$.",
+        "$(kx)' = k$ donc $k'(x) = -3$."
+      ],
+      "reponse": "$f'(x) = 7x^6$ ; $g'(x) = 0$ ; $k'(x) = -3$."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "tangente",
+      "enonce": "La tangente à la courbe de $f$ au point d'abscisse $3$ a pour équation $y = 2x - 1$. Que valent $f(3)$ et $f'(3)$ ?",
+      "corrige": [
+        "La pente de la tangente est le nombre dérivé : $f'(3) = 2$.",
+        "Le point de contact est sur la tangente : $f(3) = 2 \\times 3 - 1 = 5$."
+      ],
+      "reponse": "$f(3) = 5$ et $f'(3) = 2$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "taux-de-variation",
+      "enonce": "Calculer le coefficient directeur de la sécante à la courbe de $f(x) = \\sqrt{x}$ passant par les points d'abscisses $4$ et $9$.",
+      "corrige": [
+        "Le coefficient directeur de la sécante est le taux de variation de $f$ entre $4$ et $9$.",
+        "$f(4) = 2$ et $f(9) = 3$.",
+        "$\\tau = \\dfrac{3 - 2}{9 - 4} = \\dfrac{1}{5}$."
+      ],
+      "reponse": "$\\dfrac{1}{5}$, soit $0{,}2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "taux-de-variation",
+      "enonce": "Soit $f(x) = x^2 + x$. Exprimer en fonction de $h$ (avec $h \\neq 0$) le taux de variation $\\dfrac{f(1+h) - f(1)}{h}$.",
+      "corrige": [
+        "$f(1+h) = (1+h)^2 + (1+h) = 1 + 2h + h^2 + 1 + h = 2 + 3h + h^2$ et $f(1) = 2$.",
+        "$f(1+h) - f(1) = 3h + h^2 = h(3 + h)$.",
+        "On divise par $h \\neq 0$ : le taux vaut $3 + h$."
+      ],
+      "reponse": "$\\dfrac{f(1+h)-f(1)}{h} = 3 + h$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "nombre-derive",
+      "enonce": "Soit $f(x) = 3x^2$. En utilisant la définition (limite du taux de variation), calculer $f'(1)$.",
+      "corrige": [
+        "$\\dfrac{f(1+h) - f(1)}{h} = \\dfrac{3(1+h)^2 - 3}{h} = \\dfrac{3 + 6h + 3h^2 - 3}{h}$.",
+        "On factorise par $h$ : $\\dfrac{h(6 + 3h)}{h} = 6 + 3h$ pour $h \\neq 0$.",
+        "Quand $h \\to 0$, $6 + 3h$ tend vers $6$, donc $f'(1) = 6$."
+      ],
+      "reponse": "$f'(1) = 6$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Déterminer la fonction dérivée de $f(x) = 5x^4 - 2x^3 + x - 7$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On dérive terme à terme : $(5x^4)' = 5 \\times 4x^3 = 20x^3$ et $(-2x^3)' = -2 \\times 3x^2 = -6x^2$.",
+        "$(x)' = 1$ et $(-7)' = 0$.",
+        "On additionne : $f'(x) = 20x^3 - 6x^2 + 1$."
+      ],
+      "reponse": "$f'(x) = 20x^3 - 6x^2 + 1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Déterminer la dérivée de $f(x) = 3\\mathrm{e}^x - x^2$ sur $\\mathbb{R}$, puis calculer $f'(0)$.",
+      "corrige": [
+        "$(\\mathrm{e}^x)' = \\mathrm{e}^x$, donc $(3\\mathrm{e}^x)' = 3\\mathrm{e}^x$.",
+        "$(x^2)' = 2x$, donc $f'(x) = 3\\mathrm{e}^x - 2x$.",
+        "$f'(0) = 3\\mathrm{e}^0 - 0 = 3$."
+      ],
+      "reponse": "$f'(x) = 3\\mathrm{e}^x - 2x$ et $f'(0) = 3$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Soit $f(x) = 6\\sqrt{x}$ sur $]0\\,;+\\infty[$. Calculer $f'(x)$, puis $f'(9)$.",
+      "corrige": [
+        "$(\\sqrt{x})' = \\dfrac{1}{2\\sqrt{x}}$, donc $f'(x) = 6 \\times \\dfrac{1}{2\\sqrt{x}} = \\dfrac{3}{\\sqrt{x}}$.",
+        "$f'(9) = \\dfrac{3}{\\sqrt{9}} = \\dfrac{3}{3} = 1$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{3}{\\sqrt{x}}$ et $f'(9) = 1$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "produit",
+      "enonce": "Dériver $f(x) = (3x - 1)(x^2 + 2)$ sur $\\mathbb{R}$ avec la formule du produit.",
+      "corrige": [
+        "$u = 3x - 1$, $u' = 3$ ; $v = x^2 + 2$, $v' = 2x$.",
+        "$f'(x) = 3(x^2 + 2) + (3x - 1) \\times 2x = 3x^2 + 6 + 6x^2 - 2x$.",
+        "On réduit : $f'(x) = 9x^2 - 2x + 6$."
+      ],
+      "reponse": "$f'(x) = 9x^2 - 2x + 6$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "produit",
+      "enonce": "Dériver $f(x) = x\\,\\mathrm{e}^x$ sur $\\mathbb{R}$ et écrire le résultat sous forme factorisée.",
+      "corrige": [
+        "$u = x$, $u' = 1$ ; $v = \\mathrm{e}^x$, $v' = \\mathrm{e}^x$.",
+        "$f'(x) = 1 \\times \\mathrm{e}^x + x\\,\\mathrm{e}^x$.",
+        "On factorise par $\\mathrm{e}^x$ : $f'(x) = (x + 1)\\,\\mathrm{e}^x$."
+      ],
+      "reponse": "$f'(x) = (x + 1)\\,\\mathrm{e}^x$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "quotient",
+      "enonce": "Dériver $f(x) = \\dfrac{1}{x^2 + 1}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On utilise $\\left(\\dfrac{1}{v}\\right)' = -\\dfrac{v'}{v^2}$ avec $v = x^2 + 1$ (jamais nul) et $v' = 2x$.",
+        "$f'(x) = -\\dfrac{2x}{(x^2 + 1)^2}$."
+      ],
+      "reponse": "$f'(x) = -\\dfrac{2x}{(x^2 + 1)^2}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "quotient",
+      "enonce": "Dériver $f(x) = \\dfrac{x - 1}{x + 2}$ sur $]-2\\,;+\\infty[$.",
+      "corrige": [
+        "$u = x - 1$, $u' = 1$ ; $v = x + 2$, $v' = 1$.",
+        "$f'(x) = \\dfrac{1 \\times (x + 2) - (x - 1) \\times 1}{(x + 2)^2} = \\dfrac{x + 2 - x + 1}{(x + 2)^2}$.",
+        "$f'(x) = \\dfrac{3}{(x + 2)^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{3}{(x + 2)^2}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "composee-affine",
+      "enonce": "Dériver $f(x) = (3x - 2)^2$ sur $\\mathbb{R}$ de deux façons : avec la formule $(u^n)' = n\\,u'\\,u^{n-1}$, puis en développant.",
+      "corrige": [
+        "Avec $u = 3x - 2$ et $u' = 3$ : $f'(x) = 2 \\times 3 \\times (3x - 2) = 18x - 12$.",
+        "En développant : $f(x) = 9x^2 - 12x + 4$, donc $f'(x) = 18x - 12$.",
+        "Les deux méthodes donnent le même résultat."
+      ],
+      "reponse": "$f'(x) = 6(3x - 2) = 18x - 12$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "composee-affine",
+      "enonce": "Dériver $f(x) = \\mathrm{e}^{-2x + 1}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f$ est de la forme $x \\mapsto g(ax + b)$ avec $g = \\exp$, $a = -2$ et $b = 1$.",
+        "La dérivée est $a\\,g'(ax + b) = -2\\,\\mathrm{e}^{-2x + 1}$ : il ne faut pas oublier le facteur $a = -2$."
+      ],
+      "reponse": "$f'(x) = -2\\,\\mathrm{e}^{-2x + 1}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de $f(x) = x^3$ au point d'abscisse $1$.",
+      "corrige": [
+        "$f'(x) = 3x^2$, donc $f'(1) = 3$ ; et $f(1) = 1$.",
+        "$y = f'(1)(x - 1) + f(1) = 3(x - 1) + 1$.",
+        "$y = 3x - 2$."
+      ],
+      "reponse": "$y = 3x - 2$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de $f(x) = \\sqrt{x}$ au point d'abscisse $4$.",
+      "corrige": [
+        "$f(4) = 2$ et $f'(x) = \\dfrac{1}{2\\sqrt{x}}$, donc $f'(4) = \\dfrac{1}{4}$.",
+        "$y = \\dfrac{1}{4}(x - 4) + 2 = \\dfrac{1}{4}x - 1 + 2$.",
+        "$y = \\dfrac{1}{4}x + 1$."
+      ],
+      "reponse": "$y = \\dfrac{1}{4}x + 1$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de la fonction exponentielle au point d'abscisse $0$.",
+      "corrige": [
+        "$\\exp(0) = \\mathrm{e}^0 = 1$ et, comme $\\exp' = \\exp$, la pente vaut aussi $\\mathrm{e}^0 = 1$.",
+        "$y = 1 \\times (x - 0) + 1 = x + 1$."
+      ],
+      "reponse": "$y = x + 1$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "approximation-affine",
+      "enonce": "À l'aide de l'approximation affine de $f(x) = \\sqrt{x}$ en $a = 4$, donner une valeur approchée de $\\sqrt{4{,}02}$.",
+      "corrige": [
+        "$f(4) = 2$ et $f'(4) = \\dfrac{1}{2\\sqrt{4}} = \\dfrac{1}{4} = 0{,}25$.",
+        "Avec $h = 0{,}02$ : $f(4 + h) \\approx f(4) + f'(4)\\,h = 2 + 0{,}25 \\times 0{,}02$.",
+        "$\\sqrt{4{,}02} \\approx 2 + 0{,}005 = 2{,}005$ (la calculatrice donne $2{,}00499\\ldots$)."
+      ],
+      "reponse": "$\\sqrt{4{,}02} \\approx 2{,}005$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "taux-de-variation",
+      "enonce": "Au démarrage, la distance parcourue par une voiture est $d(t) = 2t^2$ (en mètres, $t$ en secondes). Calculer sa vitesse moyenne entre $t = 2$ s et $t = 4$ s.",
+      "corrige": [
+        "La vitesse moyenne est le taux de variation de $d$ entre $2$ et $4$.",
+        "$d(4) = 2 \\times 16 = 32$ m et $d(2) = 2 \\times 4 = 8$ m.",
+        "$v_{\\text{moy}} = \\dfrac{32 - 8}{4 - 2} = \\dfrac{24}{2} = 12$ m/s."
+      ],
+      "reponse": "$12$ m/s."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "nombre-derive",
+      "enonce": "Soit $f(x) = x^3$. Sachant que $(2+h)^3 = 8 + 12h + 6h^2 + h^3$, calculer $f'(2)$ à l'aide de la définition du nombre dérivé.",
+      "corrige": [
+        "$\\dfrac{f(2+h) - f(2)}{h} = \\dfrac{12h + 6h^2 + h^3}{h} = 12 + 6h + h^2$ pour $h \\neq 0$.",
+        "Quand $h \\to 0$, $6h$ et $h^2$ tendent vers $0$.",
+        "Le taux tend vers $12$, donc $f'(2) = 12$."
+      ],
+      "reponse": "$f'(2) = 12$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "derivees-usuelles",
+      "enonce": "Un élève dérive $f(x) = x^3 + \\sqrt{x}$ sur $]0\\,;+\\infty[$ et écrit : « $f'(x) = 3x^2 + \\dfrac{1}{\\sqrt{x}}$ ». Trouver l'erreur et corriger.",
+      "corrige": [
+        "La dérivée de $x^3$, $3x^2$, est juste.",
+        "L'erreur porte sur $\\sqrt{x}$ : sa dérivée est $\\dfrac{1}{2\\sqrt{x}}$, l'élève a oublié le facteur $2$ au dénominateur.",
+        "Correction : $f'(x) = 3x^2 + \\dfrac{1}{2\\sqrt{x}}$."
+      ],
+      "reponse": "$f'(x) = 3x^2 + \\dfrac{1}{2\\sqrt{x}}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "produit",
+      "enonce": "Dériver $f(x) = x\\sqrt{x}$ sur $]0\\,;+\\infty[$ et simplifier le résultat.",
+      "corrige": [
+        "On pose $u = x$, $v = \\sqrt{x}$ : $u' = 1$ et $v' = \\dfrac{1}{2\\sqrt{x}}$.",
+        "$f'(x) = 1 \\times \\sqrt{x} + x \\times \\dfrac{1}{2\\sqrt{x}} = \\sqrt{x} + \\dfrac{x}{2\\sqrt{x}}$.",
+        "Comme $\\dfrac{x}{\\sqrt{x}} = \\sqrt{x}$, on obtient $f'(x) = \\sqrt{x} + \\dfrac{\\sqrt{x}}{2} = \\dfrac{3}{2}\\sqrt{x}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{3}{2}\\sqrt{x}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "produit",
+      "enonce": "Pour dériver $f(x) = x^2(x + 1)$, un élève écrit : « $f'(x) = 2x \\times 1 = 2x$ ». Expliquer l'erreur, donner la bonne dérivée et la vérifier en développant $f(x)$.",
+      "corrige": [
+        "L'élève a utilisé $(uv)' = u'v'$, ce qui est faux : la bonne formule est $(uv)' = u'v + uv'$.",
+        "Avec $u = x^2$ et $v = x + 1$ : $f'(x) = 2x(x + 1) + x^2 \\times 1 = 3x^2 + 2x$.",
+        "Vérification : $f(x) = x^3 + x^2$, donc $f'(x) = 3x^2 + 2x$. Les deux calculs concordent."
+      ],
+      "reponse": "$f'(x) = 3x^2 + 2x$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Dériver $f(x) = \\dfrac{2x + 3}{x - 1}$ sur $]1\\,;+\\infty[$, puis donner le signe de $f'(x)$ sur cet intervalle.",
+      "corrige": [
+        "$u = 2x + 3$, $u' = 2$ ; $v = x - 1$, $v' = 1$.",
+        "$f'(x) = \\dfrac{2(x - 1) - (2x + 3)}{(x - 1)^2} = \\dfrac{2x - 2 - 2x - 3}{(x - 1)^2} = \\dfrac{-5}{(x - 1)^2}$.",
+        "Le numérateur vaut $-5 < 0$ et le dénominateur est un carré strictement positif : $f'(x) < 0$."
+      ],
+      "reponse": "$f'(x) = -\\dfrac{5}{(x - 1)^2}$, strictement négatif sur $]1\\,;+\\infty[$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Dériver $f(x) = \\dfrac{\\mathrm{e}^x}{x}$ sur $]0\\,;+\\infty[$ et factoriser le numérateur.",
+      "corrige": [
+        "$u = \\mathrm{e}^x$, $u' = \\mathrm{e}^x$ ; $v = x$, $v' = 1$.",
+        "$f'(x) = \\dfrac{\\mathrm{e}^x \\times x - \\mathrm{e}^x \\times 1}{x^2}$.",
+        "On factorise par $\\mathrm{e}^x$ : $f'(x) = \\dfrac{(x - 1)\\,\\mathrm{e}^x}{x^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{(x - 1)\\,\\mathrm{e}^x}{x^2}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Pour $f(x) = \\dfrac{x}{x + 3}$ sur $]-3\\,;+\\infty[$, un élève écrit : « $f'(x) = \\dfrac{x \\times 1 - 1 \\times (x + 3)}{(x + 3)^2} = \\dfrac{-3}{(x + 3)^2}$ ». Trouver l'erreur et corriger.",
+      "corrige": [
+        "L'élève a calculé $uv' - u'v$ au lieu de $u'v - uv'$ : il a inversé l'ordre du numérateur, ce qui change le signe.",
+        "Avec $u = x$, $u' = 1$, $v = x + 3$, $v' = 1$ : $f'(x) = \\dfrac{1 \\times (x + 3) - x \\times 1}{(x + 3)^2} = \\dfrac{3}{(x + 3)^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{3}{(x + 3)^2}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "composee-affine",
+      "enonce": "Dériver $f(x) = \\sqrt{2x + 1}$ sur $\\left]-\\dfrac{1}{2}\\,;+\\infty\\right[$.",
+      "corrige": [
+        "$f$ est de la forme $x \\mapsto g(ax + b)$ avec $g(X) = \\sqrt{X}$, $a = 2$ et $b = 1$.",
+        "La dérivée est $a\\,g'(ax + b) = 2 \\times \\dfrac{1}{2\\sqrt{2x + 1}}$.",
+        "On simplifie : $f'(x) = \\dfrac{1}{\\sqrt{2x + 1}}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{1}{\\sqrt{2x + 1}}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "composee-affine",
+      "enonce": "Dériver $f(x) = (x^2 + 1)^3$ sur $\\mathbb{R}$ à l'aide de la formule $(u^n)' = n\\,u'\\,u^{n-1}$.",
+      "corrige": [
+        "On pose $u = x^2 + 1$, donc $u' = 2x$, et $n = 3$.",
+        "$f'(x) = 3 \\times 2x \\times (x^2 + 1)^2$.",
+        "$f'(x) = 6x(x^2 + 1)^2$."
+      ],
+      "reponse": "$f'(x) = 6x(x^2 + 1)^2$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à l'hyperbole d'équation $y = \\dfrac{1}{x}$ au point d'abscisse $2$.",
+      "corrige": [
+        "$f(2) = \\dfrac{1}{2}$ et $f'(x) = -\\dfrac{1}{x^2}$, donc $f'(2) = -\\dfrac{1}{4}$.",
+        "$y = -\\dfrac{1}{4}(x - 2) + \\dfrac{1}{2} = -\\dfrac{1}{4}x + \\dfrac{1}{2} + \\dfrac{1}{2}$.",
+        "$y = -\\dfrac{1}{4}x + 1$."
+      ],
+      "reponse": "$y = -\\dfrac{1}{4}x + 1$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Soit $f(x) = x^2 - 6x + 4$. En quel point la courbe de $f$ admet-elle une tangente horizontale ? Donner l'équation de cette tangente.",
+      "corrige": [
+        "Une tangente horizontale a une pente nulle : on résout $f'(x) = 0$.",
+        "$f'(x) = 2x - 6 = 0$ donne $x = 3$, et $f(3) = 9 - 18 + 4 = -5$.",
+        "La tangente au point $(3\\,;-5)$ a pour équation $y = -5$."
+      ],
+      "reponse": "Au point $(3\\,;-5)$ ; tangente $y = -5$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "approximation-affine",
+      "enonce": "Justifier que, pour $h$ proche de $0$, $\\mathrm{e}^h \\approx 1 + h$. En déduire une valeur approchée de $\\mathrm{e}^{0{,}05}$.",
+      "corrige": [
+        "On applique $f(a + h) \\approx f(a) + f'(a)\\,h$ avec $f = \\exp$ et $a = 0$.",
+        "$\\mathrm{e}^0 = 1$ et $\\exp'(0) = \\mathrm{e}^0 = 1$, d'où $\\mathrm{e}^h \\approx 1 + h$.",
+        "Donc $\\mathrm{e}^{0{,}05} \\approx 1{,}05$ (la calculatrice donne $1{,}0513\\ldots$)."
+      ],
+      "reponse": "$\\mathrm{e}^{0{,}05} \\approx 1{,}05$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "approximation-affine",
+      "enonce": "Soit $f(x) = x^5$. Donner l'approximation affine de $f(1 + h)$ pour $h$ proche de $0$, puis une valeur approchée de $1{,}002^5$.",
+      "corrige": [
+        "$f(1) = 1$ et $f'(x) = 5x^4$, donc $f'(1) = 5$.",
+        "$f(1 + h) \\approx 1 + 5h$.",
+        "Avec $h = 0{,}002$ : $1{,}002^5 \\approx 1 + 0{,}01 = 1{,}01$ (la calculatrice donne $1{,}01004\\ldots$)."
+      ],
+      "reponse": "$(1 + h)^5 \\approx 1 + 5h$ ; $1{,}002^5 \\approx 1{,}01$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "nombre-derive",
+      "enonce": "Soit $f(x) = \\sqrt{x}$ sur $[0\\,;+\\infty[$. Calculer le taux de variation $\\dfrac{f(0+h) - f(0)}{h}$ pour $h > 0$, puis expliquer pourquoi $f$ n'est pas dérivable en $0$.",
+      "corrige": [
+        "$\\dfrac{\\sqrt{h} - \\sqrt{0}}{h} = \\dfrac{\\sqrt{h}}{h} = \\dfrac{1}{\\sqrt{h}}$ pour $h > 0$.",
+        "Quand $h$ tend vers $0$, $\\sqrt{h}$ tend vers $0$ et $\\dfrac{1}{\\sqrt{h}}$ devient aussi grand que l'on veut.",
+        "Le taux ne tend pas vers un nombre réel : $f$ n'est pas dérivable en $0$ (la tangente y est verticale)."
+      ],
+      "reponse": "Le taux vaut $\\dfrac{1}{\\sqrt{h}}$, qui ne tend pas vers un réel : $\\sqrt{x}$ n'est pas dérivable en $0$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "produit",
+      "enonce": "Dériver $f(x) = (x^2 + 1)\\,\\mathrm{e}^x$ sur $\\mathbb{R}$, puis montrer que $f'(x) \\geqslant 0$ pour tout réel $x$.",
+      "corrige": [
+        "$u = x^2 + 1$, $u' = 2x$ ; $v = v' = \\mathrm{e}^x$. Donc $f'(x) = 2x\\,\\mathrm{e}^x + (x^2 + 1)\\,\\mathrm{e}^x = (x^2 + 2x + 1)\\,\\mathrm{e}^x$.",
+        "On reconnaît une identité remarquable : $x^2 + 2x + 1 = (x + 1)^2$, donc $f'(x) = (x + 1)^2\\,\\mathrm{e}^x$.",
+        "Un carré est positif ou nul et $\\mathrm{e}^x > 0$ : donc $f'(x) \\geqslant 0$ pour tout $x$."
+      ],
+      "reponse": "$f'(x) = (x + 1)^2\\,\\mathrm{e}^x \\geqslant 0$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "tangente",
+      "enonce": "Soit $f(x) = x^2 + 1$. Déterminer les points de la courbe de $f$ en lesquels la tangente passe par l'origine du repère, et donner l'équation de ces tangentes.",
+      "corrige": [
+        "La tangente au point d'abscisse $a$ a pour équation $y = 2a(x - a) + a^2 + 1$.",
+        "Elle passe par $O(0\\,;0)$ si $0 = 2a(0 - a) + a^2 + 1$, soit $-a^2 + 1 = 0$, donc $a = 1$ ou $a = -1$.",
+        "Pour $a = 1$ : $y = 2(x - 1) + 2 = 2x$. Pour $a = -1$ : $y = -2(x + 1) + 2 = -2x$."
+      ],
+      "reponse": "Points $(1\\,;2)$ et $(-1\\,;2)$ ; tangentes $y = 2x$ et $y = -2x$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "optimisation",
+      "enonce": "Un enclos rectangulaire a un périmètre de $20$ m. On note $x$ sa largeur (en m), avec $0 < x < 10$. Exprimer son aire $A(x)$, puis déterminer les dimensions qui la rendent maximale.",
+      "corrige": [
+        "Le demi-périmètre vaut $10$ m, donc la longueur est $10 - x$ et $A(x) = x(10 - x) = 10x - x^2$.",
+        "$A'(x) = 10 - 2x$ : positive sur $]0\\,;5]$, négative sur $[5\\,;10[$. $A$ croît puis décroît.",
+        "Le maximum est atteint pour $x = 5$ : l'enclos est un carré de $5$ m de côté, d'aire $A(5) = 25$ m²."
+      ],
+      "reponse": "Un carré de $5$ m de côté ; aire maximale $25$ m²."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "optimisation",
+      "enonce": "Le bénéfice d'un atelier, en milliers d'euros, est $B(x) = -2x^3 + 27x^2 - 84x$, où $x \\in [0\\,;10]$ est le nombre de centaines d'objets fabriqués. Montrer que $B'(x) = -6(x - 2)(x - 7)$, puis déterminer la production qui donne le bénéfice maximal et ce bénéfice.",
+      "corrige": [
+        "$B'(x) = -6x^2 + 54x - 84 = -6(x^2 - 9x + 14)$, et $(x - 2)(x - 7) = x^2 - 9x + 14$.",
+        "$B'(x) < 0$ sur $[0\\,;2[$, $B'(x) > 0$ sur $]2\\,;7[$, $B'(x) < 0$ sur $]7\\,;10]$ : $B$ décroît, croît puis décroît.",
+        "Le maximum est donc $B(0) = 0$ ou $B(7) = -686 + 1\\,323 - 588 = 49$. Comme $49 > 0$, le maximum est atteint en $x = 7$."
+      ],
+      "reponse": "$700$ objets ; bénéfice maximal de $49$ milliers d'euros, soit $49\\,000$ €."
     }
   ]
 }
