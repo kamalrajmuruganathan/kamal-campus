@@ -187,7 +187,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   (deux bonnes réponses, explications « choix A » alors que l'appli mélange les choix, unités, langues).
 - Difficultés « decouverte » et « probleme » ont maintenant une étiquette dans `Exercices.js`.
 
-## 14. Sept nouveautés (06-07/10/2026) — PR #5, non publiées
+## 14. Sept nouveautés (06-07/10/2026) — PR #5, PUBLIÉES le 08/10/2026 (main `59f2f71`, SQL exécutés par Kamal)
 - **Appli plus rapide** : les fiches et exercices ne sont plus dans le bundle (40 Mo → 15 Mo). `generer-index.mjs`
   génère `src/contenu-lourd.{web,native}.js` (`chargerFiche(id)`, `chargerExercices(id)`) et copie les fichiers dans
   `app/public/donnees/` (ignoré par git, recréé par `npm run preparer`, étape ajoutée dans `pages.yml`). Hook `src/useFiche.js`.
