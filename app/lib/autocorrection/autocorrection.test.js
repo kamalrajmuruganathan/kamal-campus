@@ -373,3 +373,10 @@ test('criteres : un mot après une apostrophe est trouvé (« dans l’ombre »)
   const crit = [{ idee: 'La Lune passe dans l’ombre de la Terre', mots: ['ombre'] }, { idee: 'x', mots: ["l'etoile"] }];
   assert.deepEqual(detecterCriteres('Elle passe dans l’ombre de l’étoile', crit), [true, true]);
 });
+
+test('comparer deux nombres : « < » ou « > » seul est une réponse vérifiable', () => {
+  const ex = { reponse: '$<$', attendu: { accepte: ['<'] } };
+  assert.equal(typeExercice(ex, 'maths'), 'auto');
+  assert.equal(comparerExercice('<', ex, 'maths'), true);
+  assert.equal(comparerExercice('>', ex, 'maths'), false);
+});

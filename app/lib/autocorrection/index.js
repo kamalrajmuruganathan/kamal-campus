@@ -423,7 +423,8 @@ function analyserForme(forme, matiere = null) {
   const symboles = matiere === 'langues-anciennes' ? /[=^√+*×²³]/ : /[=^√π+*×²³]/; // π est une lettre en grec ; ∞ permis (limites)
   if (symboles.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1').replace(/(^|[\s(;,])\+(?=\s?[\d∞])/g, '$1'))) return null;
   if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre)) return null;
-  const mots = compterMots(propre) || (/∞/.test(propre) ? 1 : 0);
+  // « < », « > », « = » seuls (comparer deux nombres) : une réponse d'un seul symbole est permise.
+  const mots = compterMots(propre) || (/∞|^[<>≤≥]$/.test(propre.trim()) ? 1 : 0);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
   // Pas de repli « le nombre seul suffit » : la forme écrite à la main est exigée en entier
   // (« 90° angle droit » ne doit pas accepter « 90 »). Les formes numériques sont données à part.
