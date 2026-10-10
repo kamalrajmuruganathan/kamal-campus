@@ -82,7 +82,23 @@ for (const chemin of chapitres) {
         if (!a || typeof a !== 'object') { pb.push(`${ici} : valeur invalide`); continue; }
         if (a.reponse !== ex.reponse) { pb.push(`${ici} : « reponse » différente de exercice.json`); continue; }
         const cles = Object.keys(a).filter((k) => k !== 'reponse');
-        if (cles.length !== 1 || !['accepte', 'ensemble'].includes(cles[0])) { pb.push(`${ici} : il faut « accepte » OU « ensemble » (et rien d'autre)`); continue; }
+        if (cles.length !== 1 || !['accepte', 'ensemble', 'criteres'].includes(cles[0])) { pb.push(`${ici} : il faut « accepte », « ensemble » OU « criteres » (et rien d'autre)`); continue; }
+        if (cles[0] === 'criteres') {
+          // Grille d'idées pour une réponse rédigée : 2 à 6 idées, chacune avec 1 à 8 mots-clés,
+          // dont au moins un présent (début de mot) dans la réponse ou le corrigé.
+          const cr = a.criteres;
+          if (!Array.isArray(cr) || cr.length < 2 || cr.length > 6) { pb.push(`${ici} : « criteres » doit contenir 2 à 6 idées`); continue; }
+          if (typeExercice(ex, matiere) === 'auto') { pb.push(`${ici} : exercice déjà vérifiable automatiquement, pas de « criteres »`); continue; }
+          const plat = (x) => ' ' + String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe').replace(/[^a-z0-9ßäöüñç']+/g, ' ').trim() + ' ';
+          const texteRef = plat(`${ex.reponse} ${(ex.corrige || []).join(' ')}`);
+          for (const [k, c] of cr.entries()) {
+            if (!c || typeof c.idee !== 'string' || !c.idee.trim() || c.idee.length > 140) pb.push(`${ici} : idée ${k + 1} : « idee » manquante ou trop longue (140 caractères max)`);
+            if (!Array.isArray(c?.mots) || !c.mots.length || c.mots.length > 8 || c.mots.some((m) => typeof m !== 'string' || m.trim().length < 3)) { pb.push(`${ici} : idée ${k + 1} : « mots » = 1 à 8 mots-clés de 3 lettres ou plus`); continue; }
+            if (!c.mots.some((m) => texteRef.includes(' ' + plat(m).trim()))) pb.push(`${ici} : idée ${k + 1} : aucun de ses mots-clés n'apparaît dans la réponse ou le corrigé`);
+          }
+          if (/\$/.test(JSON.stringify(cr))) pb.push(`${ici} : pas de formule ($…$) dans les idées`);
+          continue;
+        }
         const liste = a[cles[0]];
         if (!Array.isArray(liste) || !liste.length || liste.some((x) => typeof x !== 'string' || !x.trim())) { pb.push(`${ici} : « ${cles[0]} » doit être une liste de textes non vides`); continue; }
         if (liste.length > MAX_FORMES) { pb.push(`${ici} : ${liste.length} formes (max ${MAX_FORMES})`); continue; }

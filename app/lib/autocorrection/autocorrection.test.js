@@ -350,3 +350,21 @@ test('signe moins devant une lettre (« -i ; 1 ; -1 » ≠ « i ; 1 ; -1 »)', (
   const ex2 = { reponse: 'c’est-à-dire', attendu: { accepte: ["c'est-à-dire"] } };
   assert.equal(comparerExercice("c'est à dire", ex2), true);
 });
+
+// ─── Réponses rédigées : idées attendues ───
+import { detecterCriteres, bilanCriteres } from './index.js';
+
+test('criteres : fusion et détection des mots-clés (début de mot, sans accents)', () => {
+  const exo = { exercices: [{ id: 3, reponse: 'R' }] };
+  const crit = [
+    { idee: 'L’axe de la Terre est incliné', mots: ['inclin', 'axe'] },
+    { idee: 'La Terre tourne autour du Soleil en un an', mots: ['révolution', 'autour du soleil'] },
+    { idee: 'Les rayons arrivent plus ou moins inclinés', mots: ['rayons'] },
+  ];
+  const { exercice } = fusionnerAttendus(exo, { 3: { reponse: 'R', criteres: crit } });
+  assert.deepEqual(exercice.exercices[0].criteres, crit);
+  assert.deepEqual(detecterCriteres('Parce que l’axe est INCLINE et que la Terre tourne autour du Soleil', crit), [true, true, false]);
+  assert.deepEqual(detecterCriteres('', crit), [false, false, false]);
+  assert.deepEqual(bilanCriteres([true, true, false]), { nb: 2, total: 3, complet: false });
+  assert.equal(bilanCriteres([true, true]).complet, true);
+});

@@ -557,8 +557,44 @@ export function fusionnerAttendus(exercice, attendus) {
     const a = table[String(ex.id)];
     if (!a) return ex;
     if (a.reponse !== ex.reponse) { ecarts.push(ex.id); return ex; }
+    if (a.criteres) return { ...ex, criteres: a.criteres };
     const attendu = a.ensemble ? { ensemble: a.ensemble } : { accepte: a.accepte };
     return { ...ex, attendu };
   });
   return { exercice: { ...exercice, exercices }, ecarts };
+}
+
+/* ------------------------------------------------------------------ */
+/* Réponses rédigées : grille des idées attendues (« criteres »)       */
+/* ------------------------------------------------------------------ */
+//
+// Pour un exercice à rédiger, attendus.json peut donner la liste des idées que la
+// réponse doit contenir : { "reponse": "…", "criteres": [ { "idee": "texte affiché",
+// "mots": ["mot-clé", "autre formulation"] } ] }. L'élève coche lui-même ; l'appli
+// pré-coche les idées dont un mot-clé apparaît dans ce qu'il a écrit.
+
+function cleLibre(s) {
+  return ' ' + sansAccents(nettoyer(s).toLowerCase())
+    .replace(/œ/g, 'oe').replace(/æ/g, 'ae')
+    .replace(/[^a-z0-9ßäöüñç']+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim() + ' ';
+}
+
+/** Pour chaque idée, true si l'un de ses mots-clés figure dans le texte de l'élève. */
+export function detecterCriteres(saisie, criteres) {
+  const texte = cleLibre(saisie || '');
+  if (!texte.trim()) return (criteres || []).map(() => false);
+  return (criteres || []).map((c) => (c.mots || []).some((m) => {
+    const k = cleLibre(m).trim();
+    // Début de mot : « inclin » trouve « inclinaison », « incliné ».
+    return k.length >= 3 && texte.includes(' ' + k);
+  }));
+}
+
+/** Bilan des cases cochées : { nb, total, complet }. */
+export function bilanCriteres(coches) {
+  const total = (coches || []).length;
+  const nb = (coches || []).filter(Boolean).length;
+  return { nb, total, complet: total > 0 && nb === total };
 }
