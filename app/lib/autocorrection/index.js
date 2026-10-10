@@ -51,9 +51,9 @@ function protegerNombres(s) {
     // Espaces des milliers : « 1 359 » = « 1359 » (groupes de 3 chiffres après le premier).
     .replace(/(?<![\d,.])(\d{1,3})((?: \d{3})+)(?![\d])/g, (_, a, b) => a + b.replace(/ /g, ''))
     // Virgule / point décimal (sauf dans un ensemble ou une liste : « {2,4,6} », « [8,11] »).
-    .replace(/(\d)[,.](?=\d)/g, (m, d, i, tout) => (/[{[]/.test(tout) ? d + '#' : d + '§'))
+    .replace(/(\d)[,.](?=\d)/g, (m, d, i, tout) => (/[{[]|\(\s*-?\d+\s*,\s*-?\d+\s*,\s*-?\d+\s*\)/.test(tout) ? d + '#' : d + '§'))
     .replace(/(\d§\d*?)0+(?!\d)/g, '$1').replace(/§(?!\d)/g, '') // « 0,80 » = « 0,8 » ; « 2,0 » = « 2 »
-    .replace(/(^|[^\p{L}\d])-\s*(?=\d)/gu, '$1~') // signe moins
+    .replace(/(^|[^\p{L}\d])-\s*(?=[\d\p{L}∞])/gu, '$1~') // signe moins (devant un nombre, « -i », « -∞ »)
     .replace(/(\d)[\s,;:/]+(?=[\d~])/g, '$1#');  // deux nombres qui se suivent
 }
 
@@ -114,11 +114,19 @@ function normUnite(u) {
   let s = sansAccents(brut.toLowerCase());
   // Préfixes méga / milli : « MW » ≠ « mW », « Mo » ≠ « mo ».
   if (/^[mM][a-zA-ZΩ]{1,2}$/.test(brut) && !/^min$/i.test(brut)) s = brut[0] + s.slice(1);
-  s = s.replace(/\^2|2$/, '²').replace(/\^3|3$/, '³');
-  // « mol/L » = « mol.L-1 » = « mol·L⁻¹ » ; « m/s » = « m·s⁻¹ ».
-  s = s.replace(/\^?\{?\(?-1\)?\}?/g, '⁻¹').replace(/[.*×]/g, '·');
+  const EXP = { 1: '¹', 2: '²', 3: '³' };
+  // Exposants : « s^-2 », « s-2 », « s^{-2} » → s⁻² ; « m^2 », « m2 » → m² (après une lettre).
+  s = s.replace(/\^?\{?\(?-([123])\)?\}?/g, (_, d) => '⁻' + EXP[d]);
+  s = s.replace(/\^\{?([23])\}?/g, (_, d) => EXP[d]);
+  s = s.replace(/([a-zµω])([23])(?!\d)/g, (_, l, d) => l + EXP[d]);
+  s = s.replace(/[.*×]/g, '·');
+  // « a/b/c » = « a·b⁻¹·c⁻¹ » ; « m/s² » = « m·s⁻² ».
   const parts = s.split('/');
-  if (parts.length === 2 && parts[0] && parts[1]) s = `${parts[0]}·${parts[1]}⁻¹`;
+  if (parts.length >= 2 && parts.every(Boolean)) {
+    const inverser = (f) => (/⁻¹$/.test(f) ? f.slice(0, -2) : /⁻[²³]$/.test(f) ? f.slice(0, -2) + f.slice(-1)
+      : /[²³]$/.test(f) ? f.slice(0, -1) + '⁻' + f.slice(-1) : f + '⁻¹');
+    s = parts[0] + parts.slice(1).map((p) => '·' + p.split('·').map(inverser).join('·')).join('');
+  }
   const syn = {
     euro: '€', euros: '€', eur: '€',
     degre: '°', degres: '°',
@@ -151,7 +159,10 @@ function lireNombre(texte) {
   if (!m) return null;
   const [tout, signe, entier, dec = '', exp1, exp2, denom] = m;
   // Chiffres significatifs écrits (« 3,35 » → 3 ; « 0,050 » → 2 ; « 314 » → 3).
-  const chiffres = (entier.replace(/\D/g, '') + dec).replace(/^0+/, '').length;
+  // Entier sans virgule : les zéros finaux ne comptent pas (« 280 » → 2 chiffres significatifs).
+  const chiffres = dec || exp1 != null || exp2 != null
+    ? (entier.replace(/\D/g, '') + dec).replace(/^0+/, '').length
+    : entier.replace(/\D/g, '').replace(/^0+/, '').replace(/0+$/, '').length;
   let valeur = Number(entier.replace(/\D/g, '') + (dec ? '.' + dec : ''));
   const exposant = exp1 ?? exp2;
   if (exposant != null) valeur *= 10 ** Number(exposant);
@@ -162,7 +173,8 @@ function lireNombre(texte) {
   if (signe === '-') valeur = -valeur;
   const collee = s.slice(tout.length);
   // « L-1 », « s^-1 », « s^{-1} » : exposant −1 écrit au clavier.
-  const reste = collee.trim().replace(/\^?\{?\(?-1\)?\}?(?![\d])/g, '⁻¹');
+  const reste = collee.trim().replace(/\^?\{?\(?-([123])\)?\}?(?![\d])/g, (_, d) => '⁻' + '¹²³'[d - 1])
+    .replace(/(\p{L})([23])(?=[/·.\s]|$)/gu, (_, l, d) => l + '¹²³'[d - 1]); // « m3/s » = « m³/s »
   // « -4x », « 3n » : une lettre collée au nombre est une variable, pas une unité.
   if (/^[a-zA-Z]\b/.test(collee) && !/^[mgsVAWNJLhK]\b/.test(collee)) return null;
   if (reste && !/^[\p{L}µ°%€][\p{L}µ°%€²³/.·\-⁻¹ ]{0,14}(?:(?<=\p{L})[23])?$/u.test(reste)) return null;
@@ -408,10 +420,10 @@ function analyserForme(forme, matiere = null) {
   // Expression mathématique (« x² + 1 », « 6x ») : plusieurs écritures possibles → non.
   // (« < », « > » et les flèches sont permis : rangements, chaînes alimentaires.)
   // (« cm³ », « m² » : exposant collé à une unité, permis.)
-  const symboles = matiere === 'langues-anciennes' ? /[=^√∞+*×²³]/ : /[=^√∞π+*×²³]/; // π est une lettre en grec
-  if (symboles.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1').replace(/(^|[\s(;,])\+(?=\s?\d)/g, '$1'))) return null;
+  const symboles = matiere === 'langues-anciennes' ? /[=^√+*×²³]/ : /[=^√π+*×²³]/; // π est une lettre en grec ; ∞ permis (limites)
+  if (symboles.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1').replace(/(^|[\s(;,])\+(?=\s?[\d∞])/g, '$1'))) return null;
   if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre)) return null;
-  const mots = compterMots(propre);
+  const mots = compterMots(propre) || (/∞/.test(propre) ? 1 : 0);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
   // Pas de repli « le nombre seul suffit » : la forme écrite à la main est exigée en entier
   // (« 90° angle droit » ne doit pas accepter « 90 »). Les formes numériques sont données à part.
@@ -422,7 +434,7 @@ function analyserForme(forme, matiere = null) {
 /** Clé d'une phrase : comme cleTexte, sans la ponctuation intérieure. */
 function clePhrase(s, opts) {
   const t = protegerNombres(nettoyer(s))
-    .replace(/\s*(?:->|=>|⇒|→|⟶)\s*/g, '→') // toutes les flèches se valent
+    .replace(/\s*(?:->|=>|⇒|→|⟶)\s*/g, ' ') // flèches = séparateurs (« a → b » = « a, b »)
     .replace(/\s*\/\s*/g, ' ') // « des / der » = « des/der » = « des der » (sauf fractions, déjà protégées)
     .replace(/\s*≤\s*/g, '<=').replace(/\s*≥\s*/g, '>=');
   return cleTexte(t.replace(/[,;:!?.]/g, ' '), opts);
@@ -435,7 +447,7 @@ function elements(saisie) {
   return nettoyer(saisie)
     .split(/\s*[,;/\n]\s*/)
     .flatMap((m) => (/\s/.test(m.trim()) ? m.split(/\s+(?:et|and|und|y|e)\s+/iu) : [m]))
-    .map((x) => sansPonctuationFinale(x))
+    .map((x) => sansPonctuationFinale(x).replace(/^\(?([a-hA-H])\)$/, '$1'))
     .filter((x) => /[\p{L}\p{N}]/u.test(x));
 }
 
@@ -493,7 +505,7 @@ export function comparerExercice(saisie, ex, matiere = null) {
   // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
   if (comparerUne(s, ex, matiere)) return true;
   // « S = {1 ; 2} », « f(-2) = 15 », « x = 3 ou x = -5 » : on retire les « nom = » devant les valeurs.
-  const sansNoms = s.replace(/(^|[\s;,(]|\bou\b|\bet\b)\s*[A-Za-zΔ][A-Za-z0-9'_]{0,5}(?:\([^()=]{0,6}\))?\s*=\s*(?!=)/g, '$1 ').replace(/\s+/g, ' ').trim();
+  const sansNoms = s.replace(/(^|[\s;,(]|\bou\b|\bet\b)\s*\p{L}[\p{L}0-9'_]{0,5}(?:\([^()=]{0,6}\))?\s*[=≈]\s*(?!=)/gu, '$1 ').replace(/\s+/g, ' ').trim();
   return sansNoms !== s && sansNoms !== '' && comparerUne(sansNoms, ex, matiere);
 }
 

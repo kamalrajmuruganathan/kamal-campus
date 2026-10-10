@@ -317,3 +317,36 @@ test('forme « nombre + plusieurs mots » = phrase entière ; « +25 » permis',
   const ex2 = { reponse: '+1 200 habitants', attendu: { accepte: ['+1 200 habitants'] } };
   assert.equal(comparerExercice('+1200 habitants', ex2), true);
 });
+
+test('∞ dans une forme ; coordonnées (7,3,-1) ; « a) et d) » ; « δ ≈ 0,63 » ; « α = 1, β = 3 »', () => {
+  const ex = { reponse: '$+\\infty$', attendu: { accepte: ['+∞'] } };
+  assert.equal(comparerExercice('+∞', ex), true);
+  assert.equal(comparerExercice('-∞', ex), false);
+  const ex2 = { reponse: '(7 ; 3 ; -1)', attendu: { accepte: ['(7 ; 3 ; -1)'] } };
+  assert.equal(comparerExercice('(7,3,-1)', ex2), true);
+  assert.equal(comparerExercice('(7,3,1)', ex2), false);
+  const ex3 = { reponse: 'a et d', attendu: { ensemble: ['a', 'd'] } };
+  assert.equal(comparerExercice('a) et d)', ex3), true);
+  const ex4 = { reponse: '0,63', attendu: { accepte: ['0,63'] } };
+  assert.equal(comparerExercice('δ ≈ 0,63', ex4), true);
+  const ex5 = { reponse: 'α = 1, β = 3', attendu: { accepte: ['1 ; 3'] } };
+  assert.equal(comparerExercice('α = 1, β = 3', ex5), true);
+});
+
+test('unités m/s² = m·s⁻² = m.s-2 ; mol/L/s ; m3/s ; 280 s accepte 277 s', () => {
+  assert.equal(comparer('9,8 m.s-2', '9,8 m/s²'), true);
+  assert.equal(comparer('9,8 m·s⁻²', '9,8 m/s²'), true);
+  assert.equal(comparer('9,8 m/s', '9,8 m/s²'), false);
+  assert.equal(comparer('2 mol.L-1.s-1', '2 mol/L/s'), true);
+  assert.equal(comparer('3 m3/s', '3 m³/s'), true);
+  assert.equal(comparer('277 s', '280 s'), true);
+  assert.equal(comparer('260 s', '280 s'), false);
+});
+
+test('signe moins devant une lettre (« -i ; 1 ; -1 » ≠ « i ; 1 ; -1 »)', () => {
+  const ex = { reponse: '-i ; 1 ; -1', attendu: { accepte: ['-i ; 1 ; -1'] } };
+  assert.equal(comparerExercice('i ; 1 ; -1', ex), false);
+  assert.equal(comparerExercice('-i ; 1 ; -1', ex), true);
+  const ex2 = { reponse: 'c’est-à-dire', attendu: { accepte: ["c'est-à-dire"] } };
+  assert.equal(comparerExercice("c'est à dire", ex2), true);
+});
