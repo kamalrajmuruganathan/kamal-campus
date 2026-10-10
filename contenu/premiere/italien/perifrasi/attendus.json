@@ -39,6 +39,13 @@
       "Continua a piovere"
     ]
   },
+  "7": {
+    "reponse": "Sto uscendo. / Sto per uscire.",
+    "accepte": [
+      "Sto uscendo. Sto per uscire",
+      "Sto uscendo / Sto per uscire"
+    ]
+  },
   "8": {
     "reponse": "Cerco di capire, ma smetto di insistere.",
     "accepte": [
@@ -177,11 +184,67 @@
       "di, a"
     ]
   },
+  "28": {
+    "reponse": "a : iniziare, continuare ; di : smettere, cercare",
+    "accepte": [
+      "a : iniziare, continuare ; di : smettere, cercare",
+      "di : smettere, cercare ; a : iniziare, continuare",
+      "a : iniziare, continuare ; di : cercare, smettere",
+      "di : cercare, smettere ; a : iniziare, continuare",
+      "a : continuare, iniziare ; di : smettere, cercare",
+      "di : smettere, cercare ; a : continuare, iniziare",
+      "a : continuare, iniziare ; di : cercare, smettere",
+      "di : cercare, smettere ; a : continuare, iniziare"
+    ]
+  },
   "29": {
     "reponse": "Ha iniziato a nevicare e non ha ancora finito di nevicare.",
     "accepte": [
       "Ha iniziato a nevicare e non ha ancora finito di nevicare",
       "a, di"
+    ]
+  },
+  "30": {
+    "reponse": "Sta piovendo = il pleut (en ce moment) ; sta per piovere = il va pleuvoir.",
+    "criteres": [
+      {
+        "idee": "« Sta piovendo » (stare + gérondif) : l'action est en cours, il pleut en ce moment",
+        "mots": [
+          "en cours",
+          "en train",
+          "en ce moment",
+          "maintenant",
+          "il pleut"
+        ]
+      },
+      {
+        "idee": "« Sta per piovere » (stare per + infinitif) : l'action va avoir lieu, il va pleuvoir",
+        "mots": [
+          "va pleuvoir",
+          "sur le point",
+          "imminen",
+          "bientot",
+          "futur proche"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "b) sta per atterrare",
+    "accepte": [
+      "b",
+      "b)",
+      "b) sta per atterrare",
+      "sta per atterrare"
+    ]
+  },
+  "32": {
+    "reponse": "a) sto guidando",
+    "accepte": [
+      "a",
+      "a)",
+      "a) sto guidando",
+      "sto guidando"
     ]
   },
   "33": {
@@ -229,6 +292,14 @@
       "Il treno sta per partire"
     ]
   },
+  "40": {
+    "reponse": "Stavo per rinunciare. / Ero sul punto di rinunciare.",
+    "accepte": [
+      "Stavo per rinunciare. Ero sul punto di rinunciare",
+      "Stavo per rinunciare / Ero sul punto di rinunciare",
+      "Ero sul punto di rinunciare. Stavo per rinunciare"
+    ]
+  },
   "41": {
     "reponse": "Stavamo dormendo quando è suonata la sveglia.",
     "accepte": [
@@ -254,62 +325,44 @@
       "Ho finito di leggere il romanzo"
     ]
   },
-  "47": {
-    "reponse": "Quando mi hai chiamato, stavo mangiando e avevo appena finito di lavorare.",
-    "accepte": [
-      "Quando mi hai chiamato, stavo mangiando e avevo appena finito di lavorare"
-    ]
-  },
-  "7": {
-    "reponse": "Sto uscendo. / Sto per uscire.",
-    "accepte": [
-      "Sto uscendo. Sto per uscire",
-      "Sto uscendo / Sto per uscire"
-    ]
-  },
-  "28": {
-    "reponse": "a : iniziare, continuare ; di : smettere, cercare",
-    "accepte": [
-      "a : iniziare, continuare ; di : smettere, cercare",
-      "di : smettere, cercare ; a : iniziare, continuare",
-      "a : iniziare, continuare ; di : cercare, smettere",
-      "di : cercare, smettere ; a : iniziare, continuare",
-      "a : continuare, iniziare ; di : smettere, cercare",
-      "di : smettere, cercare ; a : continuare, iniziare",
-      "a : continuare, iniziare ; di : cercare, smettere",
-      "di : cercare, smettere ; a : continuare, iniziare"
-    ]
-  },
-  "31": {
-    "reponse": "b) sta per atterrare",
-    "accepte": [
-      "b",
-      "b)",
-      "b) sta per atterrare",
-      "sta per atterrare"
-    ]
-  },
-  "32": {
-    "reponse": "a) sto guidando",
-    "accepte": [
-      "a",
-      "a)",
-      "a) sto guidando",
-      "sto guidando"
-    ]
-  },
-  "40": {
-    "reponse": "Stavo per rinunciare. / Ero sul punto di rinunciare.",
-    "accepte": [
-      "Stavo per rinunciare. Ero sul punto di rinunciare",
-      "Stavo per rinunciare / Ero sul punto di rinunciare",
-      "Ero sul punto di rinunciare. Stavo per rinunciare"
-    ]
-  },
   "45": {
     "reponse": "sta facendo ; sta per ; continua a",
     "accepte": [
       "sta facendo, sta per, continua a"
+    ]
+  },
+  "46": {
+    "reponse": "stavo per (imminence), ha cominciato a (début), ho continuato a (continuation)",
+    "criteres": [
+      {
+        "idee": "stavo per uscire : action imminente",
+        "mots": [
+          "imminen",
+          "sur le point",
+          "allais"
+        ]
+      },
+      {
+        "idee": "ha cominciato a piovere : début d'une action",
+        "mots": [
+          "debut",
+          "commence",
+          "commenc"
+        ]
+      },
+      {
+        "idee": "ho continuato a studiare : continuation",
+        "mots": [
+          "continu",
+          "poursui"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Quando mi hai chiamato, stavo mangiando e avevo appena finito di lavorare.",
+    "accepte": [
+      "Quando mi hai chiamato, stavo mangiando e avevo appena finito di lavorare"
     ]
   }
 }

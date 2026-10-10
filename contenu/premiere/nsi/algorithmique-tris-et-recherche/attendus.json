@@ -5,6 +5,62 @@
       "3 comparaisons"
     ]
   },
+  "2": {
+    "reponse": "Oui, la liste est triée dans l'ordre croissant car chaque élément est inférieur ou égal au suivant.",
+    "criteres": [
+      {
+        "idee": "Oui, la liste est triée",
+        "mots": [
+          "oui"
+        ]
+      },
+      {
+        "idee": "Chaque élément est inférieur ou égal au suivant",
+        "mots": [
+          "inferieur ou egal",
+          "inferieur",
+          "plus petit ou egal"
+        ]
+      },
+      {
+        "idee": "Les égalités (5 ⩽ 5) sont autorisées",
+        "mots": [
+          "egalit",
+          "autoris",
+          "5 5"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "Au pire 1000 comparaisons en séquentiel contre environ 10 étapes (log2(1000)) en dichotomique ; la dichotomie n'est correcte que sur une liste triée, car elle élimine une moitié en se fiant à l'ordre des éléments.",
+    "criteres": [
+      {
+        "idee": "Au pire, 1000 comparaisons en recherche séquentielle",
+        "mots": [
+          "1000 comparaisons",
+          "tous les elements",
+          "toute la liste"
+        ]
+      },
+      {
+        "idee": "Environ 10 étapes en dichotomie (log2(1000))",
+        "mots": [
+          "10 etapes",
+          "log",
+          "dix"
+        ]
+      },
+      {
+        "idee": "La dichotomie élimine une moitié en se fiant à l'ordre des éléments",
+        "mots": [
+          "moitie",
+          "elimin",
+          "ordre"
+        ]
+      }
+    ]
+  },
   "7": {
     "reponse": "Au maximum 200 comparaisons ; si la valeur est absente, on parcourt tout le tableau, soit 200 comparaisons.",
     "accepte": [
@@ -17,6 +73,29 @@
       "5 pièces"
     ]
   },
+  "12": {
+    "reponse": "-1, ce qui signifie que 5 n'est pas dans le tableau.",
+    "criteres": [
+      {
+        "idee": "La fonction renvoie -1",
+        "mots": [
+          "return 1",
+          "renvoie 1",
+          "moins 1"
+        ]
+      },
+      {
+        "idee": "Cela signifie que 5 n'est pas dans le tableau",
+        "mots": [
+          "pas dans",
+          "absent",
+          "non trouve",
+          "introuvable",
+          "pas present"
+        ]
+      }
+    ]
+  },
   "13": {
     "reponse": "A et C sont triées ; B ne l'est pas.",
     "ensemble": [
@@ -24,10 +103,377 @@
       "C"
     ]
   },
+  "16": {
+    "reponse": "`g = m + 1` : l'élément d'indice m est éliminé, car on sait qu'il est différent de la cible.",
+    "criteres": [
+      {
+        "idee": "On exécute g = m + 1",
+        "mots": [
+          "g m 1"
+        ]
+      },
+      {
+        "idee": "La cible est à droite de m, car le tableau est trié",
+        "mots": [
+          "droite"
+        ]
+      },
+      {
+        "idee": "tab[m] n'est pas la cible : inutile de le garder",
+        "mots": [
+          "elimin",
+          "inutile",
+          "pas la cible",
+          "different"
+        ]
+      },
+      {
+        "idee": "Avec g = m, la boucle pourrait tourner indéfiniment",
+        "mots": [
+          "indefiniment",
+          "infini",
+          "sans fin"
+        ]
+      }
+    ]
+  },
   "22": {
     "reponse": "45 (parcours unique, coût linéaire)",
     "accepte": [
       "45"
+    ]
+  },
+  "25": {
+    "reponse": "10 comparaisons, quel que soit l'ordre initial.",
+    "criteres": [
+      {
+        "idee": "4 + 3 + 2 + 1 = 10 comparaisons",
+        "mots": [
+          "10 comparaisons",
+          "dix",
+          "4 3 2 1"
+        ]
+      },
+      {
+        "idee": "Le nombre ne dépend pas de l'ordre initial, seulement de la longueur",
+        "mots": [
+          "quel que soit",
+          "toujours",
+          "longueur",
+          "depend pas",
+          "ne depend"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "Il affiche `[2, 7, 9]` puis `None`.",
+    "criteres": [
+      {
+        "idee": "La fonction trie la liste en place : t est modifiée",
+        "mots": [
+          "en place",
+          "modifi"
+        ]
+      },
+      {
+        "idee": "Le programme affiche [2, 7, 9]",
+        "mots": [
+          "2 7 9"
+        ]
+      },
+      {
+        "idee": "Sans return, la fonction renvoie None : r vaut None",
+        "mots": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "d - g est un entier qui décroît strictement à chaque tour : il finit par être négatif, donc la boucle s'arrête.",
+    "criteres": [
+      {
+        "idee": "À chaque tour, g augmente ou d diminue",
+        "mots": [
+          "augment",
+          "diminu",
+          "m 1"
+        ]
+      },
+      {
+        "idee": "d - g est un entier qui décroît strictement",
+        "mots": [
+          "strictement",
+          "decroi",
+          "entier"
+        ]
+      },
+      {
+        "idee": "Il finit par devenir négatif : la condition devient fausse et la boucle s'arrête",
+        "mots": [
+          "negati",
+          "fausse",
+          "arret"
+        ]
+      }
+    ]
+  },
+  "29": {
+    "reponse": "« Avant le tour i, les éléments d'indices 0 à i - 1 sont triés. »",
+    "criteres": [
+      {
+        "idee": "Au début du tour i, les éléments d'indices 0 à i - 1 sont triés",
+        "mots": [
+          "trie",
+          "0 a i"
+        ]
+      },
+      {
+        "idee": "Cette propriété est vraie avant et après chaque tour",
+        "mots": [
+          "avant",
+          "chaque tour",
+          "toujours vrai"
+        ]
+      },
+      {
+        "idee": "À la fin, la partie triée est le tableau entier",
+        "mots": [
+          "entier",
+          "fin",
+          "tout le tableau"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "Environ 8 s pour 20 000 nombres et environ 32 s pour 40 000.",
+    "criteres": [
+      {
+        "idee": "Le tri par insertion a un coût quadratique : temps proportionnel à n²",
+        "mots": [
+          "quadrat",
+          "n 2",
+          "carre",
+          "proportionnel"
+        ]
+      },
+      {
+        "idee": "Doubler n multiplie le temps par 4 : environ 8 s",
+        "mots": [
+          "8 s",
+          "8 secondes",
+          "par 4",
+          "fois 4"
+        ]
+      },
+      {
+        "idee": "Environ 32 s pour 40 000",
+        "mots": [
+          "32 s",
+          "32 secondes"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Elle renvoie -1 (« absent ») alors que 2 est à l'indice 1 : on ne doit jamais appliquer la dichotomie à un tableau non trié.",
+    "criteres": [
+      {
+        "idee": "Elle renvoie -1 (« absent »)",
+        "mots": [
+          "absent",
+          "renvoie 1",
+          "pas trouve"
+        ]
+      },
+      {
+        "idee": "Alors que 2 est présent, à l'indice 1",
+        "mots": [
+          "present",
+          "indice 1",
+          "alors que"
+        ]
+      },
+      {
+        "idee": "La dichotomie n'est valable que sur un tableau trié",
+        "mots": [
+          "jamais",
+          "valable",
+          "seulement",
+          "que sur"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Meilleur cas : tableau déjà trié, 0 décalage ; pour [5, 4, 3, 2, 1] : 10 décalages.",
+    "criteres": [
+      {
+        "idee": "Meilleur cas : tableau déjà trié",
+        "mots": [
+          "deja trie"
+        ]
+      },
+      {
+        "idee": "Aucun décalage (coût linéaire)",
+        "mots": [
+          "0 decalage",
+          "aucun",
+          "lineaire"
+        ]
+      },
+      {
+        "idee": "Pour [5, 4, 3, 2, 1] : 10 décalages (pire cas)",
+        "mots": [
+          "10 decalages",
+          "1 2 3 4",
+          "dix"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Remplacer `<` par `>` dans la comparaison ; [3, 9, 4] devient [9, 4, 3].",
+    "criteres": [
+      {
+        "idee": "On place le maximum au lieu du minimum",
+        "mots": [
+          "maximum",
+          "max",
+          "plus grand"
+        ]
+      },
+      {
+        "idee": "On remplace la comparaison < par >",
+        "mots": [
+          "remplac",
+          "inverser",
+          "comparaison"
+        ]
+      },
+      {
+        "idee": "[3, 9, 4] devient [9, 4, 3]",
+        "mots": [
+          "9 4 3"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Il faut `n = n - 1` ; le variant est n, qui décroît strictement jusqu'à 0.",
+    "criteres": [
+      {
+        "idee": "n augmente : n > 0 reste toujours vrai, la boucle est infinie",
+        "mots": [
+          "augment",
+          "toujours vrai",
+          "infini"
+        ]
+      },
+      {
+        "idee": "Il faut diminuer n : n = n - 1",
+        "mots": [
+          "diminu",
+          "decrement",
+          "moins 1",
+          "retir"
+        ]
+      },
+      {
+        "idee": "Variant : n, entier qui décroît jusqu'à 0",
+        "mots": [
+          "variant est",
+          "decroi",
+          "jusqu a 0",
+          "vaut 0"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Glouton : 4 + 1 + 1 (3 pièces) ; la solution optimale est 3 + 3 (2 pièces).",
+    "criteres": [
+      {
+        "idee": "Le glouton donne 4 + 1 + 1 (3 pièces)",
+        "mots": [
+          "4 1 1",
+          "3 pieces",
+          "trois pieces"
+        ]
+      },
+      {
+        "idee": "La solution 3 + 3 n'utilise que 2 pièces",
+        "mots": [
+          "3 3",
+          "2 pieces",
+          "deux pieces"
+        ]
+      },
+      {
+        "idee": "Le glouton n'est pas optimal ici",
+        "mots": [
+          "optimal"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "Le glouton obtient 42 € (objet A seul) ; prendre B et C donne 60 €, donc il n'est pas optimal.",
+    "criteres": [
+      {
+        "idee": "Le glouton prend A (42 €) ; B et C ne rentrent plus",
+        "mots": [
+          "a seul",
+          "objet a",
+          "seulement a",
+          "prend a",
+          "rentre"
+        ]
+      },
+      {
+        "idee": "Prendre B et C donne 60 €",
+        "mots": [
+          "b et c",
+          "b c"
+        ]
+      },
+      {
+        "idee": "Ce n'est donc pas optimal",
+        "mots": [
+          "pas optimal",
+          "n est pas"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "`compteur` vaut 3 ; le coût est logarithmique.",
+    "criteres": [
+      {
+        "idee": "n vaut 8, 4, 2, 1 : compteur vaut 3",
+        "mots": [
+          "8 4 2 1",
+          "3 tours",
+          "vaut 3",
+          "affiche 3"
+        ]
+      },
+      {
+        "idee": "n est divisé par 2 à chaque tour",
+        "mots": [
+          "divis",
+          "moitie"
+        ]
+      },
+      {
+        "idee": "Le coût est logarithmique",
+        "mots": [
+          "logarithm",
+          "log"
+        ]
+      }
     ]
   },
   "43": {
@@ -41,6 +487,67 @@
     "accepte": [
       "[8, 11, 12, 14, 17]",
       "8, 11, 12, 14, 17"
+    ]
+  },
+  "49": {
+    "reponse": "A : environ un milliard de comparaisons ; B : environ 20 000 pour les recherches, plus le coût du tri, qui n'est rentable que si l'on fait de très nombreuses recherches.",
+    "criteres": [
+      {
+        "idee": "Option A : environ un milliard de comparaisons",
+        "mots": [
+          "milliard",
+          "10 9"
+        ]
+      },
+      {
+        "idee": "Option B : environ 20 000 comparaisons pour les recherches",
+        "mots": [
+          "20 000",
+          "20000"
+        ]
+      },
+      {
+        "idee": "Il faut ajouter le coût du tri, payé une seule fois",
+        "mots": [
+          "cout du tri",
+          "plus le tri",
+          "ajouter",
+          "une seule fois"
+        ]
+      },
+      {
+        "idee": "Le tri n'est rentable que pour de très nombreuses recherches",
+        "mots": [
+          "rentable",
+          "nombreuses",
+          "beaucoup"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Remplacer `i_min = tab[j]` par `i_min = j` ; la fonction renvoie alors 3.",
+    "criteres": [
+      {
+        "idee": "i_min doit contenir un indice, mais on y range une valeur",
+        "mots": [
+          "valeur"
+        ]
+      },
+      {
+        "idee": "Il faut écrire i_min = j",
+        "mots": [
+          "i min j",
+          "remplac"
+        ]
+      },
+      {
+        "idee": "Pour [4, 2, 7, 1, 3], la fonction renvoie 3",
+        "mots": [
+          "renvoie 3",
+          "indice 3"
+        ]
+      }
     ]
   }
 }
