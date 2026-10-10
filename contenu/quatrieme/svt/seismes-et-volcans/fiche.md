@@ -72,7 +72,7 @@ plaques** (voir le chapitre sur la tectonique des plaques).
 
 - Un **aléa** est un phénomène naturel possible (un séisme, une éruption).
 - Le **risque** existe quand cet aléa peut toucher des **populations, des habitations ou
-  des activités**. Risque = aléa **+** présence d'enjeux humains.
+  des activités**. Le risque naît de la **rencontre** (le croisement) d'un aléa et d'enjeux humains.
 
 On ne peut pas empêcher un séisme ou une éruption, mais on peut **réduire le risque** :
 
@@ -89,7 +89,7 @@ On ne peut pas empêcher un séisme ou une éruption, mais on peut **réduire le
 - Un **volcan** émet du **magma** (roche fondue) qui devient de la **lave**.
 - Deux types d'éruptions : **effusive** (lave fluide) et **explosive** (lave visqueuse).
 - Séismes et volcans se concentrent aux **frontières des plaques**.
-- **Risque = aléa + enjeux humains** ; la **prévention** réduit le risque.
+- **Risque = croisement d'un aléa et d'enjeux humains** ; la **prévention** réduit le risque.
 
 ## Les erreurs à éviter
 

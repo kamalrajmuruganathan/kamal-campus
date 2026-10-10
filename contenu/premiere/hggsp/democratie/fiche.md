@@ -28,7 +28,9 @@ Dès l'Antiquité, le philosophe grec **Aristote** (IVe siècle av. J.-C.) class
 |---|---|---|
 | Un seul | Monarchie | Tyrannie |
 | Quelques-uns | Aristocratie | Oligarchie |
-| Le plus grand nombre | République / démocratie | Démagogie |
+| Le plus grand nombre | Régime constitutionnel (*politeia*, parfois traduit « république ») | Démocratie (certains manuels disent « démagogie ») |
+
+Attention : pour Aristote, le mot « démocratie » désigne la forme **déviée** du gouvernement du grand nombre (le pouvoir des pauvres au service de leur seul intérêt).
 
 Le mot **démocratie** vient du grec *dêmos* (le peuple) et *kratos* (le pouvoir) : c'est le « pouvoir du peuple ».
 

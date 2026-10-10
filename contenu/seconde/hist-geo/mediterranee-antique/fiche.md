@@ -31,8 +31,8 @@ relu_par: null
 
 ## 2. Athènes et la démocratie (Ve siècle av. J.-C.)
 
-Athènes est une **cité-État** (une *polis*). Au Ve siècle av. J.-C., elle met en place la
-**démocratie** : le mot vient du grec *dêmos* (le peuple) et *kratos* (le pouvoir), soit
+Athènes est une **cité-État** (une *polis*). À la fin du VIe siècle av. J.-C. (réformes de Clisthène), elle met en place la
+**démocratie**, qui s'épanouit au Ve siècle : le mot vient du grec *dêmos* (le peuple) et *kratos* (le pouvoir), soit
 « le pouvoir du peuple ». Les décisions sont prises par les **citoyens** réunis à
 l'**Ecclésia**, l'assemblée qui se tient sur la colline de la **Pnyx**.
 
@@ -60,7 +60,7 @@ culturels circulent d'un bout à l'autre du bassin.
 
 ## À retenir
 
-- La **démocratie** naît à **Athènes** au **Ve siècle av. J.-C.** : *dêmos* + *kratos*.
+- La **démocratie** naît à **Athènes** à la fin du VIe siècle av. J.-C. et s'épanouit au **Ve siècle av. J.-C.** : *dêmos* + *kratos*.
 - À Athènes, les **femmes, métèques et esclaves** ne sont **pas** citoyens.
 - Rome passe de la **République** à l'**Empire** en **27 av. J.-C.** avec **Auguste**.
 - L'**édit de Caracalla** (**212**) étend la citoyenneté à tous les hommes libres.
