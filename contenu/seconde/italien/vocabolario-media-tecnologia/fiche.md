@@ -46,7 +46,7 @@ En italien, **i mezzi di comunicazione** (littéralement « les moyens de commun
 | caricare | téléverser, mettre en ligne |
 | pubblicare / un post | publier / une publication |
 | condividere | partager |
-| il seguace / il follower | l'abonné |
+| il follower (réseaux sociaux) / l'iscritto (chaîne, newsletter) | l'abonné |
 | la rete | le réseau, le net |
 
 **Exemples :**

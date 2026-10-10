@@ -41,7 +41,8 @@ relu_par: null
 |---|---|
 | globalisation | la mondialisation |
 | a multinational | une multinationale |
-| to outsource | délocaliser, externaliser |
+| to offshore / to relocate (abroad) | délocaliser |
+| to outsource | externaliser, sous-traiter |
 | a supply chain | une chaîne d'approvisionnement |
 | imports / exports | les importations / exportations |
 | a tariff | un droit de douane |
@@ -91,7 +92,7 @@ relu_par: null
 ## À retenir
 
 - Économie : *growth, supply and demand, unemployment, a recession, profit*.
-- Mondialisation : *globalisation, a multinational, to outsource, a supply chain, imports/exports*.
+- Mondialisation : *globalisation, a multinational, to offshore (délocaliser), to outsource (externaliser), a supply chain, imports/exports*.
 - Débat : *the gap, sustainable, fair trade, to invest, to thrive vs to struggle*.
 - Faux amis à surveiller : *benefit, actually, to assist, savings vs economy*.
 - Adapte ton **registre** : préfère un lexique soutenu à l'écrit du bac.

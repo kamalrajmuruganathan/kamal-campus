@@ -54,7 +54,7 @@ L'Argentine offre des paysages très variés :
 
 ## 4. Les erreurs à éviter
 
-- La capitale est **Buenos Aires**, pas Río de Janeiro (qui est au Brésil).
+- La capitale est **Buenos Aires**, pas Rio de Janeiro (qui est au Brésil).
 - En Argentine on parle **espagnol**, pas portugais.
 - Le **mate** est une boisson, le **tango** est une danse : ne pas confondre.
 - La **Patagonia** est au **sud** ; les **Cataratas del Iguazú** sont au **nord**.
