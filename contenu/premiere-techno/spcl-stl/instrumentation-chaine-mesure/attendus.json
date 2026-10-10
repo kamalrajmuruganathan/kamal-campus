@@ -6,10 +6,82 @@
       "2 V ; 4,88 mV ; 409"
     ]
   },
+  "11": {
+    "reponse": "Capteur → conditionneur → CAN → traitement/affichage.",
+    "criteres": [
+      {
+        "idee": "Ordre : capteur → conditionneur → CAN → traitement/affichage",
+        "mots": [
+          "capteur conditionneur",
+          "conditionneur can",
+          "can traitement"
+        ]
+      },
+      {
+        "idee": "Le capteur transforme la grandeur physique en grandeur électrique",
+        "mots": [
+          "transform",
+          "electrique",
+          "grandeur"
+        ]
+      },
+      {
+        "idee": "Le conditionneur amplifie et met en forme le signal",
+        "mots": [
+          "amplifi",
+          "met en forme",
+          "mise en forme",
+          "adapte"
+        ]
+      },
+      {
+        "idee": "Le CAN convertit la tension en nombre",
+        "mots": [
+          "convert",
+          "nombre",
+          "numeri"
+        ]
+      },
+      {
+        "idee": "Le traitement (ordinateur) affiche, enregistre et exploite la valeur",
+        "mots": [
+          "affich",
+          "enregistr",
+          "exploit",
+          "ordinateur"
+        ]
+      }
+    ]
+  },
   "13": {
     "reponse": "Résolution $1\\ \\text{mV}$ ; non, résolution n'est pas précision.",
     "accepte": [
       "1 mV ; non"
+    ]
+  },
+  "14": {
+    "reponse": "Juste : pas d'erreur systématique ; fidèle : mesures répétées resserrées.",
+    "criteres": [
+      {
+        "idee": "Juste : pas d'erreur systématique, mesures centrées sur la valeur vraie",
+        "mots": [
+          "systematique",
+          "centre",
+          "valeur vraie",
+          "valeur reelle",
+          "exact"
+        ]
+      },
+      {
+        "idee": "Fidèle : des mesures répétées donnent des valeurs resserrées",
+        "mots": [
+          "repet",
+          "resserr",
+          "proche",
+          "reproductible",
+          "dispers"
+        ]
+      }
     ]
   },
   "15": {
@@ -19,10 +91,67 @@
       "2,0 mV/lux"
     ]
   },
+  "16": {
+    "reponse": "$U = 0{,}62\\ \\text{V}$ ; $S = 0{,}010\\ \\text{V·°C}^{-1}$ et $U_0 = 0{,}25\\ \\text{V}$.",
+    "criteres": [
+      {
+        "idee": "À 37 °C, U = 0,62 V",
+        "mots": [
+          "0 62"
+        ]
+      },
+      {
+        "idee": "0,010 V/°C est la pente : la sensibilité",
+        "mots": [
+          "sensibilite",
+          "pente"
+        ]
+      },
+      {
+        "idee": "0,25 V est la tension à 0 °C (ordonnée à l'origine)",
+        "mots": [
+          "ordonnee",
+          "origine",
+          "0 c",
+          "zero"
+        ]
+      }
+    ]
+  },
   "17": {
     "reponse": "$\\theta = 35\\ \\text{°C}$.",
     "accepte": [
       "35 °C"
+    ]
+  },
+  "21": {
+    "reponse": "$5\\ \\text{°C}$ : $0$ ; $1\\ \\text{°C}$ : $1$ ; seulement deux états possibles.",
+    "criteres": [
+      {
+        "idee": "À 5 °C, la sortie est à 0 (pas d'alarme)",
+        "mots": [
+          "5 c",
+          "pas d alarme",
+          "repos",
+          "0 a 5"
+        ]
+      },
+      {
+        "idee": "À 1 °C, la sortie est à 1 (alarme)",
+        "mots": [
+          "1 c",
+          "alarme"
+        ]
+      },
+      {
+        "idee": "« Tout ou rien » : la sortie ne prend que deux états",
+        "mots": [
+          "deux etats",
+          "2 etats",
+          "deux",
+          "binaire"
+        ]
+      }
     ]
   },
   "23": {
@@ -32,6 +161,37 @@
       "65536 ; 256",
       "65 536 niveaux ; 256 fois plus",
       "65536 niveaux ; 256 fois plus"
+    ]
+  },
+  "24": {
+    "reponse": "A : précise ; B : fidèle, pas juste ; C : pas fidèle.",
+    "criteres": [
+      {
+        "idee": "A : mesures resserrées et centrées sur 50,00 g : juste et fidèle, donc précise",
+        "mots": [
+          "a precise",
+          "a est precise",
+          "juste et fidele"
+        ]
+      },
+      {
+        "idee": "B : resserrée mais décalée d'environ 0,5 g : fidèle mais pas juste",
+        "mots": [
+          "b fidele",
+          "b est fidele",
+          "pas juste",
+          "decal",
+          "systematique"
+        ]
+      },
+      {
+        "idee": "C : mesures dispersées : pas fidèle, donc pas précise",
+        "mots": [
+          "pas fidele",
+          "dispers",
+          "c n est pas"
+        ]
+      }
     ]
   },
   "25": {
@@ -74,6 +234,68 @@
       "régulation, alerte, sécurité"
     ]
   },
+  "36": {
+    "reponse": "Non linéaire (pente de $0{,}020$ à $0{,}012\\ \\text{V·°C}^{-1}$) ; il faut utiliser la courbe d'étalonnage.",
+    "criteres": [
+      {
+        "idee": "La pente entre points voisins diminue (0,020 puis 0,016 puis 0,012 V/°C)",
+        "mots": [
+          "pente",
+          "diminue",
+          "0 020",
+          "0 012"
+        ]
+      },
+      {
+        "idee": "Le capteur n'est donc pas linéaire",
+        "mots": [
+          "non lineaire",
+          "pas lineaire",
+          "n est pas lineaire"
+        ]
+      },
+      {
+        "idee": "On ne peut pas utiliser une formule unique : il faut la courbe d'étalonnage",
+        "mots": [
+          "courbe",
+          "etalonnage",
+          "unique"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Il claquette ; par exemple seuils $19{,}5$ et $20{,}5\\ \\text{°C}$.",
+    "criteres": [
+      {
+        "idee": "Avec un seuil unique, le ventilateur s'allume et s'éteint sans arrêt (il claquette)",
+        "mots": [
+          "claquet",
+          "sans arret",
+          "sans cesse",
+          "allume",
+          "eteint"
+        ]
+      },
+      {
+        "idee": "Cela use le ventilateur",
+        "mots": [
+          "use",
+          "abime",
+          "usure"
+        ]
+      },
+      {
+        "idee": "Il faut deux seuils (hystérésis) plus écartés que les fluctuations, par exemple 19,5 et 20,5 °C",
+        "mots": [
+          "hysteresis",
+          "19 5",
+          "20 5",
+          "deux seuils"
+        ]
+      }
+    ]
+  },
   "39": {
     "reponse": "$S = 25\\ \\text{mV·°C}^{-1}$ ; $U_0 = 0{,}45\\ \\text{V}$.",
     "accepte": [
@@ -88,6 +310,70 @@
     "accepte": [
       "5 ; 2,5 mV ; 12 bits",
       "a) 5 ; b) 2,5 mV ; c) 12 bits"
+    ]
+  },
+  "45": {
+    "reponse": "(a) Saturation du CAN ; (b) $G \\leq 6{,}25$, par exemple $G = 6$.",
+    "criteres": [
+      {
+        "idee": "Après amplification, le signal atteint 8,0 V, au-delà du calibre de 5,00 V",
+        "mots": [
+          "8 0",
+          "8 v",
+          "depasse",
+          "calibre"
+        ]
+      },
+      {
+        "idee": "Le CAN sature à sa valeur maximale 1023",
+        "mots": [
+          "satur",
+          "maximal",
+          "1023"
+        ]
+      },
+      {
+        "idee": "Il faut un gain d'au plus 6,25 : par exemple G = 6",
+        "mots": [
+          "6 25",
+          "g 6",
+          "gain de 6"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "(a) Fidèle mais pas juste ; (b) retrancher $0{,}8\\ \\text{°C}$ ; (c) $34{,}5\\ \\text{°C}$.",
+    "criteres": [
+      {
+        "idee": "Les mesures répétées sont identiques : le thermomètre est fidèle",
+        "mots": [
+          "fidele"
+        ]
+      },
+      {
+        "idee": "Il affiche toujours 0,8 °C de trop : il n'est pas juste (erreur systématique)",
+        "mots": [
+          "pas juste",
+          "systematique",
+          "0 8"
+        ]
+      },
+      {
+        "idee": "On corrige en retranchant 0,8 °C à chaque lecture",
+        "mots": [
+          "retranch",
+          "soustrai",
+          "enlev",
+          "0 8"
+        ]
+      },
+      {
+        "idee": "Température réelle : 34,5 °C",
+        "mots": [
+          "34 5"
+        ]
+      }
     ]
   },
   "47": {

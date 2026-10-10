@@ -8,6 +8,52 @@
       "0,080 mol.L-1"
     ]
   },
+  "4": {
+    "reponse": "Le liquide est l'**éthanol** : $T_{\\mathrm{eb}}$ et $d$ concordants, bande O–H large en IR, pas de carbonyle.",
+    "criteres": [
+      {
+        "idee": "La température d'ébullition (78 °C) n'est compatible qu'avec l'éthanol",
+        "mots": [
+          "78 c",
+          "78 degre",
+          "ebullition",
+          "seul l ethanol"
+        ]
+      },
+      {
+        "idee": "La densité 0,79 est compatible avec l'éthanol",
+        "mots": [
+          "densite",
+          "0 79"
+        ]
+      },
+      {
+        "idee": "La bande large vers 3300 cm-1 signale un groupe O–H (alcool)",
+        "mots": [
+          "o h",
+          "3300",
+          "alcool",
+          "hydroxyle"
+        ]
+      },
+      {
+        "idee": "L'absence de bande vers 1700 cm-1 exclut le groupe C=O (acide, cétone)",
+        "mots": [
+          "c o",
+          "carbonyle",
+          "1700",
+          "absence",
+          "pas de bande"
+        ]
+      },
+      {
+        "idee": "Conclusion : le liquide est l'éthanol",
+        "mots": [
+          "ethanol"
+        ]
+      }
+    ]
+  },
   "5": {
     "reponse": "$c_0 = 7{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
     "accepte": [
@@ -20,6 +66,31 @@
     "accepte": [
       "6,0 × 10^-2 mol/L",
       "6,0 × 10^-2 mol·L⁻¹"
+    ]
+  },
+  "12": {
+    "reponse": "Elle absorbe dans le bleu, vers $\\lambda_{\\max} \\approx 450\\ \\mathrm{nm}$.",
+    "criteres": [
+      {
+        "idee": "La couleur perçue est la complémentaire de la couleur absorbée",
+        "mots": [
+          "complementaire"
+        ]
+      },
+      {
+        "idee": "La solution absorbe surtout dans le bleu",
+        "mots": [
+          "bleu"
+        ]
+      },
+      {
+        "idee": "Le maximum d'absorption est vers 450 nm",
+        "mots": [
+          "450",
+          "440",
+          "460"
+        ]
+      }
     ]
   },
   "13": {
@@ -54,10 +125,56 @@
       "orange, bleu, 620"
     ]
   },
+  "19": {
+    "reponse": "Dans le rouge, vers $660\\ \\mathrm{nm}$.",
+    "criteres": [
+      {
+        "idee": "La couleur perçue est la complémentaire de la couleur absorbée",
+        "mots": [
+          "complementaire"
+        ]
+      },
+      {
+        "idee": "Le maximum d'absorption se trouve dans le rouge, vers 660 nm",
+        "mots": [
+          "rouge",
+          "660",
+          "650",
+          "orange"
+        ]
+      }
+    ]
+  },
   "20": {
     "reponse": "La propanone (C=O présent, pas de O–H).",
     "accepte": [
       "la propanone"
+    ]
+  },
+  "21": {
+    "reponse": "Présent : N–H (amine) ; absent : C=O.",
+    "criteres": [
+      {
+        "idee": "Les deux bandes fines vers 3300-3500 cm-1 indiquent des liaisons N–H (amine)",
+        "mots": [
+          "n h",
+          "amine"
+        ]
+      },
+      {
+        "idee": "Une bande O–H d'alcool serait large",
+        "mots": [
+          "large"
+        ]
+      },
+      {
+        "idee": "L'absence de bande vers 1700 cm-1 exclut le groupe C=O",
+        "mots": [
+          "c o",
+          "carbonyle",
+          "absent"
+        ]
+      }
     ]
   },
   "22": {
@@ -96,6 +213,34 @@
       "2,5 × 10^-5 mol·L⁻¹"
     ]
   },
+  "29": {
+    "reponse": "Le point à $3{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; on attendait $A = 0{,}54$.",
+    "criteres": [
+      {
+        "idee": "Pour une droite passant par l'origine, le rapport A/c doit être constant",
+        "mots": [
+          "constant",
+          "rapport",
+          "proportion",
+          "origine"
+        ]
+      },
+      {
+        "idee": "Le point aberrant est le troisième (c = 3,0 × 10^-4 mol/L)",
+        "mots": [
+          "troisieme",
+          "3eme",
+          "3 0"
+        ]
+      },
+      {
+        "idee": "On attendait A = 0,54",
+        "mots": [
+          "0 54"
+        ]
+      }
+    ]
+  },
   "30": {
     "reponse": "b – d – e – c – a – f.",
     "accepte": [
@@ -110,11 +255,56 @@
       "10,0 mL"
     ]
   },
+  "32": {
+    "reponse": "$n_B = 1{,}25\\times 10^{-3}\\ \\mathrm{mol}$ (volume oublié en mL).",
+    "criteres": [
+      {
+        "idee": "Le volume doit être en litres quand la concentration est en mol/L",
+        "mots": [
+          "litre",
+          "en l",
+          "en ml",
+          "convert"
+        ]
+      },
+      {
+        "idee": "Résultat correct : 1,25 × 10^-3 mol (erreur d'un facteur 1000)",
+        "mots": [
+          "10 3",
+          "1000",
+          "0 00125",
+          "mille"
+        ]
+      }
+    ]
+  },
   "33": {
     "reponse": "$C_A = 2{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$.",
     "accepte": [
       "2,0 × 10^-2 mol/L",
       "2,0 × 10^-2 mol·L⁻¹"
+    ]
+  },
+  "35": {
+    "reponse": "$520\\ \\mathrm{nm}$ ; solution rouge-magenta.",
+    "criteres": [
+      {
+        "idee": "On choisit 520 nm, là où l'absorbance est maximale (dosage le plus sensible)",
+        "mots": [
+          "520",
+          "maximal",
+          "sensib"
+        ]
+      },
+      {
+        "idee": "520 nm est dans le vert : la solution paraît rouge-magenta (complémentaire)",
+        "mots": [
+          "magenta",
+          "rouge",
+          "pourpre",
+          "complementaire"
+        ]
+      }
     ]
   },
   "36": {
@@ -133,6 +323,62 @@
       "1,25 × 10^-4 mol·L⁻¹"
     ]
   },
+  "41": {
+    "reponse": "$A = 0{,}60$ à $\\lambda_{\\max}$ contre $0{,}15$ : on gagne un facteur $4$ en sensibilité.",
+    "criteres": [
+      {
+        "idee": "À λmax : A = 0,60",
+        "mots": [
+          "0 60",
+          "0 6"
+        ]
+      },
+      {
+        "idee": "À l'autre longueur d'onde : A = 0,15",
+        "mots": [
+          "0 15"
+        ]
+      },
+      {
+        "idee": "À λmax, le dosage est 4 fois plus sensible et plus précis",
+        "mots": [
+          "sensib",
+          "precis",
+          "4 fois",
+          "quatre fois"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Non ; mesurer la température d'ébullition (ou faire un spectre IR).",
+    "criteres": [
+      {
+        "idee": "Non : l'eau est exclue mais les indices de la propanone et de l'éthanol sont trop proches",
+        "mots": [
+          "proche",
+          "non",
+          "propanone",
+          "eau"
+        ]
+      },
+      {
+        "idee": "Mesurer la température d'ébullition (56 °C contre 78 °C) permet de trancher",
+        "mots": [
+          "ebullition",
+          "56 c",
+          "78 c"
+        ]
+      },
+      {
+        "idee": "Un spectre IR (O–H ou C=O) conviendrait aussi",
+        "mots": [
+          "infrarouge",
+          "spectre"
+        ]
+      }
+    ]
+  },
   "44": {
     "reponse": "$c_m \\approx 1{,}7\\ \\mathrm{g\\cdot L^{-1}}$ : le lait est frais.",
     "accepte": [
@@ -141,6 +387,101 @@
       "le lait est frais",
       "il est frais",
       "oui, le lait est frais"
+    ]
+  },
+  "46": {
+    "reponse": "$M = 122\\ \\mathrm{g\\cdot mol^{-1}}$ : acide benzoïque, à confirmer par $T_{\\mathrm{fus}} \\approx 122\\ \\mathrm{°C}$.",
+    "criteres": [
+      {
+        "idee": "n = CB × VE = 2,00 × 10^-3 mol",
+        "mots": [
+          "2 00",
+          "2 0 10",
+          "0 002"
+        ]
+      },
+      {
+        "idee": "M = m/n = 122 g/mol",
+        "mots": [
+          "122"
+        ]
+      },
+      {
+        "idee": "C'est l'acide benzoïque",
+        "mots": [
+          "benzo"
+        ]
+      },
+      {
+        "idee": "On le confirme en mesurant sa température de fusion (vers 122 °C)",
+        "mots": [
+          "fusion",
+          "banc kofler",
+          "kofler"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "(1) titrage par une base ; (2) étalonnage spectrophotométrique ; (3) titrage par un acide.",
+    "criteres": [
+      {
+        "idee": "Le permanganate, coloré, se dose par étalonnage spectrophotométrique",
+        "mots": [
+          "spectro",
+          "etalonnage",
+          "colore"
+        ]
+      },
+      {
+        "idee": "L'acide chlorhydrique, incolore, se dose par titrage avec une base",
+        "mots": [
+          "par une base",
+          "avec une base",
+          "par la soude",
+          "avec la soude",
+          "une base de"
+        ]
+      },
+      {
+        "idee": "La soude, incolore, se dose par titrage avec un acide",
+        "mots": [
+          "par un acide",
+          "avec un acide",
+          "un acide de",
+          "d un acide"
+        ]
+      },
+      {
+        "idee": "Un dosage spectrophotométrique demande une espèce qui absorbe dans le visible",
+        "mots": [
+          "absorbe",
+          "visible",
+          "incolore"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "$C_0 = 0{,}880\\ \\mathrm{mol\\cdot L^{-1}}$ : conforme à l'étiquette.",
+    "criteres": [
+      {
+        "idee": "Concentration de l'eau oxygénée commerciale : 0,880 mol/L",
+        "mots": [
+          "0 880",
+          "0 88"
+        ]
+      },
+      {
+        "idee": "Valeur très proche de 0,89 mol/L : l'étiquette est vérifiée (conforme)",
+        "mots": [
+          "conforme",
+          "proche",
+          "verifie",
+          "correspond",
+          "coheren"
+        ]
+      }
     ]
   }
 }

@@ -6,11 +6,135 @@
       "jaune, cyan, blanc, noir"
     ]
   },
+  "3": {
+    "reponse": "(a) rouge ; (b) rouge ; (c) noir ; (d) noir. Un objet ne peut diffuser que les couleurs présentes dans la lumière qui l'éclaire.",
+    "criteres": [
+      {
+        "idee": "Le maillot rouge diffuse le rouge et absorbe le vert et le bleu",
+        "mots": [
+          "diffuse",
+          "absorbe",
+          "renvoie"
+        ]
+      },
+      {
+        "idee": "En lumière blanche ou rouge, il apparaît rouge",
+        "mots": [
+          "rouge"
+        ]
+      },
+      {
+        "idee": "En lumière verte ou cyan, il n'a pas de rouge à diffuser : il apparaît noir",
+        "mots": [
+          "noir"
+        ]
+      },
+      {
+        "idee": "Un objet ne peut diffuser que les couleurs présentes dans la lumière qui l'éclaire",
+        "mots": [
+          "presente",
+          "contient",
+          "pas de rouge",
+          "aucun rouge"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "reponse": "La lumière sort **verte** : le cyan retire le rouge, le jaune retire le bleu, il ne reste que le vert.",
+    "criteres": [
+      {
+        "idee": "Le filtre cyan absorbe le rouge : il reste vert + bleu",
+        "mots": [
+          "cyan absorbe",
+          "retire le rouge",
+          "absorbe le rouge",
+          "enleve le rouge"
+        ]
+      },
+      {
+        "idee": "Le filtre jaune absorbe le bleu",
+        "mots": [
+          "jaune absorbe",
+          "retire le bleu",
+          "absorbe le bleu",
+          "enleve le bleu"
+        ]
+      },
+      {
+        "idee": "La lumière qui sort est verte",
+        "mots": [
+          "vert"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "(a) noire (la lumière magenta ne contient pas de vert à diffuser) ; (b) verte (le filtre jaune laisse passer le vert diffusé par la pomme).",
+    "criteres": [
+      {
+        "idee": "La pomme verte absorbe le rouge et le bleu, seules couleurs de la lumière magenta",
+        "mots": [
+          "absorbe",
+          "pas de vert",
+          "aucun vert"
+        ]
+      },
+      {
+        "idee": "Elle ne renvoie aucune lumière : elle paraît noire",
+        "mots": [
+          "noir"
+        ]
+      },
+      {
+        "idee": "En lumière blanche, la pomme diffuse le vert",
+        "mots": [
+          "diffuse",
+          "renvoie"
+        ]
+      },
+      {
+        "idee": "Le filtre jaune laisse passer le vert : la pomme reste verte",
+        "mots": [
+          "laisse passer",
+          "vert",
+          "transmet"
+        ]
+      }
+    ]
+  },
   "7": {
     "reponse": "$\\texttt{\\#3CB0FF} \\rightarrow (60,\\ 176,\\ 255)$.",
     "accepte": [
       "(60, 176, 255)",
       "60, 176, 255"
+    ]
+  },
+  "9": {
+    "reponse": "(a) jaune (Rouge + Vert, additive) ; (b) jaune ; (c) noir (pas de bleu dans la lumière à diffuser).",
+    "criteres": [
+      {
+        "idee": "Rouge + vert donne du jaune (synthèse additive)",
+        "mots": [
+          "additive",
+          "jaune"
+        ]
+      },
+      {
+        "idee": "Le costume jaune diffuse le rouge et le vert : il apparaît jaune",
+        "mots": [
+          "diffuse",
+          "renvoie"
+        ]
+      },
+      {
+        "idee": "Le costume bleu n'a pas de bleu à diffuser : il apparaît noir",
+        "mots": [
+          "noir",
+          "aucun bleu",
+          "pas de bleu"
+        ]
+      }
     ]
   },
   "11": {
@@ -40,6 +164,35 @@
       "cyan, magenta, jaune ; on part du blanc"
     ]
   },
+  "15": {
+    "reponse": "La distance focale du cristallin change ; la distance cristallin-rétine ne change pas.",
+    "criteres": [
+      {
+        "idee": "L'œil accommode : les muscles déforment le cristallin",
+        "mots": [
+          "accommod",
+          "muscle",
+          "deform",
+          "bomb"
+        ]
+      },
+      {
+        "idee": "La distance focale du cristallin change",
+        "mots": [
+          "focale",
+          "vergence"
+        ]
+      },
+      {
+        "idee": "La distance cristallin-rétine ne change pas",
+        "mots": [
+          "distance",
+          "retine",
+          "fixe"
+        ]
+      }
+    ]
+  },
   "16": {
     "reponse": "$530\\ \\text{nm}$ : cônes M (vert) ; $420\\ \\text{nm}$ : cônes S (bleu).",
     "accepte": [
@@ -47,6 +200,31 @@
       "M ; S",
       "M (vert) ; S (bleu)",
       "cônes M (vert) ; cônes S (bleu)"
+    ]
+  },
+  "19": {
+    "reponse": "(a) R et B ; (b) V et B ; (c) R, V et B.",
+    "criteres": [
+      {
+        "idee": "Magenta : rouge et bleu",
+        "mots": [
+          "magenta"
+        ]
+      },
+      {
+        "idee": "Cyan : vert et bleu",
+        "mots": [
+          "cyan"
+        ]
+      },
+      {
+        "idee": "Blanc : les trois (rouge, vert et bleu)",
+        "mots": [
+          "blanc",
+          "les trois",
+          "tous"
+        ]
+      }
     ]
   },
   "20": {
@@ -73,6 +251,34 @@
       "128, 128, 128 ; gris moyen"
     ]
   },
+  "25": {
+    "reponse": "Les cônes ; transmission liée au chromosome X.",
+    "criteres": [
+      {
+        "idee": "Ce sont les cônes, cellules qui codent la couleur",
+        "mots": [
+          "cone"
+        ]
+      },
+      {
+        "idee": "Le daltonisme est héréditaire, lié au chromosome X",
+        "mots": [
+          "chromosome",
+          "heredit",
+          "genetique"
+        ]
+      },
+      {
+        "idee": "Il touche environ 8 % des hommes contre moins de 1 % des femmes",
+        "mots": [
+          "8 des",
+          "homme",
+          "garcon",
+          "masculin"
+        ]
+      }
+    ]
+  },
   "27": {
     "reponse": "$(165,\\ 42,\\ 42)$ ; le rouge domine.",
     "accepte": [
@@ -90,6 +296,145 @@
       "noir, rouge"
     ]
   },
+  "32": {
+    "reponse": "Bleu → noir ; blanc → rouge ; rouge → rouge.",
+    "criteres": [
+      {
+        "idee": "La bande bleue absorbe le rouge : elle apparaît noire",
+        "mots": [
+          "noir"
+        ]
+      },
+      {
+        "idee": "La bande blanche diffuse le rouge reçu : elle apparaît rouge",
+        "mots": [
+          "blanc",
+          "blanche"
+        ]
+      },
+      {
+        "idee": "La bande rouge diffuse le rouge : elle apparaît rouge",
+        "mots": [
+          "rouge"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "Les deux lumières produisent les mêmes signaux sur les cônes L et M : le cerveau perçoit la même couleur.",
+    "criteres": [
+      {
+        "idee": "La vision des couleurs est trichromatique : le cerveau utilise les signaux des trois types de cônes",
+        "mots": [
+          "trichromat",
+          "trois",
+          "cerveau",
+          "cone"
+        ]
+      },
+      {
+        "idee": "Les deux lumières excitent les cônes L et M de la même façon",
+        "mots": [
+          "meme",
+          "identique",
+          "pareil"
+        ]
+      },
+      {
+        "idee": "Signaux identiques, donc même sensation de couleur (les écrans exploitent ce phénomène)",
+        "mots": [
+          "sensation",
+          "percoit",
+          "perception",
+          "ecran"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Rouge et vert donnent des signaux presque identiques ; utiliser par exemple bleu et orange, ou des pointillés.",
+    "criteres": [
+      {
+        "idee": "Chez cette personne, les cônes L et M répondent de façon trop semblable",
+        "mots": [
+          "cone",
+          "semblable",
+          "pareil",
+          "meme"
+        ]
+      },
+      {
+        "idee": "Le rouge et le vert donnent presque le même signal",
+        "mots": [
+          "signal",
+          "confond",
+          "distingu"
+        ]
+      },
+      {
+        "idee": "Solution : d'autres couleurs (bleu et orange) ou des traits différents (pointillés)",
+        "mots": [
+          "bleu",
+          "orange",
+          "pointill",
+          "style",
+          "trait",
+          "motif"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "Un spectre continu du violet au rouge ; le violet est le plus dévié.",
+    "criteres": [
+      {
+        "idee": "Le prisme décompose la lumière blanche",
+        "mots": [
+          "decompos",
+          "disperse"
+        ]
+      },
+      {
+        "idee": "On observe un spectre continu du violet au rouge",
+        "mots": [
+          "spectre",
+          "arc en ciel",
+          "continu"
+        ]
+      },
+      {
+        "idee": "Le violet est le plus dévié",
+        "mots": [
+          "violet"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Rouge, vert, bleu ; jaune, cyan, magenta ; blanc au centre.",
+    "criteres": [
+      {
+        "idee": "Zones éclairées par un seul projecteur : rouge, vert, bleu",
+        "mots": [
+          "rouge"
+        ]
+      },
+      {
+        "idee": "Recouvrements deux à deux : jaune, cyan, magenta",
+        "mots": [
+          "jaune",
+          "cyan",
+          "magenta"
+        ]
+      },
+      {
+        "idee": "Zone centrale : blanc",
+        "mots": [
+          "blanc"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "(a) Blanc ; (b) vert.",
     "accepte": [
@@ -105,12 +450,147 @@
       "vert, vert, noir"
     ]
   },
+  "41": {
+    "reponse": "Appareil : l'objectif se déplace ; œil : la focale change. Image réelle et renversée sur l'écran dans les deux cas.",
+    "criteres": [
+      {
+        "idee": "Appareil photo : on déplace l'objectif pour que l'image tombe sur le capteur",
+        "mots": [
+          "deplace",
+          "objectif",
+          "bouge"
+        ]
+      },
+      {
+        "idee": "Œil : la distance est fixe, c'est la focale du cristallin qui change (accommodation)",
+        "mots": [
+          "focale",
+          "accommod",
+          "cristallin"
+        ]
+      },
+      {
+        "idee": "Dans les deux cas, l'image est réelle et renversée, sur le capteur ou la rétine",
+        "mots": [
+          "renvers",
+          "reelle",
+          "inverse"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "(a) Cônes S ; (b) cônes L ; (c) cônes L et M, interprété comme du jaune.",
+    "criteres": [
+      {
+        "idee": "450 nm : surtout les cônes S (bleu)",
+        "mots": [
+          "cones s",
+          "cone s",
+          "s bleu"
+        ]
+      },
+      {
+        "idee": "650 nm : surtout les cônes L (rouge)",
+        "mots": [
+          "cones l",
+          "cone l",
+          "l rouge"
+        ]
+      },
+      {
+        "idee": "580 nm : les cônes L et M sont excités",
+        "mots": [
+          "l et m",
+          "m et l"
+        ]
+      },
+      {
+        "idee": "Cette combinaison est interprétée comme du jaune, comme un mélange rouge + vert",
+        "mots": [
+          "rouge vert",
+          "rouge et vert",
+          "melange",
+          "interpret"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "(a) Rouge : M + J ; vert : C + J ; bleu : C + M. (b) Pas d'encre. (c) Économie d'encre et vrai noir.",
+    "criteres": [
+      {
+        "idee": "Rouge : magenta + jaune",
+        "mots": [
+          "rouge"
+        ]
+      },
+      {
+        "idee": "Vert : cyan + jaune",
+        "mots": [
+          "vert"
+        ]
+      },
+      {
+        "idee": "Bleu : cyan + magenta",
+        "mots": [
+          "bleu"
+        ]
+      },
+      {
+        "idee": "Blanc : aucune encre, le papier blanc diffuse toute la lumière",
+        "mots": [
+          "aucune encre",
+          "pas d encre",
+          "papier",
+          "rien"
+        ]
+      },
+      {
+        "idee": "L'encre noire économise les encres de couleur et donne un vrai noir",
+        "mots": [
+          "econom",
+          "vrai noir",
+          "profond",
+          "cout"
+        ]
+      }
+    ]
+  },
   "44": {
     "reponse": "(a) Cyan ; (b) noire ; (c) verte.",
     "accepte": [
       "a) cyan ; b) noire ; c) verte",
       "cyan, noire, verte",
       "cyan, noir, vert"
+    ]
+  },
+  "47": {
+    "reponse": "(a) Environ $1$ garçon ; (b) lien avec le chromosome X ; (c) rouge/vert.",
+    "criteres": [
+      {
+        "idee": "Environ 1 garçon daltonien attendu (0,08 × 15 = 1,2)",
+        "mots": [
+          "1 2",
+          "un garcon",
+          "1 garcon",
+          "environ 1"
+        ]
+      },
+      {
+        "idee": "Le daltonisme est héréditaire et lié au chromosome X",
+        "mots": [
+          "chromosome",
+          "heredit",
+          "genetique"
+        ]
+      },
+      {
+        "idee": "La confusion la plus probable est rouge/vert",
+        "mots": [
+          "rouge"
+        ]
+      }
     ]
   },
   "48": {
@@ -125,6 +605,39 @@
     "accepte": [
       "A jaune, B magenta ; rouge ; noir",
       "jaune, magenta, rouge, noir"
+    ]
+  },
+  "50": {
+    "reponse": "Rouge : M + J ; bleu : C + M ; blanc : aucune encre ; noir : K.",
+    "criteres": [
+      {
+        "idee": "Rouge : magenta + jaune",
+        "mots": [
+          "rouge"
+        ]
+      },
+      {
+        "idee": "Bleu : cyan + magenta",
+        "mots": [
+          "bleu"
+        ]
+      },
+      {
+        "idee": "Blanc : aucune encre (le papier diffuse tout)",
+        "mots": [
+          "aucune",
+          "pas d encre",
+          "rien",
+          "blanc"
+        ]
+      },
+      {
+        "idee": "Noir : encre noire K (ou C + M + J)",
+        "mots": [
+          "noir",
+          "noire"
+        ]
+      }
     ]
   }
 }

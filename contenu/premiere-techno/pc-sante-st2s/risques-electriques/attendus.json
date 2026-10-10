@@ -1,9 +1,133 @@
 {
+  "3": {
+    "reponse": "$I_{\\text{sec}} = 46$ mA et $I_{\\text{mouillé}} = 230$ mA : mouillée, la peau laisse passer un courant 5 fois plus grand, donc bien plus dangereux.",
+    "criteres": [
+      {
+        "idee": "Peau sèche : I = 46 mA",
+        "mots": [
+          "46 ma",
+          "46ma",
+          "0 046"
+        ]
+      },
+      {
+        "idee": "Peau mouillée : I = 230 mA",
+        "mots": [
+          "230 ma",
+          "230ma",
+          "0 23"
+        ]
+      },
+      {
+        "idee": "L'humidité fait chuter la résistance : le courant est 5 fois plus grand, donc bien plus dangereux",
+        "mots": [
+          "5 fois",
+          "cinq fois",
+          "resistance",
+          "dangereu",
+          "grave"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "$I = 200$ mA : danger mortel (au-delà du seuil de fibrillation). Le différentiel $30$ mA détecte la fuite ($\\approx 200$ mA $> 30$ mA) et coupe le circuit très vite, ce qui sauve la personne.",
+    "criteres": [
+      {
+        "idee": "I = 200 mA",
+        "mots": [
+          "200 ma",
+          "200ma",
+          "0 2 a",
+          "0 200"
+        ]
+      },
+      {
+        "idee": "Danger mortel : au-delà du seuil de fibrillation (100 mA)",
+        "mots": [
+          "mortel",
+          "fibrillation",
+          "mort",
+          "arret cardiaque"
+        ]
+      },
+      {
+        "idee": "Le courant fuit vers la terre : il ne revient pas par le neutre",
+        "mots": [
+          "fuite",
+          "fuit",
+          "terre",
+          "neutre"
+        ]
+      },
+      {
+        "idee": "L'écart dépasse 30 mA : le différentiel coupe très vite le circuit",
+        "mots": [
+          "coupe",
+          "declench",
+          "30 ma"
+        ]
+      }
+    ]
+  },
   "11": {
     "reponse": "a) continue ; b) alternative ; c) continue.",
     "accepte": [
       "a) continue ; b) alternative ; c) continue",
       "continue, alternative, continue"
+    ]
+  },
+  "12": {
+    "reponse": "a) électrisation ; b) électrocution (électrisation mortelle).",
+    "criteres": [
+      {
+        "idee": "L'électrisation est le passage d'un courant à travers le corps",
+        "mots": [
+          "passage",
+          "traverse",
+          "courant"
+        ]
+      },
+      {
+        "idee": "L'électrocution est une électrisation mortelle",
+        "mots": [
+          "mortel",
+          "deces",
+          "mort"
+        ]
+      },
+      {
+        "idee": "a) est une électrisation, b) est une électrocution",
+        "mots": [
+          "electrisation",
+          "electrocution"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "reponse": "Phase : rouge ou marron ; neutre : bleu ; terre : vert/jaune.",
+    "criteres": [
+      {
+        "idee": "Phase : rouge ou marron",
+        "mots": [
+          "rouge",
+          "marron"
+        ]
+      },
+      {
+        "idee": "Neutre : bleu",
+        "mots": [
+          "bleu"
+        ]
+      },
+      {
+        "idee": "Terre : vert et jaune",
+        "mots": [
+          "vert",
+          "jaune"
+        ]
+      }
     ]
   },
   "14": {
@@ -29,10 +153,57 @@
       "installation, installation, personnes"
     ]
   },
+  "22": {
+    "reponse": "La peau mouillée a une résistance plus faible : l'intensité dans le corps augmente.",
+    "criteres": [
+      {
+        "idee": "L'eau fait chuter la résistance électrique du corps",
+        "mots": [
+          "resistance"
+        ]
+      },
+      {
+        "idee": "L'intensité qui traverse le corps devient beaucoup plus grande",
+        "mots": [
+          "intensite",
+          "courant",
+          "augment"
+        ]
+      },
+      {
+        "idee": "C'est l'intensité qui provoque les lésions",
+        "mots": [
+          "lesion",
+          "dangereu",
+          "grave",
+          "provoque"
+        ]
+      }
+    ]
+  },
   "23": {
     "reponse": "$T = 20$ ms ; $f = 50$ Hz ; $U_{max} = 325$ V.",
     "accepte": [
       "20 ms ; 50 Hz ; 325 V"
+    ]
+  },
+  "24": {
+    "reponse": "Non : $230$ V est la valeur efficace ; le maximum vaut environ $325$ V.",
+    "criteres": [
+      {
+        "idee": "Non : 230 V est la valeur efficace affichée par le voltmètre",
+        "mots": [
+          "efficace"
+        ]
+      },
+      {
+        "idee": "La tension monte jusqu'à une valeur maximale d'environ 325 V",
+        "mots": [
+          "325",
+          "maximale",
+          "max"
+        ]
+      }
     ]
   },
   "25": {
@@ -46,6 +217,100 @@
       "3 000 périodes ; 100"
     ]
   },
+  "26": {
+    "reponse": "$21$ A ; le disjoncteur saute ; il évite un incendie.",
+    "criteres": [
+      {
+        "idee": "Intensité totale : 9 + 8 + 4 = 21 A",
+        "mots": [
+          "21 a",
+          "21a",
+          "21 amp"
+        ]
+      },
+      {
+        "idee": "21 A dépasse 16 A : surintensité, le disjoncteur coupe la ligne",
+        "mots": [
+          "coupe",
+          "saute",
+          "declench",
+          "surintensite"
+        ]
+      },
+      {
+        "idee": "Il évite l'échauffement des fils, donc un incendie",
+        "mots": [
+          "incendie",
+          "feu",
+          "echauff",
+          "chauff"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "Oui ($35$ mA $\\geq 30$ mA) : il y a une fuite de courant.",
+    "criteres": [
+      {
+        "idee": "Écart : 2,000 - 1,965 = 35 mA, supérieur à 30 mA : il déclenche",
+        "mots": [
+          "35 ma",
+          "35ma",
+          "0 035",
+          "declench",
+          "coupe",
+          "oui"
+        ]
+      },
+      {
+        "idee": "Une partie du courant ne revient pas par le neutre : il y a une fuite",
+        "mots": [
+          "fuite",
+          "fuit",
+          "ne revient pas",
+          "terre"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "Le courant de défaut part à la terre, le différentiel détecte la fuite et coupe.",
+    "criteres": [
+      {
+        "idee": "La carcasse se retrouve sous tension",
+        "mots": [
+          "carcasse",
+          "tambour",
+          "sous tension"
+        ]
+      },
+      {
+        "idee": "Le courant de défaut s'écoule vers la terre (fil vert/jaune)",
+        "mots": [
+          "terre",
+          "ecoule",
+          "sol"
+        ]
+      },
+      {
+        "idee": "Le différentiel détecte la fuite et coupe aussitôt",
+        "mots": [
+          "differentiel",
+          "coupe",
+          "fuite",
+          "declench"
+        ]
+      },
+      {
+        "idee": "Personne ne s'électrise en touchant la machine",
+        "mots": [
+          "personne",
+          "proteg",
+          "electris"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "a) Faux ; b) Vrai ; c) Vrai.",
     "accepte": [
@@ -53,10 +318,157 @@
       "faux, vrai, vrai"
     ]
   },
+  "30": {
+    "reponse": "Tétanisation : la main ne peut plus lâcher ; le passage du courant se prolonge.",
+    "criteres": [
+      {
+        "idee": "C'est la tétanisation : les muscles se contractent et la main se referme sur le fil",
+        "mots": [
+          "tetanis",
+          "contract",
+          "muscle",
+          "referme"
+        ]
+      },
+      {
+        "idee": "Le contact dure plus longtemps, ce qui aggrave les lésions",
+        "mots": [
+          "longtemps",
+          "duree",
+          "prolong",
+          "dure"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "La protection par la terre est supprimée : en cas de défaut, la carcasse électriserait l'utilisateur.",
+    "criteres": [
+      {
+        "idee": "La terre ne sert pas au fonctionnement, mais à la sécurité",
+        "mots": [
+          "securite",
+          "protection",
+          "fonctionn"
+        ]
+      },
+      {
+        "idee": "En cas de défaut, la carcasse resterait sous tension",
+        "mots": [
+          "defaut",
+          "carcasse",
+          "sous tension"
+        ]
+      },
+      {
+        "idee": "Le courant ne pourrait pas s'écouler à la terre : l'utilisateur serait électrisé",
+        "mots": [
+          "electris",
+          "ecoul",
+          "electrocut"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "Exemple : intensité élevée, peau mouillée, contact prolongé.",
+    "criteres": [
+      {
+        "idee": "Une intensité élevée dans le corps",
+        "mots": [
+          "intensite",
+          "courant fort",
+          "courant eleve"
+        ]
+      },
+      {
+        "idee": "Une peau mouillée (résistance plus faible)",
+        "mots": [
+          "mouill",
+          "humid",
+          "eau",
+          "resistance"
+        ]
+      },
+      {
+        "idee": "Un contact prolongé (durée)",
+        "mots": [
+          "prolong",
+          "duree",
+          "longtemps"
+        ]
+      }
+    ]
+  },
   "34": {
     "reponse": "$U_{max} \\approx 339$ V.",
     "accepte": [
       "339 V"
+    ]
+  },
+  "36": {
+    "reponse": "$12$ mA sous $12$ V contre $230$ mA sous $230$ V : la basse tension réduit fortement le danger.",
+    "criteres": [
+      {
+        "idee": "Sous 12 V : I = 12 mA",
+        "mots": [
+          "12 ma",
+          "12ma",
+          "0 012"
+        ]
+      },
+      {
+        "idee": "Sous 230 V : I = 230 mA, au-delà du seuil de fibrillation",
+        "mots": [
+          "230 ma",
+          "230ma",
+          "0 23",
+          "fibrillation"
+        ]
+      },
+      {
+        "idee": "La très basse tension limite fortement le danger : on l'utilise dans les lieux humides",
+        "mots": [
+          "basse tension",
+          "moins dangereu",
+          "reduit",
+          "limite",
+          "humide"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Non ; non ; toujours couper le courant avant d'intervenir.",
+    "criteres": [
+      {
+        "idee": "Le différentiel ne détecte rien : tout le courant revient par le neutre",
+        "mots": [
+          "neutre",
+          "revient",
+          "aucune fuite",
+          "pas de fuite",
+          "ecart"
+        ]
+      },
+      {
+        "idee": "Le disjoncteur 16 A ne coupe pas : l'intensité est très inférieure à 16 A",
+        "mots": [
+          "16 a",
+          "inferieur",
+          "trop faible",
+          "milliamp"
+        ]
+      },
+      {
+        "idee": "Règle : toujours couper le courant au tableau avant d'intervenir",
+        "mots": [
+          "couper",
+          "coupe",
+          "tableau",
+          "avant"
+        ]
+      }
     ]
   },
   "39": {
@@ -66,10 +478,216 @@
       "325 ; 0 ; -325 ; 0"
     ]
   },
+  "42": {
+    "reponse": "Exemple : pas d'appareil près de l'eau, mains sèches, pas de multiprise surchargée (justifications : résistance du corps, incendie).",
+    "criteres": [
+      {
+        "idee": "Pas d'appareil électrique près de l'eau (lavabo, évier)",
+        "mots": [
+          "eau",
+          "lavabo",
+          "evier",
+          "baignoire"
+        ]
+      },
+      {
+        "idee": "Ne jamais toucher un appareil avec les mains mouillées",
+        "mots": [
+          "mains mouill",
+          "mouill",
+          "humide",
+          "seche"
+        ]
+      },
+      {
+        "idee": "Ne pas surcharger une multiprise (risque d'incendie)",
+        "mots": [
+          "multiprise",
+          "surcharg",
+          "incendie"
+        ]
+      },
+      {
+        "idee": "Justification : l'eau fait chuter la résistance du corps et augmente l'intensité",
+        "mots": [
+          "resistance",
+          "intensite"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "$30$ mA correspond au seuil de danger respiratoire ; $300$ mA serait déjà mortel.",
+    "criteres": [
+      {
+        "idee": "Dès 30 mA environ, les muscles respiratoires sont atteints (asphyxie)",
+        "mots": [
+          "respir",
+          "asphyx"
+        ]
+      },
+      {
+        "idee": "Au-delà de 100 mA : fibrillation du cœur",
+        "mots": [
+          "fibrillation",
+          "coeur",
+          "cardiaque",
+          "100"
+        ]
+      },
+      {
+        "idee": "Avec 300 mA, des courants mortels passeraient avant la coupure",
+        "mots": [
+          "mortel",
+          "mort",
+          "trop tard",
+          "300"
+        ]
+      }
+    ]
+  },
   "44": {
     "reponse": "$T = 20$ ms ; $f = 50$ Hz ; $U \\approx 12$ V.",
     "accepte": [
       "20 ms ; 50 Hz ; 12 V"
+    ]
+  },
+  "45": {
+    "reponse": "Électrisation ; tétanisation ; sinon elle aurait été électrisée à son tour.",
+    "criteres": [
+      {
+        "idee": "C'est une électrisation (Paul a survécu)",
+        "mots": [
+          "electrisation",
+          "survecu"
+        ]
+      },
+      {
+        "idee": "La tétanisation des muscles l'empêchait de lâcher le fil",
+        "mots": [
+          "tetanis"
+        ]
+      },
+      {
+        "idee": "Toucher la victime sous tension aurait électrisé la voisine à son tour",
+        "mots": [
+          "electris",
+          "a son tour",
+          "aussi",
+          "sauveteur"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "$I \\approx 153$ mA (danger mortel) ; terre + différentiel auraient coupé ; le disjoncteur $16$ A ne l'aurait pas protégée.",
+    "criteres": [
+      {
+        "idee": "I ≈ 153 mA",
+        "mots": [
+          "153",
+          "0 15"
+        ]
+      },
+      {
+        "idee": "Au-delà de 100 mA : risque de fibrillation, danger mortel",
+        "mots": [
+          "fibrillation",
+          "mortel",
+          "mort"
+        ]
+      },
+      {
+        "idee": "Avec la terre, le courant de défaut s'écoule au sol et le différentiel détecte la fuite et coupe",
+        "mots": [
+          "terre",
+          "differentiel",
+          "fuite",
+          "coupe"
+        ]
+      },
+      {
+        "idee": "Le disjoncteur 16 A ne l'aurait pas protégée : il ne protège que l'installation",
+        "mots": [
+          "16 a",
+          "installation",
+          "non"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Le disjoncteur coupe ($18$ A) ; écart $60$ mA, le différentiel coupe ; sinon risque d'asphyxie.",
+    "criteres": [
+      {
+        "idee": "18 A dépasse 16 A : le disjoncteur coupe (surintensité)",
+        "mots": [
+          "18 a",
+          "surintensite",
+          "disjoncteur"
+        ]
+      },
+      {
+        "idee": "Phase 8,060 A et neutre 8,000 A : l'écart de 60 mA fait couper le différentiel",
+        "mots": [
+          "60 ma",
+          "8 060",
+          "ecart",
+          "differentiel"
+        ]
+      },
+      {
+        "idee": "Sans différentiel : risque d'asphyxie (plus de 30 mA)",
+        "mots": [
+          "asphyx",
+          "respir"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "$46$ mA (asphyxie) et $230$ mA (fibrillation) ; le différentiel le protège ; ne plus utiliser l'appareil avant réparation.",
+    "criteres": [
+      {
+        "idee": "Mains sèches : 46 mA ; mains mouillées : 230 mA",
+        "mots": [
+          "46 ma",
+          "46ma",
+          "230 ma",
+          "0 046",
+          "0 23"
+        ]
+      },
+      {
+        "idee": "46 mA : risque d'asphyxie ; 230 mA : fibrillation, mortel",
+        "mots": [
+          "asphyx",
+          "fibrillation",
+          "mortel"
+        ]
+      },
+      {
+        "idee": "Le différentiel le protège : il détecte la fuite (30 mA) et coupe",
+        "mots": [
+          "differentiel"
+        ]
+      },
+      {
+        "idee": "Le fusible 16 A protège l'installation, pas les personnes",
+        "mots": [
+          "fusible",
+          "installation"
+        ]
+      },
+      {
+        "idee": "Ne plus utiliser l'appareil et faire remplacer le cordon",
+        "mots": [
+          "utiliser",
+          "remplac",
+          "repar",
+          "cordon"
+        ]
+      }
     ]
   }
 }
