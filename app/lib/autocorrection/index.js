@@ -141,6 +141,9 @@ function lireNombre(texte) {
   if (pref) s = s.slice(pref[0].length);
   s = s.replace(/^≈\s*/, '');
   if (s.includes('=')) return null;
+  // Exposants tapés en caractères spéciaux (10⁷, 10⁻³) → 10^7, 10^-3 ; « 10^7 » seul → 1 × 10^7.
+  s = s.replace(/10\s*([⁻]?[⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (_, e) => '10^' + [...e].map((c) => '⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c) >= 0 ? '⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c) : '-').join(''));
+  if (/^10\s*\^/.test(s)) s = '1 × ' + s;
   const m = s.match(RE_NOMBRE);
   if (!m) return null;
   const [tout, signe, entier, dec = '', exp1, exp2, denom] = m;
@@ -402,6 +405,7 @@ function analyserForme(forme, matiere = null) {
 function clePhrase(s, opts) {
   const t = protegerNombres(nettoyer(s))
     .replace(/\s*(?:->|=>|⇒|→|⟶)\s*/g, '→') // toutes les flèches se valent
+    .replace(/\s*\/\s*/g, '/') // « des / der » = « des/der »
     .replace(/\s*≤\s*/g, '<=').replace(/\s*≥\s*/g, '>=');
   return cleTexte(t.replace(/[,;:!?.]/g, ' '), opts);
 }

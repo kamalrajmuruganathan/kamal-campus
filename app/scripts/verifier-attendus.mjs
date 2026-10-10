@@ -40,6 +40,7 @@ function tousLesChapitres() {
 /** Texte « à plat » pour retrouver un nombre : sans LaTeX ni espaces des milliers. */
 function aPlat(s) {
   return String(s)
+    .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, (c) => String('⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)))
     .replace(/\{,\}/g, ',')
     .replace(/\\[,;: !]|~| | /g, '')
     .replace(/[{}$\\]/g, '')

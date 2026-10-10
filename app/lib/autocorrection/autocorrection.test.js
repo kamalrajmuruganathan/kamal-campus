@@ -250,3 +250,16 @@ test('« S = {1 ; 2} » accepté pour un ensemble de solutions', () => {
   assert.equal(comparerExercice('S={1;2}', ex), true);
   assert.equal(comparerExercice('S = {1 ; 3}', ex), false);
 });
+
+test('puissances de 10 : « 10^7 » et « 10⁷ » seuls, « 3,9×10²⁶ J »', () => {
+  assert.equal(comparer('10^7', '$10^{7}$'), true);
+  assert.equal(comparer('10⁷', '$10^{7}$'), true);
+  assert.equal(comparer('10^8', '$10^{7}$'), false);
+  assert.equal(comparer('3,9×10²⁶ J', '$3{,}9 \\times 10^{26}$ J'), true);
+  assert.equal(comparer('2×10⁻³ m', '$2 \\times 10^{-3}$ m'), true);
+});
+
+test('barres obliques : « des / der » = « des/der »', () => {
+  const ex = { reponse: 'des / der', attendu: { accepte: ['des / der'] } };
+  assert.equal(comparerExercice('des/der', ex, 'allemand'), true);
+});
