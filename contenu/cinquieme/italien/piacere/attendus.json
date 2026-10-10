@@ -53,6 +53,23 @@
       "A mia sorella piacciono i gatti."
     ]
   },
+  "10": {
+    "reponse": "Mi piace la pizza e mi piacciono i gelati.",
+    "criteres": [
+      {
+        "idee": "C'est la pizza qui plaît : Mi piace la pizza",
+        "mots": [
+          "mi piace la pizza"
+        ]
+      },
+      {
+        "idee": "« i gelati » est pluriel → mi piacciono",
+        "mots": [
+          "piacciono"
+        ]
+      }
+    ]
+  },
   "11": {
     "reponse": "Mi piace la musica.",
     "accepte": [
@@ -197,6 +214,45 @@
       "Elle aime les langues étrangères."
     ]
   },
+  "36": {
+    "reponse": "Parce que « i libri » est pluriel : le verbe s'accorde avec la chose aimée.",
+    "criteres": [
+      {
+        "idee": "Le verbe s'accorde avec la chose aimée, pas avec la personne",
+        "mots": [
+          "accord",
+          "chose aimee",
+          "pas avec la personne"
+        ]
+      },
+      {
+        "idee": "« i libri » est au pluriel → piacciono",
+        "mots": [
+          "plurie"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Non : seul le pronom change, « piace » reste au singulier.",
+    "criteres": [
+      {
+        "idee": "Non : seul le pronom change (mi → ci)",
+        "mots": [
+          "non",
+          "pronom"
+        ]
+      },
+      {
+        "idee": "« piace » reste au singulier car « il mare » est singulier",
+        "mots": [
+          "singulier",
+          "reste",
+          "ne change pas"
+        ]
+      }
+    ]
+  },
   "38": {
     "reponse": "Gli piace il mare.",
     "accepte": [
@@ -228,6 +284,55 @@
       "Non mi piace il caffè."
     ]
   },
+  "43": {
+    "reponse": "Lire et les chats ; pas le football ; son frère aime le football.",
+    "criteres": [
+      {
+        "idee": "Elena aime lire",
+        "mots": [
+          "lire",
+          "lecture"
+        ]
+      },
+      {
+        "idee": "Elle aime les chats",
+        "mots": [
+          "chat"
+        ]
+      },
+      {
+        "idee": "Elle n'aime pas le football",
+        "mots": [
+          "pas le foot",
+          "aime pas le foot",
+          "deteste"
+        ]
+      },
+      {
+        "idee": "C'est son frère qui aime le football",
+        "mots": [
+          "frere"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "« leggere » est un infinitif (piace) ; « i gatti » est pluriel (piacciono).",
+    "criteres": [
+      {
+        "idee": "« leggere » est un infinitif → piace",
+        "mots": [
+          "infinitif"
+        ]
+      },
+      {
+        "idee": "« i gatti » est un nom pluriel → piacciono",
+        "mots": [
+          "plurie"
+        ]
+      }
+    ]
+  },
   "45": {
     "reponse": "Ti piace la matematica?",
     "accepte": [
@@ -247,6 +352,84 @@
     "reponse": "A mia madre piacciono i fiori.",
     "accepte": [
       "A mia madre piacciono i fiori."
+    ]
+  },
+  "48": {
+    "reponse": "Mi piace la pizza. Mi piace disegnare. Mi piacciono i cani.",
+    "criteres": [
+      {
+        "idee": "piace + nom singulier (Mi piace la pizza…)",
+        "mots": [
+          "mi piace la",
+          "mi piace il",
+          "mi piace lo",
+          "mi piace l"
+        ]
+      },
+      {
+        "idee": "piace + infinitif (Mi piace disegnare…)",
+        "mots": [
+          "disegnare",
+          "leggere",
+          "giocare",
+          "nuotare",
+          "cantare",
+          "ballare",
+          "cucinare",
+          "dormire"
+        ]
+      },
+      {
+        "idee": "piacciono + nom pluriel",
+        "mots": [
+          "piacciono"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "A mio padre piace cucinare. A mia sorella non piacciono gli sport.",
+    "criteres": [
+      {
+        "idee": "Avec un nom de personne : a mio padre, a mia sorella…",
+        "mots": [
+          "a mio",
+          "a mia",
+          "a miei",
+          "a mie"
+        ]
+      },
+      {
+        "idee": "Une phrase négative : « non » juste avant le verbe",
+        "mots": [
+          "non piace",
+          "non piacciono"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Mi piace la musica, mi piace ballare e a Luca piacciono i videogiochi.",
+    "criteres": [
+      {
+        "idee": "C'est la musique qui plaît : mi piace la musica",
+        "mots": [
+          "mi piace la musica"
+        ]
+      },
+      {
+        "idee": "Devant un infinitif : mi piace ballare",
+        "mots": [
+          "mi piace ballare"
+        ]
+      },
+      {
+        "idee": "« i videogiochi » est pluriel : a Luca piacciono i videogiochi",
+        "mots": [
+          "luca piacciono",
+          "piacciono i videogiochi"
+        ]
+      }
     ]
   }
 }
