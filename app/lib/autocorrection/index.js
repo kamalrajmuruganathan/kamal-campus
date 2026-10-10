@@ -34,6 +34,7 @@ function nettoyer(s) {
   return String(s ?? '')
     .replace(/[’‘`´]/g, "'")
     .replace(/μ/g, 'µ') // mu grec = symbole micro
+    .replace(/⩾/g, '≥').replace(/⩽/g, '≤')
     .replace(/∅/g, ' ensemble vide ')
     .replace(/[−–—]/g, '-')
     .replace(/[«»“”"¡¿]/g, ' ')
