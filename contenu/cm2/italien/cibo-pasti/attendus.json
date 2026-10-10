@@ -23,6 +23,24 @@
       "Vorrei una pizza. / Vorrei un gelato."
     ]
   },
+  "4": {
+    "reponse": "Vorrei un gelato, per favore.",
+    "criteres": [
+      {
+        "idee": "Commander avec « Vorrei un gelato »",
+        "mots": [
+          "vorrei",
+          "gelato"
+        ]
+      },
+      {
+        "idee": "Terminer par « per favore »",
+        "mots": [
+          "per favore"
+        ]
+      }
+    ]
+  },
   "5": {
     "reponse": "A colazione mangio pane. A cena bevo acqua.",
     "accepte": [
@@ -38,12 +56,48 @@
       "Vorrei una pizza, per favore."
     ]
   },
+  "7": {
+    "reponse": "Vorrei la pasta, per favore.",
+    "criteres": [
+      {
+        "idee": "Commander avec « Vorrei la pasta »",
+        "mots": [
+          "vorrei",
+          "pasta"
+        ]
+      },
+      {
+        "idee": "Terminer par « per favore »",
+        "mots": [
+          "per favore"
+        ]
+      }
+    ]
+  },
   "8": {
     "reponse": "A pranzo mangio la pasta e bevo acqua.",
     "accepte": [
       "A pranzo mangio la pasta e bevo acqua.",
       "A pranzo mangio la pasta e bevo l'acqua.",
       "A pranzo mangio la pasta e bevo dell'acqua."
+    ]
+  },
+  "9": {
+    "reponse": "Vorrei un gelato, per favore. Il conto, per favore.",
+    "criteres": [
+      {
+        "idee": "Commander : Vorrei un gelato, per favore",
+        "mots": [
+          "vorrei",
+          "gelato"
+        ]
+      },
+      {
+        "idee": "Demander l'addition : Il conto, per favore",
+        "mots": [
+          "conto"
+        ]
+      }
     ]
   },
   "10": {
@@ -69,6 +123,26 @@
       "pranzo, cena"
     ]
   },
+  "14": {
+    "reponse": "per favore = s'il vous plaît ; grazie = merci",
+    "criteres": [
+      {
+        "idee": "« per favore » = s'il vous plaît (pour demander)",
+        "mots": [
+          "s il vous plait",
+          "s il te plait",
+          "demander"
+        ]
+      },
+      {
+        "idee": "« grazie » = merci (pour remercier)",
+        "mots": [
+          "merci",
+          "remercier"
+        ]
+      }
+    ]
+  },
   "15": {
     "reponse": "manger, boire",
     "accepte": [
@@ -81,6 +155,25 @@
     "accepte": [
       "la colazione, il pranzo, la cena",
       "colazione, pranzo, cena"
+    ]
+  },
+  "17": {
+    "reponse": "a) l'acqua, il succo ; b) il gelato, la pizza, la pasta",
+    "criteres": [
+      {
+        "idee": "À boire : l'acqua, il succo",
+        "mots": [
+          "boire",
+          "acqua",
+          "succo"
+        ]
+      },
+      {
+        "idee": "À manger : il gelato, la pizza, la pasta",
+        "mots": [
+          "manger"
+        ]
+      }
     ]
   },
   "19": {
@@ -102,6 +195,24 @@
       "singulier ; pluriel",
       "singulier et pluriel",
       "Singulier en italien ; pluriel en français"
+    ]
+  },
+  "22": {
+    "reponse": "Vorrei un succo, per favore.",
+    "criteres": [
+      {
+        "idee": "Commander avec « Vorrei un succo »",
+        "mots": [
+          "vorrei",
+          "succo"
+        ]
+      },
+      {
+        "idee": "Terminer par « per favore »",
+        "mots": [
+          "per favore"
+        ]
+      }
     ]
   },
   "23": {
@@ -177,6 +288,23 @@
       "bevo"
     ]
   },
+  "34": {
+    "reponse": "la colazione = le petit-déjeuner",
+    "criteres": [
+      {
+        "idee": "« la colazione » = le petit-déjeuner",
+        "mots": [
+          "petit dejeuner"
+        ]
+      },
+      {
+        "idee": "« le dîner » se dit « la cena »",
+        "mots": [
+          "cena"
+        ]
+      }
+    ]
+  },
   "35": {
     "reponse": "Vorrei la pasta, per favore.",
     "accepte": [
@@ -190,6 +318,51 @@
       "une pizza et de l'eau",
       "une pizza et une eau",
       "pizza et eau"
+    ]
+  },
+  "38": {
+    "reponse": "Le serveur ; il demande ce que le client désire.",
+    "criteres": [
+      {
+        "idee": "C'est le serveur (il cameriere) qui parle",
+        "mots": [
+          "serveur"
+        ]
+      },
+      {
+        "idee": "Il demande ce que le client désire (Que désirez-vous ?)",
+        "mots": [
+          "desir",
+          "veut",
+          "voulez",
+          "commande",
+          "souhait"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Faux : on le dit à la fin pour demander l'addition.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "« il conto » = l'addition",
+        "mots": [
+          "addition",
+          "payer"
+        ]
+      },
+      {
+        "idee": "On le dit à la fin du repas",
+        "mots": [
+          "fin"
+        ]
+      }
     ]
   },
   "40": {
@@ -221,6 +394,56 @@
     "accepte": [
       "Cosa desidera?",
       "Che cosa desidera?"
+    ]
+  },
+  "46": {
+    "reponse": "Exemple : – Cosa desidera? – Vorrei la pasta e un'acqua, per favore. – … Il conto, per favore.",
+    "criteres": [
+      {
+        "idee": "Le serveur : Cosa desidera?",
+        "mots": [
+          "cosa desidera",
+          "desidera"
+        ]
+      },
+      {
+        "idee": "Commander : Vorrei la pasta e un'acqua, per favore",
+        "mots": [
+          "vorrei",
+          "pasta",
+          "acqua"
+        ]
+      },
+      {
+        "idee": "Demander l'addition : Il conto, per favore",
+        "mots": [
+          "conto"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Exemple : A colazione mangio pane e marmellata e bevo un succo. A cena mangio la pasta e bevo acqua.",
+    "criteres": [
+      {
+        "idee": "Le petit-déjeuner : A colazione mangio … / bevo …",
+        "mots": [
+          "colazione"
+        ]
+      },
+      {
+        "idee": "Le dîner : A cena mangio … / bevo …",
+        "mots": [
+          "cena"
+        ]
+      },
+      {
+        "idee": "Employer « mangio » et « bevo »",
+        "mots": [
+          "mangio",
+          "bevo"
+        ]
+      }
     ]
   },
   "48": {

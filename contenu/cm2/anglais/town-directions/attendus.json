@@ -61,6 +61,24 @@
       "There are two parks near here"
     ]
   },
+  "10": {
+    "reponse": "There is a park. There are two shops.",
+    "criteres": [
+      {
+        "idee": "Un lieu au singulier avec « There is »",
+        "mots": [
+          "there is",
+          "there s"
+        ]
+      },
+      {
+        "idee": "Des lieux au pluriel avec « There are »",
+        "mots": [
+          "there are"
+        ]
+      }
+    ]
+  },
   "11": {
     "reponse": "hospital, library, museum",
     "accepte": [
@@ -149,6 +167,24 @@
       "Excuse me is there a market near here"
     ]
   },
+  "28": {
+    "reponse": "Excuse me, how do I get to the park?",
+    "criteres": [
+      {
+        "idee": "Commencer poliment par « Excuse me »",
+        "mots": [
+          "excuse me",
+          "excuse"
+        ]
+      },
+      {
+        "idee": "Nommer le lieu avec l'article : the park",
+        "mots": [
+          "the park"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "Turn right, then go straight on.",
     "accepte": [
@@ -197,6 +233,26 @@
       "elle est en face du parc"
     ]
   },
+  "37": {
+    "reponse": "deux parcs ; non, il n'y a pas de musée",
+    "criteres": [
+      {
+        "idee": "Il y a deux parcs",
+        "mots": [
+          "deux",
+          "two"
+        ]
+      },
+      {
+        "idee": "Non, il n'y a pas de musée",
+        "mots": [
+          "pas de musee",
+          "non",
+          "no museum"
+        ]
+      }
+    ]
+  },
   "38": {
     "reponse": "tourner à droite",
     "accepte": [
@@ -210,6 +266,150 @@
     "accepte": [
       "There is There are",
       "is are"
+    ]
+  },
+  "45": {
+    "reponse": "The bank is between the hospital and the shop.",
+    "criteres": [
+      {
+        "idee": "Employer « between » (entre)",
+        "mots": [
+          "between"
+        ]
+      },
+      {
+        "idee": "La banque est entre l'hôpital et le magasin",
+        "mots": [
+          "hospital and the shop",
+          "hospital and",
+          "the hospital"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "There are two schools. The park is next to the station.",
+    "criteres": [
+      {
+        "idee": "two schools → pluriel → There are",
+        "mots": [
+          "there are"
+        ]
+      },
+      {
+        "idee": "À côté de = next to (il manque « to »)",
+        "mots": [
+          "next to"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Excuse me, where is the station? — Go straight on, then turn right.",
+    "criteres": [
+      {
+        "idee": "Demander poliment : Excuse me, where is the station?",
+        "mots": [
+          "excuse me",
+          "where is"
+        ]
+      },
+      {
+        "idee": "Aller tout droit : Go straight on",
+        "mots": [
+          "straight"
+        ]
+      },
+      {
+        "idee": "Puis tourner à droite : then turn right",
+        "mots": [
+          "turn right",
+          "right"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Exemple : There is a library. There are two parks. There isn't a museum.",
+    "criteres": [
+      {
+        "idee": "Un lieu au singulier : There is …",
+        "mots": [
+          "there is",
+          "there s"
+        ]
+      },
+      {
+        "idee": "Des lieux au pluriel : There are …",
+        "mots": [
+          "there are"
+        ]
+      },
+      {
+        "idee": "Un lieu qui n'existe pas : There isn't …",
+        "mots": [
+          "there isn t",
+          "there is not",
+          "there aren t"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Exemple : Go straight on, then turn right. The park is opposite the station.",
+    "criteres": [
+      {
+        "idee": "Au moins deux indications (go straight on, turn left, turn right)",
+        "mots": [
+          "straight",
+          "turn left",
+          "turn right",
+          "left",
+          "right"
+        ]
+      },
+      {
+        "idee": "Relier les étapes avec « then »",
+        "mots": [
+          "then"
+        ]
+      },
+      {
+        "idee": "Situer le lieu d'arrivée (next to, opposite, between…)",
+        "mots": [
+          "next to",
+          "opposite",
+          "between",
+          "is on",
+          "in front"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Exemple : My house is next to the bank and opposite the park.",
+    "criteres": [
+      {
+        "idee": "Situer sa maison avec next to, opposite ou between",
+        "mots": [
+          "next to",
+          "opposite",
+          "between"
+        ]
+      },
+      {
+        "idee": "Nommer deux lieux du quartier",
+        "mots": [
+          "the bank",
+          "the park",
+          "the school",
+          "the station",
+          "the shop",
+          "the library",
+          "the museum",
+          "the market"
+        ]
+      }
     ]
   }
 }

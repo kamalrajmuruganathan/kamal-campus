@@ -41,10 +41,52 @@
       "un una un"
     ]
   },
+  "7": {
+    "reponse": "Quiero una pizza y un zumo de naranja, por favor.",
+    "criteres": [
+      {
+        "idee": "Commander avec « Quiero … » (ou « Quisiera … »)",
+        "mots": [
+          "quiero",
+          "quisiera"
+        ]
+      },
+      {
+        "idee": "Une pizza et un jus d'orange : una pizza y un zumo de naranja",
+        "mots": [
+          "zumo",
+          "naranja"
+        ]
+      },
+      {
+        "idee": "Terminer par « por favor »",
+        "mots": [
+          "por favor"
+        ]
+      }
+    ]
+  },
   "8": {
     "reponse": "Quisiera un pastel. / La cuenta, por favor.",
     "accepte": [
       "Quisiera un pastel La cuenta por favor"
+    ]
+  },
+  "9": {
+    "reponse": "Exemple : Me gusta el queso. No me gusta el pescado.",
+    "criteres": [
+      {
+        "idee": "Un aliment aimé avec « Me gusta … »",
+        "mots": [
+          "me gusta"
+        ]
+      },
+      {
+        "idee": "Un aliment non aimé avec « No me gusta … »",
+        "mots": [
+          "no me gusta"
+        ]
+      }
     ]
   },
   "10": {
@@ -99,6 +141,43 @@
     "reponse": "la merienda, la cena",
     "accepte": [
       "la merienda la cena"
+    ]
+  },
+  "19": {
+    "reponse": "a) la leche, el zumo, el agua ; b) el pollo, el pescado",
+    "criteres": [
+      {
+        "idee": "À boire : la leche, el zumo, el agua",
+        "mots": [
+          "boire",
+          "leche"
+        ]
+      },
+      {
+        "idee": "À manger : el pollo, el pescado",
+        "mots": [
+          "manger",
+          "pollo"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "reponse": "la cena (c'est un repas, pas un aliment)",
+    "criteres": [
+      {
+        "idee": "L'intrus est « la cena »",
+        "mots": [
+          "cena"
+        ]
+      },
+      {
+        "idee": "C'est un repas (le dîner), les autres sont des aliments",
+        "mots": [
+          "repas",
+          "diner"
+        ]
+      }
     ]
   },
   "21": {
@@ -239,6 +318,42 @@
       "No me gustan los pasteles"
     ]
   },
+  "44": {
+    "reponse": "Parce que agua commence par un « a » accentué : on dit « el » pour éviter « la agua », mais le mot reste féminin (el agua fría).",
+    "criteres": [
+      {
+        "idee": "« agua » est un mot féminin",
+        "mots": [
+          "feminin"
+        ]
+      },
+      {
+        "idee": "Il commence par un « a » accentué (tonique)",
+        "mots": [
+          "accent",
+          "tonique",
+          "commence par"
+        ]
+      },
+      {
+        "idee": "On met « el » pour éviter que deux « a » se suivent (la agua)",
+        "mots": [
+          "la agua",
+          "eviter",
+          "se suivent",
+          "deux a"
+        ]
+      },
+      {
+        "idee": "L'adjectif reste au féminin : el agua fría",
+        "mots": [
+          "fria",
+          "reste feminin",
+          "adjectif"
+        ]
+      }
+    ]
+  },
   "45": {
     "reponse": "desea ; Quiero (ou Quisiera) ; gracias",
     "accepte": [
@@ -250,6 +365,87 @@
     "reponse": "¿Qué desea?",
     "accepte": [
       "Qué desea"
+    ]
+  },
+  "47": {
+    "reponse": "Exemple : – ¿Qué desea? – Quiero pescado y agua, por favor. – … – La cuenta, por favor. – ¡Gracias!",
+    "criteres": [
+      {
+        "idee": "Le serveur : ¿Qué desea?",
+        "mots": [
+          "que desea",
+          "desea"
+        ]
+      },
+      {
+        "idee": "Commander : Quiero pescado y agua, por favor",
+        "mots": [
+          "quiero",
+          "pescado"
+        ]
+      },
+      {
+        "idee": "Demander l'addition : La cuenta, por favor",
+        "mots": [
+          "cuenta"
+        ]
+      },
+      {
+        "idee": "Remercier : ¡Gracias!",
+        "mots": [
+          "gracias"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Exemple : Me encanta el chocolate. Me gustan las manzanas. No me gusta el pescado.",
+    "criteres": [
+      {
+        "idee": "Une chose adorée : Me encanta …",
+        "mots": [
+          "me encanta",
+          "encanta"
+        ]
+      },
+      {
+        "idee": "Une chose aimée : Me gusta … / Me gustan … (pluriel)",
+        "mots": [
+          "me gusta",
+          "me gustan"
+        ]
+      },
+      {
+        "idee": "Une chose non aimée : No me gusta …",
+        "mots": [
+          "no me gusta",
+          "no me gustan"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Exemple : Para el desayuno, como pan y bebo leche. Para la merienda, como una manzana.",
+    "criteres": [
+      {
+        "idee": "Le petit-déjeuner : Para el desayuno, como … / bebo …",
+        "mots": [
+          "desayuno"
+        ]
+      },
+      {
+        "idee": "Le goûter : Para la merienda, como …",
+        "mots": [
+          "merienda"
+        ]
+      },
+      {
+        "idee": "Employer « como » et « bebo »",
+        "mots": [
+          "como",
+          "bebo"
+        ]
+      }
     ]
   }
 }

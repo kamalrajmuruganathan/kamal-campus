@@ -5,6 +5,27 @@
       "e st t en t en"
     ]
   },
+  "2": {
+    "reponse": "ich spiele, du spielst, er spielt, wir spielen, ihr spielt, sie spielen",
+    "criteres": [
+      {
+        "idee": "ich spiele, du spielst, er spielt",
+        "mots": [
+          "ich spiele",
+          "du spielst",
+          "er spielt"
+        ]
+      },
+      {
+        "idee": "wir spielen, ihr spielt, sie spielen",
+        "mots": [
+          "wir spielen",
+          "ihr spielt",
+          "sie spielen"
+        ]
+      }
+    ]
+  },
   "3": {
     "reponse": "ich lerne, du lernst, wir lernen",
     "accepte": [
@@ -31,10 +52,56 @@
       "Ich stehe früh auf"
     ]
   },
+  "7": {
+    "reponse": "ich schlafe, du schläfst, er schläft",
+    "criteres": [
+      {
+        "idee": "ich schlafe (régulier)",
+        "mots": [
+          "ich schlafe"
+        ]
+      },
+      {
+        "idee": "du schläfst et er schläft : le a devient ä",
+        "mots": [
+          "du schlafst",
+          "er schlaft",
+          "schlafst",
+          "schlaft"
+        ]
+      }
+    ]
+  },
   "8": {
     "reponse": "Am Morgen frühstücke ich.",
     "accepte": [
       "Am Morgen frühstücke ich"
+    ]
+  },
+  "9": {
+    "reponse": "Ich stehe auf. Ich lerne. Ich spiele.",
+    "criteres": [
+      {
+        "idee": "Se lever : Ich stehe auf.",
+        "mots": [
+          "stehe auf",
+          "ich stehe"
+        ]
+      },
+      {
+        "idee": "Apprendre : Ich lerne.",
+        "mots": [
+          "ich lerne",
+          "lerne"
+        ]
+      },
+      {
+        "idee": "Jouer : Ich spiele.",
+        "mots": [
+          "ich spiele",
+          "spiele"
+        ]
+      }
     ]
   },
   "10": {
@@ -105,6 +172,27 @@
       "spielst"
     ]
   },
+  "20": {
+    "reponse": "ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen",
+    "criteres": [
+      {
+        "idee": "ich lerne, du lernst, er lernt",
+        "mots": [
+          "ich lerne",
+          "du lernst",
+          "er lernt"
+        ]
+      },
+      {
+        "idee": "wir lernen, ihr lernt, sie lernen",
+        "mots": [
+          "wir lernen",
+          "ihr lernt",
+          "sie lernen"
+        ]
+      }
+    ]
+  },
   "22": {
     "reponse": "Wir spielen.",
     "accepte": [
@@ -142,6 +230,26 @@
     "accepte": [
       "Er isst einen Apfel",
       "isst"
+    ]
+  },
+  "30": {
+    "reponse": "Parce que schlafen est irrégulier : a → ä avec du et er.",
+    "criteres": [
+      {
+        "idee": "« schlafen » est un verbe irrégulier",
+        "mots": [
+          "irregulier"
+        ]
+      },
+      {
+        "idee": "Avec du et er/sie/es, le a devient ä",
+        "mots": [
+          "devient",
+          "trema",
+          "a ae",
+          "change"
+        ]
+      }
     ]
   },
   "31": {
@@ -255,6 +363,32 @@
     "reponse": "Er steht auf. Er frühstückt. Er lernt.",
     "accepte": [
       "Er steht auf Er frühstückt Er lernt"
+    ]
+  },
+  "50": {
+    "reponse": "Du isst. Du schläfst. Du spielst.",
+    "criteres": [
+      {
+        "idee": "Du isst. (essen : e → i)",
+        "mots": [
+          "du isst",
+          "isst"
+        ]
+      },
+      {
+        "idee": "Du schläfst. (schlafen : a → ä)",
+        "mots": [
+          "du schlafst",
+          "schlafst"
+        ]
+      },
+      {
+        "idee": "Du spielst. (terminaison -st)",
+        "mots": [
+          "du spielst",
+          "spielst"
+        ]
+      }
     ]
   }
 }
