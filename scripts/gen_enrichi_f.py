@@ -425,16 +425,16 @@ def gen_1_energie_electrique():
               f"Quelle est l'intensité du courant qui traverse {app} alimenté sous ${vex(U, 'V')}$ ?",
               [f"$I = \\dfrac{{P}}{{U}} = \\dfrac{{{ex(P)}}}{{{ex(U)}}} \\approx {val(I, 'A', ncs)}$."], f"$I \\approx {val(I, 'A', ncs)}$")
     # --- énergie (9)
-    prix = 0.25
+    prix = 0.20
     for app, P, hs in [("un radiateur de 1 500 W", 1500, "3.0"), ("un four de 2 500 W", 2500, "0.75")]:
         h = float(hs)
         E = P * h * 3600
         kwh = P * h / 1000
         L.add("application", "energie",
-              f"Calculer l'énergie consommée par {app} qui fonctionne pendant ${vex(hs, 'h')}$, en joules puis en kilowattheures. Quel est le coût, à ${ex(prix)}$ € le kWh ?",
+              f"Calculer l'énergie consommée par {app} qui fonctionne pendant ${vex(hs, 'h')}$, en joules puis en kilowattheures. Quel est le coût, à $0{{,}}20$ € le kWh ?",
               [f"$\\Delta t = {ex(hs)} \\times 3\\,600 = {val(h * 3600, 's')}$ ; $E = P \\Delta t = {ex(P)} \\times {num(h * 3600)} = {val(E, 'J')}$.",
                f"En kWh : $E = {ex(P / 1000)}\\ \\mathrm{{kW}} \\times {ex(hs)}\\ \\mathrm{{h}} = {val(kwh, 'kWh')}$.",
-               f"Coût : ${num(kwh)} \\times 0{{,}}25 = {euros(kwh * prix)}$ €."],
+               f"Coût : ${num(kwh)} \\times 0{{,}}20 = {euros(kwh * prix)}$ €."],
               f"${val(E, 'J')}$, ${val(kwh, 'kWh')}$, ${euros(kwh * prix)}$ €")
     E = 2000 * 150
     L.add("application", "energie", "Une bouilloire de $2\\,000\\ \\mathrm{W}$ chauffe de l'eau pendant 2 min 30 s. Calculer l'énergie électrique reçue, en joules puis en kWh.",
@@ -1424,7 +1424,7 @@ def gen_T_decrire_mouvement():
     L.add("probleme", "vitesse-enregistrement", f"Une bille tombe sans vitesse initiale ; on la filme avec $\\tau = 0{{,}}050\\ \\mathrm{{s}}$. Distances parcourues (en m, axe vers le bas) : {tab}. Estimer $v_2$, $v_4$, puis l'accélération en 3. Comparer à $g = 9{{,}}81\\ \\mathrm{{m\\cdot s^{{-2}}}}$.",
           [f"$v_2 \\approx \\dfrac{{{fx(ys[3], 3)} - {fx(ys[1], 3)}}}{{0{{,}}10}} = {val(vb2, MS, 3)}$ ; $v_4 \\approx \\dfrac{{{fx(ys[5], 3)} - {fx(ys[3], 3)}}}{{0{{,}}10}} = {val(vb4, MS, 3)}$.",
            f"$a_3 \\approx \\dfrac{{v_4 - v_2}}{{2\\tau}} = {val((vb4 - vb2) / 0.1, MS2, 3)}$ : c'est bien la valeur de $g$, aux erreurs de mesure près."],
-          f"$a \\approx {val((vb4 - vb2) / 0.1, MS2, 3)}$")
+          f"$v_2 \\approx {val(vb2, MS, 3)}$ ; $v_4 \\approx {val(vb4, MS, 3)}$ ; $a_3 \\approx {val((vb4 - vb2) / 0.1, MS2, 3)}$, proche de $g = 9{{,}}81\\ \\mathrm{{m\\cdot s^{{-2}}}}$ (chute libre)")
     tau = 0.20
     xs = [round(4.0 * (i * tau) - 1.0 * (i * tau) ** 2, 3) for i in range(7)]
     w2, w4 = (xs[3] - xs[1]) / (2 * tau), (xs[5] - xs[3]) / (2 * tau)
@@ -1935,9 +1935,10 @@ def gen_T_equilibre():
                          (PBI, {"Pb^{2+}": 1.3e-3, "I^-": 2.6e-3}),
                          (CUAG, {"Cu^{2+}": 5.0e-2, "Ag^+": 2.0e-2})]:
         q = _qr_val(R, P, conc)
+        nq = 3 if R is CUAG[0] else 2  # 0,050 / 0,020² = 125 exactement (pas 130)
         data = " ; ".join(f"$[\\mathrm{{{e}}}] = {sci(v, 2)}" + un(MOLL) + "$" for e, v in conc.items())
         L.add("intermediaire", "quotient-reaction", f"Pour la réaction ${_eq_txt(R, P)}$, calculer le quotient de réaction quand : {data}.",
-              [f"$Q_r = {_qr_expr(R, P)} = {_qr_num(R, P, conc)} = {num(q, 2)}$ (sans unité)."], f"$Q_r \\approx {num(q, 2)}$")
+              [f"$Q_r = {_qr_expr(R, P)} = {_qr_num(R, P, conc)} = {num(q, nq)}$ (sans unité)."], f"$Q_r \\approx {num(q, nq)}$" if nq == 2 else f"$Q_r = {num(q, nq)}$")
     # --- sens d'évolution (10)
     cas = [(AMM, "3{,}1\\times 10^{4}", 3.1e4, {"CH_3COOH": 0.010, "NH_3": 0.010, "CH_3COO^-": 0.020, "NH_4^+": 0.020}, "intermediaire"),
            (FESCN, "1{,}0\\times 10^{2}", 1.0e2, {"Fe^{3+}": 1.0e-3, "SCN^-": 1.0e-3, "FeSCN^{2+}": 5.0e-4}, "intermediaire"),
@@ -1978,13 +1979,13 @@ def gen_T_equilibre():
     for nom, Ka, c in acides:
         x = (-Ka + math.sqrt(Ka * Ka + 4 * Ka * c)) / 2
         pH = Decimal(-math.log10(x)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-        h = float(arr(10 ** (-float(pH)), 2))
+        h = float(arr(10 ** (-float(pH)), 3))  # 3 chiffres : évite un τ faussé par l'arrondi (8,1 % et non 8,0 %)
         tau = h / c
         tau_res[(nom, c)] = (pH, tau)
         pHt = _plain(pH)
         L.add("intermediaire", "taux-avancement", f"Une solution {nom} de concentration $c = {sci(c, 2)}" + un(MOLL) + f"$ a un pH de ${pHt}$. Calculer le taux d'avancement final de la réaction de l'acide avec l'eau et conclure.",
-              [f"$[\\mathrm{{H_3O^+}}]_f = 10^{{-{pHt}}} = {val(h, MOLL, 2)}$.",
-               f"$x_f = [\\mathrm{{H_3O^+}}]_f \\times V$ et $x_{{\\max}} = c \\times V$, d'où $\\tau = \\dfrac{{[\\mathrm{{H_3O^+}}]_f}}{{c}} = \\dfrac{{{sci(h, 2)}}}{{{sci(c, 2)}}} = {num(tau, 2)}$, soit ${pct(tau, 2)}$.",
+              [f"$[\\mathrm{{H_3O^+}}]_f = 10^{{-{pHt}}} \\approx {val(h, MOLL, 3)}$.",
+               f"$x_f = [\\mathrm{{H_3O^+}}]_f \\times V$ et $x_{{\\max}} = c \\times V$, d'où $\\tau = \\dfrac{{[\\mathrm{{H_3O^+}}]_f}}{{c}} = \\dfrac{{{sci(h, 3)}}}{{{sci(c, 2)}}} = {num(tau, 2)}$, soit ${pct(tau, 2)}$.",
                "$\\tau < 1$ : la transformation est non totale, le système atteint un état d'équilibre."],
               f"$\\tau \\approx {pct(tau, 2)}$ : transformation non totale")
     L.add("application", "taux-avancement", "Une solution d'acide chlorhydrique de concentration $1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ a un pH de $2{,}00$. Calculer le taux d'avancement final de la réaction de $\\mathrm{HCl}$ avec l'eau.",

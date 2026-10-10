@@ -10,6 +10,10 @@ def fr(x, dec=2):
     s = str(int(round(r))) if abs(r-round(r)) < 1e-9 else f"{r:.{dec}f}".rstrip('0').rstrip('.')
     return s.replace('.', ',')
 
+def fr1(x):
+    """Arrondi au dixième, zéro final conservé (22,0)."""
+    return f"{x:.1f}".replace('.', ',')
+
 def simplifie_racine(n):
     a, b, i = 1, n, 2
     while i*i <= b:
@@ -21,7 +25,8 @@ def rac_latex(n):
     r = math.isqrt(n)
     if r*r == n: return str(r)
     a, b = simplifie_racine(n)
-    ex = f"{a}\\sqrt{{{b}}}" if a != 1 else f"\\sqrt{{{b}}}"
+    if a == 1: return f"\\sqrt{{{n}}} \\approx {fr(math.sqrt(n))}"
+    ex = f"{a}\\sqrt{{{b}}}"
     return f"\\sqrt{{{n}}} = {ex} \\approx {fr(math.sqrt(n))}"
 
 def frac_latex(f):
@@ -465,7 +470,7 @@ def gen_representation_espace():
     for (r,h) in [(2,5),(3,4),(5,10),(1,7),(4,3),(2,9),(6,2),(3,8),(5,6),(2,12)]:
         v=r*r*h
         add("intermediaire","volume-cylindre", f"Calculer le volume d'un cylindre de rayon {r} cm et de hauteur {h} cm (en fonction de $\\pi$, puis arrondi au dixième).",
-            [f"$V = \\pi r^2 h = \\pi \\times {r}^2 \\times {h} = {v}\\pi \\approx {fr(math.pi*v,1)}$ cm³."], f"${v}\\pi \\approx {fr(math.pi*v,1)}$ cm³")
+            [f"$V = \\pi r^2 h = \\pi \\times {r}^2 \\times {h} = {v}\\pi \\approx {fr1(math.pi*v)}$ cm³."], f"${v}\\pi \\approx {fr1(math.pi*v)}$ cm³")
     for (cote,h) in [(3,6),(4,9),(5,12),(2,9),(6,5),(4,6),(3,10),(5,9),(2,15),(6,4)]:
         base=cote*cote; v=Fraction(base*h,3)
         add("approfondissement","volume-pyramide", f"Calculer le volume d'une pyramide à base carrée de côté {cote} cm et de hauteur {h} cm.",
@@ -473,7 +478,7 @@ def gen_representation_espace():
     for (r,) in [(3,),(2,),(6,),(1,),(9,),(5,),(4,),(12,),(10,),(8,)]:
         v=Fraction(4,3)*r**3
         add("approfondissement","volume-boule", f"Calculer le volume d'une boule de rayon {r} cm (en fonction de $\\pi$, puis arrondi au dixième).",
-            [f"$V = \\dfrac{{4}}{{3}}\\pi r^3 = \\dfrac{{4}}{{3}}\\pi \\times {r}^3 = {frac_latex(v)}\\pi \\approx {fr(float(v)*math.pi,1)}$ cm³."], f"${frac_latex(v)}\\pi \\approx {fr(float(v)*math.pi,1)}$ cm³")
+            [f"$V = \\dfrac{{4}}{{3}}\\pi r^3 = \\dfrac{{4}}{{3}}\\pi \\times {r}^3 = {frac_latex(v)}\\pi \\approx {fr1(float(v)*math.pi)}$ cm³."], f"${frac_latex(v)}\\pi \\approx {fr1(float(v)*math.pi)}$ cm³")
     _i=2
     while len(E)<50:
         _L,_l,_h=_i,_i+1,_i+3; _v=_L*_l*_h
