@@ -47,7 +47,9 @@ function protegerNombres(s) {
   return s
     // Espaces des milliers : « 1 359 » = « 1359 » (groupes de 3 chiffres après le premier).
     .replace(/(?<![\d,.])(\d{1,3})((?: \d{3})+)(?![\d])/g, (_, a, b) => a + b.replace(/ /g, ''))
-    .replace(/(\d)[,.](?=\d)/g, '$1§')          // virgule / point décimal
+    // Virgule / point décimal (sauf dans un ensemble ou une liste : « {2,4,6} », « [8,11] »).
+    .replace(/(\d)[,.](?=\d)/g, (m, d, i, tout) => (/[{[]/.test(tout) ? d + '#' : d + '§'))
+    .replace(/(\d§\d*?)0+(?!\d)/g, '$1').replace(/§(?!\d)/g, '') // « 0,80 » = « 0,8 » ; « 2,0 » = « 2 »
     .replace(/(^|[^\p{L}\d])-\s*(?=\d)/gu, '$1~') // signe moins
     .replace(/(\d)[\s,;:/]+(?=[\d~])/g, '$1#');  // deux nombres qui se suivent
 }
@@ -110,6 +112,10 @@ function normUnite(u) {
   // Préfixes méga / milli : « MW » ≠ « mW », « Mo » ≠ « mo ».
   if (/^[mM][a-zA-ZΩ]{1,2}$/.test(brut) && !/^min$/i.test(brut)) s = brut[0] + s.slice(1);
   s = s.replace(/\^2|2$/, '²').replace(/\^3|3$/, '³');
+  // « mol/L » = « mol.L-1 » = « mol·L⁻¹ » ; « m/s » = « m·s⁻¹ ».
+  s = s.replace(/\^?\{?\(?-1\)?\}?/g, '⁻¹').replace(/[.*×]/g, '·');
+  const parts = s.split('/');
+  if (parts.length === 2 && parts[0] && parts[1]) s = `${parts[0]}·${parts[1]}⁻¹`;
   const syn = {
     euro: '€', euros: '€', eur: '€',
     degre: '°', degres: '°',
@@ -147,7 +153,8 @@ function lireNombre(texte) {
   }
   if (signe === '-') valeur = -valeur;
   const collee = s.slice(tout.length);
-  const reste = collee.trim();
+  // « L-1 », « s^-1 », « s^{-1} » : exposant −1 écrit au clavier.
+  const reste = collee.trim().replace(/\^?\{?\(?-1\)?\}?(?![\d])/g, '⁻¹');
   // « -4x », « 3n » : une lettre collée au nombre est une variable, pas une unité.
   if (/^[a-zA-Z]\b/.test(collee) && !/^[mgsVAWNJLhK]\b/.test(collee)) return null;
   if (reste && !/^[\p{L}µ°%€][\p{L}µ°%€²³/.·\-⁻¹ ]{0,14}(?:(?<=\p{L})[23])?$/u.test(reste)) return null;
@@ -168,13 +175,15 @@ function lireNombre(texte) {
 const ARTICLES = /^(?:(?:le|la|les|un|une)\s+|l'\s*)/;
 
 /** Clé de comparaison d'un texte court. */
-function cleTexte(s, { articles = true, ignorerAccents = true } = {}) {
-  let x = sansPonctuationFinale(nettoyer(s)).toLowerCase();
+function cleTexte(s, { articles = true, ignorerAccents = true, espaces = false } = {}) {
+  let x = sansPonctuationFinale(nettoyer(s)).toLowerCase().replace(/œ/g, 'oe').replace(/æ/g, 'ae');
   if (ignorerAccents) x = sansAccents(x);
   if (articles) {
     const sans = x.replace(ARTICLES, '');
     if (sans) x = sans;
   }
+  // En langue étrangère, les espaces comptent (« dagli » ≠ « da gli ») ; ailleurs on les ignore.
+  if (espaces) return protegerNombres(x).replace(/\s+/g, ' ').trim();
   return protegerNombres(x).replace(/[\s\-‐]+/g, '');
 }
 
@@ -318,7 +327,7 @@ function egalNombre(att, saisie) {
 const ACCENTS_STRICTS = new Set(['francais', ...LANGUES]);
 
 function egalTexte(att, saisie, matiere = null) {
-  const opts = { articles: att.articles };
+  const opts = { articles: att.articles, espaces: LANGUES.has(matiere) };
   const a = cleTexte(att.valeur, { ...opts, ignorerAccents: false });
   const s = cleTexte(saisie, { ...opts, ignorerAccents: false });
   if (a === s) return true;
@@ -456,10 +465,17 @@ export function consigneExercice(ex, matiere = null) {
 export function comparerExercice(saisie, ex, matiere = null) {
   const s = nettoyer(saisie);
   if (!s) return false;
+  // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
+  const sansS = s.replace(/^S\s*=\s*(?=[{[])/, '');
+  if (sansS !== s) return comparerExercice(sansS, ex, matiere) || comparerUne(s, ex, matiere);
+  return comparerUne(s, ex, matiere);
+}
+
+function comparerUne(s, ex, matiere) {
   const a = analyserExercice(ex, matiere);
   if (a.type !== 'auto') return false;
   if (a.ensemble) {
-    const cle = (x) => clePhrase(sansDollars(x) ?? x, { articles: !LANGUES.has(matiere), ignorerAccents: false });
+    const cle = (x) => clePhrase(sansDollars(x) ?? x, { articles: !LANGUES.has(matiere), ignorerAccents: false, espaces: LANGUES.has(matiere) });
     const voulus = a.ensemble.map(cle);
     const donnes = elements(s).map(cle);
     if (donnes.length !== voulus.length) return false;
@@ -476,7 +492,7 @@ export function comparerExercice(saisie, ex, matiere = null) {
   return a.alternatives.some((alt) => {
     if (alt.kind === 'nombre') return !!nbSaisi && egalNombre(alt, nbSaisi);
     if (alt.phrase) {
-      const opts = { articles: alt.articles, ignorerAccents: false };
+      const opts = { articles: alt.articles, ignorerAccents: false, espaces: LANGUES.has(matiere) };
       const x = clePhrase(alt.valeur, opts);
       const y = clePhrase(texteSaisi, opts);
       if (x === y) return true;

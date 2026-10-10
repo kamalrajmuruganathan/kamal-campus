@@ -223,3 +223,30 @@ test('forme texte : espaces des milliers (« 1 359 » = « 1359 »)', () => {
   assert.equal(comparerExercice('quotient 1 359 reste 2', ex), true);
   assert.equal(comparerExercice('quotient 135 reste 92', ex), false);
 });
+
+test('langues : les espaces comptent (« dagli » ≠ « da gli ») ; œ = oe partout', () => {
+  const ex = { reponse: 'dagli studenti', attendu: { accepte: ['dagli studenti'] } };
+  assert.equal(comparerExercice('da gli studenti', ex, 'italien'), false);
+  assert.equal(comparerExercice('Dagli studenti.', ex, 'italien'), true);
+  const ex2 = { reponse: 'le cœur', attendu: { accepte: ['le cœur'] } };
+  assert.equal(comparerExercice('coeur', ex2, 'svt'), true);
+});
+
+test('unités composées : mol/L = mol.L-1 = mol·L⁻¹ ; listes « {2,4,6} » ; 0,80 = 0,8 dans un texte', () => {
+  assert.equal(comparer('0,5 mol.L-1', '$0{,}5$ mol/L'), true);
+  assert.equal(comparer('0,5 mol·L⁻¹', '$0{,}5$ mol/L'), true);
+  assert.equal(comparer('3 m.s-1', '3 m/s'), true);
+  const ex = { reponse: '{2 ; 4 ; 6}', attendu: { accepte: ['{2 ; 4 ; 6}'] } };
+  assert.equal(comparerExercice('{2,4,6}', ex), true);
+  assert.equal(comparerExercice('{2,46}', ex), false);
+  const ex2 = { reponse: 'U = 0,80 V et I = 2,0 A', attendu: { accepte: ['0,80 V et 2,0 A'] } };
+  assert.equal(comparerExercice('0,8 V et 2 A', ex2), true);
+  assert.equal(comparerExercice('8 V et 2 A', ex2), false);
+});
+
+test('« S = {1 ; 2} » accepté pour un ensemble de solutions', () => {
+  const ex = { reponse: '$S = \\{1\\,;2\\}$', attendu: { accepte: ['{1 ; 2}', '1 et 2'] } };
+  assert.equal(comparerExercice('S = {1 ; 2}', ex), true);
+  assert.equal(comparerExercice('S={1;2}', ex), true);
+  assert.equal(comparerExercice('S = {1 ; 3}', ex), false);
+});

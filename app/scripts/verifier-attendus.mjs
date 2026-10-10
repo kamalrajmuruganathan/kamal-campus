@@ -88,7 +88,7 @@ for (const chemin of chapitres) {
         if (cles[0] === 'ensemble' && liste.length < 2) { pb.push(`${ici} : « ensemble » demande au moins 2 éléments`); continue; }
         if (/^\s*(?:par\s+)?ex(?:emple|\.)\b|exemple de réponse|exemples? possibles?|réponses? possibles?|réponse libre|\((?:par\s+)?exemple\)|,\s*par exemple\s*:/i.test(ex.reponse)) { pb.push(`${ici} : réponse « exemple » → plusieurs bonnes réponses, pas d'attendu`); continue; }
         const avecAtt = { ...ex, attendu: cles[0] === 'ensemble' ? { ensemble: liste } : { accepte: liste } };
-        if (typeExercice(avecAtt, matiere) !== 'auto') { pb.push(`${ici} : une forme n'est pas vérifiable (formule, phrase > 8 mots…) : ${JSON.stringify(liste)}`); continue; }
+        if (typeExercice(avecAtt, matiere) !== 'auto') { pb.push(`${ici} : une forme n'est pas vérifiable (formule, plus de 12 mots…) : ${JSON.stringify(liste)}`); continue; }
         if (cles[0] === 'ensemble') {
           if (!comparerExercice(liste.join(', '), avecAtt, matiere)) pb.push(`${ici} : l'appli refuserait « ${liste.join(', ')} »`);
           if (liste.some((x) => /,|\bet\b/.test(x))) pb.push(`${ici} : un élément d'« ensemble » contient une virgule ou « et » (il serait coupé en deux)`);
