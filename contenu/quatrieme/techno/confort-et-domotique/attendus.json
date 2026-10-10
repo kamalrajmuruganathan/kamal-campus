@@ -1,9 +1,200 @@
 {
+  "1": {
+    "reponse": "La domotique automatise un logement pour trois besoins : confort, sécurité et économie d'énergie.",
+    "criteres": [
+      {
+        "idee": "La domotique automatise et contrôle les équipements d'un logement",
+        "mots": [
+          "automatis",
+          "control",
+          "automatique"
+        ]
+      },
+      {
+        "idee": "Le confort (régler la température ou la lumière)",
+        "mots": [
+          "confort"
+        ]
+      },
+      {
+        "idee": "La sécurité (détecter une intrusion, une fumée, une fuite)",
+        "mots": [
+          "securit"
+        ]
+      },
+      {
+        "idee": "Les économies d'énergie (couper le chauffage fenêtre ouverte)",
+        "mots": [
+          "econom"
+        ]
+      }
+    ]
+  },
   "2": {
     "reponse": "a) actionneur, b) capteur, c) actionneur, d) capteur.",
     "accepte": [
       "a) actionneur, b) capteur, c) actionneur, d) capteur",
       "actionneur, capteur, actionneur, capteur"
+    ]
+  },
+  "3": {
+    "reponse": "Capteur (mesure) → unité de traitement (décide) → actionneur (agit).",
+    "criteres": [
+      {
+        "idee": "Ordre : capteur, unité de traitement, actionneur",
+        "mots": [
+          "capteur unite",
+          "capteur puis",
+          "capteur traitement",
+          "capteur programme"
+        ]
+      },
+      {
+        "idee": "Le capteur mesure (acquiert l'information)",
+        "mots": [
+          "mesure",
+          "acquier",
+          "detect"
+        ]
+      },
+      {
+        "idee": "L'unité de traitement décide en comparant à des conditions",
+        "mots": [
+          "decid",
+          "compar",
+          "decision"
+        ]
+      },
+      {
+        "idee": "L'actionneur agit (éclairer, chauffer, ouvrir)",
+        "mots": [
+          "agit",
+          "action",
+          "eclair",
+          "chauff",
+          "ouvr"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "reponse": "SI présence ET luminosité < 100 lux ALORS allumer SINON éteindre ; à 300 lux la lampe reste éteinte.",
+    "criteres": [
+      {
+        "idee": "SI présence ET luminosité < 100 lux",
+        "mots": [
+          "si presence et",
+          "presence et luminosite",
+          "si presence"
+        ]
+      },
+      {
+        "idee": "ALORS allumer la lampe, SINON l'éteindre",
+        "mots": [
+          "alors allumer",
+          "sinon eteindre",
+          "sinon"
+        ]
+      },
+      {
+        "idee": "À 300 lux, la condition est fausse : la lampe reste éteinte",
+        "mots": [
+          "reste eteinte",
+          "eteinte",
+          "fausse",
+          "ne s allume pas"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "A est en boucle ouverte, B en boucle fermée ; le retour d'information (mesure par capteur) permet au système B de se corriger tout seul.",
+    "criteres": [
+      {
+        "idee": "A est en boucle ouverte",
+        "mots": [
+          "a est en boucle ouverte",
+          "a boucle ouverte",
+          "a en boucle ouverte",
+          "a ouverte",
+          "systeme a est"
+        ]
+      },
+      {
+        "idee": "B est en boucle fermée",
+        "mots": [
+          "b est en boucle fermee",
+          "b boucle fermee",
+          "b en boucle fermee",
+          "b fermee",
+          "systeme b est"
+        ]
+      },
+      {
+        "idee": "Le retour d'information : un capteur mesure le résultat",
+        "mots": [
+          "mesure",
+          "capteur",
+          "retour"
+        ]
+      },
+      {
+        "idee": "Il permet au système de se corriger tout seul",
+        "mots": [
+          "corrig",
+          "ajust",
+          "tout seul"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "Capteur d'ouverture + capteur de température, actionneur = chauffage ; SI fenêtre ouverte couper, SINON SI T < 18 °C allumer, SINON couper. Il économise l'énergie (pas de chauffage fenêtre ouverte) tout en gardant le confort (rallumage automatique).",
+    "criteres": [
+      {
+        "idee": "Capteurs : capteur d'ouverture de fenêtre et capteur de température",
+        "mots": [
+          "capteur d ouverture",
+          "ouverture",
+          "temperature"
+        ]
+      },
+      {
+        "idee": "Actionneur : la commande du chauffage",
+        "mots": [
+          "chauffage",
+          "radiateur",
+          "relais",
+          "resistance"
+        ]
+      },
+      {
+        "idee": "SI fenêtre ouverte ALORS couper le chauffage",
+        "mots": [
+          "si fenetre ouverte",
+          "si la fenetre",
+          "couper"
+        ]
+      },
+      {
+        "idee": "SINON SI température < 18 °C ALORS allumer le chauffage",
+        "mots": [
+          "sinon si",
+          "18 c",
+          "18 degr",
+          "inferieure a 18",
+          "allumer"
+        ]
+      },
+      {
+        "idee": "Économie : on ne chauffe pas l'extérieur ; confort : rallumage automatique",
+        "mots": [
+          "econom",
+          "confort",
+          "exterieur",
+          "gaspill"
+        ]
+      }
     ]
   },
   "7": {
@@ -15,6 +206,110 @@
       "température, luminosité, mouvement, humidité",
       "température, lumière, présence, humidité",
       "température, lumière, mouvement, humidité"
+    ]
+  },
+  "8": {
+    "reponse": "Non : commander à distance depuis son téléphone est une commande connectée, mais l'utilisateur décide. L'automatisme, c'est quand le système réagit seul (par exemple à un capteur).",
+    "criteres": [
+      {
+        "idee": "Non, il a tort",
+        "mots": [
+          "non",
+          "tort"
+        ]
+      },
+      {
+        "idee": "Commander depuis son téléphone est une commande à distance (connectée) : c'est l'utilisateur qui décide",
+        "mots": [
+          "distance",
+          "decide",
+          "utilisateur",
+          "lui-meme",
+          "connect"
+        ]
+      },
+      {
+        "idee": "Un automatisme réagit seul, par exemple à un capteur",
+        "mots": [
+          "seul",
+          "tout seul",
+          "capteur",
+          "sans intervention"
+        ]
+      }
+    ]
+  },
+  "9": {
+    "reponse": "Le capteur mesure la température, le programme la compare à 19 °C et coupe le chauffage dès que la consigne est atteinte (retour d'information). Sans capteur, pas de correction possible : ce n'est plus un asservissement.",
+    "criteres": [
+      {
+        "idee": "Un capteur mesure la température de la pièce",
+        "mots": [
+          "capteur",
+          "mesure"
+        ]
+      },
+      {
+        "idee": "Le programme la compare à la consigne de 19 °C",
+        "mots": [
+          "compar",
+          "consigne"
+        ]
+      },
+      {
+        "idee": "Il chauffe en dessous et coupe dès que 19 °C est atteint : c'est le retour d'information",
+        "mots": [
+          "coupe",
+          "atteint",
+          "retour",
+          "corrig"
+        ]
+      },
+      {
+        "idee": "Sans capteur, aucune correction possible : ce ne serait plus un asservissement",
+        "mots": [
+          "sans capteur",
+          "pas de correction",
+          "asserv",
+          "ne saurait",
+          "pas savoir",
+          "aucune"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "(a) capteur de luminosité ; (b) SI luminosité < seuil ALORS fermer le volet ; (c) le moteur du volet ; (d) boucle ouverte (il ne vérifie pas le résultat).",
+    "criteres": [
+      {
+        "idee": "(a) Un capteur de luminosité (photorésistance)",
+        "mots": [
+          "luminosit",
+          "photoresist",
+          "lumiere"
+        ]
+      },
+      {
+        "idee": "(b) SI luminosité < seuil ALORS fermer le volet",
+        "mots": [
+          "si luminosite",
+          "seuil",
+          "si la luminosite"
+        ]
+      },
+      {
+        "idee": "(c) Le moteur du volet",
+        "mots": [
+          "moteur"
+        ]
+      },
+      {
+        "idee": "(d) Boucle ouverte : il ne vérifie pas le résultat",
+        "mots": [
+          "boucle ouverte",
+          "ouverte"
+        ]
+      }
     ]
   },
   "11": {
@@ -32,6 +327,33 @@
       "automatiques ; seuls"
     ]
   },
+  "14": {
+    "reponse": "Faux : la lampe est un actionneur (elle éclaire) ; le capteur de lumière est la photorésistance.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "La lampe est un actionneur : elle produit de la lumière",
+        "mots": [
+          "actionneur",
+          "eclaire",
+          "produit"
+        ]
+      },
+      {
+        "idee": "Le capteur de lumière est la photorésistance",
+        "mots": [
+          "photoresist",
+          "capteur de luminosite",
+          "mesure"
+        ]
+      }
+    ]
+  },
   "15": {
     "reponse": "Un interrupteur ou un bouton-poussoir.",
     "accepte": [
@@ -39,6 +361,171 @@
       "un interrupteur",
       "un bouton-poussoir",
       "un bouton poussoir"
+    ]
+  },
+  "16": {
+    "reponse": "Elle traite l'information : elle lit les capteurs, compare à des conditions et décide de l'action.",
+    "criteres": [
+      {
+        "idee": "Elle contient le programme et traite l'information",
+        "mots": [
+          "programme",
+          "trait"
+        ]
+      },
+      {
+        "idee": "Elle lit les capteurs et compare à des conditions",
+        "mots": [
+          "capteur",
+          "lit",
+          "compar",
+          "condition"
+        ]
+      },
+      {
+        "idee": "Elle décide de l'action à envoyer aux actionneurs",
+        "mots": [
+          "decid",
+          "commande",
+          "actionneur"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "Exemple : le Wi-Fi et le Bluetooth (ou le Zigbee).",
+    "criteres": [
+      {
+        "idee": "Le Wi-Fi",
+        "mots": [
+          "wi-fi",
+          "wifi",
+          "wi fi"
+        ]
+      },
+      {
+        "idee": "Le Bluetooth ou le Zigbee",
+        "mots": [
+          "bluetooth",
+          "zigbee"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "Capteurs : thermistance, photorésistance, détecteur infrarouge. Actionneurs : sirène, résistance chauffante, électrovanne.",
+    "criteres": [
+      {
+        "idee": "Capteurs : thermistance, photorésistance, détecteur infrarouge",
+        "mots": [
+          "capteurs thermistance",
+          "capteurs la thermistance",
+          "thermistance photoresistance",
+          "thermistance, photoresistance",
+          "thermistance la photoresistance"
+        ]
+      },
+      {
+        "idee": "Actionneurs : sirène, résistance chauffante, électrovanne",
+        "mots": [
+          "actionneurs sirene",
+          "actionneurs la sirene",
+          "sirene resistance",
+          "sirene, resistance",
+          "sirene la resistance"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "LED : éclairer ; moteur : ouvrir ou fermer (volet, portail) ; résistance chauffante : chauffer ; buzzer : émettre un son.",
+    "criteres": [
+      {
+        "idee": "LED : éclairer",
+        "mots": [
+          "led eclair",
+          "led lumiere",
+          "led allum",
+          "led produit"
+        ]
+      },
+      {
+        "idee": "Moteur : ouvrir ou fermer (faire bouger)",
+        "mots": [
+          "moteur ouvr",
+          "moteur ferm",
+          "moteur boug",
+          "moteur tourn",
+          "moteur deplac",
+          "moteur mouv"
+        ]
+      },
+      {
+        "idee": "Résistance chauffante : chauffer",
+        "mots": [
+          "chauffante chauff",
+          "chauffante produit"
+        ]
+      },
+      {
+        "idee": "Buzzer : émettre un son",
+        "mots": [
+          "buzzer son",
+          "buzzer emet",
+          "buzzer sonn",
+          "buzzer bruit",
+          "buzzer alarme"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "reponse": "(a) capteur d'humidité du sol ; (b) détecteur de mouvement infrarouge ; (c) capteur de luminosité (photorésistance).",
+    "criteres": [
+      {
+        "idee": "(a) Un capteur d'humidité du sol",
+        "mots": [
+          "humidit"
+        ]
+      },
+      {
+        "idee": "(b) Un détecteur de mouvement (infrarouge) ou de présence",
+        "mots": [
+          "mouvement",
+          "presence",
+          "infrarouge"
+        ]
+      },
+      {
+        "idee": "(c) Un capteur de luminosité (photorésistance)",
+        "mots": [
+          "luminosit",
+          "photoresist",
+          "lumiere"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "reponse": "Une valeur de référence choisie par le concepteur, par exemple 100 lux pour décider qu'il fait sombre.",
+    "criteres": [
+      {
+        "idee": "Une valeur de référence choisie par le concepteur",
+        "mots": [
+          "valeur",
+          "reference",
+          "limite"
+        ]
+      },
+      {
+        "idee": "Exemple : 100 lux pour décider qu'il fait sombre",
+        "mots": [
+          "lux",
+          "exemple",
+          "degr",
+          "temperature"
+        ]
+      }
     ]
   },
   "22": {
@@ -49,12 +536,92 @@
       "allumé et éteint"
     ]
   },
+  "23": {
+    "reponse": "Boucle ouverte : il agit sans vérifier le résultat (pas de capteur).",
+    "criteres": [
+      {
+        "idee": "C'est une boucle ouverte",
+        "mots": [
+          "ouverte"
+        ]
+      },
+      {
+        "idee": "Il agit selon l'heure, sans vérifier le résultat",
+        "mots": [
+          "sans verifier",
+          "verifi",
+          "heure",
+          "horloge"
+        ]
+      },
+      {
+        "idee": "Pas de capteur, donc pas de retour d'information",
+        "mots": [
+          "pas de capteur",
+          "aucun capteur",
+          "sans capteur",
+          "retour"
+        ]
+      }
+    ]
+  },
   "24": {
     "reponse": "(a) commande à distance ; (b) automatisme ; (c) commande à distance.",
     "accepte": [
       "(a) commande à distance ; (b) automatisme ; (c) commande à distance",
       "a) commande à distance ; b) automatisme ; c) commande à distance",
       "commande à distance ; automatisme ; commande à distance"
+    ]
+  },
+  "25": {
+    "reponse": "Capteur : détecteur d'eau ; traitement : carte programmable ; actionneurs : électrovanne et buzzer.",
+    "criteres": [
+      {
+        "idee": "Capteur : le détecteur d'eau",
+        "mots": [
+          "detecteur",
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Unité de traitement : la carte programmable",
+        "mots": [
+          "carte",
+          "microcontr",
+          "programme"
+        ]
+      },
+      {
+        "idee": "Actionneurs : l'électrovanne (couper l'eau) et le buzzer (alarme)",
+        "mots": [
+          "electrovanne",
+          "vanne",
+          "buzzer",
+          "sirene"
+        ]
+      }
+    ]
+  },
+  "26": {
+    "reponse": "La thermistance mesure la température ; le capteur d'humidité mesure la quantité d'eau dans l'air.",
+    "criteres": [
+      {
+        "idee": "La thermistance mesure la température",
+        "mots": [
+          "thermistance mesure la temperature",
+          "temperature",
+          "chaleur"
+        ]
+      },
+      {
+        "idee": "Le capteur d'humidité mesure la quantité d'eau dans l'air",
+        "mots": [
+          "eau dans l air",
+          "vapeur",
+          "quantite d eau",
+          "humidite de l air"
+        ]
+      }
     ]
   },
   "27": {
@@ -66,12 +633,109 @@
       "(c), (a), (b)"
     ]
   },
+  "28": {
+    "reponse": "À l'économie d'énergie : on évite de chauffer l'extérieur.",
+    "criteres": [
+      {
+        "idee": "Il répond à l'économie d'énergie",
+        "mots": [
+          "econom"
+        ]
+      },
+      {
+        "idee": "Chauffer fenêtre ouverte, c'est chauffer l'extérieur : on évite ce gaspillage",
+        "mots": [
+          "exterieur",
+          "gaspill",
+          "dehors",
+          "perte"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "(a) allumée ; (b) éteinte ; (c) éteinte.",
     "accepte": [
       "(a) allumée ; (b) éteinte ; (c) éteinte",
       "a) allumée ; b) éteinte ; c) éteinte",
       "allumée ; éteinte ; éteinte"
+    ]
+  },
+  "30": {
+    "reponse": "Il faut baisser le seuil de luminosité (par exemple de 300 lux à 100 lux).",
+    "criteres": [
+      {
+        "idee": "Il faut modifier le seuil de luminosité",
+        "mots": [
+          "seuil"
+        ]
+      },
+      {
+        "idee": "Il faut le baisser (par exemple de 300 lux à 100 lux)",
+        "mots": [
+          "baisser",
+          "diminu",
+          "abaiss",
+          "reduire",
+          "plus bas"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "SI température > 4 °C ALORS faire sonner le buzzer SINON arrêter le buzzer (en boucle permanente).",
+    "criteres": [
+      {
+        "idee": "SI la température dépasse 4 °C ALORS le buzzer sonne",
+        "mots": [
+          "si temperature",
+          "si la temperature",
+          "alors"
+        ]
+      },
+      {
+        "idee": "SINON le buzzer reste silencieux (arrêté)",
+        "mots": [
+          "sinon"
+        ]
+      },
+      {
+        "idee": "La température est lue en permanence (boucle)",
+        "mots": [
+          "permanen",
+          "boucle",
+          "toujours",
+          "repeter"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "On ajoute un capteur d'humidité du sol : SI sol sec ALORS arroser SINON ne pas arroser ; l'arrosage s'arrête quand l'humidité est suffisante.",
+    "criteres": [
+      {
+        "idee": "On ajoute un capteur d'humidité du sol",
+        "mots": [
+          "humidit"
+        ]
+      },
+      {
+        "idee": "SI le sol est sec ALORS arroser, SINON ne pas arroser",
+        "mots": [
+          "si sol",
+          "si le sol",
+          "sec",
+          "sinon"
+        ]
+      },
+      {
+        "idee": "On arrête quand l'humidité est suffisante",
+        "mots": [
+          "arret",
+          "suffisant",
+          "assez humide"
+        ]
+      }
     ]
   },
   "33": {
@@ -91,6 +755,56 @@
       "17 °C : en marche ; 19 °C : à l'arrêt ; 20 °C : à l'arrêt"
     ]
   },
+  "35": {
+    "reponse": "Faux : le capteur mesure seulement ; c'est le programme qui compare au seuil et décide.",
+    "criteres": [
+      {
+        "idee": "C'est faux : le capteur ne fait que mesurer",
+        "mots": [
+          "faux",
+          "mesure",
+          "seulement"
+        ]
+      },
+      {
+        "idee": "C'est le programme qui compare au seuil et décide",
+        "mots": [
+          "programme",
+          "carte",
+          "compar",
+          "seuil"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "L'ensemble des objets connectés qui échangent des données par un réseau ; exemple : un thermostat connecté.",
+    "criteres": [
+      {
+        "idee": "L'ensemble des objets connectés qui échangent des données par un réseau",
+        "mots": [
+          "objets connectes",
+          "connect",
+          "echang",
+          "reseau",
+          "internet"
+        ]
+      },
+      {
+        "idee": "Exemple : un thermostat, une ampoule ou une caméra connectés",
+        "mots": [
+          "thermostat",
+          "ampoule",
+          "camera",
+          "enceinte",
+          "montre",
+          "frigo",
+          "refrigerateur",
+          "volet"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "Une liaison filaire (bus filaire) et une liaison sans fil par ondes radio (Wi-Fi).",
     "accepte": [
@@ -99,6 +813,402 @@
       "filaire ; sans fil",
       "filaire et Wi-Fi",
       "une liaison filaire et le Wi-Fi"
+    ]
+  },
+  "38": {
+    "reponse": "Détecteur de mouvement + capteur de luminosité ; lampe ; SI présence ET nuit ALORS allumer 2 min puis éteindre.",
+    "criteres": [
+      {
+        "idee": "Capteurs : détecteur de mouvement et capteur de luminosité",
+        "mots": [
+          "mouvement",
+          "presence",
+          "luminosit"
+        ]
+      },
+      {
+        "idee": "Actionneur : la lampe extérieure",
+        "mots": [
+          "lampe",
+          "lumiere",
+          "eclairage"
+        ]
+      },
+      {
+        "idee": "SI présence ET nuit ALORS allumer",
+        "mots": [
+          "si presence",
+          "et nuit",
+          "et luminosite",
+          "si mouvement",
+          "et il fait nuit"
+        ]
+      },
+      {
+        "idee": "Attendre 2 minutes puis éteindre",
+        "mots": [
+          "attendre",
+          "puis eteindre",
+          "eteindre"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "SI alarme activée ET porte ouverte ALORS faire sonner la sirène SINON sirène arrêtée. Capteurs : capteur d'ouverture, bouton d'activation ; actionneur : sirène.",
+    "criteres": [
+      {
+        "idee": "SI alarme activée ET porte ouverte ALORS faire sonner la sirène",
+        "mots": [
+          "si alarme",
+          "et porte",
+          "si l alarme",
+          "et la porte"
+        ]
+      },
+      {
+        "idee": "SINON la sirène reste arrêtée",
+        "mots": [
+          "sinon"
+        ]
+      },
+      {
+        "idee": "Capteurs : capteur d'ouverture et bouton d'activation",
+        "mots": [
+          "capteur d ouverture",
+          "ouverture",
+          "bouton",
+          "clavier"
+        ]
+      },
+      {
+        "idee": "Actionneur : la sirène",
+        "mots": [
+          "actionneur sirene",
+          "actionneur la sirene",
+          "actionneur est la sirene",
+          "sirene"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Le maintien automatique à 19 °C est un automatisme ; changer la consigne depuis le smartphone est une commande à distance.",
+    "criteres": [
+      {
+        "idee": "Le maintien automatique à 19 °C est l'automatisme",
+        "mots": [
+          "maintien",
+          "maintenir",
+          "tout seul",
+          "automatisme"
+        ]
+      },
+      {
+        "idee": "Changer la consigne depuis le smartphone est la commande à distance",
+        "mots": [
+          "distance",
+          "consigne",
+          "smartphone",
+          "telephone"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "Grâce au retour d'information, il n'agit que lorsque c'est nécessaire (le chauffage se coupe dès que la consigne est atteinte).",
+    "criteres": [
+      {
+        "idee": "En boucle fermée, un capteur mesure le résultat (retour d'information)",
+        "mots": [
+          "capteur",
+          "retour",
+          "mesure"
+        ]
+      },
+      {
+        "idee": "Le chauffage se coupe dès que la consigne est atteinte",
+        "mots": [
+          "coupe",
+          "consigne",
+          "atteint",
+          "arret"
+        ]
+      },
+      {
+        "idee": "On ne chauffe que le nécessaire, alors qu'en boucle ouverte on peut chauffer une pièce déjà chaude",
+        "mots": [
+          "necessaire",
+          "deja chaude",
+          "inutile",
+          "gaspill",
+          "besoin"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Capteur de vent → SI vent > seuil ALORS replier → moteur du store ; besoin principal : sécurité.",
+    "criteres": [
+      {
+        "idee": "Capteur : un capteur de vent (anémomètre)",
+        "mots": [
+          "anemometre",
+          "capteur de vent",
+          "vent"
+        ]
+      },
+      {
+        "idee": "Condition : SI vent > seuil ALORS replier le store",
+        "mots": [
+          "seuil",
+          "si vent",
+          "si le vent",
+          "si la vitesse"
+        ]
+      },
+      {
+        "idee": "Actionneur : le moteur du store",
+        "mots": [
+          "moteur"
+        ]
+      },
+      {
+        "idee": "Besoin principal : la sécurité",
+        "mots": [
+          "securit"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "Augmenter le seuil d'humidité (par exemple de 30 % à 40 %) pour arroser plus tôt.",
+    "criteres": [
+      {
+        "idee": "Il faut modifier le seuil d'humidité",
+        "mots": [
+          "seuil"
+        ]
+      },
+      {
+        "idee": "Il faut l'augmenter (par exemple de 30 % à 40 %) pour arroser plus tôt",
+        "mots": [
+          "augment",
+          "monter",
+          "plus haut",
+          "40 %",
+          "a 40",
+          "plus tot",
+          "relever"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Capteurs de luminosité et de température ; moteur du volet ; SI soleil fort ET T > 25 °C ALORS fermer ; confort et économie d'énergie.",
+    "criteres": [
+      {
+        "idee": "Capteurs : luminosité et température intérieure",
+        "mots": [
+          "luminosit",
+          "temperature"
+        ]
+      },
+      {
+        "idee": "Actionneur : le moteur du volet",
+        "mots": [
+          "moteur"
+        ]
+      },
+      {
+        "idee": "SI soleil fort ET température > seuil ALORS fermer le volet",
+        "mots": [
+          "si luminosite",
+          "si soleil",
+          "si la temperature",
+          "si temperature",
+          "alors fermer"
+        ]
+      },
+      {
+        "idee": "Besoin : confort, et économie d'énergie (pas de climatiseur)",
+        "mots": [
+          "confort",
+          "econom"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Détecteur de présence ; commande des lampes ; SI aucune présence pendant 10 min ALORS éteindre ; économie d'énergie.",
+    "criteres": [
+      {
+        "idee": "Capteur : détecteur de présence",
+        "mots": [
+          "presence",
+          "mouvement",
+          "infrarouge"
+        ]
+      },
+      {
+        "idee": "Actionneur : la commande des lampes",
+        "mots": [
+          "lampe",
+          "lumiere",
+          "eclairage"
+        ]
+      },
+      {
+        "idee": "SI aucune présence pendant 10 minutes ALORS éteindre",
+        "mots": [
+          "si aucune",
+          "si personne",
+          "10 min",
+          "dix minutes"
+        ]
+      },
+      {
+        "idee": "Gain : économie d'énergie",
+        "mots": [
+          "econom",
+          "energie"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Le réglage de la température est en boucle fermée grâce au capteur de température ; l'horloge ne fait que changer la consigne.",
+    "criteres": [
+      {
+        "idee": "Le réglage de la température est en boucle fermée",
+        "mots": [
+          "fermee"
+        ]
+      },
+      {
+        "idee": "L'horloge ne fait que changer la consigne",
+        "mots": [
+          "horloge",
+          "consigne",
+          "heure"
+        ]
+      },
+      {
+        "idee": "C'est le capteur de température (retour d'information) qui rend le réglage précis",
+        "mots": [
+          "capteur",
+          "retour",
+          "thermostat"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Capteur de fumée → microcontrôleur → sirène ; la pile alimente le système en énergie.",
+    "criteres": [
+      {
+        "idee": "Capteur de fumée → microcontrôleur → sirène",
+        "mots": [
+          "capteur de fumee microcontroleur",
+          "fumee microcontroleur sirene",
+          "capteur microcontroleur sirene",
+          "capteur de fumee puis",
+          "capteur de fumee traitement"
+        ]
+      },
+      {
+        "idee": "La pile fournit l'énergie au système",
+        "mots": [
+          "alimente",
+          "energie",
+          "fournit"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Exemple : avantage : programmer l'éclairage depuis son téléphone ; précaution : sécuriser le Wi-Fi avec un mot de passe solide.",
+    "criteres": [
+      {
+        "idee": "Avantage : commander ou programmer l'éclairage depuis son téléphone",
+        "mots": [
+          "telephone",
+          "smartphone",
+          "distance",
+          "program",
+          "application"
+        ]
+      },
+      {
+        "idee": "Précaution : sécuriser le Wi-Fi avec un mot de passe solide et faire les mises à jour",
+        "mots": [
+          "mot de passe",
+          "securis",
+          "mise a jour",
+          "mises a jour",
+          "proteg"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Ouvrir au-dessus de 28 °C et fermer seulement en dessous de 25 °C (deux seuils différents).",
+    "criteres": [
+      {
+        "idee": "Ouvrir au-dessus de 28 °C",
+        "mots": [
+          "ouvrir au-dessus",
+          "ouvrir au dessus",
+          "ouvrir a 28",
+          "ouvrir si",
+          "28 c"
+        ]
+      },
+      {
+        "idee": "Fermer seulement en dessous d'un seuil plus bas (par exemple 25 °C)",
+        "mots": [
+          "25 c",
+          "25 degr",
+          "plus bas",
+          "fermer en dessous de 2",
+          "fermer si",
+          "fermer a 2"
+        ]
+      },
+      {
+        "idee": "Deux seuils différents, écartés",
+        "mots": [
+          "deux seuils",
+          "2 seuils",
+          "ecart",
+          "different"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Un capteur (par exemple de luminosité) et un programme avec un seuil : capteur → carte programmable → moteur du volet.",
+    "criteres": [
+      {
+        "idee": "Il faut ajouter un capteur (par exemple de luminosité)",
+        "mots": [
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Et un programme avec un seuil sur une carte programmable",
+        "mots": [
+          "seuil",
+          "programme",
+          "carte"
+        ]
+      },
+      {
+        "idee": "Chaîne : capteur → carte programmable → moteur du volet",
+        "mots": [
+          "moteur"
+        ]
+      }
     ]
   }
 }

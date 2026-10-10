@@ -1,9 +1,226 @@
 {
+  "1": {
+    "reponse": "ACQUÉRIR (capteur) → TRAITER (microcontrôleur) → COMMUNIQUER (écran ou DEL).",
+    "criteres": [
+      {
+        "idee": "Acquérir, avec un capteur (ou un bouton, un clavier)",
+        "mots": [
+          "acquerir capteur",
+          "acquerir un capteur",
+          "acquerir le capteur",
+          "capteur",
+          "bouton",
+          "clavier"
+        ]
+      },
+      {
+        "idee": "Traiter, avec un microcontrôleur (carte programmable)",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur"
+        ]
+      },
+      {
+        "idee": "Communiquer, avec un écran, une DEL ou un buzzer",
+        "mots": [
+          "ecran",
+          "del",
+          "led",
+          "buzzer",
+          "voyant",
+          "afficheur",
+          "haut-parleur"
+        ]
+      },
+      {
+        "idee": "Les fonctions sont dans l'ordre : acquérir, traiter, communiquer",
+        "mots": [
+          "acquerir traiter communiquer",
+          "acquerir puis traiter",
+          "acquerir capteur traiter"
+        ]
+      }
+    ]
+  },
   "2": {
     "reponse": "a) énergie, b) information, c) énergie, d) information.",
     "accepte": [
       "a) énergie, b) information, c) énergie, d) information",
       "énergie, information, énergie, information"
+    ]
+  },
+  "3": {
+    "reponse": "Le thermomètre donne un signal analogique (continu) ; le capteur de porte donne un signal numérique (0 ou 1).",
+    "criteres": [
+      {
+        "idee": "Le thermomètre donne un signal analogique",
+        "mots": [
+          "thermometre analogique",
+          "thermometre donne un signal analogique",
+          "thermometre est analogique",
+          "analogique"
+        ]
+      },
+      {
+        "idee": "Car sa tension varie en continu (infinité de valeurs)",
+        "mots": [
+          "continu",
+          "infinit",
+          "progressiv",
+          "toutes les valeurs"
+        ]
+      },
+      {
+        "idee": "Le capteur de porte donne un signal numérique",
+        "mots": [
+          "numerique"
+        ]
+      },
+      {
+        "idee": "Car il ne prend que deux valeurs, 0 ou 1",
+        "mots": [
+          "deux valeurs",
+          "2 valeurs",
+          "discret",
+          "0 ou 1",
+          "seulement"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "reponse": "Acquérir = capteur de luminosité, Traiter = microcontrôleur, Communiquer = ordre vers la lampe ; la chaîne d'énergie alimente et allume l'ampoule.",
+    "criteres": [
+      {
+        "idee": "Acquérir : le capteur de luminosité",
+        "mots": [
+          "luminosit",
+          "photoresist",
+          "capteur de lumiere"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur compare à un seuil et décide",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur",
+          "compar",
+          "decid"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'ordre « allumer » envoyé vers la lampe",
+        "mots": [
+          "ordre",
+          "allum",
+          "envoi",
+          "transmet"
+        ]
+      },
+      {
+        "idee": "La chaîne d'énergie fournit la puissance et allume réellement la lampe",
+        "mots": [
+          "chaine d energie",
+          "energie",
+          "puissance",
+          "alimente"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "Acquérir = clavier, Traiter = microcontrôleur, Communiquer = ordre transmis ; le moteur appartient à la chaîne d'énergie, pas à la chaîne d'information.",
+    "criteres": [
+      {
+        "idee": "Acquérir : le clavier",
+        "mots": [
+          "clavier"
+        ]
+      },
+      {
+        "idee": "Traiter : la carte à microcontrôleur vérifie le code",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur",
+          "verifi"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'ordre d'ouverture transmis",
+        "mots": [
+          "ordre",
+          "transmet",
+          "envoi"
+        ]
+      },
+      {
+        "idee": "Le moteur n'appartient pas à la chaîne d'information : il fait partie de la chaîne d'énergie",
+        "mots": [
+          "chaine d energie",
+          "energie",
+          "n appartient pas",
+          "pas a la chaine"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "Antenne (acquérir) → microcontrôleur (traiter) → ordre (communiquer) : chaîne d'information ; puis moteur alimenté : chaîne d'énergie. Le microcontrôleur commande mais ne fournit pas la puissance, d'où le rôle de la chaîne d'énergie.",
+    "criteres": [
+      {
+        "idee": "Acquérir : l'antenne reçoit le signal de la télécommande",
+        "mots": [
+          "antenne",
+          "recepteur",
+          "recoit",
+          "signal radio"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur vérifie le code et décide",
+        "mots": [
+          "verifi",
+          "decid",
+          "microcontr"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'ordre d'ouverture est envoyé à la chaîne d'énergie",
+        "mots": [
+          "ordre",
+          "envoi",
+          "transmet"
+        ]
+      },
+      {
+        "idee": "Chaîne d'énergie : elle alimente le moteur qui fait bouger le portail",
+        "mots": [
+          "alimente",
+          "chaine d energie",
+          "moteur"
+        ]
+      },
+      {
+        "idee": "Le microcontrôleur ne délivre que de faibles signaux : pas assez de puissance",
+        "mots": [
+          "puissance",
+          "faible",
+          "pas assez",
+          "petit"
+        ]
+      }
     ]
   },
   "7": {
@@ -25,6 +242,77 @@
       "a) traiter, b) acquérir, c) communiquer"
     ]
   },
+  "9": {
+    "reponse": "Acquérir : le lecteur de ticket ; traiter : la carte électronique qui vérifie et décide ; communiquer : l'ordre envoyé (voyant, puis moteur via la chaîne d'énergie).",
+    "criteres": [
+      {
+        "idee": "Acquérir : le lecteur de ticket",
+        "mots": [
+          "lecteur",
+          "capteur",
+          "acquerir le"
+        ]
+      },
+      {
+        "idee": "Traiter : la carte électronique vérifie la validité et décide",
+        "mots": [
+          "carte",
+          "verifi",
+          "decid",
+          "microcontr"
+        ]
+      },
+      {
+        "idee": "Communiquer : elle envoie l'ordre à la chaîne d'énergie (moteur), voyant",
+        "mots": [
+          "ordre",
+          "envoi",
+          "voyant",
+          "transmet"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "(a) Capteur de fumée (acquérir) → microcontrôleur (traiter) → sirène/buzzer (communiquer/agir). (b) La sirène agit : elle relève de la chaîne d'énergie, mais elle est commandée par la chaîne d'information.",
+    "criteres": [
+      {
+        "idee": "Acquérir : un capteur de fumée",
+        "mots": [
+          "capteur",
+          "detecteur"
+        ]
+      },
+      {
+        "idee": "Traiter : un microcontrôleur qui décide de déclencher l'alarme",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur"
+        ]
+      },
+      {
+        "idee": "Communiquer : il commande la sirène (buzzer)",
+        "mots": [
+          "buzzer",
+          "sirene",
+          "commande"
+        ]
+      },
+      {
+        "idee": "La sirène agit : elle relève de la chaîne d'énergie, commandée par la chaîne d'information",
+        "mots": [
+          "chaine d energie",
+          "energie",
+          "agit",
+          "puissance"
+        ]
+      }
+    ]
+  },
   "11": {
     "reponse": "Les muscles ; le cerveau et les sens.",
     "accepte": [
@@ -34,10 +322,98 @@
       "muscles ; cerveau et sens"
     ]
   },
+  "12": {
+    "reponse": "Il doit écrire des verbes à l'infinitif : acquérir, traiter, communiquer.",
+    "criteres": [
+      {
+        "idee": "Il faut des verbes à l'infinitif, pas des noms",
+        "mots": [
+          "verbe",
+          "infinitif"
+        ]
+      },
+      {
+        "idee": "Acquérir, traiter, communiquer",
+        "mots": [
+          "acquerir",
+          "traiter",
+          "communiquer"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "reponse": "Une grandeur physique qui porte une information ; exemples : une tension électrique, une onde radio.",
+    "criteres": [
+      {
+        "idee": "Un signal est une grandeur physique qui porte une information",
+        "mots": [
+          "grandeur",
+          "porte",
+          "information"
+        ]
+      },
+      {
+        "idee": "Exemples : tension électrique, lumière, onde radio, son",
+        "mots": [
+          "tension",
+          "lumiere",
+          "onde",
+          "son",
+          "radio"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "reponse": "Faux : le moteur agit, il appartient à la chaîne d'énergie.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Le moteur agit (il fait bouger le portail) : il appartient à la chaîne d'énergie",
+        "mots": [
+          "chaine d energie",
+          "energie",
+          "agit",
+          "boug"
+        ]
+      }
+    ]
+  },
   "18": {
     "reponse": "Bouton-poussoir : acquérir ; processeur : traiter ; émetteur radio : communiquer ; antenne de réception : acquérir ; écran : communiquer.",
     "accepte": [
       "acquérir ; traiter ; communiquer ; acquérir ; communiquer"
+    ]
+  },
+  "19": {
+    "reponse": "Énergie : résistance chauffante, moteur du tambour. Information : capteur d'humidité, microcontrôleur, écran.",
+    "criteres": [
+      {
+        "idee": "Chaîne d'énergie : la résistance chauffante et le moteur du tambour",
+        "mots": [
+          "energie resistance",
+          "energie la resistance",
+          "resistance chauffante et le moteur",
+          "resistance et moteur",
+          "resistance chauffante moteur"
+        ]
+      },
+      {
+        "idee": "Chaîne d'information : capteur d'humidité, microcontrôleur et écran",
+        "mots": [
+          "information capteur",
+          "information le capteur",
+          "capteur d humidite microcontroleur",
+          "capteur microcontroleur",
+          "capteur d humidite le microcontroleur"
+        ]
+      }
     ]
   },
   "20": {
@@ -56,6 +432,63 @@
       "analogique ; numérique ; numérique"
     ]
   },
+  "22": {
+    "reponse": "Faux : l'analogique varie en continu, le numérique prend des valeurs discrètes (0/1) ; ce n'est pas une question d'âge.",
+    "criteres": [
+      {
+        "idee": "C'est faux : ce n'est pas une question d'âge",
+        "mots": [
+          "faux",
+          "age",
+          "pas une question"
+        ]
+      },
+      {
+        "idee": "Un signal analogique varie de façon continue",
+        "mots": [
+          "continu",
+          "infinit"
+        ]
+      },
+      {
+        "idee": "Un signal numérique ne prend que des valeurs discrètes (0 ou 1)",
+        "mots": [
+          "discret",
+          "0 ou 1",
+          "deux valeurs",
+          "0 1"
+        ]
+      }
+    ]
+  },
+  "23": {
+    "reponse": "Acquérir : le bouton ; traiter : le circuit électronique ; communiquer : l'émetteur radio (puis le carillon sonne).",
+    "criteres": [
+      {
+        "idee": "Acquérir : le bouton",
+        "mots": [
+          "bouton"
+        ]
+      },
+      {
+        "idee": "Traiter : le circuit électronique",
+        "mots": [
+          "circuit",
+          "carte",
+          "microcontr"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'émetteur radio (puis le carillon sonne)",
+        "mots": [
+          "emetteur",
+          "radio",
+          "carillon",
+          "sonne"
+        ]
+      }
+    ]
+  },
   "24": {
     "reponse": "Acquérir : la sonde de température ; traiter : le microcontrôleur ; communiquer : l'écran.",
     "accepte": [
@@ -72,12 +505,320 @@
       "touches : acquérir ; processeur : traiter ; écran : communiquer"
     ]
   },
+  "26": {
+    "reponse": "Parce qu'il enchaîne les fonctions (acquérir → traiter → communiquer) dans l'ordre où circule l'information.",
+    "criteres": [
+      {
+        "idee": "Chaque bloc représente une fonction",
+        "mots": [
+          "fonction",
+          "bloc"
+        ]
+      },
+      {
+        "idee": "Les blocs sont reliés dans l'ordre où circule l'information, comme des maillons",
+        "mots": [
+          "ordre",
+          "maillon",
+          "encha",
+          "circule",
+          "suite"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "Deux valeurs : 0 (courant absent) et 1 (courant présent).",
+    "criteres": [
+      {
+        "idee": "Un bit peut prendre deux valeurs",
+        "mots": [
+          "deux valeurs",
+          "2 valeurs",
+          "deux"
+        ]
+      },
+      {
+        "idee": "Ces valeurs sont 0 et 1",
+        "mots": [
+          "0 et 1",
+          "0 ou 1",
+          "0 1"
+        ]
+      },
+      {
+        "idee": "Elles représentent souvent courant absent ou présent",
+        "mots": [
+          "courant",
+          "absent",
+          "present",
+          "eteint",
+          "allume"
+        ]
+      }
+    ]
+  },
+  "30": {
+    "reponse": "Capteur de température (acquérir) → microcontrôleur (traiter) → ordre de chauffer (communiquer) ; la résistance chauffante, alimentée par le secteur, relève de la chaîne d'énergie.",
+    "criteres": [
+      {
+        "idee": "Acquérir : le capteur de température",
+        "mots": [
+          "capteur",
+          "thermometre",
+          "sonde"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur compare à 19 °C et décide",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur",
+          "compar"
+        ]
+      },
+      {
+        "idee": "Communiquer : il envoie l'ordre de chauffer",
+        "mots": [
+          "ordre",
+          "envoi"
+        ]
+      },
+      {
+        "idee": "Chaîne d'énergie : le secteur et la résistance chauffante",
+        "mots": [
+          "resistance",
+          "secteur",
+          "chaine d energie",
+          "alimentation"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "Le capteur acquiert seulement l'information ; il faut qu'elle soit traitée puis que la chaîne d'énergie actionne le moteur.",
+    "criteres": [
+      {
+        "idee": "Le capteur ne fait qu'acquérir l'information",
+        "mots": [
+          "acquer",
+          "seulement",
+          "detecte"
+        ]
+      },
+      {
+        "idee": "Il faut que l'information soit traitée (le microcontrôleur décide)",
+        "mots": [
+          "trait",
+          "microcontr",
+          "decid"
+        ]
+      },
+      {
+        "idee": "La chaîne d'énergie actionne le moteur qui ouvre la porte",
+        "mots": [
+          "energie",
+          "moteur",
+          "puissance"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "Il ne fournit pas assez de puissance : il donne l'ordre, et c'est la chaîne d'énergie qui alimente le moteur.",
+    "criteres": [
+      {
+        "idee": "Le microcontrôleur ne fournit pas assez de puissance (faibles signaux)",
+        "mots": [
+          "puissance",
+          "pas assez",
+          "faible"
+        ]
+      },
+      {
+        "idee": "Il donne seulement l'ordre",
+        "mots": [
+          "ordre",
+          "commande"
+        ]
+      },
+      {
+        "idee": "C'est la chaîne d'énergie qui alimente le moteur",
+        "mots": [
+          "chaine d energie",
+          "energie",
+          "alimente"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "La gâchette acquiert une information (chaîne d'information) ; le moteur relève de la chaîne d'énergie.",
+    "criteres": [
+      {
+        "idee": "La gâchette acquiert une information : chaîne d'information",
+        "mots": [
+          "chaine d information",
+          "information",
+          "acquer"
+        ]
+      },
+      {
+        "idee": "Le moteur relève de la chaîne d'énergie",
+        "mots": [
+          "energie"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Le nom de la fonction (verbe à l'infinitif) et, en dessous, le composant qui la réalise.",
+    "criteres": [
+      {
+        "idee": "Dans le bloc : le nom de la fonction, verbe à l'infinitif",
+        "mots": [
+          "fonction",
+          "verbe",
+          "infinitif"
+        ]
+      },
+      {
+        "idee": "En dessous : le composant qui réalise la fonction",
+        "mots": [
+          "composant",
+          "objet",
+          "element"
+        ]
+      }
+    ]
+  },
   "35": {
     "reponse": "Sonde (acquérir) → microcontrôleur (traiter) → écran (communiquer).",
     "accepte": [
       "sonde → microcontrôleur → écran",
       "sonde, microcontrôleur, écran",
       "mesurer la température → calculer la moyenne → afficher la température"
+    ]
+  },
+  "36": {
+    "reponse": "Le détecteur et la sirène sont inversés : ACQUÉRIR (détecteur de mouvement) → TRAITER (microcontrôleur) → COMMUNIQUER (sirène).",
+    "criteres": [
+      {
+        "idee": "Le détecteur et la sirène sont inversés",
+        "mots": [
+          "invers",
+          "echang"
+        ]
+      },
+      {
+        "idee": "Acquérir : le détecteur de mouvement",
+        "mots": [
+          "acquerir detecteur",
+          "acquerir le detecteur",
+          "detecteur dans acquerir",
+          "detecteur acquiert",
+          "detecteur doit etre"
+        ]
+      },
+      {
+        "idee": "Communiquer : la sirène",
+        "mots": [
+          "communiquer sirene",
+          "communiquer la sirene",
+          "sirene dans communiquer",
+          "sirene communique",
+          "sirene doit"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Traiter : analyser l'information et prendre une décision.",
+    "criteres": [
+      {
+        "idee": "C'est la fonction « traiter »",
+        "mots": [
+          "trait"
+        ]
+      },
+      {
+        "idee": "Son rôle : analyser l'information et prendre une décision",
+        "mots": [
+          "analys",
+          "decid",
+          "decision"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Exemple : le bouton et la carte de commande (information) commandent le moteur (énergie) qui déplace la cabine.",
+    "criteres": [
+      {
+        "idee": "Information : le bouton d'appel ou la carte de commande",
+        "mots": [
+          "bouton",
+          "carte"
+        ]
+      },
+      {
+        "idee": "Énergie : le moteur qui entraîne la cabine",
+        "mots": [
+          "moteur"
+        ]
+      },
+      {
+        "idee": "La carte reçoit l'appel, décide et commande le moteur, qui déplace la cabine",
+        "mots": [
+          "command",
+          "decid",
+          "deplac",
+          "monte",
+          "descend"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Capteur (acquérir) → microcontrôleur (traiter) → ordre (communiquer) → moteurs alimentés par la batterie (énergie) : le robot tourne.",
+    "criteres": [
+      {
+        "idee": "Acquérir : un capteur détecte l'obstacle",
+        "mots": [
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur décide de tourner",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur",
+          "decid"
+        ]
+      },
+      {
+        "idee": "Communiquer : il envoie l'ordre à la commande des moteurs",
+        "mots": [
+          "ordre",
+          "envoi"
+        ]
+      },
+      {
+        "idee": "Énergie : la batterie alimente les moteurs des roues",
+        "mots": [
+          "batterie",
+          "alimente",
+          "energie"
+        ]
+      }
     ]
   },
   "40": {
@@ -89,12 +830,297 @@
       "un signal analogique ; forme numérique"
     ]
   },
+  "41": {
+    "reponse": "Information : capteur de niveau (acquérir), carte (traiter), écran (communiquer). Énergie : électrovanne, moteur, résistance.",
+    "criteres": [
+      {
+        "idee": "Information : capteur de niveau (acquérir), carte (traiter), écran (communiquer)",
+        "mots": [
+          "information capteur",
+          "capteur acquerir",
+          "capteur de niveau acquerir",
+          "capteur de niveau (acquerir"
+        ]
+      },
+      {
+        "idee": "Énergie : électrovanne, moteur et résistance",
+        "mots": [
+          "energie electrovanne",
+          "energie l electrovanne",
+          "electrovanne moteur",
+          "electrovanne le moteur",
+          "electrovanne, moteur"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Capteur de luminosité (acquérir) → processeur (traiter) → écran réglé moins lumineux (communiquer).",
+    "criteres": [
+      {
+        "idee": "Acquérir : le capteur de luminosité mesure la lumière",
+        "mots": [
+          "capteur",
+          "luminosit"
+        ]
+      },
+      {
+        "idee": "Traiter : le processeur compare et choisit la luminosité",
+        "mots": [
+          "processeur",
+          "microcontr",
+          "compar",
+          "choisit",
+          "decid"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'écran s'affiche moins lumineux",
+        "mots": [
+          "ecran",
+          "affich"
+        ]
+      }
+    ]
+  },
   "43": {
     "reponse": "Vert, puis orange, puis rouge.",
     "accepte": [
       "vert, puis orange, puis rouge",
       "vert, orange, rouge",
       "vert → orange → rouge"
+    ]
+  },
+  "44": {
+    "reponse": "Oui : la carte du portail transmet l'ordre au moteur et allume aussi un voyant clignotant pour prévenir les personnes.",
+    "criteres": [
+      {
+        "idee": "Oui, c'est possible",
+        "mots": [
+          "oui"
+        ]
+      },
+      {
+        "idee": "La carte envoie l'ordre au moteur (vers la chaîne d'énergie)",
+        "mots": [
+          "moteur",
+          "ordre"
+        ]
+      },
+      {
+        "idee": "Et elle allume un voyant ou un gyrophare pour prévenir les personnes",
+        "mots": [
+          "voyant",
+          "gyrophare",
+          "clignot",
+          "lumiere",
+          "prevenir"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Capteurs de luminosité et de présence (acquérir) → microcontrôleur (traiter) → ordre d'allumage vers la lampe (communiquer).",
+    "criteres": [
+      {
+        "idee": "Acquérir : un capteur de luminosité et un capteur de présence",
+        "mots": [
+          "luminosit",
+          "presence",
+          "mouvement"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur vérifie qu'il fait nuit ET que quelqu'un passe",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur"
+        ]
+      },
+      {
+        "idee": "Communiquer : ordre d'allumage vers la lampe",
+        "mots": [
+          "ordre",
+          "allum",
+          "lampe"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "ACQUÉRIR (capteur d'humidité) → TRAITER (microcontrôleur) → COMMUNIQUER (écran + ordre) ; la pompe relève de la chaîne d'énergie.",
+    "criteres": [
+      {
+        "idee": "ACQUÉRIR : capteur d'humidité du sol",
+        "mots": [
+          "capteur",
+          "humidit"
+        ]
+      },
+      {
+        "idee": "TRAITER : microcontrôleur",
+        "mots": [
+          "microcontr",
+          "carte",
+          "processeur",
+          "circuit",
+          "automate",
+          "controleur"
+        ]
+      },
+      {
+        "idee": "COMMUNIQUER : écran et ordre vers la pompe",
+        "mots": [
+          "ecran",
+          "ordre"
+        ]
+      },
+      {
+        "idee": "La pompe relève de la chaîne d'énergie",
+        "mots": [
+          "pompe"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Information : capteur de pédalage (acquérir) → contrôleur (traiter, communiquer). Énergie : batterie → moteur qui aide le cycliste.",
+    "criteres": [
+      {
+        "idee": "Information : le capteur de pédalage acquiert la rotation",
+        "mots": [
+          "capteur",
+          "acquier",
+          "acquer"
+        ]
+      },
+      {
+        "idee": "Le contrôleur électronique décide et commande le moteur",
+        "mots": [
+          "controleur",
+          "decid",
+          "command",
+          "microcontr",
+          "carte"
+        ]
+      },
+      {
+        "idee": "Énergie : la batterie fournit la puissance au moteur, qui aide le cycliste",
+        "mots": [
+          "batterie",
+          "puissance",
+          "energie"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Le bouton A donne un signal numérique (0/1) ; le joystick donne un signal analogique (inclinaison continue).",
+    "criteres": [
+      {
+        "idee": "Le bouton A donne un signal numérique",
+        "mots": [
+          "bouton a numerique",
+          "bouton numerique",
+          "bouton est numerique",
+          "bouton donne un signal numerique",
+          "numerique"
+        ]
+      },
+      {
+        "idee": "Car il n'a que deux états : appuyé ou relâché (1 ou 0)",
+        "mots": [
+          "deux etats",
+          "2 etats",
+          "appuy",
+          "relach",
+          "0 ou 1",
+          "1 ou 0"
+        ]
+      },
+      {
+        "idee": "Le joystick donne un signal analogique",
+        "mots": [
+          "analogique"
+        ]
+      },
+      {
+        "idee": "Car son inclinaison varie en continu",
+        "mots": [
+          "continu",
+          "progressiv",
+          "infinit"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Il mélange les deux chaînes. Information : capteur → microcontrôleur → ordre. Énergie : pile → commande → moteur.",
+    "criteres": [
+      {
+        "idee": "Il mélange les deux chaînes : la pile et le moteur relèvent de la chaîne d'énergie",
+        "mots": [
+          "melange",
+          "pile",
+          "energie"
+        ]
+      },
+      {
+        "idee": "Chaîne d'information : capteur, microcontrôleur, ordre",
+        "mots": [
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Chaîne d'énergie : pile, commande, moteur",
+        "mots": [
+          "commande",
+          "distribu",
+          "pile"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Capteur sur la voie (acquérir) → automate (traiter) → feux, sonnerie et ordre au moteur (communiquer) ; la chaîne d'énergie abaisse la barrière.",
+    "criteres": [
+      {
+        "idee": "Acquérir : un capteur sur la voie détecte le train",
+        "mots": [
+          "capteur",
+          "detect"
+        ]
+      },
+      {
+        "idee": "Traiter : l'automate décide",
+        "mots": [
+          "automate",
+          "microcontr",
+          "carte",
+          "decid"
+        ]
+      },
+      {
+        "idee": "Communiquer : feux, sonnerie et ordre au moteur",
+        "mots": [
+          "feux",
+          "sonnerie",
+          "ordre",
+          "alarme"
+        ]
+      },
+      {
+        "idee": "La chaîne d'énergie alimente le moteur qui abaisse la barrière",
+        "mots": [
+          "chaine d energie",
+          "alimente",
+          "energie"
+        ]
+      }
     ]
   }
 }
