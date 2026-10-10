@@ -58,7 +58,7 @@ plaques d'exister en tant que blocs.
 ## 2. Les plaques lithosphériques
 
 La lithosphère est découpée en une douzaine de grandes **plaques** rigides, qui se
-déplacent les unes par rapport aux autres, en « flottant » sur l'asthénosphère plus
+déplacent les unes par rapport aux autres, en reposant sur l'asthénosphère plus
 ductile. Leurs mouvements sont lents : quelques **centimètres par an** (l'ordre de
 grandeur de la pousse des ongles).
 

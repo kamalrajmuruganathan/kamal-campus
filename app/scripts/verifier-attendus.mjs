@@ -89,7 +89,7 @@ for (const chemin of chapitres) {
           const cr = a.criteres;
           if (!Array.isArray(cr) || cr.length < 2 || cr.length > 6) { pb.push(`${ici} : « criteres » doit contenir 2 à 6 idées`); continue; }
           if (typeExercice(ex, matiere) === 'auto') { pb.push(`${ici} : exercice déjà vérifiable automatiquement, pas de « criteres »`); continue; }
-          const plat = (x) => ' ' + String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe').replace(/[^a-z0-9ßäöüñç']+/g, ' ').trim() + ' ';
+          const plat = (x) => ' ' + String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe').replace(/[^a-z0-9ßäöüñç]+/g, ' ').trim() + ' ';
           const texteRef = plat(`${ex.reponse} ${(ex.corrige || []).join(' ')}`);
           for (const [k, c] of cr.entries()) {
             if (!c || typeof c.idee !== 'string' || !c.idee.trim() || c.idee.length > 140) pb.push(`${ici} : idée ${k + 1} : « idee » manquante ou trop longue (140 caractères max)`);

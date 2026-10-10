@@ -368,3 +368,8 @@ test('criteres : fusion et détection des mots-clés (début de mot, sans accent
   assert.deepEqual(bilanCriteres([true, true, false]), { nb: 2, total: 3, complet: false });
   assert.equal(bilanCriteres([true, true]).complet, true);
 });
+
+test('criteres : un mot après une apostrophe est trouvé (« dans l’ombre »)', () => {
+  const crit = [{ idee: 'La Lune passe dans l’ombre de la Terre', mots: ['ombre'] }, { idee: 'x', mots: ["l'etoile"] }];
+  assert.deepEqual(detecterCriteres('Elle passe dans l’ombre de l’étoile', crit), [true, true]);
+});

@@ -576,7 +576,7 @@ export function fusionnerAttendus(exercice, attendus) {
 function cleLibre(s) {
   return ' ' + sansAccents(nettoyer(s).toLowerCase())
     .replace(/œ/g, 'oe').replace(/æ/g, 'ae')
-    .replace(/[^a-z0-9ßäöüñç']+/g, ' ')
+    .replace(/[^a-z0-9ßäöüñç]+/g, ' ') // apostrophes comprises : « l'étoile » → « l etoile »
     .replace(/\s+/g, ' ')
     .trim() + ' ';
 }
