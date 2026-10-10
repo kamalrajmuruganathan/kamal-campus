@@ -147,7 +147,7 @@ function lireNombre(texte) {
 /* Texte                                                               */
 /* ------------------------------------------------------------------ */
 
-const ARTICLES = /^(?:le|la|les|un|une|l')\s*/;
+const ARTICLES = /^(?:(?:le|la|les|un|une)\s+|l'\s*)/;
 
 /** Clé de comparaison d'un texte court. */
 function cleTexte(s, { articles = true, ignorerAccents = true } = {}) {
@@ -296,11 +296,15 @@ function egalNombre(att, saisie) {
   return false;
 }
 
-function egalTexte(att, saisie) {
+/** En français, l'orthographe compte : les accents doivent être justes. */
+const ACCENTS_STRICTS = new Set(['francais']);
+
+function egalTexte(att, saisie, matiere = null) {
   const opts = { articles: att.articles };
   const a = cleTexte(att.valeur, { ...opts, ignorerAccents: false });
   const s = cleTexte(saisie, { ...opts, ignorerAccents: false });
   if (a === s) return true;
+  if (ACCENTS_STRICTS.has(matiere)) return false;
   // Mots très courts (a/à, ou/où, la/là, du/dû, sur/sûr) : l'accent compte.
   if (sansAccents(a).length <= 3) return false;
   return cleTexte(att.valeur, opts) === cleTexte(saisie, opts);
@@ -319,11 +323,160 @@ export function comparer(saisie, reponse, matiere = null) {
   const nbSaisi = lireNombre(sansPonctuationFinale(texteSaisi));
   return a.alternatives.some((alt) => {
     if (alt.kind === 'nombre') return !!nbSaisi && egalNombre(alt, nbSaisi);
-    if (egalTexte(alt, texteSaisi)) return true;
+    if (egalTexte(alt, texteSaisi, matiere)) return true;
     // Phrase à un seul nombre : le nombre seul suffit (unité = un mot de la phrase).
     if (alt.nombre && nbSaisi && (!nbSaisi.unite || alt.nombre.mots.includes(nbSaisi.unite))) {
       return egalNombre({ ...alt.nombre, unite: '' }, { ...nbSaisi, unite: '' });
     }
     return false;
   });
+}
+
+/* ------------------------------------------------------------------ */
+/* Réponses acceptées écrites à la main (fichier attendus.json)        */
+/* ------------------------------------------------------------------ */
+//
+// Beaucoup de réponses sont des phrases (« Il y a 30 timbres en tout. ») : la
+// machine ne peut pas les comparer telles quelles. Le fichier attendus.json d'un
+// chapitre donne, pour certains exercices, les formes courtes acceptées :
+//   { "12": { "reponse": "<réponse exacte>", "accepte": ["30 timbres", "trente"] },
+//     "13": { "reponse": "<réponse exacte>", "ensemble": ["le lait", "la pomme"] } }
+// - « accepte » : chaque forme est un nombre (avec ou sans unité) ou un texte court ;
+// - « ensemble » : l'élève doit citer TOUS les éléments, dans n'importe quel ordre,
+//   séparés par des virgules, « et » ou des points-virgules.
+// « reponse » sert de garde-fou : si l'exercice a changé, la ligne est ignorée.
+
+/** Nombre maximal de mots d'une forme acceptée écrite à la main. */
+export const MAX_MOTS_ATTENDU = 8;
+
+/** Analyse UNE forme acceptée ; null si elle n'est pas vérifiable par la machine. */
+function analyserForme(forme) {
+  const brut = nettoyer(forme);
+  if (!brut || brut.length > 80) return null;
+  const texte = sansDollars(brut);
+  if (texte == null) return null;
+  const propre = sansPonctuationFinale(texte);
+  const nb = lireNombre(propre);
+  if (nb) return { kind: 'nombre', ...nb };
+  // Expression mathématique (« x² + 1 », « 6x ») : plusieurs écritures possibles → non.
+  if (/[=<>≤≥^√∞π+*×²³]/.test(propre)) return null;
+  if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde)\b/i.test(propre)) return null;
+  const mots = compterMots(propre);
+  if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
+  return { kind: 'texte', valeur: propre, articles: true, phrase: true, nombre: nombreDansTexte(propre) };
+}
+
+/** Clé d'une phrase : comme cleTexte, sans la ponctuation intérieure. */
+function clePhrase(s, opts) {
+  return cleTexte(String(s ?? '').replace(/[,;:!?.]/g, ' '), opts);
+}
+
+/** Découpe une énumération saisie par l'élève (virgules, « et », « ; », « / », retours). */
+function elements(saisie) {
+  return nettoyer(saisie)
+    .split(/\s*(?:[,;/\n]|\bet\b|\band\b|\bund\b|\by\b|\be\b)\s*/i)
+    .map((x) => sansPonctuationFinale(x))
+    .filter((x) => /[\p{L}\p{N}]/u.test(x));
+}
+
+/**
+ * Analyse un exercice : formes acceptées d'attendus.json si présentes, sinon la
+ * réponse elle-même. @returns {{type:'auto'|'ouverte', alternatives:Array, ensemble?:string[]}}
+ */
+export function analyserExercice(ex, matiere = null) {
+  const att = ex && ex.attendu;
+  if (att && Array.isArray(att.ensemble) && att.ensemble.length >= 2) {
+    const items = att.ensemble.map((x) => sansDollars(nettoyer(x))).filter(Boolean);
+    if (items.length === att.ensemble.length) return { type: 'auto', alternatives: [], ensemble: items };
+  }
+  if (att && Array.isArray(att.accepte) && att.accepte.length) {
+    const alts = att.accepte.map(analyserForme);
+    if (alts.every(Boolean)) {
+      // Formes de la réponse d'origine, si elle était déjà vérifiable : on les garde aussi.
+      const base = analyser(ex.reponse, matiere);
+      return { type: 'auto', alternatives: [...alts, ...(base.type === 'auto' ? base.alternatives : [])] };
+    }
+  }
+  return analyser(ex && ex.reponse, matiere);
+}
+
+/** 'auto' ou 'ouverte' pour un exercice (en tenant compte d'attendus.json). */
+export function typeExercice(ex, matiere = null) {
+  return analyserExercice(ex, matiere).type;
+}
+
+/** Unité à afficher dans le champ de saisie d'un exercice, ou ''. */
+export function uniteExercice(ex, matiere = null) {
+  const a = analyserExercice(ex, matiere);
+  if (a.type !== 'auto' || a.ensemble) return '';
+  const nbs = a.alternatives.filter((x) => x.kind === 'nombre');
+  // On n'affiche l'unité que si toutes les formes numériques ont la même.
+  if (!nbs.length || nbs.length !== a.alternatives.length || new Set(nbs.map((x) => x.unite)).size !== 1) return '';
+  if (ex.attendu && ex.attendu.accepte) {
+    const texte = sansDollars(nettoyer(ex.attendu.accepte[0])) || '';
+    const m = texte.match(/[\d)]\s*([A-Za-zÀ-ÿµΩ°%€][^()]*?)\s*[.]?$/);
+    return m ? m[1].trim() : nbs[0].unite;
+  }
+  return uniteAttendue(ex.reponse, matiere);
+}
+
+/** Indication à afficher sous le champ quand l'élève doit citer plusieurs éléments. */
+export function consigneExercice(ex, matiere = null) {
+  const a = analyserExercice(ex, matiere);
+  return a.ensemble ? `${a.ensemble.length} éléments, séparés par des virgules` : '';
+}
+
+/** La saisie de l'élève est-elle juste pour cet exercice ? */
+export function comparerExercice(saisie, ex, matiere = null) {
+  const s = nettoyer(saisie);
+  if (!s) return false;
+  const a = analyserExercice(ex, matiere);
+  if (a.type !== 'auto') return false;
+  if (a.ensemble) {
+    const cle = (x) => clePhrase(sansDollars(x) ?? x);
+    const voulus = a.ensemble.map(cle);
+    const donnes = elements(s).map(cle);
+    if (donnes.length !== voulus.length) return false;
+    const reste = [...voulus];
+    for (const d of donnes) {
+      const i = reste.findIndex((v) => v === d || (!ACCENTS_STRICTS.has(matiere) && v.length > 3 && sansAccents(v) === sansAccents(d)));
+      if (i < 0) return false;
+      reste.splice(i, 1);
+    }
+    return true;
+  }
+  const texteSaisi = sansDollars(s) ?? s;
+  const nbSaisi = lireNombre(sansPonctuationFinale(texteSaisi));
+  return a.alternatives.some((alt) => {
+    if (alt.kind === 'nombre') return !!nbSaisi && egalNombre(alt, nbSaisi);
+    if (alt.phrase) {
+      const opts = { articles: true, ignorerAccents: false };
+      const x = clePhrase(alt.valeur, opts);
+      const y = clePhrase(texteSaisi, opts);
+      if (x === y) return true;
+      if (!ACCENTS_STRICTS.has(matiere) && sansAccents(x).length > 3 && sansAccents(x) === sansAccents(y)) return true;
+    } else if (egalTexte(alt, texteSaisi, matiere)) return true;
+    if (alt.nombre && nbSaisi && (!nbSaisi.unite || alt.nombre.mots.includes(nbSaisi.unite))) {
+      return egalNombre({ ...alt.nombre, unite: '' }, { ...nbSaisi, unite: '' });
+    }
+    return false;
+  });
+}
+
+/**
+ * Fusionne attendus.json dans un objet exercice.json (copie). Les lignes dont la
+ * « reponse » ne correspond plus à l'exercice sont ignorées et renvoyées dans `ecarts`.
+ */
+export function fusionnerAttendus(exercice, attendus) {
+  const ecarts = [];
+  if (!exercice || !attendus) return { exercice, ecarts };
+  const table = attendus.attendus || attendus;
+  const exercices = (exercice.exercices || []).map((ex) => {
+    const a = table[String(ex.id)];
+    if (!a) return ex;
+    if (a.reponse !== ex.reponse) { ecarts.push(ex.id); return ex; }
+    const attendu = a.ensemble ? { ensemble: a.ensemble } : { accepte: a.accepte };
+    return { ...ex, attendu };
+  });
+  return { exercice: { ...exercice, exercices }, ecarts };
 }

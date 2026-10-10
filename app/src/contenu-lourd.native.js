@@ -4,6 +4,7 @@
  * renvoient une promesse (texte Markdown / objet exercice.json, ou null).
  */
 
+import { fusionnerAttendus } from '../lib/autocorrection';
 import fiche0 from './../../contenu/cp/allemand/begrussungen/fiche.md';
 import exercice0 from './../../contenu/cp/allemand/begrussungen/exercice.json';
 import fiche1 from './../../contenu/cp/allemand/zahlen/fiche.md';
@@ -3834,5 +3835,12 @@ const EXERCICES = {
   "tale-stl-spcl-systemes-procedes-flux": exercice955,
 };
 
+const ATTENDUS = {
+
+};
+
 export async function chargerFiche(id) { return FICHES[id] ?? null; }
-export async function chargerExercices(id) { return EXERCICES[id] ?? null; }
+export async function chargerExercices(id) {
+  const ex = EXERCICES[id] ?? null;
+  return ex && ATTENDUS[id] ? fusionnerAttendus(ex, ATTENDUS[id]).exercice : ex;
+}

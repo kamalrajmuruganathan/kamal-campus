@@ -108,3 +108,61 @@ test('uniteAttendue', () => {
   assert.equal(uniteAttendue('$43$'), '');
   assert.equal(uniteAttendue('Le judaïsme.'), '');
 });
+
+// ─── Réponses acceptées écrites à la main (attendus.json) ───
+import { typeExercice, comparerExercice, uniteExercice, consigneExercice, fusionnerAttendus } from './index.js';
+
+test('attendu : une phrase devient vérifiable grâce à sa forme courte', () => {
+  const ex = { reponse: 'Il y a 30 timbres en tout.', attendu: { accepte: ['30 timbres'] } };
+  assert.equal(typeExercice(ex), 'auto');
+  assert.equal(comparerExercice('30', ex), true);
+  assert.equal(comparerExercice('30 timbres', ex), true);
+  assert.equal(comparerExercice('31', ex), false);
+  assert.equal(uniteExercice(ex), 'timbres');
+});
+
+test('attendu : sans fichier, on garde le comportement de la réponse seule', () => {
+  assert.equal(typeExercice({ reponse: 'Il y a 30 timbres en tout, puis on en donne 4.' }), 'ouverte');
+  assert.equal(typeExercice({ reponse: '42' }), 'auto');
+});
+
+test('attendu : une phrase courte en langue étrangère, ponctuation et casse ignorées', () => {
+  const ex = { reponse: 'Ich trinke gern Milch.', attendu: { accepte: ['Ich trinke gern Milch', 'Ich trinke gerne Milch'] } };
+  assert.equal(comparerExercice('ich trinke gerne milch !', ex, 'allemand'), true);
+  assert.equal(comparerExercice('Ich trinke Milch', ex, 'allemand'), false);
+});
+
+test('attendu : ensemble → tous les éléments, dans n’importe quel ordre', () => {
+  const ex = { reponse: 'le lait, la pomme', attendu: { ensemble: ['le lait', 'la pomme'] } };
+  assert.equal(comparerExercice('pomme et lait', ex), true);
+  assert.equal(comparerExercice('la pomme, le lait', ex), true);
+  assert.equal(comparerExercice('la pomme', ex), false);
+  assert.equal(comparerExercice('la pomme, le lait, le pain', ex), false);
+  assert.match(consigneExercice(ex), /2 éléments/);
+});
+
+test('attendu : une forme non vérifiable (formule) laisse l’exercice ouvert', () => {
+  const ex = { reponse: 'On trouve f(x) = x² + 1 après calcul.', attendu: { accepte: ['$x^2 + 1$'] } };
+  assert.equal(typeExercice(ex), 'ouverte');
+});
+
+test('fusionnerAttendus ignore les lignes dont la réponse a changé', () => {
+  const exo = { exercices: [{ id: 1, reponse: 'A' }, { id: 2, reponse: 'B' }] };
+  const { exercice, ecarts } = fusionnerAttendus(exo, { 1: { reponse: 'A', accepte: ['a'] }, 2: { reponse: 'ancien', accepte: ['b'] } });
+  assert.deepEqual(exercice.exercices[0].attendu, { accepte: ['a'] });
+  assert.equal(exercice.exercices[1].attendu, undefined);
+  assert.deepEqual(ecarts, [2]);
+});
+
+test('articles : « lait » et « le lait » se valent (le « la » de « lait » n’est pas un article)', () => {
+  assert.equal(comparer('lait', 'le lait'), true);
+  assert.equal(comparer('laine', 'la laine'), true);
+});
+
+test('français : les accents comptent ; ailleurs ils sont tolérés', () => {
+  const ex = { reponse: 'Ma sœur et ma cousine semblent fatiguées.', attendu: { accepte: ['fatiguées'] } };
+  assert.equal(comparerExercice('fatiguées', ex, 'francais'), true);
+  assert.equal(comparerExercice('fatiguees', ex, 'francais'), false);
+  assert.equal(comparerExercice('fatiguees', ex, 'hist-geo'), true);
+  assert.equal(comparer('fatigues', 'fatigués', 'francais'), false);
+});

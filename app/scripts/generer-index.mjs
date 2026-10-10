@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { fusionnerAttendus } from '../lib/autocorrection/index.js';
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const RACINE_APP = join(ICI, '..');
@@ -236,6 +237,10 @@ for (const niveau of dossiers(CONTENU)) {
           : null,
         cheminFlashcards: aFlashcards
           ? './' + relative(join(RACINE_APP, 'src'), flash).split('\\').join('/')
+          : null,
+        // Réponses courtes acceptées (facultatif) : rend plus d'exercices vérifiables par l'appli.
+        cheminAttendus: aExercice && existsSync(join(dossier, 'attendus.json'))
+          ? './' + relative(join(RACINE_APP, 'src'), join(dossier, 'attendus.json')).split('\\').join('/')
           : null,
       });
     }
@@ -487,7 +492,8 @@ const ENTETE_LOURD = `/**
  */
 `;
 const lourdNatif = `${ENTETE_LOURD}
-${chapitres.map((c, i) => `import fiche${i} from '${c.cheminFiche}';` + (c.cheminExercice ? `\nimport exercice${i} from '${c.cheminExercice}';` : '')).join('\n')}
+import { fusionnerAttendus } from '../lib/autocorrection';
+${chapitres.map((c, i) => `import fiche${i} from '${c.cheminFiche}';` + (c.cheminExercice ? `\nimport exercice${i} from '${c.cheminExercice}';` : '') + (c.cheminAttendus ? `\nimport attendus${i} from '${c.cheminAttendus}';` : '')).join('\n')}
 
 const FICHES = {
 ${chapitres.map((c, i) => `  ${JSON.stringify(c.id)}: fiche${i},`).join('\n')}
@@ -496,8 +502,15 @@ const EXERCICES = {
 ${chapitres.filter((c) => c.cheminExercice).map((c) => `  ${JSON.stringify(c.id)}: exercice${chapitres.indexOf(c)},`).join('\n')}
 };
 
+const ATTENDUS = {
+${chapitres.filter((c) => c.cheminAttendus).map((c) => `  ${JSON.stringify(c.id)}: attendus${chapitres.indexOf(c)},`).join('\n')}
+};
+
 export async function chargerFiche(id) { return FICHES[id] ?? null; }
-export async function chargerExercices(id) { return EXERCICES[id] ?? null; }
+export async function chargerExercices(id) {
+  const ex = EXERCICES[id] ?? null;
+  return ex && ATTENDUS[id] ? fusionnerAttendus(ex, ATTENDUS[id]).exercice : ex;
+}
 `;
 const chemins = Object.fromEntries(chapitres.map((c) => [c.id, `${c.niveau}/${c.parcours}/${c.dossier}`]));
 const exAvec = chapitres.filter((c) => c.cheminExercice).map((c) => c.id);
@@ -545,7 +558,15 @@ for (const c of chapitres) {
   mkdirSync(dest, { recursive: true });
   const src = join(CONTENU, c.niveau, c.parcours, c.dossier);
   writeFileSync(join(dest, 'fiche.md'), readFileSync(join(src, 'fiche.md')));
-  if (c.cheminExercice) writeFileSync(join(dest, 'exercice.json'), JSON.stringify(JSON.parse(readFileSync(join(src, 'exercice.json'), 'utf8'))));
+  if (c.cheminExercice) {
+    let ex = JSON.parse(readFileSync(join(src, 'exercice.json'), 'utf8'));
+    if (c.cheminAttendus) {
+      const r = fusionnerAttendus(ex, JSON.parse(readFileSync(join(src, 'attendus.json'), 'utf8')));
+      ex = r.exercice;
+      if (r.ecarts.length) console.warn(`  ⚠️  attendus.json périmé (exercices ${r.ecarts.join(', ')}) : ${c.id}`);
+    }
+    writeFileSync(join(dest, 'exercice.json'), JSON.stringify(ex));
+  }
 }
 console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
 

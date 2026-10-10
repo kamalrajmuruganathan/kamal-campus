@@ -24,7 +24,7 @@ import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
 import { useProgression } from '../progression/Contexte';
-import { typeReponse, comparer, uniteAttendue } from '../../lib/autocorrection';
+import { typeExercice, comparerExercice, uniteExercice, consigneExercice } from '../../lib/autocorrection';
 
 const LIBELLE_DIFFICULTE = {
   decouverte: 'Découverte',
@@ -106,8 +106,9 @@ function Verdict({ juste, texte, t }) {
 }
 
 function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat }) {
-  const auto = useMemo(() => typeReponse(ex.reponse, matiere) === 'auto', [ex.reponse, matiere]);
-  const unite = useMemo(() => (auto ? uniteAttendue(ex.reponse, matiere) : ''), [auto, ex.reponse, matiere]);
+  const auto = useMemo(() => typeExercice(ex, matiere) === 'auto', [ex, matiere]);
+  const unite = useMemo(() => (auto ? uniteExercice(ex, matiere) : ''), [auto, ex, matiere]);
+  const consigne = useMemo(() => (auto ? consigneExercice(ex, matiere) : ''), [auto, ex, matiere]);
   const [saisie, setSaisie] = useState('');
   const [verifie, setVerifie] = useState(null); // null | true | false (dernière vérification)
   const [corrigeVu, setCorrigeVu] = useState(false);
@@ -119,7 +120,7 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
 
   const verifier = () => {
     if (!saisie.trim()) return;
-    const juste = comparer(saisie, ex.reponse, matiere);
+    const juste = comparerExercice(saisie, ex, matiere);
     setVerifie(juste);
     setParMachine(true);
     setCorrigeVu(true);
@@ -178,7 +179,7 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
       {auto ? (
         <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.m }}>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginBottom: 6 }}>
-            {unite ? `Ta réponse (unité : ${unite}, facultative) :` : 'Ta réponse :'}
+            {unite ? `Ta réponse (unité : ${unite}, facultative) :` : consigne ? `Ta réponse (${consigne}) :` : 'Ta réponse :'}
           </Text>
           <View style={{ flexDirection: 'row', gap: t.espace.s }}>
             <TextInput
