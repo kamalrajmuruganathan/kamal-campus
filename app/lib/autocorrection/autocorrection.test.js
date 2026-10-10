@@ -166,3 +166,16 @@ test('français : les accents comptent ; ailleurs ils sont tolérés', () => {
   assert.equal(comparerExercice('fatiguees', ex, 'hist-geo'), true);
   assert.equal(comparer('fatigues', 'fatigués', 'francais'), false);
 });
+
+test('ensemble : un mot finissant par « ée » n’est pas coupé (« e » italien seulement en mot isolé)', () => {
+  const ex = { reponse: 'grelottait, givre, glacée', attendu: { ensemble: ['grelottait', 'givre', 'glacée'] } };
+  assert.equal(comparerExercice('grelottait, givre et glacée', ex, 'francais'), true);
+});
+
+test('forme écrite à la main : exigée en entier (« 90 » ne suffit pas pour « 90° angle droit »)', () => {
+  const ex = { reponse: '$90^\\circ$, angle droit', attendu: { accepte: ['90° angle droit', '90° droit'] } };
+  assert.equal(comparerExercice('90°, angle droit', ex), true);
+  assert.equal(comparerExercice('90° droit', ex), true);
+  assert.equal(comparerExercice('90', ex), false);
+  assert.equal(comparer('20 °C', '$20$ °C'), true);
+});

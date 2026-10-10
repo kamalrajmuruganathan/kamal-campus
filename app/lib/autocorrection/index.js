@@ -136,6 +136,8 @@ function lireNombre(texte) {
   if (/^[a-zA-Z]\b/.test(collee) && !/^[mgsVAWNJLhK]\b/.test(collee)) return null;
   if (reste && !/^[\p{L}µ°%€][\p{L}µ°%€²³/.·\-⁻¹ ]{0,14}(?:(?<=\p{L})[23])?$/u.test(reste)) return null;
   if (reste.split(' ').length > 2) return null;
+  // « 90° droit » : un degré suivi d'un mot n'est pas une unité (seuls °C et °F le sont).
+  if (/^°\s*\p{L}/u.test(reste) && !/^°\s*[cf]$/i.test(reste)) return null;
   return {
     valeur,
     decimales: exposant != null || denom != null ? null : dec.length,
@@ -363,7 +365,9 @@ function analyserForme(forme) {
   if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde)\b/i.test(propre)) return null;
   const mots = compterMots(propre);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
-  return { kind: 'texte', valeur: propre, articles: true, phrase: true, nombre: nombreDansTexte(propre) };
+  // Pas de repli « le nombre seul suffit » : la forme écrite à la main est exigée en entier
+  // (« 90° angle droit » ne doit pas accepter « 90 »). Les formes numériques sont données à part.
+  return { kind: 'texte', valeur: propre, articles: true, phrase: true, nombre: null };
 }
 
 /** Clé d'une phrase : comme cleTexte, sans la ponctuation intérieure. */
@@ -374,7 +378,7 @@ function clePhrase(s, opts) {
 /** Découpe une énumération saisie par l'élève (virgules, « et », « ; », « / », retours). */
 function elements(saisie) {
   return nettoyer(saisie)
-    .split(/\s*(?:[,;/\n]|\bet\b|\band\b|\bund\b|\by\b|\be\b)\s*/i)
+    .split(/\s*(?:[,;/\n]|(?<!\p{L})(?:et|and|und|y|e)(?!\p{L}))\s*/iu)
     .map((x) => sansPonctuationFinale(x))
     .filter((x) => /[\p{L}\p{N}]/u.test(x));
 }
