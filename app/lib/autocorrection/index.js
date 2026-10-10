@@ -376,7 +376,8 @@ function analyserForme(forme, matiere = null) {
   if (nb) return { kind: 'nombre', ...nb };
   // Expression mathématique (« x² + 1 », « 6x ») : plusieurs écritures possibles → non.
   // (« < », « > » et les flèches sont permis : rangements, chaînes alimentaires.)
-  if (/[=^√∞π+*×²³]/.test(propre.replace(/=>|->/g, '→'))) return null;
+  // (« cm³ », « m² » : exposant collé à une unité, permis.)
+  if (/[=^√∞π+*×²³]/.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1'))) return null;
   if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre)) return null;
   const mots = compterMots(propre);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
