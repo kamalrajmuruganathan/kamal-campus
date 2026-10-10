@@ -8,12 +8,94 @@
       "non, pas compatible"
     ]
   },
+  "5": {
+    "reponse": "La méthode A est la plus fidèle (plus petit écart-type) ; la méthode B est la plus juste (moyenne sur la référence).",
+    "criteres": [
+      {
+        "idee": "La méthode A est la plus fidèle",
+        "mots": [
+          "a est la plus fidele",
+          "a est plus fidele",
+          "a plus fidele",
+          "a fidele"
+        ]
+      },
+      {
+        "idee": "La fidélité se lit sur l'écart-type (sA < sB)",
+        "mots": [
+          "ecart type",
+          "dispersion",
+          "resserr"
+        ]
+      },
+      {
+        "idee": "La méthode B est la plus juste",
+        "mots": [
+          "b est la plus juste",
+          "b est plus juste",
+          "b plus juste",
+          "b juste"
+        ]
+      },
+      {
+        "idee": "La justesse se lit sur l'écart entre la moyenne et la référence",
+        "mots": [
+          "moyenne",
+          "reference"
+        ]
+      }
+    ]
+  },
   "6": {
     "reponse": "$20$ mesures pour atteindre $0{,}15\\ \\mathrm{mm}$, et $45$ mesures pour $0{,}10\\ \\mathrm{mm}$.",
     "accepte": [
       "20 et 45",
       "20 mesures et 45 mesures",
       "20 puis 45"
+    ]
+  },
+  "11": {
+    "reponse": "m (longueur), kg (masse), s (temps), A (intensité électrique), K (température), mol (quantité de matière), cd (intensité lumineuse).",
+    "criteres": [
+      {
+        "idee": "Mètre (m) : longueur ; kilogramme (kg) : masse ; seconde (s) : temps",
+        "mots": [
+          "metre",
+          "longueur",
+          "kilogramme",
+          "masse",
+          "seconde",
+          "temps"
+        ]
+      },
+      {
+        "idee": "Ampère (A) : intensité électrique",
+        "mots": [
+          "ampere",
+          "intensite electrique"
+        ]
+      },
+      {
+        "idee": "Kelvin (K) : température",
+        "mots": [
+          "kelvin",
+          "temperature"
+        ]
+      },
+      {
+        "idee": "Mole (mol) : quantité de matière",
+        "mots": [
+          "mole",
+          "quantite de matiere"
+        ]
+      },
+      {
+        "idee": "Candela (cd) : intensité lumineuse",
+        "mots": [
+          "candela",
+          "lumineuse"
+        ]
+      }
     ]
   },
   "12": {
@@ -25,11 +107,94 @@
       "ampère"
     ]
   },
+  "13": {
+    "reponse": "Grandeur : la masse ; valeur : $12{,}5$ ; unité : le gramme (g).",
+    "criteres": [
+      {
+        "idee": "Grandeur : la masse",
+        "mots": [
+          "masse"
+        ]
+      },
+      {
+        "idee": "Valeur : 12,5",
+        "mots": [
+          "12 5"
+        ]
+      },
+      {
+        "idee": "Unité : le gramme (g)",
+        "mots": [
+          "gramme"
+        ]
+      }
+    ]
+  },
   "16": {
     "reponse": "a) systématique ; b) aléatoire ; c) aléatoire ; d) systématique.",
     "accepte": [
       "systématique, aléatoire, aléatoire, systématique",
       "a) systématique, b) aléatoire, c) aléatoire, d) systématique"
+    ]
+  },
+  "17": {
+    "reponse": "Non : la répétition ne corrige pas une erreur systématique ; il faut étalonner (régler le zéro de) la balance.",
+    "criteres": [
+      {
+        "idee": "Non, la justesse n'est pas améliorée",
+        "mots": [
+          "non",
+          "pas ameliore"
+        ]
+      },
+      {
+        "idee": "Le zéro décalé est une erreur systématique : la répétition ne la corrige pas",
+        "mots": [
+          "systematique"
+        ]
+      },
+      {
+        "idee": "Il faut étalonner la balance (régler son zéro, la tarer)",
+        "mots": [
+          "etalonn",
+          "regler",
+          "tare",
+          "zero"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "Fidèle mais pas juste : mesures resserrées mais décalées (erreur systématique).",
+    "criteres": [
+      {
+        "idee": "Le tir est fidèle (impacts groupés, faible dispersion)",
+        "mots": [
+          "fidele"
+        ]
+      },
+      {
+        "idee": "Le tir n'est pas juste (loin du centre)",
+        "mots": [
+          "pas juste",
+          "non juste"
+        ]
+      },
+      {
+        "idee": "Pour des mesures : faible écart-type mais moyenne décalée",
+        "mots": [
+          "ecart type",
+          "moyenne",
+          "resserr",
+          "decal"
+        ]
+      },
+      {
+        "idee": "Signe d'une erreur systématique",
+        "mots": [
+          "systematique"
+        ]
+      }
     ]
   },
   "19": {
@@ -72,12 +237,79 @@
       "non"
     ]
   },
-  "46": {
-    "reponse": "Oui : écart de $1\\,u < 2\\,u$ (après conversion en ohms).",
-    "accepte": [
-      "oui",
-      "oui, compatible",
-      "compatible"
+  "32": {
+    "reponse": "A : erreur systématique (fidèle, pas juste) → étalonner. B : erreur aléatoire (juste, peu fidèle) → répéter et moyenner.",
+    "criteres": [
+      {
+        "idee": "A : erreur systématique (fidèle mais pas juste)",
+        "mots": [
+          "systematique"
+        ]
+      },
+      {
+        "idee": "A : on la corrige en étalonnant le thermomètre",
+        "mots": [
+          "etalonn"
+        ]
+      },
+      {
+        "idee": "B : erreur aléatoire (juste mais peu fidèle)",
+        "mots": [
+          "aleatoire"
+        ]
+      },
+      {
+        "idee": "B : on la réduit en répétant les mesures et en faisant la moyenne",
+        "mots": [
+          "repet",
+          "moyenn"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Non compatible ($3{,}5\\,u$) : le multimètre est à étalonner.",
+    "criteres": [
+      {
+        "idee": "Écart de 0,07 V, soit 3,5 incertitudes-types",
+        "mots": [
+          "0 07",
+          "3 5"
+        ]
+      },
+      {
+        "idee": "3,5 > 2 : la mesure n'est pas compatible avec la référence",
+        "mots": [
+          "non compatible",
+          "pas compatible",
+          "incompatible"
+        ]
+      },
+      {
+        "idee": "Le multimètre doit être étalonné (erreur systématique)",
+        "mots": [
+          "etalonn",
+          "systematique"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "L'unité et l'incertitude : $T = 1{,}42 \\pm 0{,}02\\ \\mathrm{s}$.",
+    "criteres": [
+      {
+        "idee": "Il manque l'unité",
+        "mots": [
+          "unite",
+          "seconde"
+        ]
+      },
+      {
+        "idee": "Il manque l'incertitude",
+        "mots": [
+          "incertitude"
+        ]
+      }
     ]
   },
   "39": {
@@ -85,6 +317,14 @@
     "accepte": [
       "A, B",
       "A et B"
+    ]
+  },
+  "46": {
+    "reponse": "Oui : écart de $1\\,u < 2\\,u$ (après conversion en ohms).",
+    "accepte": [
+      "oui",
+      "oui, compatible",
+      "compatible"
     ]
   },
   "48": {
@@ -101,6 +341,33 @@
       "b",
       "b)",
       "réponse b"
+    ]
+  },
+  "50": {
+    "reponse": "Erreur systématique, incertitude sous-estimée, modèle hors de son domaine de validité.",
+    "criteres": [
+      {
+        "idee": "Une erreur systématique (appareil mal étalonné)",
+        "mots": [
+          "systematique",
+          "etalonn"
+        ]
+      },
+      {
+        "idee": "Une incertitude-type sous-estimée",
+        "mots": [
+          "sous estim",
+          "incertitude"
+        ]
+      },
+      {
+        "idee": "Un modèle utilisé hors de son domaine de validité",
+        "mots": [
+          "modele",
+          "validite",
+          "domaine"
+        ]
+      }
     ]
   }
 }

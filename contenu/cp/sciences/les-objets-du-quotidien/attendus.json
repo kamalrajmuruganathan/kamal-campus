@@ -1,4 +1,55 @@
 {
+  "1": {
+    "reponse": "Un objet n'est pas vivant ; il est fabriqué par les humains.",
+    "criteres": [
+      {
+        "idee": "Un objet n'est pas vivant (il ne naît pas, ne grandit pas)",
+        "mots": [
+          "pas vivant",
+          "non vivant",
+          "ne grandit",
+          "ne nait"
+        ]
+      },
+      {
+        "idee": "Il est fabriqué par les humains",
+        "mots": [
+          "humain",
+          "homme",
+          "gens",
+          "personne"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "reponse": "Le parapluie protège de la pluie, la lampe éclaire, le crayon sert à écrire.",
+    "criteres": [
+      {
+        "idee": "Le parapluie protège de la pluie",
+        "mots": [
+          "protege",
+          "pas mouille",
+          "abri"
+        ]
+      },
+      {
+        "idee": "La lampe éclaire",
+        "mots": [
+          "eclair",
+          "lumiere",
+          "voir"
+        ]
+      },
+      {
+        "idee": "Le crayon sert à écrire (ou à dessiner)",
+        "mots": [
+          "ecri",
+          "dessin"
+        ]
+      }
+    ]
+  },
   "3": {
     "reponse": "La cuillère est en métal, le verre à eau est en verre, la chaise est en bois.",
     "accepte": [
@@ -6,6 +57,100 @@
       "métal, verre et bois",
       "en métal, en verre, en bois",
       "en métal, en verre et en bois"
+    ]
+  },
+  "4": {
+    "reponse": "On fait la fenêtre en verre parce que le verre est transparent : on voit à travers, ce qui n'est pas possible avec le bois.",
+    "criteres": [
+      {
+        "idee": "Le verre est transparent : on voit à travers",
+        "mots": [
+          "transparent",
+          "voit a travers",
+          "voir a travers",
+          "travers"
+        ]
+      },
+      {
+        "idee": "Une fenêtre sert à voir dehors et à laisser passer la lumière",
+        "mots": [
+          "dehors",
+          "lumiere",
+          "jour"
+        ]
+      },
+      {
+        "idee": "Le bois n'est pas transparent",
+        "mots": [
+          "bois n est pas",
+          "bois ne",
+          "bois on ne"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "La bouteille en verre risque de se casser ; le verre se casse alors que le plastique plie souvent.",
+    "criteres": [
+      {
+        "idee": "La bouteille en verre risque de se casser",
+        "mots": [
+          "verre"
+        ]
+      },
+      {
+        "idee": "Le verre se casse (il est fragile)",
+        "mots": [
+          "fragile",
+          "casse"
+        ]
+      },
+      {
+        "idee": "Le plastique plie souvent au lieu de se casser",
+        "mots": [
+          "plie",
+          "rebondit",
+          "plastique ne"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "Seul : le crayon et le ballon. Attention ou avec un adulte : les ciseaux (ça coupe) et la prise électrique (l'électricité est dangereuse).",
+    "criteres": [
+      {
+        "idee": "Seul : le crayon et le ballon",
+        "mots": [
+          "crayon et le ballon",
+          "crayon le ballon",
+          "crayon ballon"
+        ]
+      },
+      {
+        "idee": "Avec attention ou un adulte : les ciseaux et la prise électrique",
+        "mots": [
+          "adulte les ciseaux",
+          "adulte ciseaux",
+          "attention les ciseaux",
+          "les ciseaux ca coupe",
+          "ciseaux et la prise",
+          "ciseaux la prise"
+        ]
+      },
+      {
+        "idee": "Les ciseaux coupent",
+        "mots": [
+          "coup"
+        ]
+      },
+      {
+        "idee": "L'électricité est dangereuse",
+        "mots": [
+          "electricit",
+          "dangereu",
+          "electrocut"
+        ]
+      }
     ]
   },
   "7": {
@@ -24,6 +169,52 @@
       "en papier, en plastique et en tissu"
     ]
   },
+  "9": {
+    "reponse": "Il devrait ranger ses objets et en prendre soin pour qu'ils durent plus longtemps.",
+    "criteres": [
+      {
+        "idee": "Il devrait ranger ses objets",
+        "mots": [
+          "range"
+        ]
+      },
+      {
+        "idee": "En prendre soin, les utiliser doucement sans les abîmer",
+        "mots": [
+          "soin",
+          "doucement",
+          "attention",
+          "abim"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "On choisit le verre, car il est transparent et on peut voir la boisson à travers ; le bois n'est pas transparent.",
+    "criteres": [
+      {
+        "idee": "On choisit le verre",
+        "mots": [
+          "verre"
+        ]
+      },
+      {
+        "idee": "Le verre est transparent : on voit la boisson à travers",
+        "mots": [
+          "transparent",
+          "travers"
+        ]
+      },
+      {
+        "idee": "Le bois n'est pas transparent",
+        "mots": [
+          "bois n est pas",
+          "bois ne",
+          "bois on ne"
+        ]
+      }
+    ]
+  },
   "15": {
     "reponse": "Le bois, le métal, le plastique, le verre, le papier (ou le carton) et le tissu.",
     "ensemble": [
@@ -33,6 +224,27 @@
       "le verre",
       "le papier",
       "le tissu"
+    ]
+  },
+  "17": {
+    "reponse": "Non, jamais : l'électricité est dangereuse.",
+    "criteres": [
+      {
+        "idee": "Non, jamais",
+        "mots": [
+          "non",
+          "jamais"
+        ]
+      },
+      {
+        "idee": "L'électricité est dangereuse",
+        "mots": [
+          "electricit",
+          "dangereu",
+          "electrocut",
+          "mal"
+        ]
+      }
     ]
   },
   "18": {
@@ -57,6 +269,46 @@
     "reponse": "La trottinette → se déplacer ; le stylo → écrire ; le parapluie → se protéger de la pluie.",
     "accepte": [
       "se déplacer, écrire, se protéger de la pluie"
+    ]
+  },
+  "21": {
+    "reponse": "Les ciseaux, en faisant attention à mes doigts.",
+    "criteres": [
+      {
+        "idee": "Les ciseaux",
+        "mots": [
+          "ciseau"
+        ]
+      },
+      {
+        "idee": "Faire attention à ses doigts",
+        "mots": [
+          "doigt",
+          "attention",
+          "coupe"
+        ]
+      }
+    ]
+  },
+  "22": {
+    "reponse": "Écrire : le crayon, le stylo. Se déplacer : la trottinette, le vélo.",
+    "criteres": [
+      {
+        "idee": "Écrire : le crayon et le stylo",
+        "mots": [
+          "crayon et le stylo",
+          "crayon le stylo",
+          "crayon stylo"
+        ]
+      },
+      {
+        "idee": "Se déplacer : la trottinette et le vélo",
+        "mots": [
+          "trottinette et le velo",
+          "trottinette le velo",
+          "trottinette velo"
+        ]
+      }
     ]
   },
   "23": {
@@ -91,10 +343,480 @@
       "le couteau"
     ]
   },
+  "27": {
+    "reponse": "Je les range (par exemple dans ma trousse).",
+    "criteres": [
+      {
+        "idee": "Je les range",
+        "mots": [
+          "range"
+        ]
+      },
+      {
+        "idee": "Par exemple dans ma trousse, pour qu'ils ne se perdent pas ni ne se cassent",
+        "mots": [
+          "trousse",
+          "boite",
+          "pot",
+          "perd",
+          "casse"
+        ]
+      }
+    ]
+  },
   "28": {
     "reponse": "Faux : un objet ne grandit pas.",
     "accepte": [
       "faux"
+    ]
+  },
+  "29": {
+    "reponse": "L'intrus est le chat : c'est un être vivant, pas un objet.",
+    "criteres": [
+      {
+        "idee": "L'intrus est le chat",
+        "mots": [
+          "chat"
+        ]
+      },
+      {
+        "idee": "C'est un être vivant, pas un objet",
+        "mots": [
+          "vivant",
+          "pas un objet",
+          "animal"
+        ]
+      }
+    ]
+  },
+  "30": {
+    "reponse": "L'intrus est la pomme : elle n'est pas fabriquée par les humains.",
+    "criteres": [
+      {
+        "idee": "L'intrus est la pomme",
+        "mots": [
+          "pomme"
+        ]
+      },
+      {
+        "idee": "Elle n'est pas fabriquée par les humains : elle pousse sur l'arbre",
+        "mots": [
+          "fabriqu",
+          "pousse",
+          "nature",
+          "vivant"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "L'intrus est le cahier : il est en papier, les autres en métal.",
+    "criteres": [
+      {
+        "idee": "L'intrus est le cahier",
+        "mots": [
+          "cahier"
+        ]
+      },
+      {
+        "idee": "Il est en papier ; les autres sont en métal",
+        "mots": [
+          "papier",
+          "metal",
+          "fer"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "Bois : la règle, la cuillère. Tissu : la chaussette, le drap.",
+    "criteres": [
+      {
+        "idee": "Bois : la règle et la cuillère",
+        "mots": [
+          "regle et la cuillere",
+          "regle la cuillere",
+          "regle cuillere",
+          "bois la regle"
+        ]
+      },
+      {
+        "idee": "Tissu : la chaussette et le drap",
+        "mots": [
+          "chaussette et le drap",
+          "chaussette le drap",
+          "chaussette drap",
+          "tissu la chaussette"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "Ce sont deux matières différentes : le verre se casse, le plastique plie souvent.",
+    "criteres": [
+      {
+        "idee": "Ce sont deux matières différentes",
+        "mots": [
+          "different",
+          "pas la meme"
+        ]
+      },
+      {
+        "idee": "Le verre se casse (et il est transparent)",
+        "mots": [
+          "verre se casse",
+          "casse",
+          "transparent",
+          "fragile"
+        ]
+      },
+      {
+        "idee": "Le plastique plie souvent",
+        "mots": [
+          "plie",
+          "souple"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Parce que le métal convient pour la chaleur : on peut chauffer la casserole sur le feu.",
+    "criteres": [
+      {
+        "idee": "La casserole va sur le feu, à la chaleur",
+        "mots": [
+          "feu",
+          "chau",
+          "cuire",
+          "cuisin"
+        ]
+      },
+      {
+        "idee": "Le métal convient pour la chaleur",
+        "mots": [
+          "metal",
+          "resiste",
+          "brule pas",
+          "fond pas"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "En plastique, car il ne se casse pas quand il tombe.",
+    "criteres": [
+      {
+        "idee": "En plastique",
+        "mots": [
+          "plastique"
+        ]
+      },
+      {
+        "idee": "Le plastique ne se casse pas quand il tombe, alors que le verre se casse",
+        "mots": [
+          "casse pas",
+          "pas casse",
+          "verre se casse",
+          "plus sur",
+          "solide"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Elle doit demander de l'aide à un adulte et faire attention à ses doigts.",
+    "criteres": [
+      {
+        "idee": "Demander l'aide d'un adulte",
+        "mots": [
+          "adulte",
+          "aide",
+          "parent",
+          "maman",
+          "papa"
+        ]
+      },
+      {
+        "idee": "Faire attention à ses doigts : le couteau coupe",
+        "mots": [
+          "doigt",
+          "attention",
+          "coupe",
+          "dangereu"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Non : il devrait ranger son vélo à l'abri pour qu'il dure.",
+    "criteres": [
+      {
+        "idee": "Non, ce n'est pas une bonne idée",
+        "mots": [
+          "non",
+          "pas une bonne"
+        ]
+      },
+      {
+        "idee": "Il devrait ranger son vélo à l'abri pour qu'il dure",
+        "mots": [
+          "range",
+          "abri",
+          "garage",
+          "dedans",
+          "rentr"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Parce que le tissu est souple et doux ; le métal est dur et ne se porte pas.",
+    "criteres": [
+      {
+        "idee": "Le tissu est souple et doux, il tient chaud",
+        "mots": [
+          "souple",
+          "doux",
+          "chaud",
+          "plie"
+        ]
+      },
+      {
+        "idee": "Le métal est dur : on ne pourrait pas le porter",
+        "mots": [
+          "dur",
+          "ne plie pas",
+          "porter",
+          "lourd"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Le verre, car il est transparent.",
+    "criteres": [
+      {
+        "idee": "Le verre",
+        "mots": [
+          "verre"
+        ]
+      },
+      {
+        "idee": "Il est transparent (on voit à travers, pas le carton)",
+        "mots": [
+          "transparent",
+          "travers"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Parce que le papier se mouille et se déchire : il ne protégerait pas de la pluie.",
+    "criteres": [
+      {
+        "idee": "Le parapluie doit protéger de la pluie",
+        "mots": [
+          "protege",
+          "pluie"
+        ]
+      },
+      {
+        "idee": "Le papier mouillé se déchire et laisse passer l'eau",
+        "mots": [
+          "dechir",
+          "mouill",
+          "trou",
+          "passer l eau",
+          "abim"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Exemple : « La règle est en plastique, elle sert à tracer des traits droits. »",
+    "criteres": [
+      {
+        "idee": "Le nom de l'objet",
+        "mots": [
+          "regle",
+          "crayon",
+          "chaise",
+          "table",
+          "gomme",
+          "stylo",
+          "cahier",
+          "ciseau"
+        ]
+      },
+      {
+        "idee": "Sa matière (bois, plastique, métal…)",
+        "mots": [
+          "en plastique",
+          "en bois",
+          "en metal",
+          "en papier",
+          "en tissu",
+          "en verre",
+          "en carton",
+          "en fer"
+        ]
+      },
+      {
+        "idee": "À quoi il sert",
+        "mots": [
+          "sert",
+          "pour"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "Sans danger : la gomme, le livre. Attention : le couteau, la prise électrique.",
+    "criteres": [
+      {
+        "idee": "Sans danger : la gomme et le livre",
+        "mots": [
+          "gomme et le livre",
+          "gomme le livre",
+          "gomme livre",
+          "danger la gomme"
+        ]
+      },
+      {
+        "idee": "Attention : le couteau et la prise électrique",
+        "mots": [
+          "couteau et la prise",
+          "couteau la prise",
+          "couteau prise",
+          "attention le couteau"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Parce que chaque objet est fabriqué pour rendre un service ; par exemple, la chaise sert à s'asseoir.",
+    "criteres": [
+      {
+        "idee": "Chaque objet est fabriqué pour rendre un service",
+        "mots": [
+          "service",
+          "fabriqu",
+          "utile",
+          "utilis"
+        ]
+      },
+      {
+        "idee": "Un exemple (la chaise sert à s'asseoir…)",
+        "mots": [
+          "asseoir",
+          "assoir",
+          "chaise",
+          "crayon",
+          "ecrire",
+          "parapluie",
+          "lampe"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Lou : le verre est transparent, on voit à travers.",
+    "criteres": [
+      {
+        "idee": "Lou a la bonne idée",
+        "mots": [
+          "lou"
+        ]
+      },
+      {
+        "idee": "Le verre est transparent : on voit à travers (pas le bois)",
+        "mots": [
+          "transparent",
+          "travers",
+          "voit dehors",
+          "lumiere"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "La vitre est en verre et le livre est en papier.",
+    "criteres": [
+      {
+        "idee": "La vitre est en verre (pas en tissu)",
+        "mots": [
+          "vitre est en verre",
+          "vitre en verre",
+          "vitre c est du verre",
+          "vitre verre"
+        ]
+      },
+      {
+        "idee": "Le livre est en papier (pas en verre)",
+        "mots": [
+          "papier"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Exemple : les ranger et les utiliser comme il faut (en prendre soin).",
+    "criteres": [
+      {
+        "idee": "Ranger ses objets",
+        "mots": [
+          "range"
+        ]
+      },
+      {
+        "idee": "En prendre soin : les utiliser comme il faut, ne pas les jeter",
+        "mots": [
+          "soin",
+          "comme il faut",
+          "jeter",
+          "doucement",
+          "attention",
+          "abim",
+          "cass"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Un vélo ou une trottinette pour se déplacer, un parapluie pour la pluie.",
+    "criteres": [
+      {
+        "idee": "Un vélo ou une trottinette pour se déplacer",
+        "mots": [
+          "velo",
+          "trottinette"
+        ]
+      },
+      {
+        "idee": "Un parapluie pour la pluie",
+        "mots": [
+          "parapluie"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Exemple : le carton est léger et ne se casse pas, alors que le verre se casse.",
+    "criteres": [
+      {
+        "idee": "Le carton est léger",
+        "mots": [
+          "leger"
+        ]
+      },
+      {
+        "idee": "Le carton ne se casse pas, alors que le verre se casse (et il est lourd)",
+        "mots": [
+          "casse",
+          "fragile",
+          "lourd"
+        ]
+      }
     ]
   }
 }
