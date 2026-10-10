@@ -215,3 +215,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Vérificateur : `node app/scripts/verifier-attendus.mjs [chemins…]` (0 problème exigé ; refuse un nombre absent
   de l'énoncé/réponse/corrigé, une forme non vérifiable, une réponse « Exemple : »).
 - ~88 erreurs repérées dans les exercices pendant ce travail : corrigées (voir le message de commit « Corrections »).
+- **Examen sur mesure** (`src/ecrans/ExamenSurMesure.js`, `app/lib/examen/composer.js` + tests) : classe → matière →
+  chapitres → format (Express 10 min, Standard 20 min, Long 40 min) ; QCM (1 pt) + exercices auto-corrigés (2 pts),
+  chrono, note /20, chapitres à revoir, corrigé ; historique `profil.examens` (30 max, fusionné dans `cloud/fusion.js`).
+  Carte « 🎓 Examen sur mesure » sur l'accueil (à côté de « Mode examen »). Testé dans Chromium.

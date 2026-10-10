@@ -126,5 +126,14 @@ export function fusionnerProfils(a, b) {
   }
   if (plans.size) f.controles = [...plans.values()];
 
+  // Historique « Examen sur mesure » : union par id, plus récent d'abord, 30 au plus.
+  const examens = new Map();
+  for (const ex of [...(autre.examens || []), ...(recent.examens || [])]) if (ex && ex.id) examens.set(ex.id, ex);
+  if (examens.size) {
+    f.examens = [...examens.values()]
+      .sort((x, y) => String(y.date || '').localeCompare(String(x.date || '')) || String(y.id).localeCompare(String(x.id)))
+      .slice(0, 30);
+  }
+
   return f;
 }

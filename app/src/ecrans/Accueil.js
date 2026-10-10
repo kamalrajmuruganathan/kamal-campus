@@ -463,6 +463,14 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="🎓 Examen sur mesure"
+            sousTitre="Brevet ou bac blanc sur tes chapitres : QCM et exercices, noté sur 20"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('ExamenSurMesure')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.sujets.t')}
             sousTitre={L('card.sujets.s')}
             couleur={t.couleur.physique}
