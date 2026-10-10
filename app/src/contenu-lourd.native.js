@@ -5691,6 +5691,7 @@ const ATTENDUS = {
 };
 
 export async function chargerFiche(id) { return FICHES[id] ?? null; }
+export function cheminDonnees() { return null; }
 export async function chargerExercices(id) {
   const ex = EXERCICES[id] ?? null;
   return ex && ATTENDUS[id] ? fusionnerAttendus(ex, ATTENDUS[id]).exercice : ex;

@@ -219,3 +219,9 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   chapitres → format (Express 10 min, Standard 20 min, Long 40 min) ; QCM (1 pt) + exercices auto-corrigés (2 pts),
   chrono, note /20, chapitres à revoir, corrigé ; historique `profil.examens` (30 max, fusionné dans `cloud/fusion.js`).
   Carte « 🎓 Examen sur mesure » sur l'accueil (à côté de « Mode examen »). Testé dans Chromium.
+- **Hors connexion (web)** : `public/sw.js` (réseau d'abord, copie de secours `kamal-campus-v1` pour l'appli et
+  public/donnees) ; `src/horsLigne.{web,}.js` (`useEnLigne`, `telechargerHorsLigne`, `compterDisponibles`) ;
+  bouton « 📥 Réviser sans internet » dans la liste des chapitres (`composants/HorsLigneParcours.js`) ; bandeau
+  « Hors connexion » (`composants/BandeauHorsLigne.js`, dans App.js). `contenu-lourd.web.js` exporte `cheminDonnees(id)`.
+  Testé dans Chromium : téléchargement de 15 chapitres, coupure réseau, rechargement, fiche lisible avec formules.
+  Si on change la stratégie du SW, incrémenter le nom du cache (v2…).

@@ -44,6 +44,7 @@ import RecapHebdo from './src/ecrans/RecapHebdo';
 import Express from './src/ecrans/Express';
 import ModeExamen from './src/ecrans/ModeExamen';
 import ExamenSurMesure from './src/ecrans/ExamenSurMesure';
+import BandeauHorsLigne from './src/composants/BandeauHorsLigne';
 import ModeErreurs from './src/ecrans/ModeErreurs';
 import Podcast from './src/ecrans/Podcast';
 import Annales from './src/ecrans/Annales';
@@ -191,9 +192,12 @@ function PortailAuth() {
 export default function App() {
   return (
     <SafeAreaProvider>
-      <AuthProvider>
-        <PortailAuth />
-      </AuthProvider>
+      <View style={{ flex: 1 }}>
+        <BandeauHorsLigne />
+        <AuthProvider>
+          <PortailAuth />
+        </AuthProvider>
+      </View>
     </SafeAreaProvider>
   );
 }

@@ -11,6 +11,7 @@ import { Carte, Bandeau } from '../composants/communs';
 import { chapitresDe } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { composerQcm, poolQuestions } from '../../lib/quizmix';
+import HorsLigneParcours from '../composants/HorsLigneParcours';
 
 const TAILLE_QCM_PARCOURS = 15;
 
@@ -82,6 +83,8 @@ export default function Chapitres({ route, navigation }) {
             </View>
           </View>
         )}
+
+        <HorsLigneParcours t={t} ids={liste.map((c) => c.id)} accent={accentParcours} />
 
         {/* Carte de quête : chemin de chapitres */}
         {liste.map((c, i) => {
