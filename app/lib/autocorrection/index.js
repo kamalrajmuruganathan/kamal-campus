@@ -34,9 +34,20 @@ function nettoyer(s) {
   return String(s ?? '')
     .replace(/[’‘`´]/g, "'")
     .replace(/[−–—]/g, '-')
-    .replace(/[«»“”"]/g, ' ')
+    .replace(/[«»“”"¡¿]/g, ' ')
     .replace(ESPACES, ' ')
     .trim();
+}
+
+/**
+ * Protège les nombres d'un texte avant d'en retirer espaces et ponctuation :
+ * « −3,5 » et « 3,5 » restent distincts, « 2 ; 3 » ne devient pas « 23 ».
+ */
+function protegerNombres(s) {
+  return s
+    .replace(/(\d)[,.](?=\d)/g, '$1§')          // virgule / point décimal
+    .replace(/(^|[^\p{L}\d])-\s*(?=\d)/gu, '$1~') // signe moins
+    .replace(/(\d)[\s,;:/]+(?=[\d~])/g, '$1#');  // deux nombres qui se suivent
 }
 
 /** Retire la ponctuation finale (. ! ? … ; :) et les espaces autour. */
@@ -92,7 +103,10 @@ const RE_NOMBRE = new RegExp(
 
 /** Normalise une unité (minuscules, synonymes courants). */
 function normUnite(u) {
-  let s = sansAccents(String(u || '').toLowerCase()).replace(/\s+/g, '');
+  const brut = String(u || '').replace(/\s+/g, '');
+  let s = sansAccents(brut.toLowerCase());
+  // Préfixes méga / milli : « MW » ≠ « mW », « Mo » ≠ « mo ».
+  if (/^[mM][a-zA-ZΩ]{1,2}$/.test(brut) && !/^min$/i.test(brut)) s = brut[0] + s.slice(1);
   s = s.replace(/\^2|2$/, '²').replace(/\^3|3$/, '³');
   const syn = {
     euro: '€', euros: '€', eur: '€',
@@ -159,7 +173,7 @@ function cleTexte(s, { articles = true, ignorerAccents = true } = {}) {
     const sans = x.replace(ARTICLES, '');
     if (sans) x = sans;
   }
-  return x.replace(/[\s\-‐]+/g, '');
+  return protegerNombres(x).replace(/[\s\-‐]+/g, '');
 }
 
 /**
@@ -299,7 +313,7 @@ function egalNombre(att, saisie) {
 }
 
 /** En français, l'orthographe compte : les accents doivent être justes. */
-const ACCENTS_STRICTS = new Set(['francais']);
+const ACCENTS_STRICTS = new Set(['francais', ...LANGUES]);
 
 function egalTexte(att, saisie, matiere = null) {
   const opts = { articles: att.articles };
@@ -349,10 +363,10 @@ export function comparer(saisie, reponse, matiere = null) {
 // « reponse » sert de garde-fou : si l'exercice a changé, la ligne est ignorée.
 
 /** Nombre maximal de mots d'une forme acceptée écrite à la main. */
-export const MAX_MOTS_ATTENDU = 8;
+export const MAX_MOTS_ATTENDU = 12;
 
 /** Analyse UNE forme acceptée ; null si elle n'est pas vérifiable par la machine. */
-function analyserForme(forme) {
+function analyserForme(forme, matiere = null) {
   const brut = nettoyer(forme);
   if (!brut || brut.length > 80) return null;
   const texte = sansDollars(brut);
@@ -361,18 +375,23 @@ function analyserForme(forme) {
   const nb = lireNombre(propre);
   if (nb) return { kind: 'nombre', ...nb };
   // Expression mathématique (« x² + 1 », « 6x ») : plusieurs écritures possibles → non.
-  if (/[=<>≤≥^√∞π+*×²³]/.test(propre)) return null;
-  if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde)\b/i.test(propre)) return null;
+  // (« < », « > » et les flèches sont permis : rangements, chaînes alimentaires.)
+  if (/[=^√∞π+*×²³]/.test(propre.replace(/=>|->/g, '→'))) return null;
+  if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre)) return null;
   const mots = compterMots(propre);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
   // Pas de repli « le nombre seul suffit » : la forme écrite à la main est exigée en entier
   // (« 90° angle droit » ne doit pas accepter « 90 »). Les formes numériques sont données à part.
-  return { kind: 'texte', valeur: propre, articles: true, phrase: true, nombre: null };
+  // En langue étrangère, l'article fait souvent partie de ce qui est évalué (« la mia casa ») : on le garde.
+  return { kind: 'texte', valeur: propre, articles: !LANGUES.has(matiere), phrase: true, nombre: null };
 }
 
 /** Clé d'une phrase : comme cleTexte, sans la ponctuation intérieure. */
 function clePhrase(s, opts) {
-  return cleTexte(String(s ?? '').replace(/[,;:!?.]/g, ' '), opts);
+  const t = protegerNombres(nettoyer(s))
+    .replace(/\s*(?:->|=>|⇒|→|⟶)\s*/g, '→') // toutes les flèches se valent
+    .replace(/\s*≤\s*/g, '<=').replace(/\s*≥\s*/g, '>=');
+  return cleTexte(t.replace(/[,;:!?.]/g, ' '), opts);
 }
 
 /** Découpe une énumération saisie par l'élève (virgules, « et », « ; », « / », retours). */
@@ -394,7 +413,7 @@ export function analyserExercice(ex, matiere = null) {
     if (items.length === att.ensemble.length) return { type: 'auto', alternatives: [], ensemble: items };
   }
   if (att && Array.isArray(att.accepte) && att.accepte.length) {
-    const alts = att.accepte.map(analyserForme);
+    const alts = att.accepte.map((f) => analyserForme(f, matiere));
     if (alts.every(Boolean)) {
       // Formes de la réponse d'origine, si elle était déjà vérifiable : on les garde aussi.
       const base = analyser(ex.reponse, matiere);
@@ -437,7 +456,7 @@ export function comparerExercice(saisie, ex, matiere = null) {
   const a = analyserExercice(ex, matiere);
   if (a.type !== 'auto') return false;
   if (a.ensemble) {
-    const cle = (x) => clePhrase(sansDollars(x) ?? x);
+    const cle = (x) => clePhrase(sansDollars(x) ?? x, { articles: !LANGUES.has(matiere), ignorerAccents: false });
     const voulus = a.ensemble.map(cle);
     const donnes = elements(s).map(cle);
     if (donnes.length !== voulus.length) return false;
@@ -454,7 +473,7 @@ export function comparerExercice(saisie, ex, matiere = null) {
   return a.alternatives.some((alt) => {
     if (alt.kind === 'nombre') return !!nbSaisi && egalNombre(alt, nbSaisi);
     if (alt.phrase) {
-      const opts = { articles: true, ignorerAccents: false };
+      const opts = { articles: alt.articles, ignorerAccents: false };
       const x = clePhrase(alt.valeur, opts);
       const y = clePhrase(texteSaisi, opts);
       if (x === y) return true;

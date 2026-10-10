@@ -179,3 +179,40 @@ test('forme écrite à la main : exigée en entier (« 90 » ne suffit pas pour 
   assert.equal(comparerExercice('90', ex), false);
   assert.equal(comparer('20 °C', '$20$ °C'), true);
 });
+
+test('nombres dans une forme texte : signe, virgule et séparation conservés', () => {
+  const ex = { reponse: 'S(3 ; −3,5)', attendu: { accepte: ['S(3 ; -3,5)'] } };
+  assert.equal(comparerExercice('S(3 ; -3,5)', ex), true);
+  assert.equal(comparerExercice('S(3;−3,5)', ex), true);
+  assert.equal(comparerExercice('S(3 ; 3,5)', ex), false);
+  assert.equal(comparerExercice('S(3 ; -35)', ex), false);
+  const ex2 = { reponse: '1,4 s et 10,8 m', attendu: { accepte: ['1,4 s et 10,8 m'] } };
+  assert.equal(comparerExercice('14 s et 108 m', ex2), false);
+  const ex3 = { reponse: '(2 ; 3)', attendu: { accepte: ['(2 ; 3)'] } };
+  assert.equal(comparerExercice('23', ex3), false);
+  assert.equal(comparerExercice('(2;3)', ex3), true);
+});
+
+test('unités : MW et mW ne se confondent pas ; « ¿ » au milieu est ignoré', () => {
+  assert.equal(comparer('10 mW', '10 MW'), false);
+  assert.equal(comparer('10 MW', '10 MW'), true);
+  assert.equal(comparer('5 min', '5 MIN'), true);
+  const ex = { reponse: 'Hola, ¿qué tal?', attendu: { accepte: ['Hola ¿qué tal?'] } };
+  assert.equal(comparerExercice('hola, que tal', ex, 'espagnol'), false); // accents exigés en langue
+  assert.equal(comparerExercice('hola, qué tal', ex, 'espagnol'), true);
+});
+
+test('langues : l’article compte (« mia casa » ≠ « la mia casa »)', () => {
+  const ex = { reponse: 'la mia casa', attendu: { accepte: ['la mia casa'] } };
+  assert.equal(comparerExercice('mia casa', ex, 'italien'), false);
+  assert.equal(comparerExercice('La mia casa.', ex, 'italien'), true);
+});
+
+test('formes avec flèches ou « < » : rangements et chaînes', () => {
+  const ex = { reponse: 'herbe → lapin → renard', attendu: { accepte: ['herbe → lapin → renard'] } };
+  assert.equal(comparerExercice('herbe -> lapin -> renard', ex), true);
+  assert.equal(comparerExercice('lapin -> herbe -> renard', ex), false);
+  const ex2 = { reponse: '$7 < 7{,}4 < 8$', attendu: { accepte: ['7 < 7,4 < 8'] } };
+  assert.equal(comparerExercice('7<7,4<8', ex2), true);
+  assert.equal(comparerExercice('7 < 74 < 8', ex2), false);
+});
