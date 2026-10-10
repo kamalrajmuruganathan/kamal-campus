@@ -201,3 +201,17 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **SQL à exécuter une fois par Kamal dans Supabase** : `outils/sql/realtime_amities.sql`,
   `outils/sql/classement_amis.sql`, `outils/sql/espace_parent.sql` (sans eux, l'appli affiche « pas encore activé »).
 - Testé dans Chromium (téléphone simulé) : 4e racine carrée, 2de vecteurs, exercices, contrôle, classement, parent : OK.
+
+## 15. Exercices auto-corrigés : attendus.json (10/10/2026) — sur `upgrade-sdk57`, non publié
+- **65 % des exercices sont vérifiés par l'appli** (31 167 / 47 800), contre 28 % avant. Pour cela, 926 chapitres ont
+  un `contenu/<niveau>/<matiere>/<slug>/attendus.json` (créé à côté, exercice.json inchangé) :
+  `{ "<id>": { "reponse": "<copie exacte>", "accepte": [formes courtes] } }` ou `"ensemble": [éléments, ordre libre]`.
+  Si la `reponse` d'un exercice change, la ligne est ignorée (avertissement dans `generer-index`) → mettre à jour.
+- Fusion à la construction : `generer-index.mjs` (web : public/donnees ; natif : import + `fusionnerAttendus`).
+- Logique : `app/lib/autocorrection` (`analyserExercice`, `comparerExercice`, `typeExercice`…), ~70 tests.
+  Accents exigés en français et en langues ; articles et espaces exigés en langues ; nombres : signe, virgule,
+  milliers, puissances de 10, chiffres significatifs (saisie plus précise acceptée) ; unités (m/s² = m.s-2,
+  mol/L = mol·L⁻¹, MW ≠ mW) ; « f(x) = », « S = {…} », flèches, « < ».
+- Vérificateur : `node app/scripts/verifier-attendus.mjs [chemins…]` (0 problème exigé ; refuse un nombre absent
+  de l'énoncé/réponse/corrigé, une forme non vérifiable, une réponse « Exemple : »).
+- ~88 erreurs repérées dans les exercices pendant ce travail : corrigées (voir le message de commit « Corrections »).
