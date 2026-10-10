@@ -25,6 +25,25 @@
       "Ich trage ein blaues Kleid"
     ]
   },
+  "10": {
+    "reponse": "Exemple : Ich trage eine Hose und ein T-Shirt.",
+    "criteres": [
+      {
+        "idee": "La phrase commence par Ich trage",
+        "mots": [
+          "ich trage"
+        ]
+      },
+      {
+        "idee": "Un vêtement avec son article (eine Hose, ein T-Shirt…)",
+        "mots": [
+          "eine",
+          "ein",
+          "einen"
+        ]
+      }
+    ]
+  },
   "15": {
     "reponse": "le pull, le pantalon",
     "accepte": [
@@ -37,6 +56,50 @@
     "accepte": [
       "das T-Shirt, die Hose",
       "das, die"
+    ]
+  },
+  "18": {
+    "reponse": "der : Pullover — die : Jacke, Hose — das : Kleid, T-Shirt",
+    "criteres": [
+      {
+        "idee": "der : Pullover",
+        "mots": [
+          "der pullover",
+          "pullover"
+        ]
+      },
+      {
+        "idee": "die : Jacke, Hose",
+        "mots": [
+          "jacke",
+          "hose"
+        ]
+      },
+      {
+        "idee": "das : Kleid, T-Shirt",
+        "mots": [
+          "kleid",
+          "shirt"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "reponse": "Parce que Schuhe est un pluriel : au pluriel, on dit die.",
+    "criteres": [
+      {
+        "idee": "Schuhe est un pluriel (les chaussures)",
+        "mots": [
+          "pluriel",
+          "chaussures"
+        ]
+      },
+      {
+        "idee": "Au pluriel, l'article est toujours die",
+        "mots": [
+          "die"
+        ]
+      }
     ]
   },
   "23": {
@@ -101,6 +164,26 @@
       "Der Pullover ist blau"
     ]
   },
+  "39": {
+    "reponse": "Haut : Pullover, T-Shirt, Jacke — Jambes et pieds : Hose, Schuhe",
+    "criteres": [
+      {
+        "idee": "Haut du corps : Pullover, T-Shirt, Jacke",
+        "mots": [
+          "pullover",
+          "shirt",
+          "jacke"
+        ]
+      },
+      {
+        "idee": "Jambes et pieds : Hose, Schuhe",
+        "mots": [
+          "hose",
+          "schuhe"
+        ]
+      }
+    ]
+  },
   "41": {
     "reponse": "une robe et une veste",
     "accepte": [
@@ -122,6 +205,49 @@
     "reponse": "Ich trage eine Jacke.",
     "accepte": [
       "Ich trage eine Jacke"
+    ]
+  },
+  "46": {
+    "reponse": "Exemple : Sie trägt ein Kleid.",
+    "criteres": [
+      {
+        "idee": "La phrase commence par Er trägt ou Sie trägt",
+        "mots": [
+          "tragt"
+        ]
+      },
+      {
+        "idee": "Un vêtement avec le bon article : einen, eine ou ein",
+        "mots": [
+          "einen",
+          "eine",
+          "ein"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Exemple : Ich trage einen Pullover. Der Pullover ist blau.",
+    "criteres": [
+      {
+        "idee": "Phrase 1 : Ich trage + un vêtement",
+        "mots": [
+          "ich trage"
+        ]
+      },
+      {
+        "idee": "Phrase 2 : Der, Die ou Das + vêtement + ist + une couleur",
+        "mots": [
+          "ist blau",
+          "ist rot",
+          "ist grun",
+          "ist gelb",
+          "ist schwarz",
+          "ist weiß",
+          "ist braun",
+          "ist rosa"
+        ]
+      }
     ]
   },
   "49": {

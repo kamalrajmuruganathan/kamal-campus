@@ -44,6 +44,28 @@
       "Sie ist glücklich"
     ]
   },
+  "10": {
+    "reponse": "Exemple : Ich bin fröhlich.",
+    "criteres": [
+      {
+        "idee": "La phrase commence par Ich bin",
+        "mots": [
+          "ich bin"
+        ]
+      },
+      {
+        "idee": "Puis un sentiment (fröhlich, traurig, müde, wütend…)",
+        "mots": [
+          "frohlich",
+          "traurig",
+          "mude",
+          "wutend",
+          "glucklich",
+          "gut"
+        ]
+      }
+    ]
+  },
   "12": {
     "reponse": "fatigué(e)",
     "accepte": [
@@ -97,6 +119,45 @@
     "accepte": [
       "Ich bin müde und er ist fröhlich",
       "bin, ist"
+    ]
+  },
+  "27": {
+    "reponse": "Parce que la peur se dit avec haben : on a peur.",
+    "criteres": [
+      {
+        "idee": "Angst est un nom (la peur) : on « a » peur, comme en français",
+        "mots": [
+          "nom",
+          "a peur",
+          "on a"
+        ]
+      },
+      {
+        "idee": "La peur se dit donc avec haben (habe)",
+        "mots": [
+          "haben",
+          "habe"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "Ich bin : traurig, müde, wütend — Ich habe : Angst",
+    "criteres": [
+      {
+        "idee": "Avec Ich bin : traurig, müde, wütend",
+        "mots": [
+          "traurig",
+          "mude",
+          "wutend"
+        ]
+      },
+      {
+        "idee": "Avec Ich habe : Angst",
+        "mots": [
+          "angst"
+        ]
+      }
     ]
   },
   "33": {
@@ -160,6 +221,24 @@
       "Sie ist müde und traurig"
     ]
   },
+  "45": {
+    "reponse": "Wie geht es dir? — Es geht mir gut.",
+    "criteres": [
+      {
+        "idee": "La question : Wie geht es dir?",
+        "mots": [
+          "wie geht"
+        ]
+      },
+      {
+        "idee": "La réponse : Es geht mir gut (ou nicht gut)",
+        "mots": [
+          "geht mir",
+          "mir gut"
+        ]
+      }
+    ]
+  },
   "47": {
     "reponse": "Ich bin glücklich.",
     "accepte": [
@@ -175,6 +254,43 @@
       "fatiguée, heureuse",
       "heureux et fatigué",
       "heureuse et fatiguée"
+    ]
+  },
+  "49": {
+    "reponse": "Exemple : Ich bin müde. Ich habe Angst.",
+    "criteres": [
+      {
+        "idee": "Une phrase avec Ich bin et un adjectif",
+        "mots": [
+          "ich bin"
+        ]
+      },
+      {
+        "idee": "Une phrase avec Ich habe (Angst)",
+        "mots": [
+          "ich habe",
+          "angst"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Agréables : fröhlich, glücklich — Désagréables : traurig, wütend",
+    "criteres": [
+      {
+        "idee": "Agréables : fröhlich, glücklich",
+        "mots": [
+          "frohlich",
+          "glucklich"
+        ]
+      },
+      {
+        "idee": "Désagréables : traurig, wütend",
+        "mots": [
+          "traurig",
+          "wutend"
+        ]
+      }
     ]
   }
 }

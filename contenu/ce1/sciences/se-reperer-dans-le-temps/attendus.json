@@ -46,6 +46,32 @@
       "matin, midi, après-midi, soir, nuit"
     ]
   },
+  "8": {
+    "reponse": "Lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche. Après mardi vient mercredi.",
+    "criteres": [
+      {
+        "idee": "Lundi, mardi, mercredi, jeudi",
+        "mots": [
+          "lundi",
+          "jeudi"
+        ]
+      },
+      {
+        "idee": "Vendredi, samedi, dimanche",
+        "mots": [
+          "vendredi",
+          "samedi",
+          "dimanche"
+        ]
+      },
+      {
+        "idee": "Juste après mardi vient mercredi",
+        "mots": [
+          "mercredi"
+        ]
+      }
+    ]
+  },
   "9": {
     "reponse": "La petite aiguille montre les heures, la grande aiguille montre les minutes.",
     "accepte": [
@@ -148,6 +174,24 @@
       "mesurer une durée"
     ]
   },
+  "36": {
+    "reponse": "C'est le matin que Zoé prend son petit-déjeuner avant de partir à l'école.",
+    "criteres": [
+      {
+        "idee": "Le petit-déjeuner se prend le matin, pas le soir",
+        "mots": [
+          "matin"
+        ]
+      },
+      {
+        "idee": "On part aussi à l'école le matin",
+        "mots": [
+          "avant de partir",
+          "matin"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "Il naît → il apprend à marcher → il entre au CE1.",
     "accepte": [
@@ -169,10 +213,80 @@
       "la montre, le chronomètre, le calendrier"
     ]
   },
+  "43": {
+    "reponse": "Parce que la nuit il fait sombre, alors que le jour le Soleil éclaire.",
+    "criteres": [
+      {
+        "idee": "Le jour, il fait clair grâce au Soleil",
+        "mots": [
+          "clair",
+          "soleil eclaire",
+          "eclaire",
+          "lumiere du soleil"
+        ]
+      },
+      {
+        "idee": "La nuit, il fait sombre : on a besoin de lumière",
+        "mots": [
+          "sombre",
+          "noir",
+          "besoin"
+        ]
+      }
+    ]
+  },
   "44": {
     "reponse": "Hier, j'ai joué au foot. Aujourd'hui, je vais à la piscine. Demain, j'irai chez ma mamie.",
     "accepte": [
       "hier, aujourd'hui, demain"
+    ]
+  },
+  "47": {
+    "reponse": "Exemple de réponse : « Avant l'école, je prends mon petit-déjeuner ; pendant la classe, je lis ; après l'école, je goûte. »",
+    "criteres": [
+      {
+        "idee": "Une phrase qui commence par « Avant »",
+        "mots": [
+          "avant"
+        ]
+      },
+      {
+        "idee": "Une phrase qui commence par « Pendant »",
+        "mots": [
+          "pendant"
+        ]
+      },
+      {
+        "idee": "Une phrase qui commence par « Après »",
+        "mots": [
+          "apres"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Le calendrier : il compte les jours entre aujourd'hui et le début des vacances.",
+    "criteres": [
+      {
+        "idee": "Le calendrier",
+        "mots": [
+          "calendrier"
+        ]
+      },
+      {
+        "idee": "Il cherche la date d'aujourd'hui et celle des vacances",
+        "mots": [
+          "date",
+          "aujourd",
+          "debut"
+        ]
+      },
+      {
+        "idee": "Il compte les jours entre les deux",
+        "mots": [
+          "compte"
+        ]
+      }
     ]
   },
   "50": {
