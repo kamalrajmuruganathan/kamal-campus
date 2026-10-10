@@ -278,3 +278,42 @@ test('« ont / on » = « ont, on » = « ont/on » ; fractions intactes', () =>
   const ex2 = { reponse: '3/4 du gâteau', attendu: { accepte: ['3/4 du gâteau'] } };
   assert.equal(comparerExercice('34 du gâteau', ex2), false);
 });
+
+test('très petits nombres : 1,3 × 10⁻¹⁹ ≠ 1,3 × 10⁻¹⁸ ; unité après une puissance de 10', () => {
+  assert.equal(comparer('1,3 × 10^-19 C', '$1{,}3 \\times 10^{-18}$ C'), false);
+  assert.equal(comparer('1,3 × 10^-18 C', '$1{,}3 \\times 10^{-18}$ C'), true);
+  assert.equal(comparer('3,0 × 10^-2 S/m', '$3{,}0 \\times 10^{-2}$ S/m'), true);
+  assert.equal(comparer('0,03 S/m', '$3{,}0 \\times 10^{-2}$ S/m'), true);
+});
+
+test('saisie plus précise : arrondie aux chiffres significatifs de la réponse', () => {
+  assert.equal(comparer('314,16 rad/s', '314 rad/s'), true);
+  assert.equal(comparer('13,86 min', '14 min'), true);
+  assert.equal(comparer('334 800 J', '$3{,}35 \\times 10^{5}$ J'), true);
+  assert.equal(comparer('3,33 × 10^-3', '$3{,}3 \\times 10^{-3}$'), true);
+  assert.equal(comparer('320 000 J', '$3{,}35 \\times 10^{5}$ J'), false);
+  assert.equal(comparer('15', '14 min'), false);
+  assert.equal(comparer('4,5', '4,47'), false); // moins précis : refusé
+});
+
+test('« f(-2) = 15 », « x = 3 ou x = -5 », « S = ∅ » acceptés ; π permis en grec', () => {
+  const ex = { reponse: '$f(-2) = 15$', attendu: { accepte: ['15'] } };
+  assert.equal(comparerExercice('f(-2) = 15', ex), true);
+  assert.equal(comparerExercice('f(-2) = 16', ex), false);
+  const ex2 = { reponse: '$x = 3$ ou $x = -5$', attendu: { accepte: ['3 ou -5', '-5 ou 3'] } };
+  assert.equal(comparerExercice('x = 3 ou x = -5', ex2), true);
+  assert.equal(comparerExercice('x = 3 ou x = 5', ex2), false);
+  const ex3 = { reponse: '$S = \\emptyset$', attendu: { accepte: ['ensemble vide', 'aucune solution'] } };
+  assert.equal(comparerExercice('S = ∅', ex3), true);
+  assert.equal(comparerExercice('∅', ex3), true);
+  const ex4 = { reponse: 'ἵππος', attendu: { accepte: ['ἵππος', 'ιππος'] } };
+  assert.equal(typeExercice(ex4, 'langues-anciennes'), 'auto');
+});
+
+test('forme « nombre + plusieurs mots » = phrase entière ; « +25 » permis', () => {
+  const ex = { reponse: 'En 1895, par les frères Lumière.', attendu: { accepte: ['1895 frères Lumière'] } };
+  assert.equal(comparerExercice('1895', ex), false);
+  assert.equal(comparerExercice('1895, frères Lumière', ex), true);
+  const ex2 = { reponse: '+1 200 habitants', attendu: { accepte: ['+1 200 habitants'] } };
+  assert.equal(comparerExercice('+1200 habitants', ex2), true);
+});

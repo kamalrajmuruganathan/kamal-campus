@@ -34,6 +34,7 @@ function nettoyer(s) {
   return String(s ?? '')
     .replace(/[’‘`´]/g, "'")
     .replace(/μ/g, 'µ') // mu grec = symbole micro
+    .replace(/∅/g, ' ensemble vide ')
     .replace(/[−–—]/g, '-')
     .replace(/[«»“”"¡¿]/g, ' ')
     .replace(ESPACES, ' ')
@@ -102,7 +103,7 @@ function sansDollars(r) {
 // puis éventuellement « × 10^n » / « e-n », puis éventuellement « /entier ».
 const RE_NOMBRE = new RegExp(
   '^([+-]?)\\s*(\\d{1,3}(?:[ \\u00a0\\u202f]\\d{3})+|\\d+)(?:[.,](\\d+))?' +
-    '(?:\\s*(?:[×x*·]\\s*10\\s*\\^\\s*\\(?\\s*([+-]?\\d+)\\s*\\)?|[eE]([+-]?\\d+)))?' +
+    '(?:\\s*(?:[×x*·]\\s*10\\s*\\^\\s*\\(?\\s*([+-]?\\d+)(?:\\s*\\))?|[eE]([+-]?\\d+)))?' +
     '(?:\\s*/\\s*(\\d+)(?![\\d.,]))?',
 );
 
@@ -148,6 +149,8 @@ function lireNombre(texte) {
   const m = s.match(RE_NOMBRE);
   if (!m) return null;
   const [tout, signe, entier, dec = '', exp1, exp2, denom] = m;
+  // Chiffres significatifs écrits (« 3,35 » → 3 ; « 0,050 » → 2 ; « 314 » → 3).
+  const chiffres = (entier.replace(/\D/g, '') + dec).replace(/^0+/, '').length;
   let valeur = Number(entier.replace(/\D/g, '') + (dec ? '.' + dec : ''));
   const exposant = exp1 ?? exp2;
   if (exposant != null) valeur *= 10 ** Number(exposant);
@@ -168,7 +171,9 @@ function lireNombre(texte) {
   return {
     valeur,
     decimales: exposant != null || denom != null ? null : dec.length,
+    chiffres: denom != null ? null : chiffres,
     unite: reste ? normUnite(reste) : '',
+    motsUnite: reste ? reste.split(' ').length : 0,
   };
 }
 
@@ -316,8 +321,16 @@ export function uniteAttendue(reponse, matiere = null) {
 function egalNombre(att, saisie) {
   if (saisie.unite && att.unite && saisie.unite !== att.unite) return false;
   if (saisie.unite && !att.unite) return false;
-  const e = Math.abs(att.valeur) * 1e-9 + 1e-12;
+  // Tolérance RELATIVE seulement (sinon 10⁻¹⁹ « égalerait » 10⁻¹⁸).
+  const e = att.valeur === 0 ? 1e-15 : Math.abs(att.valeur) * 1e-9;
   if (Math.abs(att.valeur - saisie.valeur) <= e) return true;
+  // Saisie plus précise que la réponse (au moins 2 chiffres significatifs attendus) :
+  // on arrondit la saisie au même nombre de chiffres significatifs (314,16 → 314 ;
+  // 334 800 → 3,35 × 10^5 ; 13,86 → 14).
+  if (att.chiffres >= 2 && saisie.chiffres != null && saisie.chiffres > att.chiffres && att.valeur !== 0) {
+    const arrondi = Number(saisie.valeur.toPrecision(att.chiffres));
+    if (Math.abs(arrondi - att.valeur) <= e) return true;
+  }
   // Plus de décimales que la réponse (attendue décimale) : on accepte si
   // l'arrondi de la saisie redonne la réponse (3,1416 pour 3,14).
   if (att.decimales && saisie.decimales != null && saisie.decimales > att.decimales) {
@@ -388,11 +401,14 @@ function analyserForme(forme, matiere = null) {
   if (texte == null) return null;
   const propre = sansPonctuationFinale(texte);
   const nb = lireNombre(propre);
-  if (nb) return { kind: 'nombre', ...nb };
+  // « 1895 frères Lumière » : deux mots après le nombre → c'est une phrase, pas une unité
+  // (sinon « 1895 » seul suffirait).
+  if (nb && nb.motsUnite < 2) return { kind: 'nombre', ...nb };
   // Expression mathématique (« x² + 1 », « 6x ») : plusieurs écritures possibles → non.
   // (« < », « > » et les flèches sont permis : rangements, chaînes alimentaires.)
   // (« cm³ », « m² » : exposant collé à une unité, permis.)
-  if (/[=^√∞π+*×²³]/.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1'))) return null;
+  const symboles = matiere === 'langues-anciennes' ? /[=^√∞+*×²³]/ : /[=^√∞π+*×²³]/; // π est une lettre en grec
+  if (symboles.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1').replace(/(^|[\s(;,])\+(?=\s?\d)/g, '$1'))) return null;
   if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre)) return null;
   const mots = compterMots(propre);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
@@ -474,9 +490,10 @@ export function comparerExercice(saisie, ex, matiere = null) {
   const s = nettoyer(saisie);
   if (!s) return false;
   // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
-  const sansS = s.replace(/^S\s*=\s*(?=[{[])/, '');
-  if (sansS !== s) return comparerExercice(sansS, ex, matiere) || comparerUne(s, ex, matiere);
-  return comparerUne(s, ex, matiere);
+  if (comparerUne(s, ex, matiere)) return true;
+  // « S = {1 ; 2} », « f(-2) = 15 », « x = 3 ou x = -5 » : on retire les « nom = » devant les valeurs.
+  const sansNoms = s.replace(/(^|[\s;,(]|\bou\b|\bet\b)\s*[A-Za-zΔ][A-Za-z0-9'_]{0,5}(?:\([^()=]{0,6}\))?\s*=\s*(?!=)/g, '$1 ').replace(/\s+/g, ' ').trim();
+  return sansNoms !== s && sansNoms !== '' && comparerUne(sansNoms, ex, matiere);
 }
 
 function comparerUne(s, ex, matiere) {
