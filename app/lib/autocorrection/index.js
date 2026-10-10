@@ -45,6 +45,8 @@ function nettoyer(s) {
  */
 function protegerNombres(s) {
   return s
+    // Espaces des milliers : « 1 359 » = « 1359 » (groupes de 3 chiffres après le premier).
+    .replace(/(?<![\d,.])(\d{1,3})((?: \d{3})+)(?![\d])/g, (_, a, b) => a + b.replace(/ /g, ''))
     .replace(/(\d)[,.](?=\d)/g, '$1§')          // virgule / point décimal
     .replace(/(^|[^\p{L}\d])-\s*(?=\d)/gu, '$1~') // signe moins
     .replace(/(\d)[\s,;:/]+(?=[\d~])/g, '$1#');  // deux nombres qui se suivent

@@ -216,3 +216,10 @@ test('formes avec flèches ou « < » : rangements et chaînes', () => {
   assert.equal(comparerExercice('7<7,4<8', ex2), true);
   assert.equal(comparerExercice('7 < 74 < 8', ex2), false);
 });
+
+test('forme texte : espaces des milliers (« 1 359 » = « 1359 »)', () => {
+  const ex = { reponse: 'quotient 1 359, reste 2', attendu: { accepte: ['quotient 1 359 reste 2'] } };
+  assert.equal(comparerExercice('quotient 1359, reste 2', ex), true);
+  assert.equal(comparerExercice('quotient 1 359 reste 2', ex), true);
+  assert.equal(comparerExercice('quotient 135 reste 92', ex), false);
+});
