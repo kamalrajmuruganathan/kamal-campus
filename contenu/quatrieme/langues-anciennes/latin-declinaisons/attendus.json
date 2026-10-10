@@ -32,6 +32,32 @@
       "1re : rosa ; 2e : dominus ; 3e : rex"
     ]
   },
+  "10": {
+    "reponse": "Le roi construit un temple.",
+    "criteres": [
+      {
+        "idee": "rex : nominatif, sujet",
+        "mots": [
+          "sujet",
+          "nominatif"
+        ]
+      },
+      {
+        "idee": "templum : accusatif, COD",
+        "mots": [
+          "cod",
+          "accusatif"
+        ]
+      },
+      {
+        "idee": "Traduction : « Le roi construit un temple. »",
+        "mots": [
+          "roi construit",
+          "construit un temple"
+        ]
+      }
+    ]
+  },
   "11": {
     "reponse": "2e : -i ; 3e : -is",
     "accepte": [
@@ -94,6 +120,34 @@
       "non",
       "non, c'est un pluriel neutre",
       "non, c'est un neutre pluriel"
+    ]
+  },
+  "33": {
+    "reponse": "Le sujet est dominus ; templum est le COD.",
+    "criteres": [
+      {
+        "idee": "dominus, en -us, ne peut être qu'un nominatif : c'est le sujet",
+        "mots": [
+          "dominus",
+          "nominatif",
+          "sujet"
+        ]
+      },
+      {
+        "idee": "templum, neutre, est ici le COD",
+        "mots": [
+          "cod",
+          "complement",
+          "accusatif"
+        ]
+      },
+      {
+        "idee": "Traduction : « Le maître voit le temple »",
+        "mots": [
+          "maitre voit",
+          "voit le temple"
+        ]
+      }
     ]
   },
   "34": {
@@ -173,10 +227,91 @@
       "Milites equos ducibus dant"
     ]
   },
+  "45": {
+    "reponse": "Le roi montre les temples aux consuls.",
+    "criteres": [
+      {
+        "idee": "rex : nominatif, sujet",
+        "mots": [
+          "sujet",
+          "nominatif"
+        ]
+      },
+      {
+        "idee": "consulibus : datif pluriel, complément d'objet second",
+        "mots": [
+          "datif",
+          "cos",
+          "objet second"
+        ]
+      },
+      {
+        "idee": "templa : accusatif pluriel neutre, COD",
+        "mots": [
+          "cod",
+          "accusatif"
+        ]
+      },
+      {
+        "idee": "Traduction : « Le roi montre les temples aux consuls. »",
+        "mots": [
+          "montre les temples",
+          "aux consuls"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "templa est pluriel alors que le verbe est au singulier.",
+    "criteres": [
+      {
+        "idee": "templa est un pluriel alors que laudat est au singulier",
+        "mots": [
+          "pluriel",
+          "singulier"
+        ]
+      },
+      {
+        "idee": "Le sujet est rex ; templa est le COD",
+        "mots": [
+          "rex",
+          "cod",
+          "accusatif"
+        ]
+      }
+    ]
+  },
   "48": {
     "reponse": "homines, homines, homines, hominum, hominibus, hominibus",
     "accepte": [
       "homines, homines, homines, hominum, hominibus, hominibus"
+    ]
+  },
+  "49": {
+    "reponse": "Non, c'est le sujet au pluriel : « Les amis du roi louent les cadeaux. »",
+    "criteres": [
+      {
+        "idee": "Non : laudant est au pluriel, il faut un sujet au pluriel",
+        "mots": [
+          "non",
+          "pluriel"
+        ]
+      },
+      {
+        "idee": "amici est un nominatif pluriel, sujet ; regis est le complément du nom",
+        "mots": [
+          "nominatif",
+          "sujet",
+          "regis"
+        ]
+      },
+      {
+        "idee": "Traduction : « Les amis du roi louent les cadeaux. »",
+        "mots": [
+          "amis du roi",
+          "louent"
+        ]
+      }
     ]
   },
   "50": {
