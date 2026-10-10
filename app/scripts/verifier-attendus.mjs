@@ -86,7 +86,7 @@ for (const chemin of chapitres) {
         if (!Array.isArray(liste) || !liste.length || liste.some((x) => typeof x !== 'string' || !x.trim())) { pb.push(`${ici} : « ${cles[0]} » doit être une liste de textes non vides`); continue; }
         if (liste.length > MAX_FORMES) { pb.push(`${ici} : ${liste.length} formes (max ${MAX_FORMES})`); continue; }
         if (cles[0] === 'ensemble' && liste.length < 2) { pb.push(`${ici} : « ensemble » demande au moins 2 éléments`); continue; }
-        if (/exemple|par ex\.|réponses? possibles?|réponse libre/i.test(ex.reponse)) { pb.push(`${ici} : réponse « exemple » → plusieurs bonnes réponses, pas d'attendu`); continue; }
+        if (/^\s*(?:par\s+)?ex(?:emple|\.)\b|exemple de réponse|exemples? possibles?|réponses? possibles?|réponse libre|\((?:par\s+)?exemple\)|,\s*par exemple\s*:/i.test(ex.reponse)) { pb.push(`${ici} : réponse « exemple » → plusieurs bonnes réponses, pas d'attendu`); continue; }
         const avecAtt = { ...ex, attendu: cles[0] === 'ensemble' ? { ensemble: liste } : { accepte: liste } };
         if (typeExercice(avecAtt, matiere) !== 'auto') { pb.push(`${ici} : une forme n'est pas vérifiable (formule, phrase > 8 mots…) : ${JSON.stringify(liste)}`); continue; }
         if (cles[0] === 'ensemble') {
