@@ -383,7 +383,7 @@ export const MAX_MOTS_ATTENDU = 12;
 /** Analyse UNE forme acceptée ; null si elle n'est pas vérifiable par la machine. */
 function analyserForme(forme, matiere = null) {
   const brut = nettoyer(forme);
-  if (!brut || brut.length > 80) return null;
+  if (!brut || brut.length > 100) return null;
   const texte = sansDollars(brut);
   if (texte == null) return null;
   const propre = sansPonctuationFinale(texte);
@@ -406,15 +406,18 @@ function analyserForme(forme, matiere = null) {
 function clePhrase(s, opts) {
   const t = protegerNombres(nettoyer(s))
     .replace(/\s*(?:->|=>|⇒|→|⟶)\s*/g, '→') // toutes les flèches se valent
-    .replace(/\s*\/\s*/g, '/') // « des / der » = « des/der »
+    .replace(/\s*\/\s*/g, ' ') // « des / der » = « des/der » = « des der » (sauf fractions, déjà protégées)
     .replace(/\s*≤\s*/g, '<=').replace(/\s*≥\s*/g, '>=');
   return cleTexte(t.replace(/[,;:!?.]/g, ' '), opts);
 }
 
 /** Découpe une énumération saisie par l'élève (virgules, « et », « ; », « / », retours). */
 function elements(saisie) {
+  // D'abord les séparateurs sûrs, puis « et / and / und / y / e » seulement à l'intérieur d'un
+  // morceau de plusieurs mots (une liste de voyelles « a, e, i » garde son « e »).
   return nettoyer(saisie)
-    .split(/\s*(?:[,;/\n]|(?<!\p{L})(?:et|and|und|y|e)(?!\p{L}))\s*/iu)
+    .split(/\s*[,;/\n]\s*/)
+    .flatMap((m) => (/\s/.test(m.trim()) ? m.split(/\s+(?:et|and|und|y|e)\s+/iu) : [m]))
     .map((x) => sansPonctuationFinale(x))
     .filter((x) => /[\p{L}\p{N}]/u.test(x));
 }
@@ -477,6 +480,8 @@ export function comparerExercice(saisie, ex, matiere = null) {
 }
 
 function comparerUne(s, ex, matiere) {
+  // « c) », « (c) » → « c » (réponse à un QCM écrit).
+  s = s.replace(/^\(?([a-hA-H])\)$/, '$1');
   const a = analyserExercice(ex, matiere);
   if (a.type !== 'auto') return false;
   if (a.ensemble) {

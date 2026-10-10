@@ -263,3 +263,18 @@ test('barres obliques : « des / der » = « des/der »', () => {
   const ex = { reponse: 'des / der', attendu: { accepte: ['des / der'] } };
   assert.equal(comparerExercice('des/der', ex, 'allemand'), true);
 });
+
+test('ensemble de lettres (« a, e, i, o, u ») ; « c) » = « c »', () => {
+  const ex = { reponse: 'a, e, i, o, u', attendu: { ensemble: ['a', 'e', 'i', 'o', 'u'] } };
+  assert.equal(comparerExercice('a, e, i, o, u', ex, 'espagnol'), true);
+  assert.equal(comparerExercice('a, e, i, o', ex, 'espagnol'), false);
+  const ex2 = { reponse: 'c) del', attendu: { accepte: ['c', 'del'] } };
+  assert.equal(comparerExercice('c)', ex2, 'espagnol'), true);
+});
+
+test('« ont / on » = « ont, on » = « ont/on » ; fractions intactes', () => {
+  const ex = { reponse: 'ont, on', attendu: { accepte: ['ont, on'] } };
+  assert.equal(comparerExercice('ont/on', ex, 'francais'), true);
+  const ex2 = { reponse: '3/4 du gâteau', attendu: { accepte: ['3/4 du gâteau'] } };
+  assert.equal(comparerExercice('34 du gâteau', ex2), false);
+});
