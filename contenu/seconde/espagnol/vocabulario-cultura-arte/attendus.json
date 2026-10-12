@@ -54,6 +54,26 @@
       "El museo expone obras de Goya"
     ]
   },
+  "9": {
+    "reponse": "Leo una novela de Cervantes. / Este cuento es muy corto.",
+    "criteres": [
+      {
+        "idee": "La novela est le roman, un récit long",
+        "mots": [
+          "roman",
+          "long"
+        ]
+      },
+      {
+        "idee": "El cuento est le conte ou la nouvelle, un récit court",
+        "mots": [
+          "conte",
+          "nouvelle",
+          "court"
+        ]
+      }
+    ]
+  },
   "11": {
     "reponse": "la escultura, el/la artista, el lienzo",
     "accepte": [
@@ -191,6 +211,57 @@
       "Elle lit un roman"
     ]
   },
+  "35": {
+    "reponse": "Exemple : Mi película favorita es una comedia; el director es español.",
+    "criteres": [
+      {
+        "idee": "Tu présentes ton film préféré (titre ou genre)",
+        "mots": [
+          "mi pelicula",
+          "favorita",
+          "comedia",
+          "drama",
+          "accion",
+          "terror",
+          "animacion"
+        ]
+      },
+      {
+        "idee": "Tu donnes une information sur el director / la directora",
+        "mots": [
+          "director",
+          "directora"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Exemple : ¿Quieres venir conmigo a ver una exposición en el museo el sábado?",
+    "criteres": [
+      {
+        "idee": "Une question d'invitation (¿Quieres…? ¿Vienes…?)",
+        "mots": [
+          "quieres",
+          "te gustaria",
+          "vienes",
+          "vamos"
+        ]
+      },
+      {
+        "idee": "Le lieu : une exposición en el museo",
+        "mots": [
+          "exposicion",
+          "museo"
+        ]
+      },
+      {
+        "idee": "Le jour : el sábado",
+        "mots": [
+          "sabado"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "cantante ; canción",
     "accepte": [
@@ -203,10 +274,77 @@
       "los cuadros, las canciones, los pintores, las exposiciones"
     ]
   },
+  "39": {
+    "reponse": "arts plastiques : lienzo, escultura ; musique : canción, cantante ; cinéma : película ; littérature : novela",
+    "criteres": [
+      {
+        "idee": "Arts plastiques : el lienzo, la escultura",
+        "mots": [
+          "plastiques el lienzo",
+          "plastiques lienzo",
+          "lienzo escultura",
+          "lienzo la escultura",
+          "escultura lienzo",
+          "escultura el lienzo"
+        ]
+      },
+      {
+        "idee": "Musique : la canción, el cantante",
+        "mots": [
+          "musique la cancion",
+          "musique cancion",
+          "cancion cantante",
+          "cancion el cantante",
+          "cantante cancion",
+          "cantante la cancion"
+        ]
+      },
+      {
+        "idee": "Cinéma : la película",
+        "mots": [
+          "cinema la pelicula",
+          "cinema pelicula",
+          "pelicula cinema"
+        ]
+      },
+      {
+        "idee": "Littérature : la novela",
+        "mots": [
+          "litterature la novela",
+          "litterature novela",
+          "novela litterature"
+        ]
+      }
+    ]
+  },
   "40": {
     "reponse": "La nueva película de esta directora se estrena en diciembre.",
     "accepte": [
       "La nueva película de esta directora se estrena en diciembre"
+    ]
+  },
+  "41": {
+    "reponse": "À Figueres (Catalogne) ; au surréalisme ; un musée consacré à son œuvre.",
+    "criteres": [
+      {
+        "idee": "Dalí est né à Figueres, en Catalogne",
+        "mots": [
+          "figueres",
+          "catalogne"
+        ]
+      },
+      {
+        "idee": "Il appartenait au surréalisme",
+        "mots": [
+          "surreal"
+        ]
+      },
+      {
+        "idee": "On y trouve aujourd'hui un musée consacré à son œuvre",
+        "mots": [
+          "musee"
+        ]
+      }
     ]
   },
   "42": {
@@ -218,10 +356,47 @@
       "La artista expone sus esculturas en un museo pequeño"
     ]
   },
+  "43": {
+    "reponse": "Exemple : En el cuadro hay una mujer y un niño en un jardín. El pintor usa colores muy alegres.",
+    "criteres": [
+      {
+        "idee": "La phrase commence par « En el cuadro hay… » pour dire ce qu'on voit",
+        "mots": [
+          "hay"
+        ]
+      },
+      {
+        "idee": "Un détail sur le peintre ou les couleurs",
+        "mots": [
+          "pintor",
+          "pintora",
+          "color"
+        ]
+      }
+    ]
+  },
   "44": {
     "reponse": "expongo, estrenan, interpretamos",
     "accepte": [
       "expongo, estrenan, interpretamos"
+    ]
+  },
+  "45": {
+    "reponse": "el cuadro = le tableau (pas le cadre) ; la novela = le roman (pas la nouvelle).",
+    "criteres": [
+      {
+        "idee": "El cuadro ressemble à « cadre » mais signifie le tableau",
+        "mots": [
+          "tableau",
+          "cadre"
+        ]
+      },
+      {
+        "idee": "La novela ressemble à « nouvelle » mais signifie le roman",
+        "mots": [
+          "roman"
+        ]
+      }
     ]
   },
   "46": {
@@ -229,6 +404,31 @@
     "accepte": [
       "novelas, cuentos",
       "novelas, relatos"
+    ]
+  },
+  "47": {
+    "reponse": "a) faux ; b) vrai ; c) faux",
+    "criteres": [
+      {
+        "idee": "a) Faux : tocar = jouer d'un instrument (jouer un rôle = actuar, interpretar)",
+        "mots": [
+          "instrument",
+          "actuar",
+          "interpretar"
+        ]
+      },
+      {
+        "idee": "b) Vrai : estrenar = sortir un film",
+        "mots": [
+          "vrai"
+        ]
+      },
+      {
+        "idee": "c) Faux : el lienzo = la toile du peintre",
+        "mots": [
+          "toile"
+        ]
+      }
     ]
   },
   "48": {
