@@ -14,6 +14,67 @@
       "4,0 kg/s"
     ]
   },
+  "3": {
+    "reponse": "Organes : consigne, capteur (sonde), correcteur, actionneur (résistance). $\\varepsilon = +1{,}5$ °C > 0 : la résistance chauffe ; à 37,0 °C, $\\varepsilon = 0$ et elle s'arrête.",
+    "criteres": [
+      {
+        "idee": "Les quatre organes : consigne, capteur (sonde), correcteur, actionneur (résistance)",
+        "mots": [
+          "consigne",
+          "capteur",
+          "correcteur",
+          "actionneur"
+        ]
+      },
+      {
+        "idee": "Écart ε = 37,0 − 35,5 = +1,5 °C",
+        "mots": [
+          "1 5"
+        ]
+      },
+      {
+        "idee": "L'écart est positif : la résistance chauffe",
+        "mots": [
+          "chauffe",
+          "positif"
+        ]
+      },
+      {
+        "idee": "À 37,0 °C, l'écart est nul et la résistance s'arrête",
+        "mots": [
+          "nul",
+          "arret",
+          "s arrete"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "reponse": "Non, pas de régime permanent ($Q_e \\neq Q_s$). Masse accumulée : $\\Delta m = 180$ kg en 2,0 min.",
+    "criteres": [
+      {
+        "idee": "Non : le régime permanent exige Qe = Qs, ce qui n'est pas le cas",
+        "mots": [
+          "regime permanent",
+          "pas en regime",
+          "non"
+        ]
+      },
+      {
+        "idee": "Le réservoir accumule de la matière (1,5 kg/s)",
+        "mots": [
+          "accumul",
+          "1 5"
+        ]
+      },
+      {
+        "idee": "Masse accumulée en 2,0 min : 180 kg",
+        "mots": [
+          "180"
+        ]
+      }
+    ]
+  },
   "5": {
     "reponse": "$\\eta = 0{,}68$ (68 %) ; $P_u \\approx 2{,}7$ kW ; $P_\\text{pertes} \\approx 1{,}3$ kW.",
     "accepte": [
@@ -23,6 +84,42 @@
       "0,68, 2,7 et 1,3",
       "68 % ; 2,7 kW ; 1,3 kW",
       "68 % ; 2,7 ; 1,3"
+    ]
+  },
+  "7": {
+    "reponse": "**a.** $\\varepsilon = +8{,}0$ °C, $S = 40\\ \\%$. **b.** $\\varepsilon = +2{,}0$ °C, $S = 10\\ \\%$. **c.** La commande est dosée et décroît quand on approche la consigne, contrairement au TOR (ON/OFF).",
+    "criteres": [
+      {
+        "idee": "Écart +8,0 °C donne une commande de 40 %",
+        "mots": [
+          "8 0",
+          "40 pour"
+        ]
+      },
+      {
+        "idee": "Écart +2,0 °C donne une commande de 10 %",
+        "mots": [
+          "2 0",
+          "10 pour"
+        ]
+      },
+      {
+        "idee": "La commande est dosée et diminue à l'approche de la consigne",
+        "mots": [
+          "dose",
+          "decroi",
+          "diminu",
+          "approche"
+        ]
+      },
+      {
+        "idee": "Contrairement au tout ou rien qui est soit à fond soit coupé",
+        "mots": [
+          "tout ou rien",
+          "tor",
+          "on off"
+        ]
+      }
     ]
   },
   "8": {
@@ -41,6 +138,95 @@
       "0,40 kg/s, 0,10 kg/s et 5,0 L/min",
       "0,40 ; 0,10 ; 5,0",
       "0,40, 0,10 et 5,0"
+    ]
+  },
+  "10": {
+    "reponse": "Boucle fermée (mesure de retour) ; organes : consigne, capteur, correcteur, actionneur. $\\varepsilon = +2{,}0$ °C : la résistance chauffe. $P_u = 17$ kW, $P_\\text{pertes} = 3{,}0$ kW. $Q_m \\approx 0{,}52$ kg·s⁻¹, identique en sortie (régime permanent). En 1,0 min : $E_u \\approx 1{,}0$ MJ, $m \\approx 31$ kg de lait.",
+    "criteres": [
+      {
+        "idee": "C'est une boucle fermée : la sonde renvoie une mesure au régulateur",
+        "mots": [
+          "boucle fermee",
+          "retour",
+          "feedback"
+        ]
+      },
+      {
+        "idee": "Organes : consigne, capteur, correcteur, actionneur",
+        "mots": [
+          "consigne",
+          "capteur",
+          "correcteur",
+          "actionneur"
+        ]
+      },
+      {
+        "idee": "Écart +2,0 °C : la résistance chauffe",
+        "mots": [
+          "2 0",
+          "chauffe"
+        ]
+      },
+      {
+        "idee": "Puissance utile 17 kW et pertes 3,0 kW",
+        "mots": [
+          "17 kw",
+          "3 0 kw"
+        ]
+      },
+      {
+        "idee": "Débit massique 0,52 kg/s, identique en sortie (régime permanent)",
+        "mots": [
+          "0 52",
+          "regime permanent",
+          "identique"
+        ]
+      },
+      {
+        "idee": "En 1,0 min : environ 1,0 MJ et 31 kg de lait",
+        "mots": [
+          "1 0 mj",
+          "31 kg"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "reponse": "Acquérir (capteur) → traiter (unité de traitement) → communiquer (afficheur, réseau).",
+    "criteres": [
+      {
+        "idee": "Acquérir : un capteur prélève une grandeur physique",
+        "mots": [
+          "acquerir",
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Traiter : l'unité de traitement (correcteur) compare et décide",
+        "mots": [
+          "traiter",
+          "traitement",
+          "correcteur",
+          "microcontr"
+        ]
+      },
+      {
+        "idee": "Communiquer : afficheur, voyant ou réseau",
+        "mots": [
+          "communiquer",
+          "afficheur",
+          "reseau",
+          "voyant"
+        ]
+      },
+      {
+        "idee": "Dans l'ordre : acquérir, puis traiter, puis communiquer",
+        "mots": [
+          "acquerir traiter communiquer",
+          "puis traiter",
+          "ordre"
+        ]
+      }
     ]
   },
   "12": {
@@ -99,6 +285,34 @@
       "3,7 et conservation de la masse"
     ]
   },
+  "23": {
+    "reponse": "Acquérir : détecteur ; traiter : microcontrôleur ; communiquer : ordre au moteur et voyant.",
+    "criteres": [
+      {
+        "idee": "Acquérir : le détecteur de présence (capteur)",
+        "mots": [
+          "detecteur",
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur qui décide d'ouvrir",
+        "mots": [
+          "microcontr",
+          "automate",
+          "carte"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'ordre envoyé au moteur et l'allumage du voyant",
+        "mots": [
+          "voyant",
+          "moteur",
+          "ordre"
+        ]
+      }
+    ]
+  },
   "26": {
     "reponse": "$P_{\\text{absorbée}} = 2{,}0\\ \\text{kW}$ ; pertes $= 300\\ \\text{W}$.",
     "accepte": [
@@ -117,6 +331,36 @@
       "diminue, 0,50 et 30"
     ]
   },
+  "28": {
+    "reponse": "(b) $\\varepsilon = +0{,}4$ : la pompe ajoute de la base.",
+    "criteres": [
+      {
+        "idee": "Consigne pH 7,0 ; capteur : électrode ; correcteur : régulateur ; actionneur : pompe doseuse",
+        "mots": [
+          "electrode",
+          "regulateur",
+          "pompe",
+          "actionneur",
+          "consigne"
+        ]
+      },
+      {
+        "idee": "Écart ε = 7,0 − 6,6 = +0,4",
+        "mots": [
+          "0 4"
+        ]
+      },
+      {
+        "idee": "Le milieu est trop acide : la pompe ajoute de la base jusqu'à annuler l'écart",
+        "mots": [
+          "acide",
+          "base",
+          "basique",
+          "ajoute"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "(a) TOR ; (b) proportionnelle ; (c) TOR.",
     "accepte": [
@@ -130,6 +374,27 @@
     "accepte": [
       "0,73 ; moins bon",
       "0,73 et moins bon"
+    ]
+  },
+  "31": {
+    "reponse": "La chaîne d'information commande ; l'ordre arrive au distributeur.",
+    "criteres": [
+      {
+        "idee": "La chaîne d'information commande la chaîne d'énergie",
+        "mots": [
+          "information commande",
+          "chaine d information",
+          "commande"
+        ]
+      },
+      {
+        "idee": "L'ordre arrive au distributeur (relais, variateur)",
+        "mots": [
+          "distributeur",
+          "relais",
+          "variateur"
+        ]
+      }
     ]
   },
   "32": {
@@ -156,6 +421,40 @@
       "12, 2,40 et 0,48"
     ]
   },
+  "36": {
+    "reponse": "Seule la boucle fermée réagit à la perturbation, grâce à la mesure en retour.",
+    "criteres": [
+      {
+        "idee": "Boucle ouverte : le radiateur chauffe pareil, il ne sait pas que la pièce refroidit",
+        "mots": [
+          "boucle ouverte",
+          "meme facon",
+          "continue",
+          "pareil",
+          "ne sait pas"
+        ]
+      },
+      {
+        "idee": "Boucle fermée : le capteur mesure la baisse et l'écart augmente",
+        "mots": [
+          "boucle fermee",
+          "capteur",
+          "mesure",
+          "ecart"
+        ]
+      },
+      {
+        "idee": "Le thermostat chauffe davantage pour revenir à la consigne : seule la boucle fermée réagit",
+        "mots": [
+          "davantage",
+          "ramen",
+          "reagit",
+          "consigne",
+          "corrige"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "Concentré : $0{,}50\\ \\text{kg·s}^{-1}$ ; eau évaporée : $1{,}5\\ \\text{kg·s}^{-1}$.",
     "accepte": [
@@ -174,6 +473,36 @@
       "0,25, 0,57, 0,84 et pompe"
     ]
   },
+  "39": {
+    "reponse": "Oscillations plus faibles, mais démarrages plus fréquents.",
+    "criteres": [
+      {
+        "idee": "Oscillations de température plus faibles : régulation plus précise",
+        "mots": [
+          "oscillation",
+          "precis",
+          "plus faible",
+          "ecart plus petit"
+        ]
+      },
+      {
+        "idee": "Démarrages et arrêts plus fréquents de l'actionneur",
+        "mots": [
+          "frequent",
+          "plus souvent",
+          "demarr"
+        ]
+      },
+      {
+        "idee": "L'actionneur s'use davantage : c'est un compromis",
+        "mots": [
+          "use",
+          "usure",
+          "compromis"
+        ]
+      }
+    ]
+  },
   "40": {
     "reponse": "(a) $\\approx 42\\ \\text{min}$ ; (b) $0{,}21\\ \\text{kg·s}^{-1}$ ; (c) $525\\ \\text{kg}$.",
     "accepte": [
@@ -181,6 +510,33 @@
       "42 min, 0,21 kg/s et 525 kg",
       "42 ; 0,21 ; 525",
       "42, 0,21 et 525"
+    ]
+  },
+  "41": {
+    "reponse": "(a) $\\eta = 92\\ \\%$, pertes $2{,}0\\ \\text{kW}$ ; (b) $0{,}20\\ \\text{kg·s}^{-1}$ ; (c) oscillation entre $75$ et $80\\ \\text{°C}$.",
+    "criteres": [
+      {
+        "idee": "Rendement 92 % et pertes de 2,0 kW",
+        "mots": [
+          "0 92",
+          "2 0 kw",
+          "92 pour"
+        ]
+      },
+      {
+        "idee": "Le débit de sortie vaut aussi 0,20 kg/s : la masse se conserve",
+        "mots": [
+          "conserv",
+          "0 20"
+        ]
+      },
+      {
+        "idee": "La température oscille entre 75 et 80 °C (tout ou rien)",
+        "mots": [
+          "oscill",
+          "entre 75"
+        ]
+      }
     ]
   },
   "43": {
@@ -200,6 +556,45 @@
       "55,6 kWh, 11,1 € et 7,5 h",
       "55,6 ; 11,1 ; 7,5",
       "55,6, 11,1 et 7,5"
+    ]
+  },
+  "45": {
+    "reponse": "(a) Sonde, automate, électrovanne et écran ; (b) l'eau ; (c) boucle fermée.",
+    "criteres": [
+      {
+        "idee": "Acquérir : la sonde d'humidité",
+        "mots": [
+          "sonde",
+          "capteur"
+        ]
+      },
+      {
+        "idee": "Traiter : l'automate",
+        "mots": [
+          "automate"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'ordre à l'électrovanne et l'écran",
+        "mots": [
+          "electrovanne",
+          "ecran"
+        ]
+      },
+      {
+        "idee": "Le flux de matière est l'eau",
+        "mots": [
+          "eau"
+        ]
+      },
+      {
+        "idee": "Boucle fermée : l'humidité est mesurée en permanence",
+        "mots": [
+          "boucle fermee",
+          "permanence",
+          "mesure"
+        ]
+      }
     ]
   },
   "46": {

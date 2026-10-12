@@ -33,6 +33,70 @@
       "a) positive b) négative c) positive"
     ]
   },
+  "14": {
+    "reponse": "Faux : augmenter la taille réduit l'effet du hasard, pas un biais systématique.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Un biais est une distorsion systématique, pas un effet du hasard",
+        "mots": [
+          "systematique",
+          "distorsion",
+          "pas un effet du hasard"
+        ]
+      },
+      {
+        "idee": "Augmenter la taille réduit l'effet du hasard, mais le biais reste",
+        "mots": [
+          "reste",
+          "persiste",
+          "demeure",
+          "ne disparait pas",
+          "hasard"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "reponse": "$P_M(T^+)$ : positif sachant malade (sensibilité) ; $P_{T^+}(M)$ : malade sachant positif (VPP), qui intéresse le patient.",
+    "criteres": [
+      {
+        "idee": "P_M(T+) : probabilité d'avoir un test positif sachant qu'on est malade",
+        "mots": [
+          "positif sachant",
+          "sachant qu on est malade",
+          "sachant malade"
+        ]
+      },
+      {
+        "idee": "C'est la sensibilité du test",
+        "mots": [
+          "sensibilite"
+        ]
+      },
+      {
+        "idee": "P_T+(M) : probabilité d'être malade sachant que le test est positif",
+        "mots": [
+          "malade sachant",
+          "sachant que le test",
+          "sachant positif"
+        ]
+      },
+      {
+        "idee": "C'est la valeur prédictive positive, celle qui intéresse le patient",
+        "mots": [
+          "valeur predictive",
+          "vpp",
+          "patient"
+        ]
+      }
+    ]
+  },
   "16": {
     "reponse": "$1\\,440\\,000$ octets, soit $1{,}44$ Mo.",
     "accepte": [
@@ -49,6 +113,37 @@
       "882 000 octets soit 0,88 Mo",
       "882 000 0,88 Mo",
       "882 000 octets et 0,88 Mo"
+    ]
+  },
+  "19": {
+    "reponse": "Non : le facteur de confusion est la taille (gravité) de l'incendie, qui augmente à la fois les dégâts et le nombre de pompiers.",
+    "criteres": [
+      {
+        "idee": "Non : cette corrélation ne prouve pas que les pompiers causent les dégâts",
+        "mots": [
+          "non",
+          "correlation",
+          "causalite",
+          "ne prouve pas"
+        ]
+      },
+      {
+        "idee": "Le facteur de confusion est la taille (la gravité) de l'incendie",
+        "mots": [
+          "facteur de confusion",
+          "taille",
+          "gravite",
+          "ampleur"
+        ]
+      },
+      {
+        "idee": "Un grand incendie fait plus de dégâts et demande plus de pompiers",
+        "mots": [
+          "grand incendie",
+          "a la fois",
+          "les deux"
+        ]
+      }
     ]
   },
   "20": {
@@ -107,6 +202,36 @@
       "0,571"
     ]
   },
+  "29": {
+    "reponse": "Il confond $P_M(T^+)$ et $P_{T^+}(M)$ ; il faut connaître $P(M)$ et la spécificité, puis utiliser Bayes.",
+    "criteres": [
+      {
+        "idee": "Il confond la sensibilité P_M(T+) et la probabilité d'être malade sachant le test positif P_T+(M)",
+        "mots": [
+          "confond",
+          "inversion",
+          "sensibilite",
+          "sachant"
+        ]
+      },
+      {
+        "idee": "Il faut connaître la proportion de malades P(M) (prévalence)",
+        "mots": [
+          "prevalence",
+          "proportion de malades",
+          "p m"
+        ]
+      },
+      {
+        "idee": "Il faut aussi la spécificité, puis appliquer la formule de Bayes",
+        "mots": [
+          "specificite",
+          "bayes",
+          "faux positif"
+        ]
+      }
+    ]
+  },
   "30": {
     "reponse": "1) 400 ; 340 ; 60 ; 9 600 ; 960 ; 8 640. 2) VPP $\\approx 0{,}262$.",
     "accepte": [
@@ -121,6 +246,99 @@
       "0,913 0,087"
     ]
   },
+  "36": {
+    "reponse": "Exemple de réponse : groupe test et groupe témoin tirés au hasard, puis comparaison ; le hasard neutralise les facteurs de confusion.",
+    "criteres": [
+      {
+        "idee": "Former deux groupes tirés au hasard",
+        "mots": [
+          "hasard",
+          "aleatoire",
+          "tires"
+        ]
+      },
+      {
+        "idee": "Un groupe test utilise l'application, un groupe témoin ne l'utilise pas ; on compare leurs progrès",
+        "mots": [
+          "temoin",
+          "groupe test",
+          "compar"
+        ]
+      },
+      {
+        "idee": "Le hasard répartit équitablement les autres facteurs (motivation, niveau…) : pas de facteur de confusion",
+        "mots": [
+          "facteur de confusion",
+          "equitable",
+          "autres facteurs",
+          "repartit"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "1) Biais d'échantillonnage des données d'entraînement. 2) Réentraîner avec des données représentatives et contrôler les erreurs par groupe.",
+    "criteres": [
+      {
+        "idee": "C'est un biais d'échantillonnage : les données d'entraînement ne représentent pas toute la population",
+        "mots": [
+          "biais d echantillonnage",
+          "echantillon",
+          "pas representati",
+          "donnees d entrainement"
+        ]
+      },
+      {
+        "idee": "Réentraîner l'IA avec des données représentatives de toute la diversité des visages",
+        "mots": [
+          "reentrain",
+          "representati",
+          "diversite",
+          "plus de photos"
+        ]
+      },
+      {
+        "idee": "Vérifier ses performances sur chaque groupe",
+        "mots": [
+          "chaque groupe",
+          "verifier",
+          "controler",
+          "tester"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "(a) Faux ; (b) Vrai ; (c) Faux.",
+    "criteres": [
+      {
+        "idee": "(a) Faux : l'IA extrait des régularités statistiques à partir d'exemples étiquetés",
+        "mots": [
+          "regularite",
+          "exemples",
+          "statisti",
+          "apprend"
+        ]
+      },
+      {
+        "idee": "(b) Vrai : sa qualité ne dépasse pas celle de ses données",
+        "mots": [
+          "reproduit",
+          "ne depasse pas",
+          "qualite des donnees",
+          "vrai"
+        ]
+      },
+      {
+        "idee": "(c) Faux : une IA repère des corrélations mais ne comprend pas les causes",
+        "mots": [
+          "ne comprend pas",
+          "correlation",
+          "cause"
+        ]
+      }
+    ]
+  },
   "40": {
     "reponse": "1) Environ $2{,}5$ To. 2) Volume et vélocité.",
     "accepte": [
@@ -128,6 +346,76 @@
       "2,5 To volume vélocité",
       "1) 2,5 To 2) volume et vélocité",
       "2,5 To vélocité et volume"
+    ]
+  },
+  "44": {
+    "reponse": "1) Corrélation ≠ causalité. 2) Exemple de réponse : le temps de sommeil ou l'encadrement familial.",
+    "criteres": [
+      {
+        "idee": "L'étude montre une corrélation, pas une causalité",
+        "mots": [
+          "correlation",
+          "causalite",
+          "pas une cause"
+        ]
+      },
+      {
+        "idee": "Seule une expérience contrôlée avec groupes tirés au hasard pourrait le prouver",
+        "mots": [
+          "experience controlee",
+          "hasard",
+          "groupe temoin"
+        ]
+      },
+      {
+        "idee": "Un facteur de confusion possible : rythme de vie, temps de sommeil, encadrement familial…",
+        "mots": [
+          "sommeil",
+          "rythme",
+          "famil",
+          "milieu social",
+          "coucher"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Le sondage de 1 000 personnes tirées au hasard : le million de réponses en ligne reste biaisé.",
+    "criteres": [
+      {
+        "idee": "Le sondage de 1 000 personnes tirées au hasard est le plus fiable",
+        "mots": [
+          "1 000",
+          "1000",
+          "tirees au hasard",
+          "hasard"
+        ]
+      },
+      {
+        "idee": "Le sondage en ligne ne touche que des internautes volontaires : biais d'échantillonnage",
+        "mots": [
+          "volontaire",
+          "internaute",
+          "biais",
+          "selection"
+        ]
+      },
+      {
+        "idee": "Un grand nombre de réponses ne corrige pas un biais systématique",
+        "mots": [
+          "ne corrige pas",
+          "systematique",
+          "reste biaise"
+        ]
+      },
+      {
+        "idee": "L'échantillon tiré au hasard est représentatif, avec une erreur mesurable",
+        "mots": [
+          "representati",
+          "erreur",
+          "mesur"
+        ]
+      }
     ]
   }
 }
