@@ -82,6 +82,7 @@ import exercice24 from './../../contenu/cp/italien/animali/exercice.json';
 import attendus24 from './../../contenu/cp/italien/animali/attendus.json';
 import fiche25 from './../../contenu/cp/maths/nombres-jusqu-a-20/fiche.md';
 import exercice25 from './../../contenu/cp/maths/nombres-jusqu-a-20/exercice.json';
+import attendus25 from './../../contenu/cp/maths/nombres-jusqu-a-20/attendus.json';
 import fiche26 from './../../contenu/cp/maths/comparer-ranger/fiche.md';
 import exercice26 from './../../contenu/cp/maths/comparer-ranger/exercice.json';
 import attendus26 from './../../contenu/cp/maths/comparer-ranger/attendus.json';
@@ -90,6 +91,7 @@ import exercice27 from './../../contenu/cp/maths/addition/exercice.json';
 import attendus27 from './../../contenu/cp/maths/addition/attendus.json';
 import fiche28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/fiche.md';
 import exercice28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/exercice.json';
+import attendus28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/attendus.json';
 import fiche29 from './../../contenu/cp/maths/dizaines-et-unites/fiche.md';
 import exercice29 from './../../contenu/cp/maths/dizaines-et-unites/exercice.json';
 import attendus29 from './../../contenu/cp/maths/dizaines-et-unites/attendus.json';
@@ -1013,6 +1015,7 @@ import exercice340 from './../../contenu/cinquieme/maths/reperage/exercice.json'
 import attendus340 from './../../contenu/cinquieme/maths/reperage/attendus.json';
 import fiche341 from './../../contenu/cinquieme/maths/calcul-litteral/fiche.md';
 import exercice341 from './../../contenu/cinquieme/maths/calcul-litteral/exercice.json';
+import attendus341 from './../../contenu/cinquieme/maths/calcul-litteral/attendus.json';
 import fiche342 from './../../contenu/cinquieme/maths/puissances/fiche.md';
 import exercice342 from './../../contenu/cinquieme/maths/puissances/exercice.json';
 import attendus342 from './../../contenu/cinquieme/maths/puissances/attendus.json';
@@ -2552,6 +2555,7 @@ import exercice856 from './../../contenu/terminale/maths-specialite/fonctions-tr
 import attendus856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/attendus.json';
 import fiche857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/fiche.md';
 import exercice857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/exercice.json';
+import attendus857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/attendus.json';
 import fiche858 from './../../contenu/terminale/maths-specialite/calcul-integral/fiche.md';
 import exercice858 from './../../contenu/terminale/maths-specialite/calcul-integral/exercice.json';
 import attendus858 from './../../contenu/terminale/maths-specialite/calcul-integral/attendus.json';
@@ -4787,8 +4791,10 @@ const ATTENDUS = {
   "cp-italien-numeri": attendus22,
   "cp-italien-colori": attendus23,
   "cp-italien-animali": attendus24,
+  "cp-math-nombres-jusqu-a-20": attendus25,
   "cp-math-comparer-ranger": attendus26,
   "cp-math-addition": attendus27,
+  "cp-math-se-reperer-et-quadrillage": attendus28,
   "cp-math-dizaines-et-unites": attendus29,
   "cp-math-soustraction": attendus30,
   "cp-math-calcul-mental": attendus32,
@@ -5086,6 +5092,7 @@ const ATTENDUS = {
   "5e-math-operations": attendus337,
   "5e-math-fractions": attendus338,
   "5e-math-reperage": attendus340,
+  "5e-math-calcul-litteral": attendus341,
   "5e-math-puissances": attendus342,
   "5e-math-proportionnalite": attendus343,
   "5e-math-triangles-angles": attendus344,
@@ -5593,6 +5600,7 @@ const ATTENDUS = {
   "tale-spe-math-derivation-convexite": attendus854,
   "tale-spe-math-fonction-logarithme": attendus855,
   "tale-spe-math-fonctions-trigonometriques": attendus856,
+  "tale-spe-math-primitives-equations-differentielles": attendus857,
   "tale-spe-math-calcul-integral": attendus858,
   "tale-spe-math-vecteurs-droites-plans-espace": attendus859,
   "tale-spe-math-produit-scalaire-espace": attendus860,

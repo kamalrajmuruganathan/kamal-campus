@@ -250,6 +250,11 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
       {/* Grille des idées attendues (réponse rédigée). */}
       {criteres && corrigeVu && coches && verifie === null && (
         <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
+          {saisie.trim() ? (
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontStyle: 'italic', backgroundColor: t.couleur.fond, borderRadius: t.rayon.s, padding: t.espace.s, marginBottom: t.espace.s }}>
+              Ta réponse : {saisie.trim()}
+            </Text>
+          ) : null}
           <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontWeight: '650', marginBottom: 6 }}>
             Ta réponse contient-elle ces idées ?
           </Text>

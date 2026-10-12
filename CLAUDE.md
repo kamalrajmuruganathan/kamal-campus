@@ -225,3 +225,10 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   « Hors connexion » (`composants/BandeauHorsLigne.js`, dans App.js). `contenu-lourd.web.js` exporte `cheminDonnees(id)`.
   Testé dans Chromium : téléchargement de 15 chapitres, coupure réseau, rechargement, fiche lisible avec formules.
   Si on change la stratégie du SW, incrémenter le nom du cache (v2…).
+- **Grilles d'idées (12/10/2026, non publié)** : 11 614 exercices « à rédiger » ont dans `attendus.json` une ligne
+  `{ "reponse": …, "criteres": [{ "idee": "…", "mots": ["racine", …] }] }` (2 à 6 idées, 1 à 8 mots-clés ≥ 3 lettres
+  une fois nettoyés). Dans `Exercices.js` : l'élève écrit, « Voir le corrigé », l'appli pré-coche les idées dont un
+  mot-clé (début de mot, sans accents ; « CO₂ » = « CO2 ») est dans son texte (`detecterCriteres`), il corrige les cases
+  puis « Valider ma réponse » (réussi si toutes les idées sont cochées). Vérificateur : même commande
+  `node app/scripts/verifier-attendus.mjs` (mots-clés présents dans la réponse/corrigé, pas trop courts).
+  Bilan : 65 % des exercices vérifiés automatiquement + 24 % guidés par une grille ≈ 89 %.
