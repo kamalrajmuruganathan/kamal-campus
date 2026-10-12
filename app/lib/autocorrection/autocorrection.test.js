@@ -386,3 +386,18 @@ test('criteres : indices chimiques (« CO₂ » = « CO2 ») et « µm » trouv�
   assert.deepEqual(detecterCriteres('Elle rejette du CO₂ ; taille 10 µm', crit), [true, true]);
   assert.deepEqual(detecterCriteres('Elle rejette du CO', crit), [false, false]);
 });
+
+test('expressions : « E = 3(2x + 5) » n’est pas le nombre 3 ; calcul et grille', () => {
+  const ex = { enonce: 'Factorise $E = 6x + 15$.', reponse: '$E = 3(2x + 5)$' };
+  assert.equal(typeExercice(ex, 'maths'), 'auto');
+  assert.equal(comparerExercice('3', ex, 'maths'), false);
+  assert.equal(comparerExercice('3(2x+5)', ex, 'maths'), true);
+  assert.equal(comparerExercice('6x+15', ex, 'maths'), false);
+  const z = { enonce: 'Calculer $\\dfrac{6}{2}\\mathrm{i}$.', reponse: '$3\\mathrm{i}$.' };
+  assert.equal(comparerExercice('3', z, 'maths'), false);
+  const ab = { enonce: 'Écris plus simplement $ 3 \\times a \\times b $.', reponse: '$ 3ab $' };
+  assert.equal(typeExercice(ab, 'maths'), 'ouverte');
+  // Une grille d'idées (explication attendue) garde la main.
+  const g = { enonce: 'Développe $ 8(x - 5) $ et explique.', reponse: '$ 8x - 40 $', criteres: [{ idee: 'a', mots: ['abc'] }, { idee: 'b', mots: ['bcd'] }] };
+  assert.equal(typeExercice(g, 'maths'), 'ouverte');
+});

@@ -232,3 +232,11 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   puis « Valider ma réponse » (réussi si toutes les idées sont cochées). Vérificateur : même commande
   `node app/scripts/verifier-attendus.mjs` (mots-clés présents dans la réponse/corrigé, pas trop courts).
   Bilan : 65 % des exercices vérifiés automatiquement + 24 % guidés par une grille ≈ 89 %.
+- **Calculs corrigés par l'appli (12/10/2026, non publié)** : `app/lib/expressions` (+ tests) lit une réponse-formule
+  (LaTeX du corrigé ou saisie : `3x^2`, `3x²`, `√`, `sqrt`, `e^x`, `ln`, `i`) et compare par évaluation en 10 points
+  (à une constante près pour « une primitive », à un facteur près pour une équation de droite/plan/cercle).
+  Forme exigée selon l'énoncé : « développe/réduis/forme algébrique » (aucune somme multipliée, pas plus de termes),
+  « factorise » (produit, facteurs réduits, même facteur constant), « forme canonique ». Expression juste mais pas
+  sous la bonne forme → message 🟠 « Continue ! » (pas compté faux). Exclus : « démontrer/justifier/interpréter »,
+  unités, d/dt, recopie possible de l'énoncé. Une grille d'idées garde la priorité. ≈ 350 exercices de maths en plus ;
+  corrige aussi un ancien défaut (« E = 3(2x + 5) » était lu comme le nombre 3).

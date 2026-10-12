@@ -13,6 +13,8 @@
  * laisser l'élève juger que lui dire « faux » alors qu'il a juste.
  */
 
+import { analyserCalcul, comparerCalcul, valeurLitterale } from '../expressions/index.js';
+
 /** Matières de langues étrangères : traductions, phrases → plus strict. */
 const LANGUES = new Set(['anglais', 'allemand', 'espagnol', 'italien', 'langues-anciennes']);
 
@@ -470,7 +472,15 @@ export function analyserExercice(ex, matiere = null) {
       return { type: 'auto', alternatives: [...alts, ...(base.type === 'auto' ? base.alternatives : [])] };
     }
   }
-  return analyser(ex && ex.reponse, matiere);
+  const base = analyser(ex && ex.reponse, matiere);
+  // Une grille d'idées (réponse à expliquer) l'emporte sur le calcul.
+  if (LANGUES.has(matiere) || (ex && ex.criteres)) return base;
+  // Expression ou équation (« 6x + 8 », « f'(x) = 3x² − 2 », « 2x + 5y + 4 = 0 ») : comparée par calcul.
+  const calcul = analyserCalcul(ex);
+  if (calcul) return { type: 'auto', alternatives: [{ kind: 'calcul', calcul }] };
+  // « E = 3(2x + 5) » ou « -2i » ne sont pas des nombres : ne pas accepter « 3 » ou « -2 ».
+  if (base.type === 'auto' && valeurLitterale(ex && ex.reponse)) return { type: 'ouverte', alternatives: [] };
+  return base;
 }
 
 /** 'auto' ou 'ouverte' pour un exercice (en tenant compte d'attendus.json). */
@@ -496,13 +506,35 @@ export function uniteExercice(ex, matiere = null) {
 /** Indication à afficher sous le champ quand l'élève doit citer plusieurs éléments. */
 export function consigneExercice(ex, matiere = null) {
   const a = analyserExercice(ex, matiere);
-  return a.ensemble ? `${a.ensemble.length} éléments, séparés par des virgules` : '';
+  if (a.ensemble) return `${a.ensemble.length} éléments, séparés par des virgules`;
+  const c = a.alternatives && a.alternatives[0] && a.alternatives[0].calcul;
+  if (!c) return '';
+  if (c.forme === 'eq') return 'une équation, par ex. 2x + 3y - 1 = 0';
+  if (c.complexe) return 'sous la forme a + bi (i² = -1), par ex. 3 - 2i';
+  if (c.regle === 'developpe') return 'forme développée et réduite, par ex. 3x^2 - 5x + 2';
+  if (c.regle === 'factorise') return 'forme factorisée, par ex. 2(x + 1)(x - 3)';
+  if (c.regle === 'canonique') return 'forme canonique, par ex. 2(x - 1)^2 + 3';
+  return 'une expression, par ex. 3x^2 - 2 ou (x + 1)/(x - 2) — x² ou x^2, √ ou sqrt, e^x, ln x';
+}
+
+/**
+ * Pourquoi une saisie est refusée, quand on le sait : 'forme' = l'expression est égale
+ * à la bonne réponse mais pas écrite sous la forme demandée (développée, factorisée…).
+ */
+export function diagnosticExercice(saisie, ex, matiere = null) {
+  const a = analyserExercice(ex, matiere);
+  const c = a.type === 'auto' && a.alternatives.length === 1 && a.alternatives[0].calcul;
+  if (!c) return null;
+  const r = comparerCalcul(saisie, c);
+  return r.juste ? null : r.raison || null;
 }
 
 /** La saisie de l'élève est-elle juste pour cet exercice ? */
 export function comparerExercice(saisie, ex, matiere = null) {
   const s = nettoyer(saisie);
   if (!s) return false;
+  const a = analyserExercice(ex, matiere);
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'calcul') return comparerCalcul(saisie, a.alternatives[0].calcul).juste;
   // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
   if (comparerUne(s, ex, matiere)) return true;
   // « S = {1 ; 2} », « f(-2) = 15 », « x = 3 ou x = -5 » : on retire les « nom = » devant les valeurs.

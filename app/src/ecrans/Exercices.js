@@ -24,7 +24,7 @@ import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
 import { useProgression } from '../progression/Contexte';
-import { typeExercice, comparerExercice, uniteExercice, consigneExercice, detecterCriteres, bilanCriteres } from '../../lib/autocorrection';
+import { typeExercice, comparerExercice, uniteExercice, consigneExercice, diagnosticExercice, detecterCriteres, bilanCriteres } from '../../lib/autocorrection';
 
 const LIBELLE_DIFFICULTE = {
   decouverte: 'Découverte',
@@ -95,10 +95,10 @@ function Verdict({ juste, texte, t }) {
         marginBottom: t.espace.s,
         padding: t.espace.s,
         borderRadius: t.rayon.s,
-        backgroundColor: juste ? t.couleur.succesFond : t.couleur.erreurFond,
+        backgroundColor: juste == null ? t.couleur.fond : juste ? t.couleur.succesFond : t.couleur.erreurFond,
       }}
     >
-      <Text style={{ color: juste ? t.couleur.succes : t.couleur.erreur, fontWeight: '650', fontSize: t.police.normale }}>
+      <Text style={{ color: juste == null ? t.couleur.texte : juste ? t.couleur.succes : t.couleur.erreur, fontWeight: '650', fontSize: t.police.normale }}>
         {texte}
       </Text>
     </View>
@@ -115,6 +115,7 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
   const [masque, setMasque] = useState(false);
   const [points, setPoints] = useState(0);
   const [parMachine, setParMachine] = useState(false); // verdict donné par la vérification automatique ?
+  const [presque, setPresque] = useState(null); // expression juste mais pas sous la forme demandée
   // Réponse rédigée avec grille d'idées : cases cochées (pré-cochées d'après le texte écrit).
   const criteres = !auto && Array.isArray(ex.criteres) && ex.criteres.length ? ex.criteres : null;
   const [coches, setCoches] = useState(null);
@@ -129,6 +130,10 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
   const verifier = () => {
     if (!saisie.trim()) return;
     const juste = comparerExercice(saisie, ex, matiere);
+    // Égale à la réponse mais pas développée / factorisée : on le dit, sans compter faux.
+    const raison = juste ? null : diagnosticExercice(saisie, ex, matiere);
+    setPresque(raison);
+    if (raison) return;
     setVerifie(juste);
     setParMachine(true);
     setCorrigeVu(true);
@@ -144,7 +149,10 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
 
   const corrigeAffiche = corrigeVu && !masque;
   let texteVerdict = '';
-  if (verifie === true) {
+  if (presque === 'forme') {
+    const forme = /factoris/i.test(consigne) ? 'factorisée' : /canonique/i.test(consigne) ? 'canonique' : /a \+ bi/.test(consigne) ? 'algébrique (a + bi)' : 'développée et réduite';
+    texteVerdict = `🟠 Ton expression est égale à la bonne réponse, mais elle n’est pas sous forme ${forme}. Continue !`;
+  } else if (verifie === true) {
     texteVerdict = (parMachine ? '✅ Bonne réponse !' : auto ? '✅ Compté juste.' : '✅ Bravo !') + (points > 0 ? ` +${points} XP` : '');
   } else if (verifie === false) {
     texteVerdict = parMachine
@@ -192,7 +200,7 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
           <View style={{ flexDirection: 'row', gap: t.espace.s }}>
             <TextInput
               value={saisie}
-              onChangeText={setSaisie}
+              onChangeText={(v) => { setSaisie(v); setPresque(null); }}
               onSubmitEditing={verifier}
               placeholder="Écris ta réponse"
               placeholderTextColor={t.couleur.attenue}
@@ -291,7 +299,7 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
         </View>
       )}
 
-      {verifie !== null && <Verdict juste={verifie} texte={texteVerdict} t={t} />}
+      {(verifie !== null || presque) && <Verdict juste={presque ? null : verifie} texte={texteVerdict} t={t} />}
 
       {/* Réponse ouverte : auto-évaluation après lecture du corrigé. */}
       {!auto && !criteres && corrigeVu && verifie === null && (
