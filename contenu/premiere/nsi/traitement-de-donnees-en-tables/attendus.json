@@ -1,4 +1,24 @@
 {
+  "1": {
+    "reponse": "Il y a 4 descripteurs ; une ligne de données s'appelle un enregistrement.",
+    "criteres": [
+      {
+        "idee": "Il y a 4 descripteurs",
+        "mots": [
+          "4 descripteur",
+          "quatre",
+          "4 colonne",
+          "4 champ"
+        ]
+      },
+      {
+        "idee": "Une ligne de données s'appelle un enregistrement",
+        "mots": [
+          "enregistrement"
+        ]
+      }
+    ]
+  },
   "5": {
     "reponse": "sorted(table, key=lambda e: e[\"age\"]) range les enregistrements dans l'ordre Ka, Ba, Sy.",
     "accepte": [
@@ -15,6 +35,52 @@
     "reponse": "ages = [int(ligne[\"age\"]) for ligne in table] puis sum(ages)/len(ages) = 48/3 = 16.0.",
     "accepte": [
       "16"
+    ]
+  },
+  "11": {
+    "reponse": "4 enregistrements ; descripteurs : nom, age, ville.",
+    "criteres": [
+      {
+        "idee": "La table a 4 enregistrements",
+        "mots": [
+          "4 enregistrement",
+          "quatre",
+          "4 ligne"
+        ]
+      },
+      {
+        "idee": "Ses descripteurs sont nom, age et ville",
+        "mots": [
+          "nom age",
+          "nom age et ville",
+          "descripteurs nom",
+          "descripteurs sont"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "Comma Separated Values ; non, un CSV ne contient que les données (fichier texte sans mise en forme).",
+    "criteres": [
+      {
+        "idee": "CSV signifie Comma Separated Values (valeurs séparées par des virgules)",
+        "mots": [
+          "comma",
+          "separated",
+          "virgule",
+          "separees"
+        ]
+      },
+      {
+        "idee": "Non : un CSV est un simple fichier texte, sans mise en forme",
+        "mots": [
+          "non",
+          "texte",
+          "mise en forme",
+          "que les donnees",
+          "seulement"
+        ]
+      }
     ]
   },
   "14": {
@@ -39,11 +105,88 @@
       "Benali, Diallo, Martin, Nguyen"
     ]
   },
+  "18": {
+    "reponse": "Type `str` ; `\"17\" + \"1\"` donne \"171\" et `int(\"17\") + 1` donne 18.",
+    "criteres": [
+      {
+        "idee": "Le type est str (chaîne de caractères)",
+        "mots": [
+          "str",
+          "chaine"
+        ]
+      },
+      {
+        "idee": "\"17\" + \"1\" donne \"171\" (concaténation)",
+        "mots": [
+          "171",
+          "concat",
+          "bout a bout",
+          "colle"
+        ]
+      },
+      {
+        "idee": "int(\"17\") + 1 donne 18",
+        "mots": [
+          "donne 18",
+          "vaut 18",
+          "1 18",
+          "addition"
+        ]
+      }
+    ]
+  },
   "19": {
     "reponse": "La ligne d'Inès est un enregistrement ; « moyenne » est un descripteur.",
     "accepte": [
       "enregistrement, descripteur",
       "enregistrement et descripteur"
+    ]
+  },
+  "22": {
+    "reponse": "Ordre obtenu : 12, 15, 9 ; il faut écrire `key=lambda l: int(l[\"age\"])`.",
+    "criteres": [
+      {
+        "idee": "Ordre obtenu : 12, 15, 9",
+        "mots": [
+          "12 15 9"
+        ]
+      },
+      {
+        "idee": "Les âges sont comparés comme des chaînes, caractère par caractère",
+        "mots": [
+          "chaine",
+          "caractere",
+          "alphabeti",
+          "texte",
+          "str"
+        ]
+      },
+      {
+        "idee": "Correction : convertir avec int dans la clé",
+        "mots": [
+          "int",
+          "convert"
+        ]
+      }
+    ]
+  },
+  "24": {
+    "reponse": "La virgule sert déjà aux nombres décimaux ; on écrit `csv.DictReader(f, delimiter=\";\")`.",
+    "criteres": [
+      {
+        "idee": "En France, la virgule sert déjà de séparateur décimal",
+        "mots": [
+          "decima",
+          "nombres a virgule",
+          "virgule"
+        ]
+      },
+      {
+        "idee": "On l'indique avec le paramètre delimiter=\";\"",
+        "mots": [
+          "delimiter"
+        ]
+      }
     ]
   },
   "25": {
@@ -60,6 +203,37 @@
       "Benali",
       "['Benali']",
       "[Benali]"
+    ]
+  },
+  "27": {
+    "reponse": "`Martin Diallo` ; la table d'origine est inchangée.",
+    "criteres": [
+      {
+        "idee": "Le programme affiche Martin Diallo",
+        "mots": [
+          "martin diallo"
+        ]
+      },
+      {
+        "idee": "sorted renvoie une nouvelle liste triée",
+        "mots": [
+          "nouvelle liste",
+          "nouvelle",
+          "copie",
+          "renvoie"
+        ]
+      },
+      {
+        "idee": "La table d'origine n'est pas modifiée",
+        "mots": [
+          "inchang",
+          "pas modifi",
+          "non modifi",
+          "n est pas modifi",
+          "intact",
+          "pas change"
+        ]
+      }
     ]
   },
   "28": {
@@ -94,11 +268,139 @@
       "[Lyon, Nantes, Paris]"
     ]
   },
+  "33": {
+    "reponse": "`[{'nom': 'Ba', 'note': 15}]` ; deux descripteurs ne peuvent pas avoir le même nom.",
+    "criteres": [
+      {
+        "idee": "On obtient [{'nom': 'Ba', 'note': 15}] : la note 12 est perdue",
+        "mots": [
+          "note 15",
+          "perdu",
+          "ecras",
+          "remplac",
+          "disparai"
+        ]
+      },
+      {
+        "idee": "Une clé (un descripteur) doit être unique",
+        "mots": [
+          "unique",
+          "meme nom",
+          "deux fois",
+          "pas avoir le meme"
+        ]
+      },
+      {
+        "idee": "Il faut par exemple note1 et note2",
+        "mots": [
+          "note1",
+          "note2",
+          "deux descripteurs differents",
+          "noms differents"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Zoé n'apparaît pas dans la table fusionnée, faute de classe correspondante.",
+    "criteres": [
+      {
+        "idee": "Zoé n'apparaît pas dans la table fusionnée",
+        "mots": [
+          "apparait pas",
+          "disparai",
+          "absente",
+          "pas dans",
+          "n apparai"
+        ]
+      },
+      {
+        "idee": "Aucune ligne de classes ne correspond à la 1C",
+        "mots": [
+          "aucune",
+          "correspond",
+          "pas de classe",
+          "condition"
+        ]
+      },
+      {
+        "idee": "C'est gênant : il faut vérifier la cohérence des deux tables",
+        "mots": [
+          "genant",
+          "coheren",
+          "verifi",
+          "perd",
+          "oui"
+        ]
+      }
+    ]
+  },
   "39": {
     "reponse": "15.5 pour \"Lyon\" ; `None` pour \"Brest\".",
     "accepte": [
       "15,5 et None",
       "15,5 ; None"
+    ]
+  },
+  "40": {
+    "reponse": "Les prix sont des chaînes (`TypeError`) ; avec `int(l[\"prix\"])`, on obtient 5.",
+    "criteres": [
+      {
+        "idee": "Les prix lus dans le CSV sont des chaînes",
+        "mots": [
+          "chaine",
+          "str",
+          "texte"
+        ]
+      },
+      {
+        "idee": "Additionner un entier et une chaîne provoque une TypeError",
+        "mots": [
+          "typeerror",
+          "erreur",
+          "plante"
+        ]
+      },
+      {
+        "idee": "Correction : int(l[\"prix\"]), le programme affiche alors 5",
+        "mots": [
+          "int",
+          "convert",
+          "affiche 5"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "La ligne a 4 champs pour 3 descripteurs ; des données incohérentes faussent les traitements.",
+    "criteres": [
+      {
+        "idee": "La ligne a 4 champs pour 3 descripteurs",
+        "mots": [
+          "4 champ",
+          "quatre",
+          "en trop",
+          "un champ de trop",
+          "4 valeur"
+        ]
+      },
+      {
+        "idee": "Les traitements supposent des enregistrements cohérents",
+        "mots": [
+          "meme descripteur",
+          "coheren",
+          "bon type"
+        ]
+      },
+      {
+        "idee": "Des données incohérentes faussent les résultats ou font planter",
+        "mots": [
+          "fauss",
+          "plant",
+          "erreur",
+          "erron"
+        ]
+      }
     ]
   },
   "44": {

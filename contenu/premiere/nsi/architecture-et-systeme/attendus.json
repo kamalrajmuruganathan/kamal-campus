@@ -1,8 +1,127 @@
 {
+  "1": {
+    "reponse": "Le modèle comprend le processeur (UAL + unité de commande), la mémoire et les entrées-sorties ; c'est l'UAL qui exécute les calculs.",
+    "criteres": [
+      {
+        "idee": "Le processeur (unité centrale), avec l'UAL et l'unité de commande",
+        "mots": [
+          "processeur",
+          "cpu",
+          "unite centrale"
+        ]
+      },
+      {
+        "idee": "La mémoire",
+        "mots": [
+          "memoire"
+        ]
+      },
+      {
+        "idee": "Les entrées-sorties (périphériques)",
+        "mots": [
+          "entree",
+          "sortie",
+          "peripherique"
+        ]
+      },
+      {
+        "idee": "C'est l'UAL qui exécute les calculs",
+        "mots": [
+          "ual",
+          "arithmetique"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "reponse": "L'unité de commande organise l'exécution des instructions ; les registres stockent très rapidement les données et résultats intermédiaires.",
+    "criteres": [
+      {
+        "idee": "L'unité de commande lit, décode et fait exécuter les instructions",
+        "mots": [
+          "organise",
+          "decode",
+          "pilote",
+          "dirige",
+          "coordonne",
+          "controle"
+        ]
+      },
+      {
+        "idee": "Les registres sont de petites mémoires très rapides dans le processeur",
+        "mots": [
+          "rapide",
+          "petite memoire",
+          "petites memoires"
+        ]
+      },
+      {
+        "idee": "Les registres stockent temporairement les données et résultats intermédiaires",
+        "mots": [
+          "stock",
+          "intermediaire",
+          "temporaire",
+          "conserv",
+          "garde"
+        ]
+      }
+    ]
+  },
   "3": {
     "reponse": "pwd affiche le répertoire courant, ls liste le contenu, cd change de répertoire : c'est pwd qui affiche le répertoire courant.",
     "accepte": [
       "pwd"
+    ]
+  },
+  "6": {
+    "reponse": "Avec -rwxr-xr-- : le propriétaire peut lire/écrire/exécuter, le groupe lire et exécuter, les autres seulement lire ; un processus est un programme en cours d'exécution auquel le système alloue des ressources et un identifiant (PID).",
+    "criteres": [
+      {
+        "idee": "Le propriétaire peut lire, écrire et exécuter",
+        "mots": [
+          "tous les droits",
+          "lire ecrire",
+          "lecture ecriture",
+          "ecrire",
+          "ecriture"
+        ]
+      },
+      {
+        "idee": "Le groupe peut lire et exécuter, mais pas modifier",
+        "mots": [
+          "lire et execut",
+          "lecture et execution",
+          "pas modifier",
+          "pas ecrire",
+          "sans ecrire",
+          "pas d ecriture"
+        ]
+      },
+      {
+        "idee": "Les autres peuvent seulement lire",
+        "mots": [
+          "autres",
+          "seulement lire",
+          "lecture seule"
+        ]
+      },
+      {
+        "idee": "Un processus est un programme en cours d'exécution",
+        "mots": [
+          "cours d'execution",
+          "en train de s'execut",
+          "en execution"
+        ]
+      },
+      {
+        "idee": "Le système lui attribue des ressources et un identifiant (PID)",
+        "mots": [
+          "pid",
+          "identifiant",
+          "ressource",
+          "numero"
+        ]
+      }
     ]
   },
   "7": {
@@ -26,11 +145,142 @@
       "dans la mémoire"
     ]
   },
+  "12": {
+    "reponse": "a) entrées-sorties ; b) UAL ; c) unité de commande ; d) mémoire ; e) entrées-sorties.",
+    "criteres": [
+      {
+        "idee": "Clavier et écran : entrées-sorties",
+        "mots": [
+          "entree",
+          "sortie",
+          "peripherique"
+        ]
+      },
+      {
+        "idee": "Addition : UAL",
+        "mots": [
+          "ual",
+          "arithmetique"
+        ]
+      },
+      {
+        "idee": "Décodage d'une instruction : unité de commande",
+        "mots": [
+          "commande",
+          "controle"
+        ]
+      },
+      {
+        "idee": "Stockage d'une variable : mémoire",
+        "mots": [
+          "memoire"
+        ]
+      }
+    ]
+  },
   "14": {
     "reponse": "Charger → décoder → exécuter (puis on recommence).",
     "accepte": [
       "charger → décoder → exécuter",
       "charger décoder exécuter"
+    ]
+  },
+  "15": {
+    "reponse": "Elle supprime le fichier brouillon.txt, sans passer par la corbeille.",
+    "criteres": [
+      {
+        "idee": "rm supprime le fichier",
+        "mots": [
+          "supprim",
+          "efface",
+          "detruit",
+          "enleve"
+        ]
+      },
+      {
+        "idee": "Le fichier ne passe pas par la corbeille : on ne peut pas le récupérer",
+        "mots": [
+          "corbeille",
+          "recuper",
+          "definitif",
+          "irreversible",
+          "retour"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "reponse": "Gérer les processus, la mémoire, les périphériques et les fichiers ; exemples : Linux, Windows (ou macOS, Android).",
+    "criteres": [
+      {
+        "idee": "Gérer les processus (partage du processeur)",
+        "mots": [
+          "processus"
+        ]
+      },
+      {
+        "idee": "Gérer la mémoire",
+        "mots": [
+          "memoire"
+        ]
+      },
+      {
+        "idee": "Gérer les périphériques et ressources matérielles",
+        "mots": [
+          "peripherique",
+          "materiel",
+          "ressource"
+        ]
+      },
+      {
+        "idee": "Gérer les fichiers",
+        "mots": [
+          "fichier"
+        ]
+      },
+      {
+        "idee": "Exemples : Linux, Windows, macOS, Android",
+        "mots": [
+          "linux",
+          "windows",
+          "macos",
+          "android",
+          "ios",
+          "unix"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "a) Faux ; b) Vrai.",
+    "criteres": [
+      {
+        "idee": "a) Faux : un programme sur le disque n'est qu'un fichier",
+        "mots": [
+          "fichier",
+          "pas un processus",
+          "n'est pas"
+        ]
+      },
+      {
+        "idee": "Il devient un processus seulement quand il s'exécute",
+        "mots": [
+          "cours d'execution",
+          "s'execute",
+          "lance",
+          "execution"
+        ]
+      },
+      {
+        "idee": "b) Vrai : chaque exécution donne un processus distinct, avec sa propre mémoire",
+        "mots": [
+          "distinct",
+          "deux processus",
+          "propre",
+          "chacun",
+          "separe"
+        ]
+      }
     ]
   },
   "19": {
@@ -46,10 +296,186 @@
       "False True False True"
     ]
   },
+  "33": {
+    "reponse": "En partageant le temps du processeur : chaque processus s'exécute à tour de rôle pendant de très courtes durées.",
+    "criteres": [
+      {
+        "idee": "Un cœur n'exécute qu'une seule chose à la fois",
+        "mots": [
+          "une seule",
+          "une instruction",
+          "un seul",
+          "a la fois"
+        ]
+      },
+      {
+        "idee": "Le système partage le temps du processeur entre les processus, à tour de rôle",
+        "mots": [
+          "tour de role",
+          "tour a tour",
+          "partag",
+          "altern",
+          "chacun son tour",
+          "passe d un",
+          "a l autre"
+        ]
+      },
+      {
+        "idee": "Chaque processus reçoit de très courtes tranches de temps",
+        "mots": [
+          "court",
+          "tranche",
+          "fraction",
+          "petit"
+        ]
+      },
+      {
+        "idee": "Les alternances sont si rapides qu'on croit à une exécution simultanée",
+        "mots": [
+          "rapide",
+          "impression",
+          "simultan",
+          "illusion"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Le fichier est découpé en paquets adressés à l'IP du destinataire, acheminés par le réseau puis réassemblés à l'arrivée.",
+    "criteres": [
+      {
+        "idee": "Le fichier est découpé en paquets",
+        "mots": [
+          "decoup",
+          "paquet",
+          "morceau"
+        ]
+      },
+      {
+        "idee": "Chaque paquet porte l'adresse IP du destinataire",
+        "mots": [
+          "adresse",
+          "destinataire"
+        ]
+      },
+      {
+        "idee": "Les paquets sont acheminés à travers le réseau",
+        "mots": [
+          "achemin",
+          "reseau",
+          "circul",
+          "transit"
+        ]
+      },
+      {
+        "idee": "À l'arrivée, les paquets sont réassemblés",
+        "mots": [
+          "reassembl",
+          "reconstitu",
+          "remis",
+          "rassembl"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "« Le processeur calcule (UAL + unité de commande) et la mémoire stocke données et programme. »",
+    "criteres": [
+      {
+        "idee": "L'élève inverse les rôles : le processeur calcule",
+        "mots": [
+          "calcul",
+          "inverse"
+        ]
+      },
+      {
+        "idee": "La mémoire stocke les données et le programme",
+        "mots": [
+          "memoire stock",
+          "stocke",
+          "conserve",
+          "garde"
+        ]
+      },
+      {
+        "idee": "Le processeur contient l'UAL et l'unité de commande",
+        "mots": [
+          "ual",
+          "unite de commande",
+          "unite de controle"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "A (4 milliards d'instructions/s contre 3 milliards pour B) : la fréquence seule ne mesure pas la rapidité.",
+    "criteres": [
+      {
+        "idee": "A exécute 4 milliards d'instructions par seconde, B seulement 3 milliards",
+        "mots": [
+          "4 milliard",
+          "3 milliard",
+          "4 x 10",
+          "4x10"
+        ]
+      },
+      {
+        "idee": "A est donc le plus rapide",
+        "mots": [
+          "a est",
+          "a execute",
+          "processeur a"
+        ]
+      },
+      {
+        "idee": "La fréquence seule ne suffit pas à comparer la rapidité",
+        "mots": [
+          "ne suffit pas",
+          "seule",
+          "pas suffi",
+          "ne mesure pas",
+          "pas forcement"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "M = 1, 0 et 1 : l'expression traduit bien « au moins deux oui ».",
     "accepte": [
       "1 0 1"
+    ]
+  },
+  "40": {
+    "reponse": "On est déjà dans notes, qui ne contient aucun dossier notes : la dernière commande est en trop.",
+    "criteres": [
+      {
+        "idee": "Après le premier cd, on est déjà dans le dossier notes",
+        "mots": [
+          "deja dans",
+          "deja",
+          "on est dans"
+        ]
+      },
+      {
+        "idee": "Le dossier notes ne contient aucun dossier notes : le second cd échoue",
+        "mots": [
+          "n'existe pas",
+          "aucun",
+          "pas de dossier",
+          "contient pas",
+          "vide"
+        ]
+      },
+      {
+        "idee": "Correction : supprimer la dernière commande",
+        "mots": [
+          "suppr",
+          "enlev",
+          "retir",
+          "en trop",
+          "inutile"
+        ]
+      }
     ]
   },
   "41": {
@@ -58,10 +484,179 @@
       "non non non"
     ]
   },
+  "42": {
+    "reponse": "Pour qu'un processus ne puisse ni lire ni modifier la mémoire d'un autre (ex. : un programme bogué qui corromprait un document ouvert).",
+    "criteres": [
+      {
+        "idee": "Plusieurs processus sont en mémoire en même temps",
+        "mots": [
+          "plusieurs processus",
+          "meme temps",
+          "partag"
+        ]
+      },
+      {
+        "idee": "Un processus ne doit pas lire ni modifier la mémoire d'un autre",
+        "mots": [
+          "un autre",
+          "d un autre",
+          "modifi",
+          "ecras",
+          "acced"
+        ]
+      },
+      {
+        "idee": "Sinon une erreur ou un programme malveillant ferait perdre ou fuiter des données",
+        "mots": [
+          "bogue",
+          "bug",
+          "erreur",
+          "malveillant",
+          "perdre",
+          "pirat",
+          "virus",
+          "corromp"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "On ne renvoie que les paquets perdus, et le réseau peut être partagé entre de nombreuses communications (chemins possibles différents).",
+    "criteres": [
+      {
+        "idee": "Si un paquet est perdu, on ne renvoie que ce paquet",
+        "mots": [
+          "renvo",
+          "perdu",
+          "seul paquet",
+          "reemi",
+          "abime"
+        ]
+      },
+      {
+        "idee": "Le réseau est partagé entre plusieurs communications",
+        "mots": [
+          "partag",
+          "plusieurs communication",
+          "altern",
+          "en meme temps"
+        ]
+      },
+      {
+        "idee": "Les paquets peuvent prendre des chemins différents",
+        "mots": [
+          "chemin",
+          "route",
+          "itineraire"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Commande : charge et décode ; bus : transporte les valeurs ; UAL : additionne ; mémoire : fournit les opérandes et reçoit le résultat.",
+    "criteres": [
+      {
+        "idee": "L'unité de commande charge l'instruction et la décode",
+        "mots": [
+          "decod",
+          "charg",
+          "commande"
+        ]
+      },
+      {
+        "idee": "Le bus transporte les valeurs entre mémoire et processeur",
+        "mots": [
+          "bus",
+          "transport"
+        ]
+      },
+      {
+        "idee": "L'UAL effectue l'addition",
+        "mots": [
+          "ual",
+          "addition"
+        ]
+      },
+      {
+        "idee": "La mémoire fournit les deux valeurs et reçoit le résultat",
+        "mots": [
+          "memoire",
+          "case",
+          "ecrit",
+          "range"
+        ]
+      }
+    ]
+  },
   "45": {
     "reponse": "3 combinaisons : (0, 1, 0), (1, 0, 0) et (1, 1, 0).",
     "accepte": [
       "3 combinaisons"
+    ]
+  },
+  "49": {
+    "reponse": "Processeur, mémoire et périphériques sur une seule puce ; avantages : petite taille et faible consommation.",
+    "criteres": [
+      {
+        "idee": "Le SoC regroupe processeur, mémoire et périphériques sur une seule puce",
+        "mots": [
+          "seule puce",
+          "une puce",
+          "regroup",
+          "meme puce",
+          "processeur"
+        ]
+      },
+      {
+        "idee": "Avantage : une petite taille",
+        "mots": [
+          "taille",
+          "petit",
+          "compact",
+          "encombrement",
+          "place"
+        ]
+      },
+      {
+        "idee": "Avantage : une faible consommation (meilleure autonomie)",
+        "mots": [
+          "consomm",
+          "energie",
+          "autonomie",
+          "batterie"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Transistors → portes logiques → circuits de calcul (additionneurs, comparateurs) de l'UAL.",
+    "criteres": [
+      {
+        "idee": "Un transistor est un interrupteur : passant ou bloqué, soit 1 ou 0",
+        "mots": [
+          "interrupteur",
+          "passant",
+          "bloque",
+          "0 ou 1",
+          "1 ou 0"
+        ]
+      },
+      {
+        "idee": "En combinant des transistors, on fabrique des portes logiques",
+        "mots": [
+          "porte"
+        ]
+      },
+      {
+        "idee": "En assemblant des portes, on construit les circuits de calcul de l'UAL",
+        "mots": [
+          "additionneur",
+          "comparateur",
+          "circuit",
+          "assembl",
+          "ual"
+        ]
+      }
     ]
   }
 }

@@ -1,4 +1,57 @@
 {
+  "1": {
+    "reponse": "Le sèche-mains rend service à l'utilisateur en agissant sur ses mains, dans le but de les sécher rapidement et sans contact.",
+    "criteres": [
+      {
+        "idee": "Il rend service à l'utilisateur des sanitaires",
+        "mots": [
+          "utilisateur",
+          "usager",
+          "personne"
+        ]
+      },
+      {
+        "idee": "Il agit sur les mains (l'eau présente sur les mains)",
+        "mots": [
+          "mains",
+          "eau"
+        ]
+      },
+      {
+        "idee": "But : sécher les mains rapidement et sans contact",
+        "mots": [
+          "secher",
+          "seche",
+          "sans contact",
+          "rapide"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "reponse": "(a) est la fonction principale (FP) ; (b) et (c) sont des fonctions contraintes (FC).",
+    "criteres": [
+      {
+        "idee": "(a) est la fonction principale (FP)",
+        "mots": [
+          "a est la fp",
+          "a fp",
+          "fp a",
+          "a est la fonction principale",
+          "a principale"
+        ]
+      },
+      {
+        "idee": "(b) et (c) sont des fonctions contraintes (FC)",
+        "mots": [
+          "b et c",
+          "fc b",
+          "b fc",
+          "b c"
+        ]
+      }
+    ]
+  },
   "3": {
     "reponse": "Non : la chute est de 11 °C alors que le cahier des charges impose au plus 8 °C ; le critère n'est pas respecté.",
     "accepte": [
@@ -8,12 +61,200 @@
       "non, 11 °C > 8 °C"
     ]
   },
+  "4": {
+    "reponse": "FP1 relie Utilisateur et Boissons (« obtenir une boisson ») ; FC1 relie à Énergie électrique et FC2 relie à Monnaie.",
+    "criteres": [
+      {
+        "idee": "FP : permettre à l'utilisateur d'obtenir une boisson (relie Utilisateur et Boissons)",
+        "mots": [
+          "obtenir",
+          "boisson",
+          "servir",
+          "distribuer"
+        ]
+      },
+      {
+        "idee": "FC : être alimenté par l'énergie électrique",
+        "mots": [
+          "alimente",
+          "energie electrique",
+          "electricite"
+        ]
+      },
+      {
+        "idee": "FC : encaisser et rendre la monnaie (ou faciliter la maintenance)",
+        "mots": [
+          "monnaie",
+          "payer",
+          "encaiss",
+          "maintenance"
+        ]
+      },
+      {
+        "idee": "Chaque fonction est formulée par un verbe à l'infinitif",
+        "mots": [
+          "infinitif",
+          "verbe"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "« Déplacer le vantail » → « Convertir l'énergie électrique en mouvement de translation » → « Motoréducteur + crémaillère ».",
+    "criteres": [
+      {
+        "idee": "Sous-fonction : convertir l'énergie électrique en énergie mécanique (translation)",
+        "mots": [
+          "convert",
+          "transform",
+          "mecanique",
+          "translation"
+        ]
+      },
+      {
+        "idee": "Solution constructive : motoréducteur et crémaillère (ou vérin, bras articulé)",
+        "mots": [
+          "moteur",
+          "motoreducteur",
+          "cremaillere",
+          "verin",
+          "bras"
+        ]
+      }
+    ]
+  },
   "6": {
     "reponse": "Non : le temps d'ouverture est d'environ 76 s, très supérieur aux 20 s exigés ; le cahier des charges n'est pas respecté.",
     "accepte": [
       "non",
       "non, 76 s",
       "non, environ 76 s"
+    ]
+  },
+  "7": {
+    "reponse": "Matière d'œuvre : les cheveux mouillés ; valeur ajoutée : les cheveux sont séchés.",
+    "criteres": [
+      {
+        "idee": "Matière d'œuvre : les cheveux mouillés",
+        "mots": [
+          "cheveux mouill",
+          "cheveux humide",
+          "matiere d oeuvre les cheveux",
+          "les cheveux"
+        ]
+      },
+      {
+        "idee": "Valeur ajoutée : les cheveux sont séchés (mouillés → secs)",
+        "mots": [
+          "seche",
+          "secs",
+          "sec"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "reponse": "(a) est une FP (relie deux éléments extérieurs) ; (b) est une FC (relie le système à un seul élément).",
+    "criteres": [
+      {
+        "idee": "(a) est une FP : elle relie deux éléments extérieurs",
+        "mots": [
+          "a est une fp",
+          "a fp",
+          "fp a",
+          "deux elements",
+          "a principale"
+        ]
+      },
+      {
+        "idee": "(b) est une FC : elle relie le système à un seul élément",
+        "mots": [
+          "b est une fc",
+          "b fc",
+          "fc b",
+          "un seul",
+          "b contrainte"
+        ]
+      }
+    ]
+  },
+  "9": {
+    "reponse": "Critère : masse ; niveau : ≤ 15 kg ; flexibilité : maxi.",
+    "criteres": [
+      {
+        "idee": "Critère : la masse du vélo (grandeur mesurable)",
+        "mots": [
+          "masse",
+          "poids"
+        ]
+      },
+      {
+        "idee": "Niveau : une valeur avec son unité, par exemple ≤ 15 kg",
+        "mots": [
+          "15 kg",
+          "12 kg",
+          "10 kg",
+          "20 kg",
+          "kilo"
+        ]
+      },
+      {
+        "idee": "Flexibilité : « maxi » (ne pas dépasser ce seuil)",
+        "mots": [
+          "maxi",
+          "tolerance",
+          "maximum"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "FP : « permettre à l'utilisateur d'arroser le jardin », reliant les éléments extérieurs utilisateur et jardin.",
+    "criteres": [
+      {
+        "idee": "FP : permettre à l'utilisateur d'arroser le jardin",
+        "mots": [
+          "arroser",
+          "arrosage"
+        ]
+      },
+      {
+        "idee": "Elle relie l'utilisateur et le jardin",
+        "mots": [
+          "utilisateur et le jardin",
+          "utilisateur et jardin",
+          "utilisateur jardin",
+          "relie l utilisateur"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "À qui rend-il service ? Sur quoi agit-il ? Dans quel but ?",
+    "criteres": [
+      {
+        "idee": "À qui le produit rend-il service ?",
+        "mots": [
+          "a qui",
+          "rend service",
+          "rend il service"
+        ]
+      },
+      {
+        "idee": "Sur quoi agit-il ?",
+        "mots": [
+          "sur quoi",
+          "agit"
+        ]
+      },
+      {
+        "idee": "Dans quel but ?",
+        "mots": [
+          "quel but",
+          "pourquoi",
+          "but"
+        ]
+      }
     ]
   },
   "13": {
@@ -25,11 +266,105 @@
       "solution et fonction"
     ]
   },
+  "14": {
+    "reponse": "Fonctions : (b) et (d) ; solutions : (a) et (c).",
+    "criteres": [
+      {
+        "idee": "Fonctions : mesurer la température (b) et stocker l'énergie (d)",
+        "mots": [
+          "fonctions b",
+          "b et d",
+          "b d",
+          "mesurer",
+          "stocker"
+        ]
+      },
+      {
+        "idee": "Solutions : panneau photovoltaïque (a) et batterie (c)",
+        "mots": [
+          "solutions a",
+          "a et c",
+          "a c",
+          "panneau",
+          "batterie"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "reponse": "Matière d'œuvre : le linge sale ; valeur ajoutée : le linge est lavé (sale → propre).",
+    "criteres": [
+      {
+        "idee": "Matière d'œuvre : le linge (sale)",
+        "mots": [
+          "linge sale",
+          "le linge",
+          "vetements"
+        ]
+      },
+      {
+        "idee": "Valeur ajoutée : le linge devient propre (lavé)",
+        "mots": [
+          "propre",
+          "lave",
+          "nettoy"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "reponse": "Matière d'œuvre : les personnes ; valeur ajoutée : elles sont déplacées d'un étage à un autre.",
+    "criteres": [
+      {
+        "idee": "Matière d'œuvre : les personnes transportées",
+        "mots": [
+          "personne",
+          "passager",
+          "gens",
+          "usager"
+        ]
+      },
+      {
+        "idee": "Valeur ajoutée : un changement de position (d'un étage à un autre)",
+        "mots": [
+          "position",
+          "deplac",
+          "etage",
+          "monte"
+        ]
+      }
+    ]
+  },
   "17": {
     "reponse": "(a) information ; (b) énergie ; (c) personnes.",
     "accepte": [
       "information, énergie, personnes",
       "information, énergie, personne"
+    ]
+  },
+  "18": {
+    "reponse": "Elle délimite ce qui appartient au système et ce qui appartient au milieu extérieur.",
+    "criteres": [
+      {
+        "idee": "La frontière sépare ce qui fait partie du système de ce qui n'en fait pas partie",
+        "mots": [
+          "separe",
+          "delimit",
+          "dedans",
+          "fait partie",
+          "limite",
+          "appartient"
+        ]
+      },
+      {
+        "idee": "Ce qui est dehors forme le milieu extérieur, avec lequel le système interagit",
+        "mots": [
+          "milieu exterieur",
+          "exterieur",
+          "dehors",
+          "interagit"
+        ]
+      }
     ]
   },
   "19": {
@@ -67,6 +402,36 @@
       "acquérir, traiter, convertir, distribuer"
     ]
   },
+  "25": {
+    "reponse": "La chaîne d'information pilote la chaîne d'énergie ; des capteurs renvoient des informations en retour (régulation).",
+    "criteres": [
+      {
+        "idee": "La chaîne d'information pilote la chaîne d'énergie (elle envoie des ordres)",
+        "mots": [
+          "information pilote",
+          "chaine d information",
+          "ordres",
+          "commande"
+        ]
+      },
+      {
+        "idee": "Des capteurs renvoient des informations en retour",
+        "mots": [
+          "capteur",
+          "retour",
+          "mesur"
+        ]
+      },
+      {
+        "idee": "C'est le principe de la régulation",
+        "mots": [
+          "regulation",
+          "boucle",
+          "asservissement"
+        ]
+      }
+    ]
+  },
   "26": {
     "reponse": "La station météo (matière d'œuvre : information).",
     "accepte": [
@@ -81,6 +446,28 @@
       "ibd",
       "diagramme de blocs internes (ibd)",
       "diagramme ibd"
+    ]
+  },
+  "29": {
+    "reponse": "Faux : il décrit les services attendus par les acteurs ; les composants sont décrits par le bdd.",
+    "criteres": [
+      {
+        "idee": "Le diagramme des cas d'utilisation décrit les services attendus par les acteurs",
+        "mots": [
+          "services",
+          "acteurs",
+          "attendu",
+          "utilisateur"
+        ]
+      },
+      {
+        "idee": "Les composants sont décrits par le diagramme de définition de blocs (bdd)",
+        "mots": [
+          "bdd",
+          "blocs",
+          "definition de blocs"
+        ]
+      }
     ]
   },
   "31": {
@@ -102,11 +489,173 @@
       "24,9 et 23,8"
     ]
   },
+  "33": {
+    "reponse": "Elle n'est pas quantifiée. Exemple : critère « niveau sonore à 1 m », niveau ≤ 50 dB, flexibilité maxi.",
+    "criteres": [
+      {
+        "idee": "Sans critère ni niveau, la fonction ne peut pas être mesurée ni validée",
+        "mots": [
+          "mesur",
+          "quantifi",
+          "critere",
+          "chiffre",
+          "valid"
+        ]
+      },
+      {
+        "idee": "Critère : le niveau sonore à 1 m, en décibels",
+        "mots": [
+          "sonore",
+          "bruit",
+          "decibel",
+          "50 db",
+          "40 db"
+        ]
+      },
+      {
+        "idee": "Niveau : par exemple ≤ 50 dB, flexibilité maxi",
+        "mots": [
+          "50 db",
+          "maxi",
+          "inferieur a",
+          "au plus"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Le système est au centre ; une FP est un trait reliant deux éléments extérieurs en passant par le système.",
+    "criteres": [
+      {
+        "idee": "Le système est placé au centre",
+        "mots": [
+          "centre",
+          "milieu"
+        ]
+      },
+      {
+        "idee": "Une FP est un trait qui relie deux éléments extérieurs en passant par le système",
+        "mots": [
+          "trait",
+          "deux elements",
+          "relie",
+          "passant par",
+          "passe par"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "FP : permettre à l'utilisateur de tondre la pelouse. FC (exemples) : se recharger sur la station, résister à la pluie.",
+    "criteres": [
+      {
+        "idee": "FP : permettre à l'utilisateur de tondre la pelouse",
+        "mots": [
+          "tondre",
+          "couper"
+        ]
+      },
+      {
+        "idee": "FC : se recharger sur la station de charge",
+        "mots": [
+          "recharg",
+          "station",
+          "batterie"
+        ]
+      },
+      {
+        "idee": "FC : résister à la pluie (ou ne pas blesser les animaux)",
+        "mots": [
+          "pluie",
+          "resister",
+          "etanche",
+          "animaux",
+          "blesser"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "« Permettre à l'utilisateur de conserver ses aliments au frais » : elle relie l'utilisateur et les aliments.",
+    "criteres": [
+      {
+        "idee": "FP : permettre à l'utilisateur de conserver ses aliments au frais",
+        "mots": [
+          "conserver",
+          "frais",
+          "refroidir",
+          "froid"
+        ]
+      },
+      {
+        "idee": "Elle relie l'utilisateur et les aliments",
+        "mots": [
+          "aliments",
+          "nourriture"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "Vers la droite : « comment ? » ; vers la gauche : « pourquoi ? ».",
     "accepte": [
       "comment ; pourquoi",
       "comment et pourquoi"
+    ]
+  },
+  "38": {
+    "reponse": "Solution : une DEL ; « Alimenter » → piles ou batterie.",
+    "criteres": [
+      {
+        "idee": "Solution de conversion : une DEL (LED) ou une ampoule",
+        "mots": [
+          "del",
+          "led",
+          "ampoule",
+          "diode"
+        ]
+      },
+      {
+        "idee": "Fonction « alimenter en énergie » : piles ou batterie",
+        "mots": [
+          "pile",
+          "batterie",
+          "accumulateur"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Elle impose une solution. Reformulation : « mettre en mouvement le vantail » (avec un critère, par exemple le temps d'ouverture).",
+    "criteres": [
+      {
+        "idee": "Le cahier des charges fonctionnel exprime le besoin, sans imposer de solution",
+        "mots": [
+          "solution",
+          "impose",
+          "besoin"
+        ]
+      },
+      {
+        "idee": "Imposer un moteur 24 V, c'est choisir trop tôt et fermer d'autres possibilités",
+        "mots": [
+          "trop tot",
+          "ferme",
+          "autres possibilit",
+          "limite",
+          "empeche"
+        ]
+      },
+      {
+        "idee": "Reformulation : « mettre en mouvement le vantail », avec un critère (temps d'ouverture)",
+        "mots": [
+          "mettre en mouvement",
+          "deplacer",
+          "ouvrir",
+          "temps d ouverture",
+          "manoeuvrer"
+        ]
+      }
     ]
   },
   "40": {
@@ -142,11 +691,177 @@
       "1,08 kg ; 1,32 kg ; non conforme"
     ]
   },
+  "44": {
+    "reponse": "À l'usager ; sur l'usager (sa position) ; pour se déplacer en ville rapidement et sans effort.",
+    "criteres": [
+      {
+        "idee": "À qui ? À l'usager de la ville",
+        "mots": [
+          "usager",
+          "utilisateur",
+          "habitant",
+          "citadin"
+        ]
+      },
+      {
+        "idee": "Sur quoi ? Sur l'usager lui-même (sa position)",
+        "mots": [
+          "lui meme",
+          "position",
+          "sur l usager",
+          "sur l utilisateur"
+        ]
+      },
+      {
+        "idee": "Dans quel but ? Se déplacer en ville rapidement et sans effort",
+        "mots": [
+          "deplacer",
+          "rapide",
+          "sans effort",
+          "trajet"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "C'est une FC (un seul élément relié). FP : permettre à l'utilisateur de nettoyer le sol.",
+    "criteres": [
+      {
+        "idee": "« Être rechargé par sa base » ne relie le robot qu'à un seul élément",
+        "mots": [
+          "un seul",
+          "seul element",
+          "une seule"
+        ]
+      },
+      {
+        "idee": "C'est donc une fonction de contrainte (FC)",
+        "mots": [
+          "contrainte",
+          "fonction de contrainte"
+        ]
+      },
+      {
+        "idee": "FP : permettre à l'utilisateur de nettoyer le sol",
+        "mots": [
+          "nettoyer",
+          "aspirer",
+          "sol"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Alimenter → batterie ; distribuer → contrôleur ; convertir → moteur ; transmettre → chaîne et pignons.",
+    "criteres": [
+      {
+        "idee": "Alimenter : la batterie",
+        "mots": [
+          "batterie"
+        ]
+      },
+      {
+        "idee": "Distribuer : le contrôleur (variateur)",
+        "mots": [
+          "controleur",
+          "variateur",
+          "distribu"
+        ]
+      },
+      {
+        "idee": "Convertir : le moteur électrique",
+        "mots": [
+          "moteur"
+        ]
+      },
+      {
+        "idee": "Transmettre : la chaîne et les pignons",
+        "mots": [
+          "chaine",
+          "pignon",
+          "transmet"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Sonde (acquérir) → thermostat (traiter) → résistance (convertir) ; la mesure renvoyée permet de corriger : c'est une régulation.",
+    "criteres": [
+      {
+        "idee": "Une sonde de température acquiert la température de la pièce",
+        "mots": [
+          "sonde",
+          "capteur",
+          "thermometre"
+        ]
+      },
+      {
+        "idee": "Le thermostat compare la mesure à la consigne et traite l'information",
+        "mots": [
+          "thermostat",
+          "compare",
+          "consigne"
+        ]
+      },
+      {
+        "idee": "La résistance chauffante convertit l'énergie électrique en chaleur",
+        "mots": [
+          "resistance",
+          "chauffante",
+          "radiateur",
+          "chaleur"
+        ]
+      },
+      {
+        "idee": "La mesure revient en permanence pour corriger la commande : c'est une régulation",
+        "mots": [
+          "retour",
+          "corrig",
+          "boucle",
+          "en permanence",
+          "ajust"
+        ]
+      }
+    ]
+  },
   "48": {
     "reponse": "Oui : la recharge dure 6 h, moins que les 8 h imposées.",
     "accepte": [
       "oui",
       "oui, 6 h"
+    ]
+  },
+  "49": {
+    "reponse": "FC1 est une solution ; exemple de correction : « être compatible avec un contact alimentaire ».",
+    "criteres": [
+      {
+        "idee": "FC1 « être en acier inoxydable » impose un matériau : c'est une solution",
+        "mots": [
+          "fc1",
+          "acier",
+          "materiau",
+          "solution"
+        ]
+      },
+      {
+        "idee": "Correction : « être compatible avec un contact alimentaire »",
+        "mots": [
+          "contact alimentaire",
+          "alimentaire",
+          "compatible",
+          "hygien",
+          "ne pas rouiller"
+        ]
+      },
+      {
+        "idee": "FP1 et FC2 sont correctes (FC2 est vérifiable)",
+        "mots": [
+          "fp1",
+          "fc2",
+          "correct",
+          "verifiable"
+        ]
+      }
     ]
   },
   "50": {

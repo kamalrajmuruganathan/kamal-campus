@@ -18,6 +18,40 @@
       "-5"
     ]
   },
+  "6": {
+    "reponse": "1011 + 0101 = 10000, soit 16 : ce nombre dépasse les 4 bits (max 15), d'où un dépassement de capacité.",
+    "criteres": [
+      {
+        "idee": "La somme vaut 10000 en binaire, soit 16",
+        "mots": [
+          "10000",
+          "soit 16",
+          "vaut 16",
+          "5 16",
+          "egal a 16"
+        ]
+      },
+      {
+        "idee": "Sur 4 bits, on ne peut coder que de 0 à 15",
+        "mots": [
+          "0 a 15",
+          "maximum",
+          "jusqu a 15",
+          "plus de 15"
+        ]
+      },
+      {
+        "idee": "Il faudrait un 5e bit : la retenue finale est perdue",
+        "mots": [
+          "5e bit",
+          "cinquieme",
+          "5 bits",
+          "retenue",
+          "perdu"
+        ]
+      }
+    ]
+  },
   "7": {
     "reponse": "1010₂ = 10 et 110₂ = 6.",
     "accepte": [
@@ -90,6 +124,60 @@
       "63 et 1023"
     ]
   },
+  "20": {
+    "reponse": "Premier bit à 1 : négatif. 0111 0000 et 0000 0000 : positif ou nul ; 1000 0001 et 1111 1111 : négatifs.",
+    "criteres": [
+      {
+        "idee": "Premier bit à 1 : le nombre est négatif",
+        "mots": [
+          "negatif"
+        ]
+      },
+      {
+        "idee": "0111 0000 et 0000 0000 : positif ou nul",
+        "mots": [
+          "positif",
+          "nul"
+        ]
+      },
+      {
+        "idee": "1000 0001 et 1111 1111 : négatifs",
+        "mots": [
+          "1000 0001 et 1111",
+          "1111 1111 negatif",
+          "10000001 et 11111111",
+          "1000 0001 1111 1111"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "reponse": "7 bits, 128 caractères ; « é » n'y figure pas.",
+    "criteres": [
+      {
+        "idee": "La table ASCII code les caractères sur 7 bits",
+        "mots": [
+          "7 bits",
+          "sept bits"
+        ]
+      },
+      {
+        "idee": "Elle contient 128 caractères",
+        "mots": [
+          "128"
+        ]
+      },
+      {
+        "idee": "« é » n'y figure pas (il est dans Unicode)",
+        "mots": [
+          "pas",
+          "unicode",
+          "non",
+          "absent"
+        ]
+      }
+    ]
+  },
   "23": {
     "reponse": "1011 1100 0111₂ = BC7₁₆.",
     "accepte": [
@@ -101,6 +189,41 @@
     "accepte": [
       "255, 136, 0",
       "rouge 255 vert 136 bleu 0"
+    ]
+  },
+  "28": {
+    "reponse": "On obtient 44 (300 − 256) au lieu de 300 : dépassement de capacité.",
+    "criteres": [
+      {
+        "idee": "200 + 100 = 300, mais le maximum sur 8 bits est 255",
+        "mots": [
+          "255",
+          "maximum",
+          "max",
+          "depasse"
+        ]
+      },
+      {
+        "idee": "300 demande 9 bits",
+        "mots": [
+          "9 bits",
+          "neuf bits",
+          "9e bit",
+          "neuvieme"
+        ]
+      },
+      {
+        "idee": "En gardant les 8 bits de droite, on stocke 44 au lieu de 300",
+        "mots": [
+          "obtient 44",
+          "stocke 44",
+          "44 au lieu",
+          "00101100",
+          "0010 1100",
+          "donne 44",
+          "vaut 44"
+        ]
+      }
     ]
   },
   "29": {
@@ -122,6 +245,70 @@
       "a False b False c True"
     ]
   },
+  "37": {
+    "reponse": "Le zéro occupe un motif « positif » ; sur 16 bits, on code de −32 768 à 32 767.",
+    "criteres": [
+      {
+        "idee": "Il y a 256 motifs : 128 négatifs et 128 commençant par 0",
+        "mots": [
+          "256",
+          "128 motif",
+          "moitie"
+        ]
+      },
+      {
+        "idee": "Le zéro occupe un des motifs commençant par 0",
+        "mots": [
+          "zero",
+          "le 0",
+          "nul"
+        ]
+      },
+      {
+        "idee": "Les positifs ne vont donc que jusqu'à 127",
+        "mots": [
+          "127"
+        ]
+      },
+      {
+        "idee": "Sur 16 bits : de −32 768 à 32 767",
+        "mots": [
+          "32 768",
+          "32768",
+          "32 767",
+          "32767"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "1001 0110, qui représente −106 : dépassement de capacité (150 > 127).",
+    "criteres": [
+      {
+        "idee": "On obtient le motif 1001 0110",
+        "mots": [
+          "1001 0110",
+          "10010110"
+        ]
+      },
+      {
+        "idee": "Le bit de poids fort vaut 1 : il est lu comme négatif, −106",
+        "mots": [
+          "106",
+          "negatif"
+        ]
+      },
+      {
+        "idee": "150 dépasse 127 : c'est un dépassement de capacité",
+        "mots": [
+          "depassement",
+          "overflow",
+          "127",
+          "150"
+        ]
+      }
+    ]
+  },
   "39": {
     "reponse": "8 bits pour 200 couleurs ; 10 bits pour 1 000 couleurs.",
     "accepte": [
@@ -129,6 +316,177 @@
       "8 bits et 10 bits",
       "8, 10",
       "8 et 10"
+    ]
+  },
+  "40": {
+    "reponse": "Unicode numérote les caractères, UTF-8 encode ces numéros en octets ; UTF-8 code les caractères ASCII sur 1 octet avec la même valeur.",
+    "criteres": [
+      {
+        "idee": "Unicode attribue un numéro à chaque caractère",
+        "mots": [
+          "numero",
+          "point de code",
+          "table",
+          "numerote",
+          "attribue"
+        ]
+      },
+      {
+        "idee": "UTF-8 encode ces numéros en octets (1 à 4 par caractère)",
+        "mots": [
+          "encod",
+          "octet",
+          "suite d"
+        ]
+      },
+      {
+        "idee": "Les caractères ASCII sont codés sur 1 octet avec la même valeur",
+        "mots": [
+          "meme valeur",
+          "un octet",
+          "1 octet",
+          "meme code",
+          "compatible"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "7 puis 10 : 7 caractères, mais 10 octets en UTF-8.",
+    "criteres": [
+      {
+        "idee": "7 caractères",
+        "mots": [
+          "7 caractere",
+          "sept caractere",
+          "7 puis"
+        ]
+      },
+      {
+        "idee": "10 octets en UTF-8",
+        "mots": [
+          "10 octet",
+          "dix octet",
+          "puis 10"
+        ]
+      },
+      {
+        "idee": "Les caractères ASCII prennent 1 octet, « ë » 2 et « € » 3",
+        "mots": [
+          "2 octet",
+          "3 octet",
+          "deux octet",
+          "trois octet",
+          "plusieurs octet",
+          "en prend",
+          "1 octet"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "x ne vaut jamais exactement 1 (0.9999999999999999 après 10 tours) ; il faut écrire `while x < 1`.",
+    "criteres": [
+      {
+        "idee": "0.1 n'est pas représentable exactement en binaire",
+        "mots": [
+          "exactement",
+          "approch",
+          "approx",
+          "arrondi",
+          "pas represent"
+        ]
+      },
+      {
+        "idee": "x ne vaut jamais exactement 1 (0.9999999999999999)",
+        "mots": [
+          "9999",
+          "jamais",
+          "pas egal"
+        ]
+      },
+      {
+        "idee": "La condition reste vraie : la boucle est infinie",
+        "mots": [
+          "infini",
+          "indefiniment",
+          "reste vrai",
+          "ne s arrete"
+        ]
+      },
+      {
+        "idee": "Correction : while x < 1",
+        "mots": [
+          "while x 1",
+          "inferieur",
+          "strictement",
+          "range"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "Le dernier bit indique la parité ; multiplier par 2 ajoute un 0 à droite : 26 = 11010₂.",
+    "criteres": [
+      {
+        "idee": "Le bit de droite a pour poids 1, les autres des poids pairs",
+        "mots": [
+          "poids 1",
+          "pair",
+          "puissance"
+        ]
+      },
+      {
+        "idee": "Un nombre est pair quand son dernier bit vaut 0",
+        "mots": [
+          "dernier bit",
+          "bit de droite",
+          "termine par 0",
+          "parite"
+        ]
+      },
+      {
+        "idee": "Multiplier par 2 décale les bits vers la gauche et ajoute un 0 à droite",
+        "mots": [
+          "decal",
+          "ajoute un 0",
+          "ajoute 0",
+          "gauche"
+        ]
+      },
+      {
+        "idee": "26 = 11010 en binaire",
+        "mots": [
+          "11010"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "8 chiffres ; la plus grande valeur est FFFFFFFF (soit 4 294 967 295).",
+    "criteres": [
+      {
+        "idee": "Un chiffre hexadécimal code 4 bits",
+        "mots": [
+          "4 bits",
+          "quatre bits"
+        ]
+      },
+      {
+        "idee": "Il faut 8 chiffres hexadécimaux pour 32 bits",
+        "mots": [
+          "8 chiffres",
+          "huit chiffres",
+          "8 groupes",
+          "8 hexa"
+        ]
+      },
+      {
+        "idee": "La plus grande valeur est FFFFFFFF",
+        "mots": [
+          "ffffffff"
+        ]
+      }
     ]
   },
   "45": {
@@ -142,6 +500,69 @@
     "reponse": "Totaux successifs : 1, 3, 6, 13 ; la fonction renvoie 13.",
     "accepte": [
       "1, 3, 6, 13"
+    ]
+  },
+  "49": {
+    "reponse": "`0.6000000000000001` puis `False` ; il vaut mieux calculer en centimes avec des entiers.",
+    "criteres": [
+      {
+        "idee": "Le programme affiche 0.6000000000000001 puis False",
+        "mots": [
+          "6000000000000001",
+          "false"
+        ]
+      },
+      {
+        "idee": "Les flottants sont des valeurs approchées",
+        "mots": [
+          "approch",
+          "approx",
+          "arrondi",
+          "exact"
+        ]
+      },
+      {
+        "idee": "Solution : calculer en centimes avec des entiers (ou une tolérance)",
+        "mots": [
+          "centime",
+          "entier",
+          "toleran"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "65 535 au maximum ; ensuite il repasse à 0 ; en Python, `int` n'a pas ce problème (précision illimitée).",
+    "criteres": [
+      {
+        "idee": "Le maximum est 65 535",
+        "mots": [
+          "65 535",
+          "65535"
+        ]
+      },
+      {
+        "idee": "À la visite suivante, le compteur repasse à 0 (dépassement)",
+        "mots": [
+          "repasse",
+          "revient",
+          "zero",
+          "a 0",
+          "depassement",
+          "overflow"
+        ]
+      },
+      {
+        "idee": "En Python, int a une précision illimitée : pas ce problème",
+        "mots": [
+          "illimit",
+          "infini",
+          "pas de limite",
+          "pas ce probleme",
+          "aucun probleme",
+          "non"
+        ]
+      }
     ]
   }
 }

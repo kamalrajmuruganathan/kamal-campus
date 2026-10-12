@@ -1,4 +1,53 @@
 {
+  "1": {
+    "reponse": "Alimenter (batterie) → Distribuer (variateur) → Convertir (moteur) → Transmettre (réducteur).",
+    "criteres": [
+      {
+        "idee": "Ordre : alimenter, distribuer, convertir, transmettre",
+        "mots": [
+          "alimenter distribuer convertir transmettre",
+          "alimenter distribuer",
+          "distribuer convertir"
+        ]
+      },
+      {
+        "idee": "Alimenter : la batterie",
+        "mots": [
+          "alimenter batterie",
+          "alimenter la batterie",
+          "batterie alimente",
+          "batterie alimenter"
+        ]
+      },
+      {
+        "idee": "Distribuer : le variateur",
+        "mots": [
+          "distribuer variateur",
+          "distribuer le variateur",
+          "variateur distribue",
+          "variateur distribuer"
+        ]
+      },
+      {
+        "idee": "Convertir : le moteur",
+        "mots": [
+          "convertir moteur",
+          "convertir le moteur",
+          "moteur convertit",
+          "moteur convertir"
+        ]
+      },
+      {
+        "idee": "Transmettre : le réducteur",
+        "mots": [
+          "transmettre reducteur",
+          "transmettre le reducteur",
+          "reducteur transmet",
+          "reducteur transmettre"
+        ]
+      }
+    ]
+  },
   "2": {
     "reponse": "Le moteur absorbe une puissance électrique de 120 W.",
     "accepte": [
@@ -80,6 +129,43 @@
       "préactionneur, actionneur, effecteur"
     ]
   },
+  "12": {
+    "reponse": "E en J ; P en W ; C en N·m ; ω en rad/s.",
+    "criteres": [
+      {
+        "idee": "Énergie en joules (J)",
+        "mots": [
+          "joule",
+          "e en j",
+          "e j"
+        ]
+      },
+      {
+        "idee": "Puissance en watts (W)",
+        "mots": [
+          "watt",
+          "p en w",
+          "p w"
+        ]
+      },
+      {
+        "idee": "Couple en newtons-mètres (N·m)",
+        "mots": [
+          "newton metre",
+          "newtons metres",
+          "n m",
+          "newton m"
+        ]
+      },
+      {
+        "idee": "Vitesse angulaire en radians par seconde (rad/s)",
+        "mots": [
+          "rad s",
+          "radian"
+        ]
+      }
+    ]
+  },
   "14": {
     "reponse": "Alimenter → distribuer → convertir → transmettre.",
     "accepte": [
@@ -92,6 +178,39 @@
     "accepte": [
       "la roue arrière ; la chaîne et les pignons",
       "roue arrière ; chaîne et pignons"
+    ]
+  },
+  "25": {
+    "reponse": "C'est impossible (η < 1) : il a probablement inversé puissance utile et puissance absorbée.",
+    "criteres": [
+      {
+        "idee": "C'est impossible : le rendement est toujours inférieur à 1",
+        "mots": [
+          "impossible",
+          "inferieur a 1",
+          "pas possible",
+          "depasser 1",
+          "superieur a 1"
+        ]
+      },
+      {
+        "idee": "On ne crée pas d'énergie (il y a toujours des pertes)",
+        "mots": [
+          "creer",
+          "cree pas",
+          "perte",
+          "conservation"
+        ]
+      },
+      {
+        "idee": "Il a sans doute inversé puissance utile et puissance absorbée",
+        "mots": [
+          "invers",
+          "erreur",
+          "utile",
+          "absorb"
+        ]
+      }
     ]
   },
   "30": {
@@ -119,6 +238,36 @@
       "15 rad/s ; 8 Nm",
       "15 ; 8",
       "15 et 8"
+    ]
+  },
+  "37": {
+    "reponse": "Faux : la puissance est au mieux conservée (elle diminue un peu à cause des pertes).",
+    "criteres": [
+      {
+        "idee": "Faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Un réducteur échange de la vitesse contre du couple",
+        "mots": [
+          "vitesse",
+          "echange",
+          "diminue la vitesse",
+          "reduit la vitesse"
+        ]
+      },
+      {
+        "idee": "Sans pertes, la puissance (C × ω) reste constante ; en réalité, elle diminue un peu",
+        "mots": [
+          "constant",
+          "conserv",
+          "perte",
+          "diminue",
+          "au mieux"
+        ]
+      }
     ]
   },
   "38": {
@@ -209,6 +358,45 @@
     "accepte": [
       "500 Wh",
       "la batterie de 500 Wh"
+    ]
+  },
+  "50": {
+    "reponse": "Batterie → variateur (gâchette) → moteur → réducteur et mandrin ; effecteur : le foret.",
+    "criteres": [
+      {
+        "idee": "Alimenter : la batterie",
+        "mots": [
+          "batterie"
+        ]
+      },
+      {
+        "idee": "Distribuer : la gâchette et le variateur électronique",
+        "mots": [
+          "gachette",
+          "variateur"
+        ]
+      },
+      {
+        "idee": "Convertir : le moteur électrique",
+        "mots": [
+          "moteur"
+        ]
+      },
+      {
+        "idee": "Transmettre : le réducteur à engrenages et le mandrin",
+        "mots": [
+          "reducteur",
+          "engrenage",
+          "mandrin"
+        ]
+      },
+      {
+        "idee": "Effecteur : le foret",
+        "mots": [
+          "foret",
+          "meche"
+        ]
+      }
     ]
   }
 }

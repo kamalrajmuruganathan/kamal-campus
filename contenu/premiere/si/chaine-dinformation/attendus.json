@@ -1,4 +1,44 @@
 {
+  "1": {
+    "reponse": "Acquérir (capteur de température) → Traiter (microcontrôleur) → Communiquer (écran).",
+    "criteres": [
+      {
+        "idee": "Ordre : acquérir, traiter, communiquer",
+        "mots": [
+          "acquerir traiter communiquer",
+          "acquerir traiter",
+          "traiter communiquer"
+        ]
+      },
+      {
+        "idee": "Acquérir : le capteur de température (il mesure)",
+        "mots": [
+          "acquerir capteur",
+          "acquerir le capteur",
+          "capteur acquiert",
+          "capteur de temperature acquerir"
+        ]
+      },
+      {
+        "idee": "Traiter : le microcontrôleur (il calcule et décide)",
+        "mots": [
+          "traiter microcontroleur",
+          "traiter le microcontroleur",
+          "microcontroleur traite",
+          "microcontroleur traiter"
+        ]
+      },
+      {
+        "idee": "Communiquer : l'écran d'affichage",
+        "mots": [
+          "communiquer ecran",
+          "communiquer l ecran",
+          "ecran communique",
+          "ecran d affichage communiquer"
+        ]
+      }
+    ]
+  },
   "2": {
     "reponse": "(a) TOR, (b) analogique, (c) TOR.",
     "accepte": [
@@ -34,6 +74,31 @@
       "acquérir → traiter → communiquer"
     ]
   },
+  "12": {
+    "reponse": "Faux : la chaîne d'information commande, c'est la chaîne d'énergie qui fournit la puissance.",
+    "criteres": [
+      {
+        "idee": "Faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "La chaîne d'information commande : elle envoie des ordres",
+        "mots": [
+          "command",
+          "ordre",
+          "pilote"
+        ]
+      },
+      {
+        "idee": "C'est la chaîne d'énergie qui fournit la puissance",
+        "mots": [
+          "chaine d energie"
+        ]
+      }
+    ]
+  },
   "13": {
     "reponse": "grandeur physique ; signal",
     "accepte": [
@@ -66,6 +131,61 @@
       "255 et 11111111"
     ]
   },
+  "28": {
+    "reponse": "Le cours utilise q = 5 ÷ 1 023 ≈ 4,89 mV ; 5 ÷ 1 024 ≈ 4,88 mV est une autre convention, l'écart est négligeable.",
+    "criteres": [
+      {
+        "idee": "Le cours utilise q = 5 / (2¹⁰ − 1) = 5 / 1 023 ≈ 4,89 mV",
+        "mots": [
+          "1023",
+          "1 023",
+          "4 89",
+          "2 10 1"
+        ]
+      },
+      {
+        "idee": "Il y a 1 024 niveaux mais 1 023 intervalles entre 0 et 5 V",
+        "mots": [
+          "intervalle",
+          "niveaux"
+        ]
+      },
+      {
+        "idee": "L'autre convention (5 / 1 024 ≈ 4,88 mV) n'est pas fausse : l'écart est négligeable",
+        "mots": [
+          "neglig",
+          "faible",
+          "pas faux",
+          "convention",
+          "0 1"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "Échantillonner = prélever à intervalles réguliers ; quantifier = arrondir chaque valeur sur un nombre fini de niveaux.",
+    "criteres": [
+      {
+        "idee": "Échantillonner : relever la valeur du signal à intervalles de temps réguliers",
+        "mots": [
+          "intervalle",
+          "regulier",
+          "preleve",
+          "releve",
+          "temps"
+        ]
+      },
+      {
+        "idee": "Quantifier : arrondir chaque valeur sur un nombre fini de niveaux",
+        "mots": [
+          "arrondi",
+          "niveaux",
+          "nombre fini",
+          "valeur numerique"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "À 17,5 °C : chauffage allumé ; à 20 °C : chauffage éteint.",
     "accepte": [
@@ -76,11 +196,200 @@
       "allumer et éteindre"
     ]
   },
+  "38": {
+    "reponse": "Entrées : les capteurs ; sorties : les préactionneurs de la chaîne d'énergie.",
+    "criteres": [
+      {
+        "idee": "Les entrées viennent des capteurs (télécommande, fins de course, cellule)",
+        "mots": [
+          "capteur",
+          "telecommande",
+          "fin de course",
+          "cellule"
+        ]
+      },
+      {
+        "idee": "Les sorties commandent les préactionneurs de la chaîne d'énergie (relais, variateur)",
+        "mots": [
+          "preactionneur",
+          "relais",
+          "variateur",
+          "chaine d energie",
+          "moteur"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Exemple : répéter : si (présence = 1) ET (il fait sombre) alors allumer, sinon éteindre.",
+    "criteres": [
+      {
+        "idee": "Lire les deux capteurs (présence et luminosité)",
+        "mots": [
+          "lire",
+          "capteur",
+          "acquer",
+          "mesur"
+        ]
+      },
+      {
+        "idee": "Tester les deux conditions avec un ET",
+        "mots": [
+          "si presence",
+          "les deux conditions",
+          "et luminosite",
+          "et sombre",
+          "et si",
+          "et il fait"
+        ]
+      },
+      {
+        "idee": "Si les conditions sont vraies, allumer la lampe ; sinon l'éteindre",
+        "mots": [
+          "allumer",
+          "eteindre",
+          "sinon"
+        ]
+      },
+      {
+        "idee": "Répéter en boucle",
+        "mots": [
+          "repeter",
+          "boucle",
+          "tant que",
+          "sans fin",
+          "toujours"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Filaires : Ethernet, I²C, bus CAN ; sans fil : Bluetooth, Wi-Fi.",
+    "criteres": [
+      {
+        "idee": "Filaires : Ethernet, I²C, bus CAN",
+        "mots": [
+          "filaires ethernet",
+          "filaire ethernet",
+          "ethernet i2c",
+          "ethernet i 2c",
+          "filaires"
+        ]
+      },
+      {
+        "idee": "Sans fil : Bluetooth et Wi-Fi (ondes radio)",
+        "mots": [
+          "sans fil bluetooth",
+          "bluetooth et wi fi",
+          "bluetooth wi fi",
+          "ondes radio",
+          "radio"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "Série : un bit après l'autre ; parallèle : plusieurs bits simultanément.",
+    "criteres": [
+      {
+        "idee": "Série : les bits sont envoyés l'un après l'autre sur un même fil",
+        "mots": [
+          "l un apres l autre",
+          "un apres l autre",
+          "un par un",
+          "un seul fil",
+          "meme fil"
+        ]
+      },
+      {
+        "idee": "Parallèle : plusieurs bits en même temps sur plusieurs fils",
+        "mots": [
+          "en meme temps",
+          "simultan",
+          "plusieurs fils",
+          "plusieurs bits"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Un paquet organisé de bits (début, données, contrôle) ; le contrôle sert à vérifier l'intégrité du message.",
+    "criteres": [
+      {
+        "idee": "Une trame est un paquet organisé de bits",
+        "mots": [
+          "paquet",
+          "ensemble de bits",
+          "suite de bits",
+          "organis"
+        ]
+      },
+      {
+        "idee": "Elle comprend un début, les données et un contrôle",
+        "mots": [
+          "debut",
+          "donnees",
+          "entete"
+        ]
+      },
+      {
+        "idee": "Le contrôle vérifie que le message est arrivé sans erreur (intégrité)",
+        "mots": [
+          "erreur",
+          "integrite",
+          "verifi",
+          "correct"
+        ]
+      }
+    ]
+  },
   "49": {
     "reponse": "Aucun ne convient : le 12 bits donne environ 0,12 °C ; il faut plus de bits ou un capteur plus sensible.",
     "accepte": [
       "aucun",
       "aucun ne convient"
+    ]
+  },
+  "50": {
+    "reponse": "Acquérir : photorésistance ; traiter : microcontrôleur ; communiquer : ordre au relais et module radio vers la mairie.",
+    "criteres": [
+      {
+        "idee": "Acquérir : une photorésistance (capteur de luminosité)",
+        "mots": [
+          "photoresistance",
+          "capteur de lumi",
+          "luminosite",
+          "photodiode",
+          "cellule"
+        ]
+      },
+      {
+        "idee": "Traiter : un microcontrôleur qui compare à un seuil et calcule la consommation",
+        "mots": [
+          "microcontroleur",
+          "seuil",
+          "compare",
+          "programme"
+        ]
+      },
+      {
+        "idee": "Communiquer : un ordre au relais qui allume la lampe",
+        "mots": [
+          "relais",
+          "ordre",
+          "allume"
+        ]
+      },
+      {
+        "idee": "Communiquer : un module radio qui envoie les données à la mairie",
+        "mots": [
+          "radio",
+          "module",
+          "mairie",
+          "lora",
+          "sigfox"
+        ]
+      }
     ]
   }
 }
