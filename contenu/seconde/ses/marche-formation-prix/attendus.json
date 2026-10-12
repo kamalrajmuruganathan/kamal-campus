@@ -21,6 +21,92 @@
       "8 euros et 40 unités"
     ]
   },
+  "3": {
+    "reponse": "Excédent de 40 unités ; le prix tend à baisser.",
+    "criteres": [
+      {
+        "idee": "L'offre (60) dépasse la demande (20)",
+        "mots": [
+          "depasse",
+          "superieur",
+          "plus grande",
+          "offre"
+        ]
+      },
+      {
+        "idee": "Il y a un excédent de 40 unités",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "40 unit",
+          "trop d offre"
+        ]
+      },
+      {
+        "idee": "Le prix tend à baisser",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "reponse": "Pénurie de 40 unités ; le prix tend à monter.",
+    "criteres": [
+      {
+        "idee": "La demande (60) dépasse l'offre (20)",
+        "mots": [
+          "depasse",
+          "superieur",
+          "plus grande",
+          "demande"
+        ]
+      },
+      {
+        "idee": "Il y a une pénurie de 40 unités",
+        "mots": [
+          "penurie",
+          "manque",
+          "rarete",
+          "40 unit"
+        ]
+      },
+      {
+        "idee": "Le prix tend à monter",
+        "mots": [
+          "mont",
+          "augment",
+          "hausse",
+          "eleve"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "Faux : la demande diminue quand le prix augmente.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Quand le prix augmente, la quantité demandée diminue (loi de la demande)",
+        "mots": [
+          "diminu",
+          "baiss",
+          "decroiss",
+          "moins",
+          "loi de la demande"
+        ]
+      }
+    ]
+  },
   "6": {
     "reponse": "Le prix augmente et la quantité échangée augmente.",
     "accepte": [
@@ -45,6 +131,128 @@
       "le prix diminue et la quantité échangée augmente"
     ]
   },
+  "8": {
+    "reponse": "La baisse des prix rapproche offre et demande jusqu'à l'équilibre.",
+    "criteres": [
+      {
+        "idee": "Un excédent signifie des invendus",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "stock"
+        ]
+      },
+      {
+        "idee": "Les vendeurs baissent leurs prix pour écouler leurs stocks",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend",
+          "ecoul"
+        ]
+      },
+      {
+        "idee": "La baisse du prix réduit l'offre et augmente la demande jusqu'à l'équilibre",
+        "mots": [
+          "equilibr",
+          "egal"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "Offre faible pour une demande donnée → prix d'équilibre plus élevé.",
+    "criteres": [
+      {
+        "idee": "La demande de fraises existe toute l'année",
+        "mots": [
+          "demande"
+        ]
+      },
+      {
+        "idee": "En hiver, l'offre est faible (les fraises sont rares)",
+        "mots": [
+          "offre faible",
+          "rare",
+          "peu",
+          "moins",
+          "faible"
+        ]
+      },
+      {
+        "idee": "La rareté fait monter le prix d'équilibre",
+        "mots": [
+          "mont",
+          "augment",
+          "hausse",
+          "eleve",
+          "plus cher",
+          "plus eleve"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "reponse": "La rencontre entre offreurs et demandeurs d'un bien ou d'un service, d'où résulte un prix.",
+    "criteres": [
+      {
+        "idee": "C'est un lieu, réel ou virtuel, de rencontre",
+        "mots": [
+          "lieu",
+          "rencontr",
+          "virtuel"
+        ]
+      },
+      {
+        "idee": "entre offreurs (vendeurs) et demandeurs (acheteurs)",
+        "mots": [
+          "offreur",
+          "demandeur",
+          "vendeur",
+          "acheteur"
+        ]
+      },
+      {
+        "idee": "où s'échange un bien ou un service à un prix",
+        "mots": [
+          "prix",
+          "echang",
+          "bien",
+          "service"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "Exemple : marché de producteurs (réel) ; site de vente en ligne (virtuel).",
+    "criteres": [
+      {
+        "idee": "Marché réel, avec un lieu physique : par exemple un marché de producteurs",
+        "mots": [
+          "reel",
+          "physique",
+          "producteur",
+          "fruit",
+          "legume",
+          "halle",
+          "magasin",
+          "bourse"
+        ]
+      },
+      {
+        "idee": "Marché virtuel, sans lieu physique : par exemple un site de vente en ligne",
+        "mots": [
+          "virtuel",
+          "en ligne",
+          "internet",
+          "site",
+          "application"
+        ]
+      }
+    ]
+  },
   "13": {
     "reponse": "grande (élevée)",
     "accepte": [
@@ -57,6 +265,176 @@
     "ensemble": [
       "offerte",
       "demandée"
+    ]
+  },
+  "16": {
+    "reponse": "Faux : une pénurie apparaît quand le prix est trop bas.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Un prix trop élevé crée un excédent (l'offre dépasse la demande)",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction"
+        ]
+      },
+      {
+        "idee": "La pénurie apparaît quand le prix est trop bas (la demande dépasse l'offre)",
+        "mots": [
+          "trop bas",
+          "prix bas",
+          "faible",
+          "trop faible"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "Offreurs : fabricants et vendeurs ; demandeurs : les acheteurs.",
+    "criteres": [
+      {
+        "idee": "Offreurs : les fabricants et les vendeurs (magasins)",
+        "mots": [
+          "fabricant",
+          "vendeur",
+          "magasin",
+          "entreprise",
+          "marque",
+          "constructeur",
+          "produc"
+        ]
+      },
+      {
+        "idee": "Demandeurs : les acheteurs (consommateurs)",
+        "mots": [
+          "acheteur",
+          "consommateur",
+          "client",
+          "menage"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "Oui : la quantité demandée baisse quand le prix augmente.",
+    "criteres": [
+      {
+        "idee": "Oui, la loi de la demande est vérifiée",
+        "mots": [
+          "oui",
+          "verifi"
+        ]
+      },
+      {
+        "idee": "Quand le prix augmente (de 20 à 40 €), la quantité demandée baisse (de 900 à 500 places)",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend",
+          "decroiss",
+          "moins"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "Un prix plus élevé rend la production plus rentable (loi de l'offre).",
+    "criteres": [
+      {
+        "idee": "Un prix plus élevé rapporte davantage pour chaque kilo vendu",
+        "mots": [
+          "rapport",
+          "gagn",
+          "davantage",
+          "plus d'argent"
+        ]
+      },
+      {
+        "idee": "Produire plus devient plus rentable : il est incité à produire davantage",
+        "mots": [
+          "rentab",
+          "incit",
+          "profit",
+          "benefice"
+        ]
+      },
+      {
+        "idee": "C'est la loi de l'offre : l'offre est croissante avec le prix",
+        "mots": [
+          "loi de l'offre",
+          "croiss"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "reponse": "Excédent de 150 cahiers ; le prix tend à baisser.",
+    "criteres": [
+      {
+        "idee": "L'offre (350) dépasse la demande (200)",
+        "mots": [
+          "depasse",
+          "superieur",
+          "plus grande"
+        ]
+      },
+      {
+        "idee": "Il y a un excédent de 150 cahiers invendus",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "150"
+        ]
+      },
+      {
+        "idee": "Le prix tend à baisser",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend"
+        ]
+      }
+    ]
+  },
+  "22": {
+    "reponse": "Pénurie de 400 cahiers ; le prix tend à monter.",
+    "criteres": [
+      {
+        "idee": "La demande (500) dépasse l'offre (100)",
+        "mots": [
+          "depasse",
+          "superieur",
+          "plus grande"
+        ]
+      },
+      {
+        "idee": "Il y a une pénurie de 400 cahiers",
+        "mots": [
+          "penurie",
+          "manque",
+          "rarete",
+          "400",
+          "il manque"
+        ]
+      },
+      {
+        "idee": "Le prix tend à monter",
+        "mots": [
+          "mont",
+          "augment",
+          "hausse",
+          "eleve"
+        ]
+      }
     ]
   },
   "23": {
@@ -77,6 +455,37 @@
       "baisse ; augmente ; baisse"
     ]
   },
+  "26": {
+    "reponse": "Il informe sur la rareté et oriente les décisions.",
+    "criteres": [
+      {
+        "idee": "Le prix informe acheteurs et vendeurs sur la rareté d'un bien",
+        "mots": [
+          "inform",
+          "rare",
+          "indique",
+          "renseign"
+        ]
+      },
+      {
+        "idee": "Un prix élevé signale un bien rare, un prix bas un bien abondant",
+        "mots": [
+          "abond",
+          "eleve",
+          "rare"
+        ]
+      },
+      {
+        "idee": "Il oriente les décisions de chacun",
+        "mots": [
+          "orient",
+          "decision",
+          "choix",
+          "guide"
+        ]
+      }
+    ]
+  },
   "27": {
     "reponse": "a) 1,10 € et 450 baguettes ; b) 495 €.",
     "accepte": [
@@ -85,6 +494,134 @@
       "1,10 € et 450 baguettes ; 495 €",
       "1,10 ; 450 ; 495",
       "1,10 euro ; 450 baguettes ; 495 euros"
+    ]
+  },
+  "28": {
+    "reponse": "Faux : c'est le prix où offre = demande, pas le plus bas possible.",
+    "criteres": [
+      {
+        "idee": "C'est faux : le prix d'équilibre ne favorise aucun camp",
+        "mots": [
+          "faux",
+          "aucun",
+          "pas fixe",
+          "ne favorise"
+        ]
+      },
+      {
+        "idee": "C'est le prix où la quantité offerte est égale à la quantité demandée",
+        "mots": [
+          "egal",
+          "offre",
+          "rencontr"
+        ]
+      },
+      {
+        "idee": "À un prix plus bas, il y aurait une pénurie",
+        "mots": [
+          "penurie",
+          "plus bas",
+          "manque"
+        ]
+      }
+    ]
+  },
+  "29": {
+    "reponse": "Il baisse son prix pour écouler l'excédent.",
+    "criteres": [
+      {
+        "idee": "Les invendus montrent un excédent : l'offre dépasse la demande",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "depasse"
+        ]
+      },
+      {
+        "idee": "Il va baisser son prix",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend",
+          "solde",
+          "promo"
+        ]
+      },
+      {
+        "idee": "pour attirer des acheteurs et écouler ses melons (retour vers l'équilibre)",
+        "mots": [
+          "attir",
+          "ecoul",
+          "vendre",
+          "equilibr"
+        ]
+      }
+    ]
+  },
+  "30": {
+    "reponse": "Le prix est trop bas : la demande dépasse l'offre (pénurie).",
+    "criteres": [
+      {
+        "idee": "La demande dépasse l'offre : il y a pénurie",
+        "mots": [
+          "penurie",
+          "manque",
+          "rarete",
+          "depasse"
+        ]
+      },
+      {
+        "idee": "Le prix fixé est trop bas, inférieur au prix d'équilibre",
+        "mots": [
+          "trop bas",
+          "inferieur",
+          "faible",
+          "pas assez cher",
+          "sous"
+        ]
+      },
+      {
+        "idee": "D'où la revente de places plus cher",
+        "mots": [
+          "revend",
+          "marche noir",
+          "plus cher"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "La hausse du prix réduit la demande et augmente l'offre jusqu'à l'équilibre.",
+    "criteres": [
+      {
+        "idee": "Des acheteurs privés du bien acceptent de payer plus cher : le prix augmente",
+        "mots": [
+          "payer plus",
+          "plus cher",
+          "mont",
+          "augment",
+          "hausse",
+          "eleve"
+        ]
+      },
+      {
+        "idee": "La quantité demandée diminue et la quantité offerte augmente",
+        "mots": [
+          "diminu",
+          "baiss",
+          "moins"
+        ]
+      },
+      {
+        "idee": "L'écart se réduit jusqu'au prix d'équilibre",
+        "mots": [
+          "equilibr",
+          "ecart",
+          "egal"
+        ]
+      }
     ]
   },
   "32": {
@@ -137,6 +674,336 @@
       "non ; 96 euros",
       "non ; 96",
       "non"
+    ]
+  },
+  "40": {
+    "reponse": "Les vendeurs produisent plus, les acheteurs économisent le bois ou le remplacent.",
+    "criteres": [
+      {
+        "idee": "Pour les vendeurs, produire du bois devient plus rentable : ils en produisent davantage",
+        "mots": [
+          "vendeur",
+          "rentab",
+          "produis",
+          "produire",
+          "davantage"
+        ]
+      },
+      {
+        "idee": "Les acheteurs en achètent moins ou utilisent d'autres matériaux",
+        "mots": [
+          "acheteur",
+          "moins",
+          "autre",
+          "remplac",
+          "substitu",
+          "econom"
+        ]
+      },
+      {
+        "idee": "Le prix joue son rôle de signal",
+        "mots": [
+          "signal",
+          "orient"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "Faux : à un prix trop élevé, ils auront des invendus (excédent).",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux",
+          "non"
+        ]
+      },
+      {
+        "idee": "À un prix très élevé, la quantité demandée est faible (loi de la demande)",
+        "mots": [
+          "demande",
+          "faible",
+          "peu",
+          "moins"
+        ]
+      },
+      {
+        "idee": "Il y aurait des invendus (un excédent)",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction"
+        ]
+      },
+      {
+        "idee": "Les vendeurs devraient baisser leur prix",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Excédents et pénuries font varier le prix vers l'équilibre sans intervention.",
+    "criteres": [
+      {
+        "idee": "Si le prix est trop élevé, l'excédent pousse à le baisser",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "trop eleve",
+          "trop haut"
+        ]
+      },
+      {
+        "idee": "Si le prix est trop bas, la pénurie le fait monter",
+        "mots": [
+          "penurie",
+          "manque",
+          "rarete",
+          "trop bas"
+        ]
+      },
+      {
+        "idee": "Ces ajustements se font sans intervention d'une autorité",
+        "mots": [
+          "sans",
+          "autorit",
+          "intervention",
+          "lui meme",
+          "seul"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "La demande augmente fortement avant les fêtes : le prix monte.",
+    "criteres": [
+      {
+        "idee": "Avant les fêtes, la demande de sapins augmente fortement",
+        "mots": [
+          "demande"
+        ]
+      },
+      {
+        "idee": "L'offre ne peut pas augmenter beaucoup en peu de temps",
+        "mots": [
+          "offre",
+          "peu de temps",
+          "limite",
+          "fixe"
+        ]
+      },
+      {
+        "idee": "Le prix d'équilibre augmente",
+        "mots": [
+          "mont",
+          "augment",
+          "hausse",
+          "eleve",
+          "plus cher"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Pour isoler l'effet du prix, sans l'influence du revenu ou des goûts.",
+    "criteres": [
+      {
+        "idee": "La demande dépend aussi du revenu, des goûts et du prix des autres biens",
+        "mots": [
+          "revenu",
+          "gout",
+          "autres biens",
+          "depend aussi"
+        ]
+      },
+      {
+        "idee": "S'ils changent en même temps, on ne sait plus ce qui est dû au prix",
+        "mots": [
+          "meme temps",
+          "savoir",
+          "sait",
+          "du au prix",
+          "distingu"
+        ]
+      },
+      {
+        "idee": "Il faut donc les supposer fixes pour isoler l'effet du prix",
+        "mots": [
+          "isol",
+          "seul",
+          "toutes choses",
+          "fixe",
+          "constant"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Le prix d'équilibre égalise offre et demande ; excédents et pénuries le ramènent vers lui.",
+    "criteres": [
+      {
+        "idee": "La demande diminue quand le prix augmente",
+        "mots": [
+          "demande"
+        ]
+      },
+      {
+        "idee": "L'offre augmente quand le prix augmente",
+        "mots": [
+          "offre"
+        ]
+      },
+      {
+        "idee": "Le prix d'équilibre égalise l'offre et la demande",
+        "mots": [
+          "equilibr",
+          "egal"
+        ]
+      },
+      {
+        "idee": "Un excédent ou une pénurie ramène le prix vers l'équilibre",
+        "mots": [
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "penurie",
+          "manque",
+          "rarete",
+          "ramen"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "a) 8 € et 500 pots ; b) non, excédent de 100 pots ; c) le prix va baisser.",
+    "criteres": [
+      {
+        "idee": "Équilibre : 8 € et 500 pots",
+        "mots": [
+          "8 e",
+          "500"
+        ]
+      },
+      {
+        "idee": "8 € n'est plus un prix d'équilibre : excédent de 100 pots",
+        "mots": [
+          "non",
+          "excedent",
+          "surplus",
+          "invendu",
+          "surproduction",
+          "100"
+        ]
+      },
+      {
+        "idee": "Le prix va baisser",
+        "mots": [
+          "baiss",
+          "diminu",
+          "descend"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "a) Offre : la récolte ; demande : la publicité ; b) effets opposés sur le prix ; c) la quantité augmente.",
+    "criteres": [
+      {
+        "idee": "La récolte exceptionnelle touche l'offre ; la publicité touche la demande",
+        "mots": [
+          "recolte",
+          "publicit"
+        ]
+      },
+      {
+        "idee": "Effets opposés sur le prix : l'offre le fait baisser, la demande le fait monter",
+        "mots": [
+          "oppos",
+          "contraire",
+          "compens",
+          "depend",
+          "baiss"
+        ]
+      },
+      {
+        "idee": "La quantité échangée augmente",
+        "mots": [
+          "quantit",
+          "augment"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "a) Une pénurie ; b) 1 200 baguettes ; c) le prix ne peut pas monter.",
+    "criteres": [
+      {
+        "idee": "Une pénurie apparaît",
+        "mots": [
+          "penurie",
+          "manque",
+          "rarete"
+        ]
+      },
+      {
+        "idee": "Il manque 1 200 baguettes par jour",
+        "mots": [
+          "1 200",
+          "1200"
+        ]
+      },
+      {
+        "idee": "Le prix ne peut pas monter, à cause de l'interdiction : la pénurie persiste",
+        "mots": [
+          "interdi",
+          "bloqu",
+          "ne peut pas",
+          "plafon",
+          "empech",
+          "persist"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Une hausse de l'offre fait baisser le prix : fraises abondantes en été, donc moins chères.",
+    "criteres": [
+      {
+        "idee": "Erreur : une hausse de l'offre fait baisser le prix, pas monter",
+        "mots": [
+          "erreur",
+          "faux",
+          "baiss",
+          "diminu",
+          "descend"
+        ]
+      },
+      {
+        "idee": "En été, les fraises sont abondantes : l'offre augmente",
+        "mots": [
+          "abond",
+          "ete",
+          "beaucoup"
+        ]
+      },
+      {
+        "idee": "En hiver, elles sont rares : le prix est plus élevé",
+        "mots": [
+          "hiver",
+          "rare",
+          "plus cher",
+          "plus eleve"
+        ]
+      }
     ]
   }
 }

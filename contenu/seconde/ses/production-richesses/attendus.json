@@ -1,4 +1,65 @@
 {
+  "1": {
+    "reponse": "Biens : pizza, vélo. Services : cours de piano, assurance.",
+    "criteres": [
+      {
+        "idee": "Biens (matériels) : la pizza et le vélo",
+        "mots": [
+          "bien",
+          "materiel"
+        ]
+      },
+      {
+        "idee": "Services (immatériels) : le cours de piano et l'assurance",
+        "mots": [
+          "service",
+          "immateriel"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "reponse": "Marchand : cinéma, abonnement téléphonique. Non marchand : police.",
+    "criteres": [
+      {
+        "idee": "Marchand : le billet de cinéma et l'abonnement téléphonique",
+        "mots": [
+          "marchand"
+        ]
+      },
+      {
+        "idee": "Non marchand : la police nationale",
+        "mots": [
+          "non marchand",
+          "gratuit"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "Capital fixe : machine à coudre, bâtiment. Consommations intermédiaires : tissu, fil.",
+    "criteres": [
+      {
+        "idee": "Capital fixe : la machine à coudre et le bâtiment (biens durables)",
+        "mots": [
+          "capital fixe",
+          "durable",
+          "plusieurs fois",
+          "plusieurs annee"
+        ]
+      },
+      {
+        "idee": "Consommations intermédiaires : le tissu et le fil (détruits dans la production)",
+        "mots": [
+          "consommation intermediaire",
+          "consommations intermediaire",
+          "detrui",
+          "transform",
+          "dispar"
+        ]
+      }
+    ]
+  },
   "7": {
     "reponse": "A : 100 ; B : 80 ; C : 120.",
     "accepte": [
@@ -15,6 +76,121 @@
       "2 pièces/heure puis 2,4 pièces/heure",
       "2 pièces par heure ; 2,4 pièces par heure",
       "2 pièces par heure puis 2,4 pièces par heure"
+    ]
+  },
+  "10": {
+    "reponse": "Parce qu'il n'y a ni transaction marchande ni service fourni par une administration.",
+    "criteres": [
+      {
+        "idee": "La production comptée suppose un échange sur un marché ou un service fourni par une administration",
+        "mots": [
+          "marche",
+          "echange",
+          "administration",
+          "transaction",
+          "vendu"
+        ]
+      },
+      {
+        "idee": "Le travail domestique n'est ni vendu ni fourni par une administration : il n'est pas mesuré",
+        "mots": [
+          "ni vendu",
+          "pas vendu",
+          "gratuit",
+          "pas pay",
+          "pour soi",
+          "pas mesur"
+        ]
+      },
+      {
+        "idee": "Le même service acheté à une entreprise est payé : il est marchand et compté",
+        "mots": [
+          "pay",
+          "achet",
+          "prix",
+          "marchand"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "reponse": "Créer des biens et services qui satisfont des besoins en combinant des facteurs de production.",
+    "criteres": [
+      {
+        "idee": "Produire, c'est créer des biens et des services",
+        "mots": [
+          "cre",
+          "fabriqu",
+          "bien",
+          "service"
+        ]
+      },
+      {
+        "idee": "destinés à satisfaire des besoins",
+        "mots": [
+          "besoin",
+          "satisf"
+        ]
+      },
+      {
+        "idee": "en combinant des facteurs de production (travail et capital)",
+        "mots": [
+          "facteur",
+          "travail",
+          "capital",
+          "combin"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "Faux : c'est un bien qui est matériel et stockable ; un service est immatériel.",
+    "criteres": [
+      {
+        "idee": "C'est faux : c'est la définition d'un bien",
+        "mots": [
+          "faux",
+          "bien"
+        ]
+      },
+      {
+        "idee": "Un service est immatériel",
+        "mots": [
+          "immateriel"
+        ]
+      },
+      {
+        "idee": "Il est consommé au moment où il est réalisé (il ne se stocke pas)",
+        "mots": [
+          "moment",
+          "en meme temps",
+          "pas stock",
+          "ne peut pas etre stock",
+          "realis"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "reponse": "Parce que c'est un service, immatériel et consommé au moment où il est réalisé.",
+    "criteres": [
+      {
+        "idee": "La coupe de cheveux est un service, immatériel",
+        "mots": [
+          "service",
+          "immateriel"
+        ]
+      },
+      {
+        "idee": "Elle est consommée au moment où le coiffeur la réalise",
+        "mots": [
+          "moment",
+          "en meme temps",
+          "realis",
+          "coiffeur",
+          "directement"
+        ]
+      }
     ]
   },
   "14": {
@@ -41,11 +217,87 @@
       "piscine non marchande ; parc de loisirs marchande"
     ]
   },
+  "18": {
+    "reponse": "Surtout par l'impôt ; par les administrations publiques.",
+    "criteres": [
+      {
+        "idee": "Elle est financée surtout par l'impôt",
+        "mots": [
+          "impot",
+          "taxe",
+          "contribu",
+          "etat"
+        ]
+      },
+      {
+        "idee": "Elle est assurée par les administrations publiques",
+        "mots": [
+          "administration",
+          "public",
+          "etat"
+        ]
+      }
+    ]
+  },
   "19": {
     "reponse": "a) Entreprise ; b) administration publique ; c) association ; d) ménage.",
     "accepte": [
       "entreprise ; administration publique ; association ; ménage",
       "a entreprise ; b administration publique ; c association ; d ménage"
+    ]
+  },
+  "20": {
+    "reponse": "L'entreprise vise le profit ; l'administration fournit des services non marchands.",
+    "criteres": [
+      {
+        "idee": "L'entreprise produit des biens et services marchands pour faire des profits",
+        "mots": [
+          "profit",
+          "lucratif",
+          "benefice",
+          "gagner",
+          "marchand"
+        ]
+      },
+      {
+        "idee": "L'administration fournit des services non marchands financés par l'impôt",
+        "mots": [
+          "non marchand",
+          "gratuit",
+          "impot",
+          "service public",
+          "interet general"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "reponse": "Oui : un artisan, ou l'autoconsommation agricole.",
+    "criteres": [
+      {
+        "idee": "Oui, un ménage peut être producteur",
+        "mots": [
+          "oui"
+        ]
+      },
+      {
+        "idee": "Exemple : un artisan qui vend son travail",
+        "mots": [
+          "artisan",
+          "independant",
+          "commer"
+        ]
+      },
+      {
+        "idee": "Exemple : l'autoconsommation agricole (on mange ce qu'on a cultivé)",
+        "mots": [
+          "autoconsomm",
+          "jardin",
+          "potager",
+          "cultiv",
+          "legume"
+        ]
+      }
     ]
   },
   "22": {
@@ -61,6 +313,106 @@
       "capital ; travail"
     ]
   },
+  "23": {
+    "reponse": "Capital fixe : four, camionnette ; consommations intermédiaires : farine, électricité ; travail : heures du boulanger.",
+    "criteres": [
+      {
+        "idee": "Capital fixe : le four et la camionnette",
+        "mots": [
+          "four",
+          "camionnette",
+          "capital fixe"
+        ]
+      },
+      {
+        "idee": "Consommations intermédiaires : la farine et l'électricité",
+        "mots": [
+          "farine",
+          "electricit",
+          "consommation"
+        ]
+      },
+      {
+        "idee": "Travail : les heures du boulanger",
+        "mots": [
+          "travail",
+          "heure"
+        ]
+      }
+    ]
+  },
+  "24": {
+    "reponse": "L'électricité disparaît dans la production ; la machine sert plusieurs fois.",
+    "criteres": [
+      {
+        "idee": "L'électricité est entièrement utilisée (détruite) au cours de la production",
+        "mots": [
+          "detrui",
+          "utilise",
+          "dispar",
+          "consomm",
+          "une seule fois",
+          "une fois"
+        ]
+      },
+      {
+        "idee": "La machine est un bien durable qui sert plusieurs fois, pendant plusieurs années",
+        "mots": [
+          "durable",
+          "plusieurs",
+          "reutilis",
+          "longtemps"
+        ]
+      }
+    ]
+  },
+  "25": {
+    "reponse": "Les ordinateurs sont du capital fixe, pas des consommations intermédiaires.",
+    "criteres": [
+      {
+        "idee": "Les ordinateurs sont du capital fixe, pas des consommations intermédiaires",
+        "mots": [
+          "capital fixe",
+          "capital"
+        ]
+      },
+      {
+        "idee": "Ce sont des biens durables utilisés pendant plusieurs années",
+        "mots": [
+          "durable",
+          "plusieurs",
+          "longtemps",
+          "annee"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "Parce qu'elle retire les consommations intermédiaires produites par d'autres.",
+    "criteres": [
+      {
+        "idee": "Le chiffre d'affaires contient les consommations intermédiaires produites par d'autres",
+        "mots": [
+          "consommation",
+          "intermediaire",
+          "achat",
+          "autres entreprise",
+          "par d'autres"
+        ]
+      },
+      {
+        "idee": "La valeur ajoutée retire ces achats : il reste ce que le producteur a lui-même créé",
+        "mots": [
+          "retir",
+          "enlev",
+          "soustra",
+          "moins",
+          "lui meme",
+          "cree"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "Valeur ajoutée : 120 000 euros ; consommations intermédiaires : 80 000 euros.",
     "accepte": [
@@ -70,6 +422,68 @@
       "120 000 euros et 80 000 euros",
       "120 000 ; 80 000",
       "120 000 et 80 000"
+    ]
+  },
+  "31": {
+    "reponse": "Les salariés, l'État, les prêteurs et l'entreprise elle-même.",
+    "criteres": [
+      {
+        "idee": "Les salariés (salaires)",
+        "mots": [
+          "salari",
+          "salaire",
+          "travailleur"
+        ]
+      },
+      {
+        "idee": "L'État (impôts)",
+        "mots": [
+          "etat",
+          "impot",
+          "administration"
+        ]
+      },
+      {
+        "idee": "Les prêteurs (intérêts)",
+        "mots": [
+          "preteur",
+          "banque",
+          "interet"
+        ]
+      },
+      {
+        "idee": "L'entreprise elle-même",
+        "mots": [
+          "entreprise",
+          "elle meme",
+          "profit",
+          "actionnaire"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "La quantité produite pour une quantité donnée de facteurs de production.",
+    "criteres": [
+      {
+        "idee": "C'est la quantité produite",
+        "mots": [
+          "quantit",
+          "production",
+          "produit"
+        ]
+      },
+      {
+        "idee": "pour une quantité donnée de facteurs (par exemple par heure de travail)",
+        "mots": [
+          "par heure",
+          "facteur",
+          "par travailleur",
+          "par salarie",
+          "donnee",
+          "rapport"
+        ]
+      }
     ]
   },
   "35": {
@@ -87,6 +501,48 @@
       "60 objets par salarié ; 20 %"
     ]
   },
+  "37": {
+    "reponse": "Le progrès technique et l'organisation du travail.",
+    "criteres": [
+      {
+        "idee": "Le progrès technique (machines plus performantes, nouveaux procédés)",
+        "mots": [
+          "progres",
+          "technique",
+          "technolog",
+          "machine",
+          "innov"
+        ]
+      },
+      {
+        "idee": "Une meilleure organisation du travail",
+        "mots": [
+          "organis"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Les cours particuliers payés ; le bénévolat n'est pas compté.",
+    "criteres": [
+      {
+        "idee": "Les cours particuliers payés sont comptés : c'est un service vendu",
+        "mots": [
+          "pay",
+          "vendu",
+          "particulier",
+          "remuner"
+        ]
+      },
+      {
+        "idee": "Le bénévolat n'est pas compté dans la production",
+        "mots": [
+          "benevol",
+          "gratuit"
+        ]
+      }
+    ]
+  },
   "41": {
     "reponse": "50, 90 et 60 euros ; total 200 euros.",
     "accepte": [
@@ -101,6 +557,168 @@
       "20 ; 25 ; 25 %",
       "20 puis 25 ; 25 %",
       "20 pièces par heure ; 25 pièces par heure ; 25 %"
+    ]
+  },
+  "45": {
+    "reponse": "Exemple : travail + capital fixe transforment les consommations intermédiaires ; la différence de valeur est la valeur ajoutée.",
+    "criteres": [
+      {
+        "idee": "L'entreprise combine le travail (menuisiers) et le capital fixe (machines, atelier)",
+        "mots": [
+          "travail",
+          "capital fixe",
+          "menuisier",
+          "machine",
+          "combin"
+        ]
+      },
+      {
+        "idee": "Elle transforme des consommations intermédiaires (bois, électricité)",
+        "mots": [
+          "consommation",
+          "intermediaire",
+          "bois",
+          "transform"
+        ]
+      },
+      {
+        "idee": "Elle vend ses meubles plus cher que la valeur de ces achats",
+        "mots": [
+          "vend",
+          "plus cher",
+          "prix"
+        ]
+      },
+      {
+        "idee": "La différence est la valeur ajoutée, la richesse réellement créée",
+        "mots": [
+          "valeur ajoutee",
+          "difference",
+          "richesse"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Parce que le service est immatériel ; un concert est produit et écouté en même temps.",
+    "criteres": [
+      {
+        "idee": "Un service est immatériel : il n'existe pas en dehors de sa réalisation",
+        "mots": [
+          "immateriel",
+          "realis",
+          "n'existe"
+        ]
+      },
+      {
+        "idee": "Le concert est produit par les musiciens et écouté par le public au même moment",
+        "mots": [
+          "meme moment",
+          "en meme temps",
+          "simultan",
+          "public",
+          "musicien"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Mairie : non marchande ; entreprise : marchande ; association : non marchande ; retraité : ménage, autoconsommation.",
+    "criteres": [
+      {
+        "idee": "Mairie : administration publique, production non marchande",
+        "mots": [
+          "mairie",
+          "administration"
+        ]
+      },
+      {
+        "idee": "Entreprise de travaux : production marchande",
+        "mots": [
+          "entreprise",
+          "marchand"
+        ]
+      },
+      {
+        "idee": "Association : production non marchande (bénévoles)",
+        "mots": [
+          "association",
+          "non lucratif"
+        ]
+      },
+      {
+        "idee": "Retraité : ménage, autoconsommation",
+        "mots": [
+          "menage",
+          "autoconsomm",
+          "retrait"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Il a retiré la voiture (capital fixe) ; la valeur ajoutée est de 49 000 euros.",
+    "criteres": [
+      {
+        "idee": "Erreur : la voiture est du capital fixe, pas une consommation intermédiaire",
+        "mots": [
+          "capital fixe",
+          "voiture",
+          "erreur",
+          "durable"
+        ]
+      },
+      {
+        "idee": "Consommations intermédiaires : 8 000 + 3 000 = 11 000 euros",
+        "mots": [
+          "11 000",
+          "11000"
+        ]
+      },
+      {
+        "idee": "Valeur ajoutée : 49 000 euros",
+        "mots": [
+          "49 000",
+          "49000"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Facteurs combinés → transformation des consommations intermédiaires → valeur ajoutée → partage (dont les salaires).",
+    "criteres": [
+      {
+        "idee": "L'entreprise combine travail et capital fixe",
+        "mots": [
+          "combin",
+          "travail",
+          "capital"
+        ]
+      },
+      {
+        "idee": "Elle transforme des consommations intermédiaires en biens ou services",
+        "mots": [
+          "transform",
+          "consommation",
+          "intermediaire"
+        ]
+      },
+      {
+        "idee": "Elle vend : production moins consommations intermédiaires = valeur ajoutée",
+        "mots": [
+          "valeur ajoutee",
+          "vend"
+        ]
+      },
+      {
+        "idee": "La valeur ajoutée est partagée entre salariés, État, prêteurs et entreprise",
+        "mots": [
+          "partag",
+          "repart",
+          "salari",
+          "salaire"
+        ]
+      }
     ]
   }
 }
