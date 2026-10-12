@@ -47,7 +47,7 @@ Londres. Il a écrit des **tragédies**, des **comédies** et des **sonnets**.
 | **A Midsummer Night's Dream** | comédie | une nuit d'été pleine de magie |
 
 ## 3. Le roman anglais du XIXe siècle
-Le **XIXe siècle** (l'**époque victorienne**) est un âge d'or du **novel** britannique.
+Le **XIXe siècle** est un âge d'or du **novel** britannique. **Jane Austen** (morte en 1817) écrit au début du siècle, avant l'**époque victorienne** (règne de la reine Victoria, 1837-1901), qui est celle de **Dickens** et des sœurs **Brontë**.
 
 | Auteur | Œuvre célèbre | En une ligne |
 |---|---|---|
@@ -79,5 +79,5 @@ La littérature de langue anglaise dépasse le Royaume-Uni.
 ## À retenir
 - Trois genres : le **novel** (roman), la **poetry** (poésie), le **drama / play** (théâtre).
 - **Shakespeare**, « the Bard » de **Stratford-upon-Avon** : *Romeo and Juliet*, *Hamlet*, *Macbeth*.
-- Le roman **victorien** : **Dickens**, **Austen**, les sœurs **Brontë**.
+- Le roman anglais du XIXe siècle : **Austen** (avant l'époque victorienne), puis les romanciers **victoriens** : **Dickens**, les sœurs **Brontë**.
 - Classiques anglophones : **Twain**, **Poe**, **Defoe**, **Swift**, **Stevenson**, **Orwell**.
