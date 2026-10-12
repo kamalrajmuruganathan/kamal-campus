@@ -1,4 +1,34 @@
 {
+  "6": {
+    "reponse": "Il y a une erreur : la somme fait $19$",
+    "criteres": [
+      {
+        "idee": "Il y a une erreur dans le tableau",
+        "mots": [
+          "erreur",
+          "faux",
+          "incoherent",
+          "probleme"
+        ]
+      },
+      {
+        "idee": "La somme des effectifs fait 19, pas 20",
+        "mots": [
+          "fait 19",
+          "donne 19",
+          "somme"
+        ]
+      },
+      {
+        "idee": "Une donnée a été oubliée ou mal comptée",
+        "mots": [
+          "oubli",
+          "mal compt",
+          "manque"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "$\\dfrac{1}{4}$, soit $25\\ \\%$",
     "accepte": [
@@ -6,6 +36,58 @@
       "25 %",
       "0,25",
       "1/4, soit 25 %"
+    ]
+  },
+  "43": {
+    "reponse": "Les écarts sont visuellement exagérés",
+    "criteres": [
+      {
+        "idee": "Les écarts paraissent beaucoup plus grands",
+        "mots": [
+          "ecart",
+          "difference",
+          "exager",
+          "parai",
+          "plus grand"
+        ]
+      },
+      {
+        "idee": "En réalité, les écarts sont plus petits qu'ils n'en ont l'air",
+        "mots": [
+          "realite",
+          "en vrai",
+          "plus petit",
+          "ne le sont",
+          "trompe",
+          "faux"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Il oublie les effectifs ; la moyenne est $11{,}3$",
+    "criteres": [
+      {
+        "idee": "Il a oublié de tenir compte des effectifs",
+        "mots": [
+          "effectif",
+          "oubli",
+          "nombre de fois"
+        ]
+      },
+      {
+        "idee": "Il faut diviser par l'effectif total, 20",
+        "mots": [
+          "par 20",
+          "total"
+        ]
+      },
+      {
+        "idee": "La bonne moyenne est 11,3",
+        "mots": [
+          "11 3"
+        ]
+      }
     ]
   }
 }
