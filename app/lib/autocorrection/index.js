@@ -14,6 +14,7 @@
  */
 
 import { analyserCalcul, comparerCalcul, valeurLitterale } from '../expressions/index.js';
+import { analyserAutre, comparerAutre, consigneAutre } from '../expressions/autres.js';
 
 /** Matières de langues étrangères : traductions, phrases → plus strict. */
 const LANGUES = new Set(['anglais', 'allemand', 'espagnol', 'italien', 'langues-anciennes']);
@@ -478,6 +479,9 @@ export function analyserExercice(ex, matiere = null) {
   // Expression ou équation (« 6x + 8 », « f'(x) = 3x² − 2 », « 2x + 5y + 4 = 0 ») : comparée par calcul.
   const calcul = analyserCalcul(ex);
   if (calcul) return { type: 'auto', alternatives: [{ kind: 'calcul', calcul }] };
+  // Intervalle, coordonnées, équation de réaction chimique.
+  const autre = base.type !== 'auto' || valeurLitterale(ex && ex.reponse) ? analyserAutre(ex) : null;
+  if (autre) return { type: 'auto', alternatives: [{ kind: 'autre', autre }] };
   // « E = 3(2x + 5) » ou « -2i » ne sont pas des nombres : ne pas accepter « 3 » ou « -2 ».
   if (base.type === 'auto' && valeurLitterale(ex && ex.reponse)) return { type: 'ouverte', alternatives: [] };
   return base;
@@ -507,6 +511,7 @@ export function uniteExercice(ex, matiere = null) {
 export function consigneExercice(ex, matiere = null) {
   const a = analyserExercice(ex, matiere);
   if (a.ensemble) return `${a.ensemble.length} éléments, séparés par des virgules`;
+  if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'autre') return consigneAutre(a.alternatives[0].autre);
   const c = a.alternatives && a.alternatives[0] && a.alternatives[0].calcul;
   if (!c) return '';
   if (c.forme === 'eq') return 'une équation, par ex. 2x + 3y - 1 = 0';
@@ -535,6 +540,7 @@ export function comparerExercice(saisie, ex, matiere = null) {
   if (!s) return false;
   const a = analyserExercice(ex, matiere);
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'calcul') return comparerCalcul(saisie, a.alternatives[0].calcul).juste;
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'autre') return comparerAutre(saisie, a.alternatives[0].autre);
   // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
   if (comparerUne(s, ex, matiere)) return true;
   // « S = {1 ; 2} », « f(-2) = 15 », « x = 3 ou x = -5 » : on retire les « nom = » devant les valeurs.

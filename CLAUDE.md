@@ -240,3 +240,6 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   sous la bonne forme → message 🟠 « Continue ! » (pas compté faux). Exclus : « démontrer/justifier/interpréter »,
   unités, d/dt, recopie possible de l'énoncé. Une grille d'idées garde la priorité. ≈ 350 exercices de maths en plus ;
   corrige aussi un ancien défaut (« E = 3(2x + 5) » était lu comme le nombre 3).
+  Suite (`app/lib/expressions/autres.js` + tests) : intervalles et réunions (« ]-∞ ; 5[ ∪ [7 ; 9] », ou « x < 5 »),
+  coordonnées « M(2 ; 1) » (pas « un vecteur / un point » : plusieurs réponses), équations de réaction ajustées
+  (« 2 H2 + O2 -> 2 H2O », charges « Fe3+ », ordre libre, pas les noyaux) : ≈ 140 exercices de plus.
