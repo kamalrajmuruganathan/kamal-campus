@@ -94,6 +94,8 @@ for (const chemin of chapitres) {
           for (const [k, c] of cr.entries()) {
             if (!c || typeof c.idee !== 'string' || !c.idee.trim() || c.idee.length > 140) pb.push(`${ici} : idée ${k + 1} : « idee » manquante ou trop longue (140 caractères max)`);
             if (!Array.isArray(c?.mots) || !c.mots.length || c.mots.length > 8 || c.mots.some((m) => typeof m !== 'string' || m.trim().length < 3)) { pb.push(`${ici} : idée ${k + 1} : « mots » = 1 à 8 mots-clés de 3 lettres ou plus`); continue; }
+            const courts = c.mots.filter((m) => plat(m).trim().length < 3);
+            if (courts.length) pb.push(`${ici} : idée ${k + 1} : mot-clé trop court une fois nettoyé (jamais trouvé) : ${JSON.stringify(courts)}`);
             if (!c.mots.some((m) => texteRef.includes(' ' + plat(m).trim()))) pb.push(`${ici} : idée ${k + 1} : aucun de ses mots-clés n'apparaît dans la réponse ou le corrigé`);
           }
           if (/\$/.test(JSON.stringify(cr))) pb.push(`${ici} : pas de formule ($…$) dans les idées`);
