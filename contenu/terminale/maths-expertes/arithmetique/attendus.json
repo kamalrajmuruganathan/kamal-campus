@@ -18,10 +18,73 @@
       "2"
     ]
   },
+  "6": {
+    "reponse": "Pour tout entier $n$, $n^{5} \\equiv n\\ [5]$, donc $5 \\mid (n^{5} - n)$.",
+    "criteres": [
+      {
+        "idee": "5 est premier : on applique le petit théorème de Fermat",
+        "mots": [
+          "fermat",
+          "premier"
+        ]
+      },
+      {
+        "idee": "Pour tout entier n, n⁵ ≡ n modulo 5",
+        "mots": [
+          "congru",
+          "modulo",
+          "n 5 n 5"
+        ]
+      },
+      {
+        "idee": "Donc 5 divise n⁵ − n",
+        "mots": [
+          "divis",
+          "divise"
+        ]
+      }
+    ]
+  },
   "7": {
     "reponse": "Le chiffre des unités de $7^{2023}$ est $3$.",
     "accepte": [
       "3"
+    ]
+  },
+  "9": {
+    "reponse": "Pour tout entier $n$, $n^2 \\equiv 0$ ou $1\\ [4]$ ; une somme de deux carrés est donc $\\equiv 0$, $1$ ou $2\\ [4]$. Comme $2023 \\equiv 3\\ [4]$, ce n'est pas une somme de deux carrés.",
+    "criteres": [
+      {
+        "idee": "On raisonne selon la parité de n : n = 2k ou n = 2k + 1",
+        "mots": [
+          "pair",
+          "impair",
+          "parite",
+          "2k 1"
+        ]
+      },
+      {
+        "idee": "Un carré est congru à 0 ou 1 modulo 4",
+        "mots": [
+          "0 ou 1",
+          "congru"
+        ]
+      },
+      {
+        "idee": "Une somme de deux carrés est donc congrue à 0, 1 ou 2 modulo 4",
+        "mots": [
+          "0 1 ou 2",
+          "somme"
+        ]
+      },
+      {
+        "idee": "Or 2023 ≡ 3 modulo 4 : ce n'est pas une somme de deux carrés",
+        "mots": [
+          "2023",
+          "3 4",
+          "reste 3"
+        ]
+      }
     ]
   },
   "11": {
@@ -73,6 +136,60 @@
       "vrai vrai vrai"
     ]
   },
+  "22": {
+    "reponse": "$3\\mid n^{3}-n$ pour tout $n$",
+    "criteres": [
+      {
+        "idee": "On étudie les trois restes possibles de n modulo 3 (0, 1 ou 2)",
+        "mots": [
+          "reste",
+          "cas",
+          "0 1",
+          "n 2"
+        ]
+      },
+      {
+        "idee": "Dans chaque cas, n³ − n ≡ 0 modulo 3",
+        "mots": [
+          "dans tous les cas",
+          "chaque cas",
+          "0 3",
+          "congru a 0",
+          "divisible"
+        ]
+      }
+    ]
+  },
+  "23": {
+    "reponse": "Contre-exemple $x=5$ : simplification interdite.",
+    "criteres": [
+      {
+        "idee": "Pour x = 5, 4x = 20 ≡ 2 modulo 6 : l'hypothèse est vraie",
+        "mots": [
+          "20 2",
+          "hypothese",
+          "vraie"
+        ]
+      },
+      {
+        "idee": "Mais 5 n'est pas congru à 2 modulo 6",
+        "mots": [
+          "pas congru",
+          "contre",
+          "pas vrai",
+          "faux"
+        ]
+      },
+      {
+        "idee": "On ne peut pas simplifier par 4 car pgcd(4, 6) = 2 ≠ 1",
+        "mots": [
+          "simplifi",
+          "pgcd",
+          "diviser par 4"
+        ]
+      }
+    ]
+  },
   "26": {
     "reponse": "Oui, $\\mathrm{pgcd}(144\\,;89)=1$",
     "accepte": [
@@ -94,6 +211,47 @@
       "non oui"
     ]
   },
+  "31": {
+    "reponse": "$5\\mid n$",
+    "criteres": [
+      {
+        "idee": "pgcd(5, 3) = 1 : 5 et 3 sont premiers entre eux",
+        "mots": [
+          "pgcd",
+          "premiers entre eux"
+        ]
+      },
+      {
+        "idee": "D'après le théorème de Gauss, 5 divise n",
+        "mots": [
+          "gauss"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "Hypothèse de Gauss non vérifiée ($\\mathrm{pgcd}(4\\,;2)=2$).",
+    "criteres": [
+      {
+        "idee": "Le théorème de Gauss exige pgcd(4, 2) = 1",
+        "mots": [
+          "exige",
+          "hypothese",
+          "premiers entre eux",
+          "pgcd"
+        ]
+      },
+      {
+        "idee": "Or pgcd(4, 2) = 2 : l'hypothèse n'est pas vérifiée",
+        "mots": [
+          "4 2 2",
+          "pas verifie",
+          "non verifie",
+          "pas premiers"
+        ]
+      }
+    ]
+  },
   "34": {
     "reponse": "$2$, $17$, $29$",
     "ensemble": [
@@ -112,6 +270,49 @@
     "reponse": "Non : $221=13\\times 17$",
     "accepte": [
       "non"
+    ]
+  },
+  "37": {
+    "reponse": "Faux : ils sont premiers entre eux sans être premiers.",
+    "criteres": [
+      {
+        "idee": "« Premiers entre eux » signifie pgcd = 1, ce qui est vrai ici",
+        "mots": [
+          "pgcd",
+          "diviseur commun"
+        ]
+      },
+      {
+        "idee": "Mais 8 = 2³ et 15 = 3 × 5 ne sont pas des nombres premiers",
+        "mots": [
+          "ne sont pas",
+          "pas premier",
+          "pas des nombres premiers",
+          "faux"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "$14^{6}\\equiv 0\\ [7]$",
+    "criteres": [
+      {
+        "idee": "Fermat exige que 7 ne divise pas 14 ; or 14 = 7 × 2",
+        "mots": [
+          "exige",
+          "divise",
+          "7 2",
+          "multiple"
+        ]
+      },
+      {
+        "idee": "En fait 14 ≡ 0 modulo 7, donc 14⁶ ≡ 0 modulo 7",
+        "mots": [
+          "0 7",
+          "congru a 0",
+          "14 0"
+        ]
+      }
     ]
   },
   "47": {

@@ -32,6 +32,35 @@
       "0,4"
     ]
   },
+  "14": {
+    "reponse": "Il a inversé le conditionnement : $P_T(M)\\neq P_M(T)$.",
+    "criteres": [
+      {
+        "idee": "Il a inversé le conditionnement : être positif sachant malade ≠ être malade sachant positif",
+        "mots": [
+          "invers",
+          "sachant",
+          "conditionn"
+        ]
+      },
+      {
+        "idee": "Ces deux probabilités ne sont pas égales en général",
+        "mots": [
+          "pas egal",
+          "different",
+          "pas la meme"
+        ]
+      },
+      {
+        "idee": "Pour obtenir P_T(M), il faut la formule de Bayes (et P(T) sachant non M)",
+        "mots": [
+          "bayes",
+          "formule",
+          "probabilites totales"
+        ]
+      }
+    ]
+  },
   "20": {
     "reponse": "Oui, ils sont indépendants.",
     "accepte": [
@@ -78,6 +107,37 @@
       "1/3"
     ]
   },
+  "35": {
+    "reponse": "$X\\sim B(10\\,;0{,}25)$",
+    "criteres": [
+      {
+        "idee": "Chaque question est une épreuve à deux issues (juste ou faux), de succès 1/4",
+        "mots": [
+          "deux issues",
+          "bernoulli",
+          "juste ou faux",
+          "succes",
+          "1 4"
+        ]
+      },
+      {
+        "idee": "Les réponses sont indépendantes et on répète 10 fois l'épreuve",
+        "mots": [
+          "independ",
+          "repet",
+          "10 fois"
+        ]
+      },
+      {
+        "idee": "X suit la loi binomiale B(10 ; 0,25)",
+        "mots": [
+          "0,25",
+          "10 0 25",
+          "binomiale"
+        ]
+      }
+    ]
+  },
   "37": {
     "reponse": "$0{,}2^{2}\\times 0{,}8^{3}=0{,}02048$",
     "accepte": [
@@ -88,6 +148,29 @@
     "reponse": "$\\dfrac{1}{8}$, $\\dfrac{3}{8}$, $\\dfrac{3}{8}$, $\\dfrac{1}{8}$",
     "accepte": [
       "1/8 ; 3/8 ; 3/8 ; 1/8"
+    ]
+  },
+  "47": {
+    "reponse": "$P(X\\geqslant 3)=1-P(X\\leqslant 2)$",
+    "criteres": [
+      {
+        "idee": "Le contraire de « X ≥ 3 » est « X ≤ 2 »",
+        "mots": [
+          "contraire",
+          "oppose",
+          "complementaire",
+          "x 2"
+        ]
+      },
+      {
+        "idee": "Avec X ≤ 3, on retirerait aussi P(X = 3)",
+        "mots": [
+          "x 3",
+          "retir",
+          "enleve",
+          "compte deux fois"
+        ]
+      }
     ]
   },
   "48": {

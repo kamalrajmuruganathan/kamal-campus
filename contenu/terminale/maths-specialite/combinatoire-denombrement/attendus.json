@@ -62,11 +62,65 @@
       "1 048 576 grilles"
     ]
   },
+  "23": {
+    "reponse": "$A_7^2=42$ ; $A_5^5=5!=120$ (permutations de $5$ éléments).",
+    "criteres": [
+      {
+        "idee": "A(7, 2) = 7 × 6 = 42",
+        "mots": [
+          "2 42",
+          "vaut 42",
+          "7 6",
+          "egal a 42"
+        ]
+      },
+      {
+        "idee": "A(5, 5) = 5! = 120 : c'est le nombre de permutations de 5 éléments",
+        "mots": [
+          "permutation",
+          "120",
+          "ordonn"
+        ]
+      }
+    ]
+  },
   "24": {
     "reponse": "$\\dbinom{6}{2}=15$ et $\\dbinom{7}{3}=35$.",
     "accepte": [
       "15 et 35",
       "15 ; 35"
+    ]
+  },
+  "25": {
+    "reponse": "$1$, $12$, $12$, $1$.",
+    "criteres": [
+      {
+        "idee": "(12 parmi 0) = 1 et (12 parmi 12) = 1 : une seule façon de ne rien choisir ou de tout prendre",
+        "mots": [
+          "une seule",
+          "rien",
+          "tout",
+          "aucun"
+        ]
+      },
+      {
+        "idee": "(12 parmi 1) = 12 : on choisit un seul élément parmi 12",
+        "mots": [
+          "un seul element",
+          "un element",
+          "12 facons",
+          "choisir un"
+        ]
+      },
+      {
+        "idee": "(12 parmi 11) = 12 : choisir les 11 qu'on prend revient à choisir celui qu'on laisse",
+        "mots": [
+          "laisse",
+          "revient a",
+          "symetri",
+          "celui"
+        ]
+      }
     ]
   },
   "27": {
@@ -80,6 +134,35 @@
     "accepte": [
       "arrangement, combinaison, p-liste, permutation",
       "a) arrangement ; b) combinaison ; c) p-liste ; d) permutation"
+    ]
+  },
+  "30": {
+    "reponse": "$\\dbinom{25}{3}=2\\,300$ (il a oublié de diviser par $3!$).",
+    "criteres": [
+      {
+        "idee": "Le produit 25 × 24 × 23 compte des triplets ordonnés",
+        "mots": [
+          "ordonn",
+          "ordre"
+        ]
+      },
+      {
+        "idee": "Chaque groupe est compté 3! = 6 fois : il faut diviser par 3!",
+        "mots": [
+          "divis",
+          "6 fois",
+          "3 6"
+        ]
+      },
+      {
+        "idee": "Le bon nombre est 25 parmi 3 = 2 300",
+        "mots": [
+          "2 300",
+          "2300",
+          "combinaison",
+          "parmi"
+        ]
+      }
     ]
   },
   "44": {

@@ -26,6 +26,52 @@
       "la suite est constante"
     ]
   },
+  "14": {
+    "reponse": "Non (explicite / récurrence) ; $u_{10}=v_{10}=21$",
+    "criteres": [
+      {
+        "idee": "Non : u est donnée par une formule explicite, v par récurrence",
+        "mots": [
+          "non",
+          "explicite",
+          "recurrence"
+        ]
+      },
+      {
+        "idee": "Pourtant u₁₀ = v₁₀ = 21 : mêmes termes, deux définitions différentes",
+        "mots": [
+          "memes termes",
+          "meme valeur",
+          "egaux",
+          "identiques",
+          "deux definitions",
+          "vaut 21"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "$(u_n)$ est décroissante.",
+    "criteres": [
+      {
+        "idee": "On étudie la différence u(n+1) − u(n) = −u(n)²",
+        "mots": [
+          "difference",
+          "u n 1 u n",
+          "u n 2"
+        ]
+      },
+      {
+        "idee": "Cette différence est négative ou nulle, donc la suite est décroissante",
+        "mots": [
+          "negati",
+          "inferieur",
+          "nulle",
+          "decroissant"
+        ]
+      }
+    ]
+  },
   "18": {
     "reponse": "Non, elle est décroissante ($u_0<0$).",
     "accepte": [
@@ -72,6 +118,37 @@
       "5"
     ]
   },
+  "38": {
+    "reponse": "Formule fausse ; $u_n=4\\times 0{,}5^{n}+6$",
+    "criteres": [
+      {
+        "idee": "Par la relation u₁ = 8, par sa formule u₁ = 5 : ce n'est pas pareil, sa formule est fausse",
+        "mots": [
+          "u 1 8",
+          "vaut 8",
+          "faux",
+          "fausse",
+          "pas pareil",
+          "different"
+        ]
+      },
+      {
+        "idee": "La suite n'est pas géométrique (à cause du +3)",
+        "mots": [
+          "pas geometrique",
+          "n est pas geometrique",
+          "terme 3"
+        ]
+      },
+      {
+        "idee": "Il faut passer par le point fixe 6 : u(n) = 4 × 0,5ⁿ + 6",
+        "mots": [
+          "point fixe",
+          "4 0 5"
+        ]
+      }
+    ]
+  },
   "39": {
     "reponse": "a) $1{,}03$ ; b) $0{,}85$ ; c) $2$",
     "accepte": [
@@ -86,11 +163,59 @@
       "8 % de baisse"
     ]
   },
+  "41": {
+    "reponse": "$u_{n+1}=0{,}8u_n$",
+    "criteres": [
+      {
+        "idee": "Après une baisse de 20 %, il reste 80 % de la quantité",
+        "mots": [
+          "reste 80",
+          "il reste",
+          "80 pour",
+          "1 0 2"
+        ]
+      },
+      {
+        "idee": "La bonne relation est u(n+1) = 0,8 u(n)",
+        "mots": [
+          "0,8"
+        ]
+      }
+    ]
+  },
   "42": {
     "reponse": "Non : baisse globale de $1\\,\\%$",
     "accepte": [
       "non",
       "non baisse de 1 %"
+    ]
+  },
+  "50": {
+    "reponse": "$600$ n'est jamais atteint ; $u_n<610$ à partir de $n=11$",
+    "criteres": [
+      {
+        "idee": "200 × 0,75ⁿ > 0, donc u(n) > 600 pour tout n",
+        "mots": [
+          "positi",
+          "superieur a 600",
+          "toujours"
+        ]
+      },
+      {
+        "idee": "La limite 600 n'est jamais atteinte",
+        "mots": [
+          "jamais",
+          "atteint"
+        ]
+      },
+      {
+        "idee": "u(n) < 610 à partir du rang n = 11",
+        "mots": [
+          "rang 11",
+          "n 11",
+          "onze"
+        ]
+      }
     ]
   }
 }

@@ -6,6 +6,35 @@
       "3"
     ]
   },
+  "5": {
+    "reponse": "$f$ décroît sur $]0\\,;1[$, croît sur $]1\\,;+\\infty[$, minimum $f(1)=1$ ; comme $f(x)\\geqslant 1>0$, on a $x>\\ln x$ pour tout $x>0$.",
+    "criteres": [
+      {
+        "idee": "f'(x) = 1 − 1/x = (x − 1)/x, du signe de x − 1",
+        "mots": [
+          "x 1 x",
+          "signe",
+          "derivee"
+        ]
+      },
+      {
+        "idee": "f décroît sur ]0 ; 1[ puis croît : minimum f(1) = 1",
+        "mots": [
+          "minimum",
+          "decroi",
+          "croi"
+        ]
+      },
+      {
+        "idee": "Donc f(x) ≥ 1 > 0, c'est-à-dire x > ln x",
+        "mots": [
+          "donc",
+          "positi",
+          "superieur"
+        ]
+      }
+    ]
+  },
   "6": {
     "reponse": "Au bout de $n = 8$ années.",
     "accepte": [
@@ -20,6 +49,55 @@
       "5 et 7 et 0 et 1"
     ]
   },
+  "13": {
+    "reponse": "$B\\left(e^2\\,;2\\right)$.",
+    "criteres": [
+      {
+        "idee": "La symétrie d'axe y = x échange abscisse et ordonnée : B(e² ; 2)",
+        "mots": [
+          "echang",
+          "invers",
+          "b e 2",
+          "e 2 2"
+        ]
+      },
+      {
+        "idee": "Vérification : ln(e²) = 2",
+        "mots": [
+          "ln e 2",
+          "verif"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "reponse": "$\\ln(0{,}3)<0$, $\\ln 1=0$, $\\ln(2{,}5)>0$.",
+    "criteres": [
+      {
+        "idee": "ln est strictement croissante et ln 1 = 0",
+        "mots": [
+          "croissant",
+          "ln 1 0"
+        ]
+      },
+      {
+        "idee": "0,3 < 1 donc ln(0,3) < 0",
+        "mots": [
+          "negati",
+          "0 3 1",
+          "inferieur a 1"
+        ]
+      },
+      {
+        "idee": "2,5 > 1 donc ln(2,5) > 0",
+        "mots": [
+          "positi",
+          "2 5 1",
+          "superieur a 1"
+        ]
+      }
+    ]
+  },
   "18": {
     "reponse": "$B=-1$ et $C=\\dfrac{1}{2}$.",
     "accepte": [
@@ -27,11 +105,84 @@
       "-1 et 1/2"
     ]
   },
+  "28": {
+    "reponse": "$y=x-1$ et $y=\\dfrac{x}{e}$ (cette dernière passe par l'origine).",
+    "criteres": [
+      {
+        "idee": "En 1 : tangente y = x − 1",
+        "mots": [
+          "x 1"
+        ]
+      },
+      {
+        "idee": "En e : tangente y = x/e",
+        "mots": [
+          "x e",
+          "1 e"
+        ]
+      },
+      {
+        "idee": "La tangente en e passe par l'origine du repère",
+        "mots": [
+          "origine"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "$\\ln 6$.",
     "accepte": [
       "ln 6",
       "ln(6)"
+    ]
+  },
+  "30": {
+    "reponse": "$\\ln 2+\\ln 3=\\ln 6$, pas $\\ln 5$.",
+    "criteres": [
+      {
+        "idee": "La somme de deux logarithmes est le logarithme du produit : ln 2 + ln 3 = ln 6",
+        "mots": [
+          "produit",
+          "ln 6"
+        ]
+      },
+      {
+        "idee": "Il n'existe aucune formule pour le logarithme d'une somme",
+        "mots": [
+          "somme",
+          "aucune formule",
+          "pas de formule"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "Égalité démontrée avec la formule du quotient.",
+    "criteres": [
+      {
+        "idee": "Pour x > 1, x² − 1 > 0 et x − 1 > 0 : les logarithmes existent",
+        "mots": [
+          "existent",
+          "defini",
+          "positi"
+        ]
+      },
+      {
+        "idee": "La différence des ln est le ln du quotient",
+        "mots": [
+          "quotient",
+          "divis"
+        ]
+      },
+      {
+        "idee": "x² − 1 = (x − 1)(x + 1), on simplifie par x − 1",
+        "mots": [
+          "x 1 x 1",
+          "factoris",
+          "simplifi",
+          "identite"
+        ]
+      }
     ]
   },
   "32": {
@@ -46,6 +197,55 @@
     "accepte": [
       "{2}",
       "2"
+    ]
+  },
+  "42": {
+    "reponse": "$-\\infty$ (pas de forme indéterminée).",
+    "criteres": [
+      {
+        "idee": "ln x tend vers −∞ et 1/x vers +∞",
+        "mots": [
+          "infini",
+          "infty",
+          "tend"
+        ]
+      },
+      {
+        "idee": "Le produit tend vers −∞ : ce n'est pas une forme indéterminée",
+        "mots": [
+          "pas une forme",
+          "pas de forme",
+          "non"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Maximum $-\\dfrac{1}{2}$ en $1$, d'où $\\ln x\\leqslant\\dfrac{x^2-1}{2}$.",
+    "criteres": [
+      {
+        "idee": "f'(x) = (1 − x)(1 + x)/x, du signe de 1 − x",
+        "mots": [
+          "signe",
+          "1 x 1 x",
+          "derivee"
+        ]
+      },
+      {
+        "idee": "f a pour maximum f(1) = −1/2",
+        "mots": [
+          "maximum",
+          "1 2"
+        ]
+      },
+      {
+        "idee": "Donc ln x − x²/2 ≤ −1/2, soit ln x ≤ (x² − 1)/2",
+        "mots": [
+          "donc",
+          "soit",
+          "inferieur"
+        ]
+      }
     ]
   },
   "49": {

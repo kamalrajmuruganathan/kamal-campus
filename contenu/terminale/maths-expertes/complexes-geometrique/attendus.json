@@ -23,6 +23,26 @@
       "13"
     ]
   },
+  "17": {
+    "reponse": "$|-3i|=3$ et $|-7|=7$.",
+    "criteres": [
+      {
+        "idee": "|−3i| = 3 et |−7| = 7",
+        "mots": [
+          "3 et 7",
+          "vaut 3",
+          "vaut 7"
+        ]
+      },
+      {
+        "idee": "Le module est la distance de l'origine O au point image",
+        "mots": [
+          "distance",
+          "origine"
+        ]
+      }
+    ]
+  },
   "19": {
     "reponse": "$|z|=1$.",
     "accepte": [
@@ -35,11 +55,144 @@
       "32"
     ]
   },
+  "21": {
+    "reponse": "Affirmation fausse : $|z+z'|=8$ alors que $|z|+|z'|=10$.",
+    "criteres": [
+      {
+        "idee": "|z| + |z'| = 5 + 5 = 10",
+        "mots": [
+          "5 5",
+          "dix",
+          "vaut 10",
+          "z z 10"
+        ]
+      },
+      {
+        "idee": "z + z' = 8i, donc |z + z'| = 8",
+        "mots": [
+          "z 8i",
+          "vaut 8",
+          "huit"
+        ]
+      },
+      {
+        "idee": "8 ≠ 10 : l'affirmation est fausse (on a seulement |z + z'| ≤ |z| + |z'|)",
+        "mots": [
+          "fausse",
+          "faux",
+          "inegalite",
+          "inferieur"
+        ]
+      }
+    ]
+  },
   "22": {
     "reponse": "$z\\bar z=25$ et $|z|=5$.",
     "accepte": [
       "25 et 5",
       "25 ; 5"
+    ]
+  },
+  "23": {
+    "reponse": "$AB=AC=5$, $BC=5\\sqrt2$ : triangle rectangle isocèle en $A$.",
+    "criteres": [
+      {
+        "idee": "AB = AC = 5",
+        "mots": [
+          "ab ac 5",
+          "ab ac",
+          "ac 5"
+        ]
+      },
+      {
+        "idee": "BC = 5√2",
+        "mots": [
+          "5 sqrt",
+          "5 racine",
+          "bc 5"
+        ]
+      },
+      {
+        "idee": "AB = AC : triangle isocèle en A",
+        "mots": [
+          "isocele"
+        ]
+      },
+      {
+        "idee": "AB² + AC² = BC² : rectangle en A (réciproque de Pythagore)",
+        "mots": [
+          "pythagore",
+          "rectangle"
+        ]
+      }
+    ]
+  },
+  "26": {
+    "reponse": "Le produit vaut $-\\dfrac45+\\dfrac35 i$ et appartient à $\\mathbb U$.",
+    "criteres": [
+      {
+        "idee": "i et 3/5 + 4/5 i sont de module 1 (dans 𝕌)",
+        "mots": [
+          "module 1",
+          "appartien"
+        ]
+      },
+      {
+        "idee": "𝕌 est stable par produit",
+        "mots": [
+          "stable",
+          "produit"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "$\\bar Z=-Z$, donc $Z$ est un imaginaire pur.",
+    "criteres": [
+      {
+        "idee": "Avec conj(z) = 1/z, on obtient conj(Z) = (1 + z)/(1 − z)",
+        "mots": [
+          "1 z",
+          "multipli",
+          "conjugue"
+        ]
+      },
+      {
+        "idee": "Donc conj(Z) = −Z",
+        "mots": [
+          "z z",
+          "oppose",
+          "moins z"
+        ]
+      },
+      {
+        "idee": "Un complexe égal à l'opposé de son conjugué est imaginaire pur",
+        "mots": [
+          "imaginaire pur",
+          "partie reelle nulle"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "$\\arg(1-i\\sqrt3)=-\\dfrac\\pi3$ (modulo $2\\pi$).",
+    "criteres": [
+      {
+        "idee": "Le cosinus seul ne suffit pas : θ = π/3 ou θ = −π/3",
+        "mots": [
+          "ne suffit pas",
+          "cosinus seul",
+          "deux"
+        ]
+      },
+      {
+        "idee": "Le sinus est négatif (partie imaginaire négative), donc θ = −π/3",
+        "mots": [
+          "sinus",
+          "negati",
+          "pi 3"
+        ]
+      }
     ]
   },
   "34": {
@@ -48,6 +201,58 @@
       "multiple de 4",
       "les multiples de 4",
       "n multiple de 4"
+    ]
+  },
+  "41": {
+    "reponse": "$|z|=3$ et $z=3e^{i6\\pi/5}$ (ou $3e^{-i4\\pi/5}$).",
+    "criteres": [
+      {
+        "idee": "Un module est toujours positif : il vaut 3, pas −3",
+        "mots": [
+          "positi",
+          "module",
+          "vaut 3"
+        ]
+      },
+      {
+        "idee": "On écrit −1 = e^(iπ), d'où z = 3e^(i6π/5) (ou 3e^(−i4π/5))",
+        "mots": [
+          "6 pi 5",
+          "6pi 5",
+          "4 pi 5",
+          "4pi 5",
+          "pi pi 5",
+          "e i pi"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Le quotient vaut $3$ (réel) : $A$, $B$, $C$ sont alignés.",
+    "criteres": [
+      {
+        "idee": "Le quotient vaut 3, c'est un réel",
+        "mots": [
+          "vaut 3",
+          "reel"
+        ]
+      },
+      {
+        "idee": "Son argument vaut 0 modulo π : les vecteurs AB et AC sont colinéaires",
+        "mots": [
+          "argument",
+          "colineaire",
+          "angle",
+          "ac 3ab",
+          "ac 3 ab"
+        ]
+      },
+      {
+        "idee": "Donc A, B, C sont alignés",
+        "mots": [
+          "align"
+        ]
+      }
     ]
   }
 }
