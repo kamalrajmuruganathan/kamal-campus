@@ -5,11 +5,93 @@
       "11000000"
     ]
   },
+  "4": {
+    "reponse": "Non : elles sont sur des réseaux différents (10.0.5.0 et 10.0.6.0), un routeur est nécessaire.",
+    "criteres": [
+      {
+        "idee": "Avec /24, l'adresse réseau est donnée par les trois premiers octets",
+        "mots": [
+          "trois premiers octets",
+          "3 premiers octets"
+        ]
+      },
+      {
+        "idee": "Réseau de A : 10.0.5.0 ; réseau de B : 10.0.6.0 : ils sont différents",
+        "mots": [
+          "10 0 5 0",
+          "10 0 6 0",
+          "different"
+        ]
+      },
+      {
+        "idee": "Non : elles ne peuvent pas communiquer directement, un routeur est nécessaire",
+        "mots": [
+          "routeur",
+          "non"
+        ]
+      }
+    ]
+  },
   "5": {
     "reponse": "Le chemin de coût minimal est A-B-C-D, pour un coût total de 6.",
     "accepte": [
       "A-B-C-D, 6",
       "A-B-C-D coût 6"
+    ]
+  },
+  "6": {
+    "reponse": "RIP compte les sauts (A-C direct), OSPF pondère par le débit et peut préférer A-B-C si le lien direct est lent.",
+    "criteres": [
+      {
+        "idee": "RIP mesure la distance en nombre de sauts et choisit le chemin qui en compte le moins",
+        "mots": [
+          "saut"
+        ]
+      },
+      {
+        "idee": "OSPF utilise un coût lié au débit des liens et choisit le chemin de coût total minimal",
+        "mots": [
+          "debit",
+          "cout"
+        ]
+      },
+      {
+        "idee": "RIP choisit A-C en direct ; OSPF peut préférer A-B-C si le lien direct est lent",
+        "mots": [
+          "a b c",
+          "lent"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "reponse": "192.168.1.10 et 10.0.0.255 sont valides ; 256.1.1.1 ne l'est pas (256 > 255).",
+    "criteres": [
+      {
+        "idee": "Une adresse IPv4 est formée de quatre nombres entre 0 et 255",
+        "mots": [
+          "0 et 255",
+          "entre 0",
+          "quatre nombres",
+          "4 nombres"
+        ]
+      },
+      {
+        "idee": "192.168.1.10 et 10.0.0.255 sont valides",
+        "mots": [
+          "192 168 1 10",
+          "10 0 0 255",
+          "valide"
+        ]
+      },
+      {
+        "idee": "256.1.1.1 est invalide car 256 dépasse 255",
+        "mots": [
+          "256",
+          "invalide",
+          "depasse"
+        ]
+      }
     ]
   },
   "8": {
@@ -32,12 +114,72 @@
       "route 1 et route 2"
     ]
   },
+  "11": {
+    "reponse": "Message découpé en paquets routés indépendamment ; en cas de panne, ils passent par un autre chemin.",
+    "criteres": [
+      {
+        "idee": "Le message est découpé en paquets qui voyagent indépendamment",
+        "mots": [
+          "decoup",
+          "paquet",
+          "independ"
+        ]
+      },
+      {
+        "idee": "Chaque paquet porte l'adresse de destination ; ils sont réassemblés à l'arrivée",
+        "mots": [
+          "reassembl",
+          "adresse",
+          "reconstitu"
+        ]
+      },
+      {
+        "idee": "En cas de panne, les paquets sont réacheminés par un autre chemin, sans couper la communication",
+        "mots": [
+          "autre chemin",
+          "reachemin",
+          "panne",
+          "contourn"
+        ]
+      }
+    ]
+  },
   "12": {
     "reponse": "IP → (2) ; RIP → (3) ; OSPF → (1).",
     "accepte": [
       "IP → (2) ; RIP → (3) ; OSPF → (1)",
       "IP 2, RIP 3, OSPF 1",
       "IP → 2, RIP → 3, OSPF → 1"
+    ]
+  },
+  "13": {
+    "reponse": "Il relie des réseaux ; sa table donne, pour chaque destination, le prochain saut (et une distance ou un coût).",
+    "criteres": [
+      {
+        "idee": "Un routeur relie plusieurs réseaux et fait passer les paquets de l'un à l'autre",
+        "mots": [
+          "relie",
+          "plusieurs reseaux",
+          "interconnect"
+        ]
+      },
+      {
+        "idee": "Sa table de routage indique, pour chaque destination, le voisin à qui envoyer le paquet (prochain saut)",
+        "mots": [
+          "prochain saut",
+          "voisin",
+          "destination",
+          "passerelle"
+        ]
+      },
+      {
+        "idee": "Souvent avec une distance ou un coût",
+        "mots": [
+          "distance",
+          "cout",
+          "metrique"
+        ]
+      }
     ]
   },
   "14": {
@@ -47,16 +189,131 @@
       "non, oui, non, oui"
     ]
   },
+  "19": {
+    "reponse": "2 sauts contre 4 : RIP choisit A-B-F.",
+    "criteres": [
+      {
+        "idee": "RIP compte le nombre de liaisons traversées (sauts)",
+        "mots": [
+          "saut"
+        ]
+      },
+      {
+        "idee": "A-B-F : 2 sauts ; A-C-E-D-F : 4 sauts",
+        "mots": [
+          "2 sauts",
+          "4 sauts"
+        ]
+      },
+      {
+        "idee": "RIP choisit A-B-F",
+        "mots": [
+          "a b f"
+        ]
+      }
+    ]
+  },
   "21": {
     "reponse": "Oui : elles sont toutes deux dans le réseau 192.168.0.0/24.",
     "accepte": [
       "oui"
     ]
   },
+  "23": {
+    "reponse": "A-B-F coûte 110, A-C-E-D-F coûte 4 : OSPF choisit A-C-E-D-F.",
+    "criteres": [
+      {
+        "idee": "Coûts : 10 Mbit/s → 10 ; 100 Mbit/s → 1 ; 1 Mbit/s → 100",
+        "mots": [
+          "cout"
+        ]
+      },
+      {
+        "idee": "A-B-F coûte 10 + 100 = 110",
+        "mots": [
+          "110"
+        ]
+      },
+      {
+        "idee": "A-C-E-D-F coûte 1 + 1 + 1 + 1 = 4",
+        "mots": [
+          "1 1 1 1",
+          "coute 4"
+        ]
+      },
+      {
+        "idee": "OSPF choisit A-C-E-D-F, malgré ses 4 sauts",
+        "mots": [
+          "a c e d f"
+        ]
+      }
+    ]
+  },
   "29": {
     "reponse": "Au moins 2 000 paquets.",
     "accepte": [
       "2 000 paquets"
+    ]
+  },
+  "30": {
+    "reponse": "Grâce aux numéros des paquets, qu'il remet dans l'ordre ; c'est le rôle de TCP.",
+    "criteres": [
+      {
+        "idee": "Chaque paquet porte un numéro d'ordre",
+        "mots": [
+          "numero",
+          "numerot"
+        ]
+      },
+      {
+        "idee": "Le destinataire remet les paquets dans l'ordre avant de réassembler le message",
+        "mots": [
+          "dans l ordre",
+          "remet",
+          "reassembl",
+          "trie"
+        ]
+      },
+      {
+        "idee": "C'est le rôle du protocole TCP",
+        "mots": [
+          "tcp"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "Sommets : routeurs ; arêtes : liaisons ; poids 1 pour RIP, coût lié au débit pour OSPF.",
+    "criteres": [
+      {
+        "idee": "Les sommets sont les routeurs",
+        "mots": [
+          "routeur"
+        ]
+      },
+      {
+        "idee": "Les arêtes sont les liaisons entre routeurs",
+        "mots": [
+          "liaison",
+          "lien",
+          "cable"
+        ]
+      },
+      {
+        "idee": "Pour RIP, chaque arête a le poids 1 (un saut)",
+        "mots": [
+          "poids 1",
+          "un saut",
+          "1 saut"
+        ]
+      },
+      {
+        "idee": "Pour OSPF, le poids est un coût lié au débit",
+        "mots": [
+          "debit",
+          "cout"
+        ]
+      }
     ]
   },
   "32": {
@@ -66,6 +323,62 @@
       "R2, R3"
     ]
   },
+  "33": {
+    "reponse": "La destination est jugée inaccessible ; RIP ne convient qu'aux réseaux de taille limitée.",
+    "criteres": [
+      {
+        "idee": "La destination à 17 sauts est considérée comme inaccessible",
+        "mots": [
+          "inaccessible",
+          "injoignable",
+          "infini"
+        ]
+      },
+      {
+        "idee": "RIP est réservé aux réseaux de taille limitée",
+        "mots": [
+          "taille limitee",
+          "petit",
+          "limite"
+        ]
+      },
+      {
+        "idee": "Pour de grands réseaux, on utilise plutôt OSPF",
+        "mots": [
+          "ospf"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "Parce que chaque paquet voyage seul et peut suivre son propre chemin : chaque routeur lit l'adresse de chaque paquet.",
+    "criteres": [
+      {
+        "idee": "Chaque paquet est routé indépendamment : chaque routeur doit savoir où l'envoyer",
+        "mots": [
+          "independ",
+          "chaque routeur",
+          "seul"
+        ]
+      },
+      {
+        "idee": "Les paquets peuvent suivre des chemins différents",
+        "mots": [
+          "chemins differents",
+          "propre chemin",
+          "autre chemin"
+        ]
+      },
+      {
+        "idee": "Un paquet sans adresse ne pourrait pas être acheminé (comme une enveloppe sans adresse)",
+        "mots": [
+          "achemin",
+          "enveloppe",
+          "perdu"
+        ]
+      }
+    ]
+  },
   "35": {
     "reponse": "OSPF : X-Y-Z (coût 11) ; RIP : X-Z (1 saut).",
     "accepte": [
@@ -73,10 +386,160 @@
       "X-Y-Z et X-Z"
     ]
   },
+  "39": {
+    "reponse": "Non : réseaux 192.168.5.64/26 et 192.168.5.128/26.",
+    "criteres": [
+      {
+        "idee": "Avec /26, le réseau comprend les 3 premiers octets et les 2 premiers bits du dernier",
+        "mots": [
+          "26 premiers bits",
+          "2 premiers bits",
+          "deux premiers bits"
+        ]
+      },
+      {
+        "idee": "70 = 01000110 : réseau 192.168.5.64",
+        "mots": [
+          "01000110",
+          "192 168 5 64"
+        ]
+      },
+      {
+        "idee": "130 = 10000010 : réseau 192.168.5.128",
+        "mots": [
+          "10000010",
+          "192 168 5 128"
+        ]
+      },
+      {
+        "idee": "Les réseaux sont différents : non, elles ne sont pas sur le même réseau",
+        "mots": [
+          "different",
+          "non"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "IP achemine les paquets ; OSPF sert seulement à construire les tables de routage utilisées par les routeurs.",
+    "criteres": [
+      {
+        "idee": "OSPF ne transporte pas les paquets : c'est un protocole de routage qui construit les tables",
+        "mots": [
+          "table",
+          "protocole de routage",
+          "ne transporte pas"
+        ]
+      },
+      {
+        "idee": "C'est IP qui adresse et achemine les paquets",
+        "mots": [
+          "ip adresse",
+          "ip achemine",
+          "protocole ip",
+          "c est ip",
+          "le protocole ip"
+        ]
+      },
+      {
+        "idee": "Chaque routeur consulte sa table pour choisir le prochain saut",
+        "mots": [
+          "prochain saut",
+          "routeur",
+          "consulte"
+        ]
+      }
+    ]
+  },
   "42": {
     "reponse": "2 s par A-C-E-D-F contre 200 s par A-B-F.",
     "accepte": [
       "2 s et 200 s"
+    ]
+  },
+  "43": {
+    "reponse": "Chaque routeur choisit seulement le voisin suivant ; la route complète se construit de proche en proche.",
+    "criteres": [
+      {
+        "idee": "Chaque routeur ne décide que de l'étape suivante : le prochain saut indiqué par sa table",
+        "mots": [
+          "prochain saut",
+          "etape suivante",
+          "voisin suivant"
+        ]
+      },
+      {
+        "idee": "Le voisin consulte à son tour sa propre table",
+        "mots": [
+          "a son tour",
+          "propre table"
+        ]
+      },
+      {
+        "idee": "De proche en proche, la route complète se construit",
+        "mots": [
+          "proche en proche",
+          "etape par etape"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "4 paquets ; les paquets 3 et 4 prennent un autre chemin ; le fichier est réassemblé à l'arrivée.",
+    "criteres": [
+      {
+        "idee": "6 000 ÷ 1 500 = 4 paquets",
+        "mots": [
+          "4 paquets",
+          "quatre paquets"
+        ]
+      },
+      {
+        "idee": "Les routeurs mettent à jour leurs tables : les paquets 3 et 4 prennent un autre chemin",
+        "mots": [
+          "autre chemin",
+          "reachemin",
+          "mettent a jour",
+          "3 et 4"
+        ]
+      },
+      {
+        "idee": "Le destinataire remet les paquets dans l'ordre et réassemble le fichier",
+        "mots": [
+          "reassembl",
+          "dans l ordre",
+          "reconstitu"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "3 échanges ; R4 connaît N à 3 sauts (par R3).",
+    "criteres": [
+      {
+        "idee": "Chaque échange propage l'information d'un routeur : R2 à 1 saut, R3 à 2, R4 à 3",
+        "mots": [
+          "proche en proche",
+          "r2 apprend",
+          "r3 l apprend",
+          "distance 1"
+        ]
+      },
+      {
+        "idee": "Il faut 3 échanges ; R4 connaît N à 3 sauts, par R3",
+        "mots": [
+          "3 echanges",
+          "trois echanges",
+          "3 sauts"
+        ]
+      },
+      {
+        "idee": "RIP converge lentement sur les grands réseaux",
+        "mots": [
+          "lent",
+          "converge"
+        ]
+      }
     ]
   }
 }

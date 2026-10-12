@@ -5,6 +5,31 @@
       "10"
     ]
   },
+  "3": {
+    "reponse": "Le test doit être if x % 2 == 0 (pair = reste nul), et non == 1.",
+    "criteres": [
+      {
+        "idee": "Un nombre est pair quand le reste de sa division par 2 vaut 0",
+        "mots": [
+          "reste",
+          "pair"
+        ]
+      },
+      {
+        "idee": "La condition x % 2 == 1 teste en réalité les nombres impairs",
+        "mots": [
+          "impair"
+        ]
+      },
+      {
+        "idee": "Il faut remplacer la condition par x % 2 == 0",
+        "mots": [
+          "x 2 0",
+          "2 0"
+        ]
+      }
+    ]
+  },
   "4": {
     "reponse": "Complexité linéaire O(n) dans le pire des cas.",
     "accepte": [
@@ -12,6 +37,125 @@
       "linéaire",
       "O(n) linéaire",
       "linéaire O(n)"
+    ]
+  },
+  "5": {
+    "reponse": "Environ 1 000 000 comparaisons (séquentielle) contre environ 20 (dichotomique) : la dichotomie est bien plus rapide sur un tableau trié.",
+    "criteres": [
+      {
+        "idee": "Recherche séquentielle : dans le pire cas, environ 1 000 000 de comparaisons",
+        "mots": [
+          "1 000 000",
+          "1000000",
+          "un million",
+          "toutes les cases"
+        ]
+      },
+      {
+        "idee": "Recherche dichotomique : environ log₂(1 000 000) ≈ 20 comparaisons",
+        "mots": [
+          "environ 20",
+          "20 comparaisons",
+          "log2",
+          "log 2",
+          "vingt"
+        ]
+      },
+      {
+        "idee": "La dichotomie est bien plus rapide sur un tableau trié",
+        "mots": [
+          "plus rapide",
+          "plus efficace",
+          "dichotomi"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "doublons est en O(n^2) ; l'invariant 'm = max(t[0..i-1]) au début du tour i' prouve que maxi renvoie le maximum de la liste.",
+    "criteres": [
+      {
+        "idee": "La boucle interne fait environ n(n - 1)/2 comparaisons dans le pire cas",
+        "mots": [
+          "n n 1 2",
+          "n 1 2"
+        ]
+      },
+      {
+        "idee": "doublons est donc quadratique, O(n²)",
+        "mots": [
+          "quadratique",
+          "o n 2",
+          "o n"
+        ]
+      },
+      {
+        "idee": "Invariant : au début du tour i, m est le maximum de t[0..i-1]",
+        "mots": [
+          "invariant",
+          "maximum de t",
+          "max t"
+        ]
+      },
+      {
+        "idee": "À la fin de la boucle, l'invariant donne m = maximum de toute la liste",
+        "mots": [
+          "fin",
+          "toute la liste",
+          "sortie"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "reponse": "La complexité est O(n) (linéaire) : n tours, une opération par tour.",
+    "criteres": [
+      {
+        "idee": "La boucle fait n tours, avec une opération par tour",
+        "mots": [
+          "n tours",
+          "une operation",
+          "chaque tour"
+        ]
+      },
+      {
+        "idee": "Le nombre d'opérations est proportionnel à n : complexité linéaire O(n)",
+        "mots": [
+          "lineaire",
+          "o n",
+          "proportionnel"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "≈ 1000 comparaisons en séquentiel contre ≈ 10 en dichotomique : la dichotomique est bien plus efficace.",
+    "criteres": [
+      {
+        "idee": "Recherche séquentielle : jusqu'à environ 1000 comparaisons, O(n)",
+        "mots": [
+          "1000",
+          "1 000",
+          "mille",
+          "o n"
+        ]
+      },
+      {
+        "idee": "Recherche dichotomique : log₂(1000) ≈ 10 comparaisons, O(log n)",
+        "mots": [
+          "log",
+          "dizaine",
+          "10 comparaisons"
+        ]
+      },
+      {
+        "idee": "Sur un tableau trié, la dichotomie est bien plus efficace",
+        "mots": [
+          "plus efficace",
+          "plus rapide",
+          "prefere"
+        ]
+      }
     ]
   },
   "11": {
@@ -25,6 +169,71 @@
       "erreur de syntaxe, erreur d'exécution, erreur de logique"
     ]
   },
+  "12": {
+    "reponse": "Condition supposée vraie en entrée ; ici notes doit être non vide, sinon division par zéro.",
+    "criteres": [
+      {
+        "idee": "Une précondition est une condition supposée vraie sur les entrées d'une fonction",
+        "mots": [
+          "condition",
+          "entree",
+          "suppos"
+        ]
+      },
+      {
+        "idee": "Pour moyenne, la liste notes doit être non vide",
+        "mots": [
+          "non vide",
+          "pas vide"
+        ]
+      },
+      {
+        "idee": "Sinon len(notes) vaut 0 : division par zéro (ZeroDivisionError)",
+        "mots": [
+          "zerodivisionerror",
+          "division par zero",
+          "zero"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "reponse": "La 1re assertion passe, la 2de lève `AssertionError` : la fonction est fausse (il faut `x * x`).",
+    "criteres": [
+      {
+        "idee": "La première assertion passe : carre(2) = 2 × 2 = 4",
+        "mots": [
+          "premiere",
+          "passe",
+          "2 2 4"
+        ]
+      },
+      {
+        "idee": "La seconde lève AssertionError : carre(3) = 6 ≠ 9",
+        "mots": [
+          "assertionerror",
+          "6 9",
+          "vaut 6"
+        ]
+      },
+      {
+        "idee": "La fonction est fausse : il faut x * x",
+        "mots": [
+          "x x",
+          "fausse"
+        ]
+      },
+      {
+        "idee": "Le premier test réussissait par coïncidence : un test réussi ne prouve pas que la fonction est juste",
+        "mots": [
+          "coincidence",
+          "hasard",
+          "ne prouve",
+          "ne suffit"
+        ]
+      }
+    ]
+  },
   "16": {
     "reponse": "a) O(1) ; b) O(n) ; c) O(n).",
     "accepte": [
@@ -33,12 +242,234 @@
       "(a) O(1) (b) O(n) (c) O(n)"
     ]
   },
+  "17": {
+    "reponse": "Exemple de réponse : liste à un élément, minimum en premier, minimum en dernier (ou minimum répété).",
+    "criteres": [
+      {
+        "idee": "Une liste d'un seul élément",
+        "mots": [
+          "un seul element",
+          "un element",
+          "1 element"
+        ]
+      },
+      {
+        "idee": "Le minimum en première position",
+        "mots": [
+          "premiere position",
+          "en premier",
+          "debut"
+        ]
+      },
+      {
+        "idee": "Le minimum en dernière position",
+        "mots": [
+          "derniere position",
+          "en dernier",
+          "fin"
+        ]
+      },
+      {
+        "idee": "Éventuellement : minimum répété ou valeurs négatives",
+        "mots": [
+          "plusieurs fois",
+          "repete",
+          "negati"
+        ]
+      }
+    ]
+  },
   "18": {
     "reponse": "Environ 0,2 s pour l'algorithme linéaire et environ 20 s pour le quadratique.",
     "accepte": [
       "0,2 s et 20 s",
       "0,2 ; 20",
       "200 ms et 20 s"
+    ]
+  },
+  "19": {
+    "reponse": "`input` renvoie une chaîne ; il faut `int(input(...))`.",
+    "criteres": [
+      {
+        "idee": "input renvoie toujours une chaîne de caractères",
+        "mots": [
+          "chaine",
+          "str",
+          "texte"
+        ]
+      },
+      {
+        "idee": "On ne peut pas ajouter un entier à une chaîne",
+        "mots": [
+          "ajouter",
+          "concaten",
+          "entier"
+        ]
+      },
+      {
+        "idee": "Il faut convertir avec int(input(...))",
+        "mots": [
+          "int input",
+          "int",
+          "convert"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "reponse": "La première ne fait rien ; la seconde lève `AssertionError`.",
+    "criteres": [
+      {
+        "idee": "Si la condition est vraie, il ne se passe rien",
+        "mots": [
+          "rien",
+          "continue"
+        ]
+      },
+      {
+        "idee": "assert 2 + 2 == 4 : rien ne se passe",
+        "mots": [
+          "rien"
+        ]
+      },
+      {
+        "idee": "assert 2 + 2 == 5 : Python lève AssertionError et le programme s'arrête",
+        "mots": [
+          "assertionerror",
+          "erreur",
+          "arrete"
+        ]
+      }
+    ]
+  },
+  "22": {
+    "reponse": "`4 1` : la fonction renvoie le nombre de chiffres de n.",
+    "criteres": [
+      {
+        "idee": "Le programme affiche 4 1",
+        "mots": [
+          "4 1"
+        ]
+      },
+      {
+        "idee": "À chaque tour, n // 10 supprime le dernier chiffre et c compte les tours",
+        "mots": [
+          "dernier chiffre",
+          "supprim",
+          "enleve"
+        ]
+      },
+      {
+        "idee": "La fonction renvoie le nombre de chiffres de n",
+        "mots": [
+          "nombre de chiffres"
+        ]
+      }
+    ]
+  },
+  "25": {
+    "reponse": "La boucle doit commencer à l'indice 0 : `range(len(t))` ; la somme vaut alors 15.",
+    "criteres": [
+      {
+        "idee": "11 = 5 + 6 : le premier élément (4) n'est pas compté",
+        "mots": [
+          "premier element",
+          "4 n est pas",
+          "oubli",
+          "5 6"
+        ]
+      },
+      {
+        "idee": "range(1, len(t)) commence à l'indice 1 et oublie l'indice 0",
+        "mots": [
+          "indice 0",
+          "indice 1",
+          "commence"
+        ]
+      },
+      {
+        "idee": "Correction : range(len(t)) ; la somme vaut alors 15",
+        "mots": [
+          "range len t",
+          "vaut 15",
+          "donne 15",
+          "obtient 15"
+        ]
+      }
+    ]
+  },
+  "26": {
+    "reponse": "Affichages : (3, 3), (8, 8), (2, 8), puis renvoie 8 ; le bug est `m = 0`, faux si tous les nombres sont négatifs ; il faut `m = t[0]`.",
+    "criteres": [
+      {
+        "idee": "Affichages : x = 3 m = 3, x = 8 m = 8, x = 2 m = 8 ; la fonction renvoie 8",
+        "mots": [
+          "renvoie 8",
+          "x 3 m 3",
+          "m 8"
+        ]
+      },
+      {
+        "idee": "Le bug est m = 0 : faux si tous les nombres sont négatifs (renverrait 0)",
+        "mots": [
+          "m 0",
+          "negati"
+        ]
+      },
+      {
+        "idee": "Il faut initialiser m = t[0]",
+        "mots": [
+          "m t 0",
+          "t 0"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "O(log n) ; 10 tours pour n = 1024.",
+    "criteres": [
+      {
+        "idee": "n est divisé par 2 à chaque tour",
+        "mots": [
+          "divise par 2",
+          "moitie",
+          "n 2"
+        ]
+      },
+      {
+        "idee": "Pour n = 1024 = 2¹⁰ : 10 tours",
+        "mots": [
+          "10 tours",
+          "2 10"
+        ]
+      },
+      {
+        "idee": "La complexité est logarithmique : O(log n)",
+        "mots": [
+          "logarithm",
+          "log n"
+        ]
+      }
+    ]
+  },
+  "29": {
+    "reponse": "Successives : O(n) ; imbriquées : O(n²).",
+    "criteres": [
+      {
+        "idee": "Boucles successives : n + n = 2n tours, complexité linéaire O(n)",
+        "mots": [
+          "2n tours",
+          "n n 2n",
+          "lineaire"
+        ]
+      },
+      {
+        "idee": "Boucles imbriquées : n × n = n² tours, complexité quadratique O(n²)",
+        "mots": [
+          "quadratique",
+          "n 2"
+        ]
+      }
     ]
   },
   "31": {
@@ -58,6 +489,313 @@
       "10 ; 1 000 ; 10 000 ; 1 000 000"
     ]
   },
+  "34": {
+    "reponse": "Elle est déjà en O(n) (la copie n'est faite qu'une fois) ; on simplifie en `return i`.",
+    "criteres": [
+      {
+        "idee": "La copie t[:i] n'est faite qu'une seule fois, au moment du return",
+        "mots": [
+          "une seule fois",
+          "une fois",
+          "copie"
+        ]
+      },
+      {
+        "idee": "La complexité est O(n), déjà linéaire",
+        "mots": [
+          "o n",
+          "lineaire"
+        ]
+      },
+      {
+        "idee": "On peut simplifier en return i",
+        "mots": [
+          "return i"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "doublon1 : O(n²) ; doublon2 : O(n) en moyenne ; on choisit doublon2.",
+    "criteres": [
+      {
+        "idee": "doublon1 compare tous les couples : O(n²)",
+        "mots": [
+          "n 2",
+          "quadratique",
+          "couples"
+        ]
+      },
+      {
+        "idee": "doublon2 parcourt la liste une fois, avec un ensemble en temps constant : O(n) en moyenne",
+        "mots": [
+          "ensemble",
+          "temps constant",
+          "lineaire",
+          "o n"
+        ]
+      },
+      {
+        "idee": "Pour un million d'éléments, on choisit doublon2",
+        "mots": [
+          "doublon2"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Un seul test ne prouve rien ; `assert mediane([1, 2, 3, 4, 5]) == 3` échoue et révèle le bug.",
+    "criteres": [
+      {
+        "idee": "Pour [1, 2, 3], t[1] est l'élément du milieu : le test passe par hasard",
+        "mots": [
+          "hasard",
+          "par chance",
+          "coincidence"
+        ]
+      },
+      {
+        "idee": "Un seul test ne prouve pas que la fonction est juste",
+        "mots": [
+          "un seul test",
+          "ne prouve",
+          "ne suffit"
+        ]
+      },
+      {
+        "idee": "La médiane est t[len(t) // 2]",
+        "mots": [
+          "len t 2",
+          "milieu"
+        ]
+      },
+      {
+        "idee": "Test révélateur : mediane([1, 2, 3, 4, 5]) == 3, qui échoue",
+        "mots": [
+          "1 2 3 4 5",
+          "echoue"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Résultat faux possible ; on peut vérifier le tri avec un `assert`, mais cela coûte O(n).",
+    "criteres": [
+      {
+        "idee": "Sur une liste non triée, la dichotomie peut répondre « absent » pour une valeur présente",
+        "mots": [
+          "faux",
+          "absent",
+          "elimine",
+          "a tort"
+        ]
+      },
+      {
+        "idee": "On peut vérifier le tri avec un assert (t[i] <= t[i+1] pour tout i)",
+        "mots": [
+          "assert",
+          "t i t i 1"
+        ]
+      },
+      {
+        "idee": "Cette vérification coûte O(n), ce qui annule l'intérêt de la dichotomie",
+        "mots": [
+          "o n",
+          "lineaire",
+          "interet",
+          "annule"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "O(n × m) (O(n²) si les listes ont la même taille), car `in` sur une liste est linéaire.",
+    "criteres": [
+      {
+        "idee": "La boucle fait au plus n tours",
+        "mots": [
+          "n tours",
+          "boucle"
+        ]
+      },
+      {
+        "idee": "Le test x not in u parcourt la liste u : il coûte O(m)",
+        "mots": [
+          "o m",
+          "parcourt u",
+          "lineaire"
+        ]
+      },
+      {
+        "idee": "La complexité est O(n × m), soit O(n²) si les listes ont la même taille",
+        "mots": [
+          "n m",
+          "n 2",
+          "quadratique"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Rien ne « plante » : seuls des tests comparant résultats attendus et obtenus (et des affichages intermédiaires) les révèlent.",
+    "criteres": [
+      {
+        "idee": "Une erreur de logique ne provoque aucun message : le programme se termine mais le résultat est faux",
+        "mots": [
+          "aucun message",
+          "pas d erreur",
+          "plante",
+          "resultat est faux",
+          "resultat faux"
+        ]
+      },
+      {
+        "idee": "Les erreurs de syntaxe ou d'exécution, elles, se voient immédiatement",
+        "mots": [
+          "syntaxe",
+          "execution",
+          "immediatement"
+        ]
+      },
+      {
+        "idee": "On les détecte avec des jeux de tests comparant résultat attendu et obtenu, et des affichages intermédiaires",
+        "mots": [
+          "test",
+          "attendu",
+          "print",
+          "affichage"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "(A) O(kn) ; (B) O((n + k) log n) ; k = 1 → A ; k = n → B.",
+    "criteres": [
+      {
+        "idee": "(A) coûte O(k × n)",
+        "mots": [
+          "o k n",
+          "k fois n"
+        ]
+      },
+      {
+        "idee": "(B) coûte O(n log n + k log n)",
+        "mots": [
+          "n log n",
+          "k log n"
+        ]
+      },
+      {
+        "idee": "Pour k = 1, on choisit (A)",
+        "mots": [
+          "k 1",
+          "choisit a"
+        ]
+      },
+      {
+        "idee": "Pour k = n, on choisit (B)",
+        "mots": [
+          "choisit b",
+          "k n on choisit"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "`dernier([])` lève `IndexError` ; on documente/vérifie la précondition « t non vide » ou on renvoie `None`.",
+    "criteres": [
+      {
+        "idee": "dernier([]) échoue : liste vide",
+        "mots": [
+          "liste vide",
+          "dernier"
+        ]
+      },
+      {
+        "idee": "On obtient une erreur IndexError",
+        "mots": [
+          "indexerror"
+        ]
+      },
+      {
+        "idee": "1re façon : écrire la précondition « t non vide » (et la vérifier avec assert)",
+        "mots": [
+          "precondition",
+          "assert",
+          "non vide"
+        ]
+      },
+      {
+        "idee": "2e façon : traiter le cas dans la fonction, par exemple renvoyer None",
+        "mots": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Remplacer `m[n - i]` par `m[n - 1 - i]` (et boucler sur `range(n // 2)`) ; complexité O(n).",
+    "criteres": [
+      {
+        "idee": "Pour i = 0, on lit m[n], indice qui n'existe pas (le dernier est n - 1) : IndexError",
+        "mots": [
+          "m n",
+          "n existe pas",
+          "indexerror",
+          "n 1"
+        ]
+      },
+      {
+        "idee": "Il faut comparer m[i] à m[n - 1 - i]",
+        "mots": [
+          "m n 1 i",
+          "n 1 i"
+        ]
+      },
+      {
+        "idee": "On peut s'arrêter à la moitié : range(n // 2)",
+        "mots": [
+          "n 2",
+          "moitie"
+        ]
+      },
+      {
+        "idee": "La complexité est O(n)",
+        "mots": [
+          "o n",
+          "lineaire"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Version 1 : O(n²) ; version 2 : O(n), grâce au tableau trié.",
+    "criteres": [
+      {
+        "idee": "Version 1 : jusqu'à n(n - 1)/2 couples, O(n²)",
+        "mots": [
+          "n 2",
+          "quadratique",
+          "couples"
+        ]
+      },
+      {
+        "idee": "Version 2 : à chaque tour, d - g diminue de 1, donc au plus n - 1 tours : O(n)",
+        "mots": [
+          "o n",
+          "lineaire",
+          "diminue",
+          "n 1 tours"
+        ]
+      },
+      {
+        "idee": "La version 2 utilise le fait que la liste est triée",
+        "mots": [
+          "trie"
+        ]
+      }
+    ]
+  },
   "46": {
     "reponse": "Environ 1 000 s (17 min) contre 0,02 s.",
     "accepte": [
@@ -66,11 +804,70 @@
       "17 min et 0,02 s"
     ]
   },
+  "48": {
+    "reponse": "Cas limite : aucune note ⩾ 10 (ex. [8, 5]) → division par zéro ; on ajoute `if len(admis) == 0: return None`.",
+    "criteres": [
+      {
+        "idee": "Cas limite : aucune note supérieure ou égale à 10 (ex. [8, 5]) ou liste vide",
+        "mots": [
+          "aucune note",
+          "8 5",
+          "liste vide",
+          "vide"
+        ]
+      },
+      {
+        "idee": "On divise alors par len(admis) = 0 : ZeroDivisionError",
+        "mots": [
+          "zerodivisionerror",
+          "division par zero",
+          "zero"
+        ]
+      },
+      {
+        "idee": "Correction : if len(admis) == 0: return None avant la division",
+        "mots": [
+          "return none",
+          "none",
+          "len admis 0"
+        ]
+      }
+    ]
+  },
   "49": {
     "reponse": "Environ 20 pour 10^6 et environ 30 pour 10^9.",
     "accepte": [
       "20 ; 30",
       "20 et 30"
+    ]
+  },
+  "50": {
+    "reponse": "`10 45`, `20 190`, `40 780` : ×4 quand n double, donc O(n²).",
+    "criteres": [
+      {
+        "idee": "Le programme affiche 10 45, 20 190, 40 780",
+        "mots": [
+          "10 45",
+          "20 190",
+          "40 780"
+        ]
+      },
+      {
+        "idee": "Quand n double, le nombre de comparaisons est multiplié par environ 4",
+        "mots": [
+          "multipli",
+          "par 4",
+          "4 fois",
+          "double"
+        ]
+      },
+      {
+        "idee": "C'est une complexité quadratique, O(n²)",
+        "mots": [
+          "quadratique",
+          "n 2"
+        ]
+      }
     ]
   }
 }

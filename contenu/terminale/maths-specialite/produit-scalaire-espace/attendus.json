@@ -1,8 +1,120 @@
 {
+  "6": {
+    "reponse": "Si $m\\neq0$, $d$ et $\\mathcal{P}_m$ sont sécants en un point ($t=\\tfrac1m$) ; si $m=0$, $d$ est strictement parallèle à $\\mathcal{P}_0$.",
+    "criteres": [
+      {
+        "idee": "On injecte la représentation de d dans l'équation du plan : on obtient -1 + mt = 0",
+        "mots": [
+          "inject",
+          "remplac",
+          "1 m t 0",
+          "mt 1",
+          "1 mt"
+        ]
+      },
+      {
+        "idee": "Si m ≠ 0 : t = 1/m, la droite et le plan sont sécants en un point",
+        "mots": [
+          "secant",
+          "t 1 m",
+          "un seul point",
+          "un point"
+        ]
+      },
+      {
+        "idee": "Si m = 0 : -1 = 0 est impossible, la droite est strictement parallèle au plan",
+        "mots": [
+          "strictement parallele",
+          "parallele",
+          "impossible"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "Non : $\\vec{u}\\cdot\\vec{v} = 6$ pour tout $m$.",
+    "criteres": [
+      {
+        "idee": "Le produit scalaire vaut 6 - m + m = 6",
+        "mots": [
+          "6 m m",
+          "vaut 6",
+          "egal a 6"
+        ]
+      },
+      {
+        "idee": "Il vaut 6 quel que soit m : il n'est jamais nul",
+        "mots": [
+          "quel que soit",
+          "jamais nul",
+          "jamais egal a 0",
+          "pour tout m",
+          "ne depend pas"
+        ]
+      },
+      {
+        "idee": "Donc aucune valeur de m ne rend les vecteurs orthogonaux",
+        "mots": [
+          "aucun",
+          "non",
+          "n existe pas"
+        ]
+      }
+    ]
+  },
+  "22": {
+    "reponse": "$AB = AC = 3$ et $\\vec{AB}\\cdot\\vec{AC} = 0$ : rectangle isocèle en $A$.",
+    "criteres": [
+      {
+        "idee": "AB = AC = 3 : le triangle est isocèle en A",
+        "mots": [
+          "isocele",
+          "ab ac 3"
+        ]
+      },
+      {
+        "idee": "Le produit scalaire AB · AC vaut 0 : les côtés sont perpendiculaires",
+        "mots": [
+          "2 2 4 0",
+          "vaut 0",
+          "nul",
+          "perpendiculaire",
+          "orthogona"
+        ]
+      },
+      {
+        "idee": "Le triangle est donc rectangle en A",
+        "mots": [
+          "rectangle"
+        ]
+      }
+    ]
+  },
   "28": {
     "reponse": "Oui : $\\vec{n}\\cdot\\vec{u} = 0$ et $\\vec{n}\\cdot\\vec{v} = 0$.",
     "accepte": [
       "oui"
+    ]
+  },
+  "37": {
+    "reponse": "$(1,3,0)$ est un point ; un vecteur directeur est $\\vec{u}(2,\\ -1,\\ 1)$.",
+    "criteres": [
+      {
+        "idee": "(1 ; 3 ; 0) sont les coordonnées d'un point de la droite (obtenu pour t = 0)",
+        "mots": [
+          "point",
+          "t 0",
+          "constantes"
+        ]
+      },
+      {
+        "idee": "Le vecteur directeur se lit dans les coefficients de t : (2 ; -1 ; 1)",
+        "mots": [
+          "coefficient",
+          "2 1 1",
+          "devant t"
+        ]
+      }
     ]
   },
   "38": {
@@ -28,12 +140,69 @@
       "4,6,0"
     ]
   },
+  "42": {
+    "reponse": "Aucun point commun : $d$ est strictement parallèle à $\\mathcal{P}$.",
+    "criteres": [
+      {
+        "idee": "On injecte la représentation paramétrique dans l'équation du plan",
+        "mots": [
+          "inject",
+          "remplac",
+          "substitu"
+        ]
+      },
+      {
+        "idee": "On obtient 3 = 0, impossible : aucun point commun",
+        "mots": [
+          "3 0",
+          "impossible",
+          "aucun point",
+          "aucune solution"
+        ]
+      },
+      {
+        "idee": "La droite est strictement parallèle au plan",
+        "mots": [
+          "strictement parallele",
+          "parallele"
+        ]
+      }
+    ]
+  },
   "44": {
     "reponse": "$\\alpha = 1$, $\\beta = 3$, $\\gamma = 2$.",
     "accepte": [
       "1 ; 3 ; 2",
       "(1 ; 3 ; 2)",
       "(1;3;2)"
+    ]
+  },
+  "50": {
+    "reponse": "Non : $\\vec{w} = \\vec{u} + \\vec{v}$, les vecteurs sont coplanaires.",
+    "criteres": [
+      {
+        "idee": "On remarque que w = u + v",
+        "mots": [
+          "vec u vec v",
+          "w u v",
+          "u v w",
+          "1 3 3"
+        ]
+      },
+      {
+        "idee": "Les trois vecteurs sont coplanaires",
+        "mots": [
+          "coplanaire"
+        ]
+      },
+      {
+        "idee": "Ils ne forment donc pas une base",
+        "mots": [
+          "pas une base",
+          "non",
+          "ne forment pas"
+        ]
+      }
     ]
   }
 }

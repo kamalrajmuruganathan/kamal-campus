@@ -17,6 +17,70 @@
       "0,393"
     ]
   },
+  "17": {
+    "reponse": "$X\\sim B(10\\,;0{,}25)$.",
+    "criteres": [
+      {
+        "idee": "Chaque question est une épreuve à deux issues (bonne réponse ou non), de succès 1/4",
+        "mots": [
+          "deux issues",
+          "bernoulli",
+          "succes",
+          "1 4",
+          "0 25"
+        ]
+      },
+      {
+        "idee": "Les réponses au hasard sont indépendantes et p est le même à chaque question",
+        "mots": [
+          "independ",
+          "meme probabilite",
+          "identique"
+        ]
+      },
+      {
+        "idee": "X compte les succès : X suit B(10 ; 0,25)",
+        "mots": [
+          "b 10",
+          "binomiale",
+          "10 0 25",
+          "n 10"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "Non : tirage sans remise, donc épreuves dépendantes.",
+    "criteres": [
+      {
+        "idee": "Non, la loi binomiale ne s'applique pas",
+        "mots": [
+          "non",
+          "pas binomiale",
+          "ne s applique pas"
+        ]
+      },
+      {
+        "idee": "Sans remise, la probabilité de tirer un as change d'un tirage à l'autre",
+        "mots": [
+          "sans remise",
+          "change",
+          "4 32",
+          "3 31",
+          "plus la meme"
+        ]
+      },
+      {
+        "idee": "Les épreuves ne sont pas indépendantes : ce n'est pas un schéma de Bernoulli",
+        "mots": [
+          "independ",
+          "dependant",
+          "dependent",
+          "pas un schema"
+        ]
+      }
+    ]
+  },
   "20": {
     "reponse": "$\\dfrac{5}{16}=0{,}3125$.",
     "accepte": [
@@ -29,11 +93,69 @@
       "5 bonnes réponses"
     ]
   },
+  "27": {
+    "reponse": "$\\dfrac{3}{10}$ sans remise, contre $\\dfrac{9}{25}$ avec remise.",
+    "criteres": [
+      {
+        "idee": "Sans remise : 3/5 × 2/4 = 3/10",
+        "mots": [
+          "3 10",
+          "0 3",
+          "2 4"
+        ]
+      },
+      {
+        "idee": "Avec remise : 3/5 × 3/5 = 9/25",
+        "mots": [
+          "9 25",
+          "0 36"
+        ]
+      },
+      {
+        "idee": "Les résultats diffèrent car, sans remise, la seconde épreuve dépend de la première",
+        "mots": [
+          "depend",
+          "independ",
+          "differ"
+        ]
+      }
+    ]
+  },
   "28": {
     "reponse": "b) et c).",
     "ensemble": [
       "b",
       "c"
+    ]
+  },
+  "32": {
+    "reponse": "Il a oublié $\\dbinom{4}{1}=4$ : $P(X=1)=0{,}4116$.",
+    "criteres": [
+      {
+        "idee": "L'élève n'a calculé la probabilité que d'un seul chemin",
+        "mots": [
+          "un seul chemin",
+          "seul chemin",
+          "chemin"
+        ]
+      },
+      {
+        "idee": "Il a oublié le coefficient binomial « 1 parmi 4 » = 4 (4 chemins avec un succès)",
+        "mots": [
+          "coefficient",
+          "binomial",
+          "parmi",
+          "4 chemins",
+          "oubli"
+        ]
+      },
+      {
+        "idee": "P(X = 1) = 4 × 0,1029 = 0,4116",
+        "mots": [
+          "0 4116",
+          "4116"
+        ]
+      }
     ]
   },
   "35": {
@@ -47,6 +169,35 @@
     "accepte": [
       "11/1 024",
       "0,011"
+    ]
+  },
+  "39": {
+    "reponse": "$P(3\\leqslant X\\leqslant 6)=P(X\\leqslant 6)-P(X\\leqslant 2)$.",
+    "criteres": [
+      {
+        "idee": "P(X ≤ 6) - P(X ≤ 3) ne garde que les valeurs 4, 5 et 6",
+        "mots": [
+          "4 5 et 6",
+          "4 5 6"
+        ]
+      },
+      {
+        "idee": "La valeur X = 3 a été retirée par erreur",
+        "mots": [
+          "x 3",
+          "retir",
+          "enlev",
+          "oubli"
+        ]
+      },
+      {
+        "idee": "Il faut écrire P(X ≤ 6) - P(X ≤ 2)",
+        "mots": [
+          "p x 2",
+          "x leqslant 2",
+          "inferieur ou egal a 2"
+        ]
+      }
     ]
   },
   "44": {
