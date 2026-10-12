@@ -380,3 +380,9 @@ test('comparer deux nombres : « < » ou « > » seul est une réponse vérifiab
   assert.equal(comparerExercice('<', ex, 'maths'), true);
   assert.equal(comparerExercice('>', ex, 'maths'), false);
 });
+
+test('criteres : indices chimiques (« CO₂ » = « CO2 ») et « µm » trouvé par « micro »', () => {
+  const crit = [{ idee: 'Rejet de dioxyde de carbone', mots: ['co2'] }, { idee: 'Taille de l’ordre du micromètre', mots: ['micro'] }];
+  assert.deepEqual(detecterCriteres('Elle rejette du CO₂ ; taille 10 µm', crit), [true, true]);
+  assert.deepEqual(detecterCriteres('Elle rejette du CO', crit), [false, false]);
+});
