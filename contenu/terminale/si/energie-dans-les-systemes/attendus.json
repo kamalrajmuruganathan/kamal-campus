@@ -101,6 +101,58 @@
       "alimenter, distribuer, convertir et transmettre"
     ]
   },
+  "14": {
+    "reponse": "Batterie : chimique ; ressort : mécanique élastique ; volant d'inertie : mécanique cinétique.",
+    "criteres": [
+      {
+        "idee": "Batterie : énergie chimique",
+        "mots": [
+          "chimique"
+        ]
+      },
+      {
+        "idee": "Ressort : énergie mécanique élastique",
+        "mots": [
+          "elastique",
+          "potentielle"
+        ]
+      },
+      {
+        "idee": "Volant d'inertie : énergie mécanique cinétique (de rotation)",
+        "mots": [
+          "cinetique",
+          "rotation"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "Électrique → mécanique ; le réducteur assure la fonction « transmettre ».",
+    "criteres": [
+      {
+        "idee": "Le moteur reçoit de l'énergie électrique",
+        "mots": [
+          "electrique"
+        ]
+      },
+      {
+        "idee": "Il fournit de l'énergie mécanique de rotation : il convertit",
+        "mots": [
+          "mecanique",
+          "convertit",
+          "conversion"
+        ]
+      },
+      {
+        "idee": "Le réducteur assure la fonction « transmettre » (adapte vitesse et couple)",
+        "mots": [
+          "transmet",
+          "adapte",
+          "couple"
+        ]
+      }
+    ]
+  },
   "24": {
     "reponse": "η = 0,85 ; 300 W de pertes.",
     "accepte": [
@@ -110,6 +162,36 @@
       "85 % et 300 W"
     ]
   },
+  "25": {
+    "reponse": "Impossible : un rendement est toujours inférieur à 100 %.",
+    "criteres": [
+      {
+        "idee": "C'est impossible : un rendement est toujours inférieur à 100 %",
+        "mots": [
+          "impossible",
+          "inferieur",
+          "faux",
+          "ne peut pas"
+        ]
+      },
+      {
+        "idee": "On ne crée pas d'énergie",
+        "mots": [
+          "cree pas",
+          "creer de l energie",
+          "conservation"
+        ]
+      },
+      {
+        "idee": "Il y a toujours des pertes (chaleur, frottements)",
+        "mots": [
+          "perte",
+          "chaleur",
+          "frottement"
+        ]
+      }
+    ]
+  },
   "28": {
     "reponse": "504 Wh ; environ 50 km.",
     "accepte": [
@@ -117,6 +199,35 @@
       "504 Wh et 50 km",
       "504 Wh ; 50,4 km",
       "504 Wh et 50,4 km"
+    ]
+  },
+  "29": {
+    "reponse": "Un condensateur, car il restitue son énergie très rapidement.",
+    "criteres": [
+      {
+        "idee": "On choisit un condensateur",
+        "mots": [
+          "condensateur car",
+          "le condensateur",
+          "condensateur parce",
+          "c est un condensateur"
+        ]
+      },
+      {
+        "idee": "Il restitue son énergie très rapidement",
+        "mots": [
+          "rapide",
+          "vite"
+        ]
+      },
+      {
+        "idee": "Une batterie stocke plus d'énergie mais la restitue plus lentement",
+        "mots": [
+          "lentement",
+          "plus lent",
+          "beaucoup plus d energie"
+        ]
+      }
     ]
   },
   "31": {
@@ -134,6 +245,28 @@
       "4 500 J ; thermique",
       "4 500 J, énergie thermique",
       "4 500 J, dissipés en chaleur"
+    ]
+  },
+  "38": {
+    "reponse": "Il faut multiplier (0,72) ; et un rendement ne peut pas dépasser 1.",
+    "criteres": [
+      {
+        "idee": "Les rendements en série se multiplient : 0,9 × 0,8 = 0,72",
+        "mots": [
+          "multipli",
+          "produit",
+          "0 72"
+        ]
+      },
+      {
+        "idee": "Un rendement supérieur à 1 est impossible",
+        "mots": [
+          "superieur a 1",
+          "impossible",
+          "depasser 1",
+          "plus de 100"
+        ]
+      }
     ]
   },
   "40": {
@@ -198,6 +331,42 @@
     "reponse": "Non : 1 500 Wh produits pour 1 200 Wh de stockage.",
     "accepte": [
       "non"
+    ]
+  },
+  "50": {
+    "reponse": "4,5 MJ, soit 1,25 kWh ; la récupérer évite de la perdre en chaleur à chaque arrêt.",
+    "criteres": [
+      {
+        "idee": "54 km/h = 15 m/s",
+        "mots": [
+          "15 m s",
+          "15 m"
+        ]
+      },
+      {
+        "idee": "Énergie cinétique : 4,5 MJ soit 4 500 000 J",
+        "mots": [
+          "4 5 mj",
+          "4 500 000",
+          "4500000",
+          "4 5 10"
+        ]
+      },
+      {
+        "idee": "Soit 1,25 kWh",
+        "mots": [
+          "1 25"
+        ]
+      },
+      {
+        "idee": "Sans récupération, cette énergie part en chaleur dans les freins : la récupérer réduit la consommation",
+        "mots": [
+          "chaleur",
+          "consommation",
+          "perdue",
+          "perte"
+        ]
+      }
     ]
   }
 }

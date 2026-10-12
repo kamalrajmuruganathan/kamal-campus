@@ -87,6 +87,59 @@
       "1 000 000 Pa ; 1 N/mm²"
     ]
   },
+  "14": {
+    "reponse": "La pièce se déforme de façon permanente (déformation plastique), puis peut se rompre.",
+    "criteres": [
+      {
+        "idee": "En dessous de Re, la pièce reprend sa forme initiale (domaine élastique)",
+        "mots": [
+          "forme initiale",
+          "revient",
+          "reprend"
+        ]
+      },
+      {
+        "idee": "Au-delà, elle se déforme de façon permanente (déformation plastique)",
+        "mots": [
+          "permanente",
+          "plastique",
+          "definitive",
+          "irreversible"
+        ]
+      },
+      {
+        "idee": "Elle peut ensuite se rompre",
+        "mots": [
+          "romp",
+          "rupture",
+          "casse"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "reponse": "Aucune : ε est sans unité.",
+    "criteres": [
+      {
+        "idee": "ε est sans unité",
+        "mots": [
+          "sans unite",
+          "aucune",
+          "pas d unite",
+          "adimension"
+        ]
+      },
+      {
+        "idee": "C'est le quotient de deux longueurs dans la même unité : les unités se simplifient",
+        "mots": [
+          "quotient",
+          "deux longueurs",
+          "rapport",
+          "simplifi"
+        ]
+      }
+    ]
+  },
   "17": {
     "reponse": "20 000 000 Pa, soit 20 MPa.",
     "accepte": [
@@ -117,6 +170,32 @@
     "reponse": "ε = 0,0006",
     "accepte": [
       "0,0006"
+    ]
+  },
+  "24": {
+    "reponse": "La loi de Hooke ne s'applique que dans le domaine élastique.",
+    "criteres": [
+      {
+        "idee": "La loi de Hooke n'est valable que dans le domaine élastique",
+        "mots": [
+          "domaine elastique"
+        ]
+      },
+      {
+        "idee": "Au-delà de Re, la déformation devient plastique",
+        "mots": [
+          "plastique",
+          "permanente"
+        ]
+      },
+      {
+        "idee": "La contrainte n'est plus proportionnelle à la déformation",
+        "mots": [
+          "proportionn",
+          "plus lineaire",
+          "non lineaire"
+        ]
+      }
     ]
   },
   "27": {
@@ -158,6 +237,35 @@
       "non",
       "non, 156,7 MPa",
       "non, la pièce est refusée"
+    ]
+  },
+  "32": {
+    "reponse": "Le coefficient fixe la contrainte admissible ; il faut toujours vérifier la contrainte réelle par le calcul.",
+    "criteres": [
+      {
+        "idee": "Le coefficient de sécurité sert à fixer la contrainte admissible (Re / 3)",
+        "mots": [
+          "contrainte admissible",
+          "admissible",
+          "re 3",
+          "divise"
+        ]
+      },
+      {
+        "idee": "Il faut calculer la contrainte réelle",
+        "mots": [
+          "contrainte reelle"
+        ]
+      },
+      {
+        "idee": "Et vérifier qu'elle reste inférieure à la contrainte admissible",
+        "mots": [
+          "inferieure",
+          "verifier",
+          "reste sous",
+          "ne depasse pas"
+        ]
+      }
     ]
   },
   "33": {
@@ -268,6 +376,40 @@
       "100 000 ; 317",
       "100 000 et 317",
       "100 000 mm2 ; 317 mm"
+    ]
+  },
+  "50": {
+    "reponse": "L'acier inoxydable, pour sa tenue à la corrosion en milieu salin.",
+    "criteres": [
+      {
+        "idee": "La résistance mécanique n'est pas le seul critère : la tenue à la corrosion compte",
+        "mots": [
+          "corrosion",
+          "rouille",
+          "oxyd"
+        ]
+      },
+      {
+        "idee": "En bord de mer, l'air salin fait rouiller l'acier non protégé, sa résistance diminue",
+        "mots": [
+          "sel",
+          "salin",
+          "sale",
+          "rouill"
+        ]
+      },
+      {
+        "idee": "On choisit l'acier inoxydable, plus cher mais durable",
+        "mots": [
+          "choisit l acier inox",
+          "choisir l acier inox",
+          "acier inoxydable pour",
+          "l inox",
+          "inox car",
+          "inoxydable car",
+          "prendre l acier inox"
+        ]
+      }
     ]
   }
 }

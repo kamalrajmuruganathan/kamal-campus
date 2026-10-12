@@ -29,10 +29,526 @@
       "50 %"
     ]
   },
+  "8": {
+    "reponse": "Produit humide ou impur, ou erreur sur le réactif limitant",
+    "criteres": [
+      {
+        "idee": "Un rendement ne peut pas dépasser 100 %",
+        "mots": [
+          "depasser",
+          "superieur a 100",
+          "impossible",
+          "100"
+        ]
+      },
+      {
+        "idee": "Le produit est peut-être encore humide (pesé avec du solvant)",
+        "mots": [
+          "humide",
+          "solvant",
+          "eau",
+          "sec"
+        ]
+      },
+      {
+        "idee": "Le produit est peut-être impur",
+        "mots": [
+          "impur",
+          "impurete"
+        ]
+      },
+      {
+        "idee": "Ou le réactif limitant a été mal identifié (erreur de calcul)",
+        "mots": [
+          "reactif limitant",
+          "limitant",
+          "erreur de calcul"
+        ]
+      }
+    ]
+  },
   "9": {
     "reponse": "$\\eta = 80\\ \\%$",
     "accepte": [
       "80 %"
+    ]
+  },
+  "10": {
+    "reponse": "L'excès d'un réactif déplace l'équilibre",
+    "criteres": [
+      {
+        "idee": "La réaction est limitée (équilibre)",
+        "mots": [
+          "limitee",
+          "non totale",
+          "pas totale"
+        ]
+      },
+      {
+        "idee": "Un réactif en excès déplace l'équilibre vers la formation du produit",
+        "mots": [
+          "deplace",
+          "sens de la formation",
+          "sens direct"
+        ]
+      },
+      {
+        "idee": "Le réactif limitant (l'acide) est davantage consommé",
+        "mots": [
+          "davantage consomm",
+          "plus consomm",
+          "limitant"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "reponse": "Excès d'un réactif ; élimination d'un produit",
+    "criteres": [
+      {
+        "idee": "Introduire un réactif en excès",
+        "mots": [
+          "exces"
+        ]
+      },
+      {
+        "idee": "Éliminer un produit au fur et à mesure de sa formation (distillation…)",
+        "mots": [
+          "elimin",
+          "retirer",
+          "extraire",
+          "distill",
+          "fur et a mesure"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "Température, concentration, catalyseur",
+    "criteres": [
+      {
+        "idee": "Augmenter la température",
+        "mots": [
+          "temperature",
+          "chauff"
+        ]
+      },
+      {
+        "idee": "Augmenter la concentration des réactifs",
+        "mots": [
+          "concentration"
+        ]
+      },
+      {
+        "idee": "Ajouter un catalyseur",
+        "mots": [
+          "catalys"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "Vitesse et rendement varient en sens opposés",
+    "criteres": [
+      {
+        "idee": "Augmenter la température accélère toujours la réaction",
+        "mots": [
+          "accelere",
+          "plus rapide",
+          "vitesse"
+        ]
+      },
+      {
+        "idee": "Mais une température trop élevée peut abaisser le rendement",
+        "mots": [
+          "rendement"
+        ]
+      },
+      {
+        "idee": "On choisit une température qui concilie vitesse et rendement",
+        "mots": [
+          "concili",
+          "equilibre entre",
+          "intermediaire"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "Liaison multiple qui disparaît (addition) ou qui apparaît (élimination)",
+    "criteres": [
+      {
+        "idee": "Addition : une liaison multiple disparaît (elle s'ouvre)",
+        "mots": [
+          "disparait",
+          "s ouvre",
+          "ouvert",
+          "rompt"
+        ]
+      },
+      {
+        "idee": "Élimination : une liaison multiple apparaît",
+        "mots": [
+          "apparait",
+          "se forme",
+          "cree"
+        ]
+      }
+    ]
+  },
+  "30": {
+    "reponse": "Le carbone ($\\delta^+$)",
+    "criteres": [
+      {
+        "idee": "C'est le carbone qui est le site accepteur",
+        "mots": [
+          "carbone"
+        ]
+      },
+      {
+        "idee": "Le chlore est plus électronégatif que le carbone : la liaison est polarisée",
+        "mots": [
+          "electronegati",
+          "polaris"
+        ]
+      },
+      {
+        "idee": "Le carbone porte une charge partielle positive δ+",
+        "mots": [
+          "positi",
+          "delta",
+          "charge partielle"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "Charge négative et doublets non liants",
+    "criteres": [
+      {
+        "idee": "L'oxygène porte une charge négative",
+        "mots": [
+          "charge negative",
+          "negati"
+        ]
+      },
+      {
+        "idee": "Il possède des doublets non liants qu'il peut céder",
+        "mots": [
+          "non liant",
+          "doublet libre",
+          "ceder"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "Les doublets non liants de l'oxygène",
+    "criteres": [
+      {
+        "idee": "Ce sont les doublets non liants",
+        "mots": [
+          "non liant",
+          "doublets libres"
+        ]
+      },
+      {
+        "idee": "Ils sont portés par l'atome d'oxygène (deux doublets)",
+        "mots": [
+          "oxygene",
+          "deux doublets",
+          "2 doublets"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Le doublet est attiré par l'atome le plus électronégatif",
+    "criteres": [
+      {
+        "idee": "L'atome le plus électronégatif attire davantage le doublet de liaison",
+        "mots": [
+          "attire",
+          "plus electronegatif"
+        ]
+      },
+      {
+        "idee": "Il porte une charge partielle négative δ−, l'autre δ+",
+        "mots": [
+          "delta",
+          "charge partielle",
+          "negati",
+          "positi"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Le déplacement d'un doublet d'électrons",
+    "criteres": [
+      {
+        "idee": "Elle représente le déplacement d'un doublet d'électrons",
+        "mots": [
+          "doublet",
+          "electron",
+          "deplacement"
+        ]
+      },
+      {
+        "idee": "Jamais le déplacement d'un atome",
+        "mots": [
+          "jamais",
+          "pas un atome",
+          "pas d atome",
+          "pas d un atome"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Du site donneur vers le site accepteur",
+    "criteres": [
+      {
+        "idee": "Elle part d'un site donneur (doublet non liant ou liaison)",
+        "mots": [
+          "donneur",
+          "riche en electrons"
+        ]
+      },
+      {
+        "idee": "Elle pointe vers un site accepteur, là où se forme la nouvelle liaison",
+        "mots": [
+          "accepteur",
+          "pauvre en electrons",
+          "nouvelle liaison"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Du doublet de $\\mathrm{HO^-}$ vers le carbone $\\delta^+$",
+    "criteres": [
+      {
+        "idee": "Elle part d'un doublet non liant de l'oxygène de HO⁻",
+        "mots": [
+          "doublet",
+          "non liant",
+          "oxygene"
+        ]
+      },
+      {
+        "idee": "Elle pointe vers le carbone δ+ lié au chlore",
+        "mots": [
+          "carbone",
+          "delta"
+        ]
+      },
+      {
+        "idee": "Elle traduit la formation de la liaison C–O",
+        "mots": [
+          "formation",
+          "liaison c o",
+          "nouvelle liaison"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "La rupture de C–Cl, le doublet partant avec le chlore",
+    "criteres": [
+      {
+        "idee": "Elle part de la liaison C–Cl : rupture de cette liaison",
+        "mots": [
+          "rupture",
+          "rompt",
+          "liaison c cl",
+          "casse"
+        ]
+      },
+      {
+        "idee": "Elle pointe vers le chlore, qui garde le doublet",
+        "mots": [
+          "chlore",
+          "doublet"
+        ]
+      },
+      {
+        "idee": "Le chlore part sous forme d'ion chlorure Cl⁻",
+        "mots": [
+          "chlorure",
+          "ion cl",
+          "anion",
+          "sous forme"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "La flèche doit aller du donneur vers l'accepteur",
+    "criteres": [
+      {
+        "idee": "Une flèche part toujours d'un site donneur (riche en électrons)",
+        "mots": [
+          "donneur",
+          "riche"
+        ]
+      },
+      {
+        "idee": "Elle va vers un site accepteur (pauvre en électrons)",
+        "mots": [
+          "accepteur",
+          "pauvre"
+        ]
+      },
+      {
+        "idee": "Le carbone δ+ est accepteur : la flèche doit arriver sur lui, pas en partir",
+        "mots": [
+          "arriver",
+          "sens inverse",
+          "inverse",
+          "pas en partir"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Vers l'atome qui garde le doublet",
+    "criteres": [
+      {
+        "idee": "Vers l'atome qui garde le doublet",
+        "mots": [
+          "garde",
+          "recupere",
+          "emporte"
+        ]
+      },
+      {
+        "idee": "En général l'atome le plus électronégatif",
+        "mots": [
+          "electronegati"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Pour rendre la transformation sélective",
+    "criteres": [
+      {
+        "idee": "La molécule porte deux groupes réactifs et on ne veut en faire réagir qu'un seul",
+        "mots": [
+          "deux groupes",
+          "un seul",
+          "plusieurs groupes",
+          "seul groupe"
+        ]
+      },
+      {
+        "idee": "On rend temporairement l'autre groupe inerte",
+        "mots": [
+          "inerte",
+          "temporaire",
+          "bloque",
+          "empeche"
+        ]
+      },
+      {
+        "idee": "On obtient sélectivement le produit voulu",
+        "mots": [
+          "selecti",
+          "produit voulu",
+          "bon produit"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Protection, transformation, déprotection",
+    "criteres": [
+      {
+        "idee": "Protéger le groupe à préserver",
+        "mots": [
+          "proteg",
+          "bloquer le groupe"
+        ]
+      },
+      {
+        "idee": "Réaliser la transformation sur l'autre groupe",
+        "mots": [
+          "transformation",
+          "reaction",
+          "realiser"
+        ]
+      },
+      {
+        "idee": "Déprotéger pour régénérer le groupe initial",
+        "mots": [
+          "deproteg",
+          "deprotection",
+          "regener"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Pour former sélectivement la bonne liaison peptidique",
+    "criteres": [
+      {
+        "idee": "Pour qu'une seule liaison peptidique se forme",
+        "mots": [
+          "une seule",
+          "seule liaison",
+          "selecti",
+          "bonne liaison"
+        ]
+      },
+      {
+        "idee": "Entre le groupe acide du premier et le groupe amine du second",
+        "mots": [
+          "acide du premier",
+          "amine du second",
+          "entre le groupe"
+        ]
+      },
+      {
+        "idee": "Sans protection, on obtiendrait un mélange de dipeptides",
+        "mots": [
+          "melange",
+          "n importe comment",
+          "plusieurs dipeptides",
+          "dipeptides"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Elle diminue le rendement global",
+    "criteres": [
+      {
+        "idee": "Elle ajoute deux étapes (protection et déprotection)",
+        "mots": [
+          "deux etapes",
+          "2 etapes",
+          "etapes supplementaires",
+          "etape"
+        ]
+      },
+      {
+        "idee": "Chaque étape a un rendement inférieur à 100 %",
+        "mots": [
+          "inferieur a 100",
+          "rendement de chaque",
+          "chaque etape",
+          "100"
+        ]
+      },
+      {
+        "idee": "Le rendement global diminue",
+        "mots": [
+          "rendement global",
+          "diminu",
+          "baisse"
+        ]
+      }
     ]
   }
 }
