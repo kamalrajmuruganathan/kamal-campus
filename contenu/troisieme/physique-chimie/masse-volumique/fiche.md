@@ -27,8 +27,8 @@ relu_par: null
 ## 1. Qu'est-ce que la masse volumique ?
 
 La **masse volumique** d'un matériau, notée $\rho$ (la lettre grecque « rhô »), est la
-**masse d'un volume donné** de ce matériau. Elle dit combien pèse chaque unité de
-volume : $1\ \text{cm}^3$ de fer ne pèse pas comme $1\ \text{cm}^3$ de bois.
+**masse d'un volume donné** de ce matériau. Elle indique la masse de chaque unité de
+volume : $1\ \text{cm}^3$ de fer n'a pas la même masse que $1\ \text{cm}^3$ de bois.
 
 $$\boxed{\rho = \dfrac{m}{V}}$$
 
@@ -37,7 +37,7 @@ où $m$ est la **masse** de l'échantillon et $V$ son **volume**.
 > **Exemple.** Un cube de fer de volume $V = 10\ \text{cm}^3$ a une masse
 > $m = 79\ \text{g}$. Sa masse volumique vaut
 > $\rho = \dfrac{79}{10} = 7{,}9\ \text{g/cm}^3$. Autrement dit, chaque centimètre cube
-> de fer pèse $7{,}9$ g.
+> de fer a une masse de $7{,}9$ g.
 
 Point clé : la masse volumique **ne dépend pas de la taille de l'échantillon**. Un clou
 en fer et une poutre en fer ont la même masse volumique. C'est une **propriété du
@@ -81,7 +81,7 @@ Pour calculer $\rho$, il faut d'abord **mesurer** $m$ et $V$.
 
 On mesure la masse avec une **balance électronique**, en gramme (g) ou kilogramme (kg).
 Pense à **faire la tare** (remettre à zéro) avec le récipient vide avant d'y verser le
-liquide : sinon tu pèses aussi le récipient.
+liquide : sinon tu mesures aussi la masse du récipient.
 
 ### Le volume d'un liquide
 

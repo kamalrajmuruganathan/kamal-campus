@@ -200,7 +200,7 @@ avertissent du danger **avant** toute manipulation.
 - Porter **blouse, lunettes et gants** ; travailler dans un local **aéré**.
 - **Ne jamais mélanger** au hasard : eau de Javel + détartrant (acide) dégage un gaz toxique.
 - Pour diluer un acide concentré, verser **l'acide dans l'eau**, jamais l'inverse
-  (« l'acide dans l'eau, sinon les emmerdes » : l'inverse projette des gouttes brûlantes).
+  (« on ne donne jamais à boire à un acide » : verser l'eau dans l'acide projette des gouttes brûlantes).
 - En cas de projection : **rincer abondamment à l'eau** et prévenir.
 
 ---

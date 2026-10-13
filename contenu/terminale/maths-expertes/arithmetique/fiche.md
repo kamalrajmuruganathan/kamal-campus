@@ -113,8 +113,8 @@ $$\boxed{\,a^{k} \equiv b^{k} \ [n]\,}$$
 > et $2024 = 4 \times 506$, donc $2^{2024} = (2^4)^{506} \equiv 1^{506} = 1 \ [5]$.
 > **Le reste est $1$.** On a remplacé un nombre gigantesque par un calcul de tête.
 
-> ⚠️ **Interdiction de « diviser » une congruence.** De $6 \equiv 0 \ [6]$ et
-> $ac \equiv bc \ [n]$ on **ne peut pas** en général déduire $a \equiv b \ [n]$.
+> ⚠️ **Interdiction de « diviser » une congruence.** De
+> $ac \equiv bc \ [n]$, on **ne peut pas** en général déduire $a \equiv b \ [n]$.
 > Exemple : $2\times 3 \equiv 2\times 0 \ [6]$ mais $3 \not\equiv 0 \ [6]$. La simplification
 > par $c$ n'est licite que si $c$ et $n$ sont premiers entre eux (voir §5).
 

@@ -105,14 +105,9 @@ tourner un moteur : il **donne l'ordre**, et c'est la chaîne d'énergie qui **e
 *Schéma en blocs de la chaîne d'information : chaque bloc porte une fonction (un verbe) et, en dessous, le composant qui la réalise.*
 <!-- /schema -->
 
-On la représente par un **schéma en blocs** (aussi appelé chaîne fonctionnelle) :
-
-```
-   Information       ┌───────────┐   ┌───────────┐   ┌──────────────┐   Information
-   d'entrée   ─────► │ ACQUÉRIR  │──►│  TRAITER  │──►│  COMMUNIQUER │ ─────► sortie
-   (grandeur)        │ (capteur) │   │ (µcontrôl.)│   │ (écran, DEL) │      (message,
-                     └───────────┘   └───────────┘   └──────────────┘       ordre)
-```
+On la représente par un **schéma en blocs** (aussi appelé chaîne fonctionnelle), comme
+ci-dessus : l'information d'entrée passe par ACQUÉRIR (capteur), TRAITER (microcontrôleur)
+puis COMMUNIQUER (écran, DEL).
 
 Chaque bloc porte le **nom de la fonction** (verbe à l'infinitif) et, en dessous, le
 **composant** qui la réalise.

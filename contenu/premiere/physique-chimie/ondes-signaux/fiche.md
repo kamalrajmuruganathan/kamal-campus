@@ -192,8 +192,6 @@ complémentaire** de celle qu'elle absorbe. Le spectre d'absorption permet de l'
 | Relation fondamentale | $\lambda = vT = \dfrac{v}{f}$ |
 | Changement de milieu | $f$ **inchangée**, $v$ et $\lambda$ changent |
 | Son | onde **longitudinale**, $\approx 340$ m·s⁻¹ |
-| Lunette afocale | $\mathrm{F}'_1 = \mathrm{F}_2$ |
-| Grossissement | $G = \dfrac{f'_1}{f'_2}$ |
 
 ---
 

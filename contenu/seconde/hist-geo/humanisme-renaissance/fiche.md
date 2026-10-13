@@ -60,7 +60,7 @@ carte du monde connue.
 
 En astronomie, **Copernic** propose au XVIe siècle l'**héliocentrisme** : la **Terre tourne
 autour du Soleil**, et non l'inverse. Au début du XVIIe siècle, **Galilée**, grâce à la
-**lunette astronomique**, confirme par l'observation cette théorie. C'est une rupture avec la
+**lunette astronomique**, appuie par l'observation cette théorie. C'est une rupture avec la
 vision ancienne où la Terre était au centre (géocentrisme).
 
 ## À retenir

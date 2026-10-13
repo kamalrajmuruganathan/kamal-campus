@@ -100,7 +100,7 @@ C'est la loi de la **balance Roberval**, de la **balançoire** et du
 équilibre une grande force sur un petit bras.
 
 Exemple : sur une balançoire, un enfant de poids **300 N** assis à **1,2 m** de
-l'axe équilibre un adulte à **d₂** si **600 × d₂ = 300 × 1,2**, soit
+l'axe équilibre un adulte de poids **600 N** assis à **d₂** si **600 × d₂ = 300 × 1,2**, soit
 **d₂ = 360 / 600 = 0,6 m**.
 
 ---

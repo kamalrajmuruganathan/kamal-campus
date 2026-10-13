@@ -37,7 +37,7 @@ l'Autriche-Hongrie, déclenche l'engrenage des déclarations de guerre.
 | 28 juin 1914 | Attentat de Sarajevo |
 | Août 1914 | Entrée en guerre, guerre de mouvement |
 | Sept. 1914 | Bataille de la Marne |
-| 1915-1916 | Guerre de position (tranchées) |
+| Fin 1914-1918 | Guerre de position (tranchées), jusqu'au printemps 1918 |
 | 1916 | Bataille de Verdun ; bataille de la Somme |
 | 1917 | Révolution russe ; entrée en guerre des États-Unis |
 | 11 nov. 1918 | Armistice |

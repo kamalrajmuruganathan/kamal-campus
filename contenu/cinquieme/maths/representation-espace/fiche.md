@@ -143,10 +143,11 @@ deux $5 \times 2$, deux $3 \times 2$.
 
 **Cube** — $6$ carrés identiques, mais tous les assemblages de $6$ carrés ne conviennent pas.
 
-> ⚠️ **Le test de la ceinture.** Quatre carrés alignés forment la ceinture du cube : il faut
-> alors exactement **un carré au-dessus** et **un carré en dessous** de cette ligne, et **pas
-> à la même place**. Un bloc de $2 \times 2$ carrés n'est jamais un patron de cube — deux
-> faces se superposeraient.
+> ⚠️ **Le test de la ceinture.** Quand quatre carrés sont alignés (la ceinture du cube), il
+> faut exactement **un carré au-dessus** et **un carré en dessous** de cette ligne, à n'importe
+> quelle place (la croix est un patron). Deux carrés du **même côté** se superposeraient.
+> Certains patrons du cube n'ont pas quatre carrés alignés (il y a $11$ patrons en tout). Un bloc
+> de $2 \times 2$ carrés n'est jamais un patron de cube — deux faces se superposeraient.
 
 **Prisme droit** — les **deux bases** $+$ une **bande de rectangles**, un par côté de la base.
 La bande a pour hauteur la hauteur du prisme.

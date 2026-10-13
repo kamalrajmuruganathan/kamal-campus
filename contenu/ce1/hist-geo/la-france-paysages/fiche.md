@@ -41,8 +41,8 @@ En France, il existe plusieurs sortes de paysages :
 
 ## 3. La mer autour de la France
 La France est bordée par de l'eau sur plusieurs côtés :
-- l'**océan Atlantique** à l'**Ouest**,
-- la **mer Méditerranée** au **Sud**.
+- l'**océan Atlantique** à l'**ouest**,
+- la **mer Méditerranée** au **sud**.
 
 ## 4. La ville et la campagne
 - En **ville**, il y a beaucoup de monde, des immeubles, des magasins et des voitures.
@@ -56,5 +56,5 @@ La France est bordée par de l'eau sur plusieurs côtés :
 ## À retenir
 - La **France** est un pays d'**Europe** ; sa capitale est **Paris**.
 - Il existe différents **paysages** : la montagne, la mer, la ville, la campagne.
-- L'**océan Atlantique** borde la France à l'Ouest, la **mer Méditerranée** au Sud.
+- L'**océan Atlantique** borde la France à l'ouest, la **mer Méditerranée** au sud.
 - En ville, beaucoup d'immeubles ; à la campagne, des champs et des fermes.

@@ -57,16 +57,6 @@ relu_par: null
 Deux droites sécantes forment quatre angles. Ceux qui se font face sont **opposés par
 le sommet**, et ils sont **égaux**.
 
-```
-        \   1  /
-         \    /
-      4   \  /   2
-    -------\/-------
-           /\
-      3   /  \   4'
-         /    \
-```
-
 > Les angles $1$ et $3$ sont opposés par le sommet, donc égaux. Idem pour $2$ et $4$.
 
 ---

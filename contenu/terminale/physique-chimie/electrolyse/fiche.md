@@ -76,8 +76,9 @@ $$\boxed{\text{Anode} : \text{oxydation} \qquad\qquad \text{Cathode} : \text{ré
 - À la **cathode**, une espèce **capte** des électrons : c'est une **réduction**. Les
   électrons arrivent du générateur par le fil.
 
-Un moyen mnémotechnique : **anode / oxydation** commencent par une voyelle,
-**cathode / réduction**... non, retiens plutôt « **red-cat** » (RÉDuction à la CAThode).
+Un moyen mnémotechnique : **anode** et **oxydation** commencent toutes deux par une
+voyelle, **cathode** et **réduction** par une consonne. Ou encore « **red-cat** » :
+RÉDuction à la CAThode.
 
 ### Les signes, eux, changent
 

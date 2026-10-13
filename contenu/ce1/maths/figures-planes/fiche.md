@@ -43,7 +43,7 @@ Le carré a :
 - **4 sommets** (4 coins) ;
 - **4 angles droits**.
 
-Toutes ses côtés sont égaux : c'est ce qui le rend « bien carré ».
+Tous ses côtés sont égaux : c'est ce qui le rend « bien carré ».
 
 ## Le rectangle
 

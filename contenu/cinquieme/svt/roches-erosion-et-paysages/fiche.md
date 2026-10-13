@@ -94,6 +94,6 @@ histoire, en **couches** (strates) superposées.
 - Un galet rond n'est pas « né rond » : il s'est **arrondi** par le transport et
   les chocs.
 - La dissolution ne fait pas disparaître la matière : la roche est **dissoute**
-  dans l'eau, elle change d'état, elle n'est pas détruite.
+  dans l'eau, qui l'emporte : elle devient invisible, mais elle n'est pas détruite.
 - Les couches de roches (strates) ne sont pas décoratives : elles racontent
   l'**empilement** des sédiments au fil du temps (la plus ancienne est en bas).

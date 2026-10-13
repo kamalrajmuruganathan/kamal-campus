@@ -55,7 +55,7 @@ Ce qui donne : *quatre millions deux cent cinq mille trois cent dix-sept*.
 ## La valeur de chaque chiffre
 
 Dans un nombre, un même chiffre ne vaut pas la même chose selon sa **place**.
-Prenons **53 individuellement** dans 4 205 317 :
+Regardons **chaque chiffre** de 4 205 317 :
 
 - Le chiffre des **unités** est 7.
 - Le chiffre des **dizaines** est 1 (il vaut 10).

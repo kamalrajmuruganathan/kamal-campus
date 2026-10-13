@@ -55,8 +55,8 @@ chenille devient papillon, le têtard devient grenouille. On appelle cela une
 
 Les plantes à fleurs se reproduisent aussi. Dans la **fleur** :
 
-- le **pollen** est la cellule reproductrice mâle ;
-- l'**ovule**, au fond de la fleur, est la cellule reproductrice femelle.
+- le **pollen** contient les cellules reproductrices mâles ;
+- l'**ovule**, au fond de la fleur, contient la cellule reproductrice femelle.
 
 La **pollinisation** est le transport du pollen d'une fleur à une autre, souvent
 par les **insectes** (comme les abeilles) ou par le **vent**. Après la
@@ -84,8 +84,8 @@ parle alors de **multiplication végétative**.
 
 - Ovipare et vivipare ne se devinent pas à la taille : la **baleine** est
   vivipare, alors que de petits oiseaux sont ovipares.
-- Le **pollen** n'est pas de la poussière sans utilité : c'est la cellule
-  reproductrice mâle de la plante.
+- Le **pollen** n'est pas de la poussière sans utilité : il contient les
+  cellules reproductrices mâles de la plante.
 - Toutes les graines ne viennent pas du même endroit : c'est l'**ovule** de la
   fleur qui devient graine, pas le pétale.
 - Se reproduire n'est pas la même chose que grandir : grandir, c'est augmenter de

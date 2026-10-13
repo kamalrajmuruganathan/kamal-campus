@@ -248,7 +248,7 @@ dépend des **conditions initiales**.
 | Critère d'évolution | $Q_{r,i} < K$ : sens direct ; $Q_{r,i} > K$ : sens indirect |
 | Taux d'avancement final | $\tau = \dfrac{x_f}{x_{max}}$, entre $0$ et $1$ |
 | Total / non total | $\tau = 1$ total ; $\tau < 1$ équilibre |
-| $\tau$ dépend de… | $K$ **et** des concentrations initiales (pas $K$) |
+| $\tau$ dépend de… | $K$ **et** des concentrations initiales (alors que $K$ ne dépend que de $T$) |
 
 ---
 

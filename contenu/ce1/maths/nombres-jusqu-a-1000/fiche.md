@@ -77,4 +77,4 @@ Juste avant 1000, il y a 999. Juste après 999, il y a 1000.
 - Ne confonds pas le chiffre et sa valeur : dans 347, le 4 vaut **40**, pas 4.
 - N'oublie pas le zéro : « trois-cents » s'écrit **300**, pas 30.
 - Pour 205, il y a un zéro aux dizaines : « deux-cent-cinq ». Ne l'oublie pas.
-- Le plus grand nombre a le plus de centaines, pas le plus de chiffres écrits en dernier.
+- Pour comparer deux nombres de 3 chiffres, regarde d'abord les **centaines**, pas le dernier chiffre : 302 > 298.

@@ -146,8 +146,9 @@ très petit volume versé. C'est ce saut qui **repère l'équivalence**.
 | Base faible par acide fort | $< 7$ (acide) |
 
 > **Exemple.** Le titrage de l'acide éthanoïque (acide faible) par la soude donne une
-> équivalence à pH $\approx 8{,}5$ : le milieu est basique car il reste l'ion éthanoate, base
-> conjuguée. Attendre pH $=7$ conduirait à sous-estimer $V_{\text{éq}}$.
+> équivalence à pH $\approx 8{,}7$ dans les conditions de la figure ci-dessus (la valeur dépend
+> des concentrations, en général entre $8$ et $9$) : le milieu est basique car il reste l'ion
+> éthanoate, base conjuguée. Attendre pH $=7$ conduirait à sous-estimer $V_{\text{éq}}$.
 
 > ⚠️ L'indicateur coloré n'est **pas** exigé pour repérer l'équivalence, mais s'il est
 > utilisé, sa **zone de virage** doit encadrer le pH à l'équivalence.

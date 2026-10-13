@@ -123,7 +123,8 @@ $$\boxed{u(\bar{x}) = \frac{s}{\sqrt{n}}}$$
 > Moyenne : $\bar{x} = \dfrac{100{,}6}{5} = 20{,}12\ \mathrm{s}$.
 > Écart-type (calculatrice) : $s = 0{,}24\ \mathrm{s}$.
 > Incertitude-type : $u(\bar{x}) = \dfrac{0{,}24}{\sqrt{5}} = 0{,}11\ \mathrm{s}$.
-> On écrira $t = (20{,}1 \pm 0{,}1)\ \mathrm{s}$ (voir §8-9 pour l'arrondi).
+> Plus précisément $u = 0{,}107\ \mathrm{s}$ ; son premier chiffre est un $1$, on garde $2$ c.s.
+> par excès : $u \approx 0{,}11\ \mathrm{s}$. On écrira $t = (20{,}12 \pm 0{,}11)\ \mathrm{s}$ (voir §8-9 pour l'arrondi).
 
 > ⚠️ **Divise par $\sqrt{n}$, pas par $n$**, et prends bien l'écart-type en $n-1$
 > (touche $\sigma_{n-1}$), pas celui en $n$. Plus on fait de mesures, plus $u(\bar{x})$
@@ -176,9 +177,9 @@ $$\boxed{\frac{u(y)}{|y|} = \sqrt{\left(\frac{u(a)}{a}\right)^2 + \left(\frac{u(
 > Valeur : $\rho = \dfrac{24{,}6}{20{,}0} = 1{,}23\ \mathrm{g\cdot mL^{-1}}$.
 > Incertitudes relatives : $\dfrac{u(m)}{m} = \dfrac{0{,}1}{24{,}6} = 0{,}0041$ et
 > $\dfrac{u(V)}{V} = \dfrac{0{,}5}{20{,}0} = 0{,}025$.
-> $\dfrac{u(\rho)}{\rho} = \sqrt{0{,}0041^2 + 0{,}025^2} = 0{,}025$, donc
-> $u(\rho) = 0{,}025 \times 1{,}23 = 0{,}03\ \mathrm{g\cdot mL^{-1}}$.
-> Résultat : $\rho = (1{,}23 \pm 0{,}03)\ \mathrm{g\cdot mL^{-1}}$.
+> $\dfrac{u(\rho)}{\rho} = \sqrt{0{,}0041^2 + 0{,}025^2} \approx 0{,}0253$, donc
+> $u(\rho) = 0{,}0253 \times 1{,}23 \approx 0{,}031\ \mathrm{g\cdot mL^{-1}}$, arrondi par excès à $0{,}04\ \mathrm{g\cdot mL^{-1}}$.
+> Résultat : $\rho = (1{,}23 \pm 0{,}04)\ \mathrm{g\cdot mL^{-1}}$.
 
 > **Exemple — somme.** $L = L_1 + L_2$ avec $L_1 = (12{,}3 \pm 0{,}1)\ \mathrm{cm}$ et
 > $L_2 = (8{,}5 \pm 0{,}1)\ \mathrm{cm}$ : $L = 20{,}8\ \mathrm{cm}$ et

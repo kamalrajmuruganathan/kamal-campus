@@ -185,7 +185,8 @@ Regarde **ce qui l'entoure** :
 > **ester** $\mathrm{CH_3-COO-CH_3}$, à l'odeur fruitée.
 
 > **Exemple santé.** Le paracétamol contient à la fois une fonction **amide** et une
-> fonction **alcool** (phénol) : une même molécule peut porter **plusieurs** groupes.
+> fonction **phénol** (groupe $\mathrm{-OH}$ porté par un cycle benzénique, qui n'est pas un
+> alcool) : une même molécule peut porter **plusieurs** groupes.
 
 ---
 

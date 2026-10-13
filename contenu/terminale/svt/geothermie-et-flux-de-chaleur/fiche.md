@@ -43,7 +43,7 @@ globe, cela représente néanmoins une puissance considérable.
 
 Deux sources principales alimentent le budget thermique de la Terre :
 
-- **La radioactivité naturelle** (source **majoritaire** aujourd'hui) : la
+- **La radioactivité naturelle** (environ **la moitié** de la chaleur évacuée aujourd'hui) : la
   désintégration d'isotopes radioactifs présents dans les roches — surtout
   **uranium 238, thorium 232 et potassium 40** — libère de la chaleur en
   continu. Ces éléments sont surtout concentrés dans la croûte continentale.
@@ -102,7 +102,7 @@ contextes géologiques favorables.
 
 - Le **gradient géothermique** (~25-30 °C/km) traduit un **flux de chaleur**
   vers la surface (~65 mW·m⁻² en moyenne).
-- Chaleur d'origine **radioactive** (majoritaire : U, Th, K) + **chaleur
+- Chaleur d'origine **radioactive** (environ la moitié : U, Th, K) + **chaleur
   initiale** de la formation de la Terre.
 - **Conduction** (sans déplacement de matière, lithosphère rigide) et
   **convection** (avec déplacement, manteau : mode le plus efficace).
@@ -112,8 +112,8 @@ contextes géologiques favorables.
 ## Les erreurs à éviter
 
 - La convection nécessite un **déplacement de matière** ; la conduction, non.
-- La chaleur interne provient **surtout de la radioactivité actuelle**, pas
-  seulement de la chaleur d'origine de la Terre.
+- La chaleur interne provient pour **environ la moitié de la radioactivité actuelle**,
+  pas seulement de la chaleur d'origine de la Terre.
 - Le manteau **n'est pas liquide** : il est solide mais **ductile**, capable de
   fluer lentement, ce qui permet la convection.
 - Un fort gradient géothermique local ne signifie pas que toute la Terre est

@@ -200,7 +200,9 @@ $R$ est le rayon, et $R^3 = R \times R \times R$.
 > la contient : ce cylindre a pour rayon $R$ et pour hauteur $2R$, donc pour volume
 > $\pi R^2 \times 2R = 2\pi R^3$. Archimède a découvert, dès le IIIᵉ siècle avant J.-C., que
 > la boule en occupe les **deux tiers** : $\frac{2}{3} \times 2\pi R^3 = \frac{4}{3}\pi R^3$.
-> C'est bien notre formule. Newton l'a démontrée rigoureusement au XVIIᵉ siècle.
+> C'est bien notre formule. Archimède l'a lui-même démontrée (dans son traité *De la sphère
+> et du cylindre*) ; au XVIIᵉ siècle, le calcul intégral (Newton, Leibniz) a permis de la
+> retrouver plus simplement.
 
 ---
 

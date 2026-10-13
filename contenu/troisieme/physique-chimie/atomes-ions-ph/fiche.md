@@ -89,8 +89,8 @@ Un **ion** est un atome (ou un groupe d'atomes) qui a **gagné** ou **perdu** un
 | **Cation** | l'atome a **perdu** des électrons | **positive** ($+$) | $\text{Na}^{+}$, $\text{Cu}^{2+}$ |
 | **Anion** | l'atome a **gagné** des électrons | **négative** ($-$) | $\text{Cl}^{-}$, $\text{O}^{2-}$ |
 
-> **Astuce mémoire.** Un **catio**n est po**sitif** (le « t » de « **plus** » n'y est pas, mais
-> retiens : cation = charge +). Un anion est **n**égatif.
+> **Astuce mémoire.** Dans « ca**t**ion », le **t** ressemble à un signe **+** : un cation est
+> positif. Dans « a**n**ion », le **n** rappelle « **n**égatif » : un anion est négatif.
 
 > **Exemple.** L'atome de cuivre perd $2$ électrons : il lui reste $2$ charges positives en
 > trop, il devient l'ion cuivre $\text{Cu}^{2+}$ (un cation). L'atome de chlore gagne

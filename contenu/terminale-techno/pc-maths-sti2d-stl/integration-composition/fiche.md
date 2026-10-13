@@ -269,13 +269,15 @@ $\langle u \rangle = \dfrac{1}{T}\displaystyle\int_0^T u(t)\,dt$ : c'est ce
 qu'affiche un voltmètre en position DC.
 
 > **Exemple (signal redressé).** $u(t) = 10\sin(100\pi t)$ (en volts), signal
-> $50$ Hz de période $T = 0{,}02$ s, redressé simple alternance : on le moyenne
-> sur la demi-période $[0\,;0{,}01]$.
+> $50$ Hz de période $T = 0{,}02$ s, redressé simple alternance : le signal redressé
+> vaut $u(t)$ sur $[0\,;0{,}01]$ et $0$ sur $[0{,}01\,;0{,}02]$. On le moyenne sur une période.
 > Une primitive de $\sin(100\pi t)$ est $-\dfrac{1}{100\pi}\cos(100\pi t)$
 > (ajustement de constante, §3). Donc
 > $$\int_0^{0{,}01} 10\sin(100\pi t)\,dt = \left[-\frac{10}{100\pi}\cos(100\pi t)\right]_0^{0{,}01} = \frac{1}{10\pi}\big(-\cos\pi + \cos 0\big) = \frac{2}{10\pi} = \frac{1}{5\pi},$$
-> et $\langle u \rangle = \dfrac{1}{0{,}01} \times \dfrac{1}{5\pi} = \dfrac{20}{\pi} \approx 6{,}37$ V.
-> On retrouve la formule des cours d'électricité : $\langle u \rangle = \dfrac{2U_{\max}}{\pi}$.
+> et, l'intégrale étant nulle sur $[0{,}01\,;0{,}02]$,
+> $\langle u \rangle = \dfrac{1}{0{,}02} \times \dfrac{1}{5\pi} = \dfrac{10}{\pi} \approx 3{,}18$ V.
+> On retrouve la formule des cours d'électricité : $\langle u \rangle = \dfrac{U_{\max}}{\pi}$ en simple
+> alternance (en double alternance, l'alternance négative est retournée : $\dfrac{2U_{\max}}{\pi} \approx 6{,}37$ V).
 
 ⚠️ Sur une **période complète**, la valeur moyenne d'une sinusoïde pure est
 **nulle** : l'aire de l'alternance positive compense exactement celle de
@@ -350,7 +352,7 @@ Choix de rédaction :
   composées → intégration, la composition servant d'outil aux deux suivants.
 - Application phare (esprit du programme PCM : croisement avec la partie
   physique « Énergie électrique — régime sinusoïdal ») : valeur moyenne d'un
-  signal, redressement simple alternance, ⟨u⟩ = 2U_max/π, et distinction valeur
+  signal, redressement simple alternance, ⟨u⟩ = U_max/π (2U_max/π en double alternance), et distinction valeur
   moyenne / valeur efficace U_max/√2.
 - (u^n)' donné pour n entier ≥ 1 ; le cas des exposants négatifs n'est pas
   développé (à valider par le relecteur si le PDF l'inclut).
@@ -364,7 +366,7 @@ Vérifications numériques faites :
   haut 0,2·(0,04+0,16+0,36+0,64+1)=0,44 ; exact 1/3 ∈ [0,24 ; 0,44]. ✓
 - ∫₀¹ x e^{x²} dx = (e−1)/2 ≈ 0,859. ✓
 - Signal : T=0,02 s, ω=100π ; ∫₀^{0,01} 10 sin(100πt) dt = (10/100π)(1−cos π)
-  = 20/(100π) = 1/(5π) ; ⟨u⟩ = 100 × 1/(5π) = 20/π ≈ 6,37 V = 2·10/π. ✓
+  = 20/(100π) = 1/(5π) ; signal nul sur [0,01;0,02] : ⟨u⟩ = 50 × 1/(5π) = 10/π ≈ 3,18 V = U_max/π. ✓
 - Valeur moyenne de x² sur [0;3] : (1/3)(27/3) = 3. ✓
 
 À SOUMETTRE AU RELECTEUR :

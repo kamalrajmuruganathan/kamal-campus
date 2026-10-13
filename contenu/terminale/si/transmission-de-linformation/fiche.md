@@ -89,6 +89,10 @@ petit écart mesurable (le « pas ») vaut
 $$\frac{10\ \mathrm{V}}{2^8} = \frac{10}{256} \approx 0{,}039\ \mathrm{V} \approx
 39\ \mathrm{mV}.$$
 
+On prend ici la convention **pas = plage ÷ 2ⁿ**. En 1re, on a aussi vu
+**plage ÷ (2ⁿ − 1)** (nombre d'intervalles entre 2ⁿ niveaux) : $\frac{10}{255} \approx 0{,}039$ V,
+la différence est négligeable dès que n est grand. Dans un exercice, utilise la convention indiquée par l'énoncé.
+
 ---
 
 # 4. Le débit et le support de transmission

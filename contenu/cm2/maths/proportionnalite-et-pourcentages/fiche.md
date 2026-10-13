@@ -26,8 +26,8 @@ Exemple : le prix des croissants. 1 croissant coûte 1,20 €. Alors :
 |----------------------|-------|-------|-------|-------|
 | Prix (€)             | 1,20  | 2,40  | 3,60  | 4,80  |
 
-Chaque fois qu'on ajoute un croissant, le prix augmente de 1,20 €. C'est une
-situation de proportionnalité.
+Le prix s'obtient toujours en **multipliant** le nombre de croissants par 1,20 :
+4 croissants coûtent 4 × 1,20 = 4,80 €. C'est une situation de proportionnalité.
 
 ## 1. Reconnaître la proportionnalité
 

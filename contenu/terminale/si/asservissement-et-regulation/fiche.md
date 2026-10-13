@@ -103,8 +103,10 @@ $$\text{FTBF} = \frac{H}{1 + H}.$$
 **Exemple de calcul.** Un moteur de gain statique $H = 4$ est asservi avec un
 retour unitaire. Le gain de l'ensemble en boucle fermée vaut
 $$\frac{4}{1 + 4} = \frac{4}{5} = 0{,}8.$$
-Le système « écrase » le gain vers 1 : c'est l'effet stabilisant de la boucle
-fermée.
+Plus $H$ est grand, plus ce gain se rapproche de 1 : la sortie suit la consigne de
+plus près (meilleure **précision**) et dépend moins des variations de $H$. Attention :
+la boucle fermée ne rend pas automatiquement le système plus stable (un gain trop fort
+peut le faire osciller).
 
 ---
 

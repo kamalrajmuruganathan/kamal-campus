@@ -169,8 +169,9 @@ L'histoire du vivant se lit à l'échelle des **temps géologiques**, qui se com
 | Apparition du genre *Homo* | ≈ 2 à 3 millions d'années |
 
 Pour saisir ces ordres de grandeur, on ramène souvent l'histoire de la Terre à une
-**année** : la vie apparaît alors dès le mois de **mars**, mais l'être humain n'arrive
-que dans les **dernières minutes du 31 décembre**. L'humanité est un événement **très
+**année** : la vie apparaît alors dès le mois de **mars**, mais le genre *Homo* n'arrive
+que le **31 décembre vers 19 h**, et notre espèce, *Homo sapiens* (≈ 300 000 ans), dans la
+**dernière demi-heure**. L'humanité est un événement **très
 récent** à l'échelle du vivant.
 
 ---

@@ -181,8 +181,8 @@ renseigne sur la fonction rénale.
 
 $$\boxed{\text{urée} : \mathrm{CO(NH_2)_2} \quad\text{soit}\quad \mathrm{H_2N-CO-NH_2}}$$
 
-C'est une petite molécule portant **deux fonctions amine** de part et d'autre d'un carbonyle
-(un **diamide**). Elle est **très soluble** dans l'eau, ce qui permet son élimination urinaire.
+C'est une petite molécule portant **deux groupes** $\mathrm{-NH_2}$ liés au même carbonyle :
+ce sont deux fonctions **amide** (l'urée est un **diamide**), et non des amines. Elle est **très soluble** dans l'eau, ce qui permet son élimination urinaire.
 
 ---
 

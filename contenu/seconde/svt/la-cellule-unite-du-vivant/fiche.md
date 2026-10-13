@@ -94,7 +94,7 @@ tous les êtres vivants : ils partagent une **origine commune**.
 
 ## Les erreurs à éviter
 
-- **Confondre paroi et membrane.** Toutes les cellules ont une membrane ; seule la cellule végétale (et bactérienne) a en plus une paroi rigide.
+- **Confondre paroi et membrane.** Toutes les cellules ont une membrane ; seules les cellules végétales, bactériennes et celles des champignons ont en plus une paroi rigide.
 - **Croire que les procaryotes n'ont pas d'ADN.** Ils ont de l'ADN, mais pas de noyau qui l'entoure.
 - **Penser que toutes les cellules végétales font la photosynthèse.** Seules les cellules contenant des chloroplastes (cellules chlorophylliennes) le font ; une cellule de racine, non.
 - **Mesurer une cellule en millimètres.** L'unité adaptée est le micromètre (µm), visible au microscope optique.

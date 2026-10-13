@@ -188,7 +188,7 @@ additionne.
 > fournisseurs : $A$ ($50\,\%$ des livraisons), $B$ ($30\,\%$) et $C$
 > ($20\,\%$). Leurs taux de retard sont $4\,\%$, $10\,\%$ et $5\,\%$.
 > $$P(R) = 0{,}5 \times 0{,}04 + 0{,}3 \times 0{,}10 + 0{,}2 \times 0{,}05 = 0{,}02 + 0{,}03 + 0{,}01 = 0{,}06$$
-> Une livraison sur $6\,\%$… non : $6\,\%$ des livraisons sont en retard. La
+> Donc $6\,\%$ des livraisons sont en retard. La
 > partition peut avoir autant de branches que nécessaire.
 
 ---

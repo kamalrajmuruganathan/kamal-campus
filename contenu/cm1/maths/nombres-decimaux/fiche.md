@@ -48,7 +48,7 @@ Après la virgule, chaque rang a un nom :
 
 Un **dixième**, c'est $\dfrac{1}{10}$. Un **centième**, c'est $\dfrac{1}{100}$.
 
-## Du fraction décimale au nombre à virgule
+## De la fraction décimale au nombre à virgule
 
 C'est la même chose écrite de deux façons :
 

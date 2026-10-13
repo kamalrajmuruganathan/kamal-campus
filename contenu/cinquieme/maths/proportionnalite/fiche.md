@@ -144,9 +144,11 @@ $$\text{échelle} = \frac{\text{distance sur le plan}}{\text{distance réelle}}$
 
 ## 7. Vitesse
 
-$$v = \frac{d}{t}$$
+**À vitesse constante**, la distance parcourue est proportionnelle à la durée. Le
+coefficient de proportionnalité est la **vitesse moyenne** : la distance parcourue en $1$ h.
 
-La distance parcourue est proportionnelle à la durée, **à vitesse constante**.
+> **Exemple.** Une voiture parcourt $120$ km en $2$ h à vitesse constante : en $1$ h, elle
+> parcourt $120 \div 2 = 60$ km (sa vitesse est $60$ km/h), donc en $3$ h, $60 \times 3 = 180$ km.
 
 > ⚠️ **La précision « à vitesse constante » est essentielle.** Une voiture qui
 > accélère ne parcourt pas une distance proportionnelle au temps.

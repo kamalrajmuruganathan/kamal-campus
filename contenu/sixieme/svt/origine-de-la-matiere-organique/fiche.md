@@ -30,7 +30,7 @@ On distingue deux sortes de matière :
 - La **matière organique** : elle est **fabriquée par les êtres vivants** et constitue leur
   corps. Exemples : le bois, les feuilles, la viande, le sucre fabriqué par la plante.
 
-## Les végétaux : les seuls producteurs de matière organique
+## Les végétaux verts : les producteurs de matière organique
 
 Les **végétaux verts** ont un pouvoir particulier : ils **fabriquent** leur propre matière
 organique. Pour cela, ils utilisent uniquement de la **matière minérale** :
@@ -43,8 +43,9 @@ Grâce à la lumière, la plante transforme cette matière minérale en **matiè
 (comme le sucre, puis tout le corps de la plante). On dit que les végétaux sont des
 **producteurs** : ils sont **au début** de toute chaîne alimentaire.
 
-> Point clé : les végétaux verts sont les **seuls** êtres vivants capables de fabriquer de
-> la matière organique **à partir de matière minérale**, à condition d'avoir de la lumière.
+> Point clé : les végétaux verts (plantes et algues) — avec quelques bactéries comme les
+> cyanobactéries — sont les **seuls** êtres vivants capables de fabriquer de la matière
+> organique **à partir de matière minérale**, à condition d'avoir de la lumière.
 
 ## Les animaux : ils prélèvent la matière organique
 
@@ -76,7 +77,7 @@ matière organique. La matière **circule en boucle** : c'est un **cycle de la m
 
 - La **matière organique** est fabriquée par les êtres vivants ; la **matière minérale**
   (eau, dioxyde de carbone, sels minéraux) ne provient pas du vivant.
-- Les **végétaux verts** sont les **seuls producteurs** : ils fabriquent de la matière
+- Les **végétaux verts** (plantes, algues) sont les **producteurs** : ils fabriquent de la matière
   organique à partir de matière minérale et de **lumière**.
 - Les **animaux** sont des **consommateurs** : ils prélèvent la matière organique en mangeant.
 - Les **décomposeurs** transforment la matière organique en matière minérale : la matière

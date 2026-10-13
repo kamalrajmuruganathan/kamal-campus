@@ -192,7 +192,7 @@ lieu de l'extraire de la nature. L'espèce synthétisée peut être **identique*
 de la nature (ex. la vanilline) ou **artificielle** (elle n'existe pas dans la nature).
 
 > **Exemple.** L'industrie **synthétise** l'ammoniac $\text{NH}_3$ à partir du
-> diazote et du dihydrogène de l'air :
+> diazote de l'air et de dihydrogène (produit surtout à partir du gaz naturel) :
 > $$\text{N}_2 + 3\,\text{H}_2 \longrightarrow 2\,\text{NH}_3$$
 > Cet ammoniac sert ensuite à fabriquer des engrais.
 

@@ -243,7 +243,7 @@ $\lambda$, avec un maximum à $\lambda_{\max}$.
 
 L'IR sonde les **vibrations des liaisons** d'une molécule. Le spectre donne la
 **transmittance** en fonction du **nombre d'onde** $\sigma = 1/\lambda$ (en $\text{cm}^{-1}$),
-lu de la droite ($4000\ \text{cm}^{-1}$) vers la gauche.
+avec un axe **inversé** : $4000\ \text{cm}^{-1}$ à gauche, les nombres d'onde **décroissent** vers la droite.
 
 Chaque type de liaison absorbe dans une **bande caractéristique** : on identifie les
 **groupes fonctionnels** (bandes indicatives, à confirmer avec une table) :
