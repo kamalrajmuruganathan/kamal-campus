@@ -43,6 +43,8 @@ import Statistiques from './src/ecrans/Statistiques';
 import RecapHebdo from './src/ecrans/RecapHebdo';
 import Express from './src/ecrans/Express';
 import ModeExamen from './src/ecrans/ModeExamen';
+import ExamenSurMesure from './src/ecrans/ExamenSurMesure';
+import BandeauHorsLigne from './src/composants/BandeauHorsLigne';
 import ModeErreurs from './src/ecrans/ModeErreurs';
 import Podcast from './src/ecrans/Podcast';
 import Annales from './src/ecrans/Annales';
@@ -156,6 +158,7 @@ function Navigation() {
         <Pile.Screen name="RecapHebdo" component={RecapHebdo} options={{ title: 'Bilan de la semaine' }} />
         <Pile.Screen name="Express" component={Express} options={{ title: 'Révision express' }} />
         <Pile.Screen name="ModeExamen" component={ModeExamen} options={{ title: 'Mode examen' }} />
+        <Pile.Screen name="ExamenSurMesure" component={ExamenSurMesure} options={{ title: 'Examen sur mesure' }} />
         <Pile.Screen name="ModeErreurs" component={ModeErreurs} options={{ title: 'Réviser mes erreurs' }} />
         <Pile.Screen name="Podcast" component={Podcast} options={{ title: 'Podcast de révision' }} />
         <Pile.Screen name="Annales" component={Annales} options={{ title: 'Annales — liens' }} />
@@ -189,9 +192,12 @@ function PortailAuth() {
 export default function App() {
   return (
     <SafeAreaProvider>
-      <AuthProvider>
-        <PortailAuth />
-      </AuthProvider>
+      <View style={{ flex: 1 }}>
+        <BandeauHorsLigne />
+        <AuthProvider>
+          <PortailAuth />
+        </AuthProvider>
+      </View>
     </SafeAreaProvider>
   );
 }

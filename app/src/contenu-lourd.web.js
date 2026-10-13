@@ -33,6 +33,8 @@ export function chargerFiche(id) {
   const c = CHEMINS[id];
   return c ? telecharger(c + '/fiche.md', false) : Promise.resolve(null);
 }
+/** Dossier d'un chapitre dans public/donnees (« niveau/parcours/dossier »), ou null. */
+export function cheminDonnees(id) { return CHEMINS[id] ?? null; }
 export function chargerExercices(id) {
   const c = CHEMINS[id];
   return c && AVEC_EXERCICES.has(id) ? telecharger(c + '/exercice.json', true) : Promise.resolve(null);

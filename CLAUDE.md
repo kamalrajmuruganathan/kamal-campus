@@ -187,7 +187,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   (deux bonnes réponses, explications « choix A » alors que l'appli mélange les choix, unités, langues).
 - Difficultés « decouverte » et « probleme » ont maintenant une étiquette dans `Exercices.js`.
 
-## 14. Sept nouveautés (06-07/10/2026) — PR #5, non publiées
+## 14. Sept nouveautés (06-07/10/2026) — PR #5, PUBLIÉES le 08/10/2026 (main `59f2f71`, SQL exécutés par Kamal)
 - **Appli plus rapide** : les fiches et exercices ne sont plus dans le bundle (40 Mo → 15 Mo). `generer-index.mjs`
   génère `src/contenu-lourd.{web,native}.js` (`chargerFiche(id)`, `chargerExercices(id)`) et copie les fichiers dans
   `app/public/donnees/` (ignoré par git, recréé par `npm run preparer`, étape ajoutée dans `pages.yml`). Hook `src/useFiche.js`.
@@ -201,3 +201,45 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **SQL à exécuter une fois par Kamal dans Supabase** : `outils/sql/realtime_amities.sql`,
   `outils/sql/classement_amis.sql`, `outils/sql/espace_parent.sql` (sans eux, l'appli affiche « pas encore activé »).
 - Testé dans Chromium (téléphone simulé) : 4e racine carrée, 2de vecteurs, exercices, contrôle, classement, parent : OK.
+
+## 15. Exercices auto-corrigés : attendus.json (10/10/2026) — sur `upgrade-sdk57`, non publié
+- **65 % des exercices sont vérifiés par l'appli** (31 167 / 47 800), contre 28 % avant. Pour cela, 926 chapitres ont
+  un `contenu/<niveau>/<matiere>/<slug>/attendus.json` (créé à côté, exercice.json inchangé) :
+  `{ "<id>": { "reponse": "<copie exacte>", "accepte": [formes courtes] } }` ou `"ensemble": [éléments, ordre libre]`.
+  Si la `reponse` d'un exercice change, la ligne est ignorée (avertissement dans `generer-index`) → mettre à jour.
+- Fusion à la construction : `generer-index.mjs` (web : public/donnees ; natif : import + `fusionnerAttendus`).
+- Logique : `app/lib/autocorrection` (`analyserExercice`, `comparerExercice`, `typeExercice`…), ~70 tests.
+  Accents exigés en français et en langues ; articles et espaces exigés en langues ; nombres : signe, virgule,
+  milliers, puissances de 10, chiffres significatifs (saisie plus précise acceptée) ; unités (m/s² = m.s-2,
+  mol/L = mol·L⁻¹, MW ≠ mW) ; « f(x) = », « S = {…} », flèches, « < ».
+- Vérificateur : `node app/scripts/verifier-attendus.mjs [chemins…]` (0 problème exigé ; refuse un nombre absent
+  de l'énoncé/réponse/corrigé, une forme non vérifiable, une réponse « Exemple : »).
+- ~88 erreurs repérées dans les exercices pendant ce travail : corrigées (voir le message de commit « Corrections »).
+- **Examen sur mesure** (`src/ecrans/ExamenSurMesure.js`, `app/lib/examen/composer.js` + tests) : classe → matière →
+  chapitres → format (Express 10 min, Standard 20 min, Long 40 min) ; QCM (1 pt) + exercices auto-corrigés (2 pts),
+  chrono, note /20, chapitres à revoir, corrigé ; historique `profil.examens` (30 max, fusionné dans `cloud/fusion.js`).
+  Carte « 🎓 Examen sur mesure » sur l'accueil (à côté de « Mode examen »). Testé dans Chromium.
+- **Hors connexion (web)** : `public/sw.js` (réseau d'abord, copie de secours `kamal-campus-v1` pour l'appli et
+  public/donnees) ; `src/horsLigne.{web,}.js` (`useEnLigne`, `telechargerHorsLigne`, `compterDisponibles`) ;
+  bouton « 📥 Réviser sans internet » dans la liste des chapitres (`composants/HorsLigneParcours.js`) ; bandeau
+  « Hors connexion » (`composants/BandeauHorsLigne.js`, dans App.js). `contenu-lourd.web.js` exporte `cheminDonnees(id)`.
+  Testé dans Chromium : téléchargement de 15 chapitres, coupure réseau, rechargement, fiche lisible avec formules.
+  Si on change la stratégie du SW, incrémenter le nom du cache (v2…).
+- **Grilles d'idées (12/10/2026, non publié)** : 11 614 exercices « à rédiger » ont dans `attendus.json` une ligne
+  `{ "reponse": …, "criteres": [{ "idee": "…", "mots": ["racine", …] }] }` (2 à 6 idées, 1 à 8 mots-clés ≥ 3 lettres
+  une fois nettoyés). Dans `Exercices.js` : l'élève écrit, « Voir le corrigé », l'appli pré-coche les idées dont un
+  mot-clé (début de mot, sans accents ; « CO₂ » = « CO2 ») est dans son texte (`detecterCriteres`), il corrige les cases
+  puis « Valider ma réponse » (réussi si toutes les idées sont cochées). Vérificateur : même commande
+  `node app/scripts/verifier-attendus.mjs` (mots-clés présents dans la réponse/corrigé, pas trop courts).
+  Bilan : 65 % des exercices vérifiés automatiquement + 24 % guidés par une grille ≈ 89 %.
+- **Calculs corrigés par l'appli (12/10/2026, non publié)** : `app/lib/expressions` (+ tests) lit une réponse-formule
+  (LaTeX du corrigé ou saisie : `3x^2`, `3x²`, `√`, `sqrt`, `e^x`, `ln`, `i`) et compare par évaluation en 10 points
+  (à une constante près pour « une primitive », à un facteur près pour une équation de droite/plan/cercle).
+  Forme exigée selon l'énoncé : « développe/réduis/forme algébrique » (aucune somme multipliée, pas plus de termes),
+  « factorise » (produit, facteurs réduits, même facteur constant), « forme canonique ». Expression juste mais pas
+  sous la bonne forme → message 🟠 « Continue ! » (pas compté faux). Exclus : « démontrer/justifier/interpréter »,
+  unités, d/dt, recopie possible de l'énoncé. Une grille d'idées garde la priorité. ≈ 350 exercices de maths en plus ;
+  corrige aussi un ancien défaut (« E = 3(2x + 5) » était lu comme le nombre 3).
+  Suite (`app/lib/expressions/autres.js` + tests) : intervalles et réunions (« ]-∞ ; 5[ ∪ [7 ; 9] », ou « x < 5 »),
+  coordonnées « M(2 ; 1) » (pas « un vecteur / un point » : plusieurs réponses), équations de réaction ajustées
+  (« 2 H2 + O2 -> 2 H2O », charges « Fe3+ », ordre libre, pas les noyaux) : ≈ 140 exercices de plus.

@@ -1,0 +1,169 @@
+{
+  "1": {
+    "reponse": "$1$, $2$, $3$, $4$, $5$ et $6$",
+    "ensemble": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  "2": {
+    "reponse": "Non, c'est un événement (3 issues)",
+    "accepte": [
+      "non",
+      "non, c'est un événement"
+    ]
+  },
+  "3": {
+    "reponse": "$0$ ; événement impossible",
+    "accepte": [
+      "0 ; événement impossible",
+      "0 ; impossible"
+    ]
+  },
+  "4": {
+    "reponse": "$1$ ; événement certain",
+    "accepte": [
+      "1 ; événement certain",
+      "1 ; certain"
+    ]
+  },
+  "5": {
+    "reponse": "Impossible : une probabilité ne dépasse jamais $1$",
+    "criteres": [
+      {
+        "idee": "C'est impossible : il y a une erreur",
+        "mots": [
+          "impossible",
+          "erreur",
+          "faux",
+          "tort"
+        ]
+      },
+      {
+        "idee": "Une probabilité est toujours comprise entre 0 et 1",
+        "mots": [
+          "entre 0 et 1",
+          "depasse",
+          "superieur",
+          "plus grand que 1",
+          "plus que 1",
+          "inferieure a 1"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "reponse": "$\\dfrac{1}{4} = 0{,}25 = 25\\ \\%$",
+    "accepte": [
+      "1/4",
+      "0,25",
+      "25 %"
+    ]
+  },
+  "39": {
+    "reponse": "$ 0{,}75 = 75\\ \\% $",
+    "accepte": [
+      "0,75 ; 75 %",
+      "0,75 et 75 %"
+    ]
+  },
+  "40": {
+    "reponse": "$ 0{,}4 = 40\\ \\% $",
+    "accepte": [
+      "0,4 ; 40 %",
+      "0,4 et 40 %"
+    ]
+  },
+  "41": {
+    "reponse": "$ 0{,}35 = 35\\ \\% $",
+    "accepte": [
+      "0,35 ; 35 %",
+      "0,35 et 35 %"
+    ]
+  },
+  "42": {
+    "reponse": "$ 0{,}125 = 12{,}5\\ \\% $",
+    "accepte": [
+      "0,125 ; 12,5 %",
+      "0,125 et 12,5 %"
+    ]
+  },
+  "43": {
+    "reponse": "$ 0{,}36 = 36\\ \\% $",
+    "accepte": [
+      "0,36 ; 36 %",
+      "0,36 et 36 %"
+    ]
+  },
+  "48": {
+    "reponse": "$ 0{,}47 $ ; non, c'est proche de $0{,}5$",
+    "criteres": [
+      {
+        "idee": "La fréquence de « pile » est 0,47",
+        "mots": [
+          "0,47"
+        ]
+      },
+      {
+        "idee": "Ce n'est pas surprenant : c'est proche de la probabilité 0,5",
+        "mots": [
+          "proche",
+          "0 5",
+          "pas surpren",
+          "normal"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "Elle sera proche de $\\dfrac{1}{6} \\approx 0{,}17$",
+    "criteres": [
+      {
+        "idee": "La fréquence du 6 sera proche de 1/6, environ 0,17",
+        "mots": [
+          "proche",
+          "environ",
+          "0 17",
+          "1 6"
+        ]
+      },
+      {
+        "idee": "Plus on répète l'expérience, plus la fréquence se rapproche de la probabilité",
+        "mots": [
+          "plus on",
+          "grand nombre",
+          "rapproche",
+          "repet"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "La probabilité se calcule, la fréquence s'observe",
+    "criteres": [
+      {
+        "idee": "La probabilité se calcule avant l'expérience, par le raisonnement",
+        "mots": [
+          "calcul",
+          "avant",
+          "raisonn",
+          "theori"
+        ]
+      },
+      {
+        "idee": "La fréquence s'observe après l'expérience, en comptant les résultats",
+        "mots": [
+          "observ",
+          "constat",
+          "apres",
+          "compt",
+          "experience"
+        ]
+      }
+    ]
+  }
+}

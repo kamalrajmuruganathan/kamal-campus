@@ -1,0 +1,550 @@
+{
+  "1": {
+    "reponse": "(a) analogique, (b) numérique, (c) analogique.",
+    "accepte": [
+      "analogique, numérique, analogique",
+      "(a) analogique, (b) numérique, (c) analogique"
+    ]
+  },
+  "2": {
+    "reponse": "Le débit binaire est de 1 000 000 bits/s, soit 1 Mbit/s.",
+    "accepte": [
+      "1 000 000 bits/s",
+      "1 Mbit/s"
+    ]
+  },
+  "3": {
+    "reponse": "Le temps de transmission est de 20 s.",
+    "accepte": [
+      "20 s"
+    ]
+  },
+  "4": {
+    "reponse": "Le débit brut est d'environ 1 411 200 bits/s, soit environ 1411 kbit/s.",
+    "accepte": [
+      "1411 kbit/s",
+      "1 411 200 bits/s"
+    ]
+  },
+  "5": {
+    "reponse": "L'atténuation de la liaison est de 20 dB.",
+    "accepte": [
+      "20 dB"
+    ]
+  },
+  "6": {
+    "reponse": "(a) bit de parité = 0 ; (b) oui, parité paire respectée, trame correcte ; (c) non, une erreur sur 2 bits n'est pas détectée.",
+    "accepte": [
+      "0 ; oui ; non",
+      "0, oui, non",
+      "0 oui non"
+    ]
+  },
+  "7": {
+    "reponse": "256 valeurs avec 8 bits ; 1024 valeurs avec 10 bits.",
+    "accepte": [
+      "256 valeurs ; 1024 valeurs",
+      "256 valeurs et 1024 valeurs",
+      "256 ; 1024",
+      "256 et 1024"
+    ]
+  },
+  "8": {
+    "reponse": "La transmission dure 5 secondes.",
+    "accepte": [
+      "5 s"
+    ]
+  },
+  "9": {
+    "reponse": "Le bit de parité vaut 1 (mot 11011) ; une parité fausse à la réception signale une erreur.",
+    "criteres": [
+      {
+        "idee": "La donnée contient trois 1 (nombre impair) : on ajoute un bit de parité 1",
+        "mots": [
+          "trois 1",
+          "impair",
+          "bit de parite 1",
+          "vaut 1"
+        ]
+      },
+      {
+        "idee": "Le mot envoyé devient 11011",
+        "mots": [
+          "11011"
+        ]
+      },
+      {
+        "idee": "À la réception, un nombre impair de 1 signale une erreur de transmission",
+        "mots": [
+          "erreur"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "Le pas vaut environ 10 / 256 ≈ 0,039 V, soit 39 mV.",
+    "accepte": [
+      "39 mV",
+      "0,039 V"
+    ]
+  },
+  "11": {
+    "reponse": "Acquérir (capteur) → traiter (microcontrôleur) → communiquer (module Wi-Fi).",
+    "accepte": [
+      "acquérir (capteur), traiter (microcontrôleur), communiquer (module Wi-Fi)",
+      "acquérir capteur traiter microcontrôleur communiquer module Wi-Fi",
+      "acquérir : capteur ; traiter : microcontrôleur ; communiquer : module Wi-Fi",
+      "acquérir (capteur) → traiter (microcontrôleur) → communiquer (module Wi-Fi)"
+    ]
+  },
+  "12": {
+    "reponse": "infinité ; fini ; binaire.",
+    "accepte": [
+      "infinité ; fini ; binaire",
+      "infinité, fini, binaire"
+    ]
+  },
+  "13": {
+    "reponse": "Avec 4 bits, on code 16 valeurs (de 0 à 15).",
+    "accepte": [
+      "16 valeurs"
+    ]
+  },
+  "15": {
+    "reponse": "Plus robuste au bruit (régénérable) et facile à traiter par un ordinateur.",
+    "criteres": [
+      {
+        "idee": "Il est plus robuste au bruit : on peut le régénérer",
+        "mots": [
+          "bruit",
+          "robuste",
+          "regener",
+          "parasite"
+        ]
+      },
+      {
+        "idee": "Il est facile à traiter, stocker et transmettre par un ordinateur",
+        "mots": [
+          "traiter",
+          "stocker",
+          "ordinateur",
+          "microcontroleur",
+          "compress"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "reponse": "Échantillonnage (relevés réguliers) puis quantification (arrondi sur un nombre fini de niveaux).",
+    "criteres": [
+      {
+        "idee": "L'échantillonnage : relever la valeur du signal à intervalles réguliers",
+        "mots": [
+          "echantillon",
+          "intervalle",
+          "releve"
+        ]
+      },
+      {
+        "idee": "La quantification : arrondir chaque valeur à un niveau disponible, codé en binaire",
+        "mots": [
+          "quantifi",
+          "arrondi",
+          "niveau",
+          "binaire"
+        ]
+      }
+    ]
+  },
+  "23": {
+    "reponse": "Il confond débit (bit/s) et quantité d'information (bits).",
+    "criteres": [
+      {
+        "idee": "Il confond débit et quantité d'information",
+        "mots": [
+          "confond",
+          "debit",
+          "quantite"
+        ]
+      },
+      {
+        "idee": "100 Mbit/s est une quantité d'information par seconde",
+        "mots": [
+          "par seconde",
+          "mbit s",
+          "bit s"
+        ]
+      },
+      {
+        "idee": "La quantité téléchargeable dépend aussi de la durée",
+        "mots": [
+          "duree",
+          "temps",
+          "1 000 mbit"
+        ]
+      }
+    ]
+  },
+  "25": {
+    "reponse": "1 (mot transmis : 01101001).",
+    "accepte": [
+      "1"
+    ]
+  },
+  "26": {
+    "reponse": "Oui : cinq 1 (nombre impair), une erreur est détectée.",
+    "accepte": [
+      "oui"
+    ]
+  },
+  "33": {
+    "reponse": "Plus de niveaux (65 536 contre 256) : meilleure résolution.",
+    "criteres": [
+      {
+        "idee": "16 bits donnent 65 536 niveaux contre 256 pour 8 bits",
+        "mots": [
+          "65 536",
+          "65536",
+          "256",
+          "plus de niveaux",
+          "niveaux"
+        ]
+      },
+      {
+        "idee": "Les valeurs sont arrondies plus finement : meilleure résolution",
+        "mots": [
+          "resolution",
+          "finement",
+          "precis",
+          "arrondi"
+        ]
+      },
+      {
+        "idee": "Le son est plus proche de l'original",
+        "mots": [
+          "proche",
+          "original"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "10 dB : la puissance est divisée par 10.",
+    "accepte": [
+      "10 dB ; 10",
+      "10 dB et 10",
+      "10 ; 10",
+      "10 et 10"
+    ]
+  },
+  "36": {
+    "reponse": "Le numérique se régénère tant qu'on distingue 0 et 1 ; l'analogique garde le bruit.",
+    "criteres": [
+      {
+        "idee": "En numérique, il suffit de distinguer 0 et 1",
+        "mots": [
+          "0 et 1",
+          "0 ou 1",
+          "deux niveaux",
+          "distingu"
+        ]
+      },
+      {
+        "idee": "Tant que le bruit ne fait pas confondre les deux, on régénère le signal parfait",
+        "mots": [
+          "regener",
+          "reconstitu"
+        ]
+      },
+      {
+        "idee": "En analogique, toutes les valeurs sont possibles : on ne distingue pas le bruit du signal",
+        "mots": [
+          "toutes les valeurs",
+          "ne peut pas distinguer",
+          "garde le bruit",
+          "continu"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "La fibre optique, insensible aux parasites électromagnétiques.",
+    "criteres": [
+      {
+        "idee": "Les câbles en cuivre sont sensibles aux perturbations électromagnétiques",
+        "mots": [
+          "cuivre",
+          "sensible",
+          "perturb"
+        ]
+      },
+      {
+        "idee": "On conseille la fibre optique, qui transporte de la lumière",
+        "mots": [
+          "fibre",
+          "lumiere"
+        ]
+      },
+      {
+        "idee": "Elle est insensible aux parasites et offre un haut débit avec peu de pertes",
+        "mots": [
+          "insensible",
+          "pas sensible",
+          "haut debit",
+          "peu de pertes",
+          "immunis"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Avantage : mobilité ; inconvénients : sensibilité aux obstacles et partage de la bande.",
+    "criteres": [
+      {
+        "idee": "Avantage : la mobilité, aucun câble à tirer",
+        "mots": [
+          "mobilit",
+          "pas de cable",
+          "aucun cable",
+          "sans cable",
+          "deplacer"
+        ]
+      },
+      {
+        "idee": "Inconvénient : sensibilité aux obstacles (murs)",
+        "mots": [
+          "obstacle",
+          "mur",
+          "portee",
+          "distance"
+        ]
+      },
+      {
+        "idee": "Inconvénient : bande de fréquences partagée, le débit peut baisser",
+        "mots": [
+          "partag",
+          "debit",
+          "interference",
+          "securite",
+          "piratage"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Un ensemble de règles communes ; par exemple la trame et l'adresse (ou le contrôle d'erreur).",
+    "criteres": [
+      {
+        "idee": "Un protocole est un ensemble de règles communes pour que deux systèmes se comprennent",
+        "mots": [
+          "regle",
+          "comprendre",
+          "convention"
+        ]
+      },
+      {
+        "idee": "Il définit par exemple la trame, l'adresse ou le contrôle d'erreur",
+        "mots": [
+          "trame",
+          "adresse",
+          "controle d erreur",
+          "format",
+          "vitesse"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "À adapter le signal au support en modulant une onde porteuse.",
+    "criteres": [
+      {
+        "idee": "Le signal n'est pas directement adapté au support radio",
+        "mots": [
+          "adapt",
+          "support"
+        ]
+      },
+      {
+        "idee": "On modifie une onde porteuse en fonction de l'information",
+        "mots": [
+          "porteuse",
+          "modifie",
+          "module"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "0 ; 1 ; 0.",
+    "accepte": [
+      "0 ; 1 ; 0",
+      "0, 1 et 0"
+    ]
+  },
+  "42": {
+    "reponse": "Non : deux erreurs conservent la parité ; la méthode ne détecte qu'un nombre impair d'erreurs.",
+    "criteres": [
+      {
+        "idee": "Non, l'erreur n'est pas détectée",
+        "mots": [
+          "non",
+          "pas detectee",
+          "n est pas detectee",
+          "aucune erreur"
+        ]
+      },
+      {
+        "idee": "Le mot reçu contient quatre 1 : la parité reste paire",
+        "mots": [
+          "quatre 1",
+          "4 bits a 1",
+          "reste paire"
+        ]
+      },
+      {
+        "idee": "Deux inversions conservent la parité : on ne détecte qu'un nombre impair d'erreurs",
+        "mots": [
+          "nombre impair",
+          "impair",
+          "deux erreurs",
+          "deux inversions",
+          "conserv"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "4 320 bits par heure, soit 1,2 bit/s en moyenne.",
+    "accepte": [
+      "4 320 bits ; 1,2 bit/s",
+      "4 320 bits et 1,2 bit/s",
+      "4 320 ; 1,2",
+      "4 320 et 1,2"
+    ]
+  },
+  "45": {
+    "reponse": "La liaison est saturée ; il faut compresser le flux ou augmenter le débit de la liaison.",
+    "criteres": [
+      {
+        "idee": "La caméra produit plus d'information que la liaison ne peut en transporter : saturation",
+        "mots": [
+          "satur",
+          "plus d information",
+          "trop",
+          "superieur"
+        ]
+      },
+      {
+        "idee": "Les données s'accumulent ou sont perdues",
+        "mots": [
+          "perdu",
+          "accumul",
+          "perte",
+          "saccade",
+          "coupure"
+        ]
+      },
+      {
+        "idee": "Solution : compresser la vidéo ou réduire la résolution",
+        "mots": [
+          "compress",
+          "resolution",
+          "reduire"
+        ]
+      },
+      {
+        "idee": "Ou choisir une liaison de débit supérieur",
+        "mots": [
+          "debit superieur",
+          "augmenter le debit",
+          "autre liaison",
+          "fibre"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Acquérir (mesure), traiter (décision), communiquer (ordre et envoi) ; le CAN est entre acquérir et traiter.",
+    "criteres": [
+      {
+        "idee": "Mesurer la température : acquérir",
+        "mots": [
+          "acquer",
+          "acquisition"
+        ]
+      },
+      {
+        "idee": "Décider d'allumer la chaudière : traiter",
+        "mots": [
+          "trait"
+        ]
+      },
+      {
+        "idee": "Envoyer l'ordre et la valeur au téléphone : communiquer",
+        "mots": [
+          "communiqu"
+        ]
+      },
+      {
+        "idee": "La conversion analogique-numérique (CAN) se fait entre l'acquisition et le traitement",
+        "mots": [
+          "can",
+          "entre",
+          "convertisseur"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Pas ≈ 9,77 mV, soit environ 0,10 °C.",
+    "accepte": [
+      "9,77 mV ; 0,10 °C",
+      "9,77 mV et 0,10 °C",
+      "9,77 ; 0,10",
+      "9,77 et 0,10"
+    ]
+  },
+  "49": {
+    "reponse": "Oui, de justesse : on reçoit 0,01 mW, exactement le minimum.",
+    "accepte": [
+      "oui"
+    ]
+  },
+  "50": {
+    "reponse": "Analogique au micro et au haut-parleur, numérique pendant la transmission ; CAN à l'émission, CNA à la réception.",
+    "criteres": [
+      {
+        "idee": "Le signal du microphone et celui du haut-parleur sont analogiques",
+        "mots": [
+          "analogique au",
+          "sont analogiques",
+          "micro analogique",
+          "analogiques au"
+        ]
+      },
+      {
+        "idee": "Les nombres transmis par radio forment un signal numérique",
+        "mots": [
+          "numerique pendant",
+          "signal numerique",
+          "numerique par radio",
+          "transmission numerique"
+        ]
+      },
+      {
+        "idee": "Un CAN dans le téléphone qui émet",
+        "mots": [
+          "can",
+          "analogique numerique"
+        ]
+      },
+      {
+        "idee": "Un CNA dans celui qui reçoit",
+        "mots": [
+          "cna",
+          "numerique analogique"
+        ]
+      }
+    ]
+  }
+}

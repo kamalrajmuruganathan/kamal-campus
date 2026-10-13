@@ -1,0 +1,478 @@
+{
+  "6": {
+    "reponse": "`maxi` prend les valeurs $3, 9, 9, 9, 9$ ; à la fin `maxi = 9`.",
+    "criteres": [
+      {
+        "idee": "L[0] est un candidat de départ sûr car la liste est non vide",
+        "mots": [
+          "candidat",
+          "non vide",
+          "premier element",
+          "depart"
+        ]
+      },
+      {
+        "idee": "On commence à l'indice 1 car comparer L[0] à lui-même est inutile",
+        "mots": [
+          "inutile",
+          "lui meme",
+          "deja"
+        ]
+      },
+      {
+        "idee": "maxi prend successivement les valeurs 3, 9, 9, 9, 9",
+        "mots": [
+          "3 9 9 9",
+          "3, 9, 9"
+        ]
+      },
+      {
+        "idee": "À la fin, maxi vaut 9",
+        "mots": [
+          "maxi 9",
+          "vaut 9",
+          "maxi vaut 9"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "reponse": "`len(L)` vaut $4$ ; l'ensemble a $3$ éléments (une liste autorise les répétitions).",
+    "criteres": [
+      {
+        "idee": "len(L) vaut 4 : la liste compte tous les éléments, doublons compris",
+        "mots": [
+          "len l 4",
+          "vaut 4",
+          "4 elements",
+          "doublon"
+        ]
+      },
+      {
+        "idee": "L'ensemble {2, 5, 2, 7} = {2, 5, 7} n'a que 3 éléments",
+        "mots": [
+          "3 elements",
+          "trois",
+          "2 5 7"
+        ]
+      },
+      {
+        "idee": "Une liste autorise les répétitions ; dans un ensemble, un élément répété ne compte qu'une fois",
+        "mots": [
+          "repet",
+          "repete",
+          "une fois",
+          "doublon"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "`False` pour les listes ; les ensembles sont égaux.",
+    "criteres": [
+      {
+        "idee": "Le test renvoie False pour les listes",
+        "mots": [
+          "false",
+          "faux"
+        ]
+      },
+      {
+        "idee": "Deux listes sont égales seulement si elles ont les mêmes éléments dans le même ordre",
+        "mots": [
+          "ordre"
+        ]
+      },
+      {
+        "idee": "Les ensembles sont égaux car un ensemble ne tient pas compte de l'ordre",
+        "mots": [
+          "egaux",
+          "ensembles sont",
+          "pas compte"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "Dernier indice $5$ ; `L[len(L) - 1]` vaut `42` ; `L[6]` provoque une `IndexError`.",
+    "criteres": [
+      {
+        "idee": "Le dernier indice est 5 (les indices vont de 0 à 5)",
+        "mots": [
+          "indice 5",
+          "de 0 a 5",
+          "est 5"
+        ]
+      },
+      {
+        "idee": "L[len(L) - 1] vaut L[5], soit 42",
+        "mots": [
+          "vaut 42",
+          "l 5",
+          "soit 42"
+        ]
+      },
+      {
+        "idee": "L[6] provoque une erreur IndexError car l'indice 6 n'existe pas",
+        "mots": [
+          "indexerror",
+          "erreur",
+          "existe pas"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "`L = [4, 7, 9, 11]`.",
+    "accepte": [
+      "[4, 7, 9, 11]",
+      "4, 7, 9, 11"
+    ]
+  },
+  "20": {
+    "reponse": "`[1, 3, 5, 7, 9]`.",
+    "accepte": [
+      "[1, 3, 5, 7, 9]",
+      "1, 3, 5, 7, 9"
+    ]
+  },
+  "22": {
+    "reponse": "`L = [1, 2, 3, 4, 1]`.",
+    "accepte": [
+      "[1, 2, 3, 4, 1]",
+      "1, 2, 3, 4, 1"
+    ]
+  },
+  "24": {
+    "reponse": "`L = [0, 10, 20, 30]`.",
+    "accepte": [
+      "[0, 10, 20, 30]",
+      "0, 10, 20, 30"
+    ]
+  },
+  "26": {
+    "reponse": "`p` vaut $30$ ; on part de $1$, élément neutre de la multiplication.",
+    "criteres": [
+      {
+        "idee": "p vaut 2, puis 6, puis 30",
+        "mots": [
+          "vaut 30",
+          "p 30",
+          "6 puis 30",
+          "30 car"
+        ]
+      },
+      {
+        "idee": "1 est l'élément neutre de la multiplication",
+        "mots": [
+          "neutre"
+        ]
+      },
+      {
+        "idee": "Avec 0, le produit resterait égal à 0",
+        "mots": [
+          "resterait",
+          "toujours 0",
+          "reste 0",
+          "egal a 0",
+          "nul"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "Erreur `IndexError` ; il faut écrire `print(L[-1])` (ou `L[2]`).",
+    "criteres": [
+      {
+        "idee": "La liste n'a que les indices 0, 1 et 2 : l'indice 3 n'existe pas",
+        "mots": [
+          "existe pas",
+          "indices 0",
+          "0 1 et 2"
+        ]
+      },
+      {
+        "idee": "Python renvoie une erreur IndexError",
+        "mots": [
+          "indexerror",
+          "erreur"
+        ]
+      },
+      {
+        "idee": "Correction : écrire L[-1] (ou L[2])",
+        "mots": [
+          "l 1",
+          "l 2"
+        ]
+      }
+    ]
+  },
+  "29": {
+    "reponse": "`[k for k in range(1, 11)]`.",
+    "criteres": [
+      {
+        "idee": "La borne de droite est exclue : range(1, 10) s'arrête à 9",
+        "mots": [
+          "exclu",
+          "arrete a 9",
+          "jusqu a 9",
+          "manque"
+        ]
+      },
+      {
+        "idee": "Il faut écrire range(1, 11)",
+        "mots": [
+          "range 1 11",
+          "1 11"
+        ]
+      }
+    ]
+  },
+  "30": {
+    "reponse": "`L = [6, 6, 18]`.",
+    "accepte": [
+      "[6, 6, 18]",
+      "6, 6, 18"
+    ]
+  },
+  "31": {
+    "reponse": "`L = [4, 2, 3, 1]` : on a échangé le premier et le dernier élément.",
+    "criteres": [
+      {
+        "idee": "L contient [4, 2, 3, 1] à la fin",
+        "mots": [
+          "4 2 3 1"
+        ]
+      },
+      {
+        "idee": "Le code échange le premier et le dernier élément",
+        "mots": [
+          "echang",
+          "permut",
+          "inverse"
+        ]
+      },
+      {
+        "idee": "La variable tmp évite de perdre la valeur 1",
+        "mots": [
+          "tmp",
+          "perdre",
+          "memoris",
+          "temporaire",
+          "sauvegard"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "`[1, 2, 4, 5, 10, 20]` : la liste des diviseurs de $20$.",
+    "criteres": [
+      {
+        "idee": "La liste obtenue est [1, 2, 4, 5, 10, 20]",
+        "mots": [
+          "1 2 4 5 10 20"
+        ]
+      },
+      {
+        "idee": "20 % x == 0 signifie que le reste de la division de 20 par x est nul",
+        "mots": [
+          "reste",
+          "divisible"
+        ]
+      },
+      {
+        "idee": "C'est la liste des diviseurs de 20",
+        "mots": [
+          "diviseur"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "`[1, 9, 25, 49]`.",
+    "accepte": [
+      "[1, 9, 25, 49]",
+      "1, 9, 25, 49"
+    ]
+  },
+  "36": {
+    "reponse": "`[0, 1, 3, 7, 15, 31]`.",
+    "accepte": [
+      "[0, 1, 3, 7, 15, 31]",
+      "0, 1, 3, 7, 15, 31"
+    ]
+  },
+  "38": {
+    "reponse": "`L = [1, 3, 7]`.",
+    "accepte": [
+      "[1, 3, 7]",
+      "1, 3, 7"
+    ]
+  },
+  "39": {
+    "reponse": "`del L[1]` donne `[1, 1, 9]` ; `L.remove(1)` donne `[5, 1, 9]`.",
+    "criteres": [
+      {
+        "idee": "del L[1] donne [1, 1, 9]",
+        "mots": [
+          "1 1 9"
+        ]
+      },
+      {
+        "idee": "L.remove(1) donne [5, 1, 9] : seule la première valeur 1 est supprimée",
+        "mots": [
+          "5 1 9",
+          "premiere"
+        ]
+      },
+      {
+        "idee": "del agit sur une position (un indice), remove sur une valeur",
+        "mots": [
+          "position",
+          "indice"
+        ]
+      },
+      {
+        "idee": "remove agit sur une valeur",
+        "mots": [
+          "valeur"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "`c` vaut $3$ ; on s'arrête avant le dernier indice pour que `L[i+1]` existe.",
+    "criteres": [
+      {
+        "idee": "c vaut 3 (trois montées : 3<5, 4<6, 6<8)",
+        "mots": [
+          "vaut 3",
+          "c 3",
+          "trois"
+        ]
+      },
+      {
+        "idee": "La boucle utilise L[i+1], qui doit exister",
+        "mots": [
+          "l i 1",
+          "suivant",
+          "existe"
+        ]
+      },
+      {
+        "idee": "Pour le dernier indice, L[i+1] n'existerait pas : on s'arrête à l'avant-dernier",
+        "mots": [
+          "avant dernier",
+          "dernier",
+          "depasse",
+          "indexerror"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "$12=A_4^2$ (arrangements de $2$ éléments parmi $4$).",
+    "criteres": [
+      {
+        "idee": "Il reste 16 - 4 = 12 couples d'éléments distincts",
+        "mots": [
+          "vaut 12",
+          "reste 12",
+          "il en reste",
+          "douze",
+          "12 a"
+        ]
+      },
+      {
+        "idee": "Ce sont des arrangements de 2 éléments parmi 4 (l'ordre compte)",
+        "mots": [
+          "arrangement",
+          "ordre"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Écrire `L.append(3)` sans réaffecter `L`.",
+    "criteres": [
+      {
+        "idee": "append modifie la liste sur place et ne renvoie rien (None)",
+        "mots": [
+          "sur place",
+          "renvoie rien",
+          "none",
+          "retourne rien"
+        ]
+      },
+      {
+        "idee": "En écrivant L = L.append(3), on remplace la liste par None",
+        "mots": [
+          "remplace",
+          "ecrase",
+          "reaffect",
+          "devient"
+        ]
+      },
+      {
+        "idee": "Il faut écrire simplement L.append(3)",
+        "mots": [
+          "l append 3",
+          "simplement",
+          "sans"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Remplacer `range(10)` par `range(1, 11)` ; le résultat est alors $55$.",
+    "criteres": [
+      {
+        "idee": "range(10) parcourt 0 à 9 : il manque 10, d'où 45",
+        "mots": [
+          "manque",
+          "0 a 9",
+          "exclu",
+          "45 car",
+          "s arrete a 9"
+        ]
+      },
+      {
+        "idee": "Il faut écrire range(1, 11)",
+        "mots": [
+          "range 1 11",
+          "1 11"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "$s=\\dfrac{25}{12}\\approx 2{,}083$.",
+    "accepte": [
+      "25/12"
+    ]
+  },
+  "48": {
+    "reponse": "$6$ couples ; $6=\\dbinom{4}{2}$.",
+    "criteres": [
+      {
+        "idee": "La condition a < b garde chaque paire d'éléments distincts une seule fois : 6 couples",
+        "mots": [
+          "une seule fois",
+          "paire",
+          "six",
+          "longueur 6",
+          "de 6"
+        ]
+      },
+      {
+        "idee": "Cette longueur est le coefficient binomial « 2 parmi 4 »",
+        "mots": [
+          "binomial",
+          "parmi",
+          "combinaison",
+          "4 2"
+        ]
+      }
+    ]
+  }
+}

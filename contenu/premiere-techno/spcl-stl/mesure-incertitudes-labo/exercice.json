@@ -17,10 +17,10 @@
       "enonce": "On pèse cinq fois le même échantillon (masses en $\\mathrm{g}$) : $12{,}44$ ; $12{,}47$ ; $12{,}41$ ; $12{,}46$ ; $12{,}42$. La calculatrice indique un écart-type expérimental $s = 0{,}045\\ \\mathrm{g}$. Calcule la masse moyenne $\\bar{m}$, puis l'incertitude-type de type A $u(\\bar{m})$, et exprime le résultat sous la forme $(\\bar{m} \\pm u)$.",
       "corrige": [
         "Moyenne : $\\bar{m} = \\dfrac{12{,}44 + 12{,}47 + 12{,}41 + 12{,}46 + 12{,}42}{5} = \\dfrac{62{,}20}{5} = 12{,}44\\ \\mathrm{g}$.",
-        "Incertitude-type de type A sur la moyenne : $u(\\bar{m}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}045}{\\sqrt{5}} = 0{,}020\\ \\mathrm{g}$ (on divise par $\\sqrt{5}$, pas par $5$).",
-        "On arrondit $u$ à $1$ chiffre significatif ($0{,}02\\ \\mathrm{g}$) et la valeur au même rang (le centième) : $\\bar{m} = 12{,}44\\ \\mathrm{g}$."
+        "Incertitude-type de type A sur la moyenne : $u(\\bar{m}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}045}{\\sqrt{5}} = 0{,}0201\\ \\mathrm{g}$ (on divise par $\\sqrt{5}$, pas par $5$).",
+        "On arrondit $u$ à $1$ chiffre significatif **par excès** ($0{,}0201 \\to 0{,}03\\ \\mathrm{g}$) et la valeur au même rang (le centième) : $\\bar{m} = 12{,}44\\ \\mathrm{g}$."
       ],
-      "reponse": "$m = (12{,}44 \\pm 0{,}02)\\ \\mathrm{g}$."
+      "reponse": "$m = (12{,}44 \\pm 0{,}03)\\ \\mathrm{g}$."
     },
     {
       "id": 2,
@@ -106,10 +106,10 @@
       "corrige": [
         "Volume versé : $V = 15{,}80 - 1{,}50 = 14{,}30\\ \\mathrm{mL}$.",
         "Incertitude de type B sur **chaque** lecture (graduation $0{,}1\\ \\mathrm{mL}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{0{,}1}{\\sqrt{3}} = 0{,}058\\ \\mathrm{mL}$.",
-        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}058^2 + 0{,}058^2} = 0{,}058\\times\\sqrt{2} = 0{,}082 \\approx 0{,}08\\ \\mathrm{mL}$.",
-        "On arrondit $u$ à $1$ c.s. ($0{,}08\\ \\mathrm{mL}$) et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}08)\\ \\mathrm{mL}$."
+        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}058^2 + 0{,}058^2} = 0{,}058\\times\\sqrt{2} = 0{,}082\\ \\mathrm{mL}$.",
+        "On arrondit $u$ à $1$ c.s. **par excès** ($0{,}09\\ \\mathrm{mL}$) et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}09)\\ \\mathrm{mL}$."
       ],
-      "reponse": "$u$ sur une lecture $= 0{,}058\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}08)\\ \\mathrm{mL}$."
+      "reponse": "$u$ sur une lecture $= 0{,}058\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}09)\\ \\mathrm{mL}$."
     },
     {
       "id": 9,
@@ -120,10 +120,10 @@
         "Masse de liquide, par **différence** de deux pesées : $m = m_2 - m_1 = 72{,}65 - 32{,}15 = 40{,}50\\ \\mathrm{g}$. Différence $\\Rightarrow$ on combine les incertitudes **absolues** : $u(m) = \\sqrt{0{,}01^2 + 0{,}01^2} = 0{,}014\\ \\mathrm{g}$.",
         "Masse volumique : $\\rho = \\dfrac{m}{V} = \\dfrac{40{,}50}{50{,}00} = 0{,}8100\\ \\mathrm{g\\cdot mL^{-1}}$.",
         "$\\rho$ est un **quotient** : on combine les incertitudes **relatives**. $\\dfrac{u(m)}{m} = \\dfrac{0{,}014}{40{,}50} = 0{,}00035$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}04}{50{,}00} = 0{,}00080$ : c'est le **volume** qui contribue le plus (la pesée par différence est ici très précise).",
-        "$\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}00035^2 + 0{,}00080^2} = 0{,}00087$, donc $u(\\rho) = 0{,}00087 \\times 0{,}8100 = 0{,}00071 \\approx 0{,}0007\\ \\mathrm{g\\cdot mL^{-1}}$.",
-        "On arrondit la valeur au même rang que $u$ (le dix-millième) : $\\rho = (0{,}8100 \\pm 0{,}0007)\\ \\mathrm{g\\cdot mL^{-1}}$. Pour gagner encore en précision, il faudrait surtout mieux connaître le **volume** (verrerie plus précise)."
+        "$\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}00035^2 + 0{,}00080^2} = 0{,}00087$, donc $u(\\rho) = 0{,}00087 \\times 0{,}8100 = 0{,}00071\\ \\mathrm{g\\cdot mL^{-1}}$, arrondie à $1$ c.s. **par excès** : $0{,}0008\\ \\mathrm{g\\cdot mL^{-1}}$.",
+        "On arrondit la valeur au même rang que $u$ (le dix-millième) : $\\rho = (0{,}8100 \\pm 0{,}0008)\\ \\mathrm{g\\cdot mL^{-1}}$. Pour gagner encore en précision, il faudrait surtout mieux connaître le **volume** (verrerie plus précise)."
       ],
-      "reponse": "$m = 40{,}50\\ \\mathrm{g}$ ($u(m) = 0{,}014\\ \\mathrm{g}$) ; $\\rho = (0{,}8100 \\pm 0{,}0007)\\ \\mathrm{g\\cdot mL^{-1}}$. C'est l'incertitude sur le **volume** qui domine."
+      "reponse": "$m = 40{,}50\\ \\mathrm{g}$ ($u(m) = 0{,}014\\ \\mathrm{g}$) ; $\\rho = (0{,}8100 \\pm 0{,}0008)\\ \\mathrm{g\\cdot mL^{-1}}$. C'est l'incertitude sur le **volume** qui domine."
     },
     {
       "id": 10,

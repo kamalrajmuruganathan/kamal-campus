@@ -80,7 +80,7 @@
       "id": 6,
       "difficulte": "approfondissement",
       "notion": "complexité de boucles imbriquées et invariant",
-      "enonce": "1) Donne la complexité de la fonction ci-dessous en fonction de n. 2) Énonce un invariant de boucle qui prouve qu'à la fin, m contient le maximum de t (liste non vide).\n\n```python\ndef doublons(t):\n    n = len(t)\n    for i in range(n):\n        for j in range(i+1, n):\n            if t[i] == t[j]:\n                return True\n    return False\n\ndef maxi(t):\n    m = t[0]\n    for i in range(1, len(t)):\n        if t[i] > m:\n            m = t[i]\n    return m\n```",
+      "enonce": "1) Donne la complexité de la fonction doublons ci-dessous en fonction de n. 2) Pour la fonction maxi, énonce un invariant de boucle qui prouve qu'à la fin, m contient le maximum de t (liste non vide).\n\n```python\ndef doublons(t):\n    n = len(t)\n    for i in range(n):\n        for j in range(i+1, n):\n            if t[i] == t[j]:\n                return True\n    return False\n\ndef maxi(t):\n    m = t[0]\n    for i in range(1, len(t)):\n        if t[i] > m:\n            m = t[i]\n    return m\n```",
       "corrige": [
         "Pour doublons : la boucle interne effectue environ (n-1)+(n-2)+...+1 = n(n-1)/2 comparaisons dans le pire des cas (aucun doublon).",
         "Ce nombre est proportionnel à n au carré : la complexité est quadratique, O(n^2).",

@@ -1,0 +1,940 @@
+{
+  "1": {
+    "reponse": "Protocole https, domaine www.lycee.fr, et /snt/web.html est le chemin vers la page demandée.",
+    "criteres": [
+      {
+        "idee": "Le protocole est https",
+        "mots": [
+          "https"
+        ]
+      },
+      {
+        "idee": "Le nom de domaine est www.lycee.fr",
+        "mots": [
+          "www lycee fr",
+          "lycee fr"
+        ]
+      },
+      {
+        "idee": "/snt/web.html est le chemin vers la page (dossier snt, fichier web.html)",
+        "mots": [
+          "chemin",
+          "dossier",
+          "fichier",
+          "emplacement"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "reponse": "HTML structure les pages Web ; un hyperlien mène d'une page à une autre ; ici on voit 'Suite' et le lien ouvre page2.html.",
+    "criteres": [
+      {
+        "idee": "HTML (HyperText Markup Language) est le langage de balises qui structure les pages Web",
+        "mots": [
+          "balise",
+          "structur",
+          "hypertext",
+          "langage"
+        ]
+      },
+      {
+        "idee": "Un hyperlien est un lien cliquable qui mène d'une page à une autre",
+        "mots": [
+          "cliqu",
+          "autre page",
+          "mene",
+          "passer",
+          "relie"
+        ]
+      },
+      {
+        "idee": "On voit le texte « Suite » et le lien ouvre page2.html",
+        "mots": [
+          "suite"
+        ]
+      },
+      {
+        "idee": "Le lien ouvre page2.html (cible donnée par href)",
+        "mots": [
+          "page2",
+          "href"
+        ]
+      }
+    ]
+  },
+  "3": {
+    "reponse": "Le navigateur est le client, la machine hébergeant la page est le serveur, et l'échange utilise HTTP(S).",
+    "accepte": [
+      "client ; serveur ; HTTP",
+      "client ; serveur ; HTTPS",
+      "client ; serveur ; HTTP ou HTTPS",
+      "le client ; le serveur ; HTTP",
+      "le client ; le serveur ; HTTPS"
+    ]
+  },
+  "4": {
+    "reponse": "Des robots explorent les liens, remplissent un index de mots-clés, et le classement dépend de la pertinence et de la popularité des pages.",
+    "criteres": [
+      {
+        "idee": "Des robots (crawlers) parcourent le Web en suivant les liens",
+        "mots": [
+          "robot",
+          "crawler",
+          "araignee",
+          "programme",
+          "suivant les liens",
+          "explor"
+        ]
+      },
+      {
+        "idee": "L'index est une base qui associe des mots-clés aux pages",
+        "mots": [
+          "base",
+          "associ",
+          "mots cles",
+          "table",
+          "repertori"
+        ]
+      },
+      {
+        "idee": "Classement : pertinence et popularité (liens reçus), fraîcheur…",
+        "mots": [
+          "pertinen",
+          "popularit",
+          "liens entrants",
+          "liens recus",
+          "fraicheur",
+          "reputation"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "Vérifier l'auteur et le sérieux du site, recouper avec d'autres sources fiables, et regarder la date et les preuves avancées.",
+    "criteres": [
+      {
+        "idee": "Vérifier l'auteur et le sérieux du site",
+        "mots": [
+          "auteur",
+          "site",
+          "serieu",
+          "qui a ecrit",
+          "fiab"
+        ]
+      },
+      {
+        "idee": "Recouper avec d'autres sources fiables et indépendantes",
+        "mots": [
+          "recoup",
+          "crois",
+          "autres sources",
+          "comparer",
+          "plusieurs sources"
+        ]
+      },
+      {
+        "idee": "Regarder la date et les preuves avancées (études, sources citées)",
+        "mots": [
+          "date",
+          "preuve",
+          "etude",
+          "chiffre",
+          "source cite"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "4 requêtes (HTML + CSS + 2 images) ; 404 = ressource introuvable ; HTTPS chiffre les données, donc protège le mot de passe.",
+    "criteres": [
+      {
+        "idee": "4 requêtes au minimum : HTML, CSS et les 2 images",
+        "mots": [
+          "4 requete",
+          "quatre",
+          "html css"
+        ]
+      },
+      {
+        "idee": "404 : la ressource demandée est introuvable",
+        "mots": [
+          "introuvable",
+          "not found",
+          "trouv",
+          "existe pas",
+          "supprim"
+        ]
+      },
+      {
+        "idee": "HTTPS chiffre les données, donc le mot de passe ne circule pas en clair",
+        "mots": [
+          "chiffr",
+          "crypt",
+          "en clair",
+          "illisible",
+          "intercept"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "reponse": "Un hyperlien, créé par la balise <a href=...> ; l'hypertexte relie les documents par des liens.",
+    "criteres": [
+      {
+        "idee": "C'est un hyperlien (lien hypertexte)",
+        "mots": [
+          "hyperlien",
+          "lien hypertexte"
+        ]
+      },
+      {
+        "idee": "On le crée avec la balise <a> et l'attribut href",
+        "mots": [
+          "href",
+          "balise a",
+          "ancre"
+        ]
+      },
+      {
+        "idee": "L'hypertexte : des documents reliés par des liens qu'on peut suivre",
+        "mots": [
+          "relie",
+          "documents",
+          "ensemble",
+          "suivre",
+          "naviguer"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "reponse": "<h1> pour le titre, <p> pour le paragraphe ; le HTML structure, le CSS met en forme.",
+    "criteres": [
+      {
+        "idee": "Le titre de niveau 1 s'écrit avec <h1>",
+        "mots": [
+          "balise h1",
+          "h1 pour",
+          "titre h1",
+          "h1 titre",
+          "h1 et"
+        ]
+      },
+      {
+        "idee": "Le paragraphe s'écrit avec <p>",
+        "mots": [
+          "balise p",
+          "p pour",
+          "paragraph"
+        ]
+      },
+      {
+        "idee": "Le HTML structure le contenu, le CSS gère la mise en forme",
+        "mots": [
+          "mise en forme",
+          "style",
+          "couleur",
+          "police",
+          "apparence",
+          "presentation"
+        ]
+      }
+    ]
+  },
+  "9": {
+    "reponse": "Le moteur cherche dans un index construit par des robots ; le classement dépend de la pertinence et de la popularité, pas de la vérité.",
+    "criteres": [
+      {
+        "idee": "Le moteur cherche dans un index construit à l'avance, pas dans le Web en direct",
+        "mots": [
+          "index",
+          "a l avance",
+          "base de donnee"
+        ]
+      },
+      {
+        "idee": "Un robot d'indexation est un programme qui parcourt les pages en suivant les liens",
+        "mots": [
+          "programme",
+          "parcour",
+          "suivant les liens",
+          "explor",
+          "automatique",
+          "crawler"
+        ]
+      },
+      {
+        "idee": "Classement selon la pertinence et la popularité (liens reçus), pas selon la vérité",
+        "mots": [
+          "pertinen",
+          "popularit",
+          "liens",
+          "verite",
+          "fraicheur",
+          "publicit"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "GET pour lire ; 200 = trouvée, 404 = introuvable ; HTTPS chiffre l'échange (confidentialité et intégrité).",
+    "criteres": [
+      {
+        "idee": "Le navigateur envoie une requête GET",
+        "mots": [
+          "get"
+        ]
+      },
+      {
+        "idee": "200 : la page est trouvée et envoyée (OK)",
+        "mots": [
+          "200",
+          "trouvee",
+          "succes"
+        ]
+      },
+      {
+        "idee": "404 : la page est introuvable",
+        "mots": [
+          "404",
+          "introuvable",
+          "not found",
+          "non trouvee",
+          "pas trouvee"
+        ]
+      },
+      {
+        "idee": "HTTPS chiffre l'échange : confidentialité et intégrité des données",
+        "mots": [
+          "chiffr",
+          "crypt",
+          "confidential",
+          "integrit",
+          "securis",
+          "tls"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "reponse": "Tim Berners-Lee, au CERN, en 1989-1990.",
+    "accepte": [
+      "Tim Berners-Lee ; CERN ; 1989-1990",
+      "Tim Berners-Lee ; CERN ; 1989",
+      "Tim Berners-Lee ; CERN ; 1990",
+      "Tim Berners-Lee ; au CERN ; en 1989",
+      "Tim Berners-Lee ; au CERN ; en 1989-1990",
+      "Berners-Lee ; CERN ; 1989",
+      "Berners-Lee ; CERN ; 1989-1990"
+    ]
+  },
+  "12": {
+    "reponse": "« Toile mondiale » ; URL, HTTP et HTML.",
+    "criteres": [
+      {
+        "idee": "World Wide Web signifie « toile mondiale »",
+        "mots": [
+          "toile",
+          "mondial"
+        ]
+      },
+      {
+        "idee": "Il repose sur les URL, le protocole HTTP et le langage HTML",
+        "mots": [
+          "url",
+          "http",
+          "html"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "reponse": "Faux : Internet date des années 1970, le Web de 1989-1990.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Internet date des années 1970 (ARPANET)",
+        "mots": [
+          "1970",
+          "1969",
+          "arpanet"
+        ]
+      },
+      {
+        "idee": "Le Web date de 1989-1990",
+        "mots": [
+          "1989",
+          "1990",
+          "1991"
+        ]
+      },
+      {
+        "idee": "Le Web est un service qui fonctionne grâce à Internet",
+        "mots": [
+          "service",
+          "grace a internet",
+          "utilise internet",
+          "sur internet",
+          "fonctionne"
+        ]
+      }
+    ]
+  },
+  "14": {
+    "reponse": "a) https ; b) www.musee-exemple.fr ; c) /expositions/2025/affiche.png ; d) une image.",
+    "accepte": [
+      "https ; www.musee-exemple.fr ; /expositions/2025/affiche.png ; image",
+      "https ; www.musee-exemple.fr ; /expositions/2025/affiche.png ; une image",
+      "https ; www.musee-exemple.fr ; expositions/2025/affiche.png ; image"
+    ]
+  },
+  "18": {
+    "reponse": "Clients : a, c. Serveurs : b, d.",
+    "accepte": [
+      "clients a et c ; serveurs b et d",
+      "clients a c ; serveurs b d",
+      "client a c ; serveur b d"
+    ]
+  },
+  "19": {
+    "reponse": "Il interprète le HTML : un grand titre « Club d'échecs » puis le paragraphe « Rendez-vous au CDI le jeudi. »",
+    "criteres": [
+      {
+        "idee": "Le navigateur interprète le code HTML sans afficher les balises",
+        "mots": [
+          "interpret",
+          "lit",
+          "affiche pas les balises",
+          "traduit",
+          "transform"
+        ]
+      },
+      {
+        "idee": "Il affiche un grand titre « Club d'échecs »",
+        "mots": [
+          "titre",
+          "gros",
+          "grand"
+        ]
+      },
+      {
+        "idee": "Puis un paragraphe « Rendez-vous au CDI le jeudi. »",
+        "mots": [
+          "paragraphe",
+          "texte normal",
+          "en dessous"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "reponse": "`<h1>Recettes de saison</h1>`",
+    "accepte": [
+      "<h1>Recettes de saison</h1>"
+    ]
+  },
+  "23": {
+    "reponse": "HTML : b, d. CSS : a, c, e.",
+    "accepte": [
+      "HTML b et d ; CSS a c et e",
+      "HTML b d ; CSS a c e"
+    ]
+  },
+  "24": {
+    "reponse": "a) 2 ; b) 2 ; c) programme.html et inscription.html ; d) « S'inscrire ».",
+    "accepte": [
+      "2 ; 2 ; programme.html et inscription.html ; S'inscrire",
+      "2 ; 2 ; programme.html ; inscription.html ; S'inscrire"
+    ]
+  },
+  "25": {
+    "reponse": "Parce que les liens hypertexte relient les pages comme les fils d'une toile.",
+    "criteres": [
+      {
+        "idee": "Les pages sont reliées entre elles par des liens hypertexte",
+        "mots": [
+          "lien",
+          "hyperlien",
+          "hypertexte"
+        ]
+      },
+      {
+        "idee": "Ce maillage ressemble aux fils d'une toile d'araignée",
+        "mots": [
+          "fil",
+          "araignee",
+          "maill",
+          "reseau",
+          "tiss"
+        ]
+      }
+    ]
+  },
+  "26": {
+    "reponse": "a) 2 clics ; b) la page C (2 liens).",
+    "accepte": [
+      "2 clics ; C",
+      "2 ; C",
+      "2 clics ; la page C",
+      "2 ; la page C"
+    ]
+  },
+  "27": {
+    "reponse": "b, d, e, a, c.",
+    "accepte": [
+      "b, d, e, a, c"
+    ]
+  },
+  "30": {
+    "reponse": "200 OK, 404 Not Found, 200 OK, 200 OK, puis 3 : trois ressources trouvées.",
+    "accepte": [
+      "200 OK ; 404 Not Found ; 200 OK ; 200 OK ; 3"
+    ]
+  },
+  "31": {
+    "reponse": "Que la connexion utilise HTTPS : les échanges sont chiffrés.",
+    "accepte": [
+      "HTTPS",
+      "la connexion utilise HTTPS",
+      "connexion sécurisée",
+      "connexion chiffrée",
+      "la connexion est chiffrée",
+      "la connexion est sécurisée",
+      "les échanges sont chiffrés"
+    ]
+  },
+  "32": {
+    "reponse": "Faux : HTTPS chiffre la connexion, mais ne garantit pas l'honnêteté du contenu.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "HTTPS chiffre seulement la connexion (personne ne lit les données en route)",
+        "mots": [
+          "chiffr",
+          "crypt",
+          "connexion",
+          "securis"
+        ]
+      },
+      {
+        "idee": "Il ne garantit rien sur le contenu : un site trompeur peut être en HTTPS",
+        "mots": [
+          "contenu",
+          "trompeur",
+          "mensong",
+          "faux site",
+          "honnet",
+          "ne garantit"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "a, b et c.",
+    "ensemble": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  "34": {
+    "reponse": "Son mot de passe circule en clair et peut être intercepté ; il ne doit le saisir que sur un site en HTTPS.",
+    "criteres": [
+      {
+        "idee": "En HTTP, les données circulent en clair",
+        "mots": [
+          "en clair",
+          "pas chiffr",
+          "non chiffr",
+          "lisible",
+          "crypt"
+        ]
+      },
+      {
+        "idee": "Son mot de passe peut être intercepté et lu",
+        "mots": [
+          "intercept",
+          "vol",
+          "pirat",
+          "recuper",
+          "espion"
+        ]
+      },
+      {
+        "idee": "Conseil : ne saisir un mot de passe que sur un site en HTTPS (cadenas)",
+        "mots": [
+          "https",
+          "cadenas",
+          "ne pas se connect",
+          "eviter"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "b, c, a.",
+    "accepte": [
+      "b, c, a"
+    ]
+  },
+  "36": {
+    "reponse": "Faux : il ne connaît que les pages qu'il a indexées.",
+    "criteres": [
+      {
+        "idee": "C'est faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "Il ne connaît que les pages de son index (visitées par ses robots)",
+        "mots": [
+          "index",
+          "robot",
+          "visit",
+          "explor"
+        ]
+      },
+      {
+        "idee": "Les pages non visitées (récentes, sans lien, protégées) n'y sont pas",
+        "mots": [
+          "recente",
+          "sans lien",
+          "protege",
+          "nouvelle",
+          "aucun lien",
+          "pas toutes"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "La page n'a pas encore été visitée par les robots, donc elle n'est pas dans l'index.",
+    "criteres": [
+      {
+        "idee": "Le moteur cherche dans son index, pas en direct sur le Web",
+        "mots": [
+          "index"
+        ]
+      },
+      {
+        "idee": "Aucun robot n'est encore passé sur la page nouvelle",
+        "mots": [
+          "robot",
+          "pas encore",
+          "crawler",
+          "visit",
+          "explor",
+          "trop recent"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Rassurants : a, c, e. Alertes : b, d, f.",
+    "accepte": [
+      "rassurants a c e ; alertes b d f",
+      "rassurants a c et e ; alertes b d et f"
+    ]
+  },
+  "41": {
+    "reponse": "Exemple : ton sensationnel, aucune source, but commercial et promesse irréaliste.",
+    "criteres": [
+      {
+        "idee": "Le ton sensationnel (majuscules, points d'exclamation)",
+        "mots": [
+          "sensationnel",
+          "majuscule",
+          "exclamation",
+          "ton",
+          "exager"
+        ]
+      },
+      {
+        "idee": "Aucune source ni auteur, avec l'idée d'un secret caché",
+        "mots": [
+          "source",
+          "auteur",
+          "secret",
+          "cache",
+          "complot"
+        ]
+      },
+      {
+        "idee": "Le but commercial : vendre une cure",
+        "mots": [
+          "commerc",
+          "vendre",
+          "vente",
+          "achat",
+          "argent",
+          "publicit"
+        ]
+      },
+      {
+        "idee": "Une promesse irréaliste (10 kg en une semaine)",
+        "mots": [
+          "irrealiste",
+          "impossible",
+          "invraisembl",
+          "promesse",
+          "trop beau"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "La comparer avec plusieurs sources fiables et indépendantes ; ne la partager que si elles la confirment.",
+    "criteres": [
+      {
+        "idee": "Croiser : comparer l'information avec plusieurs sources",
+        "mots": [
+          "compar",
+          "plusieurs sources",
+          "autres sources",
+          "recoup",
+          "verifi"
+        ]
+      },
+      {
+        "idee": "Choisir des sources fiables et indépendantes (presse reconnue, organismes officiels)",
+        "mots": [
+          "fiab",
+          "independ",
+          "presse",
+          "officiel",
+          "serieu",
+          "journal"
+        ]
+      },
+      {
+        "idee": "Vérifier la date et l'auteur d'origine",
+        "mots": [
+          "date",
+          "auteur",
+          "origine"
+        ]
+      },
+      {
+        "idee": "Ne la partager que si plusieurs sources sérieuses la confirment",
+        "mots": [
+          "confirm",
+          "ne pas partager",
+          "seulement si",
+          "partag"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "Les cookies et l'historique de navigation.",
+    "criteres": [
+      {
+        "idee": "Les cookies",
+        "mots": [
+          "cookie"
+        ]
+      },
+      {
+        "idee": "L'historique de navigation",
+        "mots": [
+          "historique"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Ses traces de navigation (cookies) ont servi à lui afficher une publicité ciblée.",
+    "criteres": [
+      {
+        "idee": "Sa navigation a laissé des traces (cookies)",
+        "mots": [
+          "trace",
+          "cookie",
+          "historique"
+        ]
+      },
+      {
+        "idee": "Ces traces révèlent ses centres d'intérêt et construisent un profil",
+        "mots": [
+          "profil",
+          "interet",
+          "gout",
+          "renseign"
+        ]
+      },
+      {
+        "idee": "Elles servent à afficher une publicité ciblée",
+        "mots": [
+          "cibl",
+          "adapt",
+          "personnalis"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Par la publicité, ciblée grâce aux traces laissées par les utilisateurs.",
+    "criteres": [
+      {
+        "idee": "Les sites gratuits se financent par la publicité",
+        "mots": [
+          "publicit",
+          "pub",
+          "annonce"
+        ]
+      },
+      {
+        "idee": "Les traces servent à établir un profil de l'utilisateur",
+        "mots": [
+          "profil",
+          "trace",
+          "cookie",
+          "donnee"
+        ]
+      },
+      {
+        "idee": "La publicité ciblée rapporte davantage",
+        "mots": [
+          "cibl",
+          "rapporte",
+          "plus cher",
+          "davantage",
+          "adapt",
+          "personnalis"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Exemple : refuser les cookies non nécessaires ; effacer l'historique et les cookies.",
+    "criteres": [
+      {
+        "idee": "Refuser les cookies non nécessaires, ce qui limite le suivi publicitaire",
+        "mots": [
+          "refus",
+          "cookie",
+          "bloqu"
+        ]
+      },
+      {
+        "idee": "Effacer l'historique et les cookies, ce qui supprime les traces déjà enregistrées",
+        "mots": [
+          "effac",
+          "supprim",
+          "historique",
+          "vider",
+          "nettoy",
+          "navigation privee"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "a) https, www.bibliotheque-exemple.fr, /catalogue/recherche.html ; b) navigateur = client, machine du site = serveur ; c) requête puis réponse, puis affichage ; d) 200.",
+    "criteres": [
+      {
+        "idee": "Protocole https, domaine www.bibliotheque-exemple.fr, chemin /catalogue/recherche.html",
+        "mots": [
+          "chemin",
+          "domaine",
+          "protocole"
+        ]
+      },
+      {
+        "idee": "Le navigateur de Lina est le client, l'ordinateur du site est le serveur",
+        "mots": [
+          "client"
+        ]
+      },
+      {
+        "idee": "Le navigateur envoie une requête, le serveur renvoie la page HTML",
+        "mots": [
+          "requete",
+          "demande",
+          "renvo",
+          "repond",
+          "reponse"
+        ]
+      },
+      {
+        "idee": "Le navigateur interprète le code et affiche la page",
+        "mots": [
+          "affich",
+          "interpret"
+        ]
+      },
+      {
+        "idee": "Code de réponse attendu : 200 (OK)",
+        "mots": [
+          "200"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "a) l'organisme scientifique (≈ 300 000 km/s) ; b) c'est une publicité ; c) vérifier dans une autre source fiable.",
+    "criteres": [
+      {
+        "idee": "Retenir la page de l'organisme scientifique (environ 300 000 km/s)",
+        "mots": [
+          "organisme",
+          "scientifique",
+          "300 000",
+          "300000",
+          "troisieme"
+        ]
+      },
+      {
+        "idee": "Le premier résultat est une publicité",
+        "mots": [
+          "publicit",
+          "pub",
+          "annonce",
+          "commerc"
+        ]
+      },
+      {
+        "idee": "Le classement ne mesure pas la vérité",
+        "mots": [
+          "verite",
+          "classement",
+          "pertinen",
+          "algorithm",
+          "pas forcement"
+        ]
+      },
+      {
+        "idee": "Croiser avec une autre source fiable (manuel, encyclopédie)",
+        "mots": [
+          "crois",
+          "autre source",
+          "verifi",
+          "manuel",
+          "encyclopedi",
+          "recoup"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "a) 6 requêtes ; b) 1 260 ko = 1,26 Mo ; c) environ 1 seconde.",
+    "accepte": [
+      "6 ; 1 260 ko ; 1,26 Mo ; 1 s",
+      "6 ; 1 260 ; 1,26 ; 1",
+      "6 requêtes ; 1 260 ko ; 1,26 Mo ; 1 seconde",
+      "6 ; 1 260 ko ; 1,26 Mo ; 1 seconde"
+    ]
+  }
+}

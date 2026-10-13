@@ -36,7 +36,8 @@ Un programme s'appuie sur quelques structures fondamentales :
 
 - la **séquence** : des instructions exécutées **l'une après l'autre**, dans l'ordre ;
 - la **boucle** (répétition) : on répète des instructions, soit un **nombre de fois** connu
-  (« répéter 4 fois »), soit **tant qu'une condition** est vraie (« répéter jusqu'à… ») ;
+  (« répéter 4 fois »), soit **selon une condition** : « **tant que** » la condition est vraie, ou
+  « **répéter jusqu'à** » ce qu'elle devienne vraie (la boucle s'arrête alors) ;
 - la **condition** (test) : « **si** … **alors** … **sinon** … » ; l'action dépend d'un test
   (par exemple : *si* un obstacle est détecté, *alors* tourner).
 

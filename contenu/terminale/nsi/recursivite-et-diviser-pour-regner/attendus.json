@@ -1,0 +1,552 @@
+{
+  "1": {
+    "reponse": "Cas de base : n==0 renvoie 1 ; cas récursif : n*fact(n-1) ; fact(3) = 6.",
+    "criteres": [
+      {
+        "idee": "Cas de base : n == 0, la fonction renvoie 1 sans se rappeler",
+        "mots": [
+          "cas de base",
+          "n 0"
+        ]
+      },
+      {
+        "idee": "Cas récursif : n * fact(n-1), la fonction s'appelle sur n - 1",
+        "mots": [
+          "cas recursif",
+          "fact n 1"
+        ]
+      },
+      {
+        "idee": "fact(3) = 3 × fact(2) = 3 × 2 × fact(1) = 3 × 2 × 1 × fact(0) = 6",
+        "mots": [
+          "3 2 1",
+          "vaut 6",
+          "fact 3 6",
+          "egal a 6",
+          "3 2 6"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "reponse": "Il manque le cas de base ; on ajoute if n == 0: return 0 avant l'appel récursif.",
+    "criteres": [
+      {
+        "idee": "Il manque un cas de base : n décroît indéfiniment (0, -1, -2…)",
+        "mots": [
+          "cas de base",
+          "indefiniment",
+          "jamais",
+          "sans fin"
+        ]
+      },
+      {
+        "idee": "Python lève une RecursionError (profondeur maximale dépassée)",
+        "mots": [
+          "recursionerror",
+          "profondeur"
+        ]
+      },
+      {
+        "idee": "Correction : ajouter if n == 0: return 0 avant l'appel récursif",
+        "mots": [
+          "n 0 return 0",
+          "return 0"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "reponse": "factorielle(4) = 24 (calculé en remontant depuis factorielle(0) = 1).",
+    "accepte": [
+      "24"
+    ]
+  },
+  "9": {
+    "reponse": "L'appel ne se termine jamais (aucun cas de base) : Python lève une RecursionError.",
+    "criteres": [
+      {
+        "idee": "La fonction n'a pas de cas de base",
+        "mots": [
+          "cas de base"
+        ]
+      },
+      {
+        "idee": "Les appels s'empilent indéfiniment : f(3), f(2), f(1), f(0), f(-1)…",
+        "mots": [
+          "indefiniment",
+          "empil",
+          "jamais",
+          "sans fin"
+        ]
+      },
+      {
+        "idee": "La pile d'appels sature : Python lève une RecursionError",
+        "mots": [
+          "recursionerror",
+          "pile",
+          "satur"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "reponse": "Le tableau trié est [1, 3, 4, 7] (fusion des moitiés triées [1, 4] et [3, 7]).",
+    "criteres": [
+      {
+        "idee": "Diviser : on coupe en deux moitiés [4, 1] et [7, 3]",
+        "mots": [
+          "diviser",
+          "coupe",
+          "4 1 et 7 3"
+        ]
+      },
+      {
+        "idee": "Régner : on trie chaque moitié → [1, 4] et [3, 7]",
+        "mots": [
+          "regner",
+          "1 4 et 3 7",
+          "trie chaque"
+        ]
+      },
+      {
+        "idee": "Combiner : on fusionne les deux moitiés triées",
+        "mots": [
+          "combiner",
+          "fusion"
+        ]
+      },
+      {
+        "idee": "Le tableau trié est [1, 3, 4, 7]",
+        "mots": [
+          "1 3 4 7"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "reponse": "a) Vrai ; b) Faux ; c) Vrai.",
+    "accepte": [
+      "a vrai b faux c vrai",
+      "vrai faux vrai"
+    ]
+  },
+  "16": {
+    "reponse": "4 appels au maximum ; dépilés dans l'ordre factorielle(0), (1), (2), (3).",
+    "criteres": [
+      {
+        "idee": "Au maximum 4 appels sont empilés : factorielle(3), (2), (1) et (0)",
+        "mots": [
+          "4 appels",
+          "quatre"
+        ]
+      },
+      {
+        "idee": "factorielle(0) est dépilé en premier (cas de base)",
+        "mots": [
+          "0 en premier",
+          "premier depile",
+          "factorielle 0"
+        ]
+      },
+      {
+        "idee": "Puis factorielle(1), (2) et (3) : le dernier empilé est le premier dépilé",
+        "mots": [
+          "dernier empile",
+          "ordre inverse",
+          "lifo",
+          "1 2 3"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "L'appel doit se rapprocher du cas de base : `compte(n - 1)` ; compte(5) = 5.",
+    "criteres": [
+      {
+        "idee": "L'argument passe de n à n + 1 : il s'éloigne du cas de base au lieu de s'en rapprocher",
+        "mots": [
+          "eloigne",
+          "n 1",
+          "rapproch",
+          "augmente"
+        ]
+      },
+      {
+        "idee": "Les appels ne s'arrêtent jamais : RecursionError",
+        "mots": [
+          "recursionerror",
+          "jamais"
+        ]
+      },
+      {
+        "idee": "Correction : return 1 + compte(n - 1) ; compte(5) renvoie 5",
+        "mots": [
+          "compte n 1",
+          "renvoie 5"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "[1, 2, 5, 6, 7, 9]",
+    "accepte": [
+      "[1, 2, 5, 6, 7, 9]"
+    ]
+  },
+  "19": {
+    "reponse": "La fonction c (elle s'appelle elle-même, avec le cas de base n == 0).",
+    "criteres": [
+      {
+        "idee": "Une fonction récursive s'appelle elle-même dans son propre code",
+        "mots": [
+          "elle meme",
+          "s appelle"
+        ]
+      },
+      {
+        "idee": "a et b ne s'appellent pas elles-mêmes (b utilise une boucle : itérative)",
+        "mots": [
+          "boucle",
+          "iterati"
+        ]
+      },
+      {
+        "idee": "c est récursive : elle appelle c(n - 1) et a un cas de base n == 0",
+        "mots": [
+          "c n 1",
+          "cas de base",
+          "la fonction c",
+          "c est recursive"
+        ]
+      }
+    ]
+  },
+  "25": {
+    "reponse": "Il affiche 1, 2, 3 (une valeur par ligne).",
+    "criteres": [
+      {
+        "idee": "Le programme affiche 1, 2, 3",
+        "mots": [
+          "1 2 3"
+        ]
+      },
+      {
+        "idee": "L'appel récursif est fait avant l'affichage : on affiche au retour, au dépilement",
+        "mots": [
+          "depil",
+          "retour",
+          "apres l appel",
+          "avant l affichage"
+        ]
+      },
+      {
+        "idee": "L'ordre est inversé par rapport à compte, qui affichait avant l'appel",
+        "mots": [
+          "invers",
+          "3 2 1"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "`pile pleine` (RecursionError : pas de cas de base).",
+    "criteres": [
+      {
+        "idee": "Le programme affiche « pile pleine »",
+        "mots": [
+          "pile pleine"
+        ]
+      },
+      {
+        "idee": "La fonction n'a pas de cas de base : les appels s'empilent jusqu'à la profondeur maximale",
+        "mots": [
+          "cas de base",
+          "profondeur",
+          "empil"
+        ]
+      },
+      {
+        "idee": "Python lève RecursionError, interceptée par except",
+        "mots": [
+          "recursionerror",
+          "except",
+          "intercept"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "`if n <= 1: return n` puis `return fibo(n - 1) + fibo(n - 2)` ; fibo(7) = 13.",
+    "criteres": [
+      {
+        "idee": "Code : if n <= 1: return n, puis return fibo(n - 1) + fibo(n - 2)",
+        "mots": [
+          "fibo n 1 fibo n 2",
+          "return n"
+        ]
+      },
+      {
+        "idee": "Deux cas de base car le cas récursif utilise deux valeurs précédentes (sinon fibo(1) appellerait fibo(-1))",
+        "mots": [
+          "deux valeurs",
+          "fibo 1",
+          "deux precedent",
+          "n 2"
+        ]
+      },
+      {
+        "idee": "fibo(7) = 13",
+        "mots": [
+          "fibo 7 13",
+          "vaut 13",
+          "egal a 13"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "`avant 2`, `avant 1`, `après 1`, `après 2`.",
+    "accepte": [
+      "avant 2, avant 1, après 1, après 2"
+    ]
+  },
+  "35": {
+    "reponse": "`55 177` : beaucoup d'appels redondants, la version itérative est bien plus efficace.",
+    "criteres": [
+      {
+        "idee": "Le programme affiche 55 177",
+        "mots": [
+          "55 177",
+          "177"
+        ]
+      },
+      {
+        "idee": "Les mêmes valeurs sont recalculées de nombreuses fois (appels redondants)",
+        "mots": [
+          "recalcul",
+          "redondant",
+          "plusieurs fois",
+          "nombreuses fois"
+        ]
+      },
+      {
+        "idee": "Une version itérative est bien plus efficace : la récursivité naïve n'est pas toujours efficace",
+        "mots": [
+          "iterati",
+          "efficace",
+          "boucle"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "Au plus p + q − 1 (5 pour [1, 3, 5] et [2, 4, 6]) ; au moins min(p, q) (3 pour [1, 2, 3] et [4, 5, 6]).",
+    "criteres": [
+      {
+        "idee": "Chaque comparaison place un élément ; quand une liste est épuisée, le reste est ajouté sans comparaison",
+        "mots": [
+          "epuise",
+          "place un element",
+          "sans comparaison"
+        ]
+      },
+      {
+        "idee": "Au plus p + q - 1 comparaisons (ex. [1, 3, 5] et [2, 4, 6] : 5)",
+        "mots": [
+          "p q 1",
+          "1 3 5 et 2 4 6"
+        ]
+      },
+      {
+        "idee": "Au moins min(p, q) comparaisons (ex. [1, 2, 3] et [4, 5, 6] : 3)",
+        "mots": [
+          "min p q",
+          "1 2 3 et 4 5 6"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Diviser en deux moitiés, régner (maximum de chaque moitié), combiner (`max` des deux).",
+    "criteres": [
+      {
+        "idee": "Diviser : couper la liste en deux moitiés",
+        "mots": [
+          "diviser",
+          "deux moities",
+          "couper"
+        ]
+      },
+      {
+        "idee": "Régner : calculer récursivement le maximum de chaque moitié (cas de base : un seul élément)",
+        "mots": [
+          "regner",
+          "chaque moitie",
+          "cas de base"
+        ]
+      },
+      {
+        "idee": "Combiner : le maximum est le plus grand des deux maximums",
+        "mots": [
+          "combiner",
+          "plus grand des deux",
+          "max"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "d − g décroît strictement à chaque appel ; au plus 11 appels (10 milieux examinés + l'appel final où g > d).",
+    "criteres": [
+      {
+        "idee": "À chaque appel, [g, d] devient [m + 1, d] ou [g, m - 1] : d - g diminue strictement",
+        "mots": [
+          "diminue",
+          "decroi",
+          "m 1"
+        ]
+      },
+      {
+        "idee": "d - g finit par devenir négatif (g > d), cas de base d'échec : la fonction se termine",
+        "mots": [
+          "negati",
+          "g d",
+          "cas de base"
+        ]
+      },
+      {
+        "idee": "La zone est divisée par 2 à chaque appel : au plus 11 appels pour 1 000 éléments",
+        "mots": [
+          "11 appels",
+          "divise par 2",
+          "moitie"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "3 niveaux ; au plus 17 comparaisons, contre 28 pour le tri par sélection.",
+    "criteres": [
+      {
+        "idee": "8 = 2³ : on coupe en listes de 4, puis 2, puis 1 : 3 niveaux de fusions",
+        "mots": [
+          "2 3",
+          "3 niveaux",
+          "4 puis 2"
+        ]
+      },
+      {
+        "idee": "Au plus 4 + 6 + 7 = 17 comparaisons",
+        "mots": [
+          "17 comparaisons",
+          "4 6 7"
+        ]
+      },
+      {
+        "idee": "Le tri par sélection en fait 8 × 7 / 2 = 28",
+        "mots": [
+          "28 comparaisons",
+          "8 7 2"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "La récursive lève `RecursionError` ; l'itérative renvoie 12 502 500.",
+    "criteres": [
+      {
+        "idee": "La version récursive empile environ 5 000 appels : la limite est dépassée, RecursionError",
+        "mots": [
+          "recursionerror",
+          "limite",
+          "5 000",
+          "5000"
+        ]
+      },
+      {
+        "idee": "La version itérative n'empile aucun appel et renvoie 12 502 500",
+        "mots": [
+          "iterati",
+          "12 502 500",
+          "12502500",
+          "boucle"
+        ]
+      },
+      {
+        "idee": "Pour de grandes tailles, l'itération évite de saturer la pile d'appels",
+        "mots": [
+          "pile",
+          "satur"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "`A -> B`, `A -> C`, `B -> C`, puis `3`.",
+    "accepte": [
+      "A -> B, A -> C, B -> C, 3"
+    ]
+  },
+  "46": {
+    "reponse": "7, 15 et 1 023 déplacements (D(n) = 2ⁿ − 1).",
+    "criteres": [
+      {
+        "idee": "La stratégie donne D(n) = 2 D(n - 1) + 1, avec D(0) = 0",
+        "mots": [
+          "2 d n 1 1",
+          "d n 1"
+        ]
+      },
+      {
+        "idee": "D(3) = 7, D(4) = 15",
+        "mots": [
+          "d 3 7",
+          "d 4 15",
+          "7 et 15"
+        ]
+      },
+      {
+        "idee": "On vérifie que 2ⁿ - 1 convient : 2(2ⁿ⁻¹ - 1) + 1 = 2ⁿ - 1",
+        "mots": [
+          "reconnait",
+          "2 n 1"
+        ]
+      },
+      {
+        "idee": "Pour 10 disques : 2¹⁰ - 1 = 1 023 déplacements",
+        "mots": [
+          "1 023",
+          "1023"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "15 appels pour 8 éléments ; 2n − 1 en général.",
+    "criteres": [
+      {
+        "idee": "Les appels forment un arbre : 1 + 2 + 4 + 8 = 15 appels pour 8 éléments",
+        "mots": [
+          "15 appels",
+          "1 2 4 8",
+          "arbre"
+        ]
+      },
+      {
+        "idee": "Pour n éléments : 2n - 1 appels",
+        "mots": [
+          "2n 1"
+        ]
+      },
+      {
+        "idee": "La somme reste en O(n) : chaque élément doit être lu",
+        "mots": [
+          "o n",
+          "lineaire",
+          "chaque element"
+        ]
+      }
+    ]
+  }
+}

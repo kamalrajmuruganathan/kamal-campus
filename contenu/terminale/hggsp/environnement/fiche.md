@@ -34,11 +34,11 @@ La question environnementale devient un enjeu politique international à partir 
 | 1987 | Rapport Brundtland | Définit le développement durable |
 | 1992 | Sommet de la Terre (Rio) | Convention sur le climat et la biodiversité |
 | 1997 | Protocole de Kyoto | Premiers engagements chiffrés sur les gaz à effet de serre |
-| 2015 | Accord de Paris (COP21) | Limiter le réchauffement bien en dessous de 2 °C |
+| 2015 | Accord de Paris (COP21) | Limiter le réchauffement bien en dessous de 2 °C, si possible à 1,5 °C |
 
 Le **rapport Brundtland (1987)** définit le **développement durable** comme un développement « qui répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs ». Il repose sur trois piliers : **économique, social, environnemental**.
 
-Depuis 1995, les **COP** (Conférences des parties) réunissent chaque année les États sur le climat. La **COP21** aboutit à l'**accord de Paris (2015)**, qui vise à contenir le réchauffement bien en dessous de 2 °C par rapport à l'ère préindustrielle.
+Depuis 1995, les **COP** (Conférences des parties) réunissent chaque année les États sur le climat. La **COP21** aboutit à l'**accord de Paris (2015)**, qui vise à contenir le réchauffement bien en dessous de 2 °C par rapport à l'ère préindustrielle, en poursuivant les efforts pour le limiter à 1,5 °C.
 
 ## 3. Acteurs, échelles et tensions
 

@@ -1,0 +1,494 @@
+{
+  "3": {
+    "reponse": "$v_n \\to 3$.",
+    "accepte": [
+      "3"
+    ]
+  },
+  "4": {
+    "reponse": "$u_n \\to 2$.",
+    "accepte": [
+      "2"
+    ]
+  },
+  "5": {
+    "reponse": "Pour tout $n \\geq 0$, $u_n = 2^n + 1$, et $u_n \\to +\\infty$.",
+    "criteres": [
+      {
+        "idee": "Initialisation : u₀ = 2 et 2⁰ + 1 = 2",
+        "mots": [
+          "initialis",
+          "au rang 0",
+          "pour n 0"
+        ]
+      },
+      {
+        "idee": "Hérédité : si u_k = 2ᵏ + 1, alors u_(k+1) = 2(2ᵏ + 1) - 1 = 2ᵏ⁺¹ + 1",
+        "mots": [
+          "heredit",
+          "supposons",
+          "hypothese de recurrence",
+          "2 2 k 1 1"
+        ]
+      },
+      {
+        "idee": "Conclusion par récurrence : u_n = 2ⁿ + 1 pour tout n",
+        "mots": [
+          "conclusion",
+          "par recurrence",
+          "pour tout"
+        ]
+      },
+      {
+        "idee": "Comme 2 > 1, 2ⁿ tend vers +∞, donc u_n tend vers +∞",
+        "mots": [
+          "2 1",
+          "2 n",
+          "infini",
+          "infty"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "reponse": "$u_n \\to +\\infty$.",
+    "criteres": [
+      {
+        "idee": "(-1)ⁿ ≥ -1, donc u_n ≥ n - 1",
+        "mots": [
+          "n 1",
+          "1 n 1"
+        ]
+      },
+      {
+        "idee": "n - 1 tend vers +∞",
+        "mots": [
+          "infini",
+          "infty"
+        ]
+      },
+      {
+        "idee": "Par le théorème de comparaison, u_n tend vers +∞",
+        "mots": [
+          "comparaison"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "reponse": "$u_n \\to \\dfrac{3}{2}$.",
+    "accepte": [
+      "3/2"
+    ]
+  },
+  "9": {
+    "reponse": "$u_n \\to 0$.",
+    "accepte": [
+      "0"
+    ]
+  },
+  "12": {
+    "reponse": "À partir du rang $n = 100$.",
+    "accepte": [
+      "100",
+      "n ≥ 100"
+    ]
+  },
+  "13": {
+    "reponse": "À partir du rang $n = 101$.",
+    "accepte": [
+      "101",
+      "n ≥ 101",
+      "n > 100"
+    ]
+  },
+  "15": {
+    "reponse": "Faux : $u_n = n + 2(-1)^n$ tend vers $+\\infty$ sans être croissante.",
+    "criteres": [
+      {
+        "idee": "Faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "u₀ = 2 et u₁ = -1 : la suite n'est pas croissante",
+        "mots": [
+          "pas croissante",
+          "u 1 u 0",
+          "u1 u0",
+          "n est pas croissant",
+          "decroi"
+        ]
+      },
+      {
+        "idee": "u_n ≥ n - 2, qui tend vers +∞ : par comparaison, u_n tend vers +∞",
+        "mots": [
+          "n 2",
+          "comparaison"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "$u_n \\geq \\sqrt{n}$, donc $u_n \\to +\\infty$.",
+    "criteres": [
+      {
+        "idee": "Pour k ≤ n, chaque terme 1/√k est au moins égal à 1/√n",
+        "mots": [
+          "1 sqrt k",
+          "chaque terme",
+          "au moins egal",
+          "1 racine"
+        ]
+      },
+      {
+        "idee": "La somme a n termes, donc u_n ≥ n × 1/√n = √n",
+        "mots": [
+          "n termes",
+          "n 1 sqrt n",
+          "n fois"
+        ]
+      },
+      {
+        "idee": "√n tend vers +∞, donc par comparaison u_n tend vers +∞",
+        "mots": [
+          "comparaison"
+        ]
+      }
+    ]
+  },
+  "24": {
+    "reponse": "b), c) et d).",
+    "ensemble": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  "37": {
+    "reponse": "Faux : $5 - \\dfrac{1}{n}$ est croissante, majorée par $10$, et converge vers $5$.",
+    "criteres": [
+      {
+        "idee": "Faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "5 - 1/n est croissante et majorée par 10",
+        "mots": [
+          "croissante",
+          "majore"
+        ]
+      },
+      {
+        "idee": "Elle converge vers 5, et non vers 10",
+        "mots": [
+          "vers 5",
+          "converge vers 5",
+          "limite 5",
+          "limite est 5"
+        ]
+      },
+      {
+        "idee": "Le théorème garantit l'existence d'une limite, pas sa valeur : un majorant n'est pas forcément la limite",
+        "mots": [
+          "pas sa valeur",
+          "pas forcement",
+          "existence",
+          "un majorant"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Croissante, majorée par $1$ : elle converge (vers $1$).",
+    "criteres": [
+      {
+        "idee": "u_(n+1) - u_n = 1/((n+1)(n+2)) > 0 : la suite est croissante",
+        "mots": [
+          "croissante",
+          "n 1 n 2"
+        ]
+      },
+      {
+        "idee": "1/(n+1) > 0 donc u_n < 1 : la suite est majorée par 1",
+        "mots": [
+          "majore",
+          "u n 1"
+        ]
+      },
+      {
+        "idee": "Croissante et majorée, elle converge (vers 1)",
+        "mots": [
+          "converge",
+          "convergence monotone"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Elle converge vers un réel $\\ell \\geq 0$, pas forcément $0$.",
+    "criteres": [
+      {
+        "idee": "La suite est minorée par 0 (termes positifs)",
+        "mots": [
+          "minore",
+          "positi"
+        ]
+      },
+      {
+        "idee": "Décroissante et minorée, elle converge vers un réel ℓ ≥ 0",
+        "mots": [
+          "converge"
+        ]
+      },
+      {
+        "idee": "La limite n'est pas forcément 0 : exemple 1 + 1/(n+1), qui tend vers 1",
+        "mots": [
+          "pas forcement",
+          "contre exemple",
+          "exemple",
+          "vers 1"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "$(S_n)$ croissante et majorée par $2$ : elle converge vers une limite $\\ell \\leq 2$.",
+    "criteres": [
+      {
+        "idee": "S_(n+1) - S_n = 1/(n+1)² > 0 : la suite est croissante",
+        "mots": [
+          "croissante",
+          "1 n 1 2"
+        ]
+      },
+      {
+        "idee": "Croissante et majorée par 2, elle converge (théorème de convergence monotone)",
+        "mots": [
+          "converge",
+          "majore"
+        ]
+      },
+      {
+        "idee": "Sa limite vérifie ℓ ≤ 2, mais le théorème ne donne pas sa valeur",
+        "mots": [
+          "pas sa valeur",
+          "ne donne pas",
+          "inferieur",
+          "l 2"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Initialisation au rang $0$ et hérédité vérifiées : $u_n = 3 + 2n$.",
+    "criteres": [
+      {
+        "idee": "Initialisation : u₀ = 3 = 3 + 2 × 0",
+        "mots": [
+          "initialis",
+          "au rang 0",
+          "pour n 0"
+        ]
+      },
+      {
+        "idee": "Hérédité : si u_k = 3 + 2k, alors u_(k+1) = 3 + 2k + 2 = 3 + 2(k + 1)",
+        "mots": [
+          "heredit",
+          "supposons",
+          "hypothese de recurrence",
+          "3 2 k 1",
+          "3 2k 2"
+        ]
+      },
+      {
+        "idee": "Conclusion : par récurrence, u_n = 3 + 2n pour tout n",
+        "mots": [
+          "conclusion",
+          "par recurrence",
+          "pour tout"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "Propriété démontrée : $1 + 3 + \\dots + (2n - 1) = n^2$.",
+    "criteres": [
+      {
+        "idee": "Initialisation : pour n = 1, la somme vaut 1 = 1²",
+        "mots": [
+          "initialis",
+          "pour n 1",
+          "au rang 1"
+        ]
+      },
+      {
+        "idee": "Hérédité : on ajoute 2k + 1 à k², ce qui donne (k + 1)²",
+        "mots": [
+          "heredit",
+          "supposons",
+          "hypothese de recurrence",
+          "k 2 2k 1",
+          "2k 1",
+          "k 1 2"
+        ]
+      },
+      {
+        "idee": "Conclusion : par récurrence, la propriété est vraie pour tout n ≥ 1",
+        "mots": [
+          "conclusion",
+          "par recurrence",
+          "pour tout"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "Propriété démontrée : $3^n \\geq 1 + 2n$ pour tout $n \\geq 0$.",
+    "criteres": [
+      {
+        "idee": "Initialisation : 3⁰ = 1 ≥ 1 + 0",
+        "mots": [
+          "initialis",
+          "au rang 0",
+          "pour n 0"
+        ]
+      },
+      {
+        "idee": "Hérédité : 3ᵏ⁺¹ = 3 × 3ᵏ ≥ 3(1 + 2k) = 3 + 6k",
+        "mots": [
+          "heredit",
+          "supposons",
+          "hypothese de recurrence",
+          "3 6k",
+          "3 1 2k"
+        ]
+      },
+      {
+        "idee": "Or 3 + 6k ≥ 3 + 2k = 1 + 2(k + 1), car k ≥ 0",
+        "mots": [
+          "3 2k",
+          "1 2 k 1"
+        ]
+      },
+      {
+        "idee": "Conclusion : par récurrence, 3ⁿ ≥ 1 + 2n pour tout n",
+        "mots": [
+          "conclusion",
+          "par recurrence",
+          "pour tout"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Propriété démontrée : $0 < u_n < 2$ pour tout $n$.",
+    "criteres": [
+      {
+        "idee": "Initialisation : u₀ = 1 et 0 < 1 < 2",
+        "mots": [
+          "initialis",
+          "au rang 0",
+          "pour n 0"
+        ]
+      },
+      {
+        "idee": "Hérédité : si 0 < u_k < 2, alors 2 < u_k + 2 < 4",
+        "mots": [
+          "heredit",
+          "supposons",
+          "hypothese de recurrence",
+          "2 u k 2 4",
+          "u k 2 4"
+        ]
+      },
+      {
+        "idee": "La racine carrée est strictement croissante : √2 < u_(k+1) < 2",
+        "mots": [
+          "racine",
+          "sqrt",
+          "croissante"
+        ]
+      },
+      {
+        "idee": "Conclusion : par récurrence, 0 < u_n < 2 pour tout n",
+        "mots": [
+          "conclusion",
+          "par recurrence",
+          "pour tout"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Hérédité vraie, mais aucune initialisation : la propriété est fausse ; l'initialisation est indispensable.",
+    "criteres": [
+      {
+        "idee": "Hérédité : si 4ᵏ + 1 = 3m, alors 4ᵏ⁺¹ + 1 = 3(4m - 1), divisible par 3",
+        "mots": [
+          "heredit",
+          "3 4m 1",
+          "12m 3"
+        ]
+      },
+      {
+        "idee": "4⁰ + 1 = 2, 4¹ + 1 = 5, 4² + 1 = 17 : aucun n'est divisible par 3",
+        "mots": [
+          "4 2 1 17",
+          "aucun"
+        ]
+      },
+      {
+        "idee": "Sans initialisation, on ne peut rien conclure : l'hérédité seule ne prouve rien (la propriété est fausse)",
+        "mots": [
+          "initialis",
+          "rien",
+          "fausse"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "$(1 + a)^n \\geq 1 + na$ ; par comparaison, $q^n \\to +\\infty$ si $q > 1$.",
+    "criteres": [
+      {
+        "idee": "Initialisation : (1 + a)⁰ = 1 = 1 + 0 × a",
+        "mots": [
+          "initialis",
+          "au rang 0",
+          "pour n 0"
+        ]
+      },
+      {
+        "idee": "Hérédité : on multiplie par 1 + a > 0 et on obtient 1 + (k + 1)a + ka²",
+        "mots": [
+          "heredit",
+          "supposons",
+          "hypothese de recurrence",
+          "multipl",
+          "ka 2",
+          "1 k 1 a"
+        ]
+      },
+      {
+        "idee": "ka² ≥ 0, donc (1 + a)ᵏ⁺¹ ≥ 1 + (k + 1)a",
+        "mots": [
+          "ka 2 0",
+          "ka 2 geq",
+          "positif"
+        ]
+      },
+      {
+        "idee": "Si q > 1, on pose a = q - 1 : qⁿ ≥ 1 + n(q - 1), qui tend vers +∞, donc qⁿ tend vers +∞ par comparaison",
+        "mots": [
+          "a q 1",
+          "comparaison",
+          "q 1"
+        ]
+      }
+    ]
+  }
+}

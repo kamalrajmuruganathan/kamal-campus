@@ -1,0 +1,478 @@
+{
+  "1": {
+    "reponse": "id garantit l'unicité de chaque ligne ; oui, deux homonymes peuvent coexister car ils ont des id différents.",
+    "criteres": [
+      {
+        "idee": "La clé primaire identifie de façon unique chaque ligne de la table",
+        "mots": [
+          "unique",
+          "identifi"
+        ]
+      },
+      {
+        "idee": "Elle doit être unique et toujours renseignée (non nulle)",
+        "mots": [
+          "non nul",
+          "renseign",
+          "jamais vide"
+        ]
+      },
+      {
+        "idee": "Oui, deux homonymes peuvent coexister car ils ont des id différents",
+        "mots": [
+          "oui",
+          "id different",
+          "ids different"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "reponse": "Ligne : un élève ; colonne : une caractéristique ; domaine de `id` : les entiers.",
+    "criteres": [
+      {
+        "idee": "Une ligne (enregistrement) représente un élève",
+        "mots": [
+          "un eleve",
+          "enregistrement"
+        ]
+      },
+      {
+        "idee": "Une colonne (attribut) représente une caractéristique commune : id, nom ou classe",
+        "mots": [
+          "caracteristique",
+          "attribut"
+        ]
+      },
+      {
+        "idee": "Le domaine de id est l'ensemble des valeurs autorisées : les entiers",
+        "mots": [
+          "entier",
+          "valeurs autorisees",
+          "valeurs possibles"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "Système de gestion de base de données ; avantage : données partagées et cohérentes (contraintes d'intégrité).",
+    "criteres": [
+      {
+        "idee": "SGBD signifie « système de gestion de base de données »",
+        "mots": [
+          "systeme de gestion"
+        ]
+      },
+      {
+        "idee": "Les données sont partagées entre plusieurs programmes et utilisateurs",
+        "mots": [
+          "partag",
+          "plusieurs utilisateurs",
+          "plusieurs programmes"
+        ]
+      },
+      {
+        "idee": "Le SGBD garantit leur cohérence (contraintes d'intégrité, de clés)",
+        "mots": [
+          "coheren",
+          "integrite",
+          "contrainte"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "reponse": "L'identifiant id, car titre et auteur peuvent se répéter.",
+    "criteres": [
+      {
+        "idee": "Une clé primaire doit être unique et toujours renseignée",
+        "mots": [
+          "unique",
+          "unicite"
+        ]
+      },
+      {
+        "idee": "Le titre et l'auteur peuvent se répéter d'un livre à l'autre",
+        "mots": [
+          "repet",
+          "meme titre",
+          "meme auteur",
+          "plusieurs livres"
+        ]
+      },
+      {
+        "idee": "On choisit donc l'identifiant numérique id",
+        "mots": [
+          "identifiant",
+          "l id",
+          "un id"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "Diallo a emprunté Les Misérables ; id_livre référence livre.id.",
+    "criteres": [
+      {
+        "idee": "id_eleve = 1 désigne l'élève Diallo",
+        "mots": [
+          "diallo"
+        ]
+      },
+      {
+        "idee": "id_livre = 4 désigne le livre Les Misérables",
+        "mots": [
+          "miserables"
+        ]
+      },
+      {
+        "idee": "id_livre est une clé étrangère qui référence la clé primaire livre.id",
+        "mots": [
+          "cle etrangere",
+          "livre id",
+          "reference"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "reponse": "Elle affiche toute la table : 4 lignes et 4 colonnes ; elle ne modifie rien.",
+    "criteres": [
+      {
+        "idee": "La requête affiche toute la table livre (* = toutes les colonnes)",
+        "mots": [
+          "toute la table",
+          "toutes les colonnes",
+          "tout"
+        ]
+      },
+      {
+        "idee": "Le résultat a 4 lignes et 4 colonnes",
+        "mots": [
+          "4 lignes",
+          "quatre lignes"
+        ]
+      },
+      {
+        "idee": "Un SELECT lit les données sans jamais modifier la table",
+        "mots": [
+          "ne modifie",
+          "pas modifi",
+          "sans modifi",
+          "lit"
+        ]
+      }
+    ]
+  },
+  "23": {
+    "reponse": "Nana, Germinal, Candide.",
+    "accepte": [
+      "Nana, Germinal, Candide"
+    ]
+  },
+  "25": {
+    "reponse": "1759 ; 1885 ; 1882,5.",
+    "accepte": [
+      "1759 ; 1885 ; 1882,5"
+    ]
+  },
+  "28": {
+    "reponse": "`UPDATE eleve SET classe = 'TG1' WHERE id = 2;` ; sans WHERE, tous les élèves passeraient en TG1.",
+    "criteres": [
+      {
+        "idee": "UPDATE eleve SET classe = 'TG1' WHERE id = 2",
+        "mots": [
+          "update",
+          "where id 2",
+          "set classe"
+        ]
+      },
+      {
+        "idee": "Sans WHERE, la modification s'appliquerait à toutes les lignes : tous les élèves passeraient en TG1",
+        "mots": [
+          "tous les eleves",
+          "toutes les lignes",
+          "tout le monde"
+        ]
+      }
+    ]
+  },
+  "30": {
+    "reponse": "L'id 3 est déjà utilisé (Nguyen) : la clé primaire doit rester unique.",
+    "criteres": [
+      {
+        "idee": "id est la clé primaire de eleve : sa valeur doit être unique",
+        "mots": [
+          "unique",
+          "unicite",
+          "cle primaire"
+        ]
+      },
+      {
+        "idee": "Il existe déjà un élève d'id 3 (Nguyen)",
+        "mots": [
+          "deja",
+          "nguyen",
+          "existe"
+        ]
+      },
+      {
+        "idee": "Il faut choisir un id libre, par exemple 6",
+        "mots": [
+          "libre",
+          "autre id",
+          "id 6",
+          "exemple 6"
+        ]
+      }
+    ]
+  },
+  "31": {
+    "reponse": "Il n'existe pas d'élève d'id 9 : la contrainte d'intégrité référentielle est violée.",
+    "criteres": [
+      {
+        "idee": "id_eleve est une clé étrangère vers eleve.id",
+        "mots": [
+          "cle etrangere",
+          "eleve id"
+        ]
+      },
+      {
+        "idee": "Aucun élève n'a l'id 9 : l'emprunt référencerait un élève inexistant",
+        "mots": [
+          "inexistant",
+          "aucun eleve",
+          "n existe pas",
+          "id 9"
+        ]
+      },
+      {
+        "idee": "C'est la contrainte d'intégrité référentielle",
+        "mots": [
+          "integrite referentielle",
+          "referentiel"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "TG1 : 4 ; TG2 : 1. Benali et Petit n'ont rien emprunté, la jointure ne les fait pas apparaître.",
+    "criteres": [
+      {
+        "idee": "La requête renvoie TG1 : 4 et TG2 : 1",
+        "mots": [
+          "tg1 4",
+          "tg2 1"
+        ]
+      },
+      {
+        "idee": "La jointure associe chaque emprunt à son élève",
+        "mots": [
+          "jointure",
+          "associe",
+          "relie"
+        ]
+      },
+      {
+        "idee": "Benali et Petit n'ont rien emprunté : la jointure ne produit aucune ligne pour eux",
+        "mots": [
+          "rien emprunt",
+          "aucun emprunt",
+          "pas emprunt",
+          "aucune ligne"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Il obtient 5 (total) ; il faut `SELECT classe, COUNT(*) FROM eleve GROUP BY classe;`.",
+    "criteres": [
+      {
+        "idee": "WHERE garde tous les élèves de TG1 et TG2 et COUNT(*) les compte ensemble : 5",
+        "mots": [
+          "tous ensemble",
+          "total",
+          "compte tous",
+          "donne 5",
+          "obtient 5"
+        ]
+      },
+      {
+        "idee": "Pour un résultat par classe, il faut regrouper avec GROUP BY et afficher la classe",
+        "mots": [
+          "group by",
+          "regroup"
+        ]
+      },
+      {
+        "idee": "Correction : SELECT classe, COUNT(*) FROM eleve GROUP BY classe",
+        "mots": [
+          "select classe",
+          "group by classe"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "Des emprunts référencent encore Diallo ; il faut d'abord supprimer ses emprunts, puis l'élève.",
+    "criteres": [
+      {
+        "idee": "Des emprunts référencent encore Diallo par la clé étrangère id_eleve",
+        "mots": [
+          "referenc",
+          "cle etrangere",
+          "emprunts"
+        ]
+      },
+      {
+        "idee": "Le supprimer violerait l'intégrité référentielle (emprunts vers un élève inexistant)",
+        "mots": [
+          "integrite",
+          "inexistant",
+          "referentiel"
+        ]
+      },
+      {
+        "idee": "Il faut d'abord supprimer ses emprunts, puis l'élève",
+        "mots": [
+          "d abord",
+          "supprimer ses emprunts",
+          "delete from emprunt"
+        ]
+      }
+    ]
+  },
+  "39": {
+    "reponse": "Données répétées (risque d'incohérence) et pas d'identifiant unique pour distinguer élèves ou livres homonymes.",
+    "criteres": [
+      {
+        "idee": "Redondance : le nom et la classe d'un élève sont recopiés à chaque emprunt",
+        "mots": [
+          "redondan",
+          "repet",
+          "recopi",
+          "duplic"
+        ]
+      },
+      {
+        "idee": "Risque d'incohérence lors d'une modification (plusieurs lignes à changer)",
+        "mots": [
+          "incoheren",
+          "plusieurs lignes"
+        ]
+      },
+      {
+        "idee": "Pas de clé primaire : impossible de distinguer deux élèves ou deux livres homonymes",
+        "mots": [
+          "homonyme",
+          "distingu",
+          "cle primaire",
+          "identifiant"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Hugo, Voltaire, Zola.",
+    "accepte": [
+      "Hugo, Voltaire, Zola"
+    ]
+  },
+  "43": {
+    "reponse": "id_eleve se répète (Diallo a 3 emprunts) ; le couple pourrait aussi se répéter si un élève réemprunte un livre ; d'où l'attribut id.",
+    "criteres": [
+      {
+        "idee": "Une clé primaire doit être unique",
+        "mots": [
+          "unique",
+          "unicite"
+        ]
+      },
+      {
+        "idee": "id_eleve se répète : Diallo a 3 emprunts",
+        "mots": [
+          "repet",
+          "plusieurs livres",
+          "3 emprunts",
+          "plusieurs emprunts"
+        ]
+      },
+      {
+        "idee": "Le couple (id_eleve, id_livre) se répéterait si un élève réempruntait le même livre",
+        "mots": [
+          "reemprunt",
+          "meme livre",
+          "seconde fois",
+          "deux fois"
+        ]
+      },
+      {
+        "idee": "D'où l'attribut id propre à chaque emprunt",
+        "mots": [
+          "attribut id",
+          "identifiant",
+          "un id",
+          "l id"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "`note(id, id_eleve, matiere, valeur, date_note)` : clé primaire id, clé étrangère id_eleve vers eleve.id.",
+    "criteres": [
+      {
+        "idee": "Une clé primaire id identifie chaque note de façon unique",
+        "mots": [
+          "cle primaire",
+          "unique",
+          "identifiant"
+        ]
+      },
+      {
+        "idee": "Une clé étrangère id_eleve référence eleve.id",
+        "mots": [
+          "cle etrangere",
+          "id eleve",
+          "eleve id"
+        ]
+      },
+      {
+        "idee": "Les autres attributs : matière (texte), valeur (nombre), date",
+        "mots": [
+          "matiere",
+          "valeur",
+          "date"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Les 4 livres prennent l'auteur Hugo ; il fallait `UPDATE livre SET auteur = 'Voltaire' WHERE id = 2;`.",
+    "criteres": [
+      {
+        "idee": "Sans WHERE, la requête modifie toutes les lignes : les 4 livres ont Hugo pour auteur",
+        "mots": [
+          "toutes les lignes",
+          "tous les livres",
+          "4 livres",
+          "hugo"
+        ]
+      },
+      {
+        "idee": "Les informations d'origine sont perdues",
+        "mots": [
+          "perdu",
+          "ecras",
+          "sauvegarde"
+        ]
+      },
+      {
+        "idee": "Il fallait cibler une ligne par sa clé primaire : UPDATE livre SET auteur = 'Voltaire' WHERE id = 2",
+        "mots": [
+          "where id 2",
+          "voltaire"
+        ]
+      }
+    ]
+  }
+}

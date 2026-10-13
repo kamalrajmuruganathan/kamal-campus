@@ -61,7 +61,7 @@
         "Sinon on teste le milieu : palindrome(ch[1:-1]) qui retire le premier et le dernier caractère.",
         "Code :\n\n```python\ndef palindrome(ch):\n    if len(ch) <= 1:\n        return True\n    if ch[0] != ch[-1]:\n        return False\n    return palindrome(ch[1:-1])\n```"
       ],
-      "reponse": "On teste ch[0]==ch[-1] puis on récursive sur ch[1:-1], avec cas de base len(ch)<=1 qui renvoie True."
+      "reponse": "On teste ch[0] == ch[-1], puis on rappelle la fonction récursivement sur ch[1:-1] ; cas de base : len(ch) <= 1 renvoie True."
     },
     {
       "id": 5,

@@ -466,7 +466,8 @@ def g2_calcul_numerique_algebrique():
         add("application","fractions", f"Calculer $ \\dfrac{{{a}}}{{{b}}} + \\dfrac{{{c}}}{{{d}}} $.",
             [f"$ = {frac_latex(f)} $."], f"$ {frac_latex(f)} $")
     for (k,a,b) in [(3,2,5),(4,1,3),(2,5,7),(5,3,2),(6,2,1),(3,4,6),(7,2,3),(2,8,5)]:
-        add("intermediaire","developpement", f"Developper $ {k}({a}x + {b}) $.",
+        ax = "x" if a == 1 else f"{a}x"
+        add("intermediaire","developpement", f"Developper $ {k}({ax} + {b}) $.",
             [f"$ = {k*a}x + {k*b} $."], f"$ {k*a}x + {k*b} $")
     for n in [8,12,18,20,50,32,27,48,72,45]:
         a,b=1,n

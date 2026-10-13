@@ -1,0 +1,936 @@
+{
+  "2": {
+    "reponse": "(a) vraie ; (b) fausse ; (c) fausse ; (d) vraie.",
+    "criteres": [
+      {
+        "idee": "(a) vraie : le carré d'un réel est toujours positif ou nul",
+        "mots": [
+          "positif ou nul",
+          "toujours positif",
+          "a vrai"
+        ]
+      },
+      {
+        "idee": "(b) fausse : aucun réel n'a un carré négatif",
+        "mots": [
+          "aucun reel",
+          "carre negatif",
+          "b faux",
+          "b fausse"
+        ]
+      },
+      {
+        "idee": "(c) fausse : n = 0 est un contre-exemple",
+        "mots": [
+          "contre exemple",
+          "n 0",
+          "c faux",
+          "c fausse"
+        ]
+      },
+      {
+        "idee": "(d) vraie : n = 2 convient, un seul exemple suffit pour « il existe »",
+        "mots": [
+          "n 2",
+          "exemple suffit",
+          "d vrai"
+        ]
+      }
+    ]
+  },
+  "3": {
+    "reponse": "Pour $x = 2$ : vraie, vraie, vraie. Pour $x = 5$ : fausse, vraie, fausse.",
+    "criteres": [
+      {
+        "idee": "Pour x = 2, P et Q sont vraies : les trois propositions sont vraies",
+        "mots": [
+          "vraies",
+          "toutes vraies",
+          "trois vraies"
+        ]
+      },
+      {
+        "idee": "Pour x = 5, P est vraie et Q fausse : « P et Q » est fausse, « P ou Q » vraie (ou inclusif)",
+        "mots": [
+          "inclusif",
+          "q fausse",
+          "q est fausse"
+        ]
+      },
+      {
+        "idee": "L'implication est fausse pour x = 5 : seul cas où une implication est fausse (P vraie, Q fausse)",
+        "mots": [
+          "seul cas",
+          "implication est fausse",
+          "implication fausse"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "reponse": "Réciproque « $x^2 = 9 \\Rightarrow x = 3$ » : fausse (contre-exemple $x = -3$). Contraposée « $x^2 \\neq 9 \\Rightarrow x \\neq 3$ » : vraie.",
+    "criteres": [
+      {
+        "idee": "Réciproque : si x² = 9, alors x = 3",
+        "mots": [
+          "reciproque"
+        ]
+      },
+      {
+        "idee": "La réciproque est fausse : contre-exemple x = -3",
+        "mots": [
+          "contre exemple",
+          "x 3",
+          "moins 3"
+        ]
+      },
+      {
+        "idee": "Contraposée : si x² ≠ 9, alors x ≠ 3",
+        "mots": [
+          "contraposee"
+        ]
+      },
+      {
+        "idee": "La contraposée est vraie car elle est équivalente à l'implication de départ",
+        "mots": [
+          "equivalent",
+          "meme valeur"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "reponse": "$3n^2 + n$ est pair pour tout $n \\in \\mathbb{Z}$ : il s'écrit $2(6k^2+k)$ si $n=2k$, et $2(6k^2+7k+2)$ si $n=2k+1$.",
+    "criteres": [
+      {
+        "idee": "Disjonction de cas : tout entier est soit pair, soit impair",
+        "mots": [
+          "disjonction",
+          "deux cas",
+          "pair soit impair",
+          "pair ou impair"
+        ]
+      },
+      {
+        "idee": "Si n = 2k : 3n² + n = 2(6k² + k), pair",
+        "mots": [
+          "n 2k",
+          "6k 2 k",
+          "12k 2 2k"
+        ]
+      },
+      {
+        "idee": "Si n = 2k + 1 : 3n² + n = 2(6k² + 7k + 2), pair",
+        "mots": [
+          "2k 1",
+          "6k 2 7k",
+          "12k 2 14k"
+        ]
+      },
+      {
+        "idee": "Les deux cas couvrent tout Z : la propriété est démontrée",
+        "mots": [
+          "couvr",
+          "tous les entiers",
+          "dans les deux cas"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "reponse": "Vrai. Par contraposée : si $n = 2k$ est pair, $n^2 + 1 = 2(2k^2) + 1$ est impair ; l'implication de départ est donc établie.",
+    "criteres": [
+      {
+        "idee": "Contraposée : si n est pair, alors n² + 1 est impair",
+        "mots": [
+          "contraposee",
+          "si n est pair"
+        ]
+      },
+      {
+        "idee": "Avec n = 2k : n² + 1 = 2(2k²) + 1, impair",
+        "mots": [
+          "n 2k",
+          "4k 2 1",
+          "2 2k 2 1"
+        ]
+      },
+      {
+        "idee": "La contraposée est équivalente à l'énoncé, qui est donc démontré",
+        "mots": [
+          "equivalent",
+          "demontre"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "reponse": "(a) vraie ; (b) fausse.",
+    "accepte": [
+      "vrai faux",
+      "vraie fausse",
+      "V F",
+      "a) vrai b) faux",
+      "a) vraie b) fausse",
+      "(a) vrai (b) faux",
+      "(a) vraie (b) fausse",
+      "a vrai b faux"
+    ]
+  },
+  "9": {
+    "reponse": "1. Si $r + x = s$ était rationnel, alors $x = s - r$ serait rationnel (différence de rationnels), ce qui contredit l'irrationalité de $x$ : donc $r + x$ est irrationnel. 2. Avec $r = 1$ et $x = \\sqrt{2}$, $1 + \\sqrt{2}$ est irrationnel.",
+    "criteres": [
+      {
+        "idee": "On suppose par l'absurde que r + x = s est rationnel",
+        "mots": [
+          "absurde",
+          "suppos"
+        ]
+      },
+      {
+        "idee": "Alors x = s - r est rationnel (différence de deux rationnels)",
+        "mots": [
+          "difference",
+          "s r",
+          "stable"
+        ]
+      },
+      {
+        "idee": "Contradiction avec x irrationnel : r + x est irrationnel",
+        "mots": [
+          "contradi",
+          "contredit",
+          "absurde"
+        ]
+      },
+      {
+        "idee": "Avec r = 1 et x = √2, on conclut que 1 + √2 est irrationnel",
+        "mots": [
+          "r 1",
+          "racine",
+          "sqrt",
+          "1 2 est irrationnel"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "reponse": "a) Faux ; b) Vrai ; c) Faux.",
+    "accepte": [
+      "faux vrai faux",
+      "fausse vraie fausse",
+      "F V F",
+      "a) faux b) vrai c) faux",
+      "a) fausse b) vraie c) fausse",
+      "(a) faux (b) vrai (c) faux",
+      "(a) fausse (b) vraie (c) fausse",
+      "a faux b vrai c faux"
+    ]
+  },
+  "13": {
+    "reponse": "a) proposition fausse ; c) proposition vraie ; b) et d) ne sont pas des propositions.",
+    "criteres": [
+      {
+        "idee": "a) est une proposition fausse et c) une proposition vraie",
+        "mots": [
+          "a proposition fausse",
+          "a fausse",
+          "c vraie",
+          "c proposition vraie"
+        ]
+      },
+      {
+        "idee": "b) « 2x + 1 » n'est ni vrai ni faux : ce n'est pas une proposition",
+        "mots": [
+          "pas une proposition",
+          "pas des propositions",
+          "ni vrai"
+        ]
+      },
+      {
+        "idee": "d) dépend de x (prédicat) : pas une proposition tant que x n'est pas fixé ou quantifié",
+        "mots": [
+          "predicat",
+          "depend",
+          "variable"
+        ]
+      }
+    ]
+  },
+  "14": {
+    "reponse": "$2\\in\\{1, 2, 3\\}$ ou $\\{2\\}\\subset\\{1, 2, 3\\}$.",
+    "criteres": [
+      {
+        "idee": "2 est un élément, pas un ensemble : on écrit 2 ∈ {1, 2, 3}",
+        "mots": [
+          "element",
+          "appartient",
+          "2 1 2 3"
+        ]
+      },
+      {
+        "idee": "Ou on parle de l'ensemble {2}, inclus dans {1, 2, 3}",
+        "mots": [
+          "inclus",
+          "ensemble 2",
+          "singleton"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "reponse": "a) Vrai ; b) Faux ; c) Vrai.",
+    "accepte": [
+      "vrai faux vrai",
+      "vraie fausse vraie",
+      "V F V",
+      "a) vrai b) faux c) vrai",
+      "a) vraie b) fausse c) vraie",
+      "(a) vrai (b) faux (c) vrai",
+      "(a) vraie (b) fausse (c) vraie",
+      "a vrai b faux c vrai"
+    ]
+  },
+  "21": {
+    "reponse": "« Au moins un élève de la classe n'a pas la moyenne. »",
+    "criteres": [
+      {
+        "idee": "Nier un « pour tout » revient à affirmer l'existence d'un contre-exemple",
+        "mots": [
+          "existe",
+          "au moins un",
+          "contre exemple"
+        ]
+      },
+      {
+        "idee": "Négation : au moins un élève de la classe n'a pas la moyenne",
+        "mots": [
+          "au moins un",
+          "n a pas la moyenne",
+          "un eleve"
+        ]
+      }
+    ]
+  },
+  "23": {
+    "reponse": "Implication vraie ; réciproque fausse.",
+    "criteres": [
+      {
+        "idee": "L'implication est vraie : tout carré a quatre angles droits, c'est un rectangle",
+        "mots": [
+          "angles droits",
+          "angle droit",
+          "implication est vraie",
+          "vraie"
+        ]
+      },
+      {
+        "idee": "Réciproque : si un quadrilatère est un rectangle, alors c'est un carré",
+        "mots": [
+          "reciproque"
+        ]
+      },
+      {
+        "idee": "La réciproque est fausse : un rectangle de côtés 2 et 5 n'est pas un carré",
+        "mots": [
+          "fausse",
+          "contre exemple",
+          "pas un carre"
+        ]
+      }
+    ]
+  },
+  "24": {
+    "reponse": "Non (contre-exemple $x=-3$).",
+    "accepte": [
+      "non",
+      "non elle est fausse"
+    ]
+  },
+  "25": {
+    "reponse": "$x^2=4\\iff(x=2$ ou $x=-2)$.",
+    "criteres": [
+      {
+        "idee": "« x = 2 ⇒ x² = 4 » est vraie",
+        "mots": [
+          "vraie"
+        ]
+      },
+      {
+        "idee": "« x² = 4 ⇒ x = 2 » est fausse : x = -2 convient aussi",
+        "mots": [
+          "fausse",
+          "x 2 convient",
+          "moins 2"
+        ]
+      },
+      {
+        "idee": "Correction : x² = 4 ⟺ (x = 2 ou x = -2)",
+        "mots": [
+          "ou x 2",
+          "2 ou",
+          "ou moins 2"
+        ]
+      }
+    ]
+  },
+  "26": {
+    "reponse": "Fausse : $2$ est premier et pair.",
+    "criteres": [
+      {
+        "idee": "Pour réfuter un « pour tout », un seul contre-exemple suffit",
+        "mots": [
+          "contre exemple",
+          "un seul"
+        ]
+      },
+      {
+        "idee": "2 est premier et pair",
+        "mots": [
+          "2 est premier",
+          "pair",
+          "deux est premier"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "Fausse seulement si $P$ vraie et $Q$ fausse ; l'implication proposée est vraie.",
+    "criteres": [
+      {
+        "idee": "P ⇒ Q n'est fausse que si P est vraie et Q fausse",
+        "mots": [
+          "p vraie",
+          "p est vraie"
+        ]
+      },
+      {
+        "idee": "Ici « 2 > 3 » est fausse, donc l'implication est vraie",
+        "mots": [
+          "implication est vraie",
+          "est vraie",
+          "p est fausse",
+          "p fausse"
+        ]
+      }
+    ]
+  },
+  "28": {
+    "reponse": "$A\\subset B$, mais $B\\not\\subset A$ (contre-exemple : $2$).",
+    "criteres": [
+      {
+        "idee": "Si x > 3, alors x > 1 : A est inclus dans B",
+        "mots": [
+          "3 1",
+          "a b",
+          "a est inclus",
+          "inclus dans b"
+        ]
+      },
+      {
+        "idee": "B n'est pas inclus dans A : 2 est dans B mais pas dans A",
+        "mots": [
+          "contre exemple",
+          "2 b",
+          "2 appartient",
+          "pas inclus"
+        ]
+      }
+    ]
+  },
+  "29": {
+    "reponse": "a) Vrai ; b) Faux.",
+    "accepte": [
+      "vrai faux",
+      "vraie fausse",
+      "V F",
+      "a) vrai b) faux",
+      "a) vraie b) fausse",
+      "(a) vrai (b) faux",
+      "(a) vraie (b) fausse",
+      "a vrai b faux"
+    ]
+  },
+  "30": {
+    "reponse": "a) Vrai ; b) Faux (contre-exemple $x=\\dfrac{1}{2}$).",
+    "accepte": [
+      "vrai faux",
+      "vraie fausse",
+      "V F",
+      "a) vrai b) faux",
+      "a) vraie b) fausse",
+      "(a) vrai (b) faux",
+      "(a) vraie (b) fausse",
+      "a vrai b faux"
+    ]
+  },
+  "31": {
+    "reponse": "$\\mathbb{R}$ et $\\varnothing$.",
+    "criteres": [
+      {
+        "idee": "Tout réel vérifie au moins l'une des deux conditions : le premier ensemble est R",
+        "mots": [
+          "tout reel",
+          "tous les reels",
+          "au moins"
+        ]
+      },
+      {
+        "idee": "Aucun réel n'est à la fois ≤ 1 et ≥ 2 : le second ensemble est vide",
+        "mots": [
+          "aucun",
+          "vide"
+        ]
+      }
+    ]
+  },
+  "32": {
+    "reponse": "Vraie ; le « ou » mathématique est inclusif.",
+    "criteres": [
+      {
+        "idee": "La proposition est vraie : 6 est pair et multiple de 3",
+        "mots": [
+          "vraie",
+          "pair et multiple"
+        ]
+      },
+      {
+        "idee": "Le « ou » mathématique est inclusif, pas exclusif",
+        "mots": [
+          "inclusif",
+          "pas exclusif",
+          "non exclusif"
+        ]
+      }
+    ]
+  },
+  "34": {
+    "reponse": "$\\forall x\\in\\mathbb{R},\\ e^x>0$ ; c'est elle qui est vraie.",
+    "criteres": [
+      {
+        "idee": "Négation : pour tout réel x, eˣ > 0",
+        "mots": [
+          "pour tout",
+          "quel que soit",
+          "forall"
+        ]
+      },
+      {
+        "idee": "C'est la négation qui est vraie : l'exponentielle est strictement positive",
+        "mots": [
+          "strictement positi",
+          "toujours positi",
+          "negation est vraie",
+          "exponentielle"
+        ]
+      }
+    ]
+  },
+  "35": {
+    "reponse": "« $n$ divisible par $6$ et non divisible par $4$ » ; implication fausse (exemple $n=6$).",
+    "criteres": [
+      {
+        "idee": "Négation de P ⇒ Q : P et non Q",
+        "mots": [
+          "et non",
+          "et n est pas"
+        ]
+      },
+      {
+        "idee": "« n divisible par 6 et non divisible par 4 »",
+        "mots": [
+          "divisible par 6 et",
+          "pas divisible par 4",
+          "non divisible par 4"
+        ]
+      },
+      {
+        "idee": "L'implication est fausse : n = 6 est un contre-exemple",
+        "mots": [
+          "n 6",
+          "contre exemple",
+          "fausse"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "« Si $x=1$, alors $x^2=1$ » : vraie.",
+    "criteres": [
+      {
+        "idee": "La contraposée de P ⇒ Q est non Q ⇒ non P",
+        "mots": [
+          "non q",
+          "contraposee"
+        ]
+      },
+      {
+        "idee": "Ici : si x = 1, alors x² = 1",
+        "mots": [
+          "si x 1",
+          "x 2 1"
+        ]
+      },
+      {
+        "idee": "Elle est vraie, donc l'implication de départ aussi",
+        "mots": [
+          "vraie",
+          "equivalent"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "Non ; la contraposée est « si $x^2\\neq 9$, alors $x\\neq 3$ ».",
+    "criteres": [
+      {
+        "idee": "Non : l'élève a nié P et Q sans les échanger",
+        "mots": [
+          "echang",
+          "inverse",
+          "sans les"
+        ]
+      },
+      {
+        "idee": "La contraposée correcte est « si x² ≠ 9, alors x ≠ 3 »",
+        "mots": [
+          "x 2 9 alors",
+          "si x 2"
+        ]
+      },
+      {
+        "idee": "Sa phrase est fausse : x = -3 en est un contre-exemple",
+        "mots": [
+          "contre exemple",
+          "x 3",
+          "fausse"
+        ]
+      }
+    ]
+  },
+  "38": {
+    "reponse": "a) Vrai ; b) Faux (contre-exemple $x=0$).",
+    "accepte": [
+      "vrai faux",
+      "vraie fausse",
+      "V F",
+      "a) vrai b) faux",
+      "a) vraie b) fausse",
+      "(a) vrai (b) faux",
+      "(a) vraie (b) fausse",
+      "a vrai b faux"
+    ]
+  },
+  "39": {
+    "reponse": "Les deux implications ; ici l'équivalence est vraie.",
+    "criteres": [
+      {
+        "idee": "Il faut prouver les deux implications P ⇒ Q et Q ⇒ P",
+        "mots": [
+          "deux implications",
+          "double implication",
+          "reciproque",
+          "deux sens"
+        ]
+      },
+      {
+        "idee": "Si 2x + 3 = 7, alors x = 2",
+        "mots": [
+          "2x 4",
+          "x 2"
+        ]
+      },
+      {
+        "idee": "Réciproquement, si x = 2, alors 2x + 3 = 7 : l'équivalence est vraie",
+        "mots": [
+          "reciproquement",
+          "equivalence est vraie",
+          "vraie"
+        ]
+      }
+    ]
+  },
+  "40": {
+    "reponse": "Vraie pour tout réel (cas $x\\geqslant 0$ et $x<0$).",
+    "criteres": [
+      {
+        "idee": "Cas x ≥ 0 : |x| = x et |x| + x = 2x ≥ 0",
+        "mots": [
+          "x x 2x",
+          "egal a 2x"
+        ]
+      },
+      {
+        "idee": "Cas x < 0 : |x| = -x et |x| + x = 0",
+        "mots": [
+          "x x 0",
+          "egal a 0",
+          "vaut 0",
+          "0 0"
+        ]
+      },
+      {
+        "idee": "Les deux cas couvrent tous les réels",
+        "mots": [
+          "deux cas",
+          "tous les reels",
+          "couvr"
+        ]
+      }
+    ]
+  },
+  "41": {
+    "reponse": "Démontré via « $n$ pair $\\Rightarrow n^2$ pair ».",
+    "criteres": [
+      {
+        "idee": "Contraposée : si n est pair, alors n² est pair",
+        "mots": [
+          "contraposee",
+          "si n est pair"
+        ]
+      },
+      {
+        "idee": "Avec n = 2k : n² = 4k² = 2(2k²) est pair",
+        "mots": [
+          "n 2k",
+          "4k 2"
+        ]
+      },
+      {
+        "idee": "La contraposée est vraie, donc l'implication de départ aussi",
+        "mots": [
+          "equivalent",
+          "vraie",
+          "donc"
+        ]
+      }
+    ]
+  },
+  "42": {
+    "reponse": "Démontré par la contraposée « $a\\leqslant 1$ et $b\\leqslant 1\\Rightarrow a+b\\leqslant 2$ ».",
+    "criteres": [
+      {
+        "idee": "La négation de « a > 1 ou b > 1 » est « a ≤ 1 et b ≤ 1 »",
+        "mots": [
+          "a 1 et b 1",
+          "et b"
+        ]
+      },
+      {
+        "idee": "Contraposée : si a ≤ 1 et b ≤ 1, alors a + b ≤ 2",
+        "mots": [
+          "contraposee",
+          "alors a b 2"
+        ]
+      },
+      {
+        "idee": "On additionne les deux inégalités pour conclure",
+        "mots": [
+          "addition",
+          "somme",
+          "ajout"
+        ]
+      }
+    ]
+  },
+  "43": {
+    "reponse": "Contradiction avec $N+1>N$ : il n'y a pas de plus grand entier.",
+    "criteres": [
+      {
+        "idee": "On suppose qu'il existe un plus grand entier naturel N",
+        "mots": [
+          "suppos",
+          "absurde"
+        ]
+      },
+      {
+        "idee": "N + 1 est un entier naturel et N + 1 > N",
+        "mots": [
+          "n 1"
+        ]
+      },
+      {
+        "idee": "Contradiction : il n'existe pas de plus grand entier",
+        "mots": [
+          "contradi",
+          "contredit",
+          "absurde"
+        ]
+      }
+    ]
+  },
+  "44": {
+    "reponse": "La supposition mène à $0=1$ : un tel $y$ n'existe pas.",
+    "criteres": [
+      {
+        "idee": "On suppose qu'un tel réel y existe",
+        "mots": [
+          "suppos",
+          "absurde"
+        ]
+      },
+      {
+        "idee": "Or 0 × y = 0 pour tout y : on obtiendrait 0 = 1",
+        "mots": [
+          "0 1",
+          "0 y 0",
+          "toujours 0"
+        ]
+      },
+      {
+        "idee": "C'est absurde : un tel réel n'existe pas (0 n'a pas d'inverse)",
+        "mots": [
+          "absurde",
+          "contradi",
+          "inverse",
+          "existe pas"
+        ]
+      }
+    ]
+  },
+  "45": {
+    "reponse": "Fausse : $40^2+40+41=41^2$ n'est pas premier.",
+    "criteres": [
+      {
+        "idee": "Pour n = 40 : 40² + 40 + 41 = 1 681",
+        "mots": [
+          "1681",
+          "1 681"
+        ]
+      },
+      {
+        "idee": "1 681 = 41² n'est pas premier : P(40) est fausse",
+        "mots": [
+          "41 2",
+          "41 41",
+          "41 au carre",
+          "pas premier"
+        ]
+      },
+      {
+        "idee": "La proposition universelle est fausse : des exemples ne prouvent pas un « pour tout »",
+        "mots": [
+          "fausse",
+          "exemples",
+          "contre exemple"
+        ]
+      }
+    ]
+  },
+  "47": {
+    "reponse": "Le reste vaut $0$ ou $1$, jamais $2$.",
+    "criteres": [
+      {
+        "idee": "On distingue trois cas : n = 3k, 3k + 1, 3k + 2, qui couvrent tous les entiers",
+        "mots": [
+          "trois cas",
+          "3 cas",
+          "n 3k"
+        ]
+      },
+      {
+        "idee": "Si n = 3k, n² = 3(3k²) : reste 0",
+        "mots": [
+          "reste 0",
+          "3 3k 2"
+        ]
+      },
+      {
+        "idee": "Si n = 3k + 1, n² = 3(3k² + 2k) + 1 : reste 1",
+        "mots": [
+          "3k 2 2k",
+          "9k 2 6k"
+        ]
+      },
+      {
+        "idee": "Si n = 3k + 2, n² = 3(3k² + 4k + 1) + 1 : reste 1",
+        "mots": [
+          "3k 2 4k",
+          "9k 2 12k"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Démontré via « $n$ impair $\\Rightarrow 8$ divise $n^2-1$ ».",
+    "criteres": [
+      {
+        "idee": "Contraposée : si n est impair, alors n² - 1 est divisible par 8",
+        "mots": [
+          "contraposee",
+          "si n est impair"
+        ]
+      },
+      {
+        "idee": "Avec n = 2k + 1 : n² - 1 = 4k(k + 1)",
+        "mots": [
+          "4k k 1",
+          "4k 2 4k"
+        ]
+      },
+      {
+        "idee": "k et k + 1 sont consécutifs, l'un est pair : n² - 1 = 8m",
+        "mots": [
+          "consecuti",
+          "l un est pair",
+          "n 2 1 8m"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "$6a+4b$ est toujours pair, il ne peut pas valoir $1$.",
+    "criteres": [
+      {
+        "idee": "On suppose qu'il existe des entiers a et b tels que 6a + 4b = 1",
+        "mots": [
+          "suppos",
+          "absurde"
+        ]
+      },
+      {
+        "idee": "6a + 4b = 2(3a + 2b) est pair",
+        "mots": [
+          "2 3a 2b",
+          "pair"
+        ]
+      },
+      {
+        "idee": "Or 1 est impair : contradiction, de tels entiers n'existent pas",
+        "mots": [
+          "impair",
+          "contradi",
+          "absurde"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "Formule démontrée dans les deux cas ; pour $a=3$, $b=7$ on trouve $7$.",
+    "criteres": [
+      {
+        "idee": "Cas a ≥ b : |a - b| = a - b et la formule donne a",
+        "mots": [
+          "a b a b",
+          "donne a"
+        ]
+      },
+      {
+        "idee": "Cas a < b : |a - b| = b - a et la formule donne b",
+        "mots": [
+          "b a",
+          "donne b"
+        ]
+      },
+      {
+        "idee": "Vérification : (3 + 7 + 4)/2 = 7 = max(3, 7)",
+        "mots": [
+          "10 4",
+          "max 3 7",
+          "vaut 7",
+          "donne 7"
+        ]
+      }
+    ]
+  }
+}

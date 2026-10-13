@@ -61,7 +61,7 @@ La richesse : rime **pauvre** (1 son commun), **suffisante** (2 sons), **riche**
 
 ## 4. Le lyrisme et le poème en prose
 
-Le **lyrisme** est l'expression des sentiments personnels (souvent par le « je »). La poésie n'est pas obligatoirement en vers : Baudelaire invente le **poème en prose** (*Le Spleen de Paris*), et le **vers libre** (sans mètre ni rime réguliers) se développe à partir de Rimbaud et d'Apollinaire.
+Le **lyrisme** est l'expression des sentiments personnels (souvent par le « je »). La poésie n'est pas obligatoirement en vers : après Aloysius Bertrand (*Gaspard de la nuit*, 1842), Baudelaire impose le **poème en prose** (*Le Spleen de Paris*), et le **vers libre** (sans mètre ni rime réguliers) se développe à partir de Rimbaud et d'Apollinaire.
 
 ## 5. Les erreurs à éviter
 

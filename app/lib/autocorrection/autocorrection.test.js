@@ -108,3 +108,296 @@ test('uniteAttendue', () => {
   assert.equal(uniteAttendue('$43$'), '');
   assert.equal(uniteAttendue('Le judaïsme.'), '');
 });
+
+// ─── Réponses acceptées écrites à la main (attendus.json) ───
+import { typeExercice, comparerExercice, uniteExercice, consigneExercice, fusionnerAttendus } from './index.js';
+
+test('attendu : une phrase devient vérifiable grâce à sa forme courte', () => {
+  const ex = { reponse: 'Il y a 30 timbres en tout.', attendu: { accepte: ['30 timbres'] } };
+  assert.equal(typeExercice(ex), 'auto');
+  assert.equal(comparerExercice('30', ex), true);
+  assert.equal(comparerExercice('30 timbres', ex), true);
+  assert.equal(comparerExercice('31', ex), false);
+  assert.equal(uniteExercice(ex), 'timbres');
+});
+
+test('attendu : sans fichier, on garde le comportement de la réponse seule', () => {
+  assert.equal(typeExercice({ reponse: 'Il y a 30 timbres en tout, puis on en donne 4.' }), 'ouverte');
+  assert.equal(typeExercice({ reponse: '42' }), 'auto');
+});
+
+test('attendu : une phrase courte en langue étrangère, ponctuation et casse ignorées', () => {
+  const ex = { reponse: 'Ich trinke gern Milch.', attendu: { accepte: ['Ich trinke gern Milch', 'Ich trinke gerne Milch'] } };
+  assert.equal(comparerExercice('ich trinke gerne milch !', ex, 'allemand'), true);
+  assert.equal(comparerExercice('Ich trinke Milch', ex, 'allemand'), false);
+});
+
+test('attendu : ensemble → tous les éléments, dans n’importe quel ordre', () => {
+  const ex = { reponse: 'le lait, la pomme', attendu: { ensemble: ['le lait', 'la pomme'] } };
+  assert.equal(comparerExercice('pomme et lait', ex), true);
+  assert.equal(comparerExercice('la pomme, le lait', ex), true);
+  assert.equal(comparerExercice('la pomme', ex), false);
+  assert.equal(comparerExercice('la pomme, le lait, le pain', ex), false);
+  assert.match(consigneExercice(ex), /2 éléments/);
+});
+
+test('attendu : une forme non vérifiable (formule) laisse l’exercice ouvert', () => {
+  const ex = { reponse: 'On trouve f(x) = x² + 1 après calcul.', attendu: { accepte: ['$x^2 + 1$'] } };
+  assert.equal(typeExercice(ex), 'ouverte');
+});
+
+test('fusionnerAttendus ignore les lignes dont la réponse a changé', () => {
+  const exo = { exercices: [{ id: 1, reponse: 'A' }, { id: 2, reponse: 'B' }] };
+  const { exercice, ecarts } = fusionnerAttendus(exo, { 1: { reponse: 'A', accepte: ['a'] }, 2: { reponse: 'ancien', accepte: ['b'] } });
+  assert.deepEqual(exercice.exercices[0].attendu, { accepte: ['a'] });
+  assert.equal(exercice.exercices[1].attendu, undefined);
+  assert.deepEqual(ecarts, [2]);
+});
+
+test('articles : « lait » et « le lait » se valent (le « la » de « lait » n’est pas un article)', () => {
+  assert.equal(comparer('lait', 'le lait'), true);
+  assert.equal(comparer('laine', 'la laine'), true);
+});
+
+test('français : les accents comptent ; ailleurs ils sont tolérés', () => {
+  const ex = { reponse: 'Ma sœur et ma cousine semblent fatiguées.', attendu: { accepte: ['fatiguées'] } };
+  assert.equal(comparerExercice('fatiguées', ex, 'francais'), true);
+  assert.equal(comparerExercice('fatiguees', ex, 'francais'), false);
+  assert.equal(comparerExercice('fatiguees', ex, 'hist-geo'), true);
+  assert.equal(comparer('fatigues', 'fatigués', 'francais'), false);
+});
+
+test('ensemble : un mot finissant par « ée » n’est pas coupé (« e » italien seulement en mot isolé)', () => {
+  const ex = { reponse: 'grelottait, givre, glacée', attendu: { ensemble: ['grelottait', 'givre', 'glacée'] } };
+  assert.equal(comparerExercice('grelottait, givre et glacée', ex, 'francais'), true);
+});
+
+test('forme écrite à la main : exigée en entier (« 90 » ne suffit pas pour « 90° angle droit »)', () => {
+  const ex = { reponse: '$90^\\circ$, angle droit', attendu: { accepte: ['90° angle droit', '90° droit'] } };
+  assert.equal(comparerExercice('90°, angle droit', ex), true);
+  assert.equal(comparerExercice('90° droit', ex), true);
+  assert.equal(comparerExercice('90', ex), false);
+  assert.equal(comparer('20 °C', '$20$ °C'), true);
+});
+
+test('nombres dans une forme texte : signe, virgule et séparation conservés', () => {
+  const ex = { reponse: 'S(3 ; −3,5)', attendu: { accepte: ['S(3 ; -3,5)'] } };
+  assert.equal(comparerExercice('S(3 ; -3,5)', ex), true);
+  assert.equal(comparerExercice('S(3;−3,5)', ex), true);
+  assert.equal(comparerExercice('S(3 ; 3,5)', ex), false);
+  assert.equal(comparerExercice('S(3 ; -35)', ex), false);
+  const ex2 = { reponse: '1,4 s et 10,8 m', attendu: { accepte: ['1,4 s et 10,8 m'] } };
+  assert.equal(comparerExercice('14 s et 108 m', ex2), false);
+  const ex3 = { reponse: '(2 ; 3)', attendu: { accepte: ['(2 ; 3)'] } };
+  assert.equal(comparerExercice('23', ex3), false);
+  assert.equal(comparerExercice('(2;3)', ex3), true);
+});
+
+test('unités : MW et mW ne se confondent pas ; « ¿ » au milieu est ignoré', () => {
+  assert.equal(comparer('10 mW', '10 MW'), false);
+  assert.equal(comparer('10 MW', '10 MW'), true);
+  assert.equal(comparer('5 min', '5 MIN'), true);
+  const ex = { reponse: 'Hola, ¿qué tal?', attendu: { accepte: ['Hola ¿qué tal?'] } };
+  assert.equal(comparerExercice('hola, que tal', ex, 'espagnol'), false); // accents exigés en langue
+  assert.equal(comparerExercice('hola, qué tal', ex, 'espagnol'), true);
+});
+
+test('langues : l’article compte (« mia casa » ≠ « la mia casa »)', () => {
+  const ex = { reponse: 'la mia casa', attendu: { accepte: ['la mia casa'] } };
+  assert.equal(comparerExercice('mia casa', ex, 'italien'), false);
+  assert.equal(comparerExercice('La mia casa.', ex, 'italien'), true);
+});
+
+test('formes avec flèches ou « < » : rangements et chaînes', () => {
+  const ex = { reponse: 'herbe → lapin → renard', attendu: { accepte: ['herbe → lapin → renard'] } };
+  assert.equal(comparerExercice('herbe -> lapin -> renard', ex), true);
+  assert.equal(comparerExercice('lapin -> herbe -> renard', ex), false);
+  const ex2 = { reponse: '$7 < 7{,}4 < 8$', attendu: { accepte: ['7 < 7,4 < 8'] } };
+  assert.equal(comparerExercice('7<7,4<8', ex2), true);
+  assert.equal(comparerExercice('7 < 74 < 8', ex2), false);
+});
+
+test('forme texte : espaces des milliers (« 1 359 » = « 1359 »)', () => {
+  const ex = { reponse: 'quotient 1 359, reste 2', attendu: { accepte: ['quotient 1 359 reste 2'] } };
+  assert.equal(comparerExercice('quotient 1359, reste 2', ex), true);
+  assert.equal(comparerExercice('quotient 1 359 reste 2', ex), true);
+  assert.equal(comparerExercice('quotient 135 reste 92', ex), false);
+});
+
+test('langues : les espaces comptent (« dagli » ≠ « da gli ») ; œ = oe partout', () => {
+  const ex = { reponse: 'dagli studenti', attendu: { accepte: ['dagli studenti'] } };
+  assert.equal(comparerExercice('da gli studenti', ex, 'italien'), false);
+  assert.equal(comparerExercice('Dagli studenti.', ex, 'italien'), true);
+  const ex2 = { reponse: 'le cœur', attendu: { accepte: ['le cœur'] } };
+  assert.equal(comparerExercice('coeur', ex2, 'svt'), true);
+});
+
+test('unités composées : mol/L = mol.L-1 = mol·L⁻¹ ; listes « {2,4,6} » ; 0,80 = 0,8 dans un texte', () => {
+  assert.equal(comparer('0,5 mol.L-1', '$0{,}5$ mol/L'), true);
+  assert.equal(comparer('0,5 mol·L⁻¹', '$0{,}5$ mol/L'), true);
+  assert.equal(comparer('3 m.s-1', '3 m/s'), true);
+  const ex = { reponse: '{2 ; 4 ; 6}', attendu: { accepte: ['{2 ; 4 ; 6}'] } };
+  assert.equal(comparerExercice('{2,4,6}', ex), true);
+  assert.equal(comparerExercice('{2,46}', ex), false);
+  const ex2 = { reponse: 'U = 0,80 V et I = 2,0 A', attendu: { accepte: ['0,80 V et 2,0 A'] } };
+  assert.equal(comparerExercice('0,8 V et 2 A', ex2), true);
+  assert.equal(comparerExercice('8 V et 2 A', ex2), false);
+});
+
+test('« S = {1 ; 2} » accepté pour un ensemble de solutions', () => {
+  const ex = { reponse: '$S = \\{1\\,;2\\}$', attendu: { accepte: ['{1 ; 2}', '1 et 2'] } };
+  assert.equal(comparerExercice('S = {1 ; 2}', ex), true);
+  assert.equal(comparerExercice('S={1;2}', ex), true);
+  assert.equal(comparerExercice('S = {1 ; 3}', ex), false);
+});
+
+test('puissances de 10 : « 10^7 » et « 10⁷ » seuls, « 3,9×10²⁶ J »', () => {
+  assert.equal(comparer('10^7', '$10^{7}$'), true);
+  assert.equal(comparer('10⁷', '$10^{7}$'), true);
+  assert.equal(comparer('10^8', '$10^{7}$'), false);
+  assert.equal(comparer('3,9×10²⁶ J', '$3{,}9 \\times 10^{26}$ J'), true);
+  assert.equal(comparer('2×10⁻³ m', '$2 \\times 10^{-3}$ m'), true);
+});
+
+test('barres obliques : « des / der » = « des/der »', () => {
+  const ex = { reponse: 'des / der', attendu: { accepte: ['des / der'] } };
+  assert.equal(comparerExercice('des/der', ex, 'allemand'), true);
+});
+
+test('ensemble de lettres (« a, e, i, o, u ») ; « c) » = « c »', () => {
+  const ex = { reponse: 'a, e, i, o, u', attendu: { ensemble: ['a', 'e', 'i', 'o', 'u'] } };
+  assert.equal(comparerExercice('a, e, i, o, u', ex, 'espagnol'), true);
+  assert.equal(comparerExercice('a, e, i, o', ex, 'espagnol'), false);
+  const ex2 = { reponse: 'c) del', attendu: { accepte: ['c', 'del'] } };
+  assert.equal(comparerExercice('c)', ex2, 'espagnol'), true);
+});
+
+test('« ont / on » = « ont, on » = « ont/on » ; fractions intactes', () => {
+  const ex = { reponse: 'ont, on', attendu: { accepte: ['ont, on'] } };
+  assert.equal(comparerExercice('ont/on', ex, 'francais'), true);
+  const ex2 = { reponse: '3/4 du gâteau', attendu: { accepte: ['3/4 du gâteau'] } };
+  assert.equal(comparerExercice('34 du gâteau', ex2), false);
+});
+
+test('très petits nombres : 1,3 × 10⁻¹⁹ ≠ 1,3 × 10⁻¹⁸ ; unité après une puissance de 10', () => {
+  assert.equal(comparer('1,3 × 10^-19 C', '$1{,}3 \\times 10^{-18}$ C'), false);
+  assert.equal(comparer('1,3 × 10^-18 C', '$1{,}3 \\times 10^{-18}$ C'), true);
+  assert.equal(comparer('3,0 × 10^-2 S/m', '$3{,}0 \\times 10^{-2}$ S/m'), true);
+  assert.equal(comparer('0,03 S/m', '$3{,}0 \\times 10^{-2}$ S/m'), true);
+});
+
+test('saisie plus précise : arrondie aux chiffres significatifs de la réponse', () => {
+  assert.equal(comparer('314,16 rad/s', '314 rad/s'), true);
+  assert.equal(comparer('13,86 min', '14 min'), true);
+  assert.equal(comparer('334 800 J', '$3{,}35 \\times 10^{5}$ J'), true);
+  assert.equal(comparer('3,33 × 10^-3', '$3{,}3 \\times 10^{-3}$'), true);
+  assert.equal(comparer('320 000 J', '$3{,}35 \\times 10^{5}$ J'), false);
+  assert.equal(comparer('15', '14 min'), false);
+  assert.equal(comparer('4,5', '4,47'), false); // moins précis : refusé
+});
+
+test('« f(-2) = 15 », « x = 3 ou x = -5 », « S = ∅ » acceptés ; π permis en grec', () => {
+  const ex = { reponse: '$f(-2) = 15$', attendu: { accepte: ['15'] } };
+  assert.equal(comparerExercice('f(-2) = 15', ex), true);
+  assert.equal(comparerExercice('f(-2) = 16', ex), false);
+  const ex2 = { reponse: '$x = 3$ ou $x = -5$', attendu: { accepte: ['3 ou -5', '-5 ou 3'] } };
+  assert.equal(comparerExercice('x = 3 ou x = -5', ex2), true);
+  assert.equal(comparerExercice('x = 3 ou x = 5', ex2), false);
+  const ex3 = { reponse: '$S = \\emptyset$', attendu: { accepte: ['ensemble vide', 'aucune solution'] } };
+  assert.equal(comparerExercice('S = ∅', ex3), true);
+  assert.equal(comparerExercice('∅', ex3), true);
+  const ex4 = { reponse: 'ἵππος', attendu: { accepte: ['ἵππος', 'ιππος'] } };
+  assert.equal(typeExercice(ex4, 'langues-anciennes'), 'auto');
+});
+
+test('forme « nombre + plusieurs mots » = phrase entière ; « +25 » permis', () => {
+  const ex = { reponse: 'En 1895, par les frères Lumière.', attendu: { accepte: ['1895 frères Lumière'] } };
+  assert.equal(comparerExercice('1895', ex), false);
+  assert.equal(comparerExercice('1895, frères Lumière', ex), true);
+  const ex2 = { reponse: '+1 200 habitants', attendu: { accepte: ['+1 200 habitants'] } };
+  assert.equal(comparerExercice('+1200 habitants', ex2), true);
+});
+
+test('∞ dans une forme ; coordonnées (7,3,-1) ; « a) et d) » ; « δ ≈ 0,63 » ; « α = 1, β = 3 »', () => {
+  const ex = { reponse: '$+\\infty$', attendu: { accepte: ['+∞'] } };
+  assert.equal(comparerExercice('+∞', ex), true);
+  assert.equal(comparerExercice('-∞', ex), false);
+  const ex2 = { reponse: '(7 ; 3 ; -1)', attendu: { accepte: ['(7 ; 3 ; -1)'] } };
+  assert.equal(comparerExercice('(7,3,-1)', ex2), true);
+  assert.equal(comparerExercice('(7,3,1)', ex2), false);
+  const ex3 = { reponse: 'a et d', attendu: { ensemble: ['a', 'd'] } };
+  assert.equal(comparerExercice('a) et d)', ex3), true);
+  const ex4 = { reponse: '0,63', attendu: { accepte: ['0,63'] } };
+  assert.equal(comparerExercice('δ ≈ 0,63', ex4), true);
+  const ex5 = { reponse: 'α = 1, β = 3', attendu: { accepte: ['1 ; 3'] } };
+  assert.equal(comparerExercice('α = 1, β = 3', ex5), true);
+});
+
+test('unités m/s² = m·s⁻² = m.s-2 ; mol/L/s ; m3/s ; 280 s accepte 277 s', () => {
+  assert.equal(comparer('9,8 m.s-2', '9,8 m/s²'), true);
+  assert.equal(comparer('9,8 m·s⁻²', '9,8 m/s²'), true);
+  assert.equal(comparer('9,8 m/s', '9,8 m/s²'), false);
+  assert.equal(comparer('2 mol.L-1.s-1', '2 mol/L/s'), true);
+  assert.equal(comparer('3 m3/s', '3 m³/s'), true);
+  assert.equal(comparer('277 s', '280 s'), true);
+  assert.equal(comparer('260 s', '280 s'), false);
+});
+
+test('signe moins devant une lettre (« -i ; 1 ; -1 » ≠ « i ; 1 ; -1 »)', () => {
+  const ex = { reponse: '-i ; 1 ; -1', attendu: { accepte: ['-i ; 1 ; -1'] } };
+  assert.equal(comparerExercice('i ; 1 ; -1', ex), false);
+  assert.equal(comparerExercice('-i ; 1 ; -1', ex), true);
+  const ex2 = { reponse: 'c’est-à-dire', attendu: { accepte: ["c'est-à-dire"] } };
+  assert.equal(comparerExercice("c'est à dire", ex2), true);
+});
+
+// ─── Réponses rédigées : idées attendues ───
+import { detecterCriteres, bilanCriteres } from './index.js';
+
+test('criteres : fusion et détection des mots-clés (début de mot, sans accents)', () => {
+  const exo = { exercices: [{ id: 3, reponse: 'R' }] };
+  const crit = [
+    { idee: 'L’axe de la Terre est incliné', mots: ['inclin', 'axe'] },
+    { idee: 'La Terre tourne autour du Soleil en un an', mots: ['révolution', 'autour du soleil'] },
+    { idee: 'Les rayons arrivent plus ou moins inclinés', mots: ['rayons'] },
+  ];
+  const { exercice } = fusionnerAttendus(exo, { 3: { reponse: 'R', criteres: crit } });
+  assert.deepEqual(exercice.exercices[0].criteres, crit);
+  assert.deepEqual(detecterCriteres('Parce que l’axe est INCLINE et que la Terre tourne autour du Soleil', crit), [true, true, false]);
+  assert.deepEqual(detecterCriteres('', crit), [false, false, false]);
+  assert.deepEqual(bilanCriteres([true, true, false]), { nb: 2, total: 3, complet: false });
+  assert.equal(bilanCriteres([true, true]).complet, true);
+});
+
+test('criteres : un mot après une apostrophe est trouvé (« dans l’ombre »)', () => {
+  const crit = [{ idee: 'La Lune passe dans l’ombre de la Terre', mots: ['ombre'] }, { idee: 'x', mots: ["l'etoile"] }];
+  assert.deepEqual(detecterCriteres('Elle passe dans l’ombre de l’étoile', crit), [true, true]);
+});
+
+test('comparer deux nombres : « < » ou « > » seul est une réponse vérifiable', () => {
+  const ex = { reponse: '$<$', attendu: { accepte: ['<'] } };
+  assert.equal(typeExercice(ex, 'maths'), 'auto');
+  assert.equal(comparerExercice('<', ex, 'maths'), true);
+  assert.equal(comparerExercice('>', ex, 'maths'), false);
+});
+
+test('criteres : indices chimiques (« CO₂ » = « CO2 ») et « µm » trouvé par « micro »', () => {
+  const crit = [{ idee: 'Rejet de dioxyde de carbone', mots: ['co2'] }, { idee: 'Taille de l’ordre du micromètre', mots: ['micro'] }];
+  assert.deepEqual(detecterCriteres('Elle rejette du CO₂ ; taille 10 µm', crit), [true, true]);
+  assert.deepEqual(detecterCriteres('Elle rejette du CO', crit), [false, false]);
+});
+
+test('expressions : « E = 3(2x + 5) » n’est pas le nombre 3 ; calcul et grille', () => {
+  const ex = { enonce: 'Factorise $E = 6x + 15$.', reponse: '$E = 3(2x + 5)$' };
+  assert.equal(typeExercice(ex, 'maths'), 'auto');
+  assert.equal(comparerExercice('3', ex, 'maths'), false);
+  assert.equal(comparerExercice('3(2x+5)', ex, 'maths'), true);
+  assert.equal(comparerExercice('6x+15', ex, 'maths'), false);
+  const z = { enonce: 'Calculer $\\dfrac{6}{2}\\mathrm{i}$.', reponse: '$3\\mathrm{i}$.' };
+  assert.equal(comparerExercice('3', z, 'maths'), false);
+  const ab = { enonce: 'Écris plus simplement $ 3 \\times a \\times b $.', reponse: '$ 3ab $' };
+  assert.equal(typeExercice(ab, 'maths'), 'ouverte');
+  // Une grille d'idées (explication attendue) garde la main.
+  const g = { enonce: 'Développe $ 8(x - 5) $ et explique.', reponse: '$ 8x - 40 $', criteres: [{ idee: 'a', mots: ['abc'] }, { idee: 'b', mots: ['bcd'] }] };
+  assert.equal(typeExercice(g, 'maths'), 'ouverte');
+});

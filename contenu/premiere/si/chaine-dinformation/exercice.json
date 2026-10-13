@@ -58,7 +58,8 @@
         "Nombre de niveaux : 2^10 = 1024.",
         "La plage de tension est découpée en (2^n − 1) intervalles, soit 1023 intervalles.",
         "Résolution : q = plage / (2^n − 1) = 5 / 1023 ≈ 0,00489 V.",
-        "Soit environ 4,89 mV par pas."
+        "Soit environ 4,89 mV par pas.",
+        "Remarque : on trouve aussi la convention q = plage / 2^n = 5 / 1024 ≈ 4,88 mV ; l'écart est négligeable, il faut simplement suivre la convention de l'énoncé (ici celle du cours)."
       ],
       "reponse": "Le CAN offre 1024 niveaux et une résolution d'environ 4,89 mV."
     },
@@ -124,7 +125,8 @@
         "Avec 10 bits, on dispose de 2¹⁰ = 1024 niveaux, soit 1024 − 1 = 1023 intervalles.",
         "La résolution est la plage divisée par le nombre d'intervalles : q = 5 / (1024 − 1).",
         "q = 5 / 1023 ≈ 0,00489 V.",
-        "Soit environ 4,89 mV."
+        "Soit environ 4,89 mV.",
+        "Remarque : on trouve aussi la convention q = plage / 2^n = 5 / 1024 ≈ 4,88 mV ; l'écart est négligeable, il faut simplement suivre la convention de l'énoncé (ici celle du cours)."
       ],
       "reponse": "La résolution vaut q = 5 / 1023 ≈ 4,89 mV."
     },
@@ -332,12 +334,13 @@
       "id": 28,
       "difficulte": "intermediaire",
       "notion": "résolution d'un CAN",
-      "enonce": "Un élève calcule la résolution d'un CAN 10 bits sur 0–5 V ainsi : $q = \\dfrac{5}{1\\,024}$. Quelle erreur a-t-il commise ?",
+      "enonce": "Un élève calcule la résolution d'un CAN 10 bits sur 0–5 V ainsi : $q = \\dfrac{5}{1\\,024}$. Le cours utilise une autre formule. Laquelle, et l'écart est-il important ?",
       "corrige": [
-        "Avec 10 bits, il y a $2^{10} = 1\\,024$ niveaux, mais seulement 1 023 intervalles entre 0 V et 5 V.",
-        "Il faut écrire $q = \\dfrac{5}{2^{10} - 1} = \\dfrac{5}{1\\,023} \\approx 4{,}89$ mV."
+        "Avec 10 bits, il y a $2^{10} = 1\\,024$ niveaux, et 1 023 intervalles entre 0 V et 5 V.",
+        "Le cours prend $q = \\dfrac{5}{2^{10} - 1} = \\dfrac{5}{1\\,023} \\approx 4{,}89$ mV.",
+        "Le calcul de l'élève, $q = \\dfrac{5}{1\\,024} \\approx 4{,}88$ mV, correspond à une autre convention, elle aussi très utilisée : il n'est pas faux, et l'écart (moins de 0,1 %) est négligeable."
       ],
-      "reponse": "Il a oublié le −1 : q = 5 ÷ 1 023 ≈ 4,89 mV."
+      "reponse": "Le cours utilise q = 5 ÷ 1 023 ≈ 4,89 mV ; 5 ÷ 1 024 ≈ 4,88 mV est une autre convention, l'écart est négligeable."
     },
     {
       "id": 29,

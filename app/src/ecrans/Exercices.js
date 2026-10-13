@@ -24,7 +24,7 @@ import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
 import { useProgression } from '../progression/Contexte';
-import { typeReponse, comparer, uniteAttendue } from '../../lib/autocorrection';
+import { typeExercice, comparerExercice, uniteExercice, consigneExercice, diagnosticExercice, detecterCriteres, bilanCriteres } from '../../lib/autocorrection';
 
 const LIBELLE_DIFFICULTE = {
   decouverte: 'Découverte',
@@ -95,10 +95,10 @@ function Verdict({ juste, texte, t }) {
         marginBottom: t.espace.s,
         padding: t.espace.s,
         borderRadius: t.rayon.s,
-        backgroundColor: juste ? t.couleur.succesFond : t.couleur.erreurFond,
+        backgroundColor: juste == null ? t.couleur.fond : juste ? t.couleur.succesFond : t.couleur.erreurFond,
       }}
     >
-      <Text style={{ color: juste ? t.couleur.succes : t.couleur.erreur, fontWeight: '650', fontSize: t.police.normale }}>
+      <Text style={{ color: juste == null ? t.couleur.texte : juste ? t.couleur.succes : t.couleur.erreur, fontWeight: '650', fontSize: t.police.normale }}>
         {texte}
       </Text>
     </View>
@@ -106,20 +106,34 @@ function Verdict({ juste, texte, t }) {
 }
 
 function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat }) {
-  const auto = useMemo(() => typeReponse(ex.reponse, matiere) === 'auto', [ex.reponse, matiere]);
-  const unite = useMemo(() => (auto ? uniteAttendue(ex.reponse, matiere) : ''), [auto, ex.reponse, matiere]);
+  const auto = useMemo(() => typeExercice(ex, matiere) === 'auto', [ex, matiere]);
+  const unite = useMemo(() => (auto ? uniteExercice(ex, matiere) : ''), [auto, ex, matiere]);
+  const consigne = useMemo(() => (auto ? consigneExercice(ex, matiere) : ''), [auto, ex, matiere]);
   const [saisie, setSaisie] = useState('');
   const [verifie, setVerifie] = useState(null); // null | true | false (dernière vérification)
   const [corrigeVu, setCorrigeVu] = useState(false);
   const [masque, setMasque] = useState(false);
   const [points, setPoints] = useState(0);
   const [parMachine, setParMachine] = useState(false); // verdict donné par la vérification automatique ?
+  const [presque, setPresque] = useState(null); // expression juste mais pas sous la forme demandée
+  // Réponse rédigée avec grille d'idées : cases cochées (pré-cochées d'après le texte écrit).
+  const criteres = !auto && Array.isArray(ex.criteres) && ex.criteres.length ? ex.criteres : null;
+  const [coches, setCoches] = useState(null);
+  const voirCorrigeRedige = () => {
+    if (criteres) setCoches(detecterCriteres(saisie, criteres));
+    setCorrigeVu(true);
+  };
+  const basculer = (i) => setCoches((c) => c.map((v, j) => (j === i ? !v : v)));
 
   const enonce = `**Exercice ${index + 1}.** ${ex.enonce}`;
 
   const verifier = () => {
     if (!saisie.trim()) return;
-    const juste = comparer(saisie, ex.reponse, matiere);
+    const juste = comparerExercice(saisie, ex, matiere);
+    // Égale à la réponse mais pas développée / factorisée : on le dit, sans compter faux.
+    const raison = juste ? null : diagnosticExercice(saisie, ex, matiere);
+    setPresque(raison);
+    if (raison) return;
     setVerifie(juste);
     setParMachine(true);
     setCorrigeVu(true);
@@ -135,7 +149,10 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
 
   const corrigeAffiche = corrigeVu && !masque;
   let texteVerdict = '';
-  if (verifie === true) {
+  if (presque === 'forme') {
+    const forme = /factoris/i.test(consigne) ? 'factorisée' : /canonique/i.test(consigne) ? 'canonique' : /a \+ bi/.test(consigne) ? 'algébrique (a + bi)' : 'développée et réduite';
+    texteVerdict = `🟠 Ton expression est égale à la bonne réponse, mais elle n’est pas sous forme ${forme}. Continue !`;
+  } else if (verifie === true) {
     texteVerdict = (parMachine ? '✅ Bonne réponse !' : auto ? '✅ Compté juste.' : '✅ Bravo !') + (points > 0 ? ` +${points} XP` : '');
   } else if (verifie === false) {
     texteVerdict = parMachine
@@ -178,12 +195,12 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
       {auto ? (
         <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.m }}>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginBottom: 6 }}>
-            {unite ? `Ta réponse (unité : ${unite}, facultative) :` : 'Ta réponse :'}
+            {unite ? `Ta réponse (unité : ${unite}, facultative) :` : consigne ? `Ta réponse (${consigne}) :` : 'Ta réponse :'}
           </Text>
           <View style={{ flexDirection: 'row', gap: t.espace.s }}>
             <TextInput
               value={saisie}
-              onChangeText={setSaisie}
+              onChangeText={(v) => { setSaisie(v); setPresque(null); }}
               onSubmitEditing={verifier}
               placeholder="Écris ta réponse"
               placeholderTextColor={t.couleur.attenue}
@@ -208,16 +225,84 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
         </View>
       ) : (
         !corrigeVu && (
-          <View style={{ flexDirection: 'row', paddingHorizontal: t.espace.m, paddingBottom: t.espace.m }}>
-            <Bouton libelle="Voir le corrigé" onPress={() => setCorrigeVu(true)} t={t} couleur={accent} />
+          <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.m }}>
+            {criteres && (
+              <TextInput
+                value={saisie}
+                onChangeText={setSaisie}
+                placeholder="Écris ta réponse ici (facultatif), puis regarde le corrigé"
+                placeholderTextColor={t.couleur.attenue}
+                accessibilityLabel={`Ta réponse rédigée à l'exercice ${index + 1}`}
+                multiline
+                style={{
+                  minHeight: 88,
+                  textAlignVertical: 'top',
+                  backgroundColor: t.couleur.fond,
+                  borderColor: t.couleur.trait,
+                  borderWidth: 1,
+                  borderRadius: t.rayon.s,
+                  padding: t.espace.m,
+                  color: t.couleur.texte,
+                  fontSize: t.police.normale,
+                  marginBottom: t.espace.s,
+                }}
+              />
+            )}
+            <View style={{ flexDirection: 'row' }}>
+              <Bouton libelle="Voir le corrigé" onPress={voirCorrigeRedige} t={t} couleur={accent} />
+            </View>
           </View>
         )
       )}
 
-      {verifie !== null && <Verdict juste={verifie} texte={texteVerdict} t={t} />}
+      {/* Grille des idées attendues (réponse rédigée). */}
+      {criteres && corrigeVu && coches && verifie === null && (
+        <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
+          {saisie.trim() ? (
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontStyle: 'italic', backgroundColor: t.couleur.fond, borderRadius: t.rayon.s, padding: t.espace.s, marginBottom: t.espace.s }}>
+              Ta réponse : {saisie.trim()}
+            </Text>
+          ) : null}
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontWeight: '650', marginBottom: 6 }}>
+            Ta réponse contient-elle ces idées ?
+          </Text>
+          {saisie.trim() ? (
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginBottom: 6 }}>
+              J’ai pré-coché ce que j’ai repéré dans ton texte : vérifie et corrige les cases.
+            </Text>
+          ) : null}
+          {criteres.map((c, i) => (
+            <Pressable
+              key={i}
+              onPress={() => basculer(i)}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: !!coches[i] }}
+              style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 10, paddingVertical: 8, minHeight: 44 }}
+            >
+              <Text style={{ fontSize: 20, color: coches[i] ? t.couleur.succes : t.couleur.attenue, width: 24 }}>{coches[i] ? '☑' : '☐'}</Text>
+              <Text style={{ flex: 1, color: t.couleur.texte, fontSize: t.police.normale, lineHeight: 22 }}>{c.idee}</Text>
+            </Pressable>
+          ))}
+          {(() => {
+            const b = bilanCriteres(coches);
+            return (
+              <View style={{ marginTop: t.espace.s }}>
+                <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginBottom: 6 }}>
+                  {b.complet ? 'Toutes les idées y sont !' : `${b.nb} idée${b.nb > 1 ? 's' : ''} sur ${b.total}.`}
+                </Text>
+                <View style={{ flexDirection: 'row' }}>
+                  <Bouton libelle="Valider ma réponse" onPress={() => juger(b.complet)} t={t} couleur={accent} plein />
+                </View>
+              </View>
+            );
+          })()}
+        </View>
+      )}
+
+      {(verifie !== null || presque) && <Verdict juste={presque ? null : verifie} texte={texteVerdict} t={t} />}
 
       {/* Réponse ouverte : auto-évaluation après lecture du corrigé. */}
-      {!auto && corrigeVu && verifie === null && (
+      {!auto && !criteres && corrigeVu && verifie === null && (
         <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginBottom: 6 }}>
             Compare avec ta réponse :

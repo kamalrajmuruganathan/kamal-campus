@@ -1,0 +1,299 @@
+{
+  "6": {
+    "reponse": "Il faut $n \\geqslant 800$ : un échantillon de $800$ pièces garantit le risque demandé.",
+    "accepte": [
+      "800 pièces",
+      "n ≥ 800"
+    ]
+  },
+  "9": {
+    "reponse": "1) $V(X + X) = V(2X) = 4V(X) = 20$ (l'addition des variances exige l'indépendance, absente ici). 2) $V(X + Y) = 10$. 3) $20 \\neq 10$ : seule l'indépendance permet d'ajouter les variances.",
+    "criteres": [
+      {
+        "idee": "Additionner les variances exige l'indépendance ; X n'est pas indépendante d'elle-même",
+        "mots": [
+          "independ",
+          "elle meme"
+        ]
+      },
+      {
+        "idee": "X + X = 2X, donc V(X + X) = 4 V(X) = 20",
+        "mots": [
+          "x x 2x",
+          "v 2x",
+          "4 v x",
+          "4 5",
+          "egal a 20",
+          "vaut 20"
+        ]
+      },
+      {
+        "idee": "Avec Y indépendante de même loi : V(X + Y) = 5 + 5 = 10",
+        "mots": [
+          "5 5",
+          "vaut 10",
+          "egal a 10",
+          "y 10"
+        ]
+      },
+      {
+        "idee": "20 ≠ 10 : c'est l'indépendance, et non la loi, qui permet d'ajouter les variances",
+        "mots": [
+          "independ",
+          "pas la loi",
+          "non la loi"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "$E(G) = -10$ : perte moyenne de $10$ € sur $20$ parties.",
+    "criteres": [
+      {
+        "idee": "Par linéarité, E(G) = 20 × (-0,5) = -10",
+        "mots": [
+          "linearite",
+          "20 0 5",
+          "egal a 10",
+          "vaut 10"
+        ]
+      },
+      {
+        "idee": "En moyenne, le joueur perd 10 € sur 20 parties",
+        "mots": [
+          "perd",
+          "perte"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "reponse": "Faux : la linéarité de l'espérance ne demande aucune indépendance.",
+    "criteres": [
+      {
+        "idee": "Faux",
+        "mots": [
+          "faux"
+        ]
+      },
+      {
+        "idee": "La linéarité de l'espérance est vraie sans condition d'indépendance",
+        "mots": [
+          "linearite",
+          "sans condition",
+          "toujours vrai",
+          "toutes variables",
+          "aucune indep"
+        ]
+      },
+      {
+        "idee": "C'est l'addition des variances qui exige l'indépendance",
+        "mots": [
+          "variance",
+          "v x y v x v y"
+        ]
+      }
+    ]
+  },
+  "26": {
+    "reponse": "$V(X) = V(Y) = \\dfrac{1}{4}$ ; $V(X + Y) = 0$ ; les variables ne sont pas indépendantes.",
+    "criteres": [
+      {
+        "idee": "X et Y suivent une loi de Bernoulli de paramètre 1/2 : V(X) = V(Y) = 1/4",
+        "mots": [
+          "1 4",
+          "0 25",
+          "bernoulli"
+        ]
+      },
+      {
+        "idee": "X + Y = 1 est constante, donc V(X + Y) = 0",
+        "mots": [
+          "constant",
+          "x y 1",
+          "vaut 1",
+          "egal a 1"
+        ]
+      },
+      {
+        "idee": "La formule ne s'applique pas car X et Y ne sont pas indépendantes",
+        "mots": [
+          "independ",
+          "dependant",
+          "determine"
+        ]
+      }
+    ]
+  },
+  "27": {
+    "reponse": "$\\dfrac{35}{4} = 8{,}75$.",
+    "accepte": [
+      "35/4"
+    ]
+  },
+  "34": {
+    "reponse": "$V(M_{10}) = 0{,}5$.",
+    "criteres": [
+      {
+        "idee": "V(M) = V(S)/n² avec V(S) = nV : on obtient V/n",
+        "mots": [
+          "v n",
+          "10v",
+          "10 v",
+          "10 5",
+          "v s 10"
+        ]
+      },
+      {
+        "idee": "L'élève a oublié que la variance de la somme vaut 10 V",
+        "mots": [
+          "oubli",
+          "somme"
+        ]
+      },
+      {
+        "idee": "La bonne valeur est 5/10 = 0,5",
+        "mots": [
+          "0 5",
+          "5 10"
+        ]
+      }
+    ]
+  },
+  "37": {
+    "reponse": "$P(|X - 100| \\geqslant 10) \\leqslant 0{,}16$.",
+    "accepte": [
+      "0,16",
+      "≤ 0,16"
+    ]
+  },
+  "38": {
+    "reponse": "$P(|X - 10| \\geqslant 4) \\leqslant 0{,}25$.",
+    "accepte": [
+      "0,25",
+      "≤ 0,25"
+    ]
+  },
+  "39": {
+    "reponse": "$P(|X - 50| \\geqslant 10) \\leqslant 0{,}25$.",
+    "accepte": [
+      "0,25",
+      "≤ 0,25"
+    ]
+  },
+  "40": {
+    "reponse": "$P(30 < X < 70) \\geqslant 0{,}875$.",
+    "accepte": [
+      "0,875",
+      "≥ 0,875"
+    ]
+  },
+  "42": {
+    "reponse": "$\\leqslant 0{,}084$.",
+    "accepte": [
+      "0,084",
+      "≤ 0,084"
+    ]
+  },
+  "43": {
+    "reponse": "$n \\geqslant 2000$.",
+    "accepte": [
+      "2 000",
+      "n ≥ 2 000"
+    ]
+  },
+  "45": {
+    "reponse": "$\\delta = \\sqrt{0{,}4} \\approx 0{,}63$.",
+    "accepte": [
+      "0,63"
+    ]
+  },
+  "47": {
+    "reponse": "$0{,}16$ ; $0{,}016$ ; $0{,}0016$ : le majorant tend vers $0$.",
+    "criteres": [
+      {
+        "idee": "Les majorants valent 0,16 ; 0,016 et 0,0016",
+        "mots": [
+          "0 16",
+          "0 016",
+          "0 0016"
+        ]
+      },
+      {
+        "idee": "Le majorant est divisé par 10 quand n est multiplié par 10 : il tend vers 0",
+        "mots": [
+          "tend vers 0",
+          "divise par 10",
+          "diminu",
+          "decroi",
+          "vers 0"
+        ]
+      },
+      {
+        "idee": "C'est la loi des grands nombres : la moyenne se concentre autour de l'espérance",
+        "mots": [
+          "grands nombres",
+          "concentr"
+        ]
+      }
+    ]
+  },
+  "48": {
+    "reponse": "Faux : les lancers sont indépendants, $P(\\text{face}) = \\dfrac{1}{2}$ à chaque lancer.",
+    "criteres": [
+      {
+        "idee": "Les lancers sont indépendants : P(face) = 1/2 à chaque lancer, quel que soit le passé",
+        "mots": [
+          "independ",
+          "1 2",
+          "quel que soit",
+          "chaque lancer"
+        ]
+      },
+      {
+        "idee": "La loi des grands nombres porte sur la fréquence d'un très grand nombre de lancers",
+        "mots": [
+          "frequence",
+          "grand nombre",
+          "long terme"
+        ]
+      },
+      {
+        "idee": "Les premiers lancers ne sont pas « compensés » : ils pèsent de moins en moins dans la moyenne",
+        "mots": [
+          "compens",
+          "pesent",
+          "moins en moins",
+          "dilu"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "La moyenne d'un grand échantillon est proche de l'espérance $3{,}5$ (loi des grands nombres).",
+    "criteres": [
+      {
+        "idee": "Un lancer a pour espérance 3,5 ; la moyenne des lancers aussi",
+        "mots": [
+          "3 5",
+          "esperance"
+        ]
+      },
+      {
+        "idee": "La variance de la moyenne est très petite pour n = 10 000",
+        "mots": [
+          "variance",
+          "petite"
+        ]
+      },
+      {
+        "idee": "Loi des grands nombres : la moyenne d'un grand échantillon se concentre autour de l'espérance",
+        "mots": [
+          "grands nombres",
+          "concentr",
+          "proche"
+        ]
+      }
+    ]
+  }
+}

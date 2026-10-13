@@ -116,7 +116,8 @@ ou **parallèle** (plusieurs bits en même temps). Un **débit** s'exprime en
 
 - **Confondre TOR et analogique** : un bouton (TOR) n'a que 2 états ; un
   potentiomètre (analogique) varie continûment.
-- **Oublier le −1 dans la résolution** : avec n bits on a 2ⁿ niveaux mais
-  **2ⁿ − 1** intervalles, donc q = plage ÷ (2ⁿ − 1).
+- **Mélanger les conventions de résolution** : dans ce cours, avec n bits on a 2ⁿ niveaux et
+  **2ⁿ − 1** intervalles, donc q = plage ÷ (2ⁿ − 1). Certains documents prennent q = plage ÷ 2ⁿ
+  (5 ÷ 1024 ≈ 4,88 mV au lieu de 4,89 mV) : l'écart est négligeable, suis la convention de l'énoncé.
 - **Croire que la chaîne d'information fournit la puissance** : elle **commande**,
   la chaîne d'énergie **agit**.

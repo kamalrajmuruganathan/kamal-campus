@@ -1,0 +1,268 @@
+{
+  "13": {
+    "reponse": "Non : la somme des degrés ($13$) serait impaire.",
+    "criteres": [
+      {
+        "idee": "La somme des degrés vaudrait 13",
+        "mots": [
+          "degres 13",
+          "vaut 13",
+          "egale a 13",
+          "treize"
+        ]
+      },
+      {
+        "idee": "Or la somme des degrés est le double du nombre d'arêtes, donc paire",
+        "mots": [
+          "double",
+          "deux fois",
+          "paire",
+          "2 fois"
+        ]
+      },
+      {
+        "idee": "13 est impair : un tel graphe n'existe pas",
+        "mots": [
+          "impair",
+          "existe pas",
+          "impossible",
+          "non"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "reponse": "Non connexe ; en ajoutant par exemple l'arête $3-4$, il devient connexe.",
+    "criteres": [
+      {
+        "idee": "Non : aucune chaîne ne relie {1, 2, 3} à {4, 5}",
+        "mots": [
+          "non",
+          "pas connexe",
+          "aucune chaine",
+          "morceaux",
+          "deux parties"
+        ]
+      },
+      {
+        "idee": "Il suffit d'ajouter une arête entre les deux morceaux, par exemple 3 − 4",
+        "mots": [
+          "3 4",
+          "ajout",
+          "arete"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "reponse": "Impossible : la somme des degrés ($21$) serait impaire.",
+    "criteres": [
+      {
+        "idee": "Graphe : les personnes sont les sommets, les poignées de main les arêtes, chaque sommet de degré 3",
+        "mots": [
+          "sommet",
+          "arete",
+          "degre"
+        ]
+      },
+      {
+        "idee": "La somme des degrés vaudrait 7 × 3 = 21, nombre impair",
+        "mots": [
+          "degres 21",
+          "vaut 21",
+          "3 21",
+          "impair"
+        ]
+      },
+      {
+        "idee": "Or cette somme est le double du nombre d'arêtes, donc paire : c'est impossible",
+        "mots": [
+          "double",
+          "paire",
+          "impossible",
+          "deux fois"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "reponse": "$AB$ existe, de taille $2\\times1$ ; $BA$ n'existe pas.",
+    "criteres": [
+      {
+        "idee": "AB existe : A a 3 colonnes et B a 3 lignes ; AB est de taille 2 × 1",
+        "mots": [
+          "2 1",
+          "colonnes",
+          "lignes"
+        ]
+      },
+      {
+        "idee": "BA n'existe pas : B a 1 colonne mais A a 2 lignes",
+        "mots": [
+          "n existe pas",
+          "existe pas",
+          "pas defini",
+          "impossible"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "reponse": "$\\begin{pmatrix} 32 \\end{pmatrix}$",
+    "accepte": [
+      "32"
+    ]
+  },
+  "26": {
+    "reponse": "Non, car $ad-bc=0$.",
+    "accepte": [
+      "non"
+    ]
+  },
+  "29": {
+    "reponse": "$(x\\,;y)=(1\\,;2)$.",
+    "accepte": [
+      "(1 ; 2)",
+      "1 et 2"
+    ]
+  },
+  "30": {
+    "reponse": "$A^{-1}=\\begin{pmatrix} -2 & 1 \\\\ \\frac32 & -\\frac12 \\end{pmatrix}$.",
+    "criteres": [
+      {
+        "idee": "Le produit matriciel ne se fait pas terme à terme : inverser chaque coefficient ne donne pas l'inverse",
+        "mots": [
+          "terme a terme",
+          "coefficient",
+          "aa 1 i",
+          "produit"
+        ]
+      },
+      {
+        "idee": "ad − bc = −2 ≠ 0, donc A est inversible",
+        "mots": [
+          "ad bc",
+          "determinant",
+          "2 0",
+          "inversible"
+        ]
+      },
+      {
+        "idee": "A⁻¹ = −1/2 × (4 −2 ; −3 1)",
+        "mots": [
+          "1 2",
+          "frac32",
+          "3 2"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "Elle n'est pas symétrique ($m_{12}=1$ mais $m_{21}=0$).",
+    "criteres": [
+      {
+        "idee": "Dans un graphe non orienté, la matrice d'adjacence est symétrique (m_ij = m_ji)",
+        "mots": [
+          "symetrique"
+        ]
+      },
+      {
+        "idee": "Ici m₁₂ = 1 mais m₂₁ = 0",
+        "mots": [
+          "m 12",
+          "m12",
+          "m 21",
+          "m21"
+        ]
+      }
+    ]
+  },
+  "36": {
+    "reponse": "$1$ chemin de longueur $2$ de $2$ à $3$ ; $3$ chemins de longueur $3$ de $2$ à $1$.",
+    "accepte": [
+      "1 et 3",
+      "1 ; 3"
+    ]
+  },
+  "39": {
+    "reponse": "$U=\\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$.",
+    "accepte": [
+      "(2 ; 4)",
+      "2 et 4"
+    ]
+  },
+  "41": {
+    "reponse": "$U=\\begin{pmatrix} 20 \\\\ 20 \\end{pmatrix}$ : $20$ milliers d'habitants dans chaque quartier.",
+    "accepte": [
+      "20 et 20",
+      "(20 ; 20)"
+    ]
+  },
+  "43": {
+    "reponse": "$P_1$ et $P_3$ (pas $P_2$).",
+    "accepte": [
+      "P1 et P3",
+      "P3 et P1",
+      "P_1 et P_3",
+      "P1, P3"
+    ]
+  },
+  "44": {
+    "reponse": "$P=\\begin{pmatrix} 0{,}35 & 0{,}65 \\\\ 0{,}1 & 0{,}9 \\end{pmatrix}$.",
+    "accepte": [
+      "0,65 et 0,1",
+      "0,65 ; 0,1"
+    ]
+  },
+  "46": {
+    "reponse": "$\\pi=\\left(\\dfrac13\\ \\ \\dfrac23\\right)$.",
+    "accepte": [
+      "(1/3 ; 2/3)",
+      "1/3 et 2/3",
+      "1/3 ; 2/3"
+    ]
+  },
+  "47": {
+    "reponse": "Il manque la condition $x+y=1$ : la distribution invariante est $\\left(\\dfrac13\\ \\ \\dfrac23\\right)$.",
+    "criteres": [
+      {
+        "idee": "(0 0) vérifie π P = π, mais ce n'est pas une distribution : la somme doit valoir 1",
+        "mots": [
+          "somme",
+          "distribution",
+          "x y 1",
+          "valoir 1"
+        ]
+      },
+      {
+        "idee": "C'est la condition x + y = 1 qui donne la distribution invariante (1/3 2/3)",
+        "mots": [
+          "condition",
+          "x y 1",
+          "1 3",
+          "frac13"
+        ]
+      }
+    ]
+  },
+  "49": {
+    "reponse": "$\\big(P^{2}\\big)_{11}=0{,}61$ : probabilité d'être en $A$ après deux étapes en partant de $A$.",
+    "criteres": [
+      {
+        "idee": "Le coefficient vaut 0,7 × 0,7 + 0,3 × 0,4 = 0,61",
+        "mots": [
+          "0,61"
+        ]
+      },
+      {
+        "idee": "C'est la probabilité d'être en A deux étapes plus tard en partant de A",
+        "mots": [
+          "probabilite",
+          "deux etapes",
+          "partant de a",
+          "2 etapes"
+        ]
+      }
+    ]
+  }
+}
