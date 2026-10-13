@@ -265,3 +265,13 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   `BoutonEcouter` : `texte` ou `segments`, second appui = « ⏹️ Arrêter ». Boutons dans Chapitre (fiche), Exercices
   (énoncé), Qcm (« Écouter la question » : énoncé + réponses A, B…), Flashcards, RevisionSRS.
   Réglage dans Profil : « Bouton « Écouter » dans toutes les matières ». Testé dans Chromium (voix espionnées).
+
+## 18. Schémas dans les fiches (13/10/2026) — sur `upgrade-sdk57`, non publié
+- `outils/schemas/base.mjs` (style « papier », `texte`, `fleche`, `boite`, `repere`, `courbe`, `frise` à l'échelle…) ;
+  lots `outils/schemas/lot_{maths_primaire,maths_college,maths_lycee,pc,svt,histgeo,techno}.mjs` (SCHEMAS + POSES) ;
+  `node outils/poser-schemas.mjs [lot_x.mjs] [--dry-run]` pose chaque schéma sous le titre de section voulu, avec une
+  légende visible, entre `<!-- schema:<cle> -->` et `<!-- /schema -->` (relançable : remplace le bloc). Ne pas éditer
+  ces blocs à la main : corriger le lot puis relancer. Les anciens `<!-- schema:auto -->` (outils/generer-schemas.mjs)
+  restent.
+- ≈ 990 schémas dans ≈ 460 fiches (maths, PC, SVT/sciences, hist-géo, techno/SI/SNT/NSI), chacun regardé en aperçu PNG.
+  Pas de carte géographique dessinée à main levée.
