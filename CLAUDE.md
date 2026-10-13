@@ -243,3 +243,5 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   Suite (`app/lib/expressions/autres.js` + tests) : intervalles et réunions (« ]-∞ ; 5[ ∪ [7 ; 9] », ou « x < 5 »),
   coordonnées « M(2 ; 1) » (pas « un vecteur / un point » : plusieurs réponses), équations de réaction ajustées
   (« 2 H2 + O2 -> 2 H2O », charges « Fe3+ », ordre libre, pas les noyaux) : ≈ 140 exercices de plus.
+- **Publié le 13/10/2026** : PR #6 (`upgrade-sdk57` → `main`, merge `7f0be03`), contrôle qualité et déploiement Pages verts.
+  Tout le § 15 est en ligne.
