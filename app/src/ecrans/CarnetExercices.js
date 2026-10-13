@@ -17,6 +17,7 @@ import { useProgression } from '../progression/Contexte';
 import { aRevoir } from '../../lib/carnet';
 import { dateLocale } from '../../lib/serie';
 import { CarteExercice, idExo } from './Exercices';
+import { lectureActive } from '../../lib/lecture';
 
 export default function CarnetExercices() {
   const t = useTheme();
@@ -77,6 +78,7 @@ export default function CarnetExercices() {
               matiere={e.matiere || chapitre?.matiere}
               dejaReussi={(reussis[e.chapitreId] || []).includes(String(e.exoId))}
               resultat={resultats[e.cle]}
+              lecture={lectureActive(e.matiere || chapitre?.matiere, chapitre?.niveau, profil)}
               onResultat={(juste) => {
                 setResultats((r) => ({ ...r, [e.cle]: r[e.cle] === true ? true : juste }));
                 noterExerciceCarnet({ chapitreId: e.chapitreId, exoId: e.exoId, juste, titre: e.titre, matiere: e.matiere });

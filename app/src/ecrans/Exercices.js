@@ -20,7 +20,7 @@ import { couleurMatiere } from '../theme';
 import { Bandeau, Etiquette } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
-import { matiereParlante } from '../parole';
+import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { chapitreParId } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
 import { useProgression } from '../progression/Contexte';
@@ -105,7 +105,7 @@ function Verdict({ juste, texte, t }) {
   );
 }
 
-export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat }) {
+export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat, lecture = lectureActive(matiere) }) {
   const auto = useMemo(() => typeExercice(ex, matiere) === 'auto', [ex, matiere]);
   const unite = useMemo(() => (auto ? uniteExercice(ex, matiere) : ''), [auto, ex, matiere]);
   const consigne = useMemo(() => (auto ? consigneExercice(ex, matiere) : ''), [auto, ex, matiere]);
@@ -186,9 +186,9 @@ export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resul
 
       <VisionneuseFiche markdown={enonce} />
 
-      {matiereParlante(matiere) && (
+      {lecture && (
         <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
-          <BoutonEcouter t={t} matiere={matiere} texte={ex.enonce} libelle="Écouter l'énoncé" />
+          <BoutonEcouter t={t} matiere={matiere} segments={segmentsTexte(ex.enonce, matiere)} libelle="Écouter l'énoncé" />
         </View>
       )}
 
@@ -496,6 +496,7 @@ export default function Exercices({ route }) {
               dejaReussi={setReussis.has(id)}
               resultat={resultats[id]}
               onResultat={(juste) => surResultat(id, juste)}
+              lecture={lectureActive(chapitre.matiere, chapitre.niveau, profil)}
             />
           );
         })}

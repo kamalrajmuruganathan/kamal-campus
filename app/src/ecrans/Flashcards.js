@@ -18,7 +18,8 @@ import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
-import { matiereParlante, parler } from '../parole';
+import { parlerSequence } from '../parole';
+import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
@@ -40,9 +41,9 @@ export default function Flashcards({ route, navigation }) {
 
   // Lecture automatique de la face affichée (si activée, pour les langues).
   useEffect(() => {
-    if (fini || !profil.lectureAutoCartes || !chapitre || !matiereParlante(chapitre.matiere)) return;
+    if (fini || !profil.lectureAutoCartes || !chapitre || !lectureActive(chapitre.matiere, chapitre.niveau, profil)) return;
     const carte = cartes[i];
-    if (carte) parler(face === 'recto' ? carte.recto : carte.verso, chapitre.matiere);
+    if (carte) parlerSequence(segmentsTexte(face === 'recto' ? carte.recto : carte.verso, chapitre.matiere), chapitre.matiere);
   }, [i, face, fini]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -193,7 +194,7 @@ export default function Flashcards({ route, navigation }) {
             >
               {face === 'recto' ? 'Question' : 'Réponse'}
             </Text>
-            {matiereParlante(chapitre.matiere) && (
+            {lectureActive(chapitre.matiere, chapitre.niveau, profil) && (
               <View style={{ paddingHorizontal: t.espace.s, marginTop: 6 }}>
                 <BoutonEcouter t={t} matiere={chapitre.matiere} texte={face === 'recto' ? carte.recto : carte.verso} />
               </View>

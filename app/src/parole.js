@@ -8,6 +8,7 @@
  */
 
 import * as Speech from 'expo-speech';
+import { LANGUES_PARLEES, latexEnMots } from '../lib/lecture';
 
 // Vitesse de lecture courante (pilotée par la préférence du profil).
 const VITESSES = { lent: 0.7, normal: 0.92, rapide: 1.15 };
@@ -42,19 +43,21 @@ export function localeMatiere(matiere) {
     case 'anglais': return 'en-US';
     case 'espagnol': return 'es-ES';
     case 'allemand': return 'de-DE';
+    case 'italien': return 'it-IT';
     default: return 'fr-FR';
   }
 }
 
 /** Cette matière profite-t-elle de la lecture à voix haute ? (langues vivantes) */
 export function matiereParlante(matiere) {
-  return matiere === 'anglais' || matiere === 'espagnol' || matiere === 'allemand';
+  return LANGUES_PARLEES.includes(matiere);
 }
 
 /** Lit `texte` à voix haute dans la langue de `matiere`. */
 export function parler(texte, matiere) {
   try {
     if (!texte) return;
+    lectureCourante++;
     Speech.stop();
     const locale = localeMatiere(matiere);
     const opts = { language: locale, rate: vitesseCourante, pitch: 1.0 };
@@ -67,6 +70,7 @@ export function parler(texte, matiere) {
 
 /** Coupe la lecture en cours. */
 export function arreterParole() {
+  lectureCourante++;
   try { Speech.stop(); } catch { /* ignore */ }
 }
 
@@ -77,16 +81,25 @@ export function arreterParole() {
  * @param {string} matiere    pour la langue de la voix
  * @param {{onIndex?:(i:number)=>void, onFin?:()=>void}} cbs
  */
+// Numéro de la lecture en cours : une nouvelle lecture (ou un arrêt) rend caduques
+// les rappels de la précédente, qui ne doit pas enchaîner sur sa phrase suivante.
+let lectureCourante = 0;
+
 export function parlerSequence(segments, matiere, cbs = {}) {
   const { onIndex, onFin } = cbs;
+  const moi = ++lectureCourante;
   try {
     Speech.stop();
-    const locale = localeMatiere(matiere);
-    const liste = (segments || []).filter((s) => s && String(s).trim());
+    // Un segment peut porter sa propre langue : { texte, langue } (voir lib/lecture).
+    const liste = (segments || [])
+      .map((s) => (s && typeof s === 'object' ? s : { texte: s, langue: matiere }))
+      .filter((s) => s.texte && String(s.texte).trim());
     let k = 0;
     const dire = () => {
+      if (moi !== lectureCourante) { if (onFin) onFin(); return; }
       if (k >= liste.length) { if (onFin) onFin(); return; }
       if (onIndex) onIndex(k);
+      const locale = localeMatiere(liste[k].langue);
       const opts = {
         language: locale,
         rate: vitesseCourante,
@@ -95,7 +108,7 @@ export function parlerSequence(segments, matiere, cbs = {}) {
         onError: () => { k += 1; dire(); },
       };
       if (voixChoisies[locale]) opts.voice = voixChoisies[locale];
-      Speech.speak(String(liste[k]), opts);
+      Speech.speak(String(liste[k].texte), opts);
     };
     if (liste.length === 0) { if (onFin) onFin(); return; }
     dire();
@@ -113,7 +126,7 @@ export function texteBrut(markdown) {
   let s = String(markdown);
   s = s.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, ''); // en-tête YAML
   s = s.replace(/```[\s\S]*?```/g, ' ');               // blocs de code
-  s = s.replace(/\$[^$]*\$/g, ' ');                    // LaTeX inline
+  s = s.replace(/\$([^$]*)\$/g, (_, f) => ` ${latexEnMots(f)} `); // formules lues en mots
   s = s.replace(/!\[[^\]]*\]\([^)]*\)/g, ' ');          // images
   s = s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1');        // liens → texte
   s = s.replace(/^\s*\|.*$/gm, ' ');                    // lignes de tableau

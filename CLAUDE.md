@@ -255,3 +255,13 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Écrans : `ModeErreurs.js` réécrit (« Mon carnet d'erreurs » : à revoir aujourd'hui / plus tard / maîtrisées, par
   chapitre) ; `CarnetExercices.js` (exercices dus, réutilise `CarteExercice` exportée par Exercices.js). Carte d'accueil
   « 📒 Mon carnet d'erreurs » (nombre à revoir aujourd'hui). Testé dans Chromium avec l'horloge avancée d'un jour.
+
+## 17. Lecture à voix haute (13/10/2026) — sur `upgrade-sdk57`, non publié
+- `app/lib/lecture` (+ tests) : `lectureActive(matiere, niveau, profil)` (langues vivantes dont l'italien, CP, CE1, ou
+  réglage `profil.lecturePartout`) ; `latexEnMots` (« 3 + 4 = 7 » → « 3 plus 4 égale 7 ») ; `segmentsFiche` /
+  `segmentsTexte` : chaque passage avec sa voix (tableaux de vocabulaire par colonne, gras, « citations »),
+  morceaux ≤ 220 caractères (Chrome coupe les lectures longues).
+- `src/parole.js` : voix it-IT, `parlerSequence` accepte `{texte, langue}`, une nouvelle lecture annule la précédente.
+  `BoutonEcouter` : `texte` ou `segments`, second appui = « ⏹️ Arrêter ». Boutons dans Chapitre (fiche), Exercices
+  (énoncé), Qcm (« Écouter la question » : énoncé + réponses A, B…), Flashcards, RevisionSRS.
+  Réglage dans Profil : « Bouton « Écouter » dans toutes les matières ». Testé dans Chromium (voix espionnées).

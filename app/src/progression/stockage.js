@@ -65,6 +65,7 @@ export function profilVide() {
     vitesseParole: 'normal', // lecture à voix haute : 'lent' | 'normal' | 'rapide'
     voix: {}, // voix préférée par langue : { 'en-US': id, 'es-ES': id, 'de-DE': id }
     lectureAutoCartes: false, // lire automatiquement la carte quand on la retourne
+    lecturePartout: false, // bouton « Écouter » dans toutes les matières (sinon : langues, CP, CE1)
     niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
     dernierChapitre: null, // { id, titre } — pour « reprendre » sur l'accueil
     rappelActif: false,

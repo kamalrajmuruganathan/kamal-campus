@@ -13,7 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
-import { matiereParlante } from '../parole';
+import { lectureActive } from '../../lib/lecture';
 import { CHAPITRES } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { clesDues } from '../../lib/srs';
@@ -119,7 +119,7 @@ export default function RevisionSRS({ navigation }) {
             <Text style={{ color: face === 'recto' ? t.couleur.attenue : accent, fontSize: t.police.minuscule, letterSpacing: 1, textTransform: 'uppercase', paddingHorizontal: t.espace.s }}>
               {face === 'recto' ? 'Question' : 'Réponse'}
             </Text>
-            {matiereParlante(carte.matiere) && (
+            {lectureActive(carte.matiere, carte.niveau, profil) && (
               <View style={{ paddingHorizontal: t.espace.s, marginTop: 6 }}>
                 <BoutonEcouter t={t} matiere={carte.matiere} texte={face === 'recto' ? carte.recto : carte.verso} />
               </View>
