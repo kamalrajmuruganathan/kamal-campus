@@ -40,7 +40,7 @@ const LIBELLE_DIFFICULTE = {
 };
 
 /** Identifiant stable d'un exercice dans son chapitre. */
-const idExo = (ex, i) => String(ex.id ?? `n${i + 1}`);
+export const idExo = (ex, i) => String(ex.id ?? `n${i + 1}`);
 
 /** Assemble le corrigé (étapes + réponse) en un seul Markdown. */
 function corrigeMarkdown(ex) {
@@ -105,7 +105,7 @@ function Verdict({ juste, texte, t }) {
   );
 }
 
-function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat }) {
+export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat }) {
   const auto = useMemo(() => typeExercice(ex, matiere) === 'auto', [ex, matiere]);
   const unite = useMemo(() => (auto ? uniteExercice(ex, matiere) : ''), [auto, ex, matiere]);
   const consigne = useMemo(() => (auto ? consigneExercice(ex, matiere) : ''), [auto, ex, matiere]);
@@ -346,7 +346,7 @@ function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, on
 export default function Exercices({ route }) {
   const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
-  const { profil, enregistrerExercice } = useProgression();
+  const { profil, enregistrerExercice, noterExerciceCarnet } = useProgression();
 
   // Les exercices ne sont plus dans l'index : on les charge à la demande.
   const [donnees, setDonnees] = useState(chapitre?.exercice ?? undefined); // undefined = en cours
@@ -370,10 +370,12 @@ export default function Exercices({ route }) {
     (id, juste) => {
       // Une fois juste, l'exercice reste juste pour la session.
       setResultats((r) => ({ ...r, [id]: r[id] === true ? true : juste }));
+      // Carnet d'erreurs : un exercice raté y entre ; réussi, il avance s'il était à revoir.
+      noterExerciceCarnet({ chapitreId: chapitre.id, exoId: id, juste, titre: chapitre.titre, matiere: chapitre.matiere });
       if (!juste) return 0;
       return enregistrerExercice({ chapitreId: chapitre.id, exoId: id, matiere: chapitre.matiere }).points;
     },
-    [chapitre?.id, chapitre?.matiere, enregistrerExercice],
+    [chapitre?.id, chapitre?.matiere, chapitre?.titre, enregistrerExercice, noterExerciceCarnet],
   );
 
   const pleinEcran = (contenu) => (

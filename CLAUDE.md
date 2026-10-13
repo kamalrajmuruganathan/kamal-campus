@@ -245,3 +245,13 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   (« 2 H2 + O2 -> 2 H2O », charges « Fe3+ », ordre libre, pas les noyaux) : ≈ 140 exercices de plus.
 - **Publié le 13/10/2026** : PR #6 (`upgrade-sdk57` → `main`, merge `7f0be03`), contrôle qualité et déploiement Pages verts.
   Tout le § 15 est en ligne.
+
+## 16. Carnet d'erreurs (13/10/2026) — sur `upgrade-sdk57`, non publié
+- `app/lib/carnet` (+ tests) : QCM et exercices ratés → `profil.carnet` (entrées `{cle, type: qcm|exo, chapitreId, titre,
+  question | exoId, etape, prochaine, echecs, maj}`), répétition espacée 1 → 3 → 7 jours, maîtrisé après 3 réussites
+  dues (`profil.carnetMaitrisees`), échec = retour au début. Reprise automatique de l'ancienne réserve `profil.erreurs`.
+- `Contexte.js` : `enregistrerResultat` note les QCM ; `noterExerciceCarnet` (appelé par `Exercices.js`).
+  `cloud/fusion.js` : `fusionnerCarnets` (par clé, `maj` la plus récente).
+- Écrans : `ModeErreurs.js` réécrit (« Mon carnet d'erreurs » : à revoir aujourd'hui / plus tard / maîtrisées, par
+  chapitre) ; `CarnetExercices.js` (exercices dus, réutilise `CarteExercice` exportée par Exercices.js). Carte d'accueil
+  « 📒 Mon carnet d'erreurs » (nombre à revoir aujourd'hui). Testé dans Chromium avec l'horloge avancée d'un jour.
