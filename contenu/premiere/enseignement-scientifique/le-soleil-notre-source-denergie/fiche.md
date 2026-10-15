@@ -50,7 +50,7 @@ $$\lambda_{\max} = \frac{2{,}9 \times 10^{-3}}{T}$$
 
 ($\lambda_{\max}$ en mètres, $T$ en kelvins). Plus un corps est chaud, plus la
 longueur d'onde de son maximum d'émission est **courte**. Pour le Soleil, ce
-maximum tombe dans le **visible** (lumière jaune-vert), ce qui explique pourquoi
+maximum tombe dans le **visible** (vers 500 nm, lumière bleu-vert), ce qui explique pourquoi
 nos yeux y sont sensibles.
 
 ### La puissance reçue sur Terre

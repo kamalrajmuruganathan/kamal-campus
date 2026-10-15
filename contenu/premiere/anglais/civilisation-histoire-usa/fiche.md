@@ -42,7 +42,7 @@ Le **Congrès** (*Congress*) est *bicaméral* : il comprend le **Sénat** (*the 
 
 ## 3. Un État fédéral
 
-Les États-Unis sont une **république fédérale** (*a federal republic*) composée de **50 États** (*fifty states*). Chaque État possède ses propres lois, tout en respectant la Constitution fédérale. La devise *E Pluribus Unum* (« De plusieurs, un seul ») résume cette union.
+Les États-Unis sont une **république fédérale** (*a federal republic*) composée de **50 États** (*fifty states*). Chaque État possède ses propres lois, tout en respectant la Constitution fédérale. La devise traditionnelle *E Pluribus Unum* (« De plusieurs, un seul ») résume cette union.
 
 ## 4. Symboles nationaux
 

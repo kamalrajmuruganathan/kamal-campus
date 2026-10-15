@@ -70,7 +70,7 @@ La **maille** permet de calculer des grandeurs à l'échelle macroscopique
 (masse volumique, compacité) à partir de l'organisation microscopique.
 
 Les cristaux ne sont pas réservés au monde minéral : le vivant en fabrique aussi
-(**calcaire** des coquilles, **carbonate de calcium** ou **phosphate de calcium**
+(**carbonate de calcium**, ou calcaire, des coquilles ; **phosphate de calcium**
 des os et des dents). À l'opposé, un solide dont les atomes sont désordonnés est
 dit **amorphe** (comme le **verre**).
 

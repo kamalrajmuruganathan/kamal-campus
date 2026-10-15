@@ -27,7 +27,7 @@ Commenter un texte, c'est **analyser** : relier un procédé d'écriture à un e
 - réciter des connaissances sur l'auteur ;
 - juger (« j'ai aimé »).
 
-À l'écrit du bac (épreuve de 4 heures, notée sur 20), le candidat choisit **au choix** le commentaire **ou** la dissertation.
+À l'écrit du bac (épreuve de 4 heures, notée sur 20), le candidat traite **au choix** le commentaire **ou** la dissertation.
 
 ## 2. Les étapes du brouillon
 

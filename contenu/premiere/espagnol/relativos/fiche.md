@@ -53,7 +53,7 @@ Après une préposition et pour une **chose**, on utilise **el que / la que / lo
 
 ## 4. Les erreurs à éviter
 
-- Employer *que* seul après une préposition longue pour une chose : on dit *la razón **por la que**…*, pas *la razón por que*.
+- Employer *que* seul après une préposition longue pour une chose : on dit *la mesa **sobre la que**…*, pas *la mesa sobre que*. Après *por*, l'usage courant est aussi *la razón **por la que**…* (*por que* existe mais est rare).
 - Traduire « dont » par *de que* : la possession se dit *cuyo* (accordé avec l'objet possédé).
 - Accorder *cuyo* avec le possesseur au lieu de l'objet possédé.
 - Confondre *lo que* (idée/neutre) et *el que* (renvoie à un nom précis).

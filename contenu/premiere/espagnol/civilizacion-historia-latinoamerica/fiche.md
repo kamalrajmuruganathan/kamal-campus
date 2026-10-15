@@ -33,7 +33,7 @@ Avant l'arrivée des Européens, plusieurs grandes civilisations existaient :
 ## 2. La conquête (siglo XVI)
 
 - En **1492**, **Cristóbal Colón** (Christophe Colomb), au service de la couronne de Castille, atteint l'Amérique.
-- **Hernán Cortés** conquiert l'empire aztèque ; l'empereur **Moctezuma** en est alors le souverain (chute de Tenochtitlan en 1521).
+- **Hernán Cortés** conquiert l'empire aztèque, dont l'empereur est **Moctezuma** à l'arrivée des Espagnols (1519) ; Tenochtitlan tombe en 1521.
 - **Francisco Pizarro** conquiert l'empire inca ; il fait exécuter l'empereur **Atahualpa** (1533).
 - L'Amérique espagnole est ensuite organisée en **virreinatos** (vice-royautés), comme la **Nueva España** (Mexique) et le **Virreinato del Perú**.
 

@@ -24,7 +24,7 @@ L'anglais oppose l'**aspect simple** (l'action vue comme un tout, un fait) à l'
 
 | Aspect | Exemple | Traduction | Regard |
 |---|---|---|---|
-| Simple | Water **boils** at 100°C. | L'eau bout à 100°C. | Vérité générale, fait |
+| Simple | Water **boils** at 100 °C. | L'eau bout à 100 °C. | Vérité générale, fait |
 | Continu | Look! The water **is boiling**. | Regarde ! L'eau bout. | Déroulement visible, maintenant |
 | Simple (passé) | I **read** that book last year. | J'ai lu ce livre l'an dernier. | Fait achevé |
 | Continu (passé) | I **was reading** when you called. | Je lisais quand tu as appelé. | Action en cours, arrière-plan |

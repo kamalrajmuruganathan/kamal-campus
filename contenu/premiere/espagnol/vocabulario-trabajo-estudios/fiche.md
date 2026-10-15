@@ -67,7 +67,7 @@ Faux-ami : **el paro** = le chômage (« estar en paro » = être au chômage).
 ## 4. Les erreurs à éviter
 
 - Ne pas confondre **suspender** (rater un examen) et **aprobar** (le réussir).
-- **la carrera** = les études supérieures (aussi « la course ») ; la carrière se dit *la trayectoria profesional*.
+- **la carrera** = les études supérieures (aussi « la course », et parfois « la carrière ») ; pour la carrière professionnelle, on dit plutôt *la trayectoria profesional*.
 - **el sueldo** est masculin : *un buen sueldo*.
 - « Postuler » se dit **presentarse a / solicitar (un puesto)**.
 

@@ -34,7 +34,7 @@ relu_par: null
 | la manifestación | la manifestation |
 
 Exemple : *Todos los ciudadanos tienen los mismos derechos.* → Tous les citoyens ont les mêmes droits.
-Attention au faux-ami : **el deber** = le devoir (obligation), à ne pas confondre avec le verbe *deber* (devoir).
+Attention : **el deber** (nom) = le devoir, l'obligation ; *deber* est aussi le verbe « devoir ».
 
 ## 2. Los retos sociales (les défis de société)
 
@@ -64,7 +64,7 @@ Exemple : *La solidaridad ayuda a reducir la pobreza.* → La solidarité aide �
 - **el paro** (Espagne) / **el desempleo** : deux mots pour « le chômage ».
 - Ne pas confondre **el deber** (le devoir, obligation) et **los deberes** (aussi « les devoirs scolaires »).
 - « S'engager » se dit **comprometerse** (con / a), pas *engagarse* (mot inexistant).
-- **la manifestación** = la manifestation (dans la rue) et non « la manifestation » au sens de signe.
+- **la manifestación** désigne le plus souvent la manifestation de rue, mais peut aussi signifier « expression » (*una manifestación de alegría*).
 
 ## À retenir
 

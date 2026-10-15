@@ -33,7 +33,7 @@ relu_par: null
 | **Isabel Allende** | Chili | *La casa de los espíritus* | — |
 
 - ***Cien años de soledad*** (1967) de **García Márquez** raconte l'histoire de la famille Buendía dans le village imaginaire de **Macondo**. C'est l'œuvre phare du **realismo mágico** (réalisme magique).
-- Ces auteurs font partie du **boom latinoamericano** des années 1960.
+- **García Márquez** et **Vargas Llosa** font partie du **boom latinoamericano** des années 1960 ; **Isabel Allende** appartient à la génération suivante (le « post-boom »).
 
 ## 3. Poésie et théâtre
 
