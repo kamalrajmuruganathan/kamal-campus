@@ -181,7 +181,7 @@ Le programme la demande **pour une valeur numérique de $a$** — prenons $a = 7
 somme des chiffres est un multiple de $3$ ; par $5$ : le chiffre des unités est $0$ ou
 $5$ ; par $9$ : la somme des chiffres est un multiple de $9$.
 
-**Division euclidienne** — pour $a$ entier et $b$ entier non nul, il existe un unique
+**Division euclidienne** — pour $a$ entier naturel et $b$ entier naturel non nul, il existe un unique
 couple $(q, r)$ tel que $a = bq + r$ avec $0 \leqslant r < b$. Le cas $r = 0$ correspond
 exactement à « $b$ divise $a$ ».
 

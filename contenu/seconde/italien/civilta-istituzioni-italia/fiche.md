@@ -16,7 +16,7 @@ relu_par: null
 
 # Istituzioni e storia dell'Italia
 
-> L'Italie est une **République** jeune : elle n'a que 160 ans en tant qu'État unifié et son organisation actuelle date de 1946. Voici les repères sûrs pour comprendre comment elle est née et comment elle est gouvernée.
+> L'Italie est une **République** jeune : elle n'a qu'un peu plus de 160 ans en tant qu'État unifié et son organisation actuelle date de 1946. Voici les repères sûrs pour comprendre comment elle est née et comment elle est gouvernée.
 
 ## 1. L'Unità d'Italia (l'unification)
 Avant 1861, l'Italie était divisée en plusieurs États. Le **Regno d'Italia** est proclamé en **1861** ; ce processus d'unification s'appelle il **Risorgimento**. **Roma** devient la capitale en **1871**.
@@ -43,7 +43,7 @@ Symboles nationaux :
 | **Parlamento** | fait les lois, **bicaméral** | Parlement |
 | **Camera dei deputati** + **Senato** | les deux chambres | Chambre des députés + Sénat |
 
-L'Italie est divisée en **20 regioni** (dont 5 à statut spécial). Elle est membre fondateur de l'Union européenne (**Trattati di Roma, 1957**) et sa monnaie est l'**euro**.
+L'Italie est divisée en **20 regioni** (dont 5 à statut spécial). Elle est membre fondateur de la construction européenne : la Communauté économique européenne, ancêtre de l'Union européenne (**Trattati di Roma, 1957**) et sa monnaie est l'**euro**.
 
 ## 4. Les erreurs à éviter
 - « la Repubblica » ne date pas de 1861 mais de **1946** (1861 = le royaume).
