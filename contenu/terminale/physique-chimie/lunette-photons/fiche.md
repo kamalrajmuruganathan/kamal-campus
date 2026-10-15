@@ -48,8 +48,8 @@ alignées sur le même axe optique :
 
 | Lentille | Rôle | Distance focale |
 |---|---|---|
-| **Objectif** | tournée vers l'astre, forme une image intermédiaire | $f'_1$ **grande** |
-| **Oculaire** | tournée vers l'œil, sert de loupe sur cette image | $f'_2$ **petite** |
+| **Objectif** | tourné vers l'astre, forme une image intermédiaire | $f'_1$ **grande** |
+| **Oculaire** | tourné vers l'œil, sert de loupe sur cette image | $f'_2$ **petite** |
 
 ### Définition « afocale »
 
@@ -175,7 +175,7 @@ l'énergie de **chaque** photon : c'est pourquoi seule la **fréquence** command
 > **Exemple.** Métal de travail d'extraction $W = 2{,}3$ eV $= 2{,}3 \times 1{,}60\times10^{-19}
 > = 3{,}7 \times 10^{-19}$ J. Seuil : $\lambda_0 = \dfrac{hc}{W} = \dfrac{1{,}99\times10^{-25}}
 > {3{,}7\times10^{-19}} = 5{,}4\times10^{-7}$ m $= 540$ nm. Une lumière de longueur d'onde
-> **supérieure** à $540$ nm (rouge) n'arrache aucun électron ; en dessous (bleu, UV), si.
+> **supérieure** à $540$ nm (jaune, orange, rouge) n'arrache aucun électron ; en dessous (bleu, UV), si.
 
 ---
 

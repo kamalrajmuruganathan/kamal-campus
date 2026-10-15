@@ -36,7 +36,7 @@ def moyenne(notes):
 ```
 
 Une **précondition** est ce que l'on suppose **vrai en entrée** (ici : liste non vide).
-Une bonne spécification rend le code **réutilisable** et le teste plus facilement.
+Une bonne spécification rend le code **réutilisable** et plus facile à tester.
 
 ---
 

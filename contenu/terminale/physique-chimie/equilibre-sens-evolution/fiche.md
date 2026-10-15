@@ -263,8 +263,8 @@ dépend des **conditions initiales**.
 4. **Confondre $K$ et $\tau$.** $K$ ne dépend que de la température ; $\tau$ dépend aussi des
    concentrations initiales. Diluer ne change pas $K$, mais change $\tau$.
 5. **Croire que « il reste des réactifs » = « la réaction est bloquée par la cinétique ».**
-   Non : un équilibre est un état final **thermodynamique**, atteint même après un temps
-   infini. C'est $K$, pas la lenteur, qui l'impose.
+   Non : un équilibre est un état final **thermodynamique**, qui persiste même au bout d'un
+   temps infini. C'est $K$, pas la lenteur, qui l'impose.
 6. **Oublier de convertir les concentrations en $\text{mol·L}^{-1}$** (ou les volumes en L)
    avant de calculer $Q_r$ et $\tau$ : un facteur $10^3$ oublié fausse le sens d'évolution.
 

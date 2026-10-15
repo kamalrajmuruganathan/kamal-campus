@@ -45,7 +45,7 @@ Le **gaz parfait** est un modèle microscopique dans lequel :
 ### Pourquoi un modèle ?
 
 Un vrai gaz est trop compliqué pour être décrit particule par particule (un litre d'air en
-contient environ $3 \times 10^{22}$). Le modèle remplace cette foule par quelques **grandeurs
+contient environ $2{,}5 \times 10^{22}$). Le modèle remplace cette foule par quelques **grandeurs
 macroscopiques** mesurables, reliées entre elles par une loi unique.
 
 ---

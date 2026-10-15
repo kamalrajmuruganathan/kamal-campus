@@ -118,8 +118,8 @@ $$G = k_{\text{cell}}\cdot\sigma \qquad \text{avec } \sigma \text{ en } \mathrm{
 $k_{\text{cell}}$ est la **constante de cellule** (en $\mathrm{m}$), propre à la sonde. On l'obtient
 par étalonnage avec une solution de conductivité connue.
 
-> **Exemple.** Une cellule de constante $k_{\text{cell}} = 1{,}0\ \mathrm{m}$ plongée dans une
-> solution donne $G = 0{,}10\ \mathrm{S}$ ; la conductivité vaut alors
+> **Exemple.** Une cellule de constante $k_{\text{cell}} = 1{,}0\times10^{-2}\ \mathrm{m}$ plongée dans une
+> solution donne $G = 1{,}0\times10^{-3}\ \mathrm{S}$ ; la conductivité vaut alors
 > $\sigma = G / k_{\text{cell}} = 0{,}10\ \mathrm{S\cdot m^{-1}}$.
 
 ### Loi de Kohlrausch
@@ -212,7 +212,7 @@ bas**.
 > **fournie**, on en déduit les groupes présents. Une bande forte vers $1700\ \mathrm{cm^{-1}}$
 > ($\mathrm{C\!=\!O}$) **plus** une bande très large $2500\text{-}3200\ \mathrm{cm^{-1}}$
 > ($\mathrm{O\!-\!H}$ acide) signent un **acide carboxylique** ; le $\mathrm{C\!=\!O}$ seul (sans
-> $\mathrm{O\!-\!H}$) oriente vers un aldéhyde ou une cétone.
+> $\mathrm{O\!-\!H}$) oriente vers un aldéhyde, une cétone ou un ester.
 
 ---
 

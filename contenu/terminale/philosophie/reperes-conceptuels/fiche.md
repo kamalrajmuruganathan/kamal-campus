@@ -21,8 +21,8 @@ relu_par: null
 
 - **Absolu / relatif** : est *absolu* ce qui existe ou vaut par soi, indépendamment de toute autre chose ou de tout point de vue ; est *relatif* ce qui n'existe ou ne vaut que par rapport à autre chose. Le mouvement d'un train est relatif au quai ; une vérité dite absolue vaudrait sans condition.
 - **En fait / en droit** : *en fait* désigne ce qui est effectivement le cas ; *en droit* ce qui devrait être ou est possible en principe. En fait, personne n'est peut-être parfaitement libre ; en droit, tout homme est réputé capable de raison. La distinction sépare le constat de ce qui est légitime ou possible par principe.
-- **Objectif / subjectif** : est *objectif* ce qui appartient à l'objet et vaut pour tous indépendamment des préférences ; est *subjectif* ce qui dépend du sujet, de son point de vue ou de ses états. « L'eau bout à 100 °C » est objectif ; « ce plat est délicieux » est subjectif.
-- **Contingent / nécessaire** : est *nécessaire* ce qui ne peut pas ne pas être (ou être autrement) ; est *contingent* ce qui est mais aurait pu ne pas être. Le contraire du nécessaire est l'impossible ; le contraire du contingent est le nécessaire. On y ajoute parfois le *possible* (ce qui peut être).
+- **Objectif / subjectif** : est *objectif* ce qui appartient à l'objet et vaut pour tous indépendamment des préférences ; est *subjectif* ce qui dépend du sujet, de son point de vue ou de ses états. « L'eau bout à 100 °C sous la pression atmosphérique normale » est objectif ; « ce plat est délicieux » est subjectif.
+- **Contingent / nécessaire** : est *nécessaire* ce qui ne peut pas ne pas être (ou être autrement) ; est *contingent* ce qui est mais aurait pu ne pas être. Le contingent s'oppose donc au nécessaire ; l'*impossible*, lui, est ce qui ne peut pas être. On y ajoute parfois le *possible* (ce qui peut être).
 
 ## 2. Distinctions sur l'explication et la structure
 

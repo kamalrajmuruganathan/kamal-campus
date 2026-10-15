@@ -186,7 +186,7 @@ En pratique on considère le **régime permanent atteint au bout de $5\tau$**.
 1. **La règle des 63 % / 37 %.** Pour la charge, $\tau$ est l'abscisse du point où
    $u_C = 0{,}63\,E$. Pour la décharge, celle du point où $u_C = 0{,}37\,E$.
 2. **La tangente à l'origine.** La tangente à la courbe en $t = 0$ coupe l'asymptote finale
-   exactement à l'instant $t = \tau$. C'est le tracé le plus précis.
+   exactement à l'instant $t = \tau$.
 3. **Le calcul direct** $\tau = RC$ à partir des valeurs des composants (à comparer à la
    mesure).
 

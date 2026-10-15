@@ -28,7 +28,7 @@ Pour **Aristote**, le bonheur est le **souverain bien**, la fin ultime de toutes
 **Épicure** est hédoniste, mais mesuré : le plaisir visé est l'absence de douleur du corps (*aponie*) et de trouble de l'âme (*ataraxie*). Il distingue les désirs **naturels et nécessaires** (à satisfaire), naturels non nécessaires, et vains (à écarter) (*Lettre à Ménécée*). Les **stoïciens** (Épictète, Sénèque, Marc Aurèle) distinguent ce qui dépend de nous (nos jugements, nos désirs) et ce qui n'en dépend pas ; le bonheur consiste à ne désirer que ce qui dépend de nous et à vivre en accord avec la raison.
 
 ## 4. Le bonheur en question : Kant et Pascal
-Pour **Kant**, le bonheur est un "idéal de l'imagination" et non de la raison : il est trop indéterminé pour servir de règle morale. La morale ne commande donc pas d'être heureux, mais de se rendre **digne d'être heureux**. Pour **Pascal**, l'homme, incapable de rester en repos, fuit sa condition par le **divertissement** : il s'agite pour ne pas penser à sa misère (*Pensées*).
+Pour **Kant**, le bonheur est un « idéal de l'imagination » et non de la raison : il est trop indéterminé pour servir de règle morale. La morale ne commande donc pas d'être heureux, mais de se rendre **digne d'être heureux**. Pour **Pascal**, l'homme, incapable de rester en repos, fuit sa condition par le **divertissement** : il s'agite pour ne pas penser à sa misère (*Pensées*).
 
 ## 5. Les erreurs à éviter
 - Confondre plaisir et bonheur : le plaisir est ponctuel, le bonheur durable.
@@ -37,6 +37,6 @@ Pour **Kant**, le bonheur est un "idéal de l'imagination" et non de la raison :
 
 ## À retenir
 - Aristote : le bonheur est le souverain bien, activité de l'âme selon la vertu.
-- Épicure : plaisir = absence de douleur (ataraxie) ; trier ses désirs.
+- Épicure : plaisir = absence de douleur du corps (aponie) et de trouble de l'âme (ataraxie) ; trier ses désirs.
 - Stoïciens : distinguer ce qui dépend de nous / ne dépend pas de nous.
 - Kant : le bonheur n'est pas le but de la morale ; il faut se rendre digne d'être heureux.

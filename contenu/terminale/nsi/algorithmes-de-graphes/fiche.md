@@ -135,7 +135,7 @@ un cycle ferait tourner l'algorithme indéfiniment.
 
 ---
 
-## 5. Où sert-on des graphes ?
+## 5. À quoi servent les graphes ?
 
 - Trouver un **itinéraire** (le plus court chemin) dans un réseau routier ;
 - Détecter la **connexité** ou des **cycles** ;

@@ -20,7 +20,7 @@ relu_par: null
 
 ## 1. Analyser le sujet et dégager le problème
 - **Lire et analyser les termes** du sujet : définir chaque mot important, repérer les distinctions conceptuelles utiles (par exemple absolu/relatif, en fait/en droit).
-- **Repérer la forme du sujet** : une question fermée (« Peut-on…? », « Faut-il…? ») appelle une réflexion qui pèse le pour et le contre ; une question ouverte (« Qu'est-ce que…? ») appelle une définition problématisée.
+- **Repérer la forme du sujet** : une question fermée (« Peut-on… ? », « Faut-il… ? ») appelle une réflexion qui pèse le pour et le contre ; une question ouverte (« Qu'est-ce que… ? ») appelle une définition problématisée.
 - **Dégager le problème** : le sujet cache une difficulté, une tension entre deux réponses possibles qui semblent toutes deux défendables. Formuler le problème, c'est montrer pourquoi la question mérite d'être posée et n'a pas de réponse évidente. Le problème n'est pas le thème : le thème est ce dont on parle, le problème est la difficulté à résoudre.
 - **La problématique** est l'ensemble des questions qui structurent le devoir et guident la progression.
 

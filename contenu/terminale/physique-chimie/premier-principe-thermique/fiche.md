@@ -208,7 +208,7 @@ température moyenne reste stable.
 
 L'**effet de serre** : certains gaz de l'atmosphère (vapeur d'eau, $\text{CO}_2$, méthane…)
 **absorbent** une partie du rayonnement infrarouge réémis par le sol et le **renvoient** vers
-la surface. Résultat : la Terre est plus chaude qu'elle ne le serait sans atmosphère
+la surface. Résultat : la Terre est plus chaude qu'elle ne le serait sans ces gaz
 (environ $+15\ \text{°C}$ au lieu de $-18\ \text{°C}$). L'augmentation de ces gaz **renforce**
 l'effet de serre et **déplace l'équilibre** vers une température moyenne plus élevée.
 

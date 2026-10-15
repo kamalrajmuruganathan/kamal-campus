@@ -270,7 +270,7 @@ On en tire son altitude par la 3e loi : $r = \left(\dfrac{GM\,T^2}{4\pi^2}\right
 3. **Oublier le signe de la charge.** Pour un électron $q = -e < 0$ : $\vec{F} = q\vec{E}$ est
    **opposée** à $\vec{E}$. Ne pas recopier mécaniquement le sens du champ.
 4. **Négliger la mauvaise force.** Pour une particule chargée, on néglige le **poids** (pas la
-   force électrique). Pour un projectile macroscopique, l'inverse n'a aucun sens.
+   force électrique). Pour un projectile macroscopique, c'est l'inverse : le poids ne se néglige pas.
 5. **Utiliser $T = 24$ h pour le géostationnaire.** La bonne période est le **jour sidéral**
    ($\approx 23$ h $56$ min), pas le jour solaire de 24 h.
 6. **Mélanger rayon d'orbite et altitude.** Dans les formules, $r$ est mesuré depuis le

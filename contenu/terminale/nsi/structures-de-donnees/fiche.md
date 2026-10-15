@@ -172,5 +172,5 @@ Taille = nombre de nœuds ; hauteur = longueur du plus long chemin racine → fe
   « une liste Python », elle *peut être réalisée* avec.
 - Utiliser `list.pop(0)` pour une file sans voir que c'est coûteux (décalage) ; préférer
   `deque`.
-- Confondre **profondeur** (d'un nœud) et **hauteur** (de l'arbre), ou dire qu'une racine
-  est une feuille.
+- Confondre **profondeur** (d'un nœud) et **hauteur** (de l'arbre), ou confondre la racine
+  (nœud sans parent) et une feuille (nœud sans enfant).

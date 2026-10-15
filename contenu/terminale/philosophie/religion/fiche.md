@@ -31,7 +31,7 @@ Plusieurs rapports ont été pensés :
 
 ## 3. Les critiques philosophiques de la religion
 La philosophie a développé des lectures critiques du fait religieux (à exposer sans les tenir pour des vérités définitives) :
-- **Illusion et projection** : Feuerbach soutient que l'homme projette en Dieu sa propre essence idéalisée. Freud analyse la religion comme une illusion qui répond au désir de protection (« l'avenir d'une illusion »).
+- **Illusion et projection** : Feuerbach soutient que l'homme projette en Dieu sa propre essence idéalisée. Freud analyse la religion comme une illusion qui répond au désir de protection (*L'Avenir d'une illusion*).
 - **Fait social** : Durkheim voit dans le divin une représentation de la société elle-même, qui se vénère à travers ses symboles.
 - **Critique et émancipation** : Marx parle de la religion comme « opium du peuple », consolation qui détourne de la transformation des conditions réelles.
 - **Défense** : d'autres penseurs soulignent la dimension morale, spirituelle et communautaire de la religion. Bergson distingue religion « statique » (close) et religion « dynamique » (ouverte, mystique).
