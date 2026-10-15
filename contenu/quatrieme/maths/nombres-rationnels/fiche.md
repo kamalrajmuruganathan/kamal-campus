@@ -122,8 +122,8 @@ $$\boxed{\text{« } \frac{a}{b} \text{ de } N \text{ »} \ = \ \frac{a}{b} \time
 voilà $\dfrac{3}{4}$. Redécoupe-le en $3$ lignes et garde $2$ lignes sur $3$ de la
 partie coloriée. Le rectangle compte $3 \times 4 = 12$ cases et il t'en reste
 $2 \times 3 = 6$ : bien $\dfrac{6}{12} = \dfrac{1}{2}$. Le dessin montre l'essentiel —
-une fraction d'une fraction donne un résultat **plus petit** que les deux, puisqu'on
-partage un morceau déjà partagé.
+une fraction d'une fraction (toutes deux inférieures à $1$) donne un résultat **plus petit**
+que les deux, puisqu'on partage un morceau déjà partagé.
 
 ## 7. L'inverse d'un nombre
 

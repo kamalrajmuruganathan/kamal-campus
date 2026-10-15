@@ -26,7 +26,7 @@ relu_par: null
 
 ## 1. Ce que tu sais déjà
 
-Tout le chapitre de 5e (*Calcul littéral*, `5e-math-calcul-litteral`) reste valable :
+Tout le chapitre de 5e (*Calcul littéral*) reste valable :
 conventions d'écriture, réduction, développement, factorisation, test d'une égalité,
 contre-exemple. **Relis-le si l'un de ces mots te fait hésiter** — la 4e s'appuie
 dessus sans y revenir. Ce qu'elle ajoute : produire une **formule** (§3), **démontrer**

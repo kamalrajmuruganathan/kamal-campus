@@ -37,8 +37,8 @@ Un même objet peut être décrit à deux niveaux très différents.
 > **Exemple.** Un verre d'eau (échelle macroscopique) contient un nombre gigantesque de
 > molécules d'eau (échelle microscopique). Les deux descriptions parlent de la **même** eau.
 
-> **Ordre de grandeur.** Il y a plus de molécules dans une cuillère d'eau que d'étoiles dans
-> l'univers observable. Le microscopique, c'est petit **et** très nombreux.
+> **Ordre de grandeur.** Une seule goutte d'eau contient plus de mille milliards de milliards
+> de molécules : des centaines de milliards de fois plus que d'êtres humains sur Terre. Le microscopique, c'est petit **et** très nombreux.
 
 ---
 
@@ -138,7 +138,7 @@ chaque état par deux critères : sont-ils **serrés ou éloignés** ? **rangés
 > capables de glisser les unes sur les autres : l'eau coule.
 
 > ⚠️ **Un gaz n'est pas « du vide ».** Entre ses grains, oui, il y a beaucoup de vide, mais
-> le gaz **a une masse**. Un ballon gonflé pèse plus lourd qu'un ballon vide.
+> le gaz **a une masse**. Un ballon gonflé est plus lourd qu'un ballon dégonflé.
 
 ---
 

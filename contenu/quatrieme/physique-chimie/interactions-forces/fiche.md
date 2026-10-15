@@ -178,7 +178,7 @@ magnétique** qui agit à distance sur les petits aimants — c'est ce qui fait 
 **boussole**.
 
 Une **boussole** est une petite aiguille aimantée, libre de tourner. Sous l'effet du champ
-magnétique terrestre, elle s'oriente toujours de la même façon : son pôle Nord pointe vers
+magnétique terrestre, elle s'oriente toujours de la même façon : son pôle Nord pointe (à peu près) vers
 le **Nord géographique** de la Terre. C'est pour cela qu'elle sert à s'orienter.
 
 > **Exemple.** Où que tu ailles avec une boussole (sans aimant ni objet en fer à côté),
@@ -211,7 +211,7 @@ le **Nord géographique** de la Terre. C'est pour cela qu'elle sert à s'oriente
 
 ## 7. Les erreurs qui coûtent des points
 
-1. **Parler d'une force sur un seul objet.** Une interaction concerne **toujours deux**
+1. **Croire qu'une interaction ne concerne qu'un seul objet.** Une interaction concerne **toujours deux**
    objets qui agissent l'un sur l'autre.
 2. **Croire que « à distance » veut dire « de loin ».** Un aimant collé à un clou agit
    toujours à distance : ce qui compte, c'est que ce soient deux objets séparés.

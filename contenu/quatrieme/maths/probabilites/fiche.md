@@ -258,8 +258,8 @@ de la probabilité $0{,}5$.
 
 ## 8. Les erreurs qui coûtent des points
 
-1. **Confondre $\cup$ et $\cap$.** « Ou » rassemble, « et » restreint : $A \cap B$ est
-   toujours plus petit que $A \cup B$. Si tu trouves l'inverse, tu les as échangés.
+1. **Confondre $\cup$ et $\cap$.** « Ou » rassemble, « et » restreint : $A \cap B$ n'a
+   jamais plus d'issues que $A \cup B$. Si tu trouves l'inverse, tu les as échangés.
 2. **Additionner $P(A) + P(B)$ pour obtenir $P(A \cup B)$** quand les deux événements
    ont des issues communes : elles sont comptées deux fois. Liste et compte.
 3. **Croire que « un pile sur deux pièces » a une chance sur trois.** Les issues

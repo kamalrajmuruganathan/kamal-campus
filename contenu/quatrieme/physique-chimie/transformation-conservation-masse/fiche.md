@@ -76,15 +76,16 @@ $$\boxed{\text{réactifs} \longrightarrow \text{produits}}$$
 > droite (après). On ne l'inverse pas.
 
 Un réactif peut être totalement consommé (le réactif **limitant**) pendant qu'il reste de
-l'autre : quand une bougie s'éteint sous un bocal, c'est le **dioxygène** qui a été épuisé,
+l'autre : quand une bougie s'éteint sous un bocal, c'est le **dioxygène** qui vient à manquer,
 pas la cire.
 
 ---
 
 ## 3. La conservation de la masse
 
-C'est la loi centrale du chapitre. Elle a été énoncée par Lavoisier :
-**« Rien ne se perd, rien ne se crée, tout se transforme. »**
+C'est la loi centrale du chapitre. Elle a été établie par Lavoisier (fin du XVIIIe siècle) et
+se résume par une formule qu'on lui attribue : **« Rien ne se perd, rien ne se crée, tout se
+transforme. »**
 
 > **Loi de conservation de la masse.** Au cours d'une transformation chimique, la **masse
 > totale** des produits est **égale** à la masse totale des réactifs consommés.

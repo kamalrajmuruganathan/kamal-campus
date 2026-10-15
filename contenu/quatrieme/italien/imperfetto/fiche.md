@@ -48,7 +48,7 @@ Peu nombreux, mais très fréquents :
 ## 4. Les erreurs à éviter
 - Confondre imperfetto et passato prossimo : l'imperfetto décrit, le passato prossimo raconte un événement ponctuel.
 - Oublier que *essere* est irrégulier : ❌ *essevo* → ✅ *ero*.
-- Mal placer l'accent des formes en -avano/-evano/-ivano : l'accent tombe sur le radical (*parlàvano*).
+- Mal placer l'accent des formes en -avano/-evano/-ivano : l'accent tombe sur l'antépénultième syllabe (*parlàvano*, *credévano*, *dormìvano*), jamais sur *-va-no* final (❌ *parlavàno*).
 
 ## À retenir
 - Imperfetto = radical + -avo/-evo/-ivo…

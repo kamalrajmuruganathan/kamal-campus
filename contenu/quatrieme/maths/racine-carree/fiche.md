@@ -172,7 +172,8 @@ une **valeur approchée**. Le nombre exact ne s'écrit avec aucune suite finie d
 - Le carré garde des décimales : il ne peut pas valoir l'entier $2$. Contradiction.
 
 Conclusion : $\sqrt{2}$ **existe** — c'est le côté d'un carré d'aire $2$ — mais ce n'est
-pas un nombre décimal. On dit qu'il est **irrationnel**. (Ouverture culturelle : à
+pas un nombre décimal. On démontre même (au lycée) qu'il n'est le quotient d'aucun
+couple d'entiers : on dit qu'il est **irrationnel**. (Ouverture culturelle : à
 comprendre, pas à réciter.)
 
 ---
