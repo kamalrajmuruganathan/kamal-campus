@@ -127,9 +127,10 @@ les comparant à une **table**.
 | C–H | $\approx 2900$–$3000$ | moyenne |
 | C=O (carbonyle) | $1700$–$1750$ | **fine et intense** |
 
-> **Exemple.** Un spectre montre une bande **large** vers $3300\ \text{cm}^{-1}$ **et** une
-> bande **fine et intense** vers $1710\ \text{cm}^{-1}$ : on identifie à la fois un O–H et un
-> C=O, cohérents avec un **acide carboxylique** (le O–H acide, très large, confirme).
+> **Exemple.** Un spectre montre une bande **très large** entre $2500$ et $3200\ \text{cm}^{-1}$
+> **et** une bande **fine et intense** vers $1710\ \text{cm}^{-1}$ : on identifie à la fois un
+> O–H et un C=O, cohérents avec un **acide carboxylique** (la position et la largeur de la
+> bande O–H le confirment).
 
 > ⚠️ L'IR identifie des **groupes**, pas la molécule entière. Deux molécules différentes
 > portant les mêmes groupes ont des bandes semblables dans cette zone. La zone en dessous de

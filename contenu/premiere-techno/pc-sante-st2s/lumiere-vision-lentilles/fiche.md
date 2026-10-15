@@ -90,8 +90,8 @@ Il existe **deux familles** :
 
 | Type | Forme | Bords / centre | Symbole (flèches) | Action sur un faisceau parallèle |
 |---|---|---|---|---|
-| **Convergente** | bords minces, centre épais | plus épaisse au milieu | segment à **pointes vers l'extérieur** ↑↓ | il converge, les rayons se **rassemblent** en un point |
-| **Divergente** | bords épais, centre mince | plus fine au milieu | segment à **pointes vers l'intérieur** ↕ rentrantes | il diverge, les rayons **s'écartent** |
+| **Convergente** | bords minces, centre épais | plus épaisse au milieu | segment à **pointes vers l'extérieur** ↕ | il converge, les rayons se **rassemblent** en un point |
+| **Divergente** | bords épais, centre mince | plus fine au milieu | segment à **pointes vers l'intérieur** (flèches rentrantes) | il diverge, les rayons **s'écartent** |
 
 > **Exemple.** Une loupe et le cristallin sont convergents (ils concentrent la lumière) ;
 > le verre qui corrige la myopie est divergent (il écarte la lumière avant l'œil).

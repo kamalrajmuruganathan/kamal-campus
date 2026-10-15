@@ -241,7 +241,7 @@ tabulée, ou le résultat d'un modèle.
 > $\dfrac{0{,}11}{0{,}08} \approx 1{,}4$. C'est inférieur à $2$ : le résultat est
 > **compatible** avec la valeur de référence.
 
-> **Ce que ça sert aussi.** Cette comparaison permet de **délimiter le domaine de
+> **À quoi cela sert aussi.** Cette comparaison permet de **délimiter le domaine de
 > validité d'un modèle** : tant que l'écart reste de l'ordre de quelques
 > incertitudes-types, le modèle décrit correctement la situation.
 

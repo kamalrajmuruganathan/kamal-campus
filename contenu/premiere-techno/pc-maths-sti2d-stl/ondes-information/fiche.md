@@ -113,7 +113,7 @@ dilatations du milieu. Il lui faut donc **toujours** un milieu matériel.
 
 ### Célérité selon le milieu
 
-Le son va **plus vite dans les milieux denses**, à l'inverse de l'intuition.
+Le son va **plus vite dans les liquides et les solides que dans l'air**, à l'inverse de l'intuition.
 
 | Milieu | Célérité (ordre de grandeur) |
 |---|---|
@@ -148,8 +148,8 @@ distance $d$ sur une sphère de surface $S = 4\pi d^2$ :
 $$I = \frac{P}{4\pi d^2}$$
 
 > **Ce que dit la formule.** L'intensité décroît comme $1/d^2$ : à **deux fois plus
-> loin**, on reçoit **quatre fois moins**. C'est pourquoi on s'éloigne d'une source
-> bruyante plutôt que de la couvrir.
+> loin**, on reçoit **quatre fois moins**. C'est pourquoi s'éloigner d'une source
+> bruyante protège efficacement l'audition.
 
 > **Exemple.** Une enceinte de $P = 12$ W écoutée à $d = 2$ m :
 > $I = \dfrac{12}{4\pi \times 2^2} = \dfrac{12}{50{,}3} \approx 0{,}24$ W·m⁻².

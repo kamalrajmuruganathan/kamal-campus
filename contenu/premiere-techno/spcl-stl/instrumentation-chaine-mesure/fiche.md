@@ -248,8 +248,8 @@ Avec un seuil **unique**, un signal qui oscille juste autour du seuil fait **cla
 (marche/arrêt/marche… très vite). Pour l'éviter, on utilise **deux seuils** différents : c'est
 l'**hystérésis**.
 
-- un seuil **haut** $S_H$ pour **enclencher** ;
-- un seuil **bas** $S_B$ (plus petit) pour **couper**.
+- un seuil **haut** $S_H$, qui fait basculer la sortie quand la grandeur **monte** ;
+- un seuil **bas** $S_B$ (plus petit), qui la fait rebasculer quand la grandeur **descend**.
 
 Entre les deux, l'état ne change pas : le système reste dans la position où il était.
 

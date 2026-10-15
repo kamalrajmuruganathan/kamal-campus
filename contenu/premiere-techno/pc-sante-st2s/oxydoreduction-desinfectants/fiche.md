@@ -253,7 +253,7 @@ Les oxydants sont **corrosifs ou irritants** et peuvent réagir dangereusement.
 
 - **Ne JAMAIS mélanger eau de Javel et produit acide** (détartrant, vinaigre) : la réaction
   libère du **dichlore** $\mathrm{Cl_2}$, un **gaz toxique**.
-- **Ne JAMAIS mélanger eau de Javel et ammoniaque** (ou déboucheur) : dégagement de
+- **Ne JAMAIS mélanger eau de Javel et ammoniaque** (ou un produit ménager ammoniaqué) : dégagement de
   **chloramines** toxiques.
 - **Conserver à l'abri de la lumière et de la chaleur** : l'eau de Javel et l'eau oxygénée se
   **décomposent** (elles perdent leur efficacité).

@@ -276,7 +276,7 @@ $R_f$ est **sans unité**, compris entre $0$ et $1$. Dans les mêmes conditions 
 |---|---|
 | Le produit donne **une seule tache** | il est (a priori) **pur** |
 | Le produit donne **plusieurs taches** | il contient plusieurs espèces : **impur** |
-| Tache du produit **à la même hauteur** qu'un réactif de référence | il **reste du réactif** de départ |
+| Une des taches du produit **à la même hauteur** que le réactif de référence | il **reste du réactif** de départ |
 
 > ⚠️ On trace la ligne de dépôt et on repère le front **au crayon à papier**, jamais au
 > stylo : l'encre migrerait elle aussi. Et on **doit** marquer le front de l'éluant à la

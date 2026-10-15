@@ -37,7 +37,7 @@ relu_par: null
 
 Un **son** est une onde : une vibration qui se propage de proche en proche dans un
 milieu **matériel** (l'air le plus souvent, mais aussi l'eau ou les os). La source
-(corde vocale, haut-parleur, diapason) fait vibrer l'air, qui transmet la vibration
+(cordes vocales, haut-parleur, diapason) fait vibrer l'air, qui transmet la vibration
 jusqu'au tympan.
 
 > **Exemple.** Dans le vide, aucun son ne se propage : sans matière à faire vibrer,

@@ -70,8 +70,9 @@ C'est le résultat central du chapitre :
 | taux de variation **nul** | **constante** sur $I$ |
 
 > ⚠️ **Ce théorème vaut sur un INTERVALLE.** La fonction inverse a des taux négatifs
-> partout où elle est définie, mais elle n'est pas décroissante sur $\mathbb{R}^*$ :
-> elle l'est sur $]-\infty\,;0[$ et sur $]0\,;+\infty[$ séparément.
+> sur $]-\infty\,;0[$ et sur $]0\,;+\infty[$ : elle est décroissante sur chacun de ces
+> deux intervalles séparément, mais pas sur $\mathbb{R}^*$. Entre $-1$ et $1$, son taux
+> de variation vaut $\dfrac{1 - (-1)}{1 - (-1)} = 1$, il est positif.
 
 ---
 

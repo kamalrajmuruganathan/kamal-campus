@@ -47,7 +47,7 @@ Avec un verbe **non séparable** ou simple, zu reste un mot séparé : *zu verst
 
 - **Après certains verbes** : *versuchen* (essayer), *vergessen* (oublier), *hoffen* (espérer), *beginnen* (commencer), *aufhören* (arrêter), *sich freuen* (se réjouir), *vorhaben* (avoir l'intention).
 - **Après des expressions impersonnelles** : *Es ist wichtig / schön / verboten / möglich …, zu + Inf.*
-- **Après un nom + Lust / Zeit / Angst …** : *Ich habe Zeit, dir zu helfen.*
+- **Après des noms comme Lust / Zeit / Angst …** : *Ich habe Zeit, dir zu helfen.*
 
 ## 4. um … zu, ohne … zu, (an)statt … zu
 
@@ -57,7 +57,7 @@ Ce sont des groupes infinitifs particuliers (le sujet est le même que dans la p
 |---|---|---|
 | **um … zu** | but (« pour, afin de ») | Ich lerne, **um** die Prüfung **zu** bestehen. |
 | **ohne … zu** | « sans + inf. » | Er ging weg, **ohne** etwas **zu** sagen. |
-| **(an)statt … zu** | « au lieu de + inf. » | Sie spielt, **statt** zu **lernen**. |
+| **(an)statt … zu** | « au lieu de + inf. » | Sie spielt, **statt** **zu** lernen. |
 
 ## 5. Les erreurs à éviter
 - Mettre **zu après un modal** : on dit *Ich kann schwimmen*, **pas** *Ich kann zu schwimmen*.

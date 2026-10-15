@@ -48,7 +48,7 @@ $$\boxed{\mathrm{G}\left(\bar{x}\,;\bar{y}\right)}$$
 
 où $\bar x$ et $\bar y$ sont les **moyennes** de chaque variable.
 
-C'est le « centre de gravité » du nuage. **Toute droite d'ajustement passe par lui** —
+C'est le « centre de gravité » du nuage. **La droite des moindres carrés passe toujours par lui**, et une droite tracée à la main doit y passer aussi —
 c'est le contrôle le plus rapide d'un tracé.
 
 > **Exemple.** Pour les couples $(1\,;3)$, $(2\,;5)$, $(3\,;8)$, $(4\,;10)$ :

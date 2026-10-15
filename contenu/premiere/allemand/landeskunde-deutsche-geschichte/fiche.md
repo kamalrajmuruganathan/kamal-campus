@@ -45,7 +45,7 @@ génocide des Juifs d'Europe, la **Shoah** (*der Holocaust*). La guerre s'achèv
 
 ## 3. Teilung : deux Allemagnes
 
-Après 1945, l'Allemagne et Berlin sont **divisées** entre les vainqueurs. En **1949**
+Après 1945, l'Allemagne et Berlin sont **divisés** entre les vainqueurs. En **1949**
 naissent deux États :
 
 | État | Nom complet | Situation |

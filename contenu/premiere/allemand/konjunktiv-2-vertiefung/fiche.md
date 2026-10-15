@@ -27,12 +27,12 @@ Le Konjunktiv II exprime l'**irréel**, l'**hypothèse**, le **souhait** et la *
 |---|---|---|
 | Hypothèse | Wenn ich Zeit **hätte**, käme ich. | Si j'avais le temps, je viendrais. |
 | Souhait | Ich **wäre** gern reich. | J'aimerais être riche. |
-| Politesse | **Könnten** Sie mir helfen ? | Pourriez-vous m'aider ? |
+| Politesse | **Könnten** Sie mir helfen? | Pourriez-vous m'aider ? |
 | Conseil | An deiner Stelle **würde** ich warten. | À ta place, j'attendrais. |
 
 ## 2. würde + infinitif ou forme propre ?
 
-La forme la plus courante est **würde + infinitif**. Mais certains verbes très fréquents ont une **forme propre** (dérivée du Präteritum + Umlaut) qu'on préfère à *würde*.
+La forme la plus courante est **würde + infinitif**. Mais certains verbes très fréquents ont une **forme propre** (dérivée du Präteritum + Umlaut) qu'on emploie volontiers à la place de *würde* (toujours pour *sein*, *haben* et les modaux).
 
 | Infinitif | Präteritum | Konjunktiv II | Traduction |
 |---|---|---|---|
@@ -46,7 +46,7 @@ La forme la plus courante est **würde + infinitif**. Mais certains verbes très
 | können | konnte | **könnte** | pourrait |
 | müssen | musste | **müsste** | devrait |
 
-On dit *Ich käme gern* plutôt que *Ich würde gern kommen*. Pour les autres verbes (surtout faibles), on emploie **würde + infinitif** : *Ich würde das kaufen.*
+À l'écrit, on trouve souvent *Ich käme gern* au lieu de *Ich würde gern kommen* (les deux sont corrects). Pour les autres verbes (surtout faibles), on emploie **würde + infinitif** : *Ich würde das kaufen.*
 
 ## 3. L'irréel du passé
 
@@ -74,6 +74,6 @@ Un cas fréquent : le regret ou le reproche. On emploie **hätte + infinitif + m
 ## À retenir
 - Konjunktiv II = irréel, hypothèse, souhait, politesse.
 - Forme courante : **würde + infinitif** ; formes propres pour *sein, haben*, modaux et verbes forts fréquents.
-- Irréel du présent : **hätte/wäre + infinitif** ou forme propre.
+- Irréel du présent : **würde + infinitif** ou forme propre (*hätte, wäre, käme…*).
 - Irréel du passé : **hätte/wäre + Partizip II**.
 - Regret/reproche passé avec modal : **hätte + infinitif + modal** (double infinitif).

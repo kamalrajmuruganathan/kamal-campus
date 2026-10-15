@@ -48,13 +48,13 @@ l'écran. Le haut de l'objet se projette **en bas** de l'écran : l'image est **
 
 Avec le théorème de Thalès, la taille de l'image se déduit des distances :
 
-$$\boxed{\dfrac{\overline{A'B'}}{\overline{AB}} = \dfrac{d'}{d}}$$
+$$\boxed{\dfrac{A'B'}{AB} = \dfrac{d'}{d}}$$
 
-où $d$ est la distance objet–trou et $d'$ la distance trou–écran (profondeur de la boîte).
+où $A'B'$ et $AB$ sont les **hauteurs** (positives) de l'image et de l'objet, $d$ la distance objet–trou et $d'$ la distance trou–écran (profondeur de la boîte).
 
-> **Exemple.** Un objet de $\overline{AB} = 20\ \text{cm}$ est à $d = 2{,}0\ \text{m}$ du trou.
+> **Exemple.** Un objet de hauteur $AB = 20\ \text{cm}$ est à $d = 2{,}0\ \text{m}$ du trou.
 > La boîte a une profondeur $d' = 10\ \text{cm} = 0{,}10\ \text{m}$. La hauteur de l'image vaut
-> $\overline{A'B'} = \overline{AB}\times \dfrac{d'}{d} = 0{,}20 \times \dfrac{0{,}10}{2{,}0} = 1{,}0\ \text{cm}$.
+> $A'B' = AB\times \dfrac{d'}{d} = 0{,}20 \times \dfrac{0{,}10}{2{,}0} = 1{,}0\ \text{cm}$.
 > L'image est **10 fois plus petite** et renversée.
 
 > ⚠️ **Compromis du sténopé.** Un trou **plus petit** donne une image plus **nette** mais plus
@@ -125,7 +125,7 @@ convergente. Trois approches courantes en TP :
 Soleil). Ses rayons arrivent quasi **parallèles** : l'image nette se forme dans le **plan
 focal image**. On mesure alors directement $f' = \overline{OF'}$ = distance lentille–écran.
 
-**b) Méthode de conjugaison (Bessel simplifiée).** On forme l'image nette d'un objet à distance
+**b) Méthode de conjugaison.** On forme l'image nette d'un objet à distance
 finie, on mesure $\overline{OA}$ et $\overline{OA'}$, et on **calcule** $f'$ avec la relation de
 conjugaison (section 6).
 
@@ -278,7 +278,7 @@ que la distance focale). L'image obtenue est alors :
 
 | Notion | À retenir |
 |---|---|
-| Chambre noire / sténopé | image **réelle**, **renversée** ; $\dfrac{\overline{A'B'}}{\overline{AB}}=\dfrac{d'}{d}$ ; petit trou = net mais sombre |
+| Chambre noire / sténopé | image **réelle**, **renversée** ; $\dfrac{A'B'}{AB}=\dfrac{d'}{d}$ (hauteurs) ; petit trou = net mais sombre |
 | Lentille convergente | épaisse au centre ; $O$ (non dévié), $F$, $F'$ ; $\overline{OF}=-f'$ |
 | Distance focale | $f' = \overline{OF'} > 0$, en **mètres** |
 | Vergence | $\boxed{V = \dfrac{1}{f'}}$, en **dioptries** ($\delta$), $f'$ en m |

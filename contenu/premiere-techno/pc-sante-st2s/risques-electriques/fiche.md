@@ -102,7 +102,7 @@ $1\ \text{mA} = 10^{-3}$ A, soit $1$ A $= 1000$ mA.
 
 > **Exemple.** Un sèche-cheveux de forte puissance appelle une intensité d'environ
 > $I = 5$ A. Un courant de seulement $I = 0{,}030$ A $= 30$ mA traversant le corps
-> est déjà **mortel** : en sécurité électrique, ce sont les **milliampères** qui comptent.
+> est déjà **dangereux** (risque d'asphyxie, mortel s'il se prolonge) : en sécurité électrique, ce sont les **milliampères** qui comptent.
 
 > **Ce qu'il faut comprendre.** Ce n'est pas la tension seule qui blesse : c'est
 > **l'intensité qui traverse le corps**. La tension est la cause, l'intensité dans le

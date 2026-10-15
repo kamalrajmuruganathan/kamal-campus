@@ -142,7 +142,7 @@ $$\text{acide} \; \rightleftharpoons \; \text{base} + \mathrm{H^+}$$
 C'est un **transfert d'ion H⁺** de l'acide d'un couple vers la base d'un **autre** couple.
 On combine les deux demi-équations en supprimant le H⁺.
 
-> **Exemple.** Verser de l'ammoniac (base) dans une solution d'acide chlorhydrique
+> **Exemple.** Verser de l'ammoniaque (solution d'ammoniac $\mathrm{NH_3}$, base) dans une solution d'acide chlorhydrique
 > ($\mathrm{H_3O^+}$, acide) :
 > $$\mathrm{NH_3} + \mathrm{H_3O^+} \longrightarrow \mathrm{NH_4^+} + \mathrm{H_2O}$$
 > L'acide $\mathrm{H_3O^+}$ cède un H⁺ à la base $\mathrm{NH_3}$.

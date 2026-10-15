@@ -45,7 +45,7 @@ renversée et réduite** sur le capteur. Faire la **mise au point**, c'est dépl
 que cette image tombe **exactement** sur le plan du capteur (cf. relation de conjugaison, chapitre
 précédent).
 
-Devant l'objectif, un **diaphragme** est un trou de diamètre **réglable** $D$ : il contrôle la
+Dans l'objectif, un **diaphragme** est un trou de diamètre **réglable** $D$ : il contrôle la
 **quantité de lumière** qui entre, comme l'iris de l'œil. Un **obturateur** s'ouvre pendant une
 durée $t$ (le **temps de pose**) puis se referme.
 
@@ -94,7 +94,7 @@ forme de fractions : $\tfrac{1}{125}\ \text{s}$, $\tfrac{1}{500}\ \text{s}$, $2\
 
 - Temps de pose **long** → **plus** de lumière, mais risque de **flou de bougé** si le sujet ou
   l'appareil bouge.
-- Temps de pose **court** → **moins** de lumière, mais le mouvement est **figé** (nette).
+- Temps de pose **court** → **moins** de lumière, mais le mouvement est **figé** (image nette).
 
 La quantité de lumière (l'**exposition**) reçue par le capteur augmente avec $t$ et diminue avec
 $N^2$ :

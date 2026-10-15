@@ -44,7 +44,7 @@ $$\boxed{\lambda = \frac{c}{f}}$$
 
 > **Exemple.** Une onde radio FM de fréquence $f = 100$ MHz $= 100 \times 10^{6}$ Hz a
 > une longueur d'onde $\lambda = \dfrac{3{,}0 \times 10^{8}}{100 \times 10^{6}} = 3{,}0$ m.
-> Une onde lumineuse, elle, a une longueur d'onde des centaines de milliers de fois
+> Une onde lumineuse, elle, a une longueur d'onde des millions de fois
 > plus petite.
 
 ### Le spectre électromagnétique
@@ -82,7 +82,7 @@ En classant les ondes de la plus **grande** longueur d'onde (basse fréquence) �
 
 ### Le fait de base
 
-**Tout corps** dont la température n'est pas nulle **émet un rayonnement
+**Tout corps** dont la température absolue n'est pas nulle (au-dessus de $0$ K) **émet un rayonnement
 électromagnétique**. Plus il est **chaud**, plus ce rayonnement se décale vers les
 **courtes** longueurs d'onde.
 
