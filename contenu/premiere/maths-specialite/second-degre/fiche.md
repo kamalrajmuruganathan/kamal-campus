@@ -93,7 +93,7 @@ C'est **le cœur du nouveau programme**. Face à un trinôme, on choisit la stra
 ### Stratégie 1 — Racine évidente
 
 On teste les valeurs simples : $0$, $1$, $-1$, $2$…
-Si $f(x_1) = 0$, alors la seconde racine se déduit du produit : $x_2 = \dfrac{c}{a\,x_1}$.
+Si $f(x_1) = 0$ avec $x_1 \neq 0$, alors la seconde racine se déduit du produit : $x_2 = \dfrac{c}{a\,x_1}$.
 
 > **Exemple.** $f(x) = x^2 - 5x + 4$. On voit que $f(1) = 1 - 5 + 4 = 0$.
 > Donc $x_1 = 1$, et $P = \frac{c}{a} = 4$ donne $x_2 = 4$.

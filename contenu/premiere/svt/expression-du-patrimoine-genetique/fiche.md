@@ -18,7 +18,7 @@ relu_par: null
 # L'expression du patrimoine génétique
 
 > Toutes les cellules d'un organisme possèdent le **même ADN**. Pourtant un neurone
-> ne ressemble pas à un globule rouge. La différence ne tient pas au programme, mais
+> ne ressemble pas à une cellule musculaire. La différence ne tient pas au programme, mais
 > à la partie du programme que chaque cellule **utilise**. Ce chapitre explique
 > comment l'information d'un gène devient une **protéine** — et comment une même
 > cellule choisit les gènes qu'elle exprime.

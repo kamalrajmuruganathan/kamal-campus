@@ -45,7 +45,7 @@ Ce vecteur est **tangent à la trajectoire** et orienté dans le sens du mouveme
 $$\Delta\vec{v} = \vec{v_{i+1}} - \vec{v_i}$$
 
 > **Construction graphique** : on reporte $\vec{v_{i+1}}$ à l'origine de $\vec{v_i}$, et
-> $\Delta\vec v$ est le vecteur qui joint l'extrémité du premier à celle du second.
+> $\Delta\vec v$ est le vecteur qui va de l'extrémité de $\vec{v_i}$ à celle de $\vec{v_{i+1}}$.
 
 ---
 

@@ -39,7 +39,7 @@ critère choisi.
 | Enveloppe | De quoi elle est faite |
 |---|---|
 | **Croûte** | continentale (granite) ou océanique (basalte/gabbro) |
-| **Manteau** | roches riches en péridotite |
+| **Manteau** | péridotite (roche riche en olivine) |
 | **Noyau** | fer et nickel |
 
 ### b) Découpage mécanique (comportement des matériaux)

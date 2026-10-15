@@ -165,7 +165,7 @@ vérification faite seulement en JavaScript (côté client) peut être contourn�
 
 # Les erreurs à éviter
 
-- Croire que JavaScript s'exécute sur le serveur : il tourne **dans le navigateur**
+- Croire que le JavaScript d'une page s'exécute sur le serveur : il tourne **dans le navigateur**
   (côté client).
 - Envoyer un mot de passe en **GET** : il apparaîtrait dans l'URL.
 - Confondre HTML (structure) et CSS (présentation).

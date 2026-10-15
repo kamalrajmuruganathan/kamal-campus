@@ -182,7 +182,7 @@ dans un énoncé.
 
 > **Justifier un choix de technique** revient toujours à invoquer une **propriété
 > physico-chimique** : une différence de solubilité justifie une extraction, une
-> différence de température d'ébullition une distillation, une solidification une
+> différence de température d'ébullition une distillation, un produit solide une
 > filtration.
 
 ### Rendement

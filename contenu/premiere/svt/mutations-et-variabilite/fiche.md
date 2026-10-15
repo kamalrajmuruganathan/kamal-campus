@@ -78,8 +78,8 @@ les appelle **agents mutagènes**.
 | **Physiques** | rayons UV du Soleil, rayons X, radioactivité |
 | **Chimiques** | substances du tabac (benzopyrène), certains polluants |
 
-> ⚠️ **Un agent mutagène ne crée pas des mutations « choisies ».** Il augmente le
-> **hasard** des mutations, sans les orienter vers un but. Il n'existe pas de
+> ⚠️ **Un agent mutagène ne crée pas des mutations « choisies ».** Il augmente la
+> **fréquence** des mutations, qui restent aléatoires, sans les orienter vers un but. Il n'existe pas de
 > mutation « décidée » pour s'adapter.
 
 ---
@@ -188,7 +188,7 @@ $$\text{mutations} \Rightarrow \text{nouveaux allèles} \Rightarrow \text{divers
 1. **Croire que toute mutation est nuisible** : beaucoup sont neutres, certaines
    favorables.
 2. **Penser qu'un agent mutagène crée des mutations utiles à la demande** : il
-   augmente le **hasard**, il n'oriente rien.
+   augmente leur **fréquence**, il n'oriente rien.
 3. **Confondre spontané et provoqué** : les mutations spontanées viennent des erreurs
    de réplication, sans cause extérieure.
 4. **Oublier les systèmes de réparation** : la plupart des dommages sont corrigés

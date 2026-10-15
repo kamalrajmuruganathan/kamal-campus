@@ -80,16 +80,16 @@ Les relations **alimentaires** structurent le réseau : les **producteurs**
   Elle n'est **pas recyclée**.
 
 > **À chaque maillon, l'énergie diminue.** Une grande partie de l'énergie est
-> perdue sous forme de chaleur à chaque transfert. C'est pourquoi il y a toujours
-> beaucoup plus de producteurs que de grands prédateurs.
+> perdue sous forme de chaleur à chaque transfert. C'est pourquoi la biomasse des
+> producteurs est généralement bien plus grande que celle des grands prédateurs.
 
 ---
 
 ## 4. Un écosystème stable mais dynamique
 
 Un écosystème n'est jamais figé : ses populations varient, mais il tend vers un
-**équilibre dynamique**. Il peut résister à certaines perturbations
-(**résilience**) et revenir à un état proche du précédent.
+**équilibre dynamique**. Après certaines perturbations, il peut revenir à un état
+proche du précédent : c'est la **résilience**.
 
 Mais au-delà d'un certain seuil, une perturbation (incendie, pollution,
 disparition d'une espèce clé) peut faire **basculer** l'écosystème vers un autre

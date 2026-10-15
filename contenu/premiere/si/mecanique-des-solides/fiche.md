@@ -17,7 +17,7 @@ relu_par: null
 # Mécanique des solides (statique)
 
 > La statique étudie les solides **à l'équilibre** : immobiles, ou en mouvement
-> uniforme. Elle permet de dimensionner une structure (pont, potence, bras de
+> rectiligne uniforme. Elle permet de dimensionner une structure (pont, potence, bras de
 > robot) en garantissant qu'elle ne se déplacera ni ne basculera sous les
 > efforts. Deux outils suffisent : la **force** et le **moment**.
 
@@ -95,7 +95,7 @@ tourner dans un sens **compensent** ceux qui le font tourner dans l'autre :
 
 **F₁ × d₁ = F₂ × d₂**
 
-C'est la loi de la **balance Roberval**, de la **balançoire** et du
+C'est la loi de la **balance à fléau**, de la **balançoire** et du
 **pied-de-biche**. Elle explique pourquoi une petite force sur un grand bras
 équilibre une grande force sur un petit bras.
 

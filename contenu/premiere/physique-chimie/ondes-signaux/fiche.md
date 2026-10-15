@@ -203,7 +203,7 @@ complémentaire** de celle qu'elle absorbe. Le spectre d'absorption permet de l'
 3. **Croire que la fréquence change** quand l'onde change de milieu. Elle est imposée par la
    source.
 4. **Confondre ondes transversale et longitudinale** : le son est longitudinal.
-5. **Inverser le grossissement** en écrivant $\dfrac{f'_2}{f'_1}$.
+5. *(lunette, pour aller plus loin)* **Inverser le grossissement** en écrivant $\dfrac{f'_2}{f'_1}$.
 6. **Oublier de convertir** les centimètres en mètres dans les calculs optiques.
 7. **Croire qu'un objet rouge reste rouge sous n'importe quel éclairage** : sous une lumière
    verte, il paraît noir.
