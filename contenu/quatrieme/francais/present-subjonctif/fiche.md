@@ -65,7 +65,7 @@ Comparaison : après *penser que* ou *savoir que* (certitude), on emploie l'**in
 ## 4. Les erreurs à éviter
 
 - **Écrire « que je fais » au lieu de « que je fasse ».** Après *il faut que*, le subjonctif est obligatoire : « Il faut que je fasse ».
-- **Oublier le -i- à nous et vous des verbes en -ier ou avec radical en -i.** « que nous parl**i**ons », « que vous cr**i**iez ».
+- **Oublier le -i- des terminaisons de nous et vous (-ions, -iez).** « que nous parl**i**ons » ; avec un verbe en -ier, on a donc deux *i* : « que vous cr**ii**ez ».
 - **Employer l'indicatif après *bien que* ou *afin que*.** Ces conjonctions imposent le subjonctif : « bien qu'il **soit** », jamais « bien qu'il est ».
 - **Confondre « ait » (subjonctif de avoir) et « est » (indicatif de être).** « Je doute qu'il **ait** compris » ≠ « Il **est** parti ».
 

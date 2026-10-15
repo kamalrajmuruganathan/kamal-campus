@@ -48,7 +48,7 @@ Quand le pronom relatif est **complément d'objet** (il n'est pas sujet du verbe
 
 - Ne pas utiliser **who** pour une chose : on dit *the book **which/that** I read* (pas *the book who*).
 - Ne pas répéter le nom **et** le pronom : *The man **who lives** here* (pas *the man who **he** lives here*).
-- **where** = un lieu, pas une chose : *the house **where** I live* (pas *the house **which** I live in*... sauf en ajoutant la préposition).
+- **where** = un lieu, pas une chose : *the house **where** I live* (pas *the house **which** I live*, sauf en ajoutant la préposition : *the house which I live **in***).
 - Ne pas confondre **whose** (possession, « dont ») et **who's** (= who is).
 
 ## À retenir

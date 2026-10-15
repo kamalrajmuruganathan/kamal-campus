@@ -55,7 +55,7 @@ Sur les armoiries (*coat of arms*) figurent deux animaux emblématiques : le **k
 ## 3. People and animals
 Les premiers habitants sont les **Aboriginal people** (les Aborigènes), présents depuis des
 dizaines de milliers d'années ; le **boomerang** fait partie de leur culture. L'Australie compte
-aussi des animaux qu'on ne voit nulle part ailleurs : le **kangaroo**, le **koala**, l'**emu**
+aussi des animaux qu'on ne voit presque nulle part ailleurs : le **kangaroo**, le **koala**, l'**emu**
 et l'**echidna**. On y conduit **à gauche** (*on the left*), comme au Royaume-Uni.
 
 ## 4. Les erreurs à éviter

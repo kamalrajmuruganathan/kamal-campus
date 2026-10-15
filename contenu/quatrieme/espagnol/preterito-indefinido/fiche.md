@@ -54,7 +54,7 @@ Le pretérito indefinido exprime une action **passée et terminée**, souvent da
 ## 4. Les erreurs à éviter
 - Oublier l'accent : « hablo » (présent) ≠ « habl**ó** » (indefinido, il/elle a parlé).
 - Confondre avec le pretérito perfecto : « **ayer** he hablado » est faux → « ayer **hablé** ».
-- Donner aux verbes en -er/-ir des terminaisons en -a : on dit « comí, comió » et non « comé, comó ».
+- Donner aux verbes en -er/-ir les terminaisons des verbes en -ar : on dit « comí, comió » et non « comé, comó ».
 - Pour « nosotros », les verbes en -ar ont la même forme au présent et à l'indefinido (hablamos) : c'est le contexte qui distingue.
 
 ## À retenir

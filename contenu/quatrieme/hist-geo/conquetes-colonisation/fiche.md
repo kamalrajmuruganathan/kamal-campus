@@ -34,7 +34,7 @@ Plusieurs raisons poussent à la colonisation :
 - **politiques** : renforcer la puissance et le prestige des États ;
 - **idéologiques** : les Européens prétendent apporter la « civilisation », ce qui sert à justifier la domination.
 
-En 1885, la **conférence de Berlin** organise le partage de l'Afrique entre les puissances européennes.
+En 1884-1885, la **conférence de Berlin** fixe les règles du partage de l'Afrique entre les puissances européennes.
 
 ## 3. La colonie et ses effets
 
@@ -61,5 +61,5 @@ La colonisation entraîne :
 - Au **XIXe siècle**, les puissances européennes constituent de grands empires coloniaux.
 - Le **Royaume-Uni** possède le plus vaste empire ; la **France** est la deuxième puissance coloniale.
 - La colonisation touche surtout l'**Afrique** et l'**Asie**.
-- La **conférence de Berlin (1885)** organise le partage de l'Afrique.
+- La **conférence de Berlin (1884-1885)** fixe les règles du partage de l'Afrique.
 - Une **colonie** est administrée par la **métropole** ; les populations colonisées sont dominées.

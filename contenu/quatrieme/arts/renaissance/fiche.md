@@ -50,7 +50,7 @@ donner du relief. Les artistes travaillent grâce à des **mécènes** riches, c
 
 - La perspective fait converger les lignes vers le **point de fuite**, pas vers les bords.
 - Le **sfumato** est propre à Léonard de Vinci (contours fondus).
-- La chapelle Sixtine (au Vatican) a été peinte par **Michel-Ange**.
+- Le plafond de la chapelle Sixtine (au Vatican) a été peint par **Michel-Ange**.
 
 ## À retenir
 

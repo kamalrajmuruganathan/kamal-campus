@@ -79,7 +79,7 @@ Pour dire que l'on aime faire une activité, on ajoute **gern** après le verbe.
 
 - Pour un sport de balle, on emploie **spielen** : *Fußball spielen*, *Tennis spielen*.
 - Pour un instrument aussi : *Gitarre spielen*, *Klavier spielen* (jouer d'un instrument).
-- « gern » exprime le goût pour une activité ; il ne se traduit pas par un verbe.
+- « gern » est un adverbe, pas un verbe : il se place après le verbe conjugué, mais se traduit par « aimer ».
 - Tous les noms prennent une **majuscule** : der Sport, das Hobby, die Musik.
 
 ## À retenir

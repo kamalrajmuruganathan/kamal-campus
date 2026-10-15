@@ -64,7 +64,7 @@ Exemple : *Estoy resfriado y tengo fiebre. Voy a pedir cita con el médico.* (Je
 ## 4. Les erreurs à éviter
 - Avec **doler**, on accorde avec la partie du corps : *me duelen las piernas* (pluriel), pas *me duele las piernas*.
 - On dit **tengo fiebre** (« j'ai de la fièvre »), avec **tener**, pas *soy/estoy fiebre*.
-- **la mano** est féminin ; **el mapa** ne concerne pas ce champ, mais méfie-toi des faux amis de genre.
+- **la mano** est féminin, bien qu'il se termine par -o : attention aux exceptions de genre.
 - « être malade » = **estar enfermo** (état passager) → estar, jamais ser.
 
 ## À retenir
