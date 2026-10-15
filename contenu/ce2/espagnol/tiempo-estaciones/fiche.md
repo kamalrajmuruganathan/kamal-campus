@@ -32,7 +32,7 @@ Beaucoup d'expressions du temps utilisent le verbe **hacer** (hace = « il fait 
 | Hace buen tiempo. | Il fait beau. |
 | Hace mal tiempo. | Il fait mauvais. |
 
-Deux verbes spéciaux ne se disent pas avec « hace » :
+Certaines expressions ne se disent pas avec « hace » :
 
 | Espagnol | Traduction |
 |---|---|

@@ -41,6 +41,7 @@ En France, il existe plusieurs sortes de paysages :
 
 ## 3. La mer autour de la France
 La France est bordée par de l'eau sur plusieurs côtés :
+- la **Manche** et la **mer du Nord** au **nord**,
 - l'**océan Atlantique** à l'**ouest**,
 - la **mer Méditerranée** au **sud**.
 

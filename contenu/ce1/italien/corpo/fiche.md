@@ -45,7 +45,7 @@ En italien, le pluriel change souvent la fin du mot.
 | la gamb**a** | le gamb**e** | la jambe → les jambes |
 | il pied**e** | i pied**i** | le pied → les pieds |
 
-Les mots en **-o** font leur pluriel en **-i**, les mots en **-a** font leur pluriel en **-e**.
+En général, les mots en **-o** font leur pluriel en **-i**, les mots en **-a** font leur pluriel en **-e** (attention : *la mano* → *le mani*).
 
 ## 3. Parler de son corps
 
@@ -64,5 +64,5 @@ Les mots en **-o** font leur pluriel en **-i**, les mots en **-a** font leur plu
 - **la testa** = la tête, **i capelli** = les cheveux.
 - **gli occhi / il naso / la bocca** = les yeux / le nez / la bouche.
 - **la mano / il piede** = la main / le pied.
-- Les mots en -o font leur pluriel en **-i**, ceux en -a en **-e**.
+- En général, les mots en -o font leur pluriel en **-i**, ceux en -a en **-e**.
 - **la mano** est féminin même s'il finit par -o.

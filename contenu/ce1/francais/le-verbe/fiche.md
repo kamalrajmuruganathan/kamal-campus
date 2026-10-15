@@ -49,7 +49,7 @@ Pour trouver l'infinitif, on dit : **« il faut… »** → *il faut manger* →
 - Ne pas confondre le **nom** et le **verbe** : *le dessin* (nom) et *je dessine* (verbe).
 - L'infinitif se termine souvent par **-er** (manger), **-ir** (finir), **-re** (prendre) ou **-oir** (voir).
 - Le verbe **change** dans la phrase, mais son infinitif reste toujours pareil.
-- Il y a toujours un verbe dans une phrase, même s'il est petit : *Elle **est** là.*
+- Il y a presque toujours un verbe dans une phrase, même s'il est petit : *Elle **est** là.*
 
 ## À retenir
 

@@ -23,7 +23,7 @@ relu_par: null
 ## 1. Los números de 0 a 15
 On révise d'abord les petits nombres, puis on ajoute de nouveaux mots.
 
-| Chiffre | Espagnol | Chiffre | Espagnol |
+| Nombre | Espagnol | Nombre | Espagnol |
 |---|---|---|---|
 | 0 | cero | 8 | ocho |
 | 1 | uno | 9 | nueve |
@@ -37,7 +37,7 @@ On révise d'abord les petits nombres, puis on ajoute de nouveaux mots.
 ## 2. De 16 a 31
 À partir de 16, on colle souvent les mots avec **y** (= « et »).
 
-| Chiffre | Espagnol | Chiffre | Espagnol |
+| Nombre | Espagnol | Nombre | Espagnol |
 |---|---|---|---|
 | 16 | dieciséis | 20 | veinte |
 | 17 | diecisiete | 21 | veintiuno |
@@ -61,7 +61,7 @@ Attention : le mot **años** prend un **ñ** (avec le tilde) et se termine par *
 ## 4. Les erreurs à éviter
 - Ne pas dire *« soy ocho años »* : on dit **tengo ocho años** (avec **tener**).
 - Ne pas oublier le **-s** ni le **ñ** : on écrit **años**, pas « ano » ni « anos ».
-- « once » veut dire **11**, pas « une fois » : c'est un faux ami avec le français.
+- « once » veut dire **11**, pas « une fois » : c'est un faux ami avec l'anglais (*once* = « une fois »).
 
 ## À retenir
 - Les nombres 0-15 : cero, uno, dos… quince.

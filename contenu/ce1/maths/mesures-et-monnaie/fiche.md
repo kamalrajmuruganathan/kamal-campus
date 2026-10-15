@@ -37,7 +37,7 @@ On mesure les longueurs avec une **règle**.
 
 La masse, c'est « combien ça pèse ». On la mesure avec une **balance**.
 
-- Le **gramme** (g) pour ce qui est léger (une plume).
+- Le **gramme** (g) pour ce qui est léger (un crayon).
 - Le **kilogramme** (kg) pour ce qui est lourd (un sac).
 
 À retenir : **1 kilogramme = 1000 grammes**, donc 1 kg = 1000 g.
@@ -57,7 +57,7 @@ La contenance, c'est ce qu'un récipient peut contenir.
 
 On lit l'heure sur une **horloge** ou une **pendule**.
 
-- Une **heure** (h) est un moment de la journée.
+- L'**heure** (h) et la **minute** (min) servent à mesurer les durées.
 - 1 heure = 60 minutes ; 1 journée = 24 heures.
 - La petite aiguille montre les heures, la grande montre les minutes.
 

@@ -48,7 +48,7 @@ Le nom propre commence **toujours** par une **majuscule**, même au milieu de la
 
 - Ne pas oublier la **majuscule** au nom propre : on écrit *Marie*, jamais *marie*.
 - Ne pas mettre de majuscule à un nom commun au milieu de la phrase : *un chien*, pas *un Chien*.
-- Le nom propre n'a pas besoin de *le, la, un, une* : on dit *Paris*, pas *un Paris*.
+- Souvent, le nom propre n'a pas besoin de *le, la, un, une* : on dit *Paris*, pas *le Paris* (mais on dit *la France*).
 - Les jours et les mois s'écrivent avec une petite lettre : *lundi, mars*.
 
 ## À retenir

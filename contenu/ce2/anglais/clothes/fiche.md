@@ -61,19 +61,19 @@ a **red** hat (un chapeau rouge), **blue** shoes (des chaussures bleues).
 ## 4. Le singulier et le pluriel
 
 Certains vêtements sont **toujours au pluriel** en anglais, car ils ont deux
-jambes ou vont par deux :
+jambes ; d'autres sont **souvent au pluriel**, car ils vont par deux :
 
-| Toujours pluriel | Exemple |
+| Mot | Exemple |
 |---|---|
-| trousers | My trousers are blue. |
-| jeans | I like these jeans. |
-| shoes | Your shoes are nice. |
-| socks | I have red socks. |
+| trousers (toujours pluriel) | My trousers are blue. |
+| jeans (toujours pluriel) | I like these jeans. |
+| shoes (souvent pluriel) | Your shoes are nice. |
+| socks (souvent pluriel) | I have red socks. |
 
 ## 5. Les erreurs à éviter
 - La couleur va **avant** le vêtement : *a green T-shirt* (pas « a T-shirt green »).
 - Avec **she/he**, n'oublie pas le **-s** : *She wears a coat.*
-- **shoes**, **socks**, **trousers**, **jeans** restent au pluriel.
+- **trousers** et **jeans** restent toujours au pluriel ; **shoes** et **socks** s'emploient le plus souvent au pluriel.
 - Ne confonds pas **skirt** (jupe) et **shirt** (chemise) !
 
 ## À retenir
@@ -81,4 +81,4 @@ jambes ou vont par deux :
 - Pour porter : le verbe **wear** (she wear**s**).
 - La couleur se place **avant** le vêtement : *a blue hat*.
 - Question : **What are you wearing?**
-- Certains vêtements sont toujours au pluriel : shoes, socks, jeans, trousers.
+- **jeans** et **trousers** sont toujours au pluriel ; **shoes** et **socks** le sont le plus souvent.

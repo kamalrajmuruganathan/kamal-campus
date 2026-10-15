@@ -31,7 +31,7 @@ de nous, on trouve surtout :
 Chaque matériau a ses **propriétés**, c'est-à-dire ce qui le décrit :
 
 - le **verre** est **transparent** (on voit à travers) mais il se **casse**,
-- le **métal** est **dur**, **froid** et souvent **brillant**,
+- le **métal** est **dur**, **froid au toucher** et souvent **brillant**,
 - le **bois** est **solide** et vient des **arbres**,
 - le **plastique** est **léger** et peut avoir toutes les couleurs,
 - le **tissu** est **souple**, il plie facilement.

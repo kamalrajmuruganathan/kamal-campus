@@ -58,7 +58,7 @@ Pour dire ce qu'on fait, on utilise **eat** (manger) et **drink** (boire).
 | I **drink** water. | Je bois de l'eau. |
 
 ## 4. Les erreurs à éviter
-- Devant *apple*, *egg*, *orange* (qui commencent par un son voyelle) on dit **an** : *an apple*.
+- Devant *apple*, *egg*, *orange* (qui commencent par un son voyelle), on dit **an** : *an apple*.
 - *eat* (manger) et *drink* (boire) : on **mange** un gâteau mais on **boit** du lait.
 
 ## À retenir

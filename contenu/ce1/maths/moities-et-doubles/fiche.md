@@ -17,7 +17,7 @@ relu_par: null
 # Moitiés et doubles
 
 Le **double** et la **moitié** sont deux idées liées : le double, c'est deux
-fois plus ; la moitié, c'est deux parts égales.
+fois plus ; la moitié, c'est une des deux parts égales quand on partage.
 
 ## Le double
 
@@ -33,7 +33,7 @@ Le **double** d'un nombre, c'est **deux fois ce nombre**. On l'obtient en
 - double de 7 = 7 + 7 = **14**
 - double de 10 = 10 + 10 = **20**
 
-Le double est **toujours plus grand** que le nombre de départ.
+Le double est **toujours plus grand** que le nombre de départ (sauf pour 0).
 
 ## La moitié
 
@@ -42,14 +42,14 @@ Le double est **toujours plus grand** que le nombre de départ.
 *On partage 8 jetons en deux parts égales : chaque part a 4 jetons. La moitié de 8 est 4.*
 <!-- /schema -->
 
-La **moitié** d'un nombre, c'est **la moitié de sa valeur**, quand on le partage
+La **moitié** d'un nombre, c'est **la valeur d'une part** quand on le partage
 en **deux parts égales**.
 
 - moitié de 8 = **4** (4 + 4 = 8)
 - moitié de 10 = **5** (5 + 5 = 10)
 - moitié de 20 = **10**
 
-La moitié est **toujours plus petite** que le nombre de départ.
+La moitié est **toujours plus petite** que le nombre de départ (sauf pour 0).
 
 ## Double et moitié vont ensemble
 

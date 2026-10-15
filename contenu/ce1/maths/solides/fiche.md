@@ -65,7 +65,7 @@ Il a une face ronde et une **pointe**. Exemple : un chapeau de fête ou un corne
 de glace.
 
 **La pyramide**
-Ses faces sont des **triangles** qui se rejoignent en une pointe (le sommet).
+Elle a une base (souvent un carré) et des faces en **triangles** qui se rejoignent en une pointe (le sommet).
 
 ## Reconnaître un solide
 
