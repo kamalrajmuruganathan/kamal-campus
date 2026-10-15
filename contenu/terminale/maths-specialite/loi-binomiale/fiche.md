@@ -140,8 +140,7 @@ Décortiquons les trois morceaux :
   les $k$ succès parmi les $n$ épreuves) ;
 - $p^k$ = probabilité des $k$ succès d'un chemin ; $(1 - p)^{n-k}$ = celle des $n-k$ échecs.
 
-Le coefficient binomial $\binom{n}{k}$ vient du chapitre **Combinatoire et dénombrement**
-(`contenu/terminale/maths-specialite/combinatoire-denombrement/`) : c'est le nombre de
+Le coefficient binomial $\binom{n}{k}$ vient du chapitre **Combinatoire et dénombrement** : c'est le nombre de
 sous-ensembles de $k$ éléments parmi $n$.
 
 > **Exemple.** Une pièce équilibrée lancée $n = 4$ fois, succès = Pile, $p = \tfrac12$.
@@ -202,7 +201,7 @@ $$\boxed{P(k \leqslant X \leqslant k') = P(X \leqslant k') - P(X \leqslant k - 1
 <!-- /schema -->
 
 On cherche le plus petit (ou plus grand) entier $k$ tel qu'une probabilité cumulée
-franchit un seuil $\alpha$. Type : « à partir de combien de succès est-on presque sûr ? »
+franchisse un seuil $\alpha$. Type : « à partir de combien de succès est-on presque sûr ? »
 ou « quel intervalle $I$ vérifie $P(X \in I) \geqslant 1 - \alpha$ ? ».
 
 > **Exemple.** $X \sim B(50 ; 0{,}1)$. Plus petit entier $s$ tel que

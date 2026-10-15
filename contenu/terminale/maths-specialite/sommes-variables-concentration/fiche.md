@@ -8,7 +8,7 @@ matiere: mathematiques
 programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028"
 duree_lecture_min: 14
 prerequis:
-  - Loi binomiale et schéma de Bernoulli (Terminale spé — chapitre « Loi binomiale », contenu/terminale/maths-specialite/loi-binomiale/)
+  - Loi binomiale et schéma de Bernoulli (Terminale spé — chapitre « Loi binomiale »)
   - Variables aléatoires, espérance et variance (Première spé)
   - Loi de Bernoulli (Première spé)
 statut: brouillon

@@ -285,7 +285,7 @@ $$\arg(z_B-z_A)=\big(\vec u\,,\overrightarrow{AB}\big) \qquad\qquad
    pas celui du module.
 6. **Inverser le quotient d'angle.** L'angle $\big(\overrightarrow{AB},\overrightarrow{AC}\big)$
    est $\arg\dfrac{z_C-z_A}{z_B-z_A}$ : au numérateur l'affixe du vecteur d'**arrivée**
-   ($\overrightarrow{AC}$), au dénominateur celui de **départ** ($\overrightarrow{AB}$).
+   ($\overrightarrow{AC}$), au dénominateur celle de **départ** ($\overrightarrow{AB}$).
    L'inverser change le signe de l'angle.
 
 ---

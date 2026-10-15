@@ -90,7 +90,7 @@ pairs = [x for x in range(10) if x % 2 == 0]   # [0, 2, 4, 6, 8]
 ```
 
 > **À quoi ça sert.** La compréhension remplace en une ligne une boucle `for` +
-> `append`. Les trois listes ci-dessous sont **identiques** :
+> `append`. Les deux écritures ci-dessous donnent la **même** liste :
 > ```python
 > [x**2 for x in range(5)]
 > # ==
@@ -165,7 +165,7 @@ L[1] = 99      # L devient [10, 99, 30, 40]
 | Tester l'appartenance | `20 in L` | `True` |
 
 > **Appartenance.** `x in L` renvoie `True` si `x` figure dans la liste : c'est le
-> `\in` mathématique. `30 in [10, 20, 30]` vaut `True`.
+> $\in$ mathématique. `30 in [10, 20, 30]` vaut `True`.
 
 > ⚠️ `remove(v)` supprime **la première occurrence** de la valeur `v`, pas toutes.
 > Sur `[15, 15]`, `remove(15)` laisse `[15]`.
@@ -239,7 +239,7 @@ len(issues)     # 4 = 2 x 2
 | Compréhension | `[f(x) for x in ...]` | une règle |
 | `range(n)` | `0 … n-1` | borne droite **exclue** |
 | Ajouter / supprimer | `append`, `insert`, `del`, `remove` | — |
-| Appartenance | `x in L` | le `\in` mathématique |
+| Appartenance | `x in L` | le $\in$ mathématique |
 | Itérer | `for e in L:` | chaque valeur |
 | Parcourir | `for i in range(len(L)):` | chaque indice |
 

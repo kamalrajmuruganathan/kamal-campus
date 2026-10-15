@@ -265,8 +265,8 @@ $2^{k+1} \geq (k+1) + 1$ : $P(k+1)$ est vraie.
 ## 9. Les erreurs qui coûtent des points
 
 1. **Oublier l'initialisation.** Une hérédité seule ne prouve **rien** : sans premier
-   domino qui tombe, aucun ne tombe. On peut « démontrer » l'hérédité de $P(n): 2^n = 1$
-   … qui est fausse. L'initialisation n'est pas une formalité, c'est la moitié de la preuve.
+   domino qui tombe, aucun ne tombe. Pour $P(n)$ : « $3$ divise $2^n$ », l'hérédité marche (si $3$ divise $2^k$, il
+   divise $2\times 2^k=2^{k+1}$)… et pourtant $P(n)$ est fausse pour tout $n$. L'initialisation n'est pas une formalité, c'est la moitié de la preuve.
 2. **Mal formuler l'hérédité.** Il faut supposer $P(k)$ (l'hypothèse) et **en déduire**
    $P(k+1)$. Supposer directement $P(k+1)$, ou « supposer $P(n)$ pour tout $n$ », c'est
    supposer ce qu'on veut démontrer : le raisonnement est circulaire et vaut zéro.

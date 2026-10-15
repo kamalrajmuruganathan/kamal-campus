@@ -35,7 +35,7 @@ se réalise quand on sait déjà que $A$ est réalisé. On la note $P_A(B)$ (ou 
 $$\boxed{P_A(B) = \frac{P(A \cap B)}{P(A)}} \qquad \text{définie pour } P(A) \neq 0$$
 
 > **Exemple.** Dans une classe, $60\,\%$ des élèves font de l'anglais ($A$) et
-> $24\,\%$ font anglais **et** espagnol ($A \cap B$). Parmi les anglicistes, la
+> $24\,\%$ font de l'anglais **et** de l'espagnol ($A \cap B$). Parmi les anglicistes, la
 > proportion d'hispanophones est
 > $$P_A(B) = \frac{0{,}24}{0{,}60} = 0{,}4.$$
 

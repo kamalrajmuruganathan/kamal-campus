@@ -173,7 +173,7 @@ monotone, puis on **additionne** le nombre de solutions.
 
 > **Exemple.** Pour $f(x) = x^3 - 3x$ sur $[-2\,;2]$, le tableau de variations donne trois
 > morceaux monotones. On teste sur chacun si $k$ est entre les valeurs aux bornes, et on
-> additionne : cela peut donner $0$, $1$, $2$ ou $3$ solutions selon $k$.
+> additionne : cela peut donner $0$, $2$ ou $3$ solutions selon $k$.
 
 ### 4.3 Encadrer la solution : balayage et dichotomie
 

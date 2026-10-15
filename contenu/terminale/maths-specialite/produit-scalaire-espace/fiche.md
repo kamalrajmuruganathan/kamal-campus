@@ -205,7 +205,7 @@ passant par $A$ et normal à $\vec{n}$. Un point $M$ lui appartient si et seulem
 $$\boxed{M\in\mathcal{P}\iff\vec{AM}\cdot\vec{n}=0}$$
 
 > **Exemple.** C'est cette caractérisation qui va donner l'équation cartésienne du plan
-> (section 9).
+> (section 10).
 
 ---
 

@@ -22,7 +22,7 @@ relu_par: null
 ## 1. ESSERE : auxiliaire, existence, passif
 - **Auxiliaire** des verbes de mouvement et pronominaux : Lei **è** andata a casa.
 - **Passif** de base : La lettera **è** scritta da Marco. Il ponte **fu** costruito nel 1900.
-- **Localisation / existence** : Dove **è** il libro?
+- **Localisation / existence** : Dov'**è** il libro?
 
 ## 2. STARE : action en cours et imminence
 
@@ -31,7 +31,7 @@ relu_par: null
 | stare + gerundio | action en cours | **Sto** studiando. (je suis en train d'étudier) |
 | stare per + infinitif | action imminente | Il treno **sta per** partire. |
 | stare (santé, lieu) | aller, se trouver | Come **stai**? — **Sto** bene. |
-| imperatif : sta' / stai | reste | **Sta' fermo!** |
+| impératif : sta' / stai | reste | **Sta' fermo!** |
 
 ## 3. ANDARE : mouvement, passif d'obligation, progression
 

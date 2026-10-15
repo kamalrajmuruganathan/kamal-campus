@@ -81,7 +81,7 @@ faux** — jamais les deux, jamais « entre les deux ».
 
 ### Variables
 
-Un énoncé qui dépend d'une **variable**, comme $P(x) : « x > 2 »$, n'a pas de valeur de
+Un énoncé qui dépend d'une **variable**, comme $P(x)$ : « $x > 2$ », n'a pas de valeur de
 vérité tant que $x$ n'est pas fixé : c'est un **prédicat**. Il devient une proposition dès
 qu'on donne une valeur à $x$, ou qu'on le **quantifie**.
 

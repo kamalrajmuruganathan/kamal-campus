@@ -208,7 +208,7 @@ L'évolution s'écrit **en multipliant par $P$ à droite** :
 
 $$\boxed{\pi_{n+1} = \pi_n \times P \qquad\text{et}\qquad \pi_n = \pi_0 \times P^{\,n}}$$
 
-> **Exemple.** Avec $\pi_0 = (\,1\ \ 0\,)$ (on part certainement en $A$) et le $P$
+> **Exemple.** Avec $\pi_0 = (\,1\ \ 0\,)$ (on part de $A$ à coup sûr) et le $P$
 > ci-dessus : $\pi_1 = \pi_0 P = (\,0{,}7\ \ 0{,}3\,)$ : après une étape, $70\,\%$ de
 > chance d'être en $A$.
 
@@ -270,8 +270,8 @@ $U=(I-A)^{-1}C$ si $I-A$ est inversible.
    **arêtes** et $k+1$ sommets. Compter les points au lieu des traits fausse tout le
    comptage de chemins.
 2. **Croire que $AB=BA$.** Le produit matriciel **n'est pas commutatif** : dans une
-   chaîne de Markov, $\pi P$ (ligne $\times$ matrice) et $P\pi$ n'ont même pas la même
-   taille. On multiplie **la distribution ligne par $P$, à droite**.
+   chaîne de Markov, $\pi P$ (ligne $\times$ matrice) alors que $P\pi$ n'est même pas
+   défini. On multiplie **la distribution ligne par $P$, à droite**.
 3. **Oublier de tester $ad-bc$.** Avant d'inverser, on vérifie que $ad-bc\neq 0$. Si
    ce déterminant est nul, écrire un inverse est une faute : la matrice n'en a pas.
 4. **Mal orienter la matrice de transition.** $p_{ij}$ va **de $i$ vers $j$** et

@@ -140,7 +140,7 @@ $$\overline{\overline{z}}=z, \quad \overline{z+z'}=\overline{z}+\overline{z'}, \
 \overline{z^{\,n}}=\left(\overline{z}\right)^{n}$$
 
 > **Exemple.** $\overline{(2+i)(3-i)}=\overline{2+i}\times\overline{3-i}=(2-i)(3+i)$.
-> On peut conjuguer **avant** ou **après** de développer, le résultat est le même.
+> On peut conjuguer **avant** ou **après** avoir développé, le résultat est le même.
 
 ---
 
@@ -161,7 +161,7 @@ $$\boxed{\dfrac{1}{z} = \dfrac{\overline{z}}{z\,\overline{z}} = \dfrac{a-ib}{a^{
 dénominateur :
 
 $$\dfrac{z}{z'} = \dfrac{z\,\overline{z'}}{z'\,\overline{z'}}
-= \dfrac{z\,\overline{z'}}{|\,\text{dénominateur réel}\,|}$$
+= \dfrac{z\,\overline{z'}}{a'^{2}+b'^{2}} \qquad (z'=a'+ib'\neq 0)$$
 
 > **Exemple.** $\dfrac{3+i}{1-2i}=\dfrac{(3+i)(1+2i)}{(1-2i)(1+2i)}
 > =\dfrac{3+6i+i+2i^{2}}{1^{2}+2^{2}}=\dfrac{3+7i-2}{5}=\dfrac{1+7i}{5}
@@ -216,7 +216,7 @@ $$\boxed{\begin{aligned}
 \end{aligned}}$$
 
 Le cas nouveau est $\Delta<0$ : comme $\Delta<0$, on a $-\Delta>0$ et $\sqrt{-\Delta}$
-existe ; le $i$ vient de $\sqrt{\Delta}=\sqrt{-(-\Delta)}=i\sqrt{-\Delta}$.
+existe ; le $i$ vient de ce que $\left(i\sqrt{-\Delta}\right)^{2}=i^{2}\times(-\Delta)=\Delta$ : le nombre $i\sqrt{-\Delta}$ joue le rôle d'une « racine carrée » de $\Delta$.
 
 > **Exemple.** $z^{2}-2z+5=0$. Ici $\Delta=(-2)^{2}-4\times1\times5=4-20=-16<0$.
 > Donc $\sqrt{-\Delta}=\sqrt{16}=4$ et

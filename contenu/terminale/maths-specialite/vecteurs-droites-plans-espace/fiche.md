@@ -45,8 +45,8 @@ amène $A$ sur $B$.
   un parallélogramme (éventuellement aplati). Le vecteur ne dépend pas de l'endroit
   où on le dessine.
 - **Relation de Chasles** : $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$.
-  Elle est vraie même quand $A$, $B$, $C$ ne sont pas dans un même plan — c'est là
-  toute la nouveauté de l'espace.
+  Elle reste vraie pour tous points $A$, $B$, $C$ de l'espace, exactement
+  comme dans le plan.
 
 > **Sur le cube.** $\overrightarrow{AB} = \overrightarrow{DC} = \overrightarrow{EF}
 > = \overrightarrow{HG}$ : ces quatre arêtes portent le **même** vecteur. De même
@@ -278,8 +278,8 @@ l'existence d'un **point commun**.
 4. **Prendre trois vecteurs coplanaires pour une base.** Il faut trois vecteurs
    **non coplanaires** : trois arêtes concourantes du cube, pas trois vecteurs d'une
    même face.
-5. **Oublier la relation de Chasles dans l'espace.** Elle reste valable même si les
-   points ne sont pas dans un même plan — c'est l'outil n°1 pour décomposer un vecteur.
+5. **Oublier la relation de Chasles dans l'espace.** Elle reste valable pour des
+   points quelconques de l'espace — c'est l'outil n°1 pour décomposer un vecteur.
 6. **Écrire des coordonnées sans préciser la base ou le repère.** $(1,1,1)$ ne veut
    rien dire sans le repère $(A ; \overrightarrow{AB}, \overrightarrow{AD}, \overrightarrow{AE})$.
 

@@ -110,7 +110,7 @@ $$\boxed{E(X) = \dfrac{a+b}{2}}$$
 C'est le **milieu** de l'intervalle — ce que l'intuition attend d'un tirage « au hasard
 et sans biais ».
 
-> **Exemple.** Sur $[0\,;20]$ : $E(X) = \dfrac{0+20}{2} = 10$. En moyenne, on arrive au
+> **Exemple.** Sur $[0\,;20]$ : $E(X) = \dfrac{0+20}{2} = 10$. En moyenne, le bus arrive au
 > milieu de la plage, soit $10$ min après $10$ h.
 >
 > **Vérification par le calcul :** $E(X)=\displaystyle\int_a^b x\cdot\dfrac{1}{b-a}\,dx

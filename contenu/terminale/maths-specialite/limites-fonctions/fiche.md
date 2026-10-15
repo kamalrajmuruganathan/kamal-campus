@@ -84,7 +84,7 @@ $$\boxed{\lim_{x \to a} f(x) = \pm\infty \iff \text{la droite } x = a \text{ est
 
 La courbe se colle à la droite verticale $x = a$.
 
-> **Exemple.** $f(x) = \dfrac{1}{x - 3}$ vérifie $\displaystyle\lim_{x \to 3} f(x) = \pm\infty$.
+> **Exemple.** $f(x) = \dfrac{1}{x - 3}$ vérifie $\displaystyle\lim_{x \to 3^+} f(x) = +\infty$ et $\displaystyle\lim_{x \to 3^-} f(x) = -\infty$.
 > La droite $x = 3$ est asymptote verticale.
 
 > **À retenir.** Une limite finie **à l'infini** donne une asymptote **horizontale** ;
