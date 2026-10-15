@@ -45,8 +45,8 @@ phrase et souvent **supprimé** sans la rendre incorrecte.
 | Je bois du lait. | Le CC supprimé : la phrase reste correcte |
 
 Le complément circonstanciel peut être un **nom** ou un **groupe nominal**
-(« dans la cour »), un **adverbe** (« lentement », « hier ») ou un groupe introduit
-par une préposition (« avec soin »).
+(« le matin »), un **adverbe** (« lentement », « hier ») ou un groupe introduit
+par une préposition (« dans la cour », « avec soin »).
 
 ## 3. Reconnaître les trois principaux compléments
 
@@ -62,7 +62,7 @@ par une préposition (« avec soin »).
   dans « Je mange une pomme », « une pomme » est un COD, pas un CC.
 - **« Où » et « quand » sont des questions, pas des types.** On dit un CC *de lieu*,
   un CC *de temps*, pas un « CC où ».
-- Attention : un même groupe peut avoir des sens différents. « Je cours **le matin** »
+- Attention : c'est le sens qui compte. « Je cours **le matin** »
   → temps ; « Je cours **dans le parc** » → lieu.
 - Un adverbe seul (vite, hier, ici) peut être un complément circonstanciel à lui tout seul.
 

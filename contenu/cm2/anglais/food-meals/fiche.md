@@ -74,8 +74,8 @@ Au café ou au restaurant, on demande poliment avec **Can I have… please?**
 
 - On dit *an apple*, pas *a apple* (apple commence par une voyelle).
 - Pour la négation : *I don't like*, pas *I no like*.
-- *Bread, water, milk* ne prennent pas de -s au pluriel (on ne les compte pas).
-- On dit *Can I have a pizza?*, pas *Can I have a pizza ?* sans **please** si on veut être poli.
+- *Bread, water, milk* ne se mettent pas au pluriel : on ne les compte pas (*some bread*, pas *breads*).
+- Pour être poli, n'oublie pas **please** : *Can I have a pizza, please?*
 
 ## À retenir
 

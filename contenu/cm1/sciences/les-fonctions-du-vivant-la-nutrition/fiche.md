@@ -55,7 +55,7 @@ Quand nous mangeons, les aliments suivent un long chemin : le **tube digestif**.
 2. L'**œsophage** : un tuyau qui conduit les aliments vers l'estomac.
 3. L'**estomac** : les aliments sont brassés et transformés en une bouillie.
 4. L'**intestin grêle** : les éléments utiles (les **nutriments**) passent dans le sang.
-5. Le **gros intestin** : ce qui n'est pas utile devient les déchets, évacués par l'anus.
+5. Le **gros intestin** : ce qui n'est pas utile forme les excréments, évacués par l'anus.
 
 **Digérer**, c'est transformer les aliments en tout petits morceaux (les nutriments)
 que le corps peut utiliser.
@@ -87,7 +87,8 @@ qu'une plante privée de lumière finit par jaunir et mourir.
 Pour utiliser leur nourriture, presque tous les êtres vivants ont aussi besoin de
 **respirer**, c'est-à-dire de prendre du **dioxygène** (un gaz de l'air) et de rejeter
 du **dioxyde de carbone**. L'humain respire avec ses **poumons**, le poisson avec ses
-**branchies**, l'insecte par de petits trous appelés trachées.
+**branchies**, l'insecte grâce à de petits tubes, les **trachées**, qui s'ouvrent par de
+petits trous sur son corps.
 
 ## Ce qu'il faut retenir
 

@@ -17,7 +17,7 @@ relu_par: null
 # Les grands nombres
 
 En CM1, on apprend à lire et à écrire de très grands nombres : les milliers, les
-millions, et même les milliards. Pas de panique : ce sont toujours les mêmes
+millions. Pas de panique : ce sont toujours les mêmes
 chiffres, on les range juste dans un tableau bien ordonné.
 
 ## Le tableau des classes
@@ -84,7 +84,8 @@ Pour comparer deux grands nombres :
    de la gauche.
 
 Exemple : 4 205 317 et 4 205 900 ont le même nombre de chiffres. On compare : les
-millions sont égaux (4), les mille aussi jusqu'à... 3 contre 9. Comme 3 < 9, on a
+millions sont égaux (4), les mille aussi (205). On compare alors les centaines :
+3 contre 9. Comme 3 < 9, on a
 **4 205 317 < 4 205 900**.
 
 - Ranger dans l'**ordre croissant** = du plus petit au plus grand.

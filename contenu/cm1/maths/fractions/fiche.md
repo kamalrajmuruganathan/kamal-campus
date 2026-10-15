@@ -81,7 +81,7 @@ Comme 5 est entre 4 et 8, la fraction est entre 1 et 2.
 
 ## Les fractions décimales
 
-Les fractions dont le dénominateur est **10, 100 ou 1000** sont très importantes :
+Les fractions dont le dénominateur est **10, 100 ou 1 000** sont très importantes :
 on les appelle **fractions décimales**. Elles serviront pour les nombres à virgule.
 
 - $\dfrac{1}{10}$ = un dixième

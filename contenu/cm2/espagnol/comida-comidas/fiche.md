@@ -76,9 +76,9 @@ Au restaurant ou au café, on demande poliment avec **quiero… por favor**.
 ## 5. Les erreurs à éviter
 
 - Avec un nom au pluriel, on dit *me gustan* (avec -n), pas *me gusta*.
-- On dit *el agua* mais *un vaso de agua* : agua est féminin (*el agua fría*).
+- On dit *el agua* (avec *el*), mais *agua* est bien féminin : *el agua fría*.
 - Pour dire « s'il vous plaît », on dit *por favor*, pas *por favor de*.
-- *El pan, el arroz* ne prennent pas de -s (on ne les compte pas).
+- *El arroz, la leche* ne se mettent généralement pas au pluriel (on ne les compte pas).
 
 ## À retenir
 

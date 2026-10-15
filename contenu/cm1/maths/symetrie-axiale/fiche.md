@@ -23,8 +23,8 @@ s'appelle l'**axe de symétrie**.
 ## L'image du pliage
 
 Imagine une figure dessinée sur une feuille que tu plies en deux. Si les deux
-parties se recouvrent parfaitement, le pli est un axe de symétrie. Une aile de
-papillon, un cœur dessiné, la lettre **A** : tous ont un axe de symétrie.
+parties se recouvrent parfaitement, le pli est un axe de symétrie. Un papillon,
+un cœur dessiné, la lettre **A** : tous ont un axe de symétrie.
 
 > La figure obtenue par symétrie garde **la même taille et la même forme**. C'est
 > une image « en miroir », comme dans un miroir posé sur l'axe.

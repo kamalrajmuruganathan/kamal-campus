@@ -33,7 +33,7 @@ Voici un exemple : 1 stylo coûte 2 €.
 |---|---|---|---|---|
 | Prix en euros | 2 | 4 | 6 | 10 |
 
-Pour chaque ligne, on multiplie **toujours par 2** : 1 × 2 = 2, 3 × 2 = 6,
+Pour chaque colonne, on multiplie **toujours par 2** : 1 × 2 = 2, 3 × 2 = 6,
 5 × 2 = 10. C'est donc proportionnel, et le coefficient est **2**.
 
 > Astuce : si je double la quantité, le prix double aussi. Si je prends 3 fois

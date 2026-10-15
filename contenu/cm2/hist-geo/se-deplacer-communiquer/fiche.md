@@ -27,7 +27,7 @@ Pour se déplacer, on utilise différents **moyens de transport** :
 |---|---|---|
 | La route | Voiture, car, camion | Trajets quotidiens et transport de marchandises |
 | Le train | TGV, TER | Relier les villes rapidement |
-| l'avion | Vols intérieurs et internationaux | Longues distances |
+| L'avion | Vols intérieurs et internationaux | Longues distances |
 | Le bateau | Ferry, porte-conteneurs | Traverser la mer, transporter des marchandises |
 
 La France possède un grand réseau de **routes**, d'**autoroutes** et de lignes de

@@ -56,7 +56,7 @@ Le serveur peut demander : *Cosa desidera?* (Que désirez-vous ?)
 ## 4. Les erreurs à éviter
 - On ne dit pas « *io voglio* » pour commander (trop direct) : on dit **vorrei**, plus poli.
 - « s'il vous plaît » se dit **per favore** (ne pas confondre avec *grazie* = merci).
-- *Un* devient **una** devant un mot féminin : *una pizza*, *una pasta*, mais *un gelato*.
+- *Un* devient **una** devant un mot féminin : *una pizza*, *una cena*, mais *un gelato*.
 
 ## À retenir
 - Les trois repas : **la colazione**, **il pranzo**, **la cena**.

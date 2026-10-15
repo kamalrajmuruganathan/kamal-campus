@@ -52,14 +52,14 @@ Un **dixième**, c'est $\dfrac{1}{10}$. Un **centième**, c'est $\dfrac{1}{100}$
 
 C'est la même chose écrite de deux façons :
 
-$$\dfrac{5}{10} = 0,5 \qquad \dfrac{35}{10} = 3,5 \qquad \dfrac{74}{100} = 0,74$$
+$$\dfrac{5}{10} = 0{,}5 \qquad \dfrac{35}{10} = 3{,}5 \qquad \dfrac{74}{100} = 0{,}74$$
 
 Pour $\dfrac{35}{10}$ : il y a 3 fois 10 dixièmes (= 3 unités) et il reste 5 dixièmes,
 donc **3,5**.
 
 ## Décomposer un nombre décimal
 
-$$12,74 = 10 + 2 + \dfrac{7}{10} + \dfrac{4}{100}$$
+$$12{,}74 = 10 + 2 + \dfrac{7}{10} + \dfrac{4}{100}$$
 
 On peut aussi dire : 12 unités + 7 dixièmes + 4 centièmes.
 

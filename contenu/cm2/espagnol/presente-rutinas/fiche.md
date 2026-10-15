@@ -74,7 +74,7 @@ Exemple : *Todos los días **desayuno** a las ocho y **voy** a la escuela.*
 
 ## 5. Les erreurs à éviter
 
-- À « yo », la terminaison est toujours **-o** : *yo hablo, yo como, yo vivo*.
+- Pour les verbes réguliers, à « yo », la terminaison est toujours **-o** : *yo hablo, yo como, yo vivo*.
 - On ne confond pas -ar (habl**as**) et -er (com**es**) à la personne « tú ».
 - Avec un verbe pronominal, on place le pronom **devant** : *me levanto*, pas *levanto me*.
 - Le pronom s'accorde : *yo **me** levanto*, *tú **te** levantas*, *él **se** levanta*.
@@ -82,6 +82,6 @@ Exemple : *Todos los días **desayuno** a las ocho y **voy** a la escuela.*
 ## À retenir
 
 - Trois familles : **-ar, -er, -ir**.
-- À « yo » : toujours **-o** (hablo, como, vivo).
+- À « yo » (verbes réguliers) : toujours **-o** (hablo, como, vivo).
 - Routine → verbes pronominaux : **me levanto, me ducho, me acuesto**.
 - Moments : **por la mañana, por la tarde, por la noche, todos los días**.

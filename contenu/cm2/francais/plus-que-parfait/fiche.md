@@ -62,10 +62,10 @@ Rappel de l'imparfait des auxiliaires :
 ## 4. Les erreurs à éviter
 
 - **Ne pas oublier l'auxiliaire.** On ne dit pas « je mangé » mais « j'avais mangé ».
-- **Choisir le bon auxiliaire.** Les verbes de déplacement et d'état (aller, venir,
-  partir, arriver, rester, tomber…) se conjuguent avec *être*.
-- **Ne pas confondre imparfait et plus-que-parfait.** « Je jouais » (imparfait, une seule
-  action) ≠ « J'avais joué » (plus-que-parfait, action antérieure).
+- **Choisir le bon auxiliaire.** Certains verbes, surtout de mouvement (aller, venir,
+  partir, arriver, rester, tomber…), se conjuguent avec *être*.
+- **Ne pas confondre imparfait et plus-que-parfait.** « Je jouais » (imparfait : action en
+  cours dans le passé) ≠ « J'avais joué » (plus-que-parfait : action antérieure).
 - Avec *avoir*, ne fais pas accorder le participe avec le sujet : « ils avaient chanté ».
 
 ## À retenir
