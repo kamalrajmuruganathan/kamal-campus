@@ -111,8 +111,8 @@ distance } R \text{ de } O}$$
 $$\boxed{\text{La boule de centre } O \text{ et de rayon } R = \text{les points situés à une
 distance } \leqslant R \text{ de } O}$$
 
-- La **sphère** est une **surface** : uniquement la « peau ». Un ballon de foot dégonflé,
-  c'est une sphère.
+- La **sphère** est une **surface** : uniquement la « peau ». L'enveloppe d'un ballon de foot
+  gonflé, c'est (presque) une sphère.
 - La **boule** est un **solide plein** : la peau **et tout l'intérieur**. Une bille, une boule
   de pétanque, c'est une boule.
 
@@ -152,7 +152,7 @@ identique à cette face**, quelle que soit la hauteur de la coupe.
 > Pavé $5 \times 3 \times 2$ (cm) coupé parallèlement à la face $5 \times 3$ : la section est
 > un rectangle $5 \times 3$, d'aire $15 \text{ cm}^2$ — le même à toutes les hauteurs.
 
-**Cylindre coupé selon son axe.** Deux cas à ne pas inverser :
+**Cylindre coupé par un plan.** Deux cas à ne pas inverser :
 
 - **perpendiculairement à l'axe** → la section est un **disque** identique aux bases, de
   rayon $r$ ;
@@ -165,7 +165,7 @@ identique à cette face**, quelle que soit la hauteur de la coupe.
 **Boule coupée par un plan** → la section est **toujours un disque** (et la sphère, un
 cercle). Son rayon dépend de la **distance $d$ du plan au centre** :
 
-- si le plan passe par le centre ($d = 0$), on retrouve un **grand cercle** de rayon $R$ ;
+- si le plan passe par le centre ($d = 0$), la section est un disque de rayon $R$, limité par un **grand cercle** ;
 - sinon, le rayon $r$ de la section se calcule par **Pythagore** dans le triangle rectangle
   formé par $R$, $d$ et $r$ :
 

@@ -80,7 +80,7 @@ Remarque : le participe de **essere** est **stato**, identique à celui de *star
 - Ne pas accorder le participe avec **essere** : on dit *Lei è andat**a***, jamais *è andato* pour une fille.
 - Vouloir accorder le participe avec **avere** et le sujet : *Le ragazze hanno mangiat**o*** (et non *mangiate*).
 - Traduire mot à mot le français : « j'ai été » se dit **sono stato**, avec *essere*, pas avec *avere*.
-- Oublier que les verbes réfléchis prennent **essere** : *Mi sono lavat**o*** les mains.
+- Oublier que les verbes réfléchis prennent **essere** : *Mi sono alzat**o** presto* (je me suis levé tôt).
 
 ## À retenir
 

@@ -36,8 +36,8 @@ libérée dans le **sang** et qui agit **à distance** sur d'autres organes appe
 
 La **puberté** est la période où le corps devient capable de se reproduire. Elle a lieu
 en général entre **10 et 16 ans**, à un âge variable selon les personnes. Elle est
-déclenchée par des hormones fabriquées à la fois par le **cerveau** (une petite glande,
-l'**hypophyse**) et par les **organes reproducteurs**.
+déclenchée par des hormones fabriquées à la fois par une petite glande située sous le **cerveau**,
+l'**hypophyse**, et par les **organes reproducteurs**.
 
 À la puberté apparaissent les **caractères sexuels secondaires** :
 
@@ -83,7 +83,7 @@ Elle se fixe dans l'utérus (**nidation**) et se développe : c'est le début de
 - La **contraception** permet d'éviter une grossesse non désirée. La **pilule** contient
   des hormones qui **bloquent l'ovulation** ; le **préservatif** empêche la rencontre des
   spermatozoïdes et de l'ovule. Seul le **préservatif** protège aussi des **IST**.
-- Les **IST** (infections sexuellement transmissibles), comme le **sida** (virus VIH),
+- Les **IST** (infections sexuellement transmissibles), comme l'infection par le **VIH** (virus du sida),
   se transmettent lors des rapports sexuels. Le **préservatif** est le meilleur moyen de
   s'en protéger.
 

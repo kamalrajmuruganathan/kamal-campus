@@ -106,7 +106,7 @@ $$\boxed{A(x\,;y)} \qquad x = \text{abscisse} \quad y = \text{ordonnée}$$
 **Règle 1 — l'ordre est fixe : abscisse d'abord.**
 
 > $M(-2\,;5)$ et $N(5\,;-2)$ ne sont pas le même point : $M$ est en haut à gauche,
-> $N$ est en bas à droite. Mêmes chiffres, points opposés.
+> $N$ est en bas à droite. Mêmes nombres, deux points différents.
 
 **Règle 2 — la position donne les signes avant même la lecture.**
 
@@ -314,8 +314,8 @@ lycée.
 3. **Donner les solutions d'une équation graphique en ordonnées.** Résoudre, c'est
    chercher des **$x$** : la réponse se lit toujours sur l'axe horizontal.
 
-4. **Inverser abscisse et ordonnée.** $(-2\,;5)$ et $(5\,;-2)$ sont deux points opposés
-   dans le repère. Horizontale d'abord, toujours.
+4. **Inverser abscisse et ordonnée.** $(-2\,;5)$ et $(5\,;-2)$ sont deux points différents
+   du repère. Horizontale d'abord, toujours.
 
 5. **Aller du mauvais côté dans les négatifs.** À gauche de $-3$, les nombres sont
    **plus petits** que $-3$. Le comptage donne la distance, le côté donne le **signe** :

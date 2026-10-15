@@ -49,7 +49,7 @@ géologiques.
 
 Les êtres vivants partagent de nombreux **caractères communs**. Par exemple, l'être
 humain, le chat, la chauve-souris et la baleine possèdent tous un **squelette avec une
-colonne vertébrale** et **quatre membres** bâtis sur le même plan. Ces ressemblances
+colonne vertébrale** et des **membres antérieurs** (bras, patte, aile, nageoire) bâtis sur le même plan. Ces ressemblances
 s'expliquent par un **ancêtre commun** : les espèces sont **parentes**.
 
 On représente ces liens de parenté par un **arbre** : plus deux espèces partagent de

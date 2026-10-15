@@ -120,7 +120,7 @@ Si tu connais le **plus grand diviseur commun** au numérateur et au dénominate
 seule division suffit. Dans l'exemple précédent, ce diviseur est $12$ — et
 $\dfrac{60 \div 12}{84 \div 12} = \dfrac{5}{7}$ tombe directement.
 
-> 📎 **La mécanique pour le trouver** (décomposition, PGCD, nombres premiers) est traitée
+> 📎 **La mécanique pour le trouver** (décomposition en produit de nombres premiers) est traitée
 > dans le chapitre **« Multiples et diviseurs »** de 3e. Ici, ce qui compte est le
 > **résultat** : une fraction réduite au maximum.
 

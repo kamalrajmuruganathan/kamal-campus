@@ -21,7 +21,8 @@ relu_par: null
 > Deux grandes idées dans ce chapitre. D'abord, l'énergie ne disparaît jamais : elle change
 > seulement de forme, et on sait faire les comptes. Ensuite, une onde qui rebondit sur un
 > obstacle et revient nous permet de **mesurer une distance sans bouger** — c'est comme ça
-> qu'un bateau connaît la profondeur de la mer et qu'on connaît la distance des étoiles.
+> qu'un bateau connaît la profondeur de la mer, et qu'on a mesuré la distance de la Terre à la Lune
+> avec un faisceau laser.
 
 ---
 

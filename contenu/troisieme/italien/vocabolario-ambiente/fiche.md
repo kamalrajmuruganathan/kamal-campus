@@ -77,7 +77,7 @@ Exemple : *È importante riciclare la plastica e la carta.* → Il est important
 - *inquinare* = polluer / *l'inquinamento* = la pollution : ne confonds pas le verbe et le nom.
 - *la carta* = le papier (et non « la carte » au sens de plan, qui se dit *la cartina / la mappa*).
 - *risparmiare* = économiser ; *sprecare / lo spreco* = gaspiller / le gaspillage (contraires).
-- Attention aux doubles consonnes : *l'inquiname**nt**o*, *la ra**cc**olta*, *ri**cc**… non : ricicl**are** (un seul c), *ri**ff**iuti* → correct : *rifiuti* (un seul f).
+- Attention à l'orthographe : *la ra**cc**olta* (deux c), mais *ri**c**iclare* (un seul c) et *ri**f**iuti* (un seul f).
 
 ## À retenir
 

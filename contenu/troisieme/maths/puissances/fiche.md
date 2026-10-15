@@ -280,7 +280,7 @@ Ce sont des puissances de 10 déguisées : c'est ce qui fait le lien avec les
 3. **Se tromper de signe en soustrayant les exposants** : $\dfrac{10^{-3}}{10^{-7}}
    = 10^{-3+7} = 10^{4}$, pas $10^{-10}$. Recopie les parenthèses : $-3 - (-7)$.
 4. **Compter les zéros au lieu des rangs de virgule** : dans $0{,}00058$, la virgule
-   se déplace de $4$ rangs, même s'il n'y a que $3$ zéros. Compte les **sauts**.
+   se déplace de $4$ rangs, même s'il n'y a que $3$ zéros après la virgule. Compte les **sauts**.
 5. **Comparer les mantisses avant les exposants** : $9{,}5 \times 10^{-6}$ est plus
    **petit** que $1{,}2 \times 10^{-5}$, bien que $9{,}5 > 1{,}2$.
 6. **Additionner les mantisses dans un produit** : $(3 \times 10^5)(4 \times 10^{-8})$

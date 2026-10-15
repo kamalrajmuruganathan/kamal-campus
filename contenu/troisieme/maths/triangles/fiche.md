@@ -287,8 +287,8 @@ calculatrice, c'est la **seconde fonction** de la touche : `SHIFT` puis `cos`.
 > choisi ne change pas le résultat.
 
 > ⚠️ **$\cos^{-1}$ n'est pas $\dfrac{1}{\cos}$.** Le $-1$ ne veut pas dire « inverse
-> d'un nombre » ici, mais « opération qui annule le cosinus ». $1 \div 0{,}6 = 1{,}67$,
-> ce qui n'est même pas un angle.
+> d'un nombre » ici, mais « opération qui annule le cosinus ». $1 \div 0{,}6 \approx 1{,}67$,
+> ce qui n'a rien à voir avec l'angle cherché.
 
 | Tu cherches… | Tu connais… | Tu tapes… |
 |---|---|---|

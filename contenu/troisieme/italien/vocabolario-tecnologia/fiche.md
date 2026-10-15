@@ -32,7 +32,7 @@ relu_par: null
 | la tastiera | le clavier |
 | il mouse | la souris |
 
-Exemple : *Uso il portatile per fare i compiti.* → J'utilise le portable pour faire mes devoirs.
+Exemple : *Uso il portatile per fare i compiti.* → J'utilise l'ordinateur portable pour faire mes devoirs.
 
 ## 2. Internet e la rete (internet et le réseau)
 

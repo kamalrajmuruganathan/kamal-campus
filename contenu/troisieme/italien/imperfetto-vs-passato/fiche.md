@@ -64,7 +64,7 @@ Très souvent, les deux temps coexistent dans la même phrase. L'imperfetto pose
 
 ## 6. Les erreurs à éviter
 
-- Traduire tout imparfait français par un imperfetto : « soudain il téléphona / il a téléphoné » → *ha telefonato* (action ponctuelle), pas *telefonava*.
+- Traduire une action soudaine par un imperfetto : « soudain, il a téléphoné » → *ha telefonato* (action ponctuelle), pas *telefonava*.
 - Mettre le décor au passato prossimo : on dit *Era bello* (c'était beau), pas *è stato bello* pour une simple description.
 - Oublier le sens : l'imperfetto = « je faisais / je jouais » (durée) ; le passato prossimo = « j'ai fait / j'ai joué » (fini).
 

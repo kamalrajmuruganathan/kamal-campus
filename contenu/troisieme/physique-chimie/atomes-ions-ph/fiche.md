@@ -156,8 +156,8 @@ qui trouble le liquide) révèle l'ion.
 Pour détecter l'ion **chlorure** $\text{Cl}^{-}$, on ajoute quelques gouttes de **nitrate
 d'argent**. Un **précipité blanc** apparaît ; il **noircit** à la lumière.
 
-> **À retenir.** Un test est dit *caractéristique* parce que chaque ion donne un résultat
-> **qui n'appartient qu'à lui** : la couleur (ou le réactif) permet de l'identifier à coup sûr.
+> **À retenir.** Un test est dit *caractéristique* parce que, parmi les ions étudiés, chaque ion
+> donne un résultat **qui permet de le reconnaître** : la couleur (et le réactif) l'identifient.
 
 ---
 

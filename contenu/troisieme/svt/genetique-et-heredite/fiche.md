@@ -23,7 +23,7 @@ est **transmise** d'une génération à l'autre.
 
 ## Où est stockée l'information héréditaire ?
 
-Le corps humain est formé de milliards de **cellules**. Chaque cellule possède un
+Le corps humain est formé de milliers de milliards de **cellules**. Chaque cellule possède un
 **noyau**, et dans ce noyau se trouvent les **chromosomes**. Les chromosomes sont
 faits d'une molécule : l'**ADN** (acide désoxyribonucléique).
 

@@ -22,7 +22,7 @@ relu_par: null
 <!-- schema:auto -->
 ![Fonction linéaire : droite passant par l’origine du repère.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMzIwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIzMjAiIGZpbGw9IiNmZmZmZmYiLz48bGluZSB4MT0iMTgiIHkxPSIxOCIgeDI9IjE4IiB5Mj0iMzAyIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSI1Ni40IiB5MT0iMTgiIHgyPSI1Ni40IiB5Mj0iMzAyIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSI5NC44IiB5MT0iMTgiIHgyPSI5NC44IiB5Mj0iMzAyIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIxMzMuMiIgeTE9IjE4IiB4Mj0iMTMzLjIiIHkyPSIzMDIiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjE3MS42IiB5MT0iMTgiIHgyPSIxNzEuNiIgeTI9IjMwMiIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiLz48bGluZSB4MT0iMjEwIiB5MT0iMTgiIHgyPSIyMTAiIHkyPSIzMDIiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjI0OC40IiB5MT0iMTgiIHgyPSIyNDguNCIgeTI9IjMwMiIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiLz48bGluZSB4MT0iMjg2LjgiIHkxPSIxOCIgeDI9IjI4Ni44IiB5Mj0iMzAyIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIzMjUuMiIgeTE9IjE4IiB4Mj0iMzI1LjIiIHkyPSIzMDIiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjM2My42IiB5MT0iMTgiIHgyPSIzNjMuNiIgeTI9IjMwMiIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiLz48bGluZSB4MT0iNDAyIiB5MT0iMTgiIHgyPSI0MDIiIHkyPSIzMDIiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjE4IiB5MT0iMzAyIiB4Mj0iNDAyIiB5Mj0iMzAyIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIxOCIgeTE9IjI2Ni41IiB4Mj0iNDAyIiB5Mj0iMjY2LjUiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjE4IiB5MT0iMjMxIiB4Mj0iNDAyIiB5Mj0iMjMxIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIxOCIgeTE9IjE5NS41IiB4Mj0iNDAyIiB5Mj0iMTk1LjUiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjE4IiB5MT0iMTYwIiB4Mj0iNDAyIiB5Mj0iMTYwIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIxOCIgeTE9IjEyNC41IiB4Mj0iNDAyIiB5Mj0iMTI0LjUiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjE4IiB5MT0iODkiIHgyPSI0MDIiIHkyPSI4OSIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiLz48bGluZSB4MT0iMTgiIHkxPSI1My41IiB4Mj0iNDAyIiB5Mj0iNTMuNSIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiLz48bGluZSB4MT0iMTgiIHkxPSIxOCIgeDI9IjQwMiIgeTI9IjE4IiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIvPjxsaW5lIHgxPSIxOCIgeTE9IjE2MCIgeDI9IjQwMiIgeTI9IjE2MCIgc3Ryb2tlPSIjOGE5OWE4IiBzdHJva2Utd2lkdGg9IjEuOCIvPjxsaW5lIHgxPSIyMTAiIHkxPSIxOCIgeDI9IjIxMCIgeTI9IjMwMiIgc3Ryb2tlPSIjOGE5OWE4IiBzdHJva2Utd2lkdGg9IjEuOCIvPjxwYXRoIGQ9Ik0gNDAyIDE2MCBsIC04IC00IHYgOCB6IiBmaWxsPSIjOGE5OWE4Ii8+PHBhdGggZD0iTSAyMTAgMTggbCAtNCA4IGggOCB6IiBmaWxsPSIjOGE5OWE4Ii8+PHRleHQgeD0iMzk4IiB5PSIxNzYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJlbmQiPng8L3RleHQ+PHRleHQgeD0iMjE4IiB5PSIyOCIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzViNmI3YSI+eTwvdGV4dD48dGV4dCB4PSIyMDQiIHk9IjE3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9ImVuZCI+TzwvdGV4dD48bGluZSB4MT0iMTgiIHkxPSI1MTUiIHgyPSI0MDIiIHkyPSItMTk1IiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMi44Ii8+PGNpcmNsZSBjeD0iMjEwIiBjeT0iMTYwIiByPSI0LjUiIGZpbGw9IiNjMDJhMmEiLz48dGV4dCB4PSIyMTgiIHk9IjE1MiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2MwMmEyYSI+KDAgOyAwKTwvdGV4dD48dGV4dCB4PSIyNiIgeT0iMzAiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxZjZmZWIiIGZvbnQtc3R5bGU9Iml0YWxpYyI+eSA9IDJ4ICsgMDwvdGV4dD48L3N2Zz4=)
 
-> En 5e, tu disais « le prix dépend **en fonction du** nombre de séances ». En 4e, tu
+> En 5e, tu disais « le prix varie **en fonction du** nombre de séances ». En 4e, tu
 > l'écrivais : $P(n) = 5 + 2n$, sans jamais nommer l'objet lui-même. Cette année, on lui
 > donne enfin son nom — une **fonction** — et le vocabulaire qui l'accompagne : **image**,
 > **antécédent**, **courbe représentative**. Le fond, tu le connais déjà. On pose juste
@@ -231,7 +231,8 @@ Tout se ramène à la lecture d'**images** et d'**antécédents** de la section 
 > **symétrique** par rapport à l'axe vertical.
 
 Cette symétrie explique la section 2 : deux nombres opposés ont **la même image**. Donc
-un nombre positif a **deux** antécédents, et un nombre négatif **aucun**.
+un nombre strictement positif a **deux** antécédents, $0$ en a un seul ($0$ lui-même), et
+un nombre négatif **aucun**.
 
 > **Exemple.** Image de $-4$ par la fonction carré : $(-4)^2 = 16$. Antécédents de $16$ :
 > $4$ et $-4$. Antécédents de $-9$ : **aucun**.
@@ -246,8 +247,8 @@ un nombre positif a **deux** antécédents, et un nombre négatif **aucun**.
 | $f(x)$ | se lit « $f$ de $x$ » — **pas** $f \times x$ |
 | Image de $x$ | le nombre $f(x)$ : on **calcule** (unique) |
 | Antécédent de $y$ | un $x$ tel que $f(x) = y$ : on **résout** (0, 1 ou plusieurs) |
-| Lire une image | partir de l'axe des **abscisses** (vertical) |
-| Lire un antécédent | partir de l'axe des **ordonnées** (horizontal) |
+| Lire une image | partir de l'axe des **abscisses** (horizontal) |
+| Lire un antécédent | partir de l'axe des **ordonnées** (vertical) |
 | Fonction linéaire | $f(x) = ax$ · droite par l'**origine** · **proportionnalité** |
 | Fonction affine | $f(x) = ax + b$ · $a$ = coeff. directeur, $b$ = ordonnée à l'origine |
 | Coeff. directeur $a$ | avance de $1$ → monte de $a$ |
@@ -270,7 +271,7 @@ un nombre positif a **deux** antécédents, et un nombre négatif **aucun**.
    $b$ l'endroit où la droite **coupe l'axe vertical**. Les inverser fait tracer la
    mauvaise droite.
 6. **Oublier le carré d'un négatif.** $(-3)^2 = 9$, pas $-9$ : c'est pour cela qu'un
-   nombre positif a deux antécédents par la fonction carré.
+   nombre strictement positif a deux antécédents par la fonction carré.
 
 ---
 

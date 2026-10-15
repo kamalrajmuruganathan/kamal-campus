@@ -37,8 +37,8 @@ Ces activités prélèvent des **ressources** et rejettent des **déchets** et d
 
 Une **pollution** est l'introduction dans un milieu de substances qui le dégradent.
 
-- **Pollution de l'air** : les gaz rejetés par les usines et les véhicules (dioxyde de
-  carbone, particules fines) dégradent la qualité de l'air.
+- **Pollution de l'air** : les gaz et les poussières rejetés par les usines et les véhicules
+  (oxydes d'azote, particules fines) dégradent la qualité de l'air.
 - **Pollution de l'eau** : les engrais, les pesticides, les eaux usées et les déchets
   (comme les plastiques) contaminent rivières, nappes et océans.
 - **Pollution des sols** : les produits chimiques et les déchets s'accumulent dans la

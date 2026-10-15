@@ -29,7 +29,7 @@ relu_par: null
 ## 2. Se nourrir, se laver, se divertir
 | Domaine | Fait de civilisation |
 |---|---|
-| Repas | Le repas principal est la *cena*, le soir ; on mange allongé sur des lits (*triclinium*). |
+| Repas | Le repas principal est la *cena*, le soir ; on mange allongé sur des lits, dans la salle à manger (*triclinium*). |
 | Bains | Les **thermes** sont des bains publics : lieu d'hygiène et de vie sociale. |
 | Jeux | Au **Colisée** (amphithéâtre) ont lieu les combats de **gladiateurs**. |
 | Courses | Au **Circus Maximus** se déroulent les courses de chars. |
@@ -37,10 +37,10 @@ relu_par: null
 
 ## 3. La société romaine
 - Les **citoyens** (*cives*) ont des droits ; les **esclaves** (*servi*) n'en ont pas et sont la
-  propriété de leur maître. Un esclave affranchi devient un **affranchi** (*libertus*).
+  propriété de leur maître. Un esclave libéré par son maître devient un **affranchi** (*libertus*).
 - Le **forum** est la place centrale : marché, tribunaux, temples et vie politique.
-- Rome fut d'abord une royauté, puis la **République** (magistrats élus, dont les *consuls* et
-  le Sénat), enfin l'**Empire** à partir d'**Auguste** (premier empereur, 27 av. J.-C.).
+- Rome fut d'abord une royauté, puis la **République** (magistrats élus, dont les *consuls*,
+  et Sénat), enfin l'**Empire** à partir d'**Auguste** (premier empereur, 27 av. J.-C.).
 
 ## 4. Les erreurs à éviter
 - Ne pas confondre **domus** (maison de riche) et **insula** (immeuble populaire).

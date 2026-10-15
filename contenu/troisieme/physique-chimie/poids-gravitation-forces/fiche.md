@@ -57,7 +57,7 @@ Comme toute force, le poids est un **vecteur** : il a quatre caractéristiques.
 
 | Caractéristique | Valeur pour le poids |
 |---|---|
-| **Point d'application** | le centre de l'objet |
+| **Point d'application** | le centre de gravité de l'objet |
 | **Direction** | la **verticale** du lieu |
 | **Sens** | vers le bas (vers le centre de la Terre) |
 | **Valeur** | $P$, en **newtons (N)** |
@@ -192,9 +192,9 @@ Un mouvement est dit **uniforme** quand la **valeur** de la vitesse reste **cons
 Un objet est **en équilibre** lorsqu'il est **immobile** (au repos). Cela n'arrive pas par
 hasard : cela signifie que **toutes les forces qu'il subit se compensent**.
 
-$$\boxed{\text{Objet en équilibre} \iff \text{somme des forces} = \vec{0}}$$
+$$\boxed{\text{Objet en équilibre} \Rightarrow \text{les forces se compensent}}$$
 
-Autrement dit, les forces ont la **même valeur**, la **même direction**, mais des **sens
+Avec deux forces, cela veut dire qu'elles ont la **même valeur**, la **même direction**, mais des **sens
 opposés** : elles s'annulent deux à deux.
 
 > **Exemple.** Un lustre suspendu au plafond est immobile. Il subit deux forces :
@@ -228,7 +228,7 @@ opposés** : elles s'annulent deux à deux.
 | Poids | en **N**, **change** selon l'astre |
 | Vecteur vitesse | direction + sens + valeur ($v = d/t$) |
 | Circulaire uniforme | valeur constante mais **direction qui change** |
-| Équilibre | objet immobile $\iff$ somme des forces $= \vec{0}$ |
+| Équilibre | objet immobile $\Rightarrow$ les forces se compensent |
 
 ---
 
