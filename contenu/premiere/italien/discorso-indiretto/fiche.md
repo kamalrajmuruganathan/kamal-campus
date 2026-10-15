@@ -49,7 +49,7 @@ Si le verbe introducteur est au **passé** (*ha detto, disse*), les temps recule
 | Direct | Indirect (passé) |
 |---|---|
 | Présent → **imperfetto** : «Sto bene». | Ha detto che **stava** bene. |
-| Passato prossimo → **trapassato**: «Ho finito». | Ha detto che **aveva finito**. |
+| Passato prossimo → **trapassato** : «Ho finito». | Ha detto che **aveva finito**. |
 | Futur → **condizionale composto** : «Verrò». | Ha detto che **sarebbe venuto**. |
 | Impératif → **di + infinitif** : «Parti!». | Mi ha detto **di partire**. |
 

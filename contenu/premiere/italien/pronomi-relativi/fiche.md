@@ -58,7 +58,7 @@ Pour exprimer la possession (« dont le/la… »), on emploie **cui** entre l'ar
 
 ## 6. Les erreurs à éviter
 - Employer *che* après une préposition : ❌ *L'amico a che scrivo* → ✅ *a **cui** scrivo*.
-- Traduire « dont » par *di che* : selon le sens, c'est *di cui* (*parlo di cui*) ou *il cui* (possession).
+- Traduire « dont » par *di che* : selon le sens, c'est *di cui* (*la ragazza di cui parlo*) ou *il cui* (possession).
 - Accorder *che* ou *cui* : ils sont **invariables**.
 - Oublier de contracter *il quale* avec la préposition : *a + il quale* → **al quale**.
 

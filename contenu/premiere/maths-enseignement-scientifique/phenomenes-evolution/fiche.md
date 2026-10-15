@@ -69,8 +69,8 @@ pas confondre :
 
 > ⚠️ **Le taux marginal n'est pas le taux payé sur l'ensemble du revenu.** Passer dans
 > une tranche à $30\,\%$ ne signifie pas payer $30\,\%$ de tout : seule la part de
-> revenu au-dessus du seuil est concernée. Le taux moyen reste toujours **inférieur**
-> au taux marginal.
+> revenu au-dessus du seuil est concernée. Le taux moyen est donc **inférieur**
+> au taux marginal (dès que le revenu dépasse la première tranche, taxée à $0\,\%$).
 >
 > C'est une confusion très répandue, et le programme la vise explicitement.
 
@@ -90,6 +90,10 @@ La courbe est une **parabole**, avec un sommet — donc un **maximum** ou un **m
 L'abscisse du sommet vaut
 
 $$\alpha = -\frac{b}{2a}$$
+
+Cette formule n'est pas exigible : on peut aussi trouver l'axe de symétrie en résolvant
+$f(x) = c$ (ses deux solutions, $0$ et $-\dfrac{b}{a}$, sont symétriques par rapport à $\alpha$),
+ou en prenant le milieu des deux racines quand $f$ est donnée sous forme factorisée.
 
 > **Ce que le modèle apporte ici** : il décrit un phénomène qui **passe par un optimum**
 > — un bénéfice maximal, une trajectoire de projectile, une hauteur maximale atteinte.
@@ -199,7 +203,7 @@ $R_0$ est le nombre moyen de personnes contaminées par un malade.
 | | |
 |---|---|
 | Affine | accroissement constant, $f(x) = ax+b$ |
-| Taux marginal ≠ taux moyen | le moyen est toujours inférieur |
+| Taux marginal ≠ taux moyen | le moyen est inférieur au marginal |
 | Second degré | admet un optimum, sommet en $-\dfrac{b}{2a}$ |
 | Exponentiel | pourcentage constant, $f(n) = f(0)q^n$ |
 | Demi-vie | divise par $2$ à chaque période, n'atteint jamais $0$ |

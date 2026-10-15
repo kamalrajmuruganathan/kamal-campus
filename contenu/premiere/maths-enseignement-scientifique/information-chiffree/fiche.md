@@ -141,7 +141,7 @@ Quand on compare deux pourcentages, il faut distinguer deux façons de dire l'é
 | L'axe des ordonnées part-il de zéro ? | Un axe tronqué exagère visuellement les écarts |
 | L'échelle est-elle régulière ? | Une échelle qui change fausse la pente perçue |
 | Quelle est la base des pourcentages ? | Sans base, un pourcentage n'informe pas |
-| L'effectif total est-il indiqué ? | $50\,\%$ sur $4$ personnes n'est pas $50\,\%$ sur $4000$ |
+| L'effectif total est-il indiqué ? | $50\,\%$ sur $4$ personnes n'est pas $50\,\%$ sur $4\,000$ |
 | La source et la date ? | Une donnée sans provenance ne se vérifie pas |
 
 ---

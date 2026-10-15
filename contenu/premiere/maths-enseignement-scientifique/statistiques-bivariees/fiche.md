@@ -72,7 +72,8 @@ On y observe :
 $$\boxed{\mathrm{G}\left(\bar{x}\,;\bar{y}\right)}$$
 
 où $\bar x$ et $\bar y$ sont les moyennes de chaque caractère. Le point moyen est le
-« centre de gravité » du nuage — **toute droite d'ajustement doit y passer**.
+« centre de gravité » du nuage — la droite de Mayer et celle des moindres carrés **y passent**,
+et une droite tracée au jugé doit, elle aussi, y passer.
 
 ---
 
@@ -145,7 +146,7 @@ Deux caractères peuvent varier ensemble sans que l'un cause l'autre :
 |---|---|
 | Tableau croisé | trois pourcentages possibles par case |
 | Nuage de points | un individu = un point $(x_i\,;y_i)$ |
-| Point moyen | $\mathrm{G}(\bar x\,;\bar y)$, la droite d'ajustement y passe |
+| Point moyen | $\mathrm{G}(\bar x\,;\bar y)$, les droites d'ajustement y passent |
 | Ajustement affine | $y = ax + b$ |
 | Interpoler | à l'intérieur des données — raisonnable |
 | Extrapoler | au-delà — à justifier avec prudence |

@@ -66,7 +66,7 @@ Au XVIe siècle, les guerres de religion opposent catholiques et protestants en 
 
 - Les **États-Unis** séparent l'Église et l'État (le **premier amendement** de leur Constitution l'affirme), mais la religion reste très présente dans la vie publique.
 - L'**Iran** est une **République islamique** où le pouvoir s'exerce largement au nom de la religion (théocratie).
-- D'autres États conservent une **religion officielle** tout en garantissant des libertés (Royaume-Uni, pays scandinaves).
+- D'autres États conservent une **religion officielle** tout en garantissant des libertés (Royaume-Uni, Danemark).
 
 Ces modèles montrent qu'il n'existe pas une seule façon d'organiser les relations entre États et religions.
 

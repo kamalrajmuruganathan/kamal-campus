@@ -18,7 +18,7 @@ relu_par: null
 # Fonction exponentielle
 
 > La seule fonction qui soit **égale à sa propre dérivée**. C'est cette propriété qui la
-> définit, et tout le reste en découle. Elle modélise ce qui croît proportionnellement à
+> définit, et tout le reste en découle. Elle modélise ce qui varie proportionnellement à
 > sa propre taille : population, capital, désintégration.
 
 ---

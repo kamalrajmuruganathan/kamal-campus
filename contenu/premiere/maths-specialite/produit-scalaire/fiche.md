@@ -37,7 +37,7 @@ problème.
 
 $$\boxed{\vec{u} \cdot \vec{v} = \|\vec{u}\| \times \|\vec{v}\| \times \cos\theta}$$
 
-où $\theta$ est l'angle entre les deux vecteurs.
+où $\theta$ est l'angle entre les deux vecteurs (supposés non nuls ; si l'un est nul, le produit scalaire vaut $0$).
 
 ### b. En base orthonormée — l'expression de calcul
 

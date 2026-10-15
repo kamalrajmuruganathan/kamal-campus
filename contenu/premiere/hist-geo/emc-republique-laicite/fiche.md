@@ -50,7 +50,7 @@ La **loi de 1905** organise la séparation des Églises et de l'État. La laïci
 L'égalité est un principe central de la République :
 
 - **Égalité devant la loi** : la loi est la même pour tous.
-- **Égalité femmes-hommes** : les femmes et les hommes ont les mêmes droits ; en France, les femmes votent depuis 1944.
+- **Égalité femmes-hommes** : les femmes et les hommes ont les mêmes droits ; en France, les femmes ont le droit de vote depuis 1944.
 - **Refus des discriminations** : la loi interdit de traiter différemment une personne en raison de son origine, de son sexe, de sa religion ou d'un handicap.
 
 ## 4. Vocabulaire
@@ -65,4 +65,4 @@ L'égalité est un principe central de la République :
 - La devise de la République est **« Liberté, Égalité, Fraternité »**.
 - La **laïcité** repose sur la **loi de 1905** (séparation des Églises et de l'État) et garantit la liberté de conscience.
 - Tous les citoyens sont **égaux devant la loi** ; les discriminations sont interdites.
-- Les femmes votent en France depuis **1944**.
+- Les femmes ont le droit de vote en France depuis **1944**.
