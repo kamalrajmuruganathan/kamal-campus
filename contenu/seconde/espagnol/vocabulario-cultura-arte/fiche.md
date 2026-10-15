@@ -34,7 +34,7 @@ relu_par: null
 | el lienzo | la toile |
 
 Exemple : *Vamos a ver una exposición de pintura.* → Nous allons voir une exposition de peinture.
-Attention au faux-ami : **el cuadro** = le tableau (peinture), et non « le cadre » au sens de contexte.
+Attention au faux ami : **el cuadro** = le tableau (peinture), et non « le cadre » au sens de contexte.
 
 ## 2. La música, el cine y la literatura
 
@@ -62,8 +62,8 @@ Exemple : *Esta novela ganó un premio importante.* → Ce roman a gagné un pri
 
 - **el papel** = le rôle (au théâtre / cinéma), mais aussi « le papier » : attention au contexte.
 - Ne pas confondre **actuar** (jouer, agir) et **tocar** (jouer d'un instrument) : *Toca la guitarra.*
-- « Réalisateur » se dit **director(a) de cine**, pas *realizador* (rare).
-- **la novela** = le roman (faux-ami : ce n'est pas « la nouvelle », qui se dit *el cuento* ou *el relato*).
+- « Réalisateur » se dit **director(a) de cine**, plutôt que *realizador* (plus rare).
+- **la novela** = le roman (faux ami : ce n'est pas « la nouvelle », qui se dit *el cuento* ou *el relato*).
 
 ## À retenir
 

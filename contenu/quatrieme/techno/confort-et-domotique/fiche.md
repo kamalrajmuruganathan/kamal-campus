@@ -61,7 +61,7 @@ humidité…) en un **signal électrique** utilisable par un programme.
 
 | Capteur | Ce qu'il mesure ou détecte |
 |---|---|
-| Capteur de température (thermistance) | La chaleur |
+| Capteur de température (thermistance) | La température (chaud ou froid) |
 | Capteur de luminosité (photorésistance) | La lumière |
 | Détecteur de mouvement (infrarouge) | La présence d'une personne |
 | Capteur d'humidité | La quantité d'eau dans l'air ou le sol |

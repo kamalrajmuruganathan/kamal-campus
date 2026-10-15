@@ -19,7 +19,7 @@ relu_par: null
 > L'Allemagne d'aujourd'hui, la **Bundesrepublik Deutschland** (République fédérale
 > d'Allemagne), est une **démocratie fédérale**. Sa Constitution, le **Grundgesetz**,
 > date de **1949**. Cette fiche présente ses grandes institutions politiques et
-> quelques repères historiques établis du XXe siècle.
+> quelques repères historiques du XXe siècle.
 
 ## 1. Ein Bundesstaat : l'État fédéral
 
@@ -51,7 +51,7 @@ Le **Bundeskanzler** dirige la politique du gouvernement : c'est la fonction la 
 puissante. Le **Bundespräsident** représente l'État mais gouverne peu. Le premier
 chancelier de la République fédérale fut **Konrad Adenauer**, à partir de **1949**.
 
-## 3. Repères historiques établis
+## 3. Repères historiques
 
 - **1949** : création de deux États allemands, la **Bundesrepublik Deutschland (BRD)**
   à l'ouest et la **Deutsche Demokratische Republik (DDR)** à l'est. C'est la
@@ -63,7 +63,8 @@ chancelier de la République fédérale fut **Konrad Adenauer**, à partir de **
 - **1990** : **réunification** (*die Wiedervereinigung*), le **3 octobre 1990**.
   Ce jour est aujourd'hui la fête nationale : le **Tag der Deutschen Einheit**.
 
-L'Allemagne est un **membre fondateur** de l'Union européenne et sa monnaie est
+L'Allemagne (de l'Ouest) est un **membre fondateur** de la construction européenne (la CEE,
+en 1957, devenue l'Union européenne) et sa monnaie est
 l'**euro** (*der Euro*).
 
 ## 4. Les erreurs à éviter

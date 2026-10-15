@@ -96,8 +96,8 @@ efficace que tout apprendre la veille.
 
 ## Les erreurs à éviter
 
-- **Croire que les messages nerveux vont dans les deux sens dans un même nerf.** Les
-  messages sensitifs vont vers le centre, les moteurs en partent.
+- **Croire qu'un même message nerveux fait l'aller-retour.** Le message sensitif va vers
+  le centre nerveux ; le message moteur est un autre message, qui en part vers le muscle.
 - **Confondre récepteur et effecteur.** Le récepteur détecte (l'œil, la peau) ;
   l'effecteur agit (le muscle).
 - **Penser qu'un réflexe est une décision.** Un réflexe est automatique et involontaire.

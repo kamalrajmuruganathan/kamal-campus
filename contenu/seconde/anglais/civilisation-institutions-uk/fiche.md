@@ -16,7 +16,7 @@ relu_par: null
 
 # Civilisation : institutions et histoire du Royaume-Uni
 
-> Connaître le Royaume-Uni, ce n'est pas seulement savoir parler anglais : c'est comprendre une monarchie constitutionnelle ancienne, quatre nations réunies, et des symboles célèbres dans le monde entier. Cette fiche présente les faits essentiels et vérifiables.
+> Connaître le Royaume-Uni, ce n'est pas seulement savoir parler anglais : c'est comprendre une monarchie constitutionnelle ancienne, quatre nations réunies, et des symboles célèbres dans le monde entier. Cette fiche présente les faits essentiels.
 
 ## 1. Un pays composé de quatre nations
 

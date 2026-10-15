@@ -23,7 +23,7 @@ relu_par: null
 
 ## 1. An island, two territories
 L'Irlande est une **île** de l'océan Atlantique, séparée de la Grande-Bretagne par la
-**Irish Sea** (mer d'Irlande). Il faut distinguer deux territoires :
+**mer d'Irlande** (*Irish Sea*). Il faut distinguer deux territoires :
 
 | Territoire | Statut | Capitale |
 |---|---|---|
@@ -32,15 +32,15 @@ L'Irlande est une **île** de l'océan Atlantique, séparée de la Grande-Bretag
 
 La **République d'Irlande** est membre de l'**Union européenne** et sa monnaie est l'**euro**.
 Ses deux langues officielles sont l'**Irish** (l'irlandais, ou *Gaeilge*) et l'**English**.
-Dublin est traversée par la rivière **Liffey**.
+Dublin est traversée par le fleuve **Liffey** (*the Liffey*).
 
 ## 2. Symbols and traditions
 - Le **drapeau** est un **tricolore vert, blanc et orange** (*green, white and orange*).
 - Le **shamrock** (trèfle à trois feuilles) est un symbole célèbre de l'Irlande.
 - L'emblème officiel est la **harpe** (*the harp*) : l'Irlande est le seul pays au monde à avoir
   un **instrument de musique** pour emblème national.
-- **Saint Patrick** est le saint patron de l'Irlande ; on le fête le **17 March** lors de la
-  **St Patrick's Day**.
+- **Saint Patrick** est le saint patron de l'Irlande ; on le fête le **17 mars** (*17 March*), jour de la
+  **Saint-Patrick** (*St Patrick's Day*).
 
 L'Irlande fait partie du monde **celtique** : on y joue des sports gaéliques comme le **hurling**
 et le **Gaelic football**, et la musique et la danse traditionnelles (*Irish dance*) sont réputées.

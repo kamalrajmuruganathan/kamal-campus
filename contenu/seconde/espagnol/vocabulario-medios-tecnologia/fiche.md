@@ -34,7 +34,7 @@ relu_par: null
 | la emisora de radio | la station de radio |
 
 Exemple : *Leo el periódico todos los días.* → Je lis le journal tous les jours.
-Attention aux faux-amis : **la noticia** = la nouvelle (information), et non « la notice ».
+Attention aux faux amis : **la noticia** = la nouvelle (information), et non « la notice ».
 
 ## 2. La tecnología y las redes sociales
 

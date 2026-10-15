@@ -32,7 +32,7 @@ relu_par: null
 | **Richard Wagner** | romantisme, opéra | *Der Ring des Nibelungen* |
 
 - **Bach** (baroque) est un maître de la **fugue** et de la musique d'orgue.
-- **Beethoven** relie le **classicisme** et le **romantisme** ; sa 9e symphonie chante l'unité.
+- **Beethoven** relie le **classicisme** et le **romantisme** ; sa 9e symphonie, avec l'*Ode à la joie*, chante la fraternité.
 - **Mozart**, né à **Salzburg** (Autriche), est une figure du **classicisme viennois**.
 - **Wagner** a développé un opéra total avec *Der Ring des Nibelungen*.
 
