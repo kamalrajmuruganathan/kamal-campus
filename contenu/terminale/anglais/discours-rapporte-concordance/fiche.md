@@ -43,7 +43,7 @@ En résumé : présent → prétérit ; prétérit / present perfect → past pe
 | must | had to |
 | shall | should |
 
-*Must*, *should*, *would*, *could*, *might* ne changent pas. *"I **can** swim"* → *He said he **could** swim.*
+*Should*, *would*, *could*, *might* ne changent pas ; *must* peut rester *must* ou devenir *had to*. *"I **can** swim"* → *He said he **could** swim.*
 
 ## 3. Repères de temps et de lieu
 

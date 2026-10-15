@@ -54,7 +54,7 @@ humaine et ne se reconstitue pas.
 | **Fossiles** | charbon, pétrole, gaz naturel | matière organique enfouie il y a des millions d'années |
 | **Fissiles** | uranium (et thorium) | minerais radioactifs |
 
-> **Exemple.** Le charbon brûlé aujourd'hui a mis ~300 millions d'années à se former. Une
+> **Exemple.** Une grande partie du charbon brûlé aujourd'hui s'est formée il y a ~300 millions d'années, lentement, sur des millions d'années. Une
 > fois consommé, il ne se refait pas : c'est un **stock** qu'on épuise.
 
 ### Les flux (renouvelables)

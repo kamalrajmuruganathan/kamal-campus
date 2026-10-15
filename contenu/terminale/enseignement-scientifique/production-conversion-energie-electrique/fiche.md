@@ -51,7 +51,7 @@ bobine ne produit rien. C'est le **mouvement**, le **changement**, qui crée la 
 
 Plus le champ magnétique varie **vite**, plus la tension induite est **grande** : on l'augmente
 en déplaçant l'aimant plus rapidement, en le prenant plus puissant, ou en multipliant les spires
-de la bobine. C'est pourquoi la dynamo d'un vélo brille davantage quand on pédale plus fort.
+de la bobine. C'est pourquoi la lampe alimentée par la dynamo d'un vélo brille davantage quand on roule plus vite.
 
 ---
 

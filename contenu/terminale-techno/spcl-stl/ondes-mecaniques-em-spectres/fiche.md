@@ -213,7 +213,7 @@ exactement les longueurs d'onde qu'il émettrait chaud. On voit alors des **raie
 le fond continu, aux **mêmes** positions que les raies d'émission de l'élément.
 
 > **Exemple.** Les **raies de Fraunhofer** — raies noires du spectre du Soleil — révèlent
-> les éléments (hydrogène, hélium, sodium…) présents dans son atmosphère. On identifie ainsi
+> les éléments (hydrogène, sodium, fer, calcium…) présents dans son atmosphère. On identifie ainsi
 > la composition d'une étoile **sans y aller**.
 
 > **À retenir.** Raies d'émission (colorées sur fond noir) et raies d'absorption (noires sur

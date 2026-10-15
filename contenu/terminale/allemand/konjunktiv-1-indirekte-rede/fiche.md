@@ -36,7 +36,7 @@ On part du **radical de l'infinitif** auquel on ajoute les terminaisons `-e, -es
 
 ## 2. Le remplacement par le Konjunktiv II
 
-Le Konjunktiv I n'est distinct de l'indicatif qu'à la **3e personne du singulier** (*er kommt* → *er komme*). Partout où la forme du Konjunktiv I **se confond avec l'indicatif** (surtout au pluriel et à *ich*), on la remplace par le **Konjunktiv II**, ou à défaut par *würde + infinitif*.
+Sauf pour *sein*, le Konjunktiv I ne se distingue vraiment de l'indicatif qu'à la **3e personne du singulier** (*er kommt* → *er komme*) ; les formes en *-est* et *-et* (*du kommest*, *ihr kommet*) sont rares. Partout où la forme du Konjunktiv I **se confond avec l'indicatif** (surtout au pluriel et à *ich*), on la remplace par le **Konjunktiv II**, ou à défaut par *würde + infinitif*.
 
 | Direct | Konjunktiv I ? | Forme retenue |
 |---|---|---|

@@ -21,7 +21,7 @@ relu_par: null
 > Cette fiche présente des repères **notoires** de la langue et de la culture
 > germanophones.
 
-## 1. Wo spricht man Deutsch ? Les pays germanophones
+## 1. Wo spricht man Deutsch? Les pays germanophones
 
 L'allemand est **langue officielle** dans plusieurs pays. On retient souvent le sigle
 **DACH** :
@@ -32,9 +32,9 @@ L'allemand est **langue officielle** dans plusieurs pays. On retient souvent le 
 | **A** | l'Autriche | Österreich |
 | **CH** | la Suisse | die Schweiz |
 
-L'allemand est aussi langue officielle au **Liechtenstein** et au **Luxembourg**, et il
-est parlé dans certaines régions comme le **Tyrol du Sud** (*Südtirol*, en Italie) et
-l'est de la **Belgique**. C'est l'une des langues **maternelles** les plus parlées de
+L'allemand est aussi langue officielle au **Liechtenstein**, au **Luxembourg** et en
+**Belgique** (il y est parlé dans l'est du pays), ainsi que dans certaines régions comme
+le **Tyrol du Sud** (*Südtirol*, en Italie). C'est l'une des langues **maternelles** les plus parlées de
 l'Union européenne.
 
 ## 2. Merkmale der Sprache : particularités de la langue

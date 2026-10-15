@@ -211,7 +211,7 @@ différentes. Même « recette d'atomes », molécules différentes, propriété
   soit le **méthoxyméthane** $\mathrm{CH_3-O-CH_3}$ (éther), un gaz.
 
 > **Exemple.** L'éthanol se boit (avec modération), le méthoxyméthane est un gaz
-> anesthésiant : même $\mathrm{C_2H_6O}$, deux mondes. C'est pourquoi la formule brute
+> utilisé comme propulseur dans les bombes aérosols : même $\mathrm{C_2H_6O}$, deux mondes. C'est pourquoi la formule brute
 > ne suffit **jamais** à identifier une molécule.
 
 ---

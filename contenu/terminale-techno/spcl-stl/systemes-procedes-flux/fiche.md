@@ -105,7 +105,7 @@ C'est le cœur du chapitre côté information : **comment** le correcteur répon
 | Comportement | oscille autour de la consigne | se stabilise, sans à-coups |
 | Exemple | thermostat de fer à repasser, frigo | vanne modulante, variateur de moteur |
 
-En TOR, on ajoute un **hystérésis** (vu en Première) : l'actionneur démarre à un seuil
+En TOR, on ajoute une **hystérésis** (vu en Première) : l'actionneur démarre à un seuil
 bas et s'arrête à un seuil haut, pour éviter qu'il ne claque en permanence autour de la
 consigne.
 

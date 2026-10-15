@@ -164,11 +164,11 @@ La **condensation** est la réaction **inverse** de l'hydrolyse : deux oses se l
 
 $$\boxed{\mathrm{C_6H_{12}O_6 + C_6H_{12}O_6 \;\longrightarrow\; C_{12}H_{22}O_{11} + H_2O}}$$
 
-Deux glucose se condensent en maltose **en libérant de l'eau** : une liaison osidique se forme.
+Deux molécules de glucose se condensent en maltose **en libérant de l'eau** : une liaison osidique se forme.
 
 ### Du glucose au glycogène
 
-En répétant la condensation, l'organisme assemble des milliers de glucose en une longue chaîne
+En répétant la condensation, l'organisme assemble des milliers de molécules de glucose en une longue chaîne
 ramifiée : le **glycogène**. C'est le stockage du sucre dans le **foie** et les **muscles**.
 
 $$n\,\mathrm{C_6H_{12}O_6} \;\longrightarrow\; \text{glycogène} \;+\; (n-1)\,\mathrm{H_2O}$$
@@ -319,7 +319,8 @@ convention, N est exprimé en azote, P en **$\mathrm{P_2O_5}$** et K en **$\math
 3. **Faire figurer l'enzyme dans l'équation-bilan.** C'est un **catalyseur** : elle accélère
    sans être consommée, elle n'y apparaît pas.
 4. **Mélanger mg·L⁻¹ et µg·L⁻¹** pour la potabilité. $1$ µg·L⁻¹ $= 10^{-3}$ mg·L⁻¹ :
-   les pesticides (µg) sont mille fois plus limités que les nitrates (mg).
+   la limite des pesticides ($0{,}1$ µg·L⁻¹) est $500\,000$ fois plus basse que celle des
+   nitrates ($50$ mg·L⁻¹).
 5. **Croire que le sol retient les nitrates.** Le complexe argilo-humique est **négatif** : il
    retient les **cations** ($\mathrm{K^+}$, $\mathrm{Ca^{2+}}$) mais **repousse** les nitrates
    $\mathrm{NO_3^-}$, qui filent vers les nappes.

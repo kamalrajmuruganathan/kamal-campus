@@ -147,7 +147,7 @@ $$\boxed{1\ \text{octet} = 8\ \text{bits}}\qquad (\text{en anglais : } 1\ \text{
 Les **débits** se donnent en **bit/s** (b/s) ; les **tailles de fichiers** en **octets** (o).
 Pour passer de l'un à l'autre, on **multiplie ou divise par 8**.
 
-> **Exemple.** Une «box» annonce $D = 8\ \text{Mbit/s}$. En octets, cela fait
+> **Exemple.** Une « box » annonce $D = 8\ \text{Mbit/s}$. En octets, cela fait
 > $\dfrac{8}{8} = 1\ \text{Mo/s}$ : un fichier de $1\ \text{Mo}$ arrive en une seconde, pas de
 > $8\ \text{Mo}$.
 
@@ -161,9 +161,9 @@ Ainsi $1\ \text{Mbit/s} = 10^{6}\ \text{bit/s}$ et $1\ \text{Go} = 10^{9}\ \text
 
 > ⚠️ **Le préfixe binaire.** Les systèmes d'exploitation comptent parfois en puissances de
 > $2$ : $1\ \text{kio} = 2^{10} = 1024$ octets (kibioctet), $1\ \text{Mio} = 2^{20}$ octets.
-> C'est pour cela qu'un disque «de $500\ \text{Go}$» n'affiche que «$465\ \text{Gio}$». **Par
-> défaut, dans ce cours, k / M / G valent $10^{3}$ / $10^{6}$ / $10^{9}$** ; on précise «kio,
-> Mio…» quand on veut les puissances de $2$.
+> C'est pour cela qu'un disque « de $500\ \text{Go}$ » n'affiche que « $465\ \text{Gio}$ ». **Par
+> défaut, dans ce cours, k / M / G valent $10^{3}$ / $10^{6}$ / $10^{9}$** ; on précise « kio,
+> Mio… » quand on veut les puissances de $2$.
 
 ### Méthode — taille d'un fichier audio
 
@@ -329,7 +329,7 @@ $$\text{taille} = (\text{nombre de pixels}) \times (\text{nombre d'octets par pi
 
 ## 10. Les erreurs qui coûtent des points
 
-1. **Confondre bit et octet.** $1\ \text{octet} = 8\ \text{bits}$. Un débit «$8\ \text{Mbit/s}$»
+1. **Confondre bit et octet.** $1\ \text{octet} = 8\ \text{bits}$. Un débit « $8\ \text{Mbit/s}$ »
    ne fait que $1\ \text{Mo/s}$. Oublier le facteur $8$ fausse toute taille de fichier.
 2. **Mélanger k / M / G décimaux et binaires.** Par défaut $\text{M} = 10^{6}$, pas
    $2^{20}$. N'utilise $1024$ que si l'énoncé parle de **kio / Mio / Gio**.

@@ -39,17 +39,17 @@ Le **Commonwealth of Nations** est une association volontaire de pays, pour la p
 | Pays | Anglais | Capitale | À retenir |
 |---|---|---|---|
 | Royaume-Uni | United Kingdom | London | Berceau de la langue anglaise |
-| États-Unis | United States | Washington, D.C. | Pays anglophone le plus peuplé |
+| États-Unis | United States | Washington, D.C. | Pays qui compte le plus de locuteurs natifs de l'anglais |
 | Canada | Canada | Ottawa | Bilingue : anglais et français |
 | Australie | Australia | Canberra | Ancienne colonie britannique |
 | Nouvelle-Zélande | New Zealand | Wellington | Anglais et maori (*Māori*) |
 | Irlande | Ireland | Dublin | Anglais et irlandais (*Irish*) |
 | Inde | India | New Delhi | Anglais, langue officielle avec le hindi |
-| Afrique du Sud | South Africa | (plusieurs) | Onze langues officielles, dont l'anglais |
+| Afrique du Sud | South Africa | (plusieurs) | Douze langues officielles, dont l'anglais |
 
 Deux repères notoires :
 - En **Inde**, l'anglais est une langue officielle aux côtés du hindi, héritage de la colonisation britannique.
-- En **Afrique du Sud**, l'anglais est l'une des **onze langues officielles** ; **Nelson Mandela**, premier président élu démocratiquement en **1994**, symbolise la fin de l'apartheid.
+- En **Afrique du Sud**, l'anglais est l'une des **douze langues officielles** (onze langues parlées et, depuis 2023, la langue des signes sud-africaine) ; **Nelson Mandela**, premier président élu démocratiquement en **1994**, symbolise la fin de l'apartheid.
 
 ## 4. La diversité de l'anglais
 

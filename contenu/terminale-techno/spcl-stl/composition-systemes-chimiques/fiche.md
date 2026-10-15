@@ -227,7 +227,8 @@ l'**équivalence**. On repère $V_E$ à l'**intersection** des deux droites.
 
 > ⚠️ En conductimétrie, on ne cherche **pas** un saut : on prolonge deux **droites** et on
 > lit leur intersection. Il faut donc des points **avant et après** l'équivalence. Penser
-> aussi à **diluer peu** (ajouter de l'eau) pour que les segments restent bien droits.
+> aussi à ajouter **beaucoup d'eau** dans le bécher au départ : le volume total varie alors
+> peu pendant le dosage et les segments restent bien droits.
 
 ---
 
@@ -281,7 +282,7 @@ Le couple de **plus haut** potentiel impose sa **réduction** (borne $\oplus$) ;
 > $\text{Cu}^{2+} + \text{Zn} \rightarrow \text{Cu} + \text{Zn}^{2+}$.
 
 > ⚠️ La f.é.m. se calcule $E_{\oplus} - E_{\ominus}$ et doit sortir **positive**. Si ton
-> résultat est négatif, tu as **inverti** les bornes : c'est l'autre couple qui est la
+> résultat est négatif, tu as **inversé** les bornes : c'est l'autre couple qui est la
 > cathode.
 
 ---
