@@ -183,8 +183,8 @@ forme de **chaleur**.
 
 ### Définitions
 
-Une transformation chimique s'accompagne toujours d'un **échange d'énergie** avec le
-milieu extérieur, sous forme de chaleur.
+Une transformation chimique ou physique (changement d'état, dissolution) s'accompagne
+d'un **échange d'énergie** avec le milieu extérieur, sous forme de chaleur.
 
 - Une transformation est **exothermique** si elle **libère** de l'énergie vers le
   milieu : le milieu **s'échauffe**.

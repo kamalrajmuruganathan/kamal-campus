@@ -102,7 +102,9 @@ terme $5$ et de raison $3$.
 > def v(n):
 >     return 200 * 1.04 ** n
 > ```
-> `v(0)` renvoie `200.0`, `v(2)` renvoie `216.32`. En Python, la puissance
+> `v(0)` renvoie `200.0`, `v(2)` renvoie environ `216.32` (Python affiche
+> `216.32000000000002` : les calculs sur les décimaux laissent de minuscules
+> erreurs d'arrondi). En Python, la puissance
 > s'écrit `**` et le séparateur décimal est le **point** : `1.04`, pas `1,04`.
 
 ### `return` termine la fonction

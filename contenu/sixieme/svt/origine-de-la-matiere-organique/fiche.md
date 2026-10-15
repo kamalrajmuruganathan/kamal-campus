@@ -53,7 +53,7 @@ Les **animaux** ne savent **pas** fabriquer de matière organique à partir de m
 minérale. Ils doivent la **prélever** en **mangeant** d'autres êtres vivants :
 
 - un herbivore mange des végétaux (matière organique produite par la plante) ;
-- un carnivore mange d'autres animaux (matière organique) ;
+- un carnivore mange d'autres animaux (matière organique).
 
 Les animaux sont donc des **consommateurs** : ils dépendent, directement ou indirectement,
 de la matière organique fabriquée par les végétaux.

@@ -27,7 +27,7 @@ relu_par: null
 
 ## 1. Le nombre e et la fonction exponentielle
 
-Parmi les fonctions exponentielles $x \mapsto a^x$ vues en Première, une
+Parmi les fonctions exponentielles $x \mapsto a^x$ ($a > 0$) du cours de maths, une
 seule est **égale à sa propre dérivée**. Sa base est un irrationnel, noté $e$ :
 
 $$\boxed{e \approx 2{,}718} \qquad \text{(retiens : } e \text{ est entre } 2 \text{ et } 3\text{)}$$

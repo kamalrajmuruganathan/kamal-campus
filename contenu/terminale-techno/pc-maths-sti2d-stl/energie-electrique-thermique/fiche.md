@@ -51,8 +51,8 @@ $$\boxed{U = \frac{U_{\text{max}}}{\sqrt{2}}}$$
 La même relation vaut pour l'intensité : $I = \dfrac{I_{\text{max}}}{\sqrt{2}}$.
 
 > **Exemple.** « 230 V » sur une prise est une valeur **efficace** : la tension
-> monte réellement à $U_{\text{max}} = 230 \times \sqrt{2} \approx 325$ V, cent
-> fois par seconde. ⚠️ Le multimètre en mode alternatif (AC) affiche la valeur
+> monte réellement à $U_{\text{max}} = 230 \times \sqrt{2} \approx 325$ V (puis
+> descend à $-325$ V), $50$ fois par seconde. ⚠️ Le multimètre en mode alternatif (AC) affiche la valeur
 > **efficace** ; l'oscilloscope, lui, montre $U_{\text{max}}$ (et $T$) sur la
 > courbe : divise par $\sqrt{2}$ pour passer de l'un à l'autre.
 

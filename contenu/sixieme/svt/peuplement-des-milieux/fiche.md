@@ -46,7 +46,7 @@ Pour passer la mauvaise saison, les animaux ont différentes **stratégies** :
 - **L'hibernation** (ou vie ralentie l'hiver) : certains animaux passent l'hiver
   **endormis**, cachés dans un abri, en dépensant très peu d'énergie. Exemple : la
   marmotte, le hérisson.
-- **Le changement de forme du corps** : certains changent de fourrure ou de comportement.
+- **Le changement d'aspect ou de comportement** : certains changent de fourrure (plus épaisse en hiver) ou de comportement.
   D'autres restent actifs toute l'année (comme le renard).
 
 Certaines espèces ne sont visibles qu'**à un moment de l'année**. Par exemple, beaucoup

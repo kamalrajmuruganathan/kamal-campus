@@ -256,8 +256,8 @@ Dans « si $P$, alors $Q$ » (vraie) :
 > - $x^2 = 9$ est **nécessaire** pour avoir $x = 3$, mais pas suffisant :
 >   $x = -3$ donne aussi $x^2 = 9$.
 
-> **Exemple de la vie courante.** Avoir 18 ans est **nécessaire** pour passer le
-> permis de conduire en candidat libre, mais pas **suffisant** : il faut aussi
+> **Exemple de la vie courante.** Avoir au moins 17 ans est **nécessaire** pour
+> obtenir le permis de conduire (permis B), mais pas **suffisant** : il faut aussi
 > réussir le code et la conduite.
 
 Pour ne pas les confondre, dans « si $P$ alors $Q$ » : l'hypothèse (à gauche) est
@@ -335,7 +335,7 @@ pas de quantificateurs formels (∀, ∃), pas de notation en compréhension
   probabilités) : le PDF utilise peut-être $\complement_E A$.
 - Le point de vocabulaire « ou inclusif » et le lien affectation Python / statut du
   signe égal : présents dans les préambules habituels, à confirmer sur ce programme.
-- L'exemple du permis à 18 ans (candidat libre) : simplification assumée d'une règle
+- L'exemple du permis à 17 ans (âge minimal du permis B depuis 2024) : simplification assumée d'une règle
   administrative, à valider comme illustration.
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.

@@ -80,8 +80,9 @@ $$\boxed{\text{Les deux asymptotes de la courbe de } x \mapsto \frac{1}{x} \text
 > de monde, la part de chacun devient minuscule (proche de $0$) ; avec très peu
 > de monde, elle explose. Les deux comportements aux bornes en une phrase.
 
-⚠️ Une asymptote est une droite dont la courbe **se rapproche indéfiniment** :
-la courbe ne la touche jamais, ne la coupe jamais.
+⚠️ Une asymptote est une droite dont la courbe **se rapproche indéfiniment**.
+Ici, la courbe ne touche jamais ses asymptotes : $\dfrac{1}{x}$ ne vaut jamais $0$
+et $x = 0$ n'a pas d'image.
 
 ---
 

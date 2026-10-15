@@ -208,7 +208,7 @@ versements, sur les $n$ premières années.**
 >   $u_{11} = 1800 \times 1{,}02^{11}$ (le $12^{\text{e}}$ mois est le rang $11$
 >   si le premier est $u_0$).
 > - « Combien a-t-il perçu en tout sur l'année ? » → une **somme** de $12$ termes :
->   $S = 1800 \times \dfrac{1 - 1{,}02^{12}}{1 - 1{,}02} \approx 24\,143$ €.
+>   $S = 1800 \times \dfrac{1 - 1{,}02^{12}}{1 - 1{,}02} \approx 24\,142$ €.
 
 ⚠️ Avant toute formule, **compte les termes** : de $u_0$ à $u_{n}$ inclus, il y a
 $n + 1$ termes ; de $u_1$ à $u_n$ inclus, il y en a $n$.
@@ -283,7 +283,7 @@ conformément au texte (pas de raison négative) ; convention « n premiers term
 
 Vérifications numériques faites : √2,16 ≈ 1,4697 ; 1+…+100 = 5050 ;
 12×(50+160)/2 = 1260 ; 2^10−1 = 1023 ; 1,1^4 = 1,4641 → 46 410 ;
-1800×(1,02^12−1)/0,02 = 24 143,4 → ≈ 24 143 €.
+1800×(1,02^12−1)/0,02 = 24 141,76 → ≈ 24 142 €.
 
 ⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
 - La convention « n premiers termes » (u_0 à u_{n-1} vs u_1 à u_n) : le PDF donne

@@ -81,7 +81,7 @@ Traduction visuelle, avec la lampe torche face à un mur :
 - **Hyperbole** ($\beta < \alpha$) : plan si redressé qu'il **coupe les deux
   nappes** (cas limite : plan parallèle à l'axe). **Deux branches** séparées.
 
-Repère pratique : cercle et ellipse sont **fermées**, parabole et hyperbole
+Repère pratique : cercle et ellipse sont **fermés**, parabole et hyperbole
 **ouvertes**, à branches infinies.
 
 > **Exemple.** Une applique murale conique éclaire vers le haut et le bas. Le

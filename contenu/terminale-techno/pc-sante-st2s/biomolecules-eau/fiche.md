@@ -23,13 +23,13 @@ relu_par: null
 
 > Le chapitre précédent t'a appris à **nommer les fonctions** d'une molécule organique. On
 > passe maintenant aux molécules du **vivant** : celles que tu manges, que ton corps
-> fabrique, que le laboratoire dose. Toutes se rangent en quatre familles — **glucides,
+> fabrique, que le laboratoire dose. Toutes se rangent en cinq familles — **glucides,
 > lipides, protéines**, plus l'**urée** et les **vitamines** — et toutes baignent dans le
 > même solvant, l'**eau**, dont les propriétés commandent la biologie tout entière.
 
 Tu ne pars pas de rien : reconnais dans ce chapitre l'**ester** (triglycérides), l'**amide**
-(liaison peptidique), l'**acide carboxylique** et l'**amine** (acides aminés) vus dans
-`molecules-organiques`. Ce sont les mêmes fonctions, appliquées au corps humain.
+(liaison peptidique), l'**acide carboxylique** et l'**amine** (acides aminés) vus dans le
+chapitre « Molécules organiques ». Ce sont les mêmes fonctions, appliquées au corps humain.
 
 ---
 
