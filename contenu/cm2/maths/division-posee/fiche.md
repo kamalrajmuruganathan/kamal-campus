@@ -46,7 +46,7 @@ plus grand ou égal au diviseur, c'est qu'on aurait pu partager davantage.
 On divise **chiffre par chiffre, en partant de la gauche**. Prenons 84 ÷ 4.
 
 ```
-  84 | 4
+  84  | 4
  -8   |----
  --   | 21
   04

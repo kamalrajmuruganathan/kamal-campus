@@ -44,7 +44,7 @@ Certaines figures ont plusieurs axes de symétrie :
 - le **rectangle** (non carré) en a **2** ;
 - le **losange** (non carré) en a **2** ;
 - le **triangle équilatéral** en a **3** ;
-- le **triangle isocèle** en a **1** ;
+- le **triangle isocèle** (non équilatéral) en a **1** ;
 - le **triangle quelconque** (scalène) en a **0** ;
 - un **polygone régulier** a autant d'axes que de côtés (pentagone : 5, hexagone :
   6) ;

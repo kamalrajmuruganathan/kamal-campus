@@ -63,8 +63,8 @@ Ajouter **0**, cela ne change rien : 7 + 0 = 7.
 
 ## Les erreurs à éviter
 
-- Ne pas **oublier de compter le premier nombre** : pour 3 + 2, on part de 3, on
-  ajoute seulement 2 crans (pas 3).
+- Ne pas **recompter le nombre de départ** : pour 3 + 2, on part de 3 et on
+  avance de 2 crans (« 4, 5 »), on ne dit pas « 3, 4 ».
 - Ne pas **coller les chiffres** : 3 + 2 fait 5, pas 32.
 - Bien compter **une case après l'autre** sur la bande des nombres, sans en
   sauter.

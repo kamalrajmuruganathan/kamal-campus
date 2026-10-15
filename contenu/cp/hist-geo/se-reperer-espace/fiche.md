@@ -32,8 +32,8 @@ autres :
 | sur | sous |
 | près | loin |
 
-La main avec laquelle la plupart des gens écrivent est souvent la main **droite**.
-L'autre est la main **gauche**.
+La plupart des gens écrivent avec la main **droite**.
+L'autre main est la main **gauche**.
 
 ## 2. La classe
 

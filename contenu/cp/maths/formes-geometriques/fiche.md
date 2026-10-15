@@ -38,7 +38,7 @@ Exemple : une porte, une fenêtre, une feuille de cahier.
 ### Le triangle
 
 Le **triangle** a **3 côtés** et **3 coins**.
-Exemple : un panneau routier, un morceau de tarte.
+Exemple : certains panneaux routiers, un morceau de tarte.
 
 ### Le cercle (le rond)
 

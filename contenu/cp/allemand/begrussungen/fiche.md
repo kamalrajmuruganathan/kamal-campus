@@ -45,7 +45,7 @@ Les mots polis : **bitte** (s'il te plaît / je t'en prie), **danke** (merci), *
 
 ## 3. Les erreurs à éviter
 - « je m'appelle » se dit **ich heiße** : le verbe s'écrit avec **ß** (heiße).
-- Le matin on dit **Guten Morgen**, pas *Gute Morgen* (Morgen prend une majuscule).
+- Le matin on dit **Guten Morgen**, pas *Gute Morgen* : on écrit **Guten** avec un **n**, comme dans Guten Tag et Guten Abend.
 - **Tschüss** s'emploie entre copains ; à un adulte, on préfère **Auf Wiedersehen**.
 
 ## À retenir

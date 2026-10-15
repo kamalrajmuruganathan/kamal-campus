@@ -39,7 +39,7 @@ On place souvent la couleur **après** le nom :
 ## 3. Les erreurs à éviter
 - **blu** et **azzurro** sont deux bleus : *azzurro* = bleu ciel, plus clair.
 - Attention : en italien, la couleur se met souvent **après** le nom (« la macchina rossa » = la voiture rouge).
-- **bianco** = blanc (le « ch » n'existe pas ici, on écrit *bianco*).
+- **bianco** = blanc : le « c » se prononce « k » (*bi-an-ko*).
 
 ## À retenir
 - Les couleurs de base : **rosso, blu, giallo, verde, nero, bianco**.

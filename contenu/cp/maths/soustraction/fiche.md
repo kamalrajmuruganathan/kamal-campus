@@ -41,7 +41,7 @@ Pour calculer 7 − 2, on part de 7 et on **recule** de 2 crans :
 On peut s'aider :
 
 - de ses **doigts** (on baisse un doigt à chaque cran),
-- de la **bande des nombres** (on avance vers la **gauche**),
+- de la **bande des nombres** (on recule vers la **gauche**),
 - de **jetons** que l'on retire.
 
 ## Enlever tout, enlever rien

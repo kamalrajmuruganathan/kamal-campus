@@ -45,7 +45,7 @@ On peut dire : **The sky is blue.** (Le ciel est bleu.)
 **The grass is green.** (L'herbe est verte.) **The snow is white.** (La neige est blanche.)
 
 ## Les erreurs à éviter
-- **red** (rouge) ne se dit pas comme *read* : attention à bien dire *rèd*.
+- **red** (rouge) se dit *rèd*, avec un son *è* bien court.
 - **white** (blanc) commence par le son *w* : *ouaït*.
 - **green** (vert) et **grey** (gris) commencent pareil mais sont différents.
 

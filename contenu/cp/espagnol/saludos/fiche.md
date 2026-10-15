@@ -44,7 +44,7 @@ Pour dire son prénom, on utilise **me llamo** (« je m'appelle »).
 Les mots polis : **por favor** (s'il te plaît), **gracias** (merci), **de nada** (de rien).
 
 ## 3. Les erreurs à éviter
-- On écrit **¡Hola!** sans « h » qui se prononce : on dit « ola ».
+- On écrit **¡Hola!** avec un « h », mais ce « h » ne se prononce pas : on dit « ola ».
 - « Bonjour » le matin se dit **buenos días** (au pluriel en espagnol). En Amérique latine, on entend aussi *buen día*.
 - **Gracias** s'écrit avec un **-s** à la fin.
 

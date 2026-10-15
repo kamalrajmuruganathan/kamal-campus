@@ -43,7 +43,7 @@ Pour dire de quelle couleur est une chose, on utilise **es** (« est ») :
 *La flor es roja.* (« La fleur est rouge. »)
 
 ## 3. Les erreurs à éviter
-- **azul** = bleu, à ne pas confondre avec le français.
+- **azul** = bleu (il ressemble au mot français « azur », le bleu du ciel).
 - **verde** (vert) finit par « -e ».
 - Beaucoup de couleurs changent au féminin : *rojo* → *roja*, *blanco* → *blanca*.
 
