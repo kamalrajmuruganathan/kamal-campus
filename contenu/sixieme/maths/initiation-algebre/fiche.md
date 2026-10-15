@@ -34,10 +34,10 @@ les choses sont reliées* et *comment elles évoluent*.
 > de Léa, ni celui de Tom. Mais tu connais déjà une **relation** entre les deux :
 > l'écart est de $2$. C'est déjà de la pensée algébrique.
 
-> ⚠️ **En 6e, on n'utilise pas de lettres comme $x$.** Les lettres «&nbsp;officielles&nbsp;»
-> (le calcul littéral) arrivent seulement au cycle 4, en 5e-4e-3e. Ici, on reste sur du
-> **concret et du visuel**. Une quantité inconnue s'exprime avec des **mots**, des
-> **dessins** ou des **schémas** — pas avec des lettres.
+> ⚠️ **En 6e, les lettres comme $x$ ne sont pas l'objectif.** Le calcul littéral
+> (avec des lettres) n'est introduit de façon formelle qu'au cycle 4, en 5e-4e-3e. Ici, on
+> reste surtout sur du **concret et du visuel** : une quantité inconnue s'exprime avec des
+> **mots**, des **dessins**, une **case** ou des **schémas** (parfois un symbole).
 
 ---
 
@@ -178,7 +178,7 @@ l'ordre inverse** pour retrouver le nombre de départ.
 | Régularité | ce qui **se répète** d'une étape à la suivante (on ajoute ? on multiplie ?) |
 | Structure | la relation entre **le numéro de l'étape** et **le résultat** |
 | Schéma en barres | des **rectangles partagés en parts égales** pour voir et résoudre un problème |
-| Lettres ($x$) | **pas en 6e** — elles arrivent au cycle 4 |
+| Lettres ($x$) | pas encore de calcul littéral en 6e — il arrive au cycle 4 |
 
 ---
 
@@ -191,8 +191,8 @@ l'ordre inverse** pour retrouver le nombre de départ.
 4. **Oublier le «&nbsp;+ quelque chose&nbsp;» de la structure** : écrire « le triple du
    numéro » alors que c'est « le triple du numéro **plus 1** ».
 5. **Remonter dans le mauvais ordre** : diviser avant d'enlever, au lieu de l'inverse.
-6. **Vouloir utiliser des lettres comme $x$** : hors programme en 6e, on reste sur mots,
-   dessins et schémas.
+6. **Se précipiter sur des lettres comme $x$** : en 6e, on raisonne d'abord avec des mots,
+   des dessins et des schémas.
 
 ---
 

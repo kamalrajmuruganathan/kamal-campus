@@ -95,7 +95,7 @@ $$\boxed{\frac{a}{b} = a \div b}$$
 C'est le nombre qui, **multiplié par $b$, redonne $a$**.
 
 > **Exemple.** $\dfrac{3}{4}$ est le nombre qui multiplié par $4$ donne $3$.
-> On peut le vérifier plus tard, mais c'est déjà ce que dit la définition : partager $3$
+> On peut le vérifier : $4 \times 0{,}75 = 3$. C'est aussi ce qu'on obtient en partageant $3$
 > en $4$ parts égales.
 
 ### Les égalités à trous
@@ -113,8 +113,8 @@ Une fraction $\dfrac{a}{b}$ peut représenter :
 | La fraction | Ce que ça donne | Genre de nombre |
 |---|---|---|
 | $\dfrac{6}{3}$ | $6 \div 3 = 2$ | un **entier** |
-| $\dfrac{5}{2}$ | $5 \div 2 = 2,5$ | un **décimal** non entier |
-| $\dfrac{1}{3}$ | $1 \div 3 = 0,333\ldots$ | un nombre **non décimal** (ça ne s'arrête pas) |
+| $\dfrac{5}{2}$ | $5 \div 2 = 2{,}5$ | un **décimal** non entier |
+| $\dfrac{1}{3}$ | $1 \div 3 = 0{,}333\ldots$ | un nombre **non décimal** (ça ne s'arrête pas) |
 
 ---
 
@@ -123,7 +123,7 @@ Une fraction $\dfrac{a}{b}$ peut représenter :
 Une **fraction décimale** a pour dénominateur $10$, $100$, $1000$… Elle se traduit
 directement en écriture à virgule.
 
-$$\frac{3}{10} = 0,3 \qquad \frac{27}{100} = 0,27 \qquad \frac{9}{1000} = 0,009$$
+$$\frac{3}{10} = 0{,}3 \qquad \frac{27}{100} = 0{,}27 \qquad \frac{9}{1000} = 0{,}009$$
 
 > **La règle des chiffres.** Le nombre de zéros du dénominateur = le nombre de chiffres
 > après la virgule. $/100$ → **deux** chiffres après la virgule.
@@ -132,10 +132,10 @@ $$\frac{3}{10} = 0,3 \qquad \frac{27}{100} = 0,27 \qquad \frac{9}{1000} = 0,009$
 
 Certaines fractions simples valent un nombre décimal facile à retenir :
 
-$$\frac{1}{4} = 0,25 \qquad \frac{1}{2} = 0,5 \qquad \frac{3}{4} = 0,75$$
-$$\frac{3}{2} = 1,5 \qquad \frac{4}{2} = 2 \qquad \frac{5}{2} = 2,5$$
+$$\frac{1}{4} = 0{,}25 \qquad \frac{1}{2} = 0{,}5 \qquad \frac{3}{4} = 0{,}75$$
+$$\frac{3}{2} = 1{,}5 \qquad \frac{4}{2} = 2 \qquad \frac{5}{2} = 2{,}5$$
 
-> **Pourquoi ça marche.** Grâce au sens quotient : $\dfrac{1}{4} = 1 \div 4 = 0,25$.
+> **Pourquoi ça marche.** Grâce au sens quotient : $\dfrac{1}{4} = 1 \div 4 = 0{,}25$.
 
 ---
 
@@ -189,7 +189,7 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
 - **Une fraction peut être plus grande que 1** : $\dfrac{7}{4}$, $\dfrac{5}{2}$…
 - **Toutes les fractions ne sont pas décimales** : $\dfrac{1}{3}$ ne s'écrit pas
   exactement avec une virgule.
-- **La même valeur a plusieurs écritures** : $\dfrac{1}{2}$, $\dfrac{2}{4}$, $0,5$
+- **La même valeur a plusieurs écritures** : $\dfrac{1}{2}$, $\dfrac{2}{4}$, $0{,}5$
   sont trois écritures du **même** nombre.
 
 ---
@@ -202,8 +202,8 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
 | Numérateur / dénominateur | parts prises / nombre de parts |
 | Fraction = quotient | $\dfrac{a}{b} = a \div b$ |
 | Placer sur une demi-droite | partager l'unité en $b$, compter $a$ crans |
-| Fraction décimale | $\dfrac{27}{100} = 0,27$ |
-| À savoir par cœur | $\dfrac{1}{4}=0,25$ ; $\dfrac{1}{2}=0,5$ ; $\dfrac{3}{4}=0,75$ |
+| Fraction décimale | $\dfrac{27}{100} = 0{,}27$ |
+| À savoir par cœur | $\dfrac{1}{4}=0{,}25$ ; $\dfrac{1}{2}=0{,}5$ ; $\dfrac{3}{4}=0{,}75$ |
 | Fractions égales | multiplier haut **et** bas par le même nombre |
 | Comparer à 1 | $a < b \Rightarrow \dfrac{a}{b} < 1$ |
 
@@ -214,8 +214,8 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
 1. **Inverser numérateur et dénominateur** : $\dfrac{3}{5}$, c'est $5$ parts dont on
    prend $3$, pas l'inverse.
 2. **Écrire un dénominateur nul.** On ne partage jamais en $0$ part.
-3. **Coller les chiffres pour l'écriture décimale** : $\dfrac{3}{4}$ ne fait pas $0,34$.
-   C'est $3 \div 4 = 0,75$.
+3. **Coller les chiffres pour l'écriture décimale** : $\dfrac{3}{4}$ ne fait pas $0{,}34$.
+   C'est $3 \div 4 = 0{,}75$.
 4. **Ne multiplier que le haut** (ou que le bas) en cherchant une fraction égale : il
    faut agir sur les deux.
 5. **Croire que toute fraction est un nombre décimal** : $\dfrac{1}{3}$ ne l'est pas.

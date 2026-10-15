@@ -61,7 +61,7 @@ Après le verbe, on trouve souvent des **compléments**.
 | COI (complément d'objet indirect) | à qui ? à quoi ? de quoi ? | Léa parle **à son frère**. |
 | Complément circonstanciel | quand ? où ? comment ? | Léa lit **le soir**, **dans sa chambre**. |
 
-Le COD et le COI sont **essentiels** (on ne peut pas les supprimer). Les compléments circonstanciels sont souvent **déplaçables et supprimables** : *Le soir, Léa lit.*
+Le COD et le COI sont **essentiels** (en général, on ne peut ni les supprimer ni les déplacer). Les compléments circonstanciels sont souvent **déplaçables et supprimables** : *Le soir, Léa lit.*
 
 ## 5. Les erreurs à éviter
 

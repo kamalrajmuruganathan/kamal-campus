@@ -161,7 +161,7 @@ $$4 \text{ personnes} \xrightarrow{\ \times 2\ } 8 \text{ personnes}
 Une **échelle** sert à représenter en petit une distance réelle, en gardant les
 proportions. C'est de la proportionnalité entre le dessin et la réalité.
 
-> **Exemple.** Sur une carte, $1$ cm représente $100$ cm en vrai (soit $1$ m).
+> **Exemple.** Sur un plan, $1$ cm représente $100$ cm en vrai (soit $1$ m).
 > - $3$ cm sur la carte $\rightarrow 3 \times 100 = 300$ cm $= 3$ m en réalité
 > - $5$ cm sur la carte $\rightarrow 500$ cm $= 5$ m en réalité
 >

@@ -124,8 +124,8 @@ $1\ \text{dm}^2 = 0{,}01\ \text{m}^2$.
 > différence avec les longueurs. Dans un tableau de conversion d'aires, on met **deux
 > chiffres par colonne**.
 
-| m² | dm² | cm² |
-|----|-----|-----|
+| m² | dm² | cm² | |
+|----|-----|-----|---|
 | 3  | 00  |     | ← $3\ \text{m}^2 = 300\ \text{dm}^2 = 30\,000\ \text{cm}^2$ |
 
 ### L'aire du carré et du rectangle

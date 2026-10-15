@@ -63,7 +63,7 @@ Pour tester le 2e groupe : *nous finissons* → oui ; *nous partons* (sans -iss-
 ## 5. Les erreurs à éviter
 
 - **je** au 1er groupe → **-e**, jamais **-es** : *je chante*, pas *je chantes*.
-- **il/elle** au 1er groupe → **-e** ; au 2e et 3e groupe → **-t/-d** : *il finit*, *il prend*.
+- **il/elle** au 1er groupe → **-e** ; au 2e groupe → **-t** ; au 3e groupe, le plus souvent **-t/-d** : *il finit*, *il prend* (mais *il va*, *il ouvre*).
 - Ne pas oublier le **-iss-** du 2e groupe au pluriel : *nous finissons*, *ils finissent*.
 - Verbes en **-ger** : on garde le **e** devant *-ons* (*nous mangeons*). Verbes en **-cer** : *ç* devant *-ons* (*nous plaçons*).
 - *tu* prend **toujours** un **-s** (sauf *tu peux, tu veux, tu vaux* qui prennent -x).
@@ -71,6 +71,6 @@ Pour tester le 2e groupe : *nous finissons* → oui ; *nous partons* (sans -iss-
 ## À retenir
 
 - Trois groupes : **-er** (1er), **-ir** avec *-issons* (2e), autres **-ir/-re/-oir** + *aller* (3e).
-- Au 1er groupe : *je/il* en **-e** ; au 2e/3e : *il* en **-t** ou **-d**.
+- Au 1er groupe : *je/il* en **-e** ; au 2e/3e : *il* le plus souvent en **-t** ou **-d**.
 - Le 2e groupe garde **-iss-** au pluriel : *nous finissons*.
 - Le présent peut exprimer l'actualité, l'habitude ou une vérité générale.

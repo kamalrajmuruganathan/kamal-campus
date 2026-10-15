@@ -59,7 +59,7 @@ Et pour les grandes durées :
 $$1 \text{ semaine} = 7 \text{ jours} \qquad 1 \text{ siècle} = 100 \text{ ans} \qquad 1 \text{ millénaire} = 1000 \text{ ans}$$
 
 > **Attention aux années.** Une année ordinaire compte **365 jours**. Une année
-> **bissextile** (tous les 4 ans, comme 2024 ou 2028) en compte **366** : on ajoute
+> **bissextile** (en général tous les 4 ans, comme 2024 ou 2028) en compte **366** : on ajoute
 > le 29 février.
 
 ---
@@ -94,8 +94,8 @@ Attention à ne pas confondre deux choses différentes :
 > la grande donne les minutes. Sur un affichage digital, `14:05` se lit
 > « 14 heures 5 » (soit 2 h 05 de l'après-midi).
 
-Une même heure peut s'écrire de deux façons : le matin **8 h 30**, l'après-midi la
-même position d'aiguilles donne **20 h 30** (on ajoute 12 h l'après-midi).
+Une même position des aiguilles correspond à deux horaires : le matin **8 h 30**, le soir
+**20 h 30** (l'après-midi et le soir, on ajoute 12 h).
 
 ---
 
@@ -188,9 +188,9 @@ Beaucoup de problèmes enchaînent plusieurs durées. La stratégie :
 
 ## 10. Les erreurs qui coûtent des points
 
-1. **Traiter les heures-minutes comme des nombres décimaux.** $1,5$ h **n'est pas**
+1. **Traiter les heures-minutes comme des nombres décimaux.** $1{,}5$ h **n'est pas**
    1 h 50 min ! La virgule veut dire « une heure et **demie** », donc
-   $1,5 \text{ h} = 1 \text{ h } 30 \text{ min} = 90$ min. C'est l'erreur numéro 1 du
+   $1{,}5 \text{ h} = 1 \text{ h } 30 \text{ min} = 90$ min. C'est l'erreur numéro 1 du
    chapitre.
 
 2. **Écrire un résultat avec plus de 59 minutes.** $2 \text{ h } 90 \text{ min}$ n'est

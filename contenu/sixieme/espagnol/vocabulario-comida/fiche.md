@@ -9,7 +9,7 @@ programme: "Programme de langues vivantes — cycle 3, CECRL A1"
 duree_lecture_min: 12
 prerequis:
   - Connaître les articles définis (el, la, los, las)
-  - Savoir compter et employer le verbe querer (je voudrais)
+  - Savoir compter et employer le verbe querer (vouloir)
 statut: brouillon
 relu_par: null
 ---
@@ -60,7 +60,7 @@ Pour commander ou proposer, on utilise souvent : *Quiero...* (je veux), *Me gust
 ## 5. Les erreurs à éviter
 - On dit **tengo hambre** (j'ai faim) et **tengo sed** (j'ai soif) avec *tener*, pas avec *ser* ni *estar*.
 - **la comida** signifie à la fois « la nourriture » et « le déjeuner » selon le contexte.
-- **el zumo** = le jus (de fruit) ; ne pas confondre avec *el jugo* (surtout en Amérique latine).
+- **el zumo** = le jus (de fruit) en Espagne ; en Amérique latine, on dit plutôt *el jugo* (même sens).
 - **el pescado** = le poisson qu'on mange ; **el pez** = le poisson vivant.
 
 ## À retenir

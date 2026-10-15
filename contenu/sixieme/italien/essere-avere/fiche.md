@@ -44,7 +44,7 @@ relu_par: null
 | voi | avete | **Voi avete** ragione. | Vous avez raison. |
 | loro | hanno | **Loro hanno** due gatti. | Ils ont deux chats. |
 
-Le **h** de *ho, hai, ha, hanno* ne se prononce jamais : il est **muet**. Il sert seulement à distinguer ces formes d'autres petits mots (*o* = ou, *ai* = à les…).
+Le **h** de *ho, hai, ha, hanno* ne se prononce jamais : il est **muet**. Il sert seulement à distinguer ces formes d'autres petits mots (*o* = ou, *ai* = aux…).
 
 ## 3. Dire son âge : avere + anni
 
@@ -53,7 +53,7 @@ En italien, on n'**est** pas un âge, on l'**a** :
 | Italien | Traduction |
 |---|---|
 | **Ho** dodici **anni**. | J'ai douze ans. |
-| **Hai** quanti anni? | Tu as quel âge ? |
+| Quanti anni **hai**? | Tu as quel âge ? |
 | Mia sorella **ha** dieci anni. | Ma sœur a dix ans. |
 
 ## 4. Les erreurs à éviter

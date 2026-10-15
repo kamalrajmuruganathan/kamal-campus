@@ -46,8 +46,8 @@ Chaque partie de la plante a un rôle :
 
 - Les **racines** : elles **fixent** la plante dans le sol et **absorbent** l'eau et les
   sels minéraux.
-- La **tige** : elle **porte** les feuilles et les fleurs, et **transporte** l'eau et la
-  sève entre les racines et les feuilles.
+- La **tige** : elle **porte** les feuilles et les fleurs, et **transporte** la sève
+  (l'eau, les sels minéraux et la matière fabriquée) entre les racines et les feuilles.
 - Les **feuilles** : elles **captent la lumière**, prélèvent le **dioxyde de carbone** de
   l'air et fabriquent la matière de la plante.
 

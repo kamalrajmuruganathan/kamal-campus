@@ -177,8 +177,8 @@ Pour comparer deux nombres décimaux :
 (ordre croissant) ou l'inverse (ordre décroissant).
 
 > **Exemple, ordre croissant.**
-> $$1{,}9 < 2{,}07 < 2{,}7 < 2{,}70\ ? \;\Rightarrow\; 1{,}9 < 2{,}07 < 2{,}7$$
-> et $2{,}7 = 2{,}70$ : ce sont deux écritures du même nombre.
+> $$1{,}9 < 2{,}07 < 2{,}7$$
+> Et $2{,}70$ ? Il est égal à $2{,}7$ : ce sont deux écritures du même nombre.
 
 ---
 

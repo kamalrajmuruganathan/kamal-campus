@@ -129,7 +129,7 @@ milieu (ici $B$). On le mesure en **degrés** ($^\circ$) avec un rapporteur.
 | **plat** | $180^\circ$ (les deux côtés forment une droite) |
 | **plein** | $360^\circ$ (un tour complet) |
 
-Deux angles particuliers à repérer :
+Des paires d'angles particulières à repérer :
 
 - **Angles opposés par le sommet** : formés par deux droites qui se croisent, de part
   et d'autre du point. Ils sont **égaux**.

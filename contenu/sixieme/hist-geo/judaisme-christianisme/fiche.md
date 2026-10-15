@@ -36,7 +36,7 @@ dans la **Bible hébraïque**, dont la première partie est la **Torah**. La vil
 Le christianisme naît au **Ier siècle après J.-C.** en **Judée**, alors une province
 de l'**Empire romain**. Il se réclame de **Jésus de Nazareth**, que ses disciples
 appellent le Christ. Après sa mort, ses **apôtres** diffusent son message. Les récits
-de sa vie sont écrits dans les **Évangiles**, qui forment le **Nouveau Testament**.
+de sa vie sont écrits dans les **Évangiles**, qui font partie du **Nouveau Testament**.
 Les croyants sont appelés les **chrétiens** et se réunissent dans une **église**.
 
 ## 4. La diffusion dans l'Empire romain

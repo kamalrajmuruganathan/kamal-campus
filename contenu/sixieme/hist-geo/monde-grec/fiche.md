@@ -16,7 +16,7 @@ relu_par: null
 
 # Le monde des cités grecques
 
-> Il y a plus de 2500 ans, les Grecs vivent dans de nombreuses cités autour de la
+> Il y a plus de 2 500 ans, les Grecs vivent dans de nombreuses cités autour de la
 > Méditerranée. Ils partagent une langue, des dieux et des récits communs, et
 > inventent à Athènes une nouveauté : la démocratie.
 
@@ -42,7 +42,8 @@ Malgré leurs rivalités, les Grecs se sentent proches car ils partagent :
 
 Au Ve siècle avant J.-C., **Athènes** invente la **démocratie** (du grec *dêmos*, le
 peuple, et *kratos*, le pouvoir) : les **citoyens** votent les lois et prennent les
-décisions à l'**agora** et à l'assemblée. Attention : tous les habitants ne sont pas
+décisions en **assemblée** (l'**Ecclésia**, réunie sur la colline de la Pnyx) ; ils se
+retrouvent aussi sur l'**agora**, la grande place publique, pour discuter et commercer. Attention : tous les habitants ne sont pas
 citoyens (les femmes, les esclaves et les étrangers ne votent pas). **Périclès** est
 un dirigeant célèbre d'Athènes à cette époque.
 

@@ -43,7 +43,7 @@ Le passé simple raconte les **actions principales**, brèves, qui font **avance
 |---|---|---|---|
 | 1er (-er) | -a | -èrent | il chant**a**, ils chant**èrent** |
 | 2e (-ir) | -it | -irent | il fin**it**, ils fin**irent** |
-| 3e (souvent) | -it / -ut | -irent / -urent | il part**it**, il v**int**, il f**ut** |
+| 3e (souvent) | -it / -ut / -int | -irent / -urent / -inrent | il part**it**, il f**ut**, il v**int** |
 
 Verbes fréquents : *il fut* (être), *il eut* (avoir), *il fit* (faire), *il vint* (venir), *il prit* (prendre).
 
