@@ -87,7 +87,7 @@ Exemple : *The wolf lives in the forest.* → Le loup vit dans la forêt.
   **a wolf → wolves**, **a fox → foxes**, **a mouse → mice**.
 - « a deer » est invariable au pluriel : *two deer*.
 - Ne confonds pas *a hen* (une poule) et *a chicken* (un poulet).
-- Attention à l'orthographe de *mountain*, *butterfly*, *island* (le « s » ne se prononce pas).
+- Attention à l'orthographe de *mountain*, *butterfly* et *island* (dans *island*, le « s » ne se prononce pas).
 
 ## À retenir
 

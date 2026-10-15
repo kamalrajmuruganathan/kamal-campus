@@ -39,11 +39,11 @@ On emploie **nicht** pour nier un **verbe**, un **adjectif**, un **adverbe** ou 
 | Un adjectif | Er ist **nicht** groß. | Il n'est pas grand. |
 | Un possessif | Das ist **nicht** mein Buch. | Ce n'est pas mon livre. |
 
-Position : *nicht* se place souvent à la fin quand il nie toute la phrase, mais **juste devant** l'élément qu'il nie (adjectif, complément).
+Position : *nicht* se place souvent à la fin quand il nie toute la phrase, et **juste devant** l'élément qu'il nie quand il ne porte que sur une partie (adjectif, complément).
 
 ## 3. nein, nicht ou kein ?
 - **nein** = « non », réponse à une question.
-- **nicht** = « ne...pas » pour un verbe/adjectif.
+- **nicht** = « ne… pas » pour un verbe/adjectif.
 - **kein** = « aucun / pas de » pour un nom.
 
 ## 4. Les erreurs à éviter
@@ -55,4 +55,4 @@ Position : *nicht* se place souvent à la fin quand il nie toute la phrase, mais
 - kein nie un nom (avec ein ou sans article) et se décline comme ein.
 - nicht nie un verbe, un adjectif, un adverbe ou un nom avec article défini/possessif.
 - Jamais *nicht ein* → toujours **kein**.
-- nein = non (réponse) ; nicht = ne...pas ; kein = aucun/pas de.
+- nein = non (réponse) ; nicht = ne… pas ; kein = aucun/pas de.

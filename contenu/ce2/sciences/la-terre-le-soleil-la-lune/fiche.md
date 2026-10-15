@@ -84,7 +84,7 @@ sont les **phases de la Lune** :
 - Le **Soleil** est une **étoile** qui donne lumière et chaleur.
 - La **Terre** tourne **sur elle-même** en 24 h : cela fait le **jour** et la
   **nuit**.
-- La Terre tourne **autour du Soleil** en **un an** : cela fait les **saisons**.
+- La Terre tourne **autour du Soleil** en **un an** : pendant ce tour, les quatre **saisons** se succèdent.
 - La **Lune** tourne autour de la Terre et **renvoie** la lumière du Soleil ;
   sa forme change : ce sont les **phases**.
 

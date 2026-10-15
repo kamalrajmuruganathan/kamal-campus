@@ -77,6 +77,7 @@ Carré de côté 6 cm : 6 × 4 = **24 cm**.
 On pèse avec une **balance**.
 
 - **1 kg = 1 000 g** (le kilogramme et le gramme).
+
 Exemple : un paquet de sucre pèse souvent 1 kg, soit 1 000 g.
 
 ## Les durées
@@ -84,6 +85,7 @@ Exemple : un paquet de sucre pèse souvent 1 kg, soit 1 000 g.
 - **1 heure = 60 minutes**
 - **1 minute = 60 secondes**
 - **1 jour = 24 heures**
+
 Exemple : une récréation de 15 minutes plus une autre de 15 minutes font
 30 minutes en tout.
 

@@ -83,5 +83,5 @@ $\dfrac{4}{4}$ est le bout : c'est 1 tout entier.
   le haut = parts qu'on prend.
 - **Croire qu'un quart est plus grand qu'un demi.** Plus on coupe en parts,
   plus chaque part est petite : $\dfrac{1}{4}$ est plus petit que $\dfrac{1}{2}$.
-- **Confondre la moitié de 10 et la moitié de 2.** La moitié dépend du tout :
+- **Confondre la moitié de 10 et la moitié de 8.** La moitié dépend du tout :
   moitié de 10 = 5, moitié de 8 = 4.

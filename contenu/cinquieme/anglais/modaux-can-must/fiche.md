@@ -47,12 +47,12 @@ Attention au sens de la négation : ***mustn't*** signifie **une interdiction** 
 - **Can** pour demander poliment : *Can I open the window?* (Puis-je ouvrir la fenêtre ?)
 - Pour dire qu'une chose **n'est pas obligatoire**, on n'utilise pas *mustn't* mais *don't have to* : *You don't have to come.* (Tu n'es pas obligé de venir.)
 
-## 3. Les erreurs à éviter
+## 4. Les erreurs à éviter
 
 - **Mettre un -s à la 3e personne** : *He can play*, jamais *He cans play*.
 - **Ajouter to après le modal** : *I must go*, pas *I must to go*.
 - **Confondre mustn't et don't have to** : *mustn't* = interdit ; *don't have to* = pas obligatoire.
-- **Oublier que can't s'écrit avec un apostrophe** (*can't*) ou en un seul mot (*cannot*).
+- **Oublier que can't s'écrit avec une apostrophe** (*can't*) ou en un seul mot (*cannot*).
 
 ## À retenir
 

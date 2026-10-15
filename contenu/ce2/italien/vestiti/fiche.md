@@ -29,7 +29,7 @@ relu_par: null
 | la chemise | **la camicia** |
 | le pull | **il maglione** |
 
-Remarque : « i pantaloni » est toujours au pluriel, comme en français « les pantalons ».
+Remarque : « i pantaloni » s'emploie au pluriel, même pour un seul pantalon : c'est comme si on disait « les pantalons ».
 
 ## 2. Pour se couvrir
 

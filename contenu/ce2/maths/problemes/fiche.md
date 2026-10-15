@@ -35,7 +35,7 @@ Les mots de l'énoncé donnent des **indices** :
 | L'histoire dit… | Opération |
 |:---|:---|
 | on **ajoute**, on **réunit**, « en tout » | addition (+) |
-| on **enlève**, il **reste**, « de plus que » | soustraction (−) |
+| on **enlève**, il **reste**, « combien de plus ? » | soustraction (−) |
 | plusieurs paquets **égaux** | multiplication (×) |
 | on **partage** en parts égales | division (÷) |
 
@@ -76,4 +76,4 @@ plus grande est logique.
   en tout, partage…).
 - **Oublier une étape.** Dans un problème en deux étapes, il faut les DEUX
   calculs.
-- **Répondre juste un nombre.** On écrit une phrase avec l'unité : « 6 € ».
+- **Répondre juste un nombre.** On écrit une phrase avec l'unité : « On lui rend 6 €. »

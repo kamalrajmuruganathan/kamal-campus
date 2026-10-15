@@ -50,7 +50,7 @@ Pour trouver le **total**, on **additionne** tous les nombres de la colonne :
 
 Pour savoir **combien de plus**, on **soustrait**.
 
-- Pommes − oranges = 12 − 5 = **7**. On a vendu 7 pommes de plus que d'oranges.
+- Pommes − oranges = 12 − 5 = **7**. On a vendu plus de pommes que d'oranges : 7 de plus.
 
 ## Lire un graphique en barres
 

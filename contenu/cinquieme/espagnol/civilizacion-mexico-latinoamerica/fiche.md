@@ -53,7 +53,7 @@ Repères géographiques : la **cordillère des Andes** (la cordillera de los **A
 
 ## 4. Les erreurs à éviter
 
-- **México** s'écrit avec un **x** ; en Espagne on prononce souvent le « x » comme une « j ».
+- **México** s'écrit avec un **x**, mais ce « x » se prononce comme la « j » espagnole (la *jota*).
 - Le **Brésil** ne parle **pas** espagnol mais **portugais** : ce n'est pas un pays hispanophone.
 - La capitale de l'Argentine est **Buenos Aires**, pas Rio de Janeiro (qui est au Brésil).
 - L'espagnol d'Amérique et l'espagnol d'Espagne sont **la même langue**, avec quelques différences d'accent et de vocabulaire.

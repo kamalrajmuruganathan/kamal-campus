@@ -16,7 +16,7 @@ relu_par: null
 
 # La Gaule et les Romains
 
-> Il y a plus de 2000 ans, le pays qui deviendra la France s'appelait la **Gaule**.
+> Il y a plus de 2 000 ans, le pays qui deviendra la France s'appelait la **Gaule**.
 > Les Gaulois y vivaient. Puis les Romains sont arrivés et ont conquis la Gaule.
 
 ## 1. Qui sont les Gaulois ?
@@ -37,7 +37,7 @@ les **druides**.
 <!-- /schema -->
 
 Les **Romains** viennent d'Italie et ont bâti un immense empire autour de la
-Méditerranée, dont la capitale est **Rome**. Leur chef, le général **Jules César**,
+Méditerranée, dont la capitale est **Rome**. Un de leurs généraux, **Jules César**,
 conquiert la Gaule.
 
 Le chef gaulois **Vercingétorix** rassemble plusieurs peuples pour résister. Mais il

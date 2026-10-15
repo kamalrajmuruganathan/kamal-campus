@@ -54,12 +54,12 @@ Trois adjectifs très courants sont **irréguliers** :
 
 Pour dire « aussi... que », on utilise **as + adjectif + as** : *Anna is as tall as Tom.* (Anna est aussi grande que Tom.)
 
-## 3. Les erreurs à éviter
+## 4. Les erreurs à éviter
 
 - **Cumuler more et -er** : on dit *bigger*, jamais *more bigger*.
 - **Oublier than dans le comparatif** : *taller than*, pas seulement *taller*.
 - **Oublier the dans le superlatif** : *the biggest*, pas *biggest* tout seul.
-- **Utiliser good/bad au comparatif** : c'est *better* et *worse*, pas *gooder* ni *badder*.
+- **Former good/bad comme les autres adjectifs** : c'est *better* et *worse*, pas *gooder* ni *badder*.
 
 ## À retenir
 

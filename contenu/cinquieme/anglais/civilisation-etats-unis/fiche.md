@@ -43,7 +43,7 @@ déclaration d'indépendance de 1776.
 ## 3. Famous symbols
 - The **Statue of Liberty** : à **New York**, symbole de liberté et d'accueil.
 - The **White House** : la résidence du président, à **Washington, D.C.**
-- The **bald eagle** : l'aigle, oiseau symbole du pays.
+- The **bald eagle** : l'aigle à tête blanche, oiseau symbole du pays.
 - **Uncle Sam** : le personnage qui représente le gouvernement américain.
 - La monnaie est le **dollar** (`$`). La langue principale est l'anglais (**English**).
 

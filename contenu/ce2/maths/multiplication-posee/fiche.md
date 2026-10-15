@@ -89,6 +89,7 @@ C'est très simple : on **ajoute un zéro** à droite.
 
 - 7 × 10 = 70
 - 34 × 10 = 340
+
 Multiplier par 10, c'est faire des paquets de dix : chaque unité devient une
 dizaine.
 

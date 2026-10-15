@@ -52,10 +52,10 @@ Astuce : du plus précis (**at**, une heure) au plus large (**in**, une année).
 |---|---|---|---|
 | before | avant | Wash your hands **before** lunch. | Lave-toi les mains avant le déjeuner. |
 | after | après | I do my homework **after** dinner. | Je fais mes devoirs après le dîner. |
-| from... to | de... à | The shop is open **from** 9 **to** 6. | Le magasin est ouvert de 9h à 18h. |
+| from... to | de... à | The shop is open **from** 9 **to** 6. | Le magasin est ouvert de 9 h à 18 h. |
 
 ## 4. Les erreurs à éviter
-- On dit **in** the morning mais **at** night (le soir/la nuit est une exception).
+- On dit **in** the morning, **in** the evening (le soir), mais **at** night (la nuit est une exception).
 - On dit **at** the weekend (anglais britannique), pas *in the weekend*.
 - « à la maison » = **at home** (sans *the*), et « à l'école » = **at school**.
 - On ne met pas de préposition devant *next* ou *last* : *next Monday*, *last week* (pas *on next Monday*).

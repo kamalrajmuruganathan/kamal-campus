@@ -82,7 +82,8 @@ Exemple, ordre croissant : 2 300 < 2 310 < 2 400 < 3 000.
 
 - Juste après **4 999**, il y a **5 000**.
 - Juste avant **6 000**, il y a **5 999**.
-Quand toutes les unités sont à 9, ajouter 1 fait « tout basculer ».
+
+Quand les derniers chiffres sont tous des 9, ajouter 1 fait « tout basculer ».
 
 ## Les erreurs à éviter
 

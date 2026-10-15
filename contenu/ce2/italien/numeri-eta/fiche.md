@@ -36,7 +36,7 @@ Voici les premiers nombres. Lis-les à voix haute !
 | 9 | nove | 20 | venti |
 | 10 | dieci | | |
 
-Attention aux doubles consonnes : se**tt**e, o**tt**o, di**cia**ssette.
+Attention aux doubles consonnes : se**tt**e, o**tt**o, dicia**ss**ette.
 
 ## 2. Les dizaines jusqu'à cent
 
