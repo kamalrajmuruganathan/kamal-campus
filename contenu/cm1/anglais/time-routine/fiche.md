@@ -51,7 +51,7 @@ Les moments de la journée : **in the morning** (le matin), **in the afternoon**
 ## 3. Les erreurs à éviter
 
 - On dit **It's** pour l'heure, pas *He is* ni *There is*.
-- **Half past four** = 4h30 (la demie APRÈS quatre heures), attention à ne pas dire *half to*.
+- **Half past four** = 4 h 30 (la demie APRÈS quatre heures), attention à ne pas dire *half to*.
 - On dit **at** seven o'clock (à sept heures), pas *in* seven o'clock.
 - **breakfast** ne prend pas d'article : on dit *have breakfast*, pas *have a breakfast*.
 

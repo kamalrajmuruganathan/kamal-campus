@@ -195,8 +195,8 @@ $$\boxed{1 \text{ min} = 60 \text{ s} \qquad 1 \text{ h} = 60 \text{ min} = 3600
 2. **Croire qu'un objet est soit en mouvement, soit au repos, pour tout le monde.**
    Non : ça dépend de l'observateur. Le passager assis est au repos dans le train, en
    mouvement par rapport au quai.
-3. **Confondre les trajectoires.** Circulaire = un cercle complet ; curviligne = une
-   courbe quelconque. Un virage de route est **curviligne**, pas circulaire.
+3. **Confondre les trajectoires.** Circulaire = un cercle (ou un arc de cercle) ; curviligne = une
+   courbe quelconque. Un virage de route, qui n'est pas un arc de cercle parfait, est **curviligne**.
 4. **Comparer deux vitesses sans base commune.** On ne compare que si la durée **ou**
    la distance est la même.
 5. **Convertir le temps comme des mètres.** $1$ min $= 60$ s, **pas** $100$ s.

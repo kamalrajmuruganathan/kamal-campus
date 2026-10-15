@@ -72,7 +72,7 @@ porter les fragments : ils se **déposent** et forment des **sédiments** (sable
 argile, galets). Les plus **gros** se déposent en premier, les plus **fins**
 ensuite : c'est le **classement** des sédiments.
 
-Au fil de milliers d'années, ces sédiments s'**accumulent** en couches, se
+Au fil de très longues durées (des milliers à des millions d'années), ces sédiments s'**accumulent** en couches, se
 **tassent** et se **cimentent** : ils deviennent des **roches sédimentaires**
 (grès, calcaire, argilite). Le paysage garde ainsi la **mémoire** de son
 histoire, en **couches** (strates) superposées.

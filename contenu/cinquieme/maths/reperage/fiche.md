@@ -116,7 +116,7 @@ C'est une longueur : elle est **toujours positive**.
 > **Exemple.** $A(-3)$ et $B(4)$. De $-3$ à $0$ il y a $3$ unités, de $0$ à $4$ il y en a
 > $4$ : la distance $AB$ vaut $7$ unités.
 
-> ⚠️ **Ne confond pas une somme et un écart.** $-3 + 4 = 1$ : ce n'est pas la distance,
+> ⚠️ **Ne confonds pas une somme et un écart.** $-3 + 4 = 1$ : ce n'est pas la distance,
 > c'est juste un calcul sans rapport. Une distance se **compte**, elle ne s'additionne pas
 > avec les signes.
 

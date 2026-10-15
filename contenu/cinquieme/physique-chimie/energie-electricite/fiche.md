@@ -34,7 +34,7 @@ $\text{J}$.
 
 $$\boxed{\text{L'énergie se mesure en joules }(\text{J}).}$$
 
-> **Exemple.** Soulever une brique d'un mètre demande à peu près $10\ \text{J}$.
+> **Exemple.** Soulever d'un mètre une brique de lait d'un litre demande à peu près $10\ \text{J}$.
 > Un carré de chocolat apporte environ $100\,000\ \text{J}$ à ton corps.
 
 Le joule est une **petite** unité : dans la vie courante, les valeurs sont énormes. On
@@ -181,7 +181,7 @@ Comportement de la tension selon le montage (à connaître qualitativement) :
 | Montage | Ce qu'il faut retenir sur la tension |
 |---|---|
 | en **série** | la tension du générateur se **répartit** entre les dipôles (elles s'**ajoutent**) |
-| en **dérivation** | les dipôles d'une même branche double ont la **même** tension à leurs bornes |
+| en **dérivation** | les dipôles branchés en dérivation ont la **même** tension à leurs bornes |
 
 > ⚠️ Conversion utile : $1\ \text{V} = 1\,000\ \text{mV}$ (millivolts). Donc
 > $250\ \text{mV} = 0{,}250\ \text{V}$, et non $250\ \text{V}$.

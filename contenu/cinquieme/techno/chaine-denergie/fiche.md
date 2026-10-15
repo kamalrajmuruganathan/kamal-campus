@@ -57,8 +57,9 @@ l'action produite. Elle comporte quatre **fonctions** :
    C'est le rôle d'un **moteur** (électrique → mécanique), d'une **lampe**
    (électrique → lumineuse), d'un **radiateur** (électrique → thermique).
 
-L'action finale (le mouvement, la lumière, la chaleur) est ensuite utilisée par la
-**chaîne d'information** ou directement par l'utilisateur.
+L'action finale (le mouvement, la lumière, la chaleur) est le service attendu par
+l'utilisateur. Les ordres (mettre en marche, arrêter) viennent de la **chaîne
+d'information** ou directement de l'utilisateur.
 
 ## Un exemple : le ventilateur électrique
 
