@@ -82,15 +82,15 @@ $$\boxed{k(a + b) = ka + kb} \qquad\qquad \boxed{k(a - b) = ka - kb}$$
 >
 > Chaque terme de la parenthèse est multiplié par $3$ — **aucun ne doit être oublié**.
 
-### ⚠️ Le piège du signe moins
+### ⚠️ Le piège de la soustraction
 
-$$-2(x + 3) = -2x - 6$$
+$$5(x - 3) = 5x - 15$$
 
-Le $-2$ multiplie **les deux termes**, y compris le $+3$ qui devient $-6$.
+Le $5$ multiplie **les deux termes**, y compris le $3$ : on soustrait $5 \times 3 = 15$.
 
-> **Exemple plus complet.** $-4(x - 5) = -4x + 20$
+> **Exemple plus complet.** $4(2x - 5) = 8x - 20$
 >
-> $(-4) \times (-5) = +20$ : deux signes moins donnent un plus.
+> $4 \times 2x = 8x$ et $4 \times 5 = 20$, que l'on soustrait.
 
 ---
 
@@ -170,7 +170,7 @@ Pour montrer qu'une affirmation est **fausse**, un seul contre-exemple suffit.
 
 1. **Réduire $3a + 5b$ en $8ab$.** Ce sont des natures différentes.
 2. **Oublier de multiplier le second terme** : $3(x+4)$ vaut $3x + 12$, pas $3x + 4$.
-3. **Se tromper de signe** : $-2(x+3)$ vaut $-2x - 6$, pas $-2x + 6$.
+3. **Se tromper de signe** : $5(x-3)$ vaut $5x - 15$, pas $5x + 15$.
 4. **Confondre développer et factoriser.**
 5. **Écrire $34$ pour $3 \times 4$** : la suppression du × ne vaut que devant une lettre.
 6. **Utiliser la même lettre pour deux nombres différents** dans une démonstration.

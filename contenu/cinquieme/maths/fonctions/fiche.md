@@ -42,7 +42,7 @@ Deux grandeurs sont en jeu. L'une, tu la **choisis**. L'autre, tu l'**obtiens**.
 Pour pouvoir dire « en fonction de », il faut qu'à **chaque** valeur de la grandeur de
 départ corresponde **une seule** valeur de l'autre.
 
-> **Exemple qui marche.** Le prix d'essence en fonction du nombre de litres : pour
+> **Exemple qui marche.** Le prix payé pour l'essence en fonction du nombre de litres : pour
 > $10$ L, il y a un seul prix possible. ✓
 >
 > **Exemple qui ne marche pas.** La taille d'un élève en fonction de son âge : deux

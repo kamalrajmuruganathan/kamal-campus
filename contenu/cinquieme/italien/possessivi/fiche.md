@@ -43,7 +43,7 @@ Le possessif s'accorde en **genre** et en **nombre** avec la chose possédée (p
 *il loro cane, la loro casa, i loro amici, le loro idee*.
 
 ## 4. Cas particulier : les membres de la famille
-Avec un nom de famille **au singulier et non modifié**, on **enlève l'article** :
+Avec un nom de parenté (membre de la famille) **au singulier et non modifié**, on **enlève l'article** :
 *mia madre, tuo padre, suo fratello, nostra zia*.
 
 On **remet l'article** dans trois cas :

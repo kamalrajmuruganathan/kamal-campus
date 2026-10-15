@@ -70,8 +70,8 @@ Avec certains adjectifs, le choix de *ser* ou *estar* **change le sens** :
 
 - **Utiliser ser pour la localisation** : on dit *El libro **está** en la mesa*, jamais *es en la mesa*.
 - **Utiliser estar pour une caractéristique durable** : *Ella **es** alta* (pas *está alta*).
-- **Se tromper d'auxiliaire pour un état** : *Estoy cansado* (fatigue passagère), pas *soy cansado*.
-- **Oublier estar pour l'heure et la date… non !** : l'heure et la date se disent avec *ser* (*Son las dos*, *Es lunes*).
+- **Se tromper de verbe pour un état** : *Estoy cansado* (fatigue passagère), pas *soy cansado*.
+- **Utiliser estar pour l'heure ou la date** : l'heure et la date se disent avec *ser* (*Son las dos*, *Es lunes*).
 
 ## À retenir
 

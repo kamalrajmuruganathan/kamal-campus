@@ -49,7 +49,7 @@ La **densité de population** mesure le nombre d'habitants par kilomètre carré
 *L'IDH combine l'espérance de vie, le niveau d'éducation et le niveau de revenu ; il va de 0 à 1, et plus il est proche de 1, plus le pays est développé.*
 <!-- /schema -->
 
-Le **développement** désigne l'amélioration des conditions de vie : santé, éducation, revenus. Pour le mesurer, on utilise l'**IDH** (Indicateur de Développement Humain), calculé par l'**ONU**. Il prend en compte l'**espérance de vie**, le **niveau d'éducation** et le **niveau de revenu**. L'IDH est compris **entre 0 et 1** : plus il est proche de 1, plus le pays est développé.
+Le **développement** désigne l'amélioration des conditions de vie : santé, éducation, revenus. Pour le mesurer, on utilise l'**IDH** (Indice de développement humain), calculé par l'**ONU**. Il prend en compte l'**espérance de vie**, le **niveau d'éducation** et le **niveau de revenu**. L'IDH est compris **entre 0 et 1** : plus il est proche de 1, plus le pays est développé.
 
 Le monde est marqué par de fortes **inégalités**. Certains **pays développés** ont un IDH élevé et un bon niveau de vie ; d'autres, les **pays en développement**, connaissent encore la pauvreté, et parfois la **malnutrition** ou le manque d'accès à l'eau potable.
 

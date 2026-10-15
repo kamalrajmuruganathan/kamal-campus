@@ -36,8 +36,8 @@ Chaque région a un chef-lieu (*capoluogo*).
 | Emilia-Romagna | Bologna | plus vieille université d'Europe |
 
 ## 2. Le nord, le centre, le sud
-- **Le nord** : Milano (Lombardie), Torino (Piémont), Venezia (Vénétie), Genova (Ligurie, grand port).
-- **Le centre** : Roma (Latium), Firenze (Toscane), Bologna (Émilie-Romagne).
+- **Le nord** : Milano (Lombardie), Torino (Piémont), Venezia (Vénétie), Genova (Ligurie, grand port), Bologna (Émilie-Romagne).
+- **Le centre** : Roma (Latium), Firenze (Toscane).
 - **Le sud** et les îles : Napoli (Campanie), Bari (Pouilles), Palermo (Sicile), Cagliari (Sardaigne).
 
 ## 3. Quelques villes et leurs symboles
@@ -58,6 +58,6 @@ Chaque région a un chef-lieu (*capoluogo*).
 
 ## À retenir
 - **20 régions**, dont **5 à statut spécial** (Sicile, Sardaigne, Val d'Aoste…).
-- Grandes villes du nord : **Milano, Torino, Venezia** ; du centre : **Roma, Firenze, Bologna** ; du sud : **Napoli, Bari, Palermo**.
+- Grandes villes du nord : **Milano, Torino, Venezia, Bologna** ; du centre : **Roma, Firenze** ; du sud : **Napoli, Bari, Palermo**.
 - **Torino** fut la première capitale de l'Italie unifiée (1861).
 - Chaque région a un **capoluogo** (chef-lieu).
