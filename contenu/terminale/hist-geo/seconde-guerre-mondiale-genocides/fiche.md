@@ -63,13 +63,13 @@ La guerre fait environ **50 à 60 millions de morts**. Elle s'achève avec l'emp
 - **Guerre totale** : mobilisation de toutes les ressources (humaines, économiques, scientifiques) d'un pays.
 - **Guerre d'anéantissement** : guerre visant la destruction de l'adversaire, combattants comme civils.
 - **Collaboration** : coopération d'un État ou d'individus avec l'occupant.
-- **Génocide** : destruction intentionnelle et organisée d'un groupe humain en raison de son origine.
+- **Génocide** : destruction intentionnelle et organisée d'un groupe humain (national, ethnique, racial ou religieux) en tant que tel.
 - **Shoah** : génocide des Juifs d'Europe par l'Allemagne nazie.
 - **Crime contre l'humanité** : notion juridique définie à Nuremberg, imprescriptible.
 
 ## À retenir
 - **1939-1945** : la Seconde Guerre mondiale, conflit le plus meurtrier de l'histoire.
-- **18 juin 1940** : appel de De Gaulle ; **1943** : création du CNR par Jean Moulin.
+- **18 juin 1940** : appel du général de Gaulle ; **1943** : création du CNR par Jean Moulin.
 - **Shoah** : génocide des Juifs d'Europe, environ 6 millions de victimes.
 - **6 juin 1944** : débarquement de Normandie ; **8 mai 1945** : victoire en Europe.
 - **1945** : bombes atomiques (Hiroshima, Nagasaki), création de l'ONU, procès de Nuremberg.

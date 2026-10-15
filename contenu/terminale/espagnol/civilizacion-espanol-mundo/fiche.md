@@ -14,7 +14,7 @@ statut: brouillon
 relu_par: null
 ---
 
-# Civilización : el español en el mundo
+# Civilización: el español en el mundo
 
 > Parlé sur quatre continents par des centaines de millions de personnes, l'espagnol
 > est l'une des grandes langues mondiales. Cette fiche présente son poids démographique,

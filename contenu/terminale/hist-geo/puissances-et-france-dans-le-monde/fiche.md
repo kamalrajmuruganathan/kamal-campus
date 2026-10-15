@@ -52,7 +52,7 @@ La France est une **puissance moyenne** mais dotée d'atouts qui lui donnent un 
 - **puissance nucléaire** ;
 - deuxième **ZEE** du monde grâce à l'outre-mer ;
 - rayonnement culturel et linguistique (la **francophonie**) ;
-- membre fondateur de l'**Union européenne**.
+- membre fondateur de la **construction européenne** (CEE en 1957, aujourd'hui l'**Union européenne**).
 
 Son influence passe par la diplomatie, la langue française, l'aide au développement et sa présence économique et culturelle.
 

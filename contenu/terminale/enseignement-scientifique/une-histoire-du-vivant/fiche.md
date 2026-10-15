@@ -100,8 +100,9 @@ On situe son existence il y a environ **3,5 à 4 milliards d'années**.
 
 Comment savoir qui est apparenté à qui ? On compare les **caractères** des espèces. Deux
 espèces qui partagent un caractère **hérité d'un même ancêtre** sont apparentées : ce
-caractère est dit **homologue** (par exemple, le squelette des membres à cinq doigts est
-partagé par les mammifères, les oiseaux, les amphibiens…).
+caractère est dit **homologue** (par exemple, l'organisation du squelette des membres — un os,
+puis deux os, puis les os du poignet et des doigts — est partagée par les mammifères, les
+oiseaux, les amphibiens…).
 
 On représente ces liens de parenté par un **arbre phylogénétique** (ou « arbre du
 vivant ») :

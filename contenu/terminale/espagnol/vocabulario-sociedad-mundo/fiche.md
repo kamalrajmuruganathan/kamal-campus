@@ -49,7 +49,7 @@ Exemple : *La desigualdad entre ricos y pobres aumenta.* → L'inégalité entre
 | acoger | accueillir |
 
 Exemple : *Muchos refugiados cruzan la frontera.* → Beaucoup de réfugiés traversent la frontière.
-Attention : **la convivencia** = le fait de vivre ensemble (pas de traduction directe en français).
+Attention : **la convivencia** = le fait de vivre ensemble (pas d'équivalent exact en un mot : on traduit par « le vivre-ensemble » ou « la cohabitation »).
 
 ## 3. El mundo : medio ambiente y globalización
 

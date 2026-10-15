@@ -30,7 +30,7 @@ Le patrimoine est un **héritage collectif** que l'on décide de préserver. On 
 - le **patrimoine immatériel** : savoir-faire, traditions, langues, pratiques (reconnu par l'UNESCO à partir de **2003**) ;
 - le **patrimoine naturel** : paysages, sites naturels remarquables.
 
-Le patrimoine résulte d'une **construction** : une société choisit ce qui mérite d'être conservé. Cette sélection évolue dans le temps. En France, la protection s'organise dès le XIXe siècle : création du **service des Monuments historiques** (première loi de classement en 1887, loi de référence en **1913**), avec des figures comme **Prosper Mérimée**, inspecteur des monuments historiques.
+Le patrimoine résulte d'une **construction** : une société choisit ce qui mérite d'être conservé. Cette sélection évolue dans le temps. En France, la protection s'organise dès le XIXe siècle : création de l'**inspection des Monuments historiques** en 1830, première loi de classement en 1887, loi de référence en **1913**, avec des figures comme **Prosper Mérimée**, inspecteur des monuments historiques.
 
 ## 2. La protection à l'échelle mondiale : l'UNESCO
 

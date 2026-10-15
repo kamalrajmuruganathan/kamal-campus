@@ -24,7 +24,7 @@ Le Grand oral est une épreuve **orale terminale** du baccalauréat, commune aux
 |---|---|
 | Durée totale de passage | **20 minutes** |
 | Temps de préparation le jour J | **20 minutes** |
-| Coefficient dans le bac | **10** |
+| Coefficient dans le bac | **10** (voie générale ; 14 en voie technologique) |
 | Jury | **2 professeurs** |
 | Nombre de questions préparées | **2 questions** |
 
@@ -50,7 +50,7 @@ Pendant l'année, tu prépares **deux questions** adossées à tes **enseignemen
 - Penser que c'est toi qui choisis la question le jour J : c'est le **jury**.
 
 ## À retenir
-- Épreuve de **20 minutes**, **coefficient 10**, **20 minutes de préparation**.
+- Épreuve de **20 minutes**, **coefficient 10** (bac général), **20 minutes de préparation**.
 - **3 temps** : exposé **5 min** (debout, sans notes), échange **10 min**, projet d'orientation **5 min**.
 - Tu prépares **2 questions** adossées à tes spécialités ; le **jury en choisit une**.
 - Jury de **2 professeurs**.

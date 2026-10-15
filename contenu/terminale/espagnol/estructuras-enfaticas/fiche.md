@@ -53,13 +53,13 @@ Cette tournure exprime l'intensité (« à quel point, combien ») ; l'adjectif 
 
 - **Sí que** renforce l'affirmation : *Yo **sí que** lo sé.* (Moi, je le sais, pour sûr.)
 - **Exclamatives** : *¡**Qué** interesante! ¡**Cuánto** trabajo! ¡**Qué** bien cocinas!*
-- **Reduplication / antéposition** : *Dinero, no tengo.* (De l'argent, je n'en ai pas.)
+- **Antéposition** : *Dinero, no tengo.* (De l'argent, je n'en ai pas.)
 - **El que / quien** en tête : *Quien mucho abarca, poco aprieta.* (Qui trop embrasse mal étreint.)
 
 ## 5. Les erreurs à éviter
 
 - Traduire « c'est… que » par *es que* systématiquement : il faut le bon relatif (*Fue ayer **cuando**…*, pas *es que ayer*).
-- Oublier l'accord de *ser* : *Es María quien vino* peut aussi être *Fue María quien vino* selon le temps du verbe principal.
+- Oublier l'accord de *ser* : avec un verbe principal au passé, on dit de préférence *Fue María quien vino* (plutôt que *Es María quien vino*).
 - Employer *que* au lieu de *lo que* pour une idée : *No entiendo que dices* → *No entiendo **lo que** dices*.
 - Ne pas accorder l'adjectif dans *lo… que* : *lo difícil que son las cosas* → *lo **difíciles** que son las cosas*.
 

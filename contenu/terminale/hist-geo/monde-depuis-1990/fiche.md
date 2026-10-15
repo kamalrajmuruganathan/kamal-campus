@@ -48,7 +48,7 @@ L'Europe se construit progressivement après 1945. Une étape majeure est le **t
 
 La **Ve République** est fondée en **1958**, avec une nouvelle Constitution voulue par le général **de Gaulle**, qui en devient le premier président. Depuis **1962**, le président de la République est élu au **suffrage universel direct**. Le régime se caractérise par un pouvoir exécutif fort.
 
-Depuis les années 1990, la France participe pleinement à la mondialisation et à la construction européenne. Elle connaît aussi des évolutions politiques : cohabitations, alternances, réformes institutionnelles (comme le passage du mandat présidentiel à **cinq ans**, le quinquennat, adopté en 2000).
+Depuis les années 1990, la France participe pleinement à la mondialisation et à la construction européenne. Elle connaît aussi des évolutions politiques : cohabitations, alternances, réformes institutionnelles (comme le passage du mandat présidentiel à **cinq ans**, le quinquennat, adopté en 2000 et appliqué depuis l'élection de 2002).
 
 ## 4. Défis contemporains
 
@@ -59,7 +59,7 @@ Le monde depuis 1990 est confronté à de nouveaux défis : le **terrorisme** in
 - **Monde multipolaire** : monde organisé autour de plusieurs pôles de puissance.
 - **Union européenne** : organisation politique et économique d'États européens, créée en 1992.
 - **Suffrage universel direct** : mode d'élection où tous les citoyens votent directement.
-- **Quinquennat** : mandat présidentiel de cinq ans (en France depuis 2000).
+- **Quinquennat** : mandat présidentiel de cinq ans (adopté en 2000, appliqué depuis 2002).
 
 ## À retenir
 - **1991** : fin de l'URSS et du monde bipolaire ; émergence d'un monde multipolaire.
