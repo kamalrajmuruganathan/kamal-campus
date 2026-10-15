@@ -71,7 +71,7 @@ caractère (par exemple un gène impliqué dans la couleur des yeux).
   plus que leurs séquences d'ADN sont proches.
 
 Cette universalité a une application concrète : on peut transférer un gène d'un
-organisme à un autre (**transgénèse**) et il reste **lisible**, car le « langage »
+organisme à un autre (**transgenèse**) et il reste **lisible**, car le « langage »
 de l'ADN est le même partout.
 
 ## Mutations
