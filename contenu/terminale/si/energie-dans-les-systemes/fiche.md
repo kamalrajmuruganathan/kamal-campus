@@ -126,7 +126,7 @@ un rendement $\eta = 0{,}9 \times 0{,}8 = 0{,}72 = 72\ \%$.
 Un système peut **stocker** de l'énergie pour la restituer plus tard :
 
 - **Batterie / accumulateur** : énergie chimique → électrique. Capacité souvent en
-  $\mathrm{A\cdot h}$ ; énergie $E = U \times Q$ (avec $Q$ en $\mathrm{A\cdot h}$).
+  $\mathrm{A\cdot h}$ ; énergie $E = U \times Q$ (avec $Q$ en $\mathrm{A\cdot h}$, $E$ est en $\mathrm{Wh}$).
 - **Condensateur** : stocke une petite énergie électrique, restituée très vite.
 - **Volant d'inertie / ressort** : stocke de l'énergie mécanique (cinétique ou
   élastique).

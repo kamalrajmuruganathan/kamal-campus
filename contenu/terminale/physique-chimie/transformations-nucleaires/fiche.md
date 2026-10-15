@@ -164,7 +164,7 @@ $$\boxed{N(t) = N_0\, e^{-\lambda t}}$$
 > $N = 5{,}0 \times 10^{10} \times e^{-2{,}3 \times 10^{-2} \times 100}
 > = 5{,}0 \times 10^{10} \times e^{-2{,}3} \approx 5{,}0 \times 10^{9}$ noyaux.
 
-> **Où λ vient-elle ?** La loi découle de $\dfrac{\mathrm{d}N}{\mathrm{d}t} = -\lambda N$ :
+> **D'où vient cette loi ?** Elle découle de $\dfrac{\mathrm{d}N}{\mathrm{d}t} = -\lambda N$ :
 > le nombre de désintégrations pendant $\mathrm{d}t$ est proportionnel au nombre de noyaux
 > présents. Le signe $-$ traduit la diminution.
 

@@ -203,16 +203,16 @@ par un pourcentage massique et une densité, qu'il faut convertir en concentrati
 
 | Grandeur | Définition | Unité |
 |---|---|---|
-| **Titre massique** $t$ | masse de soluté par litre de solution : $t = \dfrac{m_{\text{soluté}}}{V_{\text{solution}}}$ | g·L⁻¹ |
-| **Pourcentage massique** $P$ | fraction de masse : $P = \dfrac{m_{\text{soluté}}}{m_{\text{solution}}}$ | sans unité (ou %) |
+| **Titre massique** $P$ (ou pourcentage massique) | fraction de masse : $P = \dfrac{m_{\text{soluté}}}{m_{\text{solution}}}$ | sans unité (ou %) |
+| **Concentration en masse** $C_m$ | masse de soluté par litre de solution : $C_m = \dfrac{m_{\text{soluté}}}{V_{\text{solution}}}$ | g·L⁻¹ |
 | **Masse volumique** $\rho$ | masse par unité de volume : $\rho = \dfrac{m}{V}$ | g·L⁻¹ ou g·mL⁻¹ |
 | **Densité** $d$ | $d = \dfrac{\rho_{\text{solution}}}{\rho_{\text{eau}}}$, avec $\rho_{\text{eau}} = 1{,}00$ g·mL⁻¹ $= 1000$ g·L⁻¹ | sans unité |
 
 ### Les relations qui relient tout
 
-Concentration molaire depuis le titre massique :
+Concentration molaire depuis la concentration en masse :
 
-$$\boxed{C = \dfrac{t}{M}}$$
+$$\boxed{C = \dfrac{C_m}{M}}$$
 
 Pour une solution commerciale décrite par $P$ et $d$, la masse d'un litre de solution est
 $\rho_{\text{solution}} = d \times \rho_{\text{eau}}$, dont la fraction $P$ est du soluté :
@@ -221,7 +221,7 @@ $$\boxed{C = \dfrac{P \times d \times \rho_{\text{eau}}}{M}}$$
 
 > **Exemple.** Acide chlorhydrique commercial : $P = 37\% = 0{,}37$, $d = 1{,}19$,
 > $M(\mathrm{HCl}) = 36{,}5$ g·mol⁻¹. Un litre pèse $\rho = 1{,}19 \times 1000 = 1190$ g,
-> dont $0{,}37 \times 1190 = 4{,}4\times 10^{2}$ g de HCl : $t = 4{,}4\times 10^{2}$ g·L⁻¹.
+> dont $0{,}37 \times 1190 = 4{,}4\times 10^{2}$ g de HCl : $C_m = 4{,}4\times 10^{2}$ g·L⁻¹.
 > D'où $C = \dfrac{4{,}4\times 10^{2}}{36{,}5} \approx 12$ mol·L⁻¹. C'est la concentration
 > typique d'un acide chlorhydrique concentré du commerce.
 
@@ -256,7 +256,8 @@ $$\boxed{F = \dfrac{C_{\text{mère}}}{C_{\text{fille}}} = \dfrac{V_{\text{fille}
 | pH à l'équivalence | $=7$ (fort/fort), $>7$ (acide faible/base forte) |
 | Conductimétrie | segments de droite, **rupture de pente** à $V_{\text{éq}}$ |
 | Diluer pour la conductimétrie | ajouter beaucoup d'eau → droites propres, $V_{\text{éq}}$ inchangé |
-| Titre massique | $t = \dfrac{m}{V}$ (g·L⁻¹) ; $C = \dfrac{t}{M}$ |
+| Titre massique | $P = \dfrac{m_{\text{soluté}}}{m_{\text{solution}}}$ (sans unité) |
+| Concentration en masse | $C_m = \dfrac{m}{V}$ (g·L⁻¹) ; $C = \dfrac{C_m}{M}$ |
 | Densité | $d = \dfrac{\rho}{\rho_{\text{eau}}}$, $\rho_{\text{eau}} = 1000$ g·L⁻¹ |
 | Solution commerciale | $C = \dfrac{P\,d\,\rho_{\text{eau}}}{M}$ |
 | Dilution | $F = \dfrac{C_{\text{mère}}}{C_{\text{fille}}} = \dfrac{V_{\text{fille}}}{V_{\text{prélevé}}}$ |
@@ -278,8 +279,8 @@ $$\boxed{F = \dfrac{C_{\text{mère}}}{C_{\text{fille}}} = \dfrac{V_{\text{fille}
    **éloignés** de l'équivalence ; la zone incurvée autour de $V_{\text{éq}}$ est ignorée.
 6. **Se tromper de sens pour la dilution.** Diluer **divise** la concentration ; pour
    remonter à la solution mère, on **multiplie** par le facteur $F$.
-7. **Confondre titre massique (g·L⁻¹) et pourcentage massique (sans unité).** Le premier est
-   une masse par volume, le second une fraction de masse.
+7. **Confondre titre massique (sans unité) et concentration en masse (g·L⁻¹).** Le premier est
+   une fraction de masse, le second une masse par volume.
 
 ---
 
@@ -310,9 +311,9 @@ Capacités exigibles couvertes :
   valider quant au niveau d'exigence.
 - Valeurs des conductivités molaires ioniques (λ en mS·m²·mol⁻¹) : ordres de grandeur usuels
   à 25 °C, à vérifier avec la table fournie aux élèves le jour de l'épreuve.
-- « Titre massique » : ici pris au sens masse de soluté par litre de solution (g·L⁻¹). Selon
-  les manuels, le terme peut désigner une fraction massique ; distinction explicitée au §6 et
-  dans les pièges, à trancher avec le relecteur selon l'usage retenu.
+- « Titre massique » : pris au sens du programme et des manuels, fraction massique
+  m(soluté)/m(solution), sans unité ; la masse par litre est la « concentration en masse » C_m
+  (relecture du 15/10/2026).
 
 Rédaction originale à partir du programme officiel. Aucun emprunt à un manuel.
 Statut : brouillon, non relu.

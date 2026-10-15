@@ -123,7 +123,7 @@ une poursuite du réchauffement, d'ampleur variable **selon nos choix** de
 réduction des émissions.
 
 > Un modèle n'est pas une prédiction certaine : il explore des **scénarios**. Mais
-> tous les scénarios convergent : plus les émissions sont fortes, plus le
+> tous les modèles s'accordent : plus les émissions sont fortes, plus le
 > réchauffement est important.
 
 ---

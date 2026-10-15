@@ -53,8 +53,8 @@ grandes populations ; la dérive pèse lourd dans les petites populations.
 ## 3. Un allèle « avantageux » n'a rien d'absolu
 
 Un allèle n'est avantageux ou désavantageux **que dans un environnement donné**.
-La drépanocytose (allèle de l'hémoglobine) illustre ce point : à l'état
-hétérozygote, elle protège contre le paludisme. L'allèle est donc favorisé **là
+L'allèle de la drépanocytose (allèle muté du gène de l'hémoglobine) illustre ce
+point : à l'état hétérozygote, il protège contre le paludisme. L'allèle est donc favorisé **là
 où sévit le paludisme**, mais défavorable ailleurs. L'évolution n'a **pas de
 but** ni de progrès prédéfini.
 

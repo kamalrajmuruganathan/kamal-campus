@@ -104,7 +104,7 @@ Le **diabète** est une maladie caractérisée par une **hyperglycémie chroniqu
 
 ### b) Le diabète de type 2 (DNID)
 
-- Origine : les cellules **produisent** de l'insuline, mais les cellules cibles y
+- Origine : les cellules β **produisent** de l'insuline, mais les cellules cibles y
   **répondent mal** : c'est une **insulino-résistance**. Le pancréas peut ensuite
   s'épuiser.
 - Apparaît plutôt **à l'âge adulte** ; **facteurs de risque** : surpoids,

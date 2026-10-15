@@ -35,9 +35,11 @@ l'ordre de **25 à 30 °C par kilomètre** dans la croûte continentale moyenne.
 gradient traduit l'existence d'un **flux de chaleur** dirigé du chaud (intérieur)
 vers le froid (surface).
 
-Le **flux géothermique moyen** à la surface de la Terre est faible, de l'ordre
-de **65 mW·m⁻²** (milliwatts par mètre carré). Rapporté à toute la surface du
-globe, cela représente néanmoins une puissance considérable.
+Le **flux géothermique moyen** à la surface de la Terre est faible : de l'ordre
+de **65 mW·m⁻²** (milliwatts par mètre carré) sur les continents, et d'environ
+**87 mW·m⁻²** en moyenne sur l'ensemble du globe (les fonds océaniques, plus jeunes,
+évacuent davantage de chaleur). Rapporté à toute la surface du globe, cela
+représente néanmoins une puissance considérable (environ $4{,}4 \times 10^{13}$ W).
 
 ## 2. D'où vient cette chaleur ?
 
@@ -101,7 +103,7 @@ contextes géologiques favorables.
 ## Ce qu'il faut retenir
 
 - Le **gradient géothermique** (~25-30 °C/km) traduit un **flux de chaleur**
-  vers la surface (~65 mW·m⁻² en moyenne).
+  vers la surface (~65 mW·m⁻² sur les continents, ~87 mW·m⁻² en moyenne sur le globe).
 - Chaleur d'origine **radioactive** (environ la moitié : U, Th, K) + **chaleur
   initiale** de la formation de la Terre.
 - **Conduction** (sans déplacement de matière, lithosphère rigide) et
