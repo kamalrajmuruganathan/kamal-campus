@@ -275,3 +275,12 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   restent.
 - ≈ 990 schémas dans ≈ 460 fiches (maths, PC, SVT/sciences, hist-géo, techno/SI/SNT/NSI), chacun regardé en aperçu PNG.
   Pas de carte géographique dessinée à main levée.
+
+## 19. Relecture approfondie des 956 fiches (15/10/2026) — sur `upgrade-sdk57`, non publié
+- Les 956 fiches ont été relues en entier en 24 lots (commits « Relecture des fiches : lot r00 » … « r23 »). On a corrigé les erreurs
+  de fond (faits, dates, définitions, attributions, valeurs), le français et les exemples dans les langues étudiées. Quand la même
+  erreur se trouvait dans le QCM, les cartes, les exercices non générés ou attendus.json du chapitre, elle y a été corrigée aussi.
+  Blocs de schémas non touchés.
+- Contrôles après la relecture : `npm test` (541 OK), `verifier-attendus` (0 problème), `verifier-contenu` (OK), KaTeX (154 086 formules, 0 erreur).
+- Les points qui demandent une décision de Kamal (hors programme, conventions, faits à vérifier) sont listés dans
+  `docs/relecture-a-trancher.md`, et ils n'ont pas été modifiés.
