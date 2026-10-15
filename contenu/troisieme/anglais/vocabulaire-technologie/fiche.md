@@ -90,7 +90,7 @@ Exemple : *Never share your password online.* → Ne partage jamais ton mot de p
 - **download** (télécharger vers son appareil) ≠ **upload** (envoyer vers le réseau).
 - « data » est souvent employé comme **indénombrable** : *the data is…*, pas *datas*.
 - Ne confonds pas *to log in* (se connecter) et *to sign up* (créer un compte).
-- « a mouse » (une souris d'ordinateur) a le même mot que l'animal ; au pluriel
+- « a mouse » (une souris d'ordinateur) est le même mot que pour l'animal ; au pluriel
   informatique on trouve *mouses* ou *mice* selon les sources — préfère *mice*.
 - « an app » est l'abréviation courante de *an application*.
 

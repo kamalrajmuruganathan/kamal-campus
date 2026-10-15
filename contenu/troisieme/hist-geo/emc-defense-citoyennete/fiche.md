@@ -44,8 +44,8 @@ et devoirs du citoyen. L'attestation de participation est nécessaire pour passe
 (comme le permis de conduire). La **défense nationale** protège le territoire et la population.
 
 ## 3. La démocratie et le vote
-La France est une **démocratie représentative** : les citoyens élisent des représentants (député,
-maire, président de la République). Le **vote** est **libre**, **secret** et **égal** (une personne,
+La France est une **démocratie représentative** : les citoyens élisent des représentants (conseillers
+municipaux, députés, président de la République). Le **vote** est **libre**, **secret** et **égal** (une personne,
 une voix). Voter est un **droit** fondamental, mais aussi un acte d'engagement civique.
 
 ## 4. Les symboles et principes de la République

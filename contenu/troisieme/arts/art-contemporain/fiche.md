@@ -41,7 +41,7 @@ Dans les années 1960, le **Pop Art** s'inspire de la publicité et de la socié
 ## 3. L'art engagé
 
 L'**art engagé** défend une cause ou dénonce une injustice. **Pablo Picasso** peint *Guernica*
-(1937), immense toile en noir et gris qui dénonce le **bombardement** de la ville de Guernica
+(1937), immense toile en noir, blanc et gris qui dénonce le **bombardement** de la ville de Guernica
 pendant la guerre d'Espagne. Le **street art** (art urbain) porte souvent des messages : **Keith
 Haring** et ses silhouettes, ou **Banksy** et ses pochoirs. **Yves Klein**, lui, invente son bleu
 (un monochrome bleu intense).

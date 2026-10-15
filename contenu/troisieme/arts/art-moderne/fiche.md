@@ -55,6 +55,6 @@ Plusieurs artistes prolongent puis dépassent l'impressionnisme :
 
 ## À retenir
 
-- Impressionnisme : Monet (Impression soleil levant), lumière et touches rapides.
+- Impressionnisme : Monet (*Impression, soleil levant*), lumière et touches rapides.
 - Van Gogh (post-impressionnisme, La Nuit étoilée), Matisse (fauvisme).
 - Cubisme (Picasso), expressionnisme (Munch, Le Cri), abstraction (Kandinsky), surréalisme (Dalí).

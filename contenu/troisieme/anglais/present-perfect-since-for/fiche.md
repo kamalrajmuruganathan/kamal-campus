@@ -34,10 +34,10 @@ On les emploie quand une action a commencé dans le passé et **dure encore**.
 
 | Mot | Sens | Suivi de… | Exemple |
 |---|---|---|---|
-| **for** | pendant (durée) | une **durée** | for two hours, for a week, for years |
+| **for** | depuis / pendant (durée) | une **durée** | for two hours, for a week, for years |
 | **since** | depuis (point de départ) | un **point de départ** | since 2010, since Monday, since I was a child |
 
-- I have played the guitar **for** three years. → *pendant* trois ans (durée).
+- I have played the guitar **for** three years. → depuis trois ans (durée).
 - I have played the guitar **since** 2021. → *depuis* 2021 (point de départ).
 
 Attention : en français on dit « depuis » dans les deux cas, mais en anglais **for** = durée, **since** = point de départ.

@@ -58,8 +58,8 @@ victimes d'un génocide. En France, des rafles, comme la **rafle du Vél d'Hiv**
 conduisent à la déportation de Juifs. Ces faits sont établis par de nombreuses preuves historiques.
 
 ## 4. Les conséquences
-Le bilan est effroyable (environ **50 à 60 millions de morts**). En 1945 sont créées l'**ONU**
-(pour maintenir la paix) et jugés les principaux responsables nazis lors du **procès de Nuremberg**.
+Le bilan est effroyable (environ **50 à 60 millions de morts**). En 1945, l'**ONU** est créée
+(pour maintenir la paix) ; le **procès de Nuremberg** (1945-1946) juge les principaux responsables nazis.
 La notion de **crime contre l'humanité** est reconnue.
 
 ## Vocabulaire

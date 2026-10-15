@@ -52,7 +52,7 @@ Souvent, on n'exprime pas l'agent (inconnu ou évident) : *English is spoken her
 ## 4. Les erreurs à éviter
 - Ne pas oublier le verbe **be** : ~~The cake made by the cook~~ → The cake **is made** by the cook.
 - Accorder **be** avec le sujet passif : *The cars are washed* / *The car is washed*.
-- Ne pas mettre le participe passé au prétérit : *was writ**ten*** et non ~~was wrote~~.
+- Ne pas mettre le prétérit à la place du participe passé : *was writ**ten*** et non ~~was wrote~~.
 - Introduire l'agent par **by**, pas par « from » ni « of ».
 
 ## À retenir
