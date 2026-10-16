@@ -284,3 +284,6 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Contrôles après la relecture : `npm test` (541 OK), `verifier-attendus` (0 problème), `verifier-contenu` (OK), KaTeX (154 086 formules, 0 erreur).
 - Les points qui demandent une décision de Kamal (hors programme, conventions, faits à vérifier) sont listés dans
   `docs/relecture-a-trancher.md`, et ils n'ont pas été modifiés.
+- **16/10/2026 : Kamal a choisi l'option 1 (garder la redirection).** `netlify.toml` (redirection 301) est déjà sur `main`.
+  Elle s'active au prochain build Netlify de `main`, c'est-à-dire à la fusion de la PR #7. Ensuite, Kamal clique sur
+  « Stop builds » dans Netlify (Site configuration → Build & deploy → Continuous deployment).
