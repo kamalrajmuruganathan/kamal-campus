@@ -287,3 +287,5 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **16/10/2026 : Kamal a choisi l'option 1 (garder la redirection).** `netlify.toml` (redirection 301) est déjà sur `main`.
   Elle s'active au prochain build Netlify de `main`, c'est-à-dire à la fusion de la PR #7. Ensuite, Kamal clique sur
   « Stop builds » dans Netlify (Site configuration → Build & deploy → Continuous deployment).
+- **Publié le 16/10/2026** : PR #7 fusionnée à la demande de Kamal (main `3ec77c9`). Contrôle qualité et déploiement
+  Pages verts. Les § 16 à 19 sont en ligne. La redirection Netlify s'active avec ce build ; il reste à Kamal à cliquer sur « Stop builds ».
