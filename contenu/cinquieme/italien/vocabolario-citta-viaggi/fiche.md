@@ -84,7 +84,7 @@ Exemple : *Compro il biglietto del treno.* → J'achète le billet de train.
 - *la macchina* signifie « la voiture » (et aussi « la machine ») ; le contexte tranche.
 - Ne confonds pas *la via / la strada* (la rue) et *il viaggio* (le voyage).
 - *sempre dritto* = tout droit ; ne pas confondre *dritto* (droit devant) et *a destra* (à droite).
-- Attention aux doubles consonnes : *la pia**zz**a*, *la ma**cch**ina*, *la va**l**i**g**ia*, *l'albe**rg**o*.
+- Attention aux doubles consonnes : *la pia**zz**a*, *la ma**cch**ina*, *sempre dri**tt**o*, *a**tt**raversare*.
 
 ## À retenir
 

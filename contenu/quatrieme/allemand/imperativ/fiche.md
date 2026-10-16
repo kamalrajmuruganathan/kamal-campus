@@ -17,7 +17,7 @@ relu_par: null
 
 # Der Imperativ
 
-> L'impératif sert à donner un ordre, un conseil ou une consigne : *Écoute !*, *Venez !*, *Asseyez-vous !*. En allemand, il existe trois formes selon la personne à qui l'on parle : **du**, **ihr** et **Sie**. C'est un temps très utile en classe et dans la vie quotidienne.
+> L'impératif sert à donner un ordre, un conseil ou une consigne : *Écoute !*, *Venez !*, *Asseyez-vous !*. En allemand, il existe trois formes selon la personne à qui l'on parle : **du**, **ihr** et **Sie**. C'est un mode très utile en classe et dans la vie quotidienne.
 
 ## 1. Les trois formes de l'impératif
 
@@ -39,7 +39,7 @@ On part de la forme *du* du présent (*du kommst*), on enlève le **-st** et le 
 | machen | du machst | **Mach!** | Fais ! |
 | warten | du wartest | **Warte!** | Attends ! |
 
-Les verbes en **-e→i/ie** gardent ce changement : *du gibst → **Gib!***, *du liest → **Lies!***, *du sprichst → **Sprich!***. Mais les verbes **a → ä** perdent l'Umlaut : *du fährst → **Fahr!***, *du läufst → **Lauf!***.
+Les verbes en **-e→i/ie** gardent ce changement : *du gibst → **Gib!***, *du liest → **Lies!***, *du sprichst → **Sprich!***. Mais les verbes **a → ä** (et **au → äu**) perdent l'Umlaut : *du fährst → **Fahr!***, *du läufst → **Lauf!***.
 
 ## 3. Les formes « ihr » et « Sie »
 
@@ -72,6 +72,6 @@ On ajoute souvent **bitte** pour adoucir l'ordre : *Komm bitte!* / *Mach bitte d
 ## À retenir
 - Trois formes : **du** (radical seul), **ihr** (forme ihr sans pronom), **Sie** (infinitif + Sie).
 - Verbes *e→i/ie* : on garde le changement (*Gib! Lies! Sprich!*).
-- Verbes *a→ä* : **pas** d'Umlaut à l'impératif (*Fahr! Lauf!*).
+- Verbes *a→ä* (et *au→äu*) : **pas** d'Umlaut à l'impératif (*Fahr! Lauf!*).
 - **sein** : Sei! / Seid! / Seien Sie!
 - Verbes séparables : la particule part à la fin (*Steh auf!*).

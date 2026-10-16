@@ -26,7 +26,7 @@ Pour dire le temps qu'il fait, on utilise **It's** + un mot.
 
 | Français | Anglais |
 |---|---|
-| Il fait beau / soleil. | **It's sunny.** |
+| Il fait beau / Il y a du soleil. | **It's sunny.** |
 | Il pleut. | **It's rainy.** / It's raining. |
 | Il y a des nuages. | **It's cloudy.** |
 | Il fait du vent. | **It's windy.** |
@@ -34,7 +34,7 @@ Pour dire le temps qu'il fait, on utilise **It's** + un mot.
 | Il fait chaud. | **It's hot.** |
 | Il fait froid. | **It's cold.** |
 
-**Exemple :** Today **it's sunny**! → Aujourd'hui il fait beau !
+**Exemple :** Today **it's sunny**! → Aujourd'hui, il fait beau !
 
 ## 2. Demander le temps qu'il fait
 

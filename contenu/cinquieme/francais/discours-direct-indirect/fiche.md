@@ -37,7 +37,7 @@ Le **discours indirect** rapporte les paroles **sans guillemets**, dans une **pr
 | ponctuation | Il dit : « Je pars. » | Il dit **qu'**il part. |
 | pronoms | « **Je** viens. » | Il dit qu'**il** vient. |
 | question | « Viens-**tu** ? » | Il demande **si** je viens. |
-| temps (si le verbe introducteur est au passé) | Il dit : « Je **pars**. » | Il dit qu'il **partait**. |
+| temps (si le verbe introducteur est au passé) | Il a dit : « Je **pars**. » | Il a dit qu'il **partait**. |
 
 ## 3. Les erreurs à éviter
 

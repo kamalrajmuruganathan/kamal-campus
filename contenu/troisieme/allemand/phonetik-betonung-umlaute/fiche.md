@@ -54,7 +54,7 @@ La règle dépend de la voyelle **précédente** :
 |---|---|
 | ch après a, o, u, au | Bu**ch**, Na**ch**t, au**ch** (« ach-Laut ») |
 | ch après e, i, ä, ö, ü, consonne | i**ch**, ni**ch**t, Mil**ch** (« ich-Laut ») |
-| sch (un seul son) | **Sch**ule, Fi**sch**, ti**sch** |
+| sch (un seul son) | **Sch**ule, Fi**sch**, Ti**sch** |
 
 ## 4. La syllabe accentuée (die Betonung)
 

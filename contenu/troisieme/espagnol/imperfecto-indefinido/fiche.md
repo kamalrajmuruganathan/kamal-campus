@@ -1,6 +1,6 @@
 ---
 id: 3e-espagnol-imperfecto-indefinido
-titre: "Imperfecto o indefinido ?"
+titre: "¿Imperfecto o indefinido?"
 voie: college
 niveau: troisieme
 parcours: espagnol
@@ -14,7 +14,7 @@ statut: brouillon
 relu_par: null
 ---
 
-# Imperfecto o indefinido ?
+# ¿Imperfecto o indefinido?
 
 > Ces deux temps du passé ne racontent pas la même chose. L'**indefinido** fait avancer le récit (les actions), l'**imperfecto** plante le décor (les circonstances). Savoir les distinguer, c'est savoir raconter en espagnol.
 

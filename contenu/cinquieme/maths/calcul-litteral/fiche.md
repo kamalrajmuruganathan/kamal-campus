@@ -68,6 +68,11 @@ $$3a + 5a = 8a \qquad\qquad 7x - 2x = 5x$$
 
 ## 4. Développer
 
+<!-- schema:distributivite-aire -->
+![L’aire du grand rectangle, 3 × (x + 4), est la somme des aires des deux petits : 3x et 12.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NjAgMjEwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjU2MCIgaGVpZ2h0PSIyMTAiIGZpbGw9IiNmZmZmZmYiLz48dGV4dCB4PSIyODAiIHk9IjI4IiBmb250LXNpemU9IjE2IiBmaWxsPSIjMTYyMzJlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj4zKHggKyA0KSA9IDN4ICsgMTI8L3RleHQ+PHJlY3QgeD0iMTUwIiB5PSI4MCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxZjZmZWIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyMzUiIHk9IjEzNiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzFmNmZlYiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+M3g8L3RleHQ+PHJlY3QgeD0iMzIwIiB5PSI4MCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNjMjVlMDAiIGZpbGwtb3BhY2l0eT0iMC4xOCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIzNzUiIHk9IjEzNiIgZm9udC1zaXplPSIxNyIgZmlsbD0iI2MyNWUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+MTI8L3RleHQ+PHRleHQgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHBhaW50LW9yZGVyPSJzdHJva2UiIHg9IjEzNiIgeT0iMTM1IiBmb250LXNpemU9IjE2IiBmaWxsPSIjMTYyMzJlIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXdlaWdodD0iNzAwIiBmb250LXN0eWxlPSJpdGFsaWMiPjM8L3RleHQ+PHRleHQgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHBhaW50LW9yZGVyPSJzdHJva2UiIHg9IjIzNSIgeT0iNjgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc3R5bGU9Iml0YWxpYyI+eDwvdGV4dD48dGV4dCBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgcGFpbnQtb3JkZXI9InN0cm9rZSIgeD0iMzc1IiB5PSI2OCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzE2MjMyZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zdHlsZT0iaXRhbGljIj40PC90ZXh0Pjwvc3ZnPg==)
+*L’aire du grand rectangle, 3 × (x + 4), est la somme des aires des deux petits : 3x et 12.*
+<!-- /schema -->
+
 **Développer**, c'est transformer un produit en somme, en utilisant la
 **distributivité** :
 
@@ -77,15 +82,15 @@ $$\boxed{k(a + b) = ka + kb} \qquad\qquad \boxed{k(a - b) = ka - kb}$$
 >
 > Chaque terme de la parenthèse est multiplié par $3$ — **aucun ne doit être oublié**.
 
-### ⚠️ Le piège du signe moins
+### ⚠️ Le piège de la soustraction
 
-$$-2(x + 3) = -2x - 6$$
+$$5(x - 3) = 5x - 15$$
 
-Le $-2$ multiplie **les deux termes**, y compris le $+3$ qui devient $-6$.
+Le $5$ multiplie **les deux termes**, y compris le $3$ : on soustrait $5 \times 3 = 15$.
 
-> **Exemple plus complet.** $-4(x - 5) = -4x + 20$
+> **Exemple plus complet.** $4(2x - 5) = 8x - 20$
 >
-> $(-4) \times (-5) = +20$ : deux signes moins donnent un plus.
+> $4 \times 2x = 8x$ et $4 \times 5 = 20$, que l'on soustrait.
 
 ---
 
@@ -165,7 +170,7 @@ Pour montrer qu'une affirmation est **fausse**, un seul contre-exemple suffit.
 
 1. **Réduire $3a + 5b$ en $8ab$.** Ce sont des natures différentes.
 2. **Oublier de multiplier le second terme** : $3(x+4)$ vaut $3x + 12$, pas $3x + 4$.
-3. **Se tromper de signe** : $-2(x+3)$ vaut $-2x - 6$, pas $-2x + 6$.
+3. **Se tromper de signe** : $5(x-3)$ vaut $5x - 15$, pas $5x + 15$.
 4. **Confondre développer et factoriser.**
 5. **Écrire $34$ pour $3 \times 4$** : la suppression du × ne vaut que devant une lettre.
 6. **Utiliser la même lettre pour deux nombres différents** dans une démonstration.

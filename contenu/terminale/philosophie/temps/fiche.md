@@ -20,7 +20,7 @@ relu_par: null
 
 ## 1. Le problème du temps
 - **L'insaisissable** : le temps semble évident tant qu'on n'y réfléchit pas. Saint Augustin résume la difficulté : « Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l'expliquer à qui me le demande, je ne le sais plus. »
-- **Passé, présent, futur** : le passé n'est plus, le futur n'est pas encore, et le présent est un instant fuyant. Augustin propose que les trois temps existent dans l'âme : mémoire (passé présent), attention (présent présent), attente (futur présent).
+- **Passé, présent, futur** : le passé n'est plus, le futur n'est pas encore, et le présent est un instant fuyant. Augustin propose que les trois temps existent dans l'âme : la mémoire (présent du passé), l'attention (présent du présent) et l'attente (présent de l'avenir).
 
 ## 2. Le temps : dans les choses ou dans l'esprit ?
 - **Le temps comme mesure du mouvement** : Aristote définit le temps comme « le nombre du mouvement selon l'antérieur et le postérieur ». Le temps se compte par le changement.
@@ -29,7 +29,7 @@ relu_par: null
 
 ## 3. Temps, existence et liberté
 - **L'existence temporelle** : pour Heidegger, l'existence humaine est fondamentalement temporelle ; l'homme est un être « pour la mort », ce qui donne son poids à l'existence.
-- **Le tragique du temps** : le temps semble nous dépouiller (fuite, vieillissement, oubli). Les stoïciens et Sénèque invitent à bien user du présent, seul temps qui nous appartienne (« carpe diem » chez Horace).
+- **Le tragique du temps** : le temps semble nous dépouiller (fuite, vieillissement, oubli). Les stoïciens, comme Sénèque, invitent à bien user du présent, seul temps qui nous appartienne (« carpe diem » chez Horace).
 - **Temps et liberté** : le futur est ouvert ; l'attente, le projet et l'espoir supposent que l'avenir n'est pas entièrement déterminé. Sartre lie la liberté au projet, tourné vers l'avenir.
 - **Mémoire et identité** : la continuité du moi dans le temps repose sur la mémoire ; sans elle, l'identité personnelle se défait (thème déjà présent chez Locke).
 

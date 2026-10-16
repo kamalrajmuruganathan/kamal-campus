@@ -74,7 +74,7 @@ Quelques formes très fréquentes à mémoriser :
 
 ## 4. Les modaux au Präteritum
 
-Les modaux perdent leur Umlaut : *können → **konnte***, *müssen → **musste***, *wollen → **wollte***, *dürfen → **durfte***, *sollen → **sollte***, *mögen → **mochte***.
+Les modaux qui ont un Umlaut le perdent au Präteritum, et tous prennent les terminaisons des verbes faibles : *können → **konnte***, *müssen → **musste***, *wollen → **wollte***, *dürfen → **durfte***, *sollen → **sollte***, *mögen → **mochte***.
 
 | Phrase | Traduction |
 |---|---|

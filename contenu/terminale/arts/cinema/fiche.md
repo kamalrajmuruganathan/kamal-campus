@@ -20,7 +20,7 @@ relu_par: null
 
 ## 1. Naissance du cinéma
 
-Le cinéma naît officiellement en **1895** avec les frères **Lumière**, qui organisent la première projection publique payante à Paris et tournent des vues comme *La Sortie de l'usine Lumière*. Georges **Méliès** invente peu après le cinéma de fiction et les trucages : *Le Voyage dans la Lune* (1902).
+Le cinéma naît officiellement en **1895** avec les frères **Lumière**, qui organisent la première projection publique payante à Paris et tournent des vues comme *La Sortie de l'usine Lumière*. Georges **Méliès** développe peu après le cinéma de fiction (des histoires mises en scène) et invente de nombreux trucages : *Le Voyage dans la Lune* (1902).
 
 Jusqu'à la fin des années 1920, le cinéma est **muet** (sans son synchronisé), accompagné en salle par de la musique. Le passage au **parlant** a lieu à la fin des années 1920.
 
@@ -65,7 +65,7 @@ Le cinéma se décline en **genres** : comédie, drame, science-fiction, western
 
 ## À retenir
 
-- **1895** : premières projections des frères Lumière ; Méliès invente le trucage.
+- **1895** : premières projections des frères Lumière ; Méliès, pionnier de la fiction et des trucages.
 - **Échelle des plans** : d'ensemble, moyen, gros plan, très gros plan.
 - **Angles** : plongée (affaiblit), contre-plongée (grandit).
 - **Mouvements** : travelling (déplacement), panoramique (rotation), zoom.

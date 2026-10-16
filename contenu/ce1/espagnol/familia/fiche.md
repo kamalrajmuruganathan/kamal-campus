@@ -65,7 +65,7 @@ Pour dire « c'est... », on utilise **es** : *Es mi madre.* (C'est ma mère.)
 
 - Ne confonds pas **-o** (garçon) et **-a** (fille) : on dit *el hermano* pour un frère, *la hermana* pour une sœur.
 - *madre* veut dire « mère » (et pas « maire ») ; *padre* veut dire « père ».
-- En espagnol, la lettre **ñ** existe : *niño* (garçon) se lit « niño ».
+- En espagnol, la lettre **ñ** existe : *niño* (le petit garçon) se lit « ni-gno », comme dans « montagne ».
 
 ## À retenir
 

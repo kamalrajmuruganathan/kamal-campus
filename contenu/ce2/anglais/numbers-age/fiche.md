@@ -24,7 +24,7 @@ relu_par: null
 
 On commence par les petits nombres. Écoute-les bien, ils reviennent tout le temps.
 
-| Chiffre | Anglais | Chiffre | Anglais |
+| Nombre | Anglais | Nombre | Anglais |
 |---|---|---|---|
 | 0 | zero | 7 | seven |
 | 1 | one | 8 | eight |

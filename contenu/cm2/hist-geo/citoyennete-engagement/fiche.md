@@ -41,7 +41,7 @@ ne pas croire, dans le respect des autres.
 Les grands **symboles** de la République française sont :
 - le **drapeau tricolore** (bleu, blanc, rouge) ;
 - l'hymne national, **La Marseillaise** ;
-- la **Marianne**, qui représente la République ;
+- **Marianne**, qui représente la République ;
 - la devise **« Liberté, Égalité, Fraternité »**.
 
 ## 3. S'engager pour les autres

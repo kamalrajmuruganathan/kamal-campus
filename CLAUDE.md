@@ -243,3 +243,47 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   Suite (`app/lib/expressions/autres.js` + tests) : intervalles et réunions (« ]-∞ ; 5[ ∪ [7 ; 9] », ou « x < 5 »),
   coordonnées « M(2 ; 1) » (pas « un vecteur / un point » : plusieurs réponses), équations de réaction ajustées
   (« 2 H2 + O2 -> 2 H2O », charges « Fe3+ », ordre libre, pas les noyaux) : ≈ 140 exercices de plus.
+- **Publié le 13/10/2026** : PR #6 (`upgrade-sdk57` → `main`, merge `7f0be03`), contrôle qualité et déploiement Pages verts.
+  Tout le § 15 est en ligne.
+
+## 16. Carnet d'erreurs (13/10/2026) — sur `upgrade-sdk57`, non publié
+- `app/lib/carnet` (+ tests) : QCM et exercices ratés → `profil.carnet` (entrées `{cle, type: qcm|exo, chapitreId, titre,
+  question | exoId, etape, prochaine, echecs, maj}`), répétition espacée 1 → 3 → 7 jours, maîtrisé après 3 réussites
+  dues (`profil.carnetMaitrisees`), échec = retour au début. Reprise automatique de l'ancienne réserve `profil.erreurs`.
+- `Contexte.js` : `enregistrerResultat` note les QCM ; `noterExerciceCarnet` (appelé par `Exercices.js`).
+  `cloud/fusion.js` : `fusionnerCarnets` (par clé, `maj` la plus récente).
+- Écrans : `ModeErreurs.js` réécrit (« Mon carnet d'erreurs » : à revoir aujourd'hui / plus tard / maîtrisées, par
+  chapitre) ; `CarnetExercices.js` (exercices dus, réutilise `CarteExercice` exportée par Exercices.js). Carte d'accueil
+  « 📒 Mon carnet d'erreurs » (nombre à revoir aujourd'hui). Testé dans Chromium avec l'horloge avancée d'un jour.
+
+## 17. Lecture à voix haute (13/10/2026) — sur `upgrade-sdk57`, non publié
+- `app/lib/lecture` (+ tests) : `lectureActive(matiere, niveau, profil)` (langues vivantes dont l'italien, CP, CE1, ou
+  réglage `profil.lecturePartout`) ; `latexEnMots` (« 3 + 4 = 7 » → « 3 plus 4 égale 7 ») ; `segmentsFiche` /
+  `segmentsTexte` : chaque passage avec sa voix (tableaux de vocabulaire par colonne, gras, « citations »),
+  morceaux ≤ 220 caractères (Chrome coupe les lectures longues).
+- `src/parole.js` : voix it-IT, `parlerSequence` accepte `{texte, langue}`, une nouvelle lecture annule la précédente.
+  `BoutonEcouter` : `texte` ou `segments`, second appui = « ⏹️ Arrêter ». Boutons dans Chapitre (fiche), Exercices
+  (énoncé), Qcm (« Écouter la question » : énoncé + réponses A, B…), Flashcards, RevisionSRS.
+  Réglage dans Profil : « Bouton « Écouter » dans toutes les matières ». Testé dans Chromium (voix espionnées).
+
+## 18. Schémas dans les fiches (13/10/2026) — sur `upgrade-sdk57`, non publié
+- `outils/schemas/base.mjs` (style « papier », `texte`, `fleche`, `boite`, `repere`, `courbe`, `frise` à l'échelle…) ;
+  lots `outils/schemas/lot_{maths_primaire,maths_college,maths_lycee,pc,svt,histgeo,techno}.mjs` (SCHEMAS + POSES) ;
+  `node outils/poser-schemas.mjs [lot_x.mjs] [--dry-run]` pose chaque schéma sous le titre de section voulu, avec une
+  légende visible, entre `<!-- schema:<cle> -->` et `<!-- /schema -->` (relançable : remplace le bloc). Ne pas éditer
+  ces blocs à la main : corriger le lot puis relancer. Les anciens `<!-- schema:auto -->` (outils/generer-schemas.mjs)
+  restent.
+- ≈ 990 schémas dans ≈ 460 fiches (maths, PC, SVT/sciences, hist-géo, techno/SI/SNT/NSI), chacun regardé en aperçu PNG.
+  Pas de carte géographique dessinée à main levée.
+
+## 19. Relecture approfondie des 956 fiches (15/10/2026) — sur `upgrade-sdk57`, non publié
+- Les 956 fiches ont été relues en entier en 24 lots (commits « Relecture des fiches : lot r00 » … « r23 »). On a corrigé les erreurs
+  de fond (faits, dates, définitions, attributions, valeurs), le français et les exemples dans les langues étudiées. Quand la même
+  erreur se trouvait dans le QCM, les cartes, les exercices non générés ou attendus.json du chapitre, elle y a été corrigée aussi.
+  Blocs de schémas non touchés.
+- Contrôles après la relecture : `npm test` (541 OK), `verifier-attendus` (0 problème), `verifier-contenu` (OK), KaTeX (154 086 formules, 0 erreur).
+- Les points qui demandent une décision de Kamal (hors programme, conventions, faits à vérifier) sont listés dans
+  `docs/relecture-a-trancher.md`, et ils n'ont pas été modifiés.
+- **16/10/2026 : Kamal a choisi l'option 1 (garder la redirection).** `netlify.toml` (redirection 301) est déjà sur `main`.
+  Elle s'active au prochain build Netlify de `main`, c'est-à-dire à la fusion de la PR #7. Ensuite, Kamal clique sur
+  « Stop builds » dans Netlify (Site configuration → Build & deploy → Continuous deployment).

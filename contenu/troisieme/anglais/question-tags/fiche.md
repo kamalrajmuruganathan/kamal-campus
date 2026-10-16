@@ -1,6 +1,6 @@
 ---
 id: 3e-anglais-question-tags
-titre: "Les question tags (…, isn't it ?)"
+titre: "Les question tags (…, isn't it?)"
 voie: college
 niveau: troisieme
 parcours: anglais
@@ -14,7 +14,7 @@ statut: brouillon
 relu_par: null
 ---
 
-# Les question tags (…, isn't it ?)
+# Les question tags (…, isn't it?)
 
 > « It's cold today, **isn't it?** » Cette petite reprise en fin de phrase, c'est le *question tag*. Il correspond au « n'est-ce pas ? » français, mais il change à chaque phrase. Voici la mécanique pour le former sans hésiter.
 

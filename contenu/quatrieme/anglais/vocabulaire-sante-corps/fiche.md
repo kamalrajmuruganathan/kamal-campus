@@ -69,10 +69,10 @@ Exemple : *You should rest and take some medicine.* → Tu devrais te reposer et
 
 - Pour dire « j'ai mal à… », l'anglais utilise souvent **have got a + -ache**
   (*headache*, *stomachache*, *toothache*) ou **my … hurts**.
-- « medicine » (médicament) est différent de « a medicine cabinet » ; ne le confonds
-  pas avec « médecine » comme étude, qui se dit aussi *medicine* mais indénombrable.
-- « to be sick » signifie « être malade » (britannique) mais aussi « vomir » ; le
-  contexte lève l'ambiguïté.
+- « medicine » signifie « médicament », mais aussi « la médecine » (la science) :
+  le contexte permet de choisir.
+- « to be sick » signifie « être malade » (surtout en anglais américain) mais aussi,
+  en anglais britannique, « vomir » ; le contexte lève l'ambiguïté.
 - Le pluriel de « foot » est **feet** (irrégulier), et celui de « tooth » est **teeth**.
 
 ## À retenir

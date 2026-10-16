@@ -71,7 +71,7 @@ Attention : *creo que* (affirmatif) est suivi de l'**indicatif** (*creo que es v
 
 ## 5. Les erreurs à éviter
 
-- Quand le sujet est le même, on garde l'infinitif : *Quiero venir* (et non « quiero que venga »).
+- Quand le sujet est le même, on garde l'infinitif : *Quiero venir* (et non « quiero que yo venga »).
 - Ne pas oublier d'inverser les voyelles : *hablar → hable* (en -e), pas « habla ».
 - *Espero que* est presque toujours suivi du subjonctif : *Espero que apruebes*.
 - Les verbes en *-gar/-car/-zar* changent d'orthographe : *llegar → llegue*, *buscar → busque*, *empezar → empiece*.

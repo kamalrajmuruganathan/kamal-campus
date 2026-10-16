@@ -28,7 +28,7 @@ Pour **Descartes**, la volonté est infinie, et le libre arbitre est ce qui nous
 **Spinoza** nie le libre arbitre : nous nous croyons libres parce que nous avons conscience de nos désirs, mais nous ignorons les causes qui les déterminent. La liberté n'est pas l'absence de cause, mais la **nécessité comprise** : est libre ce qui agit selon la seule nécessité de sa nature. Le déterminisme affirme que tout événement a une cause ; il s'oppose à l'idée d'un choix sans cause.
 
 ## 4. La liberté comme autonomie et comme condition : Kant, Sartre, Rousseau
-Pour **Kant**, être libre, c'est être **autonome** : obéir à la loi qu'on se donne soi-même, par opposition à l'**hétéronomie** (obéir à ses penchants). Pour **Sartre**, "l'existence précède l'essence" : l'homme n'a pas de nature qui le détermine, il se fait par ses choix ; il est "condamné à être libre" et pleinement responsable (*L'existentialisme est un humanisme*). **Rousseau** distingue liberté naturelle et liberté civile, et affirme qu'obéir à la loi qu'on s'est prescrite est la liberté.
+Pour **Kant**, être libre, c'est être **autonome** : obéir à la loi qu'on se donne soi-même, par opposition à l'**hétéronomie** (obéir à ses penchants). Pour **Sartre**, « l'existence précède l'essence » : l'homme n'a pas de nature qui le détermine, il se fait par ses choix ; il est « condamné à être libre » et pleinement responsable (*L'existentialisme est un humanisme*). **Rousseau** distingue liberté naturelle et liberté civile, et affirme qu'obéir à la loi qu'on s'est prescrite est la liberté.
 
 ## 5. Les erreurs à éviter
 - Confondre déterminisme et fatalisme : le premier n'interdit pas d'agir, le second si.

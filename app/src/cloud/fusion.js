@@ -6,6 +6,8 @@
  *  - réglages/préférences -> ceux du device le PLUS récemment actif
  */
 
+import { fusionnerCarnets } from '../../lib/carnet';
+
 const max = (x, y) => Math.max(x || 0, y || 0);
 const rangDate = (p) => (p && (p.dernierJourValide || p.jourCourant)) || '';
 
@@ -88,6 +90,10 @@ export function fusionnerProfils(a, b) {
   const err = {};
   for (const e of [...(a.erreurs || []), ...(b.erreurs || [])]) if (e && e.cle != null) err[e.cle] = e;
   f.erreurs = Object.values(err).slice(-200);
+
+  // Carnet d'erreurs : par clé, la version la plus récente gagne.
+  if (Array.isArray(a.carnet) || Array.isArray(b.carnet)) f.carnet = fusionnerCarnets(a.carnet, b.carnet);
+  f.carnetMaitrisees = Math.max(a.carnetMaitrisees || 0, b.carnetMaitrisees || 0);
 
   // Exercices réussis : union par chapitre.
   f.exosReussis = {};

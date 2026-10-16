@@ -25,14 +25,14 @@ En italien, **i mezzi di comunicazione** (littéralement « les moyens de commun
 |---|---|---|
 | il giornale | le journal | *il quotidiano* = le quotidien |
 | la stampa | la presse | *la stampa scandalistica* = la presse à scandale |
-| il titolo | le titre, la manchette | *fare notizia* = faire la une |
+| il titolo | le titre, la manchette | *essere in prima pagina* = faire la une |
 | la notizia | la nouvelle, l'information | *le notizie* = les informations |
 | il telegiornale (TG) | le journal télévisé | contraction courante : *il TG* |
 | l'emittente (f.) | la chaîne (radio/TV) | *un'emittente televisiva* |
 | la trasmissione | l'émission | *una trasmissione in diretta* = en direct |
 
 **Exemples :**
-- *La notizia è finita su tutti i giornali.* → La nouvelle a fini dans tous les journaux.
+- *La notizia è finita su tutti i giornali.* → La nouvelle s'est retrouvée dans tous les journaux.
 - *Guardo il telegiornale ogni sera.* → Je regarde le journal télévisé chaque soir.
 
 ## 2. Internet e i social (le numérique)

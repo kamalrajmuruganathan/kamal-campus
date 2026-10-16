@@ -67,7 +67,7 @@ personne, l'animal ou la chose.
 |---|---|
 | une voiture | une **grande** voiture |
 | un chat | un chat **noir** |
-| des fleurs | des **jolies** fleurs |
+| des fleurs | de **jolies** fleurs |
 
 L'adjectif s'accorde avec le nom : un chat noir → des chats **noirs**.
 

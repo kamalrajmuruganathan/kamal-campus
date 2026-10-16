@@ -21,7 +21,7 @@ relu_par: null
 ## 1. Les pronoms COD (complemento directo)
 Ils remplacent le complément **direct** (sans préposition), celui qui répond à *¿qué? / ¿a quién?*.
 
-| Personne | COD | Exemple |
+| Pronom COD | Traduction | Exemple |
 |---|---|---|
 | lo | le / cela (masc.) | ¿El libro? **Lo** leo. |
 | la | la (fém.) | ¿La carta? **La** escribo. |
@@ -31,7 +31,7 @@ Ils remplacent le complément **direct** (sans préposition), celui qui répond 
 ## 2. Les pronoms COI (complemento indirecto)
 Ils remplacent le complément **indirect** introduit par *a* (répond à *¿a quién?* au sens de « à qui »). À la 3e personne : **le** (singulier), **les** (pluriel).
 
-| Personne | COI | Exemple |
+| Pronom COI | Traduction | Exemple |
 |---|---|---|
 | le | lui | **Le** doy un regalo (a él/ella). |
 | les | leur | **Les** escribo (a mis amigos). |

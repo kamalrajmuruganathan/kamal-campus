@@ -32,7 +32,7 @@ Le présent simple sert à parler de ce qui est **habituel, permanent ou toujour
 | 3e pers. en -es | He **watches** the news. | Il regarde les informations. |
 | 3e pers. en -ies | She **studies** biology. | Elle étudie la biologie. |
 
-On l'utilise aussi pour les **vérités générales** : *Water boils at 100°C.* (L'eau bout à 100°C.)
+On l'utilise aussi pour les **vérités générales** : *Water boils at 100°C.* (L'eau bout à 100 °C.)
 
 ## 2. Le présent continu : action en cours et changement
 

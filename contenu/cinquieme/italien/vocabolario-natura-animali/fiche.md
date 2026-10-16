@@ -73,7 +73,7 @@ Exemple : *Il cane corre nel prato.* → Le chien court dans le pré.
 - *c'è il sole* = il y a du soleil ; *piove* = il pleut ; *nevica* = il neige (verbes impersonnels).
 - *il mare* (la mer) est masculin en italien, alors que « la mer » est féminin en français.
 - Ne confonds pas *il bosco* (le petit bois) et *la foresta* (la grande forêt).
-- Attention aux doubles consonnes : *la fa**rf**alla*, *la mu**cc**a*, *il ga**tt**o*, *la spia**gg**ia*.
+- Attention aux doubles consonnes : *la farfa**ll**a*, *la mu**cc**a*, *il ga**tt**o*, *la spia**gg**ia*.
 
 ## À retenir
 

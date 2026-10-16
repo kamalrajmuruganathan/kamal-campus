@@ -27,7 +27,7 @@ On ne fait pas soi-même l'action ; on la fait faire ou on la subit.
 |---|---|---|---|
 | have + objet + PP | faire faire (service) | I **had my car repaired**. | J'ai fait réparer ma voiture. |
 | get + objet + PP | idem, plus familier | She **got her hair cut**. | Elle s'est fait couper les cheveux. |
-| have/get + qqn + to/BV | obtenir que qqn fasse | I **had the plumber fix** it. | J'ai fait réparer par le plombier. |
+| have/get + qqn + to/BV | obtenir que qqn fasse | I **had the plumber fix** it. | Je l'ai fait réparer par le plombier. |
 | have + objet + PP (subi) | subir un événement | He **had his phone stolen**. | On lui a volé son téléphone. |
 
 Le point clé : *have something **done*** = ce n'est pas moi qui agis. À distinguer de *I repaired my car* (je l'ai réparée moi-même).

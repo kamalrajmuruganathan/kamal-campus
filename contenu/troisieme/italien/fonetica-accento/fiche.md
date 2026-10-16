@@ -16,7 +16,7 @@ relu_par: null
 
 # L'accent tonique et les accents graphiques
 
-> En italien, un mot sur deux se lit en appuyant sur la bonne syllabe : c'est l'**accent
+> En italien, chaque mot se lit en appuyant sur la bonne syllabe : c'est l'**accent
 > tonique**. Et quand l'accent tombe sur la dernière voyelle, on l'écrit avec un **accent
 > graphique** (à, è, é, ì, ò, ù). Voici comment ne plus se tromper, à l'oral comme à l'écrit.
 
@@ -32,13 +32,13 @@ Le plus souvent, l'accent tonique tombe sur l'**avant-dernière syllabe** (ce so
 
 ## 2. Les accents graphiques obligatoires
 Quand un mot se termine par une **voyelle accentuée** (parole tronche), l'accent s'**écrit** :
-- avec l'**accent grave** le plus souvent : cit**tà**, però, uni­versi**tà**, vir**tù**, caf**fè** ;
+- avec l'**accent grave** le plus souvent : cit**tà**, però, universi**tà**, vir**tù**, caf**fè** ;
 - avec l'**accent aigu** sur le *e* fermé de quelques mots : per**ché**, ben**ché**, af**finché**, venti**tré**, né.
 
 | Sans accent | Avec accent | Sens |
 |---|---|---|
 | e (et) | è (il/elle est) | l'accent distingue les deux mots |
-| perche ? | per**ché** | « pourquoi / parce que » (jamais sans accent) |
+| perche | per**ché** | « pourquoi / parce que » (jamais sans accent) |
 | citta | cit**tà** | la voyelle finale accentuée s'écrit toujours |
 
 ## 3. Les monosyllabes qui changent de sens

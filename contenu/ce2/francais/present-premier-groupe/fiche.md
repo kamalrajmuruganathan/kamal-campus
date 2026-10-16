@@ -17,13 +17,13 @@ relu_par: null
 # Le présent des verbes en -er
 
 > Les verbes en **-er** (comme chanter, jouer, manger) sont les plus nombreux :
-> on les appelle les verbes du **1er groupe**. Au présent, ils suivent tous les
+> on les appelle les verbes du **1er groupe** (sauf *aller*). Au présent, ils suivent tous les
 > mêmes terminaisons. Une fois la règle apprise, tu sais les conjuguer tous !
 
 ## 1. Les terminaisons du présent
 
-Pour conjuguer, on enlève le **-er** de l'infinitif (le **radical**) et on ajoute
-les terminaisons.
+Pour conjuguer, on enlève le **-er** de l'infinitif : il reste le **radical**
+(*chant-*), auquel on ajoute les terminaisons.
 
 | Pronom | Terminaison | Exemple : chanter |
 |---|---|---|
@@ -67,7 +67,7 @@ Certains verbes en -er changent un peu leur radical pour garder le bon son :
 - Pense au **e** dans « nous mangeons » et au **ç** dans « nous commençons ».
 
 ## À retenir
-- Verbes en **-er** = 1er groupe.
+- Verbes en **-er** = 1er groupe (sauf *aller*).
 - Terminaisons du présent : **-e, -es, -e, -ons, -ez, -ent**.
 - Singulier et « ils/elles » se prononcent pareil mais s'écrivent différemment.
 - Trouve le sujet pour choisir la bonne terminaison.

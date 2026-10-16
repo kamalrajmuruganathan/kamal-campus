@@ -51,7 +51,7 @@ Forme la plus courante (attribut, après le verbe) : **am + adjectif + -sten**.
 | schnell | **am schnellsten** | Anna läuft **am schnellsten**. | Anna court le plus vite. |
 | klein | **am kleinsten** | Er ist **am kleinsten**. | Il est le plus petit. |
 
-Après un *d, t, s, z, ß*, on ajoute **-esten** pour faciliter la prononciation : *alt → am **ältesten***, *kurz → am **kürzesten***.
+Après un *d, t, s, z, ß*, on ajoute **-esten** pour faciliter la prononciation : *alt → am **ältesten***, *kurz → am **kürzesten***. Exception à retenir : *groß → am **größten***.
 
 ## 4. L'Umlaut et les formes irrégulières
 
@@ -82,6 +82,6 @@ Quatre formes **irrégulières** très fréquentes, à apprendre par cœur :
 ## À retenir
 - Comparatif : **adjectif + -er** ; « que » = **als**.
 - Égalité : **so … wie**.
-- Superlatif (attribut) : **am … -sten** (ou **-esten** après d/t/s/z/ß).
+- Superlatif (attribut) : **am … -sten** (ou **-esten** après d/t/s/z/ß, sauf *am größten*).
 - Umlaut fréquent sur les adjectifs courts : *alt → älter → am ältesten*.
 - Irréguliers : **gut/besser/am besten**, **viel/mehr/am meisten**, **gern/lieber/am liebsten**, **hoch/höher/am höchsten**.

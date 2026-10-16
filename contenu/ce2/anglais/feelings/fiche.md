@@ -46,7 +46,7 @@ Pour les émotions, l'anglais utilise le verbe **be** (« être »), pas « avoi
 | he / she | She **is** tired. / He **is** angry. | Elle est fatiguée. / Il est en colère. |
 
 Attention : on dit **I am hungry** (mot à mot « je suis affamé ») pour « j'ai
-faim ». En anglais on est faim, on ne l'a pas !
+faim ». En anglais, on « est affamé », on n'« a » pas faim !
 
 ## 3. Demander comment ça va
 

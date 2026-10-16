@@ -18,7 +18,7 @@ relu_par: null
 
 > Poser une question en italien est très simple : souvent, il suffit de changer
 > l'intonation ! Et pour dire « non », on place *non* juste avant le verbe.
-> Attention à la double négation, qui n'existe pas en français.
+> Attention à la double négation (*non… niente*, *non… mai*), qui se construit comme « ne… rien » en français.
 
 ## 1. Poser une question
 Il y a trois façons de poser une question fermée (réponse oui/non) :
@@ -58,7 +58,7 @@ On place **non** directement **avant le verbe** :
 Il n'y a **pas** d'équivalent du « pas » français : *non* suffit.
 
 ## 4. La double négation
-Quand la phrase contient *niente, nessuno, mai, più, nemmeno*, l'italien **garde non** devant le verbe : c'est une double négation normale (contrairement au français).
+Quand la phrase contient *niente, nessuno, mai, più, nemmeno*, l'italien **garde non** devant le verbe : c'est une double négation normale (comme « ne… rien », « ne… jamais » en français).
 
 | Italien | Traduction |
 |---|---|

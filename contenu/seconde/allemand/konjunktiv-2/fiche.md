@@ -78,7 +78,7 @@ Pour un irréel du passé, on utilise **hätte** ou **wäre** + participe II.
 
 - Ne pas dire *würde haben* / *würde sein* : on emploie **hätte** / **wäre**.
 - Éviter *würde* avec les modaux : on dit **könnte**, **müsste**, pas *würde können*.
-- Ne pas oublier le **Umlaut** : hatte → **hätte**, war → **wäre**, konnte → **könnte**.
+- Ne pas oublier l'**Umlaut** : hatte → **hätte**, war → **wäre**, konnte → **könnte**.
 - Dans la subordonnée en *wenn*, le verbe conjugué va à la **fin**.
 - Au passé, l'auxiliaire (hätte/wäre) se conjugue, le participe reste à la fin.
 

@@ -33,7 +33,7 @@ Chaque vêtement a son article (der, die ou das).
 | la veste | **die Jacke** |
 | les chaussures | **die Schuhe** |
 
-Attention : **die Hose** est au singulier en allemand (« le pantalon »), alors qu'en français on dit parfois « un pantalon ».
+Attention : **die Hose** (le pantalon) est un mot **féminin** en allemand, alors que « pantalon » est masculin en français.
 
 ## 2. Dire ce qu'on porte : « Ich trage… »
 

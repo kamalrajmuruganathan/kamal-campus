@@ -47,7 +47,7 @@ On utilise très souvent la forme contractée : *I'm working*, *he's reading*, *
 
 On le repère souvent grâce à des mots comme : *now*, *right now*, *at the moment*, *Look!*, *Listen!*.
 
-## 3. Les erreurs à éviter
+## 4. Les erreurs à éviter
 
 - **Oublier l'auxiliaire be** : on dit *She is working*, jamais *She working*.
 - **Utiliser le présent continu avec les verbes d'état** (*like, want, know, love, understand*) : on dit *I know the answer*, pas *I am knowing the answer*.

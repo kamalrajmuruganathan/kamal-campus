@@ -35,10 +35,10 @@ Il ne faut jamais confondre l'auteur (personne réelle) et le narrateur (voix qu
 
 | Siècle | Mouvement / tendance | Auteurs et œuvres notoires |
 |---|---|---|
-| XVIIe | roman précieux et baroque | Madame de La Fayette, *La Princesse de Clèves* |
+| XVIIe | roman précieux et baroque, puis roman classique (d'analyse) | Honoré d'Urfé (*L'Astrée*), Madame de La Fayette (*La Princesse de Clèves*) |
 | XVIIIe | roman des Lumières, roman épistolaire | Montesquieu, *Lettres persanes* |
 | XIXe | réalisme puis naturalisme | Balzac, Flaubert (*Madame Bovary*), Zola |
-| XXe | roman de l'absurde, Nouveau Roman | Camus (*La Peste*), Proust (*À la recherche du temps perdu*) |
+| XXe | roman d'introspection, roman de l'absurde, Nouveau Roman | Proust (*À la recherche du temps perdu*), Camus (*La Peste*), Robbe-Grillet (*Les Gommes*) |
 | XXIe | récits contemporains, autofiction | romans de la rentrée littéraire |
 
 Le réalisme veut peindre la société telle qu'elle est ; le naturalisme y ajoute l'idée que le milieu et l'hérédité déterminent les personnages.

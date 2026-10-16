@@ -16,7 +16,7 @@ relu_par: null
 
 # El mundo hispanohablante
 
-> L'espagnol n'est pas parlé qu'en Espagne : c'est l'une des langues les plus répandues au monde, officielle sur **plusieurs continents**. On appelle **mundo hispanohablante** (ou *hispanohablante*) l'ensemble des pays et régions où l'espagnol est langue officielle. Faisons-en le tour.
+> L'espagnol n'est pas parlé qu'en Espagne : c'est l'une des langues les plus répandues au monde, officielle sur **plusieurs continents**. On appelle **mundo hispanohablante** l'ensemble des pays et régions où l'espagnol est langue officielle. Faisons-en le tour.
 
 ## 1. Une langue sur plusieurs continents
 

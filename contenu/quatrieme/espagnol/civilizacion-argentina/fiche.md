@@ -49,7 +49,7 @@ L'Argentine offre des paysages très variés :
 - El **mate** : infusion traditionnelle que l'on boit dans une petite calebasse avec une *bombilla* (paille).
 - El **asado** : le barbecue argentin, un repas convivial autour de la viande.
 - El **dulce de leche** : confiture de lait très populaire.
-- Los **gauchos** : cavaliers des plaines, figures emblématiques comme nos cow-boys.
+- Los **gauchos** : cavaliers des plaines, figures emblématiques, un peu comme les cow-boys.
 - El **fútbol** : passion nationale ; l'équipe joue en maillot **bleu ciel et blanc** (*la albiceleste*). **Diego Maradona** est un joueur de légende.
 
 ## 4. Les erreurs à éviter

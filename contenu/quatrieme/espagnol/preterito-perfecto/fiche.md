@@ -52,7 +52,7 @@ Certains verbes très fréquents ont un participe irrégulier qu'il faut mémori
 
 Le pretérito perfecto s'emploie pour une action passée reliée au présent, dans une période **non terminée**. Il va avec des marqueurs comme : **hoy** (aujourd'hui), **esta mañana / esta semana / este año**, **ya** (déjà), **todavía no / aún no** (pas encore), **alguna vez** (déjà, une fois), **nunca** (jamais), **últimamente** (dernièrement).
 
-- **Hoy** he desayunado en casa. → Aujourd'hui, j'ai déjeuné à la maison.
+- **Hoy** he desayunado en casa. → Aujourd'hui, j'ai pris le petit-déjeuner à la maison.
 - ¿**Alguna vez** has estado en Madrid? → Es-tu déjà allé à Madrid ?
 - **Todavía no** hemos cenado. → Nous n'avons pas encore dîné.
 

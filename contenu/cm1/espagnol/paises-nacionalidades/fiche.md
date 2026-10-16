@@ -31,7 +31,7 @@ relu_par: null
 
 ## 2. Les nationalités
 
-La nationalité s'accorde : **-o** au masculin, **-a** au féminin. Elle s'écrit avec une **minuscule** !
+La nationalité s'accorde au féminin : **-o** devient **-a** (*italiano → italiana*) et, après une consonne, on ajoute **-a** (*español → española*, *francés → francesa*). Elle s'écrit avec une **minuscule** !
 
 | Pays | Masculin | Féminin |
 |---|---|---|

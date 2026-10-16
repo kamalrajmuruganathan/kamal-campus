@@ -422,7 +422,7 @@ export default function Profil({ navigation }) {
             Vitesse de lecture 🔊
           </Text>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
-            Pour le bouton « Écouter » des langues (cartes, QCM, fiches).
+            Pour le bouton « Écouter » : langues vivantes, CP et CE1 (fiches, énoncés, QCM, cartes).
           </Text>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
             {VITESSES_LECTURE.map((vi) => {
@@ -471,6 +471,27 @@ export default function Profil({ navigation }) {
           >
             <Text style={{ color: profil.lectureAutoCartes ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
               {profil.lectureAutoCartes ? '✓ ' : ''}Lire les cartes automatiquement
+            </Text>
+          </Pressable>
+
+          {/* Bouton « Écouter » dans toutes les matières (aide à la lecture) */}
+          <Pressable
+            onPress={() => definirReglages({ lecturePartout: !profil.lecturePartout })}
+            accessibilityRole="switch"
+            accessibilityState={{ checked: !!profil.lecturePartout }}
+            style={({ pressed }) => [
+              st.pilule,
+              {
+                alignSelf: 'flex-start',
+                marginTop: t.espace.s,
+                backgroundColor: profil.lecturePartout ? t.couleur.accent : t.couleur.fond,
+                borderColor: profil.lecturePartout ? t.couleur.accent : t.couleur.trait,
+                opacity: pressed ? 0.7 : 1,
+              },
+            ]}
+          >
+            <Text style={{ color: profil.lecturePartout ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+              {profil.lecturePartout ? '✓ ' : ''}Bouton « Écouter » dans toutes les matières
             </Text>
           </Pressable>
 

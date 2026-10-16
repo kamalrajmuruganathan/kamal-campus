@@ -18,7 +18,7 @@ relu_par: null
 
 > L'Espagne est une monarchie parlementaire jeune, née d'une transition démocratique
 > après quarante ans de dictature. Comprendre ses institutions et les grandes dates de
-> son histoire récente éclaire l'actualité du pays. (Faits établis et vérifiables.)
+> son histoire récente éclaire l'actualité du pays.
 
 ## 1. Les institutions actuelles
 

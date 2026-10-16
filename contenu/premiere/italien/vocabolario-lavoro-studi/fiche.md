@@ -56,7 +56,7 @@ relu_par: null
 - **il colloquio** = l'entretien d'embauche (faux ami : ce n'est pas un « colloque »).
 - **lo stipendio** = le salaire (mensuel) ; ne pas confondre avec *il salario* (plus technique).
 - **la laurea** = le diplôme universitaire, pas *« le laurier »*.
-- **superare un esame** = réussir un examen (pas *« passare »*, qui signifie seulement le passer).
+- **superare un esame** = réussir un examen ; « passer » un examen (s'y présenter) se dit *dare* ou *sostenere un esame*.
 
 ## À retenir
 

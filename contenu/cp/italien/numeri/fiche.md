@@ -39,7 +39,7 @@ On s'en sert pour compter, dire son âge ou le nombre d'objets :
 
 ## 3. Les erreurs à éviter
 - Ne confonds pas **sei** (6) et **sette** (7) : ils commencent pareil.
-- **nove** = 9 (et non « neuf » qui ressemble au français mais s'écrit autrement).
+- **nove** = 9 : il ressemble au français « neuf », mais s'écrit *nove*.
 - **dieci** = 10 : le « c » se prononce « tch » (di-è-tchi).
 - **undici** (11) et **dodici** (12) finissent tous les deux par *-dici*.
 

@@ -53,7 +53,7 @@ Exemples avec d'autres groupes : je finiss**ais**, nous finiss**ions** (finir) ;
 
 ## 4. Les erreurs à éviter
 
-- Ne pas oublier le **i** à *nous* et *vous* pour les verbes dont le radical finit par un son proche : *nous criions*, *vous étudiiez*.
+- Ne pas oublier le **i** à *nous* et *vous* pour les verbes dont le radical se termine par **i** : *nous criions*, *vous étudiiez*.
 - Attention aux verbes en *-ger* et *-cer* : on garde le son doux → *nous mangions* mais *je mangeais*, *nous lancions* mais *je lançais*.
 - Ne pas confondre les terminaisons : *-ais* (je, tu), *-ait* (il), *-aient* (ils). Elles se prononcent pareil mais s'écrivent différemment selon le sujet.
 

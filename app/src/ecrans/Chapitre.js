@@ -13,7 +13,7 @@ import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
-import { matiereParlante, texteBrut } from '../parole';
+import { lectureActive, segmentsFiche } from '../../lib/lecture';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { useFiche } from '../useFiche';
@@ -61,9 +61,9 @@ export default function Chapitre({ route, navigation }) {
           </View>
         )}
 
-        {matiereParlante(chapitre.matiere) && fiche && (
+        {lectureActive(chapitre.matiere, chapitre.niveau, profil) && fiche && (
           <View style={{ paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}>
-            <BoutonEcouter t={t} matiere={chapitre.matiere} texte={texteBrut(fiche)} libelle="Écouter la fiche" />
+            <BoutonEcouter t={t} matiere={chapitre.matiere} segments={segmentsFiche(fiche, chapitre.matiere)} libelle="Écouter la fiche" />
           </View>
         )}
 

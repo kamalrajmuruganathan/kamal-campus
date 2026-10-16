@@ -30,13 +30,13 @@ relu_par: null
 
 ## 3. Les questions critiques
 - **La technique nous échappe-t-elle ?** Heidegger interroge « l'essence de la technique » moderne : elle n'est pas neutre, elle transforme notre rapport à l'être et tend à considérer la nature comme un simple « fonds » disponible.
-- **Responsabilité** : Hans Jonas, dans « Le principe responsabilité », soutient que la puissance technique moderne nous impose une responsabilité nouvelle envers les générations futures et la nature.
+- **Responsabilité** : Hans Jonas, dans *Le Principe responsabilité*, soutient que la puissance technique moderne nous impose une responsabilité nouvelle envers les générations futures et la nature.
 - **Aliénation ou libération ?** La technique peut libérer du travail pénible ou, au contraire, asservir ; le progrès technique n'est pas automatiquement un progrès moral. Rousseau doute déjà que le progrès des arts et des sciences améliore les mœurs.
 - **Neutralité en question** : un outil est-il moralement neutre, tout dépendant de l'usage, ou la technique oriente-t-elle déjà nos fins ? Le débat reste ouvert.
 
 ## 4. Les erreurs à éviter
 - Ne pas confondre **technique** (moyens efficaces) et **science** (connaissance théorique) : elles sont liées mais distinctes.
-- Ne pas réduire la technique à une simple application de la science : des techniques la précédent.
+- Ne pas réduire la technique à une simple application de la science : des techniques la précèdent.
 - Ne pas confondre *homo faber* (l'homme qui fabrique, Bergson) et *homo sapiens* (l'homme qui sait).
 - Ne pas attribuer à Descartes une critique de la technique : Descartes en fait l'idéal de maîtrise de la nature.
 

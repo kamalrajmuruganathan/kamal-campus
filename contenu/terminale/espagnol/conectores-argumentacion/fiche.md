@@ -26,7 +26,7 @@ Pour ordonner ses idées et enchaîner les arguments :
 | Fonction | Connecteurs | Exemple |
 |---|---|---|
 | Commencer | en primer lugar, para empezar | **En primer lugar**, hay que definir el problema. |
-| Ajouter | además, asimismo, por otra parte | La medida es cara ; **además**, es injusta. |
+| Ajouter | además, asimismo, por otra parte | La medida es cara; **además**, es injusta. |
 | Ordonner | por un lado… por otro lado | **Por un lado** ahorra tiempo, **por otro** cuesta dinero. |
 | Conclure | por último, en definitiva, en resumen | **En definitiva**, no merece la pena. |
 
@@ -34,7 +34,7 @@ Pour ordonner ses idées et enchaîner les arguments :
 
 | Fonction | Connecteurs | Exemple |
 |---|---|---|
-| Opposition | sin embargo, no obstante, en cambio | Es difícil ; **sin embargo**, lo intentaré. |
+| Opposition | sin embargo, no obstante, en cambio | Es difícil; **sin embargo**, lo intentaré. |
 | Restriction | pero, aunque, a pesar de | Es caro, **pero** vale la pena. |
 | Concession | aunque, a pesar de que | **Aunque** llueva, saldremos. |
 

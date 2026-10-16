@@ -19,7 +19,7 @@ relu_par: null
 > L'italien n'est pas parlé qu'en Italie : c'est une langue officielle dans plusieurs pays et une langue de culture connue dans le monde entier, surtout par la musique, la cuisine et l'art.
 
 ## 1. Origine e base della lingua
-L'italien vient du **latin** (langue romane). L'italien standard s'est formé à partir du **toscano** (le dialecte de Florence), notamment grâce aux grands auteurs comme Dante. C'est pourquoi Dante est appelé le **padre della lingua italiana**.
+L'italien est une **langue romane** : il vient du **latin**. L'italien standard s'est formé à partir du **toscano** (le dialecte de Florence), notamment grâce aux grands auteurs comme Dante. C'est pourquoi Dante est appelé le **padre della lingua italiana**.
 
 ## 2. Dove è lingua ufficiale
 L'italien est **langue officielle** dans :

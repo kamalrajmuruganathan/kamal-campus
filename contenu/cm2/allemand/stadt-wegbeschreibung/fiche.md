@@ -34,7 +34,7 @@ relu_par: null
 | das Krankenhaus | l'hôpital |
 
 ## 2. Nach dem Weg fragen (demander son chemin)
-Pour demander où se trouve un lieu, on dit **Wo ist …?** (Où est …?).
+Pour demander où se trouve un lieu, on dit **Wo ist …?** (Où est … ?).
 
 | Phrase | Traduction |
 |---|---|

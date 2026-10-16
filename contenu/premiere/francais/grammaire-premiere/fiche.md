@@ -60,7 +60,7 @@ La négation se construit avec **deux termes** (négation à deux temps) :
 
 ## 4. Analyser à l'oral
 
-Pour la question de grammaire, on procède ainsi : **nommer** la structure (type de subordonnée, d'interrogation, de négation), **délimiter** l'élément, puis **justifier** (mot introducteur, fonction, sens). Exemple : « ‘que je lis' est une subordonnée relative, introduite par le pronom relatif ‘que', complément de l'antécédent ‘livre'. »
+Pour la question de grammaire, on procède ainsi : **nommer** la structure (type de subordonnée, d'interrogation, de négation), **délimiter** l'élément, puis **justifier** (mot introducteur, fonction, sens). Exemple : « “que je lis” est une subordonnée relative, introduite par le pronom relatif “que”, complément de l'antécédent “livre”. »
 
 ## 5. Les erreurs à éviter
 

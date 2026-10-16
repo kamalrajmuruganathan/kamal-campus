@@ -44,7 +44,7 @@ Attention à **euer** : devant une terminaison, il perd son 2e e → *eure Büch
 ## 3. sein ou ihr ?
 Le possessif s'accorde avec **le possesseur** pour le choix (sein/ihr), puis avec **le nom possédé** pour la terminaison.
 - er → **sein** : *Er sucht **seinen** Schlüssel.*
-- sie / leur → **ihr** : *Anna liebt **ihre** Katze.*
+- sie (elle) ou sie (ils, elles) → **ihr** : *Anna liebt **ihre** Katze.*
 
 ## 4. Les erreurs à éviter
 - Ne pas oublier le -en au masculin accusatif : *Ich liebe **meinen** Hund*.

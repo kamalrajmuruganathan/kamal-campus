@@ -71,7 +71,7 @@ Comme le futur exprime une supposition sur le présent, le conditionnel exprime 
 
 - Ne pas séparer le radical de l'infinitif : *comería* s'écrit en un seul bloc (pas « comer ía »).
 - Les radicaux irréguliers sont **identiques** au futur : si tu sais *tendré*, tu sais *tendría*.
-- Pour un conseil, on emploie *deberías* (pas *debes*, trop direct).
+- Pour un conseil poli, on emploie *deberías* (plutôt que *debes*, plus direct).
 - Ne pas confondre *querría* (conditionnel : j'aimerais) et *quería* (imperfecto : je voulais).
 
 ## À retenir

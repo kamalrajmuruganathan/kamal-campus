@@ -31,7 +31,7 @@ La position sociale ne se réduit pas à la seule profession. D'autres facteurs 
 
 ## 4. Mesurer les inégalités
 Les inégalités sont des différences porteuses d'un avantage ou d'un désavantage (revenus, patrimoine, mais aussi accès à l'éducation, à la santé…). Outils courants :
-- les **déciles** (partage en dix groupes de même effectif) et le **rapport interdécile** (D9/D1) ;
+- les **déciles** (valeurs qui partagent la population en dix groupes de même effectif) et le **rapport interdécile** (D9/D1) ;
 - la **médiane** ;
 - la **courbe de Lorenz** et le **coefficient de Gini** (0 = égalité parfaite, 1 = inégalité maximale) ;
 - le **patrimoine**, généralement plus concentré que les revenus.

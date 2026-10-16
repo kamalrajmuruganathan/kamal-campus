@@ -46,7 +46,7 @@ Aux temps **simples**, on peut remplacer *essere* par **venire** : il insiste su
 | La porta **è chiusa** alle otto. | La porta **viene chiusa** alle otto. |
 | Le regole **saranno rispettate**. | Le regole **verranno rispettate**. |
 
-*Venire* ne s'emploie **pas** aux temps composés : on ne dit pas *è venuta stata chiusa*.
+*Venire* ne s'emploie **pas** aux temps composés : on ne dit pas *è venuta chiusa*.
 
 ## 4. Le passif avec *andare* : l'idée d'obligation
 Avec **andare** aux temps simples, le passif exprime une **nécessité** (= *deve essere*).

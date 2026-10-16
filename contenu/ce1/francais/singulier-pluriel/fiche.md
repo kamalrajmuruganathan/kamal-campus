@@ -53,7 +53,7 @@ Pour mettre la plupart des noms au pluriel, on ajoute un **-s** à la fin.
 - Ne pas oublier le **-s** au pluriel : on écrit *les chats*, pas *les chat*.
 - Le **-s** du pluriel ne s'entend pas quand on parle, mais il faut l'écrire !
 - Ne pas ajouter de **-s** aux noms qui finissent déjà par -s, -x ou -z : *des souris*, pas *des sourises*.
-- Si le petit mot est *les* ou *des*, le nom est au **pluriel** et prend un -s.
+- Si le petit mot est *les* ou *des*, le nom est au **pluriel** et prend en général un -s.
 
 ## À retenir
 

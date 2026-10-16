@@ -38,7 +38,7 @@ relu_par: null
 
 ## 2. Le verbe *haben* (avoir) au présent
 
-On utilise **haben** pour la possession et pour dire son âge (comme en français : *avoir 12 ans*).
+On utilise **haben** pour la possession (*avoir un frère, un chien*). Attention : contrairement au français (*avoir 12 ans*), l'âge ne se dit **pas** avec *haben* mais avec *sein* (voir plus bas).
 
 | Pronom | Forme | Exemple | Traduction |
 |---|---|---|---|

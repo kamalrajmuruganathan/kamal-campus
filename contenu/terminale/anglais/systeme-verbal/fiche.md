@@ -28,7 +28,7 @@ Chaque forme verbale combine un **temps** et un **aspect**.
 | Présent simple | She **works** in Leeds. | Elle travaille à Leeds. |
 | Présent continu | She **is working** right now. | Elle travaille en ce moment. |
 | Present perfect | She **has worked** here for years. | Elle travaille ici depuis des années. |
-| Present perfect continu | She **has been working** all day. | Elle travaille depuis ce matin. |
+| Present perfect continu | She **has been working** all day. | Elle a travaillé toute la journée (et elle continue). |
 
 Le **simple** décrit un fait vu comme un tout ; le **continu** insiste sur le déroulement ; le **perfect** relie deux moments (un fait antérieur qui compte maintenant).
 

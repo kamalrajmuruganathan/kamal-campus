@@ -22,7 +22,7 @@ relu_par: null
 
 | Anglais | Français | Remarque |
 |---|---|---|
-| supply and demand | l'offre et la demande | ordre inversé en anglais |
+| supply and demand | l'offre et la demande | même ordre qu'en français |
 | growth | la croissance | *economic growth* |
 | a market | un marché | *the labour market* = marché du travail |
 | trade | le commerce, les échanges | *free trade* = libre-échange |
@@ -77,7 +77,7 @@ relu_par: null
 | Familier | Neutre / soutenu |
 |---|---|
 | loads of money | substantial funds |
-| the economy is booming (fam. « crazy good ») | the economy is thriving |
+| the economy is doing great | the economy is thriving |
 | big companies | large corporations |
 | to make cash | to generate profit |
 

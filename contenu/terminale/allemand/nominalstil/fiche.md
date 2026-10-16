@@ -73,7 +73,7 @@ Un texte administratif surchargé de noms se comprend mieux « déplié » en ve
 - Oublier le **génitif** après *wegen* et *trotz* : *wegen **des** schlechten Wetter**s*** (et non *wegen dem Wetter* à l'écrit soutenu).
 - Mal accorder l'adjectif dans le groupe nominal : *wegen der steigend**en** Preise*.
 - Vouloir tout nominaliser : le Nominalstil abusif rend le texte illisible ; on l'équilibre avec des verbes.
-- Confondre l'infinitif substantivé (neutre, majuscule) : *das Lesen*, *das Rauchen ist verboten*.
+- Oublier que l'infinitif substantivé est neutre et prend une majuscule : *das Lesen*, *das Rauchen ist verboten*.
 
 ## À retenir
 

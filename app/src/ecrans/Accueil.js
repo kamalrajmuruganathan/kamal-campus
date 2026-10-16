@@ -25,6 +25,7 @@ import { serieAffichee, dateLocale } from '../../lib/serie';
 import { quetesDuJour, quetesFaites } from '../../lib/quetes';
 import { prochaineAction } from '../coach';
 import { useLangue } from '../i18n';
+import { resume as resumeCarnet, depuisAnciennesErreurs } from '../../lib/carnet';
 
 export default function Accueil({ navigation }) {
   const t = useTheme();
@@ -327,12 +328,14 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
-            titre="🎯 Réviser mes erreurs"
-            sousTitre={
-              (profil.erreurs || []).length > 0
-                ? `${profil.erreurs.length} question${profil.erreurs.length > 1 ? 's' : ''} ratée${profil.erreurs.length > 1 ? 's' : ''} à retravailler`
-                : 'Les questions que tu rates reviennent ici pour les refaire'
-            }
+            titre="📒 Mon carnet d’erreurs"
+            sousTitre={(() => {
+              const jour = dateLocale(new Date());
+              const r = resumeCarnet(Array.isArray(profil.carnet) ? profil.carnet : depuisAnciennesErreurs(profil.erreurs, jour), jour);
+              if (r.aujourdhui > 0) return `${r.aujourdhui} erreur${r.aujourdhui > 1 ? 's' : ''} à revoir aujourd’hui`;
+              if (r.total > 0) return `Rien à revoir aujourd’hui · ${r.total} en attente`;
+              return 'Les questions et exercices ratés reviennent ici au bon moment';
+            })()}
             couleur={t.couleur.erreur}
             onPress={() => navigation.navigate('ModeErreurs')}
           />

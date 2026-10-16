@@ -37,7 +37,7 @@ relu_par: null
 | Dionysos | Bacchus | le vin, la fête |
 | Hestia | Vesta | le foyer |
 
-Les douze dieux de l'Olympe sont ceux du tableau, sauf **Hadès**, qui règne sur les Enfers et non sur l'Olympe. (Selon les listes, Dionysos remplace parfois Hestia.)
+Les douze dieux de l'Olympe sont ceux du tableau, sauf **Hadès**, qui règne sur les Enfers et non sur l'Olympe : il en reste treize, car selon les listes la douzième place revient à **Hestia** ou à **Dionysos** (qui la remplace parfois).
 
 Les dieux résident sur le mont **Olympe**.
 

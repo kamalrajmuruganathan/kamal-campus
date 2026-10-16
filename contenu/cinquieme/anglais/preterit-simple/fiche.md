@@ -52,7 +52,7 @@ Pour la négation et la question, on utilise l'auxiliaire **did** (prétérit de
 
 Le verbe *be* fait exception : sa négation et sa question se forment sans *did* → *I wasn't*, *Were you happy?*
 
-## 3. Les erreurs à éviter
+## 4. Les erreurs à éviter
 
 - **Garder -ed après did** : on dit *Did you play?*, jamais *Did you played?*.
 - **Oublier que did = passé** : après *did / didn't*, le verbe est à la base (*didn't go*, pas *didn't went*).

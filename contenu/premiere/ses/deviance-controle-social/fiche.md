@@ -41,7 +41,7 @@ On observe une tendance historique à la **montée du contrôle social formel** 
 ## 3. Comment expliquer la déviance ? Trois approches
 
 - **L'approche par l'étiquetage (Howard Becker)** : la déviance n'est pas une qualité de l'acte, mais le résultat d'un processus. Un comportement devient déviant quand un groupe le désigne comme tel et applique une **étiquette** au « déviant ». Becker parle d'**entrepreneurs de morale** qui définissent les normes.
-- **L'approche par l'anomie (Durkheim, Merton)** : la déviance résulte d'un décalage entre les normes (ou entre les buts valorisés et les moyens légitimes d'y accéder). Chez **Merton**, quand la société valorise un but (la réussite matérielle) mais que certains n'ont pas les moyens légitimes de l'atteindre, ils peuvent recourir à des moyens déviants (innovation).
+- **L'approche par l'anomie (Durkheim, Merton)** : la déviance résulte d'un affaiblissement des normes (Durkheim) ou d'un décalage entre les buts valorisés et les moyens légitimes d'y accéder (Merton). Chez **Merton**, quand la société valorise un but (la réussite matérielle) mais que certains n'ont pas les moyens légitimes de l'atteindre, ils peuvent recourir à des moyens déviants (innovation).
 - **L'approche par la socialisation et le milieu** : l'appartenance à certains milieux ou groupes de pairs peut faciliter l'apprentissage de comportements déviants.
 
 ## 4. La mesure de la déviance

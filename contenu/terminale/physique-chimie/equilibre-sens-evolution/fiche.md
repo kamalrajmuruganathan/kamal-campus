@@ -124,6 +124,11 @@ préparé le mélange — **seulement** de $T$.
 
 ## 4. Le critère d'évolution spontanée
 
+<!-- schema:axe-qr -->
+![Exemple de la fiche : K = 10 et Qr,i = 2 ; comme Qr,i est inférieur à K, le système évolue dans le sens direct jusqu'à ce que Qr atteigne K.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjAwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmZmZmZmYiLz48bGluZSB4MT0iMzAiIHkxPSIxMTAiIHgyPSI2MTAiIHkyPSIxMTAiIHN0cm9rZT0iIzhhOTlhOCIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwb2x5Z29uIHBvaW50cz0iNjIwLDExMCA2MTAsMTA1IDYxMCwxMTUiIGZpbGw9IiM4YTk5YTgiLz48dGV4dCB4PSI2MjAiIHk9Ijk4IiBmb250LXNpemU9IjE0IiBmaWxsPSIjMTYyMzJlIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXdlaWdodD0iNzAwIj5RcjwvdGV4dD48bGluZSB4MT0iNDAiIHkxPSIxMDYiIHgyPSI0MCIgeTI9IjExNCIgc3Ryb2tlPSIjOGE5OWE4IiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNDAiIHk9IjEzMiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+MDwvdGV4dD48bGluZSB4MT0iMTgwIiB5MT0iMTA2IiB4Mj0iMTgwIiB5Mj0iMTE0IiBzdHJva2U9IiM4YTk5YTgiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSIxODAiIHk9IjEzMiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+NTwvdGV4dD48bGluZSB4MT0iMzIwIiB5MT0iMTA2IiB4Mj0iMzIwIiB5Mj0iMTE0IiBzdHJva2U9IiM4YTk5YTgiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iNDYwIiB5MT0iMTA2IiB4Mj0iNDYwIiB5Mj0iMTE0IiBzdHJva2U9IiM4YTk5YTgiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSI0NjAiIHk9IjEzMiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+MTU8L3RleHQ+PGxpbmUgeDE9IjYwMCIgeTE9IjEwNiIgeDI9IjYwMCIgeTI9IjExNCIgc3Ryb2tlPSIjOGE5OWE4IiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNjAwIiB5PSIxMzIiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjIwPC90ZXh0PjxsaW5lIHgxPSIzMjAiIHkxPSI4MCIgeDI9IjMyMCIgeTI9IjE0MCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjMyMCIgeT0iNzIiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPksgPSAxMDwvdGV4dD48Y2lyY2xlIGN4PSI5NiIgY3k9IjExMCIgcj0iNiIgZmlsbD0iIzFmNmZlYiIvPjx0ZXh0IHg9Ijk2IiB5PSI5MiIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzFmNmZlYiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+UXIsaSA9IDI8L3RleHQ+PGxpbmUgeDE9IjEwNiIgeTE9IjE2MCIgeDI9IjMwMCIgeTI9IjE2MCIgc3Ryb2tlPSIjMWE3ZjRiIiBzdHJva2Utd2lkdGg9IjIuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBvbHlnb24gcG9pbnRzPSIzMTAsMTYwIDMwMCwxNTUgMzAwLDE2NSIgZmlsbD0iIzFhN2Y0YiIvPjx0ZXh0IHg9IjIwOCIgeT0iMTgyIiBmb250LXNpemU9IjEzIiBmaWxsPSIjMWE3ZjRiIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj5RcixpICZsdDsgSyA6IHNlbnMgZGlyZWN0PC90ZXh0PjxsaW5lIHgxPSI1NDQiIHkxPSIxNjAiIHgyPSIzNDAiIHkyPSIxNjAiIHN0cm9rZT0iI2MwMmEyYSIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwb2x5Z29uIHBvaW50cz0iMzMwLDE2MCAzNDAsMTY1IDM0MCwxNTUiIGZpbGw9IiNjMDJhMmEiLz48dGV4dCB4PSI0MzIiIHk9IjE4MiIgZm9udC1zaXplPSIxMyIgZmlsbD0iI2MwMmEyYSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+UXIsaSAmZ3Q7IEsgOiBzZW5zIGluZGlyZWN0PC90ZXh0Pjx0ZXh0IHg9IjMyMCIgeT0iMjYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiPmxlIHN5c3TDqG1lIMOpdm9sdWUgdG91am91cnMgZGUgZmHDp29uIMOgIHJhcHByb2NoZXIgUXIgZGUgSzwvdGV4dD48L3N2Zz4=)
+*Exemple de la fiche : K = 10 et Qr,i = 2 ; comme Qr,i est inférieur à K, le système évolue dans le sens direct jusqu'à ce que Qr atteigne K.*
+<!-- /schema -->
+
 ### La comparaison $Q_{r,i}$ / $K$
 
 On calcule le quotient de réaction **dans l'état initial**, noté $Q_{r,i}$, puis on le compare
@@ -179,6 +184,11 @@ mesurable (concentration d'une espèce, pH, conductivité…).
 ## 6. Lien entre $\tau$ et le caractère total de la transformation
 
 ### La règle
+
+<!-- schema:taux -->
+![Taux d'avancement final : environ 1 pour l'acide chlorhydrique (transformation totale), 4,0 % pour l'acide éthanoïque de l'exemple (équilibre).](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjI2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIyMjYiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSIyMDAiIHk9IjUwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwIiByeD0iMCIgZmlsbD0iI2YxZjRmNyIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMS40Ii8+PHJlY3QgeD0iMjAwIiB5PSI1MCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMCIgcng9IjAiIGZpbGw9IiNlNTczNzMiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjAiLz48dGV4dCB4PSIxOTAiIHk9IjcwIiBmb250LXNpemU9IjEzIiBmaWxsPSIjMTYyMzJlIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXdlaWdodD0iNzAwIj5hY2lkZSBjaGxvcmh5ZHJpcXVlPC90ZXh0Pjx0ZXh0IHg9IjQwMCIgeT0iNzAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPs+EIOKJiCAxIDogdHJhbnNmb3JtYXRpb24gdG90YWxlPC90ZXh0PjxyZWN0IHg9IjIwMCIgeT0iMTIwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwIiByeD0iMCIgZmlsbD0iI2YxZjRmNyIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMS40Ii8+PHJlY3QgeD0iMjAwIiB5PSIxMjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIzMCIgcng9IjAiIGZpbGw9IiM1YjliZDUiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjAiLz48dGV4dCB4PSIxOTAiIHk9IjE0MCIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzE2MjMyZSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC13ZWlnaHQ9IjcwMCI+YWNpZGUgw6l0aGFub8OvcXVlPC90ZXh0Pjx0ZXh0IHg9IjIyNiIgeT0iMTQwIiBmb250LXNpemU9IjEzIiBmaWxsPSIjMWY2ZmViIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtd2VpZ2h0PSI3MDAiPs+EID0gNCwwICUgOiDDqXF1aWxpYnJlLCBpbCByZXN0ZSBkZSBsJ2FjaWRlPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMTg2IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4wPC90ZXh0Pjx0ZXh0IHg9IjYwMCIgeT0iMTg2IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj54bWF4PC90ZXh0Pjx0ZXh0IHg9IjMyMCIgeT0iMzAiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPnRhdXggZCdhdmFuY2VtZW50IGZpbmFsIM+EID0geGYgLyB4bWF4PC90ZXh0Pjx0ZXh0IHg9IjMyMCIgeT0iMjEwIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5zb2x1dGlvbnMgw6AgMSwwIMOXIDEw4oG7wrIgbW9sL0w8L3RleHQ+PC9zdmc+)
+*Taux d'avancement final : environ 1 pour l'acide chlorhydrique (transformation totale), 4,0 % pour l'acide éthanoïque de l'exemple (équilibre).*
+<!-- /schema -->
 
 | Valeur de $\tau$ | Transformation | État final |
 |---|---|---|
@@ -238,7 +248,7 @@ dépend des **conditions initiales**.
 | Critère d'évolution | $Q_{r,i} < K$ : sens direct ; $Q_{r,i} > K$ : sens indirect |
 | Taux d'avancement final | $\tau = \dfrac{x_f}{x_{max}}$, entre $0$ et $1$ |
 | Total / non total | $\tau = 1$ total ; $\tau < 1$ équilibre |
-| $\tau$ dépend de… | $K$ **et** des concentrations initiales (pas $K$) |
+| $\tau$ dépend de… | $K$ **et** des concentrations initiales (alors que $K$ ne dépend que de $T$) |
 
 ---
 
@@ -253,8 +263,8 @@ dépend des **conditions initiales**.
 4. **Confondre $K$ et $\tau$.** $K$ ne dépend que de la température ; $\tau$ dépend aussi des
    concentrations initiales. Diluer ne change pas $K$, mais change $\tau$.
 5. **Croire que « il reste des réactifs » = « la réaction est bloquée par la cinétique ».**
-   Non : un équilibre est un état final **thermodynamique**, atteint même après un temps
-   infini. C'est $K$, pas la lenteur, qui l'impose.
+   Non : un équilibre est un état final **thermodynamique**, qui persiste même au bout d'un
+   temps infini. C'est $K$, pas la lenteur, qui l'impose.
 6. **Oublier de convertir les concentrations en $\text{mol·L}^{-1}$** (ou les volumes en L)
    avant de calculer $Q_r$ et $\tau$ : un facteur $10^3$ oublié fausse le sens d'évolution.
 

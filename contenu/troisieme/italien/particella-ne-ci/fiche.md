@@ -39,7 +39,7 @@ Avec une quantité au passato prossimo, le participe **s'accorde** avec ce que r
 | un lieu | Vai a Roma? Sì, **ci** vado domani. | Tu vas à Rome ? J'**y** vais demain. |
 | « à cela » (a) | Pensi all'esame? Sì, **ci** penso. | Tu penses à l'examen ? J'**y** pense. |
 
-Ne pas confondre avec **ci** pronom (= nous) : *Ci vediamo!* (On se voit / à nous).
+Ne pas confondre avec **ci** pronom (= nous) : *Ci vediamo!* (On se voit ! — mot à mot « nous nous voyons »).
 
 ## 3. *C'è* et *ci sono* : un emploi particulier de *ci*
 
@@ -69,7 +69,7 @@ Comme les autres pronoms :
 ## 6. Les erreurs à éviter
 
 - Confondre **ne** (quantité / di) et **ci** (lieu / a) : *Ne voglio tre* (quantité) vs *Ci vado* (lieu).
-- Oublier l'accord du participe avec *ne* de quantité : *Quante ne ho comprat**e***.
+- Oublier l'accord du participe avec *ne* de quantité : *Ne ho comprat**e** tre* (des pommes).
 - Oublier de coller la particule à l'infinitif ou à l'impératif : *andarci*, *parlane*.
 - « il y a » se dit **c'è / ci sono**, pas *è / sono* seuls.
 

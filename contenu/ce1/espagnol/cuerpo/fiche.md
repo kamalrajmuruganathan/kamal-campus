@@ -40,7 +40,7 @@ relu_par: null
 ## 2. Un ou plusieurs ? (le pluriel)
 
 Pour dire qu'il y en a plusieurs, on ajoute souvent un **-s** à la fin du mot,
-et l'article devient **los** (garçons) ou **las** (filles).
+et l'article devient **los** (mots masculins) ou **las** (mots féminins).
 
 | Un seul | Plusieurs |
 |---|---|

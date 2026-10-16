@@ -29,7 +29,7 @@ relu_par: null
 
 ## 3. Vérité, vérification et réfutation
 - **Le vérificationnisme** : une théorie serait scientifique si elle peut être confirmée par l'expérience.
-- **Le falsificationnisme de Popper** : ce qui distingue une théorie scientifique, c'est qu'elle est **réfutable** (falsifiable) : elle prend le risque d'être démentie par l'expérience. Une théorie qui explique tout et que rien ne peut réfuter n'est pas scientifique. « Une théorie non réfutable n'est pas scientifique. »
+- **Le falsificationnisme de Popper** : ce qui distingue une théorie scientifique, c'est qu'elle est **réfutable** (falsifiable) : elle prend le risque d'être démentie par l'expérience. Une théorie qui explique tout et que rien ne peut réfuter n'est pas scientifique. Popper l'écrit : « Une théorie qui n'est réfutable par aucun événement qui se puisse concevoir est dépourvue de caractère scientifique » (*Conjectures et réfutations*).
 - **Les révolutions scientifiques** : Thomas Kuhn montre que la science évolue par changements de « paradigmes » (cadres théoriques partagés par une communauté), et non par simple accumulation linéaire.
 - **Vérité et modèle** : une théorie scientifique est un modèle révisable, non une vérité définitive ; le progrès scientifique corrige et dépasse les théories antérieures.
 

@@ -72,7 +72,7 @@ Exemple : *Vorrei un primo e un dolce, per favore.* → Je voudrais un premier p
 - *la frutta* (les fruits) et *la verdura* (les légumes) sont des **singuliers collectifs** : on dit *mangio la frutta*, pas « i frutti ».
 - Ne confonds pas *la pasta* (les pâtes / la pâte) et *il pane* (le pain).
 - « Je voudrais » se dit *vorrei* (forme polie), pas *voglio* (je veux), plus direct.
-- Attention aux doubles consonnes : *la fo**rch**etta*, *il cu**cch**iaio*, *il forma**gg**io*, *il co**lt**ello*.
+- Attention aux doubles consonnes : *la forche**tt**a*, *il cu**cc**hiaio*, *il forma**gg**io*, *il colte**ll**o*.
 - En italien, le repas de midi est *il pranzo* ; *la cena* est le repas du soir.
 
 ## À retenir

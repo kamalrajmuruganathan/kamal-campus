@@ -1205,7 +1205,7 @@ def g5_proportionnalite():
     E(PB, "vitesse", "Un piéton marche à $5$ km/h. Combien de temps lui faut-il pour parcourir $2$ km ?",
       ["En $1$ h ($60$ min), il parcourt $5$ km, donc $1$ km en $12$ min.", f"$ 2 \\times 12 = {2*12} $ min."], f"${2*12}$ min")
     E(PB, "vitesse", "Un train parcourt $420$ km en $3$ h. Quelle est sa vitesse moyenne ?",
-      f"$ v = \\dfrac{{d}}{{t}} = \\dfrac{{420}}{{3}} = {420//3} $ km/h.", f"${420//3}$ km/h")
+      f"La vitesse moyenne est la distance parcourue en $1$ h : $ 420 \\div 3 = {420//3} $ km, donc ${420//3}$ km/h.", f"${420//3}$ km/h")
     E(PB, "vitesse", "Une coureuse parcourt $10$ km en $50$ min à vitesse constante. Quelle distance parcourt-elle en $20$ min ?",
       ["En $10$ min, elle parcourt $ 10 \\div 5 = 2 $ km.", f"En $20$ min : $ 2 \\times 2 = {2*2} $ km."], f"${2*2}$ km")
     E(PB, "vitesse", "Un scooter roule à $45$ km/h. Quelle distance parcourt-il en $20$ min ?",

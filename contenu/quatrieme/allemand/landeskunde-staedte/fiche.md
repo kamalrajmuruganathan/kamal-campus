@@ -58,8 +58,7 @@ près des **Alpes**.
 
 - **Berlin** est la capitale, mais **München** n'est pas en Bavière « du nord » : la Bavière
   est au **sud**.
-- **Hamburg** (avec un seul *b* et sans *o*) est une ville portuaire ; ne pas confondre avec
-  Hambourg mal orthographié.
+- **Hamburg** s'écrit sans *o* en allemand (en français : Hambourg) ; c'est une ville portuaire.
 - Le mot **Dom** signifie « cathédrale » : le **Kölner Dom** est la cathédrale de Cologne.
 - Les noms de villes prennent toujours une **majuscule**.
 

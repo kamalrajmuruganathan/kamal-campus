@@ -52,7 +52,7 @@ Ces conjonctions se construisent **toujours** avec le congiuntivo :
 ## 5. Les erreurs à éviter
 - Ne pas mettre l'indicatif après benché/sebbene : ✗ *Benché è tardi* → ✓ **Benché sia tardi**.
 - Ne pas confondre *perché* cause (indicatif : perché sono stanco) et *perché* but (subjonctif : perché tu capisca).
-- *Siccome* se place en tête de phrase, pas *poiché* forcément.
+- *Siccome* se place en tête de phrase ; *poiché* peut se placer en tête ou après la principale.
 
 ## À retenir
 - Cause : poiché, siccome, dato che ; conséquence : quindi, dunque, perciò.

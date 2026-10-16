@@ -34,8 +34,8 @@ relu_par: null
 
 - **Goethe** et **Schiller** sont les deux grandes figures de la **Weimarer Klassik**.
 - **Faust** met en scène un savant qui passe un pacte avec **Méphistophélès**.
-- Avant le classicisme, le mouvement du **Sturm und Drang** exalte les passions
-  (le jeune **Werther** en est proche).
+- Avant le classicisme, le mouvement du **Sturm und Drang** exalte les passions :
+  *Werther* (1774) et *Die Räuber* (1781) sont des œuvres de jeunesse de cette période.
 
 ## 2. Franz Kafka (1883-1924)
 
@@ -89,7 +89,7 @@ Theater*).
 
 ## À retenir
 
-- **Weimarer Klassik** : **Goethe** (*Faust*) et **Schiller** (*Wilhelm Tell*, *Die Räuber*).
+- **Weimarer Klassik** : **Goethe** (*Faust*) et **Schiller** (*Wilhelm Tell*) ; avant elle, le **Sturm und Drang** (*Werther*, *Die Räuber*).
 - **Kafka** : *Die Verwandlung*, *Der Prozess* ; l'absurde et l'angoisse (« kafkaesk »).
 - **Brecht** : théâtre **épique** et **Verfremdungseffekt** ; *Mutter Courage*,
   *Die Dreigroschenoper*.

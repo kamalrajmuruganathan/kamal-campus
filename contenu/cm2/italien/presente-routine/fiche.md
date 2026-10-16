@@ -53,12 +53,12 @@ Quelques verbes très utiles pour la routine :
 Exemple : *La mattina mi sveglio alle sette e vado a scuola.* → Le matin, je me réveille à sept heures et je vais à l'école.
 
 ## 4. Les erreurs à éviter
-- La 1re personne (io) se termine toujours par **-o** : io parl**o**, io dorm**o**.
+- Pour les verbes réguliers, la 1re personne (io) se termine toujours par **-o** : io parl**o**, io dorm**o**.
 - En italien, on peut **enlever le pronom** : « (io) parlo italiano » — la terminaison suffit à savoir qui parle.
 - « je vais » se dit **vado** (verbe *andare*, irrégulier) — à apprendre par cœur.
 
 ## À retenir
 - Trois groupes : **-are**, **-ere**, **-ire**.
 - Terminaisons de *parlare* : -o, -i, -a, -iamo, -ate, -ano.
-- La 1re personne finit toujours en **-o**.
+- La 1re personne des verbes réguliers finit en **-o**.
 - Verbes de routine : **mi sveglio, mi alzo, vado a scuola, torno a casa**.

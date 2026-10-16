@@ -68,7 +68,7 @@ Réponses courtes : *Yes, I have. / No, he hasn't.*
 ## 5. Les erreurs à éviter
 
 - À la 3e personne du singulier, c'est **has got**, pas *have got* : *She has got…*.
-- Ne mélange pas *have got* et le présent simple : soit *I have got a dog*, soit *I have a dog*, mais pas *I have got have*.
+- Ne mélange pas *have got* et le présent simple : soit *I have got a dog*, soit *I have a dog*, mais pas *I do have got a dog*.
 - Dans la négation, c'est *haven't got* / *hasn't got*, pas *don't have got*.
 - La contraction *he's* peut vouloir dire *he is* **ou** *he has got* : c'est le mot *got* qui indique la possession (*He's got a dog* = il a un chien).
 - On ne dit pas *She has got a two brothers* : pas de *a* devant un pluriel (*two brothers*).

@@ -18,6 +18,7 @@ import { planifier as planifierSrs } from '../../lib/srs';
 import { ajouterXp as ligueAjouterXp } from '../../lib/ligue';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { majErreurs } from '../../lib/erreurs';
+import { noter as noterCarnet, resultatsQcm, cleExo, depuisAnciennesErreurs } from '../../lib/carnet';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide, synchroniser, definirUtilisateur } from './stockage';
 import { useAuth } from '../cloud/AuthContexte';
 import { resynchroniserSiPermis } from '../notifications';
@@ -29,6 +30,11 @@ const XP_ENIGME = { facile: 8, moyen: 12, difficile: 18 };
 const XP_EXERCICE = 5; // par exercice réussi, une seule fois par exercice
 
 const ProgressionContexte = createContext(null);
+
+/** Carnet d'erreurs du profil (repris de l'ancienne réserve d'erreurs la première fois). */
+function carnetDe(p, jour) {
+  return Array.isArray(p.carnet) ? p.carnet : depuisAnciennesErreurs(p.erreurs, jour);
+}
 
 /** Applique un gain d'XP à l'état « jour / série » d'un profil. */
 function calculerSerie(profilBase, points) {
@@ -160,6 +166,11 @@ export function ProgressionProvider({ children }) {
       // Révision des erreurs : les questions ratées entrent en réserve,
       // les réussies en sortent (voir lib/erreurs).
       suivant.erreurs = majErreurs(profil.erreurs || [], questions, reponses, matiere);
+      // Carnet d'erreurs : les questions ratées reviennent demain, puis dans 3 et 7 jours.
+      const jour = dateLocale(new Date());
+      const nc = noterCarnet(carnetDe(profil, jour), resultatsQcm(questions, reponses, { chapitreId, titre, matiere }), jour);
+      suivant.carnet = nc.carnet;
+      suivant.carnetMaitrisees = (profil.carnetMaitrisees || 0) + nc.maitrisees;
 
       setProfil(suivant);
       sauverProfil(suivant);
@@ -333,6 +344,25 @@ export function ProgressionProvider({ children }) {
     return { points, deja, niveauApres, monteeDeNiveau: niveauApres > niveauAvant };
   }, [profil]);
 
+  /**
+   * Note un exercice (réussi ou raté) dans le carnet d'erreurs.
+   * @param {{chapitreId, exoId, juste, titre?, matiere?}} arg
+   */
+  const noterExerciceCarnet = useCallback(({ chapitreId, exoId, juste, titre = null, matiere = null }) => {
+    if (!chapitreId || exoId == null || typeof juste !== 'boolean') return;
+    setProfil((p) => {
+      const jour = dateLocale(new Date());
+      const avant = carnetDe(p, jour);
+      const cle = cleExo(chapitreId, exoId);
+      // Rien à faire : réussite d'un exercice absent du carnet.
+      if (juste && !avant.some((e) => e.cle === cle)) return p;
+      const nc = noterCarnet(avant, [{ cle, juste, infos: { type: 'exo', chapitreId, exoId: String(exoId), titre, matiere } }], jour);
+      const suivant = { ...p, carnet: nc.carnet, carnetMaitrisees: (p.carnetMaitrisees || 0) + nc.maitrisees };
+      sauverProfil(suivant);
+      return suivant;
+    });
+  }, []);
+
   const reinitialiser = useCallback(() => {
     const vide = profilVide();
     setProfil(vide);
@@ -386,7 +416,7 @@ export function ProgressionProvider({ children }) {
     <ProgressionContexte.Provider
       value={{
         profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme, enregistrerExercice,
-        reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
+        noterExerciceCarnet, reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
       }}
     >
       {children}
@@ -415,6 +445,7 @@ export function useProgression() {
         badgesGagnes: [], serieJour: { atteint: false, serie: 0, objectif: 50 },
       }),
       enregistrerExercice: () => ({ points: 0, deja: false, niveauApres: 1, monteeDeNiveau: false }),
+      noterExerciceCarnet: () => {},
       reinitialiser: () => {},
       definirReglages: () => {},
       terminerOnboarding: () => {},

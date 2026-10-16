@@ -45,13 +45,13 @@ Les petits mots polis : **grazie** (merci), **prego** (de rien / je t'en prie), 
 
 ## 3. Les erreurs à éviter
 - *Buongiorno* s'écrit en **un seul mot** (pas « Buon giorno » en salutation).
-- On répond « Sto bene » (et non « Sono bene ») à *Come stai ?*.
+- On répond « Sto bene » (et non « Sono bene ») à *Come stai?*
 - « Enchanté » se dit **Piacere**, pas « Grazie ».
 - *Ciao* est familier : avec un adulte qu'on ne connaît pas, on préfère *Buongiorno* ou *Salve*.
 
 ## À retenir
 - **Ciao** = salut (bonjour ET au revoir entre amis).
 - **Buongiorno** le matin, **Buonasera** le soir, **Buonanotte** pour dormir.
-- **Come ti chiami ?** → **Mi chiamo…**
-- **Come stai ?** → **Sto bene, grazie.**
+- **Come ti chiami?** → **Mi chiamo…**
+- **Come stai?** → **Sto bene, grazie.**
 - **Grazie / Prego / Per favore** : les mots de la politesse.

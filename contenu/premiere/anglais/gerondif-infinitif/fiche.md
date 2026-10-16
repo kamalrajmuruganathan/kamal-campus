@@ -57,7 +57,7 @@ Certains verbes acceptent les **deux formes, avec un sens différent** :
 |---|---|---|
 | remember | I **remembered to lock** the door. (j'ai pensé à) | I **remember locking** the door. (je me souviens l'avoir fait) |
 | forget | Don't **forget to call**. (ne pas oublier de) | I'll never **forget meeting** her. (oublier d'avoir fait) |
-| stop | He **stopped to smoke**. (s'arrête pour) | He **stopped smoking**. (arrête de fumer) |
+| stop | He **stopped to smoke**. (s'est arrêté pour fumer) | He **stopped smoking**. (a arrêté de fumer) |
 | try | **Try to open** it. (s'efforcer de) | **Try opening** it. (essayer, faire l'expérience de) |
 
 Après *like, love, hate, begin, start,* les **deux formes** sont possibles, souvent sans changement de sens : *I like swimming / I like to swim.*

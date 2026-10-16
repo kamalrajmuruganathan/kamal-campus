@@ -74,7 +74,7 @@ Les pronoms personnels au datif : **mir, dir, ihm, ihr, ihm, uns, euch, ihnen, I
 - Oublier le **-n** au pluriel : on dit *mit den Kinder**n***, pas *mit den Kinder*.
 - Utiliser l'accusatif après *mit, nach, bei, zu*… : ces prépositions veulent **toujours** le datif.
 - Confondre *helfen* (datif) avec un verbe français transitif : *Ich helfe **dir*** et non *Ich helfe dich*.
-- Oublier la contraction : on écrit *zum Arzt*, pas *zu dem Arzt* à l'oral courant.
+- Oublier la contraction : on dit et on écrit *zum Arzt*, pas *zu dem Arzt*.
 
 ## À retenir
 - Articles définis au datif : **dem / der / dem / den (+ -n)**.

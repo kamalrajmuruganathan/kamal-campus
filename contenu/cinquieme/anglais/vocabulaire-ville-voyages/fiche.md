@@ -71,8 +71,8 @@ Exemple : *Excuse me, where is the station?* → Excusez-moi, où est la gare ?
   transport, mais **on foot** pour « à pied ».
 - « a map » est un plan ou une carte routière, à ne pas confondre avec « a card »
   (une carte à jouer ou une carte de vœux).
-- « to travel » ne double pas toujours le -l en anglais américain (*traveled*), mais
-  en anglais britannique on écrit *travelled*.
+- Au prétérit, « to travel » s'écrit *travelled* en anglais britannique et *traveled*
+  en anglais américain.
 - « Turn left » et « Turn right » : ce sont des impératifs, sans sujet.
 
 ## À retenir

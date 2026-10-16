@@ -45,7 +45,7 @@ La consommation ne dépend pas seulement du revenu :
 - l'**âge** et la composition du ménage ;
 - la **catégorie sociale**, les habitudes et la culture ;
 - la **publicité** et les effets de mode ;
-- les **effets d'imitation** : consommer comme les autres pour montrer son appartenance à un groupe (consommation ostentatoire, analysée par Thorstein Veblen).
+- les **effets d'imitation et de distinction** : consommer comme les autres pour montrer son appartenance à un groupe, ou au contraire pour afficher sa richesse et se distinguer (consommation ostentatoire, analysée par Thorstein Veblen).
 
 Selon la **loi d'Engel** (XIXe siècle), quand le revenu augmente, la part consacrée à l'alimentation diminue, tandis que celle consacrée aux loisirs, à la santé ou aux transports augmente. La **structure** de la consommation évolue donc avec le revenu.
 

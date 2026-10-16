@@ -53,7 +53,7 @@ Prédiction avec indice : *Look at those clouds! It's going to rain.* (Regarde c
 
 Mots indices du futur : *tomorrow, next week, soon, tonight, in two days*.
 
-## 3. Les erreurs à éviter
+## 4. Les erreurs à éviter
 
 - **Mettre un -s ou to après will** : *She will come*, pas *She will comes* ni *will to come*.
 - **Oublier be dans be going to** : *I am going to*, pas *I going to*.

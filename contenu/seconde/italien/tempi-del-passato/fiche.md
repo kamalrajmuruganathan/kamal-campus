@@ -63,7 +63,7 @@ Il exprime une action **antérieure** à une autre action passée. Formation : *
 - Oublier l'**accord du participe avec essere** : *Lei è andat**a*** (et non *andato*).
 - Choisir *avere* au lieu d'*essere* pour les verbes de mouvement/état : on dit *sono venuto*, pas *ho venuto*.
 - Traduire l'imparfait français par un passato prossimo : *je jouais* = *giocavo*, pas *ho giocato*.
-- Calquer le français avec des auxiliaires différents : *j'ai marché* → *ho camminato* (avere), même si en français on dit « j'ai ».
+- Calquer l'auxiliaire français : *j'ai été* → *sono stato* (essere), alors qu'en français on dit « j'ai ». L'auxiliaire dépend du verbe italien.
 
 ## À retenir
 - **Passato prossimo** : action ponctuelle achevée (avere/essere + participe).

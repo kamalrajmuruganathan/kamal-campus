@@ -28,7 +28,7 @@ Le texte de théâtre se distingue du récit : il n'y a pas de narrateur, seulem
 | Réplique | ce que dit un personnage |
 | Tirade | longue réplique ininterrompue |
 | Monologue | un personnage seul parle à voix haute |
-| Aparté | mots dits au public, censés non entendus des autres |
+| Aparté | mots dits à part, que les autres personnages sont censés ne pas entendre |
 | Didascalie | indication scénique (gestes, décor, ton), souvent en italique |
 | Stichomythie | échange de répliques très courtes, souvent tendues |
 

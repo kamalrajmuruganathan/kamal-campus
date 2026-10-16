@@ -34,7 +34,7 @@ relu_par: null
 | la deuda | la dette |
 
 Exemple : *El crecimiento económico creó empleo.* → La croissance économique a créé de l'emploi.
-Attention au faux-ami : **la crisis** est invariable au singulier et au pluriel (*las crisis*).
+Attention : **la crisis** est invariable au singulier et au pluriel (*las crisis*).
 
 ## 2. La globalización y los intercambios (la mondialisation et les échanges)
 
@@ -71,4 +71,4 @@ Exemple : *La globalización aumenta la competencia entre empresas.* → La mond
 - Économie : *la empresa, el mercado, el crecimiento, la crisis, la inversión, la deuda*.
 - Mondialisation : *el comercio, la exportación/importación, la competencia, la multinacional, la deslocalización*.
 - Verbes clés : *invertir, exportar/importar, crecer, endeudarse, generar empleo*.
-- Faux-amis : *la competencia* (la concurrence), *la crisis* (invariable au pluriel).
+- Faux-ami : *la competencia* (la concurrence) ; à noter : *la crisis* (invariable au pluriel).

@@ -46,6 +46,8 @@ Pour garder le **son dur**, les mots en **-ca / -ga** (féminins) ajoutent un **
 | l'ami**ca** | le ami**che** |
 | l'ami**co** | gli ami**ci** |
 
+Attention : *amico → amici* est une exception au masculin (le son devient doux, sans h). Beaucoup de mots en **-co / -go** prennent aussi un h : *il gioco → i giochi*, *il lago → i laghi*.
+
 ## 4. Les erreurs à éviter
 
 - Pas de « -s » au pluriel : *i libri*, jamais *i libros*.

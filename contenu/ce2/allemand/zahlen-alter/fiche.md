@@ -24,7 +24,7 @@ relu_par: null
 
 Attention : en allemand, les nombres s'écrivent en un seul mot.
 
-| Chiffre | Allemand | Chiffre | Allemand |
+| Nombre | Allemand | Nombre | Allemand |
 |---|---|---|---|
 | 0 | **null** | 7 | **sieben** |
 | 1 | **eins** | 8 | **acht** |
@@ -40,7 +40,7 @@ Remarque le **ü** de *fünf* et le **ö** de *zwölf* : ce sont des Umlauts.
 
 De 13 à 19, on ajoute **-zehn** (comme « -teen » en anglais).
 
-| Chiffre | Allemand | Chiffre | Allemand |
+| Nombre | Allemand | Nombre | Allemand |
 |---|---|---|---|
 | 13 | **dreizehn** | 17 | **siebzehn** |
 | 14 | **vierzehn** | 18 | **achtzehn** |

@@ -18,7 +18,7 @@ relu_par: null
 
 > Manger (**essen**) et boire (**trinken**) font partie du quotidien : c'est un
 > des tout premiers thèmes que l'on décrit en allemand. On apprend chaque aliment
-> **avec son article**, car le genre allemand ne suit jamais le genre français.
+> **avec son article**, car le genre allemand ne suit pas toujours le genre français.
 
 ## 1. Les repas de la journée
 

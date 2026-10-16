@@ -8,7 +8,7 @@ matiere: allemand
 programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2"
 duree_lecture_min: 12
 prerequis:
-  - La wortstellung dans la subordonnée (verbe à la fin)
+  - La Wortstellung dans la subordonnée (verbe à la fin)
   - Les subordonnées avec weil et dass
   - L'infinitif avec zu
 statut: brouillon

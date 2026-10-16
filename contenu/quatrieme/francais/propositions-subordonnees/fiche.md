@@ -64,7 +64,7 @@ Elle est introduite par une **conjonction de subordination** (que, quand, lorsqu
 - **Confondre *que* relatif et *que* conjonction.** *Que* relatif a un antécédent (le film **que** j'aime) ; *que* conjonction introduit une complétive après un verbe (je crois **que** tu mens).
 - **Oublier que la subordonnée dépend de la principale.** « Parce qu'il pleut. » seule n'est pas une phrase correcte : il manque la principale.
 - **Confondre *quand* (temps) et *quant à* (en ce qui concerne).** *Quand* introduit une subordonnée de temps ; *quant à* introduit un groupe nominal.
-- **Employer *qu'** au lieu de *qui*.** On n'élide jamais *qui* : « l'homme **qui** arrive » (jamais « qu'arrive »).
+- **Employer *qu'* au lieu de *qui*.** On n'élide jamais *qui* : « l'homme **qui** arrive » (jamais « qu'arrive »).
 
 ## À retenir
 

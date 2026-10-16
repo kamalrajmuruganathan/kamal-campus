@@ -69,6 +69,8 @@ On peut **emboîter** plusieurs subordonnées ; le verbe de chacune reste à sa 
 
 La proposition infinitive avec **zu** (Infinitiv mit zu) allège la phrase quand les deux sujets sont identiques :
 
+| Construction | Exemple | Traduction |
+|---|---|---|
 | um … zu (but) | Er lernt, **um** die Prüfung **zu bestehen**. | Il travaille pour réussir l'examen. |
 | ohne … zu | Sie ging, **ohne** etwas **zu sagen**. | Elle est partie sans rien dire. |
 | statt … zu | **Statt** zu arbeiten, spielte er. | Au lieu de travailler, il jouait. |

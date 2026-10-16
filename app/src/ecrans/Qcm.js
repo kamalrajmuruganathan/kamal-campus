@@ -20,6 +20,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
 import CarteResultat from '../composants/CarteResultat';
 import { matiereParlante } from '../parole';
+import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { partagerVue } from '../partage';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
@@ -58,7 +59,7 @@ export default function Qcm({ route, navigation }) {
   const [reponses, setReponses] = useState([]);
 
   // Progression : on enregistre le résultat UNE fois, quand le QCM se termine.
-  const { enregistrerResultat } = useProgression();
+  const { enregistrerResultat, profil } = useProgression();
   const [bilan, setBilan] = useState(null);
   const dejaEnregistre = useRef(false);
   const estTermine = questions.length > 0 && index >= questions.length;
@@ -294,6 +295,20 @@ export default function Qcm({ route, navigation }) {
         </View>
 
         <VisionneuseFiche markdown={q.enonce} style={{ marginTop: t.espace.s }} />
+
+        {lectureActive(matiere, chapitre?.niveau, profil) && (
+          <View style={{ marginBottom: t.espace.s }}>
+            <BoutonEcouter
+              t={t}
+              matiere={matiere}
+              libelle="Écouter la question"
+              segments={[
+                ...segmentsTexte(q.enonce, matiere),
+                ...q.choix.flatMap((c, k) => [{ texte: `Réponse ${LETTRES[k]}.`, langue: 'francais' }, ...segmentsTexte(c, matiere)]),
+              ]}
+            />
+          </View>
+        )}
 
         {q.choix.map((choix, i) => {
           const estBon = i === q.reponse;

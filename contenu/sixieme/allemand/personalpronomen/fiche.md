@@ -55,7 +55,7 @@ Pour une chose, le pronom suit le **genre du nom**, pas le sens français :
 
 | Nom | Genre | Pronom | Exemple |
 |---|---|---|---|
-| der Tisch | masculin | **er** | **Er** ist neu. (Elle = la table est neuve.) |
+| der Tisch | masculin | **er** | **Er** ist neu. (Elle est neuve : la table.) |
 | die Lampe | féminin | **sie** | **Sie** ist schön. |
 | das Buch | neutre | **es** | **Es** ist interessant. |
 
