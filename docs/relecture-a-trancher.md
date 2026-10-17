@@ -31,3 +31,33 @@ Ces points ont été repérés pendant la relecture mais **pas modifiés**, parc
 - r22 : « aire urbaine » (programme 3e) vs « aire d'attraction des villes » (INSEE 2020).
 - r21 : brassage-genetique : « un gamète femelle parmi des milliers » ; Irlande hors Commonwealth depuis 1949.
 - r23 : SVT 3e : « hypophyse, glande du cerveau » dans QCM/exos ; sérothérapie aussi préventive.
+
+## Mise à jour du 17/10/2026 : points traités
+
+Règle appliquée (CLAUDE.md § 12) : le programme officiel fait foi. Commits « Points à trancher (lot A / B / C / D) ».
+
+- **Corrigés / retirés / ajoutés** : saisons CE2 ; CM1 angles sans degrés, CM1 sans millions ni secondes, CM2 sans volumes
+  ni rapporteur (programme 2025) ; équations x + b = c et ax = c en 5e ; additions de fractions, fraction × entier et
+  pourcentages en 6e ; el plano ; 2de PC sans masse molaire ni mol/L (outil « masse molaire » retiré en 2de, outil
+  « Dilution » accepte g/L) ; oxydoréduction ajoutée en 1re PC ; incertitudes (u = a/√3, arrondi au plus proche) ;
+  photon 1,96 eV ; q = 2,4 × 10⁻⁵ C ; forçage radiatif ≠ déséquilibre (≈ 1 W/m²) ; temps de doublement sans ln
+  (ln en complément) ; 1re spé : uⁿ, f(ax+b) et eᵘ retirés ; E(X) = 1/λ sans intégration par parties ; 124 notes de
+  production retirées des fiches de maths et sections manquantes ajoutées (2de probabilités conditionnelles, écart type,
+  valeur absolue, base orthonormée… ; 6e opérations sur les décimaux) ; Berlin 1884-1885 partout ; JDC → baccalauréat
+  (loi du 1er août 2023) ; regista = faux ami de « régisseur » ; Verlagerung ; Gerundiv ; colegio / instituto ;
+  Irlande hors du Commonwealth depuis 1949 ; hypophyse sous le cerveau ; sérum aussi préventif ; ovocytes « quelques
+  centaines » ; épissage ajouté en 1re SVT ; aperception ; masse en SI ; QCM générés conformes (5e, 6e, CM1).
+
+## Encore à décider par Kamal
+
+1. **ES Terminale « Du génotype au phénotype »** : ne correspond à aucun thème du programme d'ES (plutôt SVT spécialité).
+   Le garder, le déplacer ou le retirer ?
+2. **Épissage en 1re SVT** : ajouté de mémoire (programme 2019) ; le programme SVT n'est pas dans docs/ : à confirmer.
+3. **2de maths** : l'information chiffrée (évolutions successives et réciproques) et les séries regroupées en classes
+   (histogramme) sont au programme 2026 mais sans chapitre → créer un chapitre ?
+4. **1re STI2D** : pas de chapitre « Dérivées » ni « Primitives » alors que le programme les contient → les créer ?
+5. **Sections ajoutées sans exercices** (2de, 1re, 6e…) : écrire QCM, cartes et exercices pour ces sections ?
+6. **Maths complémentaires, exponentielle-logarithme** : (eᵘ)′ et (ln u)′ enseignés ; programme du dépôt trop résumé
+   pour trancher.
+7. **Conventions d'incertitude** : 1re techno tronc commun « u ≈ ½ graduation » (sans √3) ; 1re SPCL arrondi par excès
+   alors que la Tle techno arrondit au plus proche → harmoniser ?

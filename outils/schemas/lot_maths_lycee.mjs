@@ -1560,7 +1560,7 @@ SCHEMAS.coneProfil = coneProfil;
     segments: [35, 70, 105].flatMap((t, i) => [{ x1: t, y1: 0, x2: t, y2: 2 ** (i + 1) }, { x1: 0, y1: 2 ** (i + 1), x2: t, y2: 2 ** (i + 1) }]),
     points: [0, 35, 70, 105].map((t, i) => ({ x: t, y: 2 ** i, couleur: 'rouge', nom: ['× 1', '× 2', '× 4', '× 8'][i], dx: -10, dy: -8, ancre: 'end', couleurNom: 'rouge' })),
     textes: [{ x: 17.5, y: 0.35, t: '35 ans', couleur: 'vert', gras: true }, { x: 52.5, y: 0.35, t: '35 ans', couleur: 'vert', gras: true }, { x: 87.5, y: 0.35, t: '35 ans', couleur: 'vert', gras: true }],
-  }, 'Avec une croissance de 2 % par an, l’effectif double tous les 35 ans environ (ln 2 ÷ ln 1,02) : × 2, puis × 4, puis × 8, quel que soit l’effectif de départ.', '## 6. Le temps de doublement');
+  }, 'Avec une croissance de 2 % par an, l’effectif double tous les 35 ans environ (1,02³⁵ ≈ 2) : × 2, puis × 4, puis × 8, quel que soit l’effectif de départ.', '## 6. Le temps de doublement');
 }
 {
   const F = 'terminale/enseignement-scientifique/probabilites-bayes-ia';
