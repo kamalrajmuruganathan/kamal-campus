@@ -1082,7 +1082,7 @@ const ORGAS = {
     notes: [
       { x: 340, y: 28, t: 'Le parcours de citoyenneté', taille: 14, couleur: ENCRE, gras: true },
       { x: 340, y: 168, t: 'L\'attestation de la JDC est demandée pour certains examens', taille: 12.5, italique: true },
-      { x: 340, y: 186, t: '(comme le permis de conduire).', taille: 12.5, italique: true },
+      { x: 340, y: 186, t: '(comme le baccalauréat), jusqu\'à 25 ans.', taille: 12.5, italique: true },
     ],
   }),
   institutionsVe: () => orga(680, 420, {

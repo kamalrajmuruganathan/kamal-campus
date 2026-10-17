@@ -22,12 +22,15 @@ relu_par: null
 
 | Espagnol | Français | Espagnol | Français |
 |---|---|---|---|
-| la escuela / el colegio | l'école / le collège | el instituto | le lycée |
+| la escuela / el colegio | l'école | el instituto | l'établissement du secondaire (collège et lycée) |
 | la clase | la classe / le cours | el aula | la salle de classe |
 | el patio | la cour | el recreo | la récréation |
 | la biblioteca | la bibliothèque | el comedor | la cantine |
 | el profesor / la profesora | le professeur | el alumno / la alumna | l'élève |
 | el director / la directora | le directeur / la directrice | el compañero | le camarade |
+
+En Espagne, **el colegio** désigne l'école (le plus souvent jusqu'à 12 ans) ; **el instituto** accueille les élèves
+de 12 à 18 ans : il correspond à notre collège et à notre lycée.
 
 Attention : **el aula** est un mot féminin, mais on emploie **el** au singulier (comme *el agua*). Au pluriel on dit **las aulas**.
 

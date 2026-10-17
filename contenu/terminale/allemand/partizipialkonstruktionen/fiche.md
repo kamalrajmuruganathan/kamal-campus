@@ -57,9 +57,10 @@ Un participe peut aussi former une **proposition détachée**, séparée par une
 | **In Berlin angekommen**, rief er seine Mutter an. | Nachdem er in Berlin angekommen war, ... |
 | **Laut lachend** verließ sie den Raum. | Während sie laut lachte, ... |
 
-## 5. Le gérondif (zu + Partizip I)
+## 5. Le participe I précédé de « zu » (Gerundiv)
 
-*zu + Partizip I* décliné exprime une **nécessité passive** (ce qui doit / peut être fait) :
+*zu + Partizip I* décliné exprime une **nécessité passive** (ce qui doit / peut être fait). Les grammaires allemandes
+l'appellent *Gerundiv* (à ne pas confondre avec le gérondif français « en + participe présent ») :
 
 > die **zu lösende** Aufgabe = die Aufgabe, die gelöst werden muss/soll
 > (le devoir à résoudre)

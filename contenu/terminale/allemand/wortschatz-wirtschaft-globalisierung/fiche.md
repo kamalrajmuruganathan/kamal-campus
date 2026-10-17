@@ -43,7 +43,8 @@ relu_par: null
 | **die Einfuhr / der Import** | l'importation |
 | **der Wettbewerb** | la concurrence |
 | **die Lieferkette** | la chaîne d'approvisionnement |
-| **die Auslagerung** | la délocalisation |
+| **die Verlagerung (ins Ausland)** | la délocalisation |
+| **die Auslagerung** | l'externalisation (confier une activité à une autre entreprise) |
 | **der Konzern** | le groupe / la multinationale |
 
 ## 3. Enjeux et développement durable (Herausforderungen)

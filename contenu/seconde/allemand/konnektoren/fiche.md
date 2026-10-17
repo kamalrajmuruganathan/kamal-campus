@@ -29,7 +29,7 @@ Ce sont : **und** (et), **oder** (ou), **aber** (mais), **denn** (car), **sonder
 | Exemple | Traduction |
 |---|---|
 | Ich bleibe zu Hause, **denn** ich **bin** krank. | Je reste à la maison, car je suis malade. |
-| Er lernt viel, **aber** er **hat** keine Zeit. | Il travaille beaucoup, mais il n'a pas le temps. |
+| Er lernt viel, **aber** er **hat** schlechte Noten. | Il travaille beaucoup, mais il a de mauvaises notes. |
 
 *sondern* s'emploie après une négation : *Das ist nicht rot, **sondern** blau.*
 

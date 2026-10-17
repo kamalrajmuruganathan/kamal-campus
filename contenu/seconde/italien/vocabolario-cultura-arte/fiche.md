@@ -52,10 +52,10 @@ relu_par: null
 
 ## 3. Les erreurs à éviter
 
-- **il regista** = le réalisateur (faux ami : ce n'est pas un « registre »).
+- **il regista** = le réalisateur (au cinéma) ou le metteur en scène (au théâtre) ; faux ami : ce n'est pas le « régisseur ».
 - **l'opera** peut signifier *l'œuvre* ou *l'opéra* selon le contexte.
 - On dit **dipingere un quadro** (peindre un tableau), pas *« pittare »*.
-- **lo spettacolo** = le spectacle : attention, *spettacoloso* n'existe pas, on dit *spettacolare*.
+- **lo spettacolo** = le spectacle : pour dire « spectaculaire », on dit *spettacolare* (*spettacoloso* existe, mais il est rare et familier).
 
 ## À retenir
 

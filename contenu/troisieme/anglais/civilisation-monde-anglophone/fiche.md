@@ -45,8 +45,8 @@ Chaque pays anglophone a ses symboles :
 | **New Zealand** | l'oiseau **kiwi**, la culture **Maori** |
 | **Ireland** | le **shamrock** (trèfle), la couleur verte, **St Patrick's Day** |
 
-Beaucoup de ces pays font partie du **Commonwealth**, un groupe de pays liés au Royaume-Uni
-par l'histoire.
+Le Royaume-Uni, le Canada, l'Australie et la Nouvelle-Zélande font partie du **Commonwealth**, un groupe de pays liés
+au Royaume-Uni par l'histoire. Attention : l'Irlande l'a quitté en 1949, et les États-Unis n'en font pas partie.
 
 ## 3. Les erreurs à éviter
 - La capitale de l'Australie est **Canberra**, pas Sydney.
@@ -57,4 +57,4 @@ par l'histoire.
 - L'**English** est une langue mondiale, parlée sur tous les continents.
 - Capitales : **Ottawa** (Canada), **Canberra** (Australia), **Wellington** (New Zealand), **Dublin** (Ireland).
 - Symboles : *maple leaf* (Canada), *kangaroo/koala* (Australia), *kiwi* (New Zealand), *shamrock* (Ireland).
-- Beaucoup de ces pays appartiennent au **Commonwealth**.
+- Le Canada, l'Australie et la Nouvelle-Zélande appartiennent au **Commonwealth** (l'Irlande l'a quitté en 1949).

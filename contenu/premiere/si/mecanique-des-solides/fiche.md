@@ -138,7 +138,7 @@ haubanage). On projette **Σ F⃗ = 0⃗** sur chaque axe :
 
 ## Les erreurs à éviter
 
-- **Confondre masse et poids** : la masse (kg) est une quantité de matière ; le
+- **Confondre masse et poids** : la masse (kg) est propre au corps et ne dépend pas du lieu ; le
   poids (N) est une force, P = m × g.
 - **Oublier le bras de levier** : le moment dépend de la **distance** à l'axe,
   pas seulement de l'intensité de la force.
