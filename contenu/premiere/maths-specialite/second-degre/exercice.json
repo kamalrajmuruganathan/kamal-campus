@@ -237,14 +237,16 @@
     },
     {
       "id": 20,
-      "difficulte": "application",
-      "notion": "identite-remarquable",
-      "enonce": "Factoriser $f(x) = x^2 - 10x + 25$ et donner sa ou ses racines.",
+      "difficulte": "approfondissement",
+      "notion": "demonstration",
+      "enonce": "Soit $a$, $b$, $c$ trois réels avec $a \\neq 0$, et $\\Delta = b^2 - 4ac$. Démontrer que, pour tout réel $x$ : $ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$.",
       "corrige": [
-        "On reconnaît $a^2 - 2ab + b^2$ avec $a = x$ et $b = 5$.",
-        "$f(x) = (x - 5)^2$ : une racine double."
+        "Comme $a \\neq 0$, on met $a$ en facteur : $ax^2 + bx + c = a\\left[x^2 + \\dfrac{b}{a}x + \\dfrac{c}{a}\\right]$.",
+        "On reconnaît le début d'un carré : $\\left(x + \\dfrac{b}{2a}\\right)^2 = x^2 + \\dfrac{b}{a}x + \\dfrac{b^2}{4a^2}$, donc $x^2 + \\dfrac{b}{a}x = \\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{b^2}{4a^2}$.",
+        "D'où $ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{b^2}{4a^2} + \\dfrac{c}{a}\\right]$.",
+        "On réduit au même dénominateur : $-\\dfrac{b^2}{4a^2} + \\dfrac{c}{a} = -\\dfrac{b^2}{4a^2} + \\dfrac{4ac}{4a^2} = -\\dfrac{b^2 - 4ac}{4a^2} = -\\dfrac{\\Delta}{4a^2}$, ce qui donne l'égalité demandée."
       ],
-      "reponse": "$f(x) = (x - 5)^2$ ; racine double $5$."
+      "reponse": "$ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$ pour tout réel $x$."
     },
     {
       "id": 21,
@@ -272,24 +274,28 @@
     {
       "id": 23,
       "difficulte": "application",
-      "notion": "discriminant",
-      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $x^2 + 2x + 5 = 0$.",
+      "notion": "demonstration",
+      "enonce": "En écrivant $x^2 + 2x + 5$ sous la forme $(x + \\alpha)^2 + \\beta$, démontrer que l'équation $x^2 + 2x + 5 = 0$ n'a pas de solution réelle.",
       "corrige": [
-        "$\\Delta = 2^2 - 4 \\times 1 \\times 5 = 4 - 20 = -16 < 0$.",
-        "L'équation n'a aucune solution réelle."
+        "$x^2 + 2x$ est le début du carré $(x + 1)^2 = x^2 + 2x + 1$, donc $x^2 + 2x = (x + 1)^2 - 1$.",
+        "Ainsi $x^2 + 2x + 5 = (x + 1)^2 - 1 + 5 = (x + 1)^2 + 4$.",
+        "Un carré est positif ou nul : pour tout réel $x$, $(x + 1)^2 + 4 \\geqslant 4 > 0$.",
+        "L'expression ne s'annule jamais : l'équation n'a pas de solution réelle (on retrouve $\\Delta = 4 - 20 = -16 < 0$)."
       ],
-      "reponse": "$S = \\varnothing$ (pas de solution dans $\\mathbb{R}$)."
+      "reponse": "$x^2 + 2x + 5 = (x + 1)^2 + 4 > 0$ : $S = \\varnothing$."
     },
     {
       "id": 24,
       "difficulte": "application",
-      "notion": "discriminant",
-      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $3x^2 - 6x + 3 = 0$.",
+      "notion": "demonstration",
+      "enonce": "Soit $f(x) = 9x^2 - 12x + 4$. Calculer $\\Delta$, puis écrire $f(x)$ sous la forme $a\\left(x + \\dfrac{b}{2a}\\right)^2$, comme dans la démonstration du cas $\\Delta = 0$. En déduire la racine de $f$.",
       "corrige": [
-        "$\\Delta = 36 - 4 \\times 3 \\times 3 = 0$ : une racine double.",
-        "$x_0 = -\\dfrac{b}{2a} = \\dfrac{6}{6} = 1$. (On pouvait aussi écrire $3(x^2 - 2x + 1) = 3(x - 1)^2$.)"
+        "$\\Delta = (-12)^2 - 4 \\times 9 \\times 4 = 144 - 144 = 0$.",
+        "Avec $\\Delta = 0$, la forme $a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$ devient $a\\left(x + \\dfrac{b}{2a}\\right)^2$, et $\\dfrac{b}{2a} = \\dfrac{-12}{18} = -\\dfrac{2}{3}$.",
+        "Donc $f(x) = 9\\left(x - \\dfrac{2}{3}\\right)^2$ (vérification : $9\\left(x^2 - \\dfrac{4}{3}x + \\dfrac{4}{9}\\right) = 9x^2 - 12x + 4$).",
+        "Ce produit est nul si et seulement si $x = \\dfrac{2}{3}$ : c'est l'unique racine."
       ],
-      "reponse": "$S = \\{1\\}$."
+      "reponse": "$f(x) = 9\\left(x - \\dfrac{2}{3}\\right)^2$ ; racine $\\dfrac{2}{3}$."
     },
     {
       "id": 25,
@@ -428,13 +434,15 @@
     {
       "id": 37,
       "difficulte": "intermediaire",
-      "notion": "discriminant",
-      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $-x^2 + x + 1 = 0$.",
+      "notion": "demonstration",
+      "enonce": "Reprendre la démonstration du cours avec $f(x) = 2x^2 - 4x - 6$ : écrire $f(x) = 2\\left[(x - 1)^2 - k\\right]$ en précisant $k$, puis factoriser par une différence de deux carrés et donner les racines.",
       "corrige": [
-        "$a = -1$, $b = 1$, $c = 1$ : $\\Delta = 1 - 4 \\times (-1) \\times 1 = 5 > 0$.",
-        "$x = \\dfrac{-1 \\pm \\sqrt{5}}{-2} = \\dfrac{1 \\mp \\sqrt{5}}{2}$."
+        "$f(x) = 2\\left[x^2 - 2x - 3\\right]$ et $x^2 - 2x = (x - 1)^2 - 1$.",
+        "Donc $f(x) = 2\\left[(x - 1)^2 - 1 - 3\\right] = 2\\left[(x - 1)^2 - 4\\right]$ : $k = 4$ (c'est bien $\\dfrac{\\Delta}{4a^2} = \\dfrac{64}{16}$).",
+        "$4 = 2^2$ : $f(x) = 2\\left[(x - 1) - 2\\right]\\left[(x - 1) + 2\\right] = 2(x - 3)(x + 1)$.",
+        "Un produit est nul si l'un des facteurs est nul : $x = 3$ ou $x = -1$."
       ],
-      "reponse": "$S = \\left\\{\\dfrac{1 - \\sqrt{5}}{2}\\,;\\dfrac{1 + \\sqrt{5}}{2}\\right\\}$."
+      "reponse": "$f(x) = 2(x - 3)(x + 1)$ ; $S = \\{-1\\,;3\\}$."
     },
     {
       "id": 38,

@@ -1019,13 +1019,11 @@ def gen_1_transformations_matiere():
     L = _Lot()
     # --- quantité de matière (7)
     for ctx, m, M, quoi in [("$9{,}00\\ \\mathrm{g}$ d'eau ($M = 18{,}0\\ \\mathrm{g\\cdot mol^{-1}}$)", 9.0, 18.0, "9.00"),
-                            ("$5{,}85\\ \\mathrm{g}$ de chlorure de sodium ($M = 58{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 5.85, 58.5, "5.85"),
-                            ("$1{,}27\\ \\mathrm{g}$ de cuivre ($M = 63{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 1.27, 63.5, "1.27"),
-                            ("$20{,}0\\ \\mathrm{g}$ de saccharose ($M = 342\\ \\mathrm{g\\cdot mol^{-1}}$)", 20.0, 342, "20.0")]:
+                            ("$5{,}85\\ \\mathrm{g}$ de chlorure de sodium ($M = 58{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 5.85, 58.5, "5.85")]:
         n = m / M
         L.add("application", "quantite-matiere", f"Calculer la quantité de matière contenue dans {ctx}.",
               [f"$n = \\dfrac{{m}}{{M}} = \\dfrac{{{ex(quoi)}}}{{{ex(str(M) if M != 342 else '342')}}} = {val(n, 'mol')}$."], f"$n \\approx {val(n, 'mol')}$")
-    for V, c in [("100", "0.20"), ("250", "5.0e-2")]:
+    for V, c in [("100", "0.20")]:
         n = float(V) / 1000 * float(c)
         ct = ex(c) if "e" not in c else sci(float(c), 2)
         L.add("application", "quantite-matiere", f"Calculer la quantité de soluté apporté dans ${V}\\ \\mathrm{{mL}}$ de solution de concentration ${ct}" + un(MOLL) + "$.",
@@ -1037,11 +1035,9 @@ def gen_1_transformations_matiere():
     # --- avancement (9)
     reacs = [
         ([("H_2", 2, "3.0"), ("O_2", 1, "2.0")], [("H_2O", 2)], None),
-        ([("CH_4", 1, "0.50"), ("O_2", 2, "0.80")], [("CO_2", 1), ("H_2O", 2)], None),
         ([("Al", 4, "0.40"), ("O_2", 3, "0.30")], [("Al_2O_3", 2)], None),
         ([("Fe", 1, "0.020"), ("H^+", 2, "0.050")], [("Fe^{2+}", 1), ("H_2", 1)], None),
         ([("Cu^{2+}", 1, "2.0e-3"), ("HO^-", 2, "3.0e-3")], [("Cu(OH)_2", 1)], None),
-        ([("C_3H_8", 1, "0.10"), ("O_2", 5, "0.60")], [("CO_2", 3), ("H_2O", 4)], None),
     ]
 
     def nt(s):
@@ -1065,7 +1061,7 @@ def gen_1_transformations_matiere():
         fin += [f"$n({_esp(e)}) = {num(float(c * xmax), sig)}\\ \\mathrm{{mol}}$" for e, c in P]
         cor.append("État final : " + " ; ".join(fin) + ".")
         ini = ", ".join(f"${nt(s)}\\ \\mathrm{{mol}}$ de ${_esp(e)}$" for e, c, s in R)
-        L.add("intermediaire" if i < 4 else "approfondissement", "avancement",
+        L.add("intermediaire" if i < 3 else "approfondissement", "avancement",
               f"On fait réagir {ini} selon ${eq}$. Déterminer le réactif limitant, l'avancement maximal et la composition de l'état final.",
               cor, rep + f" ; $x_{{\\max}} = {val(float(xmax), 'mol', sig)}$")
     n_mg, n_o2 = 0.486 / 24.3, 0.0150
@@ -1101,10 +1097,6 @@ def gen_1_transformations_matiere():
     L.add("intermediaire", "beer-lambert", "Le colorant bleu E133 d'une boisson a une absorbance de $0{,}52$ à $630\\ \\mathrm{nm}$ dans une cuve de $1{,}0\\ \\mathrm{cm}$ ; $\\varepsilon = 1{,}3\\times 10^{5}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. Calculer sa concentration molaire, puis sa concentration en masse ($M = 793\\ \\mathrm{g\\cdot mol^{-1}}$).",
           [f"$c = \\dfrac{{0{{,}}52}}{{1{{,}}3\\times 10^{{5}} \\times 1{{,}}0}} = {val(c, MOLL, 2)}$.", f"$C_m = c \\times M = {sci(c, 2)} \\times 793 = {val(c * 793, GL, 2)}$, soit environ ${num(c * 793 * 1000, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$."],
           f"$c = {val(c, MOLL, 2)}$ ; $C_m \\approx {num(c * 793 * 1000, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$")
-    L.add("application", "beer-lambert", "Une solution de sulfate de cuivre à $0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$ est étudiée à $800\\ \\mathrm{nm}$ ($\\varepsilon = 12\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$) dans une cuve de $1{,}0\\ \\mathrm{cm}$. Calculer son absorbance.",
-          [f"$A = 12 \\times 1{{,}}0 \\times 0{{,}}050 = {num(0.6, 2)}$."], "$A = 0{,}60$")
-    L.add("intermediaire", "beer-lambert", "On dilue deux fois une solution colorée dont l'absorbance vaut $0{,}84$. Quelle absorbance attend-on pour la solution diluée (même cuve, même longueur d'onde) ?",
-          ["$A$ est proportionnelle à $c$ ; la concentration est divisée par 2.", "$A' = \\dfrac{0{,}84}{2} = 0{,}42$."], "$A' = 0{,}42$")
     L.add("approfondissement", "beer-lambert", "Avec une cuve de $2{,}0\\ \\mathrm{cm}$ au lieu de $1{,}0\\ \\mathrm{cm}$, comment varie l'absorbance d'une même solution ?",
           ["$A = \\varepsilon \\ell c$ est proportionnelle à l'épaisseur $\\ell$.", "L'absorbance double."], "Elle double")
     L.add("approfondissement", "beer-lambert", "Une solution trop concentrée donne $A = 2{,}6$. Pourquoi ne peut-on pas utiliser directement la loi de Beer-Lambert ? Que faire ?",
@@ -1113,8 +1105,6 @@ def gen_1_transformations_matiere():
           "Hors du domaine de validité : diluer")
     # --- titrage (9)
     for ctx, VAs, cBs, VEs, nom, coefA, coefB, quoi, sig in [
-            ("On titre $20{,}0\\ \\mathrm{mL}$ d'une solution d'acide chlorhydrique par une solution d'hydroxyde de sodium à $0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$ ; l'équivalence est obtenue pour $12{,}4\\ \\mathrm{mL}$. Réaction : $\\mathrm{H_3O^+} + \\mathrm{HO^-} \\longrightarrow 2\\,\\mathrm{H_2O}$.", "20.0", "0.100", "12.4", "\\mathrm{H_3O^+}", 1, 1, "acide chlorhydrique", 3),
-            ("On titre $10{,}0\\ \\mathrm{mL}$ d'un vinaigre dilué 10 fois par une solution d'hydroxyde de sodium à $0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 14{,}2\\ \\mathrm{mL}$. Réaction : $\\mathrm{CH_3COOH} + \\mathrm{HO^-} \\longrightarrow \\mathrm{CH_3COO^-} + \\mathrm{H_2O}$. Calculer la concentration du vinaigre dilué puis celle du vinaigre commercial.", "10.0", "0.100", "14.2", "\\mathrm{CH_3COOH}", 1, 1, "vinaigre", 3),
             ("On titre $10{,}0\\ \\mathrm{mL}$ d'une solution de diiode par du thiosulfate de sodium à $5{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 8{,}0\\ \\mathrm{mL}$. Réaction : $\\mathrm{I_2} + 2\\,\\mathrm{S_2O_3^{2-}} \\longrightarrow 2\\,\\mathrm{I^-} + \\mathrm{S_4O_6^{2-}}$.", "10.0", "0.0500", "8.0", "\\mathrm{I_2}", 1, 2, "diiode", 2),
             ("On titre $20{,}0\\ \\mathrm{mL}$ d'une solution d'ions fer(II) par du permanganate de potassium à $2{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 15{,}0\\ \\mathrm{mL}$. Réaction : $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\longrightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$.", "20.0", "0.0200", "15.0", "\\mathrm{Fe^{2+}}", 5, 1, "fer", 3),
             ("On titre $10{,}0\\ \\mathrm{mL}$ d'eau oxygénée diluée par du permanganate de potassium à $2{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 12{,}0\\ \\mathrm{mL}$. Réaction : $2\\,\\mathrm{MnO_4^-} + 5\\,\\mathrm{H_2O_2} + 6\\,\\mathrm{H^+} \\longrightarrow 2\\,\\mathrm{Mn^{2+}} + 5\\,\\mathrm{O_2} + 8\\,\\mathrm{H_2O}$.", "10.0", "0.0200", "12.0", "\\mathrm{H_2O_2}", 5, 2, "eau oxygénée", 3),
@@ -1139,8 +1129,6 @@ def gen_1_transformations_matiere():
             rep += f", soit ${num(cA * 35500, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$"
         L.add("intermediaire" if coefA == coefB else "approfondissement", "titrage", ctx + ("" if quoi == "vinaigre" else f" Calculer la concentration en {'ions ' if quoi in ('fer', 'chlorure') else ''}{quoi if quoi != 'fer' else 'fer(II)'}" + (" (en mol par litre puis en mg par litre)." if quoi == "chlorure" else ".")),
               cor, rep)
-    L.add("application", "titrage", "On veut titrer $10{,}0\\ \\mathrm{mL}$ d'acide chlorhydrique à environ $0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$ par de la soude à $0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction mole à mole). Prévoir le volume équivalent.",
-          ["À l'équivalence : $c_A V_A = c_B V_E$.", "$V_E = \\dfrac{0{,}050 \\times 10{,}0}{0{,}10} = 5{,}0\\ \\mathrm{mL}$."], "$V_E \\approx 5{,}0\\ \\mathrm{mL}$")
     L.qa("application", "titrage", [
         ("Lors du titrage d'ions fer(II) par le permanganate (violet), comment repère-t-on l'équivalence ?",
          ["Avant l'équivalence, les ions permanganate versés sont consommés : la solution reste presque incolore.", "Juste après l'équivalence, ils sont en excès : une teinte violette persiste."],
@@ -1148,6 +1136,74 @@ def gen_1_transformations_matiere():
         ("Qu'appelle-t-on équivalence d'un titrage ?",
          ["C'est l'état où les réactifs (titré et titrant) ont été introduits dans les proportions stœchiométriques : ils sont tous deux entièrement consommés."],
          "Réactifs introduits dans les proportions stœchiométriques"),
+    ])
+    L.add("application", "titrage", "On veut titrer $10{,}0\\ \\mathrm{mL}$ d'une solution d'ions fer(II) à environ $0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$ par du permanganate de potassium à $0{,}020\\ \\mathrm{mol\\cdot L^{-1}}$ : $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\longrightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$. Prévoir le volume équivalent.",
+          ["$n(\\mathrm{Fe^{2+}}) = 0{,}050 \\times 10{,}0\\times 10^{-3} = 5{,}0\\times 10^{-4}\\ \\mathrm{mol}$.",
+           "À l'équivalence, $n(\\mathrm{MnO_4^-}) = \\dfrac{n(\\mathrm{Fe^{2+}})}{5} = 1{,}0\\times 10^{-4}\\ \\mathrm{mol}$.",
+           "$V_E = \\dfrac{1{,}0\\times 10^{-4}}{0{,}020} = 5{,}0\\times 10^{-3}\\ \\mathrm{L}$, soit $5{,}0\\ \\mathrm{mL}$."],
+          "$V_E \\approx 5{,}0\\ \\mathrm{mL}$")
+    n_mn = 2.00e-2 * 13.1e-3
+    m_fe = 5 * n_mn * 55.8
+    L.add("probleme", "titrage", "Pour contrôler un comprimé contre l'anémie, on le dissout dans de l'eau acidifiée, puis on titre la totalité des ions fer(II) obtenus par du permanganate de potassium à $2{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; la teinte violette persiste à partir de $V_E = 13{,}1\\ \\mathrm{mL}$. Réaction : $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\longrightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$. Calculer la masse de fer contenue dans le comprimé ($M(\\mathrm{Fe}) = 55{,}8\\ \\mathrm{g\\cdot mol^{-1}}$).",
+          [f"$n(\\mathrm{{MnO_4^-}}) = 2{{,}}00\\times 10^{{-2}} \\times 13{{,}}1\\times 10^{{-3}} = {val(n_mn, 'mol')}$.",
+           f"À l'équivalence, $n(\\mathrm{{Fe^{{2+}}}}) = 5 \\times n(\\mathrm{{MnO_4^-}}) = {val(5 * n_mn, 'mol')}$.",
+           f"$m = n \\times M = {sci(5 * n_mn)} \\times 55{{,}}8 = {val(m_fe, 'g')}$, soit environ ${num(m_fe * 1000)}\\ \\mathrm{{mg}}$."],
+          f"$m(\\mathrm{{Fe}}) \\approx {num(m_fe * 1000)}\\ \\mathrm{{mg}}$")
+    L.qa("intermediaire", "titrage", [
+        ("Lors du titrage des ions fer(II) par les ions permanganate, quel est le réactif limitant avant l'équivalence ? après l'équivalence ?",
+         ["Avant l'équivalence, les ions permanganate versés sont entièrement consommés : ils sont limitants (la solution reste presque incolore).",
+          "Après l'équivalence, il ne reste plus d'ions fer(II) : ce sont eux qui sont limitants, et les ions permanganate en excès colorent la solution en violet.",
+          "L'équivalence correspond au changement de réactif limitant."],
+         "Avant : les ions permanganate ; après : les ions fer(II)"),
+    ])
+    # --- oxydoréduction (10)
+    L.qa("application", "oxydoreduction", [
+        ("Écrire la demi-équation électronique du couple $\\mathrm{Ag^+/Ag}$, puis indiquer l'oxydant et le réducteur.",
+         ["L'oxydant capte des électrons pour donner le réducteur : $\\mathrm{Ag^+} + e^- = \\mathrm{Ag}$.", "Oxydant : $\\mathrm{Ag^+}$ ; réducteur : $\\mathrm{Ag}$."],
+         "$\\mathrm{Ag^+} + e^- = \\mathrm{Ag}$ ; oxydant $\\mathrm{Ag^+}$, réducteur $\\mathrm{Ag}$"),
+        ("Écrire la demi-équation électronique du couple $\\mathrm{I_2/I^-}$.",
+         ["On équilibre l'élément iode : $\\mathrm{I_2} = 2\\,\\mathrm{I^-}$.", "On équilibre les charges avec des électrons (à gauche $0$, à droite $-2$) : $\\mathrm{I_2} + 2\\,e^- = 2\\,\\mathrm{I^-}$."],
+         "$\\mathrm{I_2} + 2\\,e^- = 2\\,\\mathrm{I^-}$"),
+        ("Un clou en fer plongé dans une solution acide se transforme en ions $\\mathrm{Fe^{2+}}$. Le fer subit-il une oxydation ou une réduction ?",
+         ["$\\mathrm{Fe} = \\mathrm{Fe^{2+}} + 2\\,e^-$ : le fer cède deux électrons.", "Une espèce qui cède des électrons est un réducteur : elle s'oxyde. Le fer subit une oxydation."],
+         "Une oxydation"),
+    ])
+    L.vf("application", "oxydoreduction", [
+        ("Un oxydant est une espèce capable de céder un ou plusieurs électrons.", False, "Faux : un oxydant **capte** des électrons ; c'est le réducteur qui en cède."),
+    ])
+    L.qa("intermediaire", "oxydoreduction", [
+        ("Ajuster en milieu acide la demi-équation électronique du couple $\\mathrm{Cr_2O_7^{2-}/Cr^{3+}}$ (ion dichromate / ion chrome(III)).",
+         ["Élément chrome : $\\mathrm{Cr_2O_7^{2-}} = 2\\,\\mathrm{Cr^{3+}}$.",
+          "Oxygène avec de l'eau : $\\mathrm{Cr_2O_7^{2-}} = 2\\,\\mathrm{Cr^{3+}} + 7\\,\\mathrm{H_2O}$ ; hydrogène avec des ions $\\mathrm{H^+}$ : $\\mathrm{Cr_2O_7^{2-}} + 14\\,\\mathrm{H^+} = 2\\,\\mathrm{Cr^{3+}} + 7\\,\\mathrm{H_2O}$.",
+          "Charges : $-2 + 14 = +12$ à gauche, $2 \\times 3 = +6$ à droite ; on ajoute $6$ électrons à gauche."],
+         "$\\mathrm{Cr_2O_7^{2-}} + 14\\,\\mathrm{H^+} + 6\\,e^- = 2\\,\\mathrm{Cr^{3+}} + 7\\,\\mathrm{H_2O}$"),
+        ("Ajuster en milieu acide la demi-équation électronique du couple $\\mathrm{H_2O_2/H_2O}$ (eau oxygénée / eau).",
+         ["Oxygène : $\\mathrm{H_2O_2} = 2\\,\\mathrm{H_2O}$.", "Hydrogène : $\\mathrm{H_2O_2} + 2\\,\\mathrm{H^+} = 2\\,\\mathrm{H_2O}$.",
+          "Charges : $+2$ à gauche, $0$ à droite ; on ajoute $2$ électrons à gauche."],
+         "$\\mathrm{H_2O_2} + 2\\,\\mathrm{H^+} + 2\\,e^- = 2\\,\\mathrm{H_2O}$"),
+        ("Un fil de cuivre plongé dans une solution incolore de nitrate d'argent se recouvre d'argent, et la solution bleuit. Les couples sont $\\mathrm{Ag^+/Ag}$ et $\\mathrm{Cu^{2+}/Cu}$. Écrire l'équation de la réaction.",
+         ["Réduction : $\\mathrm{Ag^+} + e^- = \\mathrm{Ag}$ ; oxydation : $\\mathrm{Cu} = \\mathrm{Cu^{2+}} + 2\\,e^-$.",
+          "Le cuivre cède $2$ électrons, l'ion argent n'en capte qu'un : on multiplie la première demi-équation par $2$.",
+          "$2\\,\\mathrm{Ag^+} + \\mathrm{Cu} \\longrightarrow 2\\,\\mathrm{Ag} + \\mathrm{Cu^{2+}}$ (charges : $+2$ de chaque côté)."],
+         "$2\\,\\mathrm{Ag^+} + \\mathrm{Cu} \\longrightarrow 2\\,\\mathrm{Ag} + \\mathrm{Cu^{2+}}$"),
+        ("Une grenaille de zinc réagit avec l'acide chlorhydrique : un gaz (le dihydrogène) se dégage et des ions $\\mathrm{Zn^{2+}}$ se forment. Les couples sont $\\mathrm{H^+/H_2}$ et $\\mathrm{Zn^{2+}/Zn}$. Écrire l'équation de la réaction.",
+         ["Oxydation : $\\mathrm{Zn} = \\mathrm{Zn^{2+}} + 2\\,e^-$ ; réduction : $2\\,\\mathrm{H^+} + 2\\,e^- = \\mathrm{H_2}$.",
+          "Les deux demi-équations échangent $2$ électrons : on les additionne directement.",
+          "$\\mathrm{Zn} + 2\\,\\mathrm{H^+} \\longrightarrow \\mathrm{Zn^{2+}} + \\mathrm{H_2}$."],
+         "$\\mathrm{Zn} + 2\\,\\mathrm{H^+} \\longrightarrow \\mathrm{Zn^{2+}} + \\mathrm{H_2}$"),
+    ])
+    L.qa("approfondissement", "oxydoreduction", [
+        ("Le diiode réagit avec les ions thiosulfate. Les couples sont $\\mathrm{I_2/I^-}$ et $\\mathrm{S_4O_6^{2-}/S_2O_3^{2-}}$. Écrire les deux demi-équations, puis l'équation de la réaction.",
+         ["Réduction du diiode : $\\mathrm{I_2} + 2\\,e^- = 2\\,\\mathrm{I^-}$.",
+          "Oxydation des ions thiosulfate : $2\\,\\mathrm{S_2O_3^{2-}} = \\mathrm{S_4O_6^{2-}} + 2\\,e^-$ (charges : $-4$ à gauche, $-2 - 2 = -4$ à droite).",
+          "Deux électrons de chaque côté : $\\mathrm{I_2} + 2\\,\\mathrm{S_2O_3^{2-}} \\longrightarrow 2\\,\\mathrm{I^-} + \\mathrm{S_4O_6^{2-}}$."],
+         "$\\mathrm{I_2} + 2\\,\\mathrm{S_2O_3^{2-}} \\longrightarrow 2\\,\\mathrm{I^-} + \\mathrm{S_4O_6^{2-}}$"),
+        ("Les ions permanganate oxydent l'eau oxygénée en milieu acide. Les couples sont $\\mathrm{MnO_4^-/Mn^{2+}}$ et $\\mathrm{O_2/H_2O_2}$. Établir l'équation de la réaction.",
+         ["Réduction : $\\mathrm{MnO_4^-} + 8\\,\\mathrm{H^+} + 5\\,e^- = \\mathrm{Mn^{2+}} + 4\\,\\mathrm{H_2O}$.",
+          "Oxydation : $\\mathrm{H_2O_2} = \\mathrm{O_2} + 2\\,\\mathrm{H^+} + 2\\,e^-$.",
+          "Pour échanger $10$ électrons, on multiplie la première par $2$ et la seconde par $5$, puis on simplifie les ions $\\mathrm{H^+}$ ($16 - 10 = 6$).",
+          "$2\\,\\mathrm{MnO_4^-} + 5\\,\\mathrm{H_2O_2} + 6\\,\\mathrm{H^+} \\longrightarrow 2\\,\\mathrm{Mn^{2+}} + 5\\,\\mathrm{O_2} + 8\\,\\mathrm{H_2O}$ (charges : $+4$ de chaque côté)."],
+         "$2\\,\\mathrm{MnO_4^-} + 5\\,\\mathrm{H_2O_2} + 6\\,\\mathrm{H^+} \\longrightarrow 2\\,\\mathrm{Mn^{2+}} + 5\\,\\mathrm{O_2} + 8\\,\\mathrm{H_2O}$"),
     ])
     # --- énergie de réaction (7)
     for ctx, m, M, Em, signe, nom in [("On dissout $4{,}0\\ \\mathrm{g}$ d'hydroxyde de sodium ($M = 40{,}0\\ \\mathrm{g\\cdot mol^{-1}}$) dans l'eau ; l'énergie molaire de dissolution vaut $44{,}5\\ \\mathrm{kJ\\cdot mol^{-1}}$ (transformation exothermique).", 4.0, 40.0, 44.5, "libérée", ""),
@@ -1158,8 +1214,6 @@ def gen_1_transformations_matiere():
         L.add("intermediaire", "energie-reaction", ctx + f" Calculer l'énergie {signe}.",
               [f"$n = \\dfrac{{m}}{{M}} = {val(n, 'mol', 2 if m < 10 else 3)}$.", f"$Q = n \\times E_{{\\text{{molaire}}}} = {num(n, 2 if m < 10 else 3)} \\times {ex(Em)} = {val(Q, 'kJ', 2 if m < 10 else 3)}$."],
               f"$Q \\approx {val(Q, 'kJ', 2 if m < 10 else 3)}$ {signe}")
-    L.add("intermediaire", "energie-reaction", "La combustion d'une mole de méthane libère $890\\ \\mathrm{kJ}$. Quelle énergie libère la combustion de $2{,}5\\ \\mathrm{mol}$ de méthane ?",
-          [f"$Q = n \\times E_{{\\text{{molaire}}}} = 2{{,}}5 \\times 890 = {val(2.5 * 890, 'kJ', 2)}$."], f"$Q \\approx {val(2.5 * 890, 'kJ', 2)}$")
     n = 1000 / 1367
     L.add("probleme", "energie-reaction", "La combustion d'une mole d'éthanol libère $1\\,367\\ \\mathrm{kJ}$. Quelle masse d'éthanol ($M = 46{,}0\\ \\mathrm{g\\cdot mol^{-1}}$) faut-il brûler pour libérer $1{,}00\\ \\mathrm{MJ}$ ?",
           [f"$n = \\dfrac{{Q}}{{E_{{\\text{{molaire}}}}}} = \\dfrac{{1\\,000}}{{1\\,367}} = {val(n, 'mol')}$.", f"$m = n \\times M = {num(n)} \\times 46{{,}}0 = {val(n * 46.0, 'g')}$."],
@@ -1173,12 +1227,10 @@ def gen_1_transformations_matiere():
     # --- cours (10)
     L.vf("application", "cours", [
         ("Le réactif limitant est toujours le réactif introduit en plus petite quantité.", False, "Faux : c'est celui dont le rapport $\\dfrac{n_i}{\\text{coefficient}}$ est le plus petit ; les nombres stœchiométriques comptent."),
-        ("Dans un tableau d'avancement, la quantité d'un réactif s'écrit $n_0 - a\\,x$.", True, "Vrai : les réactifs sont consommés proportionnellement à leur nombre stœchiométrique $a$."),
         ("Dans un mélange stœchiométrique, tous les réactifs sont épuisés à l'état final.", True, "Vrai : ils ont été introduits dans les proportions de l'équation et disparaissent simultanément."),
         ("L'absorbance d'une solution s'exprime en $\\mathrm{mol\\cdot L^{-1}}$.", False, "Faux : l'absorbance est sans unité ; c'est la concentration qui s'exprime en $\\mathrm{mol\\cdot L^{-1}}$."),
         ("La relation $c_A V_A = c_B V_E$ est valable pour tous les titrages.", False, "Faux : seulement si les nombres stœchiométriques valent 1 ; sinon on écrit $\\dfrac{n_A}{a} = \\dfrac{n_B}{b}$."),
         ("À l'équivalence d'un titrage, le réactif titrant est en excès.", False, "Faux : à l'équivalence, réactif titré et réactif titrant sont tous deux entièrement consommés ; le titrant n'est en excès qu'après."),
-        ("Un saut de pH peut permettre de repérer l'équivalence d'un titrage acido-basique.", True, "Vrai : à l'équivalence, le pH varie brutalement."),
         ("La conductimétrie ne permet de suivre une transformation que si des ions y participent.", True, "Vrai : la conductivité d'une solution est due aux ions qu'elle contient."),
     ])
     L.qa("intermediaire", "cours", [

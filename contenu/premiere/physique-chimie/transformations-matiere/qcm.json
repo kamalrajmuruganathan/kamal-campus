@@ -153,16 +153,16 @@
   {
    "id": 11,
    "difficulte": "facile",
-   "notion": "avancement",
-   "enonce": "Dans un tableau d'avancement, comment évolue la quantité d'un produit ?",
+   "notion": "oxydoreduction",
+   "enonce": "Qu'est-ce qu'un **oxydant** ?",
    "choix": [
-    "Elle diminue selon $-cx$",
-    "Elle augmente selon $+cx$",
-    "Elle reste constante",
-    "Elle vaut toujours $x$"
+    "Une espèce capable de capter un ou plusieurs électrons",
+    "Une espèce capable de céder un ou plusieurs électrons",
+    "Une espèce qui contient forcément de l'oxygène",
+    "Une espèce capable de céder un ion $\\mathrm{H^+}$"
    ],
-   "reponse": 1,
-   "explication": "Les **produits apparaissent** : leur quantité augmente de $cx$, avec un signe $+$, où $c$ est le nombre stœchiométrique du produit. Ce sont les **réactifs** qui diminuent, avec un signe $-$. Inverser les deux signes est l'erreur la plus fréquente dans un tableau."
+   "reponse": 0,
+   "explication": "Un oxydant **capte** des électrons ; c'est le réducteur qui en **cède**. Malgré son nom, un oxydant ne contient pas forcément d'oxygène (par exemple $\\mathrm{Cu^{2+}}$ ou $\\mathrm{I_2}$). Céder un ion $\\mathrm{H^+}$, c'est la définition d'un acide, une autre notion."
   },
   {
    "id": 12,
@@ -237,16 +237,16 @@
   {
    "id": 17,
    "difficulte": "moyen",
-   "notion": "spectrophotometrie",
-   "enonce": "On divise par $3$ la concentration d'une solution colorée. Que devient son absorbance, à trajet optique constant ?",
+   "notion": "oxydoreduction",
+   "enonce": "Quelle est la demi-équation électronique du couple $\\mathrm{Zn^{2+}/Zn}$ ?",
    "choix": [
-    "Elle est inchangée",
-    "Elle est divisée par $3$",
-    "Elle est multipliée par $3$",
-    "Elle est divisée par $9$"
+    "$\\mathrm{Zn^{2+}} + 2\\,e^- = \\mathrm{Zn}$",
+    "$\\mathrm{Zn^{2+}} + e^- = \\mathrm{Zn}$",
+    "$\\mathrm{Zn} + 2\\,e^- = \\mathrm{Zn^{2+}}$",
+    "$\\mathrm{Zn^{2+}} = \\mathrm{Zn} + 2\\,e^-$"
    ],
-   "reponse": 1,
-   "explication": "$A = \\varepsilon \\ell c$ : l'absorbance est **proportionnelle** à la concentration. Diviser $c$ par $3$ divise $A$ par $3$. Le choix « divisée par $9$ » suppose à tort une dépendance au carré, qui n'existe pas dans la loi de Beer-Lambert."
+   "reponse": 0,
+   "explication": "On écrit $\\mathrm{Ox} + n\\,e^- = \\mathrm{Red}$ : l'oxydant $\\mathrm{Zn^{2+}}$ capte $2$ électrons pour donner le zinc métal. Les charges sont équilibrées : $+2 - 2 = 0$ à gauche, $0$ à droite. Placer les électrons du mauvais côté déséquilibre les charges."
   },
   {
    "id": 18,
@@ -289,6 +289,48 @@
    ],
    "reponse": 1,
    "explication": "On cherche d'abord le limitant : $\\dfrac{n_{\\mathrm{H_2}}}{2} = 2{,}5$ et $\\dfrac{n_{\\mathrm{O_2}}}{1} = 2$, donc $\\mathrm{O_2}$ limite et $x_{\\max} = 2$ mol. L'eau étant formée avec le nombre stœchiométrique $2$ : $n_{\\mathrm{H_2O}} = 2x_{\\max} = 4$ mol. Le piège est d'oublier le facteur $2$ (on répondrait $2$) ou de prendre $\\mathrm{H_2}$ pour limitant."
+  },
+  {
+   "id": 21,
+   "difficulte": "moyen",
+   "notion": "oxydoreduction",
+   "enonce": "Une lame de zinc plongée dans une solution bleue de sulfate de cuivre se recouvre de cuivre et la solution se décolore. Quelle est l'équation de la réaction ?",
+   "choix": [
+    "$\\mathrm{Cu^{2+}} + \\mathrm{Zn} \\rightarrow \\mathrm{Cu} + \\mathrm{Zn^{2+}}$",
+    "$\\mathrm{Cu} + \\mathrm{Zn^{2+}} \\rightarrow \\mathrm{Cu^{2+}} + \\mathrm{Zn}$",
+    "$\\mathrm{Cu^{2+}} + \\mathrm{Zn} + 2\\,e^- \\rightarrow \\mathrm{Cu} + \\mathrm{Zn^{2+}}$",
+    "$\\mathrm{Cu^{2+}} + 2\\,\\mathrm{Zn} \\rightarrow \\mathrm{Cu} + 2\\,\\mathrm{Zn^{2+}}$"
+   ],
+   "reponse": 0,
+   "explication": "Les ions cuivre(II) (bleus) captent $2$ électrons et deviennent du cuivre ; le zinc en cède $2$ et devient $\\mathrm{Zn^{2+}}$. Chaque demi-équation échange $2$ électrons : on les additionne et les électrons **disparaissent** de l'équation. L'équation inverse ne correspond pas aux observations, et la dernière n'est équilibrée ni en zinc ni en charges."
+  },
+  {
+   "id": 22,
+   "difficulte": "difficile",
+   "notion": "titrage",
+   "enonce": "On titre des ions fer(II) par des ions permanganate : $\\mathrm{MnO_4^-} + 8\\,\\mathrm{H^+} + 5\\,\\mathrm{Fe^{2+}} \\rightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$. Quelle relation est vraie à l'équivalence ?",
+   "choix": [
+    "$n(\\mathrm{MnO_4^-})_\\text{versé} = \\dfrac{n(\\mathrm{Fe^{2+}})_\\text{initial}}{5}$",
+    "$n(\\mathrm{MnO_4^-})_\\text{versé} = 5 \\times n(\\mathrm{Fe^{2+}})_\\text{initial}$",
+    "$n(\\mathrm{MnO_4^-})_\\text{versé} = n(\\mathrm{Fe^{2+}})_\\text{initial}$",
+    "$n(\\mathrm{MnO_4^-})_\\text{versé} = 8 \\times n(\\mathrm{Fe^{2+}})_\\text{initial}$"
+   ],
+   "reponse": 0,
+   "explication": "À l'équivalence, les réactifs ont été introduits dans les proportions de l'équation : un ion permanganate pour cinq ions fer(II). Il faut donc **cinq fois moins** d'ions permanganate que d'ions fer(II). La relation $cV = c'V'$ ne vaut que si les deux nombres stœchiométriques sont égaux à $1$."
+  },
+  {
+   "id": 23,
+   "difficulte": "difficile",
+   "notion": "titrage",
+   "enonce": "Lors du titrage d'ions fer(II) par une solution violette de permanganate de potassium, comment repère-t-on l'équivalence ?",
+   "choix": [
+    "La teinte violette persiste dans le bécher",
+    "La teinte violette disparaît pour la première fois",
+    "Un précipité apparaît",
+    "La solution devient bleue"
+   ],
+   "reponse": 0,
+   "explication": "Avant l'équivalence, les ions permanganate versés sont aussitôt consommés par les ions fer(II) : la teinte violette disparaît à chaque ajout. Dès que tous les ions fer(II) ont réagi, les ions permanganate sont en excès et la teinte violette **persiste**. Le permanganate sert ainsi lui-même d'indicateur de fin de réaction."
   }
  ]
 }

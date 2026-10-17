@@ -138,11 +138,16 @@
     {
       "id": 11,
       "difficulte": "facile",
-      "notion": "partie-reelle",
-      "enonce": "Quelle est la partie réelle de $z = -4 + 6\\mathrm{i}$ ?",
-      "choix": ["$-4$", "$6$", "$6\\mathrm{i}$", "$-4 + 6\\mathrm{i}$"],
+      "notion": "conjugue",
+      "enonce": "Pour tous nombres complexes $z$ et $z'$, à quoi est égal $\\overline{z + z'}$ ?",
+      "choix": [
+        "$\\bar{z} + \\bar{z'}$",
+        "$\\bar{z} - \\bar{z'}$",
+        "$z + z'$",
+        "$-z - z'$"
+      ],
       "reponse": 0,
-      "explication": "Dans l'écriture $z = a + \\mathrm{i}b$, la partie réelle est $a = -4$. Le signe compte : la confondre avec $4$ ou avec la partie imaginaire $6$ est le piège classique."
+      "explication": "Le conjugué d'une somme est la **somme des conjugués** : $\\overline{z + z'} = \\bar{z} + \\bar{z'}$. On change le signe des parties imaginaires, pas celui des parties réelles : $-z - z'$ ne convient donc pas."
     },
     {
       "id": 12,
@@ -170,11 +175,16 @@
     {
       "id": 14,
       "difficulte": "moyen",
-      "notion": "module",
-      "enonce": "Quel est le module de $z = 5 - 12\\mathrm{i}$ ?",
-      "choix": ["$13$", "$17$", "$7$", "$\\sqrt{17}$"],
+      "notion": "conjugue",
+      "enonce": "Avec $z = 2 + \\mathrm{i}$ et $z' = 1 + 3\\mathrm{i}$, on trouve $z z' = -1 + 7\\mathrm{i}$. Que vaut $\\bar{z} \\times \\bar{z'}$ ?",
+      "choix": [
+        "$-1 - 7\\mathrm{i}$",
+        "$-1 + 7\\mathrm{i}$",
+        "$1 - 7\\mathrm{i}$",
+        "$1 + 7\\mathrm{i}$"
+      ],
       "reponse": 0,
-      "explication": "$|z| = \\sqrt{5^2 + (-12)^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. Le signe de la partie imaginaire disparaît sous le carré ; le choix $17$ additionne $5 + 12$."
+      "explication": "Le conjugué d'un produit est le produit des conjugués : $\\bar{z} \\times \\bar{z'} = \\overline{z z'} = \\overline{-1 + 7\\mathrm{i}} = -1 - 7\\mathrm{i}$. Inutile de refaire le calcul : seule la partie imaginaire change de signe."
     },
     {
       "id": 15,
@@ -239,6 +249,34 @@
       "choix": ["$12$", "$7$", "$5$", "$\\sqrt{7}$"],
       "reponse": 0,
       "explication": "Le module d'un produit est le produit des modules : $|zz'| = |z| \\times |z'| = 3 \\times 4 = 12$. Le choix $7$ additionne les modules, le choix $5$ applique à tort une somme de type $\\sqrt{3^2+4^2}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "moyen",
+      "notion": "conjugue",
+      "enonce": "On sait que $\\dfrac{z}{z'} = 2 - 3\\mathrm{i}$ (avec $z' \\neq 0$). Que vaut $\\dfrac{\\bar{z}}{\\bar{z'}}$ ?",
+      "choix": [
+        "$2 + 3\\mathrm{i}$",
+        "$2 - 3\\mathrm{i}$",
+        "$-2 + 3\\mathrm{i}$",
+        "$\\dfrac{1}{2 - 3\\mathrm{i}}$"
+      ],
+      "reponse": 0,
+      "explication": "Le conjugué d'un quotient est le quotient des conjugués : $\\dfrac{\\bar{z}}{\\bar{z'}} = \\overline{\\left(\\dfrac{z}{z'}\\right)} = \\overline{2 - 3\\mathrm{i}} = 2 + 3\\mathrm{i}$. Le quotient n'est pas inversé."
+    },
+    {
+      "id": 22,
+      "difficulte": "difficile",
+      "notion": "conjugue",
+      "enonce": "Pour tout nombre complexe $z$, à quoi est égal $\\overline{z^2}$ ?",
+      "choix": [
+        "$\\left(\\bar{z}\\right)^2$",
+        "$-z^2$",
+        "$z^2$",
+        "$|z|^2$"
+      ],
+      "reponse": 0,
+      "explication": "$z^2 = z \\times z$, et le conjugué d'un produit est le produit des conjugués : $\\overline{z^2} = \\bar{z} \\times \\bar{z} = \\left(\\bar{z}\\right)^2$. Ne pas confondre avec $z \\times \\bar{z} = |z|^2$. Exemple : $z = \\mathrm{i}$ donne $\\overline{\\mathrm{i}^2} = -1 = (-\\mathrm{i})^2$."
     }
   ]
 }

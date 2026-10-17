@@ -165,13 +165,14 @@
     {
       "id": 13,
       "difficulte": "decouverte",
-      "notion": "demi-vie",
-      "enonce": "Quelle fraction d'un échantillon radioactif reste-t-il au bout de deux demi-vies ?",
+      "notion": "exponentielle-base-a",
+      "enonce": "Calculer sans calculatrice $27^{1/3}$ et $16^{1/2}$.",
       "corrige": [
-        "Chaque demi-vie divise par $2$ ce qui reste : $\\dfrac{1}{2} \\times \\dfrac{1}{2} = \\dfrac{1}{4}$.",
-        "Il reste un quart, soit $25\\,\\%$ : tout n'a pas disparu."
+        "$a^{1/n}$ est le nombre positif dont la puissance $n$-ième vaut $a$.",
+        "$3^3 = 27$, donc $27^{1/3} = 3$.",
+        "$4^2 = 16$, donc $16^{1/2} = 4$ (c'est $\\sqrt{16}$)."
       ],
-      "reponse": "$\\dfrac{1}{4}$, soit $25\\,\\%$"
+      "reponse": "$27^{1/3} = 3$ et $16^{1/2} = 4$."
     },
     {
       "id": 14,
@@ -276,13 +277,14 @@
     {
       "id": 23,
       "difficulte": "application",
-      "notion": "r0",
-      "enonce": "On compte $100$ malades au départ d'une épidémie de taux de reproduction $R_0 = 1{,}5$. Combien de nouveaux malades le modèle $f(n) = 100 \\times 1{,}5^{\\,n}$ prévoit-il à la génération $2$ ?",
+      "notion": "exponentielle-base-a",
+      "enonce": "Sans calcul, donner le sens de variation sur $[0\\,;+\\infty[$ des fonctions $f : x \\mapsto 0{,}9^x$ et $g : x \\mapsto 1{,}2^x$. Laquelle peut modéliser une population en croissance ?",
       "corrige": [
-        "$f(2) = 100 \\times 1{,}5^2 = 100 \\times 2{,}25$.",
-        "$f(2) = 225$."
+        "Pour $0 < a < 1$, la fonction $x \\mapsto a^x$ est décroissante : c'est le cas de $f$ ($a = 0{,}9$).",
+        "Pour $a > 1$, la fonction $x \\mapsto a^x$ est croissante : c'est le cas de $g$ ($a = 1{,}2$).",
+        "Une population en croissance est modélisée par une fonction croissante : $g$ (hausse de $20\\,\\%$ par unité de temps)."
       ],
-      "reponse": "$225$ malades"
+      "reponse": "$f$ est décroissante, $g$ est croissante ; c'est $g$ qui peut modéliser une population en croissance."
     },
     {
       "id": 24,
@@ -298,13 +300,14 @@
     {
       "id": 25,
       "difficulte": "application",
-      "notion": "point-equilibre",
-      "enonce": "Avec l'offre $O(p) = 2p - 10$ et la demande $D(p) = -p + 50$, comparer l'offre et la demande pour un prix de $10$ €. Que se passe-t-il sur le marché ?",
+      "notion": "exponentielle-base-a",
+      "enonce": "Un capital de $2\\,000$ € est placé à intérêts composés au taux de $3\\,\\%$ par an : au bout de $x$ années, il vaut $2\\,000 \\times 1{,}03^{\\,x}$. Quelle est sa valeur au bout d'un an et demi (arrondie au centime) ?",
       "corrige": [
-        "$O(10) = 10$ et $D(10) = 40$.",
-        "La demande dépasse l'offre : il y a pénurie, le prix est inférieur au prix d'équilibre ($20$ €)."
+        "Un an et demi correspond à $x = 1{,}5$ : la fonction $x \\mapsto 1{,}03^x$ donne aussi des valeurs pour des durées non entières.",
+        "À la calculatrice : $1{,}03^{1{,}5} \\approx 1{,}045\\,336$.",
+        "$2\\,000 \\times 1{,}03^{1{,}5} \\approx 2\\,090{,}67$ €."
       ],
-      "reponse": "Offre $10$, demande $40$ : pénurie."
+      "reponse": "Environ $2\\,090{,}67$ €."
     },
     {
       "id": 26,
@@ -342,13 +345,14 @@
     {
       "id": 29,
       "difficulte": "intermediaire",
-      "notion": "modele-exponentiel",
-      "enonce": "Une grandeur est modélisée par $f(n) = 1000 \\times 1{,}1^{\\,n}$. Calculer $f(3)$ et donner le pourcentage d'évolution par période.",
+      "notion": "exponentielle-base-a",
+      "enonce": "Une population a augmenté de $21\\,\\%$ en $2$ ans, avec le même taux d'évolution chaque année. Quel est ce taux annuel ?",
       "corrige": [
-        "$f(3) = 1000 \\times 1{,}1^3 = 1000 \\times 1{,}331 = 1331$.",
-        "$q = 1{,}1$ correspond à une hausse de $10\\,\\%$ par période."
+        "Augmenter de $21\\,\\%$, c'est multiplier par $1{,}21$. Si $q$ est le coefficient multiplicateur annuel, $q^2 = 1{,}21$.",
+        "$q = 1{,}21^{1/2} = 1{,}1$ (car $1{,}1^2 = 1{,}21$).",
+        "Le taux annuel est de $+10\\,\\%$ (et non $10{,}5\\,\\%$, la moitié de $21\\,\\%$)."
       ],
-      "reponse": "$f(3) = 1331$ ; $+10\\,\\%$ par période."
+      "reponse": "$+10\\,\\%$ par an."
     },
     {
       "id": 30,
@@ -387,13 +391,14 @@
     {
       "id": 33,
       "difficulte": "intermediaire",
-      "notion": "demi-vie",
-      "enonce": "Un échantillon contient $N_0 = 6\\,400$ noyaux radioactifs de demi-vie $2$ heures. À l'aide de $N(t) = N_0 \\times \\left(\\dfrac{1}{2}\\right)^{t / t_{1/2}}$, calculer le nombre de noyaux restants au bout de $10$ heures.",
+      "notion": "exponentielle-base-a",
+      "enonce": "Un échantillon contient $10\\,000$ noyaux d'iode 131, de demi-vie $8$ jours. Le nombre de noyaux restant au bout de $t$ jours est $N(t) = 10\\,000 \\times 0{,}5^{\\,t/8}$. Combien en reste-t-il au bout de $4$ jours ? de $2$ jours ? (arrondir à l'unité)",
       "corrige": [
-        "$\\dfrac{t}{t_{1/2}} = \\dfrac{10}{2} = 5$ demi-vies.",
-        "$N(10) = 6\\,400 \\times \\left(\\dfrac{1}{2}\\right)^5 = \\dfrac{6\\,400}{32} = 200$."
+        "$4$ jours correspondent à une demi-demi-vie : $N(4) = 10\\,000 \\times 0{,}5^{0{,}5} \\approx 7\\,071$ noyaux.",
+        "$2$ jours correspondent à un quart de demi-vie : $N(2) = 10\\,000 \\times 0{,}5^{0{,}25} \\approx 8\\,409$ noyaux.",
+        "Attention : au bout d'une demi-demi-vie, il ne reste pas $75\\,\\%$ des noyaux mais environ $70{,}7\\,\\%$ ; la décroissance n'est pas linéaire."
       ],
-      "reponse": "$200$ noyaux"
+      "reponse": "Environ $7\\,071$ noyaux au bout de $4$ jours et $8\\,409$ au bout de $2$ jours."
     },
     {
       "id": 34,
@@ -533,14 +538,14 @@
     {
       "id": 46,
       "difficulte": "approfondissement",
-      "notion": "malthus",
-      "enonce": "Une ville de $1$ million d'habitants voit sa population doubler tous les $25$ ans. Selon ce modèle, combien d'habitants compterait-elle dans $100$ ans ? Dans $500$ ans ? Commenter.",
+      "notion": "exponentielle-base-a",
+      "enonce": "À l'aide de la propriété admise $\\left(a^x\\right)^y = a^{xy}$, montrer que $\\left(a^{1/n}\\right)^n = a$ pour $a > 0$ et $n$ entier non nul. En déduire $32^{0{,}2}$ et $1\\,000^{1/3}$.",
       "corrige": [
-        "$100$ ans = $4$ doublements : $2^4 = 16$ millions d'habitants.",
-        "$500$ ans = $20$ doublements : $2^{20} = 1\\,048\\,576$, soit plus d'un million de millions d'habitants.",
-        "Ce dernier résultat dépasse largement la population mondiale : le modèle est extrapolé hors de son domaine de validité."
+        "$\\left(a^{1/n}\\right)^n = a^{\\frac{1}{n} \\times n} = a^1 = a$ : $a^{1/n}$ est bien le nombre positif dont la puissance $n$-ième vaut $a$.",
+        "$0{,}2 = \\dfrac{1}{5}$ et $2^5 = 32$, donc $32^{0{,}2} = 32^{1/5} = 2$.",
+        "$10^3 = 1\\,000$, donc $1\\,000^{1/3} = 10$."
       ],
-      "reponse": "$16$ millions ; plus de $10^{12}$ habitants, ce qui est absurde : le modèle n'est plus valable."
+      "reponse": "$32^{0{,}2} = 2$ et $1\\,000^{1/3} = 10$."
     },
     {
       "id": 47,

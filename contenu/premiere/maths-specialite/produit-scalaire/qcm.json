@@ -141,20 +141,30 @@
     {
       "id": 13,
       "difficulte": "facile",
-      "notion": "orthogonalite",
-      "enonce": "Deux vecteurs non nuls sont orthogonaux si et seulement si leur produit scalaire vaut :",
-      "choix": ["$0$", "$1$", "un nombre positif", "$-1$"],
+      "notion": "coordonnees",
+      "enonce": "Dans une base orthonormée $(\\vec{\\imath}, \\vec{\\jmath})$, on donne $\\vec{u}\\begin{pmatrix} -3 \\\\ 7 \\end{pmatrix}$. Que vaut $\\vec{u} \\cdot \\vec{\\imath}$ ?",
+      "choix": [
+        "$-3$",
+        "$7$",
+        "$4$",
+        "$0$"
+      ],
       "reponse": 0,
-      "explication": "Le critère d'orthogonalité est $\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0$, car $\\cos\\theta = 0$ pour un angle droit. Piège : croire qu'un produit scalaire nul force l'un des vecteurs à être nul."
+      "explication": "En base orthonormée, $\\vec{u} \\cdot \\vec{\\imath}$ est l'**abscisse** de $\\vec{u}$ : $\\vec{u} \\cdot \\vec{\\imath} = -3 \\times 1 + 7 \\times 0 = -3$. L'ordonnée $7$ s'obtient avec $\\vec{u} \\cdot \\vec{\\jmath}$."
     },
     {
       "id": 14,
       "difficulte": "moyen",
-      "notion": "norme",
-      "enonce": "Que vaut la norme du vecteur $\\vec{u}\\begin{pmatrix} 6 \\\\ 8 \\end{pmatrix}$ ?",
-      "choix": ["$10$", "$14$", "$100$", "$\\sqrt{14}$"],
+      "notion": "projection",
+      "enonce": "$\\mathrm{ABCD}$ est un carré de côté $5$. Que vaut $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ ?",
+      "choix": [
+        "$25$",
+        "$50$",
+        "$25\\sqrt{2}$",
+        "$0$"
+      ],
       "reponse": 0,
-      "explication": "$\\|\\vec{u}\\| = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. Piège : additionner les coordonnées ($6 + 8 = 14$), ou s'arrêter à $100 = \\|\\vec{u}\\|^2$ sans prendre la racine."
+      "explication": "Le projeté orthogonal de $\\mathrm{C}$ sur $(\\mathrm{AB})$ est $\\mathrm{B}$, donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AB}} = 5^2 = 25$. On retrouve $5 \\times 5\\sqrt{2} \\times \\cos 45° = 25$. Multiplier les longueurs $\\mathrm{AB} \\times \\mathrm{AC} = 25\\sqrt{2}$ oublie le cosinus."
     },
     {
       "id": 15,
@@ -214,6 +224,34 @@
       "choix": ["$35$", "$25$", "$49$", "$15$"],
       "reponse": 0,
       "explication": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2 = 9 + 2 \\times 5 + 16 = 35$. Piège : oublier le double produit $2\\,\\vec{u}\\cdot\\vec{v}$ et obtenir $9 + 16 = 25$ (valable seulement si les vecteurs étaient orthogonaux)."
+    },
+    {
+      "id": 21,
+      "difficulte": "difficile",
+      "notion": "projection",
+      "enonce": "$\\mathrm{H}$ est le projeté orthogonal de $\\mathrm{C}$ sur la droite $(\\mathrm{AB})$, avec $\\mathrm{AB} = 6$ et $\\mathrm{AH} = 2$ ; les vecteurs $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{AH}}$ sont de sens contraires. Que vaut $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ ?",
+      "choix": [
+        "$-12$",
+        "$12$",
+        "$0$",
+        "$-3$"
+      ],
+      "reponse": 0,
+      "explication": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AH}}$. Les vecteurs étant de sens contraires, le produit scalaire vaut $-\\mathrm{AB} \\times \\mathrm{AH} = -6 \\times 2 = -12$. Oublier le signe donne $12$ : l'angle $\\widehat{\\mathrm{BAC}}$ est ici obtus."
+    },
+    {
+      "id": 22,
+      "difficulte": "moyen",
+      "notion": "coordonnees",
+      "enonce": "Pourquoi l'abscisse $x$ d'un vecteur $\\vec{u}$ dans une base orthonormée $(\\vec{\\imath}, \\vec{\\jmath})$ vérifie-t-elle $x = \\vec{u} \\cdot \\vec{\\imath}$ ?",
+      "choix": [
+        "Car $\\vec{\\imath} \\cdot \\vec{\\imath} = 1$ et $\\vec{\\jmath} \\cdot \\vec{\\imath} = 0$",
+        "Car $\\vec{u} \\cdot \\vec{\\imath} = \\|\\vec{u}\\|$",
+        "Car $\\vec{\\imath}$ et $\\vec{\\jmath}$ ont la même direction",
+        "C'est vrai dans n'importe quelle base"
+      ],
+      "reponse": 0,
+      "explication": "On écrit $\\vec{u} = x\\,\\vec{\\imath} + y\\,\\vec{\\jmath}$, d'où $\\vec{u} \\cdot \\vec{\\imath} = x\\,\\vec{\\imath} \\cdot \\vec{\\imath} + y\\,\\vec{\\jmath} \\cdot \\vec{\\imath} = x \\times 1 + y \\times 0 = x$. Il faut que la base soit **orthonormée** : vecteurs de norme $1$ et orthogonaux."
     }
   ]
 }

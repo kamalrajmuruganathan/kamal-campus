@@ -127,12 +127,17 @@
     },
     {
       "id": 11,
-      "difficulte": "facile",
-      "notion": "forme-factorisee",
-      "enonce": "Quelles sont les racines de $f(x) = 2(x - 4)(x + 1)$ ?",
-      "choix": ["$4$ et $-1$", "$-4$ et $1$", "$2$ et $-4$", "$4$ et $1$"],
+      "difficulte": "moyen",
+      "notion": "demonstration",
+      "enonce": "Pour $a \\neq 0$ et $\\Delta = b^2 - 4ac$, laquelle de ces égalités est vraie pour tout réel $x$ ?",
+      "choix": [
+        "$ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$",
+        "$ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$",
+        "$ax^2 + bx + c = a\\left[\\left(x - \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$",
+        "$ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 + \\dfrac{\\Delta}{4a^2}\\right]$"
+      ],
       "reponse": 0,
-      "explication": "Un produit est nul si l'un de ses facteurs l'est : $x - 4 = 0$ donne $4$, et $x + 1 = 0$ donne $-1$. Piège : lire les signes tels quels ($-4$ et $1$) au lieu de résoudre chaque facteur. Le coefficient $2$ ne s'annule jamais."
+      "explication": "C'est le point de départ de la démonstration : on met $a$ en facteur, puis $x^2 + \\dfrac{b}{a}x$ est le début du carré $\\left(x + \\dfrac{b}{2a}\\right)^2$. En réduisant au même dénominateur, $-\\dfrac{b^2}{4a^2} + \\dfrac{c}{a} = -\\dfrac{\\Delta}{4a^2}$. Le signe moins devant $\\dfrac{\\Delta}{4a^2}$ et le $2a$ dans le carré sont les deux pièges."
     },
     {
       "id": 12,
@@ -154,17 +159,17 @@
     },
     {
       "id": 14,
-      "difficulte": "moyen",
-      "notion": "somme-produit",
-      "enonce": "Pour $f(x) = x^2 - 7x + 10$, que valent la somme $S$ et le produit $P$ des racines ?",
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "Dans la démonstration, on écrit $ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$. Si $\\Delta < 0$, pourquoi le crochet ne s'annule-t-il jamais ?",
       "choix": [
-        "$S = 7$ et $P = 10$",
-        "$S = -7$ et $P = 10$",
-        "$S = 7$ et $P = -10$",
-        "$S = 10$ et $P = 7$"
+        "C'est la somme d'un carré, positif ou nul, et du nombre strictement positif $-\\dfrac{\\Delta}{4a^2}$",
+        "Parce que $a$ est non nul",
+        "Parce qu'un carré est toujours strictement positif",
+        "Parce que $\\dfrac{\\Delta}{4a^2}$ est positif"
       ],
       "reponse": 0,
-      "explication": "$S = -\\dfrac{b}{a} = -\\dfrac{-7}{1} = 7$ et $P = \\dfrac{c}{a} = \\dfrac{10}{1} = 10$. Piège : oublier le double signe de $S$ et écrire $-7$. Vérification : les racines sont $2$ et $5$."
+      "explication": "Si $\\Delta < 0$, alors $-\\dfrac{\\Delta}{4a^2} > 0$ (car $4a^2 > 0$). Le crochet est donc supérieur ou égal à ce nombre strictement positif : il ne vaut jamais $0$, et le trinôme n'a pas de racine. Attention : un carré peut être nul, il est seulement **positif ou nul** ; et ici $\\dfrac{\\Delta}{4a^2}$ est **négatif**."
     },
     {
       "id": 15,
@@ -234,6 +239,34 @@
       ],
       "reponse": 0,
       "explication": "$\\Delta = 25 + 24 = 49$, $\\sqrt{\\Delta} = 7$, donc $x_1 = \\dfrac{-5-7}{6} = -2$ et $x_2 = \\dfrac{-5+7}{6} = \\dfrac{1}{3}$. La forme est $3(x+2)\\left(x - \\dfrac{1}{3}\\right)$ ; en distribuant le $3$ dans la seconde parenthèse : $(x+2)(3x-1)$. Vérification : $(x+2)(3x-1) = 3x^2 + 5x - 2$ ✓."
+    },
+    {
+      "id": 21,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "Dans la démonstration du cas $\\Delta > 0$, quelle identité permet de factoriser $\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}$ ?",
+      "choix": [
+        "$A^2 - B^2 = (A - B)(A + B)$, avec $B = \\dfrac{\\sqrt{\\Delta}}{2a}$",
+        "$(A + B)^2 = A^2 + 2AB + B^2$, avec $B = \\dfrac{\\Delta}{4a^2}$",
+        "$A^2 - B^2 = (A - B)^2$, avec $B = \\dfrac{\\sqrt{\\Delta}}{2a}$",
+        "$A^2 + B^2 = (A + B)^2$, avec $B = \\dfrac{\\sqrt{\\Delta}}{2a}$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $\\Delta > 0$, on peut écrire $\\dfrac{\\Delta}{4a^2} = \\left(\\dfrac{\\sqrt{\\Delta}}{2a}\\right)^2$ : on obtient une **différence de deux carrés**, que l'on factorise en $(A - B)(A + B)$. Les deux facteurs s'annulent en $\\dfrac{-b + \\sqrt{\\Delta}}{2a}$ et $\\dfrac{-b - \\sqrt{\\Delta}}{2a}$ : ce sont les deux racines. $A^2 - B^2$ n'est pas égal à $(A - B)^2$."
+    },
+    {
+      "id": 22,
+      "difficulte": "moyen",
+      "notion": "demonstration",
+      "enonce": "On a écrit $f(x) = x^2 - 4x + 7$ sous la forme $f(x) = (x - 2)^2 + 3$. Que peut-on en conclure ?",
+      "choix": [
+        "Pour tout réel $x$, $f(x) \\geqslant 3$ : $f$ n'a pas de racine",
+        "$f$ a deux racines, $2$ et $3$",
+        "$f$ a une seule racine, $2$",
+        "$f$ a une seule racine, $-3$"
+      ],
+      "reponse": 0,
+      "explication": "Un carré est positif ou nul, donc $(x - 2)^2 + 3 \\geqslant 3 > 0$ pour tout $x$ : $f(x)$ ne s'annule jamais. C'est exactement le raisonnement de la démonstration dans le cas $\\Delta < 0$ (ici $\\Delta = 16 - 28 = -12$). Le nombre $2$ est l'abscisse du sommet, pas une racine."
     }
   ]
 }

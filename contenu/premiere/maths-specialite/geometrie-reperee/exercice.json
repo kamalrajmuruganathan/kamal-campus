@@ -233,13 +233,15 @@
     {
       "id": 19,
       "difficulte": "application",
-      "notion": "equation-droite",
-      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation de la droite passant par $\\mathrm{A}$$(-3\\,;5)$ et de vecteur normal $\\vec{n}\\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}$.",
+      "notion": "projete-orthogonal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer les coordonnées du projeté orthogonal $\\mathrm{H}$ du point $\\mathrm{A}(2\\,;5)$ sur la droite $d$ d'équation $y = 1$, puis la distance $\\mathrm{AH}$.",
       "corrige": [
-        "$0 \\times (x + 3) + 2(y - 5) = 0$, soit $2y - 10 = 0$.",
-        "En divisant par $2$ : $y = 5$. C'est une droite parallèle à l'axe des abscisses."
+        "$d$ a pour équation $y - 1 = 0$ : le vecteur $\\vec{n}\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$ lui est normal.",
+        "On cherche $\\mathrm{H}$ tel que $\\overrightarrow{\\mathrm{AH}} = t\\,\\vec{n}$ : $\\mathrm{H}(2\\,;5 + t)$.",
+        "$\\mathrm{H} \\in d \\iff 5 + t = 1 \\iff t = -4$, donc $\\mathrm{H}(2\\,;1)$.",
+        "$\\mathrm{AH} = \\sqrt{0^2 + (-4)^2} = 4$."
       ],
-      "reponse": "$y = 5$ (ou $2y - 10 = 0$)."
+      "reponse": "$\\mathrm{H}(2\\,;1)$ et $\\mathrm{AH} = 4$."
     },
     {
       "id": 20,
@@ -277,13 +279,15 @@
     {
       "id": 23,
       "difficulte": "application",
-      "notion": "equation-cercle",
-      "enonce": "Le plan est muni d'un repère orthonormé. Écrire une équation du cercle de centre $\\Omega(4\\,;-1)$ et de rayon $\\sqrt{5}$.",
+      "notion": "projete-orthogonal",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer les coordonnées du projeté orthogonal $\\mathrm{H}$ du point $\\mathrm{A}(5\\,;1)$ sur la droite $d : x - y = 0$, puis la distance $\\mathrm{AH}$.",
       "corrige": [
-        "On applique $(x - x_0)^2 + (y - y_0)^2 = R^2$ avec $x_0 = 4$, $y_0 = -1$.",
-        "$R^2 = \\left(\\sqrt{5}\\right)^2 = 5$."
+        "Le vecteur $\\vec{n}\\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$ est normal à $d$ ; on cherche $\\mathrm{H}$ tel que $\\overrightarrow{\\mathrm{AH}} = t\\,\\vec{n}$ : $\\mathrm{H}(5 + t\\,;1 - t)$.",
+        "$\\mathrm{H} \\in d \\iff (5 + t) - (1 - t) = 0 \\iff 4 + 2t = 0 \\iff t = -2$.",
+        "Donc $\\mathrm{H}(3\\,;3)$ (on vérifie : $3 - 3 = 0$).",
+        "$\\overrightarrow{\\mathrm{AH}}\\begin{pmatrix} -2 \\\\ 2 \\end{pmatrix}$, d'où $\\mathrm{AH} = \\sqrt{4 + 4} = \\sqrt{8} = 2\\sqrt{2}$."
       ],
-      "reponse": "$(x - 4)^2 + (y + 1)^2 = 5$."
+      "reponse": "$\\mathrm{H}(3\\,;3)$ et $\\mathrm{AH} = 2\\sqrt{2}$."
     },
     {
       "id": 24,
@@ -330,13 +334,16 @@
     },
     {
       "id": 28,
-      "difficulte": "application",
-      "notion": "distance-milieu",
-      "enonce": "Le plan est muni d'un repère orthonormé. Calculer la norme du vecteur $\\vec{u}\\begin{pmatrix} -5 \\\\ 12 \\end{pmatrix}$.",
+      "difficulte": "intermediaire",
+      "notion": "projete-orthogonal",
+      "enonce": "Le plan est muni d'un repère orthonormé. On donne la droite $d : 2x + y - 5 = 0$ et le point $\\mathrm{A}(6\\,;3)$. Déterminer le projeté orthogonal $\\mathrm{H}$ de $\\mathrm{A}$ sur $d$, puis la distance du point $\\mathrm{A}$ à la droite $d$.",
       "corrige": [
-        "$\\|\\vec{u}\\| = \\sqrt{(-5)^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169}$."
+        "$\\vec{n}\\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$ est normal à $d$ ; $\\overrightarrow{\\mathrm{AH}} = t\\,\\vec{n}$ donne $\\mathrm{H}(6 + 2t\\,;3 + t)$.",
+        "$\\mathrm{H} \\in d \\iff 2(6 + 2t) + (3 + t) - 5 = 0 \\iff 10 + 5t = 0 \\iff t = -2$.",
+        "Donc $\\mathrm{H}(2\\,;1)$ (vérification : $4 + 1 - 5 = 0$).",
+        "La distance de $\\mathrm{A}$ à $d$ est $\\mathrm{AH}$ : $\\overrightarrow{\\mathrm{AH}}\\begin{pmatrix} -4 \\\\ -2 \\end{pmatrix}$, $\\mathrm{AH} = \\sqrt{16 + 4} = \\sqrt{20} = 2\\sqrt{5}$."
       ],
-      "reponse": "$\\|\\vec{u}\\| = 13$."
+      "reponse": "$\\mathrm{H}(2\\,;1)$ ; distance $\\mathrm{AH} = 2\\sqrt{5}$."
     },
     {
       "id": 29,
@@ -422,15 +429,16 @@
     },
     {
       "id": 36,
-      "difficulte": "intermediaire",
-      "notion": "forme-developpee",
-      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer la nature de l'ensemble des points $\\mathrm{M}(x\\,;y)$ tels que $x^2 + y^2 + 6x + 8 = 0$.",
+      "difficulte": "probleme",
+      "notion": "projete-orthogonal",
+      "enonce": "Le plan est muni d'un repère orthonormé (unité : $100$ m). Une maison est située au point $\\mathrm{A}(2\\,;0)$ et une route rectiligne a pour équation $x - 2y + 3 = 0$. On veut relier la maison à la route par le chemin le plus court. En quel point $\\mathrm{H}$ ce chemin arrive-t-il sur la route, et quelle est sa longueur en mètres (arrondie au mètre) ?",
       "corrige": [
-        "$x^2 + 6x = (x + 3)^2 - 9$.",
-        "L'équation devient $(x + 3)^2 - 9 + y^2 + 8 = 0$, soit $(x + 3)^2 + y^2 = 1$.",
-        "Le second membre est strictement positif."
+        "Le chemin le plus court arrive au projeté orthogonal $\\mathrm{H}$ de $\\mathrm{A}$ sur la route.",
+        "$\\vec{n}\\begin{pmatrix} 1 \\\\ -2 \\end{pmatrix}$ est normal à la route ; $\\overrightarrow{\\mathrm{AH}} = t\\,\\vec{n}$ donne $\\mathrm{H}(2 + t\\,;-2t)$.",
+        "$(2 + t) - 2(-2t) + 3 = 0 \\iff 5 + 5t = 0 \\iff t = -1$ : $\\mathrm{H}(1\\,;2)$ (vérification : $1 - 4 + 3 = 0$).",
+        "$\\overrightarrow{\\mathrm{AH}}\\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix}$, $\\mathrm{AH} = \\sqrt{1 + 4} = \\sqrt{5} \\approx 2{,}236$ unités, soit environ $224$ m."
       ],
-      "reponse": "Cercle de centre $(-3\\,;0)$ et de rayon $1$."
+      "reponse": "$\\mathrm{H}(1\\,;2)$ ; $\\mathrm{AH} = \\sqrt{5}$ unités, soit environ $224$ m."
     },
     {
       "id": 37,

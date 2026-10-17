@@ -244,35 +244,38 @@
     {
       "id": 19,
       "difficulte": "application",
-      "notion": "angle",
-      "enonce": "$\\|\\vec{u}\\| = 4$, $\\|\\vec{v}\\| = \\sqrt{2}$ et l'angle entre $\\vec{u}$ et $\\vec{v}$ mesure $45°$. Calculer $\\vec{u} \\cdot \\vec{v}$.",
+      "notion": "projection",
+      "enonce": "$\\mathrm{ABCD}$ est un carré de côté $6$. En utilisant le projeté orthogonal de $\\mathrm{C}$ sur la droite $(\\mathrm{AB})$, calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
       "corrige": [
-        "$\\cos 45° = \\dfrac{\\sqrt{2}}{2}$.",
-        "$\\vec{u} \\cdot \\vec{v} = 4 \\times \\sqrt{2} \\times \\dfrac{\\sqrt{2}}{2} = 4 \\times \\dfrac{2}{2} = 4$."
+        "$(\\mathrm{BC})$ est perpendiculaire à $(\\mathrm{AB})$ : le projeté orthogonal de $\\mathrm{C}$ sur $(\\mathrm{AB})$ est $\\mathrm{B}$.",
+        "Donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AB}} = \\mathrm{AB}^2$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 6^2 = 36$."
       ],
-      "reponse": "$\\vec{u} \\cdot \\vec{v} = 4$."
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 36$."
     },
     {
       "id": 20,
       "difficulte": "application",
-      "notion": "angle",
-      "enonce": "$\\|\\vec{u}\\| = 6$, $\\|\\vec{v}\\| = 5$ et l'angle entre $\\vec{u}$ et $\\vec{v}$ mesure $150°$. Calculer la valeur exacte de $\\vec{u} \\cdot \\vec{v}$.",
+      "notion": "projection",
+      "enonce": "On a $\\mathrm{AB} = 5$. 1. Le projeté orthogonal $\\mathrm{H}$ d'un point $\\mathrm{C}$ sur $(\\mathrm{AB})$ est sur la demi-droite $[\\mathrm{AB})$, avec $\\mathrm{AH} = 3$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$. 2. Le projeté orthogonal $\\mathrm{H}'$ d'un point $\\mathrm{E}$ sur $(\\mathrm{AB})$ vérifie $\\mathrm{AH}' = 2$, et $\\mathrm{A}$ est situé entre $\\mathrm{H}'$ et $\\mathrm{B}$. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AE}}$.",
       "corrige": [
-        "$\\cos 150° = -\\dfrac{\\sqrt{3}}{2}$.",
-        "$\\vec{u} \\cdot \\vec{v} = 6 \\times 5 \\times \\left(-\\dfrac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$."
+        "On remplace chaque vecteur par celui qui joint $\\mathrm{A}$ au projeté : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AH}}$.",
+        "1. $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{AH}}$ sont de même sens : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\mathrm{AB} \\times \\mathrm{AH} = 5 \\times 3 = 15$.",
+        "2. $\\mathrm{A}$ est entre $\\mathrm{H}'$ et $\\mathrm{B}$ : $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{AH}'}$ sont de sens contraires, donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AE}} = -\\mathrm{AB} \\times \\mathrm{AH}' = -5 \\times 2 = -10$."
       ],
-      "reponse": "$\\vec{u} \\cdot \\vec{v} = -15\\sqrt{3}$."
+      "reponse": "1. $15$ ; 2. $-10$."
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "angle",
-      "enonce": "On sait que $\\vec{u} \\cdot \\vec{v} = 6$, $\\|\\vec{u}\\| = 3$ et $\\|\\vec{v}\\| = 4$. Déterminer la mesure de l'angle entre $\\vec{u}$ et $\\vec{v}$.",
+      "difficulte": "intermediaire",
+      "notion": "projection",
+      "enonce": "$\\mathrm{ABC}$ est un triangle équilatéral de côté $6$ et $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$. Justifier que $\\mathrm{I}$ est le projeté orthogonal de $\\mathrm{C}$ sur $(\\mathrm{AB})$, puis calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
       "corrige": [
-        "$\\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\times \\|\\vec{v}\\|} = \\dfrac{6}{12} = \\dfrac{1}{2}$.",
-        "L'angle entre deux vecteurs est compris entre $0°$ et $180°$ : $\\cos\\theta = \\dfrac{1}{2}$ donne $\\theta = 60°$."
+        "Dans un triangle équilatéral, la médiane issue de $\\mathrm{C}$ est aussi une hauteur : $(\\mathrm{CI}) \\perp (\\mathrm{AB})$, donc $\\mathrm{I}$ est le projeté orthogonal de $\\mathrm{C}$ sur $(\\mathrm{AB})$.",
+        "$\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{AI}}$ sont de même sens, et $\\mathrm{AI} = 3$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\mathrm{AB} \\times \\mathrm{AI} = 6 \\times 3 = 18$ (on retrouve $6 \\times 6 \\times \\cos 60° = 18$)."
       ],
-      "reponse": "$\\theta = 60°$."
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 18$."
     },
     {
       "id": 22,
@@ -320,13 +323,14 @@
     {
       "id": 26,
       "difficulte": "application",
-      "notion": "developpement",
-      "enonce": "On sait que $\\|\\vec{u}\\| = 3$, $\\|\\vec{v}\\| = 2$ et $\\vec{u} \\cdot \\vec{v} = 1$. Calculer $\\|\\vec{u} + \\vec{v}\\|$.",
+      "notion": "coordonnees",
+      "enonce": "Dans une base orthonormée $(\\vec{\\imath}, \\vec{\\jmath})$, un vecteur $\\vec{u}$ vérifie $\\vec{u} \\cdot \\vec{\\imath} = 4$ et $\\vec{u} \\cdot \\vec{\\jmath} = -3$. Donner les coordonnées de $\\vec{u}$, puis sa norme.",
       "corrige": [
-        "$\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u} \\cdot \\vec{v} + \\|\\vec{v}\\|^2 = 9 + 2 + 4 = 15$.",
-        "$\\|\\vec{u} + \\vec{v}\\| = \\sqrt{15}$."
+        "En base orthonormée, les coordonnées de $\\vec{u}$ sont $x = \\vec{u} \\cdot \\vec{\\imath}$ et $y = \\vec{u} \\cdot \\vec{\\jmath}$ (car $\\vec{\\imath} \\cdot \\vec{\\imath} = \\vec{\\jmath} \\cdot \\vec{\\jmath} = 1$ et $\\vec{\\imath} \\cdot \\vec{\\jmath} = 0$).",
+        "Donc $\\vec{u}\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$.",
+        "$\\|\\vec{u}\\| = \\sqrt{4^2 + (-3)^2} = \\sqrt{25} = 5$."
       ],
-      "reponse": "$\\|\\vec{u} + \\vec{v}\\| = \\sqrt{15}$."
+      "reponse": "$\\vec{u}\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$ et $\\|\\vec{u}\\| = 5$."
     },
     {
       "id": 27,
@@ -353,15 +357,15 @@
     },
     {
       "id": 29,
-      "difficulte": "application",
-      "notion": "al-kashi",
-      "enonce": "Dans un triangle $\\mathrm{ABC}$, $\\mathrm{AC} = 3$, $\\mathrm{AB} = 5$ et $\\widehat{\\mathrm{A}} = 120°$. Calculer $\\mathrm{BC}$.",
+      "difficulte": "approfondissement",
+      "notion": "projection",
+      "enonce": "$\\mathrm{ABCD}$ est un rectangle avec $\\mathrm{AB} = 8$ et $\\mathrm{AD} = 3$ ; $\\mathrm{I}$ est le milieu de $[\\mathrm{CD}]$. À l'aide de projections orthogonales sur $(\\mathrm{AB})$, calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$, $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AI}}$ et $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{CA}}$.",
       "corrige": [
-        "$\\cos 120° = -\\dfrac{1}{2}$.",
-        "$\\mathrm{BC}^2 = 9 + 25 - 2 \\times 3 \\times 5 \\times \\left(-\\dfrac{1}{2}\\right) = 34 + 15 = 49$.",
-        "$\\mathrm{BC} = 7$."
+        "Le projeté orthogonal de $\\mathrm{C}$ sur $(\\mathrm{AB})$ est $\\mathrm{B}$ : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\mathrm{AB}^2 = 64$.",
+        "Le projeté orthogonal de $\\mathrm{I}$ sur $(\\mathrm{AB})$ est le milieu $\\mathrm{J}$ de $[\\mathrm{AB}]$, avec $\\mathrm{AJ} = 4$ et $\\overrightarrow{\\mathrm{AJ}}$ de même sens que $\\overrightarrow{\\mathrm{AB}}$ : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AI}} = 8 \\times 4 = 32$.",
+        "$\\overrightarrow{\\mathrm{CA}} = -\\overrightarrow{\\mathrm{AC}}$, donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{CA}} = -64$."
       ],
-      "reponse": "$\\mathrm{BC} = 7$."
+      "reponse": "$64$ ; $32$ ; $-64$."
     },
     {
       "id": 30,

@@ -166,11 +166,16 @@
     {
       "id": 13,
       "difficulte": "facile",
-      "notion": "distance",
-      "enonce": "Quelle est la norme du vecteur $\\vec{u}\\begin{pmatrix} 5 \\\\ 12 \\end{pmatrix}$ ?",
-      "choix": ["$13$", "$17$", "$169$", "$\\sqrt{17}$"],
+      "notion": "projete-orthogonal",
+      "enonce": "Quel est le projeté orthogonal du point $\\mathrm{A}(3\\,;5)$ sur l'axe des abscisses ?",
+      "choix": [
+        "$(3\\,;0)$",
+        "$(0\\,;5)$",
+        "$(3\\,;5)$",
+        "$(5\\,;0)$"
+      ],
       "reponse": 0,
-      "explication": "$\\|\\vec{u}\\| = \\sqrt{x^2 + y^2} = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. Piège : additionner les coordonnées ($5 + 12 = 17$), ou s'arrêter à $169$ sans prendre la racine."
+      "explication": "La perpendiculaire à l'axe des abscisses passant par $\\mathrm{A}$ est la droite verticale $x = 3$ ; elle coupe l'axe en $(3\\,;0)$. Le point $(0\\,;5)$ est le projeté sur l'axe des **ordonnées**."
     },
     {
       "id": 14,
@@ -212,11 +217,16 @@
     {
       "id": 17,
       "difficulte": "moyen",
-      "notion": "distance",
-      "enonce": "Quelle est la distance entre $\\mathrm{A}(1\\,;2)$ et $\\mathrm{B}(7\\,;10)$ ?",
-      "choix": ["$10$", "$14$", "$100$", "$\\sqrt{14}$"],
+      "notion": "projete-orthogonal",
+      "enonce": "On note $\\mathrm{H}$ le projeté orthogonal d'un point $\\mathrm{A}$ sur une droite $d$. Que représente la longueur $\\mathrm{AH}$ ?",
+      "choix": [
+        "La plus petite distance entre $\\mathrm{A}$ et un point de $d$",
+        "La plus grande distance entre $\\mathrm{A}$ et un point de $d$",
+        "La distance entre $\\mathrm{A}$ et l'origine du repère",
+        "La longueur d'un vecteur directeur de $d$"
+      ],
       "reponse": 0,
-      "explication": "$\\mathrm{AB} = \\sqrt{(7-1)^2 + (10-2)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. Piège : additionner les écarts ($6 + 8 = 14$), ou oublier la racine et donner $100$ (le carré de la distance)."
+      "explication": "$\\mathrm{H}$ est le point de $d$ **le plus proche** de $\\mathrm{A}$ : pour tout autre point $\\mathrm{M}$ de $d$, le triangle $\\mathrm{AHM}$ est rectangle en $\\mathrm{H}$ et l'hypoténuse $\\mathrm{AM}$ est plus longue que $\\mathrm{AH}$. On appelle $\\mathrm{AH}$ la distance du point $\\mathrm{A}$ à la droite $d$."
     },
     {
       "id": 18,
@@ -254,6 +264,34 @@
       ],
       "reponse": 0,
       "explication": "$\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$ caractérise le cercle de **diamètre** $[\\mathrm{AB}]$ : centre au milieu $(3\\,;0)$, rayon $\\dfrac{\\mathrm{AB}}{2} = 2$. D'où $(x-3)^2 + y^2 = 4$. Piège : prendre $\\mathrm{AB} = 4$ comme rayon et écrire $16$ au second membre."
+    },
+    {
+      "id": 21,
+      "difficulte": "difficile",
+      "notion": "projete-orthogonal",
+      "enonce": "Quelles sont les coordonnées du projeté orthogonal $\\mathrm{H}$ du point $\\mathrm{A}(4\\,;2)$ sur la droite $d : x + y - 4 = 0$ ?",
+      "choix": [
+        "$(3\\,;1)$",
+        "$(2\\,;2)$",
+        "$(4\\,;0)$",
+        "$(5\\,;3)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\vec{n}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$ est normal à $d$ : $\\mathrm{H}(4 + t\\,;2 + t)$. $\\mathrm{H} \\in d \\iff 6 + 2t - 4 = 0 \\iff t = -1$, d'où $\\mathrm{H}(3\\,;1)$. Les points $(2\\,;2)$ et $(4\\,;0)$ sont bien sur $d$, mais $\\overrightarrow{\\mathrm{AH}}$ n'y est pas colinéaire à $\\vec{n}$ ; $(5\\,;3)$ n'est pas sur $d$."
+    },
+    {
+      "id": 22,
+      "difficulte": "moyen",
+      "notion": "projete-orthogonal",
+      "enonce": "Pour trouver le projeté orthogonal $\\mathrm{H}$ de $\\mathrm{A}$ sur la droite $d : ax + by + c = 0$, quelle propriété du vecteur $\\overrightarrow{\\mathrm{AH}}$ utilise-t-on ?",
+      "choix": [
+        "Il est colinéaire au vecteur normal $\\vec{n}\\begin{pmatrix} a \\\\ b \\end{pmatrix}$",
+        "Il est colinéaire au vecteur $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$",
+        "Il est égal au vecteur $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$",
+        "Il a pour norme $1$"
+      ],
+      "reponse": 0,
+      "explication": "$(\\mathrm{AH})$ est perpendiculaire à $d$, donc $\\overrightarrow{\\mathrm{AH}} = t\\,\\vec{n}$ pour un réel $t$ ; on trouve $t$ en écrivant que $\\mathrm{H}$ appartient à $d$. Le vecteur $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$ est un vecteur **directeur** de $d$, pas normal ; et $\\overrightarrow{\\mathrm{AH}}$ n'a aucune raison d'être égal à $\\vec{n}$."
     }
   ]
 }
