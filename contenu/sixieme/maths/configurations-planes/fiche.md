@@ -269,32 +269,3 @@ cubes d'un empilement, passer de l'objet en volume à ses vues à plat (et inver
    côté dépasse la somme des deux autres.
 6. **Confondre médiatrice (coupe un segment en son milieu) et bissectrice (coupe un
    angle en deux)**, ou oublier que la somme des angles fait $180^\circ$ (pas $360^\circ$).
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source unique : /tmp/kamal-campus/docs/programme-college-cycle3-maths-2025.txt, thème
-« Espace et géométrie », niveau Sixième, « Étude de configurations planes », l.1210-1292.
-Correspondances : distance + milieu (l.1242-1243) → §2 ; cercle/disque/rayon/diamètre/
-corde (l.1246-1247) → §3 ; médiatrice + propriété caractéristique (l.1251-1253) → §4 ;
-lexique + mesurer + construire un angle (l.1256-1259) → §5 ; bissectrice d'un angle
-saillant (l.1260-1263) → §6 ; triangles, somme des angles, médiatrices concourantes,
-cercle circonscrit (l.1264-1274) → §7 ; symétrique + propriétés (l.1275-1280) → §8 ;
-cubes (l.1281-1292) → §9.
-
-À trancher par le relecteur :
-- §1 (point/droite/segment/demi-droite + notations) n'est PAS un objectif explicite de la
-  section 6e ; relève des acquis CM (l.1212-1214) et automatismes (l.1234), ajouté à la
-  demande de la consigne comme rappel — garder ou alléger ?
-- « Angles opposés par le sommet égaux » : le programme ne liste que le lexique (l.1257) ;
-  propriété d'égalité ajoutée par moi — confirmer qu'elle est attendue en 6e.
-- Inégalité triangulaire : le programme dit seulement « trois longueurs ne permettent pas
-  toujours un triangle » (l.1266-1267) sans critère formel ; critère (plus grand côté <
-  somme des deux autres) ajouté — valider en 6e.
-- Périmètre cycle 4 exclu (symétrie centrale = 5e, angles alternes-internes…) ; sans
-  figures, vérifier chaque protocole de construction comme exact et exécutable tel quel.
-
-Rédaction originale à partir du seul programme officiel. Aucun emprunt. Brouillon non relu.
--->

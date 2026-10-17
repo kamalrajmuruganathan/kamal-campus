@@ -230,14 +230,14 @@ En **décroissance** ($0<q<1$, ex. désintégration radioactive), $\ln q<0$ : di
 | Notion | À mémoriser |
 |---|---|
 | Exp — algèbre | $e^{a+b}=e^a e^b$, $e^{-a}=\frac{1}{e^a}$, $(e^a)^n=e^{na}$ |
-| Exp — dérivée | $(e^x)'=e^x$, $(e^u)'=u'e^u$ |
+| Exp — dérivée | $(e^x)'=e^x$, $(e^u)'=u'e^u$ ($u$ dérivable) |
 | Exp — limites | $\lim\limits_{-\infty}e^x=0^+$, $\lim\limits_{+\infty}e^x=+\infty$ |
 | Ln — définition | $\ln x=y\iff x=e^y$, avec $x>0$ |
 | Compensation | $\ln(e^x)=x$ et $e^{\ln x}=x$ |
 | Valeurs clés | $\ln 1=0$, $\ln e=1$, $e^0=1$ |
 | Produit / quotient | $\ln(ab)=\ln a+\ln b$ ; $\ln\!\frac ab=\ln a-\ln b$ |
 | Puissance | $\ln(a^{n})=n\ln a$ |
-| Ln — dérivée | $(\ln x)'=\frac1x$, $(\ln u)'=\frac{u'}{u}$ |
+| Ln — dérivée | $(\ln x)'=\frac1x$, $(\ln u)'=\frac{u'}{u}$ ($u$ dérivable et $u>0$) |
 | Ln — variations | strictement **croissante** sur $]0\,;+\infty[$ |
 | Ln — limites | $\lim\limits_{0^+}\ln=-\infty$, $\lim\limits_{+\infty}\ln=+\infty$ |
 | Croissances comparées | $\frac{e^x}{x^n}\to+\infty$ ; $\frac{\ln x}{x^n}\to 0$ ; $x^n\ln x\to 0$ en $0^+$ |
@@ -261,43 +261,3 @@ En **décroissance** ($0<q<1$, ex. désintégration radioactive), $\ln q<0$ : di
 6. **Confondre les croissances comparées.** L'exponentielle bat la puissance, la puissance bat
    le logarithme. Conclure « $\dfrac{\infty}{\infty}=1$ » est une faute : c'est une forme
    indéterminée que la règle tranche.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-SOURCE : fichier docs/programme-terminale-maths-options-2019.txt, en-tête (lignes 1 à 11) et
-section « === Fonctions logarithme et exponentielle === » (lignes 71 à 74), rubriques
-« Contenus » et « Capacités ». Programme des ENSEIGNEMENTS OPTIONNELS de mathématiques,
-option MATHS COMPLÉMENTAIRES, terminale générale (arrêté du 19-7-2019, BO spécial n°8 du
-25 juillet 2019). URL officielle : education.gouv.fr/bo/19/Special8/MENE1921265A.htm ;
-PDF : cache.media.education.gouv.fr/.../spe265_annexe_1159134.pdf.
-
-⚠️ PROVENANCE DE LA SOURCE : d'après l'en-tête du fichier, le texte a été extrait via WebFetch
-depuis les PDF officiels. La reproduction n'est pas garantie exhaustive. AVANT PUBLICATION,
-CONFRONTER AU PDF OFFICIEL (education.gouv.fr / éduscol) par un professeur.
-
-CONTENU DU PROGRAMME (verbatim de la source) :
-- Contenus : « fonction exponentielle (rappels) ; fonction logarithme népérien, propriétés
-  algébriques, dérivée, variations, limites ; croissances comparées ».
-- Capacités : « résoudre équations et inéquations ; utiliser log/exp dans un problème ».
-
-CHOIX DE RÉDACTION À CONFRONTER AU RELECTEUR :
-- « Rappels sur l'exponentielle » : le programme les cite sans les détailler (renvoi au
-  programme de Première). J'ai retenu algèbre, dérivée, variations, limites, dérivée de e^u —
-  périmètre standard. À valider selon le niveau d'exigence attendu en complémentaires.
-- Croissances comparées : le programme dit seulement « croissances comparées » sans préciser
-  les formes. J'ai inclus e^x/x^n → +∞, x^n e^x → 0 en -∞, ln x /x^n → 0, x^n ln x → 0 en 0⁺.
-  Vérifier les formes exactes attendues (notamment si x^n e^x en -∞ est au programme complém.).
-- Dérivées de composées (e^u)' et (ln u)' : indispensables aux exercices « utiliser dans un
-  problème » ; incluses. Confirmer qu'elles sont exigibles en maths complémentaires.
-- Section 7 « Applications » : traduit la capacité « utiliser log/exp dans un problème » par la
-  méthode de seuil d'une suite géométrique (cohérent avec la section « Suites et modèles
-  d'évolution » du même programme). Cadrage à valider.
-- Aucune démonstration exigible n'a été supposée : la construction rigoureuse de ln comme
-  réciproque est esquissée, non démontrée. Préciser si une démonstration est attendue.
-
-Rédaction 100 % originale à partir du programme officiel. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -1803,6 +1803,7 @@ import exercice605 from './../../contenu/seconde/langues-anciennes/grec-morpholo
 import attendus605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/attendus.json';
 import fiche606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/fiche.md';
 import exercice606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/exercice.json';
+import attendus606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/attendus.json';
 import fiche607 from './../../contenu/seconde/maths/arithmetique/fiche.md';
 import exercice607 from './../../contenu/seconde/maths/arithmetique/exercice.json';
 import attendus607 from './../../contenu/seconde/maths/arithmetique/attendus.json';
@@ -1821,1032 +1822,1041 @@ import attendus611 from './../../contenu/seconde/maths/vecteurs/attendus.json';
 import fiche612 from './../../contenu/seconde/maths/droites-du-plan/fiche.md';
 import exercice612 from './../../contenu/seconde/maths/droites-du-plan/exercice.json';
 import attendus612 from './../../contenu/seconde/maths/droites-du-plan/attendus.json';
-import fiche613 from './../../contenu/seconde/maths/statistiques/fiche.md';
-import exercice613 from './../../contenu/seconde/maths/statistiques/exercice.json';
-import attendus613 from './../../contenu/seconde/maths/statistiques/attendus.json';
-import fiche614 from './../../contenu/seconde/maths/probabilites/fiche.md';
-import exercice614 from './../../contenu/seconde/maths/probabilites/exercice.json';
-import attendus614 from './../../contenu/seconde/maths/probabilites/attendus.json';
-import fiche615 from './../../contenu/seconde/maths/algorithmique/fiche.md';
-import exercice615 from './../../contenu/seconde/maths/algorithmique/exercice.json';
-import attendus615 from './../../contenu/seconde/maths/algorithmique/attendus.json';
-import fiche616 from './../../contenu/seconde/physique-chimie/description-matiere/fiche.md';
-import exercice616 from './../../contenu/seconde/physique-chimie/description-matiere/exercice.json';
-import attendus616 from './../../contenu/seconde/physique-chimie/description-matiere/attendus.json';
-import fiche617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/fiche.md';
-import exercice617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/exercice.json';
-import attendus617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/attendus.json';
-import fiche618 from './../../contenu/seconde/physique-chimie/transformations-matiere/fiche.md';
-import exercice618 from './../../contenu/seconde/physique-chimie/transformations-matiere/exercice.json';
-import attendus618 from './../../contenu/seconde/physique-chimie/transformations-matiere/attendus.json';
-import fiche619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/fiche.md';
-import exercice619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/exercice.json';
-import attendus619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/attendus.json';
-import fiche620 from './../../contenu/seconde/physique-chimie/ondes-signaux/fiche.md';
-import exercice620 from './../../contenu/seconde/physique-chimie/ondes-signaux/exercice.json';
-import attendus620 from './../../contenu/seconde/physique-chimie/ondes-signaux/attendus.json';
-import fiche621 from './../../contenu/seconde/ses/production-richesses/fiche.md';
-import exercice621 from './../../contenu/seconde/ses/production-richesses/exercice.json';
-import attendus621 from './../../contenu/seconde/ses/production-richesses/attendus.json';
-import fiche622 from './../../contenu/seconde/ses/mesure-production-pib/fiche.md';
-import exercice622 from './../../contenu/seconde/ses/mesure-production-pib/exercice.json';
-import attendus622 from './../../contenu/seconde/ses/mesure-production-pib/attendus.json';
-import fiche623 from './../../contenu/seconde/ses/consommation-revenu/fiche.md';
-import exercice623 from './../../contenu/seconde/ses/consommation-revenu/exercice.json';
-import attendus623 from './../../contenu/seconde/ses/consommation-revenu/attendus.json';
-import fiche624 from './../../contenu/seconde/ses/marche-formation-prix/fiche.md';
-import exercice624 from './../../contenu/seconde/ses/marche-formation-prix/exercice.json';
-import attendus624 from './../../contenu/seconde/ses/marche-formation-prix/attendus.json';
-import fiche625 from './../../contenu/seconde/ses/socialisation-introduction/fiche.md';
-import exercice625 from './../../contenu/seconde/ses/socialisation-introduction/exercice.json';
-import attendus625 from './../../contenu/seconde/ses/socialisation-introduction/attendus.json';
-import fiche626 from './../../contenu/seconde/ses/opinion-publique/fiche.md';
-import exercice626 from './../../contenu/seconde/ses/opinion-publique/exercice.json';
-import attendus626 from './../../contenu/seconde/ses/opinion-publique/attendus.json';
-import fiche627 from './../../contenu/seconde/snt/internet/fiche.md';
-import exercice627 from './../../contenu/seconde/snt/internet/exercice.json';
-import attendus627 from './../../contenu/seconde/snt/internet/attendus.json';
-import fiche628 from './../../contenu/seconde/snt/le-web/fiche.md';
-import exercice628 from './../../contenu/seconde/snt/le-web/exercice.json';
-import attendus628 from './../../contenu/seconde/snt/le-web/attendus.json';
-import fiche629 from './../../contenu/seconde/snt/reseaux-sociaux/fiche.md';
-import exercice629 from './../../contenu/seconde/snt/reseaux-sociaux/exercice.json';
-import attendus629 from './../../contenu/seconde/snt/reseaux-sociaux/attendus.json';
-import fiche630 from './../../contenu/seconde/snt/donnees-structurees/fiche.md';
-import exercice630 from './../../contenu/seconde/snt/donnees-structurees/exercice.json';
-import attendus630 from './../../contenu/seconde/snt/donnees-structurees/attendus.json';
-import fiche631 from './../../contenu/seconde/snt/localisation-cartographie-gps/fiche.md';
-import exercice631 from './../../contenu/seconde/snt/localisation-cartographie-gps/exercice.json';
-import attendus631 from './../../contenu/seconde/snt/localisation-cartographie-gps/attendus.json';
-import fiche632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/fiche.md';
-import exercice632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/exercice.json';
-import attendus632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/attendus.json';
-import fiche633 from './../../contenu/seconde/snt/photographie-numerique/fiche.md';
-import exercice633 from './../../contenu/seconde/snt/photographie-numerique/exercice.json';
-import attendus633 from './../../contenu/seconde/snt/photographie-numerique/attendus.json';
-import fiche634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/fiche.md';
-import exercice634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/exercice.json';
-import attendus634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/attendus.json';
-import fiche635 from './../../contenu/seconde/svt/adn-et-information-genetique/fiche.md';
-import exercice635 from './../../contenu/seconde/svt/adn-et-information-genetique/exercice.json';
-import attendus635 from './../../contenu/seconde/svt/adn-et-information-genetique/attendus.json';
-import fiche636 from './../../contenu/seconde/svt/metabolisme-des-cellules/fiche.md';
-import exercice636 from './../../contenu/seconde/svt/metabolisme-des-cellules/exercice.json';
-import attendus636 from './../../contenu/seconde/svt/metabolisme-des-cellules/attendus.json';
-import fiche637 from './../../contenu/seconde/svt/biodiversite-et-evolution/fiche.md';
-import exercice637 from './../../contenu/seconde/svt/biodiversite-et-evolution/exercice.json';
-import attendus637 from './../../contenu/seconde/svt/biodiversite-et-evolution/attendus.json';
-import fiche638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/fiche.md';
-import exercice638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/exercice.json';
-import attendus638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/attendus.json';
-import fiche639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/fiche.md';
-import exercice639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/exercice.json';
-import attendus639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/attendus.json';
-import fiche640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/fiche.md';
-import exercice640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/exercice.json';
-import attendus640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/attendus.json';
-import fiche641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/fiche.md';
-import exercice641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/exercice.json';
-import attendus641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/attendus.json';
-import fiche642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/fiche.md';
-import exercice642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/exercice.json';
-import attendus642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/attendus.json';
-import fiche643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/fiche.md';
-import exercice643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/exercice.json';
-import attendus643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/attendus.json';
-import fiche644 from './../../contenu/premiere/allemand/passiv/fiche.md';
-import exercice644 from './../../contenu/premiere/allemand/passiv/exercice.json';
-import attendus644 from './../../contenu/premiere/allemand/passiv/attendus.json';
-import fiche645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/fiche.md';
-import exercice645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/exercice.json';
-import attendus645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/attendus.json';
-import fiche646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/fiche.md';
-import exercice646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/exercice.json';
-import attendus646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/attendus.json';
-import fiche647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/fiche.md';
-import exercice647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/exercice.json';
-import attendus647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/attendus.json';
-import fiche648 from './../../contenu/premiere/allemand/landeskunde-literatur/fiche.md';
-import exercice648 from './../../contenu/premiere/allemand/landeskunde-literatur/exercice.json';
-import attendus648 from './../../contenu/premiere/allemand/landeskunde-literatur/attendus.json';
-import fiche649 from './../../contenu/premiere/anglais/aspects-simple-continu/fiche.md';
-import exercice649 from './../../contenu/premiere/anglais/aspects-simple-continu/exercice.json';
-import attendus649 from './../../contenu/premiere/anglais/aspects-simple-continu/attendus.json';
-import fiche650 from './../../contenu/premiere/anglais/gerondif-infinitif/fiche.md';
-import exercice650 from './../../contenu/premiere/anglais/gerondif-infinitif/exercice.json';
-import attendus650 from './../../contenu/premiere/anglais/gerondif-infinitif/attendus.json';
-import fiche651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/fiche.md';
-import exercice651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/exercice.json';
-import attendus651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/attendus.json';
-import fiche652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/fiche.md';
-import exercice652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/exercice.json';
-import attendus652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/attendus.json';
-import fiche653 from './../../contenu/premiere/anglais/voix-passive-emplois/fiche.md';
-import exercice653 from './../../contenu/premiere/anglais/voix-passive-emplois/exercice.json';
-import attendus653 from './../../contenu/premiere/anglais/voix-passive-emplois/attendus.json';
-import fiche654 from './../../contenu/premiere/anglais/futur-et-hypotheses/fiche.md';
-import exercice654 from './../../contenu/premiere/anglais/futur-et-hypotheses/exercice.json';
-import attendus654 from './../../contenu/premiere/anglais/futur-et-hypotheses/attendus.json';
-import fiche655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/fiche.md';
-import exercice655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/exercice.json';
-import attendus655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/attendus.json';
-import fiche656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/fiche.md';
-import exercice656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/exercice.json';
-import attendus656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/attendus.json';
-import fiche657 from './../../contenu/premiere/anglais/civilisation-litterature/fiche.md';
-import exercice657 from './../../contenu/premiere/anglais/civilisation-litterature/exercice.json';
-import attendus657 from './../../contenu/premiere/anglais/civilisation-litterature/attendus.json';
-import fiche658 from './../../contenu/premiere/arts/architecture/fiche.md';
-import exercice658 from './../../contenu/premiere/arts/architecture/exercice.json';
-import attendus658 from './../../contenu/premiere/arts/architecture/attendus.json';
-import fiche659 from './../../contenu/premiere/arts/histoire-musique/fiche.md';
-import exercice659 from './../../contenu/premiere/arts/histoire-musique/exercice.json';
-import attendus659 from './../../contenu/premiere/arts/histoire-musique/attendus.json';
-import fiche660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/fiche.md';
-import exercice660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/exercice.json';
-import attendus660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/attendus.json';
-import fiche661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/fiche.md';
-import exercice661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/exercice.json';
-import attendus661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/attendus.json';
-import fiche662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/fiche.md';
-import exercice662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/exercice.json';
-import attendus662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/attendus.json';
-import fiche663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/fiche.md';
-import exercice663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/exercice.json';
-import attendus663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/attendus.json';
-import fiche664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/fiche.md';
-import exercice664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/exercice.json';
-import attendus664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/attendus.json';
-import fiche665 from './../../contenu/premiere/espagnol/subjuntivo-usos/fiche.md';
-import exercice665 from './../../contenu/premiere/espagnol/subjuntivo-usos/exercice.json';
-import attendus665 from './../../contenu/premiere/espagnol/subjuntivo-usos/attendus.json';
-import fiche666 from './../../contenu/premiere/espagnol/relativos/fiche.md';
-import exercice666 from './../../contenu/premiere/espagnol/relativos/exercice.json';
-import attendus666 from './../../contenu/premiere/espagnol/relativos/attendus.json';
-import fiche667 from './../../contenu/premiere/espagnol/perifrasis/fiche.md';
-import exercice667 from './../../contenu/premiere/espagnol/perifrasis/exercice.json';
-import attendus667 from './../../contenu/premiere/espagnol/perifrasis/attendus.json';
-import fiche668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/fiche.md';
-import exercice668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/exercice.json';
-import attendus668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/attendus.json';
-import fiche669 from './../../contenu/premiere/espagnol/voz-pasiva/fiche.md';
-import exercice669 from './../../contenu/premiere/espagnol/voz-pasiva/exercice.json';
-import attendus669 from './../../contenu/premiere/espagnol/voz-pasiva/attendus.json';
-import fiche670 from './../../contenu/premiere/espagnol/estilo-indirecto/fiche.md';
-import exercice670 from './../../contenu/premiere/espagnol/estilo-indirecto/exercice.json';
-import attendus670 from './../../contenu/premiere/espagnol/estilo-indirecto/attendus.json';
-import fiche671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/fiche.md';
-import exercice671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/exercice.json';
-import attendus671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/attendus.json';
-import fiche672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/fiche.md';
-import exercice672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/exercice.json';
-import attendus672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/attendus.json';
-import fiche673 from './../../contenu/premiere/espagnol/civilizacion-literatura/fiche.md';
-import exercice673 from './../../contenu/premiere/espagnol/civilizacion-literatura/exercice.json';
-import attendus673 from './../../contenu/premiere/espagnol/civilizacion-literatura/attendus.json';
-import fiche674 from './../../contenu/premiere/francais/grammaire-premiere/fiche.md';
-import exercice674 from './../../contenu/premiere/francais/grammaire-premiere/exercice.json';
-import attendus674 from './../../contenu/premiere/francais/grammaire-premiere/attendus.json';
-import fiche675 from './../../contenu/premiere/francais/commentaire-litteraire/fiche.md';
-import exercice675 from './../../contenu/premiere/francais/commentaire-litteraire/exercice.json';
-import attendus675 from './../../contenu/premiere/francais/commentaire-litteraire/attendus.json';
-import fiche676 from './../../contenu/premiere/francais/roman-et-recit/fiche.md';
-import exercice676 from './../../contenu/premiere/francais/roman-et-recit/exercice.json';
-import attendus676 from './../../contenu/premiere/francais/roman-et-recit/attendus.json';
-import fiche677 from './../../contenu/premiere/francais/poesie-19-21/fiche.md';
-import exercice677 from './../../contenu/premiere/francais/poesie-19-21/exercice.json';
-import attendus677 from './../../contenu/premiere/francais/poesie-19-21/attendus.json';
-import fiche678 from './../../contenu/premiere/francais/contraction-essai/fiche.md';
-import exercice678 from './../../contenu/premiere/francais/contraction-essai/exercice.json';
-import attendus678 from './../../contenu/premiere/francais/contraction-essai/attendus.json';
-import fiche679 from './../../contenu/premiere/francais/litterature-idees-16-18/fiche.md';
-import exercice679 from './../../contenu/premiere/francais/litterature-idees-16-18/exercice.json';
-import attendus679 from './../../contenu/premiere/francais/litterature-idees-16-18/attendus.json';
-import fiche680 from './../../contenu/premiere/francais/dissertation/fiche.md';
-import exercice680 from './../../contenu/premiere/francais/dissertation/exercice.json';
-import attendus680 from './../../contenu/premiere/francais/dissertation/attendus.json';
-import fiche681 from './../../contenu/premiere/francais/theatre-17-21/fiche.md';
-import exercice681 from './../../contenu/premiere/francais/theatre-17-21/exercice.json';
-import attendus681 from './../../contenu/premiere/francais/theatre-17-21/attendus.json';
-import fiche682 from './../../contenu/premiere/francais/epreuve-orale/fiche.md';
-import exercice682 from './../../contenu/premiere/francais/epreuve-orale/exercice.json';
-import attendus682 from './../../contenu/premiere/francais/epreuve-orale/attendus.json';
-import fiche683 from './../../contenu/premiere/hggsp/democratie/fiche.md';
-import exercice683 from './../../contenu/premiere/hggsp/democratie/exercice.json';
-import attendus683 from './../../contenu/premiere/hggsp/democratie/attendus.json';
-import fiche684 from './../../contenu/premiere/hggsp/puissances-internationales/fiche.md';
-import exercice684 from './../../contenu/premiere/hggsp/puissances-internationales/exercice.json';
-import attendus684 from './../../contenu/premiere/hggsp/puissances-internationales/attendus.json';
-import fiche685 from './../../contenu/premiere/hggsp/frontieres/fiche.md';
-import exercice685 from './../../contenu/premiere/hggsp/frontieres/exercice.json';
-import attendus685 from './../../contenu/premiere/hggsp/frontieres/attendus.json';
-import fiche686 from './../../contenu/premiere/hggsp/s-informer/fiche.md';
-import exercice686 from './../../contenu/premiere/hggsp/s-informer/exercice.json';
-import attendus686 from './../../contenu/premiere/hggsp/s-informer/attendus.json';
-import fiche687 from './../../contenu/premiere/hggsp/etats-et-religions/fiche.md';
-import exercice687 from './../../contenu/premiere/hggsp/etats-et-religions/exercice.json';
-import attendus687 from './../../contenu/premiere/hggsp/etats-et-religions/attendus.json';
-import fiche688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/fiche.md';
-import exercice688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/exercice.json';
-import attendus688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/attendus.json';
-import fiche689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/fiche.md';
-import exercice689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/exercice.json';
-import attendus689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/attendus.json';
-import fiche690 from './../../contenu/premiere/hist-geo/industrialisation-19e/fiche.md';
-import exercice690 from './../../contenu/premiere/hist-geo/industrialisation-19e/exercice.json';
-import attendus690 from './../../contenu/premiere/hist-geo/industrialisation-19e/attendus.json';
-import fiche691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/fiche.md';
-import exercice691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/exercice.json';
-import attendus691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/attendus.json';
-import fiche692 from './../../contenu/premiere/hist-geo/metropolisation-france/fiche.md';
-import exercice692 from './../../contenu/premiere/hist-geo/metropolisation-france/exercice.json';
-import attendus692 from './../../contenu/premiere/hist-geo/metropolisation-france/attendus.json';
-import fiche693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/fiche.md';
-import exercice693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/exercice.json';
-import attendus693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/attendus.json';
-import fiche694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/fiche.md';
-import exercice694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/exercice.json';
-import attendus694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/attendus.json';
-import fiche695 from './../../contenu/premiere/italien/congiuntivo-usi/fiche.md';
-import exercice695 from './../../contenu/premiere/italien/congiuntivo-usi/exercice.json';
-import attendus695 from './../../contenu/premiere/italien/congiuntivo-usi/attendus.json';
-import fiche696 from './../../contenu/premiere/italien/pronomi-relativi/fiche.md';
-import exercice696 from './../../contenu/premiere/italien/pronomi-relativi/exercice.json';
-import attendus696 from './../../contenu/premiere/italien/pronomi-relativi/attendus.json';
-import fiche697 from './../../contenu/premiere/italien/perifrasi/fiche.md';
-import exercice697 from './../../contenu/premiere/italien/perifrasi/exercice.json';
-import attendus697 from './../../contenu/premiere/italien/perifrasi/attendus.json';
-import fiche698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/fiche.md';
-import exercice698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/exercice.json';
-import attendus698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/attendus.json';
-import fiche699 from './../../contenu/premiere/italien/forma-passiva/fiche.md';
-import exercice699 from './../../contenu/premiere/italien/forma-passiva/exercice.json';
-import attendus699 from './../../contenu/premiere/italien/forma-passiva/attendus.json';
-import fiche700 from './../../contenu/premiere/italien/discorso-indiretto/fiche.md';
-import exercice700 from './../../contenu/premiere/italien/discorso-indiretto/exercice.json';
-import attendus700 from './../../contenu/premiere/italien/discorso-indiretto/attendus.json';
-import fiche701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/fiche.md';
-import exercice701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/exercice.json';
-import attendus701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/attendus.json';
-import fiche702 from './../../contenu/premiere/italien/civilta-rinascimento/fiche.md';
-import exercice702 from './../../contenu/premiere/italien/civilta-rinascimento/exercice.json';
-import attendus702 from './../../contenu/premiere/italien/civilta-rinascimento/attendus.json';
-import fiche703 from './../../contenu/premiere/italien/civilta-letteratura/fiche.md';
-import exercice703 from './../../contenu/premiere/italien/civilta-letteratura/exercice.json';
-import attendus703 from './../../contenu/premiere/italien/civilta-letteratura/attendus.json';
-import fiche704 from './../../contenu/premiere/langues-anciennes/mythologie/fiche.md';
-import exercice704 from './../../contenu/premiere/langues-anciennes/mythologie/exercice.json';
-import attendus704 from './../../contenu/premiere/langues-anciennes/mythologie/attendus.json';
-import fiche705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/fiche.md';
-import exercice705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/exercice.json';
-import attendus705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/attendus.json';
-import fiche706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/fiche.md';
-import exercice706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/exercice.json';
-import attendus706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/attendus.json';
-import fiche707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/fiche.md';
-import exercice707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/exercice.json';
-import attendus707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/attendus.json';
-import fiche708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/fiche.md';
-import exercice708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/exercice.json';
-import attendus708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/attendus.json';
-import fiche709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/fiche.md';
-import exercice709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/exercice.json';
-import attendus709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/attendus.json';
-import fiche710 from './../../contenu/premiere/maths-specialite/second-degre/fiche.md';
-import exercice710 from './../../contenu/premiere/maths-specialite/second-degre/exercice.json';
-import attendus710 from './../../contenu/premiere/maths-specialite/second-degre/attendus.json';
-import fiche711 from './../../contenu/premiere/maths-specialite/suites-numeriques/fiche.md';
-import exercice711 from './../../contenu/premiere/maths-specialite/suites-numeriques/exercice.json';
-import attendus711 from './../../contenu/premiere/maths-specialite/suites-numeriques/attendus.json';
-import fiche712 from './../../contenu/premiere/maths-specialite/derivation/fiche.md';
-import exercice712 from './../../contenu/premiere/maths-specialite/derivation/exercice.json';
-import attendus712 from './../../contenu/premiere/maths-specialite/derivation/attendus.json';
-import fiche713 from './../../contenu/premiere/maths-specialite/variations-courbes/fiche.md';
-import exercice713 from './../../contenu/premiere/maths-specialite/variations-courbes/exercice.json';
-import attendus713 from './../../contenu/premiere/maths-specialite/variations-courbes/attendus.json';
-import fiche714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/fiche.md';
-import exercice714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/exercice.json';
-import attendus714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/attendus.json';
-import fiche715 from './../../contenu/premiere/maths-specialite/trigonometrie/fiche.md';
-import exercice715 from './../../contenu/premiere/maths-specialite/trigonometrie/exercice.json';
-import attendus715 from './../../contenu/premiere/maths-specialite/trigonometrie/attendus.json';
-import fiche716 from './../../contenu/premiere/maths-specialite/produit-scalaire/fiche.md';
-import exercice716 from './../../contenu/premiere/maths-specialite/produit-scalaire/exercice.json';
-import attendus716 from './../../contenu/premiere/maths-specialite/produit-scalaire/attendus.json';
-import fiche717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/fiche.md';
-import exercice717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/exercice.json';
-import attendus717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/attendus.json';
-import fiche718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/fiche.md';
-import exercice718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/exercice.json';
-import attendus718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/attendus.json';
-import fiche719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/fiche.md';
-import exercice719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/exercice.json';
-import attendus719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/attendus.json';
-import fiche720 from './../../contenu/premiere/nsi/representation-des-donnees/fiche.md';
-import exercice720 from './../../contenu/premiere/nsi/representation-des-donnees/exercice.json';
-import attendus720 from './../../contenu/premiere/nsi/representation-des-donnees/attendus.json';
-import fiche721 from './../../contenu/premiere/nsi/types-construits/fiche.md';
-import exercice721 from './../../contenu/premiere/nsi/types-construits/exercice.json';
-import attendus721 from './../../contenu/premiere/nsi/types-construits/attendus.json';
-import fiche722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/fiche.md';
-import exercice722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/exercice.json';
-import attendus722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/attendus.json';
-import fiche723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/fiche.md';
-import exercice723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/exercice.json';
-import attendus723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/attendus.json';
-import fiche724 from './../../contenu/premiere/nsi/architecture-et-systeme/fiche.md';
-import exercice724 from './../../contenu/premiere/nsi/architecture-et-systeme/exercice.json';
-import attendus724 from './../../contenu/premiere/nsi/architecture-et-systeme/attendus.json';
-import fiche725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/fiche.md';
-import exercice725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/exercice.json';
-import attendus725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/attendus.json';
-import fiche726 from './../../contenu/premiere/physique-chimie/transformations-matiere/fiche.md';
-import exercice726 from './../../contenu/premiere/physique-chimie/transformations-matiere/exercice.json';
-import attendus726 from './../../contenu/premiere/physique-chimie/transformations-matiere/attendus.json';
-import fiche727 from './../../contenu/premiere/physique-chimie/chimie-organique/fiche.md';
-import exercice727 from './../../contenu/premiere/physique-chimie/chimie-organique/exercice.json';
-import attendus727 from './../../contenu/premiere/physique-chimie/chimie-organique/attendus.json';
-import fiche728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/fiche.md';
-import exercice728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/exercice.json';
-import attendus728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/attendus.json';
-import fiche729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/fiche.md';
-import exercice729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/exercice.json';
-import attendus729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/attendus.json';
-import fiche730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/fiche.md';
-import exercice730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/exercice.json';
-import attendus730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/attendus.json';
-import fiche731 from './../../contenu/premiere/physique-chimie/ondes-signaux/fiche.md';
-import exercice731 from './../../contenu/premiere/physique-chimie/ondes-signaux/exercice.json';
-import attendus731 from './../../contenu/premiere/physique-chimie/ondes-signaux/attendus.json';
-import fiche732 from './../../contenu/premiere/ses/marche-concurrentiel/fiche.md';
-import exercice732 from './../../contenu/premiere/ses/marche-concurrentiel/exercice.json';
-import attendus732 from './../../contenu/premiere/ses/marche-concurrentiel/attendus.json';
-import fiche733 from './../../contenu/premiere/ses/marches-imparfaits/fiche.md';
-import exercice733 from './../../contenu/premiere/ses/marches-imparfaits/exercice.json';
-import attendus733 from './../../contenu/premiere/ses/marches-imparfaits/attendus.json';
-import fiche734 from './../../contenu/premiere/ses/defaillances-de-marche/fiche.md';
-import exercice734 from './../../contenu/premiere/ses/defaillances-de-marche/exercice.json';
-import attendus734 from './../../contenu/premiere/ses/defaillances-de-marche/attendus.json';
-import fiche735 from './../../contenu/premiere/ses/monnaie-et-financement/fiche.md';
-import exercice735 from './../../contenu/premiere/ses/monnaie-et-financement/exercice.json';
-import attendus735 from './../../contenu/premiere/ses/monnaie-et-financement/attendus.json';
-import fiche736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/fiche.md';
-import exercice736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/exercice.json';
-import attendus736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/attendus.json';
-import fiche737 from './../../contenu/premiere/ses/liens-sociaux/fiche.md';
-import exercice737 from './../../contenu/premiere/ses/liens-sociaux/exercice.json';
-import attendus737 from './../../contenu/premiere/ses/liens-sociaux/attendus.json';
-import fiche738 from './../../contenu/premiere/ses/deviance-controle-social/fiche.md';
-import exercice738 from './../../contenu/premiere/ses/deviance-controle-social/exercice.json';
-import attendus738 from './../../contenu/premiere/ses/deviance-controle-social/attendus.json';
-import fiche739 from './../../contenu/premiere/ses/voter-participation/fiche.md';
-import exercice739 from './../../contenu/premiere/ses/voter-participation/exercice.json';
-import attendus739 from './../../contenu/premiere/ses/voter-participation/attendus.json';
-import fiche740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/fiche.md';
-import exercice740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/exercice.json';
-import attendus740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/attendus.json';
-import fiche741 from './../../contenu/premiere/si/chaine-denergie/fiche.md';
-import exercice741 from './../../contenu/premiere/si/chaine-denergie/exercice.json';
-import attendus741 from './../../contenu/premiere/si/chaine-denergie/attendus.json';
-import fiche742 from './../../contenu/premiere/si/chaine-dinformation/fiche.md';
-import exercice742 from './../../contenu/premiere/si/chaine-dinformation/exercice.json';
-import attendus742 from './../../contenu/premiere/si/chaine-dinformation/attendus.json';
-import fiche743 from './../../contenu/premiere/si/comportement-des-materiaux/fiche.md';
-import exercice743 from './../../contenu/premiere/si/comportement-des-materiaux/exercice.json';
-import attendus743 from './../../contenu/premiere/si/comportement-des-materiaux/attendus.json';
-import fiche744 from './../../contenu/premiere/si/mecanique-des-solides/fiche.md';
-import exercice744 from './../../contenu/premiere/si/mecanique-des-solides/exercice.json';
-import attendus744 from './../../contenu/premiere/si/mecanique-des-solides/attendus.json';
-import fiche745 from './../../contenu/premiere/svt/mutations-et-variabilite/fiche.md';
-import exercice745 from './../../contenu/premiere/svt/mutations-et-variabilite/exercice.json';
-import attendus745 from './../../contenu/premiere/svt/mutations-et-variabilite/attendus.json';
-import fiche746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/fiche.md';
-import exercice746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/exercice.json';
-import attendus746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/attendus.json';
-import fiche747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/fiche.md';
-import exercice747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/exercice.json';
-import attendus747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/attendus.json';
-import fiche748 from './../../contenu/premiere/svt/ecosystemes-et-services/fiche.md';
-import exercice748 from './../../contenu/premiere/svt/ecosystemes-et-services/exercice.json';
-import attendus748 from './../../contenu/premiere/svt/ecosystemes-et-services/attendus.json';
-import fiche749 from './../../contenu/premiere/svt/variation-genetique-et-sante/fiche.md';
-import exercice749 from './../../contenu/premiere/svt/variation-genetique-et-sante/exercice.json';
-import attendus749 from './../../contenu/premiere/svt/variation-genetique-et-sante/attendus.json';
-import fiche750 from './../../contenu/premiere-techno/maths/suites-numeriques/fiche.md';
-import exercice750 from './../../contenu/premiere-techno/maths/suites-numeriques/exercice.json';
-import attendus750 from './../../contenu/premiere-techno/maths/suites-numeriques/attendus.json';
-import fiche751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/fiche.md';
-import exercice751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/exercice.json';
-import attendus751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/attendus.json';
-import fiche752 from './../../contenu/premiere-techno/maths/derivation/fiche.md';
-import exercice752 from './../../contenu/premiere-techno/maths/derivation/exercice.json';
-import attendus752 from './../../contenu/premiere-techno/maths/derivation/attendus.json';
-import fiche753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/fiche.md';
-import exercice753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/exercice.json';
-import attendus753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/attendus.json';
-import fiche754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/fiche.md';
-import exercice754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/exercice.json';
-import attendus754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/attendus.json';
-import fiche755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/fiche.md';
-import exercice755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/exercice.json';
-import attendus755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/attendus.json';
-import fiche756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/fiche.md';
-import exercice756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/exercice.json';
-import attendus756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/attendus.json';
-import fiche757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/fiche.md';
-import exercice757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/exercice.json';
-import attendus757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/attendus.json';
-import fiche758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/fiche.md';
-import exercice758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/exercice.json';
-import attendus758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/attendus.json';
-import fiche759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/fiche.md';
-import exercice759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/exercice.json';
-import attendus759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/attendus.json';
-import fiche760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/fiche.md';
-import exercice760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/exercice.json';
-import attendus760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/attendus.json';
-import fiche761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/fiche.md';
-import exercice761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/exercice.json';
-import attendus761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/attendus.json';
-import fiche762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/fiche.md';
-import exercice762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/exercice.json';
-import attendus762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/attendus.json';
-import fiche763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/fiche.md';
-import exercice763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/exercice.json';
-import attendus763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/attendus.json';
-import fiche764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/fiche.md';
-import exercice764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/exercice.json';
-import attendus764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/attendus.json';
-import fiche765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/fiche.md';
-import exercice765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/exercice.json';
-import attendus765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/attendus.json';
-import fiche766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/fiche.md';
-import exercice766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/exercice.json';
-import attendus766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/attendus.json';
-import fiche767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/fiche.md';
-import exercice767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/exercice.json';
-import attendus767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/attendus.json';
-import fiche768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/fiche.md';
-import exercice768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/exercice.json';
-import attendus768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/attendus.json';
-import fiche769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/fiche.md';
-import exercice769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/exercice.json';
-import attendus769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/attendus.json';
-import fiche770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/fiche.md';
-import exercice770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/exercice.json';
-import attendus770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/attendus.json';
-import fiche771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/fiche.md';
-import exercice771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/exercice.json';
-import attendus771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/attendus.json';
-import fiche772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/fiche.md';
-import exercice772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/exercice.json';
-import attendus772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/attendus.json';
-import fiche773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/fiche.md';
-import exercice773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/exercice.json';
-import attendus773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/attendus.json';
-import fiche774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/fiche.md';
-import exercice774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/exercice.json';
-import attendus774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/attendus.json';
-import fiche775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/fiche.md';
-import exercice775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/exercice.json';
-import attendus775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/attendus.json';
-import fiche776 from './../../contenu/terminale/allemand/konnektoren-argumentation/fiche.md';
-import exercice776 from './../../contenu/terminale/allemand/konnektoren-argumentation/exercice.json';
-import attendus776 from './../../contenu/terminale/allemand/konnektoren-argumentation/attendus.json';
-import fiche777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/fiche.md';
-import exercice777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/exercice.json';
-import attendus777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/attendus.json';
-import fiche778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/fiche.md';
-import exercice778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/exercice.json';
-import attendus778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/attendus.json';
-import fiche779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/fiche.md';
-import exercice779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/exercice.json';
-import attendus779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/attendus.json';
-import fiche780 from './../../contenu/terminale/allemand/nominalstil/fiche.md';
-import exercice780 from './../../contenu/terminale/allemand/nominalstil/exercice.json';
-import attendus780 from './../../contenu/terminale/allemand/nominalstil/attendus.json';
-import fiche781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/fiche.md';
-import exercice781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/exercice.json';
-import attendus781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/attendus.json';
-import fiche782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/fiche.md';
-import exercice782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/exercice.json';
-import attendus782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/attendus.json';
-import fiche783 from './../../contenu/terminale/anglais/systeme-verbal/fiche.md';
-import exercice783 from './../../contenu/terminale/anglais/systeme-verbal/exercice.json';
-import attendus783 from './../../contenu/terminale/anglais/systeme-verbal/attendus.json';
-import fiche784 from './../../contenu/terminale/anglais/modalite/fiche.md';
-import exercice784 from './../../contenu/terminale/anglais/modalite/exercice.json';
-import attendus784 from './../../contenu/terminale/anglais/modalite/attendus.json';
-import fiche785 from './../../contenu/terminale/anglais/irreel-hypotheses/fiche.md';
-import exercice785 from './../../contenu/terminale/anglais/irreel-hypotheses/exercice.json';
-import attendus785 from './../../contenu/terminale/anglais/irreel-hypotheses/attendus.json';
-import fiche786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/fiche.md';
-import exercice786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/exercice.json';
-import attendus786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/attendus.json';
-import fiche787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/fiche.md';
-import exercice787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/exercice.json';
-import attendus787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/attendus.json';
-import fiche788 from './../../contenu/terminale/anglais/structures-complexes/fiche.md';
-import exercice788 from './../../contenu/terminale/anglais/structures-complexes/exercice.json';
-import attendus788 from './../../contenu/terminale/anglais/structures-complexes/attendus.json';
-import fiche789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/fiche.md';
-import exercice789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/exercice.json';
-import attendus789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/attendus.json';
-import fiche790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/fiche.md';
-import exercice790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/exercice.json';
-import attendus790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/attendus.json';
-import fiche791 from './../../contenu/terminale/arts/cinema/fiche.md';
-import exercice791 from './../../contenu/terminale/arts/cinema/exercice.json';
-import attendus791 from './../../contenu/terminale/arts/cinema/attendus.json';
-import fiche792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/fiche.md';
-import exercice792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/exercice.json';
-import attendus792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/attendus.json';
-import fiche793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/fiche.md';
-import exercice793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/exercice.json';
-import attendus793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/attendus.json';
-import fiche794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/fiche.md';
-import exercice794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/exercice.json';
-import attendus794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/attendus.json';
-import fiche795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/fiche.md';
-import exercice795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/exercice.json';
-import attendus795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/attendus.json';
-import fiche796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/fiche.md';
-import exercice796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/exercice.json';
-import attendus796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/attendus.json';
-import fiche797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/fiche.md';
-import exercice797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/exercice.json';
-import attendus797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/attendus.json';
-import fiche798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/fiche.md';
-import exercice798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/exercice.json';
-import attendus798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/attendus.json';
-import fiche799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/fiche.md';
-import exercice799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/exercice.json';
-import attendus799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/attendus.json';
-import fiche800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/fiche.md';
-import exercice800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/exercice.json';
-import attendus800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/attendus.json';
-import fiche801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/fiche.md';
-import exercice801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/exercice.json';
-import attendus801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/attendus.json';
-import fiche802 from './../../contenu/terminale/espagnol/concordancia-tiempos/fiche.md';
-import exercice802 from './../../contenu/terminale/espagnol/concordancia-tiempos/exercice.json';
-import attendus802 from './../../contenu/terminale/espagnol/concordancia-tiempos/attendus.json';
-import fiche803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/fiche.md';
-import exercice803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/exercice.json';
-import attendus803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/attendus.json';
-import fiche804 from './../../contenu/terminale/espagnol/conectores-argumentacion/fiche.md';
-import exercice804 from './../../contenu/terminale/espagnol/conectores-argumentacion/exercice.json';
-import attendus804 from './../../contenu/terminale/espagnol/conectores-argumentacion/attendus.json';
-import fiche805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/fiche.md';
-import exercice805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/exercice.json';
-import attendus805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/attendus.json';
-import fiche806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/fiche.md';
-import exercice806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/exercice.json';
-import attendus806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/attendus.json';
-import fiche807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/fiche.md';
-import exercice807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/exercice.json';
-import attendus807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/attendus.json';
-import fiche808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/fiche.md';
-import exercice808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/exercice.json';
-import attendus808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/attendus.json';
-import fiche809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/fiche.md';
-import exercice809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/exercice.json';
-import attendus809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/attendus.json';
-import fiche810 from './../../contenu/terminale/grand-oral/construire-l-expose/fiche.md';
-import exercice810 from './../../contenu/terminale/grand-oral/construire-l-expose/exercice.json';
-import attendus810 from './../../contenu/terminale/grand-oral/construire-l-expose/attendus.json';
-import fiche811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/fiche.md';
-import exercice811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/exercice.json';
-import attendus811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/attendus.json';
-import fiche812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/fiche.md';
-import exercice812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/exercice.json';
-import attendus812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/attendus.json';
-import fiche813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/fiche.md';
-import exercice813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/exercice.json';
-import attendus813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/attendus.json';
-import fiche814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/fiche.md';
-import exercice814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/exercice.json';
-import attendus814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/attendus.json';
-import fiche815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/fiche.md';
-import exercice815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/exercice.json';
-import attendus815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/attendus.json';
-import fiche816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/fiche.md';
-import exercice816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/exercice.json';
-import attendus816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/attendus.json';
-import fiche817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/fiche.md';
-import exercice817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/exercice.json';
-import attendus817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/attendus.json';
-import fiche818 from './../../contenu/terminale/hggsp/histoire-et-memoires/fiche.md';
-import exercice818 from './../../contenu/terminale/hggsp/histoire-et-memoires/exercice.json';
-import attendus818 from './../../contenu/terminale/hggsp/histoire-et-memoires/attendus.json';
-import fiche819 from './../../contenu/terminale/hggsp/patrimoine/fiche.md';
-import exercice819 from './../../contenu/terminale/hggsp/patrimoine/exercice.json';
-import attendus819 from './../../contenu/terminale/hggsp/patrimoine/attendus.json';
-import fiche820 from './../../contenu/terminale/hggsp/environnement/fiche.md';
-import exercice820 from './../../contenu/terminale/hggsp/environnement/exercice.json';
-import attendus820 from './../../contenu/terminale/hggsp/environnement/attendus.json';
-import fiche821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/fiche.md';
-import exercice821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/exercice.json';
-import attendus821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/attendus.json';
-import fiche822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/fiche.md';
-import exercice822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/exercice.json';
-import attendus822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/attendus.json';
-import fiche823 from './../../contenu/terminale/hist-geo/guerre-froide/fiche.md';
-import exercice823 from './../../contenu/terminale/hist-geo/guerre-froide/exercice.json';
-import attendus823 from './../../contenu/terminale/hist-geo/guerre-froide/attendus.json';
-import fiche824 from './../../contenu/terminale/hist-geo/decolonisation/fiche.md';
-import exercice824 from './../../contenu/terminale/hist-geo/decolonisation/exercice.json';
-import attendus824 from './../../contenu/terminale/hist-geo/decolonisation/attendus.json';
-import fiche825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/fiche.md';
-import exercice825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/exercice.json';
-import attendus825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/attendus.json';
-import fiche826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/fiche.md';
-import exercice826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/exercice.json';
-import attendus826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/attendus.json';
-import fiche827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/fiche.md';
-import exercice827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/exercice.json';
-import attendus827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/attendus.json';
-import fiche828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/fiche.md';
-import exercice828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/exercice.json';
-import attendus828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/attendus.json';
-import fiche829 from './../../contenu/terminale/italien/usi-avanzati/fiche.md';
-import exercice829 from './../../contenu/terminale/italien/usi-avanzati/exercice.json';
-import attendus829 from './../../contenu/terminale/italien/usi-avanzati/attendus.json';
-import fiche830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/fiche.md';
-import exercice830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/exercice.json';
-import attendus830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/attendus.json';
-import fiche831 from './../../contenu/terminale/italien/concordanza-tempi/fiche.md';
-import exercice831 from './../../contenu/terminale/italien/concordanza-tempi/exercice.json';
-import attendus831 from './../../contenu/terminale/italien/concordanza-tempi/attendus.json';
-import fiche832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/fiche.md';
-import exercice832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/exercice.json';
-import attendus832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/attendus.json';
-import fiche833 from './../../contenu/terminale/italien/connettivi-argomentazione/fiche.md';
-import exercice833 from './../../contenu/terminale/italien/connettivi-argomentazione/exercice.json';
-import attendus833 from './../../contenu/terminale/italien/connettivi-argomentazione/attendus.json';
-import fiche834 from './../../contenu/terminale/italien/strutture-enfatiche/fiche.md';
-import exercice834 from './../../contenu/terminale/italien/strutture-enfatiche/exercice.json';
-import attendus834 from './../../contenu/terminale/italien/strutture-enfatiche/attendus.json';
-import fiche835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/fiche.md';
-import exercice835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/exercice.json';
-import attendus835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/attendus.json';
-import fiche836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/fiche.md';
-import exercice836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/exercice.json';
-import attendus836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/attendus.json';
-import fiche837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/fiche.md';
-import exercice837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/exercice.json';
-import attendus837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/attendus.json';
-import fiche838 from './../../contenu/terminale/maths-complementaires/suites-evolution/fiche.md';
-import exercice838 from './../../contenu/terminale/maths-complementaires/suites-evolution/exercice.json';
-import attendus838 from './../../contenu/terminale/maths-complementaires/suites-evolution/attendus.json';
-import fiche839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/fiche.md';
-import exercice839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/exercice.json';
-import attendus839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/attendus.json';
-import fiche840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/fiche.md';
-import exercice840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/exercice.json';
-import attendus840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/attendus.json';
-import fiche841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/fiche.md';
-import exercice841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/exercice.json';
-import attendus841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/attendus.json';
-import fiche842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/fiche.md';
-import exercice842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/exercice.json';
-import attendus842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/attendus.json';
-import fiche843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/fiche.md';
-import exercice843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/exercice.json';
-import attendus843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/attendus.json';
-import fiche844 from './../../contenu/terminale/maths-complementaires/calcul-integral/fiche.md';
-import exercice844 from './../../contenu/terminale/maths-complementaires/calcul-integral/exercice.json';
-import attendus844 from './../../contenu/terminale/maths-complementaires/calcul-integral/attendus.json';
-import fiche845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/fiche.md';
-import exercice845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/exercice.json';
-import attendus845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/attendus.json';
-import fiche846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/fiche.md';
-import exercice846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/exercice.json';
-import attendus846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/attendus.json';
-import fiche847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/fiche.md';
-import exercice847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/exercice.json';
-import attendus847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/attendus.json';
-import fiche848 from './../../contenu/terminale/maths-expertes/arithmetique/fiche.md';
-import exercice848 from './../../contenu/terminale/maths-expertes/arithmetique/exercice.json';
-import attendus848 from './../../contenu/terminale/maths-expertes/arithmetique/attendus.json';
-import fiche849 from './../../contenu/terminale/maths-expertes/graphes-matrices/fiche.md';
-import exercice849 from './../../contenu/terminale/maths-expertes/graphes-matrices/exercice.json';
-import attendus849 from './../../contenu/terminale/maths-expertes/graphes-matrices/attendus.json';
-import fiche850 from './../../contenu/terminale/maths-specialite/logique-ensembles/fiche.md';
-import exercice850 from './../../contenu/terminale/maths-specialite/logique-ensembles/exercice.json';
-import attendus850 from './../../contenu/terminale/maths-specialite/logique-ensembles/attendus.json';
-import fiche851 from './../../contenu/terminale/maths-specialite/suites/fiche.md';
-import exercice851 from './../../contenu/terminale/maths-specialite/suites/exercice.json';
-import attendus851 from './../../contenu/terminale/maths-specialite/suites/attendus.json';
-import fiche852 from './../../contenu/terminale/maths-specialite/limites-fonctions/fiche.md';
-import exercice852 from './../../contenu/terminale/maths-specialite/limites-fonctions/exercice.json';
-import attendus852 from './../../contenu/terminale/maths-specialite/limites-fonctions/attendus.json';
-import fiche853 from './../../contenu/terminale/maths-specialite/continuite/fiche.md';
-import exercice853 from './../../contenu/terminale/maths-specialite/continuite/exercice.json';
-import attendus853 from './../../contenu/terminale/maths-specialite/continuite/attendus.json';
-import fiche854 from './../../contenu/terminale/maths-specialite/derivation-convexite/fiche.md';
-import exercice854 from './../../contenu/terminale/maths-specialite/derivation-convexite/exercice.json';
-import attendus854 from './../../contenu/terminale/maths-specialite/derivation-convexite/attendus.json';
-import fiche855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/fiche.md';
-import exercice855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/exercice.json';
-import attendus855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/attendus.json';
-import fiche856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/fiche.md';
-import exercice856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/exercice.json';
-import attendus856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/attendus.json';
-import fiche857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/fiche.md';
-import exercice857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/exercice.json';
-import attendus857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/attendus.json';
-import fiche858 from './../../contenu/terminale/maths-specialite/calcul-integral/fiche.md';
-import exercice858 from './../../contenu/terminale/maths-specialite/calcul-integral/exercice.json';
-import attendus858 from './../../contenu/terminale/maths-specialite/calcul-integral/attendus.json';
-import fiche859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/fiche.md';
-import exercice859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/exercice.json';
-import attendus859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/attendus.json';
-import fiche860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/fiche.md';
-import exercice860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/exercice.json';
-import attendus860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/attendus.json';
-import fiche861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/fiche.md';
-import exercice861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/exercice.json';
-import attendus861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/attendus.json';
-import fiche862 from './../../contenu/terminale/maths-specialite/listes/fiche.md';
-import exercice862 from './../../contenu/terminale/maths-specialite/listes/exercice.json';
-import attendus862 from './../../contenu/terminale/maths-specialite/listes/attendus.json';
-import fiche863 from './../../contenu/terminale/maths-specialite/loi-binomiale/fiche.md';
-import exercice863 from './../../contenu/terminale/maths-specialite/loi-binomiale/exercice.json';
-import attendus863 from './../../contenu/terminale/maths-specialite/loi-binomiale/attendus.json';
-import fiche864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/fiche.md';
-import exercice864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/exercice.json';
-import attendus864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/attendus.json';
-import fiche865 from './../../contenu/terminale/nsi/programmation-et-complexite/fiche.md';
-import exercice865 from './../../contenu/terminale/nsi/programmation-et-complexite/exercice.json';
-import attendus865 from './../../contenu/terminale/nsi/programmation-et-complexite/attendus.json';
-import fiche866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/fiche.md';
-import exercice866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/exercice.json';
-import attendus866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/attendus.json';
-import fiche867 from './../../contenu/terminale/nsi/structures-de-donnees/fiche.md';
-import exercice867 from './../../contenu/terminale/nsi/structures-de-donnees/exercice.json';
-import attendus867 from './../../contenu/terminale/nsi/structures-de-donnees/attendus.json';
-import fiche868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/fiche.md';
-import exercice868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/exercice.json';
-import attendus868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/attendus.json';
-import fiche869 from './../../contenu/terminale/nsi/reseaux-et-routage/fiche.md';
-import exercice869 from './../../contenu/terminale/nsi/reseaux-et-routage/exercice.json';
-import attendus869 from './../../contenu/terminale/nsi/reseaux-et-routage/attendus.json';
-import fiche870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/fiche.md';
-import exercice870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/exercice.json';
-import attendus870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/attendus.json';
-import fiche871 from './../../contenu/terminale/philosophie/methode-dissertation/fiche.md';
-import exercice871 from './../../contenu/terminale/philosophie/methode-dissertation/exercice.json';
-import attendus871 from './../../contenu/terminale/philosophie/methode-dissertation/attendus.json';
-import fiche872 from './../../contenu/terminale/philosophie/methode-explication-texte/fiche.md';
-import exercice872 from './../../contenu/terminale/philosophie/methode-explication-texte/exercice.json';
-import attendus872 from './../../contenu/terminale/philosophie/methode-explication-texte/attendus.json';
-import fiche873 from './../../contenu/terminale/philosophie/reperes-conceptuels/fiche.md';
-import exercice873 from './../../contenu/terminale/philosophie/reperes-conceptuels/exercice.json';
-import attendus873 from './../../contenu/terminale/philosophie/reperes-conceptuels/attendus.json';
-import fiche874 from './../../contenu/terminale/philosophie/conscience/fiche.md';
-import exercice874 from './../../contenu/terminale/philosophie/conscience/exercice.json';
-import attendus874 from './../../contenu/terminale/philosophie/conscience/attendus.json';
-import fiche875 from './../../contenu/terminale/philosophie/inconscient/fiche.md';
-import exercice875 from './../../contenu/terminale/philosophie/inconscient/exercice.json';
-import attendus875 from './../../contenu/terminale/philosophie/inconscient/attendus.json';
-import fiche876 from './../../contenu/terminale/philosophie/temps/fiche.md';
-import exercice876 from './../../contenu/terminale/philosophie/temps/exercice.json';
-import attendus876 from './../../contenu/terminale/philosophie/temps/attendus.json';
-import fiche877 from './../../contenu/terminale/philosophie/langage/fiche.md';
-import exercice877 from './../../contenu/terminale/philosophie/langage/exercice.json';
-import attendus877 from './../../contenu/terminale/philosophie/langage/attendus.json';
-import fiche878 from './../../contenu/terminale/philosophie/raison/fiche.md';
-import exercice878 from './../../contenu/terminale/philosophie/raison/exercice.json';
-import attendus878 from './../../contenu/terminale/philosophie/raison/attendus.json';
-import fiche879 from './../../contenu/terminale/philosophie/verite/fiche.md';
-import exercice879 from './../../contenu/terminale/philosophie/verite/exercice.json';
-import attendus879 from './../../contenu/terminale/philosophie/verite/attendus.json';
-import fiche880 from './../../contenu/terminale/philosophie/science/fiche.md';
-import exercice880 from './../../contenu/terminale/philosophie/science/exercice.json';
-import attendus880 from './../../contenu/terminale/philosophie/science/attendus.json';
-import fiche881 from './../../contenu/terminale/philosophie/technique/fiche.md';
-import exercice881 from './../../contenu/terminale/philosophie/technique/exercice.json';
-import attendus881 from './../../contenu/terminale/philosophie/technique/attendus.json';
-import fiche882 from './../../contenu/terminale/philosophie/travail/fiche.md';
-import exercice882 from './../../contenu/terminale/philosophie/travail/exercice.json';
-import attendus882 from './../../contenu/terminale/philosophie/travail/attendus.json';
-import fiche883 from './../../contenu/terminale/philosophie/art/fiche.md';
-import exercice883 from './../../contenu/terminale/philosophie/art/exercice.json';
-import attendus883 from './../../contenu/terminale/philosophie/art/attendus.json';
-import fiche884 from './../../contenu/terminale/philosophie/nature/fiche.md';
-import exercice884 from './../../contenu/terminale/philosophie/nature/exercice.json';
-import attendus884 from './../../contenu/terminale/philosophie/nature/attendus.json';
-import fiche885 from './../../contenu/terminale/philosophie/religion/fiche.md';
-import exercice885 from './../../contenu/terminale/philosophie/religion/exercice.json';
-import attendus885 from './../../contenu/terminale/philosophie/religion/attendus.json';
-import fiche886 from './../../contenu/terminale/philosophie/liberte/fiche.md';
-import exercice886 from './../../contenu/terminale/philosophie/liberte/exercice.json';
-import attendus886 from './../../contenu/terminale/philosophie/liberte/attendus.json';
-import fiche887 from './../../contenu/terminale/philosophie/devoir/fiche.md';
-import exercice887 from './../../contenu/terminale/philosophie/devoir/exercice.json';
-import attendus887 from './../../contenu/terminale/philosophie/devoir/attendus.json';
-import fiche888 from './../../contenu/terminale/philosophie/bonheur/fiche.md';
-import exercice888 from './../../contenu/terminale/philosophie/bonheur/exercice.json';
-import attendus888 from './../../contenu/terminale/philosophie/bonheur/attendus.json';
-import fiche889 from './../../contenu/terminale/philosophie/justice/fiche.md';
-import exercice889 from './../../contenu/terminale/philosophie/justice/exercice.json';
-import attendus889 from './../../contenu/terminale/philosophie/justice/attendus.json';
-import fiche890 from './../../contenu/terminale/philosophie/etat/fiche.md';
-import exercice890 from './../../contenu/terminale/philosophie/etat/exercice.json';
-import attendus890 from './../../contenu/terminale/philosophie/etat/attendus.json';
-import fiche891 from './../../contenu/terminale/physique-chimie/acide-base-ph/fiche.md';
-import exercice891 from './../../contenu/terminale/physique-chimie/acide-base-ph/exercice.json';
-import fiche892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/fiche.md';
-import exercice892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/exercice.json';
-import attendus892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/attendus.json';
-import fiche893 from './../../contenu/terminale/physique-chimie/titrages/fiche.md';
-import exercice893 from './../../contenu/terminale/physique-chimie/titrages/exercice.json';
-import attendus893 from './../../contenu/terminale/physique-chimie/titrages/attendus.json';
-import fiche894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/fiche.md';
-import exercice894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/exercice.json';
-import attendus894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/attendus.json';
-import fiche895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/fiche.md';
-import exercice895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/exercice.json';
-import fiche896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/fiche.md';
-import exercice896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/exercice.json';
-import attendus896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/attendus.json';
-import fiche897 from './../../contenu/terminale/physique-chimie/electrolyse/fiche.md';
-import exercice897 from './../../contenu/terminale/physique-chimie/electrolyse/exercice.json';
-import attendus897 from './../../contenu/terminale/physique-chimie/electrolyse/attendus.json';
-import fiche898 from './../../contenu/terminale/physique-chimie/synthese-organique/fiche.md';
-import exercice898 from './../../contenu/terminale/physique-chimie/synthese-organique/exercice.json';
-import attendus898 from './../../contenu/terminale/physique-chimie/synthese-organique/attendus.json';
-import fiche899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/fiche.md';
-import exercice899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/exercice.json';
-import attendus899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/attendus.json';
-import fiche900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/fiche.md';
-import exercice900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/exercice.json';
-import attendus900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/attendus.json';
-import fiche901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/fiche.md';
-import exercice901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/exercice.json';
-import attendus901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/attendus.json';
-import fiche902 from './../../contenu/terminale/physique-chimie/gaz-parfait/fiche.md';
-import exercice902 from './../../contenu/terminale/physique-chimie/gaz-parfait/exercice.json';
-import attendus902 from './../../contenu/terminale/physique-chimie/gaz-parfait/attendus.json';
-import fiche903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/fiche.md';
-import exercice903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/exercice.json';
-import attendus903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/attendus.json';
-import fiche904 from './../../contenu/terminale/physique-chimie/dipole-rc/fiche.md';
-import exercice904 from './../../contenu/terminale/physique-chimie/dipole-rc/exercice.json';
-import attendus904 from './../../contenu/terminale/physique-chimie/dipole-rc/attendus.json';
-import fiche905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/fiche.md';
-import exercice905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/exercice.json';
-import attendus905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/attendus.json';
-import fiche906 from './../../contenu/terminale/physique-chimie/lunette-photons/fiche.md';
-import exercice906 from './../../contenu/terminale/physique-chimie/lunette-photons/exercice.json';
-import attendus906 from './../../contenu/terminale/physique-chimie/lunette-photons/attendus.json';
-import fiche907 from './../../contenu/terminale/ses/sources-croissance/fiche.md';
-import exercice907 from './../../contenu/terminale/ses/sources-croissance/exercice.json';
-import attendus907 from './../../contenu/terminale/ses/sources-croissance/attendus.json';
-import fiche908 from './../../contenu/terminale/ses/commerce-mondialisation/fiche.md';
-import exercice908 from './../../contenu/terminale/ses/commerce-mondialisation/exercice.json';
-import attendus908 from './../../contenu/terminale/ses/commerce-mondialisation/attendus.json';
-import fiche909 from './../../contenu/terminale/ses/marche-du-travail-chomage/fiche.md';
-import exercice909 from './../../contenu/terminale/ses/marche-du-travail-chomage/exercice.json';
-import attendus909 from './../../contenu/terminale/ses/marche-du-travail-chomage/attendus.json';
-import fiche910 from './../../contenu/terminale/ses/monnaie-crises-financieres/fiche.md';
-import exercice910 from './../../contenu/terminale/ses/monnaie-crises-financieres/exercice.json';
-import attendus910 from './../../contenu/terminale/ses/monnaie-crises-financieres/attendus.json';
-import fiche911 from './../../contenu/terminale/ses/politiques-economiques/fiche.md';
-import exercice911 from './../../contenu/terminale/ses/politiques-economiques/exercice.json';
-import attendus911 from './../../contenu/terminale/ses/politiques-economiques/attendus.json';
-import fiche912 from './../../contenu/terminale/ses/structure-sociale-classes/fiche.md';
-import exercice912 from './../../contenu/terminale/ses/structure-sociale-classes/exercice.json';
-import attendus912 from './../../contenu/terminale/ses/structure-sociale-classes/attendus.json';
-import fiche913 from './../../contenu/terminale/ses/mobilite-sociale/fiche.md';
-import exercice913 from './../../contenu/terminale/ses/mobilite-sociale/exercice.json';
-import attendus913 from './../../contenu/terminale/ses/mobilite-sociale/attendus.json';
-import fiche914 from './../../contenu/terminale/ses/ecole-et-inegalites/fiche.md';
-import exercice914 from './../../contenu/terminale/ses/ecole-et-inegalites/exercice.json';
-import attendus914 from './../../contenu/terminale/ses/ecole-et-inegalites/attendus.json';
-import fiche915 from './../../contenu/terminale/ses/engagement-politique/fiche.md';
-import exercice915 from './../../contenu/terminale/ses/engagement-politique/exercice.json';
-import attendus915 from './../../contenu/terminale/ses/engagement-politique/attendus.json';
-import fiche916 from './../../contenu/terminale/si/modelisation-des-mouvements/fiche.md';
-import exercice916 from './../../contenu/terminale/si/modelisation-des-mouvements/exercice.json';
-import attendus916 from './../../contenu/terminale/si/modelisation-des-mouvements/attendus.json';
-import fiche917 from './../../contenu/terminale/si/energie-dans-les-systemes/fiche.md';
-import exercice917 from './../../contenu/terminale/si/energie-dans-les-systemes/exercice.json';
-import attendus917 from './../../contenu/terminale/si/energie-dans-les-systemes/attendus.json';
-import fiche918 from './../../contenu/terminale/si/resistance-des-structures/fiche.md';
-import exercice918 from './../../contenu/terminale/si/resistance-des-structures/exercice.json';
-import attendus918 from './../../contenu/terminale/si/resistance-des-structures/attendus.json';
-import fiche919 from './../../contenu/terminale/si/transmission-de-linformation/fiche.md';
-import exercice919 from './../../contenu/terminale/si/transmission-de-linformation/exercice.json';
-import attendus919 from './../../contenu/terminale/si/transmission-de-linformation/attendus.json';
-import fiche920 from './../../contenu/terminale/si/asservissement-et-regulation/fiche.md';
-import exercice920 from './../../contenu/terminale/si/asservissement-et-regulation/exercice.json';
-import attendus920 from './../../contenu/terminale/si/asservissement-et-regulation/attendus.json';
-import fiche921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/fiche.md';
-import exercice921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/exercice.json';
-import attendus921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/attendus.json';
-import fiche922 from './../../contenu/terminale/svt/evolution-et-speciation/fiche.md';
-import exercice922 from './../../contenu/terminale/svt/evolution-et-speciation/exercice.json';
-import attendus922 from './../../contenu/terminale/svt/evolution-et-speciation/attendus.json';
-import fiche923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/fiche.md';
-import exercice923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/exercice.json';
-import attendus923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/attendus.json';
-import fiche924 from './../../contenu/terminale/svt/climats-passes-et-actuels/fiche.md';
-import exercice924 from './../../contenu/terminale/svt/climats-passes-et-actuels/exercice.json';
-import attendus924 from './../../contenu/terminale/svt/climats-passes-et-actuels/attendus.json';
-import fiche925 from './../../contenu/terminale/svt/reflexe-et-motricite/fiche.md';
-import exercice925 from './../../contenu/terminale/svt/reflexe-et-motricite/exercice.json';
-import attendus925 from './../../contenu/terminale/svt/reflexe-et-motricite/attendus.json';
-import fiche926 from './../../contenu/terminale/svt/glycemie-et-diabete/fiche.md';
-import exercice926 from './../../contenu/terminale/svt/glycemie-et-diabete/exercice.json';
-import attendus926 from './../../contenu/terminale/svt/glycemie-et-diabete/attendus.json';
-import fiche927 from './../../contenu/terminale-techno/maths/logique-ensembles/fiche.md';
-import exercice927 from './../../contenu/terminale-techno/maths/logique-ensembles/exercice.json';
-import attendus927 from './../../contenu/terminale-techno/maths/logique-ensembles/attendus.json';
-import fiche928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/fiche.md';
-import exercice928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/exercice.json';
-import attendus928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/attendus.json';
-import fiche929 from './../../contenu/terminale-techno/maths/fonction-inverse/fiche.md';
-import exercice929 from './../../contenu/terminale-techno/maths/fonction-inverse/exercice.json';
-import attendus929 from './../../contenu/terminale-techno/maths/fonction-inverse/attendus.json';
-import fiche930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/fiche.md';
-import exercice930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/exercice.json';
-import attendus930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/attendus.json';
-import fiche931 from './../../contenu/terminale-techno/maths/logarithme-decimal/fiche.md';
-import exercice931 from './../../contenu/terminale-techno/maths/logarithme-decimal/exercice.json';
-import attendus931 from './../../contenu/terminale-techno/maths/logarithme-decimal/attendus.json';
-import fiche932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/fiche.md';
-import exercice932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/exercice.json';
-import attendus932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/attendus.json';
-import fiche933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/fiche.md';
-import exercice933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/exercice.json';
-import fiche934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/fiche.md';
-import exercice934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/exercice.json';
-import attendus934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/attendus.json';
-import fiche935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/fiche.md';
-import exercice935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/exercice.json';
-import attendus935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/attendus.json';
-import fiche936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/fiche.md';
-import exercice936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/exercice.json';
-import attendus936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/attendus.json';
-import fiche937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/fiche.md';
-import exercice937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/exercice.json';
-import attendus937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/attendus.json';
-import fiche938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/fiche.md';
-import exercice938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/exercice.json';
-import attendus938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/attendus.json';
-import fiche939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/fiche.md';
-import exercice939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/exercice.json';
-import attendus939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/attendus.json';
-import fiche940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/fiche.md';
-import exercice940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/exercice.json';
-import attendus940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/attendus.json';
-import fiche941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/fiche.md';
-import exercice941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/exercice.json';
-import attendus941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/attendus.json';
-import fiche942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/fiche.md';
-import exercice942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/exercice.json';
-import attendus942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/attendus.json';
-import fiche943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/fiche.md';
-import exercice943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/exercice.json';
-import attendus943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/attendus.json';
-import fiche944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/fiche.md';
-import exercice944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/exercice.json';
-import attendus944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/attendus.json';
-import fiche945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/fiche.md';
-import exercice945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/exercice.json';
-import attendus945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/attendus.json';
-import fiche946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/fiche.md';
-import exercice946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/exercice.json';
-import attendus946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/attendus.json';
-import fiche947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/fiche.md';
-import exercice947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/exercice.json';
-import attendus947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/attendus.json';
-import fiche948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/fiche.md';
-import exercice948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/exercice.json';
-import attendus948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/attendus.json';
-import fiche949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/fiche.md';
-import exercice949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/exercice.json';
-import attendus949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/attendus.json';
-import fiche950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/fiche.md';
-import exercice950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/exercice.json';
-import attendus950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/attendus.json';
-import fiche951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/fiche.md';
-import exercice951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/exercice.json';
-import attendus951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/attendus.json';
-import fiche952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/fiche.md';
-import exercice952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/exercice.json';
-import attendus952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/attendus.json';
-import fiche953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/fiche.md';
-import exercice953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/exercice.json';
-import attendus953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/attendus.json';
-import fiche954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/fiche.md';
-import exercice954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/exercice.json';
-import attendus954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/attendus.json';
-import fiche955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/fiche.md';
-import exercice955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/exercice.json';
-import attendus955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/attendus.json';
+import fiche613 from './../../contenu/seconde/maths/information-chiffree/fiche.md';
+import exercice613 from './../../contenu/seconde/maths/information-chiffree/exercice.json';
+import attendus613 from './../../contenu/seconde/maths/information-chiffree/attendus.json';
+import fiche614 from './../../contenu/seconde/maths/statistiques/fiche.md';
+import exercice614 from './../../contenu/seconde/maths/statistiques/exercice.json';
+import attendus614 from './../../contenu/seconde/maths/statistiques/attendus.json';
+import fiche615 from './../../contenu/seconde/maths/probabilites/fiche.md';
+import exercice615 from './../../contenu/seconde/maths/probabilites/exercice.json';
+import attendus615 from './../../contenu/seconde/maths/probabilites/attendus.json';
+import fiche616 from './../../contenu/seconde/maths/algorithmique/fiche.md';
+import exercice616 from './../../contenu/seconde/maths/algorithmique/exercice.json';
+import attendus616 from './../../contenu/seconde/maths/algorithmique/attendus.json';
+import fiche617 from './../../contenu/seconde/physique-chimie/description-matiere/fiche.md';
+import exercice617 from './../../contenu/seconde/physique-chimie/description-matiere/exercice.json';
+import attendus617 from './../../contenu/seconde/physique-chimie/description-matiere/attendus.json';
+import fiche618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/fiche.md';
+import exercice618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/exercice.json';
+import attendus618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/attendus.json';
+import fiche619 from './../../contenu/seconde/physique-chimie/transformations-matiere/fiche.md';
+import exercice619 from './../../contenu/seconde/physique-chimie/transformations-matiere/exercice.json';
+import attendus619 from './../../contenu/seconde/physique-chimie/transformations-matiere/attendus.json';
+import fiche620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/fiche.md';
+import exercice620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/exercice.json';
+import attendus620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/attendus.json';
+import fiche621 from './../../contenu/seconde/physique-chimie/ondes-signaux/fiche.md';
+import exercice621 from './../../contenu/seconde/physique-chimie/ondes-signaux/exercice.json';
+import attendus621 from './../../contenu/seconde/physique-chimie/ondes-signaux/attendus.json';
+import fiche622 from './../../contenu/seconde/ses/production-richesses/fiche.md';
+import exercice622 from './../../contenu/seconde/ses/production-richesses/exercice.json';
+import attendus622 from './../../contenu/seconde/ses/production-richesses/attendus.json';
+import fiche623 from './../../contenu/seconde/ses/mesure-production-pib/fiche.md';
+import exercice623 from './../../contenu/seconde/ses/mesure-production-pib/exercice.json';
+import attendus623 from './../../contenu/seconde/ses/mesure-production-pib/attendus.json';
+import fiche624 from './../../contenu/seconde/ses/consommation-revenu/fiche.md';
+import exercice624 from './../../contenu/seconde/ses/consommation-revenu/exercice.json';
+import attendus624 from './../../contenu/seconde/ses/consommation-revenu/attendus.json';
+import fiche625 from './../../contenu/seconde/ses/marche-formation-prix/fiche.md';
+import exercice625 from './../../contenu/seconde/ses/marche-formation-prix/exercice.json';
+import attendus625 from './../../contenu/seconde/ses/marche-formation-prix/attendus.json';
+import fiche626 from './../../contenu/seconde/ses/socialisation-introduction/fiche.md';
+import exercice626 from './../../contenu/seconde/ses/socialisation-introduction/exercice.json';
+import attendus626 from './../../contenu/seconde/ses/socialisation-introduction/attendus.json';
+import fiche627 from './../../contenu/seconde/ses/opinion-publique/fiche.md';
+import exercice627 from './../../contenu/seconde/ses/opinion-publique/exercice.json';
+import attendus627 from './../../contenu/seconde/ses/opinion-publique/attendus.json';
+import fiche628 from './../../contenu/seconde/snt/internet/fiche.md';
+import exercice628 from './../../contenu/seconde/snt/internet/exercice.json';
+import attendus628 from './../../contenu/seconde/snt/internet/attendus.json';
+import fiche629 from './../../contenu/seconde/snt/le-web/fiche.md';
+import exercice629 from './../../contenu/seconde/snt/le-web/exercice.json';
+import attendus629 from './../../contenu/seconde/snt/le-web/attendus.json';
+import fiche630 from './../../contenu/seconde/snt/reseaux-sociaux/fiche.md';
+import exercice630 from './../../contenu/seconde/snt/reseaux-sociaux/exercice.json';
+import attendus630 from './../../contenu/seconde/snt/reseaux-sociaux/attendus.json';
+import fiche631 from './../../contenu/seconde/snt/donnees-structurees/fiche.md';
+import exercice631 from './../../contenu/seconde/snt/donnees-structurees/exercice.json';
+import attendus631 from './../../contenu/seconde/snt/donnees-structurees/attendus.json';
+import fiche632 from './../../contenu/seconde/snt/localisation-cartographie-gps/fiche.md';
+import exercice632 from './../../contenu/seconde/snt/localisation-cartographie-gps/exercice.json';
+import attendus632 from './../../contenu/seconde/snt/localisation-cartographie-gps/attendus.json';
+import fiche633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/fiche.md';
+import exercice633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/exercice.json';
+import attendus633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/attendus.json';
+import fiche634 from './../../contenu/seconde/snt/photographie-numerique/fiche.md';
+import exercice634 from './../../contenu/seconde/snt/photographie-numerique/exercice.json';
+import attendus634 from './../../contenu/seconde/snt/photographie-numerique/attendus.json';
+import fiche635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/fiche.md';
+import exercice635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/exercice.json';
+import attendus635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/attendus.json';
+import fiche636 from './../../contenu/seconde/svt/adn-et-information-genetique/fiche.md';
+import exercice636 from './../../contenu/seconde/svt/adn-et-information-genetique/exercice.json';
+import attendus636 from './../../contenu/seconde/svt/adn-et-information-genetique/attendus.json';
+import fiche637 from './../../contenu/seconde/svt/metabolisme-des-cellules/fiche.md';
+import exercice637 from './../../contenu/seconde/svt/metabolisme-des-cellules/exercice.json';
+import attendus637 from './../../contenu/seconde/svt/metabolisme-des-cellules/attendus.json';
+import fiche638 from './../../contenu/seconde/svt/biodiversite-et-evolution/fiche.md';
+import exercice638 from './../../contenu/seconde/svt/biodiversite-et-evolution/exercice.json';
+import attendus638 from './../../contenu/seconde/svt/biodiversite-et-evolution/attendus.json';
+import fiche639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/fiche.md';
+import exercice639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/exercice.json';
+import attendus639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/attendus.json';
+import fiche640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/fiche.md';
+import exercice640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/exercice.json';
+import attendus640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/attendus.json';
+import fiche641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/fiche.md';
+import exercice641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/exercice.json';
+import attendus641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/attendus.json';
+import fiche642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/fiche.md';
+import exercice642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/exercice.json';
+import attendus642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/attendus.json';
+import fiche643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/fiche.md';
+import exercice643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/exercice.json';
+import attendus643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/attendus.json';
+import fiche644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/fiche.md';
+import exercice644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/exercice.json';
+import attendus644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/attendus.json';
+import fiche645 from './../../contenu/premiere/allemand/passiv/fiche.md';
+import exercice645 from './../../contenu/premiere/allemand/passiv/exercice.json';
+import attendus645 from './../../contenu/premiere/allemand/passiv/attendus.json';
+import fiche646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/fiche.md';
+import exercice646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/exercice.json';
+import attendus646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/attendus.json';
+import fiche647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/fiche.md';
+import exercice647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/exercice.json';
+import attendus647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/attendus.json';
+import fiche648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/fiche.md';
+import exercice648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/exercice.json';
+import attendus648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/attendus.json';
+import fiche649 from './../../contenu/premiere/allemand/landeskunde-literatur/fiche.md';
+import exercice649 from './../../contenu/premiere/allemand/landeskunde-literatur/exercice.json';
+import attendus649 from './../../contenu/premiere/allemand/landeskunde-literatur/attendus.json';
+import fiche650 from './../../contenu/premiere/anglais/aspects-simple-continu/fiche.md';
+import exercice650 from './../../contenu/premiere/anglais/aspects-simple-continu/exercice.json';
+import attendus650 from './../../contenu/premiere/anglais/aspects-simple-continu/attendus.json';
+import fiche651 from './../../contenu/premiere/anglais/gerondif-infinitif/fiche.md';
+import exercice651 from './../../contenu/premiere/anglais/gerondif-infinitif/exercice.json';
+import attendus651 from './../../contenu/premiere/anglais/gerondif-infinitif/attendus.json';
+import fiche652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/fiche.md';
+import exercice652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/exercice.json';
+import attendus652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/attendus.json';
+import fiche653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/fiche.md';
+import exercice653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/exercice.json';
+import attendus653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/attendus.json';
+import fiche654 from './../../contenu/premiere/anglais/voix-passive-emplois/fiche.md';
+import exercice654 from './../../contenu/premiere/anglais/voix-passive-emplois/exercice.json';
+import attendus654 from './../../contenu/premiere/anglais/voix-passive-emplois/attendus.json';
+import fiche655 from './../../contenu/premiere/anglais/futur-et-hypotheses/fiche.md';
+import exercice655 from './../../contenu/premiere/anglais/futur-et-hypotheses/exercice.json';
+import attendus655 from './../../contenu/premiere/anglais/futur-et-hypotheses/attendus.json';
+import fiche656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/fiche.md';
+import exercice656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/exercice.json';
+import attendus656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/attendus.json';
+import fiche657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/fiche.md';
+import exercice657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/exercice.json';
+import attendus657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/attendus.json';
+import fiche658 from './../../contenu/premiere/anglais/civilisation-litterature/fiche.md';
+import exercice658 from './../../contenu/premiere/anglais/civilisation-litterature/exercice.json';
+import attendus658 from './../../contenu/premiere/anglais/civilisation-litterature/attendus.json';
+import fiche659 from './../../contenu/premiere/arts/architecture/fiche.md';
+import exercice659 from './../../contenu/premiere/arts/architecture/exercice.json';
+import attendus659 from './../../contenu/premiere/arts/architecture/attendus.json';
+import fiche660 from './../../contenu/premiere/arts/histoire-musique/fiche.md';
+import exercice660 from './../../contenu/premiere/arts/histoire-musique/exercice.json';
+import attendus660 from './../../contenu/premiere/arts/histoire-musique/attendus.json';
+import fiche661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/fiche.md';
+import exercice661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/exercice.json';
+import attendus661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/attendus.json';
+import fiche662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/fiche.md';
+import exercice662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/exercice.json';
+import attendus662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/attendus.json';
+import fiche663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/fiche.md';
+import exercice663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/exercice.json';
+import attendus663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/attendus.json';
+import fiche664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/fiche.md';
+import exercice664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/exercice.json';
+import attendus664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/attendus.json';
+import fiche665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/fiche.md';
+import exercice665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/exercice.json';
+import attendus665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/attendus.json';
+import fiche666 from './../../contenu/premiere/espagnol/subjuntivo-usos/fiche.md';
+import exercice666 from './../../contenu/premiere/espagnol/subjuntivo-usos/exercice.json';
+import attendus666 from './../../contenu/premiere/espagnol/subjuntivo-usos/attendus.json';
+import fiche667 from './../../contenu/premiere/espagnol/relativos/fiche.md';
+import exercice667 from './../../contenu/premiere/espagnol/relativos/exercice.json';
+import attendus667 from './../../contenu/premiere/espagnol/relativos/attendus.json';
+import fiche668 from './../../contenu/premiere/espagnol/perifrasis/fiche.md';
+import exercice668 from './../../contenu/premiere/espagnol/perifrasis/exercice.json';
+import attendus668 from './../../contenu/premiere/espagnol/perifrasis/attendus.json';
+import fiche669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/fiche.md';
+import exercice669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/exercice.json';
+import attendus669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/attendus.json';
+import fiche670 from './../../contenu/premiere/espagnol/voz-pasiva/fiche.md';
+import exercice670 from './../../contenu/premiere/espagnol/voz-pasiva/exercice.json';
+import attendus670 from './../../contenu/premiere/espagnol/voz-pasiva/attendus.json';
+import fiche671 from './../../contenu/premiere/espagnol/estilo-indirecto/fiche.md';
+import exercice671 from './../../contenu/premiere/espagnol/estilo-indirecto/exercice.json';
+import attendus671 from './../../contenu/premiere/espagnol/estilo-indirecto/attendus.json';
+import fiche672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/fiche.md';
+import exercice672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/exercice.json';
+import attendus672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/attendus.json';
+import fiche673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/fiche.md';
+import exercice673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/exercice.json';
+import attendus673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/attendus.json';
+import fiche674 from './../../contenu/premiere/espagnol/civilizacion-literatura/fiche.md';
+import exercice674 from './../../contenu/premiere/espagnol/civilizacion-literatura/exercice.json';
+import attendus674 from './../../contenu/premiere/espagnol/civilizacion-literatura/attendus.json';
+import fiche675 from './../../contenu/premiere/francais/grammaire-premiere/fiche.md';
+import exercice675 from './../../contenu/premiere/francais/grammaire-premiere/exercice.json';
+import attendus675 from './../../contenu/premiere/francais/grammaire-premiere/attendus.json';
+import fiche676 from './../../contenu/premiere/francais/commentaire-litteraire/fiche.md';
+import exercice676 from './../../contenu/premiere/francais/commentaire-litteraire/exercice.json';
+import attendus676 from './../../contenu/premiere/francais/commentaire-litteraire/attendus.json';
+import fiche677 from './../../contenu/premiere/francais/roman-et-recit/fiche.md';
+import exercice677 from './../../contenu/premiere/francais/roman-et-recit/exercice.json';
+import attendus677 from './../../contenu/premiere/francais/roman-et-recit/attendus.json';
+import fiche678 from './../../contenu/premiere/francais/poesie-19-21/fiche.md';
+import exercice678 from './../../contenu/premiere/francais/poesie-19-21/exercice.json';
+import attendus678 from './../../contenu/premiere/francais/poesie-19-21/attendus.json';
+import fiche679 from './../../contenu/premiere/francais/contraction-essai/fiche.md';
+import exercice679 from './../../contenu/premiere/francais/contraction-essai/exercice.json';
+import attendus679 from './../../contenu/premiere/francais/contraction-essai/attendus.json';
+import fiche680 from './../../contenu/premiere/francais/litterature-idees-16-18/fiche.md';
+import exercice680 from './../../contenu/premiere/francais/litterature-idees-16-18/exercice.json';
+import attendus680 from './../../contenu/premiere/francais/litterature-idees-16-18/attendus.json';
+import fiche681 from './../../contenu/premiere/francais/dissertation/fiche.md';
+import exercice681 from './../../contenu/premiere/francais/dissertation/exercice.json';
+import attendus681 from './../../contenu/premiere/francais/dissertation/attendus.json';
+import fiche682 from './../../contenu/premiere/francais/theatre-17-21/fiche.md';
+import exercice682 from './../../contenu/premiere/francais/theatre-17-21/exercice.json';
+import attendus682 from './../../contenu/premiere/francais/theatre-17-21/attendus.json';
+import fiche683 from './../../contenu/premiere/francais/epreuve-orale/fiche.md';
+import exercice683 from './../../contenu/premiere/francais/epreuve-orale/exercice.json';
+import attendus683 from './../../contenu/premiere/francais/epreuve-orale/attendus.json';
+import fiche684 from './../../contenu/premiere/hggsp/democratie/fiche.md';
+import exercice684 from './../../contenu/premiere/hggsp/democratie/exercice.json';
+import attendus684 from './../../contenu/premiere/hggsp/democratie/attendus.json';
+import fiche685 from './../../contenu/premiere/hggsp/puissances-internationales/fiche.md';
+import exercice685 from './../../contenu/premiere/hggsp/puissances-internationales/exercice.json';
+import attendus685 from './../../contenu/premiere/hggsp/puissances-internationales/attendus.json';
+import fiche686 from './../../contenu/premiere/hggsp/frontieres/fiche.md';
+import exercice686 from './../../contenu/premiere/hggsp/frontieres/exercice.json';
+import attendus686 from './../../contenu/premiere/hggsp/frontieres/attendus.json';
+import fiche687 from './../../contenu/premiere/hggsp/s-informer/fiche.md';
+import exercice687 from './../../contenu/premiere/hggsp/s-informer/exercice.json';
+import attendus687 from './../../contenu/premiere/hggsp/s-informer/attendus.json';
+import fiche688 from './../../contenu/premiere/hggsp/etats-et-religions/fiche.md';
+import exercice688 from './../../contenu/premiere/hggsp/etats-et-religions/exercice.json';
+import attendus688 from './../../contenu/premiere/hggsp/etats-et-religions/attendus.json';
+import fiche689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/fiche.md';
+import exercice689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/exercice.json';
+import attendus689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/attendus.json';
+import fiche690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/fiche.md';
+import exercice690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/exercice.json';
+import attendus690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/attendus.json';
+import fiche691 from './../../contenu/premiere/hist-geo/industrialisation-19e/fiche.md';
+import exercice691 from './../../contenu/premiere/hist-geo/industrialisation-19e/exercice.json';
+import attendus691 from './../../contenu/premiere/hist-geo/industrialisation-19e/attendus.json';
+import fiche692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/fiche.md';
+import exercice692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/exercice.json';
+import attendus692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/attendus.json';
+import fiche693 from './../../contenu/premiere/hist-geo/metropolisation-france/fiche.md';
+import exercice693 from './../../contenu/premiere/hist-geo/metropolisation-france/exercice.json';
+import attendus693 from './../../contenu/premiere/hist-geo/metropolisation-france/attendus.json';
+import fiche694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/fiche.md';
+import exercice694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/exercice.json';
+import attendus694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/attendus.json';
+import fiche695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/fiche.md';
+import exercice695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/exercice.json';
+import attendus695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/attendus.json';
+import fiche696 from './../../contenu/premiere/italien/congiuntivo-usi/fiche.md';
+import exercice696 from './../../contenu/premiere/italien/congiuntivo-usi/exercice.json';
+import attendus696 from './../../contenu/premiere/italien/congiuntivo-usi/attendus.json';
+import fiche697 from './../../contenu/premiere/italien/pronomi-relativi/fiche.md';
+import exercice697 from './../../contenu/premiere/italien/pronomi-relativi/exercice.json';
+import attendus697 from './../../contenu/premiere/italien/pronomi-relativi/attendus.json';
+import fiche698 from './../../contenu/premiere/italien/perifrasi/fiche.md';
+import exercice698 from './../../contenu/premiere/italien/perifrasi/exercice.json';
+import attendus698 from './../../contenu/premiere/italien/perifrasi/attendus.json';
+import fiche699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/fiche.md';
+import exercice699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/exercice.json';
+import attendus699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/attendus.json';
+import fiche700 from './../../contenu/premiere/italien/forma-passiva/fiche.md';
+import exercice700 from './../../contenu/premiere/italien/forma-passiva/exercice.json';
+import attendus700 from './../../contenu/premiere/italien/forma-passiva/attendus.json';
+import fiche701 from './../../contenu/premiere/italien/discorso-indiretto/fiche.md';
+import exercice701 from './../../contenu/premiere/italien/discorso-indiretto/exercice.json';
+import attendus701 from './../../contenu/premiere/italien/discorso-indiretto/attendus.json';
+import fiche702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/fiche.md';
+import exercice702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/exercice.json';
+import attendus702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/attendus.json';
+import fiche703 from './../../contenu/premiere/italien/civilta-rinascimento/fiche.md';
+import exercice703 from './../../contenu/premiere/italien/civilta-rinascimento/exercice.json';
+import attendus703 from './../../contenu/premiere/italien/civilta-rinascimento/attendus.json';
+import fiche704 from './../../contenu/premiere/italien/civilta-letteratura/fiche.md';
+import exercice704 from './../../contenu/premiere/italien/civilta-letteratura/exercice.json';
+import attendus704 from './../../contenu/premiere/italien/civilta-letteratura/attendus.json';
+import fiche705 from './../../contenu/premiere/langues-anciennes/mythologie/fiche.md';
+import exercice705 from './../../contenu/premiere/langues-anciennes/mythologie/exercice.json';
+import attendus705 from './../../contenu/premiere/langues-anciennes/mythologie/attendus.json';
+import fiche706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/fiche.md';
+import exercice706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/exercice.json';
+import attendus706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/attendus.json';
+import fiche707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/fiche.md';
+import exercice707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/exercice.json';
+import attendus707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/attendus.json';
+import fiche708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/fiche.md';
+import exercice708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/exercice.json';
+import attendus708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/attendus.json';
+import fiche709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/fiche.md';
+import exercice709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/exercice.json';
+import attendus709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/attendus.json';
+import fiche710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/fiche.md';
+import exercice710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/exercice.json';
+import attendus710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/attendus.json';
+import fiche711 from './../../contenu/premiere/maths-specialite/second-degre/fiche.md';
+import exercice711 from './../../contenu/premiere/maths-specialite/second-degre/exercice.json';
+import attendus711 from './../../contenu/premiere/maths-specialite/second-degre/attendus.json';
+import fiche712 from './../../contenu/premiere/maths-specialite/suites-numeriques/fiche.md';
+import exercice712 from './../../contenu/premiere/maths-specialite/suites-numeriques/exercice.json';
+import attendus712 from './../../contenu/premiere/maths-specialite/suites-numeriques/attendus.json';
+import fiche713 from './../../contenu/premiere/maths-specialite/derivation/fiche.md';
+import exercice713 from './../../contenu/premiere/maths-specialite/derivation/exercice.json';
+import attendus713 from './../../contenu/premiere/maths-specialite/derivation/attendus.json';
+import fiche714 from './../../contenu/premiere/maths-specialite/variations-courbes/fiche.md';
+import exercice714 from './../../contenu/premiere/maths-specialite/variations-courbes/exercice.json';
+import attendus714 from './../../contenu/premiere/maths-specialite/variations-courbes/attendus.json';
+import fiche715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/fiche.md';
+import exercice715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/exercice.json';
+import attendus715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/attendus.json';
+import fiche716 from './../../contenu/premiere/maths-specialite/trigonometrie/fiche.md';
+import exercice716 from './../../contenu/premiere/maths-specialite/trigonometrie/exercice.json';
+import attendus716 from './../../contenu/premiere/maths-specialite/trigonometrie/attendus.json';
+import fiche717 from './../../contenu/premiere/maths-specialite/produit-scalaire/fiche.md';
+import exercice717 from './../../contenu/premiere/maths-specialite/produit-scalaire/exercice.json';
+import attendus717 from './../../contenu/premiere/maths-specialite/produit-scalaire/attendus.json';
+import fiche718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/fiche.md';
+import exercice718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/exercice.json';
+import attendus718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/attendus.json';
+import fiche719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/fiche.md';
+import exercice719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/exercice.json';
+import attendus719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/attendus.json';
+import fiche720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/fiche.md';
+import exercice720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/exercice.json';
+import attendus720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/attendus.json';
+import fiche721 from './../../contenu/premiere/nsi/representation-des-donnees/fiche.md';
+import exercice721 from './../../contenu/premiere/nsi/representation-des-donnees/exercice.json';
+import attendus721 from './../../contenu/premiere/nsi/representation-des-donnees/attendus.json';
+import fiche722 from './../../contenu/premiere/nsi/types-construits/fiche.md';
+import exercice722 from './../../contenu/premiere/nsi/types-construits/exercice.json';
+import attendus722 from './../../contenu/premiere/nsi/types-construits/attendus.json';
+import fiche723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/fiche.md';
+import exercice723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/exercice.json';
+import attendus723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/attendus.json';
+import fiche724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/fiche.md';
+import exercice724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/exercice.json';
+import attendus724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/attendus.json';
+import fiche725 from './../../contenu/premiere/nsi/architecture-et-systeme/fiche.md';
+import exercice725 from './../../contenu/premiere/nsi/architecture-et-systeme/exercice.json';
+import attendus725 from './../../contenu/premiere/nsi/architecture-et-systeme/attendus.json';
+import fiche726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/fiche.md';
+import exercice726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/exercice.json';
+import attendus726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/attendus.json';
+import fiche727 from './../../contenu/premiere/physique-chimie/transformations-matiere/fiche.md';
+import exercice727 from './../../contenu/premiere/physique-chimie/transformations-matiere/exercice.json';
+import attendus727 from './../../contenu/premiere/physique-chimie/transformations-matiere/attendus.json';
+import fiche728 from './../../contenu/premiere/physique-chimie/chimie-organique/fiche.md';
+import exercice728 from './../../contenu/premiere/physique-chimie/chimie-organique/exercice.json';
+import attendus728 from './../../contenu/premiere/physique-chimie/chimie-organique/attendus.json';
+import fiche729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/fiche.md';
+import exercice729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/exercice.json';
+import attendus729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/attendus.json';
+import fiche730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/fiche.md';
+import exercice730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/exercice.json';
+import attendus730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/attendus.json';
+import fiche731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/fiche.md';
+import exercice731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/exercice.json';
+import attendus731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/attendus.json';
+import fiche732 from './../../contenu/premiere/physique-chimie/ondes-signaux/fiche.md';
+import exercice732 from './../../contenu/premiere/physique-chimie/ondes-signaux/exercice.json';
+import attendus732 from './../../contenu/premiere/physique-chimie/ondes-signaux/attendus.json';
+import fiche733 from './../../contenu/premiere/ses/marche-concurrentiel/fiche.md';
+import exercice733 from './../../contenu/premiere/ses/marche-concurrentiel/exercice.json';
+import attendus733 from './../../contenu/premiere/ses/marche-concurrentiel/attendus.json';
+import fiche734 from './../../contenu/premiere/ses/marches-imparfaits/fiche.md';
+import exercice734 from './../../contenu/premiere/ses/marches-imparfaits/exercice.json';
+import attendus734 from './../../contenu/premiere/ses/marches-imparfaits/attendus.json';
+import fiche735 from './../../contenu/premiere/ses/defaillances-de-marche/fiche.md';
+import exercice735 from './../../contenu/premiere/ses/defaillances-de-marche/exercice.json';
+import attendus735 from './../../contenu/premiere/ses/defaillances-de-marche/attendus.json';
+import fiche736 from './../../contenu/premiere/ses/monnaie-et-financement/fiche.md';
+import exercice736 from './../../contenu/premiere/ses/monnaie-et-financement/exercice.json';
+import attendus736 from './../../contenu/premiere/ses/monnaie-et-financement/attendus.json';
+import fiche737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/fiche.md';
+import exercice737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/exercice.json';
+import attendus737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/attendus.json';
+import fiche738 from './../../contenu/premiere/ses/liens-sociaux/fiche.md';
+import exercice738 from './../../contenu/premiere/ses/liens-sociaux/exercice.json';
+import attendus738 from './../../contenu/premiere/ses/liens-sociaux/attendus.json';
+import fiche739 from './../../contenu/premiere/ses/deviance-controle-social/fiche.md';
+import exercice739 from './../../contenu/premiere/ses/deviance-controle-social/exercice.json';
+import attendus739 from './../../contenu/premiere/ses/deviance-controle-social/attendus.json';
+import fiche740 from './../../contenu/premiere/ses/voter-participation/fiche.md';
+import exercice740 from './../../contenu/premiere/ses/voter-participation/exercice.json';
+import attendus740 from './../../contenu/premiere/ses/voter-participation/attendus.json';
+import fiche741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/fiche.md';
+import exercice741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/exercice.json';
+import attendus741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/attendus.json';
+import fiche742 from './../../contenu/premiere/si/chaine-denergie/fiche.md';
+import exercice742 from './../../contenu/premiere/si/chaine-denergie/exercice.json';
+import attendus742 from './../../contenu/premiere/si/chaine-denergie/attendus.json';
+import fiche743 from './../../contenu/premiere/si/chaine-dinformation/fiche.md';
+import exercice743 from './../../contenu/premiere/si/chaine-dinformation/exercice.json';
+import attendus743 from './../../contenu/premiere/si/chaine-dinformation/attendus.json';
+import fiche744 from './../../contenu/premiere/si/comportement-des-materiaux/fiche.md';
+import exercice744 from './../../contenu/premiere/si/comportement-des-materiaux/exercice.json';
+import attendus744 from './../../contenu/premiere/si/comportement-des-materiaux/attendus.json';
+import fiche745 from './../../contenu/premiere/si/mecanique-des-solides/fiche.md';
+import exercice745 from './../../contenu/premiere/si/mecanique-des-solides/exercice.json';
+import attendus745 from './../../contenu/premiere/si/mecanique-des-solides/attendus.json';
+import fiche746 from './../../contenu/premiere/svt/mutations-et-variabilite/fiche.md';
+import exercice746 from './../../contenu/premiere/svt/mutations-et-variabilite/exercice.json';
+import attendus746 from './../../contenu/premiere/svt/mutations-et-variabilite/attendus.json';
+import fiche747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/fiche.md';
+import exercice747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/exercice.json';
+import attendus747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/attendus.json';
+import fiche748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/fiche.md';
+import exercice748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/exercice.json';
+import attendus748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/attendus.json';
+import fiche749 from './../../contenu/premiere/svt/ecosystemes-et-services/fiche.md';
+import exercice749 from './../../contenu/premiere/svt/ecosystemes-et-services/exercice.json';
+import attendus749 from './../../contenu/premiere/svt/ecosystemes-et-services/attendus.json';
+import fiche750 from './../../contenu/premiere/svt/variation-genetique-et-sante/fiche.md';
+import exercice750 from './../../contenu/premiere/svt/variation-genetique-et-sante/exercice.json';
+import attendus750 from './../../contenu/premiere/svt/variation-genetique-et-sante/attendus.json';
+import fiche751 from './../../contenu/premiere-techno/maths/suites-numeriques/fiche.md';
+import exercice751 from './../../contenu/premiere-techno/maths/suites-numeriques/exercice.json';
+import attendus751 from './../../contenu/premiere-techno/maths/suites-numeriques/attendus.json';
+import fiche752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/fiche.md';
+import exercice752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/exercice.json';
+import attendus752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/attendus.json';
+import fiche753 from './../../contenu/premiere-techno/maths/derivation/fiche.md';
+import exercice753 from './../../contenu/premiere-techno/maths/derivation/exercice.json';
+import attendus753 from './../../contenu/premiere-techno/maths/derivation/attendus.json';
+import fiche754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/fiche.md';
+import exercice754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/exercice.json';
+import attendus754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/attendus.json';
+import fiche755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/fiche.md';
+import exercice755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/exercice.json';
+import attendus755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/attendus.json';
+import fiche756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/fiche.md';
+import exercice756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/exercice.json';
+import attendus756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/attendus.json';
+import fiche757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/fiche.md';
+import exercice757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/exercice.json';
+import attendus757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/attendus.json';
+import fiche758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/fiche.md';
+import exercice758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/exercice.json';
+import attendus758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/attendus.json';
+import fiche759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/fiche.md';
+import exercice759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/exercice.json';
+import attendus759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/attendus.json';
+import fiche760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/fiche.md';
+import exercice760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/exercice.json';
+import attendus760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/attendus.json';
+import fiche761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/fiche.md';
+import exercice761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/exercice.json';
+import attendus761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/attendus.json';
+import fiche762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/fiche.md';
+import exercice762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/exercice.json';
+import attendus762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/attendus.json';
+import fiche763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/fiche.md';
+import exercice763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/exercice.json';
+import attendus763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/attendus.json';
+import fiche764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/fiche.md';
+import exercice764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/exercice.json';
+import attendus764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/attendus.json';
+import fiche765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/fiche.md';
+import exercice765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/exercice.json';
+import attendus765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/attendus.json';
+import fiche766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/fiche.md';
+import exercice766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/exercice.json';
+import attendus766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/attendus.json';
+import fiche767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/fiche.md';
+import exercice767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/exercice.json';
+import attendus767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/attendus.json';
+import fiche768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/fiche.md';
+import exercice768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/exercice.json';
+import attendus768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/attendus.json';
+import fiche769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/fiche.md';
+import exercice769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/exercice.json';
+import attendus769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/attendus.json';
+import fiche770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/fiche.md';
+import exercice770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/exercice.json';
+import attendus770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/attendus.json';
+import fiche771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/fiche.md';
+import exercice771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/exercice.json';
+import attendus771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/attendus.json';
+import fiche772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/fiche.md';
+import exercice772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/exercice.json';
+import attendus772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/attendus.json';
+import fiche773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/fiche.md';
+import exercice773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/exercice.json';
+import attendus773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/attendus.json';
+import fiche774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/fiche.md';
+import exercice774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/exercice.json';
+import attendus774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/attendus.json';
+import fiche775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/fiche.md';
+import exercice775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/exercice.json';
+import attendus775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/attendus.json';
+import fiche776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/fiche.md';
+import exercice776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/exercice.json';
+import attendus776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/attendus.json';
+import fiche777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/fiche.md';
+import exercice777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/exercice.json';
+import attendus777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/attendus.json';
+import fiche778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/fiche.md';
+import exercice778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/exercice.json';
+import attendus778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/attendus.json';
+import fiche779 from './../../contenu/terminale/allemand/konnektoren-argumentation/fiche.md';
+import exercice779 from './../../contenu/terminale/allemand/konnektoren-argumentation/exercice.json';
+import attendus779 from './../../contenu/terminale/allemand/konnektoren-argumentation/attendus.json';
+import fiche780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/fiche.md';
+import exercice780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/exercice.json';
+import attendus780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/attendus.json';
+import fiche781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/fiche.md';
+import exercice781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/exercice.json';
+import attendus781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/attendus.json';
+import fiche782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/fiche.md';
+import exercice782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/exercice.json';
+import attendus782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/attendus.json';
+import fiche783 from './../../contenu/terminale/allemand/nominalstil/fiche.md';
+import exercice783 from './../../contenu/terminale/allemand/nominalstil/exercice.json';
+import attendus783 from './../../contenu/terminale/allemand/nominalstil/attendus.json';
+import fiche784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/fiche.md';
+import exercice784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/exercice.json';
+import attendus784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/attendus.json';
+import fiche785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/fiche.md';
+import exercice785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/exercice.json';
+import attendus785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/attendus.json';
+import fiche786 from './../../contenu/terminale/anglais/systeme-verbal/fiche.md';
+import exercice786 from './../../contenu/terminale/anglais/systeme-verbal/exercice.json';
+import attendus786 from './../../contenu/terminale/anglais/systeme-verbal/attendus.json';
+import fiche787 from './../../contenu/terminale/anglais/modalite/fiche.md';
+import exercice787 from './../../contenu/terminale/anglais/modalite/exercice.json';
+import attendus787 from './../../contenu/terminale/anglais/modalite/attendus.json';
+import fiche788 from './../../contenu/terminale/anglais/irreel-hypotheses/fiche.md';
+import exercice788 from './../../contenu/terminale/anglais/irreel-hypotheses/exercice.json';
+import attendus788 from './../../contenu/terminale/anglais/irreel-hypotheses/attendus.json';
+import fiche789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/fiche.md';
+import exercice789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/exercice.json';
+import attendus789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/attendus.json';
+import fiche790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/fiche.md';
+import exercice790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/exercice.json';
+import attendus790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/attendus.json';
+import fiche791 from './../../contenu/terminale/anglais/structures-complexes/fiche.md';
+import exercice791 from './../../contenu/terminale/anglais/structures-complexes/exercice.json';
+import attendus791 from './../../contenu/terminale/anglais/structures-complexes/attendus.json';
+import fiche792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/fiche.md';
+import exercice792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/exercice.json';
+import attendus792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/attendus.json';
+import fiche793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/fiche.md';
+import exercice793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/exercice.json';
+import attendus793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/attendus.json';
+import fiche794 from './../../contenu/terminale/arts/cinema/fiche.md';
+import exercice794 from './../../contenu/terminale/arts/cinema/exercice.json';
+import attendus794 from './../../contenu/terminale/arts/cinema/attendus.json';
+import fiche795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/fiche.md';
+import exercice795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/exercice.json';
+import attendus795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/attendus.json';
+import fiche796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/fiche.md';
+import exercice796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/exercice.json';
+import attendus796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/attendus.json';
+import fiche797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/fiche.md';
+import exercice797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/exercice.json';
+import attendus797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/attendus.json';
+import fiche798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/fiche.md';
+import exercice798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/exercice.json';
+import attendus798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/attendus.json';
+import fiche799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/fiche.md';
+import exercice799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/exercice.json';
+import attendus799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/attendus.json';
+import fiche800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/fiche.md';
+import exercice800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/exercice.json';
+import attendus800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/attendus.json';
+import fiche801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/fiche.md';
+import exercice801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/exercice.json';
+import attendus801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/attendus.json';
+import fiche802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/fiche.md';
+import exercice802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/exercice.json';
+import attendus802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/attendus.json';
+import fiche803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/fiche.md';
+import exercice803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/exercice.json';
+import attendus803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/attendus.json';
+import fiche804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/fiche.md';
+import exercice804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/exercice.json';
+import attendus804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/attendus.json';
+import fiche805 from './../../contenu/terminale/espagnol/concordancia-tiempos/fiche.md';
+import exercice805 from './../../contenu/terminale/espagnol/concordancia-tiempos/exercice.json';
+import attendus805 from './../../contenu/terminale/espagnol/concordancia-tiempos/attendus.json';
+import fiche806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/fiche.md';
+import exercice806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/exercice.json';
+import attendus806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/attendus.json';
+import fiche807 from './../../contenu/terminale/espagnol/conectores-argumentacion/fiche.md';
+import exercice807 from './../../contenu/terminale/espagnol/conectores-argumentacion/exercice.json';
+import attendus807 from './../../contenu/terminale/espagnol/conectores-argumentacion/attendus.json';
+import fiche808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/fiche.md';
+import exercice808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/exercice.json';
+import attendus808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/attendus.json';
+import fiche809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/fiche.md';
+import exercice809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/exercice.json';
+import attendus809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/attendus.json';
+import fiche810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/fiche.md';
+import exercice810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/exercice.json';
+import attendus810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/attendus.json';
+import fiche811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/fiche.md';
+import exercice811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/exercice.json';
+import attendus811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/attendus.json';
+import fiche812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/fiche.md';
+import exercice812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/exercice.json';
+import attendus812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/attendus.json';
+import fiche813 from './../../contenu/terminale/grand-oral/construire-l-expose/fiche.md';
+import exercice813 from './../../contenu/terminale/grand-oral/construire-l-expose/exercice.json';
+import attendus813 from './../../contenu/terminale/grand-oral/construire-l-expose/attendus.json';
+import fiche814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/fiche.md';
+import exercice814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/exercice.json';
+import attendus814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/attendus.json';
+import fiche815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/fiche.md';
+import exercice815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/exercice.json';
+import attendus815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/attendus.json';
+import fiche816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/fiche.md';
+import exercice816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/exercice.json';
+import attendus816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/attendus.json';
+import fiche817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/fiche.md';
+import exercice817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/exercice.json';
+import attendus817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/attendus.json';
+import fiche818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/fiche.md';
+import exercice818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/exercice.json';
+import attendus818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/attendus.json';
+import fiche819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/fiche.md';
+import exercice819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/exercice.json';
+import attendus819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/attendus.json';
+import fiche820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/fiche.md';
+import exercice820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/exercice.json';
+import attendus820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/attendus.json';
+import fiche821 from './../../contenu/terminale/hggsp/histoire-et-memoires/fiche.md';
+import exercice821 from './../../contenu/terminale/hggsp/histoire-et-memoires/exercice.json';
+import attendus821 from './../../contenu/terminale/hggsp/histoire-et-memoires/attendus.json';
+import fiche822 from './../../contenu/terminale/hggsp/patrimoine/fiche.md';
+import exercice822 from './../../contenu/terminale/hggsp/patrimoine/exercice.json';
+import attendus822 from './../../contenu/terminale/hggsp/patrimoine/attendus.json';
+import fiche823 from './../../contenu/terminale/hggsp/environnement/fiche.md';
+import exercice823 from './../../contenu/terminale/hggsp/environnement/exercice.json';
+import attendus823 from './../../contenu/terminale/hggsp/environnement/attendus.json';
+import fiche824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/fiche.md';
+import exercice824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/exercice.json';
+import attendus824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/attendus.json';
+import fiche825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/fiche.md';
+import exercice825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/exercice.json';
+import attendus825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/attendus.json';
+import fiche826 from './../../contenu/terminale/hist-geo/guerre-froide/fiche.md';
+import exercice826 from './../../contenu/terminale/hist-geo/guerre-froide/exercice.json';
+import attendus826 from './../../contenu/terminale/hist-geo/guerre-froide/attendus.json';
+import fiche827 from './../../contenu/terminale/hist-geo/decolonisation/fiche.md';
+import exercice827 from './../../contenu/terminale/hist-geo/decolonisation/exercice.json';
+import attendus827 from './../../contenu/terminale/hist-geo/decolonisation/attendus.json';
+import fiche828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/fiche.md';
+import exercice828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/exercice.json';
+import attendus828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/attendus.json';
+import fiche829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/fiche.md';
+import exercice829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/exercice.json';
+import attendus829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/attendus.json';
+import fiche830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/fiche.md';
+import exercice830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/exercice.json';
+import attendus830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/attendus.json';
+import fiche831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/fiche.md';
+import exercice831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/exercice.json';
+import attendus831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/attendus.json';
+import fiche832 from './../../contenu/terminale/italien/usi-avanzati/fiche.md';
+import exercice832 from './../../contenu/terminale/italien/usi-avanzati/exercice.json';
+import attendus832 from './../../contenu/terminale/italien/usi-avanzati/attendus.json';
+import fiche833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/fiche.md';
+import exercice833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/exercice.json';
+import attendus833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/attendus.json';
+import fiche834 from './../../contenu/terminale/italien/concordanza-tempi/fiche.md';
+import exercice834 from './../../contenu/terminale/italien/concordanza-tempi/exercice.json';
+import attendus834 from './../../contenu/terminale/italien/concordanza-tempi/attendus.json';
+import fiche835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/fiche.md';
+import exercice835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/exercice.json';
+import attendus835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/attendus.json';
+import fiche836 from './../../contenu/terminale/italien/connettivi-argomentazione/fiche.md';
+import exercice836 from './../../contenu/terminale/italien/connettivi-argomentazione/exercice.json';
+import attendus836 from './../../contenu/terminale/italien/connettivi-argomentazione/attendus.json';
+import fiche837 from './../../contenu/terminale/italien/strutture-enfatiche/fiche.md';
+import exercice837 from './../../contenu/terminale/italien/strutture-enfatiche/exercice.json';
+import attendus837 from './../../contenu/terminale/italien/strutture-enfatiche/attendus.json';
+import fiche838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/fiche.md';
+import exercice838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/exercice.json';
+import attendus838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/attendus.json';
+import fiche839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/fiche.md';
+import exercice839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/exercice.json';
+import attendus839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/attendus.json';
+import fiche840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/fiche.md';
+import exercice840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/exercice.json';
+import attendus840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/attendus.json';
+import fiche841 from './../../contenu/terminale/maths-complementaires/suites-evolution/fiche.md';
+import exercice841 from './../../contenu/terminale/maths-complementaires/suites-evolution/exercice.json';
+import attendus841 from './../../contenu/terminale/maths-complementaires/suites-evolution/attendus.json';
+import fiche842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/fiche.md';
+import exercice842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/exercice.json';
+import attendus842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/attendus.json';
+import fiche843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/fiche.md';
+import exercice843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/exercice.json';
+import attendus843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/attendus.json';
+import fiche844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/fiche.md';
+import exercice844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/exercice.json';
+import attendus844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/attendus.json';
+import fiche845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/fiche.md';
+import exercice845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/exercice.json';
+import attendus845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/attendus.json';
+import fiche846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/fiche.md';
+import exercice846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/exercice.json';
+import attendus846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/attendus.json';
+import fiche847 from './../../contenu/terminale/maths-complementaires/calcul-integral/fiche.md';
+import exercice847 from './../../contenu/terminale/maths-complementaires/calcul-integral/exercice.json';
+import attendus847 from './../../contenu/terminale/maths-complementaires/calcul-integral/attendus.json';
+import fiche848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/fiche.md';
+import exercice848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/exercice.json';
+import attendus848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/attendus.json';
+import fiche849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/fiche.md';
+import exercice849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/exercice.json';
+import attendus849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/attendus.json';
+import fiche850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/fiche.md';
+import exercice850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/exercice.json';
+import attendus850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/attendus.json';
+import fiche851 from './../../contenu/terminale/maths-expertes/arithmetique/fiche.md';
+import exercice851 from './../../contenu/terminale/maths-expertes/arithmetique/exercice.json';
+import attendus851 from './../../contenu/terminale/maths-expertes/arithmetique/attendus.json';
+import fiche852 from './../../contenu/terminale/maths-expertes/graphes-matrices/fiche.md';
+import exercice852 from './../../contenu/terminale/maths-expertes/graphes-matrices/exercice.json';
+import attendus852 from './../../contenu/terminale/maths-expertes/graphes-matrices/attendus.json';
+import fiche853 from './../../contenu/terminale/maths-specialite/logique-ensembles/fiche.md';
+import exercice853 from './../../contenu/terminale/maths-specialite/logique-ensembles/exercice.json';
+import attendus853 from './../../contenu/terminale/maths-specialite/logique-ensembles/attendus.json';
+import fiche854 from './../../contenu/terminale/maths-specialite/suites/fiche.md';
+import exercice854 from './../../contenu/terminale/maths-specialite/suites/exercice.json';
+import attendus854 from './../../contenu/terminale/maths-specialite/suites/attendus.json';
+import fiche855 from './../../contenu/terminale/maths-specialite/limites-fonctions/fiche.md';
+import exercice855 from './../../contenu/terminale/maths-specialite/limites-fonctions/exercice.json';
+import attendus855 from './../../contenu/terminale/maths-specialite/limites-fonctions/attendus.json';
+import fiche856 from './../../contenu/terminale/maths-specialite/continuite/fiche.md';
+import exercice856 from './../../contenu/terminale/maths-specialite/continuite/exercice.json';
+import attendus856 from './../../contenu/terminale/maths-specialite/continuite/attendus.json';
+import fiche857 from './../../contenu/terminale/maths-specialite/derivation-convexite/fiche.md';
+import exercice857 from './../../contenu/terminale/maths-specialite/derivation-convexite/exercice.json';
+import attendus857 from './../../contenu/terminale/maths-specialite/derivation-convexite/attendus.json';
+import fiche858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/fiche.md';
+import exercice858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/exercice.json';
+import attendus858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/attendus.json';
+import fiche859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/fiche.md';
+import exercice859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/exercice.json';
+import attendus859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/attendus.json';
+import fiche860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/fiche.md';
+import exercice860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/exercice.json';
+import attendus860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/attendus.json';
+import fiche861 from './../../contenu/terminale/maths-specialite/calcul-integral/fiche.md';
+import exercice861 from './../../contenu/terminale/maths-specialite/calcul-integral/exercice.json';
+import attendus861 from './../../contenu/terminale/maths-specialite/calcul-integral/attendus.json';
+import fiche862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/fiche.md';
+import exercice862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/exercice.json';
+import attendus862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/attendus.json';
+import fiche863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/fiche.md';
+import exercice863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/exercice.json';
+import attendus863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/attendus.json';
+import fiche864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/fiche.md';
+import exercice864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/exercice.json';
+import attendus864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/attendus.json';
+import fiche865 from './../../contenu/terminale/maths-specialite/listes/fiche.md';
+import exercice865 from './../../contenu/terminale/maths-specialite/listes/exercice.json';
+import attendus865 from './../../contenu/terminale/maths-specialite/listes/attendus.json';
+import fiche866 from './../../contenu/terminale/maths-specialite/loi-binomiale/fiche.md';
+import exercice866 from './../../contenu/terminale/maths-specialite/loi-binomiale/exercice.json';
+import attendus866 from './../../contenu/terminale/maths-specialite/loi-binomiale/attendus.json';
+import fiche867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/fiche.md';
+import exercice867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/exercice.json';
+import attendus867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/attendus.json';
+import fiche868 from './../../contenu/terminale/nsi/programmation-et-complexite/fiche.md';
+import exercice868 from './../../contenu/terminale/nsi/programmation-et-complexite/exercice.json';
+import attendus868 from './../../contenu/terminale/nsi/programmation-et-complexite/attendus.json';
+import fiche869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/fiche.md';
+import exercice869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/exercice.json';
+import attendus869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/attendus.json';
+import fiche870 from './../../contenu/terminale/nsi/structures-de-donnees/fiche.md';
+import exercice870 from './../../contenu/terminale/nsi/structures-de-donnees/exercice.json';
+import attendus870 from './../../contenu/terminale/nsi/structures-de-donnees/attendus.json';
+import fiche871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/fiche.md';
+import exercice871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/exercice.json';
+import attendus871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/attendus.json';
+import fiche872 from './../../contenu/terminale/nsi/reseaux-et-routage/fiche.md';
+import exercice872 from './../../contenu/terminale/nsi/reseaux-et-routage/exercice.json';
+import attendus872 from './../../contenu/terminale/nsi/reseaux-et-routage/attendus.json';
+import fiche873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/fiche.md';
+import exercice873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/exercice.json';
+import attendus873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/attendus.json';
+import fiche874 from './../../contenu/terminale/philosophie/methode-dissertation/fiche.md';
+import exercice874 from './../../contenu/terminale/philosophie/methode-dissertation/exercice.json';
+import attendus874 from './../../contenu/terminale/philosophie/methode-dissertation/attendus.json';
+import fiche875 from './../../contenu/terminale/philosophie/methode-explication-texte/fiche.md';
+import exercice875 from './../../contenu/terminale/philosophie/methode-explication-texte/exercice.json';
+import attendus875 from './../../contenu/terminale/philosophie/methode-explication-texte/attendus.json';
+import fiche876 from './../../contenu/terminale/philosophie/reperes-conceptuels/fiche.md';
+import exercice876 from './../../contenu/terminale/philosophie/reperes-conceptuels/exercice.json';
+import attendus876 from './../../contenu/terminale/philosophie/reperes-conceptuels/attendus.json';
+import fiche877 from './../../contenu/terminale/philosophie/conscience/fiche.md';
+import exercice877 from './../../contenu/terminale/philosophie/conscience/exercice.json';
+import attendus877 from './../../contenu/terminale/philosophie/conscience/attendus.json';
+import fiche878 from './../../contenu/terminale/philosophie/inconscient/fiche.md';
+import exercice878 from './../../contenu/terminale/philosophie/inconscient/exercice.json';
+import attendus878 from './../../contenu/terminale/philosophie/inconscient/attendus.json';
+import fiche879 from './../../contenu/terminale/philosophie/temps/fiche.md';
+import exercice879 from './../../contenu/terminale/philosophie/temps/exercice.json';
+import attendus879 from './../../contenu/terminale/philosophie/temps/attendus.json';
+import fiche880 from './../../contenu/terminale/philosophie/langage/fiche.md';
+import exercice880 from './../../contenu/terminale/philosophie/langage/exercice.json';
+import attendus880 from './../../contenu/terminale/philosophie/langage/attendus.json';
+import fiche881 from './../../contenu/terminale/philosophie/raison/fiche.md';
+import exercice881 from './../../contenu/terminale/philosophie/raison/exercice.json';
+import attendus881 from './../../contenu/terminale/philosophie/raison/attendus.json';
+import fiche882 from './../../contenu/terminale/philosophie/verite/fiche.md';
+import exercice882 from './../../contenu/terminale/philosophie/verite/exercice.json';
+import attendus882 from './../../contenu/terminale/philosophie/verite/attendus.json';
+import fiche883 from './../../contenu/terminale/philosophie/science/fiche.md';
+import exercice883 from './../../contenu/terminale/philosophie/science/exercice.json';
+import attendus883 from './../../contenu/terminale/philosophie/science/attendus.json';
+import fiche884 from './../../contenu/terminale/philosophie/technique/fiche.md';
+import exercice884 from './../../contenu/terminale/philosophie/technique/exercice.json';
+import attendus884 from './../../contenu/terminale/philosophie/technique/attendus.json';
+import fiche885 from './../../contenu/terminale/philosophie/travail/fiche.md';
+import exercice885 from './../../contenu/terminale/philosophie/travail/exercice.json';
+import attendus885 from './../../contenu/terminale/philosophie/travail/attendus.json';
+import fiche886 from './../../contenu/terminale/philosophie/art/fiche.md';
+import exercice886 from './../../contenu/terminale/philosophie/art/exercice.json';
+import attendus886 from './../../contenu/terminale/philosophie/art/attendus.json';
+import fiche887 from './../../contenu/terminale/philosophie/nature/fiche.md';
+import exercice887 from './../../contenu/terminale/philosophie/nature/exercice.json';
+import attendus887 from './../../contenu/terminale/philosophie/nature/attendus.json';
+import fiche888 from './../../contenu/terminale/philosophie/religion/fiche.md';
+import exercice888 from './../../contenu/terminale/philosophie/religion/exercice.json';
+import attendus888 from './../../contenu/terminale/philosophie/religion/attendus.json';
+import fiche889 from './../../contenu/terminale/philosophie/liberte/fiche.md';
+import exercice889 from './../../contenu/terminale/philosophie/liberte/exercice.json';
+import attendus889 from './../../contenu/terminale/philosophie/liberte/attendus.json';
+import fiche890 from './../../contenu/terminale/philosophie/devoir/fiche.md';
+import exercice890 from './../../contenu/terminale/philosophie/devoir/exercice.json';
+import attendus890 from './../../contenu/terminale/philosophie/devoir/attendus.json';
+import fiche891 from './../../contenu/terminale/philosophie/bonheur/fiche.md';
+import exercice891 from './../../contenu/terminale/philosophie/bonheur/exercice.json';
+import attendus891 from './../../contenu/terminale/philosophie/bonheur/attendus.json';
+import fiche892 from './../../contenu/terminale/philosophie/justice/fiche.md';
+import exercice892 from './../../contenu/terminale/philosophie/justice/exercice.json';
+import attendus892 from './../../contenu/terminale/philosophie/justice/attendus.json';
+import fiche893 from './../../contenu/terminale/philosophie/etat/fiche.md';
+import exercice893 from './../../contenu/terminale/philosophie/etat/exercice.json';
+import attendus893 from './../../contenu/terminale/philosophie/etat/attendus.json';
+import fiche894 from './../../contenu/terminale/physique-chimie/acide-base-ph/fiche.md';
+import exercice894 from './../../contenu/terminale/physique-chimie/acide-base-ph/exercice.json';
+import fiche895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/fiche.md';
+import exercice895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/exercice.json';
+import attendus895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/attendus.json';
+import fiche896 from './../../contenu/terminale/physique-chimie/titrages/fiche.md';
+import exercice896 from './../../contenu/terminale/physique-chimie/titrages/exercice.json';
+import attendus896 from './../../contenu/terminale/physique-chimie/titrages/attendus.json';
+import fiche897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/fiche.md';
+import exercice897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/exercice.json';
+import attendus897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/attendus.json';
+import fiche898 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/fiche.md';
+import exercice898 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/exercice.json';
+import fiche899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/fiche.md';
+import exercice899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/exercice.json';
+import attendus899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/attendus.json';
+import fiche900 from './../../contenu/terminale/physique-chimie/electrolyse/fiche.md';
+import exercice900 from './../../contenu/terminale/physique-chimie/electrolyse/exercice.json';
+import attendus900 from './../../contenu/terminale/physique-chimie/electrolyse/attendus.json';
+import fiche901 from './../../contenu/terminale/physique-chimie/synthese-organique/fiche.md';
+import exercice901 from './../../contenu/terminale/physique-chimie/synthese-organique/exercice.json';
+import attendus901 from './../../contenu/terminale/physique-chimie/synthese-organique/attendus.json';
+import fiche902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/fiche.md';
+import exercice902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/exercice.json';
+import attendus902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/attendus.json';
+import fiche903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/fiche.md';
+import exercice903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/exercice.json';
+import attendus903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/attendus.json';
+import fiche904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/fiche.md';
+import exercice904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/exercice.json';
+import attendus904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/attendus.json';
+import fiche905 from './../../contenu/terminale/physique-chimie/gaz-parfait/fiche.md';
+import exercice905 from './../../contenu/terminale/physique-chimie/gaz-parfait/exercice.json';
+import attendus905 from './../../contenu/terminale/physique-chimie/gaz-parfait/attendus.json';
+import fiche906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/fiche.md';
+import exercice906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/exercice.json';
+import attendus906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/attendus.json';
+import fiche907 from './../../contenu/terminale/physique-chimie/dipole-rc/fiche.md';
+import exercice907 from './../../contenu/terminale/physique-chimie/dipole-rc/exercice.json';
+import attendus907 from './../../contenu/terminale/physique-chimie/dipole-rc/attendus.json';
+import fiche908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/fiche.md';
+import exercice908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/exercice.json';
+import attendus908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/attendus.json';
+import fiche909 from './../../contenu/terminale/physique-chimie/lunette-photons/fiche.md';
+import exercice909 from './../../contenu/terminale/physique-chimie/lunette-photons/exercice.json';
+import attendus909 from './../../contenu/terminale/physique-chimie/lunette-photons/attendus.json';
+import fiche910 from './../../contenu/terminale/ses/sources-croissance/fiche.md';
+import exercice910 from './../../contenu/terminale/ses/sources-croissance/exercice.json';
+import attendus910 from './../../contenu/terminale/ses/sources-croissance/attendus.json';
+import fiche911 from './../../contenu/terminale/ses/commerce-mondialisation/fiche.md';
+import exercice911 from './../../contenu/terminale/ses/commerce-mondialisation/exercice.json';
+import attendus911 from './../../contenu/terminale/ses/commerce-mondialisation/attendus.json';
+import fiche912 from './../../contenu/terminale/ses/marche-du-travail-chomage/fiche.md';
+import exercice912 from './../../contenu/terminale/ses/marche-du-travail-chomage/exercice.json';
+import attendus912 from './../../contenu/terminale/ses/marche-du-travail-chomage/attendus.json';
+import fiche913 from './../../contenu/terminale/ses/monnaie-crises-financieres/fiche.md';
+import exercice913 from './../../contenu/terminale/ses/monnaie-crises-financieres/exercice.json';
+import attendus913 from './../../contenu/terminale/ses/monnaie-crises-financieres/attendus.json';
+import fiche914 from './../../contenu/terminale/ses/politiques-economiques/fiche.md';
+import exercice914 from './../../contenu/terminale/ses/politiques-economiques/exercice.json';
+import attendus914 from './../../contenu/terminale/ses/politiques-economiques/attendus.json';
+import fiche915 from './../../contenu/terminale/ses/structure-sociale-classes/fiche.md';
+import exercice915 from './../../contenu/terminale/ses/structure-sociale-classes/exercice.json';
+import attendus915 from './../../contenu/terminale/ses/structure-sociale-classes/attendus.json';
+import fiche916 from './../../contenu/terminale/ses/mobilite-sociale/fiche.md';
+import exercice916 from './../../contenu/terminale/ses/mobilite-sociale/exercice.json';
+import attendus916 from './../../contenu/terminale/ses/mobilite-sociale/attendus.json';
+import fiche917 from './../../contenu/terminale/ses/ecole-et-inegalites/fiche.md';
+import exercice917 from './../../contenu/terminale/ses/ecole-et-inegalites/exercice.json';
+import attendus917 from './../../contenu/terminale/ses/ecole-et-inegalites/attendus.json';
+import fiche918 from './../../contenu/terminale/ses/engagement-politique/fiche.md';
+import exercice918 from './../../contenu/terminale/ses/engagement-politique/exercice.json';
+import attendus918 from './../../contenu/terminale/ses/engagement-politique/attendus.json';
+import fiche919 from './../../contenu/terminale/si/modelisation-des-mouvements/fiche.md';
+import exercice919 from './../../contenu/terminale/si/modelisation-des-mouvements/exercice.json';
+import attendus919 from './../../contenu/terminale/si/modelisation-des-mouvements/attendus.json';
+import fiche920 from './../../contenu/terminale/si/energie-dans-les-systemes/fiche.md';
+import exercice920 from './../../contenu/terminale/si/energie-dans-les-systemes/exercice.json';
+import attendus920 from './../../contenu/terminale/si/energie-dans-les-systemes/attendus.json';
+import fiche921 from './../../contenu/terminale/si/resistance-des-structures/fiche.md';
+import exercice921 from './../../contenu/terminale/si/resistance-des-structures/exercice.json';
+import attendus921 from './../../contenu/terminale/si/resistance-des-structures/attendus.json';
+import fiche922 from './../../contenu/terminale/si/transmission-de-linformation/fiche.md';
+import exercice922 from './../../contenu/terminale/si/transmission-de-linformation/exercice.json';
+import attendus922 from './../../contenu/terminale/si/transmission-de-linformation/attendus.json';
+import fiche923 from './../../contenu/terminale/si/asservissement-et-regulation/fiche.md';
+import exercice923 from './../../contenu/terminale/si/asservissement-et-regulation/exercice.json';
+import attendus923 from './../../contenu/terminale/si/asservissement-et-regulation/attendus.json';
+import fiche924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/fiche.md';
+import exercice924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/exercice.json';
+import attendus924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/attendus.json';
+import fiche925 from './../../contenu/terminale/svt/evolution-et-speciation/fiche.md';
+import exercice925 from './../../contenu/terminale/svt/evolution-et-speciation/exercice.json';
+import attendus925 from './../../contenu/terminale/svt/evolution-et-speciation/attendus.json';
+import fiche926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/fiche.md';
+import exercice926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/exercice.json';
+import attendus926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/attendus.json';
+import fiche927 from './../../contenu/terminale/svt/climats-passes-et-actuels/fiche.md';
+import exercice927 from './../../contenu/terminale/svt/climats-passes-et-actuels/exercice.json';
+import attendus927 from './../../contenu/terminale/svt/climats-passes-et-actuels/attendus.json';
+import fiche928 from './../../contenu/terminale/svt/reflexe-et-motricite/fiche.md';
+import exercice928 from './../../contenu/terminale/svt/reflexe-et-motricite/exercice.json';
+import attendus928 from './../../contenu/terminale/svt/reflexe-et-motricite/attendus.json';
+import fiche929 from './../../contenu/terminale/svt/glycemie-et-diabete/fiche.md';
+import exercice929 from './../../contenu/terminale/svt/glycemie-et-diabete/exercice.json';
+import attendus929 from './../../contenu/terminale/svt/glycemie-et-diabete/attendus.json';
+import fiche930 from './../../contenu/terminale-techno/maths/logique-ensembles/fiche.md';
+import exercice930 from './../../contenu/terminale-techno/maths/logique-ensembles/exercice.json';
+import attendus930 from './../../contenu/terminale-techno/maths/logique-ensembles/attendus.json';
+import fiche931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/fiche.md';
+import exercice931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/exercice.json';
+import attendus931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/attendus.json';
+import fiche932 from './../../contenu/terminale-techno/maths/fonction-inverse/fiche.md';
+import exercice932 from './../../contenu/terminale-techno/maths/fonction-inverse/exercice.json';
+import attendus932 from './../../contenu/terminale-techno/maths/fonction-inverse/attendus.json';
+import fiche933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/fiche.md';
+import exercice933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/exercice.json';
+import attendus933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/attendus.json';
+import fiche934 from './../../contenu/terminale-techno/maths/logarithme-decimal/fiche.md';
+import exercice934 from './../../contenu/terminale-techno/maths/logarithme-decimal/exercice.json';
+import attendus934 from './../../contenu/terminale-techno/maths/logarithme-decimal/attendus.json';
+import fiche935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/fiche.md';
+import exercice935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/exercice.json';
+import attendus935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/attendus.json';
+import fiche936 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/fiche.md';
+import exercice936 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/exercice.json';
+import fiche937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/fiche.md';
+import exercice937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/exercice.json';
+import attendus937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/attendus.json';
+import fiche938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/fiche.md';
+import exercice938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/exercice.json';
+import attendus938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/attendus.json';
+import fiche939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/fiche.md';
+import exercice939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/exercice.json';
+import attendus939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/attendus.json';
+import fiche940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/fiche.md';
+import exercice940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/exercice.json';
+import attendus940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/attendus.json';
+import fiche941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/fiche.md';
+import exercice941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/exercice.json';
+import attendus941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/attendus.json';
+import fiche942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/fiche.md';
+import exercice942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/exercice.json';
+import attendus942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/attendus.json';
+import fiche943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/fiche.md';
+import exercice943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/exercice.json';
+import attendus943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/attendus.json';
+import fiche944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/fiche.md';
+import exercice944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/exercice.json';
+import attendus944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/attendus.json';
+import fiche945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/fiche.md';
+import exercice945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/exercice.json';
+import attendus945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/attendus.json';
+import fiche946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/fiche.md';
+import exercice946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/exercice.json';
+import attendus946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/attendus.json';
+import fiche947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/fiche.md';
+import exercice947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/exercice.json';
+import attendus947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/attendus.json';
+import fiche948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/fiche.md';
+import exercice948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/exercice.json';
+import attendus948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/attendus.json';
+import fiche949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/fiche.md';
+import exercice949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/exercice.json';
+import attendus949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/attendus.json';
+import fiche950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/fiche.md';
+import exercice950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/exercice.json';
+import attendus950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/attendus.json';
+import fiche951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/fiche.md';
+import exercice951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/exercice.json';
+import attendus951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/attendus.json';
+import fiche952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/fiche.md';
+import exercice952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/exercice.json';
+import attendus952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/attendus.json';
+import fiche953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/fiche.md';
+import exercice953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/exercice.json';
+import attendus953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/attendus.json';
+import fiche954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/fiche.md';
+import exercice954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/exercice.json';
+import attendus954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/attendus.json';
+import fiche955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/fiche.md';
+import exercice955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/exercice.json';
+import attendus955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/attendus.json';
+import fiche956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/fiche.md';
+import exercice956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/exercice.json';
+import attendus956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/attendus.json';
+import fiche957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/fiche.md';
+import exercice957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/exercice.json';
+import attendus957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/attendus.json';
+import fiche958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/fiche.md';
+import exercice958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/exercice.json';
+import attendus958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/attendus.json';
 
 const FICHES = {
   "cp-allemand-begrussungen": fiche0,
@@ -3462,349 +3472,352 @@ const FICHES = {
   "2nde-math-fonctions-de-reference": fiche610,
   "2nde-math-vecteurs": fiche611,
   "2nde-math-droites-du-plan": fiche612,
-  "2nde-math-statistiques": fiche613,
-  "2nde-math-probabilites": fiche614,
-  "2nde-math-algorithmique": fiche615,
-  "2nde-pc-description-matiere": fiche616,
-  "2nde-pc-modelisation-microscopique": fiche617,
-  "2nde-pc-transformations-matiere": fiche618,
-  "2nde-pc-mouvement-interactions": fiche619,
-  "2nde-pc-ondes-signaux": fiche620,
-  "2nde-ses-production-richesses": fiche621,
-  "2nde-ses-mesure-production-pib": fiche622,
-  "2nde-ses-consommation-revenu": fiche623,
-  "2nde-ses-marche-formation-prix": fiche624,
-  "2nde-ses-socialisation-introduction": fiche625,
-  "2nde-ses-opinion-publique": fiche626,
-  "2nde-snt-internet": fiche627,
-  "2nde-snt-le-web": fiche628,
-  "2nde-snt-reseaux-sociaux": fiche629,
-  "2nde-snt-donnees-structurees": fiche630,
-  "2nde-snt-localisation-cartographie-gps": fiche631,
-  "2nde-snt-informatique-embarquee-objets-connectes": fiche632,
-  "2nde-snt-photographie-numerique": fiche633,
-  "2nde-svt-la-cellule-unite-du-vivant": fiche634,
-  "2nde-svt-adn-et-information-genetique": fiche635,
-  "2nde-svt-metabolisme-des-cellules": fiche636,
-  "2nde-svt-biodiversite-et-evolution": fiche637,
-  "2nde-svt-la-terre-dans-le-systeme-solaire": fiche638,
-  "2nde-svt-corps-humain-et-effort-physique": fiche639,
-  "1re-allemand-verben-mit-praepositionen": fiche640,
-  "1re-allemand-infinitiv-mit-zu": fiche641,
-  "1re-allemand-nebensaetze-obwohl-damit": fiche642,
-  "1re-allemand-wortschatz-arbeit-studium": fiche643,
-  "1re-allemand-passiv": fiche644,
-  "1re-allemand-konjunktiv-2-vertiefung": fiche645,
-  "1re-allemand-wortschatz-gesellschaft-engagement": fiche646,
-  "1re-allemand-landeskunde-deutsche-geschichte": fiche647,
-  "1re-allemand-landeskunde-literatur": fiche648,
-  "1re-anglais-aspects-simple-continu": fiche649,
-  "1re-anglais-gerondif-infinitif": fiche650,
-  "1re-anglais-relatives-determinatives-explicatives": fiche651,
-  "1re-anglais-vocabulaire-travail-etudes": fiche652,
-  "1re-anglais-voix-passive-emplois": fiche653,
-  "1re-anglais-futur-et-hypotheses": fiche654,
-  "1re-anglais-vocabulaire-societe-engagement": fiche655,
-  "1re-anglais-civilisation-histoire-usa": fiche656,
-  "1re-anglais-civilisation-litterature": fiche657,
-  "1re-arts-architecture": fiche658,
-  "1re-arts-histoire-musique": fiche659,
-  "1esc-une-longue-histoire-de-la-matiere": fiche660,
-  "1esc-le-soleil-notre-source-denergie": fiche661,
-  "1esc-la-terre-un-astre-singulier": fiche662,
-  "1esc-la-biodiversite-et-son-evolution": fiche663,
-  "1esc-son-et-musique": fiche664,
-  "1re-espagnol-subjuntivo-usos": fiche665,
-  "1re-espagnol-relativos": fiche666,
-  "1re-espagnol-perifrasis": fiche667,
-  "1re-espagnol-vocabulario-trabajo-estudios": fiche668,
-  "1re-espagnol-voz-pasiva": fiche669,
-  "1re-espagnol-estilo-indirecto": fiche670,
-  "1re-espagnol-vocabulario-sociedad-ciudadania": fiche671,
-  "1re-espagnol-civilizacion-historia-latinoamerica": fiche672,
-  "1re-espagnol-civilizacion-literatura": fiche673,
-  "1re-francais-grammaire-premiere": fiche674,
-  "1re-francais-commentaire-litteraire": fiche675,
-  "1re-francais-roman-et-recit": fiche676,
-  "1re-francais-poesie-19-21": fiche677,
-  "1re-francais-contraction-essai": fiche678,
-  "1re-francais-litterature-idees-16-18": fiche679,
-  "1re-francais-dissertation": fiche680,
-  "1re-francais-theatre-17-21": fiche681,
-  "1re-francais-epreuve-orale": fiche682,
-  "1re-hggsp-democratie": fiche683,
-  "1re-hggsp-puissances-internationales": fiche684,
-  "1re-hggsp-frontieres": fiche685,
-  "1re-hggsp-s-informer": fiche686,
-  "1re-hggsp-etats-et-religions": fiche687,
-  "1re-hist-geo-revolution-francaise-empire": fiche688,
-  "1re-hist-geo-nations-nationalites-europe": fiche689,
-  "1re-hist-geo-industrialisation-19e": fiche690,
-  "1re-hist-geo-premiere-guerre-et-consequences": fiche691,
-  "1re-hist-geo-metropolisation-france": fiche692,
-  "1re-hist-geo-espaces-productifs-et-ruraux": fiche693,
-  "1re-hist-geo-emc-republique-laicite": fiche694,
-  "1re-italien-congiuntivo-usi": fiche695,
-  "1re-italien-pronomi-relativi": fiche696,
-  "1re-italien-perifrasi": fiche697,
-  "1re-italien-vocabolario-lavoro-studi": fiche698,
-  "1re-italien-forma-passiva": fiche699,
-  "1re-italien-discorso-indiretto": fiche700,
-  "1re-italien-vocabolario-societa-cittadinanza": fiche701,
-  "1re-italien-civilta-rinascimento": fiche702,
-  "1re-italien-civilta-letteratura": fiche703,
-  "1re-lca-mythologie": fiche704,
-  "1re-lca-latin-auteurs": fiche705,
-  "1es-math-information-chiffree": fiche706,
-  "1es-math-phenomenes-evolution": fiche707,
-  "1es-math-statistiques-bivariees": fiche708,
-  "1es-math-phenomenes-aleatoires": fiche709,
-  "1spe-math-second-degre": fiche710,
-  "1spe-math-suites-numeriques": fiche711,
-  "1spe-math-derivation": fiche712,
-  "1spe-math-variations-courbes": fiche713,
-  "1spe-math-fonction-exponentielle": fiche714,
-  "1spe-math-trigonometrie": fiche715,
-  "1spe-math-produit-scalaire": fiche716,
-  "1spe-math-geometrie-reperee": fiche717,
-  "1spe-math-probabilites-conditionnelles": fiche718,
-  "1spe-math-variables-aleatoires": fiche719,
-  "1nsi-representation-des-donnees": fiche720,
-  "1nsi-types-construits": fiche721,
-  "1nsi-traitement-de-donnees-en-tables": fiche722,
-  "1nsi-interactions-web-client-serveur": fiche723,
-  "1nsi-architecture-et-systeme": fiche724,
-  "1nsi-algorithmique-tris-et-recherche": fiche725,
-  "1spe-pc-transformations-matiere": fiche726,
-  "1spe-pc-chimie-organique": fiche727,
-  "1spe-pc-mouvement-interactions": fiche728,
-  "1spe-pc-energie-mecanique": fiche729,
-  "1spe-pc-energie-electrique": fiche730,
-  "1spe-pc-ondes-signaux": fiche731,
-  "1re-ses-marche-concurrentiel": fiche732,
-  "1re-ses-marches-imparfaits": fiche733,
-  "1re-ses-defaillances-de-marche": fiche734,
-  "1re-ses-monnaie-et-financement": fiche735,
-  "1re-ses-socialisation-primaire-secondaire": fiche736,
-  "1re-ses-liens-sociaux": fiche737,
-  "1re-ses-deviance-controle-social": fiche738,
-  "1re-ses-voter-participation": fiche739,
-  "1si-analyse-fonctionnelle-des-systemes": fiche740,
-  "1si-chaine-denergie": fiche741,
-  "1si-chaine-dinformation": fiche742,
-  "1si-comportement-des-materiaux": fiche743,
-  "1si-mecanique-des-solides": fiche744,
-  "1svt-mutations-et-variabilite": fiche745,
-  "1svt-expression-du-patrimoine-genetique": fiche746,
-  "1svt-dynamique-interne-de-la-terre": fiche747,
-  "1svt-ecosystemes-et-services": fiche748,
-  "1svt-variation-genetique-et-sante": fiche749,
-  "1techno-math-suites-numeriques": fiche750,
-  "1techno-math-fonctions-variable-reelle": fiche751,
-  "1techno-math-derivation": fiche752,
-  "1techno-math-statistiques-deux-variables": fiche753,
-  "1techno-math-probabilites-variables-aleatoires": fiche754,
-  "1sti2d-mesure-incertitudes": fiche755,
-  "1sti2d-trigonometrie": fiche756,
-  "1sti2d-energie": fiche757,
-  "1sti2d-produit-scalaire": fiche758,
-  "1sti2d-nombres-complexes": fiche759,
-  "1sti2d-ondes-information": fiche760,
-  "1st2s-pc-securite-chimique-acide-base": fiche761,
-  "1st2s-pc-oxydoreduction-desinfectants": fiche762,
-  "1st2s-pc-risques-electriques": fiche763,
-  "1st2s-pc-ondes-sonores-audition": fiche764,
-  "1st2s-pc-lumiere-vision-lentilles": fiche765,
-  "1st2s-pc-infrarouge-securite-routiere": fiche766,
-  "1stl-spcl-securite-chimie-verte": fiche767,
-  "1stl-spcl-mesure-incertitudes-labo": fiche768,
-  "1stl-spcl-instrumentation-chaine-mesure": fiche769,
-  "1stl-spcl-analyses-spectroscopies-dosages": fiche770,
-  "1stl-spcl-syntheses-extraction-purification": fiche771,
-  "1stl-spcl-image-couleur-vision": fiche772,
-  "1stl-spcl-image-photographie-lentilles": fiche773,
-  "1stl-spcl-appareil-photo-image-numerique": fiche774,
-  "tale-allemand-komplexe-satzgefuege": fiche775,
-  "tale-allemand-konnektoren-argumentation": fiche776,
-  "tale-allemand-partizipialkonstruktionen": fiche777,
-  "tale-allemand-wortschatz-wirtschaft-globalisierung": fiche778,
-  "tale-allemand-konjunktiv-1-indirekte-rede": fiche779,
-  "tale-allemand-nominalstil": fiche780,
-  "tale-allemand-wortschatz-gesellschaft-welt": fiche781,
-  "tale-allemand-landeskunde-deutsch-in-der-welt": fiche782,
-  "tale-anglais-systeme-verbal": fiche783,
-  "tale-anglais-modalite": fiche784,
-  "tale-anglais-irreel-hypotheses": fiche785,
-  "tale-anglais-vocabulaire-economie-mondialisation": fiche786,
-  "tale-anglais-discours-rapporte-concordance": fiche787,
-  "tale-anglais-structures-complexes": fiche788,
-  "tale-anglais-vocabulaire-sciences-societe": fiche789,
-  "tale-anglais-civilisation-anglais-monde": fiche790,
-  "tale-arts-cinema": fiche791,
-  "tale-esc-atmosphere-effet-de-serre-climat": fiche792,
-  "tale-esc-energie-carbone-transition": fiche793,
-  "tale-esc-production-conversion-energie-electrique": fiche794,
-  "tale-esc-une-histoire-du-vivant": fiche795,
-  "tale-esc-evolution-et-biodiversite": fiche796,
-  "tale-esc-du-genotype-au-phenotype": fiche797,
-  "tale-esc-modeles-demographiques": fiche798,
-  "tale-esc-probabilites-bayes-ia": fiche799,
-  "tale-espagnol-ser-estar-avanzado": fiche800,
-  "tale-espagnol-subjuntivo-imperfecto": fiche801,
-  "tale-espagnol-concordancia-tiempos": fiche802,
-  "tale-espagnol-vocabulario-economia-globalizacion": fiche803,
-  "tale-espagnol-conectores-argumentacion": fiche804,
-  "tale-espagnol-estructuras-enfaticas": fiche805,
-  "tale-espagnol-vocabulario-sociedad-mundo": fiche806,
-  "tale-espagnol-civilizacion-espanol-mundo": fiche807,
-  "tale-grandoral-comprendre-l-epreuve": fiche808,
-  "tale-grandoral-choisir-formuler-ses-questions": fiche809,
-  "tale-grandoral-construire-l-expose": fiche810,
-  "tale-grandoral-voix-posture-et-stress": fiche811,
-  "tale-grandoral-l-echange-avec-le-jury": fiche812,
-  "tale-grandoral-le-projet-d-orientation": fiche813,
-  "tale-grandoral-criteres-et-erreurs": fiche814,
-  "tale-grandoral-s-entrainer-et-checklist": fiche815,
-  "tale-hggsp-nouveaux-espaces-conquete": fiche816,
-  "tale-hggsp-faire-la-guerre-faire-la-paix": fiche817,
-  "tale-hggsp-histoire-et-memoires": fiche818,
-  "tale-hggsp-patrimoine": fiche819,
-  "tale-hggsp-environnement": fiche820,
-  "tale-hggsp-enjeu-de-la-connaissance": fiche821,
-  "tale-hist-geo-seconde-guerre-mondiale-genocides": fiche822,
-  "tale-hist-geo-guerre-froide": fiche823,
-  "tale-hist-geo-decolonisation": fiche824,
-  "tale-hist-geo-monde-depuis-1990": fiche825,
-  "tale-hist-geo-mers-oceans-mondialisation": fiche826,
-  "tale-hist-geo-puissances-et-france-dans-le-monde": fiche827,
-  "tale-hist-geo-emc-democratie-engagement": fiche828,
-  "tale-italien-usi-avanzati": fiche829,
-  "tale-italien-congiuntivo-imperfetto": fiche830,
-  "tale-italien-concordanza-tempi": fiche831,
-  "tale-italien-vocabolario-economia-globalizzazione": fiche832,
-  "tale-italien-connettivi-argomentazione": fiche833,
-  "tale-italien-strutture-enfatiche": fiche834,
-  "tale-italien-vocabolario-societa-mondo": fiche835,
-  "tale-italien-civilta-italiano-nel-mondo": fiche836,
-  "tale-lca-civilisation-antique": fiche837,
-  "tale-compl-math-suites-evolution": fiche838,
-  "tale-compl-math-probabilites-bayes-binomiale": fiche839,
-  "tale-compl-math-derivation-convexite": fiche840,
-  "tale-compl-math-continuite-tvi": fiche841,
-  "tale-compl-math-exponentielle-logarithme": fiche842,
-  "tale-compl-math-primitives-equations-differentielles": fiche843,
-  "tale-compl-math-calcul-integral": fiche844,
-  "tale-compl-math-lois-densite-temps-attente": fiche845,
-  "tale-exp-math-complexes-algebrique": fiche846,
-  "tale-exp-math-complexes-geometrique": fiche847,
-  "tale-exp-math-arithmetique": fiche848,
-  "tale-exp-math-graphes-matrices": fiche849,
-  "tale-spe-math-logique-ensembles": fiche850,
-  "tale-spe-math-suites": fiche851,
-  "tale-spe-math-limites-fonctions": fiche852,
-  "tale-spe-math-continuite": fiche853,
-  "tale-spe-math-derivation-convexite": fiche854,
-  "tale-spe-math-fonction-logarithme": fiche855,
-  "tale-spe-math-fonctions-trigonometriques": fiche856,
-  "tale-spe-math-primitives-equations-differentielles": fiche857,
-  "tale-spe-math-calcul-integral": fiche858,
-  "tale-spe-math-vecteurs-droites-plans-espace": fiche859,
-  "tale-spe-math-produit-scalaire-espace": fiche860,
-  "tale-spe-math-combinatoire-denombrement": fiche861,
-  "tale-spe-math-listes": fiche862,
-  "tale-spe-math-loi-binomiale": fiche863,
-  "tale-spe-math-sommes-variables-concentration": fiche864,
-  "tale-nsi-programmation-et-complexite": fiche865,
-  "tale-nsi-recursivite-et-diviser-pour-regner": fiche866,
-  "tale-nsi-structures-de-donnees": fiche867,
-  "tale-nsi-bases-de-donnees-et-sql": fiche868,
-  "tale-nsi-reseaux-et-routage": fiche869,
-  "tale-nsi-algorithmes-de-graphes": fiche870,
-  "tale-philo-methode-dissertation": fiche871,
-  "tale-philo-methode-explication-texte": fiche872,
-  "tale-philo-reperes-conceptuels": fiche873,
-  "tale-philo-conscience": fiche874,
-  "tale-philo-inconscient": fiche875,
-  "tale-philo-temps": fiche876,
-  "tale-philo-langage": fiche877,
-  "tale-philo-raison": fiche878,
-  "tale-philo-verite": fiche879,
-  "tale-philo-science": fiche880,
-  "tale-philo-technique": fiche881,
-  "tale-philo-travail": fiche882,
-  "tale-philo-art": fiche883,
-  "tale-philo-nature": fiche884,
-  "tale-philo-religion": fiche885,
-  "tale-philo-liberte": fiche886,
-  "tale-philo-devoir": fiche887,
-  "tale-philo-bonheur": fiche888,
-  "tale-philo-justice": fiche889,
-  "tale-philo-etat": fiche890,
-  "tale-spe-pc-acide-base-ph": fiche891,
-  "tale-spe-pc-methodes-physiques-analyse": fiche892,
-  "tale-spe-pc-titrages": fiche893,
-  "tale-spe-pc-cinetique-chimique": fiche894,
-  "tale-spe-pc-transformations-nucleaires": fiche895,
-  "tale-spe-pc-equilibre-sens-evolution": fiche896,
-  "tale-spe-pc-electrolyse": fiche897,
-  "tale-spe-pc-synthese-organique": fiche898,
-  "tale-spe-pc-decrire-mouvement": fiche899,
-  "tale-spe-pc-lois-newton-champs": fiche900,
-  "tale-spe-pc-ecoulement-fluide": fiche901,
-  "tale-spe-pc-gaz-parfait": fiche902,
-  "tale-spe-pc-premier-principe-thermique": fiche903,
-  "tale-spe-pc-dipole-rc": fiche904,
-  "tale-spe-pc-phenomenes-ondulatoires": fiche905,
-  "tale-spe-pc-lunette-photons": fiche906,
-  "tale-ses-sources-croissance": fiche907,
-  "tale-ses-commerce-mondialisation": fiche908,
-  "tale-ses-marche-du-travail-chomage": fiche909,
-  "tale-ses-monnaie-crises-financieres": fiche910,
-  "tale-ses-politiques-economiques": fiche911,
-  "tale-ses-structure-sociale-classes": fiche912,
-  "tale-ses-mobilite-sociale": fiche913,
-  "tale-ses-ecole-et-inegalites": fiche914,
-  "tale-ses-engagement-politique": fiche915,
-  "tale-si-modelisation-des-mouvements": fiche916,
-  "tale-si-energie-dans-les-systemes": fiche917,
-  "tale-si-resistance-des-structures": fiche918,
-  "tale-si-transmission-de-linformation": fiche919,
-  "tale-si-asservissement-et-regulation": fiche920,
-  "tale-svt-brassage-genetique-et-meiose": fiche921,
-  "tale-svt-evolution-et-speciation": fiche922,
-  "tale-svt-geothermie-et-flux-de-chaleur": fiche923,
-  "tale-svt-climats-passes-et-actuels": fiche924,
-  "tale-svt-reflexe-et-motricite": fiche925,
-  "tale-svt-glycemie-et-diabete": fiche926,
-  "tale-techno-math-logique-ensembles": fiche927,
-  "tale-techno-math-suites-arithmetiques-geometriques": fiche928,
-  "tale-techno-math-fonction-inverse": fiche929,
-  "tale-techno-math-fonctions-exponentielles": fiche930,
-  "tale-techno-math-logarithme-decimal": fiche931,
-  "tale-techno-math-statistiques-deux-variables": fiche932,
-  "tale-techno-math-probabilites-conditionnelles": fiche933,
-  "tale-techno-math-variables-aleatoires-binomiale": fiche934,
-  "tale-techno-math-algorithmique-programmation": fiche935,
-  "tale-techno-math-activites-geometriques-std2a": fiche936,
-  "tale-sti2d-pc-mesure-incertitudes": fiche937,
-  "tale-sti2d-math-exponentielle-logarithme": fiche938,
-  "tale-sti2d-pc-matiere-materiaux": fiche939,
-  "tale-sti2d-math-integration-composition": fiche940,
-  "tale-sti2d-math-equations-differentielles": fiche941,
-  "tale-sti2d-pc-energie-mecanique-fluides": fiche942,
-  "tale-sti2d-pc-energie-electrique-thermique": fiche943,
-  "tale-sti2d-math-complexes-exponentielle": fiche944,
-  "tale-sti2d-pc-ondes-signaux": fiche945,
-  "tale-st2s-pc-molecules-organiques": fiche946,
-  "tale-st2s-pc-biomolecules-eau": fiche947,
-  "tale-st2s-pc-glucides-ressources-naturelles": fiche948,
-  "tale-st2s-pc-besoins-energetiques-alimentation": fiche949,
-  "tale-st2s-pc-fluides-pression-sanguine": fiche950,
-  "tale-stl-spcl-composition-systemes-chimiques": fiche951,
-  "tale-stl-spcl-syntheses-mecanismes": fiche952,
-  "tale-stl-spcl-ondes-mecaniques-em-spectres": fiche953,
-  "tale-stl-spcl-ondes-transmission-stockage": fiche954,
-  "tale-stl-spcl-systemes-procedes-flux": fiche955,
+  "2nde-math-information-chiffree": fiche613,
+  "2nde-math-statistiques": fiche614,
+  "2nde-math-probabilites": fiche615,
+  "2nde-math-algorithmique": fiche616,
+  "2nde-pc-description-matiere": fiche617,
+  "2nde-pc-modelisation-microscopique": fiche618,
+  "2nde-pc-transformations-matiere": fiche619,
+  "2nde-pc-mouvement-interactions": fiche620,
+  "2nde-pc-ondes-signaux": fiche621,
+  "2nde-ses-production-richesses": fiche622,
+  "2nde-ses-mesure-production-pib": fiche623,
+  "2nde-ses-consommation-revenu": fiche624,
+  "2nde-ses-marche-formation-prix": fiche625,
+  "2nde-ses-socialisation-introduction": fiche626,
+  "2nde-ses-opinion-publique": fiche627,
+  "2nde-snt-internet": fiche628,
+  "2nde-snt-le-web": fiche629,
+  "2nde-snt-reseaux-sociaux": fiche630,
+  "2nde-snt-donnees-structurees": fiche631,
+  "2nde-snt-localisation-cartographie-gps": fiche632,
+  "2nde-snt-informatique-embarquee-objets-connectes": fiche633,
+  "2nde-snt-photographie-numerique": fiche634,
+  "2nde-svt-la-cellule-unite-du-vivant": fiche635,
+  "2nde-svt-adn-et-information-genetique": fiche636,
+  "2nde-svt-metabolisme-des-cellules": fiche637,
+  "2nde-svt-biodiversite-et-evolution": fiche638,
+  "2nde-svt-la-terre-dans-le-systeme-solaire": fiche639,
+  "2nde-svt-corps-humain-et-effort-physique": fiche640,
+  "1re-allemand-verben-mit-praepositionen": fiche641,
+  "1re-allemand-infinitiv-mit-zu": fiche642,
+  "1re-allemand-nebensaetze-obwohl-damit": fiche643,
+  "1re-allemand-wortschatz-arbeit-studium": fiche644,
+  "1re-allemand-passiv": fiche645,
+  "1re-allemand-konjunktiv-2-vertiefung": fiche646,
+  "1re-allemand-wortschatz-gesellschaft-engagement": fiche647,
+  "1re-allemand-landeskunde-deutsche-geschichte": fiche648,
+  "1re-allemand-landeskunde-literatur": fiche649,
+  "1re-anglais-aspects-simple-continu": fiche650,
+  "1re-anglais-gerondif-infinitif": fiche651,
+  "1re-anglais-relatives-determinatives-explicatives": fiche652,
+  "1re-anglais-vocabulaire-travail-etudes": fiche653,
+  "1re-anglais-voix-passive-emplois": fiche654,
+  "1re-anglais-futur-et-hypotheses": fiche655,
+  "1re-anglais-vocabulaire-societe-engagement": fiche656,
+  "1re-anglais-civilisation-histoire-usa": fiche657,
+  "1re-anglais-civilisation-litterature": fiche658,
+  "1re-arts-architecture": fiche659,
+  "1re-arts-histoire-musique": fiche660,
+  "1esc-une-longue-histoire-de-la-matiere": fiche661,
+  "1esc-le-soleil-notre-source-denergie": fiche662,
+  "1esc-la-terre-un-astre-singulier": fiche663,
+  "1esc-la-biodiversite-et-son-evolution": fiche664,
+  "1esc-son-et-musique": fiche665,
+  "1re-espagnol-subjuntivo-usos": fiche666,
+  "1re-espagnol-relativos": fiche667,
+  "1re-espagnol-perifrasis": fiche668,
+  "1re-espagnol-vocabulario-trabajo-estudios": fiche669,
+  "1re-espagnol-voz-pasiva": fiche670,
+  "1re-espagnol-estilo-indirecto": fiche671,
+  "1re-espagnol-vocabulario-sociedad-ciudadania": fiche672,
+  "1re-espagnol-civilizacion-historia-latinoamerica": fiche673,
+  "1re-espagnol-civilizacion-literatura": fiche674,
+  "1re-francais-grammaire-premiere": fiche675,
+  "1re-francais-commentaire-litteraire": fiche676,
+  "1re-francais-roman-et-recit": fiche677,
+  "1re-francais-poesie-19-21": fiche678,
+  "1re-francais-contraction-essai": fiche679,
+  "1re-francais-litterature-idees-16-18": fiche680,
+  "1re-francais-dissertation": fiche681,
+  "1re-francais-theatre-17-21": fiche682,
+  "1re-francais-epreuve-orale": fiche683,
+  "1re-hggsp-democratie": fiche684,
+  "1re-hggsp-puissances-internationales": fiche685,
+  "1re-hggsp-frontieres": fiche686,
+  "1re-hggsp-s-informer": fiche687,
+  "1re-hggsp-etats-et-religions": fiche688,
+  "1re-hist-geo-revolution-francaise-empire": fiche689,
+  "1re-hist-geo-nations-nationalites-europe": fiche690,
+  "1re-hist-geo-industrialisation-19e": fiche691,
+  "1re-hist-geo-premiere-guerre-et-consequences": fiche692,
+  "1re-hist-geo-metropolisation-france": fiche693,
+  "1re-hist-geo-espaces-productifs-et-ruraux": fiche694,
+  "1re-hist-geo-emc-republique-laicite": fiche695,
+  "1re-italien-congiuntivo-usi": fiche696,
+  "1re-italien-pronomi-relativi": fiche697,
+  "1re-italien-perifrasi": fiche698,
+  "1re-italien-vocabolario-lavoro-studi": fiche699,
+  "1re-italien-forma-passiva": fiche700,
+  "1re-italien-discorso-indiretto": fiche701,
+  "1re-italien-vocabolario-societa-cittadinanza": fiche702,
+  "1re-italien-civilta-rinascimento": fiche703,
+  "1re-italien-civilta-letteratura": fiche704,
+  "1re-lca-mythologie": fiche705,
+  "1re-lca-latin-auteurs": fiche706,
+  "1es-math-information-chiffree": fiche707,
+  "1es-math-phenomenes-evolution": fiche708,
+  "1es-math-statistiques-bivariees": fiche709,
+  "1es-math-phenomenes-aleatoires": fiche710,
+  "1spe-math-second-degre": fiche711,
+  "1spe-math-suites-numeriques": fiche712,
+  "1spe-math-derivation": fiche713,
+  "1spe-math-variations-courbes": fiche714,
+  "1spe-math-fonction-exponentielle": fiche715,
+  "1spe-math-trigonometrie": fiche716,
+  "1spe-math-produit-scalaire": fiche717,
+  "1spe-math-geometrie-reperee": fiche718,
+  "1spe-math-probabilites-conditionnelles": fiche719,
+  "1spe-math-variables-aleatoires": fiche720,
+  "1nsi-representation-des-donnees": fiche721,
+  "1nsi-types-construits": fiche722,
+  "1nsi-traitement-de-donnees-en-tables": fiche723,
+  "1nsi-interactions-web-client-serveur": fiche724,
+  "1nsi-architecture-et-systeme": fiche725,
+  "1nsi-algorithmique-tris-et-recherche": fiche726,
+  "1spe-pc-transformations-matiere": fiche727,
+  "1spe-pc-chimie-organique": fiche728,
+  "1spe-pc-mouvement-interactions": fiche729,
+  "1spe-pc-energie-mecanique": fiche730,
+  "1spe-pc-energie-electrique": fiche731,
+  "1spe-pc-ondes-signaux": fiche732,
+  "1re-ses-marche-concurrentiel": fiche733,
+  "1re-ses-marches-imparfaits": fiche734,
+  "1re-ses-defaillances-de-marche": fiche735,
+  "1re-ses-monnaie-et-financement": fiche736,
+  "1re-ses-socialisation-primaire-secondaire": fiche737,
+  "1re-ses-liens-sociaux": fiche738,
+  "1re-ses-deviance-controle-social": fiche739,
+  "1re-ses-voter-participation": fiche740,
+  "1si-analyse-fonctionnelle-des-systemes": fiche741,
+  "1si-chaine-denergie": fiche742,
+  "1si-chaine-dinformation": fiche743,
+  "1si-comportement-des-materiaux": fiche744,
+  "1si-mecanique-des-solides": fiche745,
+  "1svt-mutations-et-variabilite": fiche746,
+  "1svt-expression-du-patrimoine-genetique": fiche747,
+  "1svt-dynamique-interne-de-la-terre": fiche748,
+  "1svt-ecosystemes-et-services": fiche749,
+  "1svt-variation-genetique-et-sante": fiche750,
+  "1techno-math-suites-numeriques": fiche751,
+  "1techno-math-fonctions-variable-reelle": fiche752,
+  "1techno-math-derivation": fiche753,
+  "1techno-math-statistiques-deux-variables": fiche754,
+  "1techno-math-probabilites-variables-aleatoires": fiche755,
+  "1sti2d-mesure-incertitudes": fiche756,
+  "1sti2d-trigonometrie": fiche757,
+  "1sti2d-derivees": fiche758,
+  "1sti2d-energie": fiche759,
+  "1sti2d-produit-scalaire": fiche760,
+  "1sti2d-nombres-complexes": fiche761,
+  "1sti2d-primitives": fiche762,
+  "1sti2d-ondes-information": fiche763,
+  "1st2s-pc-securite-chimique-acide-base": fiche764,
+  "1st2s-pc-oxydoreduction-desinfectants": fiche765,
+  "1st2s-pc-risques-electriques": fiche766,
+  "1st2s-pc-ondes-sonores-audition": fiche767,
+  "1st2s-pc-lumiere-vision-lentilles": fiche768,
+  "1st2s-pc-infrarouge-securite-routiere": fiche769,
+  "1stl-spcl-securite-chimie-verte": fiche770,
+  "1stl-spcl-mesure-incertitudes-labo": fiche771,
+  "1stl-spcl-instrumentation-chaine-mesure": fiche772,
+  "1stl-spcl-analyses-spectroscopies-dosages": fiche773,
+  "1stl-spcl-syntheses-extraction-purification": fiche774,
+  "1stl-spcl-image-couleur-vision": fiche775,
+  "1stl-spcl-image-photographie-lentilles": fiche776,
+  "1stl-spcl-appareil-photo-image-numerique": fiche777,
+  "tale-allemand-komplexe-satzgefuege": fiche778,
+  "tale-allemand-konnektoren-argumentation": fiche779,
+  "tale-allemand-partizipialkonstruktionen": fiche780,
+  "tale-allemand-wortschatz-wirtschaft-globalisierung": fiche781,
+  "tale-allemand-konjunktiv-1-indirekte-rede": fiche782,
+  "tale-allemand-nominalstil": fiche783,
+  "tale-allemand-wortschatz-gesellschaft-welt": fiche784,
+  "tale-allemand-landeskunde-deutsch-in-der-welt": fiche785,
+  "tale-anglais-systeme-verbal": fiche786,
+  "tale-anglais-modalite": fiche787,
+  "tale-anglais-irreel-hypotheses": fiche788,
+  "tale-anglais-vocabulaire-economie-mondialisation": fiche789,
+  "tale-anglais-discours-rapporte-concordance": fiche790,
+  "tale-anglais-structures-complexes": fiche791,
+  "tale-anglais-vocabulaire-sciences-societe": fiche792,
+  "tale-anglais-civilisation-anglais-monde": fiche793,
+  "tale-arts-cinema": fiche794,
+  "tale-esc-atmosphere-effet-de-serre-climat": fiche795,
+  "tale-esc-energie-carbone-transition": fiche796,
+  "tale-esc-production-conversion-energie-electrique": fiche797,
+  "tale-esc-une-histoire-du-vivant": fiche798,
+  "tale-esc-evolution-et-biodiversite": fiche799,
+  "tale-esc-modeles-demographiques": fiche800,
+  "tale-esc-probabilites-bayes-ia": fiche801,
+  "tale-esc-du-genotype-au-phenotype": fiche802,
+  "tale-espagnol-ser-estar-avanzado": fiche803,
+  "tale-espagnol-subjuntivo-imperfecto": fiche804,
+  "tale-espagnol-concordancia-tiempos": fiche805,
+  "tale-espagnol-vocabulario-economia-globalizacion": fiche806,
+  "tale-espagnol-conectores-argumentacion": fiche807,
+  "tale-espagnol-estructuras-enfaticas": fiche808,
+  "tale-espagnol-vocabulario-sociedad-mundo": fiche809,
+  "tale-espagnol-civilizacion-espanol-mundo": fiche810,
+  "tale-grandoral-comprendre-l-epreuve": fiche811,
+  "tale-grandoral-choisir-formuler-ses-questions": fiche812,
+  "tale-grandoral-construire-l-expose": fiche813,
+  "tale-grandoral-voix-posture-et-stress": fiche814,
+  "tale-grandoral-l-echange-avec-le-jury": fiche815,
+  "tale-grandoral-le-projet-d-orientation": fiche816,
+  "tale-grandoral-criteres-et-erreurs": fiche817,
+  "tale-grandoral-s-entrainer-et-checklist": fiche818,
+  "tale-hggsp-nouveaux-espaces-conquete": fiche819,
+  "tale-hggsp-faire-la-guerre-faire-la-paix": fiche820,
+  "tale-hggsp-histoire-et-memoires": fiche821,
+  "tale-hggsp-patrimoine": fiche822,
+  "tale-hggsp-environnement": fiche823,
+  "tale-hggsp-enjeu-de-la-connaissance": fiche824,
+  "tale-hist-geo-seconde-guerre-mondiale-genocides": fiche825,
+  "tale-hist-geo-guerre-froide": fiche826,
+  "tale-hist-geo-decolonisation": fiche827,
+  "tale-hist-geo-monde-depuis-1990": fiche828,
+  "tale-hist-geo-mers-oceans-mondialisation": fiche829,
+  "tale-hist-geo-puissances-et-france-dans-le-monde": fiche830,
+  "tale-hist-geo-emc-democratie-engagement": fiche831,
+  "tale-italien-usi-avanzati": fiche832,
+  "tale-italien-congiuntivo-imperfetto": fiche833,
+  "tale-italien-concordanza-tempi": fiche834,
+  "tale-italien-vocabolario-economia-globalizzazione": fiche835,
+  "tale-italien-connettivi-argomentazione": fiche836,
+  "tale-italien-strutture-enfatiche": fiche837,
+  "tale-italien-vocabolario-societa-mondo": fiche838,
+  "tale-italien-civilta-italiano-nel-mondo": fiche839,
+  "tale-lca-civilisation-antique": fiche840,
+  "tale-compl-math-suites-evolution": fiche841,
+  "tale-compl-math-probabilites-bayes-binomiale": fiche842,
+  "tale-compl-math-derivation-convexite": fiche843,
+  "tale-compl-math-continuite-tvi": fiche844,
+  "tale-compl-math-exponentielle-logarithme": fiche845,
+  "tale-compl-math-primitives-equations-differentielles": fiche846,
+  "tale-compl-math-calcul-integral": fiche847,
+  "tale-compl-math-lois-densite-temps-attente": fiche848,
+  "tale-exp-math-complexes-algebrique": fiche849,
+  "tale-exp-math-complexes-geometrique": fiche850,
+  "tale-exp-math-arithmetique": fiche851,
+  "tale-exp-math-graphes-matrices": fiche852,
+  "tale-spe-math-logique-ensembles": fiche853,
+  "tale-spe-math-suites": fiche854,
+  "tale-spe-math-limites-fonctions": fiche855,
+  "tale-spe-math-continuite": fiche856,
+  "tale-spe-math-derivation-convexite": fiche857,
+  "tale-spe-math-fonction-logarithme": fiche858,
+  "tale-spe-math-fonctions-trigonometriques": fiche859,
+  "tale-spe-math-primitives-equations-differentielles": fiche860,
+  "tale-spe-math-calcul-integral": fiche861,
+  "tale-spe-math-vecteurs-droites-plans-espace": fiche862,
+  "tale-spe-math-produit-scalaire-espace": fiche863,
+  "tale-spe-math-combinatoire-denombrement": fiche864,
+  "tale-spe-math-listes": fiche865,
+  "tale-spe-math-loi-binomiale": fiche866,
+  "tale-spe-math-sommes-variables-concentration": fiche867,
+  "tale-nsi-programmation-et-complexite": fiche868,
+  "tale-nsi-recursivite-et-diviser-pour-regner": fiche869,
+  "tale-nsi-structures-de-donnees": fiche870,
+  "tale-nsi-bases-de-donnees-et-sql": fiche871,
+  "tale-nsi-reseaux-et-routage": fiche872,
+  "tale-nsi-algorithmes-de-graphes": fiche873,
+  "tale-philo-methode-dissertation": fiche874,
+  "tale-philo-methode-explication-texte": fiche875,
+  "tale-philo-reperes-conceptuels": fiche876,
+  "tale-philo-conscience": fiche877,
+  "tale-philo-inconscient": fiche878,
+  "tale-philo-temps": fiche879,
+  "tale-philo-langage": fiche880,
+  "tale-philo-raison": fiche881,
+  "tale-philo-verite": fiche882,
+  "tale-philo-science": fiche883,
+  "tale-philo-technique": fiche884,
+  "tale-philo-travail": fiche885,
+  "tale-philo-art": fiche886,
+  "tale-philo-nature": fiche887,
+  "tale-philo-religion": fiche888,
+  "tale-philo-liberte": fiche889,
+  "tale-philo-devoir": fiche890,
+  "tale-philo-bonheur": fiche891,
+  "tale-philo-justice": fiche892,
+  "tale-philo-etat": fiche893,
+  "tale-spe-pc-acide-base-ph": fiche894,
+  "tale-spe-pc-methodes-physiques-analyse": fiche895,
+  "tale-spe-pc-titrages": fiche896,
+  "tale-spe-pc-cinetique-chimique": fiche897,
+  "tale-spe-pc-transformations-nucleaires": fiche898,
+  "tale-spe-pc-equilibre-sens-evolution": fiche899,
+  "tale-spe-pc-electrolyse": fiche900,
+  "tale-spe-pc-synthese-organique": fiche901,
+  "tale-spe-pc-decrire-mouvement": fiche902,
+  "tale-spe-pc-lois-newton-champs": fiche903,
+  "tale-spe-pc-ecoulement-fluide": fiche904,
+  "tale-spe-pc-gaz-parfait": fiche905,
+  "tale-spe-pc-premier-principe-thermique": fiche906,
+  "tale-spe-pc-dipole-rc": fiche907,
+  "tale-spe-pc-phenomenes-ondulatoires": fiche908,
+  "tale-spe-pc-lunette-photons": fiche909,
+  "tale-ses-sources-croissance": fiche910,
+  "tale-ses-commerce-mondialisation": fiche911,
+  "tale-ses-marche-du-travail-chomage": fiche912,
+  "tale-ses-monnaie-crises-financieres": fiche913,
+  "tale-ses-politiques-economiques": fiche914,
+  "tale-ses-structure-sociale-classes": fiche915,
+  "tale-ses-mobilite-sociale": fiche916,
+  "tale-ses-ecole-et-inegalites": fiche917,
+  "tale-ses-engagement-politique": fiche918,
+  "tale-si-modelisation-des-mouvements": fiche919,
+  "tale-si-energie-dans-les-systemes": fiche920,
+  "tale-si-resistance-des-structures": fiche921,
+  "tale-si-transmission-de-linformation": fiche922,
+  "tale-si-asservissement-et-regulation": fiche923,
+  "tale-svt-brassage-genetique-et-meiose": fiche924,
+  "tale-svt-evolution-et-speciation": fiche925,
+  "tale-svt-geothermie-et-flux-de-chaleur": fiche926,
+  "tale-svt-climats-passes-et-actuels": fiche927,
+  "tale-svt-reflexe-et-motricite": fiche928,
+  "tale-svt-glycemie-et-diabete": fiche929,
+  "tale-techno-math-logique-ensembles": fiche930,
+  "tale-techno-math-suites-arithmetiques-geometriques": fiche931,
+  "tale-techno-math-fonction-inverse": fiche932,
+  "tale-techno-math-fonctions-exponentielles": fiche933,
+  "tale-techno-math-logarithme-decimal": fiche934,
+  "tale-techno-math-statistiques-deux-variables": fiche935,
+  "tale-techno-math-probabilites-conditionnelles": fiche936,
+  "tale-techno-math-variables-aleatoires-binomiale": fiche937,
+  "tale-techno-math-algorithmique-programmation": fiche938,
+  "tale-techno-math-activites-geometriques-std2a": fiche939,
+  "tale-sti2d-pc-mesure-incertitudes": fiche940,
+  "tale-sti2d-math-exponentielle-logarithme": fiche941,
+  "tale-sti2d-pc-matiere-materiaux": fiche942,
+  "tale-sti2d-math-integration-composition": fiche943,
+  "tale-sti2d-math-equations-differentielles": fiche944,
+  "tale-sti2d-pc-energie-mecanique-fluides": fiche945,
+  "tale-sti2d-pc-energie-electrique-thermique": fiche946,
+  "tale-sti2d-math-complexes-exponentielle": fiche947,
+  "tale-sti2d-pc-ondes-signaux": fiche948,
+  "tale-st2s-pc-molecules-organiques": fiche949,
+  "tale-st2s-pc-biomolecules-eau": fiche950,
+  "tale-st2s-pc-glucides-ressources-naturelles": fiche951,
+  "tale-st2s-pc-besoins-energetiques-alimentation": fiche952,
+  "tale-st2s-pc-fluides-pression-sanguine": fiche953,
+  "tale-stl-spcl-composition-systemes-chimiques": fiche954,
+  "tale-stl-spcl-syntheses-mecanismes": fiche955,
+  "tale-stl-spcl-ondes-mecaniques-em-spectres": fiche956,
+  "tale-stl-spcl-ondes-transmission-stockage": fiche957,
+  "tale-stl-spcl-systemes-procedes-flux": fiche958,
 };
 const EXERCICES = {
   "cp-allemand-begrussungen": exercice0,
@@ -4420,349 +4433,352 @@ const EXERCICES = {
   "2nde-math-fonctions-de-reference": exercice610,
   "2nde-math-vecteurs": exercice611,
   "2nde-math-droites-du-plan": exercice612,
-  "2nde-math-statistiques": exercice613,
-  "2nde-math-probabilites": exercice614,
-  "2nde-math-algorithmique": exercice615,
-  "2nde-pc-description-matiere": exercice616,
-  "2nde-pc-modelisation-microscopique": exercice617,
-  "2nde-pc-transformations-matiere": exercice618,
-  "2nde-pc-mouvement-interactions": exercice619,
-  "2nde-pc-ondes-signaux": exercice620,
-  "2nde-ses-production-richesses": exercice621,
-  "2nde-ses-mesure-production-pib": exercice622,
-  "2nde-ses-consommation-revenu": exercice623,
-  "2nde-ses-marche-formation-prix": exercice624,
-  "2nde-ses-socialisation-introduction": exercice625,
-  "2nde-ses-opinion-publique": exercice626,
-  "2nde-snt-internet": exercice627,
-  "2nde-snt-le-web": exercice628,
-  "2nde-snt-reseaux-sociaux": exercice629,
-  "2nde-snt-donnees-structurees": exercice630,
-  "2nde-snt-localisation-cartographie-gps": exercice631,
-  "2nde-snt-informatique-embarquee-objets-connectes": exercice632,
-  "2nde-snt-photographie-numerique": exercice633,
-  "2nde-svt-la-cellule-unite-du-vivant": exercice634,
-  "2nde-svt-adn-et-information-genetique": exercice635,
-  "2nde-svt-metabolisme-des-cellules": exercice636,
-  "2nde-svt-biodiversite-et-evolution": exercice637,
-  "2nde-svt-la-terre-dans-le-systeme-solaire": exercice638,
-  "2nde-svt-corps-humain-et-effort-physique": exercice639,
-  "1re-allemand-verben-mit-praepositionen": exercice640,
-  "1re-allemand-infinitiv-mit-zu": exercice641,
-  "1re-allemand-nebensaetze-obwohl-damit": exercice642,
-  "1re-allemand-wortschatz-arbeit-studium": exercice643,
-  "1re-allemand-passiv": exercice644,
-  "1re-allemand-konjunktiv-2-vertiefung": exercice645,
-  "1re-allemand-wortschatz-gesellschaft-engagement": exercice646,
-  "1re-allemand-landeskunde-deutsche-geschichte": exercice647,
-  "1re-allemand-landeskunde-literatur": exercice648,
-  "1re-anglais-aspects-simple-continu": exercice649,
-  "1re-anglais-gerondif-infinitif": exercice650,
-  "1re-anglais-relatives-determinatives-explicatives": exercice651,
-  "1re-anglais-vocabulaire-travail-etudes": exercice652,
-  "1re-anglais-voix-passive-emplois": exercice653,
-  "1re-anglais-futur-et-hypotheses": exercice654,
-  "1re-anglais-vocabulaire-societe-engagement": exercice655,
-  "1re-anglais-civilisation-histoire-usa": exercice656,
-  "1re-anglais-civilisation-litterature": exercice657,
-  "1re-arts-architecture": exercice658,
-  "1re-arts-histoire-musique": exercice659,
-  "1esc-une-longue-histoire-de-la-matiere": exercice660,
-  "1esc-le-soleil-notre-source-denergie": exercice661,
-  "1esc-la-terre-un-astre-singulier": exercice662,
-  "1esc-la-biodiversite-et-son-evolution": exercice663,
-  "1esc-son-et-musique": exercice664,
-  "1re-espagnol-subjuntivo-usos": exercice665,
-  "1re-espagnol-relativos": exercice666,
-  "1re-espagnol-perifrasis": exercice667,
-  "1re-espagnol-vocabulario-trabajo-estudios": exercice668,
-  "1re-espagnol-voz-pasiva": exercice669,
-  "1re-espagnol-estilo-indirecto": exercice670,
-  "1re-espagnol-vocabulario-sociedad-ciudadania": exercice671,
-  "1re-espagnol-civilizacion-historia-latinoamerica": exercice672,
-  "1re-espagnol-civilizacion-literatura": exercice673,
-  "1re-francais-grammaire-premiere": exercice674,
-  "1re-francais-commentaire-litteraire": exercice675,
-  "1re-francais-roman-et-recit": exercice676,
-  "1re-francais-poesie-19-21": exercice677,
-  "1re-francais-contraction-essai": exercice678,
-  "1re-francais-litterature-idees-16-18": exercice679,
-  "1re-francais-dissertation": exercice680,
-  "1re-francais-theatre-17-21": exercice681,
-  "1re-francais-epreuve-orale": exercice682,
-  "1re-hggsp-democratie": exercice683,
-  "1re-hggsp-puissances-internationales": exercice684,
-  "1re-hggsp-frontieres": exercice685,
-  "1re-hggsp-s-informer": exercice686,
-  "1re-hggsp-etats-et-religions": exercice687,
-  "1re-hist-geo-revolution-francaise-empire": exercice688,
-  "1re-hist-geo-nations-nationalites-europe": exercice689,
-  "1re-hist-geo-industrialisation-19e": exercice690,
-  "1re-hist-geo-premiere-guerre-et-consequences": exercice691,
-  "1re-hist-geo-metropolisation-france": exercice692,
-  "1re-hist-geo-espaces-productifs-et-ruraux": exercice693,
-  "1re-hist-geo-emc-republique-laicite": exercice694,
-  "1re-italien-congiuntivo-usi": exercice695,
-  "1re-italien-pronomi-relativi": exercice696,
-  "1re-italien-perifrasi": exercice697,
-  "1re-italien-vocabolario-lavoro-studi": exercice698,
-  "1re-italien-forma-passiva": exercice699,
-  "1re-italien-discorso-indiretto": exercice700,
-  "1re-italien-vocabolario-societa-cittadinanza": exercice701,
-  "1re-italien-civilta-rinascimento": exercice702,
-  "1re-italien-civilta-letteratura": exercice703,
-  "1re-lca-mythologie": exercice704,
-  "1re-lca-latin-auteurs": exercice705,
-  "1es-math-information-chiffree": exercice706,
-  "1es-math-phenomenes-evolution": exercice707,
-  "1es-math-statistiques-bivariees": exercice708,
-  "1es-math-phenomenes-aleatoires": exercice709,
-  "1spe-math-second-degre": exercice710,
-  "1spe-math-suites-numeriques": exercice711,
-  "1spe-math-derivation": exercice712,
-  "1spe-math-variations-courbes": exercice713,
-  "1spe-math-fonction-exponentielle": exercice714,
-  "1spe-math-trigonometrie": exercice715,
-  "1spe-math-produit-scalaire": exercice716,
-  "1spe-math-geometrie-reperee": exercice717,
-  "1spe-math-probabilites-conditionnelles": exercice718,
-  "1spe-math-variables-aleatoires": exercice719,
-  "1nsi-representation-des-donnees": exercice720,
-  "1nsi-types-construits": exercice721,
-  "1nsi-traitement-de-donnees-en-tables": exercice722,
-  "1nsi-interactions-web-client-serveur": exercice723,
-  "1nsi-architecture-et-systeme": exercice724,
-  "1nsi-algorithmique-tris-et-recherche": exercice725,
-  "1spe-pc-transformations-matiere": exercice726,
-  "1spe-pc-chimie-organique": exercice727,
-  "1spe-pc-mouvement-interactions": exercice728,
-  "1spe-pc-energie-mecanique": exercice729,
-  "1spe-pc-energie-electrique": exercice730,
-  "1spe-pc-ondes-signaux": exercice731,
-  "1re-ses-marche-concurrentiel": exercice732,
-  "1re-ses-marches-imparfaits": exercice733,
-  "1re-ses-defaillances-de-marche": exercice734,
-  "1re-ses-monnaie-et-financement": exercice735,
-  "1re-ses-socialisation-primaire-secondaire": exercice736,
-  "1re-ses-liens-sociaux": exercice737,
-  "1re-ses-deviance-controle-social": exercice738,
-  "1re-ses-voter-participation": exercice739,
-  "1si-analyse-fonctionnelle-des-systemes": exercice740,
-  "1si-chaine-denergie": exercice741,
-  "1si-chaine-dinformation": exercice742,
-  "1si-comportement-des-materiaux": exercice743,
-  "1si-mecanique-des-solides": exercice744,
-  "1svt-mutations-et-variabilite": exercice745,
-  "1svt-expression-du-patrimoine-genetique": exercice746,
-  "1svt-dynamique-interne-de-la-terre": exercice747,
-  "1svt-ecosystemes-et-services": exercice748,
-  "1svt-variation-genetique-et-sante": exercice749,
-  "1techno-math-suites-numeriques": exercice750,
-  "1techno-math-fonctions-variable-reelle": exercice751,
-  "1techno-math-derivation": exercice752,
-  "1techno-math-statistiques-deux-variables": exercice753,
-  "1techno-math-probabilites-variables-aleatoires": exercice754,
-  "1sti2d-mesure-incertitudes": exercice755,
-  "1sti2d-trigonometrie": exercice756,
-  "1sti2d-energie": exercice757,
-  "1sti2d-produit-scalaire": exercice758,
-  "1sti2d-nombres-complexes": exercice759,
-  "1sti2d-ondes-information": exercice760,
-  "1st2s-pc-securite-chimique-acide-base": exercice761,
-  "1st2s-pc-oxydoreduction-desinfectants": exercice762,
-  "1st2s-pc-risques-electriques": exercice763,
-  "1st2s-pc-ondes-sonores-audition": exercice764,
-  "1st2s-pc-lumiere-vision-lentilles": exercice765,
-  "1st2s-pc-infrarouge-securite-routiere": exercice766,
-  "1stl-spcl-securite-chimie-verte": exercice767,
-  "1stl-spcl-mesure-incertitudes-labo": exercice768,
-  "1stl-spcl-instrumentation-chaine-mesure": exercice769,
-  "1stl-spcl-analyses-spectroscopies-dosages": exercice770,
-  "1stl-spcl-syntheses-extraction-purification": exercice771,
-  "1stl-spcl-image-couleur-vision": exercice772,
-  "1stl-spcl-image-photographie-lentilles": exercice773,
-  "1stl-spcl-appareil-photo-image-numerique": exercice774,
-  "tale-allemand-komplexe-satzgefuege": exercice775,
-  "tale-allemand-konnektoren-argumentation": exercice776,
-  "tale-allemand-partizipialkonstruktionen": exercice777,
-  "tale-allemand-wortschatz-wirtschaft-globalisierung": exercice778,
-  "tale-allemand-konjunktiv-1-indirekte-rede": exercice779,
-  "tale-allemand-nominalstil": exercice780,
-  "tale-allemand-wortschatz-gesellschaft-welt": exercice781,
-  "tale-allemand-landeskunde-deutsch-in-der-welt": exercice782,
-  "tale-anglais-systeme-verbal": exercice783,
-  "tale-anglais-modalite": exercice784,
-  "tale-anglais-irreel-hypotheses": exercice785,
-  "tale-anglais-vocabulaire-economie-mondialisation": exercice786,
-  "tale-anglais-discours-rapporte-concordance": exercice787,
-  "tale-anglais-structures-complexes": exercice788,
-  "tale-anglais-vocabulaire-sciences-societe": exercice789,
-  "tale-anglais-civilisation-anglais-monde": exercice790,
-  "tale-arts-cinema": exercice791,
-  "tale-esc-atmosphere-effet-de-serre-climat": exercice792,
-  "tale-esc-energie-carbone-transition": exercice793,
-  "tale-esc-production-conversion-energie-electrique": exercice794,
-  "tale-esc-une-histoire-du-vivant": exercice795,
-  "tale-esc-evolution-et-biodiversite": exercice796,
-  "tale-esc-du-genotype-au-phenotype": exercice797,
-  "tale-esc-modeles-demographiques": exercice798,
-  "tale-esc-probabilites-bayes-ia": exercice799,
-  "tale-espagnol-ser-estar-avanzado": exercice800,
-  "tale-espagnol-subjuntivo-imperfecto": exercice801,
-  "tale-espagnol-concordancia-tiempos": exercice802,
-  "tale-espagnol-vocabulario-economia-globalizacion": exercice803,
-  "tale-espagnol-conectores-argumentacion": exercice804,
-  "tale-espagnol-estructuras-enfaticas": exercice805,
-  "tale-espagnol-vocabulario-sociedad-mundo": exercice806,
-  "tale-espagnol-civilizacion-espanol-mundo": exercice807,
-  "tale-grandoral-comprendre-l-epreuve": exercice808,
-  "tale-grandoral-choisir-formuler-ses-questions": exercice809,
-  "tale-grandoral-construire-l-expose": exercice810,
-  "tale-grandoral-voix-posture-et-stress": exercice811,
-  "tale-grandoral-l-echange-avec-le-jury": exercice812,
-  "tale-grandoral-le-projet-d-orientation": exercice813,
-  "tale-grandoral-criteres-et-erreurs": exercice814,
-  "tale-grandoral-s-entrainer-et-checklist": exercice815,
-  "tale-hggsp-nouveaux-espaces-conquete": exercice816,
-  "tale-hggsp-faire-la-guerre-faire-la-paix": exercice817,
-  "tale-hggsp-histoire-et-memoires": exercice818,
-  "tale-hggsp-patrimoine": exercice819,
-  "tale-hggsp-environnement": exercice820,
-  "tale-hggsp-enjeu-de-la-connaissance": exercice821,
-  "tale-hist-geo-seconde-guerre-mondiale-genocides": exercice822,
-  "tale-hist-geo-guerre-froide": exercice823,
-  "tale-hist-geo-decolonisation": exercice824,
-  "tale-hist-geo-monde-depuis-1990": exercice825,
-  "tale-hist-geo-mers-oceans-mondialisation": exercice826,
-  "tale-hist-geo-puissances-et-france-dans-le-monde": exercice827,
-  "tale-hist-geo-emc-democratie-engagement": exercice828,
-  "tale-italien-usi-avanzati": exercice829,
-  "tale-italien-congiuntivo-imperfetto": exercice830,
-  "tale-italien-concordanza-tempi": exercice831,
-  "tale-italien-vocabolario-economia-globalizzazione": exercice832,
-  "tale-italien-connettivi-argomentazione": exercice833,
-  "tale-italien-strutture-enfatiche": exercice834,
-  "tale-italien-vocabolario-societa-mondo": exercice835,
-  "tale-italien-civilta-italiano-nel-mondo": exercice836,
-  "tale-lca-civilisation-antique": exercice837,
-  "tale-compl-math-suites-evolution": exercice838,
-  "tale-compl-math-probabilites-bayes-binomiale": exercice839,
-  "tale-compl-math-derivation-convexite": exercice840,
-  "tale-compl-math-continuite-tvi": exercice841,
-  "tale-compl-math-exponentielle-logarithme": exercice842,
-  "tale-compl-math-primitives-equations-differentielles": exercice843,
-  "tale-compl-math-calcul-integral": exercice844,
-  "tale-compl-math-lois-densite-temps-attente": exercice845,
-  "tale-exp-math-complexes-algebrique": exercice846,
-  "tale-exp-math-complexes-geometrique": exercice847,
-  "tale-exp-math-arithmetique": exercice848,
-  "tale-exp-math-graphes-matrices": exercice849,
-  "tale-spe-math-logique-ensembles": exercice850,
-  "tale-spe-math-suites": exercice851,
-  "tale-spe-math-limites-fonctions": exercice852,
-  "tale-spe-math-continuite": exercice853,
-  "tale-spe-math-derivation-convexite": exercice854,
-  "tale-spe-math-fonction-logarithme": exercice855,
-  "tale-spe-math-fonctions-trigonometriques": exercice856,
-  "tale-spe-math-primitives-equations-differentielles": exercice857,
-  "tale-spe-math-calcul-integral": exercice858,
-  "tale-spe-math-vecteurs-droites-plans-espace": exercice859,
-  "tale-spe-math-produit-scalaire-espace": exercice860,
-  "tale-spe-math-combinatoire-denombrement": exercice861,
-  "tale-spe-math-listes": exercice862,
-  "tale-spe-math-loi-binomiale": exercice863,
-  "tale-spe-math-sommes-variables-concentration": exercice864,
-  "tale-nsi-programmation-et-complexite": exercice865,
-  "tale-nsi-recursivite-et-diviser-pour-regner": exercice866,
-  "tale-nsi-structures-de-donnees": exercice867,
-  "tale-nsi-bases-de-donnees-et-sql": exercice868,
-  "tale-nsi-reseaux-et-routage": exercice869,
-  "tale-nsi-algorithmes-de-graphes": exercice870,
-  "tale-philo-methode-dissertation": exercice871,
-  "tale-philo-methode-explication-texte": exercice872,
-  "tale-philo-reperes-conceptuels": exercice873,
-  "tale-philo-conscience": exercice874,
-  "tale-philo-inconscient": exercice875,
-  "tale-philo-temps": exercice876,
-  "tale-philo-langage": exercice877,
-  "tale-philo-raison": exercice878,
-  "tale-philo-verite": exercice879,
-  "tale-philo-science": exercice880,
-  "tale-philo-technique": exercice881,
-  "tale-philo-travail": exercice882,
-  "tale-philo-art": exercice883,
-  "tale-philo-nature": exercice884,
-  "tale-philo-religion": exercice885,
-  "tale-philo-liberte": exercice886,
-  "tale-philo-devoir": exercice887,
-  "tale-philo-bonheur": exercice888,
-  "tale-philo-justice": exercice889,
-  "tale-philo-etat": exercice890,
-  "tale-spe-pc-acide-base-ph": exercice891,
-  "tale-spe-pc-methodes-physiques-analyse": exercice892,
-  "tale-spe-pc-titrages": exercice893,
-  "tale-spe-pc-cinetique-chimique": exercice894,
-  "tale-spe-pc-transformations-nucleaires": exercice895,
-  "tale-spe-pc-equilibre-sens-evolution": exercice896,
-  "tale-spe-pc-electrolyse": exercice897,
-  "tale-spe-pc-synthese-organique": exercice898,
-  "tale-spe-pc-decrire-mouvement": exercice899,
-  "tale-spe-pc-lois-newton-champs": exercice900,
-  "tale-spe-pc-ecoulement-fluide": exercice901,
-  "tale-spe-pc-gaz-parfait": exercice902,
-  "tale-spe-pc-premier-principe-thermique": exercice903,
-  "tale-spe-pc-dipole-rc": exercice904,
-  "tale-spe-pc-phenomenes-ondulatoires": exercice905,
-  "tale-spe-pc-lunette-photons": exercice906,
-  "tale-ses-sources-croissance": exercice907,
-  "tale-ses-commerce-mondialisation": exercice908,
-  "tale-ses-marche-du-travail-chomage": exercice909,
-  "tale-ses-monnaie-crises-financieres": exercice910,
-  "tale-ses-politiques-economiques": exercice911,
-  "tale-ses-structure-sociale-classes": exercice912,
-  "tale-ses-mobilite-sociale": exercice913,
-  "tale-ses-ecole-et-inegalites": exercice914,
-  "tale-ses-engagement-politique": exercice915,
-  "tale-si-modelisation-des-mouvements": exercice916,
-  "tale-si-energie-dans-les-systemes": exercice917,
-  "tale-si-resistance-des-structures": exercice918,
-  "tale-si-transmission-de-linformation": exercice919,
-  "tale-si-asservissement-et-regulation": exercice920,
-  "tale-svt-brassage-genetique-et-meiose": exercice921,
-  "tale-svt-evolution-et-speciation": exercice922,
-  "tale-svt-geothermie-et-flux-de-chaleur": exercice923,
-  "tale-svt-climats-passes-et-actuels": exercice924,
-  "tale-svt-reflexe-et-motricite": exercice925,
-  "tale-svt-glycemie-et-diabete": exercice926,
-  "tale-techno-math-logique-ensembles": exercice927,
-  "tale-techno-math-suites-arithmetiques-geometriques": exercice928,
-  "tale-techno-math-fonction-inverse": exercice929,
-  "tale-techno-math-fonctions-exponentielles": exercice930,
-  "tale-techno-math-logarithme-decimal": exercice931,
-  "tale-techno-math-statistiques-deux-variables": exercice932,
-  "tale-techno-math-probabilites-conditionnelles": exercice933,
-  "tale-techno-math-variables-aleatoires-binomiale": exercice934,
-  "tale-techno-math-algorithmique-programmation": exercice935,
-  "tale-techno-math-activites-geometriques-std2a": exercice936,
-  "tale-sti2d-pc-mesure-incertitudes": exercice937,
-  "tale-sti2d-math-exponentielle-logarithme": exercice938,
-  "tale-sti2d-pc-matiere-materiaux": exercice939,
-  "tale-sti2d-math-integration-composition": exercice940,
-  "tale-sti2d-math-equations-differentielles": exercice941,
-  "tale-sti2d-pc-energie-mecanique-fluides": exercice942,
-  "tale-sti2d-pc-energie-electrique-thermique": exercice943,
-  "tale-sti2d-math-complexes-exponentielle": exercice944,
-  "tale-sti2d-pc-ondes-signaux": exercice945,
-  "tale-st2s-pc-molecules-organiques": exercice946,
-  "tale-st2s-pc-biomolecules-eau": exercice947,
-  "tale-st2s-pc-glucides-ressources-naturelles": exercice948,
-  "tale-st2s-pc-besoins-energetiques-alimentation": exercice949,
-  "tale-st2s-pc-fluides-pression-sanguine": exercice950,
-  "tale-stl-spcl-composition-systemes-chimiques": exercice951,
-  "tale-stl-spcl-syntheses-mecanismes": exercice952,
-  "tale-stl-spcl-ondes-mecaniques-em-spectres": exercice953,
-  "tale-stl-spcl-ondes-transmission-stockage": exercice954,
-  "tale-stl-spcl-systemes-procedes-flux": exercice955,
+  "2nde-math-information-chiffree": exercice613,
+  "2nde-math-statistiques": exercice614,
+  "2nde-math-probabilites": exercice615,
+  "2nde-math-algorithmique": exercice616,
+  "2nde-pc-description-matiere": exercice617,
+  "2nde-pc-modelisation-microscopique": exercice618,
+  "2nde-pc-transformations-matiere": exercice619,
+  "2nde-pc-mouvement-interactions": exercice620,
+  "2nde-pc-ondes-signaux": exercice621,
+  "2nde-ses-production-richesses": exercice622,
+  "2nde-ses-mesure-production-pib": exercice623,
+  "2nde-ses-consommation-revenu": exercice624,
+  "2nde-ses-marche-formation-prix": exercice625,
+  "2nde-ses-socialisation-introduction": exercice626,
+  "2nde-ses-opinion-publique": exercice627,
+  "2nde-snt-internet": exercice628,
+  "2nde-snt-le-web": exercice629,
+  "2nde-snt-reseaux-sociaux": exercice630,
+  "2nde-snt-donnees-structurees": exercice631,
+  "2nde-snt-localisation-cartographie-gps": exercice632,
+  "2nde-snt-informatique-embarquee-objets-connectes": exercice633,
+  "2nde-snt-photographie-numerique": exercice634,
+  "2nde-svt-la-cellule-unite-du-vivant": exercice635,
+  "2nde-svt-adn-et-information-genetique": exercice636,
+  "2nde-svt-metabolisme-des-cellules": exercice637,
+  "2nde-svt-biodiversite-et-evolution": exercice638,
+  "2nde-svt-la-terre-dans-le-systeme-solaire": exercice639,
+  "2nde-svt-corps-humain-et-effort-physique": exercice640,
+  "1re-allemand-verben-mit-praepositionen": exercice641,
+  "1re-allemand-infinitiv-mit-zu": exercice642,
+  "1re-allemand-nebensaetze-obwohl-damit": exercice643,
+  "1re-allemand-wortschatz-arbeit-studium": exercice644,
+  "1re-allemand-passiv": exercice645,
+  "1re-allemand-konjunktiv-2-vertiefung": exercice646,
+  "1re-allemand-wortschatz-gesellschaft-engagement": exercice647,
+  "1re-allemand-landeskunde-deutsche-geschichte": exercice648,
+  "1re-allemand-landeskunde-literatur": exercice649,
+  "1re-anglais-aspects-simple-continu": exercice650,
+  "1re-anglais-gerondif-infinitif": exercice651,
+  "1re-anglais-relatives-determinatives-explicatives": exercice652,
+  "1re-anglais-vocabulaire-travail-etudes": exercice653,
+  "1re-anglais-voix-passive-emplois": exercice654,
+  "1re-anglais-futur-et-hypotheses": exercice655,
+  "1re-anglais-vocabulaire-societe-engagement": exercice656,
+  "1re-anglais-civilisation-histoire-usa": exercice657,
+  "1re-anglais-civilisation-litterature": exercice658,
+  "1re-arts-architecture": exercice659,
+  "1re-arts-histoire-musique": exercice660,
+  "1esc-une-longue-histoire-de-la-matiere": exercice661,
+  "1esc-le-soleil-notre-source-denergie": exercice662,
+  "1esc-la-terre-un-astre-singulier": exercice663,
+  "1esc-la-biodiversite-et-son-evolution": exercice664,
+  "1esc-son-et-musique": exercice665,
+  "1re-espagnol-subjuntivo-usos": exercice666,
+  "1re-espagnol-relativos": exercice667,
+  "1re-espagnol-perifrasis": exercice668,
+  "1re-espagnol-vocabulario-trabajo-estudios": exercice669,
+  "1re-espagnol-voz-pasiva": exercice670,
+  "1re-espagnol-estilo-indirecto": exercice671,
+  "1re-espagnol-vocabulario-sociedad-ciudadania": exercice672,
+  "1re-espagnol-civilizacion-historia-latinoamerica": exercice673,
+  "1re-espagnol-civilizacion-literatura": exercice674,
+  "1re-francais-grammaire-premiere": exercice675,
+  "1re-francais-commentaire-litteraire": exercice676,
+  "1re-francais-roman-et-recit": exercice677,
+  "1re-francais-poesie-19-21": exercice678,
+  "1re-francais-contraction-essai": exercice679,
+  "1re-francais-litterature-idees-16-18": exercice680,
+  "1re-francais-dissertation": exercice681,
+  "1re-francais-theatre-17-21": exercice682,
+  "1re-francais-epreuve-orale": exercice683,
+  "1re-hggsp-democratie": exercice684,
+  "1re-hggsp-puissances-internationales": exercice685,
+  "1re-hggsp-frontieres": exercice686,
+  "1re-hggsp-s-informer": exercice687,
+  "1re-hggsp-etats-et-religions": exercice688,
+  "1re-hist-geo-revolution-francaise-empire": exercice689,
+  "1re-hist-geo-nations-nationalites-europe": exercice690,
+  "1re-hist-geo-industrialisation-19e": exercice691,
+  "1re-hist-geo-premiere-guerre-et-consequences": exercice692,
+  "1re-hist-geo-metropolisation-france": exercice693,
+  "1re-hist-geo-espaces-productifs-et-ruraux": exercice694,
+  "1re-hist-geo-emc-republique-laicite": exercice695,
+  "1re-italien-congiuntivo-usi": exercice696,
+  "1re-italien-pronomi-relativi": exercice697,
+  "1re-italien-perifrasi": exercice698,
+  "1re-italien-vocabolario-lavoro-studi": exercice699,
+  "1re-italien-forma-passiva": exercice700,
+  "1re-italien-discorso-indiretto": exercice701,
+  "1re-italien-vocabolario-societa-cittadinanza": exercice702,
+  "1re-italien-civilta-rinascimento": exercice703,
+  "1re-italien-civilta-letteratura": exercice704,
+  "1re-lca-mythologie": exercice705,
+  "1re-lca-latin-auteurs": exercice706,
+  "1es-math-information-chiffree": exercice707,
+  "1es-math-phenomenes-evolution": exercice708,
+  "1es-math-statistiques-bivariees": exercice709,
+  "1es-math-phenomenes-aleatoires": exercice710,
+  "1spe-math-second-degre": exercice711,
+  "1spe-math-suites-numeriques": exercice712,
+  "1spe-math-derivation": exercice713,
+  "1spe-math-variations-courbes": exercice714,
+  "1spe-math-fonction-exponentielle": exercice715,
+  "1spe-math-trigonometrie": exercice716,
+  "1spe-math-produit-scalaire": exercice717,
+  "1spe-math-geometrie-reperee": exercice718,
+  "1spe-math-probabilites-conditionnelles": exercice719,
+  "1spe-math-variables-aleatoires": exercice720,
+  "1nsi-representation-des-donnees": exercice721,
+  "1nsi-types-construits": exercice722,
+  "1nsi-traitement-de-donnees-en-tables": exercice723,
+  "1nsi-interactions-web-client-serveur": exercice724,
+  "1nsi-architecture-et-systeme": exercice725,
+  "1nsi-algorithmique-tris-et-recherche": exercice726,
+  "1spe-pc-transformations-matiere": exercice727,
+  "1spe-pc-chimie-organique": exercice728,
+  "1spe-pc-mouvement-interactions": exercice729,
+  "1spe-pc-energie-mecanique": exercice730,
+  "1spe-pc-energie-electrique": exercice731,
+  "1spe-pc-ondes-signaux": exercice732,
+  "1re-ses-marche-concurrentiel": exercice733,
+  "1re-ses-marches-imparfaits": exercice734,
+  "1re-ses-defaillances-de-marche": exercice735,
+  "1re-ses-monnaie-et-financement": exercice736,
+  "1re-ses-socialisation-primaire-secondaire": exercice737,
+  "1re-ses-liens-sociaux": exercice738,
+  "1re-ses-deviance-controle-social": exercice739,
+  "1re-ses-voter-participation": exercice740,
+  "1si-analyse-fonctionnelle-des-systemes": exercice741,
+  "1si-chaine-denergie": exercice742,
+  "1si-chaine-dinformation": exercice743,
+  "1si-comportement-des-materiaux": exercice744,
+  "1si-mecanique-des-solides": exercice745,
+  "1svt-mutations-et-variabilite": exercice746,
+  "1svt-expression-du-patrimoine-genetique": exercice747,
+  "1svt-dynamique-interne-de-la-terre": exercice748,
+  "1svt-ecosystemes-et-services": exercice749,
+  "1svt-variation-genetique-et-sante": exercice750,
+  "1techno-math-suites-numeriques": exercice751,
+  "1techno-math-fonctions-variable-reelle": exercice752,
+  "1techno-math-derivation": exercice753,
+  "1techno-math-statistiques-deux-variables": exercice754,
+  "1techno-math-probabilites-variables-aleatoires": exercice755,
+  "1sti2d-mesure-incertitudes": exercice756,
+  "1sti2d-trigonometrie": exercice757,
+  "1sti2d-derivees": exercice758,
+  "1sti2d-energie": exercice759,
+  "1sti2d-produit-scalaire": exercice760,
+  "1sti2d-nombres-complexes": exercice761,
+  "1sti2d-primitives": exercice762,
+  "1sti2d-ondes-information": exercice763,
+  "1st2s-pc-securite-chimique-acide-base": exercice764,
+  "1st2s-pc-oxydoreduction-desinfectants": exercice765,
+  "1st2s-pc-risques-electriques": exercice766,
+  "1st2s-pc-ondes-sonores-audition": exercice767,
+  "1st2s-pc-lumiere-vision-lentilles": exercice768,
+  "1st2s-pc-infrarouge-securite-routiere": exercice769,
+  "1stl-spcl-securite-chimie-verte": exercice770,
+  "1stl-spcl-mesure-incertitudes-labo": exercice771,
+  "1stl-spcl-instrumentation-chaine-mesure": exercice772,
+  "1stl-spcl-analyses-spectroscopies-dosages": exercice773,
+  "1stl-spcl-syntheses-extraction-purification": exercice774,
+  "1stl-spcl-image-couleur-vision": exercice775,
+  "1stl-spcl-image-photographie-lentilles": exercice776,
+  "1stl-spcl-appareil-photo-image-numerique": exercice777,
+  "tale-allemand-komplexe-satzgefuege": exercice778,
+  "tale-allemand-konnektoren-argumentation": exercice779,
+  "tale-allemand-partizipialkonstruktionen": exercice780,
+  "tale-allemand-wortschatz-wirtschaft-globalisierung": exercice781,
+  "tale-allemand-konjunktiv-1-indirekte-rede": exercice782,
+  "tale-allemand-nominalstil": exercice783,
+  "tale-allemand-wortschatz-gesellschaft-welt": exercice784,
+  "tale-allemand-landeskunde-deutsch-in-der-welt": exercice785,
+  "tale-anglais-systeme-verbal": exercice786,
+  "tale-anglais-modalite": exercice787,
+  "tale-anglais-irreel-hypotheses": exercice788,
+  "tale-anglais-vocabulaire-economie-mondialisation": exercice789,
+  "tale-anglais-discours-rapporte-concordance": exercice790,
+  "tale-anglais-structures-complexes": exercice791,
+  "tale-anglais-vocabulaire-sciences-societe": exercice792,
+  "tale-anglais-civilisation-anglais-monde": exercice793,
+  "tale-arts-cinema": exercice794,
+  "tale-esc-atmosphere-effet-de-serre-climat": exercice795,
+  "tale-esc-energie-carbone-transition": exercice796,
+  "tale-esc-production-conversion-energie-electrique": exercice797,
+  "tale-esc-une-histoire-du-vivant": exercice798,
+  "tale-esc-evolution-et-biodiversite": exercice799,
+  "tale-esc-modeles-demographiques": exercice800,
+  "tale-esc-probabilites-bayes-ia": exercice801,
+  "tale-esc-du-genotype-au-phenotype": exercice802,
+  "tale-espagnol-ser-estar-avanzado": exercice803,
+  "tale-espagnol-subjuntivo-imperfecto": exercice804,
+  "tale-espagnol-concordancia-tiempos": exercice805,
+  "tale-espagnol-vocabulario-economia-globalizacion": exercice806,
+  "tale-espagnol-conectores-argumentacion": exercice807,
+  "tale-espagnol-estructuras-enfaticas": exercice808,
+  "tale-espagnol-vocabulario-sociedad-mundo": exercice809,
+  "tale-espagnol-civilizacion-espanol-mundo": exercice810,
+  "tale-grandoral-comprendre-l-epreuve": exercice811,
+  "tale-grandoral-choisir-formuler-ses-questions": exercice812,
+  "tale-grandoral-construire-l-expose": exercice813,
+  "tale-grandoral-voix-posture-et-stress": exercice814,
+  "tale-grandoral-l-echange-avec-le-jury": exercice815,
+  "tale-grandoral-le-projet-d-orientation": exercice816,
+  "tale-grandoral-criteres-et-erreurs": exercice817,
+  "tale-grandoral-s-entrainer-et-checklist": exercice818,
+  "tale-hggsp-nouveaux-espaces-conquete": exercice819,
+  "tale-hggsp-faire-la-guerre-faire-la-paix": exercice820,
+  "tale-hggsp-histoire-et-memoires": exercice821,
+  "tale-hggsp-patrimoine": exercice822,
+  "tale-hggsp-environnement": exercice823,
+  "tale-hggsp-enjeu-de-la-connaissance": exercice824,
+  "tale-hist-geo-seconde-guerre-mondiale-genocides": exercice825,
+  "tale-hist-geo-guerre-froide": exercice826,
+  "tale-hist-geo-decolonisation": exercice827,
+  "tale-hist-geo-monde-depuis-1990": exercice828,
+  "tale-hist-geo-mers-oceans-mondialisation": exercice829,
+  "tale-hist-geo-puissances-et-france-dans-le-monde": exercice830,
+  "tale-hist-geo-emc-democratie-engagement": exercice831,
+  "tale-italien-usi-avanzati": exercice832,
+  "tale-italien-congiuntivo-imperfetto": exercice833,
+  "tale-italien-concordanza-tempi": exercice834,
+  "tale-italien-vocabolario-economia-globalizzazione": exercice835,
+  "tale-italien-connettivi-argomentazione": exercice836,
+  "tale-italien-strutture-enfatiche": exercice837,
+  "tale-italien-vocabolario-societa-mondo": exercice838,
+  "tale-italien-civilta-italiano-nel-mondo": exercice839,
+  "tale-lca-civilisation-antique": exercice840,
+  "tale-compl-math-suites-evolution": exercice841,
+  "tale-compl-math-probabilites-bayes-binomiale": exercice842,
+  "tale-compl-math-derivation-convexite": exercice843,
+  "tale-compl-math-continuite-tvi": exercice844,
+  "tale-compl-math-exponentielle-logarithme": exercice845,
+  "tale-compl-math-primitives-equations-differentielles": exercice846,
+  "tale-compl-math-calcul-integral": exercice847,
+  "tale-compl-math-lois-densite-temps-attente": exercice848,
+  "tale-exp-math-complexes-algebrique": exercice849,
+  "tale-exp-math-complexes-geometrique": exercice850,
+  "tale-exp-math-arithmetique": exercice851,
+  "tale-exp-math-graphes-matrices": exercice852,
+  "tale-spe-math-logique-ensembles": exercice853,
+  "tale-spe-math-suites": exercice854,
+  "tale-spe-math-limites-fonctions": exercice855,
+  "tale-spe-math-continuite": exercice856,
+  "tale-spe-math-derivation-convexite": exercice857,
+  "tale-spe-math-fonction-logarithme": exercice858,
+  "tale-spe-math-fonctions-trigonometriques": exercice859,
+  "tale-spe-math-primitives-equations-differentielles": exercice860,
+  "tale-spe-math-calcul-integral": exercice861,
+  "tale-spe-math-vecteurs-droites-plans-espace": exercice862,
+  "tale-spe-math-produit-scalaire-espace": exercice863,
+  "tale-spe-math-combinatoire-denombrement": exercice864,
+  "tale-spe-math-listes": exercice865,
+  "tale-spe-math-loi-binomiale": exercice866,
+  "tale-spe-math-sommes-variables-concentration": exercice867,
+  "tale-nsi-programmation-et-complexite": exercice868,
+  "tale-nsi-recursivite-et-diviser-pour-regner": exercice869,
+  "tale-nsi-structures-de-donnees": exercice870,
+  "tale-nsi-bases-de-donnees-et-sql": exercice871,
+  "tale-nsi-reseaux-et-routage": exercice872,
+  "tale-nsi-algorithmes-de-graphes": exercice873,
+  "tale-philo-methode-dissertation": exercice874,
+  "tale-philo-methode-explication-texte": exercice875,
+  "tale-philo-reperes-conceptuels": exercice876,
+  "tale-philo-conscience": exercice877,
+  "tale-philo-inconscient": exercice878,
+  "tale-philo-temps": exercice879,
+  "tale-philo-langage": exercice880,
+  "tale-philo-raison": exercice881,
+  "tale-philo-verite": exercice882,
+  "tale-philo-science": exercice883,
+  "tale-philo-technique": exercice884,
+  "tale-philo-travail": exercice885,
+  "tale-philo-art": exercice886,
+  "tale-philo-nature": exercice887,
+  "tale-philo-religion": exercice888,
+  "tale-philo-liberte": exercice889,
+  "tale-philo-devoir": exercice890,
+  "tale-philo-bonheur": exercice891,
+  "tale-philo-justice": exercice892,
+  "tale-philo-etat": exercice893,
+  "tale-spe-pc-acide-base-ph": exercice894,
+  "tale-spe-pc-methodes-physiques-analyse": exercice895,
+  "tale-spe-pc-titrages": exercice896,
+  "tale-spe-pc-cinetique-chimique": exercice897,
+  "tale-spe-pc-transformations-nucleaires": exercice898,
+  "tale-spe-pc-equilibre-sens-evolution": exercice899,
+  "tale-spe-pc-electrolyse": exercice900,
+  "tale-spe-pc-synthese-organique": exercice901,
+  "tale-spe-pc-decrire-mouvement": exercice902,
+  "tale-spe-pc-lois-newton-champs": exercice903,
+  "tale-spe-pc-ecoulement-fluide": exercice904,
+  "tale-spe-pc-gaz-parfait": exercice905,
+  "tale-spe-pc-premier-principe-thermique": exercice906,
+  "tale-spe-pc-dipole-rc": exercice907,
+  "tale-spe-pc-phenomenes-ondulatoires": exercice908,
+  "tale-spe-pc-lunette-photons": exercice909,
+  "tale-ses-sources-croissance": exercice910,
+  "tale-ses-commerce-mondialisation": exercice911,
+  "tale-ses-marche-du-travail-chomage": exercice912,
+  "tale-ses-monnaie-crises-financieres": exercice913,
+  "tale-ses-politiques-economiques": exercice914,
+  "tale-ses-structure-sociale-classes": exercice915,
+  "tale-ses-mobilite-sociale": exercice916,
+  "tale-ses-ecole-et-inegalites": exercice917,
+  "tale-ses-engagement-politique": exercice918,
+  "tale-si-modelisation-des-mouvements": exercice919,
+  "tale-si-energie-dans-les-systemes": exercice920,
+  "tale-si-resistance-des-structures": exercice921,
+  "tale-si-transmission-de-linformation": exercice922,
+  "tale-si-asservissement-et-regulation": exercice923,
+  "tale-svt-brassage-genetique-et-meiose": exercice924,
+  "tale-svt-evolution-et-speciation": exercice925,
+  "tale-svt-geothermie-et-flux-de-chaleur": exercice926,
+  "tale-svt-climats-passes-et-actuels": exercice927,
+  "tale-svt-reflexe-et-motricite": exercice928,
+  "tale-svt-glycemie-et-diabete": exercice929,
+  "tale-techno-math-logique-ensembles": exercice930,
+  "tale-techno-math-suites-arithmetiques-geometriques": exercice931,
+  "tale-techno-math-fonction-inverse": exercice932,
+  "tale-techno-math-fonctions-exponentielles": exercice933,
+  "tale-techno-math-logarithme-decimal": exercice934,
+  "tale-techno-math-statistiques-deux-variables": exercice935,
+  "tale-techno-math-probabilites-conditionnelles": exercice936,
+  "tale-techno-math-variables-aleatoires-binomiale": exercice937,
+  "tale-techno-math-algorithmique-programmation": exercice938,
+  "tale-techno-math-activites-geometriques-std2a": exercice939,
+  "tale-sti2d-pc-mesure-incertitudes": exercice940,
+  "tale-sti2d-math-exponentielle-logarithme": exercice941,
+  "tale-sti2d-pc-matiere-materiaux": exercice942,
+  "tale-sti2d-math-integration-composition": exercice943,
+  "tale-sti2d-math-equations-differentielles": exercice944,
+  "tale-sti2d-pc-energie-mecanique-fluides": exercice945,
+  "tale-sti2d-pc-energie-electrique-thermique": exercice946,
+  "tale-sti2d-math-complexes-exponentielle": exercice947,
+  "tale-sti2d-pc-ondes-signaux": exercice948,
+  "tale-st2s-pc-molecules-organiques": exercice949,
+  "tale-st2s-pc-biomolecules-eau": exercice950,
+  "tale-st2s-pc-glucides-ressources-naturelles": exercice951,
+  "tale-st2s-pc-besoins-energetiques-alimentation": exercice952,
+  "tale-st2s-pc-fluides-pression-sanguine": exercice953,
+  "tale-stl-spcl-composition-systemes-chimiques": exercice954,
+  "tale-stl-spcl-syntheses-mecanismes": exercice955,
+  "tale-stl-spcl-ondes-mecaniques-em-spectres": exercice956,
+  "tale-stl-spcl-ondes-transmission-stockage": exercice957,
+  "tale-stl-spcl-systemes-procedes-flux": exercice958,
 };
 
 const ATTENDUS = {
@@ -5350,352 +5366,356 @@ const ATTENDUS = {
   "2nde-italien-civilta-arte-pittura": attendus603,
   "2nde-lca-latin-syntaxe": attendus604,
   "2nde-lca-grec-morphologie": attendus605,
+  "2nde-math-calcul-numerique-algebrique": attendus606,
   "2nde-math-arithmetique": attendus607,
   "2nde-math-equations-inequations": attendus608,
   "2nde-math-notion-de-fonction": attendus609,
   "2nde-math-fonctions-de-reference": attendus610,
   "2nde-math-vecteurs": attendus611,
   "2nde-math-droites-du-plan": attendus612,
-  "2nde-math-statistiques": attendus613,
-  "2nde-math-probabilites": attendus614,
-  "2nde-math-algorithmique": attendus615,
-  "2nde-pc-description-matiere": attendus616,
-  "2nde-pc-modelisation-microscopique": attendus617,
-  "2nde-pc-transformations-matiere": attendus618,
-  "2nde-pc-mouvement-interactions": attendus619,
-  "2nde-pc-ondes-signaux": attendus620,
-  "2nde-ses-production-richesses": attendus621,
-  "2nde-ses-mesure-production-pib": attendus622,
-  "2nde-ses-consommation-revenu": attendus623,
-  "2nde-ses-marche-formation-prix": attendus624,
-  "2nde-ses-socialisation-introduction": attendus625,
-  "2nde-ses-opinion-publique": attendus626,
-  "2nde-snt-internet": attendus627,
-  "2nde-snt-le-web": attendus628,
-  "2nde-snt-reseaux-sociaux": attendus629,
-  "2nde-snt-donnees-structurees": attendus630,
-  "2nde-snt-localisation-cartographie-gps": attendus631,
-  "2nde-snt-informatique-embarquee-objets-connectes": attendus632,
-  "2nde-snt-photographie-numerique": attendus633,
-  "2nde-svt-la-cellule-unite-du-vivant": attendus634,
-  "2nde-svt-adn-et-information-genetique": attendus635,
-  "2nde-svt-metabolisme-des-cellules": attendus636,
-  "2nde-svt-biodiversite-et-evolution": attendus637,
-  "2nde-svt-la-terre-dans-le-systeme-solaire": attendus638,
-  "2nde-svt-corps-humain-et-effort-physique": attendus639,
-  "1re-allemand-verben-mit-praepositionen": attendus640,
-  "1re-allemand-infinitiv-mit-zu": attendus641,
-  "1re-allemand-nebensaetze-obwohl-damit": attendus642,
-  "1re-allemand-wortschatz-arbeit-studium": attendus643,
-  "1re-allemand-passiv": attendus644,
-  "1re-allemand-konjunktiv-2-vertiefung": attendus645,
-  "1re-allemand-wortschatz-gesellschaft-engagement": attendus646,
-  "1re-allemand-landeskunde-deutsche-geschichte": attendus647,
-  "1re-allemand-landeskunde-literatur": attendus648,
-  "1re-anglais-aspects-simple-continu": attendus649,
-  "1re-anglais-gerondif-infinitif": attendus650,
-  "1re-anglais-relatives-determinatives-explicatives": attendus651,
-  "1re-anglais-vocabulaire-travail-etudes": attendus652,
-  "1re-anglais-voix-passive-emplois": attendus653,
-  "1re-anglais-futur-et-hypotheses": attendus654,
-  "1re-anglais-vocabulaire-societe-engagement": attendus655,
-  "1re-anglais-civilisation-histoire-usa": attendus656,
-  "1re-anglais-civilisation-litterature": attendus657,
-  "1re-arts-architecture": attendus658,
-  "1re-arts-histoire-musique": attendus659,
-  "1esc-une-longue-histoire-de-la-matiere": attendus660,
-  "1esc-le-soleil-notre-source-denergie": attendus661,
-  "1esc-la-terre-un-astre-singulier": attendus662,
-  "1esc-la-biodiversite-et-son-evolution": attendus663,
-  "1esc-son-et-musique": attendus664,
-  "1re-espagnol-subjuntivo-usos": attendus665,
-  "1re-espagnol-relativos": attendus666,
-  "1re-espagnol-perifrasis": attendus667,
-  "1re-espagnol-vocabulario-trabajo-estudios": attendus668,
-  "1re-espagnol-voz-pasiva": attendus669,
-  "1re-espagnol-estilo-indirecto": attendus670,
-  "1re-espagnol-vocabulario-sociedad-ciudadania": attendus671,
-  "1re-espagnol-civilizacion-historia-latinoamerica": attendus672,
-  "1re-espagnol-civilizacion-literatura": attendus673,
-  "1re-francais-grammaire-premiere": attendus674,
-  "1re-francais-commentaire-litteraire": attendus675,
-  "1re-francais-roman-et-recit": attendus676,
-  "1re-francais-poesie-19-21": attendus677,
-  "1re-francais-contraction-essai": attendus678,
-  "1re-francais-litterature-idees-16-18": attendus679,
-  "1re-francais-dissertation": attendus680,
-  "1re-francais-theatre-17-21": attendus681,
-  "1re-francais-epreuve-orale": attendus682,
-  "1re-hggsp-democratie": attendus683,
-  "1re-hggsp-puissances-internationales": attendus684,
-  "1re-hggsp-frontieres": attendus685,
-  "1re-hggsp-s-informer": attendus686,
-  "1re-hggsp-etats-et-religions": attendus687,
-  "1re-hist-geo-revolution-francaise-empire": attendus688,
-  "1re-hist-geo-nations-nationalites-europe": attendus689,
-  "1re-hist-geo-industrialisation-19e": attendus690,
-  "1re-hist-geo-premiere-guerre-et-consequences": attendus691,
-  "1re-hist-geo-metropolisation-france": attendus692,
-  "1re-hist-geo-espaces-productifs-et-ruraux": attendus693,
-  "1re-hist-geo-emc-republique-laicite": attendus694,
-  "1re-italien-congiuntivo-usi": attendus695,
-  "1re-italien-pronomi-relativi": attendus696,
-  "1re-italien-perifrasi": attendus697,
-  "1re-italien-vocabolario-lavoro-studi": attendus698,
-  "1re-italien-forma-passiva": attendus699,
-  "1re-italien-discorso-indiretto": attendus700,
-  "1re-italien-vocabolario-societa-cittadinanza": attendus701,
-  "1re-italien-civilta-rinascimento": attendus702,
-  "1re-italien-civilta-letteratura": attendus703,
-  "1re-lca-mythologie": attendus704,
-  "1re-lca-latin-auteurs": attendus705,
-  "1es-math-information-chiffree": attendus706,
-  "1es-math-phenomenes-evolution": attendus707,
-  "1es-math-statistiques-bivariees": attendus708,
-  "1es-math-phenomenes-aleatoires": attendus709,
-  "1spe-math-second-degre": attendus710,
-  "1spe-math-suites-numeriques": attendus711,
-  "1spe-math-derivation": attendus712,
-  "1spe-math-variations-courbes": attendus713,
-  "1spe-math-fonction-exponentielle": attendus714,
-  "1spe-math-trigonometrie": attendus715,
-  "1spe-math-produit-scalaire": attendus716,
-  "1spe-math-geometrie-reperee": attendus717,
-  "1spe-math-probabilites-conditionnelles": attendus718,
-  "1spe-math-variables-aleatoires": attendus719,
-  "1nsi-representation-des-donnees": attendus720,
-  "1nsi-types-construits": attendus721,
-  "1nsi-traitement-de-donnees-en-tables": attendus722,
-  "1nsi-interactions-web-client-serveur": attendus723,
-  "1nsi-architecture-et-systeme": attendus724,
-  "1nsi-algorithmique-tris-et-recherche": attendus725,
-  "1spe-pc-transformations-matiere": attendus726,
-  "1spe-pc-chimie-organique": attendus727,
-  "1spe-pc-mouvement-interactions": attendus728,
-  "1spe-pc-energie-mecanique": attendus729,
-  "1spe-pc-energie-electrique": attendus730,
-  "1spe-pc-ondes-signaux": attendus731,
-  "1re-ses-marche-concurrentiel": attendus732,
-  "1re-ses-marches-imparfaits": attendus733,
-  "1re-ses-defaillances-de-marche": attendus734,
-  "1re-ses-monnaie-et-financement": attendus735,
-  "1re-ses-socialisation-primaire-secondaire": attendus736,
-  "1re-ses-liens-sociaux": attendus737,
-  "1re-ses-deviance-controle-social": attendus738,
-  "1re-ses-voter-participation": attendus739,
-  "1si-analyse-fonctionnelle-des-systemes": attendus740,
-  "1si-chaine-denergie": attendus741,
-  "1si-chaine-dinformation": attendus742,
-  "1si-comportement-des-materiaux": attendus743,
-  "1si-mecanique-des-solides": attendus744,
-  "1svt-mutations-et-variabilite": attendus745,
-  "1svt-expression-du-patrimoine-genetique": attendus746,
-  "1svt-dynamique-interne-de-la-terre": attendus747,
-  "1svt-ecosystemes-et-services": attendus748,
-  "1svt-variation-genetique-et-sante": attendus749,
-  "1techno-math-suites-numeriques": attendus750,
-  "1techno-math-fonctions-variable-reelle": attendus751,
-  "1techno-math-derivation": attendus752,
-  "1techno-math-statistiques-deux-variables": attendus753,
-  "1techno-math-probabilites-variables-aleatoires": attendus754,
-  "1sti2d-mesure-incertitudes": attendus755,
-  "1sti2d-trigonometrie": attendus756,
-  "1sti2d-energie": attendus757,
-  "1sti2d-produit-scalaire": attendus758,
-  "1sti2d-nombres-complexes": attendus759,
-  "1sti2d-ondes-information": attendus760,
-  "1st2s-pc-securite-chimique-acide-base": attendus761,
-  "1st2s-pc-oxydoreduction-desinfectants": attendus762,
-  "1st2s-pc-risques-electriques": attendus763,
-  "1st2s-pc-ondes-sonores-audition": attendus764,
-  "1st2s-pc-lumiere-vision-lentilles": attendus765,
-  "1st2s-pc-infrarouge-securite-routiere": attendus766,
-  "1stl-spcl-securite-chimie-verte": attendus767,
-  "1stl-spcl-mesure-incertitudes-labo": attendus768,
-  "1stl-spcl-instrumentation-chaine-mesure": attendus769,
-  "1stl-spcl-analyses-spectroscopies-dosages": attendus770,
-  "1stl-spcl-syntheses-extraction-purification": attendus771,
-  "1stl-spcl-image-couleur-vision": attendus772,
-  "1stl-spcl-image-photographie-lentilles": attendus773,
-  "1stl-spcl-appareil-photo-image-numerique": attendus774,
-  "tale-allemand-komplexe-satzgefuege": attendus775,
-  "tale-allemand-konnektoren-argumentation": attendus776,
-  "tale-allemand-partizipialkonstruktionen": attendus777,
-  "tale-allemand-wortschatz-wirtschaft-globalisierung": attendus778,
-  "tale-allemand-konjunktiv-1-indirekte-rede": attendus779,
-  "tale-allemand-nominalstil": attendus780,
-  "tale-allemand-wortschatz-gesellschaft-welt": attendus781,
-  "tale-allemand-landeskunde-deutsch-in-der-welt": attendus782,
-  "tale-anglais-systeme-verbal": attendus783,
-  "tale-anglais-modalite": attendus784,
-  "tale-anglais-irreel-hypotheses": attendus785,
-  "tale-anglais-vocabulaire-economie-mondialisation": attendus786,
-  "tale-anglais-discours-rapporte-concordance": attendus787,
-  "tale-anglais-structures-complexes": attendus788,
-  "tale-anglais-vocabulaire-sciences-societe": attendus789,
-  "tale-anglais-civilisation-anglais-monde": attendus790,
-  "tale-arts-cinema": attendus791,
-  "tale-esc-atmosphere-effet-de-serre-climat": attendus792,
-  "tale-esc-energie-carbone-transition": attendus793,
-  "tale-esc-production-conversion-energie-electrique": attendus794,
-  "tale-esc-une-histoire-du-vivant": attendus795,
-  "tale-esc-evolution-et-biodiversite": attendus796,
-  "tale-esc-du-genotype-au-phenotype": attendus797,
-  "tale-esc-modeles-demographiques": attendus798,
-  "tale-esc-probabilites-bayes-ia": attendus799,
-  "tale-espagnol-ser-estar-avanzado": attendus800,
-  "tale-espagnol-subjuntivo-imperfecto": attendus801,
-  "tale-espagnol-concordancia-tiempos": attendus802,
-  "tale-espagnol-vocabulario-economia-globalizacion": attendus803,
-  "tale-espagnol-conectores-argumentacion": attendus804,
-  "tale-espagnol-estructuras-enfaticas": attendus805,
-  "tale-espagnol-vocabulario-sociedad-mundo": attendus806,
-  "tale-espagnol-civilizacion-espanol-mundo": attendus807,
-  "tale-grandoral-comprendre-l-epreuve": attendus808,
-  "tale-grandoral-choisir-formuler-ses-questions": attendus809,
-  "tale-grandoral-construire-l-expose": attendus810,
-  "tale-grandoral-voix-posture-et-stress": attendus811,
-  "tale-grandoral-l-echange-avec-le-jury": attendus812,
-  "tale-grandoral-le-projet-d-orientation": attendus813,
-  "tale-grandoral-criteres-et-erreurs": attendus814,
-  "tale-grandoral-s-entrainer-et-checklist": attendus815,
-  "tale-hggsp-nouveaux-espaces-conquete": attendus816,
-  "tale-hggsp-faire-la-guerre-faire-la-paix": attendus817,
-  "tale-hggsp-histoire-et-memoires": attendus818,
-  "tale-hggsp-patrimoine": attendus819,
-  "tale-hggsp-environnement": attendus820,
-  "tale-hggsp-enjeu-de-la-connaissance": attendus821,
-  "tale-hist-geo-seconde-guerre-mondiale-genocides": attendus822,
-  "tale-hist-geo-guerre-froide": attendus823,
-  "tale-hist-geo-decolonisation": attendus824,
-  "tale-hist-geo-monde-depuis-1990": attendus825,
-  "tale-hist-geo-mers-oceans-mondialisation": attendus826,
-  "tale-hist-geo-puissances-et-france-dans-le-monde": attendus827,
-  "tale-hist-geo-emc-democratie-engagement": attendus828,
-  "tale-italien-usi-avanzati": attendus829,
-  "tale-italien-congiuntivo-imperfetto": attendus830,
-  "tale-italien-concordanza-tempi": attendus831,
-  "tale-italien-vocabolario-economia-globalizzazione": attendus832,
-  "tale-italien-connettivi-argomentazione": attendus833,
-  "tale-italien-strutture-enfatiche": attendus834,
-  "tale-italien-vocabolario-societa-mondo": attendus835,
-  "tale-italien-civilta-italiano-nel-mondo": attendus836,
-  "tale-lca-civilisation-antique": attendus837,
-  "tale-compl-math-suites-evolution": attendus838,
-  "tale-compl-math-probabilites-bayes-binomiale": attendus839,
-  "tale-compl-math-derivation-convexite": attendus840,
-  "tale-compl-math-continuite-tvi": attendus841,
-  "tale-compl-math-exponentielle-logarithme": attendus842,
-  "tale-compl-math-primitives-equations-differentielles": attendus843,
-  "tale-compl-math-calcul-integral": attendus844,
-  "tale-compl-math-lois-densite-temps-attente": attendus845,
-  "tale-exp-math-complexes-algebrique": attendus846,
-  "tale-exp-math-complexes-geometrique": attendus847,
-  "tale-exp-math-arithmetique": attendus848,
-  "tale-exp-math-graphes-matrices": attendus849,
-  "tale-spe-math-logique-ensembles": attendus850,
-  "tale-spe-math-suites": attendus851,
-  "tale-spe-math-limites-fonctions": attendus852,
-  "tale-spe-math-continuite": attendus853,
-  "tale-spe-math-derivation-convexite": attendus854,
-  "tale-spe-math-fonction-logarithme": attendus855,
-  "tale-spe-math-fonctions-trigonometriques": attendus856,
-  "tale-spe-math-primitives-equations-differentielles": attendus857,
-  "tale-spe-math-calcul-integral": attendus858,
-  "tale-spe-math-vecteurs-droites-plans-espace": attendus859,
-  "tale-spe-math-produit-scalaire-espace": attendus860,
-  "tale-spe-math-combinatoire-denombrement": attendus861,
-  "tale-spe-math-listes": attendus862,
-  "tale-spe-math-loi-binomiale": attendus863,
-  "tale-spe-math-sommes-variables-concentration": attendus864,
-  "tale-nsi-programmation-et-complexite": attendus865,
-  "tale-nsi-recursivite-et-diviser-pour-regner": attendus866,
-  "tale-nsi-structures-de-donnees": attendus867,
-  "tale-nsi-bases-de-donnees-et-sql": attendus868,
-  "tale-nsi-reseaux-et-routage": attendus869,
-  "tale-nsi-algorithmes-de-graphes": attendus870,
-  "tale-philo-methode-dissertation": attendus871,
-  "tale-philo-methode-explication-texte": attendus872,
-  "tale-philo-reperes-conceptuels": attendus873,
-  "tale-philo-conscience": attendus874,
-  "tale-philo-inconscient": attendus875,
-  "tale-philo-temps": attendus876,
-  "tale-philo-langage": attendus877,
-  "tale-philo-raison": attendus878,
-  "tale-philo-verite": attendus879,
-  "tale-philo-science": attendus880,
-  "tale-philo-technique": attendus881,
-  "tale-philo-travail": attendus882,
-  "tale-philo-art": attendus883,
-  "tale-philo-nature": attendus884,
-  "tale-philo-religion": attendus885,
-  "tale-philo-liberte": attendus886,
-  "tale-philo-devoir": attendus887,
-  "tale-philo-bonheur": attendus888,
-  "tale-philo-justice": attendus889,
-  "tale-philo-etat": attendus890,
-  "tale-spe-pc-methodes-physiques-analyse": attendus892,
-  "tale-spe-pc-titrages": attendus893,
-  "tale-spe-pc-cinetique-chimique": attendus894,
-  "tale-spe-pc-equilibre-sens-evolution": attendus896,
-  "tale-spe-pc-electrolyse": attendus897,
-  "tale-spe-pc-synthese-organique": attendus898,
-  "tale-spe-pc-decrire-mouvement": attendus899,
-  "tale-spe-pc-lois-newton-champs": attendus900,
-  "tale-spe-pc-ecoulement-fluide": attendus901,
-  "tale-spe-pc-gaz-parfait": attendus902,
-  "tale-spe-pc-premier-principe-thermique": attendus903,
-  "tale-spe-pc-dipole-rc": attendus904,
-  "tale-spe-pc-phenomenes-ondulatoires": attendus905,
-  "tale-spe-pc-lunette-photons": attendus906,
-  "tale-ses-sources-croissance": attendus907,
-  "tale-ses-commerce-mondialisation": attendus908,
-  "tale-ses-marche-du-travail-chomage": attendus909,
-  "tale-ses-monnaie-crises-financieres": attendus910,
-  "tale-ses-politiques-economiques": attendus911,
-  "tale-ses-structure-sociale-classes": attendus912,
-  "tale-ses-mobilite-sociale": attendus913,
-  "tale-ses-ecole-et-inegalites": attendus914,
-  "tale-ses-engagement-politique": attendus915,
-  "tale-si-modelisation-des-mouvements": attendus916,
-  "tale-si-energie-dans-les-systemes": attendus917,
-  "tale-si-resistance-des-structures": attendus918,
-  "tale-si-transmission-de-linformation": attendus919,
-  "tale-si-asservissement-et-regulation": attendus920,
-  "tale-svt-brassage-genetique-et-meiose": attendus921,
-  "tale-svt-evolution-et-speciation": attendus922,
-  "tale-svt-geothermie-et-flux-de-chaleur": attendus923,
-  "tale-svt-climats-passes-et-actuels": attendus924,
-  "tale-svt-reflexe-et-motricite": attendus925,
-  "tale-svt-glycemie-et-diabete": attendus926,
-  "tale-techno-math-logique-ensembles": attendus927,
-  "tale-techno-math-suites-arithmetiques-geometriques": attendus928,
-  "tale-techno-math-fonction-inverse": attendus929,
-  "tale-techno-math-fonctions-exponentielles": attendus930,
-  "tale-techno-math-logarithme-decimal": attendus931,
-  "tale-techno-math-statistiques-deux-variables": attendus932,
-  "tale-techno-math-variables-aleatoires-binomiale": attendus934,
-  "tale-techno-math-algorithmique-programmation": attendus935,
-  "tale-techno-math-activites-geometriques-std2a": attendus936,
-  "tale-sti2d-pc-mesure-incertitudes": attendus937,
-  "tale-sti2d-math-exponentielle-logarithme": attendus938,
-  "tale-sti2d-pc-matiere-materiaux": attendus939,
-  "tale-sti2d-math-integration-composition": attendus940,
-  "tale-sti2d-math-equations-differentielles": attendus941,
-  "tale-sti2d-pc-energie-mecanique-fluides": attendus942,
-  "tale-sti2d-pc-energie-electrique-thermique": attendus943,
-  "tale-sti2d-math-complexes-exponentielle": attendus944,
-  "tale-sti2d-pc-ondes-signaux": attendus945,
-  "tale-st2s-pc-molecules-organiques": attendus946,
-  "tale-st2s-pc-biomolecules-eau": attendus947,
-  "tale-st2s-pc-glucides-ressources-naturelles": attendus948,
-  "tale-st2s-pc-besoins-energetiques-alimentation": attendus949,
-  "tale-st2s-pc-fluides-pression-sanguine": attendus950,
-  "tale-stl-spcl-composition-systemes-chimiques": attendus951,
-  "tale-stl-spcl-syntheses-mecanismes": attendus952,
-  "tale-stl-spcl-ondes-mecaniques-em-spectres": attendus953,
-  "tale-stl-spcl-ondes-transmission-stockage": attendus954,
-  "tale-stl-spcl-systemes-procedes-flux": attendus955,
+  "2nde-math-information-chiffree": attendus613,
+  "2nde-math-statistiques": attendus614,
+  "2nde-math-probabilites": attendus615,
+  "2nde-math-algorithmique": attendus616,
+  "2nde-pc-description-matiere": attendus617,
+  "2nde-pc-modelisation-microscopique": attendus618,
+  "2nde-pc-transformations-matiere": attendus619,
+  "2nde-pc-mouvement-interactions": attendus620,
+  "2nde-pc-ondes-signaux": attendus621,
+  "2nde-ses-production-richesses": attendus622,
+  "2nde-ses-mesure-production-pib": attendus623,
+  "2nde-ses-consommation-revenu": attendus624,
+  "2nde-ses-marche-formation-prix": attendus625,
+  "2nde-ses-socialisation-introduction": attendus626,
+  "2nde-ses-opinion-publique": attendus627,
+  "2nde-snt-internet": attendus628,
+  "2nde-snt-le-web": attendus629,
+  "2nde-snt-reseaux-sociaux": attendus630,
+  "2nde-snt-donnees-structurees": attendus631,
+  "2nde-snt-localisation-cartographie-gps": attendus632,
+  "2nde-snt-informatique-embarquee-objets-connectes": attendus633,
+  "2nde-snt-photographie-numerique": attendus634,
+  "2nde-svt-la-cellule-unite-du-vivant": attendus635,
+  "2nde-svt-adn-et-information-genetique": attendus636,
+  "2nde-svt-metabolisme-des-cellules": attendus637,
+  "2nde-svt-biodiversite-et-evolution": attendus638,
+  "2nde-svt-la-terre-dans-le-systeme-solaire": attendus639,
+  "2nde-svt-corps-humain-et-effort-physique": attendus640,
+  "1re-allemand-verben-mit-praepositionen": attendus641,
+  "1re-allemand-infinitiv-mit-zu": attendus642,
+  "1re-allemand-nebensaetze-obwohl-damit": attendus643,
+  "1re-allemand-wortschatz-arbeit-studium": attendus644,
+  "1re-allemand-passiv": attendus645,
+  "1re-allemand-konjunktiv-2-vertiefung": attendus646,
+  "1re-allemand-wortschatz-gesellschaft-engagement": attendus647,
+  "1re-allemand-landeskunde-deutsche-geschichte": attendus648,
+  "1re-allemand-landeskunde-literatur": attendus649,
+  "1re-anglais-aspects-simple-continu": attendus650,
+  "1re-anglais-gerondif-infinitif": attendus651,
+  "1re-anglais-relatives-determinatives-explicatives": attendus652,
+  "1re-anglais-vocabulaire-travail-etudes": attendus653,
+  "1re-anglais-voix-passive-emplois": attendus654,
+  "1re-anglais-futur-et-hypotheses": attendus655,
+  "1re-anglais-vocabulaire-societe-engagement": attendus656,
+  "1re-anglais-civilisation-histoire-usa": attendus657,
+  "1re-anglais-civilisation-litterature": attendus658,
+  "1re-arts-architecture": attendus659,
+  "1re-arts-histoire-musique": attendus660,
+  "1esc-une-longue-histoire-de-la-matiere": attendus661,
+  "1esc-le-soleil-notre-source-denergie": attendus662,
+  "1esc-la-terre-un-astre-singulier": attendus663,
+  "1esc-la-biodiversite-et-son-evolution": attendus664,
+  "1esc-son-et-musique": attendus665,
+  "1re-espagnol-subjuntivo-usos": attendus666,
+  "1re-espagnol-relativos": attendus667,
+  "1re-espagnol-perifrasis": attendus668,
+  "1re-espagnol-vocabulario-trabajo-estudios": attendus669,
+  "1re-espagnol-voz-pasiva": attendus670,
+  "1re-espagnol-estilo-indirecto": attendus671,
+  "1re-espagnol-vocabulario-sociedad-ciudadania": attendus672,
+  "1re-espagnol-civilizacion-historia-latinoamerica": attendus673,
+  "1re-espagnol-civilizacion-literatura": attendus674,
+  "1re-francais-grammaire-premiere": attendus675,
+  "1re-francais-commentaire-litteraire": attendus676,
+  "1re-francais-roman-et-recit": attendus677,
+  "1re-francais-poesie-19-21": attendus678,
+  "1re-francais-contraction-essai": attendus679,
+  "1re-francais-litterature-idees-16-18": attendus680,
+  "1re-francais-dissertation": attendus681,
+  "1re-francais-theatre-17-21": attendus682,
+  "1re-francais-epreuve-orale": attendus683,
+  "1re-hggsp-democratie": attendus684,
+  "1re-hggsp-puissances-internationales": attendus685,
+  "1re-hggsp-frontieres": attendus686,
+  "1re-hggsp-s-informer": attendus687,
+  "1re-hggsp-etats-et-religions": attendus688,
+  "1re-hist-geo-revolution-francaise-empire": attendus689,
+  "1re-hist-geo-nations-nationalites-europe": attendus690,
+  "1re-hist-geo-industrialisation-19e": attendus691,
+  "1re-hist-geo-premiere-guerre-et-consequences": attendus692,
+  "1re-hist-geo-metropolisation-france": attendus693,
+  "1re-hist-geo-espaces-productifs-et-ruraux": attendus694,
+  "1re-hist-geo-emc-republique-laicite": attendus695,
+  "1re-italien-congiuntivo-usi": attendus696,
+  "1re-italien-pronomi-relativi": attendus697,
+  "1re-italien-perifrasi": attendus698,
+  "1re-italien-vocabolario-lavoro-studi": attendus699,
+  "1re-italien-forma-passiva": attendus700,
+  "1re-italien-discorso-indiretto": attendus701,
+  "1re-italien-vocabolario-societa-cittadinanza": attendus702,
+  "1re-italien-civilta-rinascimento": attendus703,
+  "1re-italien-civilta-letteratura": attendus704,
+  "1re-lca-mythologie": attendus705,
+  "1re-lca-latin-auteurs": attendus706,
+  "1es-math-information-chiffree": attendus707,
+  "1es-math-phenomenes-evolution": attendus708,
+  "1es-math-statistiques-bivariees": attendus709,
+  "1es-math-phenomenes-aleatoires": attendus710,
+  "1spe-math-second-degre": attendus711,
+  "1spe-math-suites-numeriques": attendus712,
+  "1spe-math-derivation": attendus713,
+  "1spe-math-variations-courbes": attendus714,
+  "1spe-math-fonction-exponentielle": attendus715,
+  "1spe-math-trigonometrie": attendus716,
+  "1spe-math-produit-scalaire": attendus717,
+  "1spe-math-geometrie-reperee": attendus718,
+  "1spe-math-probabilites-conditionnelles": attendus719,
+  "1spe-math-variables-aleatoires": attendus720,
+  "1nsi-representation-des-donnees": attendus721,
+  "1nsi-types-construits": attendus722,
+  "1nsi-traitement-de-donnees-en-tables": attendus723,
+  "1nsi-interactions-web-client-serveur": attendus724,
+  "1nsi-architecture-et-systeme": attendus725,
+  "1nsi-algorithmique-tris-et-recherche": attendus726,
+  "1spe-pc-transformations-matiere": attendus727,
+  "1spe-pc-chimie-organique": attendus728,
+  "1spe-pc-mouvement-interactions": attendus729,
+  "1spe-pc-energie-mecanique": attendus730,
+  "1spe-pc-energie-electrique": attendus731,
+  "1spe-pc-ondes-signaux": attendus732,
+  "1re-ses-marche-concurrentiel": attendus733,
+  "1re-ses-marches-imparfaits": attendus734,
+  "1re-ses-defaillances-de-marche": attendus735,
+  "1re-ses-monnaie-et-financement": attendus736,
+  "1re-ses-socialisation-primaire-secondaire": attendus737,
+  "1re-ses-liens-sociaux": attendus738,
+  "1re-ses-deviance-controle-social": attendus739,
+  "1re-ses-voter-participation": attendus740,
+  "1si-analyse-fonctionnelle-des-systemes": attendus741,
+  "1si-chaine-denergie": attendus742,
+  "1si-chaine-dinformation": attendus743,
+  "1si-comportement-des-materiaux": attendus744,
+  "1si-mecanique-des-solides": attendus745,
+  "1svt-mutations-et-variabilite": attendus746,
+  "1svt-expression-du-patrimoine-genetique": attendus747,
+  "1svt-dynamique-interne-de-la-terre": attendus748,
+  "1svt-ecosystemes-et-services": attendus749,
+  "1svt-variation-genetique-et-sante": attendus750,
+  "1techno-math-suites-numeriques": attendus751,
+  "1techno-math-fonctions-variable-reelle": attendus752,
+  "1techno-math-derivation": attendus753,
+  "1techno-math-statistiques-deux-variables": attendus754,
+  "1techno-math-probabilites-variables-aleatoires": attendus755,
+  "1sti2d-mesure-incertitudes": attendus756,
+  "1sti2d-trigonometrie": attendus757,
+  "1sti2d-derivees": attendus758,
+  "1sti2d-energie": attendus759,
+  "1sti2d-produit-scalaire": attendus760,
+  "1sti2d-nombres-complexes": attendus761,
+  "1sti2d-primitives": attendus762,
+  "1sti2d-ondes-information": attendus763,
+  "1st2s-pc-securite-chimique-acide-base": attendus764,
+  "1st2s-pc-oxydoreduction-desinfectants": attendus765,
+  "1st2s-pc-risques-electriques": attendus766,
+  "1st2s-pc-ondes-sonores-audition": attendus767,
+  "1st2s-pc-lumiere-vision-lentilles": attendus768,
+  "1st2s-pc-infrarouge-securite-routiere": attendus769,
+  "1stl-spcl-securite-chimie-verte": attendus770,
+  "1stl-spcl-mesure-incertitudes-labo": attendus771,
+  "1stl-spcl-instrumentation-chaine-mesure": attendus772,
+  "1stl-spcl-analyses-spectroscopies-dosages": attendus773,
+  "1stl-spcl-syntheses-extraction-purification": attendus774,
+  "1stl-spcl-image-couleur-vision": attendus775,
+  "1stl-spcl-image-photographie-lentilles": attendus776,
+  "1stl-spcl-appareil-photo-image-numerique": attendus777,
+  "tale-allemand-komplexe-satzgefuege": attendus778,
+  "tale-allemand-konnektoren-argumentation": attendus779,
+  "tale-allemand-partizipialkonstruktionen": attendus780,
+  "tale-allemand-wortschatz-wirtschaft-globalisierung": attendus781,
+  "tale-allemand-konjunktiv-1-indirekte-rede": attendus782,
+  "tale-allemand-nominalstil": attendus783,
+  "tale-allemand-wortschatz-gesellschaft-welt": attendus784,
+  "tale-allemand-landeskunde-deutsch-in-der-welt": attendus785,
+  "tale-anglais-systeme-verbal": attendus786,
+  "tale-anglais-modalite": attendus787,
+  "tale-anglais-irreel-hypotheses": attendus788,
+  "tale-anglais-vocabulaire-economie-mondialisation": attendus789,
+  "tale-anglais-discours-rapporte-concordance": attendus790,
+  "tale-anglais-structures-complexes": attendus791,
+  "tale-anglais-vocabulaire-sciences-societe": attendus792,
+  "tale-anglais-civilisation-anglais-monde": attendus793,
+  "tale-arts-cinema": attendus794,
+  "tale-esc-atmosphere-effet-de-serre-climat": attendus795,
+  "tale-esc-energie-carbone-transition": attendus796,
+  "tale-esc-production-conversion-energie-electrique": attendus797,
+  "tale-esc-une-histoire-du-vivant": attendus798,
+  "tale-esc-evolution-et-biodiversite": attendus799,
+  "tale-esc-modeles-demographiques": attendus800,
+  "tale-esc-probabilites-bayes-ia": attendus801,
+  "tale-esc-du-genotype-au-phenotype": attendus802,
+  "tale-espagnol-ser-estar-avanzado": attendus803,
+  "tale-espagnol-subjuntivo-imperfecto": attendus804,
+  "tale-espagnol-concordancia-tiempos": attendus805,
+  "tale-espagnol-vocabulario-economia-globalizacion": attendus806,
+  "tale-espagnol-conectores-argumentacion": attendus807,
+  "tale-espagnol-estructuras-enfaticas": attendus808,
+  "tale-espagnol-vocabulario-sociedad-mundo": attendus809,
+  "tale-espagnol-civilizacion-espanol-mundo": attendus810,
+  "tale-grandoral-comprendre-l-epreuve": attendus811,
+  "tale-grandoral-choisir-formuler-ses-questions": attendus812,
+  "tale-grandoral-construire-l-expose": attendus813,
+  "tale-grandoral-voix-posture-et-stress": attendus814,
+  "tale-grandoral-l-echange-avec-le-jury": attendus815,
+  "tale-grandoral-le-projet-d-orientation": attendus816,
+  "tale-grandoral-criteres-et-erreurs": attendus817,
+  "tale-grandoral-s-entrainer-et-checklist": attendus818,
+  "tale-hggsp-nouveaux-espaces-conquete": attendus819,
+  "tale-hggsp-faire-la-guerre-faire-la-paix": attendus820,
+  "tale-hggsp-histoire-et-memoires": attendus821,
+  "tale-hggsp-patrimoine": attendus822,
+  "tale-hggsp-environnement": attendus823,
+  "tale-hggsp-enjeu-de-la-connaissance": attendus824,
+  "tale-hist-geo-seconde-guerre-mondiale-genocides": attendus825,
+  "tale-hist-geo-guerre-froide": attendus826,
+  "tale-hist-geo-decolonisation": attendus827,
+  "tale-hist-geo-monde-depuis-1990": attendus828,
+  "tale-hist-geo-mers-oceans-mondialisation": attendus829,
+  "tale-hist-geo-puissances-et-france-dans-le-monde": attendus830,
+  "tale-hist-geo-emc-democratie-engagement": attendus831,
+  "tale-italien-usi-avanzati": attendus832,
+  "tale-italien-congiuntivo-imperfetto": attendus833,
+  "tale-italien-concordanza-tempi": attendus834,
+  "tale-italien-vocabolario-economia-globalizzazione": attendus835,
+  "tale-italien-connettivi-argomentazione": attendus836,
+  "tale-italien-strutture-enfatiche": attendus837,
+  "tale-italien-vocabolario-societa-mondo": attendus838,
+  "tale-italien-civilta-italiano-nel-mondo": attendus839,
+  "tale-lca-civilisation-antique": attendus840,
+  "tale-compl-math-suites-evolution": attendus841,
+  "tale-compl-math-probabilites-bayes-binomiale": attendus842,
+  "tale-compl-math-derivation-convexite": attendus843,
+  "tale-compl-math-continuite-tvi": attendus844,
+  "tale-compl-math-exponentielle-logarithme": attendus845,
+  "tale-compl-math-primitives-equations-differentielles": attendus846,
+  "tale-compl-math-calcul-integral": attendus847,
+  "tale-compl-math-lois-densite-temps-attente": attendus848,
+  "tale-exp-math-complexes-algebrique": attendus849,
+  "tale-exp-math-complexes-geometrique": attendus850,
+  "tale-exp-math-arithmetique": attendus851,
+  "tale-exp-math-graphes-matrices": attendus852,
+  "tale-spe-math-logique-ensembles": attendus853,
+  "tale-spe-math-suites": attendus854,
+  "tale-spe-math-limites-fonctions": attendus855,
+  "tale-spe-math-continuite": attendus856,
+  "tale-spe-math-derivation-convexite": attendus857,
+  "tale-spe-math-fonction-logarithme": attendus858,
+  "tale-spe-math-fonctions-trigonometriques": attendus859,
+  "tale-spe-math-primitives-equations-differentielles": attendus860,
+  "tale-spe-math-calcul-integral": attendus861,
+  "tale-spe-math-vecteurs-droites-plans-espace": attendus862,
+  "tale-spe-math-produit-scalaire-espace": attendus863,
+  "tale-spe-math-combinatoire-denombrement": attendus864,
+  "tale-spe-math-listes": attendus865,
+  "tale-spe-math-loi-binomiale": attendus866,
+  "tale-spe-math-sommes-variables-concentration": attendus867,
+  "tale-nsi-programmation-et-complexite": attendus868,
+  "tale-nsi-recursivite-et-diviser-pour-regner": attendus869,
+  "tale-nsi-structures-de-donnees": attendus870,
+  "tale-nsi-bases-de-donnees-et-sql": attendus871,
+  "tale-nsi-reseaux-et-routage": attendus872,
+  "tale-nsi-algorithmes-de-graphes": attendus873,
+  "tale-philo-methode-dissertation": attendus874,
+  "tale-philo-methode-explication-texte": attendus875,
+  "tale-philo-reperes-conceptuels": attendus876,
+  "tale-philo-conscience": attendus877,
+  "tale-philo-inconscient": attendus878,
+  "tale-philo-temps": attendus879,
+  "tale-philo-langage": attendus880,
+  "tale-philo-raison": attendus881,
+  "tale-philo-verite": attendus882,
+  "tale-philo-science": attendus883,
+  "tale-philo-technique": attendus884,
+  "tale-philo-travail": attendus885,
+  "tale-philo-art": attendus886,
+  "tale-philo-nature": attendus887,
+  "tale-philo-religion": attendus888,
+  "tale-philo-liberte": attendus889,
+  "tale-philo-devoir": attendus890,
+  "tale-philo-bonheur": attendus891,
+  "tale-philo-justice": attendus892,
+  "tale-philo-etat": attendus893,
+  "tale-spe-pc-methodes-physiques-analyse": attendus895,
+  "tale-spe-pc-titrages": attendus896,
+  "tale-spe-pc-cinetique-chimique": attendus897,
+  "tale-spe-pc-equilibre-sens-evolution": attendus899,
+  "tale-spe-pc-electrolyse": attendus900,
+  "tale-spe-pc-synthese-organique": attendus901,
+  "tale-spe-pc-decrire-mouvement": attendus902,
+  "tale-spe-pc-lois-newton-champs": attendus903,
+  "tale-spe-pc-ecoulement-fluide": attendus904,
+  "tale-spe-pc-gaz-parfait": attendus905,
+  "tale-spe-pc-premier-principe-thermique": attendus906,
+  "tale-spe-pc-dipole-rc": attendus907,
+  "tale-spe-pc-phenomenes-ondulatoires": attendus908,
+  "tale-spe-pc-lunette-photons": attendus909,
+  "tale-ses-sources-croissance": attendus910,
+  "tale-ses-commerce-mondialisation": attendus911,
+  "tale-ses-marche-du-travail-chomage": attendus912,
+  "tale-ses-monnaie-crises-financieres": attendus913,
+  "tale-ses-politiques-economiques": attendus914,
+  "tale-ses-structure-sociale-classes": attendus915,
+  "tale-ses-mobilite-sociale": attendus916,
+  "tale-ses-ecole-et-inegalites": attendus917,
+  "tale-ses-engagement-politique": attendus918,
+  "tale-si-modelisation-des-mouvements": attendus919,
+  "tale-si-energie-dans-les-systemes": attendus920,
+  "tale-si-resistance-des-structures": attendus921,
+  "tale-si-transmission-de-linformation": attendus922,
+  "tale-si-asservissement-et-regulation": attendus923,
+  "tale-svt-brassage-genetique-et-meiose": attendus924,
+  "tale-svt-evolution-et-speciation": attendus925,
+  "tale-svt-geothermie-et-flux-de-chaleur": attendus926,
+  "tale-svt-climats-passes-et-actuels": attendus927,
+  "tale-svt-reflexe-et-motricite": attendus928,
+  "tale-svt-glycemie-et-diabete": attendus929,
+  "tale-techno-math-logique-ensembles": attendus930,
+  "tale-techno-math-suites-arithmetiques-geometriques": attendus931,
+  "tale-techno-math-fonction-inverse": attendus932,
+  "tale-techno-math-fonctions-exponentielles": attendus933,
+  "tale-techno-math-logarithme-decimal": attendus934,
+  "tale-techno-math-statistiques-deux-variables": attendus935,
+  "tale-techno-math-variables-aleatoires-binomiale": attendus937,
+  "tale-techno-math-algorithmique-programmation": attendus938,
+  "tale-techno-math-activites-geometriques-std2a": attendus939,
+  "tale-sti2d-pc-mesure-incertitudes": attendus940,
+  "tale-sti2d-math-exponentielle-logarithme": attendus941,
+  "tale-sti2d-pc-matiere-materiaux": attendus942,
+  "tale-sti2d-math-integration-composition": attendus943,
+  "tale-sti2d-math-equations-differentielles": attendus944,
+  "tale-sti2d-pc-energie-mecanique-fluides": attendus945,
+  "tale-sti2d-pc-energie-electrique-thermique": attendus946,
+  "tale-sti2d-math-complexes-exponentielle": attendus947,
+  "tale-sti2d-pc-ondes-signaux": attendus948,
+  "tale-st2s-pc-molecules-organiques": attendus949,
+  "tale-st2s-pc-biomolecules-eau": attendus950,
+  "tale-st2s-pc-glucides-ressources-naturelles": attendus951,
+  "tale-st2s-pc-besoins-energetiques-alimentation": attendus952,
+  "tale-st2s-pc-fluides-pression-sanguine": attendus953,
+  "tale-stl-spcl-composition-systemes-chimiques": attendus954,
+  "tale-stl-spcl-syntheses-mecanismes": attendus955,
+  "tale-stl-spcl-ondes-mecaniques-em-spectres": attendus956,
+  "tale-stl-spcl-ondes-transmission-stockage": attendus957,
+  "tale-stl-spcl-systemes-procedes-flux": attendus958,
 };
 
 export async function chargerFiche(id) { return FICHES[id] ?? null; }

@@ -108,16 +108,25 @@ $$\mathrm{e}^a = \mathrm{e}^b \iff a = b \qquad\qquad \mathrm{e}^a < \mathrm{e}^
 
 ---
 
-## 5. Dérivées composées
+## 5. Dérivée de $t \mapsto \mathrm{e}^{at}$
+
+Pour tout réel $a$, la fonction $t \mapsto \mathrm{e}^{at}$ est dérivable sur $\mathbb{R}$ et
+
+$$\boxed{\left(\mathrm{e}^{at}\right)' = a\,\mathrm{e}^{at}}$$
 
 | Fonction | Dérivée |
 |---|---|
 | $\mathrm{e}^x$ | $\mathrm{e}^x$ |
-| $\mathrm{e}^{ax+b}$ | $\boxed{a\,\mathrm{e}^{ax+b}}$ |
-| $\mathrm{e}^{u}$ | $u'\,\mathrm{e}^{u}$ |
+| $\mathrm{e}^{ax}$ | $a\,\mathrm{e}^{ax}$ |
+| $k\,\mathrm{e}^{ax}$ ($k$ constante) | $k\,a\,\mathrm{e}^{ax}$ |
 
-> **Exemple.** $f(x) = \mathrm{e}^{3x-2}$ donne $f'(x) = 3\,\mathrm{e}^{3x-2}$.
+> **Exemple.** $f(x) = \mathrm{e}^{3x}$ donne $f'(x) = 3\,\mathrm{e}^{3x}$.
 > $g(x) = \mathrm{e}^{-x}$ donne $g'(x) = -\mathrm{e}^{-x}$ : elle est **décroissante**.
+
+> **Avec une constante dans l'exposant.** $\mathrm{e}^{3x-2} = \mathrm{e}^{-2} \times \mathrm{e}^{3x}$ :
+> c'est une constante multipliée par $\mathrm{e}^{3x}$, donc sa dérivée est
+> $\mathrm{e}^{-2} \times 3\,\mathrm{e}^{3x} = 3\,\mathrm{e}^{3x-2}$. De même,
+> $\left(\mathrm{e}^{ax+b}\right)' = a\,\mathrm{e}^{ax+b}$.
 
 ---
 
@@ -152,7 +161,7 @@ continu** de la croissance géométrique.
 | Signe | $\mathrm{e}^x > 0$ **toujours** |
 | Variations | strictement croissante sur $\mathbb{R}$ |
 | Somme → produit | $\mathrm{e}^{a+b} = \mathrm{e}^a\,\mathrm{e}^b$ |
-| Dérivée composée | $\left(\mathrm{e}^{ax+b}\right)' = a\,\mathrm{e}^{ax+b}$ |
+| Dérivée | $\left(\mathrm{e}^{ax}\right)' = a\,\mathrm{e}^{ax}$ |
 | Équation | $\mathrm{e}^a = \mathrm{e}^b \iff a = b$ |
 | $\mathrm{e}$ | $\approx 2{,}718$ |
 
@@ -164,35 +173,11 @@ continu** de la croissance géométrique.
    transforme les sommes en **produits**, jamais en sommes.
 2. **Chercher quand $\mathrm{e}^x$ est négative ou nulle.** Elle ne l'est jamais. Toute
    équation $\mathrm{e}^x = -3$ ou $\mathrm{e}^x = 0$ n'a **aucune** solution.
-3. **Oublier le facteur $a$** en dérivant $\mathrm{e}^{ax+b}$ : la dérivée est
-   $a\,\mathrm{e}^{ax+b}$.
+3. **Oublier le facteur $a$** en dérivant $\mathrm{e}^{ax}$ : la dérivée est
+   $a\,\mathrm{e}^{ax}$, pas $\mathrm{e}^{ax}$.
 4. **Croire que $\mathrm{e}^{-x}$ est croissante.** Sa dérivée vaut $-\mathrm{e}^{-x} < 0$ :
    elle est décroissante.
 5. **Simplifier $\dfrac{\mathrm{e}^a}{\mathrm{e}^b}$ en $\mathrm{e}^{a/b}$.** C'est
    $\mathrm{e}^{a-b}$.
 6. **Garder un facteur exponentiel dans un tableau de signes.** Puisqu'il est toujours positif,
    il n'influence rien — le dire et l'écarter.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité mathématiques première générale,
-section « Fonction exponentielle » (ligne 2155 du .txt extrait).
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La DÉFINITION retenue par le nouveau programme. Deux entrées coexistent selon les
-  programmes : (a) l'unique fonction dérivable telle que f' = f et f(0) = 1, (b) le
-  prolongement continu des suites géométriques. J'ai retenu (a), qui est l'entrée classique
-  en première — à confirmer, car le programme insiste ailleurs sur le lien avec les suites
-  géométriques, ce qui pourrait signaler l'entrée (b).
-- La relation fonctionnelle e^(a+b) = e^a · e^b est-elle démontrée (démonstration exigible)
-  ou admise ?
-- La dérivée de e^u en toute généralité est-elle au programme de première, ou seulement
-  e^(ax+b) ? J'ai mis les deux, en mettant e^(ax+b) en évidence.
-- La notion de limite en ±∞ n'est traitée qu'intuitivement en première : ne pas formaliser.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

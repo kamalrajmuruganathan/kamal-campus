@@ -124,7 +124,7 @@ $$\boxed{u(\bar{x}) = \frac{s}{\sqrt{n}}}$$
 > Écart-type (calculatrice) : $s = 0{,}24\ \mathrm{s}$.
 > Incertitude-type : $u(\bar{x}) = \dfrac{0{,}24}{\sqrt{5}} = 0{,}11\ \mathrm{s}$.
 > Plus précisément $u = 0{,}107\ \mathrm{s}$ ; son premier chiffre est un $1$, on garde $2$ c.s.
-> par excès : $u \approx 0{,}11\ \mathrm{s}$. On écrira $t = (20{,}12 \pm 0{,}11)\ \mathrm{s}$ (voir §8-9 pour l'arrondi).
+> (arrondi au plus proche) : $u \approx 0{,}11\ \mathrm{s}$. On écrira $t = (20{,}12 \pm 0{,}11)\ \mathrm{s}$ (voir §8-9 pour l'arrondi).
 
 > ⚠️ **Divise par $\sqrt{n}$, pas par $n$**, et prends bien l'écart-type en $n-1$
 > (touche $\sigma_{n-1}$), pas celui en $n$. Plus on fait de mesures, plus $u(\bar{x})$
@@ -135,27 +135,38 @@ $$\boxed{u(\bar{x}) = \frac{s}{\sqrt{n}}}$$
 ## 6. Incertitude-type de type B — une seule mesure
 
 Quand on ne dispose que d'**une** mesure, on estime l'incertitude à partir des
-**caractéristiques de l'instrument**. On modélise le doute par une répartition
-uniforme, ce qui donne un facteur $\sqrt{3}$.
+**caractéristiques de l'instrument**. On repère d'abord la **demi-largeur** $a$ de
+l'intervalle dans lequel la valeur est sûrement comprise ($\text{valeur} \pm a$), puis on
+modélise le doute par une répartition uniforme, ce qui donne un facteur $\sqrt{3}$ :
 
-| Origine de l'incertitude | Formule | Exemple |
-|---|---|---|
-| **Résolution / graduation** (plus petite division lisible, ou dernier digit affiché) | $u = \dfrac{\text{graduation}}{\sqrt{3}}$ | burette au $1/10$ de mL |
-| **Tolérance** annoncée par le fabricant (verrerie jaugée, appareil de classe) | $u = \dfrac{\text{tolérance}}{\sqrt{3}}$ | pipette jaugée $\pm 0{,}03\ \mathrm{mL}$ |
+$$\boxed{u = \frac{a}{\sqrt{3}}}$$
 
-$$\boxed{u = \frac{\text{graduation}}{\sqrt{3}} \qquad\text{ou}\qquad u = \frac{\text{tolérance}}{\sqrt{3}}}$$
+| Origine de l'incertitude | Demi-largeur $a$ | Formule | Exemple |
+|---|---|---|---|
+| **Tolérance** annoncée par le fabricant (verrerie jaugée, notice d'un appareil) | la tolérance elle-même | $u = \dfrac{\text{tolérance}}{\sqrt{3}}$ | pipette jaugée $\pm 0{,}03\ \mathrm{mL}$ |
+| **Lecture sur une graduation** (on lit la graduation la plus proche) | une **demi-graduation** | $u = \dfrac{\text{graduation}/2}{\sqrt{3}} = \dfrac{\text{graduation}}{\sqrt{12}}$ | thermomètre, éprouvette |
+| **Affichage numérique** sans notice (on retient le dernier chiffre affiché) | une demi-unité du dernier chiffre | $u = \dfrac{\text{résolution}}{\sqrt{12}}$ | balance au $0{,}01\ \mathrm{g}$ |
 
-> **Exemple 1 — résolution.** Une burette est graduée tous les $0{,}1\ \mathrm{mL}$.
-> $u = \dfrac{0{,}1}{\sqrt{3}} = 0{,}058 \approx 0{,}06\ \mathrm{mL}$. Une lecture de
-> $14{,}20\ \mathrm{mL}$ s'écrit $V = (14{,}20 \pm 0{,}06)\ \mathrm{mL}$.
+> **Exemple 1 — une lecture.** Un thermomètre est gradué tous les $0{,}5\ \mathrm{°C}$ ; on
+> lit $21{,}5\ \mathrm{°C}$. La valeur est sûrement à moins d'une demi-graduation
+> ($0{,}25\ \mathrm{°C}$) de la lecture : $u = \dfrac{0{,}5}{\sqrt{12}} = 0{,}14 \approx 0{,}1\ \mathrm{°C}$
+> (arrondi au plus proche), d'où $\theta = (21{,}5 \pm 0{,}1)\ \mathrm{°C}$.
 
-> **Exemple 2 — tolérance.** Une pipette jaugée porte l'indication $20{,}00\ \mathrm{mL}
+> **Exemple 2 — double lecture.** Le volume versé par une burette graduée tous les
+> $0{,}1\ \mathrm{mL}$ est la **différence de deux lectures** (niveau initial et niveau
+> final). Chaque lecture donne $u = \dfrac{0{,}1}{\sqrt{12}} = 0{,}029\ \mathrm{mL}$ ; on les
+> combine comme au § 7 : $u(V) = \sqrt{0{,}029^2 + 0{,}029^2} = 0{,}041 \approx 0{,}04\ \mathrm{mL}$.
+
+> **Exemple 3 — tolérance.** Une pipette jaugée porte l'indication $20{,}00\ \mathrm{mL}
 > \pm 0{,}03\ \mathrm{mL}$. $u = \dfrac{0{,}03}{\sqrt{3}} = 0{,}017 \approx 0{,}02\ \mathrm{mL}$,
 > d'où $V = (20{,}00 \pm 0{,}02)\ \mathrm{mL}$.
 
 > ⚠️ La **tolérance** est déjà une demi-largeur ($\pm$) : on divise directement par
-> $\sqrt{3}$, **sans** la couper en deux. Et attention aux unités : une graduation lue
-> en $\mathrm{mL}$ donne une incertitude en $\mathrm{mL}$.
+> $\sqrt{3}$, **sans** la couper en deux. Pour une **graduation**, au contraire, la
+> demi-largeur n'est que la **moitié** d'une graduation : d'où $\sqrt{12} = 2\sqrt{3}$.
+> Si un énoncé indique une autre demi-largeur (lecture difficile : « à une graduation
+> près »), on applique toujours $u = \dfrac{a}{\sqrt{3}}$ avec la valeur donnée.
+> Et attention aux unités : une graduation lue en $\mathrm{mL}$ donne une incertitude en $\mathrm{mL}$.
 
 ---
 
@@ -178,12 +189,12 @@ $$\boxed{\frac{u(y)}{|y|} = \sqrt{\left(\frac{u(a)}{a}\right)^2 + \left(\frac{u(
 > Incertitudes relatives : $\dfrac{u(m)}{m} = \dfrac{0{,}1}{24{,}6} = 0{,}0041$ et
 > $\dfrac{u(V)}{V} = \dfrac{0{,}5}{20{,}0} = 0{,}025$.
 > $\dfrac{u(\rho)}{\rho} = \sqrt{0{,}0041^2 + 0{,}025^2} \approx 0{,}0253$, donc
-> $u(\rho) = 0{,}0253 \times 1{,}23 \approx 0{,}031\ \mathrm{g\cdot mL^{-1}}$, arrondi par excès à $0{,}04\ \mathrm{g\cdot mL^{-1}}$.
-> Résultat : $\rho = (1{,}23 \pm 0{,}04)\ \mathrm{g\cdot mL^{-1}}$.
+> $u(\rho) = 0{,}0253 \times 1{,}23 \approx 0{,}031\ \mathrm{g\cdot mL^{-1}}$, arrondi à $0{,}03\ \mathrm{g\cdot mL^{-1}}$.
+> Résultat : $\rho = (1{,}23 \pm 0{,}03)\ \mathrm{g\cdot mL^{-1}}$.
 
 > **Exemple — somme.** $L = L_1 + L_2$ avec $L_1 = (12{,}3 \pm 0{,}1)\ \mathrm{cm}$ et
 > $L_2 = (8{,}5 \pm 0{,}1)\ \mathrm{cm}$ : $L = 20{,}8\ \mathrm{cm}$ et
-> $u(L) = \sqrt{0{,}1^2 + 0{,}1^2} = 0{,}14 \approx 0{,}2\ \mathrm{cm}$.
+> $u(L) = \sqrt{0{,}1^2 + 0{,}1^2} = 0{,}14 \approx 0{,}1\ \mathrm{cm}$, d'où $L = (20{,}8 \pm 0{,}1)\ \mathrm{cm}$.
 
 > ⚠️ **Sommes/différences** → on combine les incertitudes **absolues** ($u$).
 > **Produits/quotients** → on combine les incertitudes **relatives** ($u/x$). Confondre
@@ -225,21 +236,21 @@ différence**, on aligne sur le **dernier rang décimal** commun.
 
 C'est l'aboutissement de tout le chapitre. Trois règles, dans l'ordre.
 
-1. **Arrondir l'incertitude** à **1 chiffre significatif** (2 c.s. tolérés si le premier
-   est un $1$), **en arrondissant vers le haut** (par excès) pour ne pas sous-estimer le
-   doute.
+1. **Arrondir l'incertitude** **au plus proche**, avec **1 ou 2 chiffres significatifs**
+   (un seul le plus souvent ; on en garde volontiers 2 quand le premier est un $1$). Si un
+   énoncé impose un autre arrondi (par excès, par exemple), on suit la consigne.
 2. **Arrondir la valeur** au **même rang décimal** que l'incertitude — ni plus, ni moins.
 3. **Écrire** le résultat sous la forme, avec l'unité **hors parenthèses** :
 $$\boxed{x = (\,\bar{x} \pm u(x)\,)\ \text{unité}}$$
 
 > **Exemple.** Un calcul donne $\bar{x} = 24{,}6172\ \mathrm{g}$ et
-> $u(x) = 0{,}0312\ \mathrm{g}$. On arrondit d'abord $u \approx 0{,}04\ \mathrm{g}$
-> ($1$ c.s., par excès), puis la valeur au **centième** : $\bar{x} \approx 24{,}62\ \mathrm{g}$.
+> $u(x) = 0{,}0382\ \mathrm{g}$. On arrondit d'abord $u \approx 0{,}04\ \mathrm{g}$
+> ($1$ c.s., au plus proche), puis la valeur au **centième** : $\bar{x} \approx 24{,}62\ \mathrm{g}$.
 > Résultat : $m = (24{,}62 \pm 0{,}04)\ \mathrm{g}$.
 
 > **Contre-exemple à ne pas écrire.** $m = (24{,}6172 \pm 0{,}04)\ \mathrm{g}$ : la valeur
 > a des chiffres au-delà du rang de l'incertitude, qui ne veulent rien dire. Ou pire,
-> $m = (24{,}62 \pm 0{,}0312)\ \mathrm{g}$ : incertitude non arrondie.
+> $m = (24{,}62 \pm 0{,}0382)\ \mathrm{g}$ : incertitude non arrondie.
 
 > **Lecture.** $m = (24{,}62 \pm 0{,}04)\ \mathrm{g}$ signifie : la valeur vraie est très
 > probablement comprise entre $24{,}58$ et $24{,}66\ \mathrm{g}$.
@@ -256,10 +267,10 @@ $$\boxed{x = (\,\bar{x} \pm u(x)\,)\ \text{unité}}$$
 | Justesse | moyenne proche de la valeur vraie |
 | Fidélité | mesures peu dispersées entre elles |
 | Type A | $\bar{x} = \dfrac{\sum x_i}{n}$ ; $u(\bar{x}) = \dfrac{s}{\sqrt{n}}$ |
-| Type B | $u = \dfrac{\text{graduation}}{\sqrt{3}}$ ou $\dfrac{\text{tolérance}}{\sqrt{3}}$ |
+| Type B | $u = \dfrac{a}{\sqrt{3}}$ : $\dfrac{\text{tolérance}}{\sqrt{3}}$ ou, pour une lecture, $\dfrac{\text{graduation}}{\sqrt{12}}$ |
 | Composée (somme) | $u(y) = \sqrt{u(a)^2 + u(b)^2}$ |
 | Composée (produit/quotient) | $\dfrac{u(y)}{|y|} = \sqrt{\left(\dfrac{u(a)}{a}\right)^2 + \left(\dfrac{u(b)}{b}\right)^2}$ |
-| Résultat final | $x = (\bar{x} \pm u)\ \text{unité}$ ; $u$ à $1$ c.s. par excès ; $\bar{x}$ au même rang |
+| Résultat final | $x = (\bar{x} \pm u)\ \text{unité}$ ; $u$ arrondie au plus proche (1 ou 2 c.s.) ; $\bar{x}$ au même rang |
 
 ---
 
@@ -274,7 +285,7 @@ $$\boxed{x = (\,\bar{x} \pm u(x)\,)\ \text{unité}}$$
 4. **Combiner des incertitudes absolues dans un produit/quotient** : dans ce cas ce sont
    les incertitudes **relatives** $u/x$ qui s'ajoutent (en quadrature), jamais les $u$.
 5. **Garder tous les chiffres de la calculatrice** : l'incertitude s'arrondit à $1$
-   chiffre significatif, la valeur au **même rang** décimal.
+   (ou $2$) chiffre(s) significatif(s), la valeur au **même rang** décimal.
 6. **Croire qu'un instrument fidèle est juste** : des mesures bien groupées peuvent être
    toutes fausses (erreur systématique).
 7. **Confondre les unités de graduation** : une burette au $0{,}1\ \mathrm{mL}$ donne
@@ -302,15 +313,13 @@ Champ « programme » de l'en-tête : renseigné à l'identique de la consigne d
 25 juillet 2019) — même remarque que pour le chapitre « syntheses-extraction-purification ».
 
 POINTS À CONFRONTER AU RELECTEUR / CONVENTIONS DE MÉTROLOGIE :
-- CONVENTION TYPE B (POINT LE PLUS SENSIBLE). La consigne de production impose
-  explicitement les formules u = graduation/√3 et u = tolérance/√3, retenues telles
-  quelles dans la fiche. ATTENTION : les conventions varient selon les manuels/référentiels.
-  Pour une RÉSOLUTION (demi-largeur = graduation/2), la loi uniforme rigoureuse donne
-  plutôt u = graduation/(2√3) = graduation/√12. La formule u = graduation/√3 retenue ici
-  suppose que « graduation » désigne la demi-largeur de l'intervalle de doute (loi
-  rectangulaire de demi-largeur = graduation). À FAIRE TRANCHER par le relecteur selon le
-  référentiel STL retenu par l'établissement / le PDF officiel. Les exemples chiffrés
-  (burette 0,1 mL → u ≈ 0,06 mL) suivent la convention de la consigne.
+- CONVENTION TYPE B (tranchée le 17/10/2026). Le programme (docs/programme-stl-spcl.txt :
+  « Évaluation des incertitudes-types (type A statistique, type B) ») ne fixe pas de formule.
+  On retient la règle générale u = a/√3 (loi uniforme de demi-largeur a), comme le GUM :
+  tolérance ± t → u = t/√3 ; lecture d'une graduation → a = ½ graduation → u = graduation/√12 ;
+  double lecture → combinaison en quadrature (graduation/√6). L'ancienne formule
+  u = graduation/√3 (qui prenait une graduation entière comme demi-largeur) a été retirée de
+  la fiche, du QCM, des cartes et des exercices.
 - Pour la TOLÉRANCE (verrerie jaugée ± t), u = t/√3 fait l'hypothèse d'une loi uniforme de
   demi-largeur t : convention standard et cohérente avec la consigne.
 - TYPE A : u(x̄) = s/√n avec s = écart-type expérimental (σ_{n-1}). Convention GUM/lycée
@@ -322,8 +331,12 @@ POINTS À CONFRONTER AU RELECTEUR / CONVENTIONS DE MÉTROLOGIE :
 - Facteur d'élargissement / intervalle de confiance : volontairement NON abordé (hors
   programme de première ; « valeur ± u » = incertitude-type, k=1). La phrase de lecture au
   §9 (« très probablement entre… ») reste qualitative pour cette raison. À valider.
-- Arrondi de l'incertitude à 1 c.s. PAR EXCÈS et valeur au même rang : convention
-  pédagogique répandue ; certains référentiels tolèrent 2 c.s. À confirmer.
+- ARRONDI (harmonisé le 17/10/2026 avec 1re et terminale STI2D/STL) : incertitude arrondie AU PLUS
+  PROCHE à 1 ou 2 c.s. (1 le plus souvent ; les énoncés précisent quand c'est nécessaire), valeur au
+  même rang. L'ancien arrondi « par excès » a été retiré de la fiche, des cartes, des exercices et
+  d'attendus.json ; exemples recalculés (θ = 21,5 ± 0,1 °C ; burette 0,04 mL ; ρ = 1,23 ± 0,03 ;
+  L = 20,8 ± 0,1 cm ; § 9 : u brute 0,0382 g → 0,04 g, pour rester cohérent avec le schéma).
+  Exercice 1 : écart-type corrigé (0,045 → 0,025 g, recalculé sur les 5 pesées).
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.
 Statut : brouillon, non relu.

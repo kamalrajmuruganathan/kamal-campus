@@ -7,7 +7,7 @@
  */
 
 import {
-  entier, entierNonNul, choisir, avecSigne, fracLatex, construireQuestion,
+  entier, entierNonNul, choisir, avecSigne, fracLatex, pgcd, construireQuestion,
 } from './noyau.js';
 
 // ── Collège / calcul ─────────────────────────────────────────────────────────
@@ -25,6 +25,161 @@ export function eqLineaire(rand) {
     bonne: `$x = ${x}$`,
     distracteurs: [`$x = ${x + 1}$`, `$x = ${x - 1}$`, `$x = ${-x}$`, `$x = ${x + 2}$`],
     explication: `On isole : $${a}x = ${c} ${avecSigne(-b)} = ${c - b}$, puis $x = \\dfrac{${c - b}}{${a}} = ${x}$. Le piège : la constante change de signe en changeant de côté.`,
+  }, rand);
+}
+
+/**
+ * Équation simple de 5e : x + b = c ou ax = c (programme cycle 4, 2026 : résolution
+ * par l'opération inverse ; ax + b = c et les relatifs dans les équations relèvent de la 4e).
+ */
+export function eqSimple5e(rand) {
+  if (rand() < 0.5) {
+    const x = entier(rand, 2, 40);
+    const b = entier(rand, 2, 30);
+    const c = x + b;
+    return construireQuestion({
+      difficulte: 'facile',
+      notion: 'equation',
+      enonce: `Résoudre l'équation $x + ${b} = ${c}$.`,
+      bonne: `$x = ${x}$`,
+      distracteurs: [`$x = ${c + b}$`, `$x = ${x + 1}$`, `$x = ${x - 1}$`, `$x = ${c}$`],
+      explication: `On fait l'opération inverse de l'addition : $x = ${c} - ${b} = ${x}$. Vérification : $${x} + ${b} = ${c}$. Le piège : ajouter ${b} au lieu de le soustraire.`,
+    }, rand);
+  }
+  const a = entier(rand, 2, 9);
+  const x = entier(rand, 2, 12);
+  const c = a * x;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'equation',
+    enonce: `Résoudre l'équation $${a}x = ${c}$.`,
+    bonne: `$x = ${x}$`,
+    distracteurs: [`$x = ${c - a}$`, `$x = ${c * a}$`, `$x = ${x + 1}$`, `$x = ${x - 1}$`],
+    explication: `On fait l'opération inverse de la multiplication : $x = ${c} \\div ${a} = ${x}$. Vérification : $${a} \\times ${x} = ${c}$. Le piège : soustraire ${a} au lieu de diviser par ${a}.`,
+  }, rand);
+}
+
+/**
+ * Somme ou différence de fractions pour la 6e (programme cycle 3, 2025) : numérateurs
+ * positifs, même dénominateur ou un dénominateur multiple de l'autre, résultat positif.
+ */
+export function fractionSomme6e(rand) {
+  let a; let b; let c; let d; let k;
+  do { // fractions de départ irréductibles
+    b = entier(rand, 2, 6);
+    k = rand() < 0.5 ? 1 : entier(rand, 2, 3);
+    d = b * k;
+    a = entier(rand, 1, b + 2);
+    c = entier(rand, 1, d + 2);
+  } while (pgcd(a, b) !== 1 || pgcd(c, d) !== 1);
+  const A = a * k; // a/b = A/d
+  let moins = rand() < 0.4 && A !== c;
+  const [p, q, P, Q] = [a, c, A, c];
+  if (moins && A < c) moins = false; // résultat positif seulement
+  const op = moins ? '-' : '+';
+  const num = moins ? A - c : A + c;
+  const etape = k === 1 ? 'On' : `$\\dfrac{${a}}{${b}} = \\dfrac{${A}}{${d}}$, donc on`;
+  return construireQuestion({
+    difficulte: k === 1 ? 'facile' : 'moyen',
+    notion: 'fractions',
+    enonce: `Calculer $\\dfrac{${p}}{${b}} ${op} \\dfrac{${q}}{${d}}$.`,
+    bonne: `$${fracLatex(num, d)}$`,
+    distracteurs: [
+      `$${fracLatex(moins ? Math.abs(a - c) : a + c, moins ? Math.abs(b - d) || d : b + d)}$`,
+      `$${fracLatex(moins ? Math.abs(a - c) : a + c, d)}$`,
+      `$${fracLatex(num + 1, d)}$`,
+      `$${fracLatex(num + 2, d)}$`,
+      `$${fracLatex(num + d, d)}$`,
+      `$${fracLatex(num + 3, d)}$`,
+    ],
+    explication: `${etape} garde le dénominateur $${d}$ et on ${moins ? 'soustrait' : 'additionne'} les numérateurs : $\\dfrac{${P}}{${d}} ${op} \\dfrac{${Q}}{${d}} = \\dfrac{${num}}{${d}}${fracLatex(num, d) === `\\dfrac{${num}}{${d}}` ? '' : ` = ${fracLatex(num, d)}`}$. On n'additionne jamais les dénominateurs entre eux.`,
+  }, rand);
+}
+
+// ── 6e : pensée algébrique sans lettres (programme cycle 3, 2025) ───────────
+
+/** « Je pense à un nombre » : on remonte les opérations (entiers positifs, sans lettre). */
+export function penseUnNombre6e(rand) {
+  const n = entier(rand, 2, 15);
+  const a = entier(rand, 2, 6);
+  const b = entier(rand, 1, 12);
+  const c = n * a + b;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'nombre-inconnu',
+    enonce: `Je pense à un nombre. Je le multiplie par ${a}, puis j'ajoute ${b} : j'obtiens ${c}. Quel est ce nombre ?`,
+    bonne: `${n}`,
+    distracteurs: [`${(c + b) / a}`, `${c - b}`, `${Math.floor(c / a)}`, `${n + 1}`, `${n - 1}`, `${c * a + b}`]
+      .filter((d) => Number.isInteger(Number(d))),
+    explication: `On remonte en faisant les opérations inverses dans l'ordre inverse : ${c} − ${b} = ${c - b}, puis ${c - b} ÷ ${a} = ${n}. Vérification : ${n} × ${a} + ${b} = ${c}.`,
+  }, rand);
+}
+
+/** Motif évolutif : régularité « on ajoute r », structure r × étape + d. */
+export function motifEvolutif6e(rand) {
+  const r = entier(rand, 2, 6);
+  const d = entier(rand, 0, 5);
+  const u = (k) => r * k + d;
+  const n = choisir(rand, [10, 20, 50, 100]);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'motif-evolutif',
+    enonce: `Un motif est formé de ${u(1)} allumettes à l'étape 1, ${u(2)} à l'étape 2, ${u(3)} à l'étape 3, et ainsi de suite. Combien d'allumettes à l'étape ${n} ?`,
+    bonne: `${u(n)}`,
+    distracteurs: [`${u(1) * n}`, `${u(3) + (n - 3)}`, `${r * n}`, `${u(n) + r}`, `${u(n) - r}`],
+    explication: `On ajoute ${r} à chaque étape : le nombre d'allumettes vaut ${r} × étape${d ? ` + ${d}` : ''}. À l'étape ${n} : ${r} × ${n}${d ? ` + ${d}` : ''} = ${u(n)}.`,
+  }, rand);
+}
+
+/** Schéma en barres : « A a k fois plus que B ; ensemble ils ont T ». */
+export function schemaBarres6e(rand) {
+  const p = entier(rand, 3, 25);
+  const k = entier(rand, 2, 5);
+  const T = p * (k + 1);
+  const [x, y] = choisir(rand, [['Léa', 'Tom'], ['Inès', 'Hugo'], ['Nora', 'Sami'], ['Jade', 'Malo']]);
+  const objet = choisir(rand, ['billes', 'cartes', 'perles', 'timbres']);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'schema-en-barres',
+    enonce: `${x} a ${k} fois plus de ${objet} que ${y}. Ensemble, ils en ont ${T}. Combien ${y} en a-t-il ?`,
+    bonne: `${p}`,
+    distracteurs: [`${T / k}`, `${p * k}`, `${T - k}`, `${p + 1}`, `${p + k}`].filter((v) => Number.isInteger(Number(v))),
+    explication: `Schéma en barres : ${y} a 1 part, ${x} en a ${k} ; en tout ${k + 1} parts égales pour ${T}. Une part : ${T} ÷ ${k + 1} = ${p}. Donc ${y} a ${p} ${objet} (et ${x} en a ${p * k}).`,
+  }, rand);
+}
+
+/**
+ * Somme ou différence de fractions pour la 5e (programme cycle 4, 2026) : fractions positives
+ * de dénominateurs quelconques mais simples (2 à 9), résultat positif ; pas de nombres négatifs.
+ */
+export function fractionSomme5e(rand) {
+  let a; let b; let c; let d;
+  do {
+    b = entier(rand, 2, 9);
+    d = entier(rand, 2, 9);
+    a = entier(rand, 1, 9);
+    c = entier(rand, 1, 9);
+  } while (b === d || pgcd(a, b) !== 1 || pgcd(c, d) !== 1);
+  const moins = rand() < 0.4 && a * d > c * b;
+  const op = moins ? '-' : '+';
+  const den = b * d / pgcd(b, d);
+  const A = a * (den / b);
+  const C = c * (den / d);
+  const num = moins ? A - C : A + C;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'fractions',
+    enonce: `Calculer $\\dfrac{${a}}{${b}} ${op} \\dfrac{${c}}{${d}}$.`,
+    bonne: `$${fracLatex(num, den)}$`,
+    distracteurs: [
+      `$${fracLatex(moins ? a - c : a + c, moins ? Math.abs(b - d) : b + d)}$`,
+      `$${fracLatex(a * c, b * d)}$`,
+      `$${fracLatex(moins ? A + C : Math.abs(A - C), den)}$`,
+      `$${fracLatex(num + 1, den)}$`,
+      `$${fracLatex(num + den, den)}$`,
+      `$${fracLatex(num + 2, den)}$`,
+    ].filter((s) => !s.includes('-')),
+    explication: `On écrit les deux fractions avec le même dénominateur $${den}$ : $\\dfrac{${A}}{${den}} ${op} \\dfrac{${C}}{${den}} = \\dfrac{${num}}{${den}}${fracLatex(num, den) === `\\dfrac{${num}}{${den}}` ? '' : ` = ${fracLatex(num, den)}`}$. On n'additionne jamais les dénominateurs entre eux.`,
   }, rand);
 }
 
@@ -814,23 +969,41 @@ export function conversionLongueur(rand) {
 
 /** Conversion de durée (heures, minutes, secondes, jours). */
 export function conversionDuree(rand) {
-  const paires = [['h', 'min', 60], ['min', 's', 60], ['j', 'h', 24]];
-  const [de, vers, f] = choisir(rand, paires);
+  // [unité de départ (pluriel, singulier), unité d'arrivée, « Combien d'… / de … », symbole, facteur]
+  const paires = [['heures', 'heure', 'minutes', 'de minutes', 'min', 60], ['minutes', 'minute', 'secondes', 'de secondes', 's', 60],
+    ['jours', 'jour', 'heures', "d'heures", 'h', 24]];
+  const [de, deSing, vers, combien, u, f] = choisir(rand, paires);
   const val = entier(rand, 2, 9);
   const r = val * f;
   return construireQuestion({
     difficulte: 'facile',
     notion: 'conversion',
-    enonce: `Combien de ${vers} y a-t-il dans $${val}$ ${de} ?`,
-    bonne: `${r} ${vers}`,
+    enonce: `Combien ${combien} y a-t-il dans ${val} ${de} ?`,
+    bonne: `${r} ${u}`,
     distracteurs: [
-      `${val} ${vers}`,
-      `${val + f} ${vers}`,
-      `${r + val} ${vers}`,
-      `${r - val} ${vers}`,
-      `${val * (f + 1)} ${vers}`,
+      `${val} ${u}`,
+      `${val + f} ${u}`,
+      `${r - val} ${u}`,
+      `${val * 100} ${u}`,
+      `${r + val} ${u}`,
     ],
-    explication: `1 ${de} = ${f} ${vers}, donc ${val} ${de} = ${val} × ${f} = ${r} ${vers}.`,
+    explication: `1 ${deSing} = ${f} ${vers}, donc ${val} ${de} = ${val} × ${f} = ${r} ${vers}.`,
+  }, rand);
+}
+
+/** Conversion de durées pour le CM1 (heures et minutes, jours, semaines ; les secondes sont au CM2). */
+export function conversionDureeCM1(rand) {
+  const paires = [['heures', 'heure', 'minutes', 'min', 60], ['jours', 'jour', 'heures', 'h', 24], ['semaines', 'semaine', 'jours', 'jours', 7]];
+  const [de, deSing, vers, u, f] = choisir(rand, paires);
+  const val = entier(rand, 2, 9);
+  const r = val * f;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'conversion',
+    enonce: `Combien ${vers === 'heures' ? "d'heures" : `de ${vers}`} y a-t-il dans ${val} ${de} ?`,
+    bonne: `${r} ${u}`,
+    distracteurs: [`${val * 100} ${u}`, `${val + f} ${u}`, `${r - val} ${u}`, `${val} ${u}`],
+    explication: `1 ${deSing} = ${f} ${vers}, donc ${val} ${de} = ${val} × ${f} = ${r} ${vers}.`,
   }, rand);
 }
 

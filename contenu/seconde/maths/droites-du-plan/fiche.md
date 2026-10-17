@@ -171,24 +171,3 @@ On multiplie les équations pour faire disparaître une inconnue par addition.
 6. **Résoudre un système sans vérifier** : remplacer la solution dans les deux équations prend
    dix secondes.
 7. **Oublier le cas des droites confondues** : un système peut avoir une infinité de solutions.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Géométrie », section repérée à la ligne 2584 du
-.txt extrait (« équations de droite »). L'extraction montre aussi un intitulé « Droites du
-plan ».
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les systèmes de deux équations à deux inconnues relèvent-ils de ce chapitre ou du bloc
-  « Algèbre » ? Je les ai rattachés ici pour l'interprétation géométrique, à arbitrer.
-- La méthode du pivot / combinaison linéaire est-elle exigible, ou seulement la substitution ?
-- Les démonstrations exigibles de cette section.
-- La distance d'un point à une droite n'est PAS traitée (elle relève de la première).
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

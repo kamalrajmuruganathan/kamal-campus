@@ -167,16 +167,16 @@
     {
       "id": 12,
       "difficulte": "facile",
-      "notion": "ecriture-decimale",
-      "enonce": "Quelle est l'écriture décimale de $\\dfrac{1}{2}$ ?",
+      "notion": "addition",
+      "enonce": "Combien vaut $\\dfrac{2}{7} + \\dfrac{3}{7}$ ?",
       "choix": [
-        "$0,5$",
-        "$0,12$",
-        "$1,2$",
-        "$2$"
+        "$\\dfrac{5}{14}$",
+        "$\\dfrac{5}{7}$",
+        "$\\dfrac{6}{7}$",
+        "$\\dfrac{5}{49}$"
       ],
-      "reponse": 0,
-      "explication": "$\\dfrac{1}{2} = 1 \\div 2 = 0,5$, une valeur à connaître par cœur. Piège : coller les chiffres $1$ et $2$ pour écrire $0,12$."
+      "reponse": 1,
+      "explication": "Même dénominateur : $2$ septièmes $+$ $3$ septièmes $=$ $5$ septièmes. On additionne les numérateurs et on garde le dénominateur ; on n'additionne jamais les dénominateurs."
     },
     {
       "id": 13,
@@ -209,47 +209,33 @@
     {
       "id": 15,
       "difficulte": "moyen",
-      "notion": "fractions-egales",
-      "enonce": "Quelle fraction est égale à $\\dfrac{2}{3}$ ?",
+      "notion": "addition",
+      "enonce": "Combien vaut $\\dfrac{1}{2} + \\dfrac{1}{4}$ ?",
       "choix": [
-        "$\\dfrac{4}{6}$",
-        "$\\dfrac{4}{3}$",
         "$\\dfrac{2}{6}$",
-        "$\\dfrac{3}{2}$"
+        "$\\dfrac{2}{4}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{1}{8}$"
       ],
-      "reponse": 0,
-      "explication": "On multiplie le haut **et** le bas par $2$ : $\\dfrac{2 \\times 2}{3 \\times 2} = \\dfrac{4}{6}$. Piège : ne multiplier que le numérateur (donnerait $\\frac{4}{3}$) ou que le dénominateur (donnerait $\\frac{2}{6}$)."
+      "reponse": 2,
+      "explication": "$\\dfrac{1}{2} = \\dfrac{2}{4}$, donc $\\dfrac{1}{2} + \\dfrac{1}{4} = \\dfrac{2}{4} + \\dfrac{1}{4} = \\dfrac{3}{4}$."
     },
     {
       "id": 16,
       "difficulte": "moyen",
-      "notion": "fraction-decimale",
-      "enonce": "Quelle est l'écriture décimale de $\\dfrac{9}{1000}$ ?",
+      "notion": "entier-fois-fraction",
+      "enonce": "Combien vaut $3 \\times \\dfrac{2}{5}$ ?",
       "choix": [
-        "$0,9$",
-        "$0,09$",
-        "$0,009$",
-        "$9$"
+        "$\\dfrac{6}{15}$",
+        "$\\dfrac{6}{5}$",
+        "$\\dfrac{5}{5}$",
+        "$\\dfrac{2}{15}$"
       ],
-      "reponse": 2,
-      "explication": "Le dénominateur $1000$ a **trois zéros**, donc trois chiffres après la virgule : $\\dfrac{9}{1000} = 0,009$. Piège : mettre trop peu de chiffres après la virgule et écrire $0,9$ ou $0,09$."
+      "reponse": 1,
+      "explication": "On multiplie le numérateur par $3$ et on garde le dénominateur : $3 \\times \\dfrac{2}{5} = \\dfrac{6}{5}$ (trois fois deux cinquièmes font six cinquièmes)."
     },
     {
       "id": 17,
-      "difficulte": "moyen",
-      "notion": "somme-fractions-unitaires",
-      "enonce": "À quelle fraction est égale la somme $\\dfrac{1}{4} + \\dfrac{1}{4} + \\dfrac{1}{4} + \\dfrac{1}{4} + \\dfrac{1}{4}$ ?",
-      "choix": [
-        "$\\dfrac{5}{20}$",
-        "$\\dfrac{5}{4}$",
-        "$\\dfrac{1}{20}$",
-        "$\\dfrac{5}{5}$"
-      ],
-      "reponse": 1,
-      "explication": "Cinq fois le quart, c'est **cinq quarts** : $\\dfrac{5}{4}$. On compte les morceaux $\\frac{1}{4}$ sans changer leur taille, donc le dénominateur reste $4$. Piège : additionner aussi les dénominateurs pour écrire $\\frac{5}{20}$."
-    },
-    {
-      "id": 18,
       "difficulte": "difficile",
       "notion": "comparaison-a-1",
       "enonce": "Parmi ces fractions, laquelle est **égale** à $1$ ?",
@@ -263,32 +249,46 @@
       "explication": "Une fraction vaut $1$ quand son numérateur est égal à son dénominateur : $\\dfrac{6}{6} = 1$. $\\dfrac{7}{4} > 1$ (car $7 > 4$), tandis que $\\dfrac{3}{5}$ et $\\dfrac{1}{2}$ sont inférieures à $1$. Piège : croire qu'une fraction ne peut pas valoir exactement $1$."
     },
     {
-      "id": 19,
-      "difficulte": "difficile",
-      "notion": "egalite-a-trou",
-      "enonce": "Quel nombre complète l'égalité $5 \\times \\square = 2$ ?",
+      "id": 18,
+      "difficulte": "moyen",
+      "notion": "pourcentage",
+      "enonce": "Combien vaut $25\\ \\%$ de $60$ ?",
       "choix": [
-        "$10$",
-        "$\\dfrac{5}{2}$",
-        "$\\dfrac{2}{5}$",
-        "$3$"
+        "$25$",
+        "$35$",
+        "$15$",
+        "$2{,}4$"
       ],
       "reponse": 2,
-      "explication": "Le nombre qui, multiplié par $5$, donne $2$, est le quotient $2 \\div 5 = \\dfrac{2}{5}$ (sens quotient de la fraction). Piège : inverser en $\\dfrac{5}{2}$, ou multiplier $5 \\times 2 = 10$."
+      "explication": "$25\\ \\%$, c'est le quart : $60 \\div 4 = 15$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "fraction-d-un-nombre",
+      "enonce": "Combien valent les $\\dfrac{3}{4}$ de $20$ ?",
+      "choix": [
+        "$5$",
+        "$15$",
+        "$12$",
+        "$60$"
+      ],
+      "reponse": 1,
+      "explication": "On partage $20$ en $4$ : $20 \\div 4 = 5$, puis on prend $3$ parts : $3 \\times 5 = 15$."
     },
     {
       "id": 20,
       "difficulte": "difficile",
-      "notion": "demi-droite-graduee",
-      "enonce": "Sur une demi-droite où l'unité est partagée en tiers, à quelle position se trouve la graduation $\\dfrac{5}{3}$ ?",
+      "notion": "pourcentage",
+      "enonce": "Dans une classe de $25$ élèves, $6$ viennent à vélo. Quel pourcentage des élèves viennent à vélo ?",
       "choix": [
-        "à $5$ crans après le point $1$",
-        "à $5$ crans après $0$, soit $2$ crans après le point $1$",
-        "entre $0$ et $\\dfrac{1}{3}$",
-        "exactement sur le point $1$"
+        "$24\\ \\%$",
+        "$6\\ \\%$",
+        "$25\\ \\%$",
+        "$31\\ \\%$"
       ],
-      "reponse": 1,
-      "explication": "$\\dfrac{5}{3}$, c'est cinq tiers : on compte $5$ graduations **à partir de $0$**. Comme $\\dfrac{3}{3} = 1$, il reste $2$ tiers après le point $1$. Piège : compter les $5$ crans à partir de $1$ au lieu de $0$."
+      "reponse": 0,
+      "explication": "$\\dfrac{6}{25} = \\dfrac{6 \\times 4}{25 \\times 4} = \\dfrac{24}{100} = 24\\ \\%$."
     }
   ]
 }

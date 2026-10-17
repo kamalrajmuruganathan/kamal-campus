@@ -76,15 +76,6 @@
     {
       "id": 8,
       "difficulte": "difficile",
-      "notion": "developpement-signe",
-      "enonce": "Quel est le développement de $5(2x - 3)$ ?",
-      "choix": ["$10x - 3$", "$10x - 15$", "$7x - 15$", "$10x + 15$"],
-      "reponse": 1,
-      "explication": "$5 \\times 2x = 10x$, puis $5 \\times 3 = 15$, que l'on soustrait. Le résultat est $10x - 15$."
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
       "notion": "demonstration",
       "enonce": "Pour démontrer que la somme de deux nombres pairs est paire, quel début est correct ?",
       "choix": ["Tester avec $4 + 6$, $8 + 10$ et $12 + 14$", "Poser deux nombres pairs $2k$ et $2k'$, puis calculer leur somme", "Poser $2k$ et $2k$", "Affirmer que c'est évident"],
@@ -92,7 +83,7 @@
       "explication": "Il faut deux lettres **différentes** : $2k + 2k' = 2(k+k')$, un multiple de $2$. Poser $2k$ et $2k$ imposerait deux nombres égaux, et tester quelques sommes ne démontre rien — des exemples n'ont jamais valeur de preuve."
     },
     {
-      "id": 10,
+      "id": 9,
       "difficulte": "difficile",
       "notion": "contre-exemple",
       "enonce": "Pour montrer que l'affirmation « tout nombre impair est premier » est fausse, que suffit-il ?",
@@ -101,7 +92,7 @@
       "explication": "$9$ est impair mais vaut $3 \\times 3$ : un **seul contre-exemple** suffit à réfuter une affirmation universelle. La dissymétrie est essentielle : prouver qu'une propriété est vraie demande une démonstration générale."
     },
     {
-      "id": 11,
+      "id": 10,
       "difficulte": "facile",
       "notion": "ecriture",
       "enonce": "Comment écrit-on $a \\times a$ plus simplement ?",
@@ -110,16 +101,16 @@
       "explication": "Un facteur répété devient une puissance : $a \\times a = a^2$. Le piège est d'écrire $2a$, qui signifie $a + a$ (deux fois $a$), pas $a$ multiplié par lui-même."
     },
     {
-      "id": 12,
+      "id": 11,
       "difficulte": "facile",
-      "notion": "reduction",
-      "enonce": "Combien vaut $8x - 3x$ ?",
-      "choix": ["$5x$", "$5$", "$11x$", "$5x^2$"],
-      "reponse": 0,
-      "explication": "Les deux termes sont de **même nature** : $8$ fois $x$ moins $3$ fois $x$ font $5$ fois $x$. On soustrait les nombres, la lettre ne change pas. Répondre $5$ revient à oublier la lettre."
+      "notion": "equation",
+      "enonce": "Quelle est la solution de l'équation $x + 7 = 19$ ?",
+      "choix": ["$26$", "$12$", "$133$", "$-12$"],
+      "reponse": 1,
+      "explication": "On fait l'opération inverse de l'addition : $x = 19 - 7 = 12$. Vérification : $12 + 7 = 19$."
     },
     {
-      "id": 13,
+      "id": 12,
       "difficulte": "facile",
       "notion": "ecriture",
       "enonce": "Que signifie l'écriture $3a$ ?",
@@ -128,16 +119,16 @@
       "explication": "Devant une lettre, on supprime le signe × : $3a$ est une écriture abrégée de $3 \\times a$. Ce n'est ni une addition ($3 + a$) ni une puissance ($a^3$)."
     },
     {
-      "id": 14,
+      "id": 13,
       "difficulte": "moyen",
-      "notion": "developpement",
-      "enonce": "Quel est le développement de $5(x + 2)$ ?",
-      "choix": ["$5x + 2$", "$5x + 10$", "$5x + 7$", "$x + 10$"],
-      "reponse": 1,
-      "explication": "Le $5$ multiplie **les deux termes** : $5 \\times x + 5 \\times 2 = 5x + 10$. Le choix $5x + 2$ oublie de multiplier le second terme — l'erreur la plus fréquente du chapitre."
+      "notion": "equation",
+      "enonce": "Quelle est la solution de l'équation $4x = 30$ ?",
+      "choix": ["$26$", "$120$", "$34$", "$7{,}5$"],
+      "reponse": 3,
+      "explication": "On fait l'opération inverse de la multiplication : $x = 30 \\div 4 = 7{,}5$. Vérification : $4 \\times 7{,}5 = 30$."
     },
     {
-      "id": 15,
+      "id": 14,
       "difficulte": "moyen",
       "notion": "factorisation",
       "enonce": "Quelle est la forme factorisée de $8x + 12$ ?",
@@ -146,7 +137,7 @@
       "explication": "Le facteur commun est $4$ : $8x = 4 \\times 2x$ et $12 = 4 \\times 3$, donc $8x + 12 = 4(2x + 3)$. Contrôle : en redéveloppant $4(2x+3)$ on retrouve bien $8x + 12$, ce que ne donnent pas les autres choix."
     },
     {
-      "id": 16,
+      "id": 15,
       "difficulte": "moyen",
       "notion": "test-egalite",
       "enonce": "L'égalité $4x - 1 = 2x + 5$ est-elle vraie pour $x = 3$ ?",
@@ -155,16 +146,16 @@
       "explication": "On calcule les deux membres **séparément** : à gauche $4 \\times 3 - 1 = 11$, à droite $2 \\times 3 + 5 = 11$. Les deux valent $11$ : l'égalité est vraie pour $x = 3$."
     },
     {
-      "id": 17,
+      "id": 16,
       "difficulte": "moyen",
-      "notion": "developpement-signe",
-      "enonce": "Quel est le développement de $3(x - 2)$ ?",
-      "choix": ["$3x - 6$", "$3x + 6$", "$3x - 2$", "$x - 6$"],
+      "notion": "equation",
+      "enonce": "Pour résoudre l'équation $x + 8 = 23$, quel calcul faut-il faire ?",
+      "choix": ["$23 - 8$", "$23 + 8$", "$23 \\div 8$", "$8 - 23$"],
       "reponse": 0,
-      "explication": "Le $3$ multiplie les deux termes : $3 \\times x = 3x$ et $3 \\times 2 = 6$, que l'on soustrait, donc $3x - 6$. Changer le signe ($3x + 6$) ou oublier de multiplier le $2$ ($3x - 2$) sont les pièges classiques."
+      "explication": "Quel nombre faut-il ajouter à $8$ pour obtenir $23$ ? On soustrait : $x = 23 - 8 = 15$. Ajouter $8$ serait se tromper d'opération inverse."
     },
     {
-      "id": 18,
+      "id": 17,
       "difficulte": "difficile",
       "notion": "developpement-signe",
       "enonce": "Quel est le développement de $6(2 - x)$ ?",
@@ -173,7 +164,7 @@
       "explication": "$6 \\times 2 = 12$, puis $6 \\times x = 6x$, que l'on soustrait. Le résultat est $12 - 6x$. Garder $-x$ (réponse $12 - x$) oublie de multiplier le second terme."
     },
     {
-      "id": 19,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "demonstration",
       "enonce": "Comment s'écrit un nombre impair, avec $k$ entier ?",
@@ -182,13 +173,22 @@
       "explication": "Un nombre pair s'écrit $2k$ ; le nombre impair qui le suit vaut donc $2k + 1$. Le choix $2k$ est justement l'écriture d'un nombre **pair**, l'erreur à éviter. $k+1$ ou $2+k$ ne garantissent aucune parité."
     },
     {
-      "id": 20,
+      "id": 19,
       "difficulte": "difficile",
       "notion": "demonstration",
       "enonce": "En additionnant un nombre pair $2k$ et un nombre impair $2k' + 1$, on obtient $2(k + k') + 1$. Que peut-on conclure ?",
       "choix": ["La somme est paire", "La somme est impaire", "La somme est un multiple de $4$", "On ne peut pas conclure"],
       "reponse": 1,
       "explication": "Le résultat est de la forme $2n + 1$ (avec $n = k + k'$ entier) : c'est exactement l'écriture d'un nombre **impair**. La somme d'un pair et d'un impair est donc toujours impaire — et le raisonnement, valable pour tous $k$ et $k'$, vaut **démonstration**, pas un simple exemple."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "equation",
+      "enonce": "Léa a des billes ; elle en gagne $8$ et en a alors $23$. Si $x$ est le nombre de billes de Léa au départ, quelle équation traduit la situation ?",
+      "choix": ["$8x = 23$", "$x - 8 = 23$", "$x + 8 = 23$", "$x + 23 = 8$"],
+      "reponse": 2,
+      "explication": "Au départ $x$ billes, puis on en ajoute $8$ : $x + 8$, qui vaut $23$. Donc $x + 8 = 23$ et $x = 15$."
     }
   ]
 }

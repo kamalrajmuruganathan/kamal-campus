@@ -164,13 +164,13 @@ Plus $\lambda$ est grand, plus l'événement arrive vite, donc plus l'attente mo
 > **Exemple.** Avec $\lambda = 0{,}01$ h$^{-1}$, la durée de vie moyenne est
 > $E(X) = \dfrac{1}{0{,}01} = 100$ h.
 
-> **D'où vient le $\frac{1}{\lambda}$ (démonstration par parties).** Sur $[0\,;x]$, on pose
-> $u(t)=t$, $v'(t)=\lambda e^{-\lambda t}$, d'où $u'(t)=1$ et $v(t)=-e^{-\lambda t}$ :
-> $$\int_0^x t\,\lambda e^{-\lambda t}\,dt = \big[-t\,e^{-\lambda t}\big]_0^x + \int_0^x e^{-\lambda t}\,dt
-> = -x e^{-\lambda x} + \left[-\dfrac{1}{\lambda}e^{-\lambda t}\right]_0^x
-> = \dfrac{1}{\lambda} - \left(x+\dfrac{1}{\lambda}\right)e^{-\lambda x}.$$
-> Quand $x \to +\infty$, $\left(x+\frac{1}{\lambda}\right)e^{-\lambda x} \to 0$ (l'exponentielle
-> l'emporte), donc $E(X) = \dfrac{1}{\lambda}$.
+> **Pour aller plus loin : d'où vient le $\frac{1}{\lambda}$ ?** (Ce résultat peut être admis.)
+> Posons $G(t) = -\left(t+\dfrac{1}{\lambda}\right)e^{-\lambda t}$. En dérivant ce produit,
+> $G'(t) = -e^{-\lambda t} + \left(t+\dfrac{1}{\lambda}\right)\lambda e^{-\lambda t} = t\,\lambda e^{-\lambda t}$ :
+> $G$ est donc une primitive de $t \mapsto t\,\lambda e^{-\lambda t}$. Sur $[0\,;x]$ :
+> $$\int_0^x t\,\lambda e^{-\lambda t}\,dt = G(x) - G(0) = \dfrac{1}{\lambda} - \left(x+\dfrac{1}{\lambda}\right)e^{-\lambda x}.$$
+> Quand $x \to +\infty$, $\left(x+\frac{1}{\lambda}\right)e^{-\lambda x} \to 0$ (croissances
+> comparées : l'exponentielle l'emporte), donc $E(X) = \dfrac{1}{\lambda}$.
 
 ---
 
@@ -255,51 +255,3 @@ Face à un énoncé « temps d'attente / durée de vie », procède dans l'ordre
    L'espérance est le milieu $\frac{a+b}{2}$.
 6. **Croire que « avoir déjà attendu » augmente la probabilité que ça arrive.** Faux pour
    l'exponentielle : c'est justement l'**absence de mémoire**, $P_{X>s}(X>s+t)=P(X>t)$.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-SOURCE : programmes des ENSEIGNEMENTS OPTIONNELS de mathématiques, terminale générale,
-option MATHÉMATIQUES COMPLÉMENTAIRES (arrêté du 19-7-2019, BO spécial n°8 du 25 juillet
-2019). Fichier docs/programme-terminale-maths-options-2019.txt, section
-« Lois à densité : temps d'attente » (lignes 92 à 96), rubriques « Contenus » et
-« Capacités ». En-tête de provenance du fichier : lignes 1 à 11.
-
-Intitulé exact du programme :
-  Contenus : lois à densité ; loi uniforme ; loi exponentielle ; propriété d'absence
-  de mémoire ; espérance.
-  Capacités : calculer une probabilité et une espérance pour une loi uniforme ou
-  exponentielle ; modéliser un temps d'attente.
-
-⚠️ SOURCE À CONFRONTER AU PDF OFFICIEL. Le fichier source est une EXTRACTION WebFetch
-depuis les PDF officiels (education.gouv.fr, MENE1921265A pour les complémentaires,
-PDF spe265_annexe_1159134.pdf). À confronter au PDF officiel avant publication : le
-texte du BO est volontairement bref (une ligne de contenus + une ligne de capacités),
-tout le développement mathématique de cette fiche est une reconstruction pédagogique
-standard, à valider par le relecteur.
-
-Correspondance contenus du programme -> sections de la fiche :
-- « lois à densité » (densité, probabilité = aire, P(X=c)=0) -> §1 ; espérance générale -> §2
-- « loi uniforme » (densité, probabilité, espérance) -> §3
-- « loi exponentielle » (densité λe^{-λt}, probabilité, espérance 1/λ) -> §4
-- « propriété d'absence de mémoire » -> §5
-- « espérance » -> §2 (générale), §3 et §4 (cas particuliers)
-- Capacités « calculer une probabilité et une espérance » -> §3, §4 ; « modéliser un
-  temps d'attente » -> §6
-
-CHOIX ET POINTS À SOUMETTRE AU RELECTEUR :
-- Notation P(X>t) vs P(X⩾t) : identiques ici puisque P(X=t)=0 ; j'ai gardé « > » pour
-  l'absence de mémoire, cohérent avec les manuels. À confirmer selon la convention
-  attendue par le relecteur.
-- Espérance de l'exponentielle : démontrée par IPP sur [0;x] puis passage à la limite.
-  Le BO complémentaires n'exige pas cette démonstration (intégrale impropre) ; elle est
-  donnée en « pour aller plus loin » et peut être admise. À arbitrer.
-- Espérance générale E(X)=∫ x f(x) dx présentée comme définition ; niveau de formalisme
-  (intervalle non borné) à valider.
-- Convention d'écriture décimale : virgule française (0{,}25) conforme aux autres fiches.
-
-Rédaction 100 % originale à partir du programme officiel. Aucun emprunt à un manuel ou
-à un site. Statut : brouillon, non relu.
--->

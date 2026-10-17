@@ -69,9 +69,11 @@ Plusieurs grandeurs permettent de suivre l'avancement :
 | Méthode | Grandeur mesurée |
 |---|---|
 | **Spectrophotométrie** | absorbance de la solution |
-| **Conductimétrie** | conductivité (si des ions sont impliqués) |
-| **pH-métrie** | acidité |
+| **Observation de la couleur** | apparition ou disparition d'une espèce colorée |
 | **Titrage** | volume de réactif titrant versé |
+
+> Les suivis par **conductimétrie** et par **pH-métrie** ne sont pas au programme de première :
+> ils sont étudiés en terminale.
 
 ### Loi de Beer-Lambert
 
@@ -85,8 +87,8 @@ de doser par étalonnage.
 ## 3. Le titrage
 
 <!-- schema:montage-titrage -->
-![Montage d'un titrage : la solution titrante, de concentration connue, est versée à la burette dans la solution à titrer agitée en permanence.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzE2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjYwMCIgaGVpZ2h0PSIzMTYiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSI4MCIgeT0iMzAwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgiIHJ4PSIwIiBmaWxsPSIjOWFhNmIyIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz48bGluZSB4MT0iMTAwIiB5MT0iMzAwIiB4Mj0iMTAwIiB5Mj0iMjAiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTAwIiB5MT0iNjAiIHgyPSIyMDUiIHkyPSI2MCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxyZWN0IHg9IjIwMyIgeT0iNjYiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMzAiIHJ4PSIwIiBmaWxsPSIjY2ZlNGY3IiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIi8+PHBhdGggZD0iTSAyMDMgMzAgTCAyMDMgMTk2IEwgMjA4IDIxMCBMIDIwOCAyMjggTSAyMTIgMjI4IEwgMjEyIDIxMCBMIDIxNyAxOTYgTCAyMTcgMzAiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9IjQyIiB4Mj0iMjA5IiB5Mj0iNDIiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iNTciIHgyPSIyMDkiIHkyPSI1NyIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMDMiIHkxPSI3MiIgeDI9IjIwOSIgeTI9IjcyIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9Ijg3IiB4Mj0iMjA5IiB5Mj0iODciIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iMTAyIiB4Mj0iMjA5IiB5Mj0iMTAyIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9IjExNyIgeDI9IjIwOSIgeTI9IjExNyIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMDMiIHkxPSIxMzIiIHgyPSIyMDkiIHkyPSIxMzIiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iMTQ3IiB4Mj0iMjA5IiB5Mj0iMTQ3IiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9IjE2MiIgeDI9IjIwOSIgeTI9IjE2MiIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMDMiIHkxPSIxNzciIHgyPSIyMDkiIHkyPSIxNzciIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iMTkyIiB4Mj0iMjA5IiB5Mj0iMTkyIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iMjAwIiB5PSIyMTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2IiByeD0iMCIgZmlsbD0iIzNiNDY1MiIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjIzMiIgeT0iNzAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC13ZWlnaHQ9IjcwMCI+YnVyZXR0ZSBncmFkdcOpZTwvdGV4dD48dGV4dCB4PSIyMzIiIHk9IjkwIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ic3RhcnQiPnNvbHV0aW9uIHRpdHJhbnRlPC90ZXh0Pjx0ZXh0IHg9IjIzMiIgeT0iMTA3IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ic3RhcnQiPihjb25jZW50cmF0aW9uIGNvbm51ZSk8L3RleHQ+PHJlY3QgeD0iMTI1IiB5PSIyNjYiIHdpZHRoPSIxNzAiIGhlaWdodD0iMzQiIHJ4PSI1IiBmaWxsPSIjZTZlYmYwIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxLjgiLz48Y2lyY2xlIGN4PSIyNzMiIGN5PSIyODMiIHI9IjgiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEuNiIvPjxyZWN0IHg9IjE2NSIgeT0iMjIzLjUiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzOC41IiByeD0iMCIgZmlsbD0iI2Y2ZTdiOCIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIvPjxwYXRoIGQ9Ik0gMTYwIDE5MiBRIDE2NSAxOTIgMTY1IDE5OCBMIDE2NSAyNjIgTCAyNTUgMjYyIEwgMjU1IDE5MiIgZmlsbD0ibm9uZSIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIyMDAiIHk9IjI1MiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjMTYyMzJlIi8+PHRleHQgeD0iMzIwIiB5PSIyNTAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJzdGFydCI+c29sdXRpb24gw6AgdGl0cmVyPC90ZXh0PjxsaW5lIHgxPSIzMTYiIHkxPSIyNDYiIHgyPSIyNTYuOTUiIHkyPSIyMzguODQiIHN0cm9rZT0iIzViNmI3YSIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwb2x5Z29uIHBvaW50cz0iMjUwLDIzOCAyNTYuNTMsMjQyLjMyIDI1Ny4zNywyMzUuMzciIGZpbGw9IiM1YjZiN2EiLz48dGV4dCB4PSIzMzAiIHk9IjI5NCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9InN0YXJ0Ij5hZ2l0YXRldXIgbWFnbsOpdGlxdWU8L3RleHQ+PGxpbmUgeDE9IjI0MCIgeTE9IjI1MCIgeDI9IjI0MCIgeTI9IjE1MCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gMjQwIDE1MCBMIDI0MCAxMzAgTCA0MzAgMTMwIEwgNDMwIDE1MCIgZmlsbD0ibm9uZSIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSI0MDAiIHk9IjE1MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI3MCIgcng9IjYiIGZpbGw9IiNlZWYzZmIiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuOCIvPjxyZWN0IHg9IjQxNSIgeT0iMTYyIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMS4yIi8+PHRleHQgeD0iNDc1IiB5PSIyMTAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPnBILW3DqHRyZTwvdGV4dD48dGV4dCB4PSIyNTAiIHk9IjE3MCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9InN0YXJ0Ij5zb25kZTwvdGV4dD48L3N2Zz4=)
-*Montage d'un titrage : la solution titrante, de concentration connue, est versée à la burette dans la solution à titrer agitée en permanence.*
+![Titrage avec suivi colorimétrique : la solution titrante est versée à la burette dans la solution à titrer, agitée ; l'équivalence est repérée quand la teinte violette du permanganate persiste.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzE2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjYwMCIgaGVpZ2h0PSIzMTYiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSI4MCIgeT0iMzAwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgiIHJ4PSIwIiBmaWxsPSIjOWFhNmIyIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz48bGluZSB4MT0iMTAwIiB5MT0iMzAwIiB4Mj0iMTAwIiB5Mj0iMjAiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTAwIiB5MT0iNjAiIHgyPSIyMDUiIHkyPSI2MCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxyZWN0IHg9IjIwMyIgeT0iNjYiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMzAiIHJ4PSIwIiBmaWxsPSIjYjY3OGM5IiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIi8+PHBhdGggZD0iTSAyMDMgMzAgTCAyMDMgMTk2IEwgMjA4IDIxMCBMIDIwOCAyMjggTSAyMTIgMjI4IEwgMjEyIDIxMCBMIDIxNyAxOTYgTCAyMTcgMzAiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9IjQyIiB4Mj0iMjA5IiB5Mj0iNDIiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iNTciIHgyPSIyMDkiIHkyPSI1NyIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMDMiIHkxPSI3MiIgeDI9IjIwOSIgeTI9IjcyIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9Ijg3IiB4Mj0iMjA5IiB5Mj0iODciIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iMTAyIiB4Mj0iMjA5IiB5Mj0iMTAyIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9IjExNyIgeDI9IjIwOSIgeTI9IjExNyIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMDMiIHkxPSIxMzIiIHgyPSIyMDkiIHkyPSIxMzIiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iMTQ3IiB4Mj0iMjA5IiB5Mj0iMTQ3IiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMyIgeTE9IjE2MiIgeDI9IjIwOSIgeTI9IjE2MiIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMDMiIHkxPSIxNzciIHgyPSIyMDkiIHkyPSIxNzciIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAzIiB5MT0iMTkyIiB4Mj0iMjA5IiB5Mj0iMTkyIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iMjAwIiB5PSIyMTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2IiByeD0iMCIgZmlsbD0iIzNiNDY1MiIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjIzMiIgeT0iNTAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC13ZWlnaHQ9IjcwMCI+YnVyZXR0ZSBncmFkdcOpZTwvdGV4dD48dGV4dCB4PSIyMzIiIHk9IjY4IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ic3RhcnQiPnNvbHV0aW9uIHRpdHJhbnRlIHZpb2xldHRlPC90ZXh0Pjx0ZXh0IHg9IjIzMiIgeT0iODQiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJzdGFydCI+KGlvbnMgcGVybWFuZ2FuYXRlLDwvdGV4dD48dGV4dCB4PSIyMzIiIHk9IjEwMCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9InN0YXJ0Ij5jb25jZW50cmF0aW9uIGNvbm51ZSk8L3RleHQ+PHJlY3QgeD0iMTI1IiB5PSIyNjYiIHdpZHRoPSIxNzAiIGhlaWdodD0iMzQiIHJ4PSI1IiBmaWxsPSIjZTZlYmYwIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIxLjgiLz48Y2lyY2xlIGN4PSIyNzMiIGN5PSIyODMiIHI9IjgiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEuNiIvPjxyZWN0IHg9IjE2NSIgeT0iMjIzLjUiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzOC41IiByeD0iMCIgZmlsbD0iI2YzZjZmOCIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIvPjxwYXRoIGQ9Ik0gMTYwIDE5MiBRIDE2NSAxOTIgMTY1IDE5OCBMIDE2NSAyNjIgTCAyNTUgMjYyIEwgMjU1IDE5MiIgZmlsbD0ibm9uZSIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIyMDAiIHk9IjI1MiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjMTYyMzJlIi8+PHRleHQgeD0iMzIwIiB5PSIyNjIiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJzdGFydCI+c29sdXRpb24gw6AgdGl0cmVyPC90ZXh0PjxsaW5lIHgxPSIzMTYiIHkxPSIyNTgiIHgyPSIyNjQuOCIgeTI9IjI0NS42NCIgc3Ryb2tlPSIjNWI2YjdhIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBvbHlnb24gcG9pbnRzPSIyNTgsMjQ0IDI2My45OCwyNDkuMDQgMjY1LjYzLDI0Mi4yNCIgZmlsbD0iIzViNmI3YSIvPjx0ZXh0IHg9IjMzMCIgeT0iMjk2IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ic3RhcnQiPmFnaXRhdGV1ciBtYWduw6l0aXF1ZTwvdGV4dD48dGV4dCB4PSI0NzgiIHk9IjEzMiIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzE2MjMyZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+cmVww6lyYWdlIGRlIGwnw6lxdWl2YWxlbmNlPC90ZXh0PjxyZWN0IHg9IjQwMCIgeT0iMTczLjYiIHdpZHRoPSI1MCIgaGVpZ2h0PSIyNi40IiByeD0iMCIgZmlsbD0iI2YzZjZmOCIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIvPjxwYXRoIGQ9Ik0gMzk1IDE1NiBRIDQwMCAxNTYgNDAwIDE2MiBMIDQwMCAyMDAgTCA0NTAgMjAwIEwgNDUwIDE1NiIgZmlsbD0ibm9uZSIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSI1MDYiIHk9IjE3My42IiB3aWR0aD0iNTAiIGhlaWdodD0iMjYuNCIgcng9IjAiIGZpbGw9IiNlN2MzZWMiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjAiLz48cGF0aCBkPSJNIDUwMSAxNTYgUSA1MDYgMTU2IDUwNiAxNjIgTCA1MDYgMjAwIEwgNTU2IDIwMCBMIDU1NiAxNTYiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjIuMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjQ1OCIgeTE9IjE4MCIgeDI9IjQ5MSIgeTI9IjE4MCIgc3Ryb2tlPSIjMTYyMzJlIiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBvbHlnb24gcG9pbnRzPSI0OTgsMTgwIDQ5MSwxNzYuNSA0OTEsMTgzLjUiIGZpbGw9IiMxNjIzMmUiLz48dGV4dCB4PSI0MjUiIHk9IjIxOCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzE2MjMyZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+YXZhbnQ8L3RleHQ+PHRleHQgeD0iNDI1IiB5PSIyMzQiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiPnByZXNxdWUgaW5jb2xvcmU8L3RleHQ+PHRleHQgeD0iNTMxIiB5PSIyMTgiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPmp1c3RlIGFwcsOoczwvdGV4dD48dGV4dCB4PSI1MzEiIHk9IjIzNCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+dmlvbGV0IHBlcnNpc3RhbnQ8L3RleHQ+PC9zdmc+)
+*Titrage avec suivi colorimétrique : la solution titrante est versée à la burette dans la solution à titrer, agitée ; l'équivalence est repérée quand la teinte violette du permanganate persiste.*
 <!-- /schema -->
 
 Un **titrage** détermine une concentration inconnue par réaction avec une solution de
@@ -106,20 +108,94 @@ $$\boxed{c_\mathrm{A} V_\mathrm{A} = c_\mathrm{B} V_{\mathrm{B},\text{éq}}}$$
 
 ### Repérer l'équivalence
 
-- **Changement de couleur** d'un indicateur, ou disparition d'une teinte
-- **Saut de pH** brutal dans un titrage acido-basique
-- **Rupture de pente** sur une courbe conductimétrique
+En première, l'équivalence est repérée par un **changement de couleur** (titrage avec suivi
+colorimétrique), le plus souvent grâce à une espèce colorée qui participe à la réaction :
+
+- le réactif **titrant** est coloré : sa teinte **persiste** dès qu'il est en excès, juste après
+  l'équivalence (ion permanganate violet) ;
+- le réactif **titré** est coloré : la solution **se décolore** quand il est entièrement consommé
+  (diiode brun-jaune titré par les ions thiosulfate incolores) ;
+- sinon, on ajoute un indicateur coloré (l'empois d'amidon colore le diiode en bleu foncé).
+
+> **Changement de réactif limitant.** Avant l'équivalence, le réactif titrant versé est
+> entièrement consommé : c'est lui le limitant. Après l'équivalence, c'est le réactif titré qui
+> est épuisé et le titrant s'accumule. L'équivalence est le moment où le réactif limitant change.
 
 ---
 
-## 4. Acides et bases — hors programme de première
+## 4. Les réactions d'oxydoréduction
+
+Beaucoup de transformations (corrosion des métaux, piles, désinfection, titrages colorés…)
+s'expliquent par un **transfert d'électrons** entre deux réactifs.
+
+### Oxydant, réducteur, couple
+
+- Un **oxydant** est une espèce capable de **capter** un ou plusieurs électrons.
+- Un **réducteur** est une espèce capable de **céder** un ou plusieurs électrons.
+- Un oxydant et le réducteur qu'il devient en captant des électrons forment un **couple
+  oxydant/réducteur**, noté Ox/Red. Le passage de l'un à l'autre s'écrit avec une
+  **demi-équation électronique** :
+
+$$\mathrm{Ox} + n\,e^- = \mathrm{Red}$$
+
+| Couple | Demi-équation électronique |
+|---|---|
+| $\mathrm{Cu^{2+}/Cu}$ | $\mathrm{Cu^{2+}} + 2\,e^- = \mathrm{Cu}$ |
+| $\mathrm{Zn^{2+}/Zn}$ | $\mathrm{Zn^{2+}} + 2\,e^- = \mathrm{Zn}$ |
+| $\mathrm{Fe^{3+}/Fe^{2+}}$ | $\mathrm{Fe^{3+}} + e^- = \mathrm{Fe^{2+}}$ |
+| $\mathrm{H^+/H_2}$ | $2\,\mathrm{H^+} + 2\,e^- = \mathrm{H_2}$ |
+| $\mathrm{I_2/I^-}$ | $\mathrm{I_2} + 2\,e^- = 2\,\mathrm{I^-}$ |
+
+> **Vocabulaire.** Un réducteur qui cède des électrons **s'oxyde** (c'est une **oxydation**) ;
+> un oxydant qui capte des électrons **se réduit** (c'est une **réduction**).
+
+### Ajuster une demi-équation en milieu acide
+
+Exemple du couple $\mathrm{MnO_4^-/Mn^{2+}}$ (ion permanganate / ion manganèse) :
+
+1. Équilibrer les éléments autres que O et H : un Mn de chaque côté.
+2. Équilibrer O avec des molécules d'eau : $\mathrm{MnO_4^-} = \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$.
+3. Équilibrer H avec des ions $\mathrm{H^+}$ : $\mathrm{MnO_4^-} + 8\,\mathrm{H^+} = \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$.
+4. Équilibrer les charges avec des électrons (à gauche : $-1 + 8 = +7$ ; à droite : $+2$) :
+
+$$\mathrm{MnO_4^-} + 8\,\mathrm{H^+} + 5\,e^- = \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$$
+
+### Écrire l'équation de la réaction
+
+Les électrons cédés par le réducteur d'un couple sont captés par l'oxydant de l'autre couple.
+On combine les deux demi-équations pour que **les électrons disparaissent** : ils n'apparaissent
+jamais dans l'équation de la réaction.
+
+> **Exemple 1.** Une lame de zinc plongée dans une solution bleue de sulfate de cuivre se
+> recouvre d'un dépôt rouge de cuivre et la solution se décolore :
+> $\mathrm{Zn} = \mathrm{Zn^{2+}} + 2\,e^-$ et $\mathrm{Cu^{2+}} + 2\,e^- = \mathrm{Cu}$, d'où
+> $$\mathrm{Cu^{2+}} + \mathrm{Zn} \rightarrow \mathrm{Cu} + \mathrm{Zn^{2+}}$$
+
+> **Exemple 2.** Ions permanganate et ions fer(II) : le réducteur $\mathrm{Fe^{2+}}$ cède un seul
+> électron, l'oxydant $\mathrm{MnO_4^-}$ en capte cinq. On multiplie donc la demi-équation du fer
+> par $5$ :
+> $$\mathrm{MnO_4^-} + 8\,\mathrm{H^+} + 5\,\mathrm{Fe^{2+}} \rightarrow \mathrm{Mn^{2+}} + 5\,\mathrm{Fe^{3+}} + 4\,\mathrm{H_2O}$$
+> Vérification des charges : $-1 + 8 + 10 = +17$ à gauche, $+2 + 15 = +17$ à droite ✓.
+
+### Un titrage d'oxydoréduction
+
+L'ion permanganate est **violet** en solution, les ions $\mathrm{Mn^{2+}}$ sont presque
+incolores. En versant du permanganate sur des ions $\mathrm{Fe^{2+}}$, la teinte violette
+disparaît tant qu'il reste des ions $\mathrm{Fe^{2+}}$ ; l'**équivalence** est repérée quand
+la teinte violette **persiste**. D'après l'équation, à l'équivalence :
+
+$$n(\mathrm{MnO_4^-})_\text{versé} = \frac{n(\mathrm{Fe^{2+}})_\text{initial}}{5}$$
+
+---
+
+## 5. Acides et bases — hors programme de première
 
 > ⚠️ **Cette section ne relève pas du programme de première.** Le mot « acide » n'y
 > apparaît que dans « acide carboxylique », un groupe caractéristique de chimie organique ;
 > ni le pH ni les couples acide/base n'y figurent. Ces notions relèvent de la **terminale**.
 >
-> Elle est conservée parce qu'elle éclaire les titrages de la section 3, mais elle ne fera
-> pas l'objet d'une question directe cette année.
+> Elle est conservée comme ouverture vers la terminale (titrages suivis par pH-métrie), mais
+> elle ne fera pas l'objet d'une question directe cette année.
 
 ### Couple acide/base
 
@@ -147,7 +223,7 @@ $$\boxed{\mathrm{pH} = -\log\left[\mathrm{H_3O^+}\right]} \qquad\qquad \left[\ma
 
 ---
 
-## 5. Énergie molaire de réaction
+## 6. Énergie molaire de réaction
 
 Une transformation chimique s'accompagne d'un transfert d'énergie :
 
@@ -158,7 +234,7 @@ $$Q = n \times E_{\text{molaire}}$$
 
 ---
 
-## 6. À retenir absolument
+## 7. À retenir absolument
 
 | | |
 |---|---|
@@ -166,13 +242,15 @@ $$Q = n \times E_{\text{molaire}}$$
 | Réactif limitant | plus petit $\dfrac{n_i}{\text{coeff}_i}$ |
 | Beer-Lambert | $A = \varepsilon \ell c$, $A$ proportionnelle à $c$ |
 | Équivalence (1:1) | $c_\mathrm{A}V_\mathrm{A} = c_\mathrm{B}V_{\mathrm{B},\text{éq}}$ |
+| Demi-équation | $\mathrm{Ox} + n\,e^- = \mathrm{Red}$ |
+| Oxydoréduction | les électrons cédés par le réducteur sont captés par l'oxydant ; ils n'apparaissent pas dans l'équation |
 | pH | $\mathrm{pH} = -\log[\mathrm{H_3O^+}]$ |
 | $-1$ unité de pH | concentration $\times 10$ |
 | Exothermique | libère de l'énergie |
 
 ---
 
-## 7. Les erreurs qui coûtent des points
+## 8. Les erreurs qui coûtent des points
 
 1. **Désigner comme limitant le réactif le moins abondant** sans diviser par le nombre
    stœchiométrique.
@@ -183,6 +261,9 @@ $$Q = n \times E_{\text{molaire}}$$
 6. **Confondre l'équivalence et la fin de la réaction** : à l'équivalence, les réactifs sont
    introduits en proportions stœchiométriques.
 7. **Oublier les unités**, en particulier les litres pour les concentrations.
+8. **Laisser des électrons dans l'équation d'une réaction d'oxydoréduction** : on multiplie les
+   demi-équations pour que le nombre d'électrons cédés soit égal au nombre d'électrons captés.
+9. **Confondre oxydant et réducteur** : l'oxydant **capte** des électrons, le réducteur en **cède**.
 
 ---
 
@@ -191,16 +272,19 @@ NOTES DE PRODUCTION — ne pas afficher dans l'application
 
 Source : programme officiel de physique-chimie de première générale (spécialité),
 BO spécial n° 1 du 22 janvier 2019 (docs/programme-pc1re.pdf, thème « Constitution et
-transformations de la matière », ligne 1025 du .txt extrait ; « Énergie molaire de
-réaction » ligne 1899).
+transformations de la matière », ligne 169 de docs/programme-pc1re.txt ; « Énergie molaire de
+réaction » ligne 473).
 
 ⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le périmètre exact des titrages : titrage colorimétrique seulement, ou aussi
-  conductimétrique et pH-métrique ? J'ai mentionné les trois.
+- Périmètre des titrages (tranché le 17/10/2026, programme-pc1re.txt l. 276-298 et l. 874) :
+  « Titrage avec suivi colorimétrique », « Réaction d'oxydo-réduction support du titrage ».
+  Le programme ne mentionne ni la conductimétrie ni les titrages par précipitation (ions
+  argent / ions chlorure) : retirés de la fiche, du QCM, des cartes et des exercices.
+  Suivis conductimétrique et pH-métrique : terminale.
 - La constante d'acidité Ka et le pKa sont-ils au programme de première, ou de terminale ?
   Je ne les ai PAS inclus — point de périmètre à trancher.
-- Les réactions d'oxydoréduction sont-elles traitées dans ce thème en première ?
-  Je ne les ai pas développées.
+- Réactions d'oxydoréduction : au programme de première (programme-pc1re.txt, partie B
+  « Suivi et modélisation de l'évolution d'un système chimique ») ; section 4 ajoutée le 17/10/2026.
 - La notion de dosage par étalonnage (droite d'étalonnage) est-elle exigible ?
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.

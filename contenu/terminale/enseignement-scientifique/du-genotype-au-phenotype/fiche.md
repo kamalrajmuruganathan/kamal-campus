@@ -5,7 +5,7 @@ voie: generale
 niveau: terminale
 parcours: enseignement-scientifique
 matiere: enseignement-scientifique
-programme: "Terminale — Enseignement scientifique (programme officiel)"
+programme: "Terminale — Enseignement scientifique (chapitre de complément, hors programme)"
 theme: "Une histoire du vivant"
 duree_lecture_min: 14
 prerequis:
@@ -17,6 +17,8 @@ relu_par: null
 ---
 
 # Du génotype au phénotype
+
+> **Chapitre de complément** : il n'est pas au programme d'enseignement scientifique ; il prolonge la SVT de 1re (expression du patrimoine génétique).
 
 > Pourquoi tel individu a-t-il les yeux bleus, tel autre un groupe sanguin A, tel autre
 > une maladie génétique ? Tout part de l'**ADN** — mais l'ADN à lui seul n'explique pas
@@ -207,8 +209,10 @@ phénotypes sont le produit de **plusieurs gènes et de l'environnement**.
 <!--
 NOTES DE PRODUCTION — ne pas afficher dans l'application
 
-PROGRAMME : Enseignement scientifique, terminale générale — Thème « Une histoire du
-vivant ». Relation génotype/phénotype : phénotype aux trois échelles (moléculaire,
+PROGRAMME : HORS PROGRAMME d'enseignement scientifique de terminale (vérifié le 17/10/2026 dans
+docs/programme-terminale-enseignement-scientifique.txt : ni génotype ni phénotype). Gardé comme
+chapitre de complément (prolonge la SVT de 1re), placé en fin de liste dans ordre.json.
+Contenu : Relation génotype/phénotype : phénotype aux trois échelles (moléculaire,
 cellulaire, macroscopique) ; expression de l'information génétique (ADN -> ARN -> protéine
 -> caractère) ; mutations et diversité allélique ; influence de l'environnement ; caractères
 complexes (plurigéniques + milieu).

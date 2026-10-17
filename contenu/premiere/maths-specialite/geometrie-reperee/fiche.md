@@ -114,7 +114,25 @@ coordonnées, on retrouve directement une équation de cercle.
 
 ---
 
-## 3. Distances
+## 3. Projeté orthogonal d'un point sur une droite
+
+Le **projeté orthogonal** du point $\mathrm{A}$ sur la droite $d$ est le point $\mathrm{H}$ de $d$ tel que
+$(\mathrm{AH})$ soit perpendiculaire à $d$ (si $\mathrm{A} \in d$, alors $\mathrm{H} = \mathrm{A}$). C'est le point de $d$
+le plus proche de $\mathrm{A}$.
+
+### Méthode
+
+Si $d$ a pour équation $ax + by + c = 0$, le vecteur $\vec{n}\begin{pmatrix} a \\ b \end{pmatrix}$ est normal à $d$ :
+$\overrightarrow{\mathrm{AH}}$ est colinéaire à $\vec{n}$. On cherche donc $\mathrm{H}$ sous la forme
+$\overrightarrow{\mathrm{AH}} = t\,\vec{n}$, puis on écrit que $\mathrm{H}$ appartient à $d$.
+
+> **Exemple.** $d : x + y - 2 = 0$ et $\mathrm{A}(3\,;3)$. Avec $\vec{n}\begin{pmatrix} 1 \\ 1 \end{pmatrix}$,
+> $\mathrm{H}(3 + t\,;3 + t)$. $\mathrm{H} \in d \iff (3 + t) + (3 + t) - 2 = 0 \iff t = -2$.
+> Donc $\mathrm{H}(1\,;1)$, et la distance de $\mathrm{A}$ à la droite est $\mathrm{AH} = \sqrt{2^2 + 2^2} = 2\sqrt{2}$.
+
+---
+
+## 4. Distances
 
 | Objet | Formule |
 |---|---|
@@ -124,7 +142,7 @@ coordonnées, on retrouve directement une équation de cercle.
 
 ---
 
-## 4. Méthode — utiliser un repère pour étudier une configuration
+## 5. Méthode — utiliser un repère pour étudier une configuration
 
 C'est une capacité attendue du programme : face à un problème de géométrie « pure », on peut
 **choisir un repère bien placé** et calculer.
@@ -140,7 +158,7 @@ C'est une capacité attendue du programme : face à un problème de géométrie 
 
 ---
 
-## 5. À retenir absolument
+## 6. À retenir absolument
 
 | | |
 |---|---|
@@ -153,7 +171,7 @@ C'est une capacité attendue du programme : face à un problème de géométrie 
 
 ---
 
-## 6. Les erreurs qui coûtent des points
+## 7. Les erreurs qui coûtent des points
 
 1. **Confondre vecteur normal et vecteur directeur.** Pour $ax+by+c=0$, le normal est
    $\begin{pmatrix} a \\ b \end{pmatrix}$, le directeur $\begin{pmatrix} -b \\ a \end{pmatrix}$.
@@ -164,28 +182,3 @@ C'est une capacité attendue du programme : face à un problème de géométrie 
 5. **Utiliser les formules dans un repère non orthonormé.** Elles y sont fausses.
 6. **Oublier de justifier le choix du repère** quand on repère une configuration : le correcteur
    attend que le repère soit explicitement défini.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité maths première générale,
-section « Géométrie repérée » (ligne 2585 du .txt extrait). Le programme précise en tête :
-« Dans cette section, le plan est rapporté à un repère orthonormé. »
-
-Éléments lisibles : vecteur normal à une droite, le vecteur de coordonnées (a,b) normal à
-ax+by+c=0, équation de cercle, reconnaître une équation de cercle et déterminer centre et
-rayon, utiliser un repère pour étudier une configuration. Approfondissement possible mentionné :
-intersection d'une parabole y = ax²+bx+c avec une droite parallèle à un axe.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La distance d'un point à une droite est-elle au programme de première ? Je ne l'ai PAS
-  incluse, l'extraction ne la mentionne pas — à vérifier car c'est un classique.
-- L'approfondissement « intersection parabole / droite parallèle à un axe » n'est pas traité,
-  à ajouter si le choix pédagogique le retient.
-- Les démonstrations exigibles éventuelles de cette section.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

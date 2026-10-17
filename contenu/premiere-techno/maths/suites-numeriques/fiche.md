@@ -186,35 +186,3 @@ Le premier qui est constant donne la nature.
 6. **Croire qu'une raison négative donne une suite décroissante** : en géométrique,
    les termes alternent de signe.
 7. **Additionner les pourcentages** sur plusieurs périodes : on multiplie les raisons.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, « Programme de mathématiques de la
-classe de première de la voie technologique »
-(docs/programme-premiere-techno-2026.pdf), partie « Analyse », section « Suites
-numériques » (ligne 1684 du .txt extrait).
-
-⚠️ POINT DE PÉRIMÈTRE IMPORTANT : ce programme est COMMUN à toutes les séries
-technologiques (STI2D, STL, STMG, ST2S, STD2A, STHR, S2TMD). Seules deux rubriques
-varient : « Algorithmique et programmation » (sauf STD2A) et « Activités
-géométriques » (uniquement STD2A). Il n'existe donc PAS sept programmes de maths
-distincts en première technologique.
-
-Éléments lisibles dans l'extraction : sens de variation, représentation graphique
-par NUAGE DE POINTS, allure exponentielle, relation de récurrence, explicitation du
-terme de rang n, capacité « Reconnaître… ».
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les SOMMES de termes (1+2+...+n, ou somme géométrique) sont-elles au programme de
-  la voie technologique ? Je ne les ai PAS incluses, faute de trace dans
-  l'extraction — point de périmètre net à trancher.
-- La notion de limite est-elle abordée, même intuitivement ?
-- Le programme mentionne un lien avec les algorithmes (calcul de termes par boucle) :
-  faut-il l'intégrer ici ou dans le chapitre Algorithmique ?
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

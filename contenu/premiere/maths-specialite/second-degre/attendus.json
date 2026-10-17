@@ -75,6 +75,31 @@
       "5/2 ou 1"
     ]
   },
+  "20": {
+    "reponse": "$ax^2 + bx + c = a\\left[\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}\\right]$ pour tout réel $x$.",
+    "criteres": [
+      {
+        "idee": "On met a en facteur (possible car a ≠ 0)",
+        "mots": [
+          "facteur"
+        ]
+      },
+      {
+        "idee": "On reconnaît le début du carré (x + b/(2a))²",
+        "mots": [
+          "carre",
+          "debut"
+        ]
+      },
+      {
+        "idee": "On réduit au même dénominateur 4a² pour faire apparaître Δ = b² − 4ac",
+        "mots": [
+          "denominateur",
+          "meme"
+        ]
+      }
+    ]
+  },
   "22": {
     "reponse": "$S = \\{-2\\,;5\\}$.",
     "accepte": [
@@ -89,7 +114,7 @@
     ]
   },
   "23": {
-    "reponse": "$S = \\varnothing$ (pas de solution dans $\\mathbb{R}$).",
+    "reponse": "$x^2 + 2x + 5 = (x + 1)^2 + 4 > 0$ : $S = \\varnothing$.",
     "accepte": [
       "aucune solution",
       "pas de solution",
@@ -98,16 +123,29 @@
     ]
   },
   "24": {
-    "reponse": "$S = \\{1\\}$.",
+    "reponse": "$f(x) = 9\\left(x - \\dfrac{2}{3}\\right)^2$ ; racine $\\dfrac{2}{3}$.",
     "accepte": [
-      "1",
-      "{1}"
+      "2/3",
+      "x = 2/3"
     ]
   },
   "34": {
     "reponse": "Non, de tels réels n'existent pas.",
     "accepte": [
       "non"
+    ]
+  },
+  "37": {
+    "reponse": "$f(x) = 2(x - 3)(x + 1)$ ; $S = \\{-1\\,;3\\}$.",
+    "accepte": [
+      "{-1 ; 3}",
+      "{3 ; -1}",
+      "-1 ; 3",
+      "3 ; -1",
+      "-1 et 3",
+      "3 et -1",
+      "-1 ou 3",
+      "3 ou -1"
     ]
   },
   "47": {

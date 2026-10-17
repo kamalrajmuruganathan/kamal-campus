@@ -97,6 +97,13 @@ $$z \times \bar{z} = a^2 + b^2 \qquad \text{— un nombre RÉEL positif}$$
 > dénominateur par le conjugué du dénominateur, exactement comme on rend rationnel
 > un dénominateur contenant une racine carrée.
 
+### Conjugué d'une somme, d'un produit, d'un quotient
+
+$$\overline{z + z'} = \bar{z} + \bar{z'} \qquad\qquad \overline{z \times z'} = \bar{z} \times \bar{z'} \qquad\qquad \overline{\left(\dfrac{z}{z'}\right)} = \dfrac{\bar{z}}{\bar{z'}} \ (z' \neq 0)$$
+
+> **Exemple.** Avec $z = 1 + 2\mathrm{i}$ et $z' = 3 - \mathrm{i}$ : $z z' = 3 - \mathrm{i} + 6\mathrm{i} - 2\mathrm{i}^2 = 5 + 5\mathrm{i}$,
+> donc $\overline{z z'} = 5 - 5\mathrm{i}$ ; et $\bar{z} \times \bar{z'} = (1 - 2\mathrm{i})(3 + \mathrm{i}) = 3 + \mathrm{i} - 6\mathrm{i} - 2\mathrm{i}^2 = 5 - 5\mathrm{i}$.
+
 ---
 
 ## 5. Module
@@ -197,41 +204,3 @@ $$\boxed{z = r\left(\cos\theta + \mathrm{i}\sin\theta\right)} \qquad \text{avec 
 5. **Multiplier par le conjugué du numérateur** au lieu de celui du dénominateur.
 6. **Déterminer l'argument avec le seul cosinus** : il faut aussi le sinus.
 7. **Confondre affixe et image** : l'affixe est le nombre, l'image est le point.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO spécial n° 1 du 22 janvier 2019, « Programme de
-physique-chimie et mathématiques de première STI2D et STL »
-(docs/programme-premiere-sti2d-stl-pc-maths.pdf), partie « Programme de
-mathématiques », section « Nombres complexes ».
-
-⚠️ POINT REMARQUABLE : les nombres complexes ne figurent PAS au programme de première
-générale (ni en spécialité, ni en enseignement scientifique) — ils y apparaissent
-seulement en terminale, en maths expertes. C'est un contenu propre à STI2D/STL, lié
-aux besoins de l'électricité en régime sinusoïdal.
-
-Contenus explicitement lisibles dans l'extraction : « Forme algébrique : définition,
-conjugué, module ; représentation dans un repère orthonormé direct ; somme, produit,
-quotient ; module ; quotient. Argument et forme trigonométrique. »
-Capacités : « Calculer et interpréter géométriquement la partie réelle, la partie
-imaginaire, le [module] », « Passer de la forme algébrique à la forme trigonométrique
-et vice versa ».
-
-⚠️ LIMITE EXPLICITE DU PROGRAMME, respectée dans cette fiche : le commentaire officiel
-précise que « La notation exponentielle et les opérations entre nombres complexes sous
-forme trigonométrique sont étudiées en CLASSE TERMINALE ». Je n'ai donc introduit
-NI la notation re^(iθ), NI la multiplication/division sous forme trigonométrique.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les équations du second degré à discriminant négatif sont-elles au programme de
-  première ici ? Je ne les ai PAS traitées, faute de trace dans l'extraction.
-- L'interprétation géométrique du module comme DISTANCE ENTRE DEUX POINTS
-  (|z_B − z_A| = AB) est-elle exigible ?
-- Le programme utilise-t-il la notation i ou j ? J'ai retenu i en signalant j.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

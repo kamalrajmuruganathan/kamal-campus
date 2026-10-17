@@ -166,32 +166,3 @@ Deux caractères peuvent varier ensemble sans que l'un cause l'autre :
 5. **Tracer une droite d'ajustement qui ne passe pas par le point moyen.**
 6. **Ajuster par une droite un nuage manifestement courbe.**
 7. **Confondre $\bar x$ et $\bar y$** dans les coordonnées du point moyen.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques intégrées à
-l'enseignement scientifique, première générale, partie « Analyse de l'information
-chiffrée » — sous-parties « Analyse statistique de deux caractères qualitatifs »
-et « Analyse statistique de deux caractères quantitatifs ».
-
-Éléments explicitement lisibles dans l'extraction : tableau croisé d'effectifs,
-diagrammes en barres et circulaires, nuage de points, ajustement affine, point moyen,
-interpolation, extrapolation, usage du TABLEUR, et la mention « Plusieurs ajustements
-sont proposés (au jugé, droite de Mayer, …) » — d'où la section 4.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La méthode des MOINDRES CARRÉS est-elle exigible (avec calculatrice) ou seulement
-  citée ? L'extraction est coupée juste après « droite de Mayer ».
-- Le COEFFICIENT DE CORRÉLATION est-il au programme ? Je ne l'ai PAS introduit,
-  faute de trace dans l'extraction — point de périmètre à trancher.
-- L'usage du tableur est mentionné dans les capacités attendues : faut-il détailler
-  les manipulations (nuage de points, courbe de tendance) ?
-- La distinction corrélation/causalité est-elle formalisée dans le texte, ou
-  seulement implicite dans l'objectif d'esprit critique ?
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -130,7 +130,7 @@ avec $h = 6{,}63 \times 10^{-34}$ J·s la **constante de Planck**.
 
 > **Exemple.** Photon de lumière rouge, $\lambda = 633$ nm $= 633 \times 10^{-9}$ m.
 > $E = \dfrac{hc}{\lambda} = \dfrac{6{,}63\times10^{-34} \times 3{,}00\times10^{8}}{633\times10^{-9}}
-> = 3{,}1 \times 10^{-19}$ J. Plus $\lambda$ est **petite**, plus $E$ est **grande** :
+> = 3{,}14 \times 10^{-19}$ J. Plus $\lambda$ est **petite**, plus $E$ est **grande** :
 > un photon bleu est plus énergétique qu'un photon rouge.
 
 ### L'électron-volt
@@ -139,8 +139,8 @@ Les énergies des photons sont minuscules en joules. On utilise souvent l'**éle
 
 $$\boxed{1\ \text{eV} = 1{,}60 \times 10^{-19}\ \text{J}}$$
 
-> **Exemple.** Le photon rouge précédent : $E = \dfrac{3{,}1\times10^{-19}}{1{,}60\times10^{-19}}
-> = 1{,}9$ eV. Pour **convertir des J en eV, on divise** par $1{,}60\times10^{-19}$ ; pour aller
+> **Exemple.** Le photon rouge précédent : $E = \dfrac{3{,}14\times10^{-19}}{1{,}60\times10^{-19}}
+> = 1{,}96$ eV. Pour **convertir des J en eV, on divise** par $1{,}60\times10^{-19}$ ; pour aller
 > des eV vers les J, on **multiplie**.
 
 ---

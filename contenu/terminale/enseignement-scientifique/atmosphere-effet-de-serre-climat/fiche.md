@@ -176,13 +176,21 @@ $$\boxed{\text{GES} : \text{transparents au visible, absorbent l'infrarouge} \;\
 
 Quand la concentration de GES augmente, l'atmosphère laisse **moins bien** repartir
 l'infrarouge : le bilan n'est plus équilibré, il reste chaque seconde un excédent d'énergie.
-Ce déséquilibre se mesure par le **forçage radiatif**, une puissance par mètre carré :
+La perturbation qui crée ce déséquilibre se mesure par le **forçage radiatif**, une puissance
+par mètre carré (évaluée avant que la température n'ait eu le temps de réagir) :
 
 $$\text{forçage radiatif} \; \text{en } \text{W/m}^2 \quad (> 0 \Rightarrow \text{réchauffement})$$
 
-Depuis l'ère préindustrielle, l'augmentation des GES représente un forçage de l'ordre de
-$+2$ à $+3\ \text{W/m}^2$. La Terre absorbe alors un peu plus qu'elle n'émet, et sa température
-**monte** jusqu'à ce qu'un nouvel équilibre (plus chaud) soit atteint.
+Depuis l'ère préindustrielle, les activités humaines (surtout la hausse des GES) représentent
+un forçage de l'ordre de $+2$ à $+3\ \text{W/m}^2$. La Terre absorbe alors plus qu'elle n'émet, et
+sa température **monte**. En se réchauffant, elle émet davantage d'infrarouge, ce qui réduit
+peu à peu l'écart : aujourd'hui, le **déséquilibre énergétique** réellement mesuré (puissance
+absorbée moins puissance émise) n'est plus que d'environ $1\ \text{W/m}^2$. Le réchauffement
+continue jusqu'à ce qu'un nouvel équilibre (plus chaud) soit atteint.
+
+> ⚠️ Ne pas confondre le **forçage radiatif** (la perturbation, $\approx 2$ à $3\ \text{W/m}^2$)
+> et le **déséquilibre énergétique** actuel ($\approx 1\ \text{W/m}^2$), qui donne l'énergie
+> réellement accumulée chaque année par la Terre (surtout par les océans).
 
 > **Exemple.** La concentration de $\text{CO}_2$ est passée d'environ $280$ ppm (avant 1850) à
 > plus de $420$ ppm aujourd'hui, soit une hausse d'environ $50\ \%$. C'est la cause principale

@@ -50,6 +50,86 @@ test('eqLineaire : la réponse marquée résout réellement l’équation', () =
   }
 });
 
+test('eqSimple5e : seulement x + b = c ou ax = c, solution entière positive juste', () => {
+  const rand = rng(2026);
+  for (let i = 0; i < 500; i++) {
+    const q = M.eqSimple5e(rand);
+    const sol = /\$x = (\d+)\$/.exec(q.choix[q.reponse]);
+    assert.ok(sol, `réponse inattendue : ${q.choix[q.reponse]}`);
+    const x = Number(sol[1]);
+    let m = /\$x \+ (\d+) = (\d+)\$/.exec(q.enonce);
+    if (m) { assert.equal(x + Number(m[1]), Number(m[2])); continue; }
+    m = /\$(\d+)x = (\d+)\$/.exec(q.enonce);
+    assert.ok(m, `énoncé hors programme de 5e : ${q.enonce}`);
+    assert.equal(Number(m[1]) * x, Number(m[2]));
+  }
+});
+
+test('conversionDureeCM1 : jamais de secondes, conversion juste', () => {
+  const rand = rng(41);
+  for (let i = 0; i < 300; i++) {
+    const q = M.conversionDureeCM1(rand);
+    assert.ok(!/seconde|\bs\b/.test(q.enonce + q.choix.join(' ')), q.enonce);
+    const m = /Combien (?:de |d')(\w+) y a-t-il dans (\d+) (\w+) \?/.exec(q.enonce);
+    const f = { minutes: 60, heures: 24, jours: 7 }[m[1]];
+    assert.equal(parseInt(q.choix[q.reponse], 10), Number(m[2]) * f);
+  }
+});
+
+test('fractionSomme6e : résultat juste et positif, dénominateurs égaux ou multiples', () => {
+  const rand = rng(66);
+  for (let i = 0; i < 500; i++) {
+    const q = M.fractionSomme6e(rand);
+    const m = /\\dfrac\{(\d+)\}\{(\d+)\} ([+-]) \\dfrac\{(\d+)\}\{(\d+)\}/.exec(q.enonce);
+    assert.ok(m, q.enonce);
+    const [a, b, op, c, d] = [Number(m[1]), Number(m[2]), m[3], Number(m[4]), Number(m[5])];
+    assert.equal(d % b, 0, `dénominateurs : ${q.enonce}`);
+    const num = op === '+' ? a * d + c * b : a * d - c * b;
+    assert.ok(num >= 0, `résultat négatif : ${q.enonce}`);
+    const bonne = q.choix[q.reponse];
+    const f = /\\dfrac\{(\d+)\}\{(\d+)\}/.exec(bonne);
+    const val = f ? Number(f[1]) / Number(f[2]) : Number(/\$(\d+)\$/.exec(bonne)[1]);
+    assert.ok(Math.abs(val - num / (b * d)) < 1e-9, `${q.enonce} → ${bonne}`);
+  }
+});
+
+test('6e initiation à l’algèbre : réponses justes, sans lettre ni nombre négatif', () => {
+  const rand = rng(6);
+  for (let i = 0; i < 300; i++) {
+    let q = M.penseUnNombre6e(rand);
+    let m = /multiplie par (\d+), puis j'ajoute (\d+) : j'obtiens (\d+)/.exec(q.enonce);
+    assert.equal(Number(q.choix[q.reponse]) * Number(m[1]) + Number(m[2]), Number(m[3]));
+    q = M.schemaBarres6e(rand);
+    m = /a (\d+) fois plus .* en ont (\d+)\./.exec(q.enonce);
+    assert.equal(Number(q.choix[q.reponse]) * (Number(m[1]) + 1), Number(m[2]));
+    q = M.motifEvolutif6e(rand);
+    m = /formé de (\d+) allumettes à l'étape 1, (\d+) à l'étape 2.*l'étape (\d+) \?/.exec(q.enonce);
+    const [u1, u2, n] = [Number(m[1]), Number(m[2]), Number(m[3])];
+    assert.equal(Number(q.choix[q.reponse]), u1 + (n - 1) * (u2 - u1));
+    for (const g of [M.penseUnNombre6e, M.motifEvolutif6e, M.schemaBarres6e]) {
+      const t = g(rand);
+      assert.ok(!/-\d|\bx\b/.test(t.enonce + t.choix.join(' ')), t.enonce);
+    }
+  }
+});
+
+test('fractionSomme5e : fractions positives, résultat juste et positif', () => {
+  const rand = rng(55);
+  for (let i = 0; i < 500; i++) {
+    const q = M.fractionSomme5e(rand);
+    assert.ok(!q.choix.join(' ').includes('-'), q.choix.join(' '));
+    const m = /\\dfrac\{(\d+)\}\{(\d+)\} ([+-]) \\dfrac\{(\d+)\}\{(\d+)\}/.exec(q.enonce);
+    assert.ok(m, q.enonce);
+    const [a, b, op, c, d] = [Number(m[1]), Number(m[2]), m[3], Number(m[4]), Number(m[5])];
+    const num = op === '+' ? a * d + c * b : a * d - c * b;
+    assert.ok(num > 0, q.enonce);
+    const bonne = q.choix[q.reponse];
+    const f = /\\dfrac\{(\d+)\}\{(\d+)\}/.exec(bonne);
+    const val = f ? Number(f[1]) / Number(f[2]) : Number(/\$(\d+)\$/.exec(bonne)[1]);
+    assert.ok(Math.abs(val - num / (b * d)) < 1e-9, `${q.enonce} → ${bonne}`);
+  }
+});
+
 test('racineCarreParfait : la réponse marquée est bien la racine', () => {
   const rand = rng(7);
   for (let i = 0; i < 200; i++) {

@@ -119,9 +119,13 @@ est la **fonction dérivée** de $f$.
 | $x$ | $1$ | $\mathbb{R}$ |
 | $x^2$ | $2x$ | $\mathbb{R}$ |
 | $x^n$ ($n$ entier $\geqslant 1$) | $n\,x^{n-1}$ | $\mathbb{R}$ |
+| $x^n$ ($n$ entier $\leqslant -1$) | $n\,x^{n-1}$ | $\mathbb{R}^*$ |
 | $\dfrac{1}{x}$ | $-\dfrac{1}{x^2}$ | $\mathbb{R}^*$ |
 | $\sqrt{x}$ | $\dfrac{1}{2\sqrt{x}}$ | $]0\,;+\infty[$ |
 | $\mathrm{e}^x$ | $\mathrm{e}^x$ | $\mathbb{R}$ |
+
+> **Exemple — exposant négatif.** $\dfrac{1}{x^3} = x^{-3}$, donc sa dérivée sur $\mathbb{R}^*$ est
+> $-3x^{-4} = -\dfrac{3}{x^4}$. Pour $n = -1$, on retrouve $\left(\dfrac{1}{x}\right)' = -\dfrac{1}{x^2}$.
 
 > ⚠️ $\sqrt{x}$ est définie en $0$ mais **n'y est pas dérivable** — la tangente y est verticale.
 
@@ -138,8 +142,6 @@ Pour $u$ et $v$ dérivables et $k$ réel :
 | $u\,v$ | $\boxed{u'v + uv'}$ |
 | $\dfrac{1}{v}$ (avec $v \neq 0$) | $-\dfrac{v'}{v^2}$ |
 | $\dfrac{u}{v}$ (avec $v \neq 0$) | $\boxed{\dfrac{u'v - uv'}{v^2}}$ |
-| $u^n$ | $n\,u'\,u^{n-1}$ |
-| $x \mapsto f(ax+b)$ | $x \mapsto a\,f'(ax+b)$ |
 
 > **Exemple — produit.** $f(x) = (2x+1)(x^2-3)$.
 > Avec $u = 2x+1$, $u' = 2$, $v = x^2-3$, $v' = 2x$ :
@@ -171,32 +173,8 @@ Pour $u$ et $v$ dérivables et $k$ réel :
    change le signe de toute la dérivée.
 3. **Confondre $f'(a)$ et $f(a)$.** Le premier est la pente, le second l'ordonnée du point.
    Dans l'équation de la tangente, les deux apparaissent — à des places différentes.
-4. **Oublier le facteur $a$** en dérivant $f(ax+b)$ : la dérivée est $a\,f'(ax+b)$, pas
-   $f'(ax+b)$.
+4. **Dériver $(3x-1)^2$ en $2(3x-1)$.** C'est faux : on développe d'abord
+   ($9x^2 - 6x + 1$, de dérivée $18x - 6$), ou on l'écrit comme le produit $(3x-1)(3x-1)$.
 5. **Dériver $\sqrt{x}$ en $0$.** La fonction y est définie mais pas dérivable.
 6. **Oublier l'ensemble de dérivabilité** : $\dfrac{1}{x}$ n'est pas dérivable en $0$, pas plus
    qu'elle n'y est définie.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité mathématiques première générale,
-section « Dérivation » (docs/programme-premiere-specialite-maths-2026.txt, ligne 1830).
-
-L'extraction PDF est fortement dégradée sur cette section : les formules éclatent en fragments
-à cause des polices mathématiques. La STRUCTURE est fiable (point de vue local, limite des
-sécantes, pente, tangente, approximation affine) mais les formulations exactes ne le sont pas.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le périmètre exact des dérivées usuelles exigibles (exp est-elle traitée ici ou seulement
-  dans le chapitre « Fonction exponentielle » ?)
-- La dérivée de x ↦ f(ax+b) est-elle au programme de première, ou réservée à la terminale ?
-- Les démonstrations exigibles (probablement : dérivée de x², de 1/x, formule du produit)
-- Le lien dérivée/variations est traité dans le chapitre séparé « Variations et courbes
-  représentatives des fonctions » — vérifier qu'il n'y a pas de recouvrement à arbitrer.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -123,20 +123,30 @@
     {
       "id": 11,
       "difficulte": "facile",
-      "notion": "conversion",
-      "enonce": "À combien de radians correspond un angle de $90°$ ?",
-      "choix": ["$\\dfrac{\\pi}{2}$", "$\\pi$", "$\\dfrac{\\pi}{4}$", "$90$"],
+      "notion": "mesure-principale",
+      "enonce": "Dans quel intervalle se trouve la **mesure principale** d'un angle orienté ?",
+      "choix": [
+        "$]-\\pi\\,;\\pi]$",
+        "$[0\\,;2\\pi[$",
+        "$[-\\pi\\,;\\pi]$",
+        "$[0\\,;\\pi]$"
+      ],
       "reponse": 0,
-      "explication": "$90° = 90 \\times \\dfrac{\\pi}{180} = \\dfrac{\\pi}{2}$ rad. C'est la moitié de $\\pi$ (qui vaut $180°$). Le quart de tour vaut donc $\\dfrac{\\pi}{2}$."
+      "explication": "La mesure principale est l'**unique** mesure de l'angle comprise dans $]-\\pi\\,;\\pi]$. L'intervalle est ouvert en $-\\pi$ : sinon $-\\pi$ et $\\pi$, qui mesurent le même angle, seraient deux mesures principales."
     },
     {
       "id": 12,
       "difficulte": "facile",
-      "notion": "valeurs-remarquables",
-      "enonce": "Que vaut $\\sin\\left(\\dfrac{\\pi}{2}\\right)$ ?",
-      "choix": ["$0$", "$1$", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{1}{2}$"],
-      "reponse": 1,
-      "explication": "En $\\dfrac{\\pi}{2}$, le point du cercle est en haut, de coordonnées $(0\\,;1)$ : le sinus (ordonnée) vaut $1$ et le cosinus (abscisse) vaut $0$. Les intervertir est l'erreur classique."
+      "notion": "mesure-principale",
+      "enonce": "$\\theta$ est une mesure d'un angle orienté de vecteurs. Quelles sont toutes ses autres mesures ?",
+      "choix": [
+        "Les réels $\\theta + 2k\\pi$, avec $k$ entier relatif",
+        "Les réels $\\theta + k\\pi$, avec $k$ entier relatif",
+        "Les réels $2k\\theta$, avec $k$ entier relatif",
+        "Le seul réel $-\\theta$"
+      ],
+      "reponse": 0,
+      "explication": "Faire un tour complet ($2\\pi$) dans un sens ou dans l'autre ramène au même angle : les mesures sont les $\\theta + 2k\\pi$, $k \\in \\mathbb{Z}$. Ajouter seulement $\\pi$ fait faire un demi-tour : on obtient un autre angle. Quant à $-\\theta$, il mesure l'angle de sens contraire."
     },
     {
       "id": 13,
@@ -173,20 +183,6 @@
     {
       "id": 16,
       "difficulte": "moyen",
-      "notion": "pulsation-frequence",
-      "enonce": "Un signal a une fréquence $f = 50$ Hz. Quelle est sa pulsation $\\omega$ ?",
-      "choix": [
-        "$100\\pi$ rad·s⁻¹",
-        "$50$ rad·s⁻¹",
-        "$\\dfrac{50}{2\\pi}$ rad·s⁻¹",
-        "$25\\pi$ rad·s⁻¹"
-      ],
-      "reponse": 0,
-      "explication": "$\\omega = 2\\pi f = 2\\pi \\times 50 = 100\\pi$ rad·s⁻¹. Confondre pulsation et fréquence ($\\omega = 50$) est l'erreur à éviter : il manque le facteur $2\\pi$."
-    },
-    {
-      "id": 17,
-      "difficulte": "moyen",
       "notion": "parite",
       "enonce": "Que vaut $\\sin(-x)$ ?",
       "choix": ["$\\sin x$", "$-\\sin x$", "$\\cos x$", "$-\\cos x$"],
@@ -194,7 +190,7 @@
       "explication": "Le sinus est une fonction **impaire** : $\\sin(-x) = -\\sin x$. Sur le cercle, $-x$ est le symétrique de $x$ par rapport à l'axe des abscisses, ce qui change le signe de l'ordonnée (le sinus). Le cosinus, lui, est pair."
     },
     {
-      "id": 18,
+      "id": 17,
       "difficulte": "difficile",
       "notion": "equation",
       "enonce": "Sur l'intervalle $[0\\,;2\\pi[$, quelles sont les solutions de $\\cos x = \\dfrac{1}{2}$ ?",
@@ -208,7 +204,7 @@
       "explication": "On lit $\\dfrac{1}{2}$ sur l'axe des abscisses : deux points du cercle, symétriques par rapport à cet axe, donnent $\\dfrac{\\pi}{3}$ et $2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}$. Le choix $\\dfrac{2\\pi}{3}$ correspondrait à une lecture sur l'axe des ordonnées."
     },
     {
-      "id": 19,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "angles-associes",
       "enonce": "Que vaut $\\sin(\\pi - x)$ ?",
@@ -217,13 +213,32 @@
       "explication": "$\\pi - x$ est le symétrique de $x$ par rapport à l'axe des ordonnées : l'ordonnée (le sinus) est conservée, d'où $\\sin(\\pi - x) = \\sin x$. En revanche $\\cos(\\pi - x) = -\\cos x$, l'abscisse changeant de signe."
     },
     {
+      "id": 19,
+      "difficulte": "moyen",
+      "notion": "mesure-principale",
+      "enonce": "Quelle est la mesure principale de l'angle orienté de mesure $\\dfrac{11\\pi}{6}$ ?",
+      "choix": [
+        "$-\\dfrac{\\pi}{6}$",
+        "$\\dfrac{11\\pi}{6}$",
+        "$\\dfrac{\\pi}{6}$",
+        "$\\dfrac{5\\pi}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{11\\pi}{6} = -\\dfrac{\\pi}{6} + 2\\pi$, et $-\\dfrac{\\pi}{6}$ appartient à $]-\\pi\\,;\\pi]$. $\\dfrac{11\\pi}{6}$ est une mesure de l'angle, mais elle dépasse $\\pi$ : ce n'est pas la mesure principale. Le signe compte : $\\dfrac{\\pi}{6}$ mesure l'angle de sens contraire."
+    },
+    {
       "id": 20,
       "difficulte": "difficile",
-      "notion": "relation-fondamentale",
-      "enonce": "Si $\\sin x = 0{,}6$ et $\\cos x < 0$, que vaut $\\cos x$ ?",
-      "choix": ["$-0{,}8$", "$0{,}8$", "$-0{,}4$", "$0{,}4$"],
+      "notion": "mesure-principale",
+      "enonce": "Quelle est la mesure principale de l'angle orienté de mesure $-\\dfrac{5\\pi}{4}$ ?",
+      "choix": [
+        "$\\dfrac{3\\pi}{4}$",
+        "$-\\dfrac{3\\pi}{4}$",
+        "$\\dfrac{5\\pi}{4}$",
+        "$\\dfrac{\\pi}{4}$"
+      ],
       "reponse": 0,
-      "explication": "$\\cos^2 x = 1 - \\sin^2 x = 1 - 0{,}36 = 0{,}64$, donc $\\cos x = \\pm 0{,}8$. La condition $\\cos x < 0$ impose $-0{,}8$. Le choix $-0{,}4$ oublie de prendre la racine carrée de $0{,}64$."
+      "explication": "$-\\dfrac{5\\pi}{4} < -\\pi$ : on ajoute $2\\pi$, ce qui donne $-\\dfrac{5\\pi}{4} + \\dfrac{8\\pi}{4} = \\dfrac{3\\pi}{4}$, qui appartient à $]-\\pi\\,;\\pi]$. $-\\dfrac{3\\pi}{4}$ correspond à l'erreur de signe, et $\\dfrac{5\\pi}{4}$ n'est pas dans l'intervalle."
     }
   ]
 }

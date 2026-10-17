@@ -2389,6 +2389,14 @@ _M_AT = {"H": 1.0, "C": 12.0, "N": 14.0, "O": 16.0, "Na": 23.0, "Cl": 35.5}
 NA = 6.02e23
 
 
+# Masses des atomes (kg), 3 chiffres significatifs : m = A_r × 1,66 × 10⁻²⁷ kg.
+_M_ATOME = {"H": 1.67e-27, "C": 1.99e-26, "N": 2.33e-26, "O": 2.66e-26, "Fe": 9.27e-26}
+
+
+def masse_entite(f):
+    return sum(_M_ATOME[el] * n for el, n in atomes(f).items())
+
+
 def masse_molaire(f):
     return sum(_M_AT[el] * n for el, n in atomes(f).items())
 
@@ -2438,31 +2446,46 @@ def gen_2de_description():
         "Calculer la masse de 25,0 mL de glycérol (masse volumique 1,26 g·mL⁻¹).",
         [f"$m = \\rho \\times V = 1{{,}}26 \\times 25{{,}}0 = {cs(m)}$ g."], f"${cs(m)}$ g")
 
-    # -- masse molaire (6)
-    for f, nom in (("H2O", "de l'eau"), ("CO2", "du dioxyde de carbone"), ("C6H12O6", "du glucose"), ("C2H6O", "de l'éthanol"),
-                   ("NH3", "de l'ammoniac"), ("CH4", "du méthane")):
-        M = masse_molaire(f)
-        detail = " + ".join(f"{n} \\times {nb(_M_AT[el], 1, True)}" if n > 1 else nb(_M_AT[el], 1, True) for el, n in atomes(f).items())
-        add("application", "masse-molaire",
-            f"Calculer la masse molaire moléculaire {nom}, ${tex_formule(f)}$. Données : M(H) = 1,0 ; M(C) = 12,0 ; M(N) = 14,0 ; M(O) = 16,0 g·mol⁻¹.",
-            ["On additionne les masses molaires atomiques de tous les atomes de la molécule.", f"$M = {detail} = {nb(M, 1, True)}$ g·mol⁻¹."],
-            f"${nb(M, 1, True)}$ g·mol⁻¹")
+    # -- masse d'une entité à partir de sa formule brute (6) — programme de 2de : pas de masse molaire
+    def _don(f):
+        els = list(atomes(f).keys())
+        return " ; ".join(f"$m_\\mathrm{{{el}}} = {sci(_M_ATOME[el], 3)}$ kg" for el in els)
+    for f, nom in (("H2O", "d'eau"), ("CO2", "de dioxyde de carbone"), ("C6H12O6", "de glucose"), ("C2H6O", "d'éthanol"),
+                   ("NH3", "d'ammoniac"), ("CH4", "de méthane")):
+        m = masse_entite(f)
+        detail = " + ".join(f"{n} \\times {sci(_M_ATOME[el], 3)}" if n > 1 else sci(_M_ATOME[el], 3) for el, n in atomes(f).items())
+        add("application" if len(atomes(f)) == 2 else "intermediaire", "masse-entite",
+            f"Calculer la masse d'une molécule {nom}, ${tex_formule(f)}$. Données (masses des atomes) : {_don(f)}.",
+            ["La masse d'une molécule est la somme des masses des atomes qui la composent.", f"$m = {detail} = {sci(m, 3)}$ kg."],
+            f"${sci(m, 3)}$ kg")
 
-    # -- quantité de matière n = m/M (7)
-    for m, f, nom in ((9.0, "H2O", "d'eau"), (11.0, "CO2", "de dioxyde de carbone"), (90.0, "C6H12O6", "de glucose"),
-                      (23.0, "C2H6O", "d'éthanol"), (5.85, "NaCl", "de chlorure de sodium, solide ionique")):
-        M = masse_molaire(f)
-        n = m / M
+    # -- nombre d'entités et quantité de matière dans une masse d'échantillon (7)
+    for mg, f, nom, ent in ((9.0, "H2O", "d'eau", "molécules"), (22.0, "CO2", "de dioxyde de carbone", "molécules"),
+                            (90.0, "C6H12O6", "de glucose", "molécules"), (23.0, "C2H6O", "d'éthanol", "molécules"),
+                            (5.58, "Fe", "de fer", "atomes")):
+        me = float(sci(masse_entite(f), 3).replace("{,}", ".").replace(" \\times 10^{", "e").rstrip("}"))
+        N = (mg / 1000) / me
+        Nr = float(sci(N, 3).replace("{,}", ".").replace(" \\times 10^{", "e").rstrip("}"))
+        n = Nr / NA
+        dm = 2 if mg < 10 else 1
+        mot = "d'une molécule" if ent == "molécules" else "d'un atome"
         add("intermediaire", "quantite-matiere",
-            f"Calculer la quantité de matière contenue dans {t(m, 2 if m < 10 else 1, True)} g {nom} (${tex_formule(f)}$, M = {t(M, 1, True)} g·mol⁻¹).",
-            [f"$n = \\dfrac{{m}}{{M}} = \\dfrac{{{nb(m, 2 if m < 10 else 1, True)}}}{{{nb(M, 1, True)}}} = {cs(n)}$ mol."],
-            f"${cs(n)}$ mol")
-    for n, f, nom in ((0.250, "H2O", "d'eau"), (2.00, "CH4", "de méthane")):
-        M = masse_molaire(f)
-        m = n * M
-        add("intermediaire", "quantite-matiere",
-            f"Quelle masse {nom} (${tex_formule(f)}$, M = {t(M, 1, True)} g·mol⁻¹) faut-il peser pour disposer de {t(n, 3 if n < 1 else 2, True)} mol ?",
-            [f"$m = n \\times M = {nb(n, 3 if n < 1 else 2, True)} \\times {nb(M, 1, True)} = {cs(m)}$ g."], f"${cs(m)}$ g")
+            f"Un échantillon {nom} (${tex_formule(f)}$) a une masse de {t(mg, dm, True)} g. La masse {mot} vaut ${sci(me, 3)}$ kg. "
+            f"Calculer le nombre d'entités $N$ de l'échantillon, puis sa quantité de matière $n$ ($N_\\mathrm{{A}} = 6{{,}}02 \\times 10^{{23}}$ mol⁻¹).",
+            [f"$m = {nb(mg, dm, True)}$ g $= {sci(mg / 1000, 3)}$ kg.",
+             f"$N = \\dfrac{{m}}{{m_{{\\text{{entité}}}}}} = \\dfrac{{{sci(mg / 1000, 3)}}}{{{sci(me, 3)}}} = {sci(N, 3)}$ {ent}.",
+             f"$n = \\dfrac{{N}}{{N_\\mathrm{{A}}}} = \\dfrac{{{sci(Nr, 3)}}}{{6{{,}}02 \\times 10^{{23}}}} = {cs(n)}$ mol."],
+            f"$N = {sci(N, 3)}$ ; $n = {cs(n)}$ mol")
+    for n, f, nom in ((0.100, "H2O", "d'eau"), (0.500, "CH4", "de méthane")):
+        me = float(sci(masse_entite(f), 3).replace("{,}", ".").replace(" \\times 10^{", "e").rstrip("}"))
+        N = n * NA
+        Nr = float(sci(N, 3).replace("{,}", ".").replace(" \\times 10^{", "e").rstrip("}"))
+        m = Nr * me * 1000
+        add("approfondissement", "quantite-matiere",
+            f"Quelle masse {nom} (${tex_formule(f)}$) correspond à {t(n, 3 if n < 1 else 2, True)} mol ? La masse d'une molécule vaut ${sci(me, 3)}$ kg ($N_\\mathrm{{A}} = 6{{,}}02 \\times 10^{{23}}$ mol⁻¹).",
+            [f"$N = n \\times N_\\mathrm{{A}} = {nb(n, 3 if n < 1 else 2, True)} \\times 6{{,}}02 \\times 10^{{23}} = {sci(N, 3)}$ molécules.",
+             f"$m = N \\times m_{{\\text{{molécule}}}} = {sci(Nr, 3)} \\times {sci(me, 3)} = {sci(m / 1000, 3)}$ kg, soit ${cs(m)}$ g."],
+            f"${cs(m)}$ g")
 
     # -- nombre d'entités (5)
     for n in (2.00, 0.500, 3.0e-3):
@@ -2475,11 +2498,12 @@ def gen_2de_description():
     add("approfondissement", "avogadro",
         "Un échantillon contient $1{,}204 \\times 10^{24}$ atomes de fer. Calculer la quantité de matière correspondante.",
         [f"$n = \\dfrac{{N}}{{N_\\mathrm{{A}}}} = \\dfrac{{1{{,}}204 \\times 10^{{24}}}}{{6{{,}}02 \\times 10^{{23}}}} = {cs(N / NA)}$ mol."], f"${cs(N / NA)}$ mol")
-    n_eau = 18.0 / 18.0
+    N_goutte = 5.0e-5 / 2.99e-26
     add("probleme", "avogadro",
-        "Une cuillère contient 18,0 g d'eau (M = 18,0 g·mol⁻¹). Combien de molécules d'eau contient-elle ?",
-        [f"$n = \\dfrac{{18{{,}}0}}{{18{{,}}0}} = {cs(n_eau)}$ mol.", f"$N = {cs(n_eau)} \\times 6{{,}}02 \\times 10^{{23}} = {sci(n_eau * NA, 3)}$ molécules."],
-        f"${sci(n_eau * NA, 3)}$ molécules")
+        "Une goutte d'eau a une masse de 0,050 g et la masse d'une molécule d'eau vaut $2{,}99 \\times 10^{-26}$ kg. Combien de molécules contient la goutte ? Comparer à la population mondiale (environ $8 \\times 10^{9}$ habitants).",
+        ["$m = 0{,}050$ g $= 5{,}0 \\times 10^{-5}$ kg.", f"$N = \\dfrac{{5{{,}}0 \\times 10^{{-5}}}}{{2{{,}}99 \\times 10^{{-26}}}} = {sci(N_goutte, 2)}$ molécules.",
+         "C'est environ $2 \\times 10^{11}$ fois (200 milliards de fois) plus que le nombre d'habitants de la Terre : une espèce chimique est une collection d'un nombre immense d'entités."],
+        f"${sci(N_goutte, 2)}$ molécules")
 
     # -- concentration en masse (7)
     for m, V in ((5.00, 250.0), (2.00, 100.0), (18.0, 500.0)):
@@ -2503,46 +2527,50 @@ def gen_2de_description():
         ["La concentration se calcule avec le volume de la solution, pas celui du solvant.", "Le volume de la solution n'est pas exactement 1,00 L."],
         "Le volume de solution n'est pas exactement celui du solvant")
 
-    # -- concentration en quantité de matière (5)
-    for n, V in ((0.0200, 200.0), (0.150, 500.0)):
-        c = n / (V / 1000)
-        dn = 4 if n < 0.1 else 3
-        add("intermediaire", "concentration-molaire",
-            f"On dissout {t(n, dn, True)} mol de soluté dans de l'eau pour obtenir {t(V, 1, True)} mL de solution. Calculer la concentration en quantité de matière.",
-            [f"$c = \\dfrac{{n}}{{V}} = \\dfrac{{{nb(n, dn, True)}}}{{{nb(V / 1000, 4, True)}}} = {cs(c)}$ mol·L⁻¹."], f"${cs(c)}$ mol·L⁻¹")
-    c, M = 0.100, 180.0
-    add("approfondissement", "concentration-molaire",
-        "Une solution de glucose a une concentration $c = 0{,}100$ mol·L⁻¹ (M = 180,0 g·mol⁻¹). Calculer sa concentration en masse.",
-        [f"$c_m = c \\times M = 0{{,}}100 \\times 180{{,}}0 = {cs(c * M)}$ g·L⁻¹."], f"${cs(c * M)}$ g·L⁻¹")
-    cm, M = 9.0, 58.5
-    add("approfondissement", "concentration-molaire",
-        "Le sérum physiologique a une concentration en masse de 9,0 g·L⁻¹ en chlorure de sodium (M = 58,5 g·mol⁻¹). Calculer sa concentration en quantité de matière.",
-        [f"$c = \\dfrac{{c_m}}{{M}} = \\dfrac{{9{{,}}0}}{{58{{,}}5}} = {cs(cm / M, 2)}$ mol·L⁻¹."], f"${cs(cm / M, 2)}$ mol·L⁻¹")
-    add("probleme", "concentration-molaire",
-        "Calculer la masse de chlorure de sodium (M = 58,5 g·mol⁻¹) à peser pour préparer 250,0 mL d'une solution à 0,200 mol·L⁻¹.",
-        ["$n = c \\times V = 0{,}200 \\times 0{,}2500 = 5{,}00 \\times 10^{-2}$ mol.", f"$m = n \\times M = 5{{,}}00 \\times 10^{{-2}} \\times 58{{,}}5 = {cs(0.05 * 58.5)}$ g."],
-        f"${cs(0.05 * 58.5)}$ g")
+    # -- concentration maximale, masse volumique d'une solution, dosage par étalonnage (5)
+    add("application", "concentration-maximale-etalonnage",
+        "On dissout un soluté dans 100,0 mL de solution jusqu'à ce qu'il ne se dissolve plus : on a alors dissous 2,90 g de soluté. Calculer la concentration maximale (solubilité) de ce soluté.",
+        ["Au-delà de la concentration maximale, le soluté ne se dissout plus (solution saturée).", "$c_{\\max} = \\dfrac{2{,}90}{0{,}1000} = 29{,}0$ g·L⁻¹."],
+        "$29{,}0$ g·L⁻¹")
+    add("intermediaire", "concentration-maximale-etalonnage",
+        "La concentration maximale d'un soluté dans l'eau vaut 200 g·L⁻¹ à 20 °C. Peut-on préparer à cette température 250 mL de solution contenant 60 g de ce soluté dissous ?",
+        ["$c_m = \\dfrac{60}{0{,}250} = 240$ g·L⁻¹.", "$240 > 200$ g·L⁻¹ : impossible, une partie du soluté resterait solide."],
+        "Non, car il faudrait 240 g·L⁻¹ > 200 g·L⁻¹")
+    add("intermediaire", "concentration-maximale-etalonnage",
+        "Une solution de volume 100 mL a une masse de 107 g et contient 10,0 g de sel dissous. Calculer sa masse volumique (en g·mL⁻¹) et la concentration en masse du sel (en g·L⁻¹).",
+        ["Masse volumique : masse de **toute la solution** divisée par son volume : $\\rho = \\dfrac{107}{100} = 1{,}07$ g·mL⁻¹.",
+         "Concentration en masse : masse du **soluté seul** divisée par le volume de solution : $c_m = \\dfrac{10{,}0}{0{,}100} = 100$ g·L⁻¹."],
+        "$\\rho = 1{,}07$ g·mL⁻¹ ; $c_m = 100$ g·L⁻¹")
+    add("approfondissement", "concentration-maximale-etalonnage",
+        "On prépare des solutions étalons d'un colorant de concentrations en masse 2, 4, 6, 8 et 10 mg·L⁻¹. Une boisson a une teinte plus foncée que la solution à 4 mg·L⁻¹ et plus claire que celle à 6 mg·L⁻¹. Que peut-on dire de sa concentration en colorant ?",
+        ["C'est un dosage par étalonnage avec une échelle de teinte.", "Plus la solution est concentrée, plus sa teinte est foncée : la concentration est comprise entre 4 et 6 mg·L⁻¹."],
+        "Elle est comprise entre 4 et 6 mg·L⁻¹")
+    add("probleme", "concentration-maximale-etalonnage",
+        "Des solutions étalons de sucre de concentrations en masse 0, 50, 100, 150 et 200 g·L⁻¹ ont pour masses volumiques 1,000 ; 1,019 ; 1,038 ; 1,057 et 1,076 g·mL⁻¹. Une boisson sucrée (on ne tient compte que du sucre) a une masse volumique de 1,038 g·mL⁻¹. Quelle est sa concentration en masse en sucre ?",
+        ["La masse volumique augmente régulièrement avec la concentration en sucre : c'est une gamme d'étalonnage.", "$1{,}038$ g·mL⁻¹ correspond à la solution étalon à $100$ g·L⁻¹."],
+        "$100$ g·L⁻¹")
 
-    # -- dilution (8)
-    for c1, V1, V2 in ((0.50, 10.0, 100.0), (2.0e-2, 20.0, 250.0)):
+    # -- dilution (8) — concentrations en masse
+    for c1, V1, V2 in ((5.0, 10.0, 100.0), (2.0, 20.0, 250.0)):
         c2 = c1 * V1 / V2
         add("intermediaire", "dilution",
-            f"On prélève {t(V1, 1, True)} mL d'une solution mère de concentration ${sci(c1, 2) if c1 < 0.1 else nb(c1, 2, True)}$ mol·L⁻¹ et on complète à {t(V2, 1, True)} mL. Calculer la concentration de la solution fille.",
-            ["La quantité de soluté se conserve : $c_1 V_1 = c_2 V_2$.",
-             f"$c_2 = \\dfrac{{c_1 V_1}}{{V_2}} = \\dfrac{{{sci(c1, 2) if c1 < 0.1 else nb(c1, 2, True)} \\times {nb(V1, 1, True)}}}{{{nb(V2, 1, True)}}} = {sci(c2, 2)}$ mol·L⁻¹."],
-            f"${sci(c2, 2)}$ mol·L⁻¹")
-    for c1, c2, V2 in ((1.00, 0.100, 100.0), (0.200, 0.0500, 50.0)):
+            f"On prélève {t(V1, 1, True)} mL d'une solution mère de concentration en masse {t(c1, 1, True)} g·L⁻¹ et on complète à {t(V2, 1, True)} mL. Calculer la concentration en masse de la solution fille.",
+            ["La masse de soluté se conserve : $c_{m1} V_1 = c_{m2} V_2$.",
+             f"$c_{{m2}} = \\dfrac{{c_{{m1}} V_1}}{{V_2}} = \\dfrac{{{nb(c1, 1, True)} \\times {nb(V1, 1, True)}}}{{{nb(V2, 1, True)}}} = {cs(c2, 2)}$ g·L⁻¹."],
+            f"${cs(c2, 2)}$ g·L⁻¹")
+    for c1, c2, V2 in ((100.0, 10.0, 100.0), (20.0, 5.00, 50.0)):
         V1 = c2 * V2 / c1
+        dc = 2 if c2 < 10 else 1
         add("approfondissement", "dilution",
-            f"Quel volume de solution mère à {t(c1, 3, True)} mol·L⁻¹ faut-il prélever pour préparer {t(V2, 1, True)} mL de solution à {t(c2, 4 if c2 < 0.1 else 3, True)} mol·L⁻¹ ?",
-            [f"$V_1 = \\dfrac{{c_2 V_2}}{{c_1}} = \\dfrac{{{nb(c2, 4 if c2 < 0.1 else 3, True)} \\times {nb(V2, 1, True)}}}{{{nb(c1, 3, True)}}} = {cs(V1)}$ mL."],
+            f"Quel volume de solution mère à {t(c1, 1, True)} g·L⁻¹ faut-il prélever pour préparer {t(V2, 1, True)} mL de solution à {t(c2, dc, True)} g·L⁻¹ ?",
+            [f"$V_1 = \\dfrac{{c_{{m2}} V_2}}{{c_{{m1}}}} = \\dfrac{{{nb(c2, dc, True)} \\times {nb(V2, 1, True)}}}{{{nb(c1, 1, True)}}} = {cs(V1)}$ mL."],
             f"${cs(V1)}$ mL")
     add("intermediaire", "dilution",
         "On veut diluer 20 fois une solution pour en obtenir 100,0 mL. Quel volume de solution mère faut-il prélever ?",
         ["$F = \\dfrac{V_2}{V_1}$, donc $V_1 = \\dfrac{V_2}{F} = \\dfrac{100{,}0}{20} = 5{,}0$ mL."], "$5{,}0$ mL")
     add("intermediaire", "dilution",
-        "On passe d'une solution à 0,40 mol·L⁻¹ à une solution à 0,050 mol·L⁻¹. Calculer le facteur de dilution.",
-        ["$F = \\dfrac{c_1}{c_2} = \\dfrac{0{,}40}{0{,}050} = 8{,}0$."], "$F = 8{,}0$")
+        "On passe d'une solution à 40 g·L⁻¹ à une solution à 5,0 g·L⁻¹. Calculer le facteur de dilution.",
+        ["$F = \\dfrac{c_{m1}}{c_{m2}} = \\dfrac{40}{5{,}0} = 8{,}0$."], "$F = 8{,}0$")
     add("application", "dilution",
         "Quelle verrerie utiliser pour prélever précisément le volume de solution mère, puis pour préparer la solution fille ?",
         ["Prélèvement : pipette jaugée.", "Solution fille : fiole jaugée, complétée jusqu'au trait de jauge puis homogénéisée."],

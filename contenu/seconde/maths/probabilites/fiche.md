@@ -120,19 +120,59 @@ Pour une expérience à deux étapes, on représente les issues par un **arbre**
 
 ---
 
-## 6. Échantillonnage et fluctuation
+## 6. Probabilité conditionnelle et arbres pondérés
+
+### Définition
+
+Soit $\mathrm{A}$ un événement de probabilité non nulle. La **probabilité de $\mathrm{B}$ sachant
+$\mathrm{A}$** est
+
+$$\boxed{P_{\mathrm{A}}(\mathrm{B}) = \dfrac{P(\mathrm{A} \cap \mathrm{B})}{P(\mathrm{A})}}$$
+
+C'est la probabilité de $\mathrm{B}$ quand on **sait** que $\mathrm{A}$ est réalisé : on se restreint
+à $\mathrm{A}$. Si l'on tire au hasard un individu dans une population (équiprobabilité),
+$P_{\mathrm{A}}(\mathrm{B}) = \dfrac{\text{nombre d'individus dans } \mathrm{A} \cap \mathrm{B}}{\text{nombre d'individus dans } \mathrm{A}}$.
+
+### Arbre pondéré
+
+- Sur les branches issues de la racine, on écrit $P(\mathrm{A})$ et $P\left(\overline{\mathrm{A}}\right)$.
+- Sur les branches suivantes, on écrit des probabilités **conditionnelles** : $P_{\mathrm{A}}(\mathrm{B})$,
+  $P_{\mathrm{A}}\left(\overline{\mathrm{B}}\right)$, etc.
+- Les probabilités issues d'un même nœud ont une somme égale à $1$.
+- La probabilité d'un chemin est le **produit** des probabilités de ses branches :
+  $P(\mathrm{A} \cap \mathrm{B}) = P(\mathrm{A}) \times P_{\mathrm{A}}(\mathrm{B})$.
+
+> **Exemple — un test de dépistage.** Une maladie touche $2\,\%$ d'une population. Le test est
+> positif chez $95\,\%$ des malades et négatif chez $90\,\%$ des personnes non malades.
+> On note $\mathrm{M}$ « la personne est malade » et $\mathrm{T}$ « le test est positif ».
+> Avec l'arbre : $P(\mathrm{M} \cap \mathrm{T}) = 0{,}02 \times 0{,}95 = 0{,}019$.
+>
+> Sur $10\,000$ personnes : $200$ malades, dont $190$ testés positifs ; $9\,800$ non malades, dont
+> $980$ testés positifs (ce sont les **faux positifs**). Il y a donc $190 + 980 = 1\,170$ tests positifs.
+>
+> - $P_{\mathrm{M}}(\mathrm{T}) = \dfrac{190}{200} = 0{,}95$ : parmi les malades, $95\,\%$ ont un test positif.
+> - $P_{\mathrm{T}}(\mathrm{M}) = \dfrac{190}{1\,170} \approx 0{,}16$ : parmi les tests positifs, seulement
+>   $16\,\%$ environ correspondent à des malades.
+>
+> $P_{\mathrm{M}}(\mathrm{T})$ et $P_{\mathrm{T}}(\mathrm{M})$ sont **très différentes** : il ne faut pas inverser
+> le conditionnement.
+
+---
+
+## 7. Échantillonnage et fluctuation
 
 Sur un échantillon de taille $n$, la **fréquence observée** d'un caractère varie d'un
 échantillon à l'autre : c'est la **fluctuation d'échantillonnage**.
 
-Plus $n$ est grand, plus la fréquence observée se rapproche de la probabilité théorique.
+C'est la **loi des grands nombres** (version simplifiée) : lorsque $n$ est grand, sauf exception,
+la fréquence observée est proche de la probabilité.
 
 > C'est ce qui justifie la simulation : on peut estimer une probabilité difficile à calculer
 > en répétant l'expérience un grand nombre de fois.
 
 ---
 
-## 7. À retenir absolument
+## 8. À retenir absolument
 
 | | |
 |---|---|
@@ -142,10 +182,12 @@ Plus $n$ est grand, plus la fréquence observée se rapproche de la probabilité
 | Union | $P(\mathrm{A} \cup \mathrm{B}) = P(\mathrm{A}) + P(\mathrm{B}) - P(\mathrm{A} \cap \mathrm{B})$ |
 | Incompatibles | $\mathrm{A} \cap \mathrm{B} = \varnothing$, l'addition suffit |
 | « Au moins un » | passer par le contraire |
+| Probabilité conditionnelle | $P_{\mathrm{A}}(\mathrm{B}) = \dfrac{P(\mathrm{A} \cap \mathrm{B})}{P(\mathrm{A})}$ |
+| Chemin d'un arbre | produit des probabilités des branches |
 
 ---
 
-## 8. Les erreurs qui coûtent des points
+## 9. Les erreurs qui coûtent des points
 
 1. **Appliquer favorables/possibles sans équiprobabilité.** C'est la faute de fond du chapitre.
 2. **Additionner les probabilités d'un « ou »** sans vérifier l'incompatibilité — on compte
@@ -159,25 +201,5 @@ Plus $n$ est grand, plus la fréquence observée se rapproche de la probabilité
    discernables.
 7. **Confondre fréquence observée et probabilité théorique** : la première fluctue, la seconde
    est fixe.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Probabilités » (lignes 67 et 1521 du .txt).
-L'extraction fait apparaître « Calculer des probabilités » et « A et de B » (traces de la
-formule d'inclusion-exclusion).
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- L'échantillonnage et la fluctuation : quel est leur périmètre exact en seconde ? J'en donne
-  une approche qualitative seulement. L'intervalle de fluctuation est-il exigible ?
-- Les probabilités conditionnelles ne sont PAS en seconde (elles sont en première) : je ne les
-  ai pas introduites.
-- Le dénombrement est-il formalisé (arbres, tableaux uniquement) ou va-t-il plus loin ?
-- La simulation avec Python est-elle rattachée à ce chapitre ou au bloc « Algorithmique » ?
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->
+8. **Confondre $P_{\mathrm{A}}(\mathrm{B})$ et $P_{\mathrm{B}}(\mathrm{A})$** : « positif sachant malade »
+   n'est pas « malade sachant positif ».

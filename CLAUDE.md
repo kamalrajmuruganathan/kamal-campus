@@ -287,3 +287,17 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **16/10/2026 : Kamal a choisi l'option 1 (garder la redirection).** `netlify.toml` (redirection 301) est déjà sur `main`.
   Elle s'active au prochain build Netlify de `main`, c'est-à-dire à la fusion de la PR #7. Ensuite, Kamal clique sur
   « Stop builds » dans Netlify (Site configuration → Build & deploy → Continuous deployment).
+- **Publié le 16/10/2026** : PR #7 fusionnée à la demande de Kamal (main `3ec77c9`). Contrôle qualité et déploiement
+  Pages verts. Les § 16 à 19 sont en ligne. La redirection Netlify s'active avec ce build ; il reste à Kamal à cliquer sur « Stop builds ».
+
+## 20. Points à trancher traités (17/10/2026) — sur `upgrade-sdk57`, non publié
+- Kamal a dit « continue » : les points de `docs/relecture-a-trancher.md` ont été traités selon la règle du § 12
+  (programme officiel), en 4 lots (commits « Points à trancher (lot A/B/C/D) »). Détail et **questions restantes**
+  dans `docs/relecture-a-trancher.md` (section « Encore à décider par Kamal »).
+- Nouveaux générateurs de QCM (`app/lib/generateurs/modeles.js`) : `eqSimple5e`, `conversionDureeCM1`, `fractionSomme6e`,
+  `fractionSomme5e`, `penseUnNombre6e`, `motifEvolutif6e`, `schemaBarres6e`. `dilution()` accepte `uniteC: ''` (g/L ou mol/L).
+- Contrôles : `npm test` 546 OK, attendus 0 problème, contenu OK, KaTeX 0 erreur.
+- **Suite (17/10, « fais tout »)** : questions restantes tranchées (détail en fin de `docs/relecture-a-trancher.md`).
+  Nouveaux chapitres : `seconde/maths/information-chiffree` (générateur `scripts/gen_enrichi_g.py`),
+  `premiere-techno/pc-maths-sti2d-stl/derivees` et `primitives` (exercices écrits à la main). 959 chapitres.
+  `g2_calcul_numerique_algebrique` (gen_extra.py) réécrit. Incertitudes harmonisées (a/√3, arrondi au plus proche).

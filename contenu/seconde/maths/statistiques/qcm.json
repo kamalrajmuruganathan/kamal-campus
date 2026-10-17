@@ -26,20 +26,6 @@
   },
   {
    "id": 2,
-   "difficulte": "facile",
-   "notion": "frequences",
-   "enonce": "Que vaut toujours la somme des fréquences d'une série statistique ?",
-   "choix": [
-    "$0$",
-    "$1$",
-    "L'effectif total",
-    "Cela dépend"
-   ],
-   "reponse": 1,
-   "explication": "Chaque fréquence est $f_i = \\dfrac{n_i}{N}$, et la somme des effectifs vaut $N$ : la somme des fréquences vaut donc $1$, soit $100\\,\\%$. C'est un contrôle rapide de cohérence."
-  },
-  {
-   "id": 3,
    "difficulte": "moyen",
    "notion": "mediane",
    "enonce": "Quelle est la médiane de la série $12\\,;\\ 3\\,;\\ 8\\,;\\ 15\\,;\\ 6$ ?",
@@ -53,7 +39,7 @@
    "explication": "Il faut **d'abord ordonner** : $3\\,;6\\,;8\\,;12\\,;15$. L'effectif est impair ($N=5$), la médiane est la valeur de rang $3$, soit $8$. Oublier d'ordonner donnerait $8$ par hasard ici, mais c'est une chance — la méthode reste obligatoire."
   },
   {
-   "id": 4,
+   "id": 3,
    "difficulte": "moyen",
    "notion": "moyenne-ponderee",
    "enonce": "Dans une classe, $10$ élèves ont $12$ et $20$ élèves ont $15$. Quelle est la moyenne ?",
@@ -67,7 +53,7 @@
    "explication": "$\\dfrac{10 \\times 12 + 20 \\times 15}{30} = \\dfrac{120 + 300}{30} = \\dfrac{420}{30} = 14$. Le choix $13{,}5$ fait la moyenne simple de $12$ et $15$ en **oubliant les effectifs** — l'erreur classique."
   },
   {
-   "id": 5,
+   "id": 4,
    "difficulte": "moyen",
    "notion": "mediane-pair",
    "enonce": "Quelle est la médiane de la série ordonnée $2\\,;\\ 5\\,;\\ 9\\,;\\ 13$ ?",
@@ -81,7 +67,7 @@
    "explication": "L'effectif est **pair** ($N=4$) : la médiane est la moyenne des deux valeurs centrales, soit $\\dfrac{5+9}{2} = 7$. Le choix $7{,}25$ est la moyenne de la série, qui est une autre quantité."
   },
   {
-   "id": 6,
+   "id": 5,
    "difficulte": "moyen",
    "notion": "etendue",
    "enonce": "Quelle est l'étendue de la série $4\\,;\\ 18\\,;\\ 7\\,;\\ 25\\,;\\ 11$ ?",
@@ -95,7 +81,7 @@
    "explication": "Étendue = maximum $-$ minimum = $25 - 4 = 21$. Elle ne dépend que de deux valeurs, ce qui la rend très sensible aux données extrêmes."
   },
   {
-   "id": 7,
+   "id": 6,
    "difficulte": "difficile",
    "notion": "choix-indicateur",
    "enonce": "Pour décrire les salaires d'une entreprise où le dirigeant gagne très largement plus que les autres, quel indicateur est le plus représentatif ?",
@@ -109,7 +95,7 @@
    "explication": "La moyenne est tirée vers le haut par le salaire du dirigeant et ne reflète alors la situation de presque personne. La **médiane** partage l'effectif en deux et reste stable — c'est pourquoi les statistiques officielles sur les revenus la privilégient."
   },
   {
-   "id": 8,
+   "id": 7,
    "difficulte": "difficile",
    "notion": "linearite",
    "enonce": "La moyenne d'une série est $12$. On ajoute $3$ à toutes les valeurs. Que devient la moyenne ?",
@@ -123,7 +109,7 @@
    "explication": "Par linéarité, $\\bar y = \\bar x + 3 = 15$. Une translation de toutes les valeurs déplace la moyenne d'autant — en revanche, la dispersion (étendue, écart interquartile) reste **inchangée**."
   },
   {
-   "id": 9,
+   "id": 8,
    "difficulte": "difficile",
    "notion": "interquartile",
    "enonce": "Que mesure l'écart interquartile $\\mathrm{Q}_3 - \\mathrm{Q}_1$ ?",
@@ -137,7 +123,7 @@
    "explication": "Entre $\\mathrm{Q}_1$ et $\\mathrm{Q}_3$ se trouvent les $50\\,\\%$ centraux de la série. Cet indicateur **ignore les valeurs extrêmes**, ce qui le rend plus robuste que l'étendue."
   },
   {
-   "id": 10,
+   "id": 9,
    "difficulte": "difficile",
    "notion": "tableau-croise",
    "enonce": "Dans un tableau croisé, une case contient $30$ individus. Combien de pourcentages différents peut-on en tirer ?",
@@ -151,21 +137,7 @@
    "explication": "La même case donne trois lectures différentes selon la base choisie, et elles n'ont pas le même sens. C'est pourquoi tout énoncé doit préciser la base — c'est aussi la source d'interprétations trompeuses que le programme met en garde de commettre."
   },
   {
-   "id": 11,
-   "difficulte": "facile",
-   "notion": "moyenne",
-   "enonce": "Quelle est la moyenne de la série $6\\,;\\ 10\\,;\\ 14$ ?",
-   "choix": [
-    "$10$",
-    "$30$",
-    "$12$",
-    "$14$"
-   ],
-   "reponse": 0,
-   "explication": "$\\bar{x} = \\dfrac{6 + 10 + 14}{3} = \\dfrac{30}{3} = 10$. Le piège $30$ consiste à donner la somme sans diviser par l'effectif."
-  },
-  {
-   "id": 12,
+   "id": 10,
    "difficulte": "facile",
    "notion": "frequences",
    "enonce": "La fréquence $f_i$ d'une valeur d'effectif $n_i$, avec $N$ l'effectif total, vaut :",
@@ -179,91 +151,7 @@
    "explication": "La fréquence est la proportion $f_i = \\dfrac{n_i}{N}$, un nombre entre $0$ et $1$. $\\dfrac{N}{n_i}$ inverse le rapport ; il ne faut pas confondre effectif (un nombre d'individus) et fréquence (une proportion)."
   },
   {
-   "id": 13,
-   "difficulte": "facile",
-   "notion": "etendue",
-   "enonce": "Quelle est l'étendue de la série $5\\,;\\ 9\\,;\\ 2\\,;\\ 14\\,;\\ 7$ ?",
-   "choix": [
-    "$12$",
-    "$14$",
-    "$16$",
-    "$9$"
-   ],
-   "reponse": 0,
-   "explication": "L'étendue est la différence entre le maximum et le minimum : $14 - 2 = 12$. Le piège $14$ consiste à donner simplement la valeur maximale."
-  },
-  {
-   "id": 14,
-   "difficulte": "moyen",
-   "notion": "mediane",
-   "enonce": "Quelle est la médiane de la série $7\\,;\\ 2\\,;\\ 9\\,;\\ 4\\,;\\ 6$ ?",
-   "choix": [
-    "$6$",
-    "$9$",
-    "$4$",
-    "$5{,}6$"
-   ],
-   "reponse": 0,
-   "explication": "On **ordonne d'abord** : $2\\,;\\ 4\\,;\\ 6\\,;\\ 7\\,;\\ 9$. Avec $N = 5$ (impair), la médiane est la valeur centrale, de rang $3$ : c'est $6$. Ne pas ordonner est l'erreur la plus fréquente ; $5{,}6$ est la moyenne, pas la médiane."
-  },
-  {
-   "id": 15,
-   "difficulte": "moyen",
-   "notion": "mediane-pair",
-   "enonce": "Quelle est la médiane de la série ordonnée $3\\,;\\ 8\\,;\\ 10\\,;\\ 15$ ?",
-   "choix": [
-    "$9$",
-    "$8$",
-    "$10$",
-    "$9{,}5$"
-   ],
-   "reponse": 0,
-   "explication": "Avec $N = 4$ (pair), la médiane est la moyenne des deux valeurs centrales ($8$ et $10$) : $\\dfrac{8 + 10}{2} = 9$. Prendre une seule des deux valeurs centrales ($8$ ou $10$) est incorrect."
-  },
-  {
-   "id": 16,
-   "difficulte": "moyen",
-   "notion": "moyenne-ponderee",
-   "enonce": "Dans une classe, $5$ élèves ont $8$ et $15$ élèves ont $16$. Quelle est la moyenne de la classe ?",
-   "choix": [
-    "$12$",
-    "$14$",
-    "$13$",
-    "$24$"
-   ],
-   "reponse": 1,
-   "explication": "On pondère par les effectifs : $\\bar{x} = \\dfrac{5 \\times 8 + 15 \\times 16}{20} = \\dfrac{40 + 240}{20} = \\dfrac{280}{20} = 14$. Faire simplement $\\dfrac{8+16}{2} = 12$ oublie les effectifs."
-  },
-  {
-   "id": 17,
-   "difficulte": "moyen",
-   "notion": "linearite",
-   "enonce": "La moyenne d'une série est $10$. On multiplie toutes les valeurs par $3$. Que devient la moyenne ?",
-   "choix": [
-    "$13$",
-    "$30$",
-    "$10$",
-    "$3$"
-   ],
-   "reponse": 1,
-   "explication": "Par linéarité de la moyenne, si $y_i = 3x_i$ alors $\\bar{y} = 3\\bar{x} = 3 \\times 10 = 30$. La réponse $13$ ajoute $3$ au lieu de multiplier."
-  },
-  {
-   "id": 18,
-   "difficulte": "difficile",
-   "notion": "choix-indicateur",
-   "enonce": "Dans la série $2\\,;\\ 4\\,;\\ 6\\,;\\ 8\\,;\\ 100$, quel indicateur est le **moins** affecté par la valeur extrême $100$ ?",
-   "choix": [
-    "la moyenne",
-    "la médiane",
-    "l'étendue",
-    "le maximum"
-   ],
-   "reponse": 1,
-   "explication": "La médiane vaut $6$ (valeur centrale) et ne bouge pas si $100$ change, car elle ne dépend que du rang. La moyenne, l'étendue et le maximum sont au contraire tirés par la valeur extrême. La médiane est robuste."
-  },
-  {
-   "id": 19,
+   "id": 11,
    "difficulte": "difficile",
    "notion": "quartiles",
    "enonce": "Pour calculer $\\mathrm{Q}_1$ d'une série de $N = 12$ valeurs, on calcule $\\dfrac{N}{4} = 3$. Quel rang prend-on ?",
@@ -277,18 +165,130 @@
    "explication": "$\\dfrac{N}{4} = 3$ est un entier : on prend directement la valeur de **rang $3$**. On n'arrondit au rang supérieur que lorsque le résultat n'est pas entier."
   },
   {
-   "id": 20,
-   "difficulte": "difficile",
-   "notion": "interquartile",
-   "enonce": "Pourquoi l'écart interquartile $\\mathrm{Q}_3 - \\mathrm{Q}_1$ est-il un indicateur robuste ?",
+   "id": 12,
+   "difficulte": "moyen",
+   "notion": "ecart-type",
+   "enonce": "Deux séries ont la même moyenne. L'écart type de la série A vaut $1{,}2$, celui de la série B vaut $3{,}5$. Que peut-on dire ?",
    "choix": [
-    "il utilise toutes les valeurs de la série",
-    "il ne dépend que des $50\\,\\%$ centraux et ignore les valeurs extrêmes",
-    "il dépend directement du maximum",
-    "il est toujours nul"
+    "Les valeurs de A sont plus resserrées autour de la moyenne",
+    "La série B contient plus de valeurs",
+    "La médiane de A est plus petite que celle de B",
+    "Les valeurs de B sont plus resserrées autour de la moyenne"
+   ],
+   "reponse": 0,
+   "explication": "L'écart type mesure la dispersion autour de la moyenne : le plus petit, celui de A, indique des valeurs plus resserrées. Il ne dit rien de l'effectif ni de la médiane."
+  },
+  {
+   "id": 13,
+   "difficulte": "difficile",
+   "notion": "ecart-type",
+   "enonce": "On ajoute $2$ à toutes les valeurs d'une série dont l'écart type vaut $3$. Que vaut le nouvel écart type ?",
+   "choix": [
+    "$5$",
+    "$3$",
+    "$6$",
+    "$1$"
    ],
    "reponse": 1,
-   "explication": "L'écart interquartile mesure la dispersion des $50\\,\\%$ centraux de la série : il ignore les valeurs extrêmes, ce qui le rend robuste, contrairement à l'étendue qui, elle, ne dépend que du minimum et du maximum."
+   "explication": "La moyenne augmente aussi de $2$, donc chaque écart $x_i - \\bar x$ est inchangé : l'écart type reste $3$. Seule la position de la série change, pas sa dispersion."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "classes-moyenne",
+   "enonce": "Une série est regroupée en deux classes : $[0\\,;\\,10[$ d'effectif $3$ et $[10\\,;\\,20[$ d'effectif $1$. En supposant la répartition uniforme dans chaque classe, quelle est la moyenne ?",
+   "choix": [
+    "$7{,}5$",
+    "$10$",
+    "$5$",
+    "$30$"
+   ],
+   "reponse": 0,
+   "explication": "On remplace chaque classe par son centre : $\\dfrac{5 \\times 3 + 15 \\times 1}{4} = \\dfrac{30}{4} = 7{,}5$. Le $10$ est la moyenne des deux centres sans tenir compte des effectifs."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "classes-mediane",
+   "enonce": "Une série de $20$ valeurs est regroupée en classes : $[0\\,;\\,10[$ d'effectif $6$, $[10\\,;\\,20[$ d'effectif $9$, $[20\\,;\\,30[$ d'effectif $5$. Quelle est la classe médiane ?",
+   "choix": [
+    "$[0\\,;\\,10[$",
+    "$[20\\,;\\,30[$",
+    "On ne peut pas la déterminer",
+    "$[10\\,;\\,20[$"
+   ],
+   "reponse": 3,
+   "explication": "$\\dfrac{N}{2} = 10$ ; les effectifs cumulés sont $6$, $15$, $20$. Le premier qui atteint $10$ est $15$ : la classe médiane est $[10\\,;\\,20[$."
+  },
+  {
+   "id": 16,
+   "difficulte": "difficile",
+   "notion": "classes-mediane",
+   "enonce": "Une série de $20$ valeurs : $[0\\,;\\,10[$ d'effectif $4$, $[10\\,;\\,20[$ d'effectif $8$, $[20\\,;\\,30[$ d'effectif $8$. En supposant la répartition uniforme dans la classe médiane, quelle estimation de la médiane obtient-on ?",
+   "choix": [
+    "$20$",
+    "$17{,}5$",
+    "$12$",
+    "$15$"
+   ],
+   "reponse": 1,
+   "explication": "La classe médiane est $[10\\,;\\,20[$ (effectifs cumulés $4$ puis $12$). Il faut avancer de $10 - 4 = 6$ valeurs sur $8$ : $\\mathrm{Me} \\approx 10 + \\dfrac{6}{8} \\times 10 = 17{,}5$. Le $15$ est le centre de la classe, qui ne tient pas compte de la position de la médiane dans la classe."
+  },
+  {
+   "id": 17,
+   "difficulte": "facile",
+   "notion": "histogramme",
+   "enonce": "Dans un histogramme dont toutes les classes ont la même amplitude, la hauteur de chaque rectangle est proportionnelle :",
+   "choix": [
+    "à l'effectif de la classe",
+    "à l'amplitude de la classe",
+    "au centre de la classe",
+    "à la borne supérieure de la classe"
+   ],
+   "reponse": 0,
+   "explication": "Les rectangles ont tous la même largeur, l'amplitude commune ; leur hauteur est donc proportionnelle à l'effectif."
+  },
+  {
+   "id": 18,
+   "difficulte": "moyen",
+   "notion": "frequences-conditionnelles",
+   "enonce": "Dans un lycée de $400$ élèves, $280$ sont demi-pensionnaires, dont $150$ filles. Quelle est la fréquence des filles parmi les demi-pensionnaires ?",
+   "choix": [
+    "$0{,}7$",
+    "$0{,}375$",
+    "environ $0{,}54$",
+    "environ $1{,}87$"
+   ],
+   "reponse": 2,
+   "explication": "On se restreint aux $280$ demi-pensionnaires : $\\dfrac{150}{280} \\approx 0{,}54$. Diviser par $400$ donnerait la fréquence des filles demi-pensionnaires dans tout le lycée, une autre quantité."
+  },
+  {
+   "id": 19,
+   "difficulte": "moyen",
+   "notion": "frequences-marginales",
+   "enonce": "Dans un tableau croisé, la fréquence marginale d'une modalité est :",
+   "choix": [
+    "l'effectif d'une case divisé par le total de sa ligne",
+    "son effectif total divisé par l'effectif total du tableau",
+    "l'effectif d'une case divisé par le total de sa colonne",
+    "la somme des effectifs de sa ligne"
+   ],
+   "reponse": 1,
+   "explication": "La fréquence marginale se lit dans la ligne ou la colonne « Total » : on divise par l'effectif total. Diviser une case par le total de sa ligne ou de sa colonne donne une fréquence conditionnelle."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "ajout-valeur",
+   "enonce": "On considère la série $3\\,;\\ 5\\,;\\ 8\\,;\\ 9\\,;\\ 10$, de moyenne $7$ et de médiane $8$. On ajoute la valeur $50$. Que se passe-t-il ?",
+   "choix": [
+    "La moyenne et la médiane augmentent autant",
+    "Ni la moyenne ni la médiane ne changent",
+    "La moyenne augmente beaucoup, la médiane très peu",
+    "Seule la médiane change"
+   ],
+   "reponse": 2,
+   "explication": "Nouvelle moyenne : $\\dfrac{85}{6} \\approx 14{,}2$ ; nouvelle médiane : $\\dfrac{8 + 9}{2} = 8{,}5$. La moyenne est sensible aux valeurs extrêmes, la médiane beaucoup moins."
   }
  ]
 }

@@ -457,31 +457,160 @@ def g5_proprietes_matiere():
 
 # ================= 2de MATHS =================
 def g2_calcul_numerique_algebrique():
-    E=[]
-    def add(d,n,e,c,r): E.append((d,n,e,c,r))
-    for (a,b) in [(2,3),(3,2),(5,2),(2,4),(4,2),(2,5),(3,3),(6,2),(2,6),(7,2),(5,3),(3,4)]:
-        add("application","puissances", f"Calculer $ {a}^{b} $.",[f"$ {a}^{b} = {a**b} $."], f"$ {a**b} $")
-    for (a,b,c,d) in [(2,3,1,6),(3,4,5,8),(1,2,3,10),(2,5,3,10),(1,3,1,4),(3,8,1,8),(2,9,1,3),(5,6,1,2)]:
-        f=Fraction(a,b)+Fraction(c,d)
-        add("application","fractions", f"Calculer $ \\dfrac{{{a}}}{{{b}}} + \\dfrac{{{c}}}{{{d}}} $.",
-            [f"$ = {frac_latex(f)} $."], f"$ {frac_latex(f)} $")
-    for (k,a,b) in [(3,2,5),(4,1,3),(2,5,7),(5,3,2),(6,2,1),(3,4,6),(7,2,3),(2,8,5)]:
-        ax = "x" if a == 1 else f"{a}x"
-        add("intermediaire","developpement", f"Developper $ {k}({ax} + {b}) $.",
-            [f"$ = {k*a}x + {k*b} $."], f"$ {k*a}x + {k*b} $")
-    for n in [8,12,18,20,50,32,27,48,72,45]:
-        a,b=1,n
-        i=2
-        while i*i<=b:
-            while b%(i*i)==0: b//=i*i; a*=i
-            i+=1
-        ext=f"{a}\\sqrt{{{b}}}" if a!=1 else f"\\sqrt{{{b}}}"
-        add("approfondissement","racines", f"Ecrire $ \\sqrt{{{n}}} $ sous la forme $ a\\sqrt{{b}} $.",
-            [f"$ \\sqrt{{{n}}} = {ext} $."], f"$ {ext} $")
-    _i=2
-    while len(E)<50:
-        add("application","puissances", f"Calculer $ {_i}^2 $.",[f"$ {_i}^2 = {_i**2} $."],f"$ {_i**2} $")
-        _i+=1
+    E = []
+    def add(d, n, e, c, r): E.append((d, n, e, c, r))
+    def dec(x):  # écriture décimale LaTeX (virgule {,})
+        s = f"{x:.6f}".rstrip("0").rstrip(".")
+        return s.replace(".", "{,}")
+    # a) ensembles de nombres
+    ENS = {"N": ("\\mathbb{N}", "entiers naturels"), "Z": ("\\mathbb{Z}", "entiers relatifs"),
+           "D": ("\\mathbb{D}", "décimaux"), "Q": ("\\mathbb{Q}", "rationnels"), "R": ("\\mathbb{R}", "réels")}
+    for x, k, c in [("-\\dfrac{12}{4}", "Z", "$-\\dfrac{12}{4} = -3$ : c'est un entier négatif, il n'est pas dans $\\mathbb{N}$."),
+                    ("\\dfrac{7}{4}", "D", "$\\dfrac{7}{4} = 1{,}75$ : écriture décimale finie, mais ce n'est pas un entier."),
+                    ("-\\dfrac{2}{3}", "Q", "$-\\dfrac{2}{3}$ est un quotient d'entiers, mais il n'est pas décimal (comme $\\dfrac{1}{3}$, son écriture décimale est illimitée)."),
+                    ("\\sqrt{49}", "N", "$\\sqrt{49} = 7$ : c'est un entier naturel."),
+                    ("\\sqrt{8}", "R", "$\\sqrt{8} = 2\\sqrt{2}$ est irrationnel (car $\\sqrt{2}$ l'est) : il n'est que dans $\\mathbb{R}$.")]:
+        add("application", "ensembles-de-nombres",
+            f"Quel est le plus petit des ensembles $\\mathbb{{N}}$, $\\mathbb{{Z}}$, $\\mathbb{{D}}$, $\\mathbb{{Q}}$, $\\mathbb{{R}}$ auquel appartient le nombre ${x}$ ?",
+            [c, "Rappel : $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{D} \\subset \\mathbb{Q} \\subset \\mathbb{R}$."],
+            f"${ENS[k][0]}$ ({ENS[k][1]})")
+    # b) démonstrations du programme
+    add("approfondissement", "demonstrations",
+        "Démontrer que le nombre $\\dfrac{1}{3}$ n'est pas décimal.",
+        ["On raisonne par l'absurde : supposons $\\dfrac{1}{3} = \\dfrac{n}{10^k}$ avec $n$ et $k$ entiers naturels.",
+         "Alors $10^k = 3n$ : $10^k$ serait un multiple de $3$.",
+         "Or $10^k = 99\\ldots9 + 1$ et $99\\ldots9$ est un multiple de $3$ : la division de $10^k$ par $3$ a pour reste $1$. Contradiction."],
+        "Si $\\dfrac{1}{3} = \\dfrac{n}{10^k}$, alors $10^k = 3n$ serait multiple de $3$ ; or $10^k$ a pour reste $1$ dans la division par $3$ : contradiction, $\\dfrac{1}{3}$ n'est pas décimal")
+    add("approfondissement", "demonstrations",
+        "Démontrer que $\\sqrt{2}$ est irrationnel.",
+        ["Par l'absurde : supposons $\\sqrt{2} = \\dfrac{p}{q}$ avec $\\dfrac{p}{q}$ irréductible ($p$, $q$ entiers, $q \\neq 0$).",
+         "Alors $p^2 = 2q^2$ : $p^2$ est pair, donc $p$ est pair (le carré d'un nombre impair est impair). On écrit $p = 2k$.",
+         "$4k^2 = 2q^2$ donne $q^2 = 2k^2$ : $q$ est pair lui aussi. La fraction $\\dfrac{p}{q}$ ne serait pas irréductible : contradiction."],
+        "Par l'absurde : $p^2 = 2q^2$ donne $p$ pair, puis $q$ pair, ce qui contredit l'irréductibilité de $\\dfrac{p}{q}$ ; donc $\\sqrt{2}$ est irrationnel")
+    add("intermediaire", "demonstrations",
+        "Démontrer que le carré d'un nombre impair est impair.",
+        ["Un nombre impair s'écrit $n = 2k + 1$ avec $k$ entier.",
+         "$n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$.",
+         "$2k^2 + 2k$ est un entier : $n^2$ est de la forme $2m + 1$, il est impair."],
+        "$(2k + 1)^2 = 2(2k^2 + 2k) + 1$ : c'est un nombre impair")
+    add("intermediaire", "demonstrations",
+        "Soit $a \\geqslant 0$ et $b \\geqslant 0$. Démontrer que $\\sqrt{ab} = \\sqrt{a} \\times \\sqrt{b}$.",
+        ["Le nombre $\\sqrt{a} \\times \\sqrt{b}$ est positif (produit de deux nombres positifs).",
+         "Son carré vaut $\\left(\\sqrt{a}\\right)^2 \\times \\left(\\sqrt{b}\\right)^2 = ab$.",
+         "Or $\\sqrt{ab}$ est le seul nombre positif dont le carré vaut $ab$ : les deux nombres sont égaux."],
+        "$\\sqrt{a}\\sqrt{b}$ est positif et son carré vaut $ab$ : c'est donc $\\sqrt{ab}$")
+    # c) puissances
+    for a, m, n, op in [(2, 3, 5, "x"), (3, 7, 4, "/"), (5, 2, 3, "^"), (10, 4, -6, "x"), (7, -2, 5, "x")]:
+        if op == "x":
+            e, res, c = f"{a}^{{{m}}} \\times {a}^{{{n}}}", m + n, "On additionne les exposants : $a^m \\times a^n = a^{m+n}$."
+        elif op == "/":
+            e, res, c = f"\\dfrac{{{a}^{{{m}}}}}{{{a}^{{{n}}}}}", m - n, "On soustrait les exposants : $\\dfrac{a^m}{a^n} = a^{m-n}$."
+        else:
+            e, res, c = f"\\left({a}^{{{m}}}\\right)^{{{n}}}", m * n, "On multiplie les exposants : $\\left(a^m\\right)^n = a^{mn}$."
+        add("application", "puissances", f"Écrire ${e}$ sous la forme d'une seule puissance de ${a}$.",
+            [c, f"${e} = {a}^{{{res}}}$."], f"${a}^{{{res}}}$")
+    add("intermediaire", "puissances", "Calculer $2^{-3}$ et donner le résultat sous forme décimale.",
+        ["$a^{-n} = \\dfrac{1}{a^n}$ : $2^{-3} = \\dfrac{1}{2^3} = \\dfrac{1}{8}$.", "$\\dfrac{1}{8} = 0{,}125$."], "$0{,}125$")
+    # d) racines carrées
+    for n in [72, 50, 48]:
+        a, b = 1, n
+        for i in range(2, int(math.isqrt(n)) + 1):
+            while b % (i * i) == 0:
+                b //= i * i; a *= i
+        assert a * a * b == n and a > 1
+        add("application", "racines", f"Écrire $\\sqrt{{{n}}}$ sous la forme $a\\sqrt{{b}}$, avec $a$ et $b$ entiers et $b$ le plus petit possible.",
+            ["On extrait le plus grand carré parfait qui divise le nombre.", f"$\\sqrt{{{n}}} = \\sqrt{{{a * a} \\times {b}}} = \\sqrt{{{a * a}}} \\times \\sqrt{{{b}}} = {a}\\sqrt{{{b}}}$."],
+            f"${a}\\sqrt{{{b}}}$")
+    add("intermediaire", "racines", "Calculer $\\sqrt{3} \\times \\sqrt{12}$.",
+        ["$\\sqrt{a} \\times \\sqrt{b} = \\sqrt{ab}$ (pour $a$, $b$ positifs).", "$\\sqrt{3} \\times \\sqrt{12} = \\sqrt{36} = 6$."], "$6$")
+    add("intermediaire", "racines", "Calculer $\\dfrac{\\sqrt{50}}{\\sqrt{2}}$.",
+        ["$\\dfrac{\\sqrt{a}}{\\sqrt{b}} = \\sqrt{\\dfrac{a}{b}}$ (pour $a \\geqslant 0$ et $b > 0$).", "$\\dfrac{\\sqrt{50}}{\\sqrt{2}} = \\sqrt{25} = 5$."], "$5$")
+    add("intermediaire", "racines", "Calculer $\\sqrt{36 + 64}$ puis $\\sqrt{36} + \\sqrt{64}$. Que peut-on en conclure ?",
+        ["$\\sqrt{36 + 64} = \\sqrt{100} = 10$ et $\\sqrt{36} + \\sqrt{64} = 6 + 8 = 14$.",
+         "Les résultats sont différents : en général, $\\sqrt{a + b} \\neq \\sqrt{a} + \\sqrt{b}$."],
+        "$10$ et $14$ : $\\sqrt{a + b} \\neq \\sqrt{a} + \\sqrt{b}$ en général")
+    # e) racine d'un carré : √(a²) = |a|
+    for a in [-3, -7, Fraction(-5, 2)]:
+        v = abs(a)
+        A = dec(float(a)) if isinstance(a, Fraction) else str(a)
+        V = dec(float(v)) if isinstance(v, Fraction) else str(v)
+        add("application", "racine-d-un-carre", f"Calculer $\\sqrt{{({A})^2}}$.",
+            [f"$({A})^2 = {dec(float(a * a))}$ et $\\sqrt{{{dec(float(a * a))}}} = {V}$.",
+             f"On retrouve $\\sqrt{{a^2}} = |a|$ : $|{A}| = {V}$ (et non ${A}$)."],
+            f"${V}$")
+    add("intermediaire", "racine-d-un-carre", "Vrai ou faux : pour tout réel $a$, $\\sqrt{a^2} = a$.",
+        ["Faux : une racine carrée est toujours positive ou nulle.", "Contre-exemple : $\\sqrt{(-4)^2} = \\sqrt{16} = 4 \\neq -4$. En réalité $\\sqrt{a^2} = |a|$."],
+        "Faux ($\\sqrt{a^2} = |a|$)")
+    add("approfondissement", "racine-d-un-carre", "Calculer $\\sqrt{(x - 4)^2}$ pour $x = 1$, puis pour $x = 9$.",
+        ["$\\sqrt{(x - 4)^2} = |x - 4|$.", "Pour $x = 1$ : $|1 - 4| = |-3| = 3$. Pour $x = 9$ : $|9 - 4| = 5$."],
+        "$3$ puis $5$")
+    # f) valeur absolue, distance et intervalles
+    for a, r in [(5, 2), (1, 4), (-2, 3), (Fraction(1, 2), Fraction(1, 10))]:
+        lo, hi = a - r, a + r
+        def D(x):
+            return dec(float(x)) if isinstance(x, Fraction) and x.denominator != 1 else str(int(x))
+        xa = f"x - {D(a)}" if a > 0 else f"x + {D(-a)}"
+        add("application" if a == 5 else "intermediaire", "valeur-absolue-intervalle",
+            f"Résoudre l'inéquation $|{xa}| \\leqslant {D(r)}$ et donner l'ensemble des solutions sous forme d'intervalle.",
+            ([f"$|x + {D(-a)}| = |x - ({D(a)})|$ : c'est la distance entre $x$ et ${D(a)}$."] if a < 0 else [f"$|{xa}|$ est la distance entre $x$ et ${D(a)}$."]) +
+            [f"$|x - a| \\leqslant r \\iff a - r \\leqslant x \\leqslant a + r$ : ${D(a)} - {D(r)} \\leqslant x \\leqslant {D(a)} + {D(r)}$, soit ${D(lo)} \\leqslant x \\leqslant {D(hi)}$."],
+            f"$S = [{D(lo)}\\,;{D(hi)}]$")
+    add("intermediaire", "valeur-absolue-intervalle", "Écrire l'intervalle $[2\\,;10]$ sous la forme $|x - a| \\leqslant r$.",
+        ["Le centre de l'intervalle est $a = \\dfrac{2 + 10}{2} = 6$ et son rayon est $r = \\dfrac{10 - 2}{2} = 4$.",
+         "$x \\in [2\\,;10] \\iff |x - 6| \\leqslant 4$."], "$|x - 6| \\leqslant 4$")
+    add("application", "valeur-absolue-intervalle", "Calculer la distance entre les nombres $-3$ et $5$.",
+        ["La distance entre $a$ et $b$ est $|a - b|$.", "$|-3 - 5| = |-8| = 8$."], "$8$")
+    # g) identités remarquables
+    for e, r, c in [("(2x + 3)^2", "4x^2 + 12x + 9", "$(a + b)^2 = a^2 + 2ab + b^2$ avec $a = 2x$ et $b = 3$ : le double produit vaut $2 \\times 2x \\times 3 = 12x$."),
+                    ("(x - 4)^2", "x^2 - 8x + 16", "$(a - b)^2 = a^2 - 2ab + b^2$ avec $a = x$ et $b = 4$."),
+                    ("(3x - 1)(3x + 1)", "9x^2 - 1", "$(a - b)(a + b) = a^2 - b^2$ avec $a = 3x$ et $b = 1$."),
+                    ("(5 - 2x)^2", "4x^2 - 20x + 25", "$(a - b)^2 = a^2 - 2ab + b^2$ avec $a = 5$ et $b = 2x$ : $25 - 20x + 4x^2$.")]:
+        add("application", "identites-remarquables", f"Développer et réduire ${e}$.", [c, f"${e} = {r}$."], f"${r}$")
+    for e, r, c in [("9x^2 - 25", "(3x - 5)(3x + 5)", "$9x^2 - 25 = (3x)^2 - 5^2$ : on reconnaît $a^2 - b^2 = (a - b)(a + b)$."),
+                    ("x^2 + 10x + 25", "(x + 5)^2", "$x^2 + 10x + 25 = x^2 + 2 \\times x \\times 5 + 5^2$ : on reconnaît $(a + b)^2$."),
+                    ("4x^2 - 12x + 9", "(2x - 3)^2", "$4x^2 - 12x + 9 = (2x)^2 - 2 \\times 2x \\times 3 + 3^2$ : on reconnaît $(a - b)^2$.")]:
+        add("intermediaire", "identites-remarquables", f"Factoriser ${e}$.", [c, f"${e} = {r}$."], f"${r}$")
+    # h) factorisation par un facteur commun
+    for e, r, c, d in [("6x + 9", "3(2x + 3)", ["Le facteur commun est $3$ : $6x + 9 = 3 \\times 2x + 3 \\times 3$."], "application"),
+                       ("x^2 - 5x", "x(x - 5)", ["Le facteur commun est $x$ : $x^2 - 5x = x \\times x - x \\times 5$."], "application"),
+                       ("(2x + 1)^2 - (2x + 1)(x - 3)", "(2x + 1)(x + 4)",
+                        ["Le facteur commun est $(2x + 1)$ : $(2x + 1)\\big[(2x + 1) - (x - 3)\\big]$.", "$(2x + 1) - (x - 3) = 2x + 1 - x + 3 = x + 4$."], "approfondissement"),
+                       ("(x + 1)(x - 3) + (x + 1) \\times 2x", "3(x + 1)(x - 1)",
+                        ["Le facteur commun est $(x + 1)$ : $(x + 1)\\big[(x - 3) + 2x\\big] = (x + 1)(3x - 3)$.", "$3x - 3 = 3(x - 1)$."], "approfondissement")]:
+        add(d, "factorisation", f"Factoriser ${e}$.", c + [f"${e} = {r}$."], f"${r}$")
+    add("probleme", "factorisation", "Résoudre l'équation $(x + 1)(x - 3) + (x + 1) \\times 2x = 0$.",
+        ["On factorise : $(x + 1)(x - 3) + (x + 1) \\times 2x = 3(x + 1)(x - 1)$.",
+         "Produit nul : $x + 1 = 0$ ou $x - 1 = 0$, soit $x = -1$ ou $x = 1$."],
+        "$S = \\{-1\\,;1\\}$")
+    # i) fractions
+    for a, b, c, d, op in [(2, 3, 1, 4, "+"), (5, 6, 3, 4, "-"), (4, 9, 3, 8, "x"), (2, 5, 4, 15, "/"), (7, 10, 2, 15, "+")]:
+        A, B = Fraction(a, b), Fraction(c, d)
+        if op == "+":
+            res, s, c1 = A + B, "+", "On met au même dénominateur."
+        elif op == "-":
+            res, s, c1 = A - B, "-", "On met au même dénominateur."
+        elif op == "x":
+            res, s, c1 = A * B, "\\times", "$\\dfrac{a}{b} \\times \\dfrac{c}{d} = \\dfrac{ac}{bd}$ (on simplifie si possible)."
+        else:
+            res, s, c1 = A / B, "\\div", "Diviser par une fraction, c'est multiplier par son inverse."
+        if op in "+-":
+            m = A.denominator * B.denominator // math.gcd(A.denominator, B.denominator)
+            c2 = f"$\\dfrac{{{a * (m // b)}}}{{{m}}} {s} \\dfrac{{{c * (m // d)}}}{{{m}}} = \\dfrac{{{a * (m // b) + (1 if op == '+' else -1) * c * (m // d)}}}{{{m}}}$"
+        elif op == "x":
+            c2 = f"$\\dfrac{{{a} \\times {c}}}{{{b} \\times {d}}} = \\dfrac{{{a * c}}}{{{b * d}}}$"
+        else:
+            c2 = f"$\\dfrac{{{a}}}{{{b}}} \\times \\dfrac{{{d}}}{{{c}}} = \\dfrac{{{a * d}}}{{{b * c}}}$"
+        nonred = c2.rsplit("\\dfrac", 1)[1].rstrip("$")
+        c2 = c2[:-1] + ("" if f"\\dfrac{nonred}" == frac_latex(res) else f" = {frac_latex(res)}") + "$."
+        add("application" if op in "+-" else "intermediaire", "fractions",
+            f"Calculer $\\dfrac{{{a}}}{{{b}}} {s} \\dfrac{{{c}}}{{{d}}}$ et donner le résultat sous forme irréductible.", [c1, c2], f"${frac_latex(res)}$")
+    add("intermediaire", "fractions", "Un élève écrit $\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{2}{5}$. A-t-il raison ?",
+        ["Non : on n'additionne pas les dénominateurs.", "$\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{3}{6} + \\dfrac{2}{6} = \\dfrac{5}{6}$."],
+        "Non, $\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{5}{6}$")
+    assert len(E) == 50, len(E)
+    assert len({e[2] for e in E}) == 50
+    ordre = {"application": 0, "intermediaire": 1, "approfondissement": 2, "probleme": 3}
+    E.sort(key=lambda t: ordre[t[0]])
     return _fin(E)
 
 def g2_equations_inequations():
@@ -2941,7 +3070,7 @@ EXTRA.update({
     ("terminale-techno", "activites-geometriques-std2a"): _wrap(gT_activites_geometriques_std2a, _s_std2a),
     ("cinquieme", "triangles-angles"): _wrap(g5_triangles_angles, _s_tri5),
     ("cinquieme", "puissances"): _wrap(g5_puissances, _s_puis5),
-    ("seconde", "calcul-numerique-algebrique"): _wrap(g2_calcul_numerique_algebrique, _s_calc2),
+    ("seconde", "calcul-numerique-algebrique"): g2_calcul_numerique_algebrique,
     ("cinquieme", "reperage"): _wrap(g5_reperage, _s_reperage5),
     ("terminale-techno", "fonctions-exponentielles"): _wrap(gT_fonctions_exponentielles, _s_exp),
     ("quatrieme", "transformations"): _wrap(g4_transformations, _s_transfo),

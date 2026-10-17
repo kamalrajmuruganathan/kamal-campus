@@ -287,39 +287,3 @@ $$\arg(z_B-z_A)=\big(\vec u\,,\overrightarrow{AB}\big) \qquad\qquad
    est $\arg\dfrac{z_C-z_A}{z_B-z_A}$ : au numérateur l'affixe du vecteur d'**arrivée**
    ($\overrightarrow{AC}$), au dénominateur celle de **départ** ($\overrightarrow{AB}$).
    L'inverser change le signe de l'angle.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-SOURCE : fichier docs/programme-terminale-maths-options-2019.txt, section
-« Nombres complexes — point de vue géométrique » (lignes 24 à 31), rubriques
-« Contenus » et « Capacités ». En-tête de provenance du fichier lu (lignes 1 à 11) :
-programmes des enseignements OPTIONNELS de mathématiques, terminale générale, arrêtés
-du 19-7-2019, BO spécial n°8 du 25 juillet 2019 (option maths EXPERTES).
-
-⚠️ PROVENANCE : d'après l'en-tête du fichier source, le programme a été extrait via
-WebFetch depuis les PDF officiels (education.gouv.fr, MENE1921264A / annexe spe264).
-À CONFRONTER AU PDF OFFICIEL avant publication, au même titre que la relecture pédagogique.
-
-À CONFRONTER AU PROGRAMME PAR UN PROFESSEUR :
-- Le programme cite « module d'un produit/quotient/puissance » : j'ai retenu les trois
-  identités |zz'|, |z/z'|, |z^n|, plus |z̄|=|z| et |-z|=|z|. Standard du chapitre.
-- Forme exponentielle : le programme la relie à l'équation fonctionnelle de exp. J'ai
-  présenté e^{iθ} comme NOTATION posée (cos θ + i sin θ) et donné les règles d'exposants
-  sans démontrer le lien avec la fonction exponentielle réelle. Vérifier le niveau
-  d'exigence attendu (certains manuels démontrent (θ ↦ e^{iθ}) morphisme via dérivation).
-- Euler / Moivre : le programme les cite sans préciser les applications. J'ai illustré
-  Euler par la linéarisation (cos²θ) et Moivre par cos(2θ) ; confirmer si linéarisation
-  et calcul de cos(nθ)/sin(nθ) sont explicitement exigibles à ce niveau.
-- Interprétations géométriques : le programme demande « interpréter |z−z'| et arg ». J'ai
-  ajouté l'angle (AB,AC) = arg((z_C−z_A)/(z_B−z_A)) et les ensembles de points (cercle,
-  médiatrice), classiques mais à valider comme attendus.
-- PRÉREQUIS : le chapitre « complexes — point de vue algébrique » (option expertes) est
-  référencé mais son dossier est encore VIDE dans le dépôt à la date de rédaction. Vérifier
-  qu'il sera publié avant celui-ci (conjugué, |z|²=z z̄ y sont supposés connus).
-
-Rédaction 100 % originale à partir du programme officiel. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

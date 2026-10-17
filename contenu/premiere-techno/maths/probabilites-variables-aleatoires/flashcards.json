@@ -18,16 +18,8 @@
       "verso": "On multiplie les probabilités des branches parcourues le long du chemin."
     },
     {
-      "recto": "Comment obtient-on la probabilité d'un événement réalisé par plusieurs chemins ?",
-      "verso": "On additionne les probabilités des chemins qui le réalisent."
-    },
-    {
       "recto": "Probabilité d'obtenir exactement $k$ succès sur $n$ épreuves ?",
       "verso": "$(\\text{nombre de chemins}) \\times p^k(1-p)^{n-k}$."
-    },
-    {
-      "recto": "Quelle est l'erreur type dans une répétition d'épreuves ?",
-      "verso": "Oublier de multiplier par le nombre de chemins qui réalisent l'événement."
     },
     {
       "recto": "Quelle différence entre $\\{X=a\\}$ et $P(X=a)$ ?",
@@ -54,8 +46,16 @@
       "verso": "$E(X) = p$."
     },
     {
-      "recto": "Comment calcule-t-on la probabilité de l'événement contraire de $A$ ?",
-      "verso": "$P(\\overline{A}) = 1 - P(A)$. Très utile pour un événement du type « au moins un »."
+      "recto": "Quand dit-on que $\\mathrm{B}$ est **indépendant** de $\\mathrm{A}$ (avec $P(\\mathrm{A}) \\neq 0$) ?",
+      "verso": "Quand $P_{\\mathrm{A}}(\\mathrm{B}) = P(\\mathrm{B})$ : savoir que $\\mathrm{A}$ est réalisé ne change pas la probabilité de $\\mathrm{B}$."
+    },
+    {
+      "recto": "Comment vérifier que deux événements $\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants ?",
+      "verso": "On vérifie que $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B})$."
+    },
+    {
+      "recto": "**Formule des probabilités totales** (arbre $\\mathrm{A}$ / $\\overline{\\mathrm{A}}$ puis $\\mathrm{B}$) ?",
+      "verso": "$P(\\mathrm{B}) = P(\\mathrm{A}) \\times P_{\\mathrm{A}}(\\mathrm{B}) + P(\\overline{\\mathrm{A}}) \\times P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$ : on additionne les deux chemins qui mènent à $\\mathrm{B}$."
     }
   ]
 }

@@ -121,6 +121,22 @@ $$f(n) = f(0) \times q^{\,n}$$
 | $q = 1$ | constante |
 | $0 < q < 1$ | décroissance, de plus en plus lente, vers $0$ |
 
+### Des suites géométriques aux fonctions exponentielles $x \mapsto a^x$
+
+Une suite géométrique ne donne des valeurs qu'aux instants entiers $n$. Pour $a > 0$, on prolonge
+$n \mapsto a^n$ à tous les réels $x \geqslant 0$ : c'est la **fonction exponentielle de base $a$**,
+$x \mapsto a^x$. La calculatrice donne ses valeurs, et ses propriétés algébriques sont **admises**,
+comme pour les puissances entières : $a^{x+y} = a^x \times a^y$ et $\left(a^x\right)^y = a^{xy}$.
+
+- Si $a > 1$, $x \mapsto a^x$ est **croissante** ; si $0 < a < 1$, elle est **décroissante** ;
+  si $a = 1$, elle est constante.
+- **Cas de l'exposant $\dfrac{1}{n}$** : $a^{1/n}$ est le nombre positif dont la puissance $n$-ième vaut $a$
+  (la **racine $n$-ième** de $a$). Par exemple $8^{1/3} = 2$ car $2^3 = 8$.
+
+> **Exemple — une fraction d'année.** Un capital de $1\,000$ € est placé à intérêts composés à $4\,\%$ par an.
+> Au bout de $n$ années, il vaut $1\,000 \times 1{,}04^{\,n}$. Au bout de $6$ mois, soit $0{,}5$ an :
+> $1\,000 \times 1{,}04^{0{,}5} \approx 1\,019{,}80$ €.
+
 ---
 
 ## 5. Les applications du programme
@@ -225,43 +241,3 @@ $R_0$ est le nombre moyen de personnes contaminées par un malade.
 6. **Additionner des pourcentages** dans une évolution exponentielle — on multiplie
    les coefficients.
 7. **Ajuster par une droite un nuage manifestement exponentiel.**
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques intégrées à
-l'enseignement scientifique, première générale, partie « Phénomènes d'évolution,
-modélisation par des fonctions ».
-
-Les applications de la section 5 sont TOUTES explicitement nommées dans le programme,
-telles que lues dans l'extraction :
-- « Modélisation de l'offre et de la demande par des fonctions affines, point
-  d'équilibre » (Économie)
-- « Modélisation du barème de l'impôt sur le revenu par une fonction affine par
-  morceaux (taux marginal, taux moyen) » (EMC)
-- « Modèle linéaire de l'évolution du niveau moyen des océans » (Sciences de la Terre)
-- « Analyse comparée de l'accroissement d'une population et des ressources
-  alimentaires (modèle de Malthus) »
-- « Nombre de noyaux radioactifs présents dans un échantillon au bout d'une fraction
-  de demi-vie. Applications à la médecine et à la datation par le carbone 14 »
-- « Taux de reproduction R0 d'un virus lors d'une épidémie » (Sciences de la vie)
-- « Modélisation simplifiée de la propagation d'une rumeur (cascades verticales) »
-  (Sciences sociales) — NON TRAITÉE dans cette fiche, à ajouter si le relecteur
-  la juge exigible.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La fonction exponentielle est-elle introduite formellement dans ce parcours, ou
-  seulement à travers les suites géométriques ? J'ai retenu une écriture q^n, plus
-  proche de l'esprit du programme que la notation e^x. À CONFIRMER — c'est le point
-  de périmètre le plus important de cette fiche.
-- Le second degré : quelle profondeur est attendue ? Discriminant et racines, ou
-  seulement le sommet et l'optimum ? J'ai retenu la seconde lecture.
-- La propagation d'une rumeur (cascades verticales) est absente de cette fiche.
-- Le programme mentionne « Fonctions » à la fin de l'extraction sans que le contexte
-  soit lisible : vérifier qu'aucune sous-partie n'a été omise.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

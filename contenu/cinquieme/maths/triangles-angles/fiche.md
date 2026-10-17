@@ -198,39 +198,3 @@ Le programme attend une rédaction structurée en trois temps :
    qu'il faut comparer.
 7. **Conclure sans citer la propriété utilisée** : le « Or » de la rédaction n'est pas
    optionnel.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 5 mars 2026, « Programme de mathématiques pour le
-cycle 4 » (docs/programme-college-cycle4-maths-2026.pdf), domaine « Espace et
-géométrie », niveau Cinquième, sections « Angles » et « Triangles ».
-
-Le sommaire du niveau Cinquième liste : Repérage sur une droite et dans le plan,
-Représentation de l'espace, Transformations, ANGLES, TRIANGLES, Parallélogrammes.
-Cette fiche couvre les deux sections Angles et Triangles.
-
-⚠️ FICHE À RELIRE EN PRIORITÉ : l'extraction du PDF est nettement moins exploitable
-sur le domaine « Espace et géométrie » que sur « Nombres et calculs ». Le sommaire
-est fiable (les intitulés de sections), mais je n'ai PAS pu lire les objectifs
-d'apprentissage détaillés de ces deux sections. Le contenu s'appuie donc sur la
-structure standard du niveau, pas sur des capacités citées.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR — points de périmètre à trancher :
-- Les angles ALTERNES-INTERNES et CORRESPONDANTS sont-ils bien au programme de 5e
-  dans le nouveau texte, ou déplacés à un autre niveau ?
-- L'INÉGALITÉ TRIANGULAIRE est-elle en 5e ou en 6e ?
-- La construction de triangles (aux instruments) est-elle attendue ici ?
-- Les hauteurs, médianes, médiatrices et bissectrices sont-elles rattachées à cette
-  section ou traitées à part ?
-- La rédaction « On sait que / Or / Donc » est-elle la formulation attendue par le
-  programme, ou une convention pédagogique locale ?
-
-Le chapitre « Parallélogrammes », également au programme de 5e, n'est PAS traité
-dans cette fiche — il mériterait sa propre fiche.
-
-Rédaction originale. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

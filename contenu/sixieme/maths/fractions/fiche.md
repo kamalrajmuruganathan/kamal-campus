@@ -183,7 +183,96 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
 
 ---
 
-## 8. Cas particuliers à connaître
+## 8. Additionner et soustraire des fractions
+
+### Même dénominateur
+
+Quand les parts ont la même taille, on additionne (ou on soustrait) les **numérateurs**
+et on **garde** le dénominateur.
+
+$$\frac{2}{7} + \frac{3}{7} = \frac{5}{7} \qquad\qquad \frac{9}{10} - \frac{4}{10} = \frac{5}{10}$$
+
+> **L'image qui aide** : $2$ septièmes $+$ $3$ septièmes $=$ $5$ septièmes, comme
+> $2$ pommes $+$ $3$ pommes $=$ $5$ pommes.
+
+### Quand un dénominateur est un multiple de l'autre
+
+On écrit d'abord les deux fractions avec le **même dénominateur** (grâce aux fractions
+égales du paragraphe 6), puis on calcule.
+
+> **Exemple.** $\dfrac{1}{2} + \dfrac{1}{4}$ : comme $\dfrac{1}{2} = \dfrac{2}{4}$,
+> on obtient $\dfrac{2}{4} + \dfrac{1}{4} = \dfrac{3}{4}$.
+>
+> **Exemple.** $\dfrac{5}{6} - \dfrac{1}{3}$ : comme $\dfrac{1}{3} = \dfrac{2}{6}$,
+> on obtient $\dfrac{5}{6} - \dfrac{2}{6} = \dfrac{3}{6}$, c'est-à-dire $\dfrac{1}{2}$.
+
+> **À savoir de tête** : $\dfrac{1}{2} + \dfrac{1}{2} = 1$ ;
+> $\dfrac{1}{4} + \dfrac{1}{4} = \dfrac{1}{2}$ ; $1 - \dfrac{1}{4} = \dfrac{3}{4}$ ;
+> $\dfrac{3}{4} + \dfrac{1}{4} = 1$ ; $\dfrac{1}{2} - \dfrac{1}{4} = \dfrac{1}{4}$.
+
+> ⚠️ **On n'additionne jamais les dénominateurs** : $\dfrac{1}{2} + \dfrac{1}{4}$ ne
+> fait pas $\dfrac{2}{6}$.
+
+---
+
+## 9. Multiplier une fraction par un entier, prendre une fraction d'un nombre
+
+### Un entier fois une fraction
+
+$7 \times \dfrac{1}{4}$, c'est $7$ fois un quart, donc **sept quarts** :
+$7 \times \dfrac{1}{4} = \dfrac{7}{4}$. De même, on multiplie le **numérateur** par
+l'entier et on garde le dénominateur :
+
+$$3 \times \frac{2}{5} = \frac{3 \times 2}{5} = \frac{6}{5}$$
+
+### Prendre une fraction d'un nombre
+
+« Les $\dfrac{2}{3}$ de $12$ » se calcule par une multiplication :
+$\dfrac{2}{3} \times 12$. Le plus simple : on partage en $3$, puis on prend $2$ parts.
+
+$$\frac{2}{3} \times 12 = (12 \div 3) \times 2 = 4 \times 2 = 8$$
+
+> **Exemples.** Les $\dfrac{2}{3}$ de $12$ œufs, c'est $8$ œufs.
+> Les $\dfrac{3}{4}$ de $10$ m, c'est $(10 \div 4) \times 3 = 2{,}5 \times 3 = 7{,}5$ m.
+
+---
+
+## 10. Les pourcentages
+
+Un **pourcentage** est une fraction de dénominateur $100$ : $30\ \%$ (« trente pour
+cent ») veut dire $\dfrac{30}{100}$, c'est-à-dire $30$ parts sur $100$.
+
+### Les pourcentages à connaître
+
+| Pourcentage | Fraction | Ce que ça veut dire |
+|---|---|---|
+| $50\ \%$ | $\dfrac{50}{100} = \dfrac{1}{2}$ | la moitié |
+| $25\ \%$ | $\dfrac{25}{100} = \dfrac{1}{4}$ | le quart |
+| $75\ \%$ | $\dfrac{75}{100} = \dfrac{3}{4}$ | les trois quarts |
+| $10\ \%$ | $\dfrac{10}{100} = \dfrac{1}{10}$ | le dixième |
+| $100\ \%$ | $\dfrac{100}{100} = 1$ | le tout |
+
+### Appliquer un pourcentage
+
+Prendre $20\ \%$ de $45$ €, c'est prendre les $\dfrac{20}{100}$ de $45$ € :
+
+$$\frac{20}{100} \times 45 = (45 \div 100) \times 20 = 0{,}45 \times 20 = 9$$
+
+Une remise de $20\ \%$ sur un article à $45$ € fait donc baisser le prix de $9$ €.
+
+> **Astuce.** $10\ \%$, c'est diviser par $10$ : $10\ \%$ de $45$ € $= 4{,}50$ €,
+> donc $20\ \%$ de $45$ € $= 2 \times 4{,}50 = 9$ €.
+
+### Exprimer une proportion en pourcentage
+
+Dans une classe de $25$ élèves, $6$ viennent à vélo. La proportion d'élèves venant à vélo
+est $\dfrac{6}{25}$. Pour l'écrire sur $100$, on multiplie le haut et le bas par $4$ :
+
+$$\frac{6}{25} = \frac{6 \times 4}{25 \times 4} = \frac{24}{100} = 24\ \%$$
+
+---
+
+## 11. Cas particuliers à connaître
 
 - **Une fraction peut valoir un entier** : $\dfrac{4}{2} = 2$, $\dfrac{6}{3} = 2$.
 - **Une fraction peut être plus grande que 1** : $\dfrac{7}{4}$, $\dfrac{5}{2}$…
@@ -194,7 +283,7 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
 
 ---
 
-## 9. À retenir absolument
+## 12. À retenir absolument
 
 | | |
 |---|---|
@@ -206,10 +295,14 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
 | À savoir par cœur | $\dfrac{1}{4}=0{,}25$ ; $\dfrac{1}{2}=0{,}5$ ; $\dfrac{3}{4}=0{,}75$ |
 | Fractions égales | multiplier haut **et** bas par le même nombre |
 | Comparer à 1 | $a < b \Rightarrow \dfrac{a}{b} < 1$ |
+| Même dénominateur | $\dfrac{2}{7} + \dfrac{3}{7} = \dfrac{5}{7}$ (on garde le dénominateur) |
+| Entier × fraction | $3 \times \dfrac{2}{5} = \dfrac{6}{5}$ |
+| Fraction d'un nombre | $\dfrac{2}{3}$ de $12$ $= (12 \div 3) \times 2 = 8$ |
+| Pourcentage | $30\ \%$ $= \dfrac{30}{100}$ ; $50\ \%$ = la moitié, $25\ \%$ = le quart |
 
 ---
 
-## 10. Les erreurs qui coûtent des points
+## 13. Les erreurs qui coûtent des points
 
 1. **Inverser numérateur et dénominateur** : $\dfrac{3}{5}$, c'est $5$ parts dont on
    prend $3$, pas l'inverse.
@@ -220,59 +313,6 @@ $$\frac{a}{b} < 1 \text{ si } a < b \qquad \frac{a}{b} = 1 \text{ si } a = b
    faut agir sur les deux.
 5. **Croire que toute fraction est un nombre décimal** : $\dfrac{1}{3}$ ne l'est pas.
 6. **Compter les graduations à partir de 1 au lieu de 0** sur la demi-droite graduée.
+7. **Additionner les dénominateurs** : $\dfrac{2}{7} + \dfrac{3}{7} = \dfrac{5}{7}$, pas $\dfrac{5}{14}$.
+8. **Multiplier aussi le dénominateur** par l'entier : $3 \times \dfrac{2}{5} = \dfrac{6}{5}$, pas $\dfrac{6}{15}$.
 
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : /tmp/kamal-campus/docs/programme-college-cycle3-maths-2025.txt,
-« Programme de cycle 3 (2025) », section Sixième, entrée « Les fractions »,
-lignes 758 à 884.
-
-Éléments explicitement lisibles dans la source, et où ils sont traités :
-- « partie d'un tout » / partage en parts égales (l.762-765) → section 1
-- fraction unitaire 1/4 comme nouvelle unité de mesure ; 7/4 = somme de sept 1/4 ;
-  fractions supérieures à 1 (l.766-784) → section 2
-- « Placer une fraction sur une demi-droite graduée dans des cas simples » /
-  « Graduer un segment de longueur donnée » (l.855-856) → section 3
-- sens quotient : a/b = a÷b, définition du quotient de a par b non nul,
-  « égalités à trous » multiplicatives (l.785-799, 852-854) → section 4
-- « Savoir que la fraction a/b peut représenter un nombre entier, un nombre décimal
-  non entier ou un nombre non décimal » (l.857-858) → sections 4 et 8
-- passage écriture fractionnaire ↔ décimale : 1/4=0,25 ; 1/2=0,5 ; 3/4=0,75 ;
-  3/2=1,5 ; 4/2=2 ; 5/2=2,5 (l.836-843) ; lien numération décimale / fractions
-  décimales (l.756-757) → section 5
-- « Établir des égalités de fractions » / « Reconnaitre des fractions égales »
-  (l.811, 867) → section 6
-- « Comparer et encadrer des fractions » / « Ordonner une liste de nombres » /
-  connaître les relations entre 1/4, 1/2, 3/4 et 1 (l.817-820, 868-869) → section 7
-
-⚠️ PÉRIMÈTRE — POINT À TRANCHER PAR LE RELECTEUR (le plus sensible) :
-La consigne de production demande de NE PAS déborder sur le cycle 4 (opérations sur
-les fractions et rationnels négatifs = 5e/4e) et de ne pas empiéter sur la fiche 5e
-existante (contenu/cinquieme/maths/fractions/fiche.md), qui traite déjà : addition
-et soustraction, « prendre une fraction d'un nombre », pourcentages, simplification,
-somme entier + fraction inférieure à 1.
-OR la section Sixième du programme cycle 3 (2025) liste AUSSI, sous 6e :
-  - « Additionner et soustraire des fractions » (l.872)
-  - « Multiplier une fraction par un nombre entier » (l.873) / fraction opérateur
-    multiplicatif (l.859-863)
-  - « Pourcentages » : sens, proportion, appliquer un pourcentage (l.876-880)
-  - simplification évoquée dans les automatismes (l.844-845)
-Ces items ont été VOLONTAIREMENT laissés de côté ici pour respecter la consigne et
-éviter le doublon avec la fiche 5e. Décision de périmètre à confirmer par un
-professeur : faut-il, pour la 6e, introduire au moins l'addition/soustraction de
-fractions de MÊME dénominateur et l'application d'un pourcentage simple, qui figurent
-bien au programme officiel de 6e ? À défaut, la fiche 6e est conforme mais partielle
-par rapport à la lettre du programme.
-
-Autres points à vérifier par le relecteur :
-- Profondeur attendue en 6e sur les « fractions égales » : simple reconnaissance
-  (choix retenu ici) ou déjà simplification par un diviseur commun ?
-- Le « guide-âne » / réseau de droites parallèles (l.794-795) n'a pas été détaillé
-  (outil de classe, difficile à rendre sans schéma) — à confirmer.
-
-Rédaction originale à partir du seul programme officiel. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

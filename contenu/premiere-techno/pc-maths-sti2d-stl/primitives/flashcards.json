@@ -1,0 +1,61 @@
+{
+  "id": "1sti2d-primitives-cartes",
+  "chapitre": "1sti2d-primitives",
+  "titre": "Cartes — Primitives et méthode d'Euler",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    {
+      "recto": "Qu'est-ce qu'une primitive de $f$ sur un intervalle $I$ ?",
+      "verso": "Une fonction $F$ dérivable sur $I$ telle que $F' = f$."
+    },
+    {
+      "recto": "Comment sont reliées deux primitives d'une même fonction sur un intervalle ?",
+      "verso": "Elles diffèrent d'une constante : $G(x) = F(x) + C$."
+    },
+    {
+      "recto": "Comment choisir une primitive parmi toutes les autres ?",
+      "verso": "Avec une condition initiale $F(t_0) = y_0$, qui fixe la constante $C$."
+    },
+    {
+      "recto": "Quelle est une primitive de $x^n$ ($n$ entier positif) ?",
+      "verso": "$\\dfrac{x^{n+1}}{n+1}$."
+    },
+    {
+      "recto": "Quelle est une primitive d'une constante $k$ ?",
+      "verso": "$kx$."
+    },
+    {
+      "recto": "Quelle est une primitive de $A\\cos(\\omega t + \\varphi)$ ?",
+      "verso": "$\\dfrac{A}{\\omega}\\sin(\\omega t + \\varphi)$."
+    },
+    {
+      "recto": "Quelle est une primitive de $A\\sin(\\omega t + \\varphi)$ ?",
+      "verso": "$-\\dfrac{A}{\\omega}\\cos(\\omega t + \\varphi)$."
+    },
+    {
+      "recto": "Comment vérifier qu'une fonction est une primitive de $f$ ?",
+      "verso": "On la dérive : on doit retrouver $f$."
+    },
+    {
+      "recto": "Quelle relation utilise la méthode d'Euler ?",
+      "verso": "$y(t + h) \\approx y(t) + h \\times f(t)$, appliquée de proche en proche à partir de $y(t_0) = y_0$."
+    },
+    {
+      "recto": "Quand utilise-t-on la méthode d'Euler ?",
+      "verso": "Quand on ne connaît pas de primitive de $f$, par exemple $\\dfrac{1}{t}$ ou $\\dfrac{1}{1 + t^2}$."
+    },
+    {
+      "recto": "Comment améliorer la méthode d'Euler ?",
+      "verso": "En diminuant le pas $h$ (davantage de calculs, meilleure précision)."
+    },
+    {
+      "recto": "Quelles grandeurs physiques obtient-on par une primitive ?",
+      "verso": "La position à partir de la vitesse, la vitesse à partir de l'accélération, la charge à partir de l'intensité, l'énergie à partir de la puissance."
+    }
+  ]
+}

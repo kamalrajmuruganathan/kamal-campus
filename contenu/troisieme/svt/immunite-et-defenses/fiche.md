@@ -94,7 +94,9 @@ plus forte** : on est **immunisé** et on ne retombe généralement pas malade. 
   un fragment). Le corps fabrique alors des lymphocytes mémoire **sans tomber malade** :
   il sera prêt à réagir vite lors d'une vraie infection. C'est une action **préventive**.
 - La **sérothérapie** (le sérum) apporte directement des **anticorps** déjà prêts : c'est
-  une action **curative** et **immédiate**, mais sans mémoire.
+  une action **immédiate**, mais sans mémoire. Elle sert surtout à soigner (action **curative**),
+  mais elle peut aussi protéger en urgence : par exemple contre le **tétanos**, après une blessure,
+  chez une personne mal vaccinée.
 - Les **antibiotiques** sont des médicaments qui détruisent ou bloquent les **bactéries**.
   Ils sont **inefficaces contre les virus** (grippe, rhume). Mal utilisés, ils rendent les
   bactéries **résistantes**.
@@ -105,7 +107,7 @@ plus forte** : on est **immunisé** et on ne retombe généralement pas malade. 
 - Les **barrières naturelles** (peau, muqueuses) empêchent l'entrée des microbes.
 - L'**immunité innée** est rapide : **phagocytose** et **réaction inflammatoire**.
 - L'**immunité adaptative** est ciblée : **lymphocytes B** (anticorps) et **lymphocytes T**.
-- La **vaccination** est **préventive** (elle crée une mémoire) ; le **sérum** est **curatif**.
+- La **vaccination** est **préventive** (elle crée une mémoire) ; le **sérum** agit tout de suite (surtout **curatif**), sans mémoire.
 - Les **antibiotiques** agissent sur les **bactéries**, jamais sur les **virus**.
 
 ## Les erreurs à éviter

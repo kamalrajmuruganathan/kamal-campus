@@ -22,9 +22,47 @@ relu_par: null
 
 ---
 
+# Probabilités conditionnelles et indépendance
+
+## 1. Indépendance et probabilités totales
+
+### Rappel — probabilité conditionnelle
+
+Pour un événement $\mathrm{A}$ de probabilité non nulle, $P_{\mathrm{A}}(\mathrm{B}) = \dfrac{P(\mathrm{A} \cap \mathrm{B})}{P(\mathrm{A})}$
+est la probabilité de $\mathrm{B}$ **sachant** que $\mathrm{A}$ est réalisé.
+
+### Événements indépendants
+
+$\mathrm{B}$ est **indépendant** de $\mathrm{A}$ (avec $P(\mathrm{A}) \neq 0$) si savoir que $\mathrm{A}$ est réalisé ne change
+pas la probabilité de $\mathrm{B}$ :
+
+$$\boxed{P_{\mathrm{A}}(\mathrm{B}) = P(\mathrm{B})} \qquad \text{ce qui revient à} \qquad P(\mathrm{A} \cap \mathrm{B}) = P(\mathrm{A}) \times P(\mathrm{B})$$
+
+Lorsque $\mathrm{A}$ et $\mathrm{B}$ ont des probabilités non nulles, la propriété est **symétrique** : on dit
+que $\mathrm{A}$ et $\mathrm{B}$ sont indépendants.
+
+> **Exemple.** On lance un dé équilibré. $\mathrm{A}$ : « le résultat est pair » ($\{2, 4, 6\}$) et
+> $\mathrm{B}$ : « le résultat est inférieur ou égal à $2$ » ($\{1, 2\}$).
+> $P(\mathrm{A}) = \dfrac{1}{2}$, $P(\mathrm{B}) = \dfrac{1}{3}$ et $\mathrm{A} \cap \mathrm{B} = \{2\}$, donc $P(\mathrm{A} \cap \mathrm{B}) = \dfrac{1}{6} = \dfrac{1}{2} \times \dfrac{1}{3}$ :
+> $\mathrm{A}$ et $\mathrm{B}$ sont indépendants.
+
+### Formule des probabilités totales
+
+Avec un arbre à deux niveaux ($\mathrm{A}$ ou $\overline{\mathrm{A}}$, puis $\mathrm{B}$ ou $\overline{\mathrm{B}}$), on additionne les
+probabilités des chemins qui mènent à $\mathrm{B}$ :
+
+$$\boxed{P(\mathrm{B}) = P(\mathrm{A}) \times P_{\mathrm{A}}(\mathrm{B}) + P\left(\overline{\mathrm{A}}\right) \times P_{\overline{\mathrm{A}}}(\mathrm{B})}$$
+
+> **Exemple.** Une usine fabrique $60\,\%$ de ses pièces sur la machine $\mathrm{A}$ et $40\,\%$ sur la
+> machine $\mathrm{B}$. $3\,\%$ des pièces de $\mathrm{A}$ et $5\,\%$ des pièces de $\mathrm{B}$ sont défectueuses.
+> On prend une pièce au hasard ; $\mathrm{D}$ : « elle est défectueuse ».
+> $P(\mathrm{D}) = 0{,}6 \times 0{,}03 + 0{,}4 \times 0{,}05 = 0{,}018 + 0{,}02 = 0{,}038$, soit $3{,}8\,\%$.
+
+---
+
 # Répétition d'épreuves de Bernoulli
 
-## 1. L'épreuve de Bernoulli
+## 2. L'épreuve de Bernoulli
 
 Une expérience à **deux issues seulement** :
 
@@ -36,7 +74,7 @@ Une expérience à **deux issues seulement** :
 
 ---
 
-## 2. Répétition — l'arbre de probabilités
+## 3. Répétition — l'arbre de probabilités
 
 On répète $n$ fois la même épreuve, de façon **identique et indépendante**.
 Chaque répétition ne dépend pas des précédentes.
@@ -87,7 +125,7 @@ Pour calculer la probabilité d'obtenir **exactement $k$ succès** :
 
 # Variables aléatoires
 
-## 3. Définition et notations
+## 4. Définition et notations
 
 Une **variable aléatoire** $X$ associe un **nombre** à chaque issue d'une expérience.
 
@@ -101,7 +139,7 @@ Une **variable aléatoire** $X$ associe un **nombre** à chaque issue d'une exp�
 
 ---
 
-## 4. Loi de probabilité
+## 5. Loi de probabilité
 
 <!-- schema:loi-nombre-succes -->
 ![Loi du nombre de succès sur trois épreuves (p = 0,2) : 0,512 ; 0,384 ; 0,096 ; 0,008. Les hauteurs des bâtons ont pour somme 1.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMzAwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNmZmZmZmYiLz48bGluZSB4MT0iNDYiIHkxPSIyNjQiIHgyPSI1MDgiIHkyPSIyNjQiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSI0MCIgeT0iMjY4IiBmb250LXNpemU9IjExIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0iZW5kIj4wPC90ZXh0PjxsaW5lIHgxPSI0NiIgeTE9IjIyNS42NyIgeDI9IjUwOCIgeTI9IjIyNS42NyIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjQwIiB5PSIyMjkuNjciIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJlbmQiPjAsMTwvdGV4dD48bGluZSB4MT0iNDYiIHkxPSIxODcuMzMiIHgyPSI1MDgiIHkyPSIxODcuMzMiIHN0cm9rZT0iI2RiZTNlYyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSI0MCIgeT0iMTkxLjMzIiBmb250LXNpemU9IjExIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0iZW5kIj4wLDI8L3RleHQ+PGxpbmUgeDE9IjQ2IiB5MT0iMTQ5IiB4Mj0iNTA4IiB5Mj0iMTQ5IiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNDAiIHk9IjE1MyIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9ImVuZCI+MCwzPC90ZXh0PjxsaW5lIHgxPSI0NiIgeTE9IjExMC42NyIgeDI9IjUwOCIgeTI9IjExMC42NyIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjQwIiB5PSIxMTQuNjciIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJlbmQiPjAsNDwvdGV4dD48bGluZSB4MT0iNDYiIHkxPSI3Mi4zMyIgeDI9IjUwOCIgeTI9IjcyLjMzIiBzdHJva2U9IiNkYmUzZWMiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNDAiIHk9Ijc2LjMzIiBmb250LXNpemU9IjExIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0iZW5kIj4wLDU8L3RleHQ+PGxpbmUgeDE9IjQ2IiB5MT0iMzQiIHgyPSI1MDgiIHkyPSIzNCIgc3Ryb2tlPSIjZGJlM2VjIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjQwIiB5PSIzOCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9ImVuZCI+MCw2PC90ZXh0PjxsaW5lIHgxPSI0NiIgeTE9IjI2NCIgeDI9IjUwOCIgeTI9IjI2NCIgc3Ryb2tlPSIjOGE5OWE4IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjQ2IiB5MT0iMjY0IiB4Mj0iNDYiIHkyPSIyOCIgc3Ryb2tlPSIjOGE5OWE4IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iNjMiIHk9IjY3LjczIiB3aWR0aD0iMjYiIGhlaWdodD0iMTk2LjI3IiBmaWxsPSIjMWY2ZmViIiBmaWxsLW9wYWNpdHk9IjAuNyIvPjx0ZXh0IHg9Ijc2IiB5PSIyODEiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjA8L3RleHQ+PHJlY3QgeD0iMjAxIiB5PSIxMTYuOCIgd2lkdGg9IjI2IiBoZWlnaHQ9IjE0Ny4yIiBmaWxsPSIjMWY2ZmViIiBmaWxsLW9wYWNpdHk9IjAuNyIvPjx0ZXh0IHg9IjIxNCIgeT0iMjgxIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4xPC90ZXh0PjxyZWN0IHg9IjMzOSIgeT0iMjI3LjIiIHdpZHRoPSIyNiIgaGVpZ2h0PSIzNi44IiBmaWxsPSIjMWY2ZmViIiBmaWxsLW9wYWNpdHk9IjAuNyIvPjx0ZXh0IHg9IjM1MiIgeT0iMjgxIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4yPC90ZXh0PjxyZWN0IHg9IjQ3NyIgeT0iMjYwLjkzIiB3aWR0aD0iMjYiIGhlaWdodD0iMy4wNyIgZmlsbD0iIzFmNmZlYiIgZmlsbC1vcGFjaXR5PSIwLjciLz48dGV4dCB4PSI0OTAiIHk9IjI4MSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+MzwvdGV4dD48dGV4dCB4PSIyNjAiIHk9IjIwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMTYyMzJlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj5Ob21icmUgZGUgc3VjY8OocyBwb3VyIG4gPSAzIGV0IHAgPSAwLDI8L3RleHQ+PC9zdmc+)
@@ -122,7 +160,7 @@ $$\boxed{\sum p_i = 1}$$
 
 ---
 
-## 5. Espérance
+## 6. Espérance
 
 $$\boxed{E(X) = x_1p_1 + x_2p_2 + \cdots + x_np_n}$$
 
@@ -151,7 +189,7 @@ C'est la **moyenne des valeurs, pondérée par leurs probabilités**.
 
 ---
 
-## 6. Loi de Bernoulli
+## 7. Loi de Bernoulli
 
 C'est le cas le plus simple : $X$ ne prend que les valeurs $0$ et $1$.
 
@@ -168,7 +206,7 @@ $$\boxed{E(X) = p}$$
 
 ---
 
-## 7. À retenir absolument
+## 8. À retenir absolument
 
 | | |
 |---|---|
@@ -182,7 +220,7 @@ $$\boxed{E(X) = p}$$
 
 ---
 
-## 8. Les erreurs qui coûtent des points
+## 9. Les erreurs qui coûtent des points
 
 1. **Oublier de compter les chemins** dans une répétition d'épreuves.
 2. **Additionner le long d'un chemin** au lieu de multiplier.
@@ -192,41 +230,3 @@ $$\boxed{E(X) = p}$$
 6. **Interpréter l'espérance comme une prévision** pour une seule partie : c'est une
    moyenne sur un grand nombre de répétitions.
 7. **Oublier le signe négatif des pertes** dans le tableau de la loi.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques, première de la voie
-technologique (docs/programme-premiere-techno-2026.pdf), partie « Statistiques et
-probabilités », sections « Modèle associé à une expérience aléatoire à plusieurs
-épreuves indépendantes » (ligne 2467) et « Variables aléatoires » (ligne 2493).
-
-Éléments explicitement lisibles :
-- « Représenter par un arbre de probabilités la répétition de n épreuves aléatoires
-  identiques et indépendantes de Bernoulli afin de calculer des probabilités »
-- « Variable aléatoire discrète : loi de probabilité, ESPÉRANCE »
-- « Loi de Bernoulli (0,1) de paramètre p, ESPÉRANCE »
-- capacités : « Interpréter en situation les écritures … », « Calculer et interpréter
-  en contexte l'espérance d'une variable aléatoire discrète », « Reconnaître … »
-
-⚠️ DIFFÉRENCE NOTABLE AVEC LA SPÉCIALITÉ : le programme technologique mentionne la
-LOI DE PROBABILITÉ et l'ESPÉRANCE, mais l'extraction ne fait apparaître NI VARIANCE
-NI ÉCART-TYPE, ni la formule de König-Huygens — contrairement au programme de
-spécialité. Je ne les ai donc PAS introduits. C'est un point de périmètre à
-CONFIRMER : si la variance est bien hors programme ici, l'absence est correcte ;
-sinon il faudra ajouter une section.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La borne sur n dans la répétition d'épreuves : l'extraction montre « avec » suivi
-  d'un blanc. En spécialité et en enseignement scientifique la limite est n ≤ 4 ;
-  vérifier qu'elle est identique ici.
-- La capacité « Reconnaître … » est tronquée : reconnaître une situation de
-  Bernoulli, probablement — à confirmer.
-- Les probabilités conditionnelles sont-elles au programme de la voie technologique
-  en première ? Je ne les ai PAS traitées, faute de trace dans l'extraction.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

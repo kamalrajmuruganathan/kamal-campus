@@ -1,0 +1,594 @@
+{
+  "id": "1sti2d-primitives-exos",
+  "chapitre": "1sti2d-primitives",
+  "titre": "Exercices — Primitives et méthode d'Euler",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Vérifier que $F(x) = x^3 + 2x$ est une primitive de $f(x) = 3x^2 + 2$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On dérive $F$ : $F'(x) = 3x^2 + 2$.",
+        "On retrouve $f(x)$ : $F$ est bien une primitive de $f$ sur $\\mathbb{R}$."
+      ],
+      "reponse": "Oui, car $F'(x) = 3x^2 + 2 = f(x)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "La fonction $F(t) = \\sin(2t)$ est-elle une primitive de $f(t) = 2\\cos(2t)$ sur $\\mathbb{R}$ ?",
+      "corrige": [
+        "$F'(t) = 2\\cos(2t)$ (règle $\\big(f(at + b)\\big)' = a\\,f'(at + b)$ avec $a = 2$).",
+        "$F' = f$ : la réponse est oui."
+      ],
+      "reponse": "Oui, car $F'(t) = 2\\cos(2t) = f(t)$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "definition",
+      "enonce": "Montrer que $F(x) = -\\dfrac{1}{x}$ est une primitive de $f(x) = \\dfrac{1}{x^2}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$F(x) = -\\dfrac{1}{x}$, donc $F'(x) = -\\left(-\\dfrac{1}{x^2}\\right) = \\dfrac{1}{x^2}$.",
+        "$F'(x) = f(x)$ pour tout $x > 0$ : $F$ est une primitive de $f$ sur $]0\\,;+\\infty[$."
+      ],
+      "reponse": "$F'(x) = \\dfrac{1}{x^2} = f(x)$ : $F$ est une primitive de $f$."
+    },
+    {
+      "id": 4,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Vrai ou faux : $F(x) = x^2$ est une primitive de $f(x) = x^3$.",
+      "corrige": [
+        "On dérive : $F'(x) = 2x$, qui n'est pas égal à $x^3$.",
+        "C'est l'inverse : $x^3$ n'est pas la dérivée de $x^2$. Une primitive de $x^3$ est $\\dfrac{x^4}{4}$."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 5,
+      "difficulte": "intermediaire",
+      "notion": "definition",
+      "enonce": "Montrer que $F(x) = x\\sin x$ est une primitive de $f(x) = \\sin x + x\\cos x$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Dérivée d'un produit : $u = x$, $u' = 1$ ; $v = \\sin x$, $v' = \\cos x$.",
+        "$F'(x) = 1 \\times \\sin x + x\\cos x = f(x)$ : $F$ est une primitive de $f$."
+      ],
+      "reponse": "$F'(x) = \\sin x + x\\cos x = f(x)$."
+    },
+    {
+      "id": 6,
+      "difficulte": "intermediaire",
+      "notion": "definition",
+      "enonce": "Montrer que $G(x) = \\dfrac{x}{x + 1}$ est une primitive de $g(x) = \\dfrac{1}{(x + 1)^2}$ sur $]-1\\,;+\\infty[$.",
+      "corrige": [
+        "Dérivée d'un quotient : $u = x$, $u' = 1$ ; $v = x + 1$, $v' = 1$.",
+        "$G'(x) = \\dfrac{1 \\times (x + 1) - x \\times 1}{(x + 1)^2} = \\dfrac{1}{(x + 1)^2} = g(x)$."
+      ],
+      "reponse": "$G'(x) = \\dfrac{1}{(x+1)^2} = g(x)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "approfondissement",
+      "notion": "definition",
+      "enonce": "Déterminer les réels $a$ et $b$ pour que $F(x) = ax\\sin x + b\\cos x$ soit une primitive de $f(x) = x\\cos x$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$F'(x) = a\\sin x + ax\\cos x - b\\sin x = (a - b)\\sin x + ax\\cos x$.",
+        "On veut $F'(x) = x\\cos x$ pour tout $x$ : il faut $a = 1$ et $a - b = 0$.",
+        "Donc $a = 1$, $b = 1$ et $F(x) = x\\sin x + \\cos x$."
+      ],
+      "reponse": "$a = 1$ et $b = 1$"
+    },
+    {
+      "id": 8,
+      "difficulte": "application",
+      "notion": "constante-condition-initiale",
+      "enonce": "$F(x) = x^2 + 3$ et $G(x) = x^2 - 5$ sont deux primitives de $f(x) = 2x$. Calculer $F(x) - G(x)$. Que constate-t-on ?",
+      "corrige": [
+        "$F(x) - G(x) = (x^2 + 3) - (x^2 - 5) = 8$.",
+        "La différence ne dépend pas de $x$ : deux primitives d'une même fonction sur un intervalle diffèrent d'une constante.",
+        "Graphiquement, la courbe de $F$ se déduit de celle de $G$ par une translation verticale de $8$ unités."
+      ],
+      "reponse": "$F(x) - G(x) = 8$ : les deux primitives diffèrent d'une constante."
+    },
+    {
+      "id": 9,
+      "difficulte": "application",
+      "notion": "constante-condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 4x$ sur $\\mathbb{R}$ telle que $F(1) = 5$.",
+      "corrige": [
+        "Les primitives de $f$ sont $F(x) = 2x^2 + C$.",
+        "$F(1) = 2 + C = 5$, donc $C = 3$.",
+        "$F(x) = 2x^2 + 3$."
+      ],
+      "reponse": "$F(x) = 2x^2 + 3$"
+    },
+    {
+      "id": 10,
+      "difficulte": "intermediaire",
+      "notion": "constante-condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 3x^2 - 2x + 1$ sur $\\mathbb{R}$ telle que $F(2) = 0$.",
+      "corrige": [
+        "Les primitives de $f$ sont $F(x) = x^3 - x^2 + x + C$.",
+        "$F(2) = 8 - 4 + 2 + C = 6 + C = 0$, donc $C = -6$.",
+        "$F(x) = x^3 - x^2 + x - 6$."
+      ],
+      "reponse": "$F(x) = x^3 - x^2 + x - 6$"
+    },
+    {
+      "id": 11,
+      "difficulte": "intermediaire",
+      "notion": "constante-condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(t) = \\cos t$ sur $\\mathbb{R}$ telle que $F(0) = 2$.",
+      "corrige": [
+        "Les primitives de $\\cos$ sont $F(t) = \\sin t + C$.",
+        "$F(0) = 0 + C = 2$, donc $C = 2$.",
+        "$F(t) = \\sin t + 2$."
+      ],
+      "reponse": "$F(t) = \\sin t + 2$"
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "constante-condition-initiale",
+      "enonce": "Deux voitures roulent sur une route droite et ont, à chaque instant, exactement la même vitesse. Que peut-on dire de la distance qui les sépare ? Quel résultat sur les primitives cela illustre-t-il ?",
+      "corrige": [
+        "Leurs positions $x_1(t)$ et $x_2(t)$ ont la même dérivée $v(t)$ : la dérivée de $x_1 - x_2$ est nulle.",
+        "La distance entre les deux voitures reste donc constante.",
+        "Cela illustre que deux primitives d'une même fonction (ici la vitesse) diffèrent d'une constante."
+      ],
+      "reponse": "La distance entre elles reste constante : deux primitives d'une même fonction diffèrent d'une constante."
+    },
+    {
+      "id": 13,
+      "difficulte": "approfondissement",
+      "notion": "constante-condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 6x^2$ dont la courbe passe par le point $\\mathrm{A}(1\\,;-1)$, puis calculer $F(2)$.",
+      "corrige": [
+        "Les primitives de $f$ sont $F(x) = 2x^3 + C$.",
+        "La courbe passe par $\\mathrm{A}$ : $F(1) = 2 + C = -1$, donc $C = -3$ et $F(x) = 2x^3 - 3$.",
+        "$F(2) = 16 - 3 = 13$."
+      ],
+      "reponse": "$F(x) = 2x^3 - 3$ et $F(2) = 13$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(x) = x^4$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $x^n$ est $\\dfrac{x^{n+1}}{n+1}$ ; ici $n = 4$.",
+        "$F(x) = \\dfrac{x^5}{5}$. Vérification : $F'(x) = \\dfrac{5x^4}{5} = x^4$."
+      ],
+      "reponse": "$F(x) = \\dfrac{x^5}{5}$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(x) = 3x^2 + 4x - 1$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $3x^2$ est $x^3$, de $4x$ est $2x^2$, de $-1$ est $-x$.",
+        "$F(x) = x^3 + 2x^2 - x$."
+      ],
+      "reponse": "$F(x) = x^3 + 2x^2 - x$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(x) = x^3 - 6x + 2$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $x^3$ est $\\dfrac{x^4}{4}$, de $-6x$ est $-3x^2$, de $2$ est $2x$.",
+        "$F(x) = \\dfrac{x^4}{4} - 3x^2 + 2x$."
+      ],
+      "reponse": "$F(x) = \\dfrac{x^4}{4} - 3x^2 + 2x$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(x) = (x - 1)(x + 3)$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On développe d'abord : $f(x) = x^2 + 3x - x - 3 = x^2 + 2x - 3$.",
+        "$F(x) = \\dfrac{x^3}{3} + x^2 - 3x$."
+      ],
+      "reponse": "$F(x) = \\dfrac{x^3}{3} + x^2 - 3x$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(x) = 0{,}5x^2 - x$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $0{,}5x^2$ est $0{,}5 \\times \\dfrac{x^3}{3} = \\dfrac{x^3}{6}$.",
+        "Une primitive de $-x$ est $-\\dfrac{x^2}{2}$.",
+        "$F(x) = \\dfrac{x^3}{6} - \\dfrac{x^2}{2}$."
+      ],
+      "reponse": "$F(x) = \\dfrac{x^3}{6} - \\dfrac{x^2}{2}$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(x) = (2x + 1)^2$ sur $\\mathbb{R}$, en développant d'abord.",
+      "corrige": [
+        "$f(x) = 4x^2 + 4x + 1$.",
+        "$F(x) = 4 \\times \\dfrac{x^3}{3} + 4 \\times \\dfrac{x^2}{2} + x = \\dfrac{4x^3}{3} + 2x^2 + x$."
+      ],
+      "reponse": "$F(x) = \\dfrac{4x^3}{3} + 2x^2 + x$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "polynomes",
+      "enonce": "Donner une primitive de $f(t) = 12t^5 - 4t^3$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $12t^5$ est $12 \\times \\dfrac{t^6}{6} = 2t^6$.",
+        "Une primitive de $-4t^3$ est $-4 \\times \\dfrac{t^4}{4} = -t^4$.",
+        "$F(t) = 2t^6 - t^4$."
+      ],
+      "reponse": "$F(t) = 2t^6 - t^4$"
+    },
+    {
+      "id": 21,
+      "difficulte": "decouverte",
+      "notion": "polynomes",
+      "enonce": "Vrai ou faux : une primitive de $x \\mapsto x^2$ est $x \\mapsto 2x$.",
+      "corrige": [
+        "$2x$ est la dérivée de $x^2$, pas une primitive.",
+        "Une primitive de $x^2$ est $\\dfrac{x^3}{3}$, car $\\left(\\dfrac{x^3}{3}\\right)' = x^2$."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 22,
+      "difficulte": "approfondissement",
+      "notion": "polynomes",
+      "enonce": "Soit $f(x) = x(x - 2)(x + 2)$. Déterminer la primitive $F$ de $f$ sur $\\mathbb{R}$ telle que $F(0) = 1$.",
+      "corrige": [
+        "On développe : $(x - 2)(x + 2) = x^2 - 4$, donc $f(x) = x^3 - 4x$.",
+        "Les primitives sont $F(x) = \\dfrac{x^4}{4} - 2x^2 + C$.",
+        "$F(0) = C = 1$, donc $F(x) = \\dfrac{x^4}{4} - 2x^2 + 1$."
+      ],
+      "reponse": "$F(x) = \\dfrac{x^4}{4} - 2x^2 + 1$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "sinusoides",
+      "enonce": "Donner une primitive de $f(t) = \\cos(3t)$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $A\\cos(\\omega t)$ est $\\dfrac{A}{\\omega}\\sin(\\omega t)$, avec $A = 1$ et $\\omega = 3$.",
+        "$F(t) = \\dfrac{1}{3}\\sin(3t)$. Vérification : $F'(t) = \\dfrac{1}{3} \\times 3\\cos(3t) = \\cos(3t)$."
+      ],
+      "reponse": "$F(t) = \\dfrac{1}{3}\\sin(3t)$"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "sinusoides",
+      "enonce": "Donner une primitive de $f(t) = \\sin(2t)$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $A\\sin(\\omega t)$ est $-\\dfrac{A}{\\omega}\\cos(\\omega t)$, avec $A = 1$ et $\\omega = 2$.",
+        "$F(t) = -\\dfrac{1}{2}\\cos(2t)$."
+      ],
+      "reponse": "$F(t) = -\\dfrac{1}{2}\\cos(2t)$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "sinusoides",
+      "enonce": "Donner une primitive de $f(t) = 4\\cos\\left(2t + \\dfrac{\\pi}{3}\\right)$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$A = 4$, $\\omega = 2$, $\\varphi = \\dfrac{\\pi}{3}$ : une primitive est $\\dfrac{4}{2}\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$.",
+        "$F(t) = 2\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$."
+      ],
+      "reponse": "$F(t) = 2\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "sinusoides",
+      "enonce": "Donner une primitive de $f(t) = 6\\sin\\left(3t - \\dfrac{\\pi}{4}\\right)$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$A = 6$, $\\omega = 3$, $\\varphi = -\\dfrac{\\pi}{4}$ : une primitive est $-\\dfrac{6}{3}\\cos\\left(3t - \\dfrac{\\pi}{4}\\right)$.",
+        "$F(t) = -2\\cos\\left(3t - \\dfrac{\\pi}{4}\\right)$."
+      ],
+      "reponse": "$F(t) = -2\\cos\\left(3t - \\dfrac{\\pi}{4}\\right)$"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "sinusoides",
+      "enonce": "Donner une primitive de $f(t) = 3\\cos t - 2\\sin t$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Une primitive de $3\\cos t$ est $3\\sin t$.",
+        "Une primitive de $-2\\sin t$ est $-2 \\times (-\\cos t) = 2\\cos t$.",
+        "$F(t) = 3\\sin t + 2\\cos t$."
+      ],
+      "reponse": "$F(t) = 3\\sin t + 2\\cos t$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "sinusoides",
+      "enonce": "Donner une primitive de $f(t) = 10\\sin(100\\pi t)$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$A = 10$ et $\\omega = 100\\pi$ : une primitive est $-\\dfrac{10}{100\\pi}\\cos(100\\pi t)$.",
+        "$F(t) = -\\dfrac{1}{10\\pi}\\cos(100\\pi t)$."
+      ],
+      "reponse": "$F(t) = -\\dfrac{1}{10\\pi}\\cos(100\\pi t)$"
+    },
+    {
+      "id": 29,
+      "difficulte": "decouverte",
+      "notion": "sinusoides",
+      "enonce": "Vérifier, en la dérivant, que $F(t) = \\dfrac{A}{\\omega}\\sin(\\omega t + \\varphi)$ est une primitive de $f(t) = A\\cos(\\omega t + \\varphi)$ (avec $\\omega \\neq 0$).",
+      "corrige": [
+        "On dérive avec $\\big(\\sin(\\omega t + \\varphi)\\big)' = \\omega\\cos(\\omega t + \\varphi)$.",
+        "$F'(t) = \\dfrac{A}{\\omega} \\times \\omega\\cos(\\omega t + \\varphi) = A\\cos(\\omega t + \\varphi) = f(t)$.",
+        "Le facteur $\\dfrac{1}{\\omega}$ compense le facteur $\\omega$ qui apparaît en dérivant."
+      ],
+      "reponse": "$F'(t) = \\dfrac{A}{\\omega} \\times \\omega\\cos(\\omega t + \\varphi) = A\\cos(\\omega t + \\varphi)$ : c'est bien une primitive."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "sinusoides",
+      "enonce": "Déterminer la primitive $F$ de $f(t) = 2\\cos(2t)$ sur $\\mathbb{R}$ telle que $F\\left(\\dfrac{\\pi}{4}\\right) = 0$.",
+      "corrige": [
+        "Les primitives de $f$ sont $F(t) = \\sin(2t) + C$.",
+        "$F\\left(\\dfrac{\\pi}{4}\\right) = \\sin\\dfrac{\\pi}{2} + C = 1 + C = 0$, donc $C = -1$.",
+        "$F(t) = \\sin(2t) - 1$."
+      ],
+      "reponse": "$F(t) = \\sin(2t) - 1$"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "methode-euler",
+      "enonce": "On cherche $y$ telle que $y' = \\dfrac{1}{t}$ sur $]0\\,;+\\infty[$ et $y(1) = 0$. Avec la méthode d'Euler de pas $h = 0{,}5$, calculer une valeur approchée de $y(1{,}5)$.",
+      "corrige": [
+        "Relation d'Euler : $y(t + h) \\approx y(t) + h \\times f(t)$ avec $f(t) = \\dfrac{1}{t}$.",
+        "$y(1{,}5) \\approx y(1) + 0{,}5 \\times \\dfrac{1}{1} = 0 + 0{,}5 = 0{,}5$."
+      ],
+      "reponse": "$y(1{,}5) \\approx 0{,}5$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "methode-euler",
+      "enonce": "On reprend $y' = \\dfrac{1}{t}$, $y(1) = 0$, avec un pas $h = 0{,}5$ et $y(1{,}5) \\approx 0{,}5$. Calculer une valeur approchée de $y(2)$ au millième.",
+      "corrige": [
+        "$y(2) \\approx y(1{,}5) + 0{,}5 \\times \\dfrac{1}{1{,}5}$.",
+        "$\\dfrac{0{,}5}{1{,}5} = \\dfrac{1}{3} \\approx 0{,}333$, donc $y(2) \\approx 0{,}5 + 0{,}333 = 0{,}833$."
+      ],
+      "reponse": "$y(2) \\approx 0{,}833$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "methode-euler",
+      "enonce": "On cherche $y$ telle que $y' = \\dfrac{1}{1 + t^2}$ et $y(0) = 0$. Avec la méthode d'Euler de pas $h = 0{,}5$, calculer des valeurs approchées de $y(0{,}5)$ puis de $y(1)$.",
+      "corrige": [
+        "$y(0{,}5) \\approx 0 + 0{,}5 \\times \\dfrac{1}{1 + 0^2} = 0{,}5$.",
+        "$y(1) \\approx 0{,}5 + 0{,}5 \\times \\dfrac{1}{1 + 0{,}5^2} = 0{,}5 + \\dfrac{0{,}5}{1{,}25} = 0{,}5 + 0{,}4 = 0{,}9$."
+      ],
+      "reponse": "$y(0{,}5) \\approx 0{,}5$ et $y(1) \\approx 0{,}9$."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "methode-euler",
+      "enonce": "Écrire la relation qui permet, dans la méthode d'Euler, de passer d'un point au suivant pour approcher la solution de $y' = f(t)$, et expliquer d'où elle vient.",
+      "corrige": [
+        "On utilise l'approximation affine : sur un petit intervalle, la courbe est proche de sa tangente.",
+        "Comme $y'(t) = f(t)$, on a $y(t + h) \\approx y(t) + y'(t) \\times h$.",
+        "D'où la relation $y(t + h) \\approx y(t) + h \\times f(t)$, appliquée de proche en proche avec un pas $h$ petit."
+      ],
+      "reponse": "$y(t + h) \\approx y(t) + h \\times f(t)$ : c'est l'approximation affine avec $y' = f$."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "methode-euler",
+      "enonce": "On reprend $y' = \\dfrac{1}{t}$, $y(1) = 0$, mais avec un pas $h = 0{,}25$. Calculer une valeur approchée de $y(2)$ au centième.",
+      "corrige": [
+        "$y(1{,}25) \\approx 0 + 0{,}25 \\times 1 = 0{,}25$.",
+        "$y(1{,}5) \\approx 0{,}25 + 0{,}25 \\times \\dfrac{1}{1{,}25} = 0{,}25 + 0{,}2 = 0{,}45$.",
+        "$y(1{,}75) \\approx 0{,}45 + 0{,}25 \\times \\dfrac{1}{1{,}5} \\approx 0{,}45 + 0{,}1667 = 0{,}6167$.",
+        "$y(2) \\approx 0{,}6167 + 0{,}25 \\times \\dfrac{1}{1{,}75} \\approx 0{,}6167 + 0{,}1429 \\approx 0{,}76$.",
+        "Avec un pas deux fois plus petit, on trouve une valeur plus faible ($0{,}76$ au lieu de $0{,}83$) : elle est plus proche de la solution exacte, que l'on étudiera en Terminale."
+      ],
+      "reponse": "$y(2) \\approx 0{,}76$"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "methode-euler",
+      "enonce": "On cherche $y$ telle que $y' = 2t$ et $y(0) = 0$ (la solution exacte est $y = t^2$). Avec la méthode d'Euler de pas $h = 0{,}5$, calculer une valeur approchée de $y(2)$ et la comparer à la valeur exacte.",
+      "corrige": [
+        "$y(0{,}5) \\approx 0 + 0{,}5 \\times 0 = 0$ ; $y(1) \\approx 0 + 0{,}5 \\times 1 = 0{,}5$.",
+        "$y(1{,}5) \\approx 0{,}5 + 0{,}5 \\times 2 = 1{,}5$ ; $y(2) \\approx 1{,}5 + 0{,}5 \\times 3 = 3$.",
+        "La valeur exacte est $2^2 = 4$ : avec ce pas assez grand, la méthode sous-estime de $1$, car on utilise à chaque étape la pente du début de l'intervalle, alors que la pente augmente."
+      ],
+      "reponse": "$y(2) \\approx 3$, alors que la valeur exacte est $4$."
+    },
+    {
+      "id": 37,
+      "difficulte": "probleme",
+      "notion": "methode-euler",
+      "enonce": "La vitesse d'un mobile qui ralentit est $v(t) = \\dfrac{10}{1 + t}$ (en m/s, $t$ en s). Sa position vérifie $x' = v$ et $x(0) = 0$. Avec la méthode d'Euler de pas $h = 1$ s, estimer sa position à $t = 3$ s (au centième).",
+      "corrige": [
+        "$x(1) \\approx 0 + 1 \\times \\dfrac{10}{1} = 10$ m.",
+        "$x(2) \\approx 10 + 1 \\times \\dfrac{10}{2} = 15$ m.",
+        "$x(3) \\approx 15 + 1 \\times \\dfrac{10}{3} \\approx 15 + 3{,}33 = 18{,}33$ m.",
+        "La vitesse diminue : la méthode, qui utilise la vitesse du début de chaque seconde, surestime la distance parcourue ; un pas plus petit donnerait une meilleure estimation."
+      ],
+      "reponse": "$x(3) \\approx 18{,}33$ m"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "cinematique",
+      "enonce": "Une bille est lâchée sans vitesse initiale ; sa vitesse est $v(t) = 9{,}8t$ (en m/s, $t$ en s). Sachant que $x(0) = 0$, déterminer la distance parcourue $x(t)$, puis $x(2)$.",
+      "corrige": [
+        "$x$ est une primitive de $v$ : $x(t) = 4{,}9t^2 + C$.",
+        "$x(0) = C = 0$, donc $x(t) = 4{,}9t^2$.",
+        "$x(2) = 4{,}9 \\times 4 = 19{,}6$ m."
+      ],
+      "reponse": "$x(t) = 4{,}9t^2$ et $x(2) = 19{,}6$ m."
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "cinematique",
+      "enonce": "Une voiture démarre avec une accélération constante $a = 2$ m/s², sans vitesse initiale et depuis $x(0) = 0$. Déterminer $v(t)$ et $x(t)$, puis la vitesse et la distance parcourue au bout de $10$ s.",
+      "corrige": [
+        "$v$ est une primitive de $a$ : $v(t) = 2t + C$ et $v(0) = 0$ donne $v(t) = 2t$.",
+        "$x$ est une primitive de $v$ : $x(t) = t^2 + C'$ et $x(0) = 0$ donne $x(t) = t^2$.",
+        "$v(10) = 20$ m/s (soit $72$ km/h) et $x(10) = 100$ m."
+      ],
+      "reponse": "$v(t) = 2t$, $x(t) = t^2$ ; $v(10) = 20$ m/s et $x(10) = 100$ m."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "cinematique",
+      "enonce": "Une balle est lancée vers le haut à $12$ m/s depuis une hauteur de $1{,}5$ m. Son accélération est $a = -9{,}8$ m/s². Déterminer sa vitesse $v(t)$ et son altitude $z(t)$.",
+      "corrige": [
+        "$v(t) = -9{,}8t + C$ et $v(0) = 12$, donc $v(t) = -9{,}8t + 12$.",
+        "$z(t) = -4{,}9t^2 + 12t + C'$ et $z(0) = 1{,}5$, donc $z(t) = -4{,}9t^2 + 12t + 1{,}5$."
+      ],
+      "reponse": "$v(t) = -9{,}8t + 12$ et $z(t) = -4{,}9t^2 + 12t + 1{,}5$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "cinematique",
+      "enonce": "Une voiture freine : sa vitesse est $v(t) = 25 - 5t$ (en m/s, $t$ en s) jusqu'à l'arrêt, et $x(0) = 0$. Déterminer $x(t)$, l'instant de l'arrêt et la distance de freinage.",
+      "corrige": [
+        "$x(t) = 25t - 2{,}5t^2 + C$ et $x(0) = 0$, donc $x(t) = 25t - 2{,}5t^2$.",
+        "Arrêt quand $v(t) = 0$ : $t = 5$ s.",
+        "Distance de freinage : $x(5) = 125 - 62{,}5 = 62{,}5$ m."
+      ],
+      "reponse": "$x(t) = 25t - 2{,}5t^2$ ; arrêt à $t = 5$ s ; distance $62{,}5$ m."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "cinematique",
+      "enonce": "La vitesse d'une masse accrochée à un ressort est $v(t) = 0{,}5\\cos(10t)$ (en m/s, $t$ en s), et $x(0) = 0$. Déterminer sa position $x(t)$ et l'amplitude du mouvement en cm.",
+      "corrige": [
+        "Une primitive de $0{,}5\\cos(10t)$ est $\\dfrac{0{,}5}{10}\\sin(10t) = 0{,}05\\sin(10t)$.",
+        "$x(t) = 0{,}05\\sin(10t) + C$ et $x(0) = C = 0$.",
+        "$x(t) = 0{,}05\\sin(10t)$ : l'amplitude est $0{,}05$ m, soit $5$ cm."
+      ],
+      "reponse": "$x(t) = 0{,}05\\sin(10t)$ ; amplitude $5$ cm."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "cinematique",
+      "enonce": "Un ascenseur part du repos avec une accélération constante de $0{,}6$ m/s² pendant $2$ s, depuis $x(0) = 0$. Déterminer $v(t)$ et $x(t)$ sur $[0\\,;2]$, puis la vitesse atteinte et la distance parcourue à $t = 2$ s.",
+      "corrige": [
+        "$v(t) = 0{,}6t$ (car $v(0) = 0$).",
+        "$x(t) = 0{,}3t^2$ (car $x(0) = 0$).",
+        "$v(2) = 1{,}2$ m/s et $x(2) = 0{,}3 \\times 4 = 1{,}2$ m."
+      ],
+      "reponse": "$v(t) = 0{,}6t$, $x(t) = 0{,}3t^2$ ; $v(2) = 1{,}2$ m/s et $x(2) = 1{,}2$ m."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "cinematique",
+      "enonce": "Un robot se déplace en ligne droite avec la vitesse $v(t) = 0{,}3t^2 - 1{,}2t + 1{,}2$ (en m/s, $t$ en s), depuis $x(0) = 0$. Déterminer $x(t)$ et la distance parcourue en $4$ s. Le robot recule-t-il ?",
+      "corrige": [
+        "$x(t) = 0{,}1t^3 - 0{,}6t^2 + 1{,}2t + C$ et $x(0) = 0$ donne $C = 0$.",
+        "$x(4) = 6{,}4 - 9{,}6 + 4{,}8 = 1{,}6$ m.",
+        "$v(t) = 0{,}3(t^2 - 4t + 4) = 0{,}3(t - 2)^2 \\geqslant 0$ : le robot ne recule jamais (il s'arrête un instant à $t = 2$ s). La distance parcourue est donc bien $1{,}6$ m."
+      ],
+      "reponse": "$x(t) = 0{,}1t^3 - 0{,}6t^2 + 1{,}2t$ ; $x(4) = 1{,}6$ m ; il ne recule pas."
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "applications-physiques",
+      "enonce": "Une batterie est chargée sous une intensité constante $i = 2$ A, avec $q(0) = 0$. Exprimer la charge $q(t)$ reçue (en C, $t$ en s), puis la charge reçue en une heure.",
+      "corrige": [
+        "$q$ est une primitive de $i$ : $q(t) = 2t + C$, et $q(0) = 0$ donne $q(t) = 2t$.",
+        "Une heure dure $3\\,600$ s : $q(3\\,600) = 7\\,200$ C."
+      ],
+      "reponse": "$q(t) = 2t$ ; $q(3\\,600) = 7\\,200$ C."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "applications-physiques",
+      "enonce": "Pendant la charge d'un téléphone, l'intensité est $i(t) = 2 - 0{,}0002t$ (en A, $t$ en s, $0 \\leqslant t \\leqslant 3\\,600$), avec $q(0) = 0$. Déterminer la charge $q(t)$, puis la charge reçue en une heure, en C puis en mAh ($1$ mAh $= 3{,}6$ C).",
+      "corrige": [
+        "$q(t) = 2t - 0{,}0001t^2 + C$ et $q(0) = 0$, donc $q(t) = 2t - 0{,}0001t^2$.",
+        "$q(3\\,600) = 7\\,200 - 0{,}0001 \\times 12\\,960\\,000 = 7\\,200 - 1\\,296 = 5\\,904$ C.",
+        "$\\dfrac{5\\,904}{3{,}6} = 1\\,640$ mAh."
+      ],
+      "reponse": "$q(t) = 2t - 0{,}0001t^2$ ; $q(3\\,600) = 5\\,904$ C, soit $1\\,640$ mAh."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "applications-physiques",
+      "enonce": "La puissance produite par des panneaux solaires est $P(t) = -60t^2 + 600t$ (en W, $t$ en h depuis le lever du soleil, $0 \\leqslant t \\leqslant 10$), avec $E(0) = 0$. Déterminer l'énergie produite $E(t)$ en Wh, puis l'énergie produite sur la journée, en kWh.",
+      "corrige": [
+        "$E$ est une primitive de $P$ : $E(t) = -20t^3 + 300t^2 + C$, et $E(0) = 0$ donne $C = 0$.",
+        "$E(10) = -20\\,000 + 30\\,000 = 10\\,000$ Wh $= 10$ kWh."
+      ],
+      "reponse": "$E(t) = -20t^3 + 300t^2$ ; $E(10) = 10$ kWh."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "applications-physiques",
+      "enonce": "Dans un circuit en courant alternatif, $i(t) = 0{,}5\\cos(100\\pi t)$ (en A, $t$ en s). Déterminer la charge $q(t)$ telle que $q(0) = 0$, puis sa valeur maximale en mC (au dixième).",
+      "corrige": [
+        "Une primitive de $0{,}5\\cos(100\\pi t)$ est $\\dfrac{0{,}5}{100\\pi}\\sin(100\\pi t) = \\dfrac{1}{200\\pi}\\sin(100\\pi t)$.",
+        "$q(0) = 0$ donne une constante nulle : $q(t) = \\dfrac{1}{200\\pi}\\sin(100\\pi t)$ en C.",
+        "Valeur maximale : $\\dfrac{1}{200\\pi} \\approx 1{,}59 \\times 10^{-3}$ C, soit environ $1{,}6$ mC."
+      ],
+      "reponse": "$q(t) = \\dfrac{1}{200\\pi}\\sin(100\\pi t)$ ; maximum $\\approx 1{,}6$ mC."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "applications-physiques",
+      "enonce": "Une voiture de $1\\,200$ kg qui démarre reçoit la puissance $P(t) = 4\\,800t$ (en W, $t$ en s), avec $E(0) = 0$. Déterminer l'énergie reçue $E(t)$, puis $E(10)$ en kJ. Vérifier avec l'énergie cinétique, sachant que $v(10) = 20$ m/s.",
+      "corrige": [
+        "$E(t) = 2\\,400t^2$ (primitive nulle en $0$).",
+        "$E(10) = 240\\,000$ J $= 240$ kJ.",
+        "Vérification : $E_c = \\dfrac{1}{2} \\times 1\\,200 \\times 20^2 = 240\\,000$ J. Les deux valeurs concordent."
+      ],
+      "reponse": "$E(t) = 2\\,400t^2$ ; $E(10) = 240$ kJ."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "applications-physiques",
+      "enonce": "Lors d'une réaction chimique, la vitesse d'apparition d'un produit P est $\\dfrac{d[\\mathrm{P}]}{dt} = 0{,}004 - 0{,}0004t$ (en mol·L⁻¹·min⁻¹, $0 \\leqslant t \\leqslant 10$ min), avec $[\\mathrm{P}](0) = 0$. Déterminer $[\\mathrm{P}](t)$ et la concentration finale à $t = 10$ min. Que se passe-t-il à cet instant ?",
+      "corrige": [
+        "$[\\mathrm{P}](t) = 0{,}004t - 0{,}0002t^2 + C$ et $[\\mathrm{P}](0) = 0$ donne $C = 0$.",
+        "$[\\mathrm{P}](10) = 0{,}04 - 0{,}02 = 0{,}02$ mol/L.",
+        "À $t = 10$ min, la vitesse d'apparition $0{,}004 - 0{,}004 = 0$ est nulle : la réaction s'arrête."
+      ],
+      "reponse": "$[\\mathrm{P}](t) = 0{,}004t - 0{,}0002t^2$ ; $[\\mathrm{P}](10) = 0{,}02$ mol/L ; la vitesse s'annule, la réaction s'arrête."
+    }
+  ]
+}

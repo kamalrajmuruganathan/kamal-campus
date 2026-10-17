@@ -213,30 +213,3 @@ Pour une suite géométrique de raison $q > 0$ et $u_0 > 0$ :
 4. **Compter les termes de travers dans une somme** : de $q^0$ à $q^n$ il y a $n+1$ termes.
 5. **Traduire une baisse de $20\,\%$ par $q = -0{,}2$.** C'est $q = 0{,}8$.
 6. **Croire que $q < 0$ donne une suite monotone.** Les termes alternent de signe.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité mathématiques première générale,
-section « Suites numériques, modèles discrets » (ligne 1275 du .txt extrait).
-
-Éléments du programme lisibles dans l'extraction : modes de génération (explicite, récurrence,
-algorithme, motifs géométriques), notations, suites arithmétiques (accroissements constants,
-lien fonctions affines, calcul de 1+2+...+n), suites géométriques (rapport constant, lien
-fonction exponentielle, calcul de 1+q+...+q^n), introduction intuitive de la limite finie ou
-infinie sur des exemples.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les capacités attendues exactes (l'extraction s'interrompt en milieu de phrase)
-- Les démonstrations exigibles (probablement la somme des n premiers entiers, et la somme
-  géométrique)
-- Le programme mentionne aussi « Somme des n premiers carrés, des n premiers cubes »
-  juste avant la section second degré — vérifier si cela relève de ce chapitre ou des
-  approfondissements possibles
-- Le raisonnement par récurrence n'est PAS au programme de première : ne pas l'introduire
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

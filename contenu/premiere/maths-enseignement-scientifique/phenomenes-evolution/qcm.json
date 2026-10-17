@@ -45,15 +45,6 @@
     {
       "id": 4,
       "difficulte": "moyen",
-      "notion": "demi-vie",
-      "enonce": "Un échantillon radioactif contient $800$ noyaux. Combien en reste-t-il après **deux** demi-vies ?",
-      "choix": ["$0$", "$200$", "$400$", "$100$"],
-      "reponse": 1,
-      "explication": "Chaque demi-vie divise par deux **ce qui reste** : $800 \\to 400 \\to 200$. Deux demi-vies ne font pas disparaître le tout — c'est l'erreur classique. On atteint $\\left(\\frac12\\right)^2 = \\frac14$ du départ."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
       "notion": "r0",
       "enonce": "Une épidémie a un taux de reproduction $R_0 = 0{,}8$. Que se passe-t-il ?",
       "choix": [
@@ -66,7 +57,7 @@
       "explication": "$R_0 < 1$ signifie que chaque malade contamine en moyenne **moins d'une** personne : la chaîne de transmission se tarit et l'épidémie s'éteint. Le seuil critique est $R_0 = 1$."
     },
     {
-      "id": 6,
+      "id": 5,
       "difficulte": "moyen",
       "notion": "second-degre",
       "enonce": "Un bénéfice est modélisé par $B(x) = -2x^2 + 40x - 50$. Que peut-on dire ?",
@@ -80,7 +71,7 @@
       "explication": "$a = -2 < 0$ : la parabole est tournée vers le bas, donc la fonction admet un **maximum**. Il est atteint en $x = -\\dfrac{b}{2a} = -\\dfrac{40}{-4} = 10$. C'est précisément ce qu'un modèle affine ne saurait décrire."
     },
     {
-      "id": 7,
+      "id": 6,
       "difficulte": "difficile",
       "notion": "taux-marginal",
       "enonce": "Un contribuable passe dans la tranche d'imposition à $30\\,\\%$. Paie-t-il $30\\,\\%$ de tout son revenu ?",
@@ -94,7 +85,7 @@
       "explication": "Le barème est une fonction affine **par morceaux** : le taux de $30\\,\\%$ est le **taux marginal**, appliqué uniquement à la fraction de revenu dépassant le seuil. Le **taux moyen** (impôt total ÷ revenu total) reste toujours inférieur. Cette confusion est très répandue."
     },
     {
-      "id": 8,
+      "id": 7,
       "difficulte": "difficile",
       "notion": "malthus",
       "enonce": "Une population croît exponentiellement, les ressources linéairement. Que se passe-t-il à long terme ?",
@@ -108,7 +99,7 @@
       "explication": "Une croissance exponentielle finit **toujours** par dépasser une croissance affine, quelle que soit l'avance initiale : c'est le raisonnement de Malthus. Historiquement, sa prédiction ne s'est pas réalisée — bonne illustration du **domaine de validité** d'un modèle."
     },
     {
-      "id": 9,
+      "id": 8,
       "difficulte": "difficile",
       "notion": "point-equilibre",
       "enonce": "L'offre est modélisée par $O(p) = 2p - 10$ et la demande par $D(p) = -3p + 40$. Quel est le prix d'équilibre ?",
@@ -117,7 +108,7 @@
       "explication": "Le point d'équilibre vérifie $O(p) = D(p)$ : $2p - 10 = -3p + 40$, soit $5p = 50$ et $p = 10$. À ce prix, offre et demande valent toutes deux $10$ — le marché s'équilibre."
     },
     {
-      "id": 10,
+      "id": 9,
       "difficulte": "difficile",
       "notion": "validite-modele",
       "enonce": "Un modèle exponentiel décrit bien une population sur $10$ ans. Peut-on l'utiliser pour prévoir dans $500$ ans ?",
@@ -131,7 +122,7 @@
       "explication": "Un modèle décrit ce qui a été **observé**. Une exponentielle prolongée sur $500$ ans donnerait des effectifs absurdes, largement supérieurs à toute capacité physique. Signaler le **domaine de validité** fait partie de la réponse attendue."
     },
     {
-      "id": 11,
+      "id": 10,
       "difficulte": "facile",
       "notion": "modele-affine",
       "enonce": "Une droite passe par les points $A(2\\,;\\,5)$ et $B(6\\,;\\,13)$. Quel est son taux d'accroissement ?",
@@ -140,16 +131,21 @@
       "explication": "Le taux d'accroissement est le coefficient directeur : $\\dfrac{y_B - y_A}{x_B - x_A} = \\dfrac{13 - 5}{6 - 2} = \\dfrac{8}{4} = 2$. Piège classique : oublier de diviser par l'écart des abscisses et répondre $8$."
     },
     {
-      "id": 12,
+      "id": 11,
       "difficulte": "facile",
-      "notion": "second-degre",
-      "enonce": "La fonction $f(x) = 3x^2 - 12x + 7$ admet-elle un maximum ou un minimum ?",
-      "choix": ["un minimum", "un maximum", "ni l'un ni l'autre", "les deux"],
+      "notion": "exponentielle-base-a",
+      "enonce": "Combien vaut $8^{1/3}$ ?",
+      "choix": [
+        "$2$",
+        "$\\dfrac{8}{3}$",
+        "$4$",
+        "$\\dfrac{1}{512}$"
+      ],
       "reponse": 0,
-      "explication": "Le coefficient $a = 3 > 0$ : la parabole est tournée vers le **haut**, donc la fonction admet un **minimum**. Piège : associer $a>0$ à un maximum. Une parabole tournée vers le haut « retient l'eau », son sommet est le point le plus bas."
+      "explication": "$8^{1/3}$ est le nombre positif dont le cube vaut $8$ (la racine cubique de $8$) : $2^3 = 8$, donc $8^{1/3} = 2$. L'exposant $\\dfrac{1}{3}$ ne signifie pas « diviser par $3$ »."
     },
     {
-      "id": 13,
+      "id": 12,
       "difficulte": "facile",
       "notion": "demi-vie",
       "enonce": "Quelle est approximativement la demi-vie du carbone 14, utilisée en datation ?",
@@ -158,16 +154,21 @@
       "explication": "La demi-vie du carbone 14 vaut environ $5\\,730$ ans : c'est la durée au bout de laquelle la moitié des noyaux se sont désintégrés. Piège : confondre le nombre de masse ($14$) avec la demi-vie."
     },
     {
-      "id": 14,
+      "id": 13,
       "difficulte": "moyen",
-      "notion": "second-degre",
-      "enonce": "Quelle est l'abscisse du sommet de la parabole $f(x) = 2x^2 - 8x + 1$ ?",
-      "choix": ["$2$", "$-2$", "$4$", "$-4$"],
+      "notion": "exponentielle-base-a",
+      "enonce": "La fonction $x \\mapsto 0{,}7^x$, définie sur $[0\\,;+\\infty[$, est :",
+      "choix": [
+        "décroissante",
+        "croissante",
+        "constante",
+        "croissante puis décroissante"
+      ],
       "reponse": 0,
-      "explication": "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-8}{2 \\times 2} = \\dfrac{8}{4} = 2$. Piège fréquent : oublier le signe moins de la formule et répondre $-2$."
+      "explication": "Pour $0 < a < 1$, la fonction $x \\mapsto a^x$ est **décroissante** : multiplier par $0{,}7$ fait diminuer. Elle serait croissante pour $a > 1$ et constante pour $a = 1$. Elle modélise par exemple une baisse de $30\\,\\%$ par unité de temps."
     },
     {
-      "id": 15,
+      "id": 14,
       "difficulte": "moyen",
       "notion": "modele-exponentiel",
       "enonce": "Un prix augmente de $10\\,\\%$ une année, puis de $20\\,\\%$ l'année suivante. Quelle est la hausse globale sur les deux ans ?",
@@ -176,7 +177,7 @@
       "explication": "On **multiplie** les coefficients : $1{,}10 \\times 1{,}20 = 1{,}32$, soit $+32\\,\\%$. Piège classique : **additionner** les pourcentages ($10 + 20 = 30$). Dans une évolution exponentielle, les pourcentages ne s'ajoutent pas."
     },
     {
-      "id": 16,
+      "id": 15,
       "difficulte": "moyen",
       "notion": "reconnaitre-modele",
       "enonce": "Une série vaut $3$, $8$, $13$, $18$. Quel modèle la décrit ?",
@@ -190,7 +191,7 @@
       "explication": "Les **différences** successives sont constantes ($8-3 = 13-8 = 18-13 = 5$) : c'est le modèle **affine**. Réflexe : différences constantes → affine ; quotients constants → exponentiel. Ici $8/3 \\neq 13/8$, donc pas exponentiel."
     },
     {
-      "id": 17,
+      "id": 16,
       "difficulte": "moyen",
       "notion": "taux-moyen",
       "enonce": "Pour un contribuable soumis à un barème progressif, comment se comparent taux marginal et taux moyen ?",
@@ -204,7 +205,7 @@
       "explication": "Seule la dernière tranche est imposée au **taux marginal** ; les tranches inférieures le sont à des taux plus faibles. La moyenne de l'ensemble reste donc **inférieure** au taux marginal. Piège : croire que tout le revenu subit le taux de la tranche atteinte."
     },
     {
-      "id": 18,
+      "id": 17,
       "difficulte": "difficile",
       "notion": "demi-vie",
       "enonce": "Un échantillon contient $1\\,600$ noyaux radioactifs. Combien en reste-t-il après **trois** demi-vies ?",
@@ -213,27 +214,41 @@
       "explication": "Chaque demi-vie divise par deux ce qui reste : $1\\,600 \\to 800 \\to 400 \\to 200$. On atteint $\\left(\\frac12\\right)^3 = \\frac18$ du départ, soit $12{,}5\\,\\%$. Piège : croire que trois demi-vies font tout disparaître — il reste toujours une fraction non nulle."
     },
     {
-      "id": 19,
-      "difficulte": "difficile",
-      "notion": "r0",
-      "enonce": "Grâce à des mesures sanitaires, le taux de reproduction d'une épidémie passe de $R_0 = 1{,}2$ à $R_0 = 0{,}9$. Qu'observe-t-on ?",
-      "choix": [
-        "L'épidémie continue de croître, un peu plus lentement",
-        "L'épidémie, qui croissait, se met à décliner",
-        "L'épidémie se stabilise exactement",
-        "Rien ne change, l'écart est trop faible"
-      ],
-      "reponse": 1,
-      "explication": "Le seuil **critique** est $R_0 = 1$. En passant de $1{,}2$ (au-dessus, croissance) à $0{,}9$ (en dessous, extinction), on franchit ce seuil : la dynamique s'inverse. Piège : juger l'écart « faible » sans voir qu'il traverse la valeur critique."
-    },
-    {
-      "id": 20,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "second-degre",
       "enonce": "Un bénéfice est modélisé par $B(x) = -x^2 + 20x - 19$. Quel est le bénéfice **maximal** ?",
       "choix": ["$81$", "$100$", "$10$", "$181$"],
       "reponse": 0,
       "explication": "Le maximum est atteint au sommet, en $x = -\\dfrac{b}{2a} = -\\dfrac{20}{-2} = 10$. On calcule alors $B(10) = -100 + 200 - 19 = 81$. Piège : donner l'**abscisse** du sommet ($10$) au lieu de la **valeur** du maximum ($81$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "moyen",
+      "notion": "exponentielle-base-a",
+      "enonce": "Un capital de $1\\,000$ € est placé à intérêts composés à $4\\,\\%$ par an. Que vaut-il au bout de $6$ mois ?",
+      "choix": [
+        "Environ $1\\,019{,}80$ €",
+        "$1\\,020$ €",
+        "$1\\,040$ €",
+        "$1\\,002$ €"
+      ],
+      "reponse": 0,
+      "explication": "Au bout de $x$ années, le capital vaut $1\\,000 \\times 1{,}04^{\\,x}$. Pour $6$ mois, $x = 0{,}5$ : $1\\,000 \\times 1{,}04^{0{,}5} \\approx 1\\,019{,}80$ €. Prendre la moitié du taux ($2\\,\\%$, soit $1\\,020$ €) donne un résultat proche mais faux : l'évolution n'est pas linéaire."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "exponentielle-base-a",
+      "enonce": "Une grandeur double tous les $10$ ans. Par quel nombre est-elle multipliée en $5$ ans ?",
+      "choix": [
+        "$2^{0{,}5} = \\sqrt{2} \\approx 1{,}41$",
+        "$1{,}5$",
+        "$2$",
+        "$0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "Au bout de $t$ années, la grandeur est multipliée par $2^{\\,t/10}$. Pour $t = 5$ : $2^{0{,}5} = \\sqrt{2} \\approx 1{,}41$. On vérifie : $\\sqrt{2} \\times \\sqrt{2} = 2$, donc deux périodes de $5$ ans donnent bien un doublement. Répondre $1{,}5$ revient à croire que la moitié du doublement se fait en $5$ ans, comme pour un modèle affine."
     }
   ]
 }

@@ -296,7 +296,9 @@ export function convertirConcentrations({ c = null, cm = null, M }) {
  * Résout c₁V₁ = c₂V₂ : on fournit trois grandeurs, l'outil calcule la quatrième.
  * Les volumes sont donnés avec leur unité.
  */
-export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = 'mL' }) {
+export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = 'mL', uniteC = 'mol·L⁻¹' }) {
+  // uniteC = '' : concentrations dans n'importe quelle unité (g·L⁻¹ en 2de, mol·L⁻¹ en 1re), la même pour c₁ et c₂.
+  const suffixeC = uniteC ? ' ' + uniteC : ' (même unité que l\'autre concentration)';
   const fournis = [c1, v1, c2, v2].filter((x) => x !== null && x !== undefined).length;
   if (fournis !== 3) {
     return { valide: false, erreur: `Il faut fournir exactement trois des quatre grandeurs (c₁, V₁, c₂, V₂). Reçu : ${fournis}.` };
@@ -321,7 +323,7 @@ export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = '
   const etapes = [
     { titre: 'Principe', detail: 'Lors d’une dilution, la QUANTITÉ DE SOLUTÉ ne change pas : n₁ = n₂, donc c₁V₁ = c₂V₂.' },
     { titre: 'Grandeur cherchée', detail: manquant },
-    { titre: 'Calcul', detail: `${manquant} = ${arrondi(valeur)}${manquant.startsWith('V') ? ' ' + unite : ' mol·L⁻¹'}` },
+    { titre: 'Calcul', detail: `${manquant} = ${arrondi(valeur)}${manquant.startsWith('V') ? ' ' + unite : suffixeC}` },
     { titre: 'Facteur de dilution', detail: `F = c₁/c₂ = V₂/V₁ = ${facteur}` },
   ];
 
@@ -336,7 +338,7 @@ export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = '
     valide: true,
     manquant,
     valeur,
-    unite: manquant.startsWith('V') ? unite : 'mol·L⁻¹',
+    unite: manquant.startsWith('V') ? unite : uniteC,
     facteurDilution: facteur,
     coherent: C2 <= C1,
     protocole: manquant === 'V₁' || v1 !== null

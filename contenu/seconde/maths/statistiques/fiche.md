@@ -6,7 +6,7 @@ niveau: seconde
 parcours: tronc-commun
 matiere: mathematiques
 programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027"
-duree_lecture_min: 12
+duree_lecture_min: 16
 prerequis:
   - Moyenne et médiane (cycle 4)
   - Pourcentages (cycle 4)
@@ -64,6 +64,16 @@ ou égales.
 > **Le choix de l'indicateur.** Pour des salaires ou des prix de logements, la **médiane** est
 > plus représentative : quelques valeurs très élevées faussent la moyenne.
 
+### Ajouter ou supprimer une valeur
+
+- La **moyenne** change dès qu'on ajoute ou supprime une valeur différente d'elle : on recalcule
+  la somme. Une série de $5$ valeurs de moyenne $8$ a pour somme $40$ ; si on ajoute $20$, la
+  nouvelle moyenne est $\dfrac{60}{6} = 10$.
+- La **médiane** bouge peu : elle dépend des rangs, pas de la taille des valeurs extrêmes.
+
+> **Exemple.** Dans la série $3,\ 5,\ 8,\ 9,\ 40$, on supprime $40$ : la moyenne passe de $13$ à
+> $\dfrac{25}{4} = 6{,}25$, la médiane de $8$ à $\dfrac{5 + 8}{2} = 6{,}5$.
+
 ---
 
 ## 3. Indicateurs de dispersion
@@ -94,6 +104,26 @@ $$\mathrm{Q}_3 - \mathrm{Q}_1$$
 
 Il contient les $50\,\%$ centraux de la série et **ignore les valeurs extrêmes** — c'est sa force.
 
+### Écart type
+
+L'**écart type**, noté $\sigma$, mesure la dispersion des valeurs **autour de la moyenne** $\bar x$.
+Pour une série de valeurs $x_i$ d'effectifs $n_i$ (effectif total $N$) :
+
+$$\sigma = \sqrt{\dfrac{n_1(x_1 - \bar x)^2 + n_2(x_2 - \bar x)^2 + \dots + n_p(x_p - \bar x)^2}{N}}$$
+
+En pratique, on l'obtient avec la **calculatrice** ou un **tableur** ; il faut surtout savoir
+l'**interpréter** : plus $\sigma$ est grand, plus les valeurs sont dispersées autour de la moyenne.
+Il s'exprime dans la même unité que les valeurs.
+
+> **Exemple.** Les séries $6,\ 8,\ 10,\ 12,\ 14$ et $9,\ 10,\ 10,\ 10,\ 11$ ont la même moyenne $10$.
+> Pour la première, les carrés des écarts à la moyenne sont $16,\ 4,\ 0,\ 4,\ 16$, de moyenne
+> $\dfrac{40}{5} = 8$, d'où $\sigma = \sqrt{8} \approx 2{,}83$.
+> Pour la seconde : $1,\ 0,\ 0,\ 0,\ 1$, de moyenne $\dfrac{2}{5} = 0{,}4$, d'où $\sigma = \sqrt{0{,}4} \approx 0{,}63$.
+> Même moyenne, mais la seconde série est beaucoup plus **resserrée**.
+
+Pour comparer deux séries, on utilise un **couple d'indicateurs** : (moyenne ; écart type) ou
+(médiane ; écart interquartile). Comme la moyenne, l'écart type est sensible aux valeurs extrêmes.
+
 ---
 
 ## 4. Linéarité de la moyenne
@@ -107,7 +137,54 @@ $$\bar{y} = a\,\bar{x} + b$$
 
 ---
 
-## 5. Croisement de deux caractères
+## 5. Séries regroupées en classes
+
+Quand le caractère est **continu** (taille, durée, distance…), on regroupe les valeurs en
+**classes** de même amplitude, notées $[a\,;\,b[$ : l'**amplitude** est $b - a$ et le **centre**
+est $\dfrac{a + b}{2}$.
+
+**Exemple suivi dans cette partie** : durée du trajet domicile-lycée de $40$ élèves.
+
+| Durée (min) | $[0\,;\,10[$ | $[10\,;\,20[$ | $[20\,;\,30[$ | $[30\,;\,40[$ |
+|---|---|---|---|---|
+| Effectif | $12$ | $18$ | $7$ | $3$ |
+| Effectif cumulé croissant | $12$ | $30$ | $37$ | $40$ |
+
+### Représentations graphiques
+
+- **Histogramme** : chaque classe est représentée par un rectangle. Comme les classes ont la
+  **même amplitude**, la hauteur de chaque rectangle est proportionnelle à l'effectif de la classe.
+- **Polygone des fréquences cumulées croissantes** : on place les points ayant pour abscisse la
+  borne supérieure de chaque classe et pour ordonnée la fréquence cumulée croissante, puis on les
+  relie par des segments (en partant de la borne inférieure de la première classe, à la fréquence $0$).
+
+### Moyenne
+
+On connaît rarement chaque valeur : on calcule une **moyenne pondérée** des moyennes des classes.
+
+- Si l'on connaît la moyenne $m_i$ de chaque classe d'effectif $n_i$ : $\bar x = \dfrac{n_1m_1 + \dots + n_pm_p}{N}$
+  (valeur exacte).
+- Si l'on suppose la **répartition uniforme** dans chaque classe, la moyenne de chaque classe est
+  son **centre** $c_i$ : $\bar x \approx \dfrac{n_1c_1 + \dots + n_pc_p}{N}$ (estimation).
+
+> **Exemple.** Centres $5$, $15$, $25$, $35$ :
+> $\bar x \approx \dfrac{5 \times 12 + 15 \times 18 + 25 \times 7 + 35 \times 3}{40} = \dfrac{610}{40} = 15{,}25$ min.
+
+### Classe médiane et estimation de la médiane
+
+- La **classe médiane** est la première classe dont l'effectif cumulé croissant atteint $\dfrac{N}{2}$.
+- Si l'on suppose la répartition **uniforme** dans la classe médiane $[a\,;\,b[$, on estime la médiane
+  par proportionnalité :
+
+$$\mathrm{Me} \approx a + \dfrac{\dfrac{N}{2} - (\text{effectif cumulé avant la classe})}{\text{effectif de la classe}} \times (b - a)$$
+
+> **Exemple.** $\dfrac{N}{2} = 20$ : l'effectif cumulé passe de $12$ à $30$ dans $[10\,;\,20[$, c'est la
+> classe médiane. $\mathrm{Me} \approx 10 + \dfrac{20 - 12}{18} \times 10 \approx 14{,}44$ min.
+> C'est aussi l'abscisse du point d'ordonnée $0{,}5$ du polygone des fréquences cumulées croissantes.
+
+---
+
+## 6. Croisement de deux caractères
 
 Un **tableau croisé** (ou à double entrée) présente deux caractères simultanément.
 
@@ -116,9 +193,18 @@ Un **tableau croisé** (ou à double entrée) présente deux caractères simulta
 > colonne. La question doit préciser lequel — et une confusion ici change complètement
 > l'interprétation.
 
+- La **fréquence marginale** d'une modalité est son effectif total (ligne ou colonne « Total »)
+  divisé par l'effectif total du tableau.
+- La **fréquence conditionnelle** de $B$ parmi $A$ est $\dfrac{\text{effectif de } A \text{ et } B}{\text{effectif de } A}$ :
+  on se restreint à la sous-population $A$.
+
+> **Exemple.** Dans un lycée de $500$ élèves, $200$ sont externes, dont $50$ font du sport en club.
+> La fréquence des sportifs **parmi les externes** est $\dfrac{50}{200} = 0{,}25$ ; la fréquence des
+> externes dans tout le lycée (fréquence marginale) est $\dfrac{200}{500} = 0{,}4$.
+
 ---
 
-## 6. À retenir absolument
+## 7. À retenir absolument
 
 | | |
 |---|---|
@@ -126,12 +212,15 @@ Un **tableau croisé** (ou à double entrée) présente deux caractères simulta
 | Médiane | partage en deux moitiés, **ordonner d'abord** |
 | Étendue | max $-$ min |
 | Écart interquartile | $\mathrm{Q}_3 - \mathrm{Q}_1$, robuste |
+| Écart type | $\sigma$, dispersion autour de la moyenne (calculatrice) |
 | Fréquences | $\sum f_i = 1$ |
 | Linéarité | $\bar y = a\bar x + b$ |
+| Classes | moyenne estimée avec les **centres** ; classe médiane : effectif cumulé $\geqslant \dfrac{N}{2}$ |
+| Tableau croisé | fréquence conditionnelle : on se restreint à une sous-population |
 
 ---
 
-## 7. Les erreurs qui coûtent des points
+## 8. Les erreurs qui coûtent des points
 
 1. **Calculer la médiane sans ordonner la série.** C'est l'erreur la plus fréquente, et elle
    invalide tout le résultat.
@@ -145,27 +234,7 @@ Un **tableau croisé** (ou à double entrée) présente deux caractères simulta
    commenter la présence de valeurs extrêmes.
 7. **Confondre écart interquartile et intervalle interquartile** : le premier est un nombre,
    le second un intervalle.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Statistiques » (lignes 1475 et 3241 du .txt).
-L'extraction fait apparaître explicitement « Croisement de deux variables qualitatives » et
-« Dresser le tableau croisé de deux variables », d'où la section 5.
-Le programme met aussi en garde (ligne 3606) : « leur utilisation inappropriée mène facilement
-à de fausses affirmations » — j'ai traduit cet avertissement dans les erreurs à éviter.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- L'écart-type est-il au programme de seconde, ou seulement en première ? Je ne l'ai PAS
-  inclus — à vérifier, c'est un point de périmètre net.
-- Les diagrammes en boîte (boîtes à moustaches) sont-ils exigibles ?
-- La convention de calcul des quartiles varie selon les manuels : celle retenue par le
-  programme doit être confirmée, car elle change les résultats numériques.
-- Les démonstrations ou capacités liées à la linéarité de la moyenne.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->
+8. **Présenter la moyenne calculée avec les centres des classes comme exacte** : ce n'est qu'une
+   estimation, qui suppose la répartition uniforme dans chaque classe.
+9. **Prendre pour classe médiane la classe du milieu du tableau, ou celle de plus grand effectif** :
+   il faut calculer les effectifs cumulés et les comparer à $\dfrac{N}{2}$.

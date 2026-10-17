@@ -151,32 +151,32 @@
       "explication": "Un intervalle de longueur $1$ partagé en $10$ parts égales donne des pas de $\\dfrac{1}{10} = 0{,}1$. Le piège : répondre $0{,}01$ (partage en $100$) ou $1$ (la longueur totale, pas un pas)."
     },
     {
-      "difficulte": "facile",
-      "notion": "valeur-chiffre",
-      "enonce": "Dans le nombre $8\\,529$, quelle est la **valeur** du chiffre $5$ ?",
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "operations-decimaux",
+      "enonce": "Combien vaut $12{,}5 + 3{,}75$ ?",
       "choix": [
-        "$500$",
+        "$15{,}80$",
         "$50$",
-        "$5$",
-        "$5\\,000$"
+        "$16{,}25$",
+        "$1{,}625$"
       ],
-      "reponse": 0,
-      "explication": "Le $5$ est au rang des **centaines**, il vaut donc $500$. Le piège est de confondre le **chiffre** ($5$) avec sa **valeur** ($500$) : la valeur dépend de la place du chiffre dans le nombre.",
-      "id": 11
+      "reponse": 2,
+      "explication": "On aligne les virgules : $12{,}50 + 3{,}75 = 16{,}25$. Aligner les chiffres « à droite » sans tenir compte des virgules donne un résultat faux."
     },
     {
-      "difficulte": "facile",
-      "notion": "pourcentage",
-      "enonce": "Quelle fraction est égale à $7\\,\\%$ ?",
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "operations-decimaux",
+      "enonce": "Combien vaut $2{,}4 \\times 1{,}3$ ?",
       "choix": [
-        "$\\dfrac{7}{100}$",
-        "$\\dfrac{7}{10}$",
-        "$\\dfrac{7}{1\\,000}$",
-        "$\\dfrac{100}{7}$"
+        "$31{,}2$",
+        "$3{,}12$",
+        "$0{,}312$",
+        "$2{,}12$"
       ],
-      "reponse": 0,
-      "explication": "Un pourcentage est une fraction de dénominateur $100$ : $7\\,\\% = \\dfrac{7}{100}$. Le piège est de se tromper de dénominateur ($10$ ou $1\\,000$) : « pour cent » indique bien un partage en $100$.",
-      "id": 12
+      "reponse": 1,
+      "explication": "$24 \\times 13 = 312$ ; il y a $1 + 1 = 2$ chiffres après la virgule dans les facteurs, donc $3{,}12$. Contrôle : $2 \\times 1 = 2$, le résultat est proche de $2$ ou $3$."
     },
     {
       "difficulte": "facile",
@@ -194,20 +194,6 @@
     },
     {
       "difficulte": "moyen",
-      "notion": "multiplier-diviser-10",
-      "enonce": "Combien vaut $58 \\div 1\\,000$ ?",
-      "choix": [
-        "$0{,}058$",
-        "$0{,}58$",
-        "$58\\,000$",
-        "$0{,}0058$"
-      ],
-      "reponse": 0,
-      "explication": "Diviser par $1\\,000$ déplace la virgule de **trois** rangs vers la gauche : $58 \\to 0{,}058$. Le piège est de déplacer d'un ou deux rangs seulement, ou d'aller vers la droite (ce qui reviendrait à multiplier).",
-      "id": 14
-    },
-    {
-      "difficulte": "moyen",
       "notion": "unites-numeration",
       "enonce": "Combien de **centièmes** y a-t-il dans $1$ **dixième** ?",
       "choix": [
@@ -218,35 +204,7 @@
       ],
       "reponse": 0,
       "explication": "On passe d'un rang au rang voisin en multipliant par $10$ : $1$ dixième $= 10$ centièmes ($0{,}1 = 10 \\times 0{,}01$). Le piège est de répondre $100$, qui est le nombre de centièmes dans une **unité**, pas dans un dixième.",
-      "id": 15
-    },
-    {
-      "difficulte": "moyen",
-      "notion": "comparaison",
-      "enonce": "Range ces trois nombres dans l'ordre **croissant** : $1{,}9$ ; $2{,}07$ ; $2{,}7$.",
-      "choix": [
-        "$1{,}9 < 2{,}07 < 2{,}7$",
-        "$2{,}07 < 1{,}9 < 2{,}7$",
-        "$1{,}9 < 2{,}7 < 2{,}07$",
-        "$2{,}7 < 2{,}07 < 1{,}9$"
-      ],
-      "reponse": 0,
-      "explication": "On compare d'abord les parties entières ($1 < 2$), donc $1{,}9$ est le plus petit ; puis entre $2{,}07$ et $2{,}7$ on compare les dixièmes ($0 < 7$), donc $2{,}07 < 2{,}7$. Le piège est de croire que $2{,}07 > 2{,}7$ parce qu'il « a plus de chiffres ».",
-      "id": 16
-    },
-    {
-      "difficulte": "moyen",
-      "notion": "ecritures-decomposition",
-      "enonce": "Quelle est la décomposition correcte de $52{,}8$ ?",
-      "choix": [
-        "$(5 \\times 10) + (2 \\times 1) + (8 \\times 0{,}1)$",
-        "$(5 \\times 10) + (2 \\times 1) + (8 \\times 1)$",
-        "$(5 \\times 100) + (2 \\times 10) + (8 \\times 1)$",
-        "$(5 \\times 1) + (2 \\times 10) + (8 \\times 0{,}1)$"
-      ],
-      "reponse": 0,
-      "explication": "Chaque chiffre est multiplié par la valeur de son rang : $5$ (dizaines) $\\times 10$, $2$ (unités) $\\times 1$, $8$ (dixièmes) $\\times 0{,}1$. Le piège est de traiter le $8$ comme des unités ($8 \\times 1$), en oubliant qu'il est après la virgule.",
-      "id": 17
+      "id": 14
     },
     {
       "difficulte": "difficile",
@@ -260,7 +218,7 @@
       ],
       "reponse": 0,
       "explication": "Multiplier par $0{,}01$, c'est **diviser par $100$** : la virgule recule de deux rangs, $47 \\to 0{,}47$. Le piège est de croire que « multiplier » agrandit toujours : ici on multiplie par un nombre plus petit que $1$, donc le résultat diminue.",
-      "id": 18
+      "id": 15
     },
     {
       "difficulte": "difficile",
@@ -274,7 +232,7 @@
       ],
       "reponse": 0,
       "explication": "Encadrer au dixième, c'est trouver le dixième juste en dessous et juste au-dessus : $3{,}7 < 3{,}74 < 3{,}8$. Le piège est d'encadrer à l'unité ($3$ et $4$) au lieu du dixième, ou de choisir un intervalle qui ne contient pas $3{,}74$.",
-      "id": 19
+      "id": 16
     },
     {
       "difficulte": "difficile",
@@ -288,7 +246,49 @@
       ],
       "reponse": 0,
       "explication": "Pour arrondir au centième, on regarde le chiffre **juste après**, le millième : c'est $6$ ($\\geq 5$), donc on augmente le centième de $1$ : $0{,}66 \\to 0{,}67$. Le piège est de garder $0{,}66$ (arrondi vers le bas) ou de regarder trop de chiffres à la fois.",
-      "id": 20
+      "id": 17
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "operations-decimaux",
+      "enonce": "Sans poser l'opération, quel est l'ordre de grandeur de $19{,}8 \\times 3{,}1$ ?",
+      "choix": [
+        "Environ $6$",
+        "Environ $600$",
+        "Environ $60$",
+        "Environ $0{,}6$"
+      ],
+      "reponse": 2,
+      "explication": "$19{,}8$ est proche de $20$ et $3{,}1$ est proche de $3$ : $20 \\times 3 = 60$ (le résultat exact est $61{,}38$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "moyen",
+      "notion": "division-euclidienne",
+      "enonce": "Dans la division euclidienne de $47$ par $6$, quels sont le quotient et le reste ?",
+      "choix": [
+        "Quotient $7$, reste $4$",
+        "Quotient $7$, reste $5$",
+        "Quotient $6$, reste $11$",
+        "Quotient $8$, reste $1$"
+      ],
+      "reponse": 1,
+      "explication": "$47 = 6 \\times 7 + 5$ avec $5 < 6$. « Quotient $6$, reste $11$ » ne convient pas : le reste doit être plus petit que $6$ ; et $6 \\times 8 = 48$ dépasse $47$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "operations-decimaux",
+      "enonce": "Combien vaut $9 \\div 4$ ?",
+      "choix": [
+        "$2{,}25$",
+        "$2{,}1$",
+        "$2{,}4$",
+        "$0{,}44$"
+      ],
+      "reponse": 0,
+      "explication": "On continue la division après la virgule en ajoutant des zéros ($9 = 9{,}00$) : $9 \\div 4 = 2{,}25$. Vérification : $4 \\times 2{,}25 = 9$. Écrire « $2{,}1$ » (quotient $2$, reste $1$) est une erreur."
     }
   ]
 }

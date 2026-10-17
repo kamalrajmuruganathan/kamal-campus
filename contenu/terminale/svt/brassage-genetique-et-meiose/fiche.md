@@ -78,7 +78,7 @@ plus fréquents (mais toujours **minoritaires** par rapport aux parentaux).
 ## 4. La fécondation : un brassage supplémentaire
 
 La **fécondation** réunit au hasard un gamète mâle parmi des millions et un
-gamète femelle parmi des milliers. Elle combine deux lots d'allèles déjà
+gamète femelle parmi quelques centaines (les ovocytes libérés au cours de la vie). Elle combine deux lots d'allèles déjà
 brassés par la méiose et rétablit la diploïdie. C'est un **troisième niveau de
 brassage**, qui rend chaque individu génétiquement unique (hors vrais jumeaux).
 

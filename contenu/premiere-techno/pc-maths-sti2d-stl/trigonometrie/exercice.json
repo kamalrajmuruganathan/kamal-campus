@@ -242,14 +242,15 @@
     },
     {
       "id": 20,
-      "difficulte": "intermediaire",
-      "notion": "angles-associes",
-      "enonce": "Calculer $\\cos\\left(-\\dfrac{2\\pi}{3}\\right)$ et $\\sin\\left(-\\dfrac{2\\pi}{3}\\right)$.",
+      "difficulte": "application",
+      "notion": "mesure-principale",
+      "enonce": "Déterminer la mesure principale de l'angle orienté de mesure $\\dfrac{9\\pi}{4}$, puis de celui de mesure $-\\dfrac{7\\pi}{6}$.",
       "corrige": [
-        "D'abord $\\dfrac{2\\pi}{3} = \\pi - \\dfrac{\\pi}{3}$ : $\\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2}$ et $\\sin\\dfrac{2\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$.",
-        "Ensuite la parité : $\\cos\\left(-\\dfrac{2\\pi}{3}\\right) = \\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2}$ et $\\sin\\left(-\\dfrac{2\\pi}{3}\\right) = -\\sin\\dfrac{2\\pi}{3} = -\\dfrac{\\sqrt{3}}{2}$."
+        "La mesure principale est l'unique mesure de l'intervalle $]-\\pi\\,;\\pi]$ ; on ajoute ou on retranche des multiples de $2\\pi$.",
+        "$\\dfrac{9\\pi}{4} = \\dfrac{\\pi}{4} + 2\\pi$, et $\\dfrac{\\pi}{4} \\in\\, ]-\\pi\\,;\\pi]$ : mesure principale $\\dfrac{\\pi}{4}$.",
+        "$-\\dfrac{7\\pi}{6} = \\dfrac{5\\pi}{6} - 2\\pi$, et $\\dfrac{5\\pi}{6} \\in\\, ]-\\pi\\,;\\pi]$ : mesure principale $\\dfrac{5\\pi}{6}$."
       ],
-      "reponse": "$-\\dfrac{1}{2}$ et $-\\dfrac{\\sqrt{3}}{2}$."
+      "reponse": "$\\dfrac{\\pi}{4}$ et $\\dfrac{5\\pi}{6}$."
     },
     {
       "id": 21,
@@ -330,25 +331,27 @@
     },
     {
       "id": 28,
-      "difficulte": "intermediaire",
-      "notion": "equation",
-      "enonce": "Résoudre $\\sin x = -\\dfrac{\\sqrt{3}}{2}$ sur $[0\\,;2\\pi[$.",
+      "difficulte": "application",
+      "notion": "mesure-principale",
+      "enonce": "Parmi les réels $\\dfrac{13\\pi}{3}$ ; $-\\dfrac{5\\pi}{3}$ ; $\\dfrac{7\\pi}{3}$ ; $-\\dfrac{2\\pi}{3}$, lesquels sont des mesures du même angle orienté que $\\dfrac{\\pi}{3}$ ?",
       "corrige": [
-        "$\\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$ ; on cherche les points d'ordonnée $-\\dfrac{\\sqrt{3}}{2}$, sous l'axe des abscisses.",
-        "Ce sont $\\pi + \\dfrac{\\pi}{3} = \\dfrac{4\\pi}{3}$ et $2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}$."
+        "Les mesures d'un même angle orienté diffèrent d'un multiple de $2\\pi$ : on calcule chaque différence avec $\\dfrac{\\pi}{3}$.",
+        "$\\dfrac{13\\pi}{3} - \\dfrac{\\pi}{3} = 4\\pi = 2 \\times 2\\pi$ ✓ ; $-\\dfrac{5\\pi}{3} - \\dfrac{\\pi}{3} = -2\\pi$ ✓ ; $\\dfrac{7\\pi}{3} - \\dfrac{\\pi}{3} = 2\\pi$ ✓.",
+        "$-\\dfrac{2\\pi}{3} - \\dfrac{\\pi}{3} = -\\pi$, qui n'est pas un multiple de $2\\pi$ : ce n'est pas une mesure du même angle."
       ],
-      "reponse": "$x = \\dfrac{4\\pi}{3}$ ou $x = \\dfrac{5\\pi}{3}$."
+      "reponse": "$\\dfrac{13\\pi}{3}$, $-\\dfrac{5\\pi}{3}$ et $\\dfrac{7\\pi}{3}$ (mais pas $-\\dfrac{2\\pi}{3}$)."
     },
     {
       "id": 29,
       "difficulte": "intermediaire",
-      "notion": "equation",
-      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\cos x = \\dfrac{\\sqrt{3}}{2}$.",
+      "notion": "mesure-principale",
+      "enonce": "Déterminer la mesure principale de l'angle orienté de mesure $\\dfrac{17\\pi}{3}$, puis de celui de mesure $-\\dfrac{11\\pi}{4}$.",
       "corrige": [
-        "Sur un tour, les solutions sont $\\dfrac{\\pi}{6}$ et $-\\dfrac{\\pi}{6}$ (points symétriques par rapport à l'axe des abscisses).",
-        "Sur $\\mathbb{R}$, on ajoute un nombre entier de tours : $+\\,2k\\pi$ avec $k$ entier."
+        "$\\dfrac{17\\pi}{3} = \\dfrac{18\\pi}{3} - \\dfrac{\\pi}{3} = 6\\pi - \\dfrac{\\pi}{3} = -\\dfrac{\\pi}{3} + 3 \\times 2\\pi$ : mesure principale $-\\dfrac{\\pi}{3}$.",
+        "$-\\dfrac{11\\pi}{4} = -\\dfrac{3\\pi}{4} - \\dfrac{8\\pi}{4} = -\\dfrac{3\\pi}{4} - 2\\pi$ : mesure principale $-\\dfrac{3\\pi}{4}$.",
+        "On vérifie que $-\\dfrac{\\pi}{3}$ et $-\\dfrac{3\\pi}{4}$ sont bien dans $]-\\pi\\,;\\pi]$."
       ],
-      "reponse": "$x = \\dfrac{\\pi}{6} + 2k\\pi$ ou $x = -\\dfrac{\\pi}{6} + 2k\\pi$, $k \\in \\mathbb{Z}$."
+      "reponse": "$-\\dfrac{\\pi}{3}$ et $-\\dfrac{3\\pi}{4}$."
     },
     {
       "id": 30,
@@ -419,12 +422,14 @@
     {
       "id": 36,
       "difficulte": "intermediaire",
-      "notion": "fonction-sinusoidale",
-      "enonce": "Écrire l'expression $u(t) = A\\cos(\\omega t + \\varphi)$ d'une tension d'amplitude $10\\ \\mathrm{V}$, de fréquence $1\\ \\mathrm{kHz}$ et de phase à l'origine nulle.",
+      "notion": "mesure-principale",
+      "enonce": "Déterminer la mesure principale de l'angle orienté de mesure $3\\pi$, puis de celui de mesure $-\\pi$.",
       "corrige": [
-        "$A = 10$, $\\varphi = 0$ et $\\omega = 2\\pi f = 2\\pi \\times 1\\,000 = 2\\,000\\pi\\ \\mathrm{rad\\cdot s^{-1}}$."
+        "$3\\pi = \\pi + 2\\pi$ et $\\pi \\in\\, ]-\\pi\\,;\\pi]$ : mesure principale $\\pi$.",
+        "$-\\pi$ n'appartient pas à $]-\\pi\\,;\\pi]$ (l'intervalle est ouvert en $-\\pi$) ; or $-\\pi = \\pi - 2\\pi$ : mesure principale $\\pi$.",
+        "Les deux angles sont égaux : ce sont des angles plats."
       ],
-      "reponse": "$u(t) = 10\\cos(2\\,000\\pi\\,t)$."
+      "reponse": "$\\pi$ dans les deux cas."
     },
     {
       "id": 37,
@@ -439,14 +444,15 @@
     },
     {
       "id": 38,
-      "difficulte": "intermediaire",
-      "notion": "fonction-sinusoidale",
-      "enonce": "Soit $f(t) = 4\\cos\\left(\\dfrac{\\pi}{2}\\,t\\right)$. Calculer sa période, puis $f(0)$, $f(1)$ et $f(2)$.",
+      "difficulte": "approfondissement",
+      "notion": "mesure-principale",
+      "enonce": "Déterminer la mesure principale de l'angle orienté de mesure $\\dfrac{2\\,026\\pi}{3}$.",
       "corrige": [
-        "$\\omega = \\dfrac{\\pi}{2}$, donc $T = \\dfrac{2\\pi}{\\pi/2} = 4$.",
-        "$f(0) = 4\\cos 0 = 4$ ; $f(1) = 4\\cos\\dfrac{\\pi}{2} = 0$ ; $f(2) = 4\\cos\\pi = -4$."
+        "$2\\,026 = 3 \\times 675 + 1$, donc $\\dfrac{2\\,026\\pi}{3} = 675\\pi + \\dfrac{\\pi}{3}$.",
+        "$675\\pi = 674\\pi + \\pi = 337 \\times 2\\pi + \\pi$ : en retirant $337 \\times 2\\pi$, il reste $\\pi + \\dfrac{\\pi}{3} = \\dfrac{4\\pi}{3}$.",
+        "$\\dfrac{4\\pi}{3} > \\pi$ : on retire encore $2\\pi$, ce qui donne $\\dfrac{4\\pi}{3} - 2\\pi = -\\dfrac{2\\pi}{3}$, qui appartient à $]-\\pi\\,;\\pi]$."
       ],
-      "reponse": "$T = 4$ ; $f(0) = 4$, $f(1) = 0$, $f(2) = -4$."
+      "reponse": "$-\\dfrac{2\\pi}{3}$."
     },
     {
       "id": 39,

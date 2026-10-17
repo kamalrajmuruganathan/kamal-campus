@@ -17,15 +17,14 @@ relu_par: null
 # Les durées
 
 Une durée, c'est le **temps qui passe** entre un début et une fin : la durée d'un
-film, d'une récréation, d'un trajet. On la mesure en **heures**, **minutes** et
-**secondes**.
+film, d'une récréation, d'un trajet. En CM1, on la mesure surtout en **heures**
+et en **minutes** (les secondes viendront en CM2).
 
 ## Les unités de temps
 
 Il faut connaître ces égalités par cœur :
 
 - **1 heure = 60 minutes** (1 h = 60 min)
-- **1 minute = 60 secondes** (1 min = 60 s)
 - **1 jour = 24 heures**
 - **1 semaine = 7 jours**
 
@@ -91,4 +90,4 @@ Autre méthode, en avançant :
 - **Oublier de « passer l'heure ».** Après 59 min vient une nouvelle heure (pas
   60 min sur l'horloge).
 - **Confondre durée et heure.** 16 h 15 est un moment ; 1 h 45 min est une durée.
-- **Se tromper d'unité.** 1 min = 60 s, pas 100 s.
+- **Se tromper d'unité.** 1 h = 60 min, pas 100 min.

@@ -101,12 +101,12 @@ const OUTILS = [
     titre: 'Dilution',
     resume: 'c₁V₁ = c₂V₂ — laisse un champ vide',
     champs: [
-      { clef: 'c1', libelle: 'c₁ (mol·L⁻¹)', defaut: '0.5' },
+      { clef: 'c1', libelle: 'c₁ (g·L⁻¹ ou mol·L⁻¹)', defaut: '0.5' },
       { clef: 'v1', libelle: 'V₁ (mL) — vide pour le calculer', defaut: '' },
-      { clef: 'c2', libelle: 'c₂ (mol·L⁻¹)', defaut: '0.1' },
+      { clef: 'c2', libelle: 'c₂ (même unité que c₁)', defaut: '0.1' },
       { clef: 'v2', libelle: 'V₂ (mL)', defaut: '200' },
     ],
-    executer: (v) => dilution({ c1: v.c1, v1: v.v1, c2: v.c2, v2: v.v2, unite: 'mL' }),
+    executer: (v) => dilution({ c1: v.c1, v1: v.v1, c2: v.c2, v2: v.v2, unite: 'mL', uniteC: '' }),
   },
   {
     id: 'energie-cinetique',

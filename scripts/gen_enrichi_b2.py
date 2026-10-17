@@ -1324,12 +1324,12 @@ def gen_6_fractions():
         E.append((d, n, e, c, r))
 
     # vocabulaire / fraction d'une figure (6)
-    for a, b, obj in [(3, 8, "Une pizza"), (2, 5, "Une tablette de chocolat"), (5, 6, "Un gâteau")]:
+    for a, b, obj in [(3, 8, "Une pizza"), (2, 5, "Une tablette de chocolat")]:
         add("application", "vocabulaire",
             f"{obj} est partagé{'e' if obj.startswith('Une') else ''} en {b} parts égales. On en mange {a}. Quelle fraction a-t-on mangée ?",
             [f"Le dénominateur ({b}) dit en combien de parts égales on partage ; le numérateur ({a}) dit combien on en prend."],
             f"${fl2(a, b)}$")
-    for a, b in [(7, 9), (4, 11)]:
+    for a, b in [(7, 9)]:
         add("application", "vocabulaire", f"Dans la fraction ${fl2(a, b)}$, quel est le numérateur et quel est le dénominateur ?",
             [f"Le numérateur est en haut : ${a}$. Le dénominateur est en bas : ${b}$."], f"numérateur ${a}$, dénominateur ${b}$")
     add("intermediaire", "vocabulaire", "Écris en chiffres la fraction « trois quarts ».",
@@ -1338,7 +1338,7 @@ def gen_6_fractions():
     for a, b in [(3, 4), (7, 5), (2, 9)]:
         add("intermediaire", "quotient", f"Complète : ${b} \\times \\square = {a}$.",
             [f"Le nombre cherché est ${a} \\div {b}$, c'est-à-dire la fraction ${fl2(a, b)}$."], f"$\\square = {fl2(a, b)}$")
-    for a, b in [(12, 4), (18, 3), (35, 7)]:
+    for a, b in [(12, 4)]:
         add("application", "quotient", f"Quel nombre entier est égal à ${fl2(a, b)}$ ?",
             [f"${fl2(a, b)} = {a} \\div {b} = {a // b}$."], f"${a // b}$")
     add("intermediaire", "quotient", f"Écris le quotient $11 \\div 6$ sous forme de fraction.",
@@ -1346,7 +1346,7 @@ def gen_6_fractions():
     add("approfondissement", "quotient", f"La fraction ${fl2(1, 3)}$ est-elle un nombre décimal ?",
         ["$1 \\div 3 = 0{,}333\\ldots$ : la division ne s'arrête jamais.", "$\\dfrac{1}{3}$ n'est donc pas un nombre décimal."], "non")
     # fractions décimales (8)
-    fd = [(3, 10), (27, 100), (9, 1000), (45, 10), (305, 100), (7, 100)]
+    fd = [(3, 10), (27, 100), (9, 1000), (305, 100)]
     for a, b in fd:
         v = Fraction(a, b)
         z = len(str(b)) - 1
@@ -1357,7 +1357,7 @@ def gen_6_fractions():
         add("intermediaire", "fraction-decimale", f"Écris ${nm(Decimal(x))}$ sous forme de fraction décimale.",
             [f"${nm(Decimal(x))}$, c'est {a} {'dixièmes' if b == 10 else 'centièmes'}."], f"${fl2(a, b)}$")
     # fractions égales (8)
-    fe = [(1, 2, 4), (2, 3, 5), (3, 4, 3), (1, 5, 6), (5, 6, 2), (3, 7, 4)]
+    fe = [(1, 2, 4), (2, 3, 5), (3, 4, 3), (5, 6, 2)]
     for a, b, k in fe:
         add("intermediaire", "fractions-egales", f"Complète : ${fl2(a, b)} = \\dfrac{{\\ldots}}{{{b * k}}}$.",
             [f"On est passé de ${b}$ à ${b * k}$ en multipliant par ${k}$.", f"On multiplie aussi le numérateur : ${a} \\times {k} = {a * k}$."],
@@ -1368,12 +1368,12 @@ def gen_6_fractions():
         ["Faux : il faut MULTIPLIER (ou diviser) le haut et le bas par le même nombre, pas ajouter.",
          f"${fl2(1, 2)} = 0{{,}}5$ alors que ${fl2(2, 3)}$ est plus grand que $0{{,}}5$."], "faux")
     # comparer (8)
-    for a, c_, b in [(3, 5, 7), (8, 4, 9), (2, 9, 11)]:
+    for a, c_, b in [(3, 5, 7), (2, 9, 11)]:
         s_ = "<" if a < c_ else ">"
         add("application", "comparer", f"Compare ${fl2(a, b)}$ et ${fl2(c_, b)}$.",
             ["Même dénominateur : on compare les numérateurs.", f"${a} {s_} {c_}$ donc ${fl2(a, b)} {s_} {fl2(c_, b)}$."],
             f"${fl2(a, b)} {s_} {fl2(c_, b)}$")
-    for a, b in [(2, 7), (9, 4), (6, 6), (13, 10)]:
+    for a, b in [(2, 7), (9, 4), (6, 6)]:
         s_ = "<" if a < b else (">" if a > b else "=")
         add("intermediaire", "comparer", f"Compare ${fl2(a, b)}$ à $1$.",
             ["On compare le numérateur et le dénominateur.",
@@ -1383,24 +1383,66 @@ def gen_6_fractions():
         ["$1 = \\dfrac{8}{8}$. On compare les numérateurs : $3 < 7 < 8 < 11$."],
         f"${fl2(3, 8)} < {fl2(7, 8)} < 1 < {fl2(11, 8)}$")
     # fraction d'une quantité (8)
-    fq = [(1, 4, 20, "application"), (3, 4, 20, "application"), (2, 5, 35, "intermediaire"), (5, 6, 42, "intermediaire")]
+    fq = [(1, 4, 20, "application"), (3, 4, 20, "application"), (2, 5, 35, "intermediaire")]
     for a, b, q, d in fq:
         r = q * a // b
         add(d, "fraction-quantite", f"Calcule les ${fl2(a, b)}$ de ${q}$." if a > 1 else f"Calcule ${fl2(a, b)}$ de ${q}$ (le quart de ${q}$).",
             [f"On partage {q} en {b} : ${q} \\div {b} = {q // b}$.", f"On en prend {a} : ${a} \\times {q // b} = {r}$."], f"${r}$")
     pq = [("Dans une classe de 30 élèves, les $\\dfrac{2}{5}$ font du sport en club. Combien d'élèves font du sport en club ?", 2, 5, 30, "élèves"),
           ("Un livre a 120 pages. Léa en a lu les $\\dfrac{3}{4}$. Combien de pages a-t-elle lues ?", 3, 4, 120, "pages"),
-          ("Un réservoir de 60 L est rempli aux $\\dfrac{2}{3}$. Combien de litres contient-il ?", 2, 3, 60, "L"),
-          ("Un ruban de 90 cm : on en coupe les $\\dfrac{3}{10}$. Quelle longueur coupe-t-on ?", 3, 10, 90, "cm")]
+          ("Un réservoir de 60 L est rempli aux $\\dfrac{2}{3}$. Combien de litres contient-il ?", 2, 3, 60, "L")]
     for e, a, b, q, u in pq:
         r = q * a // b
         add("probleme", "fraction-quantite", e, [f"${q} \\div {b} = {q // b}$, puis ${a} \\times {q // b} = {r}$."], f"${r}$ {u}")
     # demi-droite (4)
-    for k, b in [(3, 4), (5, 3), (7, 10), (6, 5)]:
+    for k, b in [(3, 4), (5, 3)]:
         add("intermediaire", "demi-droite",
             f"Sur une demi-droite graduée, l'unité (de 0 à 1) est partagée en {b} parts égales. Un point est placé à {k} graduations de 0. Quel nombre repère-t-il ?",
             [f"Chaque graduation vaut ${fl2(1, b)}$.", f"{k} graduations : ${fl2(k, b)}$" + (f" (c'est plus que 1, car {k} > {b})." if k > b else ".")],
             f"${fl2(k, b)}$")
+    # additionner et soustraire (6) : même dénominateur, ou un dénominateur multiple de l'autre
+    for (a, b), (c, d), op, dif in [((2, 7), (3, 7), "+", "application"), ((9, 10), (4, 10), "-", "application"),
+                                    ((1, 3), (1, 6), "+", "intermediaire"), ((5, 8), (1, 4), "-", "intermediaire"),
+                                    ((3, 10), (2, 5), "+", "intermediaire")]:
+        m = max(b, d)
+        A, C = a * (m // b), c * (m // d)
+        n = A + C if op == "+" else A - C
+        res = Fraction(n, m)
+        cor = []
+        if b != d:
+            p_, q_ = ((c, d), C) if d < m else ((a, b), A)
+            cor.append(f"${m}$ est un multiple de ${p_[1]}$ : ${fl2(*p_)} = {fl2(q_, m)}$.")
+        else:
+            cor.append("Même dénominateur : on calcule avec les numérateurs et on garde le dénominateur.")
+        cor.append(f"${fl2(A, m)} {op} {fl2(C, m)} = {fl2(n, m)}$" + (f", c'est-à-dire ${fl2(res.numerator, res.denominator)}$." if res.denominator != m else "."))
+        add(dif, "additionner-soustraire", f"Calcule : ${fl2(a, b)} {op} {fl2(c, d)}$.", cor, f"${fl2(n, m)}$")
+    add("probleme", "additionner-soustraire",
+        f"Tom mange ${fl2(1, 4)}$ d'une tarte et sa sœur en mange ${fl2(3, 8)}$. Quelle fraction de la tarte ont-ils mangée à eux deux ?",
+        [f"$8$ est un multiple de $4$ : ${fl2(1, 4)} = {fl2(2, 8)}$.", f"${fl2(2, 8)} + {fl2(3, 8)} = {fl2(5, 8)}$."], f"${fl2(5, 8)}$ de la tarte")
+    # entier × fraction (3)
+    TIMES_ = " \\times "
+    for k, a, b, dif in [(7, 1, 4, "application"), (3, 2, 5, "application"), (4, 3, 10, "intermediaire")]:
+        add(dif, "entier-fois-fraction", f"Calcule : ${k} \\times {fl2(a, b)}$.",
+            [f"On multiplie le numérateur par ${k}$ et on garde le dénominateur : ${k} \\times {fl2(a, b)} = {fl2(str(k) + TIMES_ + str(a), b)}$.",
+             f"${k} \\times {fl2(a, b)} = {fl2(k * a, b)}$" + (f" (soit ${nm(Fraction(k * a, b), 1)}$)." if b == 10 else ".")],
+            f"${fl2(k * a, b)}$")
+    # pourcentages (5)
+    for p_, q, u, dif in [(50, 36, "", "application"), (25, 80, "", "application"), (10, 230, " €", "application"), (30, 60, " €", "intermediaire")]:
+        r = Fraction(p_ * q, 100)
+        assert r.denominator == 1
+        cor = [f"${p_}\\,\\% = {fl2(p_, 100)}$ : ${fl2(p_, 100)} \\times {q} = ({q} \\div 100) \\times {p_} = {nm(Fraction(q, 100))} \\times {p_} = {r}$."]
+        if p_ in (50, 25, 10):
+            cor.append({50: f"Plus simple : $50\\,\\%$, c'est la moitié : ${q} \\div 2 = {r}$.",
+                        25: f"Plus simple : $25\\,\\%$, c'est le quart : ${q} \\div 4 = {r}$.",
+                        10: f"Plus simple : $10\\,\\%$, c'est diviser par $10$ : ${q} \\div 10 = {r}$."}[p_])
+        else:
+            cor.append(f"Astuce : $10\\,\\%$ de ${q}$ font ${q // 10}$, donc $30\\,\\%$ font $3 \\times {q // 10} = {r}$.")
+        add(dif, "pourcentages", f"Calcule ${p_}\\,\\%$ de ${q}${u}.", cor, f"${r}${u}")
+    add("approfondissement", "pourcentages",
+        "Dans un club de $20$ enfants, $9$ ont moins de 10 ans. Quel pourcentage des enfants ont moins de 10 ans ?",
+        [f"La proportion est ${fl2(9, 20)}$. Pour l'écrire sur $100$, on multiplie le haut et le bas par $5$.",
+         f"${fl2(9, 20)} = {fl2('9' + TIMES_ + '5', '20' + TIMES_ + '5')} = {fl2(45, 100)} = 45\\,\\%$."],
+        "$45\\,\\%$")
     return _fin(E)
 
 
@@ -1751,28 +1793,28 @@ def gen_6_nombres():
 
     RG = {-1: "dixièmes", -2: "centièmes", -3: "millièmes", 0: "unités", 1: "dizaines", 2: "centaines", 3: "milliers"}
     # rangs (7)
-    for x, k in [("34.507", -2), ("8.193", -3), ("1206.45", 2), ("0.758", -1), ("52.064", -3), ("3071.9", 1), ("6.28", -2)]:
+    for x, k in [("34.507", -2), ("8.193", -3), ("1206.45", 2), ("0.758", -1), ("3071.9", 1)]:
         d_ = Decimal(x)
         q = (d_ * Decimal(10) ** (-k)).to_integral_value(rounding=ROUND_FLOOR) % 10
         add("application", "rangs", f"Dans ${nm(d_)}$, quel est le chiffre des {RG[k]} ?",
             ["Après la virgule : dixièmes, centièmes, millièmes. Avant : unités, dizaines, centaines…",
              f"Le chiffre des {RG[k]} est ${q}$."], f"${q}$")
     # écritures (7)
-    for x in ["4.107", "12.35", "0.09"]:
+    for x in ["4.107", "0.09"]:
         d_ = Decimal(x)
         z = _ndec(d_)
         n = int(d_ * 10**z)
         add("intermediaire", "ecritures", f"Écris ${nm(d_)}$ sous forme d'une fraction décimale.",
             [f"Il y a {pl(z, 'chiffre')} après la virgule : dénominateur ${nm(10**z)}$.",
              f"${nm(d_)} = {fl2(nm(n), nm(10**z))}$."], f"${fl2(nm(n), nm(10**z))}$")
-    for e_, v in [(r"4 + \dfrac{1}{10} + \dfrac{7}{1\,000}", "4.107"), (r"25 + \dfrac{3}{100}", "25.03"), (r"\dfrac{6}{10} + \dfrac{2}{100}", "0.62")]:
+    for e_, v in [(r"4 + \dfrac{1}{10} + \dfrac{7}{1\,000}", "4.107"), (r"25 + \dfrac{3}{100}", "25.03")]:
         add("intermediaire", "ecritures", f"Écris ${e_}$ sous forme d'un nombre à virgule.",
             ["Chaque fraction décimale donne un chiffre à son rang (dixièmes, centièmes, millièmes) ; on met 0 aux rangs vides."],
             f"${nm(Decimal(v))}$")
     add("approfondissement", "ecritures", r"Écris $\dfrac{3\,045}{100}$ sous forme d'un nombre mixte (un entier + une fraction inférieure à 1).",
         [r"$3\,045 = 30 \times 100 + 45$.", r"$\dfrac{3\,045}{100} = 30 + \dfrac{45}{100}$."], r"$30 + \dfrac{45}{100}$")
     # × ÷ 10, 100, 1000 (8)
-    md = [("3.72", "x", 100), ("0.045", "x", 1000), ("12.6", "x", 10), ("7", "x", 1000), ("45.6", "/", 100), ("3.2", "/", 1000), ("508", "/", 10), ("0.7", "/", 100)]
+    md = [("3.72", "x", 100), ("0.045", "x", 1000), ("7", "x", 1000), ("45.6", "/", 100), ("3.2", "/", 1000), ("0.7", "/", 100)]
     for x, op, p in md:
         d_ = Decimal(x)
         r = d_ * p if op == "x" else d_ / p
@@ -1783,7 +1825,7 @@ def gen_6_nombres():
             [f"Chaque chiffre prend une valeur ${nm(p)}$ fois plus {'grande' if op == 'x' else 'petite'} : il se décale de {pl(z, 'rang')} vers la {'gauche' if op == 'x' else 'droite'} (la virgule semble aller vers la {'droite' if op == 'x' else 'gauche'}).",
              f"${nm(d_)} {sy} {nm(p)} = {nm(r)}$."], f"${nm(r)}$")
     # comparer (7)
-    for a, b in [("3.5", "3.45"), ("2.7", "2.70"), ("0.08", "0.1"), ("12.305", "12.35"), ("5.009", "5.01")]:
+    for a, b in [("3.5", "3.45"), ("2.7", "2.70"), ("0.08", "0.1"), ("12.305", "12.35")]:
         da, db = Decimal(a), Decimal(b)
         s_ = "<" if da < db else (">" if da > db else "=")
         k = max(_ndec(da), _ndec(db), len(a.split(".")[1]), len(b.split(".")[1]))
@@ -1801,7 +1843,7 @@ def gen_6_nombres():
     add("approfondissement", "comparer", "Range dans l'ordre décroissant : " + " ; ".join(f"${nm(Decimal(x))}$" for x in L) + ".",
         ["On complète avec des zéros : " + ", ".join(f"${nm(Decimal(x), 3)}$" for x in L) + "."], "$" + " > ".join(nm(Decimal(x)) for x in R) + "$")
     # encadrer / intercaler (7)
-    for x, p in [("3.14", 1), ("7.86", 1), ("12.457", Decimal("0.1")), ("0.639", Decimal("0.1")), ("5.0381", Decimal("0.01"))]:
+    for x, p in [("3.14", 1), ("12.457", Decimal("0.1")), ("0.639", Decimal("0.1")), ("5.0381", Decimal("0.01"))]:
         d_ = Decimal(x)
         lo = (d_ / _dec(p)).to_integral_value(rounding=ROUND_FLOOR) * _dec(p)
         hi = lo + _dec(p)
@@ -1813,7 +1855,7 @@ def gen_6_nombres():
             [f"On ajoute un chiffre : ${nm(Decimal(a), _ndec(Decimal(m)))}$ et ${nm(Decimal(b), _ndec(Decimal(m)))}$ ; ${nm(Decimal(m))}$ est entre les deux."],
             f"par exemple ${nm(Decimal(m))}$")
     # arrondir (7)
-    for x, nd in [("3.146", 0), ("3.146", 1), ("3.146", 2), ("12.75", 1), ("8.5", 0), ("0.996", 2), ("27.349", 1)]:
+    for x, nd in [("3.146", 0), ("3.146", 1), ("3.146", 2), ("0.996", 2), ("27.349", 1)]:
         d_ = Decimal(x)
         r = d_.quantize(Decimal(1).scaleb(-nd), ROUND_HALF_UP)
         nom = ["à l'unité", "au dixième", "au centième"][nd]
@@ -1823,14 +1865,62 @@ def gen_6_nombres():
             [f"On regarde le chiffre des {suiv} : c'est ${ch}$, {'supérieur ou égal à 5 : on arrondit au-dessus' if ch >= 5 else 'inférieur à 5 : on arrondit en dessous (on garde ' + ['le chiffre des unités', 'le chiffre des dixièmes', 'le chiffre des centièmes'][nd] + ' sans le changer)'}.",
              f"${nm(d_)} \\approx {nm(r, nd)}$" + (f", soit ${nm(r)}$." if nm(r) != nm(r, nd) else ".")], f"${nm(r, nd)}$")
     # pourcentage (7)
-    for p in (35, 7, 50, 85):
+    for p in (35, 7, 85):
         v = Decimal(p) / 100
         add("intermediaire", "pourcentage", f"Écris {p} % sous forme d'une fraction puis d'un nombre décimal.",
             [f"${p}\\,\\% = \\dfrac{{{p}}}{{100}}$.", f"$\\dfrac{{{p}}}{{100}} = {p} \\div 100 = {nm(v)}$."], f"${fl2(p, 100)} = {nm(v)}$")
-    for x in ("0.25", "0.08", "0.6"):
+    for x in ("0.25", "0.08"):
         p = Decimal(x) * 100
         add("intermediaire", "pourcentage", f"Écris ${nm(Decimal(x))}$ sous forme d'un pourcentage.",
             [f"${nm(Decimal(x))} = \\dfrac{{{nm(p)}}}{{100}}$."], f"${nm(p)}\\,\\%$")
+    # opérations sur les décimaux (8)
+    for a, b, op in [("12.5", "3.75", "+"), ("8", "2.35", "-"), ("15.2", "7.86", "-")]:
+        da, db = Decimal(a), Decimal(b)
+        r = da + db if op == "+" else da - db
+        k = max(_ndec(da), _ndec(db))
+        add("application", "operations-decimaux", f"Pose et calcule : ${nm(da)} {op} {nm(db)}$.",
+            [f"On aligne les virgules (unités sous les unités, dixièmes sous les dixièmes…) en complétant avec des zéros : ${nm(da, k)} {op} {nm(db, k)}$.",
+             f"${nm(da)} {op} {nm(db)} = {nm(r)}$."], f"${nm(r)}$")
+    for a, b in [("2.4", "1.3"), ("0.6", "0.7")]:
+        da, db = Decimal(a), Decimal(b)
+        r = da * db
+        ia, ib = int(a.replace(".", "")), int(b.replace(".", ""))
+        k = _ndec(da) + _ndec(db)
+        add("intermediaire", "operations-decimaux", f"Calcule : ${nm(da)} {TIMES} {nm(db)}$.",
+            [f"On calcule sans les virgules : ${ia} {TIMES} {ib} = {ia * ib}$.",
+             f"Il y a {pl(k, 'chiffre')} après la virgule en tout dans les facteurs, donc ${nm(da)} {TIMES} {nm(db)} = {nm(r, k)}$" + (f", soit ${nm(r)}$." if nm(r) != nm(r, k) else ".")],
+            f"${nm(r)}$")
+    for a, b in [("8.4", 3), ("13", 4)]:
+        da = Decimal(a)
+        r = da / b
+        assert r * b == da
+        add("intermediaire", "operations-decimaux", f"Pose et calcule : ${nm(da)} {DIV} {b}$.",
+            ([f"On continue la division après la virgule en ajoutant des zéros : ${nm(da)} = {nm(da, 2)}$."] if _ndec(da) == 0 else
+             ["Quand on « descend » le chiffre des dixièmes, on place la virgule au quotient."]) +
+            [f"${nm(da)} {DIV} {b} = {nm(r)}$ (vérification : ${b} {TIMES} {nm(r)} = {nm(da)}$)."], f"${nm(r)}$")
+    add("approfondissement", "operations-decimaux",
+        f"Sans poser l'opération, trouve le résultat de ${nm(Decimal('4.9'))} {TIMES} {nm(Decimal('2.1'))}$ parmi : ${nm(Decimal('1.029'))}$ ; ${nm(Decimal('10.29'))}$ ; ${nm(Decimal('102.9'))}$.",
+        [f"Ordre de grandeur : ${nm(Decimal('4.9'))} {TIMES} {nm(Decimal('2.1'))}$ est proche de $5 {TIMES} 2 = 10$.",
+         f"Le seul résultat plausible est ${nm(Decimal('10.29'))}$ (en effet $49 {TIMES} 21 = 1\\,029$ et il faut 2 chiffres après la virgule)."],
+        f"${nm(Decimal('10.29'))}$")
+    # division euclidienne (4)
+    for a, b in [(83, 7), (125, 9)]:
+        q, r = divmod(a, b)
+        add("intermediaire", "division-euclidienne", f"Effectue la division euclidienne de ${a}$ par ${b}$ : donne le quotient et le reste.",
+            [f"${b} {TIMES} {q} = {b * q}$ et ${b} {TIMES} {q + 1} = {b * (q + 1)}$ : le quotient est ${q}$.",
+             f"Reste : ${a} - {b * q} = {r}$, et ${r} < {b}$. Donc ${a} = {b} {TIMES} {q} + {r}$."],
+            f"quotient ${q}$, reste ${r}$")
+    q, r = divmod(200, 15)
+    add("intermediaire", "division-euclidienne", f"Écris l'égalité de la division euclidienne de $200$ par $15$.",
+        [f"$15 {TIMES} {q} = {15 * q}$ et $15 {TIMES} {q + 1} = {15 * (q + 1)}$ : le quotient est ${q}$ et le reste $200 - {15 * q} = {r}$.",
+         f"On vérifie que le reste est plus petit que le diviseur : ${r} < 15$."],
+        f"$200 = 15 {TIMES} {q} + {r}$")
+    q, r = divmod(158, 50)
+    add("approfondissement", "division-euclidienne",
+        "Un collège emmène $158$ élèves en sortie. Chaque car a $50$ places. Combien de cars faut-il réserver ?",
+        [f"Division euclidienne : $158 = 50 {TIMES} {q} + {r}$.",
+         f"${q}$ cars ne suffisent pas : il reste ${r}$ élèves, il faut un car de plus."],
+        f"${q + 1}$ cars")
     return _fin(E)
 
 

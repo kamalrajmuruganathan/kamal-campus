@@ -14,31 +14,31 @@
       "id": 1,
       "difficulte": "application",
       "notion": "type-a",
-      "enonce": "On pèse cinq fois le même échantillon (masses en $\\mathrm{g}$) : $12{,}44$ ; $12{,}47$ ; $12{,}41$ ; $12{,}46$ ; $12{,}42$. La calculatrice indique un écart-type expérimental $s = 0{,}045\\ \\mathrm{g}$. Calcule la masse moyenne $\\bar{m}$, puis l'incertitude-type de type A $u(\\bar{m})$, et exprime le résultat sous la forme $(\\bar{m} \\pm u)$.",
+      "enonce": "On pèse cinq fois le même échantillon (masses en $\\mathrm{g}$) : $12{,}44$ ; $12{,}47$ ; $12{,}41$ ; $12{,}46$ ; $12{,}42$. La calculatrice indique un écart-type expérimental $s = 0{,}025\\ \\mathrm{g}$. Calcule la masse moyenne $\\bar{m}$, puis l'incertitude-type de type A $u(\\bar{m})$, et exprime le résultat sous la forme $(\\bar{m} \\pm u)$, avec $u$ arrondie à un chiffre significatif.",
       "corrige": [
         "Moyenne : $\\bar{m} = \\dfrac{12{,}44 + 12{,}47 + 12{,}41 + 12{,}46 + 12{,}42}{5} = \\dfrac{62{,}20}{5} = 12{,}44\\ \\mathrm{g}$.",
-        "Incertitude-type de type A sur la moyenne : $u(\\bar{m}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}045}{\\sqrt{5}} = 0{,}0201\\ \\mathrm{g}$ (on divise par $\\sqrt{5}$, pas par $5$).",
-        "On arrondit $u$ à $1$ chiffre significatif **par excès** ($0{,}0201 \\to 0{,}03\\ \\mathrm{g}$) et la valeur au même rang (le centième) : $\\bar{m} = 12{,}44\\ \\mathrm{g}$."
+        "Incertitude-type de type A sur la moyenne : $u(\\bar{m}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}025}{\\sqrt{5}} = 0{,}011\\ \\mathrm{g}$ (on divise par $\\sqrt{5}$, pas par $5$).",
+        "On arrondit $u$ au plus proche, à $1$ chiffre significatif ($0{,}011 \\to 0{,}01\\ \\mathrm{g}$) et la valeur au même rang (le centième) : $\\bar{m} = 12{,}44\\ \\mathrm{g}$."
       ],
-      "reponse": "$m = (12{,}44 \\pm 0{,}03)\\ \\mathrm{g}$."
+      "reponse": "$m = (12{,}44 \\pm 0{,}01)\\ \\mathrm{g}$."
     },
     {
       "id": 2,
       "difficulte": "application",
       "notion": "type-b",
-      "enonce": "On dispose de deux instruments de mesure de volume. (a) Une éprouvette graduée tous les $1\\ \\mathrm{mL}$, sur laquelle on lit $45\\ \\mathrm{mL}$. (b) Une fiole jaugée portant l'indication $100{,}0\\ \\mathrm{mL} \\pm 0{,}10\\ \\mathrm{mL}$. Pour chacune, calcule l'incertitude-type de type B ($u = \\text{graduation}/\\sqrt{3}$ ou $u = \\text{tolérance}/\\sqrt{3}$) et exprime la mesure.",
+      "enonce": "On dispose de deux instruments de mesure de volume. (a) Une éprouvette graduée tous les $1\\ \\mathrm{mL}$, sur laquelle on lit $45\\ \\mathrm{mL}$. (b) Une fiole jaugée portant l'indication $100{,}0\\ \\mathrm{mL} \\pm 0{,}10\\ \\mathrm{mL}$. Pour chacune, calcule l'incertitude-type de type B ($u = \\text{graduation}/\\sqrt{12}$ pour une lecture, $u = \\text{tolérance}/\\sqrt{3}$) et exprime la mesure (incertitude arrondie à un chiffre significatif).",
       "corrige": [
-        "Éprouvette — on utilise la graduation : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{1}{\\sqrt{3}} = 0{,}58 \\approx 0{,}6\\ \\mathrm{mL}$. La mesure s'écrit donc $V = (45{,}0 \\pm 0{,}6)\\ \\mathrm{mL}$.",
+        "Éprouvette — une lecture, demi-largeur d'une demi-graduation : $u = \\dfrac{\\text{graduation}}{\\sqrt{12}} = \\dfrac{1}{\\sqrt{12}} = 0{,}29 \\approx 0{,}3\\ \\mathrm{mL}$. La mesure s'écrit donc $V = (45{,}0 \\pm 0{,}3)\\ \\mathrm{mL}$.",
         "Fiole jaugée — on utilise la tolérance : $u = \\dfrac{\\text{tolérance}}{\\sqrt{3}} = \\dfrac{0{,}10}{\\sqrt{3}} = 0{,}058 \\approx 0{,}06\\ \\mathrm{mL}$. La mesure s'écrit $V = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$.",
         "On constate que la fiole jaugée est bien plus précise que l'éprouvette : c'est pour cela qu'on l'emploie pour préparer une solution de concentration connue."
       ],
-      "reponse": "Éprouvette : $u \\approx 0{,}6\\ \\mathrm{mL}$, soit $(45{,}0 \\pm 0{,}6)\\ \\mathrm{mL}$. Fiole : $u \\approx 0{,}06\\ \\mathrm{mL}$, soit $(100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$."
+      "reponse": "Éprouvette : $u \\approx 0{,}3\\ \\mathrm{mL}$, soit $(45{,}0 \\pm 0{,}3)\\ \\mathrm{mL}$. Fiole : $u \\approx 0{,}06\\ \\mathrm{mL}$, soit $(100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$."
     },
     {
       "id": 3,
       "difficulte": "intermediaire",
       "notion": "type-a",
-      "enonce": "Trois mesures d'une durée (en $\\mathrm{s}$) donnent : $8{,}1$ ; $8{,}7$ ; $8{,}4$. Sans utiliser le mode statistique de la calculatrice, calcule la moyenne, l'écart-type expérimental $s = \\sqrt{\\dfrac{1}{n-1}\\sum (x_i - \\bar{x})^2}$, puis l'incertitude-type $u(\\bar{t})$. Donne le résultat final correctement arrondi.",
+      "enonce": "Trois mesures d'une durée (en $\\mathrm{s}$) donnent : $8{,}1$ ; $8{,}7$ ; $8{,}4$. Sans utiliser le mode statistique de la calculatrice, calcule la moyenne, l'écart-type expérimental $s = \\sqrt{\\dfrac{1}{n-1}\\sum (x_i - \\bar{x})^2}$, puis l'incertitude-type $u(\\bar{t})$. Donne le résultat final correctement arrondi (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "Moyenne : $\\bar{t} = \\dfrac{8{,}1 + 8{,}7 + 8{,}4}{3} = \\dfrac{25{,}2}{3} = 8{,}40\\ \\mathrm{s}$.",
         "Écarts à la moyenne : $8{,}1 - 8{,}40 = -0{,}30$ ; $8{,}7 - 8{,}40 = +0{,}30$ ; $8{,}4 - 8{,}40 = 0$. Somme des carrés : $(-0{,}30)^2 + (0{,}30)^2 + 0^2 = 0{,}18$.",
@@ -51,7 +51,7 @@
       "id": 4,
       "difficulte": "intermediaire",
       "notion": "incertitude-composee",
-      "enonce": "On prépare une solution en dissolvant une masse $m = (2{,}50 \\pm 0{,}01)\\ \\mathrm{g}$ de soluté dans un volume $V = (0{,}250 \\pm 0{,}002)\\ \\mathrm{L}$ de solution. La concentration en masse est $c = \\dfrac{m}{V}$. Calcule $c$, son incertitude-type $u(c)$ (composition d'un quotient) et exprime le résultat.",
+      "enonce": "On prépare une solution en dissolvant une masse $m = (2{,}50 \\pm 0{,}01)\\ \\mathrm{g}$ de soluté dans un volume $V = (0{,}250 \\pm 0{,}002)\\ \\mathrm{L}$ de solution. La concentration en masse est $c = \\dfrac{m}{V}$. Calcule $c$, son incertitude-type $u(c)$ (composition d'un quotient) et exprime le résultat (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "Valeur : $c = \\dfrac{m}{V} = \\dfrac{2{,}50}{0{,}250} = 10{,}0\\ \\mathrm{g\\cdot L^{-1}}$.",
         "Pour un quotient, on combine les incertitudes **relatives** : $\\dfrac{u(m)}{m} = \\dfrac{0{,}01}{2{,}50} = 0{,}0040$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}002}{0{,}250} = 0{,}0080$.",
@@ -64,14 +64,14 @@
       "id": 5,
       "difficulte": "approfondissement",
       "notion": "incertitude-composee",
-      "enonce": "On détermine la masse volumique d'un petit cylindre métallique. On le pèse : $m = (34{,}60 \\pm 0{,}05)\\ \\mathrm{g}$. On mesure son volume par déplacement d'eau dans une éprouvette graduée tous les $1\\ \\mathrm{mL}$ : le niveau passe de $20\\ \\mathrm{mL}$ à $24\\ \\mathrm{mL}$. (a) Donne le volume $V$ et son incertitude-type (type B, $u = \\text{graduation}/\\sqrt{3}$ sur chaque lecture, à combiner). (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Exprime $\\rho$ correctement et commente la précision.",
+      "enonce": "On détermine la masse volumique d'un petit cylindre métallique. On le pèse : $m = (34{,}60 \\pm 0{,}05)\\ \\mathrm{g}$. On mesure son volume par déplacement d'eau dans une éprouvette graduée tous les $1\\ \\mathrm{mL}$ : le niveau passe de $20\\ \\mathrm{mL}$ à $24\\ \\mathrm{mL}$. (a) Donne le volume $V$ et son incertitude-type (type B, $u = \\text{graduation}/\\sqrt{12}$ sur chaque lecture, à combiner). (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Exprime $\\rho$ correctement (incertitude arrondie à un chiffre significatif) et commente la précision.",
       "corrige": [
-        "Volume : $V = 24 - 20 = 4\\ \\mathrm{mL}$. Chaque lecture a une incertitude $u = \\dfrac{1}{\\sqrt{3}} = 0{,}58\\ \\mathrm{mL}$ ; comme $V$ est une différence de deux lectures, on combine en quadrature : $u(V) = \\sqrt{0{,}58^2 + 0{,}58^2} = 0{,}82 \\approx 0{,}8\\ \\mathrm{mL}$.",
+        "Volume : $V = 24 - 20 = 4\\ \\mathrm{mL}$. Chaque lecture a une incertitude $u = \\dfrac{1}{\\sqrt{12}} = 0{,}29\\ \\mathrm{mL}$ ; comme $V$ est une différence de deux lectures, on combine en quadrature : $u(V) = \\sqrt{0{,}29^2 + 0{,}29^2} = 0{,}41\\ \\mathrm{mL}$, arrondie à $0{,}4\\ \\mathrm{mL}$.",
         "Masse volumique : $\\rho = \\dfrac{m}{V} = \\dfrac{34{,}60}{4} = 8{,}65\\ \\mathrm{g\\cdot mL^{-1}}$.",
-        "Incertitudes relatives : $\\dfrac{u(m)}{m} = \\dfrac{0{,}05}{34{,}60} = 0{,}0014$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}8}{4} = 0{,}20$. La quadrature donne $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0014^2 + 0{,}20^2} = 0{,}20$ : c'est le volume qui domine totalement l'incertitude.",
-        "Incertitude absolue : $u(\\rho) = 0{,}20 \\times 8{,}65 = 1{,}8 \\approx 2\\ \\mathrm{g\\cdot mL^{-1}}$. On arrondit la valeur au même rang (l'unité) : $\\rho \\approx 9\\ \\mathrm{g\\cdot mL^{-1}}$. Le résultat est très imprécis parce que le volume ($4\\ \\mathrm{mL}$ lu au $\\mathrm{mL}$ près) est mal connu ; une éprouvette plus fine ou une pesée du volume améliorerait beaucoup la précision."
+        "Incertitudes relatives : $\\dfrac{u(m)}{m} = \\dfrac{0{,}05}{34{,}60} = 0{,}0014$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}41}{4} = 0{,}10$. La quadrature donne $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0014^2 + 0{,}10^2} = 0{,}10$ : c'est le volume qui domine totalement l'incertitude.",
+        "Incertitude absolue : $u(\\rho) = 0{,}10 \\times 8{,}65 = 0{,}87$ (avec les valeurs non arrondies : $0{,}88$), arrondie à $0{,}9\\ \\mathrm{g\\cdot mL^{-1}}$. On arrondit la valeur au même rang (le dixième) : $\\rho \\approx 8{,}7\\ \\mathrm{g\\cdot mL^{-1}}$. Le résultat est très imprécis parce que le volume ($4\\ \\mathrm{mL}$ lu au $\\mathrm{mL}$ près) est mal connu ; une éprouvette plus fine ou une pesée du volume améliorerait beaucoup la précision."
       ],
-      "reponse": "$\\rho = (9 \\pm 2)\\ \\mathrm{g\\cdot mL^{-1}}$. La mesure du volume (incertitude relative $\\approx 20\\ \\%$) domine : c'est elle qu'il faut améliorer."
+      "reponse": "$\\rho = (8{,}7 \\pm 0{,}9)\\ \\mathrm{g\\cdot mL^{-1}}$. La mesure du volume (incertitude relative $\\approx 10\\ \\%$) domine : c'est elle qu'il faut améliorer."
     },
     {
       "id": 6,
@@ -92,7 +92,7 @@
       "notion": "expression-resultat",
       "enonce": "Un calcul d'incertitude, mené à la calculatrice, a fourni les valeurs **brutes** suivantes pour une concentration : $c = 0{,}047835\\ \\mathrm{mol\\cdot L^{-1}}$ et $u(c) = 0{,}002714\\ \\mathrm{mol\\cdot L^{-1}}$. Exprime ce résultat correctement (arrondi de l'incertitude, puis de la valeur, avec l'unité), et indique entre quelles bornes se situe très probablement la concentration.",
       "corrige": [
-        "On arrondit **d'abord l'incertitude**, à $1$ chiffre significatif et **par excès** (pour ne pas sous-estimer le doute) : $u(c) = 0{,}002714 \\to 0{,}003\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "On arrondit **d'abord l'incertitude**, au plus proche, à $1$ chiffre significatif : $u(c) = 0{,}002714 \\to 0{,}003\\ \\mathrm{mol\\cdot L^{-1}}$.",
         "On arrondit **ensuite la valeur** au **même rang** que l'incertitude (le millième) : $c = 0{,}047835 \\to 0{,}048\\ \\mathrm{mol\\cdot L^{-1}}$.",
         "On écrit le résultat avec l'unité **hors parenthèses** : $c = (0{,}048 \\pm 0{,}003)\\ \\mathrm{mol\\cdot L^{-1}}$. Cela signifie que la valeur vraie est très probablement comprise entre $0{,}045$ et $0{,}051\\ \\mathrm{mol\\cdot L^{-1}}$."
       ],
@@ -102,42 +102,42 @@
       "id": 8,
       "difficulte": "intermediaire",
       "notion": "type-b",
-      "enonce": "Lors d'un titrage, on lit le niveau d'une burette graduée tous les $0{,}1\\ \\mathrm{mL}$ **avant** puis **après** l'écoulement : lecture initiale $1{,}50\\ \\mathrm{mL}$, lecture finale $15{,}80\\ \\mathrm{mL}$. Le volume versé est $V = V_{\\text{finale}} - V_{\\text{initiale}}$. (a) Calcule l'incertitude-type de type B sur **une** lecture. (b) Le volume versé étant une **différence** de deux lectures, calcule $u(V)$. (c) Exprime le volume versé.",
+      "enonce": "Lors d'un titrage, on lit le niveau d'une burette graduée tous les $0{,}1\\ \\mathrm{mL}$ **avant** puis **après** l'écoulement : lecture initiale $1{,}50\\ \\mathrm{mL}$, lecture finale $15{,}80\\ \\mathrm{mL}$. Le volume versé est $V = V_{\\text{finale}} - V_{\\text{initiale}}$. (a) Calcule l'incertitude-type de type B sur **une** lecture. (b) Le volume versé étant une **différence** de deux lectures, calcule $u(V)$. (c) Exprime le volume versé (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "Volume versé : $V = 15{,}80 - 1{,}50 = 14{,}30\\ \\mathrm{mL}$.",
-        "Incertitude de type B sur **chaque** lecture (graduation $0{,}1\\ \\mathrm{mL}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{0{,}1}{\\sqrt{3}} = 0{,}058\\ \\mathrm{mL}$.",
-        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}058^2 + 0{,}058^2} = 0{,}058\\times\\sqrt{2} = 0{,}082\\ \\mathrm{mL}$.",
-        "On arrondit $u$ à $1$ c.s. **par excès** ($0{,}09\\ \\mathrm{mL}$) et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}09)\\ \\mathrm{mL}$."
+        "Incertitude de type B sur **chaque** lecture (graduation $0{,}1\\ \\mathrm{mL}$, demi-largeur $0{,}05\\ \\mathrm{mL}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{12}} = \\dfrac{0{,}1}{\\sqrt{12}} = 0{,}029\\ \\mathrm{mL}$.",
+        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}029^2 + 0{,}029^2} = 0{,}029\\times\\sqrt{2} = 0{,}041\\ \\mathrm{mL}$.",
+        "On arrondit $u$ au plus proche, à $1$ c.s. ($0{,}04\\ \\mathrm{mL}$), et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}04)\\ \\mathrm{mL}$."
       ],
-      "reponse": "$u$ sur une lecture $= 0{,}058\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}09)\\ \\mathrm{mL}$."
+      "reponse": "$u$ sur une lecture $= 0{,}029\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}04)\\ \\mathrm{mL}$."
     },
     {
       "id": 9,
       "difficulte": "approfondissement",
       "notion": "incertitude-composee",
-      "enonce": "On mesure la masse volumique d'un liquide. On pèse une fiole vide : $m_1 = (32{,}15 \\pm 0{,}01)\\ \\mathrm{g}$, puis la même fiole contenant un volume $V = (50{,}00 \\pm 0{,}04)\\ \\mathrm{mL}$ de ce liquide (prélevé à la pipette jaugée) : $m_2 = (72{,}65 \\pm 0{,}01)\\ \\mathrm{g}$. (a) Détermine la masse $m$ de liquide et son incertitude $u(m)$. (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Calcule $u(\\rho)$ et indique quelle mesure limite la précision. (d) Exprime $\\rho$.",
+      "enonce": "On mesure la masse volumique d'un liquide. On pèse une fiole vide : $m_1 = (32{,}15 \\pm 0{,}01)\\ \\mathrm{g}$, puis la même fiole contenant un volume $V = (50{,}00 \\pm 0{,}04)\\ \\mathrm{mL}$ de ce liquide (prélevé à la pipette jaugée) : $m_2 = (72{,}65 \\pm 0{,}01)\\ \\mathrm{g}$. (a) Détermine la masse $m$ de liquide et son incertitude $u(m)$. (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Calcule $u(\\rho)$ et indique quelle mesure limite la précision. (d) Exprime $\\rho$ (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "Masse de liquide, par **différence** de deux pesées : $m = m_2 - m_1 = 72{,}65 - 32{,}15 = 40{,}50\\ \\mathrm{g}$. Différence $\\Rightarrow$ on combine les incertitudes **absolues** : $u(m) = \\sqrt{0{,}01^2 + 0{,}01^2} = 0{,}014\\ \\mathrm{g}$.",
         "Masse volumique : $\\rho = \\dfrac{m}{V} = \\dfrac{40{,}50}{50{,}00} = 0{,}8100\\ \\mathrm{g\\cdot mL^{-1}}$.",
         "$\\rho$ est un **quotient** : on combine les incertitudes **relatives**. $\\dfrac{u(m)}{m} = \\dfrac{0{,}014}{40{,}50} = 0{,}00035$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}04}{50{,}00} = 0{,}00080$ : c'est le **volume** qui contribue le plus (la pesée par différence est ici très précise).",
-        "$\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}00035^2 + 0{,}00080^2} = 0{,}00087$, donc $u(\\rho) = 0{,}00087 \\times 0{,}8100 = 0{,}00071\\ \\mathrm{g\\cdot mL^{-1}}$, arrondie à $1$ c.s. **par excès** : $0{,}0008\\ \\mathrm{g\\cdot mL^{-1}}$.",
-        "On arrondit la valeur au même rang que $u$ (le dix-millième) : $\\rho = (0{,}8100 \\pm 0{,}0008)\\ \\mathrm{g\\cdot mL^{-1}}$. Pour gagner encore en précision, il faudrait surtout mieux connaître le **volume** (verrerie plus précise)."
+        "$\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}00035^2 + 0{,}00080^2} = 0{,}00087$, donc $u(\\rho) = 0{,}00087 \\times 0{,}8100 = 0{,}00071\\ \\mathrm{g\\cdot mL^{-1}}$, arrondie au plus proche à $1$ c.s. : $0{,}0007\\ \\mathrm{g\\cdot mL^{-1}}$.",
+        "On arrondit la valeur au même rang que $u$ (le dix-millième) : $\\rho = (0{,}8100 \\pm 0{,}0007)\\ \\mathrm{g\\cdot mL^{-1}}$. Pour gagner encore en précision, il faudrait surtout mieux connaître le **volume** (verrerie plus précise)."
       ],
-      "reponse": "$m = 40{,}50\\ \\mathrm{g}$ ($u(m) = 0{,}014\\ \\mathrm{g}$) ; $\\rho = (0{,}8100 \\pm 0{,}0008)\\ \\mathrm{g\\cdot mL^{-1}}$. C'est l'incertitude sur le **volume** qui domine."
+      "reponse": "$m = 40{,}50\\ \\mathrm{g}$ ($u(m) = 0{,}014\\ \\mathrm{g}$) ; $\\rho = (0{,}8100 \\pm 0{,}0007)\\ \\mathrm{g\\cdot mL^{-1}}$. C'est l'incertitude sur le **volume** qui domine."
     },
     {
       "id": 10,
       "difficulte": "probleme",
       "notion": "synthese",
-      "enonce": "**Contrôle de la concentration d'une solution d'acide chlorhydrique.**\n\nAu laboratoire, on veut vérifier la concentration $c_A$ d'une solution d'acide chlorhydrique. On prélève un volume $V_A = 10{,}00\\ \\mathrm{mL}$ de cette solution à la **pipette jaugée** (tolérance annoncée $\\pm 0{,}02\\ \\mathrm{mL}$) et on le dose par une solution de soude de concentration $C_B = (0{,}100 \\pm 0{,}001)\\ \\mathrm{mol\\cdot L^{-1}}$. On répète le titrage $4$ fois ; les volumes de soude versés à l'équivalence (en $\\mathrm{mL}$) sont : $11{,}4$ ; $11{,}6$ ; $11{,}5$ ; $11{,}5$. À l'équivalence, $c_A = \\dfrac{C_B \\times \\bar{V_E}}{V_A}$.\n\n1. Calcule l'incertitude-type de type B sur le volume prélevé $V_A$.\n2. Calcule le volume équivalent moyen $\\bar{V_E}$ et l'incertitude-type de type A $u(\\bar{V_E})$ (calcule l'écart-type expérimental à la main).\n3. Calcule la valeur de la concentration $c_A$.\n4. Calcule l'incertitude-type composée $u(c_A)$ et indique quelle grandeur limite la précision.\n5. Exprime le résultat final, puis conclus sur la façon d'améliorer la précision.",
+      "enonce": "**Contrôle de la concentration d'une solution d'acide chlorhydrique.**\n\nAu laboratoire, on veut vérifier la concentration $c_A$ d'une solution d'acide chlorhydrique. On prélève un volume $V_A = 10{,}00\\ \\mathrm{mL}$ de cette solution à la **pipette jaugée** (tolérance annoncée $\\pm 0{,}02\\ \\mathrm{mL}$) et on le dose par une solution de soude de concentration $C_B = (0{,}100 \\pm 0{,}001)\\ \\mathrm{mol\\cdot L^{-1}}$. On répète le titrage $4$ fois ; les volumes de soude versés à l'équivalence (en $\\mathrm{mL}$) sont : $11{,}4$ ; $11{,}6$ ; $11{,}5$ ; $11{,}5$. À l'équivalence, $c_A = \\dfrac{C_B \\times \\bar{V_E}}{V_A}$.\n\n1. Calcule l'incertitude-type de type B sur le volume prélevé $V_A$.\n2. Calcule le volume équivalent moyen $\\bar{V_E}$ et l'incertitude-type de type A $u(\\bar{V_E})$ (calcule l'écart-type expérimental à la main).\n3. Calcule la valeur de la concentration $c_A$.\n4. Calcule l'incertitude-type composée $u(c_A)$ et indique quelle grandeur limite la précision.\n5. Exprime le résultat final (incertitude arrondie à un chiffre significatif), puis conclus sur la façon d'améliorer la précision.",
       "corrige": [
         "1. Type B, à partir de la **tolérance** de la pipette jaugée : $u(V_A) = \\dfrac{\\text{tolérance}}{\\sqrt{3}} = \\dfrac{0{,}02}{\\sqrt{3}} = 0{,}012\\ \\mathrm{mL}$.",
         "2. Moyenne : $\\bar{V_E} = \\dfrac{11{,}4 + 11{,}6 + 11{,}5 + 11{,}5}{4} = \\dfrac{46{,}0}{4} = 11{,}50\\ \\mathrm{mL}$. Écarts à la moyenne : $-0{,}1$ ; $+0{,}1$ ; $0$ ; $0$, d'où $\\sum (V_i - \\bar{V_E})^2 = 0{,}02$. Écart-type expérimental (division par $n-1 = 3$) : $s = \\sqrt{\\dfrac{0{,}02}{3}} = 0{,}082\\ \\mathrm{mL}$. Incertitude de type A : $u(\\bar{V_E}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}082}{\\sqrt{4}} = 0{,}041\\ \\mathrm{mL}$.",
         "3. Concentration : $c_A = \\dfrac{C_B \\times \\bar{V_E}}{V_A} = \\dfrac{0{,}100 \\times 11{,}50}{10{,}00} = 0{,}1150\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "4. $c_A$ résulte d'un **produit/quotient** : on combine les incertitudes **relatives**. $\\dfrac{u(C_B)}{C_B} = \\dfrac{0{,}001}{0{,}100} = 0{,}0100$ ; $\\dfrac{u(\\bar{V_E})}{\\bar{V_E}} = \\dfrac{0{,}041}{11{,}50} = 0{,}0036$ ; $\\dfrac{u(V_A)}{V_A} = \\dfrac{0{,}012}{10{,}00} = 0{,}0012$. En quadrature : $\\dfrac{u(c_A)}{c_A} = \\sqrt{0{,}0100^2 + 0{,}0036^2 + 0{,}0012^2} = 0{,}0107$. C'est de loin la **concentration de la soude** $C_B$ qui domine (contribution relative $0{,}0100$, contre $0{,}0036$ et $0{,}0012$). Incertitude absolue : $u(c_A) = 0{,}0107 \\times 0{,}1150 = 0{,}0012 \\approx 0{,}002\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "5. On arrondit $u$ à $1$ c.s. par excès ($0{,}002\\ \\mathrm{mol\\cdot L^{-1}}$) et la valeur au même rang (le millième) : $c_A = (0{,}115 \\pm 0{,}002)\\ \\mathrm{mol\\cdot L^{-1}}$. Puisque c'est l'incertitude sur $C_B$ qui limite le résultat, **répéter encore le titrage n'améliorerait presque rien** (cela ne réduit que le terme de type A, déjà négligeable) : il faudrait d'abord disposer d'une solution de soude **mieux étalonnée** (plus petit $u(C_B)$)."
+        "4. $c_A$ résulte d'un **produit/quotient** : on combine les incertitudes **relatives**. $\\dfrac{u(C_B)}{C_B} = \\dfrac{0{,}001}{0{,}100} = 0{,}0100$ ; $\\dfrac{u(\\bar{V_E})}{\\bar{V_E}} = \\dfrac{0{,}041}{11{,}50} = 0{,}0036$ ; $\\dfrac{u(V_A)}{V_A} = \\dfrac{0{,}012}{10{,}00} = 0{,}0012$. En quadrature : $\\dfrac{u(c_A)}{c_A} = \\sqrt{0{,}0100^2 + 0{,}0036^2 + 0{,}0012^2} = 0{,}0107$. C'est de loin la **concentration de la soude** $C_B$ qui domine (contribution relative $0{,}0100$, contre $0{,}0036$ et $0{,}0012$). Incertitude absolue : $u(c_A) = 0{,}0107 \\times 0{,}1150 = 0{,}0012 \\approx 0{,}001\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "5. On arrondit $u$ au plus proche, à $1$ c.s. ($0{,}001\\ \\mathrm{mol\\cdot L^{-1}}$), et la valeur au même rang (le millième) : $c_A = (0{,}115 \\pm 0{,}001)\\ \\mathrm{mol\\cdot L^{-1}}$. Puisque c'est l'incertitude sur $C_B$ qui limite le résultat, **répéter encore le titrage n'améliorerait presque rien** (cela ne réduit que le terme de type A, déjà négligeable) : il faudrait d'abord disposer d'une solution de soude **mieux étalonnée** (plus petit $u(C_B)$)."
       ],
-      "reponse": "$u(V_A) = 0{,}012\\ \\mathrm{mL}$ ; $\\bar{V_E} = 11{,}50\\ \\mathrm{mL}$ avec $u(\\bar{V_E}) = 0{,}041\\ \\mathrm{mL}$ ; $c_A = (0{,}115 \\pm 0{,}002)\\ \\mathrm{mol\\cdot L^{-1}}$. La précision est limitée par l'incertitude sur la soude $C_B$ : c'est elle qu'il faut réduire, pas le nombre de titrages."
+      "reponse": "$u(V_A) = 0{,}012\\ \\mathrm{mL}$ ; $\\bar{V_E} = 11{,}50\\ \\mathrm{mL}$ avec $u(\\bar{V_E}) = 0{,}041\\ \\mathrm{mL}$ ; $c_A = (0{,}115 \\pm 0{,}001)\\ \\mathrm{mol\\cdot L^{-1}}$. La précision est limitée par l'incertitude sur la soude $C_B$ : c'est elle qu'il faut réduire, pas le nombre de titrages."
     },
     {
       "id": 11,
@@ -187,30 +187,30 @@
       "id": 15,
       "difficulte": "application",
       "notion": "type-a",
-      "enonce": "Quatre titrages donnent des volumes équivalents (en $\\mathrm{mL}$) : $12{,}45$ ; $12{,}50$ ; $12{,}40$ ; $12{,}45$. La calculatrice donne $s = 0{,}041\\ \\mathrm{mL}$. Calcule la moyenne, l'incertitude-type de type A et écris le résultat.",
+      "enonce": "Quatre titrages donnent des volumes équivalents (en $\\mathrm{mL}$) : $12{,}45$ ; $12{,}50$ ; $12{,}40$ ; $12{,}45$. La calculatrice donne $s = 0{,}041\\ \\mathrm{mL}$. Calcule la moyenne, l'incertitude-type de type A (arrondie à un chiffre significatif) et écris le résultat.",
       "corrige": [
         "$\\bar{V} = \\dfrac{12{,}45 + 12{,}50 + 12{,}40 + 12{,}45}{4} = \\dfrac{49{,}80}{4} = 12{,}45\\ \\mathrm{mL}$.",
-        "$u(\\bar{V}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}041}{\\sqrt{4}} \\approx 0{,}021\\ \\mathrm{mL}$, arrondie à $1$ chiffre significatif par excès : $0{,}03\\ \\mathrm{mL}$.",
-        "$V_E = (12{,}45 \\pm 0{,}03)\\ \\mathrm{mL}$."
+        "$u(\\bar{V}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}041}{\\sqrt{4}} \\approx 0{,}021\\ \\mathrm{mL}$, arrondie au plus proche à $1$ chiffre significatif : $0{,}02\\ \\mathrm{mL}$.",
+        "$V_E = (12{,}45 \\pm 0{,}02)\\ \\mathrm{mL}$."
       ],
-      "reponse": "$V_E = (12{,}45 \\pm 0{,}03)\\ \\mathrm{mL}$."
+      "reponse": "$V_E = (12{,}45 \\pm 0{,}02)\\ \\mathrm{mL}$."
     },
     {
       "id": 16,
       "difficulte": "application",
       "notion": "type-b",
-      "enonce": "Un thermomètre à alcool est gradué tous les $0{,}5\\ \\mathrm{°C}$. On lit $21{,}5\\ \\mathrm{°C}$. Calcule l'incertitude-type et écris la mesure.",
+      "enonce": "Un thermomètre à alcool est gradué tous les $0{,}5\\ \\mathrm{°C}$. On lit $21{,}5\\ \\mathrm{°C}$. Calcule l'incertitude-type (arrondie à un chiffre significatif) et écris la mesure.",
       "corrige": [
-        "Une seule lecture : incertitude de type B, $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{0{,}5}{\\sqrt{3}} \\approx 0{,}29\\ \\mathrm{°C}$.",
-        "Arrondie à $1$ chiffre significatif par excès : $u = 0{,}3\\ \\mathrm{°C}$, d'où $\\theta = (21{,}5 \\pm 0{,}3)\\ \\mathrm{°C}$."
+        "Une seule lecture : incertitude de type B, de demi-largeur une demi-graduation ($0{,}25\\ \\mathrm{°C}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{12}} = \\dfrac{0{,}5}{\\sqrt{12}} \\approx 0{,}14\\ \\mathrm{°C}$.",
+        "Arrondie au plus proche à $1$ chiffre significatif : $u = 0{,}1\\ \\mathrm{°C}$, d'où $\\theta = (21{,}5 \\pm 0{,}1)\\ \\mathrm{°C}$."
       ],
-      "reponse": "$\\theta = (21{,}5 \\pm 0{,}3)\\ \\mathrm{°C}$."
+      "reponse": "$\\theta = (21{,}5 \\pm 0{,}1)\\ \\mathrm{°C}$."
     },
     {
       "id": 17,
       "difficulte": "application",
       "notion": "type-b",
-      "enonce": "La notice d'un voltmètre annonce une tolérance de $\\pm 0{,}05\\ \\mathrm{V}$ sur le calibre utilisé. Il affiche $4{,}52\\ \\mathrm{V}$. Calcule l'incertitude-type et écris la mesure.",
+      "enonce": "La notice d'un voltmètre annonce une tolérance de $\\pm 0{,}05\\ \\mathrm{V}$ sur le calibre utilisé. Il affiche $4{,}52\\ \\mathrm{V}$. Calcule l'incertitude-type et écris la mesure (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "$u = \\dfrac{\\text{tolérance}}{\\sqrt{3}} = \\dfrac{0{,}05}{\\sqrt{3}} \\approx 0{,}029\\ \\mathrm{V}$, soit $0{,}03\\ \\mathrm{V}$.",
         "$U = (4{,}52 \\pm 0{,}03)\\ \\mathrm{V}$."
@@ -221,7 +221,7 @@
       "id": 18,
       "difficulte": "application",
       "notion": "incertitude-composee",
-      "enonce": "On réunit deux échantillons : $m_1 = (12{,}40 \\pm 0{,}02)\\ \\mathrm{g}$ et $m_2 = (7{,}85 \\pm 0{,}02)\\ \\mathrm{g}$. Calcule la masse totale et son incertitude.",
+      "enonce": "On réunit deux échantillons : $m_1 = (12{,}40 \\pm 0{,}02)\\ \\mathrm{g}$ et $m_2 = (7{,}85 \\pm 0{,}02)\\ \\mathrm{g}$. Calcule la masse totale et son incertitude (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "Pour une somme, on combine les incertitudes absolues en quadrature : $u(m) = \\sqrt{0{,}02^{2} + 0{,}02^{2}} \\approx 0{,}028\\ \\mathrm{g}$.",
         "$m = 12{,}40 + 7{,}85 = 20{,}25\\ \\mathrm{g}$ ; avec $u$ arrondie à $0{,}03\\ \\mathrm{g}$ : $m = (20{,}25 \\pm 0{,}03)\\ \\mathrm{g}$."
@@ -243,12 +243,12 @@
       "id": 20,
       "difficulte": "application",
       "notion": "expression-resultat",
-      "enonce": "Un calcul donne $g = 9{,}8147\\ \\mathrm{m\\cdot s^{-2}}$ et $u(g) = 0{,}0523\\ \\mathrm{m\\cdot s^{-2}}$. Écris le résultat correctement.",
+      "enonce": "Un calcul donne $g = 9{,}8147\\ \\mathrm{m\\cdot s^{-2}}$ et $u(g) = 0{,}0523\\ \\mathrm{m\\cdot s^{-2}}$. Écris le résultat correctement (incertitude arrondie à un chiffre significatif).",
       "corrige": [
-        "On arrondit d'abord l'incertitude à $1$ chiffre significatif, par excès : $u = 0{,}06\\ \\mathrm{m\\cdot s^{-2}}$.",
-        "On arrondit la valeur au même rang (le centième) : $9{,}81$. Résultat : $g = (9{,}81 \\pm 0{,}06)\\ \\mathrm{m\\cdot s^{-2}}$."
+        "On arrondit d'abord l'incertitude au plus proche, à $1$ chiffre significatif : $u = 0{,}05\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "On arrondit la valeur au même rang (le centième) : $9{,}81$. Résultat : $g = (9{,}81 \\pm 0{,}05)\\ \\mathrm{m\\cdot s^{-2}}$."
       ],
-      "reponse": "$g = (9{,}81 \\pm 0{,}06)\\ \\mathrm{m\\cdot s^{-2}}$."
+      "reponse": "$g = (9{,}81 \\pm 0{,}05)\\ \\mathrm{m\\cdot s^{-2}}$."
     },
     {
       "id": 21,
@@ -287,7 +287,7 @@
       "id": 24,
       "difficulte": "intermediaire",
       "notion": "type-a",
-      "enonce": "Quatre mesures d'un volume (en $\\mathrm{mL}$) : $9{,}4$ ; $10{,}2$ ; $9{,}8$ ; $10{,}6$. Sans le mode statistique de la calculatrice, calcule la moyenne, l'écart-type $s$ (en $n-1$), puis $u(\\bar{V})$, et écris le résultat.",
+      "enonce": "Quatre mesures d'un volume (en $\\mathrm{mL}$) : $9{,}4$ ; $10{,}2$ ; $9{,}8$ ; $10{,}6$. Sans le mode statistique de la calculatrice, calcule la moyenne, l'écart-type $s$ (en $n-1$), puis $u(\\bar{V})$, et écris le résultat (incertitude arrondie à un chiffre significatif).",
       "corrige": [
         "$\\bar{V} = \\dfrac{40{,}0}{4} = 10{,}0\\ \\mathrm{mL}$. Écarts : $-0{,}6$ ; $+0{,}2$ ; $-0{,}2$ ; $+0{,}6$, de carrés $0{,}36$ ; $0{,}04$ ; $0{,}04$ ; $0{,}36$ (somme $0{,}80$).",
         "$s = \\sqrt{\\dfrac{0{,}80}{3}} \\approx 0{,}52\\ \\mathrm{mL}$.",
@@ -313,10 +313,10 @@
       "enonce": "Pour prélever $10\\ \\mathrm{mL}$, on compare une pipette jaugée (tolérance $\\pm 0{,}02\\ \\mathrm{mL}$) et une éprouvette graduée tous les $0{,}2\\ \\mathrm{mL}$. Calcule l'incertitude-type de chacune. Laquelle choisir pour une solution étalon ?",
       "corrige": [
         "Pipette : $u = \\dfrac{0{,}02}{\\sqrt{3}} \\approx 0{,}012\\ \\mathrm{mL}$.",
-        "Éprouvette : $u = \\dfrac{0{,}2}{\\sqrt{3}} \\approx 0{,}12\\ \\mathrm{mL}$, soit $10$ fois plus.",
+        "Éprouvette (une lecture) : $u = \\dfrac{0{,}2}{\\sqrt{12}} \\approx 0{,}058\\ \\mathrm{mL}$, soit environ $5$ fois plus.",
         "Pour une solution étalon, on choisit la pipette jaugée."
       ],
-      "reponse": "Pipette : $0{,}012\\ \\mathrm{mL}$ ; éprouvette : $0{,}12\\ \\mathrm{mL}$ ; la pipette jaugée."
+      "reponse": "Pipette : $0{,}012\\ \\mathrm{mL}$ ; éprouvette : $0{,}058\\ \\mathrm{mL}$ ; la pipette jaugée."
     },
     {
       "id": 27,
@@ -334,25 +334,25 @@
       "id": 28,
       "difficulte": "intermediaire",
       "notion": "incertitude-composee",
-      "enonce": "On mesure l'élévation de température d'un liquide : $\\theta_1 = (18{,}4 \\pm 0{,}3)\\ \\mathrm{°C}$ puis $\\theta_2 = (25{,}9 \\pm 0{,}3)\\ \\mathrm{°C}$. Calcule $\\Delta\\theta = \\theta_2 - \\theta_1$ et son incertitude.",
+      "enonce": "On mesure l'élévation de température d'un liquide : $\\theta_1 = (18{,}4 \\pm 0{,}3)\\ \\mathrm{°C}$ puis $\\theta_2 = (25{,}9 \\pm 0{,}3)\\ \\mathrm{°C}$. Calcule $\\Delta\\theta = \\theta_2 - \\theta_1$ et son incertitude (arrondie à un chiffre significatif).",
       "corrige": [
         "$\\Delta\\theta = 25{,}9 - 18{,}4 = 7{,}5\\ \\mathrm{°C}$.",
-        "Pour une différence, $u(\\Delta\\theta) = \\sqrt{0{,}3^{2} + 0{,}3^{2}} \\approx 0{,}42\\ \\mathrm{°C}$, arrondie à $0{,}5\\ \\mathrm{°C}$ (par excès).",
-        "$\\Delta\\theta = (7{,}5 \\pm 0{,}5)\\ \\mathrm{°C}$ : les incertitudes ne se compensent pas dans une différence."
+        "Pour une différence, $u(\\Delta\\theta) = \\sqrt{0{,}3^{2} + 0{,}3^{2}} \\approx 0{,}42\\ \\mathrm{°C}$, arrondie à $0{,}4\\ \\mathrm{°C}$.",
+        "$\\Delta\\theta = (7{,}5 \\pm 0{,}4)\\ \\mathrm{°C}$ : les incertitudes ne se compensent pas dans une différence."
       ],
-      "reponse": "$\\Delta\\theta = (7{,}5 \\pm 0{,}5)\\ \\mathrm{°C}$."
+      "reponse": "$\\Delta\\theta = (7{,}5 \\pm 0{,}4)\\ \\mathrm{°C}$."
     },
     {
       "id": 29,
       "difficulte": "intermediaire",
       "notion": "incertitude-composee",
-      "enonce": "Une solution contient $n = (2{,}00 \\pm 0{,}02)\\times 10^{-3}\\ \\mathrm{mol}$ de soluté dans $V = (100{,}0 \\pm 0{,}1)\\ \\mathrm{mL}$. Calcule $c = \\dfrac{n}{V}$ et son incertitude.",
+      "enonce": "Une solution contient $n = (2{,}00 \\pm 0{,}02)\\times 10^{-3}\\ \\mathrm{mol}$ de soluté dans $V = (100{,}0 \\pm 0{,}1)\\ \\mathrm{mL}$. Calcule $c = \\dfrac{n}{V}$ et son incertitude (arrondie à un chiffre significatif).",
       "corrige": [
         "$c = \\dfrac{2{,}00\\times 10^{-3}}{0{,}1000} = 0{,}0200\\ \\mathrm{mol\\cdot L^{-1}}$.",
         "Incertitudes relatives : $\\dfrac{0{,}02}{2{,}00} = 0{,}010$ et $\\dfrac{0{,}1}{100{,}0} = 0{,}001$ ; $\\dfrac{u(c)}{c} = \\sqrt{0{,}010^{2} + 0{,}001^{2}} \\approx 0{,}010$.",
-        "$u(c) \\approx 0{,}010 \\times 0{,}0200 = 2{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ (le calcul exact donne $2{,}01\\times 10^{-4}$), arrondie par excès à $3\\times 10^{-4}$ : $c = (0{,}0200 \\pm 0{,}0003)\\ \\mathrm{mol\\cdot L^{-1}}$."
+        "$u(c) \\approx 0{,}010 \\times 0{,}0200 = 2{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ (le calcul exact donne $2{,}01\\times 10^{-4}$), arrondie à $2\\times 10^{-4}$ : $c = (0{,}0200 \\pm 0{,}0002)\\ \\mathrm{mol\\cdot L^{-1}}$."
       ],
-      "reponse": "$c = (0{,}0200 \\pm 0{,}0003)\\ \\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "$c = (0{,}0200 \\pm 0{,}0002)\\ \\mathrm{mol\\cdot L^{-1}}$."
     },
     {
       "id": 30,
@@ -362,7 +362,7 @@
       "corrige": [
         "(a) La valeur a un chiffre de trop par rapport à l'incertitude, et il manque les parenthèses. (c) L'incertitude n'est pas arrondie et l'unité est mal placée.",
         "(d) La valeur est arrondie au dixième alors que l'incertitude porte sur le centième.",
-        "(b) est correcte : incertitude à $1$ chiffre significatif, valeur au même rang, unité après la parenthèse."
+        "(b) est correcte : incertitude arrondie à $1$ chiffre significatif, valeur au même rang, unité après la parenthèse."
       ],
       "reponse": "(b)."
     },
@@ -417,22 +417,22 @@
       "enonce": "Six mesures d'une durée ont pour moyenne $\\bar{t} = 8{,}4133\\ \\mathrm{s}$ et pour écart-type $s = 0{,}042\\ \\mathrm{s}$. Calcule $u(\\bar{t})$ et écris le résultat (on garde $2$ chiffres significatifs si le premier est un $1$).",
       "corrige": [
         "$u(\\bar{t}) = \\dfrac{0{,}042}{\\sqrt{6}} \\approx 0{,}0171\\ \\mathrm{s}$.",
-        "Le premier chiffre est un $1$ : on garde $2$ chiffres significatifs, par excès : $0{,}018\\ \\mathrm{s}$.",
-        "La valeur est arrondie au même rang (le millième) : $t = (8{,}413 \\pm 0{,}018)\\ \\mathrm{s}$."
+        "Le premier chiffre est un $1$ : on garde $2$ chiffres significatifs, au plus proche : $0{,}017\\ \\mathrm{s}$.",
+        "La valeur est arrondie au même rang (le millième) : $t = (8{,}413 \\pm 0{,}017)\\ \\mathrm{s}$."
       ],
-      "reponse": "$t = (8{,}413 \\pm 0{,}018)\\ \\mathrm{s}$."
+      "reponse": "$t = (8{,}413 \\pm 0{,}017)\\ \\mathrm{s}$."
     },
     {
       "id": 36,
       "difficulte": "approfondissement",
       "notion": "incertitude-composee",
-      "enonce": "On pèse $m = (9{,}85 \\pm 0{,}01)\\ \\mathrm{g}$ d'un liquide prélevé à la pipette jaugée : $V = (10{,}00 \\pm 0{,}02)\\ \\mathrm{mL}$. Calcule la masse volumique et son incertitude. Quelle mesure limite la précision ?",
+      "enonce": "On pèse $m = (9{,}85 \\pm 0{,}01)\\ \\mathrm{g}$ d'un liquide prélevé à la pipette jaugée : $V = (10{,}00 \\pm 0{,}02)\\ \\mathrm{mL}$. Calcule la masse volumique et son incertitude (arrondie à un chiffre significatif). Quelle mesure limite la précision ?",
       "corrige": [
         "$\\rho = \\dfrac{9{,}85}{10{,}00} = 0{,}985\\ \\mathrm{g\\cdot mL^{-1}}$.",
         "$\\dfrac{u(m)}{m} = \\dfrac{0{,}01}{9{,}85} \\approx 0{,}0010$ ; $\\dfrac{u(V)}{V} = \\dfrac{0{,}02}{10{,}00} = 0{,}0020$ ; $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0010^{2} + 0{,}0020^{2}} \\approx 0{,}0022$.",
-        "$u(\\rho) \\approx 0{,}0022 \\times 0{,}985 \\approx 0{,}0022$, arrondie à $0{,}003\\ \\mathrm{g\\cdot mL^{-1}}$ : $\\rho = (0{,}985 \\pm 0{,}003)\\ \\mathrm{g\\cdot mL^{-1}}$. Le volume limite la précision."
+        "$u(\\rho) \\approx 0{,}0022 \\times 0{,}985 \\approx 0{,}0022$, arrondie à $0{,}002\\ \\mathrm{g\\cdot mL^{-1}}$ : $\\rho = (0{,}985 \\pm 0{,}002)\\ \\mathrm{g\\cdot mL^{-1}}$. Le volume limite la précision."
       ],
-      "reponse": "$\\rho = (0{,}985 \\pm 0{,}003)\\ \\mathrm{g\\cdot mL^{-1}}$ ; le volume limite la précision."
+      "reponse": "$\\rho = (0{,}985 \\pm 0{,}002)\\ \\mathrm{g\\cdot mL^{-1}}$ ; le volume limite la précision."
     },
     {
       "id": 37,
@@ -462,25 +462,25 @@
       "id": 39,
       "difficulte": "approfondissement",
       "notion": "expression-resultat",
-      "enonce": "Corrige ces trois résultats : (a) $m = (2{,}538 \\pm 0{,}2)\\ \\mathrm{g}$ ; (b) $V = 14{,}2\\ \\mathrm{mL} \\pm 0{,}06\\ \\mathrm{mL}$ ; (c) $c = (0{,}10356 \\pm 0{,}0021)\\ \\mathrm{mol\\cdot L^{-1}}$.",
+      "enonce": "Corrige ces trois résultats (incertitude arrondie à un chiffre significatif) : (a) $m = (2{,}538 \\pm 0{,}2)\\ \\mathrm{g}$ ; (b) $V = 14{,}2\\ \\mathrm{mL} \\pm 0{,}06\\ \\mathrm{mL}$ ; (c) $c = (0{,}10356 \\pm 0{,}0021)\\ \\mathrm{mol\\cdot L^{-1}}$.",
       "corrige": [
         "(a) L'incertitude porte sur le dixième : la valeur doit être arrondie au même rang, $m = (2{,}5 \\pm 0{,}2)\\ \\mathrm{g}$.",
         "(b) Il faut une parenthèse et la valeur au centième : $V = (14{,}20 \\pm 0{,}06)\\ \\mathrm{mL}$.",
-        "(c) $u = 0{,}0021$ arrondie par excès à $0{,}003$, valeur au millième : $c = (0{,}104 \\pm 0{,}003)\\ \\mathrm{mol\\cdot L^{-1}}$."
+        "(c) $u = 0{,}0021$ arrondie à $0{,}002$, valeur au millième : $c = (0{,}104 \\pm 0{,}002)\\ \\mathrm{mol\\cdot L^{-1}}$."
       ],
-      "reponse": "(a) $(2{,}5 \\pm 0{,}2)\\ \\mathrm{g}$ ; (b) $(14{,}20 \\pm 0{,}06)\\ \\mathrm{mL}$ ; (c) $(0{,}104 \\pm 0{,}003)\\ \\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "(a) $(2{,}5 \\pm 0{,}2)\\ \\mathrm{g}$ ; (b) $(14{,}20 \\pm 0{,}06)\\ \\mathrm{mL}$ ; (c) $(0{,}104 \\pm 0{,}002)\\ \\mathrm{mol\\cdot L^{-1}}$."
     },
     {
       "id": 40,
       "difficulte": "approfondissement",
       "notion": "incertitude-composee",
-      "enonce": "Pour une dilution, le facteur vaut $F = \\dfrac{V_{\\text{fiole}}}{V_{\\text{pipette}}}$ avec $V_{\\text{fiole}} = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$ et $V_{\\text{pipette}} = (10{,}000 \\pm 0{,}012)\\ \\mathrm{mL}$. Calcule $F$ et son incertitude.",
+      "enonce": "Pour une dilution, le facteur vaut $F = \\dfrac{V_{\\text{fiole}}}{V_{\\text{pipette}}}$ avec $V_{\\text{fiole}} = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$ et $V_{\\text{pipette}} = (10{,}000 \\pm 0{,}012)\\ \\mathrm{mL}$. Calcule $F$ et son incertitude (arrondie à un chiffre significatif).",
       "corrige": [
         "$F = \\dfrac{100{,}00}{10{,}000} = 10{,}000$.",
         "$\\dfrac{u(F)}{F} = \\sqrt{\\left(\\dfrac{0{,}06}{100{,}00}\\right)^{2} + \\left(\\dfrac{0{,}012}{10{,}000}\\right)^{2}} = \\sqrt{0{,}0006^{2} + 0{,}0012^{2}} \\approx 0{,}0013$.",
-        "$u(F) \\approx 0{,}013$, arrondie à $1$ c.s. par excès : $0{,}02$. $F = (10{,}00 \\pm 0{,}02)$ (sans unité)."
+        "$u(F) \\approx 0{,}013$, arrondie au plus proche à $1$ c.s. : $0{,}01$. $F = (10{,}00 \\pm 0{,}01)$ (sans unité)."
       ],
-      "reponse": "$F = (10{,}00 \\pm 0{,}02)$."
+      "reponse": "$F = (10{,}00 \\pm 0{,}01)$."
     },
     {
       "id": 41,
@@ -509,7 +509,7 @@
       "id": 43,
       "difficulte": "probleme",
       "notion": "synthese",
-      "enonce": "**Titrage complet.** On titre $V_A = 20{,}00\\ \\mathrm{mL}$ d'acide (pipette jaugée, tolérance $\\pm 0{,}03\\ \\mathrm{mL}$) par une soude à $C_B = (0{,}0500 \\pm 0{,}0005)\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). Cinq essais donnent $V_E$ (en $\\mathrm{mL}$) : $15{,}10$ ; $15{,}20$ ; $15{,}15$ ; $15{,}05$ ; $15{,}20$ ; la calculatrice donne $s = 0{,}065\\ \\mathrm{mL}$. (a) Calcule $\\bar{V}_E$ et $u(\\bar{V}_E)$. (b) Calcule $u(V_A)$. (c) Calcule $C_A$ et son incertitude. (d) Quelle source domine ?",
+      "enonce": "**Titrage complet.** On titre $V_A = 20{,}00\\ \\mathrm{mL}$ d'acide (pipette jaugée, tolérance $\\pm 0{,}03\\ \\mathrm{mL}$) par une soude à $C_B = (0{,}0500 \\pm 0{,}0005)\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). Cinq essais donnent $V_E$ (en $\\mathrm{mL}$) : $15{,}10$ ; $15{,}20$ ; $15{,}15$ ; $15{,}05$ ; $15{,}20$ ; la calculatrice donne $s = 0{,}065\\ \\mathrm{mL}$. (a) Calcule $\\bar{V}_E$ et $u(\\bar{V}_E)$. (b) Calcule $u(V_A)$. (c) Calcule $C_A$ et son incertitude (incertitude arrondie à un chiffre significatif). (d) Quelle source domine ?",
       "corrige": [
         "(a) $\\bar{V}_E = \\dfrac{75{,}70}{5} = 15{,}14\\ \\mathrm{mL}$ ; $u(\\bar{V}_E) = \\dfrac{0{,}065}{\\sqrt{5}} \\approx 0{,}029\\ \\mathrm{mL}$. (b) $u(V_A) = \\dfrac{0{,}03}{\\sqrt{3}} \\approx 0{,}017\\ \\mathrm{mL}$.",
         "(c) $C_A = \\dfrac{0{,}0500 \\times 15{,}14}{20{,}00} \\approx 0{,}0379\\ \\mathrm{mol\\cdot L^{-1}}$. Incertitudes relatives : $0{,}0019$ ($V_E$), $0{,}0009$ ($V_A$) et $0{,}010$ ($C_B$) ; total $\\sqrt{0{,}0019^{2} + 0{,}0009^{2} + 0{,}010^{2}} \\approx 0{,}010$.",
@@ -522,13 +522,13 @@
       "id": 44,
       "difficulte": "probleme",
       "notion": "incertitude-composee",
-      "enonce": "**Préparer une solution.** On pèse un sabot vide, $m_1 = (25{,}46 \\pm 0{,}01)\\ \\mathrm{g}$, puis le sabot avec le soluté, $m_2 = (27{,}96 \\pm 0{,}01)\\ \\mathrm{g}$. Le soluté est dissous dans une fiole de $V = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$. (a) Calcule la masse de soluté et son incertitude. (b) Calcule la concentration en masse $c_m = \\dfrac{m}{V}$ et son incertitude.",
+      "enonce": "**Préparer une solution.** On pèse un sabot vide, $m_1 = (25{,}46 \\pm 0{,}01)\\ \\mathrm{g}$, puis le sabot avec le soluté, $m_2 = (27{,}96 \\pm 0{,}01)\\ \\mathrm{g}$. Le soluté est dissous dans une fiole de $V = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$. (a) Calcule la masse de soluté et son incertitude. (b) Calcule la concentration en masse $c_m = \\dfrac{m}{V}$ et son incertitude. Arrondis les incertitudes à un chiffre significatif.",
       "corrige": [
-        "(a) $m = m_2 - m_1 = 2{,}50\\ \\mathrm{g}$ ; différence : $u(m) = \\sqrt{0{,}01^{2} + 0{,}01^{2}} \\approx 0{,}014\\ \\mathrm{g}$.",
+        "(a) $m = m_2 - m_1 = 2{,}50\\ \\mathrm{g}$ ; différence : $u(m) = \\sqrt{0{,}01^{2} + 0{,}01^{2}} \\approx 0{,}014\\ \\mathrm{g}$, soit $m = (2{,}50 \\pm 0{,}01)\\ \\mathrm{g}$.",
         "(b) $c_m = \\dfrac{2{,}50}{0{,}10000} = 25{,}0\\ \\mathrm{g\\cdot L^{-1}}$. Quotient : $\\dfrac{u(c_m)}{c_m} = \\sqrt{\\left(\\dfrac{0{,}014}{2{,}50}\\right)^{2} + \\left(\\dfrac{0{,}06}{100{,}00}\\right)^{2}} \\approx 0{,}0057$.",
-        "$u(c_m) \\approx 0{,}0057 \\times 25{,}0 \\approx 0{,}14\\ \\mathrm{g\\cdot L^{-1}}$, arrondie à $0{,}2$ : $c_m = (25{,}0 \\pm 0{,}2)\\ \\mathrm{g\\cdot L^{-1}}$. La pesée domine."
+        "$u(c_m) \\approx 0{,}0057 \\times 25{,}0 \\approx 0{,}14\\ \\mathrm{g\\cdot L^{-1}}$, arrondie à $0{,}1$ : $c_m = (25{,}0 \\pm 0{,}1)\\ \\mathrm{g\\cdot L^{-1}}$. La pesée domine."
       ],
-      "reponse": "(a) $m = (2{,}50 \\pm 0{,}02)\\ \\mathrm{g}$ ; (b) $c_m = (25{,}0 \\pm 0{,}2)\\ \\mathrm{g\\cdot L^{-1}}$."
+      "reponse": "(a) $m = (2{,}50 \\pm 0{,}01)\\ \\mathrm{g}$ ; (b) $c_m = (25{,}0 \\pm 0{,}1)\\ \\mathrm{g\\cdot L^{-1}}$."
     },
     {
       "id": 45,
@@ -548,17 +548,17 @@
       "notion": "type-b",
       "enonce": "**Choisir la verrerie.** On doit prélever $50\\ \\mathrm{mL}$ de solution avec une incertitude relative inférieure à $0{,}5\\ \\%$. Possibilités : éprouvette graduée tous les $1\\ \\mathrm{mL}$ ; pipette jaugée de $50\\ \\mathrm{mL}$ (tolérance $\\pm 0{,}05\\ \\mathrm{mL}$). Calcule l'incertitude relative pour chacune et conclus.",
       "corrige": [
-        "Éprouvette : $u = \\dfrac{1}{\\sqrt{3}} \\approx 0{,}58\\ \\mathrm{mL}$, soit $\\dfrac{0{,}58}{50} \\approx 1{,}2\\ \\%$ : trop.",
+        "Éprouvette (une lecture) : $u = \\dfrac{1}{\\sqrt{12}} \\approx 0{,}29\\ \\mathrm{mL}$, soit $\\dfrac{0{,}29}{50} \\approx 0{,}6\\ \\%$ : trop.",
         "Pipette jaugée : $u = \\dfrac{0{,}05}{\\sqrt{3}} \\approx 0{,}029\\ \\mathrm{mL}$, soit $\\dfrac{0{,}029}{50} \\approx 0{,}06\\ \\%$ : convient.",
         "On choisit la pipette jaugée."
       ],
-      "reponse": "Éprouvette : $\\approx 1{,}2\\ \\%$ ; pipette : $\\approx 0{,}06\\ \\%$ ; la pipette jaugée."
+      "reponse": "Éprouvette : $\\approx 0{,}6\\ \\%$ ; pipette : $\\approx 0{,}06\\ \\%$ ; la pipette jaugée."
     },
     {
       "id": 47,
       "difficulte": "probleme",
       "notion": "type-a",
-      "enonce": "**Combien de mesures ?** Huit mesures d'une durée (en $\\mathrm{s}$) : $2{,}31$ ; $2{,}45$ ; $2{,}38$ ; $2{,}52$ ; $2{,}29$ ; $2{,}41$ ; $2{,}36$ ; $2{,}48$. La calculatrice donne $s = 0{,}081\\ \\mathrm{s}$. (a) Écris le résultat. (b) Combien de mesures faudrait-il pour obtenir $u \\leq 0{,}02\\ \\mathrm{s}$, en supposant que $s$ reste le même ?",
+      "enonce": "**Combien de mesures ?** Huit mesures d'une durée (en $\\mathrm{s}$) : $2{,}31$ ; $2{,}45$ ; $2{,}38$ ; $2{,}52$ ; $2{,}29$ ; $2{,}41$ ; $2{,}36$ ; $2{,}48$. La calculatrice donne $s = 0{,}081\\ \\mathrm{s}$. (a) Écris le résultat (incertitude arrondie à un chiffre significatif). (b) Combien de mesures faudrait-il pour obtenir $u \\leq 0{,}02\\ \\mathrm{s}$, en supposant que $s$ reste le même ?",
       "corrige": [
         "(a) $\\bar{t} = \\dfrac{19{,}20}{8} = 2{,}40\\ \\mathrm{s}$ ; $u = \\dfrac{0{,}081}{\\sqrt{8}} \\approx 0{,}029\\ \\mathrm{s}$, arrondie à $0{,}03$ : $t = (2{,}40 \\pm 0{,}03)\\ \\mathrm{s}$.",
         "(b) Il faut $\\dfrac{0{,}081}{\\sqrt{n}} \\leq 0{,}02$, soit $\\sqrt{n} \\geq 4{,}05$ et $n \\geq 16{,}4$ : au moins $17$ mesures."
@@ -572,7 +572,7 @@
       "enonce": "**Relire un compte rendu.** Un élève a écrit : « $\\rho = 1{,}2345678\\ \\mathrm{g\\cdot mL^{-1}}$, avec une incertitude de $0{,}0274$ ; donc $\\rho = 1{,}2345678 \\pm 0{,}0274\\ \\mathrm{g/mL}$. » Relève les erreurs et réécris le résultat correctement.",
       "corrige": [
         "Il garde tous les chiffres de la calculatrice, n'arrondit pas l'incertitude, et oublie les parenthèses.",
-        "On arrondit l'incertitude à $1$ chiffre significatif par excès : $0{,}03$ ; puis la valeur au centième : $1{,}23$.",
+        "On arrondit l'incertitude au plus proche, à $1$ chiffre significatif : $0{,}03$ ; puis la valeur au centième : $1{,}23$.",
         "$\\rho = (1{,}23 \\pm 0{,}03)\\ \\mathrm{g\\cdot mL^{-1}}$."
       ],
       "reponse": "$\\rho = (1{,}23 \\pm 0{,}03)\\ \\mathrm{g\\cdot mL^{-1}}$."
@@ -592,7 +592,7 @@
       "id": 50,
       "difficulte": "probleme",
       "notion": "incertitude-composee",
-      "enonce": "**Dosage spectrophotométrique.** On calcule $c = \\dfrac{A}{\\varepsilon\\,\\ell}$ avec $A = 0{,}520 \\pm 0{,}005$, $\\varepsilon = (1{,}20 \\pm 0{,}02)\\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ et $\\ell = (1{,}000 \\pm 0{,}005)\\ \\mathrm{cm}$. (a) Calcule $c$. (b) Calcule son incertitude et écris le résultat. (c) Quelle donnée pèse le plus ?",
+      "enonce": "**Dosage spectrophotométrique.** On calcule $c = \\dfrac{A}{\\varepsilon\\,\\ell}$ avec $A = 0{,}520 \\pm 0{,}005$, $\\varepsilon = (1{,}20 \\pm 0{,}02)\\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ et $\\ell = (1{,}000 \\pm 0{,}005)\\ \\mathrm{cm}$. (a) Calcule $c$. (b) Calcule son incertitude et écris le résultat (incertitude arrondie à un chiffre significatif). (c) Quelle donnée pèse le plus ?",
       "corrige": [
         "(a) $c = \\dfrac{0{,}520}{1{,}20\\times 10^{4} \\times 1{,}000} \\approx 4{,}33\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
         "(b) Incertitudes relatives : $\\dfrac{0{,}005}{0{,}520} \\approx 0{,}0096$ ; $\\dfrac{0{,}02}{1{,}20} \\approx 0{,}017$ ; $\\dfrac{0{,}005}{1{,}000} = 0{,}005$. Total : $\\sqrt{0{,}0096^{2} + 0{,}017^{2} + 0{,}005^{2}} \\approx 0{,}020$.",

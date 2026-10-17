@@ -1,6 +1,6 @@
 ---
 id: cm2-math-aires-perimetres-volumes
-titre: Aires, périmètres et volumes
+titre: Aires et périmètres
 voie: primaire
 niveau: cm2
 parcours: maths
@@ -10,21 +10,20 @@ duree_lecture_min: 8
 prerequis:
   - Mesurer des longueurs et changer d'unité
   - La multiplication
-  - Reconnaître carré, rectangle, cube et pavé droit
+  - Reconnaître le carré et le rectangle
 statut: brouillon
 relu_par: null
 ---
 
-# Aires, périmètres et volumes
+# Aires et périmètres
 
 <!-- schema:auto -->
 ![Aire et périmètre d’un rectangle : aire = longueur × largeur ; périmètre = 2 × (longueur + largeur).](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDAgMjUwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQ0MCIgaGVpZ2h0PSIyNTAiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSI5MCIgeT0iNDAiIHdpZHRoPSIyMzAiIGhlaWdodD0iMTIwIiBmaWxsPSIjMWY2ZmViIiBmaWxsLW9wYWNpdHk9IjAuMDgiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48dGV4dCB4PSIyMDUiIHk9IjE4NCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2MwMmEyYSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zdHlsZT0iaXRhbGljIj5MPC90ZXh0Pjx0ZXh0IHg9Ijc0IiB5PSIxMDUiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxYTdmNGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc3R5bGU9Iml0YWxpYyI+bDwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMjIyIiBmb250LXNpemU9IjE1IiBmaWxsPSIjMTYyMzJlIj5Qw6lyaW3DqHRyZSA9IDIgw5cgKEwgKyBsKTwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMjQ2IiBmb250LXNpemU9IjE1IiBmaWxsPSIjMTYyMzJlIj5BaXJlID0gTCDDlyBsPC90ZXh0Pjwvc3ZnPg==)
 
-Trois mots à ne pas confondre :
+Deux mots à ne pas confondre :
 
 - le **périmètre** mesure la **longueur du contour** (le tour de la figure) ;
-- l'**aire** mesure la **surface** (la place à l'intérieur) ;
-- le **volume** mesure la **place occupée dans l'espace** (l'intérieur d'un solide).
+- l'**aire** mesure la **surface** (la place à l'intérieur).
 
 ## 1. Le périmètre
 
@@ -62,28 +61,24 @@ Attention, ce sont deux choses différentes ! Deux figures peuvent avoir le **m�
 périmètre** et des **aires différentes**. Le périmètre parle du tour, l'aire parle
 de l'intérieur.
 
-## 4. Le volume
+## 4. Les unités d'aire
 
-<!-- schema:volume-cubes -->
-![Un pavé de 4 cm sur 2 cm sur 3 cm est formé de 24 petits cubes de 1 cm³ : son volume est 24 cm³.](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgMjcwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQ4MCIgaGVpZ2h0PSIyNzAiIGZpbGw9IiNmZmZmZmYiLz48cG9seWdvbiBwb2ludHM9IjkwLDYyIDI1MCw2MiAyOTAsMzMuMiAxMzAsMzMuMiIgZmlsbD0iI2RjZTlmYyIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMC4wMSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwb2x5Z29uIHBvaW50cz0iMjUwLDE4MiAyNTAsNjIgMjkwLDMzLjIgMjkwLDE1My4yIiBmaWxsPSIjMWY2ZmViIiBmaWxsLW9wYWNpdHk9IjAuMzIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIwLjAxIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBvbHlnb24gcG9pbnRzPSI5MCwxODIgMjUwLDE4MiAyNTAsNjIgOTAsNjIiIGZpbGw9IiMxZjZmZWIiIGZpbGwtb3BhY2l0eT0iMC4xNCIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjAuMDEiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48bGluZSB4MT0iOTAiIHkxPSIxODIiIHgyPSI5MCIgeTI9IjYyIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iOTAiIHkxPSI2MiIgeDI9IjEzMCIgeTI9IjMzLjIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIxODIiIHgyPSIxMzAiIHkyPSI2MiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjEzMCIgeTE9IjYyIiB4Mj0iMTcwIiB5Mj0iMzMuMiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjE3MCIgeTE9IjE4MiIgeDI9IjE3MCIgeTI9IjYyIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTcwIiB5MT0iNjIiIHgyPSIyMTAiIHkyPSIzMy4yIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjEwIiB5MT0iMTgyIiB4Mj0iMjEwIiB5Mj0iNjIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyMTAiIHkxPSI2MiIgeDI9IjI1MCIgeTI9IjMzLjIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyNTAiIHkxPSIxODIiIHgyPSIyNTAiIHkyPSI2MiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjI1MCIgeTE9IjYyIiB4Mj0iMjkwIiB5Mj0iMzMuMiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjkwIiB5MT0iMTgyIiB4Mj0iMjUwIiB5Mj0iMTgyIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjUwIiB5MT0iMTgyIiB4Mj0iMjkwIiB5Mj0iMTUzLjIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI5MCIgeTE9IjE0MiIgeDI9IjI1MCIgeTI9IjE0MiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjI1MCIgeTE9IjE0MiIgeDI9IjI5MCIgeTI9IjExMy4yIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iOTAiIHkxPSIxMDIiIHgyPSIyNTAiIHkyPSIxMDIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyNTAiIHkxPSIxMDIiIHgyPSIyOTAiIHkyPSI3My4yIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iOTAiIHkxPSI2MiIgeDI9IjI1MCIgeTI9IjYyIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjUwIiB5MT0iNjIiIHgyPSIyOTAiIHkyPSIzMy4yIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iOTAiIHkxPSI2MiIgeDI9IjI1MCIgeTI9IjYyIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjUwIiB5MT0iMTgyIiB4Mj0iMjUwIiB5Mj0iNjIiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMTAiIHkxPSI0Ny42IiB4Mj0iMjcwIiB5Mj0iNDcuNiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE2Ny42IiB4Mj0iMjcwIiB5Mj0iNDcuNiIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjEzMCIgeTE9IjMzLjIiIHgyPSIyOTAiIHkyPSIzMy4yIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjkwIiB5MT0iMTUzLjIiIHgyPSIyOTAiIHkyPSIzMy4yIiBzdHJva2U9IiMxZjZmZWIiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cG9seWdvbiBwb2ludHM9IjkwLDE4MiAyNTAsMTgyIDI5MCwxNTMuMiAyOTAsMzMuMiAxMzAsMzMuMiA5MCw2MiIgZmlsbD0ibm9uZSIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMi40IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHRleHQgeD0iMTcwIiB5PSIyMTAiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNjMDJhMmEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPjQgY208L3RleHQ+PHRleHQgeD0iNzgiIHk9IjEyOCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzFhN2Y0YiIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC13ZWlnaHQ9IjcwMCI+MyBjbTwvdGV4dD48dGV4dCB4PSIyODYiIHk9IjE3My42IiBmb250LXNpemU9IjE2IiBmaWxsPSIjYzI1ZTAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtd2VpZ2h0PSI3MDAiPjIgY208L3RleHQ+PHRleHQgeD0iMjQwIiB5PSIyNTQiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMxNjIzMmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPjQgw5cgMiDDlyAzID0gMjQgY3ViZXMgZGUgMSBjbcKzPC90ZXh0Pjwvc3ZnPg==)
-*Un pavé de 4 cm sur 2 cm sur 3 cm est formé de 24 petits cubes de 1 cm³ : son volume est 24 cm³.*
-<!-- /schema -->
+En CM2, on utilise trois unités d'aire :
 
-Le volume mesure la place prise dans l'espace. Pour un **pavé droit** (une boîte)
-de longueur L, largeur l et hauteur h :
+- le **centimètre carré** (**cm²**) : l'aire d'un carré de 1 cm de côté ;
+- le **décimètre carré** (**dm²**) : l'aire d'un carré de 1 dm (10 cm) de côté ;
+- le **mètre carré** (**m²**) : l'aire d'un carré de 1 m (10 dm) de côté.
 
-- volume = **L × l × h**.
-  Un pavé 4 cm × 2 cm × 3 cm → volume = 4 × 2 × 3 = **24 cm³**.
+Un carré de 1 dm de côté mesure 10 cm sur 10 cm : on peut y ranger
+10 × 10 = 100 carrés de 1 cm². De même pour le mètre carré :
 
-Un **cube** est un pavé dont toutes les arêtes sont égales : volume = **c × c × c**.
-Arête 2 cm → volume = 2 × 2 × 2 = **8 cm³**.
+- **1 dm² = 100 cm²** ;
+- **1 m² = 100 dm²**.
 
-Le volume se mesure dans une unité **« cube »** : cm³, dm³, m³.
+**Exemples :** 3 dm² = 3 × 100 cm² = **300 cm²** ; 500 dm² = **5 m²**, car
+5 × 100 = 500.
 
-## 5. Volume et contenance
-
-Un lien utile à connaître : **1 dm³ = 1 litre**. Un cube de 10 cm de côté (soit
-1 dm) contient donc 1 litre d'eau.
+> Attention : 1 dm = 10 cm, mais **1 dm² = 100 cm²** (et non 10 cm²).
 
 ## Les erreurs à éviter
 
@@ -91,5 +86,6 @@ Un lien utile à connaître : **1 dm³ = 1 litre**. Un cube de 10 cm de côté (
   surface (en cm²).
 - Oublier de **multiplier par 2** dans le périmètre du rectangle : il y a **deux**
   longueurs et **deux** largeurs.
-- Écrire une aire en cm au lieu de cm² (ou un volume en cm² au lieu de cm³).
-- Pour le volume, oublier une des trois dimensions : il faut bien **L × l × h**.
+- Écrire une aire en cm au lieu de cm².
+- Croire que 1 dm² = 10 cm² : un carré de 1 dm de côté contient **100** carrés de
+  1 cm².

@@ -1,6 +1,6 @@
 ---
 id: cm1-math-angles
-titre: Comparer et mesurer des angles
+titre: Comparer des angles
 voie: primaire
 niveau: cm1
 parcours: maths
@@ -14,7 +14,7 @@ statut: brouillon
 relu_par: null
 ---
 
-# Comparer et mesurer des angles
+# Comparer des angles
 
 <!-- schema:auto -->
 ![Un angle est formé par deux demi-droites de même origine (le sommet).](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjUwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNTAiIGZpbGw9IiNmZmZmZmYiLz48bGluZSB4MT0iOTAiIHkxPSIyMDAiIHgyPSIzNDAiIHkyPSIyMDAiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48bGluZSB4MT0iOTAiIHkxPSIyMDAiIHgyPSIxOTcuNzQiIHkyPSI2Mi4xIiBzdHJva2U9IiMxNjIzMmUiIHN0cm9rZS13aWR0aD0iMi40Ii8+PHBhdGggZD0iTSAxMzYgMjAwIEEgNDYgNDYgMCAwIDAgMTE4LjMyIDE2My43NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzAyYTJhIiBzdHJva2Utd2lkdGg9IjIuMiIvPjxjaXJjbGUgY3g9IjkwIiBjeT0iMjAwIiByPSIzLjUiIGZpbGw9IiMxNjIzMmUiLz48dGV4dCB4PSI3NiIgeT0iMjA2IiBmb250LXNpemU9IjE2IiBmaWxsPSIjMTYyMzJlIj5PPC90ZXh0Pjx0ZXh0IHg9IjMzNCIgeT0iMjIwIiBmb250LXNpemU9IjE1IiBmaWxsPSIjNWI2YjdhIj5BPC90ZXh0Pjx0ZXh0IHg9IjIwMy43NCIgeT0iNTguMSIgZm9udC1zaXplPSIxNSIgZmlsbD0iIzViNmI3YSI+QjwvdGV4dD48dGV4dCB4PSIxNTAiIHk9IjE4NCIgZm9udC1zaXplPSIxNSIgZmlsbD0iI2MwMmEyYSI+YW5nbGUgw4JPQjwvdGV4dD48L3N2Zz4=)
@@ -22,6 +22,17 @@ relu_par: null
 Un **angle**, c'est l'**ouverture** entre deux côtés (deux demi-droites) qui
 partent d'un même point, le **sommet**. Plus les deux côtés sont écartés, plus
 l'angle est grand.
+
+## Nommer un angle
+
+Pour nommer un angle, on utilise **trois lettres** : un point sur un côté, le
+**sommet**, puis un point sur l'autre côté. On met un petit **chapeau** au-dessus :
+$\widehat{AOB}$ se lit « l'angle $AOB$ ».
+
+- La lettre du **milieu** est toujours le **sommet** : dans $\widehat{AOB}$, le
+  sommet est $O$.
+- Les côtés de l'angle $\widehat{AOB}$ partent de $O$ : l'un passe par $A$, l'autre par $B$.
+- $\widehat{AOB}$ et $\widehat{BOA}$ désignent le **même** angle.
 
 ## Ce qui compte : l'ouverture, pas la longueur
 
@@ -34,22 +45,22 @@ Pour comparer deux angles, on regarde **l'écartement des côtés**, et **pas** 
 longueur. Deux angles peuvent avoir des côtés très courts ou très longs et être
 **pareils** : seule l'ouverture compte.
 
-## Les quatre angles à connaître
+## Les angles à connaître
 
 <!-- schema:quatre-angles -->
-![Les quatre angles à connaître : aigu (moins de 90°), droit (90°), obtus (entre 90° et 180°) et plat (180°).](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMjIwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIyMjAiIGZpbGw9IiNmZmZmZmYiLz48bGluZSB4MT0iNDAiIHkxPSIxNDAiIHgyPSIxNDAiIHkyPSIxNDAiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI0MCIgeTE9IjE0MCIgeDI9IjEwNC4yOCIgeTI9IjYzLjQiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gNDAgMTQwIEwgNzAgMTQwIEEgMzAgMzAgMCAwIDAgNTkuMjggMTE3LjAyIFoiIGZpbGw9IiMxZjZmZWIiIGZpbGwtb3BhY2l0eT0iMC4yNSIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjIuMiIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMTQwIiByPSI0LjUiIGZpbGw9IiMxNjIzMmUiLz48dGV4dCB4PSI4MCIgeT0iMTc4IiBmb250LXNpemU9IjE2IiBmaWxsPSIjMWY2ZmViIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj5hbmdsZSBhaWd1PC90ZXh0Pjx0ZXh0IHg9IjgwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPm1vaW5zIGRlIDkwwrA8L3RleHQ+PGxpbmUgeDE9IjIwMCIgeTE9IjE0MCIgeDI9IjMwMCIgeTI9IjE0MCIgc3Ryb2tlPSIjMWE3ZjRiIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMCIgeTE9IjE0MCIgeDI9IjIwMCIgeTI9IjQwIiBzdHJva2U9IiMxYTdmNGIiIHN0cm9rZS13aWR0aD0iMy4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNIDIxNiAxNDAgTCAyMTYgMTI0IEwgMjAwIDEyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWE3ZjRiIiBzdHJva2Utd2lkdGg9IjEuNiIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE0MCIgcj0iNC41IiBmaWxsPSIjMTYyMzJlIi8+PHRleHQgeD0iMjQwIiB5PSIxNzgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxYTdmNGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPmFuZ2xlIGRyb2l0PC90ZXh0Pjx0ZXh0IHg9IjI0MCIgeT0iMjAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj45MMKwPC90ZXh0PjxsaW5lIHgxPSIzOTIiIHkxPSIxNDAiIHgyPSI0NzQiIHkyPSIxNDAiIHN0cm9rZT0iI2MyNWUwMCIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIzOTIiIHkxPSIxNDAiIHgyPSIzMzkuMjkiIHkyPSI3Ny4xOCIgc3Ryb2tlPSIjYzI1ZTAwIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAzOTIgMTQwIEwgNDIyIDE0MCBBIDMwIDMwIDAgMCAwIDM3Mi43MiAxMTcuMDIgWiIgZmlsbD0iI2MyNWUwMCIgZmlsbC1vcGFjaXR5PSIwLjI1IiBzdHJva2U9IiNjMjVlMDAiIHN0cm9rZS13aWR0aD0iMi4yIi8+PGNpcmNsZSBjeD0iMzkyIiBjeT0iMTQwIiByPSI0LjUiIGZpbGw9IiMxNjIzMmUiLz48dGV4dCB4PSI0MDAiIHk9IjE3OCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2MyNWUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+YW5nbGUgb2J0dXM8L3RleHQ+PHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPmVudHJlIDkwwrAgZXQgMTgwwrA8L3RleHQ+PGxpbmUgeDE9IjU2MCIgeTE9IjE0MCIgeDI9IjYzMCIgeTI9IjE0MCIgc3Ryb2tlPSIjN2EzZmIwIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjU2MCIgeTE9IjE0MCIgeDI9IjQ5MCIgeTI9IjE0MCIgc3Ryb2tlPSIjN2EzZmIwIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSA1NjAgMTQwIEwgNTkwIDE0MCBBIDMwIDMwIDAgMCAwIDUzMCAxNDAgWiIgZmlsbD0iIzdhM2ZiMCIgZmlsbC1vcGFjaXR5PSIwLjI1IiBzdHJva2U9IiM3YTNmYjAiIHN0cm9rZS13aWR0aD0iMi4yIi8+PGNpcmNsZSBjeD0iNTYwIiBjeT0iMTQwIiByPSI0LjUiIGZpbGw9IiMxNjIzMmUiLz48dGV4dCB4PSI1NjAiIHk9IjE3OCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzdhM2ZiMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+YW5nbGUgcGxhdDwvdGV4dD48dGV4dCB4PSI1NjAiIHk9IjIwMCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzViNmI3YSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9IjcwMCI+MTgwwrA8L3RleHQ+PC9zdmc+)
-*Les quatre angles à connaître : aigu (moins de 90°), droit (90°), obtus (entre 90° et 180°) et plat (180°).*
+![Les angles à connaître, comparés à l’angle droit : aigu (plus petit), droit (le coin de l’équerre), obtus (plus grand).](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgMjIwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQ4MCIgaGVpZ2h0PSIyMjAiIGZpbGw9IiNmZmZmZmYiLz48bGluZSB4MT0iNDAiIHkxPSIxNDAiIHgyPSIxNDAiIHkyPSIxNDAiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI0MCIgeTE9IjE0MCIgeDI9IjEwNC4yOCIgeTI9IjYzLjQiIHN0cm9rZT0iIzFmNmZlYiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gNDAgMTQwIEwgNzAgMTQwIEEgMzAgMzAgMCAwIDAgNTkuMjggMTE3LjAyIFoiIGZpbGw9IiMxZjZmZWIiIGZpbGwtb3BhY2l0eT0iMC4yNSIgc3Ryb2tlPSIjMWY2ZmViIiBzdHJva2Utd2lkdGg9IjIuMiIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMTQwIiByPSI0LjUiIGZpbGw9IiMxNjIzMmUiLz48dGV4dCB4PSI4MCIgeT0iMTc4IiBmb250LXNpemU9IjE2IiBmaWxsPSIjMWY2ZmViIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj5hbmdsZSBhaWd1PC90ZXh0Pjx0ZXh0IHg9IjgwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM1YjZiN2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPnBsdXMgcGV0aXQ8L3RleHQ+PGxpbmUgeDE9IjIwMCIgeTE9IjE0MCIgeDI9IjMwMCIgeTI9IjE0MCIgc3Ryb2tlPSIjMWE3ZjRiIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIwMCIgeTE9IjE0MCIgeDI9IjIwMCIgeTI9IjQwIiBzdHJva2U9IiMxYTdmNGIiIHN0cm9rZS13aWR0aD0iMy4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNIDIxNiAxNDAgTCAyMTYgMTI0IEwgMjAwIDEyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWE3ZjRiIiBzdHJva2Utd2lkdGg9IjEuNiIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE0MCIgcj0iNC41IiBmaWxsPSIjMTYyMzJlIi8+PHRleHQgeD0iMjQwIiB5PSIxNzgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxYTdmNGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPmFuZ2xlIGRyb2l0PC90ZXh0Pjx0ZXh0IHg9IjI0MCIgeT0iMjAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj5jb2luIGRlIGzigJnDqXF1ZXJyZTwvdGV4dD48bGluZSB4MT0iMzkyIiB5MT0iMTQwIiB4Mj0iNDc0IiB5Mj0iMTQwIiBzdHJva2U9IiNjMjVlMDAiIHN0cm9rZS13aWR0aD0iMy4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMzkyIiB5MT0iMTQwIiB4Mj0iMzM5LjI5IiB5Mj0iNzcuMTgiIHN0cm9rZT0iI2MyNWUwMCIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gMzkyIDE0MCBMIDQyMiAxNDAgQSAzMCAzMCAwIDAgMCAzNzIuNzIgMTE3LjAyIFoiIGZpbGw9IiNjMjVlMDAiIGZpbGwtb3BhY2l0eT0iMC4yNSIgc3Ryb2tlPSIjYzI1ZTAwIiBzdHJva2Utd2lkdGg9IjIuMiIvPjxjaXJjbGUgY3g9IjM5MiIgY3k9IjE0MCIgcj0iNC41IiBmaWxsPSIjMTYyMzJlIi8+PHRleHQgeD0iNDAwIiB5PSIxNzgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNjMjVlMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiPmFuZ2xlIG9idHVzPC90ZXh0Pjx0ZXh0IHg9IjQwMCIgeT0iMjAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNWI2YjdhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNzAwIj5wbHVzIGdyYW5kPC90ZXh0Pjwvc3ZnPg==)
+*Les angles à connaître, comparés à l’angle droit : aigu (plus petit), droit (le coin de l’équerre), obtus (plus grand).*
 <!-- /schema -->
 
-- **Angle droit** : c'est le coin d'une équerre ou d'une feuille. Il mesure
-  **90°** (90 degrés).
-- **Angle aigu** : plus **petit** qu'un angle droit (moins de 90°).
-- **Angle obtus** : plus **grand** qu'un angle droit, mais pas complètement
-  ouvert (entre 90° et 180°).
-- **Angle plat** : complètement ouvert, les deux côtés forment une ligne droite.
-  Il mesure **180°**.
+On compare chaque angle à l'**angle droit** :
 
-> Repère facile : compare toujours à l'**angle droit** (90°). Plus petit → aigu.
+- **Angle droit** : c'est le coin d'une équerre ou d'une feuille. Les deux côtés
+  sont **perpendiculaires**.
+- **Angle aigu** : plus **petit** qu'un angle droit.
+- **Angle obtus** : plus **grand** qu'un angle droit, sans que les deux côtés
+  forment une ligne droite.
+
+> Repère facile : compare toujours à l'**angle droit**. Plus petit → aigu.
 > Plus grand → obtus.
 
 ## Vérifier et comparer avec l'équerre
@@ -69,18 +80,20 @@ l'équerre** :
    - il reste **à l'intérieur** → l'angle est **aigu** ;
    - il dépasse **à l'extérieur** → l'angle est **obtus**.
 
-On peut aussi comparer deux angles en **calquant** l'un sur l'autre (avec du
-papier calque ou un gabarit) pour voir lequel est le plus ouvert.
+## Comparer deux angles avec un gabarit
 
-## Quelques repères en degrés
+Pour savoir lequel de deux angles est le plus grand, on **reproduit** l'un des
+deux sur du papier calque (ou on découpe un **gabarit** en papier) :
 
-- Angle droit = **90°**
-- Angle plat = **180°** = deux angles droits (2 × 90 = 180)
-- Tour complet = **360°** = quatre angles droits (4 × 90 = 360)
-- Moitié d'un angle droit = **45°**
+1. On pose le sommet du calque sur le sommet de l'autre angle.
+2. On aligne un côté sur un côté.
+3. Si le deuxième côté du calque reste **à l'intérieur** de l'autre angle, l'angle
+   du calque est **plus petit** ; s'il passe **à l'extérieur**, il est **plus
+   grand** ; s'il est **confondu** avec l'autre côté, les deux angles sont
+   **égaux**.
 
-**Exemple :** un angle mesure 70°. Combien lui manque-t-il pour être droit ?
-90 − 70 = **20°**.
+**Exemple :** dans un carré, les quatre angles sont droits, donc égaux. Dans un
+triangle rectangle, un angle est droit et les deux autres sont aigus.
 
 ## Les erreurs à éviter
 
@@ -88,7 +101,9 @@ papier calque ou un gabarit) pour voir lequel est le plus ouvert.
   pas plus grand : seule l'ouverture compte.
 - **Confondre aigu et obtus.** Aigu = plus petit que l'angle droit ; obtus = plus
   grand.
-- **Oublier le repère 90°.** Un angle de 95° est déjà obtus, même s'il paraît
-  proche de l'angle droit.
+- **Se tromper de sommet.** Dans $\widehat{ABC}$, le sommet est la lettre du
+  milieu : $B$.
 - **Mal placer l'équerre.** Le sommet de l'équerre doit être exactement sur le
   sommet de l'angle.
+
+> En CM2, on apprendra qu'un angle droit mesure **90 degrés** (90°).

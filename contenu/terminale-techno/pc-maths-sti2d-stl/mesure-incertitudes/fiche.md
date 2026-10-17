@@ -32,8 +32,9 @@ première, qu'il faut avoir relu. En deux lignes :
 
 - toute mesure est **dispersée** : l'incertitude-type $u(X)$ chiffre cette
   dispersion ;
-- série de $n$ mesures (type A) : $u(X) = \dfrac{s}{\sqrt{n}}$ ; mesure unique :
-  $u$ estimée d'après l'instrument ;
+- série de $n$ mesures (type A) : $u(X) = \dfrac{s}{\sqrt{n}}$ ; mesure unique
+  (type B) : $u(X) = \dfrac{a}{\sqrt{3}}$, où $a$ est la demi-largeur (tolérance du
+  constructeur, ou une demi-graduation pour une lecture : $u = \dfrac{\text{graduation}}{\sqrt{12}}$) ;
 - un résultat s'écrit $X = X_{\text{mes}} \pm u(X)$, **avec l'unité**.
 
 Rien de tout cela n'est redémontré ici : on le **réutilise**.
@@ -126,8 +127,8 @@ produits et quotients.
    **relatives** pour un produit.
 4. **Reviens à l'incertitude absolue** si besoin :
    $u(y) = y \times \dfrac{u(y)}{y}$, dans l'unité du résultat.
-5. **Arrondis** : l'incertitude à $1$ chiffre significatif (voir § 5), la valeur
-   au même rang.
+5. **Arrondis** : l'incertitude au plus proche, à $1$ (ou $2$) chiffre(s)
+   significatif(s) (voir § 5), la valeur au même rang.
 
 > **Exemple complet.** $R = \dfrac{U}{I}$, $U = 12{,}0 \pm 0{,}1$ V,
 > $I = 0{,}250 \pm 0{,}005$ A.
@@ -149,14 +150,17 @@ significatifs **cohérent avec l'incertitude-type**.
 
 $$\boxed{X = X_{\text{mes}} \pm u(X)\quad \text{[unité]}}$$
 
-1. **L'incertitude** s'arrondit à $1$ chiffre significatif (l'arrondi se fait
-   **par excès** en cas de doute : on ne minimise jamais un doute).
+1. **L'incertitude** s'arrondit à la valeur **la plus proche** (arrondi habituel),
+   avec $1$ ou $2$ chiffres significatifs — un seul le plus souvent, c'est ce que font
+   les exemples de cette fiche. Si un énoncé impose un autre arrondi (par excès, par
+   exemple), on suit la consigne.
 2. **La valeur** s'arrondit **au même rang** (même position décimale) que
    l'incertitude.
 
 > **Exemple.** Calcul brut : $\rho = 7{,}8966$ g·cm⁻³ avec $u(\rho) = 0{,}0702$
 > g·cm⁻³.
-> Incertitude à 1 chiffre : $u = 0{,}07$ g·cm⁻³ (rang : le centième).
+> Incertitude à 1 chiffre : $u = 0{,}07$ g·cm⁻³ (rang : le centième) — ou $0{,}08$ g·cm⁻³
+> si l'énoncé impose l'arrondi par excès.
 > Valeur au centième : $\rho = 7{,}90$ g·cm⁻³.
 > Écriture finale : $\rho = 7{,}90 \pm 0{,}07$ g·cm⁻³.
 
@@ -233,7 +237,7 @@ $$\boxed{z = \frac{\left| X_{\text{mes}} - X_{\text{réf}} \right|}{u(X)}}$$
 | À savoir faire | Règle |
 |---|---|
 | Écriture du résultat | $X = X_{\text{mes}} \pm u(X)$ + unité |
-| Arrondi de $u$ | $1$ chiffre significatif |
+| Arrondi de $u$ | au plus proche, $1$ ou $2$ chiffres significatifs |
 | Arrondi de la valeur | au **même rang** que $u$ |
 | Validité | $z = \dfrac{\lvert X_{\text{mes}} - X_{\text{réf}}\rvert}{u(X)}$, seuil usuel $2$ |
 | $z > 2$ | erreur systématique ? $u$ sous-estimée ? modèle hors domaine ? |
@@ -296,8 +300,13 @@ Contenus couverts, tels que listés dans l'extraction :
   sont les formules standard (GUM) données dans les sujets de bac STI2D/STL ;
   le programme dit seulement « formule fournie ». Vérifier qu'aucune variante
   (somme simple majorante) n'est attendue.
-- L'arrondi de l'incertitude « par excès en cas de doute » et à 1 chiffre
-  significatif : convention d'usage (certains sujets en gardent 2). À valider.
+- CONVENTIONS HARMONISÉES le 17/10/2026 avec 1re STI2D/STL et SPCL 1re : type B u = a/√3
+  (lecture d'une graduation : a = ½ graduation, u = graduation/√12) ; incertitude arrondie au plus
+  proche à 1 ou 2 c.s., valeur au même rang. Les énoncés d'exercices et de QCM qui ont une seule
+  bonne écriture précisent « incertitude arrondie à un chiffre significatif ».
+- Arrondi de l'incertitude à 1 chiffre significatif, au plus proche (tranché le 17/10/2026 :
+  l'ancienne règle « par excès en cas de doute » contredisait l'exemple 0,0702 → 0,07 et les
+  QCM) ; l'arrondi par excès est présenté comme une variante imposée par certains énoncés.
 
 Calculs vérifiés numériquement (R = U/I : 48 ± 1 Ω ; différence de masses :
 u = 0,07 g ; ρ : 7,90 ± 0,07 g·cm⁻³ ; vitesse du son : z = 1,0).

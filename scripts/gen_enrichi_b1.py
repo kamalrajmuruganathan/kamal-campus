@@ -259,87 +259,120 @@ def _justif_nature(a):
 
 
 def gen_cm1_angles():
+    # CM1 (programme cycle 3, 2025) : lexique, notations, comparaison d'angles saillants.
+    # Pas de degrés (CM2), pas d'angle plat ni plein (6e).
     L = Lot()
-    # 1. nature d'un angle (6 directs + 3 vrai/faux)
-    for a in [35, 90, 120, 180, 75, 160]:
+    REP = "On compare à l'angle droit (le coin de l'équerre)."
+    # 1. nature d'un angle (comparaison à l'angle droit)
+    for cas, nat, expl in [("reste à l'intérieur de l'équerre", "aigu", "l'angle est plus petit que l'angle droit"),
+                           ("dépasse à l'extérieur de l'équerre", "obtus", "l'angle est plus grand que l'angle droit"),
+                           ("suit exactement le bord de l'équerre", "droit", "l'angle est un angle droit")]:
         L.add("application", "nature-angle",
-              f"Un angle mesure {deg(a)}. Est-il aigu, droit, obtus ou plat ?",
-              ["On compare à l'angle droit ($90^\\circ$) et à l'angle plat ($180^\\circ$).", _justif_nature(a)],
-              _nature(a))
-    for a, dit in [(95, "aigu"), (88, "aigu"), (135, "obtus")]:
-        vrai = _nature(a) == dit
-        L.add("intermediaire", "nature-angle",
-              f"Vrai ou faux : un angle de {deg(a)} est {dit}.",
-              [_justif_nature(a)],
-              "Vrai" if vrai else f"Faux : il est {_nature(a)}.")
-    # 2. compléter jusqu'à l'angle droit
-    for i, a in enumerate([70, 40, 25, 65, 10, 55, 80, 35]):
-        diff = "application" if i < 4 else "intermediaire"
-        en = (f"Combien de degrés manque-t-il à un angle de {deg(a)} pour former un angle droit ?" if i % 2 == 0 else
-              f"Un angle droit est partagé en deux angles. L'un mesure {deg(a)}. Combien mesure l'autre ?")
-        L.add(diff, "completer-angle-droit", en,
-              ["Un angle droit mesure $90^\\circ$.", f"$90 - {a} = {90 - a}$."], deg(90 - a))
-    # 3. compléter jusqu'à l'angle plat
-    for i, a in enumerate([130, 45, 100, 150, 72, 115, 90, 25]):
-        diff = "intermediaire" if i < 5 else "approfondissement"
-        en = (f"Deux angles placés côte à côte forment un angle plat. L'un mesure {deg(a)}. Combien mesure l'autre ?"
-              if i % 2 == 0 else
-              f"Combien de degrés faut-il ajouter à un angle de {deg(a)} pour obtenir un angle plat ?")
-        L.add(diff, "completer-angle-plat", en,
-              ["Un angle plat mesure $180^\\circ$.", f"$180 - {a} = {180 - a}$."], deg(180 - a))
-    # 4. repères en degrés
-    for k in [2, 3, 4]:
-        tot = 90 * k
-        nom = {180: " : c'est un angle plat", 360: " : c'est un tour complet"}.get(tot, "")
-        L.add("application", "reperes-degres",
-              f"Combien de degrés mesurent {lettres(k)} angles droits placés côte à côte ?",
-              [f"${k} \\times 90 = {tot}${nom}."], deg(tot))
-    L.add("application", "reperes-degres", "Combien d'angles droits faut-il pour faire un tour complet ?",
-          ["Un tour complet mesure $360^\\circ$ et un angle droit $90^\\circ$.", f"$360 \\div 90 = {360 // 90}$."],
-          f"${360 // 90}$")
-    L.add("application", "reperes-degres", "Combien d'angles droits faut-il pour faire un angle plat ?",
-          ["Un angle plat mesure $180^\\circ$.", f"$180 \\div 90 = {180 // 90}$."], f"${180 // 90}$")
-    L.add("intermediaire", "reperes-degres", "Combien mesure la moitié d'un angle droit ?",
-          [f"$90 \\div 2 = {90 // 2}$."], deg(90 // 2))
-    L.add("intermediaire", "reperes-degres", "Combien mesure la moitié d'un angle plat ? Quel angle obtient-on ?",
-          [f"$180 \\div 2 = {180 // 2}$ : c'est un angle droit."], f"{deg(180 // 2)}, un angle droit")
+              f"On pose le coin de l'équerre sur le sommet d'un angle, un côté bien aligné. Le deuxième côté de l'angle {cas}. L'angle est-il aigu, droit ou obtus ?",
+              [f"Le deuxième côté {cas} : {expl}."], f"angle {nat}")
+    L.add("application", "nature-angle", "Le coin d'une page de cahier forme-t-il un angle aigu, droit ou obtus ?",
+          ["Une page de cahier est un rectangle : ses coins sont des angles droits (on le vérifie avec l'équerre)."], "angle droit")
+    for k, nat, expl in [(4, "droit", "Quatre parts égales font chacune un quart de tour : c'est exactement le coin de l'équerre."),
+                         (8, "aigu", "Huit parts égales sont deux fois plus étroites que quatre parts : chaque pointe est plus petite qu'un angle droit."),
+                         (6, "aigu", "Six parts égales sont plus étroites que quatre parts (qui forment des angles droits) : chaque pointe est plus petite qu'un angle droit."),
+                         (3, "obtus", "Trois parts égales sont plus larges que quatre parts (qui forment des angles droits) : chaque pointe est plus grande qu'un angle droit.")]:
+        L.add("intermediaire" if k != 4 else "application", "nature-angle",
+              f"Une tarte ronde est coupée depuis le centre en {lettres(k)} parts égales. La pointe de chaque part forme-t-elle un angle aigu, droit ou obtus ?",
+              [REP, expl], f"angle {nat}")
+    # 2. nommer un angle
+    for (a, b, c) in [("A", "B", "C"), ("R", "S", "T"), ("M", "N", "P"), ("E", "F", "G"), ("K", "L", "M")]:
+        L.add("application", "nommer-angle", f"Quel est le sommet de l'angle $\\widehat{{{a}{b}{c}}}$ ?",
+              ["Dans le nom d'un angle, la lettre du milieu est toujours le sommet.",
+               f"Le sommet de $\\widehat{{{a}{b}{c}}}$ est donc ${b}$."], f"${b}$")
+    for (s, p, q) in [("E", "D", "F"), ("I", "H", "J")]:
+        L.add("intermediaire", "nommer-angle",
+              f"Un angle a pour sommet le point ${s}$ ; un de ses côtés passe par ${p}$ et l'autre par ${q}$. Comment le nomme-t-on ?",
+              ["On écrit un point d'un côté, puis le sommet au milieu, puis un point de l'autre côté, avec un chapeau au-dessus.",
+               f"On peut aussi l'écrire $\\widehat{{{q}{s}{p}}}$ : c'est le même angle."],
+              f"$\\widehat{{{p}{s}{q}}}$ (ou $\\widehat{{{q}{s}{p}}}$)")
+    L.add("approfondissement", "nommer-angle", "Le triangle $ABC$ a trois angles. Écris le nom de l'angle de sommet $C$.",
+          ["Le sommet $C$ s'écrit au milieu ; les côtés de cet angle passent par $A$ et par $B$."],
+          "$\\widehat{ACB}$ (ou $\\widehat{BCA}$)")
+    L.add("intermediaire", "nommer-angle", "Les écritures $\\widehat{ABC}$ et $\\widehat{CBA}$ désignent-elles le même angle ?",
+          ["Les deux ont le même sommet $B$ (la lettre du milieu) et les mêmes côtés, qui passent par $A$ et par $C$."], "Oui")
+    L.add("approfondissement", "nommer-angle", "Les écritures $\\widehat{ABC}$ et $\\widehat{BAC}$ désignent-elles le même angle ?",
+          ["Le sommet de $\\widehat{ABC}$ est $B$, celui de $\\widehat{BAC}$ est $A$ : ce sont deux angles différents."],
+          "Non : les sommets sont différents ($B$ et $A$).")
+    # 3. angles des figures
+    L.add("application", "angles-des-figures", "Combien d'angles droits a un carré ?",
+          ["Un carré a quatre angles, et ils sont tous droits."], "$4$")
+    L.add("application", "angles-des-figures", "Combien d'angles droits a un rectangle ?",
+          ["Un rectangle a quatre angles, et ils sont tous droits."], "$4$")
+    L.add("application", "angles-des-figures", "Combien d'angles droits a un triangle rectangle ?",
+          ["Un triangle rectangle a exactement un angle droit."], "$1$")
+    L.add("intermediaire", "angles-des-figures",
+          "Dans un triangle rectangle, les deux angles qui ne sont pas droits sont-ils aigus ou obtus ?",
+          ["On le vérifie avec l'équerre : chacun de ces deux angles est plus petit que l'angle droit."], "aigus")
+    L.add("intermediaire", "angles-des-figures",
+          "Les trois angles d'un triangle équilatéral sont égaux. Sont-ils aigus, droits ou obtus ?",
+          ["Avec l'équerre, on voit que chaque angle d'un triangle équilatéral est plus petit que l'angle droit."], "aigus")
+    L.add("approfondissement", "angles-des-figures",
+          "Un losange qui n'est pas un carré a-t-il des angles droits ? Quels angles a-t-il ?",
+          ["Seul le losange qui est un carré a des angles droits.",
+           "Un autre losange a deux angles aigus (face à face) et deux angles obtus (face à face)."],
+          "Non : deux angles aigus et deux angles obtus.")
+    L.add("approfondissement", "angles-des-figures",
+          "On coupe un rectangle en deux triangles le long d'une diagonale. Quels angles a chaque triangle ?",
+          ["Chaque triangle garde un coin du rectangle : un angle droit.",
+           "Ses deux autres angles sont des morceaux d'angles droits : ils sont aigus."],
+          "un angle droit et deux angles aigus")
+    L.add("probleme", "angles-des-figures", "Un triangle peut-il avoir deux angles droits ? Explique.",
+          ["Si un triangle avait deux angles droits aux deux bouts d'un même côté, ses deux autres côtés seraient tous les deux perpendiculaires à ce côté.",
+           "Ils seraient alors parallèles : ils ne se rejoindraient jamais et ne pourraient pas fermer le triangle."],
+          "Non : les deux côtés seraient parallèles et ne se rejoindraient pas.")
+    # 4. les aiguilles d'une horloge
+    for h in [3, 1, 5, 9, 2, 4, 10, 8, 11, 7]:
+        k = min(h, 12 - h)
+        nat = "aigu" if k < 3 else ("droit" if k == 3 else "obtus")
+        diff = "application" if k == 3 else ("intermediaire" if k != 4 else "approfondissement")
+        corr = ["À 3 h, la grande aiguille est sur le 12 et la petite sur le 3 : elles forment un angle droit (un quart du cadran)."]
+        if h == 9:
+            corr.append("À 9 h, c'est pareil de l'autre côté du cadran : la petite aiguille est sur le 9, à un quart de tour du 12.")
+        elif k != 3:
+            ecart = "une heure" if k == 1 else f"{lettres(k)} heures"
+            corr.append(f"À {h} h, l'écart entre les aiguilles correspond à {ecart} sur le cadran, "
+                        + ("moins qu'à 3 h" if k < 3 else "plus qu'à 3 h, sans que les aiguilles forment une ligne droite") + f" : l'angle est {nat}.")
+        L.add(diff, "horloge",
+              f"À {h} h pile, les deux aiguilles d'une horloge forment-elles un angle aigu, droit ou obtus ?",
+              corr, f"angle {nat}")
     # 5. comparer des angles
-    for liste in [[120, 45, 90, 30], [100, 15, 170, 60], [89, 91, 9, 145], [180, 75, 105, 40]]:
-        tri = sorted(liste)
+    for cas, rep, expl in [("reste à l'intérieur de l'angle B", "L'angle A est plus petit que l'angle B.", "l'angle A est moins ouvert"),
+                           ("passe à l'extérieur de l'angle B", "L'angle A est plus grand que l'angle B.", "l'angle A est plus ouvert"),
+                           ("se pose exactement sur l'autre côté de l'angle B", "Les deux angles sont égaux.", "les deux angles ont la même ouverture")]:
         L.add("intermediaire", "comparer-angles",
-              "Range ces angles du plus petit au plus grand : " + ", ".join(deg(a) for a in liste) + ".",
-              ["On compare les mesures en degrés : plus la mesure est grande, plus l'angle est ouvert."],
-              " ; ".join(deg(a) for a in tri))
-    for (ca, a, cb, b) in [(12, 40, 3, 70), (2, 110, 15, 85), (20, 30, 5, 45), (4, 150, 9, 120)]:
-        plus = "A" if a > b else "B"
-        L.add("approfondissement", "comparer-angles",
-              f"L'angle A a des côtés de {ca} cm et mesure {deg(a)}. L'angle B a des côtés de {cb} cm et mesure {deg(b)}. Lequel est le plus grand ?",
-              ["La longueur des côtés ne compte pas : seule l'ouverture (la mesure) compte.",
-               f"${max(a, b)}^\\circ > {min(a, b)}^\\circ$."],
-              f"l'angle {plus}")
-    # 6. situations
-    for k in [4, 8, 2]:
-        ang = 360 // k
-        L.add("probleme", "situations",
-              f"Une tarte ronde est coupée depuis le centre en {lettres(k)} parts égales. Quel angle forme chaque part au centre ? Quelle est sa nature ?",
-              ["Un tour complet mesure $360^\\circ$.", f"$360 \\div {k} = {ang}$ : angle {_nature(ang)}."],
-              f"{deg(ang)}, angle {_nature(ang)}")
-    for nom, frac in [("un quart de tour", Fraction(1, 4)), ("un demi-tour", Fraction(1, 2)),
-                      ("trois quarts de tour", Fraction(3, 4))]:
-        ang = int(360 * frac)
-        L.add("probleme", "situations",
-              f"Un danseur fait {nom} sur lui-même. De combien de degrés a-t-il tourné ?",
-              [f"Un tour complet mesure $360^\\circ$ ; {nom}, c'est ${fl(frac.numerator, frac.denominator)}$ de tour.",
-               f"$360 \\div {frac.denominator} = {360 // frac.denominator}$" + (f" et ${360 // frac.denominator} \\times {frac.numerator} = {ang}$." if frac.numerator > 1 else ".")],
-              deg(ang))
-    for h in [3, 6, 2, 5]:
-        ang = 30 * min(h, 12 - h)
-        L.add("probleme", "situations",
-              f"À {h} h pile, quel angle forment les deux aiguilles d'une horloge : aigu, droit, obtus ou plat ?",
-              ["Le cadran fait un tour ($360^\\circ$) en 12 heures : entre deux nombres voisins, il y a $360 \\div 12 = 30^\\circ$.",
-               f"À {h} h, les aiguilles sont écartées de ${min(h, 12 - h)} \\times 30 = {ang}^\\circ$.",
-               _justif_nature(ang)],
-              f"{_nature(ang)} ({deg(ang)})")
+              f"On reproduit l'angle A sur du papier calque, puis on le pose sur l'angle B : même sommet, un côté aligné. Le deuxième côté du calque {cas}. Que peut-on dire ?",
+              [f"Le deuxième côté du calque {cas} : {expl}."], rep)
+    L.add("intermediaire", "comparer-angles",
+          "L'angle A est droit et ses côtés mesurent 12 cm. L'angle B est droit et ses côtés mesurent 3 cm. Lequel est le plus grand ?",
+          ["La longueur des côtés ne compte pas : seule l'ouverture compte.", "Deux angles droits ont la même ouverture."],
+          "Ils sont égaux.")
+    L.add("approfondissement", "comparer-angles",
+          "L'angle A est aigu et ses côtés mesurent 15 cm. L'angle B est droit et ses côtés mesurent 2 cm. Lequel est le plus grand ?",
+          ["La longueur des côtés ne compte pas.", "Un angle aigu est plus petit qu'un angle droit : B est le plus grand."],
+          "l'angle B")
+    L.add("application", "comparer-angles", "Range du plus petit au plus grand : un angle obtus, un angle aigu, un angle droit.",
+          ["L'angle aigu est plus petit que l'angle droit, et l'angle obtus est plus grand."], "aigu ; droit ; obtus")
+    L.add("application", "comparer-angles", "Un angle obtus et un angle droit : lequel est le plus grand ?",
+          ["Un angle obtus est, par définition, plus grand qu'un angle droit."], "l'angle obtus")
+    L.add("approfondissement", "comparer-angles",
+          "L'angle $\\widehat{A}$ est plus petit que l'angle $\\widehat{B}$, et $\\widehat{B}$ est plus petit que $\\widehat{C}$. Lequel des trois est le plus grand ?",
+          ["$\\widehat{A}$ est plus petit que $\\widehat{B}$, qui est plus petit que $\\widehat{C}$ : le plus grand est $\\widehat{C}$."],
+          "$\\widehat{C}$")
+    L.add("probleme", "comparer-angles",
+          "L'angle $\\widehat{B}$ est droit et l'angle $\\widehat{A}$ est plus petit que $\\widehat{B}$. L'angle $\\widehat{A}$ est-il aigu ou obtus ?",
+          ["$\\widehat{A}$ est plus petit qu'un angle droit : il est aigu."], "aigu")
+    # 6. vrai ou faux
+    for phrase, vrai, expl in [("Un angle obtus est plus petit qu'un angle droit.", False, "Un angle obtus est plus grand qu'un angle droit."),
+                               ("Plus on allonge les côtés d'un angle, plus l'angle est grand.", False, "La longueur des côtés ne change pas l'ouverture."),
+                               ("Tous les angles droits sont égaux.", True, "Ils ont tous l'ouverture du coin de l'équerre."),
+                               ("Un angle aigu est toujours plus petit qu'un angle obtus.", True, "L'angle aigu est plus petit que l'angle droit, l'angle obtus est plus grand."),
+                               ("Le sommet d'un angle est le point d'où partent ses deux côtés.", True, "C'est la définition du sommet.")]:
+        L.add("approfondissement" if "allonge" in phrase else "intermediaire", "vrai-faux", f"Vrai ou faux : « {phrase} »", [expl], "Vrai" if vrai else "Faux")
     return L.fin()
 
 
@@ -632,12 +665,13 @@ def gen_cm1_durees():
         L.add("intermediaire", "heures-minutes", f"Convertis {tot} min en heures et minutes.",
               [f"$60 \\times {h} = {60 * h}$ et ${tot} - {60 * h} = {mn}$."], du(tot))
     # 2. autres unités
-    L.add("application", "autres-unites", "Combien de secondes y a-t-il dans 3 min ?",
-          [f"$1$ min $= 60$ s, donc $3 \\times 60 = {3 * 60}$ s."], f"${3 * 60}$ s")
-    L.add("intermediaire", "autres-unites", "Convertis 2 min 30 s en secondes.",
-          [f"$2 \\times 60 + 30 = {2 * 60 + 30}$ s."], f"${2 * 60 + 30}$ s")
-    L.add("intermediaire", "autres-unites", "Convertis 90 s en minutes et secondes.",
-          [f"$90 = 60 + {90 - 60}$."], f"1 min {90 - 60} s")
+    # (Les secondes ne sont étudiées qu'en CM2 : programme cycle 3, 2025.)
+    L.add("application", "autres-unites", "Combien de minutes dure une demi-heure ?",
+          [f"Une demi-heure, c'est la moitié d'une heure : $60 \\div 2 = {60 // 2}$ min."], f"${60 // 2}$ min")
+    L.add("intermediaire", "autres-unites", "Convertis 1 jour et 6 h en heures.",
+          [f"$1$ jour $= 24$ h, donc $24 + 6 = {24 + 6}$ h."], f"${24 + 6}$ h")
+    L.add("intermediaire", "autres-unites", "Convertis 50 h en jours et heures.",
+          [f"$2 \\times 24 = {2 * 24}$ et $50 - {2 * 24} = {50 - 48}$."], f"2 jours et {50 - 48} h")
     L.add("application", "autres-unites", "Combien d'heures y a-t-il dans 2 jours ?",
           [f"$1$ jour $= 24$ h, donc $2 \\times 24 = {2 * 24}$ h."], f"${2 * 24}$ h")
     L.add("application", "autres-unites", "Combien de jours y a-t-il dans 3 semaines ?",
@@ -1648,7 +1682,7 @@ def gen_cm1_tableaux():
 
 
 # =====================================================================
-#  CM2 — Aires, périmètres et volumes
+#  CM2 — Aires et périmètres (chapitre aires-perimetres-volumes)
 # =====================================================================
 
 def gen_cm2_aires_volumes():
@@ -1693,34 +1727,35 @@ def gen_cm2_aires_volumes():
               [f"${A} \\div {lo} = {A // lo}$."], f"${A // lo}$ cm")
     L.add("approfondissement", "retrouver-une-mesure", "Un carré a un périmètre de 68 cm. Quelle est son aire ?",
           [f"Côté : $68 \\div 4 = {68 // 4}$ cm.", f"Aire : ${17} \\times {17} = {17 * 17}$ cm²."], f"${17 * 17}$ cm²")
-    # 4. volumes
-    for (lo, la, h) in [(4, 3, 2), (10, 5, 6), (8, 8, 8), (12, 5, 3)]:
-        nom = "cube" if lo == la == h else "pavé droit"
-        en = (f"Calcule le volume d'un cube de {lo} cm d'arête." if nom == "cube" else
-              f"Calcule le volume d'un pavé droit de {lo} cm de long, {la} cm de large et {h} cm de haut.")
-        L.add("application", "volume", en, [f"$V = {lo} \\times {la} \\times {h} = {m(lo * la * h)}$."], f"${m(lo * la * h)}$ cm³")
-    L.add("intermediaire", "volume", "Une boîte est remplie de 5 couches de 6 rangées de 4 petits cubes d'un centimètre cube. Quel est son volume ?",
-          [f"$4 \\times 6 \\times 5 = {4 * 6 * 5}$ petits cubes d'un centimètre cube."], f"${4 * 6 * 5}$ cm³")
-    L.add("intermediaire", "volume", "Un pavé droit a un volume de 60 cm³. Sa base mesure 5 cm sur 4 cm. Quelle est sa hauteur ?",
-          [f"Base : $5 \\times 4 = 20$.", f"Hauteur : $60 \\div 20 = {60 // 20}$ cm."], f"${60 // 20}$ cm")
-    L.add("approfondissement", "volume", "Un cube a un volume de 125 cm³. Combien mesure son arête ?",
-          ["On cherche le nombre qui, multiplié trois fois par lui-même, donne 125.", f"$5 \\times 5 \\times 5 = {5 * 5 * 5}$."], "$5$ cm")
-    L.add("intermediaire", "volume", "Combien de petits cubes d'un centimètre d'arête faut-il pour construire un cube de 3 cm d'arête ?",
-          [f"$3 \\times 3 \\times 3 = {27}$."], f"${27}$ cubes")
-    # 5. contenances
-    for (lo, la, h) in [(50, 30, 40), (60, 40, 30), (40, 25, 20)]:
-        V = lo * la * h
-        L.add("probleme", "contenance",
-              f"Un aquarium a la forme d'un pavé droit de {lo} cm sur {la} cm et {h} cm de haut. Combien de litres d'eau peut-il contenir ?",
-              [f"$V = {lo} \\times {la} \\times {h} = {m(V)}$ cm³.", f"$1$ L $= 1$ dm³ $= 1\\,000$ cm³, donc ${m(V)} \\div 1\\,000 = {m(V // 1000)}$ L."],
-              f"${m(V // 1000)}$ L")
-    L.add("application", "contenance", "Combien de litres contient un cube d'un décimètre d'arête ?", ["$1$ dm³ $= 1$ L."], "$1$ L")
-    L.add("intermediaire", "contenance", "Combien de centimètres cubes y a-t-il dans 1 L ?",
-          ["$1$ L $= 1$ dm³, et un cube d'un décimètre (10 cm) d'arête contient $10 \\times 10 \\times 10 = 1\\,000$ cm³."], "$1\\,000$ cm³")
-    L.add("approfondissement", "contenance", "Une bouteille contient 75 cL. Combien cela fait-il de centimètres cubes ?",
-          ["$1$ L $= 100$ cL $= 1\\,000$ cm³, donc $1$ cL $= 10$ cm³.", f"$75 \\times 10 = {750}$."], "$750$ cm³")
-    L.add("intermediaire", "contenance", "Une brique de jus a un volume de 1\u00a0500 cm³. Combien de litres de jus peut-elle contenir ?",
-          [f"$1\\,500 \\div 1\\,000 = {ld(F(1500, 1000))}$."], f"${ld(F(3, 2))}$ L")
+    # 4. unités d'aire (CM2 : cm², dm², m² ; le volume et le cm³ sont étudiés en 6e)
+    for d in [3, 7, 12]:
+        L.add("application", "unites-aire", f"Convertis {d} dm² en cm².",
+              ["$1$ dm² $= 100$ cm² (un carré de 10 cm sur 10 cm).", f"${d} \\times 100 = {m(d * 100)}$."], f"${m(d * 100)}$ cm²")
+    for c in [400, 2500]:
+        L.add("intermediaire", "unites-aire", f"Convertis {tx(c)} cm² en dm².",
+              ["$100$ cm² $= 1$ dm².", f"${m(c)} \\div 100 = {c // 100}$."], f"${c // 100}$ dm²")
+    for d in [4, 15]:
+        L.add("application", "unites-aire", f"Convertis {d} m² en dm².",
+              ["$1$ m² $= 100$ dm² (un carré de 10 dm sur 10 dm).", f"${d} \\times 100 = {m(d * 100)}$."], f"${m(d * 100)}$ dm²")
+    for d in [600, 1200]:
+        L.add("intermediaire", "unites-aire", f"Convertis {tx(d)} dm² en m².",
+              ["$100$ dm² $= 1$ m².", f"${m(d)} \\div 100 = {d // 100}$."], f"${d // 100}$ m²")
+    L.add("approfondissement", "unites-aire", "Range ces aires de la plus petite à la plus grande : 250 cm² ; 3 dm² ; 2 dm².",
+          ["On convertit tout en cm² : $3$ dm² $= 300$ cm² et $2$ dm² $= 200$ cm².", "$200 < 250 < 300$."],
+          "2 dm² ; 250 cm² ; 3 dm²")
+    L.add("approfondissement", "unites-aire", "Combien de centimètres carrés y a-t-il dans 1 m² ?",
+          ["$1$ m² $= 100$ dm², et $1$ dm² $= 100$ cm².", f"$100 \\times 100 = {m(10000)}$."], f"${m(10000)}$ cm²")
+    # 5. aires sur un quadrillage
+    for (r, c) in [(7, 9), (6, 12)]:
+        L.add("application", "aire-quadrillage",
+              f"Un rectangle est formé de {lettres(r)} rangées de {c} carreaux d'un centimètre carré. Quelle est son aire ?",
+              [f"${r} \\times {c} = {r * c}$ carreaux d'un centimètre carré."], f"${r * c}$ cm²")
+    L.add("intermediaire", "aire-quadrillage",
+          "Une figure dessinée sur un quadrillage de 1 cm de côté recouvre 14 carreaux entiers et 6 demi-carreaux. Quelle est son aire ?",
+          ["Deux demi-carreaux font un carreau entier : $6$ demi-carreaux font $3$ carreaux.", f"$14 + 3 = {17}$."], f"${17}$ cm²")
+    L.add("intermediaire", "aire-quadrillage",
+          "Sur un quadrillage de 1 cm de côté, on trace un carré de 5 carreaux de côté, puis on colorie un rectangle de 2 carreaux sur 3 à l'intérieur. Quelle aire reste non coloriée ?",
+          [f"Carré : $5 \\times 5 = {25}$ cm².", f"Rectangle colorié : $2 \\times 3 = {6}$ cm².", f"${25} - {6} = {19}$."], f"${19}$ cm²")
     # 6. périmètre ou aire ?
     for (r1, r2) in [((6, 4), (8, 2)), ((7, 3), (5, 5)), ((9, 1), (6, 4)), ((12, 2), (8, 6))]:
         p1, p2 = 2 * sum(r1), 2 * sum(r2)
@@ -1754,16 +1789,14 @@ def gen_cm2_aires_volumes():
           "Une cuisine rectangulaire de 4 m sur 3 m est carrelée avec des dalles carrées de 50 cm de côté. Combien faut-il de dalles ?",
           ["Dans 4 m il y a $8$ fois 50 cm, et dans 3 m $6$ fois 50 cm.", f"$8 \\times 6 = {48}$ dalles."], f"${48}$ dalles")
     L.add("probleme", "problemes",
-          "Un carton a la forme d'un pavé droit de 30 cm sur 20 cm et 10 cm de haut. Combien de cubes de 10 cm d'arête peut-on y ranger ?",
-          [f"$3$ cubes en longueur, $2$ en largeur, $1$ en hauteur : $3 \\times 2 \\times 1 = {6}$."], f"${6}$ cubes")
+          "Une pelouse rectangulaire mesure 20 m sur 15 m. Un sac d'engrais suffit pour 50 m². Combien de sacs faut-il pour toute la pelouse ?",
+          [f"Aire : $20 \\times 15 = {300}$ m².", f"${300} \\div 50 = {6}$."], f"${6}$ sacs")
     L.add("probleme", "problemes",
-          "Une piscine a la forme d'un pavé droit de 10 m de long, 5 m de large et 2 m de profondeur. Quel est son volume ? Combien de litres d'eau faut-il pour la remplir ?",
-          [f"$V = 10 \\times 5 \\times 2 = {100}$ m³.", f"$1$ m³ $= 1\\,000$ L, donc ${100} \\times 1\\,000 = {m(100 * 1000)}$ L."],
-          f"${100}$ m³, soit ${m(100000)}$ L")
+          "Une photo mesure 15 cm sur 10 cm. Quelle est son aire en centimètres carrés ? Est-elle plus grande ou plus petite que 1 dm² ?",
+          [f"Aire : $15 \\times 10 = {150}$ cm².", "$1$ dm² $= 100$ cm², et $150 > 100$."], f"${150}$ cm², plus grande que 1 dm²")
     L.add("probleme", "problemes",
-          "Combien de boîtes de 20 cm sur 10 cm sur 5 cm peut-on ranger dans un carton de 40 cm sur 30 cm sur 20 cm, en les posant toutes dans le même sens ?",
-          [f"En longueur : $40 \\div 20 = 2$ ; en largeur : $30 \\div 10 = 3$ ; en hauteur : $20 \\div 5 = 4$.", f"$2 \\times 3 \\times 4 = {24}$."],
-          f"${24}$ boîtes")
+          "On pose un tapis carré de 2 m de côté dans une chambre rectangulaire de 4 m sur 3 m. Quelle aire du sol reste visible ?",
+          [f"Chambre : $4 \\times 3 = {12}$ m².", f"Tapis : $2 \\times 2 = {4}$ m².", f"${12} - {4} = {8}$."], f"${8}$ m²")
     L.add("probleme", "problemes",
           "Un terrain carré de 30 m de côté est entouré d'une haie, sauf à l'endroit d'un portail de 4 m. Quelle est la longueur de la haie ?",
           [f"Périmètre : $4 \\times 30 = {120}$ m.", f"Sans le portail : ${120} - 4 = {116}$ m."], f"${116}$ m")
@@ -1774,53 +1807,76 @@ def gen_cm2_aires_volumes():
 #  CM2 — Angles et mesures
 # =====================================================================
 
+def _justif_cm2(a):
+    """Justification de la nature d'un angle saillant (CM2 : comparaison à 90°, pas d'angle plat)."""
+    assert 0 < a < 180
+    if a < 90:
+        return f"${a} < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
+    if a == 90:
+        return "Il mesure exactement $90^\\circ$ : c'est un angle droit."
+    return f"${a} > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
+
+
 def gen_cm2_angles():
+    # CM2 (programme cycle 3, 2025) : le degré est introduit à partir de l'angle droit (90°) ;
+    # pas de rapporteur (collège), pas d'angle plat ni de tour complet (6e), angles saillants.
     L = Lot()
-    for i, a in enumerate([20, 90, 145, 180, 60, 100, 89, 175, 91]):
+    # 1. nature d'un angle
+    for i, a in enumerate([20, 90, 145, 60, 100, 45, 89, 135, 91]):
         L.add("application" if i < 6 else "intermediaire", "nature-angle",
-              f"Un angle mesure {deg(a)}. Est-il aigu, droit, obtus ou plat ?", [_justif_nature(a)], _nature(a))
+              f"Un angle mesure {deg(a)}. Est-il aigu, droit ou obtus ?", [_justif_cm2(a)], _nature(a))
+    # 2. compléter un angle droit
     for a in [35, 72, 15, 48, 81, 27]:
         L.add("application", "completer-angle-droit",
               f"Un angle droit est partagé en deux angles. L'un mesure {deg(a)}. Combien mesure l'autre ?",
-              [f"$90 - {a} = {90 - a}$."], deg(90 - a))
-    for a in [40, 125, 63, 110, 17, 158]:
-        L.add("intermediaire", "completer-angle-plat",
-              f"Deux angles placés côte à côte forment un angle plat. L'un mesure {deg(a)}. Combien mesure l'autre ? Quelle est sa nature ?",
-              [f"$180 - {a} = {180 - a}$.", _justif_nature(180 - a)], f"{deg(180 - a)}, {_nature(180 - a)}")
-    for t in [(35, 55), (60, 70), (45, 45), (25, 40, 50), (100, 80), (30, 30, 30), (110, 35)]:
+              ["Un angle droit mesure $90^\\circ$.", f"$90 - {a} = {90 - a}$."], deg(90 - a))
+    # 3. additionner des angles
+    for t in [(35, 55), (60, 70), (45, 45), (25, 40, 50), (30, 30, 30), (110, 35), (20, 25)]:
         s = sum(t)
         L.add("intermediaire", "additionner-des-angles",
               "On place côte à côte des angles de " + ", ".join(deg(a) for a in t[:-1]) + f" et {deg(t[-1])}. Quel angle obtient-on ? Quelle est sa nature ?",
-              [f"${' + '.join(map(str, t))} = {s}$.", _justif_nature(s)], f"{deg(s)}, angle {_nature(s)}")
-    for x in [40, 130, 25, 155, 70, 115, 50]:
-        autre = 180 - x
-        nat = _nature(x)
-        L.add("approfondissement", "lire-un-rapporteur",
-              f"Sur un rapporteur, la demi-droite passe en face des nombres {min(x, autre)} et {max(x, autre)} (les deux graduations). On voit que l'angle est {nat}. Quelle est sa mesure ?",
-              ["Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-               f"L'angle est {nat}, donc il mesure {'moins' if nat == 'aigu' else 'plus'} de $90^\\circ$ : c'est {deg(x)}."],
-              deg(x))
-    for k in [4, 6, 8, 12]:
-        L.add("intermediaire", "partager-un-tour",
-              f"On partage un tour complet en {k} angles égaux. Combien mesure chaque angle ?",
-              [f"$360 \\div {k} = {360 // k}$."], deg(360 // k))
-    for (a, cible, nom) in [(30, 90, "un angle droit"), (30, 180, "un angle plat"), (45, 360, "un tour complet"), (20, 180, "un angle plat")]:
-        L.add("approfondissement", "partager-un-tour",
-              f"Combien d'angles de {deg(a)} faut-il placer côte à côte pour obtenir {nom} ?",
-              [f"${cible} \\div {a} = {cible // a}$."], f"${cible // a}$")
-    for h in [1, 4, 6, 3]:
-        ang = 30 * min(h, 12 - h)
-        L.add("probleme", "horloge",
+              [f"${' + '.join(map(str, t))} = {s}$.", _justif_cm2(s)], f"{deg(s)}, angle {_nature(s)}")
+    # 4. construire un angle multiple d'un angle donné
+    for (a, k) in [(40, 2), (30, 3), (55, 2), (25, 3), (65, 2)]:
+        nom = {2: "double", 3: "triple"}[k]
+        L.add("intermediaire", "angle-multiple",
+              f"On reproduit {lettres(k)} fois un angle de {deg(a)} et on place les copies côte à côte. On obtient l'angle {nom}. Combien mesure-t-il ?",
+              [f"Les angles placés côte à côte s'additionnent : ${k} \\times {a} = {k * a}$.", _justif_cm2(k * a)],
+              deg(k * a))
+    # 5. la moitié d'un angle, par pliage
+    for i, a in enumerate([90, 60, 120, 140, 100, 50]):
+        L.add("application" if i < 2 else "intermediaire", "moitie-par-pliage",
+              f"On plie un angle de {deg(a)} en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
+              ["Le pliage partage l'angle en deux moitiés égales.", f"${a} \\div 2 = {a // 2}$."], deg(a // 2))
+    # 6. combien d'angles pour faire un angle droit
+    for a in [30, 45, 15, 10]:
+        L.add("approfondissement", "combien-d-angles",
+              f"Combien d'angles de {deg(a)} faut-il placer côte à côte pour obtenir un angle droit ?",
+              ["Un angle droit mesure $90^\\circ$.", f"$90 \\div {a} = {90 // a}$."], f"${90 // a}$")
+    # 7. comparer et ranger
+    for liste in [[120, 45, 90, 30], [100, 15, 170, 60], [89, 91, 9, 145]]:
+        tri = sorted(liste)
+        L.add("intermediaire", "comparer-angles",
+              "Range ces angles du plus petit au plus grand : " + ", ".join(deg(a) for a in liste) + ".",
+              ["Plus la mesure en degrés est grande, plus l'angle est ouvert."],
+              " ; ".join(deg(a) for a in tri))
+    # 8. l'horloge : de 12 à 3, un quart du cadran = un angle droit ; 3 intervalles de 30°
+    QUART = "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle."
+    for h in [1, 2, 4, 5, 10, 8]:
+        k = min(h, 12 - h)
+        ang = 30 * k
+        L.add("probleme", "horloge-heures",
               f"À {h} h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
-              ["Entre deux nombres voisins du cadran : $360 \\div 12 = 30^\\circ$.",
-               f"À {h} h : ${min(h, 12 - h)} \\times 30 = {ang}$.", _justif_nature(ang)],
+              [QUART, f"À {h} h, les aiguilles sont séparées par {k} {pl(k, 'intervalle', 'intervalles')} : ${k} \\times 30 = {ang}$.", _justif_cm2(ang)],
               f"{deg(ang)}, {_nature(ang)}")
-    for mn in [15, 20, 45]:
+    for mn in [15, 5, 10, 20]:
         ang = 6 * mn
-        L.add("probleme", "horloge",
+        L.add("probleme" if mn != 15 else "approfondissement", "horloge-minutes",
               f"De combien de degrés tourne la grande aiguille d'une horloge en {mn} minutes ?",
-              ["En 60 minutes, la grande aiguille fait un tour complet ($360^\\circ$).", f"En 1 minute : $360 \\div 60 = 6^\\circ$.",
-               f"En {mn} minutes : ${mn} \\times 6 = {ang}$."], deg(ang))
+              ["En 15 minutes, la grande aiguille va du 12 au 3 : elle tourne d'un angle droit, $90^\\circ$.",
+               f"En 5 minutes, elle avance d'un seul intervalle : $90 \\div 3 = 30^\\circ$."]
+              + ([] if mn in (5, 15) else [f"En {mn} minutes : ${mn // 5} \\times 30 = {ang}$."]),
+              deg(ang))
     return L.fin()
 
 

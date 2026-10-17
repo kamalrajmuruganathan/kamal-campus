@@ -84,7 +84,18 @@ bases** :
 
 > **Exemple.** Brin transcrit : `A T G C` → ARNm : `U A C G`.
 
-L'ARNm ainsi formé quitte le noyau par un **pore nucléaire** et gagne le cytoplasme.
+### La maturation de l'ARN (chez les eucaryotes)
+
+Chez les eucaryotes, la transcription produit d'abord un **ARN pré-messager**, copie de
+tout le gène. Avant de quitter le noyau, il subit une **maturation** : certaines portions
+sont **éliminées** et les autres sont **raboutées** bout à bout. C'est l'**épissage**,
+qui donne l'**ARNm mature**.
+
+> **Épissage alternatif.** Selon la cellule ou le contexte, un même ARN pré-messager
+> peut être épissé de façons différentes (portions conservées différentes). Un même
+> gène peut ainsi être à l'origine de **plusieurs protéines** différentes.
+
+L'ARNm mature quitte le noyau par un **pore nucléaire** et gagne le cytoplasme.
 
 ---
 
@@ -170,6 +181,7 @@ cellules (différenciation) : même patrimoine, usages différents.
 | Expression d'un gène | ADN → (transcription) ARNm → (traduction) protéine |
 | ARN vs ADN | 1 brin, ribose, base **U** au lieu de T |
 | Transcription | dans le **noyau**, par l'ARN polymérase, un seul brin copié |
+| Maturation | ARN pré-messager → (épissage) ARNm mature ; épissage alternatif → plusieurs protéines |
 | Codon | **3 bases** de l'ARNm = 1 acide aminé |
 | Code génétique | universel, redondant, non ambigu ; start AUG, 3 stop |
 | Traduction | dans le **cytoplasme**, sur le **ribosome**, codon par codon |
@@ -202,11 +214,10 @@ vivant », partie « Transmission, variation et expression du patrimoine génét
 sous-partie « L'expression du patrimoine génétique ».
 Notions traitées : transcription (ARN polymérase, brin transcrit, complémentarité
 A-U/T-A/G-C/C-G), ARNm intermédiaire, sortie du noyau, code génétique (codon, universel,
-redondant, non ambigu, start/stop), traduction (ribosome, cytoplasme), relation
-séquence-structure-fonction, expression différentielle des gènes selon le type
+redondant, non ambigu, start/stop), traduction (ribosome, cytoplasme), maturation de l'ARN pré-messager (épissage,
+épissage alternatif), relation séquence-structure-fonction, expression différentielle des gènes selon le type
 cellulaire et l'environnement.
-Limites de niveau volontairement respectées : maturation de l'ARN / épissage NON traité
-(hors programme de Première, relève du supérieur) ; détail moléculaire de l'ARNt et
+Limites de niveau volontairement respectées : détail moléculaire de l'ARNt et
 appariement anticodon non exigé en Première, mentionné seulement via le ribosome.
 Statut : brouillon, non relu.
 -->

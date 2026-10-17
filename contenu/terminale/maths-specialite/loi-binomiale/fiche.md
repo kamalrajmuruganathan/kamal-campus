@@ -257,38 +257,3 @@ ou « quel intervalle $I$ vérifie $P(X \in I) \geqslant 1 - \alpha$ ? ».
    Vérifie que l'exposant de $p$ est bien le **nombre de succès** $k$.
 6. **Confondre $\binom{n}{k}$ et $n^k$** (ou $k^n$). $\binom{n}{k}$ est un nombre de
    choix sans ordre : reprends la formule $\dfrac{n!}{k!(n-k)!}$ du chapitre Combinatoire.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : /tmp/kamal-campus/docs/programme-terminale-specialite-maths-2027.txt,
-section « PROBABILITÉS — SUCCESSION D'ÉPREUVES INDÉPENDANTES, SCHÉMA DE BERNOULLI »
-(rubriques Contenus et Capacités attendues).
-
-⚠️ MENTION 1 — PROVENANCE DE LA SOURCE : ce programme n'a PAS été produit par la chaîne
-d'extraction habituelle. Son texte a été reconstitué via l'outil WebFetch depuis le miroir
-https://www.xm1math.net/reforme/term_gen_spe.pdf (voir en-tête « SOURCE ET PROVENANCE »).
-Cette extraction WebFetch doit être CONFRONTÉE au PDF officiel (education.gouv.fr / éduscol)
-avant toute publication : reproduction non garantie exhaustive.
-
-⚠️ MENTION 2 — PÉRIMÈTRE TEMPOREL : chapitre de TERMINALE produit sur le programme de la
-rentrée 2027, à la demande explicite de l'utilisateur. Le gabarit (§6) demande par défaut
-de ne rien écrire pour la Terminale avant 2027 ; le programme 2027 étant publié et la
-demande explicite, le chapitre est rédigé en brouillon.
-
-Éléments lisibles dans l'extraction et traités : produit des probabilités d'une issue (§1) ;
-succession de 2-3 épreuves quelconques, prob. conditionnelles/totales (§1) ; épreuve et loi
-de Bernoulli (§2) ; schéma de Bernoulli (§3) ; loi binomiale B(n,p) via coefficients
-binomiaux (§4) ; calcul de P(X=k), P(X⩽k), P(k⩽X⩽k'), intervalle-seuil (§5). E(X)=np et
-V(X)=np(1−p) figurent dans la section « SOMMES DE VARIABLES ALÉATOIRES » : cités SANS
-démonstration, avec renvoi à ce chapitre (consigne respectée).
-
-À CONFRONTER AU PDF / À SOUMETTRE AU RELECTEUR :
-- Notation du coefficient binomial retenue par le BO 2027 : $\binom{n}{k}$ (choisie ici,
-  cohérente avec le chapitre Combinatoire) vs $C_n^k$. À harmoniser après relecture.
-- Valeurs numériques à revérifier : seuil §5d (B(50 ; 0,1), s = 9), P(X=3)≈0,201.
-- Vérifier que « produit cartésien » est bien attendu des élèves au sens du BO.
-Rédaction originale à partir du programme, aucun emprunt à un manuel. Statut : brouillon, non relu.
--->

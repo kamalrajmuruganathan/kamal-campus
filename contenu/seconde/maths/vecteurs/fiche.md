@@ -53,6 +53,24 @@ $$\overrightarrow{\mathrm{AA}} = \vec{0} \qquad\qquad \overrightarrow{\mathrm{BA
 
 ## 2. Coordonnées
 
+### Base orthonormée et coordonnées d'un vecteur
+
+Deux vecteurs $\vec{\imath}$ et $\vec{\jmath}$ de norme $1$ et de directions perpendiculaires forment une
+**base orthonormée**. Tout vecteur $\vec{u}$ s'écrit alors d'une seule façon
+
+$$\boxed{\vec{u} = x\,\vec{\imath} + y\,\vec{\jmath}}$$
+
+Les nombres $x$ et $y$ sont les **coordonnées** de $\vec{u}$, notées $\vec{u}\begin{pmatrix} x \\ y \end{pmatrix}$.
+
+> **Exemple.** $\vec{u} = 3\,\vec{\imath} - 2\,\vec{\jmath}$ a pour coordonnées $\begin{pmatrix} 3 \\ -2 \end{pmatrix}$ :
+> on avance de $3$ dans la direction de $\vec{\imath}$, puis de $2$ dans le sens opposé à $\vec{\jmath}$.
+
+Plus généralement, si $\vec{v}$ et $\vec{w}$ sont deux vecteurs **non colinéaires**, tout vecteur du
+plan peut s'écrire $a\,\vec{v} + b\,\vec{w}$ avec $a$ et $b$ réels (voir la multiplication par un réel
+au § 3 et la colinéarité au § 4).
+
+### Coordonnées de $\overrightarrow{\mathrm{AB}}$
+
 Dans un repère, si $\mathrm{A}(x_\mathrm{A}\,;y_\mathrm{A})$ et
 $\mathrm{B}(x_\mathrm{B}\,;y_\mathrm{B})$ :
 
@@ -165,24 +183,3 @@ Le nombre $xy' - yx'$ s'appelle le **déterminant**. On le calcule « en croix �
 6. **Utiliser la formule de la norme dans un repère non orthonormé.**
 7. **Confondre vecteur et segment** : $[\mathrm{AB}]$ et $[\mathrm{BA}]$ sont le même segment,
    mais $\overrightarrow{\mathrm{AB}}$ et $\overrightarrow{\mathrm{BA}}$ sont opposés.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Géométrie ». L'extraction fait apparaître un
-intitulé « Caractérisations de la colinéarité de deux vecteurs », ce qui confirme que le
-déterminant est bien au programme.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le mot « déterminant » est-il employé par le programme, ou parle-t-on seulement de
-  « critère de colinéarité » ? Le vocabulaire attendu compte pour la notation.
-- Les démonstrations exigibles de cette section.
-- La décomposition d'un vecteur dans une base est-elle au programme de seconde ?
-- Le produit scalaire n'est PAS en seconde (il est en première) : je ne l'ai pas introduit.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->
