@@ -297,3 +297,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Nouveaux générateurs de QCM (`app/lib/generateurs/modeles.js`) : `eqSimple5e`, `conversionDureeCM1`, `fractionSomme6e`,
   `fractionSomme5e`, `penseUnNombre6e`, `motifEvolutif6e`, `schemaBarres6e`. `dilution()` accepte `uniteC: ''` (g/L ou mol/L).
 - Contrôles : `npm test` 546 OK, attendus 0 problème, contenu OK, KaTeX 0 erreur.
+- **Suite (17/10, « fais tout »)** : questions restantes tranchées (détail en fin de `docs/relecture-a-trancher.md`).
+  Nouveaux chapitres : `seconde/maths/information-chiffree` (générateur `scripts/gen_enrichi_g.py`),
+  `premiere-techno/pc-maths-sti2d-stl/derivees` et `primitives` (exercices écrits à la main). 959 chapitres.
+  `g2_calcul_numerique_algebrique` (gen_extra.py) réécrit. Incertitudes harmonisées (a/√3, arrondi au plus proche).

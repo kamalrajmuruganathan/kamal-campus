@@ -61,3 +61,18 @@ Règle appliquée (CLAUDE.md § 12) : le programme officiel fait foi. Commits «
    pour trancher.
 7. **Conventions d'incertitude** : 1re techno tronc commun « u ≈ ½ graduation » (sans √3) ; 1re SPCL arrondi par excès
    alors que la Tle techno arrondit au plus proche → harmoniser ?
+
+## Réponses du 17/10/2026 (Kamal : « fais tout »)
+
+1. Génotype-phénotype (ES) : gardé, annoncé « chapitre de complément, hors programme », placé en dernier.
+2. Épissage (1re SVT) : gardé (programme de 1re spécialité 2019).
+3. 2de : chapitre « Information chiffrée » créé ; séries regroupées en classes, écart type et fréquences
+   conditionnelles ajoutés à « Statistiques » (fiche, QCM, cartes, exercices).
+4. 1re STI2D/STL : chapitres « Dérivées » et « Primitives et méthode d'Euler » créés (programme l. 1001-1098).
+5. Sections ajoutées : QCM, cartes et exercices écrits (2de, 6e, 5e, 1re spé, 1re ES, 1re techno, STI2D, 1re PC).
+   En 1re PC, les titrages acido-basiques sont remplacés par des titrages d'oxydoréduction (programme l. 276-280).
+6. Maths complémentaires : (eᵘ)′ et (ln u)′ gardés, conditions précisées (u dérivable, u > 0).
+7. Incertitudes : partout u = a/√3 (lecture : graduation/√12), arrondi au plus proche à 1 ou 2 chiffres significatifs.
+
+Reste ouvert (non bloquant) : titrage des chlorures par l'argent et conductimétrie en 1re PC ; l'autocorrection ne
+contrôle pas le signe dans une réponse rédigée (« une baisse de 25 % » accepte « +25 % »).
