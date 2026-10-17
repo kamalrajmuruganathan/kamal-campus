@@ -112,7 +112,72 @@ $$\boxed{c_\mathrm{A} V_\mathrm{A} = c_\mathrm{B} V_{\mathrm{B},\text{éq}}}$$
 
 ---
 
-## 4. Acides et bases — hors programme de première
+## 4. Les réactions d'oxydoréduction
+
+Beaucoup de transformations (corrosion des métaux, piles, désinfection, titrages colorés…)
+s'expliquent par un **transfert d'électrons** entre deux réactifs.
+
+### Oxydant, réducteur, couple
+
+- Un **oxydant** est une espèce capable de **capter** un ou plusieurs électrons.
+- Un **réducteur** est une espèce capable de **céder** un ou plusieurs électrons.
+- Un oxydant et le réducteur qu'il devient en captant des électrons forment un **couple
+  oxydant/réducteur**, noté Ox/Red. Le passage de l'un à l'autre s'écrit avec une
+  **demi-équation électronique** :
+
+$$\mathrm{Ox} + n\,e^- = \mathrm{Red}$$
+
+| Couple | Demi-équation électronique |
+|---|---|
+| $\mathrm{Cu^{2+}/Cu}$ | $\mathrm{Cu^{2+}} + 2\,e^- = \mathrm{Cu}$ |
+| $\mathrm{Zn^{2+}/Zn}$ | $\mathrm{Zn^{2+}} + 2\,e^- = \mathrm{Zn}$ |
+| $\mathrm{Fe^{3+}/Fe^{2+}}$ | $\mathrm{Fe^{3+}} + e^- = \mathrm{Fe^{2+}}$ |
+| $\mathrm{H^+/H_2}$ | $2\,\mathrm{H^+} + 2\,e^- = \mathrm{H_2}$ |
+| $\mathrm{I_2/I^-}$ | $\mathrm{I_2} + 2\,e^- = 2\,\mathrm{I^-}$ |
+
+> **Vocabulaire.** Un réducteur qui cède des électrons **s'oxyde** (c'est une **oxydation**) ;
+> un oxydant qui capte des électrons **se réduit** (c'est une **réduction**).
+
+### Ajuster une demi-équation en milieu acide
+
+Exemple du couple $\mathrm{MnO_4^-/Mn^{2+}}$ (ion permanganate / ion manganèse) :
+
+1. Équilibrer les éléments autres que O et H : un Mn de chaque côté.
+2. Équilibrer O avec des molécules d'eau : $\mathrm{MnO_4^-} = \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$.
+3. Équilibrer H avec des ions $\mathrm{H^+}$ : $\mathrm{MnO_4^-} + 8\,\mathrm{H^+} = \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$.
+4. Équilibrer les charges avec des électrons (à gauche : $-1 + 8 = +7$ ; à droite : $+2$) :
+
+$$\mathrm{MnO_4^-} + 8\,\mathrm{H^+} + 5\,e^- = \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$$
+
+### Écrire l'équation de la réaction
+
+Les électrons cédés par le réducteur d'un couple sont captés par l'oxydant de l'autre couple.
+On combine les deux demi-équations pour que **les électrons disparaissent** : ils n'apparaissent
+jamais dans l'équation de la réaction.
+
+> **Exemple 1.** Une lame de zinc plongée dans une solution bleue de sulfate de cuivre se
+> recouvre d'un dépôt rouge de cuivre et la solution se décolore :
+> $\mathrm{Zn} = \mathrm{Zn^{2+}} + 2\,e^-$ et $\mathrm{Cu^{2+}} + 2\,e^- = \mathrm{Cu}$, d'où
+> $$\mathrm{Cu^{2+}} + \mathrm{Zn} \rightarrow \mathrm{Cu} + \mathrm{Zn^{2+}}$$
+
+> **Exemple 2.** Ions permanganate et ions fer(II) : le réducteur $\mathrm{Fe^{2+}}$ cède un seul
+> électron, l'oxydant $\mathrm{MnO_4^-}$ en capte cinq. On multiplie donc la demi-équation du fer
+> par $5$ :
+> $$\mathrm{MnO_4^-} + 8\,\mathrm{H^+} + 5\,\mathrm{Fe^{2+}} \rightarrow \mathrm{Mn^{2+}} + 5\,\mathrm{Fe^{3+}} + 4\,\mathrm{H_2O}$$
+> Vérification des charges : $-1 + 8 + 10 = +17$ à gauche, $+2 + 15 = +17$ à droite ✓.
+
+### Un titrage d'oxydoréduction
+
+L'ion permanganate est **violet** en solution, les ions $\mathrm{Mn^{2+}}$ sont presque
+incolores. En versant du permanganate sur des ions $\mathrm{Fe^{2+}}$, la teinte violette
+disparaît tant qu'il reste des ions $\mathrm{Fe^{2+}}$ ; l'**équivalence** est repérée quand
+la teinte violette **persiste**. D'après l'équation, à l'équivalence :
+
+$$n(\mathrm{MnO_4^-})_\text{versé} = \frac{n(\mathrm{Fe^{2+}})_\text{initial}}{5}$$
+
+---
+
+## 5. Acides et bases — hors programme de première
 
 > ⚠️ **Cette section ne relève pas du programme de première.** Le mot « acide » n'y
 > apparaît que dans « acide carboxylique », un groupe caractéristique de chimie organique ;
@@ -147,7 +212,7 @@ $$\boxed{\mathrm{pH} = -\log\left[\mathrm{H_3O^+}\right]} \qquad\qquad \left[\ma
 
 ---
 
-## 5. Énergie molaire de réaction
+## 6. Énergie molaire de réaction
 
 Une transformation chimique s'accompagne d'un transfert d'énergie :
 
@@ -158,7 +223,7 @@ $$Q = n \times E_{\text{molaire}}$$
 
 ---
 
-## 6. À retenir absolument
+## 7. À retenir absolument
 
 | | |
 |---|---|
@@ -166,13 +231,15 @@ $$Q = n \times E_{\text{molaire}}$$
 | Réactif limitant | plus petit $\dfrac{n_i}{\text{coeff}_i}$ |
 | Beer-Lambert | $A = \varepsilon \ell c$, $A$ proportionnelle à $c$ |
 | Équivalence (1:1) | $c_\mathrm{A}V_\mathrm{A} = c_\mathrm{B}V_{\mathrm{B},\text{éq}}$ |
+| Demi-équation | $\mathrm{Ox} + n\,e^- = \mathrm{Red}$ |
+| Oxydoréduction | les électrons cédés par le réducteur sont captés par l'oxydant ; ils n'apparaissent pas dans l'équation |
 | pH | $\mathrm{pH} = -\log[\mathrm{H_3O^+}]$ |
 | $-1$ unité de pH | concentration $\times 10$ |
 | Exothermique | libère de l'énergie |
 
 ---
 
-## 7. Les erreurs qui coûtent des points
+## 8. Les erreurs qui coûtent des points
 
 1. **Désigner comme limitant le réactif le moins abondant** sans diviser par le nombre
    stœchiométrique.
@@ -183,6 +250,9 @@ $$Q = n \times E_{\text{molaire}}$$
 6. **Confondre l'équivalence et la fin de la réaction** : à l'équivalence, les réactifs sont
    introduits en proportions stœchiométriques.
 7. **Oublier les unités**, en particulier les litres pour les concentrations.
+8. **Laisser des électrons dans l'équation d'une réaction d'oxydoréduction** : on multiplie les
+   demi-équations pour que le nombre d'électrons cédés soit égal au nombre d'électrons captés.
+9. **Confondre oxydant et réducteur** : l'oxydant **capte** des électrons, le réducteur en **cède**.
 
 ---
 
@@ -199,8 +269,8 @@ réaction » ligne 1899).
   conductimétrique et pH-métrique ? J'ai mentionné les trois.
 - La constante d'acidité Ka et le pKa sont-ils au programme de première, ou de terminale ?
   Je ne les ai PAS inclus — point de périmètre à trancher.
-- Les réactions d'oxydoréduction sont-elles traitées dans ce thème en première ?
-  Je ne les ai pas développées.
+- Réactions d'oxydoréduction : au programme de première (programme-pc1re.txt, partie B
+  « Suivi et modélisation de l'évolution d'un système chimique ») ; section 4 ajoutée le 17/10/2026.
 - La notion de dosage par étalonnage (droite d'étalonnage) est-elle exigible ?
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.

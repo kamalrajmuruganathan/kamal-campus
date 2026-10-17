@@ -69,11 +69,31 @@ $$\boxed{\rho = \frac{m}{V}}$$
 
 ---
 
-## 3. La quantité de matière
+## 3. Compter les entités : la quantité de matière
+
+### Masse d'une entité
+
+La masse d'une molécule (ou d'un ion) est la **somme des masses des atomes** qui la composent,
+lue dans sa formule brute.
+
+> **Exemple.** Avec $m_\mathrm{H} = 1{,}67 \times 10^{-27}$ kg et $m_\mathrm{O} = 2{,}66 \times 10^{-26}$ kg,
+> une molécule d'eau H₂O a pour masse
+> $m = 2 \times 1{,}67 \times 10^{-27} + 2{,}66 \times 10^{-26} = 2{,}99 \times 10^{-26}$ kg.
+
+### Nombre d'entités dans un échantillon
+
+Une espèce chimique est une collection d'un **nombre immense** d'entités identiques :
+
+$$\boxed{N = \frac{m_{\text{échantillon}}}{m_{\text{entité}}}} \qquad \text{(les deux masses dans la même unité)}$$
+
+> **Exemple.** $9{,}00$ g d'eau, soit $9{,}00 \times 10^{-3}$ kg, contiennent
+> $N = \dfrac{9{,}00 \times 10^{-3}}{2{,}99 \times 10^{-26}} = 3{,}01 \times 10^{23}$ molécules.
 
 ### La mole
 
-Une **mole** est une quantité contenant $N_\mathrm{A}$ entités.
+Pour ne pas manipuler des nombres aussi grands, on regroupe les entités par paquets : une
+**mole** contient exactement $N_\mathrm{A} = 6{,}022\,140\,76 \times 10^{23}$ entités
+(on utilise souvent $6{,}02 \times 10^{23}$).
 
 $$N_\mathrm{A} = 6{,}02 \times 10^{23}\ \text{mol}^{-1} \qquad \text{(constante d'Avogadro)}$$
 
@@ -81,18 +101,9 @@ $$\boxed{n = \frac{N}{N_\mathrm{A}}}$$
 
 où $n$ est la quantité de matière (en mol) et $N$ le nombre d'entités.
 
-### Masse molaire
+> **Exemple (suite).** $n = \dfrac{3{,}01 \times 10^{23}}{6{,}02 \times 10^{23}} = 0{,}500$ mol d'eau.
 
-$$\boxed{n = \frac{m}{M}}$$
-
-| Symbole | Grandeur | Unité |
-|---|---|---|
-| $n$ | quantité de matière | mol |
-| $m$ | masse | g |
-| $M$ | masse molaire | g·mol⁻¹ |
-
-> **Calculer une masse molaire moléculaire** : on additionne les masses molaires atomiques.
-> Pour l'eau H₂O : $M = 2 \times 1{,}0 + 16{,}0 = 18{,}0$ g·mol⁻¹.
+> **Méthode en 3 étapes** : masse d'une entité → nombre d'entités $N$ → quantité de matière $n$.
 
 ---
 
@@ -108,22 +119,35 @@ $$\boxed{n = \frac{m}{M}}$$
 
 $$\boxed{c_m = \frac{m_{\text{soluté}}}{V_{\text{solution}}}} \qquad \text{en g·L}^{-1}$$
 
-### Concentration en quantité de matière
-
-$$\boxed{c = \frac{n_{\text{soluté}}}{V_{\text{solution}}}} \qquad \text{en mol·L}^{-1}$$
-
-Les deux sont reliées par $c_m = c \times M$.
-
 > ⚠️ **Le volume est celui de la SOLUTION**, pas celui du solvant ajouté. Dissoudre du sel dans
 > $1$ L d'eau ne donne pas exactement $1$ L de solution.
 
+> ⚠️ **Ne pas confondre** avec la masse volumique de la solution : $\rho = \dfrac{m_{\text{solution}}}{V_{\text{solution}}}$
+> utilise la masse de **toute** la solution, $c_m$ seulement celle du **soluté**.
+
+### Concentration maximale (solubilité)
+
+On ne peut pas dissoudre une quantité illimitée de soluté : au-delà de la **concentration
+maximale**, le soluté ne se dissout plus et la solution est dite **saturée**. Cette valeur
+dépend du soluté, du solvant et de la température.
+
+### Dosage par étalonnage
+
+Pour trouver la concentration en masse d'un soluté dans une solution, on la compare à une
+**gamme de solutions étalons** de concentrations connues :
+
+- **échelle de teinte** : la solution a la même couleur que l'étalon de même concentration
+  (ou une couleur intermédiaire entre deux étalons, ce qui donne un encadrement) ;
+- **masse volumique** : on mesure $\rho$ des étalons, puis celle de la solution, et on lit la
+  concentration correspondante.
+
 ### Dilution
 
-Lors d'une dilution, la **quantité de soluté ne change pas** :
+Lors d'une dilution, la **masse de soluté ne change pas** :
 
-$$\boxed{c_1 V_1 = c_2 V_2}$$
+$$\boxed{c_{m1} V_1 = c_{m2} V_2}$$
 
-Le **facteur de dilution** vaut $F = \dfrac{c_1}{c_2} = \dfrac{V_2}{V_1}$.
+Le **facteur de dilution** vaut $F = \dfrac{c_{m1}}{c_{m2}} = \dfrac{V_2}{V_1}$.
 
 > **Exemple.** Pour préparer $100$ mL d'une solution $10$ fois moins concentrée, on prélève
 > $10$ mL de la solution mère et on complète à $100$ mL.
@@ -152,12 +176,11 @@ Le **facteur de dilution** vaut $F = \dfrac{c_1}{c_2} = \dfrac{V_2}{V_1}$.
 | | |
 |---|---|
 | Masse volumique | $\rho = \dfrac{m}{V}$ |
-| Quantité de matière | $n = \dfrac{m}{M}$ et $n = \dfrac{N}{N_\mathrm{A}}$ |
+| Nombre d'entités | $N = \dfrac{m_{\text{échantillon}}}{m_{\text{entité}}}$ |
+| Quantité de matière | $n = \dfrac{N}{N_\mathrm{A}}$ |
 | Constante d'Avogadro | $6{,}02 \times 10^{23}$ mol⁻¹ |
-| Concentration massique | $c_m = \dfrac{m}{V}$ en g·L⁻¹ |
-| Concentration molaire | $c = \dfrac{n}{V}$ en mol·L⁻¹ |
-| Lien | $c_m = c \times M$ |
-| Dilution | $c_1V_1 = c_2V_2$ |
+| Concentration en masse | $c_m = \dfrac{m_{\text{soluté}}}{V_{\text{solution}}}$ en g·L⁻¹ |
+| Dilution | $c_{m1}V_1 = c_{m2}V_2$ |
 
 ---
 
@@ -165,10 +188,11 @@ Le **facteur de dilution** vaut $F = \dfrac{c_1}{c_2} = \dfrac{V_2}{V_1}$.
 
 1. **Oublier de convertir les volumes** : les concentrations s'expriment par **litre**, alors
    que les mesures sont souvent en mL.
-2. **Confondre concentration massique et molaire.** L'unité les distingue : g·L⁻¹ contre
-   mol·L⁻¹.
+2. **Mélanger les unités de masse** : pour calculer $N$, la masse de l'échantillon et celle d'une
+   entité doivent être dans la même unité (souvent le kg).
 3. **Utiliser le volume de solvant** au lieu du volume de solution.
-4. **Confondre masse et quantité de matière** : $m$ en grammes, $n$ en moles.
+4. **Confondre masse volumique et concentration en masse** : la première utilise la masse de
+   toute la solution, la seconde celle du soluté seul.
 5. **Oublier les unités dans le résultat.** En physique-chimie, un nombre sans unité est faux.
 6. **Confondre masse volumique et densité** : la seconde est un rapport, donc sans unité.
 7. **Prendre une éprouvette graduée** quand le protocole exige de la verrerie jaugée.
@@ -191,7 +215,9 @@ n'expirera donc pas en 2027, contrairement à ce qui vaut pour les maths de term
 - Confirmer qu'aucun arrêté postérieur à 2019 n'a modifié ce programme.
 - Le périmètre exact des techniques de séparation exigibles (chromatographie sur couche mince ?).
 - La constante d'Avogadro est-elle à connaître par cœur ou fournie ?
-- Les valeurs numériques de masses molaires sont-elles fournies (tableau périodique autorisé) ?
+- Masse molaire, n = m/M et concentration en mol·L⁻¹ : programme de première (programme-pc1re.txt
+  l. 173 et suivantes), retirées de cette fiche le 17/10/2026 (programme de seconde : concentration en
+  masse, masse d'une entité, nombre d'entités et quantité de matière dans une masse d'échantillon).
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.
 Statut : brouillon, non relu.

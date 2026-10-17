@@ -55,7 +55,7 @@ $$1\ \mu\text{F} = 10^{-6}\ \text{F} \qquad 1\ \text{nF} = 10^{-9}\ \text{F} \qq
 
 > **Exemple.** Un condensateur de capacité $C = 4{,}7\ \mu\text{F}$ est chargé sous
 > $u = 5{,}0$ V. La charge stockée vaut
-> $q = C\,u = 4{,}7\times 10^{-6} \times 5{,}0 = 2{,}35\times 10^{-5}$ C, soit $23{,}5\ \mu$C.
+> $q = C\,u = 4{,}7\times 10^{-6} \times 5{,}0 = 2{,}4\times 10^{-5}$ C, soit $24\ \mu$C (2 chiffres significatifs, comme les données).
 > Oublier de convertir $\mu$F en F donne un résultat un million de fois trop grand.
 
 ### Lien courant – tension

@@ -135,27 +135,38 @@ $$\boxed{u(\bar{x}) = \frac{s}{\sqrt{n}}}$$
 ## 6. Incertitude-type de type B — une seule mesure
 
 Quand on ne dispose que d'**une** mesure, on estime l'incertitude à partir des
-**caractéristiques de l'instrument**. On modélise le doute par une répartition
-uniforme, ce qui donne un facteur $\sqrt{3}$.
+**caractéristiques de l'instrument**. On repère d'abord la **demi-largeur** $a$ de
+l'intervalle dans lequel la valeur est sûrement comprise ($\text{valeur} \pm a$), puis on
+modélise le doute par une répartition uniforme, ce qui donne un facteur $\sqrt{3}$ :
 
-| Origine de l'incertitude | Formule | Exemple |
-|---|---|---|
-| **Résolution / graduation** (plus petite division lisible, ou dernier digit affiché) | $u = \dfrac{\text{graduation}}{\sqrt{3}}$ | burette au $1/10$ de mL |
-| **Tolérance** annoncée par le fabricant (verrerie jaugée, appareil de classe) | $u = \dfrac{\text{tolérance}}{\sqrt{3}}$ | pipette jaugée $\pm 0{,}03\ \mathrm{mL}$ |
+$$\boxed{u = \frac{a}{\sqrt{3}}}$$
 
-$$\boxed{u = \frac{\text{graduation}}{\sqrt{3}} \qquad\text{ou}\qquad u = \frac{\text{tolérance}}{\sqrt{3}}}$$
+| Origine de l'incertitude | Demi-largeur $a$ | Formule | Exemple |
+|---|---|---|---|
+| **Tolérance** annoncée par le fabricant (verrerie jaugée, notice d'un appareil) | la tolérance elle-même | $u = \dfrac{\text{tolérance}}{\sqrt{3}}$ | pipette jaugée $\pm 0{,}03\ \mathrm{mL}$ |
+| **Lecture sur une graduation** (on lit la graduation la plus proche) | une **demi-graduation** | $u = \dfrac{\text{graduation}/2}{\sqrt{3}} = \dfrac{\text{graduation}}{\sqrt{12}}$ | thermomètre, éprouvette |
+| **Affichage numérique** sans notice (on retient le dernier chiffre affiché) | une demi-unité du dernier chiffre | $u = \dfrac{\text{résolution}}{\sqrt{12}}$ | balance au $0{,}01\ \mathrm{g}$ |
 
-> **Exemple 1 — résolution.** Une burette est graduée tous les $0{,}1\ \mathrm{mL}$.
-> $u = \dfrac{0{,}1}{\sqrt{3}} = 0{,}058 \approx 0{,}06\ \mathrm{mL}$. Une lecture de
-> $14{,}20\ \mathrm{mL}$ s'écrit $V = (14{,}20 \pm 0{,}06)\ \mathrm{mL}$.
+> **Exemple 1 — une lecture.** Un thermomètre est gradué tous les $0{,}5\ \mathrm{°C}$ ; on
+> lit $21{,}5\ \mathrm{°C}$. La valeur est sûrement à moins d'une demi-graduation
+> ($0{,}25\ \mathrm{°C}$) de la lecture : $u = \dfrac{0{,}5}{\sqrt{12}} = 0{,}14 \approx 0{,}2\ \mathrm{°C}$
+> (arrondi par excès), d'où $\theta = (21{,}5 \pm 0{,}2)\ \mathrm{°C}$.
 
-> **Exemple 2 — tolérance.** Une pipette jaugée porte l'indication $20{,}00\ \mathrm{mL}
+> **Exemple 2 — double lecture.** Le volume versé par une burette graduée tous les
+> $0{,}1\ \mathrm{mL}$ est la **différence de deux lectures** (niveau initial et niveau
+> final). Chaque lecture donne $u = \dfrac{0{,}1}{\sqrt{12}} = 0{,}029\ \mathrm{mL}$ ; on les
+> combine comme au § 7 : $u(V) = \sqrt{0{,}029^2 + 0{,}029^2} = 0{,}041 \approx 0{,}05\ \mathrm{mL}$.
+
+> **Exemple 3 — tolérance.** Une pipette jaugée porte l'indication $20{,}00\ \mathrm{mL}
 > \pm 0{,}03\ \mathrm{mL}$. $u = \dfrac{0{,}03}{\sqrt{3}} = 0{,}017 \approx 0{,}02\ \mathrm{mL}$,
 > d'où $V = (20{,}00 \pm 0{,}02)\ \mathrm{mL}$.
 
 > ⚠️ La **tolérance** est déjà une demi-largeur ($\pm$) : on divise directement par
-> $\sqrt{3}$, **sans** la couper en deux. Et attention aux unités : une graduation lue
-> en $\mathrm{mL}$ donne une incertitude en $\mathrm{mL}$.
+> $\sqrt{3}$, **sans** la couper en deux. Pour une **graduation**, au contraire, la
+> demi-largeur n'est que la **moitié** d'une graduation : d'où $\sqrt{12} = 2\sqrt{3}$.
+> Si un énoncé indique une autre demi-largeur (lecture difficile : « à une graduation
+> près »), on applique toujours $u = \dfrac{a}{\sqrt{3}}$ avec la valeur donnée.
+> Et attention aux unités : une graduation lue en $\mathrm{mL}$ donne une incertitude en $\mathrm{mL}$.
 
 ---
 
@@ -256,7 +267,7 @@ $$\boxed{x = (\,\bar{x} \pm u(x)\,)\ \text{unité}}$$
 | Justesse | moyenne proche de la valeur vraie |
 | Fidélité | mesures peu dispersées entre elles |
 | Type A | $\bar{x} = \dfrac{\sum x_i}{n}$ ; $u(\bar{x}) = \dfrac{s}{\sqrt{n}}$ |
-| Type B | $u = \dfrac{\text{graduation}}{\sqrt{3}}$ ou $\dfrac{\text{tolérance}}{\sqrt{3}}$ |
+| Type B | $u = \dfrac{a}{\sqrt{3}}$ : $\dfrac{\text{tolérance}}{\sqrt{3}}$ ou, pour une lecture, $\dfrac{\text{graduation}}{\sqrt{12}}$ |
 | Composée (somme) | $u(y) = \sqrt{u(a)^2 + u(b)^2}$ |
 | Composée (produit/quotient) | $\dfrac{u(y)}{|y|} = \sqrt{\left(\dfrac{u(a)}{a}\right)^2 + \left(\dfrac{u(b)}{b}\right)^2}$ |
 | Résultat final | $x = (\bar{x} \pm u)\ \text{unité}$ ; $u$ à $1$ c.s. par excès ; $\bar{x}$ au même rang |
@@ -302,15 +313,13 @@ Champ « programme » de l'en-tête : renseigné à l'identique de la consigne d
 25 juillet 2019) — même remarque que pour le chapitre « syntheses-extraction-purification ».
 
 POINTS À CONFRONTER AU RELECTEUR / CONVENTIONS DE MÉTROLOGIE :
-- CONVENTION TYPE B (POINT LE PLUS SENSIBLE). La consigne de production impose
-  explicitement les formules u = graduation/√3 et u = tolérance/√3, retenues telles
-  quelles dans la fiche. ATTENTION : les conventions varient selon les manuels/référentiels.
-  Pour une RÉSOLUTION (demi-largeur = graduation/2), la loi uniforme rigoureuse donne
-  plutôt u = graduation/(2√3) = graduation/√12. La formule u = graduation/√3 retenue ici
-  suppose que « graduation » désigne la demi-largeur de l'intervalle de doute (loi
-  rectangulaire de demi-largeur = graduation). À FAIRE TRANCHER par le relecteur selon le
-  référentiel STL retenu par l'établissement / le PDF officiel. Les exemples chiffrés
-  (burette 0,1 mL → u ≈ 0,06 mL) suivent la convention de la consigne.
+- CONVENTION TYPE B (tranchée le 17/10/2026). Le programme (docs/programme-stl-spcl.txt :
+  « Évaluation des incertitudes-types (type A statistique, type B) ») ne fixe pas de formule.
+  On retient la règle générale u = a/√3 (loi uniforme de demi-largeur a), comme le GUM :
+  tolérance ± t → u = t/√3 ; lecture d'une graduation → a = ½ graduation → u = graduation/√12 ;
+  double lecture → combinaison en quadrature (graduation/√6). L'ancienne formule
+  u = graduation/√3 (qui prenait une graduation entière comme demi-largeur) a été retirée de
+  la fiche, du QCM, des cartes et des exercices.
 - Pour la TOLÉRANCE (verrerie jaugée ± t), u = t/√3 fait l'hypothèse d'une loi uniforme de
   demi-largeur t : convention standard et cohérente avec la consigne.
 - TYPE A : u(x̄) = s/√n avec s = écart-type expérimental (σ_{n-1}). Convention GUM/lycée

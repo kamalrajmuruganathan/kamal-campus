@@ -12,7 +12,7 @@ prerequis:
   - Phénomènes d'évolution, modélisation par des fonctions (Enseignement scientifique, Première)
   - Suites arithmétiques et géométriques (Première)
   - Taux d'évolution et coefficient multiplicateur (Première)
-  - Fonction logarithme népérien pour le temps de doublement (Terminale)
+  - Calculatrice ou tableur (mode tableau, puissances successives)
 statut: brouillon
 relu_par: null
 ---
@@ -171,20 +171,32 @@ Malthus en déduisait une pénurie inévitable.
 Dans un modèle exponentiel de croissance ($q > 1$), le **temps de doublement** $N$ est le
 nombre de périodes au bout duquel la population a **doublé** :
 $$u_N = 2\,u_0 \iff u_0\,q^{\,N} = 2\,u_0 \iff q^{\,N} = 2.$$
-En prenant le logarithme népérien de $q^{\,N} = 2$ :
-$$\boxed{N = \frac{\ln 2}{\ln q}}$$
+
+**Méthode : calculatrice ou tableur.** On calcule les puissances successives $q^{\,1}$,
+$q^{\,2}$, $q^{\,3}$… (mode tableau de la calculatrice, ou une colonne de tableur) et on
+repère quand elles atteignent $2$. On peut aussi lire le temps de doublement sur la courbe
+de $u_n$ : c'est la durée nécessaire pour passer de $u_0$ à $2\,u_0$.
 
 > **Exemple.** Croissance de $t = 2\,\%$ par an, soit $q = 1{,}02$.
-> $N = \dfrac{\ln 2}{\ln 1{,}02} \approx \dfrac{0{,}693}{0{,}0198} \approx 35$ ans : la
-> population double tous les $35$ ans environ.
+>
+> | $n$ (années) | $34$ | $35$ | $36$ |
+> |---|---|---|---|
+> | $1{,}02^{\,n}$ | $1{,}96$ | $2{,}00$ | $2{,}04$ |
+>
+> La population double en $35$ ans environ.
 
 **Un ordre de grandeur utile : la « règle de 70 ».** Pour un taux $t$ (en %) pas trop
 grand, le temps de doublement en années vaut approximativement
 $$N \approx \frac{70}{t}.$$
 
-> **Exemple.** À $t = 3\,\%$ : $N \approx \dfrac{70}{3} \approx 23$ ans (le calcul exact
-> $\ln 2 / \ln 1{,}03 \approx 23{,}4$ ans confirme). Retiens surtout que **le temps de
-> doublement ne dépend pas de l'effectif de départ** : il ne dépend que du taux.
+> **Exemple.** À $t = 3\,\%$ : $N \approx \dfrac{70}{3} \approx 23$ ans. La calculatrice
+> confirme : $1{,}03^{\,23} \approx 1{,}97$ et $1{,}03^{\,24} \approx 2{,}03$. Retiens surtout que
+> **le temps de doublement ne dépend pas de l'effectif de départ** : $u_0$ a disparu de
+> l'équation $q^{\,N} = 2$, il ne reste que le taux.
+
+> **Pour aller plus loin (spécialité maths ou maths complémentaires, pas exigé en
+> enseignement scientifique).** Avec le logarithme népérien, $q^{\,N} = 2$ donne
+> $N = \dfrac{\ln 2}{\ln q}$ ; par exemple $\dfrac{\ln 2}{\ln 1{,}02} \approx 35{,}0$ ans.
 
 ---
 
@@ -246,7 +258,7 @@ $$\boxed{\text{Un modèle est valable sur un domaine, jamais partout ni pour tou
 | Même pourcentage | variation **relative** $t$ | exponentiel (géométrique) | $u_{n+1} = q\,u_n$ | $u_n = u_0\,q^{\,n}$ |
 | Taux $\to$ coefficient | — | — | $q = 1 + \dfrac{t}{100}$ | hausse $q>1$, baisse $0<q<1$ |
 | Population vs ressources | — | Malthus | pop. géométrique, ressources arithmétiques | l'exponentielle dépasse la droite |
-| Doublement (si $q>1$) | — | — | $q^{\,N} = 2$ | $N = \dfrac{\ln 2}{\ln q} \approx \dfrac{70}{t}$ |
+| Doublement (si $q>1$) | — | — | $q^{\,N} = 2$ | calculatrice ou tableur ; $N \approx \dfrac{70}{t}$ |
 | Choisir le modèle | différence const. $\to$ linéaire ; quotient const. $\to$ exponentiel | ajustement | courbe de tendance | à confronter au réel |
 
 ---
@@ -262,8 +274,8 @@ $$\boxed{\text{Un modèle est valable sur un domaine, jamais partout ni pour tou
 3. **Écrire $u_0 \times n\,q$ ou $u_0 \times q \times n$ pour un modèle exponentiel.** Le
    terme général est $u_n = u_0 \times q^{\,n}$ : $q$ est **élevé à la puissance $n$**, il
    n'est pas multiplié par $n$ (ça, c'est le modèle linéaire).
-4. **Croire que le temps de doublement dépend de l'effectif de départ.** $N = \dfrac{\ln
-   2}{\ln q}$ ne dépend **que du taux**. Une grande et une petite population au même taux
+4. **Croire que le temps de doublement dépend de l'effectif de départ.** L'équation
+   $q^{\,N} = 2$ ne dépend **que du taux**. Une grande et une petite population au même taux
    doublent dans le même temps.
 5. **Oublier les unités de temps.** Un taux « par an » et un taux « par période de $5$
    ans » ne donnent pas le même $n$. Précise toujours ce que compte $n$ (années ?
@@ -296,10 +308,12 @@ PÉRIMÈTRE / CHOIX DIDACTIQUES (à confirmer par un relecteur) :
     terminale, en prolongement du chapitre de Première ES « Phénomènes d'évolution »
     (1es-math-phenomenes-evolution) qui, lui, restait au niveau des fonctions f(n)=f(0)q^n.
     Ce chapitre de Première est cité comme prérequis principal.
-  - Temps de doublement : introduit N = ln2/ln q (utilise ln, prérequis Terminale) + la
-    « règle de 70 » comme ordre de grandeur. Vérifier que le niveau d'exigence attendu en
-    ES tolère l'usage de ln ; sinon, le doublement peut être présenté uniquement par
-    lecture graphique / tableur. À TRANCHER PAR LE RELECTEUR.
+  - Temps de doublement (tranché le 17/10/2026) : l'enseignement scientifique est suivi par
+    tous les élèves de la voie générale, et le logarithme népérien n'est étudié qu'en
+    spécialité maths ou maths complémentaires. Méthode principale : puissances successives
+    à la calculatrice ou au tableur, lecture graphique, « règle de 70 » ; N = ln2/ln q est
+    gardé en complément marqué « pour aller plus loin ». La légende du schéma
+    « temps-doublement » cite encore ln 2 ÷ ln 1,02 (bloc non modifié).
   - Ajustement / courbe de tendance : présenté par la méthode différences vs quotients
     (démarche tableur), sans régression formelle (moindres carrés hors programme ES).
 

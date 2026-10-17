@@ -26,13 +26,13 @@
       "id": 2,
       "difficulte": "application",
       "notion": "type-b",
-      "enonce": "On dispose de deux instruments de mesure de volume. (a) Une éprouvette graduée tous les $1\\ \\mathrm{mL}$, sur laquelle on lit $45\\ \\mathrm{mL}$. (b) Une fiole jaugée portant l'indication $100{,}0\\ \\mathrm{mL} \\pm 0{,}10\\ \\mathrm{mL}$. Pour chacune, calcule l'incertitude-type de type B ($u = \\text{graduation}/\\sqrt{3}$ ou $u = \\text{tolérance}/\\sqrt{3}$) et exprime la mesure.",
+      "enonce": "On dispose de deux instruments de mesure de volume. (a) Une éprouvette graduée tous les $1\\ \\mathrm{mL}$, sur laquelle on lit $45\\ \\mathrm{mL}$. (b) Une fiole jaugée portant l'indication $100{,}0\\ \\mathrm{mL} \\pm 0{,}10\\ \\mathrm{mL}$. Pour chacune, calcule l'incertitude-type de type B ($u = \\text{graduation}/\\sqrt{12}$ pour une lecture, $u = \\text{tolérance}/\\sqrt{3}$) et exprime la mesure.",
       "corrige": [
-        "Éprouvette — on utilise la graduation : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{1}{\\sqrt{3}} = 0{,}58 \\approx 0{,}6\\ \\mathrm{mL}$. La mesure s'écrit donc $V = (45{,}0 \\pm 0{,}6)\\ \\mathrm{mL}$.",
+        "Éprouvette — une lecture, demi-largeur d'une demi-graduation : $u = \\dfrac{\\text{graduation}}{\\sqrt{12}} = \\dfrac{1}{\\sqrt{12}} = 0{,}29 \\approx 0{,}3\\ \\mathrm{mL}$. La mesure s'écrit donc $V = (45{,}0 \\pm 0{,}3)\\ \\mathrm{mL}$.",
         "Fiole jaugée — on utilise la tolérance : $u = \\dfrac{\\text{tolérance}}{\\sqrt{3}} = \\dfrac{0{,}10}{\\sqrt{3}} = 0{,}058 \\approx 0{,}06\\ \\mathrm{mL}$. La mesure s'écrit $V = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$.",
         "On constate que la fiole jaugée est bien plus précise que l'éprouvette : c'est pour cela qu'on l'emploie pour préparer une solution de concentration connue."
       ],
-      "reponse": "Éprouvette : $u \\approx 0{,}6\\ \\mathrm{mL}$, soit $(45{,}0 \\pm 0{,}6)\\ \\mathrm{mL}$. Fiole : $u \\approx 0{,}06\\ \\mathrm{mL}$, soit $(100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$."
+      "reponse": "Éprouvette : $u \\approx 0{,}3\\ \\mathrm{mL}$, soit $(45{,}0 \\pm 0{,}3)\\ \\mathrm{mL}$. Fiole : $u \\approx 0{,}06\\ \\mathrm{mL}$, soit $(100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$."
     },
     {
       "id": 3,
@@ -64,14 +64,14 @@
       "id": 5,
       "difficulte": "approfondissement",
       "notion": "incertitude-composee",
-      "enonce": "On détermine la masse volumique d'un petit cylindre métallique. On le pèse : $m = (34{,}60 \\pm 0{,}05)\\ \\mathrm{g}$. On mesure son volume par déplacement d'eau dans une éprouvette graduée tous les $1\\ \\mathrm{mL}$ : le niveau passe de $20\\ \\mathrm{mL}$ à $24\\ \\mathrm{mL}$. (a) Donne le volume $V$ et son incertitude-type (type B, $u = \\text{graduation}/\\sqrt{3}$ sur chaque lecture, à combiner). (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Exprime $\\rho$ correctement et commente la précision.",
+      "enonce": "On détermine la masse volumique d'un petit cylindre métallique. On le pèse : $m = (34{,}60 \\pm 0{,}05)\\ \\mathrm{g}$. On mesure son volume par déplacement d'eau dans une éprouvette graduée tous les $1\\ \\mathrm{mL}$ : le niveau passe de $20\\ \\mathrm{mL}$ à $24\\ \\mathrm{mL}$. (a) Donne le volume $V$ et son incertitude-type (type B, $u = \\text{graduation}/\\sqrt{12}$ sur chaque lecture, à combiner). (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Exprime $\\rho$ correctement et commente la précision.",
       "corrige": [
-        "Volume : $V = 24 - 20 = 4\\ \\mathrm{mL}$. Chaque lecture a une incertitude $u = \\dfrac{1}{\\sqrt{3}} = 0{,}58\\ \\mathrm{mL}$ ; comme $V$ est une différence de deux lectures, on combine en quadrature : $u(V) = \\sqrt{0{,}58^2 + 0{,}58^2} = 0{,}82 \\approx 0{,}8\\ \\mathrm{mL}$.",
+        "Volume : $V = 24 - 20 = 4\\ \\mathrm{mL}$. Chaque lecture a une incertitude $u = \\dfrac{1}{\\sqrt{12}} = 0{,}29\\ \\mathrm{mL}$ ; comme $V$ est une différence de deux lectures, on combine en quadrature : $u(V) = \\sqrt{0{,}29^2 + 0{,}29^2} = 0{,}41\\ \\mathrm{mL}$, arrondie par excès à $0{,}5\\ \\mathrm{mL}$.",
         "Masse volumique : $\\rho = \\dfrac{m}{V} = \\dfrac{34{,}60}{4} = 8{,}65\\ \\mathrm{g\\cdot mL^{-1}}$.",
-        "Incertitudes relatives : $\\dfrac{u(m)}{m} = \\dfrac{0{,}05}{34{,}60} = 0{,}0014$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}8}{4} = 0{,}20$. La quadrature donne $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0014^2 + 0{,}20^2} = 0{,}20$ : c'est le volume qui domine totalement l'incertitude.",
-        "Incertitude absolue : $u(\\rho) = 0{,}20 \\times 8{,}65 = 1{,}8 \\approx 2\\ \\mathrm{g\\cdot mL^{-1}}$. On arrondit la valeur au même rang (l'unité) : $\\rho \\approx 9\\ \\mathrm{g\\cdot mL^{-1}}$. Le résultat est très imprécis parce que le volume ($4\\ \\mathrm{mL}$ lu au $\\mathrm{mL}$ près) est mal connu ; une éprouvette plus fine ou une pesée du volume améliorerait beaucoup la précision."
+        "Incertitudes relatives : $\\dfrac{u(m)}{m} = \\dfrac{0{,}05}{34{,}60} = 0{,}0014$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}41}{4} = 0{,}10$. La quadrature donne $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0014^2 + 0{,}10^2} = 0{,}10$ : c'est le volume qui domine totalement l'incertitude.",
+        "Incertitude absolue : $u(\\rho) = 0{,}10 \\times 8{,}65 = 0{,}87$, arrondie par excès à $0{,}9\\ \\mathrm{g\\cdot mL^{-1}}$. On arrondit la valeur au même rang (le dixième) : $\\rho \\approx 8{,}7\\ \\mathrm{g\\cdot mL^{-1}}$. Le résultat est très imprécis parce que le volume ($4\\ \\mathrm{mL}$ lu au $\\mathrm{mL}$ près) est mal connu ; une éprouvette plus fine ou une pesée du volume améliorerait beaucoup la précision."
       ],
-      "reponse": "$\\rho = (9 \\pm 2)\\ \\mathrm{g\\cdot mL^{-1}}$. La mesure du volume (incertitude relative $\\approx 20\\ \\%$) domine : c'est elle qu'il faut améliorer."
+      "reponse": "$\\rho = (8{,}7 \\pm 0{,}9)\\ \\mathrm{g\\cdot mL^{-1}}$. La mesure du volume (incertitude relative $\\approx 10\\ \\%$) domine : c'est elle qu'il faut améliorer."
     },
     {
       "id": 6,
@@ -105,11 +105,11 @@
       "enonce": "Lors d'un titrage, on lit le niveau d'une burette graduée tous les $0{,}1\\ \\mathrm{mL}$ **avant** puis **après** l'écoulement : lecture initiale $1{,}50\\ \\mathrm{mL}$, lecture finale $15{,}80\\ \\mathrm{mL}$. Le volume versé est $V = V_{\\text{finale}} - V_{\\text{initiale}}$. (a) Calcule l'incertitude-type de type B sur **une** lecture. (b) Le volume versé étant une **différence** de deux lectures, calcule $u(V)$. (c) Exprime le volume versé.",
       "corrige": [
         "Volume versé : $V = 15{,}80 - 1{,}50 = 14{,}30\\ \\mathrm{mL}$.",
-        "Incertitude de type B sur **chaque** lecture (graduation $0{,}1\\ \\mathrm{mL}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{0{,}1}{\\sqrt{3}} = 0{,}058\\ \\mathrm{mL}$.",
-        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}058^2 + 0{,}058^2} = 0{,}058\\times\\sqrt{2} = 0{,}082\\ \\mathrm{mL}$.",
-        "On arrondit $u$ à $1$ c.s. **par excès** ($0{,}09\\ \\mathrm{mL}$) et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}09)\\ \\mathrm{mL}$."
+        "Incertitude de type B sur **chaque** lecture (graduation $0{,}1\\ \\mathrm{mL}$, demi-largeur $0{,}05\\ \\mathrm{mL}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{12}} = \\dfrac{0{,}1}{\\sqrt{12}} = 0{,}029\\ \\mathrm{mL}$.",
+        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}029^2 + 0{,}029^2} = 0{,}029\\times\\sqrt{2} = 0{,}041\\ \\mathrm{mL}$.",
+        "On arrondit $u$ à $1$ c.s. **par excès** ($0{,}05\\ \\mathrm{mL}$) et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}05)\\ \\mathrm{mL}$."
       ],
-      "reponse": "$u$ sur une lecture $= 0{,}058\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}09)\\ \\mathrm{mL}$."
+      "reponse": "$u$ sur une lecture $= 0{,}029\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}05)\\ \\mathrm{mL}$."
     },
     {
       "id": 9,
@@ -201,10 +201,10 @@
       "notion": "type-b",
       "enonce": "Un thermomètre à alcool est gradué tous les $0{,}5\\ \\mathrm{°C}$. On lit $21{,}5\\ \\mathrm{°C}$. Calcule l'incertitude-type et écris la mesure.",
       "corrige": [
-        "Une seule lecture : incertitude de type B, $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{0{,}5}{\\sqrt{3}} \\approx 0{,}29\\ \\mathrm{°C}$.",
-        "Arrondie à $1$ chiffre significatif par excès : $u = 0{,}3\\ \\mathrm{°C}$, d'où $\\theta = (21{,}5 \\pm 0{,}3)\\ \\mathrm{°C}$."
+        "Une seule lecture : incertitude de type B, de demi-largeur une demi-graduation ($0{,}25\\ \\mathrm{°C}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{12}} = \\dfrac{0{,}5}{\\sqrt{12}} \\approx 0{,}14\\ \\mathrm{°C}$.",
+        "Arrondie à $1$ chiffre significatif par excès : $u = 0{,}2\\ \\mathrm{°C}$, d'où $\\theta = (21{,}5 \\pm 0{,}2)\\ \\mathrm{°C}$."
       ],
-      "reponse": "$\\theta = (21{,}5 \\pm 0{,}3)\\ \\mathrm{°C}$."
+      "reponse": "$\\theta = (21{,}5 \\pm 0{,}2)\\ \\mathrm{°C}$."
     },
     {
       "id": 17,
@@ -313,10 +313,10 @@
       "enonce": "Pour prélever $10\\ \\mathrm{mL}$, on compare une pipette jaugée (tolérance $\\pm 0{,}02\\ \\mathrm{mL}$) et une éprouvette graduée tous les $0{,}2\\ \\mathrm{mL}$. Calcule l'incertitude-type de chacune. Laquelle choisir pour une solution étalon ?",
       "corrige": [
         "Pipette : $u = \\dfrac{0{,}02}{\\sqrt{3}} \\approx 0{,}012\\ \\mathrm{mL}$.",
-        "Éprouvette : $u = \\dfrac{0{,}2}{\\sqrt{3}} \\approx 0{,}12\\ \\mathrm{mL}$, soit $10$ fois plus.",
+        "Éprouvette (une lecture) : $u = \\dfrac{0{,}2}{\\sqrt{12}} \\approx 0{,}058\\ \\mathrm{mL}$, soit environ $5$ fois plus.",
         "Pour une solution étalon, on choisit la pipette jaugée."
       ],
-      "reponse": "Pipette : $0{,}012\\ \\mathrm{mL}$ ; éprouvette : $0{,}12\\ \\mathrm{mL}$ ; la pipette jaugée."
+      "reponse": "Pipette : $0{,}012\\ \\mathrm{mL}$ ; éprouvette : $0{,}058\\ \\mathrm{mL}$ ; la pipette jaugée."
     },
     {
       "id": 27,
@@ -548,11 +548,11 @@
       "notion": "type-b",
       "enonce": "**Choisir la verrerie.** On doit prélever $50\\ \\mathrm{mL}$ de solution avec une incertitude relative inférieure à $0{,}5\\ \\%$. Possibilités : éprouvette graduée tous les $1\\ \\mathrm{mL}$ ; pipette jaugée de $50\\ \\mathrm{mL}$ (tolérance $\\pm 0{,}05\\ \\mathrm{mL}$). Calcule l'incertitude relative pour chacune et conclus.",
       "corrige": [
-        "Éprouvette : $u = \\dfrac{1}{\\sqrt{3}} \\approx 0{,}58\\ \\mathrm{mL}$, soit $\\dfrac{0{,}58}{50} \\approx 1{,}2\\ \\%$ : trop.",
+        "Éprouvette (une lecture) : $u = \\dfrac{1}{\\sqrt{12}} \\approx 0{,}29\\ \\mathrm{mL}$, soit $\\dfrac{0{,}29}{50} \\approx 0{,}6\\ \\%$ : trop.",
         "Pipette jaugée : $u = \\dfrac{0{,}05}{\\sqrt{3}} \\approx 0{,}029\\ \\mathrm{mL}$, soit $\\dfrac{0{,}029}{50} \\approx 0{,}06\\ \\%$ : convient.",
         "On choisit la pipette jaugée."
       ],
-      "reponse": "Éprouvette : $\\approx 1{,}2\\ \\%$ ; pipette : $\\approx 0{,}06\\ \\%$ ; la pipette jaugée."
+      "reponse": "Éprouvette : $\\approx 0{,}6\\ \\%$ ; pipette : $\\approx 0{,}06\\ \\%$ ; la pipette jaugée."
     },
     {
       "id": 47,

@@ -50,13 +50,13 @@
       "id": 4,
       "difficulte": "intermediaire",
       "notion": "temps-de-doublement",
-      "enonce": "Une population croît de $5\\,\\%$ par an (modèle exponentiel, $q = 1{,}05$). a) Écrire l'équation vérifiée par le temps de doublement $N$, puis le calculer à l'aide de $N = \\dfrac{\\ln 2}{\\ln q}$. b) Retrouver un ordre de grandeur avec la « règle de 70 ». c) Le temps de doublement change-t-il si la population de départ est plus grande ? Justifier.",
+      "enonce": "Une population croît de $5\\,\\%$ par an (modèle exponentiel, $q = 1{,}05$). a) Écrire l'équation vérifiée par le temps de doublement $N$, puis le déterminer à la calculatrice ou au tableur en calculant les puissances successives de $1{,}05$. b) Retrouver un ordre de grandeur avec la « règle de 70 ». c) Le temps de doublement change-t-il si la population de départ est plus grande ? Justifier.",
       "corrige": [
-        "a) Doubler signifie $u_N = 2\\,u_0$, soit $u_0 \\times 1{,}05^{\\,N} = 2\\,u_0$, d'où $1{,}05^{\\,N} = 2$. En prenant le logarithme népérien : $N = \\dfrac{\\ln 2}{\\ln 1{,}05} \\approx \\dfrac{0{,}693}{0{,}0488} \\approx 14{,}2$ ans.",
-        "b) La règle de 70 donne $N \\approx \\dfrac{70}{t} = \\dfrac{70}{5} = 14$ ans, cohérent avec le calcul exact.",
-        "c) Non. Dans $N = \\dfrac{\\ln 2}{\\ln q}$, l'effectif de départ $u_0$ n'apparaît pas : il s'est simplifié dans $u_0 \\times q^{\\,N} = 2\\,u_0$. Le temps de doublement ne dépend que du taux, pas de la taille initiale de la population."
+        "a) Doubler signifie $u_N = 2\\,u_0$, soit $u_0 \\times 1{,}05^{\\,N} = 2\\,u_0$, d'où $1{,}05^{\\,N} = 2$. À la calculatrice : $1{,}05^{\\,14} \\approx 1{,}98$ et $1{,}05^{\\,15} \\approx 2{,}08$ : la population double en un peu plus de $14$ ans (entre $14$ et $15$ ans).",
+        "b) La règle de 70 donne $N \\approx \\dfrac{70}{t} = \\dfrac{70}{5} = 14$ ans, cohérent avec le calcul.",
+        "c) Non. Dans l'équation $1{,}05^{\\,N} = 2$, l'effectif de départ $u_0$ n'apparaît pas : il s'est simplifié dans $u_0 \\times q^{\\,N} = 2\\,u_0$. Le temps de doublement ne dépend que du taux, pas de la taille initiale de la population."
       ],
-      "reponse": "a) $1{,}05^{\\,N} = 2$, $N = \\dfrac{\\ln 2}{\\ln 1{,}05} \\approx 14{,}2$ ans ; b) $\\approx 70/5 = 14$ ans ; c) non, $N$ ne dépend que du taux (le $u_0$ se simplifie)."
+      "reponse": "a) $1{,}05^{\\,N} = 2$, $N$ entre $14$ et $15$ ans ($1{,}05^{\\,14} \\approx 1{,}98$ ; $1{,}05^{\\,15} \\approx 2{,}08$) ; b) $\\approx 70/5 = 14$ ans ; c) non, $N$ ne dépend que du taux (le $u_0$ se simplifie)."
     },
     {
       "id": 5,
@@ -114,7 +114,7 @@
       "corrige": [
         "a) La règle de 70 relie le temps de doublement $N$ et le taux annuel $t$ (en %) par $N \\approx \\dfrac{70}{t}$, d'où $t \\approx \\dfrac{70}{N} = \\dfrac{70}{25} = 2{,}8\\,\\%$ par an.",
         "b) Puisque la population double tous les $25$ ans, $100$ ans représentent $\\dfrac{100}{25} = 4$ périodes de doublement successives. À chaque période l'effectif est multiplié par $2$, donc sur $4$ périodes il est multiplié par $2^4 = 16$. On n'a pas eu besoin de connaître le taux exact.",
-        "c) La ville passe de $40\\,000$ à $40\\,000 \\times 16 = 640\\,000$ habitants en $100$ ans. Non, le temps de doublement ne dépend pas de l'effectif de départ : dans $u_0 \\times q^{\\,N} = 2\\,u_0$, le $u_0$ se simplifie et $N = \\dfrac{\\ln 2}{\\ln q}$ ne dépend que du taux. Une ville plus grande ou plus petite au même taux doublerait aussi tous les $25$ ans."
+        "c) La ville passe de $40\\,000$ à $40\\,000 \\times 16 = 640\\,000$ habitants en $100$ ans. Non, le temps de doublement ne dépend pas de l'effectif de départ : dans $u_0 \\times q^{\\,N} = 2\\,u_0$, le $u_0$ se simplifie et l'équation $q^{\\,N} = 2$ ne dépend que du taux. Une ville plus grande ou plus petite au même taux doublerait aussi tous les $25$ ans."
       ],
       "reponse": "a) $t \\approx \\dfrac{70}{25} = 2{,}8\\,\\%$ ; b) $100$ ans $= 4$ doublements, donc $\\times 2^4 = \\times 16$ ; c) $40\\,000 \\times 16 = 640\\,000$ habitants, et $N$ ne dépend que du taux, pas de l'effectif de départ."
     },
@@ -122,16 +122,16 @@
       "id": 10,
       "difficulte": "probleme",
       "notion": "synthese",
-      "enonce": "Sur une île, les recensements donnent la population (en milliers d'habitants) : $250$ en $2000$, $300$ en $2010$, $360$ en $2020$. On note $u_n$ la population $n$ décennies après $2000$, avec $u_0 = 250$. Les ressources alimentaires de l'île peuvent nourrir $R_n$ milliers de personnes, avec $R_n = 400 + 30\\,n$ ($400$ milliers en $2000$, $+30$ milliers par décennie). 1. Montrer que la population suit un modèle exponentiel et donner l'expression de $u_n$. 2. Quelle population le modèle prévoit-il pour $2030$ et $2040$ ? 3. Au bout de combien de temps la population double-t-elle (on utilisera $N = \\dfrac{\\ln 2}{\\ln q}$) ? 4. À la manière de Malthus, comparer $u_n$ et $R_n$ pour $n = 0$, puis déterminer la première décennie où la population dépasse les ressources. 5. Le recensement de $2030$ donne finalement $410$ (milliers). Comparer à la prévision et conclure sur la validité du modèle. 6. Que peut-on dire de la thèse de Malthus et de sa limite au vu de cet exemple ?",
+      "enonce": "Sur une île, les recensements donnent la population (en milliers d'habitants) : $250$ en $2000$, $300$ en $2010$, $360$ en $2020$. On note $u_n$ la population $n$ décennies après $2000$, avec $u_0 = 250$. Les ressources alimentaires de l'île peuvent nourrir $R_n$ milliers de personnes, avec $R_n = 400 + 30\\,n$ ($400$ milliers en $2000$, $+30$ milliers par décennie). 1. Montrer que la population suit un modèle exponentiel et donner l'expression de $u_n$. 2. Quelle population le modèle prévoit-il pour $2030$ et $2040$ ? 3. Au bout de combien de temps la population double-t-elle (on calculera les puissances successives de $q$ à la calculatrice ou au tableur) ? 4. À la manière de Malthus, comparer $u_n$ et $R_n$ pour $n = 0$, puis déterminer la première décennie où la population dépasse les ressources. 5. Le recensement de $2030$ donne finalement $410$ (milliers). Comparer à la prévision et conclure sur la validité du modèle. 6. Que peut-on dire de la thèse de Malthus et de sa limite au vu de cet exemple ?",
       "corrige": [
         "1. On calcule les quotients d'une décennie à la suivante : $\\dfrac{300}{250} = 1{,}2$ et $\\dfrac{360}{300} = 1{,}2$. Ils sont constants : le modèle est exponentiel de raison $q = 1{,}2$ par décennie (hausse de $20\\,\\%$). Le terme général est donc $u_n = 250 \\times 1{,}2^{\\,n}$ (avec $n$ en décennies depuis $2000$).",
         "2. $2030$ correspond à $n = 3$ : $u_3 = 250 \\times 1{,}2^{\\,3} = 250 \\times 1{,}728 = 432$ milliers. $2040$ correspond à $n = 4$ : $u_4 = 250 \\times 1{,}2^{\\,4} = 250 \\times 2{,}0736 = 518{,}4$ milliers. Le modèle prévoit environ $432\\,000$ habitants en $2030$ et $518\\,400$ en $2040$.",
-        "3. Le temps de doublement $N$ (en décennies) vérifie $1{,}2^{\\,N} = 2$, soit $N = \\dfrac{\\ln 2}{\\ln 1{,}2} \\approx \\dfrac{0{,}693}{0{,}182} \\approx 3{,}8$ décennies, c'est-à-dire environ $38$ ans : la population double tous les $38$ ans environ.",
+        "3. Le temps de doublement $N$ (en décennies) vérifie $1{,}2^{\\,N} = 2$. À la calculatrice : $1{,}2^{\\,3} = 1{,}728$ et $1{,}2^{\\,4} \\approx 2{,}07$ : la population double en un peu moins de $4$ décennies, c'est-à-dire un peu moins de $40$ ans.",
         "4. Pour $n = 0$ : $u_0 = 250$ contre $R_0 = 400$ : les ressources sont supérieures. On compare ensuite décennie par décennie. Pour $n = 4$ : $u_4 = 518{,}4$ contre $R_4 = 400 + 120 = 520$ : les ressources sont encore (de justesse) supérieures. Pour $n = 5$ : $u_5 = 250 \\times 1{,}2^{\\,5} = 250 \\times 2{,}48832 \\approx 622$ contre $R_5 = 400 + 150 = 550$ : la population dépasse les ressources. C'est donc à la décennie $n = 5$ (année $2050$) que la population dépasse pour la première fois les ressources.",
         "5. Le modèle prévoyait $u_3 = 432$ milliers pour $2030$, mais le recensement réel donne $410$ milliers. L'écart vaut $\\dfrac{432 - 410}{410} \\approx 5{,}4\\,\\%$ : le modèle surestime la population. La croissance a commencé à ralentir par rapport au modèle exponentiel ajusté sur $2000$–$2020$ ; le modèle n'est plus tout à fait valable au-delà et devrait être révisé (taux plus faible).",
         "6. Cet exemple illustre la thèse de Malthus : une population en croissance exponentielle finit par rattraper puis dépasser des ressources en croissance seulement linéaire, malgré l'avance initiale de ces ressources ($400$ contre $250$). Mais sa limite apparaît aussitôt : dès $2030$ la croissance réelle ralentit (question 5). Aucune population ne croît indéfiniment au même rythme ; le modèle exponentiel n'est valable que sur un domaine limité, et la catastrophe annoncée par Malthus n'est donc pas une prophétie certaine."
       ],
-      "reponse": "1. quotients constants $= 1{,}2$, donc $u_n = 250 \\times 1{,}2^{\\,n}$ ; 2. $u_3 = 432$ et $u_4 = 518{,}4$ (milliers), soit $\\approx 432\\,000$ en $2030$ et $\\approx 518\\,400$ en $2040$ ; 3. $N = \\dfrac{\\ln 2}{\\ln 1{,}2} \\approx 3{,}8$ décennies ($\\approx 38$ ans) ; 4. les ressources dominent jusqu'à $n = 4$, la population les dépasse à $n = 5$ (année $2050$) ; 5. réel $410 <$ prévu $432$ ($\\approx 5{,}4\\,\\%$ d'écart) : la croissance ralentit, le modèle doit être révisé ; 6. Malthus (l'exponentielle dépasse le linéaire) se vérifie, mais son modèle de croissance illimitée n'est valable que sur un domaine limité."
+      "reponse": "1. quotients constants $= 1{,}2$, donc $u_n = 250 \\times 1{,}2^{\\,n}$ ; 2. $u_3 = 432$ et $u_4 = 518{,}4$ (milliers), soit $\\approx 432\\,000$ en $2030$ et $\\approx 518\\,400$ en $2040$ ; 3. $1{,}2^{\\,3} \\approx 1{,}73$ et $1{,}2^{\\,4} \\approx 2{,}07$ : doublement en un peu moins de $4$ décennies (un peu moins de $40$ ans) ; 4. les ressources dominent jusqu'à $n = 4$, la population les dépasse à $n = 5$ (année $2050$) ; 5. réel $410 <$ prévu $432$ ($\\approx 5{,}4\\,\\%$ d'écart) : la croissance ralentit, le modèle doit être révisé ; 6. Malthus (l'exponentielle dépasse le linéaire) se vérifie, mais son modèle de croissance illimitée n'est valable que sur un domaine limité."
     },
     {
       "id": 11,
@@ -263,7 +263,7 @@
       "enonce": "Une ville de $10\\,000$ habitants et une métropole de $1\\,000\\,000$ d'habitants croissent toutes deux de $2\\,\\%$ par an. Laquelle doublera la première ? Justifier.",
       "corrige": [
         "Le temps de doublement vérifie $q^{\\,N} = 2$ : l'effectif de départ $u_0$ se simplifie.",
-        "$N = \\dfrac{\\ln 2}{\\ln 1{,}02} \\approx 35$ ans pour les deux : elles doublent en même temps."
+        "Avec $q = 1{,}02$ : $1{,}02^{\\,35} \\approx 2{,}00$, donc $N \\approx 35$ ans pour les deux : elles doublent en même temps."
       ],
       "reponse": "Aucune : elles doublent toutes les deux en environ 35 ans, car $N$ ne dépend que du taux."
     },
@@ -349,13 +349,13 @@
       "id": 30,
       "difficulte": "intermediaire",
       "notion": "temps-de-doublement",
-      "enonce": "Comparer le temps de doublement exact $N = \\dfrac{\\ln 2}{\\ln q}$ et l'estimation $\\dfrac{70}{t}$ pour un taux de $1\\,\\%$ par an, puis pour un taux de $10\\,\\%$ par an. Pour quel taux la règle de 70 est-elle la plus précise ?",
+      "enonce": "Comparer le temps de doublement obtenu à la calculatrice (puissances successives de $q$) et l'estimation $\\dfrac{70}{t}$ pour un taux de $1\\,\\%$ par an, puis pour un taux de $10\\,\\%$ par an. Pour quel taux la règle de 70 est-elle la plus précise ?",
       "corrige": [
-        "$t = 1\\,\\%$ : $N = \\dfrac{\\ln 2}{\\ln 1{,}01} \\approx 69{,}7$ ans ; règle : $70$ ans.",
-        "$t = 10\\,\\%$ : $N = \\dfrac{\\ln 2}{\\ln 1{,}1} \\approx 7{,}3$ ans ; règle : $7$ ans.",
-        "L'écart relatif est plus faible pour $1\\,\\%$ : la règle de 70 est d'autant plus précise que le taux est petit."
+        "$t = 1\\,\\%$ : $1{,}01^{\\,69} \\approx 1{,}99$ et $1{,}01^{\\,70} \\approx 2{,}01$, donc $N \\approx 70$ ans ; règle : $70$ ans.",
+        "$t = 10\\,\\%$ : $1{,}1^{\\,7} \\approx 1{,}95$ et $1{,}1^{\\,8} \\approx 2{,}14$, donc $N$ est entre $7$ et $8$ ans ; règle : $7$ ans, un peu trop court.",
+        "L'écart est plus faible pour $1\\,\\%$ : la règle de 70 est d'autant plus précise que le taux est petit."
       ],
-      "reponse": "$69{,}7$ ans contre 70 ; $7{,}3$ ans contre 7 : la règle est plus précise pour les petits taux."
+      "reponse": "$1\\,\\%$ : environ $70$ ans contre $70$ ; $10\\,\\%$ : entre $7$ et $8$ ans contre $7$ : la règle est plus précise pour les petits taux."
     },
     {
       "id": 31,
@@ -479,7 +479,7 @@
       "enonce": "Une population diminue de $3\\,\\%$ par an. En adaptant la méthode du temps de doublement, calculer au bout de combien d'années elle aura diminué de moitié.",
       "corrige": [
         "On cherche $N$ tel que $0{,}97^{\\,N} = 0{,}5$.",
-        "En prenant le logarithme népérien : $N = \\dfrac{\\ln 0{,}5}{\\ln 0{,}97} \\approx 22{,}8$ ans."
+        "À la calculatrice : $0{,}97^{\\,22} \\approx 0{,}512$ et $0{,}97^{\\,23} \\approx 0{,}496$ : la population a diminué de moitié au bout d'environ $23$ ans."
       ],
       "reponse": "Environ 23 ans."
     },
@@ -563,7 +563,7 @@
         "1) $u_n = 150\\,000 \\times 1{,}015^{\\,n}$ (exponentiel) et $L_n = 160\\,000 + 1\\,500\\,n$ (linéaire).",
         "2) $u_{10} \\approx 174\\,081$ et $L_{10} = 175\\,000$ ; $u_{11} \\approx 176\\,692$ et $L_{11} = 176\\,500$.",
         "3) Le dépassement a lieu pour $n = 11$, c'est-à-dire en 2031.",
-        "4) $N = \\dfrac{\\ln 2}{\\ln 1{,}015} \\approx 46{,}6$ ans."
+        "4) On cherche $N$ tel que $1{,}015^{\\,N} = 2$ : à la calculatrice, $1{,}015^{\\,46} \\approx 1{,}98$ et $1{,}015^{\\,47} \\approx 2{,}01$, soit environ $47$ ans."
       ],
       "reponse": "1) $u_n = 150\\,000 \\times 1{,}015^{\\,n}$ ; $L_n = 160\\,000 + 1\\,500\\,n$. 2) $174\\,081$ / $175\\,000$ ; $176\\,692$ / $176\\,500$. 3) En 2031. 4) Environ 47 ans."
     },
@@ -588,7 +588,7 @@
         "1) $\\dfrac{46}{40} = 1{,}15$ et $\\dfrac{52{,}9}{46} = 1{,}15$ : $u_n = 40 \\times 1{,}15^{\\,n}$.",
         "2) $u_3 = 40 \\times 1{,}15^{\\,3} \\approx 60{,}8$ milliers.",
         "3) $\\dfrac{60{,}8 - 58}{60{,}8} \\approx 4{,}7\\,\\%$ : le modèle surestime ; la croissance ralentit, il faut le réviser.",
-        "4) $N = \\dfrac{\\ln 2}{\\ln 1{,}15} \\approx 5{,}0$ décennies, soit environ 50 ans."
+        "4) On cherche $N$ tel que $1{,}15^{\\,N} = 2$ : $1{,}15^{\\,4} \\approx 1{,}75$ et $1{,}15^{\\,5} \\approx 2{,}01$, soit environ $5$ décennies (environ $50$ ans)."
       ],
       "reponse": "1) $u_n = 40 \\times 1{,}15^{\\,n}$. 2) Environ $60{,}8$ milliers. 3) Écart d'environ $4{,}7\\,\\%$ : modèle à réviser. 4) Environ 50 ans."
     }
