@@ -1522,6 +1522,30 @@ S['montage-titrage'] = ({ mesure = 'pH-mètre', titrant = 'solution titrante\n(c
   return enveloppe(600, 316, s);
 };
 
+/** Variante colorimétrique (1re spécialité : titrage avec suivi colorimétrique, sans appareil de mesure). */
+S['montage-titrage-colorimetrique'] = ({ titrant = 'solution titrante violette\n(ions permanganate,\nconcentration connue)', titre = 'solution à titrer', couleurTitrant = '#b678c9', avant = '#f3f6f8', apres = '#e7c3ec', avantTxt = 'presque incolore', apresTxt = 'violet persistant' } = {}) => {
+  let s = '';
+  // potence
+  s += rect(80, 300, 160, 8, { fond: '#9aa6b2', bord: ENCRE, ep: 1.2 }) + ligne(100, 300, 100, 20, { couleur: ENCRE, epaisseur: 4 }) + ligne(100, 60, 205, 60, { couleur: ENCRE, epaisseur: 3 });
+  s += burette(210, 210, { h: 180, niveau: 0.8, titre: '', couleur: couleurTitrant });
+  const tt = titrant.split('\n');
+  s += texte(232, 50, 'burette graduée', { taille: 13, ancre: 'start', gras: true });
+  tt.forEach((l, i) => { s += texte(232, 68 + i * 16, l, { taille: 12, ancre: 'start', couleur: ATTENUE }); });
+  s += agitateur(210, 266, 170);
+  s += becher(165, 262, 90, 70, { niveau: 0.55, couleur: avant });
+  s += `<rect x="200" y="252" width="18" height="5" rx="2" fill="${ENCRE}"/>`; // barreau aimanté
+  s += texte(320, 262, titre, { taille: 13, ancre: 'start' }) + fleche(316, 258, 258, 244, { couleur: ATTENUE, epaisseur: 1.2, pointe: 7 });
+  s += texte(330, 296, 'agitateur magnétique', { taille: 12, ancre: 'start', couleur: ATTENUE });
+  // repérage de l'équivalence par la couleur
+  s += texte(478, 132, 'repérage de l\'équivalence', { taille: 13, gras: true });
+  s += becher(400, 200, 50, 44, { niveau: 0.6, couleur: avant, graine: 3 });
+  s += becher(506, 200, 50, 44, { niveau: 0.6, couleur: apres, graine: 5 });
+  s += fleche(458, 180, 498, 180, { couleur: ENCRE, epaisseur: 1.4, pointe: 7 });
+  s += texte(425, 218, 'avant', { taille: 12, gras: true }) + texte(425, 234, avantTxt, { taille: 11, couleur: ATTENUE });
+  s += texte(531, 218, 'juste après', { taille: 12, gras: true }) + texte(531, 234, apresTxt, { taille: 11, couleur: ATTENUE });
+  return enveloppe(600, 316, s);
+};
+
 /** Ballon à fond rond (centre du ventre en cx, cy). */
 function ballon(cx, cy, { r = 42, col = 40, couleur = '#f6e7b8', niveau = 0.45, grains = false } = {}) {
   const w = 9;
@@ -2408,8 +2432,8 @@ S['avancement-limitant'] = ({ nA = 0.10, nB = 0.15, a = 1, b = 2 } = {}) => {
   const F = 'premiere/physique-chimie/transformations-matiere';
   pose(F, 'limitant', 'avancement-limitant', '### Trouver le réactif limitant',
     'Exemple A + 2 B → C avec 0,10 mol de A et 0,15 mol de B : B s\'annule pour x = 0,075 mol, avant A ; B est le réactif limitant.');
-  pose(F, 'montage-titrage', 'montage-titrage', '## 3. Le titrage',
-    'Montage d\'un titrage : la solution titrante, de concentration connue, est versée à la burette dans la solution à titrer agitée en permanence.');
+  pose(F, 'montage-titrage', 'montage-titrage-colorimetrique', '## 3. Le titrage',
+    'Titrage avec suivi colorimétrique : la solution titrante est versée à la burette dans la solution à titrer, agitée ; l\'équivalence est repérée quand la teinte violette du permanganate persiste.');
 }
 
 // ───────────────────────── Collège : forces, mouvements, matière ─────────────────────────
