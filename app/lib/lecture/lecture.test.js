@@ -41,3 +41,10 @@ test('fiche : vocabulaire lu dans les deux langues, formules lues en CP', () => 
   const long = segmentsFiche('Une phrase assez longue pour remplir. '.repeat(30), 'maths');
   assert.ok(long.length > 3 && long.every((x) => x.texte.length <= 260));
 });
+
+test('un passage en gras dans la même langue reste dans la même phrase', () => {
+  const s = segmentsTexte('On part du **même radical que le futur**, auquel on ajoute **-ei, -esti**.', 'italien');
+  assert.equal(s[0].langue, 'francais');
+  assert.equal(s[0].texte, 'On part du même radical que le futur , auquel on ajoute');
+  assert.equal(s[1].langue, 'italien');
+});

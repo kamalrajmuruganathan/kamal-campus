@@ -54,7 +54,7 @@ export default function Chapitres({ route, navigation }) {
             t={t}
             texte={
               `⚠️ ${nonRelus} fiche${nonRelus > 1 ? 's' : ''} de ce parcours ${nonRelus > 1 ? 'n’ont' : 'n’a'} pas encore ` +
-              'été relue par un professeur. Le contenu est rédigé à partir des programmes officiels, ' +
+              `été relue${nonRelus > 1 ? 's' : ''} par un professeur. Le contenu est rédigé à partir des programmes officiels, ` +
               'mais vérifie avec ton cours avant un contrôle.'
             }
           />

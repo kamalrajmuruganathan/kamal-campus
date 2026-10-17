@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { protegerFormules, rendreAvecFormules } from './index.js';
+import { protegerFormules, rendreAvecFormules, espacesInsecables } from './index.js';
 
 // Mini « Markdown » qui fait comme markdown-it : il mange les échappements « \x »,
 // échappe le HTML et rend le **gras** (le CI des tests n'installe pas les dépendances).
@@ -36,4 +36,12 @@ test('le Markdown autour reste rendu', () => {
   const html = rendreAvecFormules(md, '**Gras** et $x^2$');
   assert.ok(html.includes('<strong>Gras</strong>'));
   assert.ok(html.includes('$x^2$'));
+});
+
+test('espaces insécables avant « : ; ? ! » (pas dans le code)', () => {
+  const html = rendreAvecFormules(md, 'Pour la seconde : $1$ ; « oui » ?');
+  assert.ok(html.includes('seconde\u00a0:'));
+  assert.ok(html.includes('$1$\u00a0;'));
+  assert.ok(html.includes('«\u00a0oui\u00a0»\u00a0?'));
+  assert.equal(espacesInsecables('<pre><code>if x :</code></pre><code>a ;</code> b :'), '<pre><code>if x :</code></pre><code>a ;</code> b\u00a0:');
 });

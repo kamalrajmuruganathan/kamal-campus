@@ -22,7 +22,7 @@ import CarteResultat from '../composants/CarteResultat';
 import { matiereParlante } from '../parole';
 import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { partagerVue } from '../partage';
-import { chapitreParId } from '../contenu-index';
+import { chapitreParId, libelleNotion } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { melanger } from '../../lib/quizmix';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
@@ -160,7 +160,7 @@ export default function Qcm({ route, navigation }) {
                   key={n}
                   style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 6 }}
                 >
-                  • {n.replace(/-/g, ' ')}
+                  • {libelleNotion(n, chapitre?.matiere)}
                 </Text>
               ))}
               <Text
@@ -348,7 +348,7 @@ export default function Qcm({ route, navigation }) {
                 {LETTRES[i]}
               </Text>
               <View style={{ flex: 1 }}>
-                <VisionneuseFiche markdown={choix} />
+                <VisionneuseFiche markdown={choix} inerte />
               </View>
               {repondu && estBon && <Text style={{ color: t.couleur.succes, fontSize: 18 }}>✓</Text>}
               {repondu && estChoisi && !estBon && <Text style={{ color: t.couleur.erreur, fontSize: 18 }}>✕</Text>}

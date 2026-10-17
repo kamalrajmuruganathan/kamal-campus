@@ -54,7 +54,11 @@ la courbe au point d'abscisse $x_0$.
 
 Près de $x_0$, la courbe se confond presque avec sa tangente. D'où, pour $h$ petit :
 
-$$\boxed{f(x_0 + h) \approx f(x_0) + f'(x_0)\,h} \qquad\text{soit}\qquad \boxed{\Delta y \approx f'(x_0)\,\Delta x}$$
+$$\boxed{f(x_0 + h) \approx f(x_0) + f'(x_0)\,h}$$
+
+soit
+
+$$\boxed{\Delta y \approx f'(x_0)\,\Delta x}$$
 
 > **Exemple.** Une plaque carrée de côté $c = 50$ cm s'allonge de $\Delta c = 0{,}05$ cm
 > en chauffant. Son aire est $S(c) = c^2$, donc $S'(c) = 2c$ et
@@ -99,12 +103,15 @@ $u$ et $v$ sont deux fonctions dérivables, $k$ est un réel.
 | $\dfrac{u}{v}$ ($v \neq 0$) | $\dfrac{u'v - uv'}{v^2}$ |
 
 > **D'où vient la formule du produit ?** On écrit le taux de variation :
-> $\dfrac{u(x+h)v(x+h) - u(x)v(x)}{h} = \dfrac{u(x+h) - u(x)}{h}\,v(x+h) + u(x)\,\dfrac{v(x+h) - v(x)}{h}$.
+>
+> $$\begin{aligned}&\frac{u(x+h)v(x+h) - u(x)v(x)}{h}\\ &= \frac{u(x+h) - u(x)}{h}\,v(x+h)\\ &\quad + u(x)\,\frac{v(x+h) - v(x)}{h}.\end{aligned}$$
+>
 > Quand $h$ tend vers $0$, on obtient $u'v + uv'$. La formule du quotient est admise.
 
 > **Exemple (quotient).** $f(x) = \dfrac{2x - 1}{x + 3}$ pour $x \neq -3$ : $u = 2x - 1$,
-> $u' = 2$, $v = x + 3$, $v' = 1$.
-> $f'(x) = \dfrac{2(x+3) - (2x-1) \times 1}{(x+3)^2} = \dfrac{7}{(x+3)^2}$.
+> $u' = 2$, $v = x + 3$, $v' = 1$, donc
+>
+> $$f'(x) = \dfrac{2(x+3) - (2x-1) \times 1}{(x+3)^2} = \dfrac{7}{(x+3)^2}.$$
 
 > ⚠️ La dérivée d'un produit **n'est pas** le produit des dérivées :
 > $(x \times x)' = 2x$, alors que $1 \times 1 = 1$.
@@ -120,7 +127,9 @@ $$\boxed{\big(f(ax + b)\big)' = a\,f'(ax + b)}$$
 
 Appliquée au cosinus et au sinus, avec $a = \omega$ et $b = \varphi$ :
 
-$$\boxed{\big(A\cos(\omega t + \varphi)\big)' = -A\omega\sin(\omega t + \varphi)} \qquad \boxed{\big(A\sin(\omega t + \varphi)\big)' = A\omega\cos(\omega t + \varphi)}$$
+$$\boxed{\big(A\cos(\omega t + \varphi)\big)' = -A\omega\sin(\omega t + \varphi)}$$
+
+$$\boxed{\big(A\sin(\omega t + \varphi)\big)' = A\omega\cos(\omega t + \varphi)}$$
 
 > **Exemple (tension du secteur).** $u(t) = 325\sin(100\pi t)$ en volts (valeur efficace
 > $230$ V, fréquence $50$ Hz). Alors $\dfrac{du}{dt} = 325 \times 100\pi\cos(100\pi t) = 32\,500\pi\cos(100\pi t)$
@@ -185,7 +194,7 @@ Sur un intervalle :
 | Inverse, quotient | $\left(\dfrac{1}{v}\right)' = -\dfrac{v'}{v^2}$ ; $\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}$ |
 | Fonction affine à l'intérieur | $\big(f(ax+b)\big)' = a\,f'(ax+b)$ |
 | Sinusoïdes | $\big(A\cos(\omega t+\varphi)\big)' = -A\omega\sin(\omega t+\varphi)$ |
-| Physique | $v = \dfrac{dx}{dt}$, $a = \dfrac{dv}{dt}$, $P = \dfrac{dE}{dt}$, $i = \dfrac{dq}{dt}$ |
+| Physique | $v = \frac{dx}{dt}$ ; $a = \frac{dv}{dt}$ ; $P = \frac{dE}{dt}$ ; $i = \frac{dq}{dt}$ |
 
 ---
 

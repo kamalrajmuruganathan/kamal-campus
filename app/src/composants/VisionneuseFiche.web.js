@@ -13,6 +13,7 @@ import { View } from 'react-native';
 import MarkdownIt from 'markdown-it';
 import { rendreAvecFormules } from '../../lib/markdownmath';
 import { GABARIT_HTML } from '../visionneuse';
+import { useSombre } from '../useSombre';
 
 const md = new MarkdownIt({
   html: false,
@@ -35,14 +36,31 @@ export function nettoyerFiche(markdown) {
     .trim();
 }
 
-export default function VisionneuseFiche({ markdown, style }) {
+/**
+ * Adapte le gabarit à l'appli : fond transparent (le texte se pose sur la carte
+ * ou le bouton qui l'entoure, sans rectangle blanc) et thème clair/sombre choisi
+ * dans l'appli (réglage du profil) plutôt que celui du système.
+ */
+function adapterGabarit(gabarit, sombre) {
+  return gabarit
+    .replace('@media (prefers-color-scheme: dark)', sombre ? '@media all' : '@media not all')
+    .replace('</head>', () => '<style>html, body { background: transparent !important; }</style></head>');
+}
+
+/**
+ * `inerte` : à mettre quand la visionneuse est DANS une zone à toucher (choix de
+ * QCM, carte à retourner). Sinon l'iframe garde le clic pour elle et toucher le
+ * texte de la réponse ne fait rien.
+ */
+export default function VisionneuseFiche({ markdown, style, inerte = false }) {
   const [hauteur, setHauteur] = useState(64);
   const iframeRef = useRef(null);
+  const sombre = useSombre();
 
   const html = useMemo(() => {
     const corps = rendreAvecFormules(md, nettoyerFiche(markdown));
-    return GABARIT_HTML.replace('__HTML__', () => JSON.stringify(corps));
-  }, [markdown]);
+    return adapterGabarit(GABARIT_HTML, sombre).replace('__HTML__', () => JSON.stringify(corps));
+  }, [markdown, sombre]);
 
   const mesurer = useCallback(() => {
     const f = iframeRef.current;
@@ -81,7 +99,9 @@ export default function VisionneuseFiche({ markdown, style }) {
           height: hauteur + 'px',
           border: 'none',
           background: 'transparent',
+          colorScheme: 'normal',
           display: 'block',
+          pointerEvents: inerte ? 'none' : 'auto',
         }}
       />
     </View>

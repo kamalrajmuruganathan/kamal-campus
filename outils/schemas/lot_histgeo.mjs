@@ -1072,17 +1072,19 @@ const ORGAS = {
     pos.forEach(([x, y], i) => { g += boite2(x - 95, y - 26, 190, 52, t[i], { coul: 'gris', taille: 12.5, gras: true }); });
     return enveloppe(W, H, g);
   },
-  parcours: () => orga(680, 210, {
+  // Disposition verticale : sur un téléphone, le schéma garde un texte lisible.
+  parcours: () => orga(400, 408, {
     boites: [
-      { id: 'a', x: 10, y: 50, w: 190, h: 86, t: '16 ANS\nrecensement\nen mairie', coul: 'bleu', taille: 14 },
-      { id: 'b', x: 245, y: 50, w: 190, h: 86, t: 'ENSUITE\nJournée défense\net citoyenneté (JDC)', coul: 'violet', taille: 14 },
-      { id: 'c', x: 480, y: 50, w: 190, h: 86, t: '18 ANS\ndroit de vote', coul: 'vert', taille: 14 },
+      { id: 'a', x: 50, y: 44, w: 300, h: 66, t: '16 ANS\nrecensement en mairie', coul: 'bleu', taille: 16 },
+      { id: 'b', x: 50, y: 144, w: 300, h: 86, t: 'ENSUITE\nJournée défense\net citoyenneté (JDC)', coul: 'violet', taille: 16 },
+      { id: 'c', x: 50, y: 264, w: 300, h: 66, t: '18 ANS\ndroit de vote', coul: 'vert', taille: 16 },
     ],
     liens: [{ de: 'a', a: 'b' }, { de: 'b', a: 'c' }],
     notes: [
-      { x: 340, y: 28, t: 'Le parcours de citoyenneté', taille: 14, couleur: ENCRE, gras: true },
-      { x: 340, y: 168, t: 'L\'attestation de la JDC est demandée pour certains examens', taille: 12.5, italique: true },
-      { x: 340, y: 186, t: '(comme le baccalauréat), jusqu\'à 25 ans.', taille: 12.5, italique: true },
+      { x: 200, y: 26, t: 'Le parcours de citoyenneté', taille: 17, couleur: ENCRE, gras: true },
+      { x: 200, y: 358, t: 'L\'attestation de la JDC est demandée pour', taille: 14, italique: true },
+      { x: 200, y: 378, t: 'certains examens (comme le baccalauréat),', taille: 14, italique: true },
+      { x: 200, y: 398, t: 'jusqu\'à 25 ans.', taille: 14, italique: true },
     ],
   }),
   institutionsVe: () => orga(680, 420, {

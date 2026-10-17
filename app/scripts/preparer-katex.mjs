@@ -128,6 +128,8 @@ table {
 }
 th, td { border: 1px solid var(--trait); padding: 8px 11px; text-align: left; }
 th { background: var(--encadre); font-weight: 620; }
+/* Tableau sans en-tête (« | | | » en Markdown) : pas de bande grise vide */
+thead:not(:has(th:not(:empty))) { display: none; }
 hr { border: 0; border-top: 1px solid var(--trait); margin: 2em 0; }
 ul, ol { padding-left: 1.4em; margin: 0 0 1em; }
 li { margin-bottom: .4em; }
@@ -171,6 +173,27 @@ const gabarit = `<!doctype html>
         { left: '$', right: '$', display: false },
       ],
       throwOnError: false,
+    });
+    // Formule courte suivie d'une ponctuation (« le pas $h$. ») : on les garde sur
+    // la même ligne, sinon le point peut partir seul au début de la ligne suivante.
+    Array.prototype.forEach.call(document.querySelectorAll('#contenu .katex'), function (k) {
+      if (k.closest('.katex-display')) return;
+      // auto-render entoure chaque formule d'un <span> sans classe : on part de lui.
+      var p = k.parentNode;
+      if (p && p.nodeName === 'SPAN' && !p.className && p.childNodes.length === 1) k = p;
+      var n = k.nextSibling;
+      if (!n || n.nodeType !== 3) return;
+      var t = n.nodeValue, i = 0;
+      while (i < t.length && '.,;:!?)…»\u00a0'.indexOf(t.charAt(i)) >= 0) i++;
+      if (!i) return;
+      var h = k.querySelector('.katex-html');
+      if ((h ? h.textContent : k.textContent).length > 24) return;
+      var s = document.createElement('span');
+      s.style.whiteSpace = 'nowrap';
+      k.parentNode.insertBefore(s, k);
+      s.appendChild(k);
+      s.appendChild(document.createTextNode(t.slice(0, i)));
+      n.nodeValue = t.slice(i);
     });
   }
   // Signale la hauteur du CONTENU à React Native, pour dimensionner la WebView.

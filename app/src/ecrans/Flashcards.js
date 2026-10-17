@@ -199,7 +199,7 @@ export default function Flashcards({ route, navigation }) {
                 <BoutonEcouter t={t} matiere={chapitre.matiere} texte={face === 'recto' ? carte.recto : carte.verso} />
               </View>
             )}
-            <VisionneuseFiche markdown={face === 'recto' ? carte.recto : carte.verso} />
+            <VisionneuseFiche markdown={face === 'recto' ? carte.recto : carte.verso} inerte />
           </ScrollView>
         </Pressable>
 

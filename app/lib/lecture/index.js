@@ -100,23 +100,29 @@ function propre(s) {
     .trim();
 }
 
-/** Ajoute un segment en fusionnant avec le précédent s'il est dans la même langue. */
-function pousser(out, texte, langue) {
+/**
+ * Ajoute un segment en fusionnant avec le précédent s'il est dans la même langue.
+ * `suite` : le morceau continue la même phrase (passage en **gras** ou entre « … »
+ * dans la même langue) : on le recolle avec une espace, pas avec un point.
+ * @returns {boolean} vrai si quelque chose a été ajouté
+ */
+function pousser(out, texte, langue, suite = false) {
   const t = propre(texte);
-  if (!t || !/[\p{L}\p{N}]/u.test(t)) return;
+  if (!t || !/[\p{L}\p{N}]/u.test(t)) return false;
   const der = out[out.length - 1];
   // Morceaux courts (≤ 220 caractères) : certains navigateurs coupent les lectures longues.
   if (der && der.langue === langue && der.texte.length + t.length < 220) {
-    der.texte += (/[.!?:;]$/.test(der.texte) ? ' ' : '. ') + t;
-    return;
+    der.texte += (suite || /[.!?:;]$/.test(der.texte) ? ' ' : '. ') + t;
+    return true;
   }
-  if (t.length <= 220) { out.push({ texte: t, langue }); return; }
+  if (t.length <= 220) { out.push({ texte: t, langue }); return true; }
   let bloc = '';
   for (const phrase of t.match(/[^.!?;]+[.!?;]*\s*/g) || [t]) {
     if (bloc && bloc.length + phrase.length > 220) { out.push({ texte: bloc.trim(), langue }); bloc = ''; }
     bloc += phrase;
   }
   if (bloc.trim()) out.push({ texte: bloc.trim(), langue });
+  return true;
 }
 
 /**
@@ -130,13 +136,14 @@ export function segmentsTexte(texte, matiere, out = []) {
   const re = /\*\*([^*]+)\*\*|«\s*([^»]+?)\s*»|"([^"]+)"|“([^”]+)”/g;
   let i = 0;
   let m;
+  let suite = false; // après le premier morceau, on est dans la même phrase
   while ((m = re.exec(s))) {
     const dedans = m[1] ?? m[2] ?? m[3] ?? m[4];
-    pousser(out, s.slice(i, m.index), 'francais');
-    pousser(out, dedans, estEtranger(dedans, matiere) ? matiere : 'francais');
+    suite = pousser(out, s.slice(i, m.index), 'francais', suite) || suite;
+    suite = pousser(out, dedans, estEtranger(dedans, matiere) ? matiere : 'francais', suite) || suite;
     i = m.index + m[0].length;
   }
-  pousser(out, s.slice(i), 'francais');
+  pousser(out, s.slice(i), 'francais', suite);
   // Une phrase entière en langue étrangère (« I like apples. ») sans marque.
   if (out.length === 1 && out[0].langue === 'francais' && estEtranger(out[0].texte, matiere)) out[0].langue = matiere;
   return out;
