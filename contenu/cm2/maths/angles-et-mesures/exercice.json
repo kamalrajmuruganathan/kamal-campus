@@ -14,7 +14,7 @@
       "id": 1,
       "difficulte": "application",
       "notion": "nature-angle",
-      "enonce": "Un angle mesure $20^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "enonce": "Un angle mesure $20^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
         "$20 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
@@ -26,23 +26,13 @@
       "notion": "completer-angle-droit",
       "enonce": "Un angle droit est partagé en deux angles. L'un mesure $35^\\circ$. Combien mesure l'autre ?",
       "corrige": [
+        "Un angle droit mesure $90^\\circ$.",
         "$90 - 35 = 55$."
       ],
       "reponse": "$55^\\circ$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "completer-angle-plat",
-      "enonce": "Deux angles placés côte à côte forment un angle plat. L'un mesure $40^\\circ$. Combien mesure l'autre ? Quelle est sa nature ?",
-      "corrige": [
-        "$180 - 40 = 140$.",
-        "$140$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
-      ],
-      "reponse": "$140^\\circ$, obtus"
-    },
-    {
-      "id": 4,
       "difficulte": "intermediaire",
       "notion": "additionner-des-angles",
       "enonce": "On place côte à côte des angles de $35^\\circ$ et $55^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
@@ -53,146 +43,192 @@
       "reponse": "$90^\\circ$, angle droit"
     },
     {
-      "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 40 et 140 (les deux graduations). On voit que l'angle est aigu. Quelle est sa mesure ?",
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "angle-multiple",
+      "enonce": "On reproduit deux fois un angle de $40^\\circ$ et on place les copies côte à côte. On obtient l'angle double. Combien mesure-t-il ?",
       "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est aigu, donc il mesure moins de $90^\\circ$ : c'est $40^\\circ$."
+        "Les angles placés côte à côte s'additionnent : $2 \\times 40 = 80$.",
+        "$80 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
-      "reponse": "$40^\\circ$"
+      "reponse": "$80^\\circ$"
+    },
+    {
+      "id": 5,
+      "difficulte": "application",
+      "notion": "moitie-par-pliage",
+      "enonce": "On plie un angle de $90^\\circ$ en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
+      "corrige": [
+        "Le pliage partage l'angle en deux moitiés égales.",
+        "$90 \\div 2 = 45$."
+      ],
+      "reponse": "$45^\\circ$"
     },
     {
       "id": 6,
-      "difficulte": "intermediaire",
-      "notion": "partager-un-tour",
-      "enonce": "On partage un tour complet en 4 angles égaux. Combien mesure chaque angle ?",
+      "difficulte": "approfondissement",
+      "notion": "combien-d-angles",
+      "enonce": "Combien d'angles de $30^\\circ$ faut-il placer côte à côte pour obtenir un angle droit ?",
       "corrige": [
-        "$360 \\div 4 = 90$."
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 \\div 30 = 3$."
       ],
-      "reponse": "$90^\\circ$"
+      "reponse": "$3$"
     },
     {
       "id": 7,
+      "difficulte": "intermediaire",
+      "notion": "comparer-angles",
+      "enonce": "Range ces angles du plus petit au plus grand : $120^\\circ$, $45^\\circ$, $90^\\circ$, $30^\\circ$.",
+      "corrige": [
+        "Plus la mesure en degrés est grande, plus l'angle est ouvert."
+      ],
+      "reponse": "$30^\\circ$ ; $45^\\circ$ ; $90^\\circ$ ; $120^\\circ$"
+    },
+    {
+      "id": 8,
       "difficulte": "probleme",
-      "notion": "horloge",
+      "notion": "horloge-heures",
       "enonce": "À 1 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
       "corrige": [
-        "Entre deux nombres voisins du cadran : $360 \\div 12 = 30^\\circ$.",
-        "À 1 h : $1 \\times 30 = 30$.",
+        "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle.",
+        "À 1 h, les aiguilles sont séparées par 1 intervalle : $1 \\times 30 = 30$.",
         "$30 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
       "reponse": "$30^\\circ$, aigu"
     },
     {
-      "id": 8,
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "horloge-minutes",
+      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 15 minutes ?",
+      "corrige": [
+        "En 15 minutes, la grande aiguille va du 12 au 3 : elle tourne d'un angle droit, $90^\\circ$.",
+        "En 5 minutes, elle avance d'un seul intervalle : $90 \\div 3 = 30^\\circ$."
+      ],
+      "reponse": "$90^\\circ$"
+    },
+    {
+      "id": 10,
       "difficulte": "application",
       "notion": "nature-angle",
-      "enonce": "Un angle mesure $90^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "enonce": "Un angle mesure $90^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
         "Il mesure exactement $90^\\circ$ : c'est un angle droit."
       ],
       "reponse": "droit"
     },
     {
-      "id": 9,
+      "id": 11,
       "difficulte": "application",
       "notion": "completer-angle-droit",
       "enonce": "Un angle droit est partagé en deux angles. L'un mesure $72^\\circ$. Combien mesure l'autre ?",
       "corrige": [
+        "Un angle droit mesure $90^\\circ$.",
         "$90 - 72 = 18$."
       ],
       "reponse": "$18^\\circ$"
     },
     {
-      "id": 10,
-      "difficulte": "intermediaire",
-      "notion": "completer-angle-plat",
-      "enonce": "Deux angles placés côte à côte forment un angle plat. L'un mesure $125^\\circ$. Combien mesure l'autre ? Quelle est sa nature ?",
-      "corrige": [
-        "$180 - 125 = 55$.",
-        "$55 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
-      ],
-      "reponse": "$55^\\circ$, aigu"
-    },
-    {
-      "id": 11,
+      "id": 12,
       "difficulte": "intermediaire",
       "notion": "additionner-des-angles",
       "enonce": "On place côte à côte des angles de $60^\\circ$ et $70^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
       "corrige": [
         "$60 + 70 = 130$.",
-        "$130$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "$130 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
       "reponse": "$130^\\circ$, angle obtus"
     },
     {
-      "id": 12,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 50 et 130 (les deux graduations). On voit que l'angle est obtus. Quelle est sa mesure ?",
-      "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est obtus, donc il mesure plus de $90^\\circ$ : c'est $130^\\circ$."
-      ],
-      "reponse": "$130^\\circ$"
-    },
-    {
       "id": 13,
       "difficulte": "intermediaire",
-      "notion": "partager-un-tour",
-      "enonce": "On partage un tour complet en 6 angles égaux. Combien mesure chaque angle ?",
+      "notion": "angle-multiple",
+      "enonce": "On reproduit trois fois un angle de $30^\\circ$ et on place les copies côte à côte. On obtient l'angle triple. Combien mesure-t-il ?",
       "corrige": [
-        "$360 \\div 6 = 60$."
+        "Les angles placés côte à côte s'additionnent : $3 \\times 30 = 90$.",
+        "Il mesure exactement $90^\\circ$ : c'est un angle droit."
       ],
-      "reponse": "$60^\\circ$"
+      "reponse": "$90^\\circ$"
     },
     {
       "id": 14,
-      "difficulte": "probleme",
-      "notion": "horloge",
-      "enonce": "À 4 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
+      "difficulte": "application",
+      "notion": "moitie-par-pliage",
+      "enonce": "On plie un angle de $60^\\circ$ en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
       "corrige": [
-        "Entre deux nombres voisins du cadran : $360 \\div 12 = 30^\\circ$.",
-        "À 4 h : $4 \\times 30 = 120$.",
-        "$120$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "Le pliage partage l'angle en deux moitiés égales.",
+        "$60 \\div 2 = 30$."
       ],
-      "reponse": "$120^\\circ$, obtus"
+      "reponse": "$30^\\circ$"
     },
     {
       "id": 15,
+      "difficulte": "approfondissement",
+      "notion": "combien-d-angles",
+      "enonce": "Combien d'angles de $45^\\circ$ faut-il placer côte à côte pour obtenir un angle droit ?",
+      "corrige": [
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 \\div 45 = 2$."
+      ],
+      "reponse": "$2$"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "comparer-angles",
+      "enonce": "Range ces angles du plus petit au plus grand : $100^\\circ$, $15^\\circ$, $170^\\circ$, $60^\\circ$.",
+      "corrige": [
+        "Plus la mesure en degrés est grande, plus l'angle est ouvert."
+      ],
+      "reponse": "$15^\\circ$ ; $60^\\circ$ ; $100^\\circ$ ; $170^\\circ$"
+    },
+    {
+      "id": 17,
+      "difficulte": "probleme",
+      "notion": "horloge-heures",
+      "enonce": "À 2 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
+      "corrige": [
+        "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle.",
+        "À 2 h, les aiguilles sont séparées par 2 intervalles : $2 \\times 30 = 60$.",
+        "$60 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
+      ],
+      "reponse": "$60^\\circ$, aigu"
+    },
+    {
+      "id": 18,
+      "difficulte": "probleme",
+      "notion": "horloge-minutes",
+      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 5 minutes ?",
+      "corrige": [
+        "En 15 minutes, la grande aiguille va du 12 au 3 : elle tourne d'un angle droit, $90^\\circ$.",
+        "En 5 minutes, elle avance d'un seul intervalle : $90 \\div 3 = 30^\\circ$."
+      ],
+      "reponse": "$30^\\circ$"
+    },
+    {
+      "id": 19,
       "difficulte": "application",
       "notion": "nature-angle",
-      "enonce": "Un angle mesure $145^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "enonce": "Un angle mesure $145^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
-        "$145$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "$145 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
       "reponse": "obtus"
     },
     {
-      "id": 16,
+      "id": 20,
       "difficulte": "application",
       "notion": "completer-angle-droit",
       "enonce": "Un angle droit est partagé en deux angles. L'un mesure $15^\\circ$. Combien mesure l'autre ?",
       "corrige": [
+        "Un angle droit mesure $90^\\circ$.",
         "$90 - 15 = 75$."
       ],
       "reponse": "$75^\\circ$"
     },
     {
-      "id": 17,
-      "difficulte": "intermediaire",
-      "notion": "completer-angle-plat",
-      "enonce": "Deux angles placés côte à côte forment un angle plat. L'un mesure $63^\\circ$. Combien mesure l'autre ? Quelle est sa nature ?",
-      "corrige": [
-        "$180 - 63 = 117$.",
-        "$117$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
-      ],
-      "reponse": "$117^\\circ$, obtus"
-    },
-    {
-      "id": 18,
+      "id": 21,
       "difficulte": "intermediaire",
       "notion": "additionner-des-angles",
       "enonce": "On place côte à côte des angles de $45^\\circ$ et $45^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
@@ -203,195 +239,168 @@
       "reponse": "$90^\\circ$, angle droit"
     },
     {
-      "id": 19,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 25 et 155 (les deux graduations). On voit que l'angle est aigu. Quelle est sa mesure ?",
-      "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est aigu, donc il mesure moins de $90^\\circ$ : c'est $25^\\circ$."
-      ],
-      "reponse": "$25^\\circ$"
-    },
-    {
-      "id": 20,
-      "difficulte": "intermediaire",
-      "notion": "partager-un-tour",
-      "enonce": "On partage un tour complet en 8 angles égaux. Combien mesure chaque angle ?",
-      "corrige": [
-        "$360 \\div 8 = 45$."
-      ],
-      "reponse": "$45^\\circ$"
-    },
-    {
-      "id": 21,
-      "difficulte": "probleme",
-      "notion": "horloge",
-      "enonce": "À 6 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
-      "corrige": [
-        "Entre deux nombres voisins du cadran : $360 \\div 12 = 30^\\circ$.",
-        "À 6 h : $6 \\times 30 = 180$.",
-        "Il mesure $180^\\circ$ : ses deux côtés forment une ligne droite, il est plat."
-      ],
-      "reponse": "$180^\\circ$, plat"
-    },
-    {
       "id": 22,
-      "difficulte": "application",
-      "notion": "nature-angle",
-      "enonce": "Un angle mesure $180^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "difficulte": "intermediaire",
+      "notion": "angle-multiple",
+      "enonce": "On reproduit deux fois un angle de $55^\\circ$ et on place les copies côte à côte. On obtient l'angle double. Combien mesure-t-il ?",
       "corrige": [
-        "Il mesure $180^\\circ$ : ses deux côtés forment une ligne droite, il est plat."
+        "Les angles placés côte à côte s'additionnent : $2 \\times 55 = 110$.",
+        "$110 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
-      "reponse": "plat"
+      "reponse": "$110^\\circ$"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "completer-angle-droit",
-      "enonce": "Un angle droit est partagé en deux angles. L'un mesure $48^\\circ$. Combien mesure l'autre ?",
+      "difficulte": "intermediaire",
+      "notion": "moitie-par-pliage",
+      "enonce": "On plie un angle de $120^\\circ$ en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
       "corrige": [
-        "$90 - 48 = 42$."
+        "Le pliage partage l'angle en deux moitiés égales.",
+        "$120 \\div 2 = 60$."
       ],
-      "reponse": "$42^\\circ$"
+      "reponse": "$60^\\circ$"
     },
     {
       "id": 24,
-      "difficulte": "intermediaire",
-      "notion": "completer-angle-plat",
-      "enonce": "Deux angles placés côte à côte forment un angle plat. L'un mesure $110^\\circ$. Combien mesure l'autre ? Quelle est sa nature ?",
+      "difficulte": "approfondissement",
+      "notion": "combien-d-angles",
+      "enonce": "Combien d'angles de $15^\\circ$ faut-il placer côte à côte pour obtenir un angle droit ?",
       "corrige": [
-        "$180 - 110 = 70$.",
-        "$70 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 \\div 15 = 6$."
       ],
-      "reponse": "$70^\\circ$, aigu"
+      "reponse": "$6$"
     },
     {
       "id": 25,
       "difficulte": "intermediaire",
-      "notion": "additionner-des-angles",
-      "enonce": "On place côte à côte des angles de $25^\\circ$, $40^\\circ$ et $50^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
+      "notion": "comparer-angles",
+      "enonce": "Range ces angles du plus petit au plus grand : $89^\\circ$, $91^\\circ$, $9^\\circ$, $145^\\circ$.",
       "corrige": [
-        "$25 + 40 + 50 = 115$.",
-        "$115$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "Plus la mesure en degrés est grande, plus l'angle est ouvert."
       ],
-      "reponse": "$115^\\circ$, angle obtus"
+      "reponse": "$9^\\circ$ ; $89^\\circ$ ; $91^\\circ$ ; $145^\\circ$"
     },
     {
       "id": 26,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 25 et 155 (les deux graduations). On voit que l'angle est obtus. Quelle est sa mesure ?",
+      "difficulte": "probleme",
+      "notion": "horloge-heures",
+      "enonce": "À 4 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
       "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est obtus, donc il mesure plus de $90^\\circ$ : c'est $155^\\circ$."
+        "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle.",
+        "À 4 h, les aiguilles sont séparées par 4 intervalles : $4 \\times 30 = 120$.",
+        "$120 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
-      "reponse": "$155^\\circ$"
+      "reponse": "$120^\\circ$, obtus"
     },
     {
       "id": 27,
-      "difficulte": "intermediaire",
-      "notion": "partager-un-tour",
-      "enonce": "On partage un tour complet en 12 angles égaux. Combien mesure chaque angle ?",
+      "difficulte": "probleme",
+      "notion": "horloge-minutes",
+      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 10 minutes ?",
       "corrige": [
-        "$360 \\div 12 = 30$."
+        "En 15 minutes, la grande aiguille va du 12 au 3 : elle tourne d'un angle droit, $90^\\circ$.",
+        "En 5 minutes, elle avance d'un seul intervalle : $90 \\div 3 = 30^\\circ$.",
+        "En 10 minutes : $2 \\times 30 = 60$."
       ],
-      "reponse": "$30^\\circ$"
+      "reponse": "$60^\\circ$"
     },
     {
       "id": 28,
-      "difficulte": "probleme",
-      "notion": "horloge",
-      "enonce": "À 3 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
-      "corrige": [
-        "Entre deux nombres voisins du cadran : $360 \\div 12 = 30^\\circ$.",
-        "À 3 h : $3 \\times 30 = 90$.",
-        "Il mesure exactement $90^\\circ$ : c'est un angle droit."
-      ],
-      "reponse": "$90^\\circ$, droit"
-    },
-    {
-      "id": 29,
       "difficulte": "application",
       "notion": "nature-angle",
-      "enonce": "Un angle mesure $60^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "enonce": "Un angle mesure $60^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
         "$60 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
       "reponse": "aigu"
     },
     {
-      "id": 30,
+      "id": 29,
       "difficulte": "application",
       "notion": "completer-angle-droit",
-      "enonce": "Un angle droit est partagé en deux angles. L'un mesure $81^\\circ$. Combien mesure l'autre ?",
+      "enonce": "Un angle droit est partagé en deux angles. L'un mesure $48^\\circ$. Combien mesure l'autre ?",
       "corrige": [
-        "$90 - 81 = 9$."
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 - 48 = 42$."
       ],
-      "reponse": "$9^\\circ$"
+      "reponse": "$42^\\circ$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "additionner-des-angles",
+      "enonce": "On place côte à côte des angles de $25^\\circ$, $40^\\circ$ et $50^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
+      "corrige": [
+        "$25 + 40 + 50 = 115$.",
+        "$115 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
+      ],
+      "reponse": "$115^\\circ$, angle obtus"
     },
     {
       "id": 31,
       "difficulte": "intermediaire",
-      "notion": "completer-angle-plat",
-      "enonce": "Deux angles placés côte à côte forment un angle plat. L'un mesure $17^\\circ$. Combien mesure l'autre ? Quelle est sa nature ?",
+      "notion": "angle-multiple",
+      "enonce": "On reproduit trois fois un angle de $25^\\circ$ et on place les copies côte à côte. On obtient l'angle triple. Combien mesure-t-il ?",
       "corrige": [
-        "$180 - 17 = 163$.",
-        "$163$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "Les angles placés côte à côte s'additionnent : $3 \\times 25 = 75$.",
+        "$75 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
-      "reponse": "$163^\\circ$, obtus"
+      "reponse": "$75^\\circ$"
     },
     {
       "id": 32,
       "difficulte": "intermediaire",
-      "notion": "additionner-des-angles",
-      "enonce": "On place côte à côte des angles de $100^\\circ$ et $80^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
+      "notion": "moitie-par-pliage",
+      "enonce": "On plie un angle de $140^\\circ$ en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
       "corrige": [
-        "$100 + 80 = 180$.",
-        "Il mesure $180^\\circ$ : ses deux côtés forment une ligne droite, il est plat."
-      ],
-      "reponse": "$180^\\circ$, angle plat"
-    },
-    {
-      "id": 33,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 70 et 110 (les deux graduations). On voit que l'angle est aigu. Quelle est sa mesure ?",
-      "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est aigu, donc il mesure moins de $90^\\circ$ : c'est $70^\\circ$."
+        "Le pliage partage l'angle en deux moitiés égales.",
+        "$140 \\div 2 = 70$."
       ],
       "reponse": "$70^\\circ$"
     },
     {
-      "id": 34,
+      "id": 33,
       "difficulte": "approfondissement",
-      "notion": "partager-un-tour",
-      "enonce": "Combien d'angles de $30^\\circ$ faut-il placer côte à côte pour obtenir un angle droit ?",
+      "notion": "combien-d-angles",
+      "enonce": "Combien d'angles de $10^\\circ$ faut-il placer côte à côte pour obtenir un angle droit ?",
       "corrige": [
-        "$90 \\div 30 = 3$."
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 \\div 10 = 9$."
       ],
-      "reponse": "$3$"
+      "reponse": "$9$"
+    },
+    {
+      "id": 34,
+      "difficulte": "probleme",
+      "notion": "horloge-heures",
+      "enonce": "À 5 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
+      "corrige": [
+        "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle.",
+        "À 5 h, les aiguilles sont séparées par 5 intervalles : $5 \\times 30 = 150$.",
+        "$150 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
+      ],
+      "reponse": "$150^\\circ$, obtus"
     },
     {
       "id": 35,
       "difficulte": "probleme",
-      "notion": "horloge",
-      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 15 minutes ?",
+      "notion": "horloge-minutes",
+      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 20 minutes ?",
       "corrige": [
-        "En 60 minutes, la grande aiguille fait un tour complet ($360^\\circ$).",
-        "En 1 minute : $360 \\div 60 = 6^\\circ$.",
-        "En 15 minutes : $15 \\times 6 = 90$."
+        "En 15 minutes, la grande aiguille va du 12 au 3 : elle tourne d'un angle droit, $90^\\circ$.",
+        "En 5 minutes, elle avance d'un seul intervalle : $90 \\div 3 = 30^\\circ$.",
+        "En 20 minutes : $4 \\times 30 = 120$."
       ],
-      "reponse": "$90^\\circ$"
+      "reponse": "$120^\\circ$"
     },
     {
       "id": 36,
       "difficulte": "application",
       "notion": "nature-angle",
-      "enonce": "Un angle mesure $100^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "enonce": "Un angle mesure $100^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
-        "$100$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "$100 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
       "reponse": "obtus"
     },
@@ -399,25 +408,15 @@
       "id": 37,
       "difficulte": "application",
       "notion": "completer-angle-droit",
-      "enonce": "Un angle droit est partagé en deux angles. L'un mesure $27^\\circ$. Combien mesure l'autre ?",
+      "enonce": "Un angle droit est partagé en deux angles. L'un mesure $81^\\circ$. Combien mesure l'autre ?",
       "corrige": [
-        "$90 - 27 = 63$."
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 - 81 = 9$."
       ],
-      "reponse": "$63^\\circ$"
+      "reponse": "$9^\\circ$"
     },
     {
       "id": 38,
-      "difficulte": "intermediaire",
-      "notion": "completer-angle-plat",
-      "enonce": "Deux angles placés côte à côte forment un angle plat. L'un mesure $158^\\circ$. Combien mesure l'autre ? Quelle est sa nature ?",
-      "corrige": [
-        "$180 - 158 = 22$.",
-        "$22 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
-      ],
-      "reponse": "$22^\\circ$, aigu"
-    },
-    {
-      "id": 39,
       "difficulte": "intermediaire",
       "notion": "additionner-des-angles",
       "enonce": "On place côte à côte des angles de $30^\\circ$, $30^\\circ$ et $30^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
@@ -428,47 +427,59 @@
       "reponse": "$90^\\circ$, angle droit"
     },
     {
-      "id": 40,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 65 et 115 (les deux graduations). On voit que l'angle est obtus. Quelle est sa mesure ?",
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "angle-multiple",
+      "enonce": "On reproduit deux fois un angle de $65^\\circ$ et on place les copies côte à côte. On obtient l'angle double. Combien mesure-t-il ?",
       "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est obtus, donc il mesure plus de $90^\\circ$ : c'est $115^\\circ$."
+        "Les angles placés côte à côte s'additionnent : $2 \\times 65 = 130$.",
+        "$130 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
-      "reponse": "$115^\\circ$"
+      "reponse": "$130^\\circ$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "moitie-par-pliage",
+      "enonce": "On plie un angle de $100^\\circ$ en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
+      "corrige": [
+        "Le pliage partage l'angle en deux moitiés égales.",
+        "$100 \\div 2 = 50$."
+      ],
+      "reponse": "$50^\\circ$"
     },
     {
       "id": 41,
-      "difficulte": "approfondissement",
-      "notion": "partager-un-tour",
-      "enonce": "Combien d'angles de $30^\\circ$ faut-il placer côte à côte pour obtenir un angle plat ?",
+      "difficulte": "probleme",
+      "notion": "horloge-heures",
+      "enonce": "À 10 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
       "corrige": [
-        "$180 \\div 30 = 6$."
+        "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle.",
+        "À 10 h, les aiguilles sont séparées par 2 intervalles : $2 \\times 30 = 60$.",
+        "$60 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
-      "reponse": "$6$"
+      "reponse": "$60^\\circ$, aigu"
     },
     {
       "id": 42,
-      "difficulte": "probleme",
-      "notion": "horloge",
-      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 20 minutes ?",
+      "difficulte": "application",
+      "notion": "nature-angle",
+      "enonce": "Un angle mesure $45^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
-        "En 60 minutes, la grande aiguille fait un tour complet ($360^\\circ$).",
-        "En 1 minute : $360 \\div 60 = 6^\\circ$.",
-        "En 20 minutes : $20 \\times 6 = 120$."
+        "$45 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
-      "reponse": "$120^\\circ$"
+      "reponse": "aigu"
     },
     {
       "id": 43,
-      "difficulte": "intermediaire",
-      "notion": "nature-angle",
-      "enonce": "Un angle mesure $89^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "difficulte": "application",
+      "notion": "completer-angle-droit",
+      "enonce": "Un angle droit est partagé en deux angles. L'un mesure $27^\\circ$. Combien mesure l'autre ?",
       "corrige": [
-        "$89 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
+        "Un angle droit mesure $90^\\circ$.",
+        "$90 - 27 = 63$."
       ],
-      "reponse": "aigu"
+      "reponse": "$63^\\circ$"
     },
     {
       "id": 44,
@@ -477,70 +488,71 @@
       "enonce": "On place côte à côte des angles de $110^\\circ$ et $35^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
       "corrige": [
         "$110 + 35 = 145$.",
-        "$145$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "$145 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
       "reponse": "$145^\\circ$, angle obtus"
     },
     {
       "id": 45,
-      "difficulte": "approfondissement",
-      "notion": "lire-un-rapporteur",
-      "enonce": "Sur un rapporteur, la demi-droite passe en face des nombres 50 et 130 (les deux graduations). On voit que l'angle est aigu. Quelle est sa mesure ?",
+      "difficulte": "intermediaire",
+      "notion": "moitie-par-pliage",
+      "enonce": "On plie un angle de $50^\\circ$ en deux, en superposant ses deux côtés. Le pli partage l'angle en deux angles égaux. Combien mesure chacun ?",
       "corrige": [
-        "Les deux graduations du rapporteur donnent deux nombres dont la somme vaut $180$.",
-        "L'angle est aigu, donc il mesure moins de $90^\\circ$ : c'est $50^\\circ$."
+        "Le pliage partage l'angle en deux moitiés égales.",
+        "$50 \\div 2 = 25$."
       ],
-      "reponse": "$50^\\circ$"
+      "reponse": "$25^\\circ$"
     },
     {
       "id": 46,
-      "difficulte": "approfondissement",
-      "notion": "partager-un-tour",
-      "enonce": "Combien d'angles de $45^\\circ$ faut-il placer côte à côte pour obtenir un tour complet ?",
+      "difficulte": "probleme",
+      "notion": "horloge-heures",
+      "enonce": "À 8 h pile, quel angle forment les aiguilles d'une horloge ? Donne sa mesure et sa nature.",
       "corrige": [
-        "$360 \\div 45 = 8$."
+        "De 12 à 3, les aiguilles forment un angle droit ($90^\\circ$) ; entre ces deux nombres, il y a 3 intervalles égaux : $90 \\div 3 = 30^\\circ$ par intervalle.",
+        "À 8 h, les aiguilles sont séparées par 4 intervalles : $4 \\times 30 = 120$.",
+        "$120 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
-      "reponse": "$8$"
+      "reponse": "$120^\\circ$, obtus"
     },
     {
       "id": 47,
-      "difficulte": "probleme",
-      "notion": "horloge",
-      "enonce": "De combien de degrés tourne la grande aiguille d'une horloge en 45 minutes ?",
+      "difficulte": "intermediaire",
+      "notion": "nature-angle",
+      "enonce": "Un angle mesure $89^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
-        "En 60 minutes, la grande aiguille fait un tour complet ($360^\\circ$).",
-        "En 1 minute : $360 \\div 60 = 6^\\circ$.",
-        "En 45 minutes : $45 \\times 6 = 270$."
+        "$89 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
-      "reponse": "$270^\\circ$"
+      "reponse": "aigu"
     },
     {
       "id": 48,
       "difficulte": "intermediaire",
-      "notion": "nature-angle",
-      "enonce": "Un angle mesure $175^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "notion": "additionner-des-angles",
+      "enonce": "On place côte à côte des angles de $20^\\circ$ et $25^\\circ$. Quel angle obtient-on ? Quelle est sa nature ?",
       "corrige": [
-        "$175$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "$20 + 25 = 45$.",
+        "$45 < 90$ : l'angle est plus petit qu'un angle droit, il est aigu."
       ],
-      "reponse": "obtus"
+      "reponse": "$45^\\circ$, angle aigu"
     },
     {
       "id": 49,
-      "difficulte": "approfondissement",
-      "notion": "partager-un-tour",
-      "enonce": "Combien d'angles de $20^\\circ$ faut-il placer côte à côte pour obtenir un angle plat ?",
+      "difficulte": "intermediaire",
+      "notion": "nature-angle",
+      "enonce": "Un angle mesure $135^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
-        "$180 \\div 20 = 9$."
+        "$135 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
-      "reponse": "$9$"
+      "reponse": "obtus"
     },
     {
       "id": 50,
       "difficulte": "intermediaire",
       "notion": "nature-angle",
-      "enonce": "Un angle mesure $91^\\circ$. Est-il aigu, droit, obtus ou plat ?",
+      "enonce": "Un angle mesure $91^\\circ$. Est-il aigu, droit ou obtus ?",
       "corrige": [
-        "$91$ est entre $90$ et $180$ : l'angle est plus grand qu'un angle droit sans être plat, il est obtus."
+        "$91 > 90$ : l'angle est plus grand qu'un angle droit, il est obtus."
       ],
       "reponse": "obtus"
     }

@@ -28,9 +28,9 @@ relu_par: null
 
 Tout le chapitre de 5e (*Calcul littéral*) reste valable :
 conventions d'écriture, réduction, développement, factorisation, test d'une égalité,
-contre-exemple. **Relis-le si l'un de ces mots te fait hésiter** — la 4e s'appuie
+contre-exemple, équations simples $x + b = c$ et $ax = c$. **Relis-le si l'un de ces mots te fait hésiter** — la 4e s'appuie
 dessus sans y revenir. Ce qu'elle ajoute : produire une **formule** (§3), **démontrer**
-(§5), **résoudre** une équation (§6), **mettre un problème en équation** (§7).
+(§5), **résoudre** une équation du type $ax + b = c$ (§6), **mettre un problème en équation** (§7).
 
 ---
 
@@ -240,72 +240,3 @@ au tableur ou avec un programme.
    preuve c'est la résolution.
 6. **Répondre « $x = 6$ »** au lieu de répondre à la question posée, avec l'unité.
 
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 5 mars 2026, « Programme de mathématiques pour le
-cycle 4 » (docs/programme-college-cycle4-maths-2026.txt), thème « Nombres et calculs »,
-niveau QUATRIÈME, entrée « Calcul littéral et algébrique », LIGNES 565 à 580.
-(La section Quatrième du thème commence ligne 509.)
-
-Contenu de la source, repris intégralement :
-
-Automatismes (l. 566-572) :
-- « Donner la valeur d'expressions numériques simples. » → §2
-- « Résoudre des équations du type ax = c et x + b = c » ; « Écrire 3 × x sous la forme
-  3x… » → acquis de 5e, en prérequis et renvoi §1
-- « Connaitre et utiliser : 1 × x = x ; x + x = 2x ; x × x = x² ; 3x + 2x = 5x ;
-  3x × 2x = 6x². » → §2, encadré tel quel
-- « Donner le double, le triple, la moitié, le prédécesseur, le successeur, le carré
-  d'un nombre. » → §2, tableau de traduction
-- « Tester si un nombre vérifie une égalité. » → étape de vérification (§6, §7)
-
-Objectifs d'apprentissage (l. 573-580), dans l'ordre du texte :
-- « Produire des formules et tester leur vraisemblance : aires de formes géométriques
-  simples, nombres pairs/impairs, etc. » → §3
-- « Connaitre et utiliser la distributivité SIMPLE pour développer et factoriser une
-  expression algébrique. » → §4
-- « Utiliser le calcul algébrique pour produire des démonstrations. » → §5
-- « Résoudre une équation du premier degré du type ax + b = c. » → §6
-- « Mettre en équation un problème et le résoudre à l'aide d'une équation du premier
-  degré du type ax + b = cx + d. » → §7
-- « Formuler des conjectures à l'aide d'un algorithme ou d'un tableur pour résoudre de
-  manière exacte ou approchée une équation. » → §8
-(L'ordre des sections de la fiche suit exactement cette liste.)
-
-⚠️ POINT DE PÉRIMÈTRE LE PLUS IMPORTANT — À TRANCHER PAR LE RELECTEUR
-La double distributivité et les identités remarquables ne sont PAS au programme de 4e
-dans ce texte. La ligne 575 dit explicitement « distributivité SIMPLE ». Les deux
-notions apparaissent dans la section TROISIÈME du même document :
-  - l. 635 : « Utiliser la double distributivité pour développer et factoriser des
-    expressions dont le facteur est apparent. »
-  - l. 638-641 : « Manipuler les trois identités remarquables pour développer et
-    factoriser : a² + 2ab + b² = (a+b)² ; a² − 2ab + b² = (a−b)² ; a² − b² = (a−b)(a+b). »
-Je ne les ai donc NI l'une NI l'autre traitées ici, contrairement à l'usage des manuels
-et à la pratique de nombreux enseignants qui placent (a+b)(c+d) en 4e. C'est un écart
-assumé avec la tradition, fondé sur la lettre du texte. À valider explicitement : si le
-relecteur estime que la double distributivité doit être introduite en 4e, il faut
-ajouter une section — mais alors la fiche de 3e devra être ajustée en miroir.
-
-Autres points à soumettre au relecteur :
-- MÉTHODE DE RÉSOLUTION : le texte de 4e dit seulement « Résoudre une équation du
-  premier degré du type ax + b = c », sans prescrire de méthode. J'ai retenu les règles
-  d'équivalence (« la balance »), alors que le texte de 5e (l. 505) parlait de
-  « méthodes arithmétiques s'appuyant sur les opérations inverses ». Le passage de
-  l'une à l'autre est-il attendu en 4e ? Le vocabulaire « équations équivalentes » n'est
-  employé nulle part dans la source : je ne l'ai donc pas introduit.
-- ÉQUATIONS SANS SOLUTION / TOUJOURS VRAIES (§9) : cas non mentionné dans la source,
-  mais qui surgit mécaniquement dès qu'on traite ax + b = cx + d avec a = c. Traité en
-  deux lignes comme « cas particulier ». À confirmer, ou à retirer si hors programme.
-- Notation ensembliste S = {…} : absente de la source, donc non introduite. J'emploie
-  seulement le mot « solution ».
-- §8 (tableur/algorithme) : recoupe le chapitre « pensée informatique ». Vérifier qu'il
-  n'y a pas de doublon entre les deux fiches.
-- Le chapitre de 5e (5e-math-calcul-litteral) est cité en §1 et en prérequis ; son
-  contenu n'est pas répété. Vérifier que le renvoi reste valable si la 5e évolue.
-
-Rédaction originale à partir du programme officiel. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

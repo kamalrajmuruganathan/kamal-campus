@@ -7,7 +7,7 @@
  */
 
 import {
-  eqLineaire, fractionSomme, puissancesProduit, proportionnalite, pourcentage,
+  eqLineaire, eqSimple5e, conversionDureeCM1, fractionSomme6e, fractionSomme5e, penseUnNombre6e, motifEvolutif6e, schemaBarres6e, fractionSomme, puissancesProduit, proportionnalite, pourcentage,
   relatifsSomme, relatifsProduit, moyenne, discriminant, secondDegreRacines,
   nombreDerive, suiteArithmetique, suiteGeometrique, produitScalaire,
   racineCarreParfait,
@@ -27,16 +27,16 @@ import {
 /** id de chapitre → liste de générateurs qui l'alimentent. */
 export const REGISTRE = {
   // Équations / calcul littéral
-  '5e-math-calcul-litteral': [eqLineaire],
+  '5e-math-calcul-litteral': [eqSimple5e], // 5e : x + b = c et ax = c seulement
   '4e-math-calcul-litteral': [eqLineaire],
   '3e-math-calcul-litteral': [eqLineaire],
-  '6e-math-initiation-algebre': [eqLineaire],
+  '6e-math-initiation-algebre': [penseUnNombre6e, motifEvolutif6e, schemaBarres6e], // 6e : sans lettres ni relatifs
   '2nde-math-equations-inequations': [eqLineaire],
   '2nde-math-calcul-numerique-algebrique': [eqLineaire, fractionSomme, puissancesProduit],
 
   // Fractions / rationnels
-  '6e-math-fractions': [fractionSomme],
-  '5e-math-fractions': [fractionSomme],
+  '6e-math-fractions': [fractionSomme6e, pourcentage], // 6e : numérateurs positifs, dénominateurs égaux ou multiples
+  '5e-math-fractions': [fractionSomme5e], // 5e : fractions positives, dénominateurs quelconques
   '4e-math-nombres-rationnels': [fractionSomme, relatifsSomme],
   '3e-math-nombres-rationnels': [fractionSomme],
 
@@ -135,7 +135,7 @@ export const REGISTRE = {
 
   // ── Conversions d'unités (durées) ──
   '6e-math-durees': [conversionDuree],
-  'cm1-math-durees': [conversionDuree],
+  'cm1-math-durees': [conversionDureeCM1], // CM1 : pas de secondes
 
   // ── Anglais : drills générés (verbes, pluriels, passif) ──
   '5e-anglais-preterit-simple': [verbeIrregulierPreterit, preteritRegulier],

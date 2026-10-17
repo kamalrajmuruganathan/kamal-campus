@@ -1060,14 +1060,23 @@ function equerre({ noms = ['aigu', 'droit', 'obtus'], infos = ['plus fermé', 'i
   return enveloppe(W, H, g);
 }
 
-function typesAngles({ mesures = false }) {
-  const W = 640, H = 220;
-  const liste = [
+function typesAngles({ mesures = false, niveau = null }) {
+  // niveau 'cm1' : sans degrés ; 'cm2' : degrés à partir de l'angle droit ; sans angle plat (6e) dans les deux cas.
+  const liste = niveau === 'cm1' ? [
+    { nom: 'aigu', deg: 50, info: 'plus petit', c: BLEU },
+    { nom: 'droit', deg: 90, info: 'coin de l’équerre', c: VERT },
+    { nom: 'obtus', deg: 130, info: 'plus grand', c: ORANGE },
+  ] : niveau === 'cm2' ? [
+    { nom: 'aigu', deg: 50, info: 'moins de 90°', c: BLEU },
+    { nom: 'droit', deg: 90, info: '90°', c: VERT },
+    { nom: 'obtus', deg: 130, info: 'plus de 90°', c: ORANGE },
+  ] : [
     { nom: 'aigu', deg: 50, info: 'moins de 90°', c: BLEU },
     { nom: 'droit', deg: 90, info: '90°', c: VERT },
     { nom: 'obtus', deg: 130, info: 'entre 90° et 180°', c: ORANGE },
     { nom: 'plat', deg: 180, info: '180°', c: VIOLET },
   ];
+  const W = 160 * liste.length, H = 220;
   let g = '';
   liste.forEach((t, i) => {
     const x0 = i * 160;
@@ -1666,8 +1675,8 @@ export const POSES = [
   // ============================== CM1
   { fiche: 'cm1/maths/angles', cle: 'ouverture-longueur', schema: 'ouverture', params: {},
     legende: 'Ces deux angles ont des côtés de longueurs différentes, mais la même ouverture : ils sont égaux.', apres: "## Ce qui compte : l'ouverture, pas la longueur" },
-  { fiche: 'cm1/maths/angles', cle: 'quatre-angles', schema: 'types-angles', params: {},
-    legende: 'Les quatre angles à connaître : aigu (moins de 90°), droit (90°), obtus (entre 90° et 180°) et plat (180°).', apres: '## Les quatre angles à connaître' },
+  { fiche: 'cm1/maths/angles', cle: 'quatre-angles', schema: 'types-angles', params: { niveau: 'cm1' },
+    legende: 'Les angles à connaître, comparés à l’angle droit : aigu (plus petit), droit (le coin de l’équerre), obtus (plus grand).', apres: '## Les angles à connaître' },
   { fiche: 'cm1/maths/angles', cle: 'equerre-cm1', schema: 'equerre', params: {},
     legende: 'Avec le coin de l’équerre : le 2e côté reste à l’intérieur (angle aigu), suit l’équerre (angle droit) ou dépasse à l’extérieur (angle obtus).', apres: "## Vérifier et comparer avec l'équerre" },
 
@@ -1720,10 +1729,10 @@ export const POSES = [
     legende: 'Chaque unité est partagée en 4 parts égales. Trois quarts est avant 1 ; cinq quarts est après 1 : c’est 1 et encore un quart.', apres: '## Placer une fraction sur une droite graduée' },
 
   { fiche: 'cm1/maths/grands-nombres', cle: 'tableau-classes-cm1', schema: 'numeration',
-    params: { cw: 54, tailleChiffre: 26, valeurs: false, groupes: [{ titre: 'Classe des millions', n: 3, couleur: VIOLET }, { titre: 'Classe des mille', n: 3, couleur: ORANGE }, { titre: 'Classe des unités', n: 3, couleur: BLEU }],
-      colonnes: [['c', VIOLET, ''], ['d', VIOLET, ''], ['u', VIOLET, '4'], ['c', ORANGE, '2'], ['d', ORANGE, '0'], ['u', ORANGE, '5'], ['c', BLEU, '3'], ['d', BLEU, '1'], ['u', BLEU, '7']].map(([titre, couleur, chiffre]) => ({ titre, couleur, chiffre })),
-      bas: '4 millions  ·  205 mille  ·  317' },
-    legende: 'Le nombre 4 205 317 dans le tableau des classes : on lit classe par classe, quatre millions deux cent cinq mille trois cent dix-sept.', apres: '## Le tableau des classes' },
+    params: { cw: 54, tailleChiffre: 26, valeurs: false, groupes: [{ titre: 'Classe des mille', n: 3, couleur: ORANGE }, { titre: 'Classe des unités', n: 3, couleur: BLEU }],
+      colonnes: [['c', ORANGE, '2'], ['d', ORANGE, '0'], ['u', ORANGE, '5'], ['c', BLEU, '3'], ['d', BLEU, '1'], ['u', BLEU, '7']].map(([titre, couleur, chiffre]) => ({ titre, couleur, chiffre })),
+      bas: '205 mille  ·  317' },
+    legende: 'Le nombre 205 317 dans le tableau des classes : on lit classe par classe, deux cent cinq mille trois cent dix-sept.', apres: '## Le tableau des classes' },
 
   { fiche: 'cm1/maths/multiplication-posee', cle: 'fois-10-cm1', schema: 'glissement',
     params: { rangs: ['centaines', 'dizaines', 'unités'], couleurs: [ORANGE, VERT, BLEU], cw: 84, haut: { 1: '3', 2: '6' }, bas: { 0: '3', 1: '6', 2: '0' }, ajoutes: [2], virguleApres: 2, fl: -1, etiquetteHaut: '36', etiquetteBas: '36 × 10 = 360' },
@@ -1779,15 +1788,11 @@ export const POSES = [
   { fiche: 'cm2/maths/aires-perimetres-volumes', cle: 'perimetre-ou-aire', schema: 'aire-grille',
     params: { figures: [{ w: 6, h: 2, couleur: BLEU }, { w: 4, h: 4, couleur: VERT }] },
     legende: 'Deux figures de même périmètre (16 cm, contour rouge) mais d’aires différentes : 12 cm² et 16 cm² (un carreau = 1 cm²).', apres: '## 3. Périmètre ou aire ?' },
-  { fiche: 'cm2/maths/aires-perimetres-volumes', cle: 'volume-cubes', schema: 'pave-cubes', params: { L: 4, l: 2, h: 3 },
-    legende: 'Un pavé de 4 cm sur 2 cm sur 3 cm est formé de 24 petits cubes de 1 cm³ : son volume est 24 cm³.', apres: '## 4. Le volume' },
 
-  { fiche: 'cm2/maths/angles-et-mesures', cle: 'types-angles-cm2', schema: 'types-angles', params: {},
-    legende: 'On compare l’ouverture à l’angle droit : aigu (moins de 90°), droit (90°), obtus (entre 90° et 180°), plat (180°).', apres: "## 1. Les quatre types d'angles" },
-  { fiche: 'cm2/maths/angles-et-mesures', cle: 'rapporteur', schema: 'rapporteur', params: { deg: 50 },
-    legende: 'Le centre du rapporteur est sur le sommet et un côté passe par le 0. On lit 50° sur la graduation qui part de ce 0 ; l’autre graduation indique 130°.', apres: '## 2. Mesurer un angle en degrés' },
+  { fiche: 'cm2/maths/angles-et-mesures', cle: 'types-angles-cm2', schema: 'types-angles', params: { niveau: 'cm2' },
+    legende: 'On compare l’ouverture à l’angle droit : aigu (moins de 90°), droit (90°), obtus (plus de 90°).', apres: "## 1. Les types d'angles" },
   { fiche: 'cm2/maths/angles-et-mesures', cle: 'somme-45-45', schema: 'somme-angles', params: {},
-    legende: 'Deux angles de 45° mis côte à côte forment un angle de 90° : un angle droit.', apres: '## 4. Comparer des angles' },
+    legende: 'Deux angles de 45° mis côte à côte forment un angle de 90° : un angle droit.', apres: '## 5. Comparer, additionner et partager des angles' },
 
   { fiche: 'cm2/maths/calcul-mental', cle: 'decomposer-24x5', schema: 'aire-distributivite', params: {},
     legende: 'Un rectangle de 24 carreaux sur 5 coupé en deux morceaux : 20 × 5 = 100 et 4 × 5 = 20, donc 24 × 5 = 120.', apres: '## 6. Décomposer pour multiplier' },

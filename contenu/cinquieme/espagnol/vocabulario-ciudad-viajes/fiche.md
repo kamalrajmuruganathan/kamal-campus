@@ -63,7 +63,7 @@ Exemple : *Perdone, ¿dónde está la estación? — Siga todo recto y gire a la
 
 ## 4. Les erreurs à éviter
 - Pour la **localisation** d'un lieu, on emploie **estar** : *El museo está cerca.* (jamais *es cerca*).
-- **el mapa** (le plan, la carte) est masculin malgré son -a final.
+- **el mapa** (la carte) est masculin malgré son -a final. Le plan d'une ville se dit **el plano**.
 - Ne confonds pas **la tienda** (le magasin) et **la tienda de campaña** (la tente).
 - « à pied » = **a pie** (sans *en*).
 

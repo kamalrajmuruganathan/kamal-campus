@@ -125,7 +125,38 @@ calcule les deux côtés **séparément**.
 
 ---
 
-## 7. Démontrer avec des lettres
+## 7. Résoudre une équation simple
+
+Une **équation** est une égalité où une lettre est une **inconnue**. **Résoudre**
+l'équation, c'est trouver la valeur de l'inconnue qui rend l'égalité vraie. En 5e,
+on résout deux sortes d'équations en utilisant l'**opération inverse**.
+
+### Équations du type $x + b = c$ : on soustrait
+
+> **Exemple.** $x + 7 = 19$
+>
+> Quel nombre faut-il ajouter à $7$ pour obtenir $19$ ? On fait l'opération
+> inverse de l'addition : $x = 19 - 7 = 12$.
+
+### Équations du type $ax = c$ : on divise
+
+> **Exemple.** $4x = 30$
+>
+> Par quel nombre faut-il multiplier $4$ pour obtenir $30$ ? On fait l'opération
+> inverse de la multiplication : $x = 30 \div 4 = 7{,}5$.
+
+### On vérifie toujours
+
+On remplace $x$ par la valeur trouvée (comme au paragraphe 6) :
+$12 + 7 = 19$ ✓ et $4 \times 7{,}5 = 30$ ✓.
+
+> **Modéliser un problème.** « Léa a des billes ; elle en gagne $8$ et en a alors
+> $23$. » Si $x$ est le nombre de billes au départ, on écrit $x + 8 = 23$, donc
+> $x = 23 - 8 = 15$ : Léa avait $15$ billes.
+
+---
+
+## 8. Démontrer avec des lettres
 
 C'est l'objectif le plus ambitieux du chapitre : prouver qu'une propriété est vraie
 **pour tous les nombres**.
@@ -151,7 +182,7 @@ Pour montrer qu'une affirmation est **fausse**, un seul contre-exemple suffit.
 
 ---
 
-## 8. À retenir absolument
+## 9. À retenir absolument
 
 | | |
 |---|---|
@@ -161,12 +192,14 @@ Pour montrer qu'une affirmation est **fausse**, un seul contre-exemple suffit.
 | $3a + 5b$ | ne se réduit **pas** |
 | Développer | $k(a+b) = ka + kb$ |
 | Factoriser | $ka + kb = k(a+b)$ |
+| $x + b = c$ | $x = c - b$ (on soustrait) |
+| $ax = c$ | $x = c \div a$ (on divise) |
 | Nombre pair | $2k$ avec $k$ entier |
 | Contre-exemple | suffit à réfuter, jamais à prouver |
 
 ---
 
-## 9. Les erreurs qui coûtent des points
+## 10. Les erreurs qui coûtent des points
 
 1. **Réduire $3a + 5b$ en $8ab$.** Ce sont des natures différentes.
 2. **Oublier de multiplier le second terme** : $3(x+4)$ vaut $3x + 12$, pas $3x + 4$.
@@ -175,43 +208,5 @@ Pour montrer qu'une affirmation est **fausse**, un seul contre-exemple suffit.
 5. **Écrire $34$ pour $3 \times 4$** : la suppression du × ne vaut que devant une lettre.
 6. **Utiliser la même lettre pour deux nombres différents** dans une démonstration.
 7. **Croire qu'un exemple démontre** une propriété générale.
+8. **Se tromper d'opération inverse** : si $x + 7 = 19$, alors $x = 19 - 7$, et non $19 + 7$.
 
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 5 mars 2026, « Programme de mathématiques pour le
-cycle 4 » (docs/programme-college-cycle4-maths-2026.pdf), domaine « Nombres et
-calculs », niveau Cinquième, section « Calcul littéral et algébrique ».
-
-Éléments explicitement lisibles dans l'extraction :
-- « k(a + b) = ka + kb ou k(a − b) = ka − kb pour factoriser, ou développer une
-  expression littérale »
-- « Réduire une expression littérale de la forme a … b, où a et b sont des nombres
-  décimaux »
-- « DÉMONTRER UNE PROPRIÉTÉ GÉNÉRALE PAR LE CALCUL LITTÉRAL » — d'où la section 7,
-  qui est l'objectif le plus ambitieux du chapitre
-- « Utiliser un contre-exemple pour démontrer qu'une assertion est fausse »
-- « Formuler des conjectures en s'appuyant sur un langage algorithmique ou un
-  tableur »
-- « Donner à la lettre le statut d'inconnue » — d'où la distinction variable/inconnue
-  de la section 1
-- « Modéliser des problèmes relevant des opérations à trous par des équations du
-  type [...] »
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La RÉSOLUTION d'équations est-elle attendue en 5e, ou seulement la MISE EN
-  ÉQUATION et le test d'une valeur ? L'extraction mentionne « Modéliser des problèmes
-  relevant des opérations à trous par des équations du type... » sans que la suite
-  soit lisible. Je me suis limité au TEST d'une égalité, sans méthode de résolution —
-  c'est le point de périmètre le plus sensible de cette fiche.
-- La capacité « Formuler des conjectures en s'appuyant sur un langage algorithmique
-  ou un tableur » n'est pas traitée ici : elle relève sans doute du chapitre
-  « pensée informatique ». À arbitrer.
-- Les identités remarquables ne sont PAS au programme de 5e (elles apparaissent plus
-  tard) : je ne les ai pas introduites.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->
