@@ -301,3 +301,8 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   Nouveaux chapitres : `seconde/maths/information-chiffree` (générateur `scripts/gen_enrichi_g.py`),
   `premiere-techno/pc-maths-sti2d-stl/derivees` et `primitives` (exercices écrits à la main). 959 chapitres.
   `g2_calcul_numerique_algebrique` (gen_extra.py) réécrit. Incertitudes harmonisées (a/√3, arrondi au plus proche).
+- **Publié le 17/10/2026** : PR #8 fusionnée (main `4bc5bfb`), contrôle qualité et déploiement Pages verts. Attention :
+  le CI (`node app/scripts/verifier-qualite.mjs`) exige **exactement 20 questions de QCM et 12 cartes** par chapitre.
+- **Après la PR #8 (sur `upgrade-sdk57`, non publié)** : autocorrection — sens des évolutions contrôlé (« baisse » ≠ « +25 % »),
+  puissances « 2^8 », a√b, vecteurs « −2i + 7j », division euclidienne, angles en π (`app/lib/expressions/exactes.js`) ;
+  107 exercices de plus vérifiés (66,4 %). 1re PC : titrages colorimétriques seulement, schéma `montage-titrage-colorimetrique`.
