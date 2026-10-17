@@ -15,6 +15,7 @@
 
 import { analyserCalcul, comparerCalcul, valeurLitterale } from '../expressions/index.js';
 import { analyserAutre, comparerAutre, consigneAutre } from '../expressions/autres.js';
+import { analyserExacte, comparerExacte, consigneExacte, analyserSuite, comparerSuite, consigneSuite } from '../expressions/exactes.js';
 
 /** Matières de langues étrangères : traductions, phrases → plus strict. */
 const LANGUES = new Set(['anglais', 'allemand', 'espagnol', 'italien', 'langues-anciennes']);
@@ -424,8 +425,19 @@ function analyserForme(forme, matiere = null) {
   // (« < », « > » et les flèches sont permis : rangements, chaînes alimentaires.)
   // (« cm³ », « m² » : exposant collé à une unité, permis.)
   const symboles = matiere === 'langues-anciennes' ? /[=^√+*×²³]/ : /[=^√π+*×²³]/; // π est une lettre en grec ; ∞ permis (limites)
-  if (symboles.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1').replace(/(^|[\s(;,])\+(?=\s?[\d∞])/g, '$1'))) return null;
-  if (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre)) return null;
+  const formule = symboles.test(propre.replace(/=>|->/g, '→').replace(/(\p{L})[²³]/gu, '$1').replace(/(^|[\s(;,])\+(?=\s?[\d∞])/g, '$1'))
+    || (/\d[a-z]/i.test(propre) && !/\d(?:e|er|re|ème|eme|nd|nde|st|th|rd)\b/i.test(propre))
+    || /[\d)][⁰¹²³⁴⁵⁶⁷⁸⁹⁻]/.test(propre); // « 2¹⁰ » (un exposant collé à une unité, « cm³ », reste permis)
+  // Point suivi d'autres réponses (« (3 ; 4) ; 5 ») : comparé par calcul, séparateurs libres.
+  if (!formule && !LANGUES.has(matiere) && /\([^()]*;[^()]*\)\s*(?:;|\bet\b)\s*\S/.test(propre)) {
+    const suite = analyserSuite(brut);
+    if (suite) return { kind: 'math', suite };
+  }
+  if (formule) {
+    // Valeur exacte, vecteur, point, ou suite de ces réponses (« H(1 ; 2) et AH = 2√5 ») : comparée par calcul.
+    const suite = LANGUES.has(matiere) ? null : analyserSuite(brut);
+    return suite ? { kind: 'math', suite } : null;
+  }
   // « < », « > », « = » seuls (comparer deux nombres) : une réponse d'un seul symbole est permise.
   const mots = compterMots(propre) || (/∞|^[<>≤≥]$/.test(propre.trim()) ? 1 : 0);
   if (mots === 0 || mots > MAX_MOTS_ATTENDU) return null;
@@ -479,6 +491,9 @@ export function analyserExercice(ex, matiere = null) {
   // Expression ou équation (« 6x + 8 », « f'(x) = 3x² − 2 », « 2x + 5y + 4 = 0 ») : comparée par calcul.
   const calcul = analyserCalcul(ex);
   if (calcul) return { type: 'auto', alternatives: [{ kind: 'calcul', calcul }] };
+  // Valeur exacte (« 2⁸ », « 6√2 »), vecteurs de base (« -2i + 7j »), écriture simplifiée (« x² »).
+  const exacte = base.type !== 'auto' || valeurLitterale(ex && ex.reponse) ? analyserExacte(ex) : null;
+  if (exacte) return { type: 'auto', alternatives: [{ kind: 'exacte', exacte }] };
   // Intervalle, coordonnées, équation de réaction chimique.
   const autre = base.type !== 'auto' || valeurLitterale(ex && ex.reponse) ? analyserAutre(ex) : null;
   if (autre) return { type: 'auto', alternatives: [{ kind: 'autre', autre }] };
@@ -512,6 +527,9 @@ export function consigneExercice(ex, matiere = null) {
   const a = analyserExercice(ex, matiere);
   if (a.ensemble) return `${a.ensemble.length} éléments, séparés par des virgules`;
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'autre') return consigneAutre(a.alternatives[0].autre);
+  if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'exacte') return consigneExacte(a.alternatives[0].exacte);
+  const math = a.alternatives && a.alternatives.find((x) => x.kind === 'math');
+  if (math) return consigneSuite(math.suite);
   const c = a.alternatives && a.alternatives[0] && a.alternatives[0].calcul;
   if (!c) return '';
   if (c.forme === 'eq') return 'une équation, par ex. 2x + 3y - 1 = 0';
@@ -541,6 +559,9 @@ export function comparerExercice(saisie, ex, matiere = null) {
   const a = analyserExercice(ex, matiere);
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'calcul') return comparerCalcul(saisie, a.alternatives[0].calcul).juste;
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'autre') return comparerAutre(saisie, a.alternatives[0].autre);
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'exacte') return comparerExacte(s, a.alternatives[0].exacte);
+  // Évolution (« Une baisse de 25 % ») : le sens donné par l'élève doit être le bon.
+  if (!LANGUES.has(matiere) && !sensCompatible(s, ex)) return false;
   // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
   if (comparerUne(s, ex, matiere)) return true;
   // « S = {1 ; 2} », « f(-2) = 15 », « x = 3 ou x = -5 » : on retire les « nom = » devant les valeurs.
@@ -566,10 +587,13 @@ function comparerUne(s, ex, matiere) {
     }
     return true;
   }
-  const texteSaisi = sansDollars(s) ?? s;
+  const canon = !LANGUES.has(matiere) && sensDe(ex && ex.reponse) ? canonSens : (x) => x;
+  const texteSaisi = canon(sansDollars(s) ?? s);
   const nbSaisi = lireNombre(sansPonctuationFinale(texteSaisi));
   return a.alternatives.some((alt) => {
     if (alt.kind === 'nombre') return !!nbSaisi && egalNombre(alt, nbSaisi);
+    if (alt.kind === 'math') return comparerSuite(s, alt.suite);
+    if (alt.kind === 'texte') alt = { ...alt, valeur: canon(alt.valeur) };
     if (alt.phrase) {
       const opts = { articles: alt.articles, ignorerAccents: false, espaces: LANGUES.has(matiere) };
       const x = clePhrase(alt.valeur, opts);
@@ -582,6 +606,60 @@ function comparerUne(s, ex, matiere) {
     }
     return false;
   });
+}
+
+/* ------------------------------------------------------------------ */
+/* Sens d'une évolution : hausse / baisse                              */
+/* ------------------------------------------------------------------ */
+
+const MOTS_HAUSSE = /(?<!\p{L})(?:hausses?|augment\p{L}*)/iu;
+const MOTS_BAISSE = /(?<!\p{L})(?:baiss\p{L}*|diminu\p{L}*|recul\p{L}*)/iu;
+const NEGATION = /\bn['e]\s*(?:\p{L}+\s+)?(?:augment|diminu|baiss|recul)\p{L}*\s+(?:pas|plus|jamais)\b|\bni\s+(?:augment|diminu|baiss)/iu;
+
+/**
+ * Sens d'une réponse : 1 (hausse), -1 (baisse), 0 (aucun), NaN (les deux, ou une négation).
+ * Avec `signes`, un « + » ou « − » écrit devant un nombre (au début, après « = », « : », « ; »,
+ * « , », « et », « soit ») compte aussi.
+ */
+export function sensDe(texte, signes = false) {
+  const t = nettoyer(texte);
+  if (NEGATION.test(t)) return NaN;
+  let plus = MOTS_HAUSSE.test(t);
+  let moins = MOTS_BAISSE.test(t);
+  if (signes) {
+    for (const m of t.matchAll(/(?:^|[=:;,]\s*|\b(?:et|soit)\s+)([+-])\s*(?=\d)/g)) {
+      if (m[1] === '+') plus = true; else moins = true;
+    }
+  }
+  if (plus && moins) return NaN;
+  return plus ? 1 : moins ? -1 : 0;
+}
+
+/**
+ * Le sens de la saisie est-il compatible avec celui de la réponse ? Un sens contraire (ou
+ * les deux à la fois) est toujours refusé. Sans aucun sens (« 25 % »), la saisie n'est
+ * permise que si l'énoncé donne déjà le sens (« l'augmenter de quel pourcentage ? ») ou si
+ * attendus.json accepte explicitement une forme sans sens.
+ */
+function sensCompatible(saisie, ex) {
+  const attendu = sensDe(ex && ex.reponse);
+  if (attendu !== 1 && attendu !== -1) return true;
+  const donne = sensDe(saisie, true);
+  if (Number.isNaN(donne)) return false;
+  if (donne) return donne === attendu;
+  const e = String(ex.enonce || '');
+  const enonceDonne = (attendu === 1 ? MOTS_HAUSSE : MOTS_BAISSE).test(e) && !(attendu === 1 ? MOTS_BAISSE : MOTS_HAUSSE).test(e);
+  if (enonceDonne) return true;
+  const formes = (ex.attendu && (ex.attendu.accepte || ex.attendu.ensemble)) || [];
+  return formes.some((f) => sensDe(f, true) === 0);
+}
+
+/** « diminution » = « baisse », « augmentation » = « hausse » ; « 25 % de baisse » = « baisse de 25 % ». */
+function canonSens(t) {
+  return String(t)
+    .replace(/(\d[\d\s,.]*\s*%)\s+d['’e]\s*(baisse|hausse|diminution|augmentation)\b/giu, '$2 de $1')
+    .replace(/(?<!\p{L})diminution(s?)(?!\p{L})/giu, 'baisse$1')
+    .replace(/(?<!\p{L})augmentation(s?)(?!\p{L})/giu, 'hausse$1');
 }
 
 /**

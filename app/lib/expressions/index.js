@@ -79,11 +79,12 @@ export function saisieVersSimple(s) {
     .replace(/[−–—]/g, '-')
     .replace(/[×·∙⋅]/g, '*')
     .replace(/÷/g, '/')
-    .replace(/[²³⁴⁵⁶⁷⁸⁹]/g, (c) => '^' + '  ²³⁴⁵⁶⁷⁸⁹'.indexOf(c))
+    // Exposants tapés en caractères spéciaux : « 2⁸ », « 2¹⁰ », « 3⁻² » → 2^(8), 2^(10), 3^(-2).
+    .replace(/([⁺⁻]?)([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (_, sg, d) => '^(' + (sg === '⁻' ? '-' : '') + [...d].map((c) => '⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)).join('') + ')')
     .replace(/√/g, ' sqrt ')
     .replace(/π/g, ' pi ')
     .replace(/’/g, "'")
-    .replace(/\bracine\b/gi, ' sqrt ');
+    .replace(/racine(?:\s+carr[ée]e)?(?:\s+de)?/gi, ' sqrt ');
 }
 
 function jetons(s) {
@@ -490,6 +491,8 @@ export function valeurLitterale(reponse) {
  * @returns {{juste:boolean, raison?:'forme'}}
  */
 export function comparerCalcul(saisie, c) {
+  // Valeur sans variable (angle « -2π/3 ») : l'unité « rad » est facultative.
+  if (c && !c.vars.length) saisie = String(saisie).replace(/\s*\brad(?:ians?)?\s*\.?\s*$/i, '');
   const lu = lire(saisie);
   if (!lu || !c) return { juste: false };
   let a = lu.a;

@@ -39,3 +39,20 @@ test('équations de réaction ajustées', () => {
   // Équation déjà ajustée dans l'énoncé : on ne la fait pas recopier.
   assert.equal(analyserAutre({ enonce: 'On considère $2\\,\\mathrm{H_2} + \\mathrm{O_2} \\longrightarrow 2\\,\\mathrm{H_2O}$. Que vaut… ?', reponse: '$2\\,\\mathrm{H_2} + \\mathrm{O_2} \\longrightarrow 2\\,\\mathrm{H_2O}$' }), null);
 });
+
+test('division euclidienne : égalité juste et 0 ≤ reste < diviseur', () => {
+  const a = analyserAutre({ enonce: "Écris l'égalité de la division euclidienne de $200$ par $15$.", reponse: '$200 = 15 \\times 13 + 5$' });
+  assert.equal(a.kind, 'euclide');
+  for (const s of ['200 = 15 × 13 + 5', '200=15x13+5', '200 = 13 × 15 + 5', '200 = 5 + 15 * 13', '200 = 15·13 + 5']) assert.equal(ok(a, s), true, s);
+  // Égalités vraies mais reste trop grand (ou négatif) : ce n'est pas LA division euclidienne.
+  for (const s of ['200 = 15 × 12 + 20', '200 = 15 × 14 - 10', '200 = 15 × 13 + 6', '200 = 15 × 13', '200 = 13 × 15 + 5 + 0', '15 × 13 + 5']) assert.equal(ok(a, s), false, s);
+  // Réponse attendue fausse (reste ≥ diviseur) : pas d'autocorrection.
+  assert.equal(analyserAutre({ enonce: 'Division euclidienne de $200$ par $15$.', reponse: '$200 = 15 \\times 12 + 20$' }), null);
+});
+
+test('coordonnées d’un vecteur écrites en colonne (pmatrix)', () => {
+  const a = analyserAutre({ enonce: 'Les points A et B… Donner les coordonnées de $\\overrightarrow{\\mathrm{BA}}$.', reponse: '$\\overrightarrow{\\mathrm{BA}}\\begin{pmatrix} -4 \\\\ -1 \\end{pmatrix}$' });
+  assert.equal(a.kind, 'couple');
+  for (const s of ['(-4 ; -1)', 'BA(-4 ; -1)', '-4 ; -1']) assert.equal(ok(a, s), true, s);
+  for (const s of ['(4 ; 1)', '(-1 ; -4)']) assert.equal(ok(a, s), false, s);
+});

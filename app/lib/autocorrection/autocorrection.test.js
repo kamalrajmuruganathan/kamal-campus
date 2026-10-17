@@ -395,9 +395,31 @@ test('expressions : « E = 3(2x + 5) » n’est pas le nombre 3 ; calcul et gril
   assert.equal(comparerExercice('6x+15', ex, 'maths'), false);
   const z = { enonce: 'Calculer $\\dfrac{6}{2}\\mathrm{i}$.', reponse: '$3\\mathrm{i}$.' };
   assert.equal(comparerExercice('3', z, 'maths'), false);
+  // « Écris plus simplement » : vérifiable, mais recopier l'énoncé (avec ×) ne suffit pas.
   const ab = { enonce: 'Écris plus simplement $ 3 \\times a \\times b $.', reponse: '$ 3ab $' };
-  assert.equal(typeExercice(ab, 'maths'), 'ouverte');
+  assert.equal(typeExercice(ab, 'maths'), 'auto');
+  for (const s of ['3ab', '3ba', '3 a b']) assert.equal(comparerExercice(s, ab, 'maths'), true, s);
+  for (const s of ['3 × a × b', '3*a*b', '3a×b', '3a', 'ab', '3ab²', 'ab3']) assert.equal(comparerExercice(s, ab, 'maths'), false, s);
   // Une grille d'idées (explication attendue) garde la main.
   const g = { enonce: 'Développe $ 8(x - 5) $ et explique.', reponse: '$ 8x - 40 $', criteres: [{ idee: 'a', mots: ['abc'] }, { idee: 'b', mots: ['bcd'] }] };
   assert.equal(typeExercice(g, 'maths'), 'ouverte');
+});
+
+test('évolution : le sens (hausse / baisse) est contrôlé', () => {
+  const ex = { enonce: "Multiplier une quantité par $0{,}75$ revient à l'augmenter ou à la diminuer de quel pourcentage ?", reponse: 'Une baisse de $25\\,\\%$', attendu: { accepte: ['baisse de 25 %', '-25 %'] } };
+  for (const s of ['−25 %', '-25%', 'baisse de 25 %', 'une baisse de 25 %', 'diminution de 25 %', 'une diminution de 25 %', '25 % de baisse', 'Baisse de 25%']) assert.equal(comparerExercice(s, ex, 'maths'), true, s);
+  for (const s of ['+25 %', '25 %', 'une hausse de 25 %', 'hausse de 25 %', 'augmentation de 25 %', '25 % de hausse', 'baisse de 20 %', 'hausse ou baisse de 25 %', '-25 % de hausse']) assert.equal(comparerExercice(s, ex, 'maths'), false, s);
+  // L'énoncé donne déjà le sens : « 100 % » seul suffit, mais pas « -100 % » ni « baisse ».
+  const h = { enonce: "Multiplier une quantité par $2$ revient à l'augmenter de quel pourcentage ?", reponse: 'Une hausse de $100\\,\\%$', attendu: { accepte: ['hausse de 100 %', '+100 %'] } };
+  for (const s of ['100 %', '+100 %', 'hausse de 100 %', 'augmentation de 100 %']) assert.equal(comparerExercice(s, h, 'maths'), true, s);
+  for (const s of ['-100 %', 'baisse de 100 %', 'diminution de 100 %']) assert.equal(comparerExercice(s, h, 'maths'), false, s);
+  // Forme sans sens acceptée explicitement par attendus.json : permise, le sens contraire reste refusé.
+  const d = { enonce: 'Calcule la variation d’énergie.', reponse: 'Diminution de $1{,}18\\times 10^{6}\\ \\mathrm{J}$', attendu: { accepte: ['1,18 × 10^6 J', '-1,18 × 10^6 J'] } };
+  assert.equal(comparerExercice('1,18 × 10^6 J', d, 'physique-chimie'), true);
+  assert.equal(comparerExercice('-1,18 × 10^6 J', d, 'physique-chimie'), true);
+  assert.equal(comparerExercice('+1,18 × 10^6 J', d, 'physique-chimie'), false);
+  assert.equal(comparerExercice('augmentation de 1,18 × 10^6 J', d, 'physique-chimie'), false);
+  // Réponse avec les deux sens ou une négation : pas de contrôle du sens.
+  const m = { enonce: 'Que deviennent les deux quantités ?', reponse: 'La quantité demandée augmente ; la quantité offerte diminue.', attendu: { accepte: ['augmente, diminue'] } };
+  assert.equal(comparerExercice('augmente, diminue', m, 'ses'), true);
 });

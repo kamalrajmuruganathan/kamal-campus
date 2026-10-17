@@ -126,7 +126,11 @@ function lireCouple(texte, latex) {
   let s = String(texte).trim();
   if (latex) {
     s = s.replace(/^\$|\$\.?$/g, '').replace(/\$\s*\.?\s*$/, '').replace(/\\(?:left|right)\b/g, '')
-      .replace(/\\(?:mathrm|text)\{([A-Za-z]+)\}/g, '$1').replace(/\\[,!: ]/g, ' ').trim();
+      .replace(/\\(?:mathrm|text)\{([A-Za-z]+)\}/g, '$1').trim();
+    // Vecteur en colonne : « \vec{w}\begin{pmatrix} 7 \\ -4 \end{pmatrix} » → (7 ; -4).
+    s = s.replace(/^(?:\\(?:vec|overrightarrow)\s*(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}|[A-Za-z]))?\s*\\begin\{pmatrix\}([^]*?)\\end\{pmatrix\}$/,
+      (_, c) => '(' + c.split(/\\\\/).map((x) => x.trim()).join(' ; ') + ')');
+    s = s.replace(/\\[,!: ]/g, ' ').trim();
     if (/\\begin|\\vec|\\overrightarrow/.test(s)) return null;
   } else s = s.replace(/[.]$/, '').replace(/−/g, '-');
   const parts = s.split('=');
@@ -193,6 +197,24 @@ const memesEspeces = (x, y) => {
   return kx.length === Object.keys(y).length && kx.every((k) => y[k] === x[k]);
 };
 
+// ─── Division euclidienne ─────────────────────────────────────────────────
+
+const ENTIER = '(\\d+)';
+const FOIS = '\\s*(?:×|x|X|\\*|·|\\\\times|\\\\cdot)\\s*';
+
+/** « 200 = 15 × 13 + 5 » (ou « 200 = 5 + 13 × 15 ») → { a, f: [15, 13], r }, ou null. */
+function lireEuclide(texte, latex) {
+  let s = String(texte).trim();
+  if (latex) s = s.replace(/^\$|\$\.?$/g, '').replace(/\$\s*\.?\s*$/, '').replace(/(\d)\\[,;: ]\s*(?=\d{3})/g, '$1').replace(/\\[,;: !]/g, ' ');
+  else s = s.replace(/[.]$/, '').replace(/(\d)[\s\u00a0\u202f](?=\d{3}\b)/g, '$1');
+  s = s.trim();
+  const p1 = s.match(new RegExp(`^${ENTIER}\\s*=\\s*${ENTIER}${FOIS}${ENTIER}\\s*\\+\\s*${ENTIER}$`));
+  if (p1) return { a: +p1[1], f: [+p1[2], +p1[3]], r: +p1[4] };
+  const p2 = s.match(new RegExp(`^${ENTIER}\\s*=\\s*${ENTIER}\\s*\\+\\s*${ENTIER}${FOIS}${ENTIER}$`));
+  if (p2) return { a: +p2[1], f: [+p2[3], +p2[4]], r: +p2[2] };
+  return null;
+}
+
 // ─── Exercice ─────────────────────────────────────────────────────────────
 
 /** Analyse d'une réponse d'un de ces trois types, ou null. */
@@ -202,7 +224,17 @@ export function analyserAutre(ex) {
   if (!/^\$[^$]+\$\s*\.?$/.test(r)) return null;
   if (/d[ée]montr|montrer|justifi|prouv|expliqu|interpr[ée]t|comment/i.test(ex.enonce)) return null;
   const e = plat(ex.enonce);
-  if (/longrightarrow|rightarrow/.test(r)) {
+  if (/division euclidienne/.test(e)) {
+    const eu = lireEuclide(r, true);
+    if (!eu) return null;
+    // Le diviseur est donné dans l'énoncé (« … de 200 par 15 ») ; l'égalité attendue doit être juste.
+    const d = (e.match(/\bpar\s*\$?\s*(\d+)/) || [])[1];
+    if (!d || !eu.f.includes(+d)) return null;
+    const q = eu.f[0] === +d ? eu.f[1] : eu.f[0];
+    if (eu.a !== +d * q + eu.r || eu.r < 0 || eu.r >= +d) return null;
+    return { kind: 'euclide', a: eu.a, d: +d, q, r: eu.r };
+  }
+  if (/\\(?:longrightarrow|rightarrow)\b/.test(r)) {
     const reac = lireReaction(r, true);
     if (!reac) return null;
     // Équation déjà écrite, ajustée, dans l'énoncé : recopier suffirait.
@@ -216,7 +248,7 @@ export function analyserAutre(ex) {
     const iv = lireIntervalles(r, true);
     return iv ? { kind: 'intervalle', iv } : null;
   }
-  if (/\\,?;/.test(r)) {
+  if (/\\,?;/.test(r) || /^\$\s*(?:\\(?:vec|overrightarrow)\s*(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}|[A-Za-z]))?\s*\\begin\{pmatrix\}[^$]*\\end\{pmatrix\}\s*\$\.?$/.test(r)) {
     const c = lireCouple(r, true);
     if (!c) return null;
     // « Donne un vecteur directeur » : plusieurs bonnes réponses.
@@ -233,6 +265,14 @@ export function comparerAutre(saisie, a) {
     const c = lireCouple(saisie, false);
     return !!c && c.length === a.c.length && c.every((v, i) => egaux(v, a.c[i]));
   }
+  if (a.kind === 'euclide') {
+    const eu = lireEuclide(saisie, false);
+    if (!eu || eu.a !== a.a || eu.r !== a.r) return false;
+    const [x, y] = eu.f;
+    // Mêmes facteurs (diviseur et quotient, dans n'importe quel ordre), égalité juste, 0 ≤ reste < diviseur.
+    if (!((x === a.d && y === a.q) || (x === a.q && y === a.d))) return false;
+    return eu.a === x * y + eu.r && eu.r >= 0 && eu.r < a.d;
+  }
   if (a.kind === 'reaction') {
     const q = lireReaction(saisie, false);
     return !!q && memesEspeces(q.reactifs, a.reac.reactifs) && memesEspeces(q.produits, a.reac.produits);
@@ -243,6 +283,7 @@ export function comparerAutre(saisie, a) {
 export function consigneAutre(a) {
   if (!a) return '';
   if (a.kind === 'intervalle') return 'un intervalle, par ex. ]-∞ ; 5[ ou [2 ; 3] ∪ [4 ; +∞[';
+  if (a.kind === 'euclide') return `l'égalité, par ex. 47 = 6 × 7 + 5 (reste plus petit que le diviseur)`;
   if (a.kind === 'couple') return a.c.length === 3 ? 'des coordonnées, par ex. (2 ; -1 ; 3)' : 'des coordonnées, par ex. (2 ; -1)';
   return 'une équation, par ex. 2 H2 + O2 -> 2 H2O (charges : Fe3+, Cl-)';
 }
