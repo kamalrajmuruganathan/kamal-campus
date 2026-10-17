@@ -1,0 +1,294 @@
+{
+  "id": "1sti2d-primitives-qcm",
+  "chapitre": "1sti2d-primitives",
+  "titre": "QCM — Primitives et méthode d'Euler",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Les angles sont en radians.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "$F$ est une primitive de $f$ sur un intervalle $I$ lorsque, pour tout $x$ de $I$ :",
+      "choix": [
+        "$f'(x) = F(x)$",
+        "$F'(x) = f(x)$",
+        "$F(x) = f(x) + C$",
+        "$F(x) \\times f(x) = 1$"
+      ],
+      "reponse": 1,
+      "explication": "Par définition, $F' = f$ : on remonte la dérivation. Pour vérifier une primitive, on la dérive et on doit retrouver $f$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "polynomes",
+      "enonce": "Une primitive de $x \\mapsto x^3$ sur $\\mathbb{R}$ est :",
+      "choix": [
+        "$3x^2$",
+        "$x^4$",
+        "$\\dfrac{x^4}{4}$",
+        "$\\dfrac{x^3}{3}$"
+      ],
+      "reponse": 2,
+      "explication": "Une primitive de $x^n$ est $\\dfrac{x^{n+1}}{n+1}$ : ici $\\dfrac{x^4}{4}$. La fonction $3x^2$ est la dérivée de $x^3$, pas une primitive."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "polynomes",
+      "enonce": "Une primitive de $x \\mapsto 5$ sur $\\mathbb{R}$ est :",
+      "choix": [
+        "$5x$",
+        "$0$",
+        "$5$",
+        "$\\dfrac{5}{x}$"
+      ],
+      "reponse": 0,
+      "explication": "La dérivée de $5x$ est $5$ : $5x$ est donc une primitive de la constante $5$."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "constante",
+      "enonce": "Si $F$ est une primitive de $f$ sur un intervalle, les autres primitives de $f$ sont les fonctions :",
+      "choix": [
+        "$C \\times F(x)$",
+        "$F(x + C)$",
+        "$F(x) + C$",
+        "$F'(x) + C$"
+      ],
+      "reponse": 2,
+      "explication": "Deux primitives d'une même fonction sur un intervalle diffèrent d'une constante : ce sont les fonctions $F(x) + C$, $C$ réel."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "polynomes",
+      "enonce": "Une primitive de $f(x) = 6x^2 - 4x + 3$ sur $\\mathbb{R}$ est :",
+      "choix": [
+        "$12x - 4$",
+        "$2x^3 - 2x^2 + 3x$",
+        "$6x^3 - 4x^2 + 3x$",
+        "$3x^3 - 2x^2 + 3$"
+      ],
+      "reponse": 1,
+      "explication": "$6 \\times \\dfrac{x^3}{3} = 2x^3$, $-4 \\times \\dfrac{x^2}{2} = -2x^2$ et une primitive de $3$ est $3x$. On vérifie en dérivant : $6x^2 - 4x + 3$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "constante",
+      "enonce": "La primitive $F$ de $f(x) = 2x$ telle que $F(0) = 4$ est :",
+      "choix": [
+        "$F(x) = x^2$",
+        "$F(x) = 2x^2 + 4$",
+        "$F(x) = x^2 + 4$",
+        "$F(x) = 4x^2$"
+      ],
+      "reponse": 2,
+      "explication": "Les primitives de $2x$ sont $x^2 + C$ ; $F(0) = C = 4$, donc $F(x) = x^2 + 4$."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "constante",
+      "enonce": "La primitive $F$ de $f(x) = 3x^2$ telle que $F(1) = 0$ est :",
+      "choix": [
+        "$F(x) = x^3 - 1$",
+        "$F(x) = x^3 + 1$",
+        "$F(x) = x^3$",
+        "$F(x) = 6x$"
+      ],
+      "reponse": 0,
+      "explication": "$F(x) = x^3 + C$ et $F(1) = 1 + C = 0$, donc $C = -1$ : $F(x) = x^3 - 1$."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "sinusoides",
+      "enonce": "Une primitive de $t \\mapsto \\cos(4t)$ est :",
+      "choix": [
+        "$4\\sin(4t)$",
+        "$-\\dfrac{1}{4}\\sin(4t)$",
+        "$\\sin(4t)$",
+        "$\\dfrac{1}{4}\\sin(4t)$"
+      ],
+      "reponse": 3,
+      "explication": "Une primitive de $A\\cos(\\omega t)$ est $\\dfrac{A}{\\omega}\\sin(\\omega t)$ : ici $\\dfrac{1}{4}\\sin(4t)$. On divise par $\\omega$, on ne multiplie pas."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "sinusoides",
+      "enonce": "Une primitive de $t \\mapsto \\sin(5t)$ est :",
+      "choix": [
+        "$-\\dfrac{1}{5}\\cos(5t)$",
+        "$\\dfrac{1}{5}\\cos(5t)$",
+        "$-5\\cos(5t)$",
+        "$5\\cos(5t)$"
+      ],
+      "reponse": 0,
+      "explication": "Une primitive de $A\\sin(\\omega t)$ est $-\\dfrac{A}{\\omega}\\cos(\\omega t)$, car $(\\cos)' = -\\sin$ : d'où le signe moins et la division par $5$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "sinusoides",
+      "enonce": "Une primitive de $t \\mapsto 6\\cos\\left(3t + \\dfrac{\\pi}{2}\\right)$ est :",
+      "choix": [
+        "$18\\sin\\left(3t + \\dfrac{\\pi}{2}\\right)$",
+        "$2\\sin\\left(3t + \\dfrac{\\pi}{2}\\right)$",
+        "$-2\\sin\\left(3t + \\dfrac{\\pi}{2}\\right)$",
+        "$2\\cos\\left(3t + \\dfrac{\\pi}{2}\\right)$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{A}{\\omega} = \\dfrac{6}{3} = 2$ : une primitive est $2\\sin\\left(3t + \\dfrac{\\pi}{2}\\right)$. En dérivant, on retrouve $2 \\times 3\\cos\\left(3t + \\dfrac{\\pi}{2}\\right)$."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "definition",
+      "enonce": "La fonction $F(x) = x\\cos x$ est une primitive de :",
+      "choix": [
+        "$-\\sin x$",
+        "$\\cos x + x\\sin x$",
+        "$\\cos x - x\\sin x$",
+        "$x\\sin x$"
+      ],
+      "reponse": 2,
+      "explication": "On dérive le produit : $F'(x) = 1 \\times \\cos x + x \\times (-\\sin x) = \\cos x - x\\sin x$."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "definition",
+      "enonce": "Pour vérifier que $F$ est une primitive de $f$, on :",
+      "choix": [
+        "dérive $F$ et on compare à $f$",
+        "dérive $f$ et on compare à $F$",
+        "calcule $F(0)$",
+        "multiplie $F$ par $f$"
+      ],
+      "reponse": 0,
+      "explication": "$F$ est une primitive de $f$ si $F' = f$ : il suffit de dériver $F$."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "constante",
+      "enonce": "Deux fonctions ont, en tout point, le même nombre dérivé. Leurs courbes représentatives :",
+      "choix": [
+        "sont symétriques par rapport à l'axe des abscisses",
+        "se coupent forcément",
+        "se déduisent l'une de l'autre par une translation verticale",
+        "sont confondues"
+      ],
+      "reponse": 2,
+      "explication": "Elles diffèrent d'une constante : l'une est obtenue à partir de l'autre par une translation verticale (courbes « parallèles »). Elles ne sont confondues que si la constante est nulle."
+    },
+    {
+      "id": 14,
+      "difficulte": "facile",
+      "notion": "euler",
+      "enonce": "Dans la méthode d'Euler pour $y' = f(t)$, de pas $h$, on calcule :",
+      "choix": [
+        "$y(t + h) \\approx y(t) + f(t)$",
+        "$y(t + h) \\approx h \\times y(t)$",
+        "$y(t + h) \\approx y(t) + h \\times f(t + h)$",
+        "$y(t + h) \\approx y(t) + h \\times f(t)$"
+      ],
+      "reponse": 3,
+      "explication": "C'est l'approximation affine : $y(t + h) \\approx y(t) + y'(t)\\,h$, avec $y'(t) = f(t)$. On utilise la pente au début de chaque pas."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "euler",
+      "enonce": "Avec $y' = \\dfrac{1}{t}$, $y(1) = 0$ et un pas $h = 0{,}2$, la méthode d'Euler donne $y(1{,}2) \\approx$",
+      "choix": [
+        "$0{,}2$",
+        "$1{,}2$",
+        "$0{,}167$",
+        "$0$"
+      ],
+      "reponse": 0,
+      "explication": "$y(1{,}2) \\approx y(1) + 0{,}2 \\times \\dfrac{1}{1} = 0{,}2$."
+    },
+    {
+      "id": 16,
+      "difficulte": "difficile",
+      "notion": "euler",
+      "enonce": "Pour améliorer l'approximation donnée par la méthode d'Euler, on peut :",
+      "choix": [
+        "augmenter le pas $h$",
+        "diminuer le pas $h$",
+        "changer la condition initiale",
+        "utiliser $f(t)^2$"
+      ],
+      "reponse": 1,
+      "explication": "Plus le pas est petit, plus chaque morceau de tangente reste proche de la courbe : l'approximation est meilleure, au prix de calculs plus nombreux."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "physique",
+      "enonce": "On connaît la vitesse $v(t)$ d'un mobile en mouvement rectiligne. Sa position $x(t)$ est :",
+      "choix": [
+        "la dérivée de $v$",
+        "une primitive de $v$",
+        "$v(t) \\times t$ dans tous les cas",
+        "l'inverse de $v$"
+      ],
+      "reponse": 1,
+      "explication": "Comme $x' = v$, la position est une primitive de la vitesse ; la constante est fixée par la position initiale. La formule $v \\times t$ n'est valable que si la vitesse est constante."
+    },
+    {
+      "id": 18,
+      "difficulte": "moyen",
+      "notion": "physique",
+      "enonce": "Une bille lâchée sans vitesse a pour vitesse $v(t) = 9{,}8t$ (en m/s). Avec $x(0) = 0$, la distance parcourue en $3$ s vaut :",
+      "choix": [
+        "$29{,}4$ m",
+        "$88{,}2$ m",
+        "$44{,}1$ m",
+        "$9{,}8$ m"
+      ],
+      "reponse": 2,
+      "explication": "$x(t) = 4{,}9t^2$ (primitive nulle en $0$), donc $x(3) = 4{,}9 \\times 9 = 44{,}1$ m. La valeur $29{,}4$ est la vitesse $v(3)$, en m/s."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "physique",
+      "enonce": "Un courant d'intensité $i(t) = 0{,}1t$ (en A, $t$ en s) traverse un circuit, avec $q(0) = 0$. La charge transportée en $10$ s vaut :",
+      "choix": [
+        "$1$ C",
+        "$10$ C",
+        "$0{,}5$ C",
+        "$5$ C"
+      ],
+      "reponse": 3,
+      "explication": "$q$ est une primitive de $i$ : $q(t) = 0{,}05t^2$, donc $q(10) = 0{,}05 \\times 100 = 5$ C."
+    },
+    {
+      "id": 20,
+      "difficulte": "moyen",
+      "notion": "physique",
+      "enonce": "Un appareil reçoit une puissance constante de $2\\,000$ W. Avec $E(0) = 0$, l'énergie reçue en $60$ s vaut :",
+      "choix": [
+        "$33$ J",
+        "$120\\,000$ J",
+        "$2\\,060$ J",
+        "$2\\,000$ J"
+      ],
+      "reponse": 1,
+      "explication": "$E$ est une primitive de $P$ : $E(t) = 2\\,000t$, donc $E(60) = 120\\,000$ J, soit $120$ kJ."
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "id": "1sti2d-derivees-exos",
+  "chapitre": "1sti2d-derivees",
+  "titre": "Exercices — Dérivées : calculs et applications physiques",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "notations-taux",
+      "enonce": "Un chariot est repéré en $x = 2{,}0$ m à l'instant $t = 1{,}0$ s, puis en $x = 5{,}6$ m à l'instant $t = 2{,}2$ s. Calculer le taux de variation $\\dfrac{\\Delta x}{\\Delta t}$ entre ces deux instants, c'est-à-dire la vitesse moyenne.",
+      "corrige": [
+        "$\\Delta x = 5{,}6 - 2{,}0 = 3{,}6$ m et $\\Delta t = 2{,}2 - 1{,}0 = 1{,}2$ s.",
+        "$\\dfrac{\\Delta x}{\\Delta t} = \\dfrac{3{,}6}{1{,}2} = 3$ m/s."
+      ],
+      "reponse": "$\\dfrac{\\Delta x}{\\Delta t} = 3$ m/s."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "notations-taux",
+      "enonce": "Soit $f(x) = x^2$. Calculer le taux de variation $\\dfrac{\\Delta y}{\\Delta x}$ de $f$ entre $x_0 = 3$ et $x_0 + \\Delta x = 3{,}1$.",
+      "corrige": [
+        "$\\Delta x = 0{,}1$ et $\\Delta y = f(3{,}1) - f(3) = 9{,}61 - 9 = 0{,}61$.",
+        "$\\dfrac{\\Delta y}{\\Delta x} = \\dfrac{0{,}61}{0{,}1} = 6{,}1$.",
+        "C'est proche de $f'(3) = 2 \\times 3 = 6$ : plus $\\Delta x$ est petit, plus le taux de variation est proche du nombre dérivé."
+      ],
+      "reponse": "$\\dfrac{\\Delta y}{\\Delta x} = 6{,}1$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "notations-taux",
+      "enonce": "Soit $f(x) = 2x^2$. Pour $h \\neq 0$, exprimer en fonction de $h$ le taux de variation de $f$ entre $1$ et $1 + h$, puis en déduire $f'(1)$.",
+      "corrige": [
+        "$f(1 + h) = 2(1 + h)^2 = 2(1 + 2h + h^2) = 2 + 4h + 2h^2$ et $f(1) = 2$.",
+        "$\\dfrac{f(1+h) - f(1)}{h} = \\dfrac{4h + 2h^2}{h} = 4 + 2h$.",
+        "Quand $h$ tend vers $0$, $4 + 2h$ tend vers $4$ : $f'(1) = 4$."
+      ],
+      "reponse": "Le taux de variation vaut $4 + 2h$ et $f'(1) = 4$."
+    },
+    {
+      "id": 4,
+      "difficulte": "decouverte",
+      "notion": "notations-taux",
+      "enonce": "On note $y = f(x)$. Donner trois autres écritures du nombre dérivé $f'(x_0)$ et dire ce qu'il représente sur la courbe de $f$.",
+      "corrige": [
+        "Le nombre dérivé est la limite du taux de variation : $f'(x_0) = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\Delta y}{\\Delta x}$.",
+        "On l'écrit aussi $\\dfrac{dy}{dx}(x_0)$ ou $\\dfrac{df}{dx}(x_0)$ : ces notations rappellent qu'il s'agit d'un taux de variation infinitésimal.",
+        "Graphiquement, c'est le coefficient directeur (la pente) de la tangente à la courbe au point d'abscisse $x_0$."
+      ],
+      "reponse": "$\\dfrac{dy}{dx}(x_0)$, $\\dfrac{df}{dx}(x_0)$ et la limite de $\\dfrac{\\Delta y}{\\Delta x}$ quand $\\Delta x$ tend vers $0$ ; c'est la pente de la tangente au point d'abscisse $x_0$."
+    },
+    {
+      "id": 5,
+      "difficulte": "intermediaire",
+      "notion": "notations-taux",
+      "enonce": "Sur la courbe donnant la position $x(t)$ d'un cycliste (en m, $t$ en s), la tangente au point d'abscisse $t = 4$ s passe par les points $(4\\,;30)$ et $(8\\,;54)$. Quelle est la vitesse instantanée du cycliste à $t = 4$ s ?",
+      "corrige": [
+        "La vitesse instantanée est le nombre dérivé $\\dfrac{dx}{dt}(4)$, c'est-à-dire le coefficient directeur de la tangente en $t = 4$ s.",
+        "Coefficient directeur : $\\dfrac{54 - 30}{8 - 4} = \\dfrac{24}{4} = 6$.",
+        "La vitesse vaut $6$ m/s, soit $21{,}6$ km/h : c'est réaliste pour un cycliste."
+      ],
+      "reponse": "$v(4) = 6$ m/s."
+    },
+    {
+      "id": 6,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Calculer la dérivée de la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = x^5$.",
+      "corrige": [
+        "On applique $(x^n)' = n\\,x^{n-1}$ avec $n = 5$.",
+        "$f'(x) = 5x^4$."
+      ],
+      "reponse": "$f'(x) = 5x^4$"
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Soit $f(x) = \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$. Calculer $f'(2)$.",
+      "corrige": [
+        "On sait que $\\left(\\dfrac{1}{x}\\right)' = -\\dfrac{1}{x^2}$.",
+        "$f'(2) = -\\dfrac{1}{2^2} = -\\dfrac{1}{4} = -0{,}25$."
+      ],
+      "reponse": "$f'(2) = -0{,}25$"
+    },
+    {
+      "id": 8,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Soit $g(x) = \\sin x$. Calculer $g'\\left(\\dfrac{\\pi}{3}\\right)$.",
+      "corrige": [
+        "$(\\sin x)' = \\cos x$, donc $g'(x) = \\cos x$.",
+        "$g'\\left(\\dfrac{\\pi}{3}\\right) = \\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$g'\\left(\\dfrac{\\pi}{3}\\right) = 0{,}5$"
+    },
+    {
+      "id": 9,
+      "difficulte": "decouverte",
+      "notion": "derivees-usuelles",
+      "enonce": "Vérifier que la formule $(x^n)' = n\\,x^{n-1}$, appliquée avec $n = -1$, redonne la dérivée de $x \\mapsto \\dfrac{1}{x}$.",
+      "corrige": [
+        "On écrit $\\dfrac{1}{x} = x^{-1}$.",
+        "Avec $n = -1$ : $(x^{-1})' = -1 \\times x^{-1-1} = -x^{-2}$.",
+        "Or $-x^{-2} = -\\dfrac{1}{x^2}$ : c'est bien la dérivée de $\\dfrac{1}{x}$. La formule est donc valable pour tout entier $n \\geqslant -1$."
+      ],
+      "reponse": "$(x^{-1})' = -x^{-2} = -\\dfrac{1}{x^2}$ : on retrouve la dérivée de $\\dfrac{1}{x}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "intermediaire",
+      "notion": "derivees-usuelles",
+      "enonce": "Calculer la dérivée de $f(x) = x^4 - 3x^2 + 7x - 2$.",
+      "corrige": [
+        "On dérive terme à terme (dérivée d'une somme) : $(x^4)' = 4x^3$, $(-3x^2)' = -6x$, $(7x)' = 7$ et $(-2)' = 0$.",
+        "$f'(x) = 4x^3 - 6x + 7$."
+      ],
+      "reponse": "$f'(x) = 4x^3 - 6x + 7$"
+    },
+    {
+      "id": 11,
+      "difficulte": "intermediaire",
+      "notion": "derivees-usuelles",
+      "enonce": "Calculer la dérivée de la fonction $f$ définie sur $]0\\,;+\\infty[$ par $f(t) = 2t^3 + \\dfrac{5}{t}$.",
+      "corrige": [
+        "$(2t^3)' = 2 \\times 3t^2 = 6t^2$.",
+        "$\\left(\\dfrac{5}{t}\\right)' = 5 \\times \\left(-\\dfrac{1}{t^2}\\right) = -\\dfrac{5}{t^2}$.",
+        "$f'(t) = 6t^2 - \\dfrac{5}{t^2}$."
+      ],
+      "reponse": "$f'(t) = 6t^2 - \\dfrac{5}{t^2}$"
+    },
+    {
+      "id": 12,
+      "difficulte": "intermediaire",
+      "notion": "derivees-usuelles",
+      "enonce": "Calculer la dérivée de $f(x) = 2\\sin x - 3\\cos x$.",
+      "corrige": [
+        "$(2\\sin x)' = 2\\cos x$.",
+        "$(-3\\cos x)' = -3 \\times (-\\sin x) = 3\\sin x$.",
+        "$f'(x) = 2\\cos x + 3\\sin x$."
+      ],
+      "reponse": "$f'(x) = 2\\cos x + 3\\sin x$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = (2x + 1)(x^2 - 3)$ avec la formule du produit, puis réduire.",
+      "corrige": [
+        "$u = 2x + 1$, $u' = 2$ ; $v = x^2 - 3$, $v' = 2x$.",
+        "$f'(x) = u'v + uv' = 2(x^2 - 3) + (2x + 1) \\times 2x$.",
+        "$f'(x) = 2x^2 - 6 + 4x^2 + 2x = 6x^2 + 2x - 6$."
+      ],
+      "reponse": "$f'(x) = 6x^2 + 2x - 6$"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = x\\sin x$.",
+      "corrige": [
+        "$u = x$, $u' = 1$ ; $v = \\sin x$, $v' = \\cos x$.",
+        "$f'(x) = 1 \\times \\sin x + x\\cos x = \\sin x + x\\cos x$."
+      ],
+      "reponse": "$f'(x) = \\sin x + x\\cos x$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = \\dfrac{1}{x^2 + 1}$, définie sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f = \\dfrac{1}{v}$ avec $v = x^2 + 1$ (jamais nul) et $v' = 2x$.",
+        "$f'(x) = -\\dfrac{v'}{v^2} = -\\dfrac{2x}{(x^2 + 1)^2}$."
+      ],
+      "reponse": "$f'(x) = -\\dfrac{2x}{(x^2 + 1)^2}$"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = \\dfrac{2x - 1}{x + 3}$ pour $x \\neq -3$, et simplifier le numérateur.",
+      "corrige": [
+        "$u = 2x - 1$, $u' = 2$ ; $v = x + 3$, $v' = 1$.",
+        "$f'(x) = \\dfrac{u'v - uv'}{v^2} = \\dfrac{2(x + 3) - (2x - 1)}{(x + 3)^2}$.",
+        "Numérateur : $2x + 6 - 2x + 1 = 7$, donc $f'(x) = \\dfrac{7}{(x + 3)^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{7}{(x + 3)^2}$"
+    },
+    {
+      "id": 17,
+      "difficulte": "approfondissement",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = \\dfrac{x^2}{x - 1}$ pour $x \\neq 1$, et donner le numérateur sous forme réduite.",
+      "corrige": [
+        "$u = x^2$, $u' = 2x$ ; $v = x - 1$, $v' = 1$.",
+        "$f'(x) = \\dfrac{2x(x - 1) - x^2 \\times 1}{(x - 1)^2}$.",
+        "Numérateur : $2x^2 - 2x - x^2 = x^2 - 2x$, donc $f'(x) = \\dfrac{x^2 - 2x}{(x - 1)^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{x^2 - 2x}{(x - 1)^2}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "approfondissement",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = x^2\\cos x$.",
+      "corrige": [
+        "$u = x^2$, $u' = 2x$ ; $v = \\cos x$, $v' = -\\sin x$.",
+        "$f'(x) = 2x\\cos x + x^2 \\times (-\\sin x) = 2x\\cos x - x^2\\sin x$."
+      ],
+      "reponse": "$f'(x) = 2x\\cos x - x^2\\sin x$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Calculer la dérivée de $f(x) = \\dfrac{3}{2x + 5}$ pour $x \\neq -\\dfrac{5}{2}$.",
+      "corrige": [
+        "$f = 3 \\times \\dfrac{1}{v}$ avec $v = 2x + 5$ et $v' = 2$.",
+        "$f'(x) = 3 \\times \\left(-\\dfrac{2}{(2x + 5)^2}\\right) = -\\dfrac{6}{(2x + 5)^2}$."
+      ],
+      "reponse": "$f'(x) = -\\dfrac{6}{(2x + 5)^2}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "operations",
+      "enonce": "Vrai ou faux : pour deux fonctions dérivables $u$ et $v$, on a toujours $(uv)' = u'v'$.",
+      "corrige": [
+        "Testons avec $u(x) = v(x) = x$ : $uv = x^2$, dont la dérivée est $2x$.",
+        "Mais $u'v' = 1 \\times 1 = 1$, et $2x \\neq 1$ en général.",
+        "L'égalité est donc fausse : la bonne formule est $(uv)' = u'v + uv'$."
+      ],
+      "reponse": "Faux : $(uv)' = u'v + uv'$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "composee-sinusoides",
+      "enonce": "Calculer la dérivée de $f(x) = (3x - 2)^4$.",
+      "corrige": [
+        "$f(x) = g(3x - 2)$ avec $g(x) = x^4$, $g'(x) = 4x^3$, $a = 3$.",
+        "$f'(x) = 3 \\times 4(3x - 2)^3 = 12(3x - 2)^3$."
+      ],
+      "reponse": "$f'(x) = 12(3x - 2)^3$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "composee-sinusoides",
+      "enonce": "Calculer la dérivée de $f(x) = \\cos\\left(2x + \\dfrac{\\pi}{4}\\right)$.",
+      "corrige": [
+        "On applique $\\big(f(ax + b)\\big)' = a\\,f'(ax + b)$ avec $a = 2$ et $(\\cos)' = -\\sin$.",
+        "$f'(x) = -2\\sin\\left(2x + \\dfrac{\\pi}{4}\\right)$."
+      ],
+      "reponse": "$f'(x) = -2\\sin\\left(2x + \\dfrac{\\pi}{4}\\right)$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "composee-sinusoides",
+      "enonce": "La tension du secteur est $u(t) = 325\\sin(100\\pi t)$ (en V, $t$ en s). Calculer $\\dfrac{du}{dt}$, puis sa valeur maximale arrondie à trois chiffres significatifs.",
+      "corrige": [
+        "$\\big(A\\sin(\\omega t)\\big)' = A\\omega\\cos(\\omega t)$ avec $A = 325$ et $\\omega = 100\\pi$.",
+        "$\\dfrac{du}{dt} = 325 \\times 100\\pi\\cos(100\\pi t) = 32\\,500\\pi\\cos(100\\pi t)$ en V/s.",
+        "Le cosinus vaut au plus $1$ : la valeur maximale est $32\\,500\\pi \\approx 102\\,102$ V/s, soit environ $1{,}02 \\times 10^5$ V/s."
+      ],
+      "reponse": "$\\dfrac{du}{dt} = 32\\,500\\pi\\cos(100\\pi t)$ ; valeur maximale $\\approx 1{,}02 \\times 10^5$ V/s."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "composee-sinusoides",
+      "enonce": "Une masse accrochée à un ressort oscille : sa position est $x(t) = 0{,}05\\cos(10t)$ (en m, $t$ en s). Calculer sa vitesse $v(t)$, puis la valeur maximale de la vitesse.",
+      "corrige": [
+        "$v(t) = \\dfrac{dx}{dt} = 0{,}05 \\times (-10)\\sin(10t) = -0{,}5\\sin(10t)$.",
+        "Comme $-1 \\leqslant \\sin(10t) \\leqslant 1$, la vitesse vaut au plus $0{,}5$ m/s en valeur absolue."
+      ],
+      "reponse": "$v(t) = -0{,}5\\sin(10t)$ ; vitesse maximale $0{,}5$ m/s."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "composee-sinusoides",
+      "enonce": "Calculer la dérivée de $f(x) = (2x + 1)^3$.",
+      "corrige": [
+        "$f(x) = g(2x + 1)$ avec $g(x) = x^3$, $g'(x) = 3x^2$, $a = 2$.",
+        "$f'(x) = 2 \\times 3(2x + 1)^2 = 6(2x + 1)^2$."
+      ],
+      "reponse": "$f'(x) = 6(2x + 1)^2$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "composee-sinusoides",
+      "enonce": "Dans un circuit, l'intensité vaut $i(t) = 2\\sin\\left(100\\pi t + \\dfrac{\\pi}{6}\\right)$ (en A, $t$ en s). Calculer $\\dfrac{di}{dt}$.",
+      "corrige": [
+        "$\\big(A\\sin(\\omega t + \\varphi)\\big)' = A\\omega\\cos(\\omega t + \\varphi)$ avec $A = 2$, $\\omega = 100\\pi$, $\\varphi = \\dfrac{\\pi}{6}$.",
+        "$\\dfrac{di}{dt} = 200\\pi\\cos\\left(100\\pi t + \\dfrac{\\pi}{6}\\right)$ en A/s."
+      ],
+      "reponse": "$\\dfrac{di}{dt} = 200\\pi\\cos\\left(100\\pi t + \\dfrac{\\pi}{6}\\right)$"
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "composee-sinusoides",
+      "enonce": "Un oscillateur a pour position $x(t) = 0{,}1\\sin(5t)$ (en m, $t$ en s). Calculer sa vitesse $v(t)$ et son accélération $a(t)$, puis exprimer $a(t)$ en fonction de $x(t)$.",
+      "corrige": [
+        "$v(t) = x'(t) = 0{,}1 \\times 5\\cos(5t) = 0{,}5\\cos(5t)$.",
+        "$a(t) = v'(t) = 0{,}5 \\times (-5)\\sin(5t) = -2{,}5\\sin(5t)$.",
+        "Or $x(t) = 0{,}1\\sin(5t)$, donc $-2{,}5\\sin(5t) = -25 \\times 0{,}1\\sin(5t)$ : $a(t) = -25\\,x(t)$.",
+        "On retrouve $a = -\\omega^2 x$ avec $\\omega = 5$ rad/s : l'accélération est toujours dirigée vers la position d'équilibre."
+      ],
+      "reponse": "$v(t) = 0{,}5\\cos(5t)$, $a(t) = -2{,}5\\sin(5t)$, soit $a(t) = -25\\,x(t)$."
+    },
+    {
+      "id": 28,
+      "difficulte": "decouverte",
+      "notion": "composee-sinusoides",
+      "enonce": "Expliquer pourquoi la dérivée de $t \\mapsto A\\cos(\\omega t + \\varphi)$ contient un facteur $\\omega$.",
+      "corrige": [
+        "La fonction est de la forme $f(at + b)$ avec $f = A\\cos$, $a = \\omega$ et $b = \\varphi$.",
+        "La règle $\\big(f(at + b)\\big)' = a\\,f'(at + b)$ fait apparaître le coefficient $a = \\omega$ de la variable.",
+        "D'où $\\big(A\\cos(\\omega t + \\varphi)\\big)' = -A\\omega\\sin(\\omega t + \\varphi)$ : plus la pulsation est grande, plus la grandeur varie vite."
+      ],
+      "reponse": "C'est la règle $\\big(f(at+b)\\big)' = a\\,f'(at+b)$ avec $a = \\omega$ : la dérivée vaut $-A\\omega\\sin(\\omega t + \\varphi)$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "approximation-affine",
+      "enonce": "Soit $f(x) = x^2$. À l'aide de l'approximation affine en $x_0 = 3$, donner une valeur approchée de $3{,}02^2$.",
+      "corrige": [
+        "$f(3 + h) \\approx f(3) + f'(3)\\,h$ avec $f(3) = 9$, $f'(3) = 6$ et $h = 0{,}02$.",
+        "$3{,}02^2 \\approx 9 + 6 \\times 0{,}02 = 9{,}12$.",
+        "Valeur exacte : $9{,}1204$. L'écart est très faible."
+      ],
+      "reponse": "$3{,}02^2 \\approx 9{,}12$"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "approximation-affine",
+      "enonce": "En utilisant l'approximation $\\dfrac{1}{1 + h} \\approx 1 - h$ pour $h$ proche de $0$, donner une valeur approchée de $\\dfrac{1}{1{,}03}$.",
+      "corrige": [
+        "Ici $h = 0{,}03$.",
+        "$\\dfrac{1}{1{,}03} \\approx 1 - 0{,}03 = 0{,}97$.",
+        "Valeur exacte arrondie : $0{,}9709$."
+      ],
+      "reponse": "$\\dfrac{1}{1{,}03} \\approx 0{,}97$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "approximation-affine",
+      "enonce": "Une plaque carrée en aluminium a un côté $c = 50$ cm. En chauffant, son côté augmente de $\\Delta c = 0{,}05$ cm. Estimer l'augmentation $\\Delta S$ de son aire avec $\\Delta S \\approx S'(c)\\,\\Delta c$.",
+      "corrige": [
+        "$S(c) = c^2$, donc $S'(c) = 2c$ et $S'(50) = 100$.",
+        "$\\Delta S \\approx 100 \\times 0{,}05 = 5$ cm².",
+        "Valeur exacte : $50{,}05^2 - 50^2 = 5{,}0025$ cm²."
+      ],
+      "reponse": "$\\Delta S \\approx 5$ cm²"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "approximation-affine",
+      "enonce": "Une voiture de masse $m = 1\\,200$ kg roule à $v = 20$ m/s. Son énergie cinétique est $E_c(v) = \\dfrac{1}{2}mv^2$. Estimer la variation $\\Delta E_c$ si sa vitesse augmente de $\\Delta v = 0{,}5$ m/s.",
+      "corrige": [
+        "$E_c'(v) = mv$, donc $E_c'(20) = 1\\,200 \\times 20 = 24\\,000$.",
+        "$\\Delta E_c \\approx E_c'(20) \\times \\Delta v = 24\\,000 \\times 0{,}5 = 12\\,000$ J.",
+        "Valeur exacte : $\\dfrac{1}{2} \\times 1\\,200 \\times (20{,}5^2 - 20^2) = 600 \\times 20{,}25 = 12\\,150$ J. L'approximation est correcte à environ $1$ % près."
+      ],
+      "reponse": "$\\Delta E_c \\approx 12\\,000$ J"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "approximation-affine",
+      "enonce": "Donner l'équation de la tangente en $0$ à la courbe de $x \\mapsto \\sin x$, puis une valeur approchée de $\\sin(0{,}05)$.",
+      "corrige": [
+        "$\\sin 0 = 0$ et $(\\sin)'(0) = \\cos 0 = 1$ : la tangente a pour équation $y = 1 \\times (x - 0) + 0$, soit $y = x$.",
+        "Près de $0$, $\\sin x \\approx x$, donc $\\sin(0{,}05) \\approx 0{,}05$ (valeur exacte : $0{,}04998$)."
+      ],
+      "reponse": "$y = x$ ; $\\sin(0{,}05) \\approx 0{,}05$"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "approximation-affine",
+      "enonce": "Un ballon sphérique a un rayon $r = 10$ cm. On le gonfle un peu : son rayon augmente de $\\Delta r = 0{,}2$ cm. Avec $V(r) = \\dfrac{4}{3}\\pi r^3$, estimer l'augmentation de volume $\\Delta V$ (arrondie au cm³).",
+      "corrige": [
+        "$V'(r) = \\dfrac{4}{3}\\pi \\times 3r^2 = 4\\pi r^2$, donc $V'(10) = 400\\pi$.",
+        "$\\Delta V \\approx 400\\pi \\times 0{,}2 = 80\\pi \\approx 251$ cm³.",
+        "Valeur exacte : $\\dfrac{4}{3}\\pi(10{,}2^3 - 10^3) \\approx 256$ cm³ : l'approximation donne le bon ordre de grandeur."
+      ],
+      "reponse": "$\\Delta V \\approx 251$ cm³"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "variations",
+      "enonce": "Étudier les variations de $f(x) = x^3 - 12x$ sur $\\mathbb{R}$ et donner ses extremums locaux.",
+      "corrige": [
+        "$f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 3(x - 2)(x + 2)$.",
+        "$f'(x) > 0$ pour $x < -2$ ou $x > 2$, et $f'(x) < 0$ pour $-2 < x < 2$.",
+        "$f$ est croissante sur $]-\\infty\\,;-2]$, décroissante sur $[-2\\,;2]$, croissante sur $[2\\,;+\\infty[$.",
+        "Maximum local $f(-2) = -8 + 24 = 16$ ; minimum local $f(2) = 8 - 24 = -16$."
+      ],
+      "reponse": "Croissante sur $]-\\infty\\,;-2]$, décroissante sur $[-2\\,;2]$, croissante sur $[2\\,;+\\infty[$ ; maximum local $16$, minimum local $-16$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "variations",
+      "enonce": "Étudier les variations de $f(x) = x + \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$ et donner son minimum.",
+      "corrige": [
+        "$f'(x) = 1 - \\dfrac{1}{x^2} = \\dfrac{x^2 - 1}{x^2} = \\dfrac{(x - 1)(x + 1)}{x^2}$.",
+        "Sur $]0\\,;+\\infty[$, $x + 1 > 0$ et $x^2 > 0$ : $f'(x)$ a le signe de $x - 1$.",
+        "$f$ est décroissante sur $]0\\,;1]$ et croissante sur $[1\\,;+\\infty[$ ; son minimum est $f(1) = 2$."
+      ],
+      "reponse": "Décroissante sur $]0\\,;1]$, croissante sur $[1\\,;+\\infty[$ ; minimum $f(1) = 2$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "variations",
+      "enonce": "Soit $f(x) = \\dfrac{x - 1}{x + 1}$ sur $]-1\\,;+\\infty[$. Calculer $f'(x)$ et en déduire le sens de variation de $f$.",
+      "corrige": [
+        "$f'(x) = \\dfrac{1 \\times (x + 1) - (x - 1) \\times 1}{(x + 1)^2} = \\dfrac{2}{(x + 1)^2}$.",
+        "Un carré non nul est strictement positif : $f'(x) > 0$ sur $]-1\\,;+\\infty[$.",
+        "$f$ est donc croissante sur $]-1\\,;+\\infty[$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{2}{(x+1)^2} > 0$ : $f$ est croissante sur $]-1\\,;+\\infty[$."
+    },
+    {
+      "id": 38,
+      "difficulte": "probleme",
+      "notion": "variations",
+      "enonce": "Une balle est lancée vers le haut ; son altitude est $z(t) = -4{,}9t^2 + 14{,}7t + 2$ (en m, $t$ en s). À quel instant atteint-elle son altitude maximale, et quelle est cette altitude (au dixième de mètre) ?",
+      "corrige": [
+        "$z'(t) = -9{,}8t + 14{,}7$, qui s'annule pour $t = \\dfrac{14{,}7}{9{,}8} = 1{,}5$ s.",
+        "$z'(t) > 0$ avant $1{,}5$ s (la balle monte) et $z'(t) < 0$ après (elle redescend) : le maximum est atteint à $t = 1{,}5$ s.",
+        "$z(1{,}5) = -4{,}9 \\times 2{,}25 + 14{,}7 \\times 1{,}5 + 2 = -11{,}025 + 22{,}05 + 2 = 13{,}025$ m, soit environ $13{,}0$ m."
+      ],
+      "reponse": "À $t = 1{,}5$ s, altitude maximale $\\approx 13{,}0$ m."
+    },
+    {
+      "id": 39,
+      "difficulte": "probleme",
+      "notion": "variations",
+      "enonce": "Un générateur de force électromotrice $12$ V et de résistance interne $2$ Ω délivre la puissance $P(I) = 12I - 2I^2$ (en W, $I$ en A, $0 \\leqslant I \\leqslant 6$). Pour quelle intensité la puissance délivrée est-elle maximale ? Que vaut-elle ?",
+      "corrige": [
+        "$P'(I) = 12 - 4I$, qui s'annule pour $I = 3$ A.",
+        "$P'(I) > 0$ pour $I < 3$ et $P'(I) < 0$ pour $I > 3$ : $P$ est maximale en $I = 3$ A.",
+        "$P(3) = 36 - 18 = 18$ W."
+      ],
+      "reponse": "$I = 3$ A ; $P_{\\max} = 18$ W."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "variations",
+      "enonce": "Étudier les variations de $f(x) = 2\\cos x + x$ sur $[0\\,;\\pi]$.",
+      "corrige": [
+        "$f'(x) = -2\\sin x + 1$. On a $f'(x) = 0 \\iff \\sin x = \\dfrac{1}{2}$, soit $x = \\dfrac{\\pi}{6}$ ou $x = \\dfrac{5\\pi}{6}$ sur $[0\\,;\\pi]$.",
+        "$f'(x) > 0 \\iff \\sin x < \\dfrac{1}{2}$, ce qui a lieu sur $\\left[0\\,;\\dfrac{\\pi}{6}\\right[$ et sur $\\left]\\dfrac{5\\pi}{6}\\,;\\pi\\right]$ (lecture sur le cercle trigonométrique).",
+        "$f$ est croissante sur $\\left[0\\,;\\dfrac{\\pi}{6}\\right]$, décroissante sur $\\left[\\dfrac{\\pi}{6}\\,;\\dfrac{5\\pi}{6}\\right]$, croissante sur $\\left[\\dfrac{5\\pi}{6}\\,;\\pi\\right]$."
+      ],
+      "reponse": "Croissante sur $\\left[0\\,;\\dfrac{\\pi}{6}\\right]$, décroissante sur $\\left[\\dfrac{\\pi}{6}\\,;\\dfrac{5\\pi}{6}\\right]$, croissante sur $\\left[\\dfrac{5\\pi}{6}\\,;\\pi\\right]$."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "cinematique",
+      "enonce": "Un mobile a pour position $x(t) = 2t^2 + 3t$ (en m, $t$ en s). Calculer sa vitesse à $t = 2$ s et son accélération.",
+      "corrige": [
+        "$v(t) = \\dfrac{dx}{dt} = 4t + 3$, donc $v(2) = 11$ m/s.",
+        "$a(t) = \\dfrac{dv}{dt} = 4$ m/s² : l'accélération est constante."
+      ],
+      "reponse": "$v(2) = 11$ m/s ; $a = 4$ m/s²."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "cinematique",
+      "enonce": "L'altitude d'une balle lancée vers le haut est $z(t) = -4{,}9t^2 + 12t + 1{,}5$ (en m, $t$ en s). Calculer sa vitesse à $t = 1$ s et son accélération. La balle monte-t-elle encore à cet instant ?",
+      "corrige": [
+        "$v(t) = z'(t) = -9{,}8t + 12$, donc $v(1) = 2{,}2$ m/s.",
+        "$a(t) = v'(t) = -9{,}8$ m/s² : c'est l'accélération de la pesanteur, vers le bas.",
+        "$v(1) > 0$ : la balle monte encore."
+      ],
+      "reponse": "$v(1) = 2{,}2$ m/s ; $a = -9{,}8$ m/s² ; elle monte encore."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "cinematique",
+      "enonce": "Un ballon lancé a pour coordonnées $x(t) = 3t$ et $y(t) = -4{,}9t^2 + 4t$ (en m, $t$ en s). Calculer les coordonnées du vecteur vitesse à $t = 0{,}5$ s, puis la valeur de la vitesse (au centième).",
+      "corrige": [
+        "$v_x(t) = x'(t) = 3$ et $v_y(t) = y'(t) = -9{,}8t + 4$.",
+        "À $t = 0{,}5$ s : $v_x = 3$ m/s et $v_y = -4{,}9 + 4 = -0{,}9$ m/s.",
+        "$v = \\sqrt{3^2 + (-0{,}9)^2} = \\sqrt{9{,}81} \\approx 3{,}13$ m/s."
+      ],
+      "reponse": "$v_x = 3$ m/s, $v_y = -0{,}9$ m/s ; $v \\approx 3{,}13$ m/s."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "cinematique",
+      "enonce": "Une voiture roulant à $90$ km/h freine. Sa position est $x(t) = 25t - 2{,}5t^2$ (en m, $t$ en s) jusqu'à l'arrêt. Calculer $v(t)$ et $a(t)$, l'instant de l'arrêt et la distance de freinage.",
+      "corrige": [
+        "$v(t) = x'(t) = 25 - 5t$ et $a(t) = v'(t) = -5$ m/s² (la voiture ralentit).",
+        "On vérifie $v(0) = 25$ m/s $= 90$ km/h.",
+        "Arrêt quand $v(t) = 0$ : $t = 5$ s.",
+        "Distance de freinage : $x(5) = 125 - 62{,}5 = 62{,}5$ m."
+      ],
+      "reponse": "$v(t) = 25 - 5t$, $a = -5$ m/s² ; arrêt à $t = 5$ s après $62{,}5$ m."
+    },
+    {
+      "id": 45,
+      "difficulte": "decouverte",
+      "notion": "cinematique",
+      "enonce": "Comment définit-on la vitesse instantanée d'un point en mouvement rectiligne à partir de sa vitesse moyenne ?",
+      "corrige": [
+        "La vitesse moyenne entre $t$ et $t + \\Delta t$ est $\\dfrac{\\Delta x}{\\Delta t}$.",
+        "La vitesse instantanée est la limite de cette vitesse moyenne quand la durée $\\Delta t$ devient infiniment petite.",
+        "C'est donc la dérivée de la position par rapport au temps : $v(t) = \\dfrac{dx}{dt}$."
+      ],
+      "reponse": "C'est la limite de la vitesse moyenne $\\dfrac{\\Delta x}{\\Delta t}$ quand $\\Delta t$ tend vers $0$, c'est-à-dire la dérivée $v = \\dfrac{dx}{dt}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "cinematique",
+      "enonce": "Au démarrage, un tramway a pour position $x(t) = 0{,}4t^2$ (en m, $t$ en s) pour $0 \\leqslant t \\leqslant 15$. Calculer son accélération et sa vitesse à $t = 15$ s, en m/s puis en km/h.",
+      "corrige": [
+        "$v(t) = 0{,}8t$ et $a(t) = 0{,}8$ m/s².",
+        "$v(15) = 0{,}8 \\times 15 = 12$ m/s.",
+        "$12 \\times 3{,}6 = 43{,}2$ km/h."
+      ],
+      "reponse": "$a = 0{,}8$ m/s² ; $v(15) = 12$ m/s $= 43{,}2$ km/h."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "applications-physiques",
+      "enonce": "Une voiture de $1\\,200$ kg démarre avec $v(t) = 2t$ (en m/s). Son énergie cinétique est $E_c(t) = 2\\,400t^2$ (en J). Calculer la puissance $P(t) = \\dfrac{dE_c}{dt}$ reçue par la voiture, puis sa valeur à $t = 10$ s en kW.",
+      "corrige": [
+        "$P(t) = E_c'(t) = 4\\,800t$ en W.",
+        "$P(10) = 48\\,000$ W $= 48$ kW."
+      ],
+      "reponse": "$P(t) = 4\\,800t$ ; $P(10) = 48$ kW."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "applications-physiques",
+      "enonce": "Pendant une heure de charge, la charge reçue par la batterie d'un téléphone est $q(t) = 2t - 0{,}0001t^2$ (en C, $t$ en s, $0 \\leqslant t \\leqslant 3\\,600$). Calculer l'intensité $i(t) = \\dfrac{dq}{dt}$, puis $i(0)$ et $i(3\\,600)$.",
+      "corrige": [
+        "$i(t) = q'(t) = 2 - 0{,}0002t$ en A.",
+        "$i(0) = 2$ A.",
+        "$i(3\\,600) = 2 - 0{,}72 = 1{,}28$ A : le courant de charge diminue au cours du temps."
+      ],
+      "reponse": "$i(t) = 2 - 0{,}0002t$ ; $i(0) = 2$ A et $i(3\\,600) = 1{,}28$ A."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "applications-physiques",
+      "enonce": "La concentration d'un réactif R est $[\\mathrm{R}](t) = \\dfrac{0{,}02}{1 + 0{,}05t}$ (en mol/L, $t$ en min). Calculer $\\dfrac{d[\\mathrm{R}]}{dt}$, puis la vitesse de disparition de R à $t = 20$ min.",
+      "corrige": [
+        "$[\\mathrm{R}] = 0{,}02 \\times \\dfrac{1}{v}$ avec $v = 1 + 0{,}05t$ et $v' = 0{,}05$.",
+        "$\\dfrac{d[\\mathrm{R}]}{dt} = 0{,}02 \\times \\left(-\\dfrac{0{,}05}{(1 + 0{,}05t)^2}\\right) = -\\dfrac{0{,}001}{(1 + 0{,}05t)^2}$.",
+        "Vitesse de disparition : $-\\dfrac{d[\\mathrm{R}]}{dt} = \\dfrac{0{,}001}{(1 + 0{,}05t)^2}$. À $t = 20$ min : $\\dfrac{0{,}001}{2^2} = 2{,}5 \\times 10^{-4}$ mol·L⁻¹·min⁻¹."
+      ],
+      "reponse": "$\\dfrac{d[\\mathrm{R}]}{dt} = -\\dfrac{0{,}001}{(1 + 0{,}05t)^2}$ ; vitesse de disparition à $20$ min : $2{,}5 \\times 10^{-4}$ mol·L⁻¹·min⁻¹."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "applications-physiques",
+      "enonce": "Au cours d'une journée ensoleillée, l'énergie produite par des panneaux solaires depuis le lever du soleil est $E(t) = -20t^3 + 300t^2$ (en Wh, $t$ en h, $0 \\leqslant t \\leqslant 10$). Calculer la puissance $P(t) = \\dfrac{dE}{dt}$, puis l'instant où elle est maximale et cette puissance maximale.",
+      "corrige": [
+        "$P(t) = E'(t) = -60t^2 + 600t$ en W (des Wh par heure).",
+        "$P'(t) = -120t + 600$ s'annule pour $t = 5$ h ; $P' > 0$ avant, $P' < 0$ après : $P$ est maximale à $t = 5$ h.",
+        "$P(5) = -60 \\times 25 + 600 \\times 5 = -1\\,500 + 3\\,000 = 1\\,500$ W."
+      ],
+      "reponse": "$P(t) = -60t^2 + 600t$ ; maximum à $t = 5$ h : $1\\,500$ W."
+    }
+  ]
+}

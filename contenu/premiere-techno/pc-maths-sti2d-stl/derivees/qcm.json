@@ -1,0 +1,294 @@
+{
+  "id": "1sti2d-derivees-qcm",
+  "chapitre": "1sti2d-derivees",
+  "titre": "QCM — Dérivées : calculs et applications physiques",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Les angles sont en radians.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "notations",
+      "enonce": "Si $y = f(x)$, laquelle de ces écritures désigne le nombre dérivé $f'(x_0)$ ?",
+      "choix": [
+        "$\\dfrac{dy}{dx}(x_0)$",
+        "$\\dfrac{y}{x}$",
+        "$\\Delta y \\times \\Delta x$",
+        "$f(x_0)$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x_0) = \\dfrac{dy}{dx}(x_0)$ : c'est la limite du taux de variation $\\dfrac{\\Delta y}{\\Delta x}$ quand $\\Delta x$ tend vers $0$. $f(x_0)$ est l'image, pas le nombre dérivé."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "usuelles",
+      "enonce": "Quelle est la dérivée de $x \\mapsto x^6$ ?",
+      "choix": [
+        "$x^5$",
+        "$6x^5$",
+        "$6x^6$",
+        "$\\dfrac{x^7}{7}$"
+      ],
+      "reponse": 1,
+      "explication": "$(x^n)' = n\\,x^{n-1}$ : $(x^6)' = 6x^5$. La fonction $\\dfrac{x^7}{7}$ est une primitive, pas la dérivée."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "usuelles",
+      "enonce": "Quelle est la dérivée de $x \\mapsto \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$ ?",
+      "choix": [
+        "$\\dfrac{1}{x^2}$",
+        "$-\\dfrac{1}{x}$",
+        "$-\\dfrac{1}{x^2}$",
+        "$x$"
+      ],
+      "reponse": 2,
+      "explication": "$\\left(\\dfrac{1}{x}\\right)' = -\\dfrac{1}{x^2}$ : c'est aussi la formule $(x^n)' = n\\,x^{n-1}$ avec $n = -1$."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "usuelles",
+      "enonce": "Quelle est la dérivée de $\\cos x$ ?",
+      "choix": [
+        "$\\sin x$",
+        "$-\\sin x$",
+        "$-\\cos x$",
+        "$\\cos x$"
+      ],
+      "reponse": 1,
+      "explication": "$(\\cos x)' = -\\sin x$, alors que $(\\sin x)' = \\cos x$ : le signe moins est sur la dérivée du cosinus."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "operations",
+      "enonce": "Pour deux fonctions dérivables $u$ et $v$, la dérivée de $uv$ est :",
+      "choix": [
+        "$u'v'$",
+        "$u'v - uv'$",
+        "$\\dfrac{u'}{v'}$",
+        "$u'v + uv'$"
+      ],
+      "reponse": 3,
+      "explication": "$(uv)' = u'v + uv'$. Ce n'est pas le produit des dérivées : $(x \\times x)' = 2x$, et non $1$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "operations",
+      "enonce": "Quelle est la dérivée de $\\dfrac{u}{v}$ (avec $v \\neq 0$) ?",
+      "choix": [
+        "$\\dfrac{u'v - uv'}{v^2}$",
+        "$\\dfrac{u'v + uv'}{v^2}$",
+        "$\\dfrac{uv' - u'v}{v^2}$",
+        "$\\dfrac{u'}{v'}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$ : l'ordre du numérateur compte (la dérivée de $u$ vient en premier) et le dénominateur est au carré."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "operations",
+      "enonce": "Quelle est la dérivée de $f(x) = x\\cos x$ ?",
+      "choix": [
+        "$-\\sin x$",
+        "$\\cos x + x\\sin x$",
+        "$\\cos x - x\\sin x$",
+        "$-x\\sin x$"
+      ],
+      "reponse": 2,
+      "explication": "Produit avec $u = x$, $u' = 1$, $v = \\cos x$, $v' = -\\sin x$ : $f'(x) = \\cos x + x \\times (-\\sin x) = \\cos x - x\\sin x$."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "operations",
+      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{1}{x^2 + 4}$ ?",
+      "choix": [
+        "$\\dfrac{1}{2x}$",
+        "$-\\dfrac{2x}{(x^2 + 4)^2}$",
+        "$-\\dfrac{1}{(x^2 + 4)^2}$",
+        "$\\dfrac{2x}{(x^2 + 4)^2}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\left(\\dfrac{1}{v}\\right)' = -\\dfrac{v'}{v^2}$ avec $v = x^2 + 4$ et $v' = 2x$ : $f'(x) = -\\dfrac{2x}{(x^2 + 4)^2}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $f(x) = (5x + 1)^3$ ?",
+      "choix": [
+        "$3(5x + 1)^2$",
+        "$5(5x + 1)^2$",
+        "$15(5x + 1)^3$",
+        "$15(5x + 1)^2$"
+      ],
+      "reponse": 3,
+      "explication": "$\\big(g(ax + b)\\big)' = a\\,g'(ax + b)$ avec $g(x) = x^3$ et $a = 5$ : $f'(x) = 5 \\times 3(5x + 1)^2 = 15(5x + 1)^2$."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $t \\mapsto 4\\cos(50t)$ ?",
+      "choix": [
+        "$-200\\sin(50t)$",
+        "$-4\\sin(50t)$",
+        "$200\\sin(50t)$",
+        "$-\\dfrac{4}{50}\\sin(50t)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\big(A\\cos(\\omega t)\\big)' = -A\\omega\\sin(\\omega t)$ avec $A = 4$ et $\\omega = 50$ : $-200\\sin(50t)$. Diviser par $\\omega$, c'est ce qu'on fait pour une primitive."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $t \\mapsto 3\\sin\\left(2t - \\dfrac{\\pi}{6}\\right)$ ?",
+      "choix": [
+        "$3\\cos\\left(2t - \\dfrac{\\pi}{6}\\right)$",
+        "$-6\\cos\\left(2t - \\dfrac{\\pi}{6}\\right)$",
+        "$6\\cos\\left(2t - \\dfrac{\\pi}{6}\\right)$",
+        "$6\\sin\\left(2t - \\dfrac{\\pi}{6}\\right)$"
+      ],
+      "reponse": 2,
+      "explication": "$\\big(A\\sin(\\omega t + \\varphi)\\big)' = A\\omega\\cos(\\omega t + \\varphi)$ : $3 \\times 2 = 6$, et la phase $-\\dfrac{\\pi}{6}$ ne change pas."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "approximation",
+      "enonce": "Pour $h$ proche de $0$, l'approximation affine de $f$ au voisinage de $x_0$ s'écrit :",
+      "choix": [
+        "$f(x_0 + h) \\approx f(x_0) + h$",
+        "$f(x_0 + h) \\approx f'(x_0) + f(x_0)\\,h$",
+        "$f(x_0 + h) \\approx f(x_0) \\times f'(x_0)$",
+        "$f(x_0 + h) \\approx f(x_0) + f'(x_0)\\,h$"
+      ],
+      "reponse": 3,
+      "explication": "Près de $x_0$, la courbe est proche de sa tangente : $f(x_0 + h) \\approx f(x_0) + f'(x_0)\\,h$, soit $\\Delta y \\approx f'(x_0)\\,\\Delta x$."
+    },
+    {
+      "id": 13,
+      "difficulte": "difficile",
+      "notion": "approximation",
+      "enonce": "Avec l'approximation affine de $x \\mapsto x^2$ en $x_0 = 5$, quelle valeur approchée obtient-on pour $5{,}01^2$ ?",
+      "choix": [
+        "$25{,}01$",
+        "$25{,}1$",
+        "$25{,}2$",
+        "$26$"
+      ],
+      "reponse": 1,
+      "explication": "$f(5) = 25$ et $f'(5) = 10$ : $5{,}01^2 \\approx 25 + 10 \\times 0{,}01 = 25{,}1$. La valeur exacte est $25{,}1001$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "variations",
+      "enonce": "Sur un intervalle, $f'(x) < 0$ (sauf en des points isolés). Alors :",
+      "choix": [
+        "$f$ est négative",
+        "$f$ est décroissante",
+        "$f$ est croissante",
+        "$f$ est constante"
+      ],
+      "reponse": 1,
+      "explication": "Le signe de la dérivée donne le sens de variation : $f' < 0$ signifie que $f$ est décroissante. Cela ne dit rien du signe de $f$ elle-même."
+    },
+    {
+      "id": 15,
+      "difficulte": "difficile",
+      "notion": "variations",
+      "enonce": "La fonction $f(x) = x^3 - 3x$ est décroissante sur :",
+      "choix": [
+        "$[-1\\,;1]$",
+        "$[0\\,;3]$",
+        "$]-\\infty\\,;0]$",
+        "$[1\\,;+\\infty[$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 3x^2 - 3 = 3(x - 1)(x + 1)$, négative entre les racines $-1$ et $1$ : $f$ est décroissante sur $[-1\\,;1]$."
+    },
+    {
+      "id": 16,
+      "difficulte": "facile",
+      "notion": "physique",
+      "enonce": "En mouvement rectiligne, la vitesse est :",
+      "choix": [
+        "la dérivée de l'accélération",
+        "la position divisée par le temps",
+        "la dérivée de la position par rapport au temps",
+        "la primitive de la position"
+      ],
+      "reponse": 2,
+      "explication": "$v(t) = \\dfrac{dx}{dt}$ : c'est la limite de la vitesse moyenne $\\dfrac{\\Delta x}{\\Delta t}$ quand $\\Delta t$ tend vers $0$. L'accélération est, elle, la dérivée de la vitesse."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "physique",
+      "enonce": "Un mobile a pour position $x(t) = 3t^2 - 2t$ (en m, $t$ en s). Sa vitesse à $t = 2$ s vaut :",
+      "choix": [
+        "$8$ m/s",
+        "$6$ m/s",
+        "$12$ m/s",
+        "$10$ m/s"
+      ],
+      "reponse": 3,
+      "explication": "$v(t) = x'(t) = 6t - 2$, donc $v(2) = 10$ m/s. La valeur $8$ m/s est la position $x(2)$, pas la vitesse."
+    },
+    {
+      "id": 18,
+      "difficulte": "moyen",
+      "notion": "physique",
+      "enonce": "La position d'un oscillateur est $x(t) = 0{,}02\\cos(20t)$ (en m). Sa vitesse maximale vaut :",
+      "choix": [
+        "$0{,}4$ m/s",
+        "$0{,}02$ m/s",
+        "$0{,}001$ m/s",
+        "$8$ m/s"
+      ],
+      "reponse": 0,
+      "explication": "$v(t) = -0{,}02 \\times 20\\sin(20t) = -0{,}4\\sin(20t)$ : la vitesse vaut au plus $0{,}4$ m/s en valeur absolue."
+    },
+    {
+      "id": 19,
+      "difficulte": "facile",
+      "notion": "physique",
+      "enonce": "L'intensité électrique est la dérivée par rapport au temps :",
+      "choix": [
+        "de la tension",
+        "de la charge électrique",
+        "de la puissance",
+        "de la résistance"
+      ],
+      "reponse": 1,
+      "explication": "$i(t) = \\dfrac{dq}{dt}$ : c'est le débit de charge électrique. De même, la puissance est la dérivée de l'énergie : $P = \\dfrac{dE}{dt}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "physique",
+      "enonce": "L'énergie reçue par un système est $E(t) = 50t^2$ (en J, $t$ en s). La puissance reçue à $t = 3$ s vaut :",
+      "choix": [
+        "$450$ W",
+        "$150$ W",
+        "$300$ W",
+        "$100$ W"
+      ],
+      "reponse": 2,
+      "explication": "$P(t) = \\dfrac{dE}{dt} = 100t$, donc $P(3) = 300$ W. La valeur $450$ correspond à l'énergie $E(3)$, en joules."
+    }
+  ]
+}
