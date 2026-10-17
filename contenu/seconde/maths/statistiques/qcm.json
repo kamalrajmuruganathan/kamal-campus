@@ -289,6 +289,160 @@
    ],
    "reponse": 1,
    "explication": "L'écart interquartile mesure la dispersion des $50\\,\\%$ centraux de la série : il ignore les valeurs extrêmes, ce qui le rend robuste, contrairement à l'étendue qui, elle, ne dépend que du minimum et du maximum."
+  },
+  {
+   "id": 21,
+   "difficulte": "moyen",
+   "notion": "ecart-type",
+   "enonce": "Deux séries ont la même moyenne. L'écart type de la série A vaut $1{,}2$, celui de la série B vaut $3{,}5$. Que peut-on dire ?",
+   "choix": [
+    "Les valeurs de A sont plus resserrées autour de la moyenne",
+    "La série B contient plus de valeurs",
+    "La médiane de A est plus petite que celle de B",
+    "Les valeurs de B sont plus resserrées autour de la moyenne"
+   ],
+   "reponse": 0,
+   "explication": "L'écart type mesure la dispersion autour de la moyenne : le plus petit, celui de A, indique des valeurs plus resserrées. Il ne dit rien de l'effectif ni de la médiane."
+  },
+  {
+   "id": 22,
+   "difficulte": "facile",
+   "notion": "ecart-type",
+   "enonce": "Quel est l'écart type de la série $4\\,;\\ 4\\,;\\ 4\\,;\\ 4$ ?",
+   "choix": [
+    "$16$",
+    "$0$",
+    "$4$",
+    "$1$"
+   ],
+   "reponse": 1,
+   "explication": "Toutes les valeurs sont égales à la moyenne $4$ : tous les écarts sont nuls, donc $\\sigma = 0$. Un écart type nul signifie qu'il n'y a aucune dispersion."
+  },
+  {
+   "id": 23,
+   "difficulte": "difficile",
+   "notion": "ecart-type",
+   "enonce": "On ajoute $2$ à toutes les valeurs d'une série dont l'écart type vaut $3$. Que vaut le nouvel écart type ?",
+   "choix": [
+    "$5$",
+    "$3$",
+    "$6$",
+    "$1$"
+   ],
+   "reponse": 1,
+   "explication": "La moyenne augmente aussi de $2$, donc chaque écart $x_i - \\bar x$ est inchangé : l'écart type reste $3$. Seule la position de la série change, pas sa dispersion."
+  },
+  {
+   "id": 24,
+   "difficulte": "facile",
+   "notion": "classes",
+   "enonce": "Quel est le centre de la classe $[20\\,;\\,30[$ ?",
+   "choix": [
+    "$10$",
+    "$30$",
+    "$25$",
+    "$20$"
+   ],
+   "reponse": 2,
+   "explication": "Le centre est $\\dfrac{20 + 30}{2} = 25$. $10$ est l'amplitude de la classe."
+  },
+  {
+   "id": 25,
+   "difficulte": "moyen",
+   "notion": "classes-moyenne",
+   "enonce": "Une série est regroupée en deux classes : $[0\\,;\\,10[$ d'effectif $3$ et $[10\\,;\\,20[$ d'effectif $1$. En supposant la répartition uniforme dans chaque classe, quelle est la moyenne ?",
+   "choix": [
+    "$7{,}5$",
+    "$10$",
+    "$5$",
+    "$30$"
+   ],
+   "reponse": 0,
+   "explication": "On remplace chaque classe par son centre : $\\dfrac{5 \\times 3 + 15 \\times 1}{4} = \\dfrac{30}{4} = 7{,}5$. Le $10$ est la moyenne des deux centres sans tenir compte des effectifs."
+  },
+  {
+   "id": 26,
+   "difficulte": "moyen",
+   "notion": "classes-mediane",
+   "enonce": "Une série de $20$ valeurs est regroupée en classes : $[0\\,;\\,10[$ d'effectif $6$, $[10\\,;\\,20[$ d'effectif $9$, $[20\\,;\\,30[$ d'effectif $5$. Quelle est la classe médiane ?",
+   "choix": [
+    "$[0\\,;\\,10[$",
+    "$[20\\,;\\,30[$",
+    "On ne peut pas la déterminer",
+    "$[10\\,;\\,20[$"
+   ],
+   "reponse": 3,
+   "explication": "$\\dfrac{N}{2} = 10$ ; les effectifs cumulés sont $6$, $15$, $20$. Le premier qui atteint $10$ est $15$ : la classe médiane est $[10\\,;\\,20[$."
+  },
+  {
+   "id": 27,
+   "difficulte": "difficile",
+   "notion": "classes-mediane",
+   "enonce": "Une série de $20$ valeurs : $[0\\,;\\,10[$ d'effectif $4$, $[10\\,;\\,20[$ d'effectif $8$, $[20\\,;\\,30[$ d'effectif $8$. En supposant la répartition uniforme dans la classe médiane, quelle estimation de la médiane obtient-on ?",
+   "choix": [
+    "$20$",
+    "$17{,}5$",
+    "$12$",
+    "$15$"
+   ],
+   "reponse": 1,
+   "explication": "La classe médiane est $[10\\,;\\,20[$ (effectifs cumulés $4$ puis $12$). Il faut avancer de $10 - 4 = 6$ valeurs sur $8$ : $\\mathrm{Me} \\approx 10 + \\dfrac{6}{8} \\times 10 = 17{,}5$. Le $15$ est le centre de la classe, qui ne tient pas compte de la position de la médiane dans la classe."
+  },
+  {
+   "id": 28,
+   "difficulte": "facile",
+   "notion": "histogramme",
+   "enonce": "Dans un histogramme dont toutes les classes ont la même amplitude, la hauteur de chaque rectangle est proportionnelle :",
+   "choix": [
+    "à l'effectif de la classe",
+    "à l'amplitude de la classe",
+    "au centre de la classe",
+    "à la borne supérieure de la classe"
+   ],
+   "reponse": 0,
+   "explication": "Les rectangles ont tous la même largeur, l'amplitude commune ; leur hauteur est donc proportionnelle à l'effectif."
+  },
+  {
+   "id": 29,
+   "difficulte": "moyen",
+   "notion": "frequences-conditionnelles",
+   "enonce": "Dans un lycée de $400$ élèves, $280$ sont demi-pensionnaires, dont $150$ filles. Quelle est la fréquence des filles parmi les demi-pensionnaires ?",
+   "choix": [
+    "$0{,}7$",
+    "$0{,}375$",
+    "environ $0{,}54$",
+    "environ $1{,}87$"
+   ],
+   "reponse": 2,
+   "explication": "On se restreint aux $280$ demi-pensionnaires : $\\dfrac{150}{280} \\approx 0{,}54$. Diviser par $400$ donnerait la fréquence des filles demi-pensionnaires dans tout le lycée, une autre quantité."
+  },
+  {
+   "id": 30,
+   "difficulte": "moyen",
+   "notion": "frequences-marginales",
+   "enonce": "Dans un tableau croisé, la fréquence marginale d'une modalité est :",
+   "choix": [
+    "l'effectif d'une case divisé par le total de sa ligne",
+    "son effectif total divisé par l'effectif total du tableau",
+    "l'effectif d'une case divisé par le total de sa colonne",
+    "la somme des effectifs de sa ligne"
+   ],
+   "reponse": 1,
+   "explication": "La fréquence marginale se lit dans la ligne ou la colonne « Total » : on divise par l'effectif total. Diviser une case par le total de sa ligne ou de sa colonne donne une fréquence conditionnelle."
+  },
+  {
+   "id": 31,
+   "difficulte": "difficile",
+   "notion": "ajout-valeur",
+   "enonce": "On considère la série $3\\,;\\ 5\\,;\\ 8\\,;\\ 9\\,;\\ 10$, de moyenne $7$ et de médiane $8$. On ajoute la valeur $50$. Que se passe-t-il ?",
+   "choix": [
+    "La moyenne et la médiane augmentent autant",
+    "Ni la moyenne ni la médiane ne changent",
+    "La moyenne augmente beaucoup, la médiane très peu",
+    "Seule la médiane change"
+   ],
+   "reponse": 2,
+   "explication": "Nouvelle moyenne : $\\dfrac{85}{6} \\approx 14{,}2$ ; nouvelle médiane : $\\dfrac{8 + 9}{2} = 8{,}5$. La moyenne est sensible aux valeurs extrêmes, la médiane beaucoup moins."
   }
  ]
 }

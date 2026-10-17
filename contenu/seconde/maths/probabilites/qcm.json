@@ -153,16 +153,16 @@
   {
    "id": 11,
    "difficulte": "facile",
-   "notion": "equiprobabilite",
-   "enonce": "On lance un dé équilibré à six faces. Quelle est la probabilité d'obtenir le $5$ ?",
+   "notion": "probabilite-conditionnelle",
+   "enonce": "Que désigne la notation $P_{\\mathrm{A}}(\\mathrm{B})$ ?",
    "choix": [
-    "$\\dfrac{1}{6}$",
-    "$\\dfrac{5}{6}$",
-    "$\\dfrac{1}{5}$",
-    "$\\dfrac{1}{2}$"
+    "La probabilité de $\\mathrm{A}$ sachant que $\\mathrm{B}$ est réalisé",
+    "La probabilité que $\\mathrm{A}$ et $\\mathrm{B}$ soient réalisés",
+    "La probabilité de $\\mathrm{B}$ sachant que $\\mathrm{A}$ est réalisé",
+    "La probabilité que $\\mathrm{A}$ ou $\\mathrm{B}$ soit réalisé"
    ],
-   "reponse": 0,
-   "explication": "Une seule face favorable sur six possibles, toutes équiprobables : $P = \\dfrac{1}{6}$. La valeur de la face ($5$) n'a rien à voir avec sa probabilité."
+   "reponse": 2,
+   "explication": "$P_{\\mathrm{A}}(\\mathrm{B})$ se lit « probabilité de $\\mathrm{B}$ sachant $\\mathrm{A}$ » : on se restreint aux issues où $\\mathrm{A}$ est réalisé."
   },
   {
    "id": 12,
@@ -180,31 +180,31 @@
   },
   {
    "id": 13,
-   "difficulte": "facile",
-   "notion": "contraire",
-   "enonce": "Si $P(\\mathrm{A}) = 0{,}7$, que vaut $P\\left(\\overline{\\mathrm{A}}\\right)$ ?",
+   "difficulte": "moyen",
+   "notion": "probabilite-conditionnelle",
+   "enonce": "On a $P(\\mathrm{A}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Que vaut $P_{\\mathrm{A}}(\\mathrm{B})$ ?",
    "choix": [
+    "$0{,}4$",
+    "$0{,}1$",
     "$0{,}7$",
-    "$0{,}3$",
-    "$1{,}7$",
-    "$-0{,}3$"
+    "$2{,}5$"
    ],
-   "reponse": 1,
-   "explication": "$P\\left(\\overline{\\mathrm{A}}\\right) = 1 - P(\\mathrm{A}) = 1 - 0{,}7 = 0{,}3$. L'événement contraire complète toujours à $1$."
+   "reponse": 0,
+   "explication": "$P_{\\mathrm{A}}(\\mathrm{B}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})} = \\dfrac{0{,}2}{0{,}5} = 0{,}4$. Une probabilité ne peut pas valoir $2{,}5$."
   },
   {
    "id": 14,
    "difficulte": "moyen",
-   "notion": "union",
-   "enonce": "On a $P(\\mathrm{A}) = 0{,}6$, $P(\\mathrm{B}) = 0{,}3$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}1$. Que vaut $P(\\mathrm{A} \\cup \\mathrm{B})$ ?",
+   "notion": "arbre-pondere",
+   "enonce": "Dans un arbre pondéré, $P(\\mathrm{A}) = 0{,}6$ et $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}5$. Que vaut $P(\\mathrm{A} \\cap \\mathrm{B})$ ?",
    "choix": [
-    "$0{,}9$",
-    "$0{,}8$",
-    "$1$",
-    "$0{,}7$"
+    "$1{,}1$",
+    "$0{,}1$",
+    "$1{,}2$",
+    "$0{,}3$"
    ],
-   "reponse": 1,
-   "explication": "Par la formule d'inclusion-exclusion : $P(\\mathrm{A} \\cup \\mathrm{B}) = 0{,}6 + 0{,}3 - 0{,}1 = 0{,}8$. Oublier de retrancher l'intersection (réponse $0{,}9$) revient à la compter deux fois."
+   "reponse": 3,
+   "explication": "La probabilité d'un chemin est le produit des probabilités de ses branches : $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}6 \\times 0{,}5 = 0{,}3$."
   },
   {
    "id": 15,
@@ -237,16 +237,16 @@
   {
    "id": 17,
    "difficulte": "moyen",
-   "notion": "denombrement",
-   "enonce": "On lance deux dés équilibrés discernables. Quelle est la probabilité d'obtenir une somme égale à $2$ ?",
+   "notion": "arbre-pondere",
+   "enonce": "Dans un arbre pondéré, la branche de $\\mathrm{A}$ vers $\\mathrm{B}$ porte $0{,}35$. Quelle probabilité porte la branche de $\\mathrm{A}$ vers $\\overline{\\mathrm{B}}$ ?",
    "choix": [
-    "$\\dfrac{1}{36}$",
-    "$\\dfrac{2}{36}$",
-    "$\\dfrac{1}{6}$",
-    "$\\dfrac{1}{12}$"
+    "$0{,}65$",
+    "$0{,}35$",
+    "$1{,}35$",
+    "On ne peut pas le savoir"
    ],
    "reponse": 0,
-   "explication": "Sur $6 \\times 6 = 36$ issues équiprobables, une seule donne une somme de $2$ : le couple $(1\\,;1)$. Donc $P = \\dfrac{1}{36}$. Contrairement à la somme $7$, il n'y a pas ici deux issues symétriques."
+   "explication": "Les probabilités des branches issues d'un même nœud ont pour somme $1$ : $P_{\\mathrm{A}}\\left(\\overline{\\mathrm{B}}\\right) = 1 - 0{,}35 = 0{,}65$."
   },
   {
    "id": 18,
@@ -289,6 +289,48 @@
    ],
    "reponse": 1,
    "explication": "Une probabilité ne peut pas dépasser $1$ : le résultat $1{,}1$ signale l'oubli du terme $-P(\\mathrm{A} \\cap \\mathrm{B})$ dans la formule d'union. Ils ne peuvent pas être incompatibles, car $0{,}5 + 0{,}6 = 1{,}1 > 1$ serait alors la vraie valeur, ce qui est impossible."
+  },
+  {
+   "id": 21,
+   "difficulte": "difficile",
+   "notion": "probabilite-conditionnelle",
+   "enonce": "Dans une classe de $30$ élèves, $12$ sont demi-pensionnaires, dont $8$ filles. On choisit au hasard un élève demi-pensionnaire. Quelle est la probabilité que ce soit une fille ?",
+   "choix": [
+    "$\\dfrac{4}{15}$",
+    "$\\dfrac{2}{5}$",
+    "$\\dfrac{2}{3}$",
+    "$\\dfrac{1}{3}$"
+   ],
+   "reponse": 2,
+   "explication": "On se restreint aux $12$ demi-pensionnaires, dont $8$ filles : $P = \\dfrac{8}{12} = \\dfrac{2}{3}$. Le calcul $\\dfrac{8}{30} = \\dfrac{4}{15}$ donne la probabilité d'être une fille **et** demi-pensionnaire."
+  },
+  {
+   "id": 22,
+   "difficulte": "difficile",
+   "notion": "probabilite-conditionnelle",
+   "enonce": "Un test de dépistage est positif chez $95\\,\\%$ des malades. Une personne a un test positif. Peut-on dire qu'elle a $95\\,\\%$ de chances d'être malade ?",
+   "choix": [
+    "Oui, c'est exactement le sens de $95\\,\\%$",
+    "Non : $95\\,\\%$ est $P_{\\mathrm{M}}(\\mathrm{T})$, alors qu'on cherche $P_{\\mathrm{T}}(\\mathrm{M})$, qui peut être bien plus petite",
+    "Non, elle a $5\\,\\%$ de chances d'être malade",
+    "Oui, si la maladie est rare"
+   ],
+   "reponse": 1,
+   "explication": "Il ne faut pas inverser le conditionnement : à cause des faux positifs, $P_{\\mathrm{T}}(\\mathrm{M})$ peut être très inférieure à $P_{\\mathrm{M}}(\\mathrm{T})$, surtout pour une maladie rare."
+  },
+  {
+   "id": 23,
+   "difficulte": "moyen",
+   "notion": "loi-des-grands-nombres",
+   "enonce": "On lance un dé équilibré un très grand nombre de fois. Que dit la loi des grands nombres sur la fréquence d'apparition du $6$ ?",
+   "choix": [
+    "Sauf exception, elle est proche de $\\dfrac{1}{6}$",
+    "Elle vaut exactement $\\dfrac{1}{6}$",
+    "Elle s'éloigne de $\\dfrac{1}{6}$ quand le nombre de lancers augmente",
+    "Le $6$ finit forcément par sortir après une longue série sans $6$"
+   ],
+   "reponse": 0,
+   "explication": "Lorsque $n$ est grand, sauf exception, la fréquence observée est proche de la probabilité, ici $\\dfrac{1}{6}$. Elle n'est pas exactement égale, et le dé n'a pas de « mémoire »."
   }
  ]
 }

@@ -136,7 +136,7 @@ class B:
 def g5_calcul_litteral():
     E = B()
     # --- substitution (8)
-    subs = [(3, 5, 4), (6, 1, 2), (5, 7, 3), (4, 9, 5), (7, 2, 6), (2, 13, 8)]
+    subs = [(3, 5, 4), (6, 1, 2), (5, 7, 3), (2, 13, 8)]
     for k, (a, b, x) in enumerate(subs):
         E(A, "substitution", f"Calcule $ {a}x + {b} $ pour $ x = {x} $.",
           f"On remplace $x$ par ${x}$ : $ {a} \\times {x} + {b} = {a*x} + {b} = {a*x+b} $.",
@@ -165,7 +165,7 @@ def g5_calcul_litteral():
     red = [
         [(3, "a"), (5, "a")], [(7, "x"), (-2, "x")], [(4, "x"), (3, ""), (2, "x"), (5, "")],
         [(9, "y"), (-4, "y"), (2, "")], [(5, "a"), (2, "b"), (3, "a"), (1, "b")],
-        [(6, "t"), (4, ""), (-2, "t"), (-1, "")], [(4, "x"), (2, "x^2"), (1, "x")],
+        [(4, "x"), (2, "x^2"), (1, "x")],
     ]
     for k, t in enumerate(red):
         r = poly(reduire(t))
@@ -181,7 +181,7 @@ def g5_calcul_litteral():
       "$3a$ et $5b$ ne sont pas de même nature : on ne peut pas les regrouper. Écrire $8ab$ serait faux.",
       "$ 3a + 5b $ ne se réduit pas")
     # --- développer (10)
-    dev = [(3, 2, 5), (4, 1, 7), (5, 3, -2), (2, 7, 4), (6, 1, -3), (7, 2, 1), (8, 1, -5), (9, 2, 3)]
+    dev = [(3, 2, 5), (4, 1, 7), (5, 3, -2), (6, 1, -3), (8, 1, -5)]
     for k, a, b in dev:
         t = [(a, "x"), (b, "")]
         r = poly([(k * a, "x"), (k * b, "")])
@@ -198,7 +198,7 @@ def g5_calcul_litteral():
            f"Réduire : $ {poly(dv + [extra])} = {poly(tot)} $."],
           f"$ {poly(tot)} $")
     # --- factoriser (6)
-    fac = [(3, 2, 5), (4, 1, 3), (7, 1, 2), (2, 3, 5), (5, 2, 3), (4, 2, -3)]
+    fac = [(3, 2, 5), (4, 1, 3), (7, 1, 2), (5, 2, 3), (4, 2, -3)]
     for k, a, b in fac:
         assert gcd(a, abs(b)) == 1
         dv = poly([(k * a, "x"), (k * b, "")])
@@ -208,7 +208,7 @@ def g5_calcul_litteral():
            f"$ {dv} = {k}({inn}) $."],
           f"$ {k}({inn}) $")
     # --- tester une égalité (5)
-    teq = [(3, 2, 5, 4, 3), (3, 2, 5, 4, 2), (2, 7, 4, 1, 4), (4, 1, 2, 9, 6), (6, 3, 3, 12, 5)]
+    teq = [(3, 2, 5, 4, 3), (3, 2, 5, 4, 2), (2, 7, 4, 1, 4), (6, 3, 3, 12, 5)]
     for a, b, c, d, x in teq:
         g, dr = a * x + b, c * x - d
         ok = g == dr
@@ -219,6 +219,32 @@ def g5_calcul_litteral():
            "Les deux membres sont égaux : l'égalité est vraie pour cette valeur." if ok
            else f"${g} \\neq {dr}$ : l'égalité est fausse pour cette valeur."],
           "Oui" if ok else "Non")
+    # --- résoudre une équation x + b = c ou ax = c (8)
+    for b, c, d in [(9, 23, A), (25, 61, A), (F(7, 2), 10, I)]:
+        x = c - b
+        E(d, "equations", f"Résous l'équation $ x + {nb(b)} = {nb(c)} $.",
+          [f"Quel nombre faut-il ajouter à ${nb(b)}$ pour obtenir ${nb(c)}$ ? On fait l'opération inverse de l'addition : on soustrait ${nb(b)}$.",
+           f"$ x = {nb(c)} - {nb(b)} = {nb(x)} $.",
+           f"Vérification : $ {nb(x)} + {nb(b)} = {nb(c)} $ ✓."],
+          f"$ x = {nb(x)} $")
+    for a, c, d in [(6, 42, A), (8, 36, I), (5, 3, I)]:
+        x = F(c, a)
+        assert _D(x) * a == c
+        E(d, "equations", f"Résous l'équation $ {a}x = {c} $.",
+          [f"Par quel nombre faut-il multiplier ${a}$ pour obtenir ${c}$ ? On fait l'opération inverse de la multiplication : on divise par ${a}$.",
+           f"$ x = {c} \\div {a} = {nb(x)} $.",
+           f"Vérification : $ {a} \\times {nb(x)} = {c} $ ✓."],
+          f"$ x = {nb(x)} $")
+    E(PB, "equations",
+      "Sami a une certaine somme d'argent. Sa grand-mère lui donne $15$ € ; il a alors $42$ €. Écris une équation dont l'inconnue $x$ est la somme de départ, puis résous-la.",
+      ["La somme de départ augmentée de $15$ € donne $42$ € : $ x + 15 = 42 $.",
+       "$ x = 42 - 15 = 27 $. Vérification : $ 27 + 15 = 42 $ ✓. Sami avait $27$ € au départ."],
+      "$ x + 15 = 42 $ ; $ x = 27 $ : $27$ €")
+    E(PB, "equations",
+      "Un pack de $6$ bouteilles d'eau coûte $9$ €. On note $x$ le prix d'une bouteille (en €). Écris une équation, puis trouve le prix d'une bouteille.",
+      ["$6$ bouteilles coûtent $9$ € : $ 6x = 9 $.",
+       f"$ x = 9 \\div 6 = {nb(F(3, 2))} $. Vérification : $ 6 \\times {nb(F(3, 2))} = 9 $ ✓."],
+      f"$ 6x = 9 $ ; $ x = {nb(F(3, 2))} $ : ${nb(F(3, 2), 2, True)}$ € la bouteille")
     # --- problèmes et démonstrations (7)
     x = 5
     E(PB, "probleme-expression",

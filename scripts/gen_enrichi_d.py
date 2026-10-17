@@ -492,8 +492,7 @@ def _ctx(i, n):
 def g1t_probas():
     E = []
     # a) probabilité d'un chemin
-    for i, n, chem in [(0, 3, "SSÉ"), (1, 3, "ÉÉS"), (2, 2, "SÉ"), (3, 3, "SÉS"), (4, 2, "ÉÉ"), (5, 3, "ÉSÉ"),
-                       (0, 2, "SS"), (2, 3, "SSS")]:
+    for i, n, chem in [(0, 3, "SSÉ"), (1, 3, "ÉÉS"), (2, 2, "SÉ"), (3, 3, "SÉS"), (5, 3, "ÉSÉ")]:
         intro, sdef, _, _, p = _ctx(i, n)
         q = 1 - p
         facteurs = [fx(p) if c == "S" else fx(q) for c in chem]
@@ -507,7 +506,7 @@ def g1t_probas():
                    f"${FOIS.join(facteurs)} = {fx(val)}$."],
                   f"${fx(val)}$"))
     # b) exactement k succès
-    for i, n, k in [(0, 3, 2), (1, 3, 1), (2, 2, 1), (3, 3, 1), (4, 3, 2), (5, 2, 1), (1, 4, 1), (3, 2, 2), (2, 3, 0)]:
+    for i, n, k in [(0, 3, 2), (1, 3, 1), (2, 2, 1), (3, 3, 1), (4, 3, 2), (5, 2, 1)]:
         intro, sdef, s1, s2, p = _ctx(i, n)
         q = 1 - p
         chemins = ["".join(t) for t in _produit("SÉ", repeat=n) if t.count("S") == k]
@@ -524,7 +523,7 @@ def g1t_probas():
                    f"$P = {nbc} \\times {fx(un)} = {fx(val)}$."],
                   f"${fx(val)}$"))
     # c) au moins un succès
-    for i, n in [(0, 3), (1, 3), (5, 2), (4, 3), (1, 2), (5, 3)]:
+    for i, n in [(0, 3), (1, 3), (5, 2), (4, 3), (5, 3)]:
         intro, sdef, s1, s2, p = _ctx(i, n)
         q = 1 - p
         val = 1 - q ** n
@@ -537,8 +536,7 @@ def g1t_probas():
     # d) loi : probabilité manquante
     for vals, probs in [([0, 1, 2], [F(1, 5), None, F(3, 10)]), ([-2, 0, 5], [F(1, 2), F(3, 10), None]),
                         ([1, 2, 3, 4], [F(1, 10), F(2, 5), None, F(1, 5)]), ([-5, 2, 10], [None, F(3, 5), F(1, 20)]),
-                        ([0, 10, 50, 100], [F(7, 10), F(1, 5), None, F(1, 50)]), ([-1, 3], [F(13, 20), None]),
-                        ([2, 4, 6], [F(1, 4), F(1, 4), None])]:
+                        ([0, 10, 50, 100], [F(7, 10), F(1, 5), None, F(1, 50)])]:
         manq = 1 - sum(x for x in probs if x is not None)
         j = probs.index(None)
         tab = " & ".join(nb(v) for v in vals)
@@ -553,8 +551,7 @@ def g1t_probas():
     # e) espérance
     for vals, probs in [([0, 1, 2], [F(1, 4), F(1, 2), F(1, 4)]), ([1, 2, 3, 4], [F(1, 10), F(1, 5), F(3, 10), F(2, 5)]),
                         ([-3, 1, 4], [F(1, 5), F(1, 2), F(3, 10)]), ([0, 5, 20], [F(3, 5), F(3, 10), F(1, 10)]),
-                        ([10, 20, 30], [F(1, 2), F(3, 10), F(1, 5)]), ([-10, 0, 25], [F(1, 2), F(1, 4), F(1, 4)]),
-                        ([2, 3, 5, 8], [F(1, 5), F(1, 5), F(1, 5), F(2, 5)]), ([0, 1, 2, 3], [F(1, 8), F(3, 8), F(3, 8), F(1, 8)])]:
+                        ([-10, 0, 25], [F(1, 2), F(1, 4), F(1, 4)]), ([0, 1, 2, 3], [F(1, 8), F(3, 8), F(3, 8), F(1, 8)])]:
         Ex = sum(F(v) * p for v, p in zip(vals, probs))
         tab = " & ".join(nb(v) for v in vals)
         tp = " & ".join(fx(x) for x in probs)
@@ -612,6 +609,63 @@ def g1t_probas():
           "$p = \\dfrac{1}{3}$ ; $\\{X = 1\\}$ : « obtenir 3 ou 6 »")]
     for e, c, r in B:
         E.append(("application", "loi-de-bernoulli", e, c, r))
+    # h) indépendance de deux événements
+    PA, PB, PAB = "P(\\mathrm{A})", "P(\\mathrm{B})", "P(\\mathrm{A} \\cap \\mathrm{B})"
+    for pa, pb, pab in [(F(2, 5), F(1, 2), F(1, 5)), (F(3, 10), F(3, 5), F(3, 20))]:
+        ok = pa * pb == pab
+        E.append(("application", "independance",
+                  f"On donne ${PA} = {fx(pa)}$, ${PB} = {fx(pb)}$ et ${PAB} = {fx(pab)}$. Les événements $\\mathrm{{A}}$ et $\\mathrm{{B}}$ sont-ils indépendants ?",
+                  [f"${PA} \\times {PB} = {fx(pa)} \\times {fx(pb)} = {fx(pa * pb)}$.",
+                   f"{'On retrouve' if ok else 'Ce nombre est différent de'} ${PAB} = {fx(pab)}$ : "
+                   + ("$\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants." if ok else "$\\mathrm{A}$ et $\\mathrm{B}$ ne sont pas indépendants.")],
+                  "Oui, ils sont indépendants" if ok else "Non, ils ne sont pas indépendants"))
+    E.append(("intermediaire", "independance",
+              "$\\mathrm{A}$ et $\\mathrm{B}$ sont deux événements indépendants, avec $P(\\mathrm{A}) = 0{,}7$ et $P(\\mathrm{B}) = 0{,}2$. Calculer $P(\\mathrm{A} \\cap \\mathrm{B})$, puis $P_{\\mathrm{A}}(\\mathrm{B})$.",
+              ["Les événements sont indépendants : $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}7 \\times 0{,}2 = 0{,}14$.",
+               "Savoir que $\\mathrm{A}$ est réalisé ne change pas la probabilité de $\\mathrm{B}$ : $P_{\\mathrm{A}}(\\mathrm{B}) = P(\\mathrm{B}) = 0{,}2$.",
+               "Vérification : $\\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})} = \\dfrac{0{,}14}{0{,}7} = 0{,}2$."],
+              "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}14$ et $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}2$"))
+    for nomB, defB, issuesB, inter in [("B", "« le résultat est supérieur ou égal à 5 »", [5, 6], [6]),
+                                       ("C", "« le résultat est inférieur ou égal à 3 »", [1, 2, 3], [2])]:
+        pb, pab = F(len(issuesB), 6), F(len(inter), 6)
+        ok = F(1, 2) * pb == pab
+        E.append(("intermediaire", "independance",
+                  f"On lance un dé équilibré à six faces. On note $\\mathrm{{A}}$ l'événement « le résultat est pair » et $\\mathrm{{{nomB}}}$ l'événement {defB}. Les événements $\\mathrm{{A}}$ et $\\mathrm{{{nomB}}}$ sont-ils indépendants ?",
+                  [f"$\\mathrm{{A}} = \\{{2, 4, 6\\}}$ et $\\mathrm{{{nomB}}} = \\{{{', '.join(map(str, issuesB))}\\}}$ : $P(\\mathrm{{A}}) = \\dfrac{{1}}{{2}}$ et $P(\\mathrm{{{nomB}}}) = {fl(pb)}$.",
+                   f"$\\mathrm{{A}} \\cap \\mathrm{{{nomB}}} = \\{{{', '.join(map(str, inter))}\\}}$, donc $P(\\mathrm{{A}} \\cap \\mathrm{{{nomB}}}) = {fl(pab)}$.",
+                   f"$P(\\mathrm{{A}}) \\times P(\\mathrm{{{nomB}}}) = \\dfrac{{1}}{{2}} \\times {fl(pb)} = {fl(F(1, 2) * pb)}$"
+                   + (f" : on retrouve $P(\\mathrm{{A}} \\cap \\mathrm{{{nomB}}})$, les événements sont indépendants." if ok else
+                      f", différent de ${fl(pab)}$ : les événements ne sont pas indépendants.")],
+                  "Oui, ils sont indépendants" if ok else "Non, ils ne sont pas indépendants"))
+    E.append(("approfondissement", "independance",
+              "Dans un lycée, $40\\,\\%$ des élèves sont internes. $30\\,\\%$ des internes et $30\\,\\%$ des externes pratiquent un sport en club. On choisit un élève au hasard ; on note $\\mathrm{I}$ l'événement « l'élève est interne » et $\\mathrm{S}$ l'événement « l'élève pratique un sport en club ». Calculer $P(\\mathrm{S})$, puis dire si $\\mathrm{I}$ et $\\mathrm{S}$ sont indépendants.",
+              ["Formule des probabilités totales : $P(\\mathrm{S}) = P(\\mathrm{I}) \\times P_{\\mathrm{I}}(\\mathrm{S}) + P(\\overline{\\mathrm{I}}) \\times P_{\\overline{\\mathrm{I}}}(\\mathrm{S}) = 0{,}4 \\times 0{,}3 + 0{,}6 \\times 0{,}3 = 0{,}12 + 0{,}18 = 0{,}3$.",
+               "$P_{\\mathrm{I}}(\\mathrm{S}) = 0{,}3 = P(\\mathrm{S})$ : savoir que l'élève est interne ne change pas la probabilité qu'il pratique un sport en club.",
+               "$\\mathrm{I}$ et $\\mathrm{S}$ sont indépendants."],
+              "$P(\\mathrm{S}) = 0{,}3$ ; $\\mathrm{I}$ et $\\mathrm{S}$ sont indépendants"))
+    # i) formule des probabilités totales
+    T = [("application", "Une usine fabrique $70\\,\\%$ de ses pièces sur la machine 1 et le reste sur la machine 2. $2\\,\\%$ des pièces de la machine 1 et $4\\,\\%$ des pièces de la machine 2 sont défectueuses. On prend une pièce au hasard ; on note $\\mathrm{M}$ l'événement « la pièce vient de la machine 1 » et $\\mathrm{D}$ l'événement « la pièce est défectueuse ». Calculer $P(\\mathrm{D})$.",
+          "M", "D", F(7, 10), F(1, 50), F(1, 25)),
+         ("application", "Il pleut un jour donné avec une probabilité de $0{,}3$. S'il pleut, le bus est en retard avec une probabilité de $0{,}4$ ; s'il ne pleut pas, avec une probabilité de $0{,}1$. On note $\\mathrm{A}$ l'événement « il pleut » et $\\mathrm{R}$ l'événement « le bus est en retard ». Calculer $P(\\mathrm{R})$.",
+          "A", "R", F(3, 10), F(2, 5), F(1, 10)),
+         ("intermediaire", "Une maladie touche $5\\,\\%$ d'une population. Un test est positif chez $98\\,\\%$ des personnes malades et chez $3\\,\\%$ des personnes non malades. On choisit une personne au hasard ; on note $\\mathrm{M}$ l'événement « la personne est malade » et $\\mathrm{T}$ l'événement « le test est positif ». Calculer $P(\\mathrm{T})$.",
+          "M", "T", F(1, 20), F(49, 50), F(3, 100)),
+         ("intermediaire", "Dans un lycée, $55\\,\\%$ des élèves sont des filles. $20\\,\\%$ des filles et $30\\,\\%$ des garçons jouent d'un instrument de musique. On choisit un élève au hasard ; on note $\\mathrm{F}$ l'événement « l'élève est une fille » et $\\mathrm{J}$ l'événement « l'élève joue d'un instrument ». Calculer $P(\\mathrm{J})$.",
+          "F", "J", F(11, 20), F(1, 5), F(3, 10))]
+    for diff, txt, a, b, pa, pba, pbna in T:
+        pb = pa * pba + (1 - pa) * pbna
+        A, Ab, B = f"\\mathrm{{{a}}}", f"\\overline{{\\mathrm{{{a}}}}}", f"\\mathrm{{{b}}}"
+        E.append((diff, "probabilites-totales", txt,
+                  [f"Arbre : $P({A}) = {fx(pa)}$, $P({Ab}) = {fx(1 - pa)}$, $P_{{{A}}}({B}) = {fx(pba)}$ et $P_{{{Ab}}}({B}) = {fx(pbna)}$.",
+                   f"Deux chemins mènent à ${B}$ : $P({B}) = P({A}) \\times P_{{{A}}}({B}) + P({Ab}) \\times P_{{{Ab}}}({B})$.",
+                   f"$P({B}) = {fx(pa)} \\times {fx(pba)} + {fx(1 - pa)} \\times {fx(pbna)} = {fx(pa * pba)} + {fx((1 - pa) * pbna)} = {fx(pb)}$."],
+                  f"$P({B}) = {fx(pb)}$"))
+    E.append(("approfondissement", "probabilites-totales",
+              "On sait que $P(\\mathrm{A}) = 0{,}6$, $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}5$ et $P(\\mathrm{B}) = 0{,}42$. Calculer $P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$.",
+              ["Formule des probabilités totales : $P(\\mathrm{B}) = P(\\mathrm{A}) \\times P_{\\mathrm{A}}(\\mathrm{B}) + P(\\overline{\\mathrm{A}}) \\times P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$.",
+               "$0{,}42 = 0{,}6 \\times 0{,}5 + 0{,}4 \\times P_{\\overline{\\mathrm{A}}}(\\mathrm{B})$, soit $0{,}4 \\times P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}42 - 0{,}3 = 0{,}12$.",
+               "$P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = \\dfrac{0{,}12}{0{,}4} = 0{,}3$."],
+              "$P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}3$"))
     return _fin(E)
 
 
@@ -1512,8 +1566,7 @@ def _cmp(u, v):
 def g2_reference():
     E = []
     # a) fonction carré : comparer
-    for a, b in [(F(-32, 10), F(-27, 10)), (F(15, 10), F(16, 10)), (-4, 3), (F(-1, 2), F(-1, 3)), (F(7, 10), F(-9, 10)),
-                 (-5, -6), (F(21, 10), F(19, 10))]:
+    for a, b in [(F(-32, 10), F(-27, 10)), (F(15, 10), F(16, 10)), (-4, 3), (F(-1, 2), F(-1, 3)), (F(7, 10), F(-9, 10))]:
         A, B = F(a) ** 2, F(b) ** 2
         if a < 0 and b < 0:
             j = f"La fonction carré est décroissante sur $]-\\infty\\,;0]$ : elle inverse l'ordre. Comme ${fx(min(a, b))} < {fx(max(a, b))}$, on a ${pw(min(a, b))}^2 > {pw(max(a, b))}^2$."
@@ -1526,7 +1579,7 @@ def g2_reference():
                   [j, f"${pw(a)}^2 = {fx(A)}$ et ${pw(b)}^2 = {fx(B)}$."],
                   f"${pw(a)}^2 {_cmp(A, B)} {pw(b)}^2$"))
     # b) fonction inverse
-    for a, b in [(3, 7), (F(-1, 2), F(-1, 4)), (F(25, 10), F(26, 10)), (-5, -2), (F(1, 10), F(1, 100)), (2026, 2027)]:
+    for a, b in [(3, 7), (F(-1, 2), F(-1, 4)), (-5, -2), (F(1, 10), F(1, 100))]:
         A, B = 1 / F(a), 1 / F(b)
         inter = "$]0\\,;+\\infty[$" if a > 0 else "$]-\\infty\\,;0[$"
         E.append(("application", "fonction-inverse",
@@ -1540,7 +1593,7 @@ def g2_reference():
                "$-1$ et $1$ ne sont pas dans le même intervalle : en fait $\\dfrac{1}{-1} = -1 < 1 = \\dfrac{1}{1}$."],
               "Raisonnement faux : $\\dfrac{1}{-1} < \\dfrac{1}{1}$"))
     # c) racine carrée
-    for a, b in [(7, 5), (F(3, 10), F(29, 100)), (50, 49), (2, F(19, 10))]:
+    for a, b in [(7, 5), (F(3, 10), F(29, 100)), (50, 49)]:
         E.append(("application", "fonction-racine",
                   f"Comparer $\\sqrt{{{fx(a)}}}$ et $\\sqrt{{{fx(b)}}}$.",
                   ["La fonction racine carrée est croissante sur $[0\\,;+\\infty[$ : elle conserve l'ordre.",
@@ -1558,7 +1611,7 @@ def g2_reference():
                   ["La fonction cube est croissante sur $\\mathbb{R}$ tout entier : elle conserve l'ordre.",
                    f"Comme ${fx(min(a, b))} < {fx(max(a, b))}$, on a ${pw(min(a, b))}^3 < {pw(max(a, b))}^3$."],
                   f"${pw(a)}^3 {_cmp(F(a), F(b))} {pw(b)}^3$"))
-    for k in (-8, 125, F(1, 27)):
+    for k in (-8, F(1, 27)):
         r = F(round(abs(F(k).numerator) ** (1 / 3)) * (1 if k > 0 else -1), round(F(k).denominator ** (1 / 3)))
         assert r ** 3 == k
         E.append(("intermediaire", "fonction-cube",
@@ -1567,7 +1620,7 @@ def g2_reference():
                    f"${pw(r)}^3 = {fx(k)}$."],
                   f"$S = \\{{{fx(r)}\\}}$"))
     # e) affine
-    for (xa, ya), (xb, yb) in [((1, 5), (3, 11)), ((-2, 4), (2, -4)), ((0, 3), (4, 3)), ((2, -1), (6, 1)), ((-1, -5), (1, 3))]:
+    for (xa, ya), (xb, yb) in [((1, 5), (3, 11)), ((-2, 4), (2, -4)), ((0, 3), (4, 3)), ((-1, -5), (1, 3))]:
         a = F(yb - ya, xb - xa)
         b = ya - a * xa
         sens = "croissante" if a > 0 else ("décroissante" if a < 0 else "constante")
@@ -1590,7 +1643,6 @@ def g2_reference():
          ("x^2 = -4", "Un carré est toujours positif ou nul : aucune solution.", "$S = \\varnothing$"),
          ("x^2 = 7", "Deux solutions opposées.", "$S = \\{-\\sqrt{7}\\,;\\sqrt{7}\\}$"),
          ("\\dfrac{1}{x} = 4", "On a $x \\neq 0$ et $x = \\dfrac{1}{4}$.", "$S = \\{0{,}25\\}$"),
-         ("\\dfrac{1}{x} = -\\dfrac{2}{3}", "On a $x \\neq 0$ et $x = -\\dfrac{3}{2}$.", "$S = \\{-1{,}5\\}$"),
          ("\\sqrt{x} = 6", "Pour $x \\geqslant 0$ : $\\sqrt{x} = 6 \\iff x = 6^2 = 36$.", "$S = \\{36\\}$"),
          ("\\sqrt{x} = -2", "Une racine carrée est toujours positive ou nulle : aucune solution.", "$S = \\varnothing$")]
     for eq, c, r in Q:
@@ -1603,6 +1655,31 @@ def g2_reference():
          ("x^3 > 8", "La fonction cube est croissante et $2^3 = 8$ : $x > 2$.", "$S = ]2\\,;+\\infty[$")]
     for ineq, c, r in I:
         E.append(("approfondissement", "inequation-reference", f"Résoudre dans $\\mathbb{{R}}$ l'inéquation ${ineq}$.", [c], r))
+    # g bis) fonction valeur absolue
+    VA = [("application", "Calculer $|-7{,}2|$.",
+           ["$-7{,}2 < 0$, donc $|-7{,}2| = -(-7{,}2) = 7{,}2$ : c'est la distance entre $-7{,}2$ et $0$."], "$7{,}2$"),
+          ("application", "Calculer $|3 - 8|$.",
+           ["$3 - 8 = -5$ et $|-5| = 5$.", "C'est la distance entre les nombres $3$ et $8$ sur la droite numérique."], "$5$"),
+          ("application", "Comparer $|-3|$ et $|-2|$ en utilisant le sens de variation de la fonction valeur absolue.",
+           ["La fonction valeur absolue est décroissante sur $]-\\infty\\,;0]$ : elle inverse l'ordre.",
+            "Comme $-3 < -2$, on a $|-3| > |-2|$ (en effet $3 > 2$)."], "$|-3| > |-2|$"),
+          ("application", "Donner le sens de variation de la fonction valeur absolue sur $\\mathbb{R}$ et son minimum.",
+           ["$|x| = -x$ si $x < 0$ et $|x| = x$ si $x \\geqslant 0$ : la courbe est formée de deux demi-droites d'origine $\\mathrm{O}$ (forme d'un « V »).",
+            "La fonction est décroissante sur $]-\\infty\\,;0]$, croissante sur $[0\\,;+\\infty[$ ; son minimum est $0$, atteint en $0$."],
+           "Décroissante sur $]-\\infty\\,;0]$, croissante sur $[0\\,;+\\infty[$, minimum $0$ atteint en $x = 0$"),
+          ("intermediaire", "Résoudre dans $\\mathbb{R}$ l'équation $|x| = 3$.",
+           ["Les nombres situés à la distance $3$ de $0$ sont $3$ et $-3$."], "$S = \\{-3\\,;3\\}$"),
+          ("intermediaire", "Résoudre dans $\\mathbb{R}$ l'équation $|x| = -2$.",
+           ["Une valeur absolue est toujours positive ou nulle : elle ne peut pas valoir $-2$."], "$S = \\varnothing$"),
+          ("approfondissement", "Résoudre dans $\\mathbb{R}$ l'inéquation $|x| \\leqslant 2$.",
+           ["Les nombres dont la distance à $0$ est au plus $2$ sont compris entre $-2$ et $2$.",
+            "Graphiquement : ce sont les points de la courbe en « V » situés sous la droite d'équation $y = 2$ (ou sur elle)."],
+           "$S = [-2\\,;2]$"),
+          ("approfondissement", "Résoudre dans $\\mathbb{R}$ l'inéquation $|x| > 5$.",
+           ["Les nombres dont la distance à $0$ est strictement supérieure à $5$ : $x < -5$ ou $x > 5$."],
+           "$S = ]-\\infty\\,;-5[ \\cup ]5\\,;+\\infty[$")]
+    for d, e, c, r in VA:
+        E.append((d, "fonction-valeur-absolue", e, c, r))
     # h) cours
     C = [("Vrai ou faux : la fonction carré est croissante sur $\\mathbb{R}$.",
           ["Faux : elle est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$.",
@@ -1771,7 +1848,7 @@ def _accord(n, sing, plur):
 def g2_probas():
     E = []
     # a) urnes
-    U = [((5, 3, 2), 0), ((4, 6, 0), 1), ((7, 2, 1), 2), ((3, 3, 4), 0), ((1, 8, 3), 0), ((6, 5, 9), 2), ((2, 2, 6), 1), ((10, 4, 6), 1)]
+    U = [((5, 3, 2), 0), ((4, 6, 0), 1), ((7, 2, 1), 2), ((3, 3, 4), 0), ((1, 8, 3), 0)]
     noms = [("rouge", "rouges"), ("verte", "vertes"), ("bleue", "bleues")]
     for (r, v, b), k in U:
         cpt = [r, v, b]
@@ -1788,9 +1865,7 @@ def g2_probas():
          ("On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un nombre premier ?", "Issues favorables : 2, 3 et 5.", F(3, 6)),
          ("On lance un dé équilibré à 12 faces numérotées de 1 à 12. Quelle est la probabilité d'obtenir un nombre supérieur ou égal à 10 ?", "Issues favorables : 10, 11 et 12.", F(3, 12)),
          ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer un cœur ?", "Il y a 8 cœurs parmi 32 cartes.", F(8, 32)),
-         ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer un roi ?", "Il y a 4 rois parmi 32 cartes.", F(4, 32)),
-         ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer une figure (valet, dame ou roi) ?", "Il y a $3 \\times 4 = 12$ figures.", F(12, 32)),
-         ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer un as rouge ?", "Il y a 2 as rouges (cœur et carreau).", F(2, 32))]
+         ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer un roi ?", "Il y a 4 rois parmi 32 cartes.", F(4, 32))]
     for e, c, p in D:
         E.append(("application", "des-et-cartes", e,
                   ["Le dé est équilibré : ses faces ont la même probabilité d'apparaître (équiprobabilité)." if " dé " in e
@@ -1798,14 +1873,13 @@ def g2_probas():
                   f"${fl(p)}$"))
     # c) événement contraire
     for pa, ctx in [(F(3, 10), "il pleuve demain"), (F(7, 100), "un composant soit défectueux"), (F(5, 8), "un client achète un dessert"),
-                    (F(45, 100), "un élève vienne en bus"), (F(1, 6), "on obtienne 6 avec un dé"), (F(2, 9), "une graine ne germe pas"),
-                    (F(83, 100), "un vol arrive à l'heure")]:
+                    (F(45, 100), "un élève vienne en bus")]:
         E.append(("application", "evenement-contraire",
                   f"La probabilité qu'{ctx} est ${fx(pa)}$. Quelle est la probabilité de l'événement contraire ?",
                   ["$P(\\overline{\\mathrm{A}}) = 1 - P(\\mathrm{A})$.", f"$1 - {fx(pa)} = {fx(1 - pa)}$."],
                   f"${fx(1 - pa)}$"))
     # d) réunion et intersection
-    for pa, pb, pab in [(F(1, 2), F(3, 10), F(1, 10)), (F(4, 10), F(35, 100), F(15, 100)), (F(1, 3), F(1, 4), F(1, 12)), (F(6, 10), F(5, 10), F(3, 10))]:
+    for pa, pb, pab in [(F(1, 2), F(3, 10), F(1, 10)), (F(1, 3), F(1, 4), F(1, 12))]:
         E.append(("intermediaire", "reunion-intersection",
                   f"$P(\\mathrm{{A}}) = {fx(pa)}$, $P(\\mathrm{{B}}) = {fx(pb)}$ et $P(\\mathrm{{A}} \\cap \\mathrm{{B}}) = {fx(pab)}$. Calculer $P(\\mathrm{{A}} \\cup \\mathrm{{B}})$.",
                   ["$P(\\mathrm{A} \\cup \\mathrm{B}) = P(\\mathrm{A}) + P(\\mathrm{B}) - P(\\mathrm{A} \\cap \\mathrm{B})$.",
@@ -1830,11 +1904,8 @@ def g2_probas():
     # e) deux dés (dénombrement réel des 36 issues)
     issues = list(_produit(range(1, 7), repeat=2))
     for txt, cond in [("la somme des deux dés vaut 7", lambda a, b: a + b == 7),
-                      ("la somme des deux dés vaut 10", lambda a, b: a + b == 10),
                       ("on obtient un double", lambda a, b: a == b),
-                      ("le produit des deux dés vaut 12", lambda a, b: a * b == 12),
                       ("la somme des deux dés est supérieure ou égale à 10", lambda a, b: a + b >= 10),
-                      ("les deux nombres sont pairs", lambda a, b: a % 2 == 0 and b % 2 == 0),
                       ("l'écart entre les deux nombres vaut 2", lambda a, b: abs(a - b) == 2)]:
         fav = [(a, b) for a, b in issues if cond(a, b)]
         p = F(len(fav), 36)
@@ -1872,13 +1943,80 @@ def g2_probas():
     E.append(("intermediaire", "loi-de-probabilite",
               "Une probabilité calculée vaut $1{,}2$. Qu'en conclure ?",
               ["Une probabilité est toujours comprise entre $0$ et $1$.", "Le calcul contient une erreur."], "Il y a une erreur"))
+    # h) probabilité conditionnelle (tableau croisé d'effectifs, tirage au hasard d'un individu)
+    def tableau(lig, col, eff):
+        tl = [sum(r) for r in eff]
+        tc = [sum(c) for c in zip(*eff)]
+        t = " & ".join(f"\\text{{{c}}}" for c in col + ["Total"])
+        corps = " \\\\ ".join(f"\\text{{{l}}} & " + " & ".join(nb(x) for x in r + [tl[i]]) for i, (l, r) in enumerate(zip(lig, eff)))
+        tot = "\\text{Total} & " + " & ".join(nb(x) for x in tc + [sum(tl)])
+        return f"$\\begin{{array}}{{l|c|c|c}} & {t} \\\\ \\hline {corps} \\\\ \\hline {tot} \\end{{array}}$"
+    T1 = tableau(["Filles", "Garçons"], ["Sport en club", "Pas de sport en club"], [[252, 168], [209, 171]])
+    T2 = tableau(["Vaccinés", "Non vaccinés"], ["Grippe", "Pas de grippe"], [[24, 456], [126, 594]])
+    E.append(("intermediaire", "probabilite-conditionnelle",
+              f"Le tableau donne la répartition des $800$ élèves d'un lycée : {T1}. On choisit un élève au hasard. On note F « l'élève est une fille » et S « l'élève pratique un sport en club ». Calculer $P_{{\\mathrm{{F}}}}(\\mathrm{{S}})$.",
+              ["On se restreint aux filles : il y en a $420$, dont $252$ pratiquent un sport en club.",
+               "$P_{\\mathrm{F}}(\\mathrm{S}) = \\dfrac{252}{420} = 0{,}6$."],
+              "$0{,}6$"))
+    E.append(("intermediaire", "probabilite-conditionnelle",
+              f"Le tableau donne la répartition des $800$ élèves d'un lycée : {T1}. On choisit un élève au hasard. On note F « l'élève est une fille » et S « l'élève pratique un sport en club ». Calculer $P_{{\\mathrm{{S}}}}(\\mathrm{{F}})$, arrondie au centième.",
+              ["On se restreint aux élèves qui pratiquent un sport en club : il y en a $461$, dont $252$ filles.",
+               f"$P_{{\\mathrm{{S}}}}(\\mathrm{{F}}) = \\dfrac{{252}}{{461}} \\approx {nb(arr(252 / 461, 2), 2, True)}$.",
+               "Attention : $P_{\\mathrm{S}}(\\mathrm{F})$ n'est pas égale à $P_{\\mathrm{F}}(\\mathrm{S}) = 0{,}6$."],
+              f"${nb(arr(252 / 461, 2), 2, True)}$"))
+    E.append(("intermediaire", "probabilite-conditionnelle",
+              f"Dans une entreprise de $1\\,200$ salariés, on a relevé pendant un hiver : {T2}. On choisit un salarié au hasard. On note V « le salarié est vacciné » et G « le salarié a eu la grippe ». Calculer $P_{{\\mathrm{{V}}}}(\\mathrm{{G}})$.",
+              ["On se restreint aux $480$ salariés vaccinés, dont $24$ ont eu la grippe.",
+               "$P_{\\mathrm{V}}(\\mathrm{G}) = \\dfrac{24}{480} = 0{,}05$."],
+              "$0{,}05$"))
+    E.append(("intermediaire", "probabilite-conditionnelle",
+              f"Dans une entreprise de $1\\,200$ salariés, on a relevé pendant un hiver : {T2}. On choisit au hasard un salarié qui a eu la grippe. Quelle est la probabilité qu'il soit vacciné ?",
+              ["On cherche $P_{\\mathrm{G}}(\\mathrm{V})$ : on se restreint aux $24 + 126 = 150$ salariés qui ont eu la grippe.",
+               "$P_{\\mathrm{G}}(\\mathrm{V}) = \\dfrac{24}{150} = 0{,}16$."],
+              "$0{,}16$"))
+    for pa, pab in [(F(4, 10), F(1, 10)), (F(1, 2), F(35, 100))]:
+        E.append(("application", "probabilite-conditionnelle",
+                  f"On sait que $P(\\mathrm{{A}}) = {fx(pa)}$ et $P(\\mathrm{{A}} \\cap \\mathrm{{B}}) = {fx(pab)}$. Calculer $P_{{\\mathrm{{A}}}}(\\mathrm{{B}})$.",
+                  ["$P_{\\mathrm{A}}(\\mathrm{B}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})}$ (avec $P(\\mathrm{A}) \\neq 0$).",
+                   f"$P_{{\\mathrm{{A}}}}(\\mathrm{{B}}) = \\dfrac{{{fx(pab)}}}{{{fx(pa)}}} = {fx(pab / pa)}$."],
+                  f"${fx(pab / pa)}$"))
+    # i) arbres pondérés
+    for pa, pab in [(F(3, 10), F(6, 10)), (F(7, 10), F(4, 10))]:
+        E.append(("application", "arbre-pondere",
+                  f"Dans un arbre pondéré, la branche vers A porte $P(\\mathrm{{A}}) = {fx(pa)}$ et la branche de A vers B porte $P_{{\\mathrm{{A}}}}(\\mathrm{{B}}) = {fx(pab)}$. Calculer $P(\\mathrm{{A}} \\cap \\mathrm{{B}})$.",
+                  ["La probabilité d'un chemin est le produit des probabilités de ses branches.",
+                   f"$P(\\mathrm{{A}} \\cap \\mathrm{{B}}) = P(\\mathrm{{A}}) \\times P_{{\\mathrm{{A}}}}(\\mathrm{{B}}) = {fx(pa)} \\times {fx(pab)} = {fx(pa * pab)}$."],
+                  f"${fx(pa * pab)}$"))
+    E.append(("intermediaire", "arbre-pondere",
+              "Dans un arbre pondéré, $P(\\mathrm{A}) = 0{,}45$ et $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}2$. Calculer $P_{\\mathrm{A}}\\left(\\overline{\\mathrm{B}}\\right)$, puis $P\\left(\\mathrm{A} \\cap \\overline{\\mathrm{B}}\\right)$.",
+              ["Les probabilités issues d'un même nœud ont pour somme $1$ : $P_{\\mathrm{A}}\\left(\\overline{\\mathrm{B}}\\right) = 1 - 0{,}2 = 0{,}8$.",
+               "Chemin A puis $\\overline{\\mathrm{B}}$ : $P\\left(\\mathrm{A} \\cap \\overline{\\mathrm{B}}\\right) = 0{,}45 \\times 0{,}8 = 0{,}36$."],
+              "$P_{\\mathrm{A}}\\left(\\overline{\\mathrm{B}}\\right) = 0{,}8$ et $P\\left(\\mathrm{A} \\cap \\overline{\\mathrm{B}}\\right) = 0{,}36$"))
+    E.append(("intermediaire", "arbre-pondere",
+              "On lance une pièce équilibrée. Si on obtient pile, on tire une boule dans une urne contenant 3 boules rouges et 1 boule noire ; si on obtient face, on tire une boule dans une urne contenant 1 boule rouge et 4 boules noires. Quelle est la probabilité d'obtenir face puis une boule rouge ?",
+              ["Arbre : première étape pile ou face ($0{,}5$ chacune), puis la couleur de la boule.",
+               "Sachant que l'on a obtenu face, la probabilité de tirer une boule rouge est $\\dfrac{1}{5} = 0{,}2$.",
+               "Chemin face puis rouge : $0{,}5 \\times 0{,}2 = 0{,}1$."],
+              "$0{,}1$"))
+    E.append(("approfondissement", "arbre-pondere",
+              "Une urne contient 3 boules rouges et 2 boules vertes. On tire une boule, on ne la remet pas, puis on tire une deuxième boule. À l'aide d'un arbre, calculer la probabilité d'obtenir deux boules rouges.",
+              ["Premier tirage : $P(\\mathrm{R}_1) = \\dfrac{3}{5}$.",
+               "Sachant que la première est rouge, il reste 2 rouges sur 4 boules : $P_{\\mathrm{R}_1}(\\mathrm{R}_2) = \\dfrac{2}{4}$.",
+               "$P(\\mathrm{R}_1 \\cap \\mathrm{R}_2) = \\dfrac{3}{5} \\times \\dfrac{2}{4} = \\dfrac{6}{20} = \\dfrac{3}{10}$."],
+              "$\\dfrac{3}{10}$"))
+    # j) loi des grands nombres
+    E.append(("intermediaire", "loi-des-grands-nombres",
+              "Avec Python, on simule $10\\,000$ lancers d'un dé équilibré : la fréquence d'apparition du 6 est $0{,}1689$. Ce résultat est-il cohérent avec la probabilité d'obtenir 6 ?",
+              ["La probabilité d'obtenir 6 est $\\dfrac{1}{6} \\approx 0{,}167$.",
+               "Loi des grands nombres : lorsque $n$ est grand, sauf exception, la fréquence observée est proche de la probabilité. Ici $0{,}1689$ est proche de $0{,}167$."],
+              "Oui, car $0{,}1689$ est proche de $\\dfrac{1}{6} \\approx 0{,}167$"))
     # h) problèmes
     E.append(("probleme", "probleme",
               "Dans un lycée de $400$ élèves, $240$ sont demi-pensionnaires, $150$ font du sport à l'AS et $90$ sont à la fois demi-pensionnaires et à l'AS. On choisit un élève au hasard. Quelle est la probabilité qu'il soit demi-pensionnaire ou à l'AS ?",
               ["$P(\\mathrm{D}) = \\dfrac{240}{400}$, $P(\\mathrm{S}) = \\dfrac{150}{400}$, $P(\\mathrm{D} \\cap \\mathrm{S}) = \\dfrac{90}{400}$.",
                "$P(\\mathrm{D} \\cup \\mathrm{S}) = \\dfrac{240 + 150 - 90}{400} = \\dfrac{300}{400} = 0{,}75$."],
               "$0{,}75$"))
-    E.append(("probleme", "probleme",
+    E.append(("probleme", "loi-des-grands-nombres",
               "Sur $1\\,000$ lancers d'une punaise, elle est tombée $620$ fois sur le dos. Estimer la probabilité qu'elle tombe sur le dos. Pourquoi est-ce seulement une estimation ?",
               ["La fréquence observée est $\\dfrac{620}{1\\,000} = 0{,}62$.",
                "La fréquence fluctue d'un échantillon à l'autre ; elle se rapproche de la probabilité quand le nombre de lancers augmente."],
@@ -1891,6 +2029,12 @@ def g2_probas():
               "Une famille a deux enfants ; on suppose que chaque naissance donne une fille ou un garçon avec la même probabilité. Quelle est la probabilité que les deux enfants soient de sexes différents ?",
               ["Issues équiprobables : FF, FG, GF, GG.", "Deux issues conviennent : FG et GF, donc $P = \\dfrac{2}{4} = \\dfrac{1}{2}$."],
               "$\\dfrac{1}{2}$"))
+    E.append(("probleme", "probleme",
+              "Une maladie touche $1\\,\\%$ d'une population de $5\\,000$ personnes. Un test de dépistage est positif chez $98\\,\\%$ des malades et chez $4\\,\\%$ des personnes non malades. On note M « la personne est malade » et T « le test est positif ». Calculer $P_{\\mathrm{T}}(\\mathrm{M})$, arrondie au centième, et la comparer à $P_{\\mathrm{M}}(\\mathrm{T})$.",
+              ["Malades : $1\\,\\%$ de $5\\,000$, soit $50$, dont $98\\,\\%$ testés positifs : $49$.",
+               "Non malades : $4\\,950$, dont $4\\,\\%$ testés positifs (faux positifs) : $198$. Tests positifs : $49 + 198 = 247$.",
+               f"$P_{{\\mathrm{{T}}}}(\\mathrm{{M}}) = \\dfrac{{49}}{{247}} \\approx {nb(arr(49 / 247, 2), 2, True)}$, alors que $P_{{\\mathrm{{M}}}}(\\mathrm{{T}}) = 0{{,}}98$ : il ne faut pas inverser le conditionnement."],
+              f"$P_{{\\mathrm{{T}}}}(\\mathrm{{M}}) \\approx {nb(arr(49 / 247, 2), 2, True)}$, bien plus petite que $P_{{\\mathrm{{M}}}}(\\mathrm{{T}}) = 0{{,}}98$"))
     return _fin(E)
 
 
@@ -1915,16 +2059,40 @@ def _serie(L):
 
 
 def g2_stats():
+    # Programme de seconde 2026 (docs/programme-seconde-2026.txt) : l. 664-673 (linéarité de la
+    # moyenne, écart type, ajout/suppression d'une valeur, séries regroupées en classes de même
+    # amplitude), l. 679-685 (capacités attendues), l. 698-702 (tableau croisé, fréquences
+    # conditionnelles et marginales).
     E = []
-    # a) moyenne
-    for L in [[12, 8, 15, 9, 16], [3, 7, 7, 10, 13, 2], [21, 18, 25, 19, 22, 23, 20], [F(145, 10), F(132, 10), F(158, 10), F(141, 10)]]:
+
+    def tab_classes(titre, bornes, eff, derniere_fermee=False):
+        cl = []
+        for k in range(len(eff)):
+            a, b = fx(F(bornes[k])), fx(F(bornes[k + 1]))
+            fin = "]" if (derniere_fermee and k == len(eff) - 1) else "["
+            cl.append(f"[{a}\\,;\\,{b}{fin}")
+        return (f"$\\begin{{array}}{{c|{'c' * len(eff)}}} \\text{{{titre}}} & {' & '.join(cl)} \\\\ \\hline "
+                f"\\text{{effectif}} & {' & '.join(map(str, eff))} \\end{{array}}$")
+
+    def classe(bornes, k):
+        return f"$[{fx(F(bornes[k]))}\\,;\\,{fx(F(bornes[k + 1]))}[$"
+
+    def cumuls(eff):
+        c, s = [], 0
+        for n in eff:
+            s += n
+            c.append(s)
+        return c
+
+    # a) moyenne (4)
+    for L in [[12, 8, 15, 9, 16], [21, 18, 25, 19, 22, 23, 20]]:
         m = sum(F(x) for x in L) / len(L)
         E.append(("application", "moyenne",
                   f"Calculer la moyenne de la série : ${_serie(L)}$.",
                   [f"On additionne les {len(L)} valeurs : ${fx(sum(F(x) for x in L))}$.",
                    f"$\\bar x = \\dfrac{{{fx(sum(F(x) for x in L))}}}{{{len(L)}}} {_egal_approx(m)}$."],
                   f"$\\bar x {_egal_approx(m)}$"))
-    for vals, eff in [([8, 10, 12, 14], [3, 5, 8, 4]), ([0, 1, 2, 3, 4], [5, 9, 12, 3, 1]), ([15, 16, 17, 18], [6, 10, 3, 1]), ([1, 2, 3, 4, 5], [2, 4, 6, 5, 3])]:
+    for vals, eff in [([8, 10, 12, 14], [3, 5, 8, 4]), ([0, 1, 2, 3, 4], [5, 9, 12, 3, 1])]:
         N = sum(eff)
         m = F(sum(v * n for v, n in zip(vals, eff)), N)
         E.append(("application", "moyenne",
@@ -1932,9 +2100,8 @@ def g2_stats():
                   [f"Effectif total : $N = {N}$.",
                    f"$\\bar x = \\dfrac{{{_somme_prod(vals, eff)}}}{{{N}}} {_egal_approx(m)}$."],
                   f"$\\bar x {_egal_approx(m)}$"))
-    # b) médiane
-    for L in [[12, 5, 9, 17, 3], [4, 11, 8, 2, 15, 7], [21, 30, 18, 25, 27, 19, 22], [9, 14, 11, 9, 20, 13, 16, 10], [3, 5, 8, 9, 40],
-              [101, 98, 105, 97, 110, 99], [F(15, 10), F(22, 10), F(18, 10), F(31, 10)], [7, 7, 8, 12, 12, 12, 15, 18, 20]]:
+    # b) médiane (4)
+    for L in [[12, 5, 9, 17, 3], [4, 11, 8, 2, 15, 7], [9, 14, 11, 9, 20, 13, 16, 10], [7, 7, 8, 12, 12, 12, 15, 18, 20]]:
         S = sorted(F(x) for x in L)
         n = len(S)
         me = _mediane(L)
@@ -1946,10 +2113,9 @@ def g2_stats():
                   f"Déterminer la médiane de la série : ${_serie(L)}$.",
                   [f"On range d'abord les valeurs : ${_serie(S)}$.", c2, f"$\\mathrm{{Me}} = {fx(me)}$."],
                   f"$\\mathrm{{Me}} = {fx(me)}$"))
-    # c) quartiles
+    # c) quartiles (4)
     for L in [[2, 5, 7, 8, 10, 12, 15, 18], [12, 3, 9, 15, 6, 11, 14, 7, 10, 5], [31, 25, 28, 40, 22, 35, 27, 30, 33],
-              [1, 3, 3, 4, 6, 6, 7, 9, 9, 10, 12, 15], [50, 42, 61, 38, 55, 47, 59], [8, 9, 9, 10, 11, 11, 12, 13, 14, 14, 15],
-              [100, 120, 95, 130, 110, 105]]:
+              [1, 3, 3, 4, 6, 6, 7, 9, 9, 10, 12, 15]]:
         q1, q3, r1, r3 = _quartiles(L)
         S = sorted(L)
         n = len(L)
@@ -1960,59 +2126,186 @@ def g2_stats():
                    f"$\\dfrac{{3N}}{{4}} = {fx(F(3 * n, 4))}$ : on prend le rang ${r3}$, donc $\\mathrm{{Q}}_3 = {fx(q3)}$.",
                    f"Écart interquartile : ${fx(q3)} - {fx(q1)} = {fx(q3 - q1)}$."],
                   f"$\\mathrm{{Q}}_1 = {fx(q1)}$ ; $\\mathrm{{Q}}_3 = {fx(q3)}$ ; écart interquartile ${fx(q3 - q1)}$"))
-    # d) étendue
-    for L in [[14, 9, 17, 6, 12], [F(-32, 10), F(15, 10), F(-8, 10), F(41, 10)], [1520, 1730, 1385, 1610], [98, 102, 99, 105, 101], [0, 25, 13, 7, 19, 22]]:
+    # d) étendue (2)
+    for L in [[14, 9, 17, 6, 12], [F(-32, 10), F(15, 10), F(-8, 10), F(41, 10)]]:
         e = max(F(x) for x in L) - min(F(x) for x in L)
         E.append(("application", "etendue",
                   f"Calculer l'étendue de la série : ${_serie(L)}$.",
                   [f"Valeur maximale : ${fx(max(F(x) for x in L))}$ ; valeur minimale : ${fx(min(F(x) for x in L))}$.",
                    f"Étendue : ${fx(max(F(x) for x in L))} - {par(min(F(x) for x in L)) if min(F(x) for x in L) < 0 else fx(min(F(x) for x in L))} = {fx(e)}$."],
                   f"${fx(e)}$"))
-    # e) fréquences
+    # e) fréquences (3)
     for n, N, ctx in [(12, 30, "Dans une classe de 30 élèves, 12 font du sport en club"), (45, 180, "Sur 180 personnes interrogées, 45 préfèrent le train"),
-                      (7, 25, "Sur 25 jours, il a plu 7 jours"), (318, 600, "Sur 600 votants, 318 ont voté oui"),
-                      (9, 40, "Sur 40 pièces contrôlées, 9 sont défectueuses"), (130, 520, "Sur 520 spectateurs, 130 ont moins de 18 ans")]:
+                      (7, 25, "Sur 25 jours, il a plu 7 jours")]:
         f = F(n, N)
         E.append(("application", "frequence",
                   f"{ctx}. Calculer la fréquence correspondante, en écriture décimale puis en pourcentage.",
                   [f"$f = \\dfrac{{{n}}}{{{N}}} = {fx(f)}$.", f"Soit ${fx(f * 100)}\\,\\%$."],
                   f"$f = {fx(f)}$, soit ${fx(f * 100)}\\,\\%$"))
-    # f) linéarité de la moyenne
+    # f) linéarité de la moyenne (4)
     for m, a, b, ctx, u in [(11, 1, 2, "On ajoute 2 points à toutes les notes d'un devoir dont la moyenne était 11.", ""),
                             (F(124, 10), F(11, 10), 0, "Toutes les notes, de moyenne 12,4, sont multipliées par 1,1.", ""),
                             (2000, F(102, 100), 0, "Tous les salaires d'une entreprise, de moyenne 2 000 €, augmentent de 2 %.", " €"),
-                            (20, F(9, 5), 32, "Des températures ont une moyenne de 20 °C. On les convertit en degrés Fahrenheit par $y = 1{,}8x + 32$.", " °F"),
-                            (35, 1, -5, "Les prix d'un rayon, de moyenne 35 €, baissent tous de 5 €.", " €"),
-                            (14, F(1, 2), 1, "Toutes les valeurs d'une série de moyenne 14 sont transformées par $y = 0{,}5x + 1$.", "")]:
+                            (20, F(9, 5), 32, "Des températures ont une moyenne de 20 °C. On les convertit en degrés Fahrenheit par $y = 1{,}8x + 32$.", " °F")]:
         y = a * m + b
         E.append(("intermediaire", "linearite-moyenne",
                   ctx + " Quelle est la nouvelle moyenne ?",
                   ["Si $y_i = ax_i + b$ pour toutes les valeurs, alors $\\bar y = a\\bar x + b$.",
                    f"$\\bar y = {fx(a)} \\times {fx(m)}{' ' + sg(b) if b else ''} = {fx(y)}$."],
                   f"${fx(y)}${u}"))
-    # g) problèmes
+    # g) écart type (6)
+    for vals, eff in [([2, 4, 5, 7, 9], [1, 3, 2, 1, 1]), ([8, 10, 12], [1, 2, 1]), ([10, 12, 16], [2, 2, 1]), ([0, 1, 2, 3, 4], [1, 4, 6, 4, 1])]:
+        N = sum(eff)
+        m = F(sum(v * n for v, n in zip(vals, eff)), N)
+        var = sum(n * (v - m) ** 2 for v, n in zip(vals, eff)) / N
+        rac = math.isqrt(var.numerator) ** 2 == var.numerator and math.isqrt(var.denominator) ** 2 == var.denominator
+        s = F(math.isqrt(var.numerator), math.isqrt(var.denominator)) if rac else None
+        brute = vals != [0, 1, 2, 3, 4]
+        if brute:
+            L = [v for v, n in zip(vals, eff) for _ in range(n)]
+            enonce = f"Calculer l'écart type $\\sigma$ de la série : ${_serie(L)}$."
+        else:
+            enonce = (f"Le tableau donne le nombre de buts marqués par match. Calculer l'écart type $\\sigma$ de cette série : "
+                      f"$\\begin{{array}}{{c|{'c' * len(vals)}}} \\text{{valeur}} & {' & '.join(map(str, vals))} \\\\ \\hline \\text{{effectif}} & {' & '.join(map(str, eff))} \\end{{array}}$")
+        carres = " + ".join((f"{n} \\times " if n > 1 else "") + f"({fx(v)} - {fx(m)})^2" for v, n in zip(vals, eff))
+        if rac:
+            fin = f"$\\sigma = \\sqrt{{{fx(var)}}} = {fx(s)}$."
+            rep = f"$\\sigma = {fx(s)}$"
+        else:
+            fin = f"$\\sigma = \\sqrt{{{fx(var)}}} \\approx {nb(math.sqrt(var), 2)}$."
+            rep = f"$\\sigma \\approx {nb(math.sqrt(var), 2)}$"
+        E.append(("intermediaire", "ecart-type", enonce,
+                  [f"Effectif total $N = {N}$ ; moyenne $\\bar x = {fx(m)}$.",
+                   f"Moyenne des carrés des écarts à la moyenne : $\\dfrac{{{carres}}}{{{N}}} = {fx(var)}$.",
+                   fin],
+                  rep))
+    E.append(("intermediaire", "ecart-type",
+              "À un même devoir, deux classes ont la même moyenne, $11$. L'écart type des notes vaut $2{,}1$ dans la classe A et $4{,}5$ dans la classe B. Quelle classe a les résultats les plus homogènes ?",
+              ["Les moyennes sont égales : on compare la dispersion autour de la moyenne.",
+               "L'écart type de la classe A est plus petit : ses notes sont plus resserrées autour de $11$."],
+              "La classe A"))
+    E.append(("approfondissement", "ecart-type",
+              "Une série de notes a pour moyenne $10{,}5$ et pour écart type $2{,}5$. On ajoute $3$ points à toutes les notes. Que deviennent la moyenne et l'écart type ?",
+              ["Par linéarité, la moyenne augmente aussi de $3$ : $\\bar y = 13{,}5$.",
+               "Chaque écart à la moyenne $(x_i + 3) - (\\bar x + 3) = x_i - \\bar x$ est inchangé : l'écart type reste $2{,}5$."],
+              "Moyenne $13{,}5$ ; écart type $2{,}5$"))
+    # h) séries regroupées en classes : moyenne (5)
+    for titre, bornes, eff, ferme, unite, ctx in [
+            ("taille (cm)", [150, 160, 170, 180, 190], [4, 10, 8, 3], False, " cm", "Les tailles des élèves d'une classe sont regroupées dans le tableau"),
+            ("durée (min)", [0, 10, 20, 30, 40], [12, 18, 7, 3], False, " min", "Les durées du trajet domicile-lycée des élèves d'une classe sont regroupées dans le tableau"),
+            ("note", [0, 5, 10, 15, 20], [2, 9, 14, 5], True, "", "Les notes d'un devoir sont regroupées dans le tableau")]:
+        N = sum(eff)
+        cen = [F(bornes[k] + bornes[k + 1], 2) for k in range(len(eff))]
+        m = sum(c * n for c, n in zip(cen, eff)) / N
+        produits = " + ".join(f"{fx(c)} \\times {n}" for c, n in zip(cen, eff))
+        E.append(("application" if ferme is False else "intermediaire", "classes-moyenne",
+                  f"{ctx} : {tab_classes(titre, bornes, eff, ferme)}. En supposant la répartition uniforme dans chaque classe, calculer la moyenne de cette série.",
+                  ["Répartition uniforme : chaque classe est représentée par son centre, $" + " \\,;\\, ".join(fx(c) for c in cen) + "$.",
+                   f"$\\bar x = \\dfrac{{{produits}}}{{{N}}} = \\dfrac{{{fx(sum(c * n for c, n in zip(cen, eff)))}}}{{{N}}} {_egal_approx(m)}$."],
+                  f"$\\bar x {_egal_approx(m)}${unite}"))
+    moy = [24, 36, 43]
+    eff = [15, 25, 10]
+    m = F(sum(a * n for a, n in zip(moy, eff)), sum(eff))
+    E.append(("intermediaire", "classes-moyenne",
+              "Les salariés d'une entreprise sont répartis en trois classes d'âge. Dans la classe $[20\\,;\\,30[$, il y a $15$ salariés d'âge moyen $24$ ans ; dans $[30\\,;\\,40[$, $25$ salariés d'âge moyen $36$ ans ; dans $[40\\,;\\,50[$, $10$ salariés d'âge moyen $43$ ans. Calculer l'âge moyen des salariés.",
+              ["On fait la moyenne des moyennes de chaque classe, pondérée par les effectifs.",
+               f"$\\bar x = \\dfrac{{24 \\times 15 + 36 \\times 25 + 43 \\times 10}}{{50}} = \\dfrac{{1\\,690}}{{50}} = {fx(m)}$ ans."],
+              f"$\\bar x = {fx(m)}$ ans"))
+    m2 = F(25 * 15 + 35 * 25 + 45 * 10, 50)
+    E.append(("approfondissement", "classes-moyenne",
+              "Dans une entreprise, $15$ salariés ont un âge dans $[20\\,;\\,30[$, $25$ dans $[30\\,;\\,40[$ et $10$ dans $[40\\,;\\,50[$. En remplaçant chaque classe par son centre, estimer l'âge moyen. Sachant que l'âge moyen réel est $33{,}8$ ans, expliquer l'écart.",
+              [f"Centres $25$, $35$, $45$ : $\\dfrac{{25 \\times 15 + 35 \\times 25 + 45 \\times 10}}{{50}} = \\dfrac{{1\\,700}}{{50}} = {fx(m2)}$ ans.",
+               "Ce calcul suppose les âges répartis uniformément dans chaque classe ; ce n'est qu'une estimation, d'où l'écart avec $33{,}8$ ans."],
+              f"Environ ${fx(m2)}$ ans"))
+    # i) séries regroupées en classes : classe médiane et médiane (5)
+    for titre, bornes, eff, ferme in [("taille (cm)", [150, 160, 170, 180, 190], [4, 10, 8, 3], False),
+                                      ("note", [0, 5, 10, 15, 20], [2, 9, 14, 5], True)]:
+        N = sum(eff)
+        cu = cumuls(eff)
+        k = next(i for i, c in enumerate(cu) if c >= F(N, 2))
+        E.append(("application", "classes-mediane",
+                  f"On donne la série regroupée en classes : {tab_classes(titre, bornes, eff, ferme)}. Déterminer la classe médiane.",
+                  [f"Effectif total $N = {N}$, donc $\\dfrac{{N}}{{2}} = {fx(F(N, 2))}$.",
+                   "Effectifs cumulés croissants : $" + " \\,;\\, ".join(map(str, cu)) + "$.",
+                   f"Le premier effectif cumulé supérieur ou égal à ${fx(F(N, 2))}$ est ${cu[k]}$ : la classe médiane est {classe(bornes, k)}."],
+                  f"La classe {classe(bornes, k)}"))
+    for titre, bornes, eff, unite, d in [("durée (min)", [0, 10, 20, 30, 40], [12, 18, 7, 3], " min", "intermediaire"),
+                                         ("distance (km)", [0, 2, 4, 6, 8], [30, 45, 15, 10], " km", "approfondissement")]:
+        N = sum(eff)
+        cu = cumuls(eff)
+        k = next(i for i, c in enumerate(cu) if c >= F(N, 2))
+        avant = cu[k - 1] if k else 0
+        a, amp = bornes[k], bornes[k + 1] - bornes[k]
+        me = a + (F(N, 2) - avant) / eff[k] * amp
+        E.append((d, "classes-mediane",
+                  f"On donne la série regroupée en classes : {tab_classes(titre, bornes, eff)}. Déterminer la classe médiane, puis estimer la médiane en supposant la répartition uniforme dans cette classe (arrondir au centième).",
+                  [f"$\\dfrac{{N}}{{2}} = {fx(F(N, 2))}$ ; effectifs cumulés : $" + " \\,;\\, ".join(map(str, cu)) + f"$. La classe médiane est {classe(bornes, k)}.",
+                   f"Avant cette classe, il y a ${avant}$ valeurs : il faut avancer de ${fx(F(N, 2) - avant)}$ valeurs sur les ${eff[k]}$ de la classe, d'amplitude ${amp}$.",
+                   f"$\\mathrm{{Me}} \\approx {a} + \\dfrac{{{fx(F(N, 2) - avant)}}}{{{eff[k]}}} \\times {amp} \\approx {nb(float(me), 2)}${unite}."],
+                  f"$\\mathrm{{Me}} \\approx {nb(float(me), 2)}${unite}"))
+    bornes, eff = [0, 20, 40, 60, 80], [5, 15, 20, 10]
+    N = sum(eff)
+    fcc = [F(c, N) for c in cumuls(eff)]
+    me = 40 + (F(1, 2) - fcc[1]) / (fcc[2] - fcc[1]) * 20
+    E.append(("approfondissement", "classes-mediane",
+              f"Durée quotidienne d'utilisation du téléphone (en minutes) de {N} élèves : {tab_classes('durée (min)', bornes, eff, True)}. Calculer les fréquences cumulées croissantes, puis estimer la médiane à l'aide du polygone des fréquences cumulées croissantes.",
+              ["Fréquences cumulées croissantes, aux bornes $20$, $40$, $60$, $80$ : $" + " \\,;\\, ".join(fx(f) for f in fcc) + "$.",
+               "La fréquence cumulée $0{,}5$ est atteinte entre $40$ (fréquence $0{,}4$) et $60$ (fréquence $0{,}8$) : le polygone y est un segment.",
+               f"$\\mathrm{{Me}} \\approx 40 + \\dfrac{{0{{,}}5 - 0{{,}}4}}{{0{{,}}8 - 0{{,}}4}} \\times 20 = {fx(me)}$ min."],
+              f"$\\mathrm{{Me}} \\approx {fx(me)}$ min"))
+    # j) histogramme (3)
+    E.append(("application", "histogramme",
+              "Dans un histogramme dont toutes les classes ont la même amplitude, le rectangle d'une classe d'effectif $24$ a une hauteur de $3$ cm. Quelle est la hauteur du rectangle d'une classe d'effectif $40$ ?",
+              ["Les classes ayant la même amplitude, les hauteurs sont proportionnelles aux effectifs : $1$ cm représente $\\dfrac{24}{3} = 8$ individus.",
+               f"$\\dfrac{{40}}{{8}} = {fx(F(40, 8))}$ cm."],
+              f"${fx(F(40, 8))}$ cm"))
+    h = [2, 5, 3, 1]
+    E.append(("intermediaire", "histogramme",
+              "Dans un histogramme dont toutes les classes ont la même amplitude, $1$ cm de hauteur représente $5$ personnes. Les quatre rectangles mesurent $2$ cm, $5$ cm, $3$ cm et $1$ cm de haut. Quel est l'effectif total de la série ?",
+              ["Effectifs des classes : " + ", ".join(f"${x} \\times 5 = {5 * x}$" for x in h) + ".",
+               f"Effectif total : ${' + '.join(str(5 * x) for x in h)} = {5 * sum(h)}$."],
+              f"${5 * sum(h)}$ personnes"))
+    E.append(("intermediaire", "histogramme",
+              "Vrai ou faux : dans un histogramme dont toutes les classes ont la même amplitude, la hauteur de chaque rectangle est proportionnelle à l'effectif de sa classe.",
+              ["Les rectangles ont tous la même largeur (l'amplitude commune).",
+               "Leur hauteur, comme leur aire, est donc proportionnelle à l'effectif : c'est vrai."],
+              "Vrai"))
+    # k) tableau croisé : fréquences marginales et conditionnelles (6)
+    tab = ("$\\begin{array}{l|c|c|c} & \\text{Filles} & \\text{Garçons} & \\text{Total} \\\\ \\hline "
+           "\\text{Demi-pensionnaires} & 150 & 130 & 280 \\\\ \\text{Externes} & 60 & 60 & 120 \\\\ \\hline "
+           "\\text{Total} & 210 & 190 & 400 \\end{array}$")
+    debut = f"Les $400$ élèves d'un lycée sont répartis selon le tableau croisé : {tab}. "
+    for d, q, num, den, expl in [
+            ("application", "Calculer la fréquence marginale des externes.", 120, 400, "On divise le total des externes par l'effectif total"),
+            ("application", "Calculer la fréquence marginale des garçons.", 190, 400, "On divise le total des garçons par l'effectif total"),
+            ("intermediaire", "Calculer la fréquence des filles parmi les demi-pensionnaires (arrondir au centième).", 150, 280, "On se restreint aux $280$ demi-pensionnaires"),
+            ("intermediaire", "Calculer la fréquence des demi-pensionnaires parmi les filles (arrondir au centième).", 150, 210, "On se restreint aux $210$ filles")]:
+        f = F(num, den)
+        E.append((d, "frequences-conditionnelles", debut + q,
+                  [f"{expl} : $f = \\dfrac{{{num}}}{{{den}}} {_egal_approx(f)}$."],
+                  f"$f {_egal_approx(f)}$"))
+    E.append(("approfondissement", "frequences-conditionnelles",
+              "Dans une enquête auprès de $500$ personnes, $60\\,\\%$ possèdent un vélo et, parmi les possesseurs de vélo, $25\\,\\%$ ont moins de $25$ ans. Au total, $140$ personnes interrogées ont moins de $25$ ans. Combien de personnes de moins de $25$ ans ne possèdent pas de vélo ?",
+              ["Possesseurs de vélo : $0{,}6 \\times 500 = 300$ ; parmi eux, moins de $25$ ans : $0{,}25 \\times 300 = 75$.",
+               "Dans le tableau croisé, la colonne « moins de $25$ ans » totalise $140$ : $140 - 75 = 65$."],
+              "$65$ personnes"))
+    E.append(("probleme", "frequences-conditionnelles",
+              "Une entreprise compte $250$ salariés, dont $120$ femmes. $40\\,\\%$ des salariés sont cadres et $30\\,\\%$ des cadres sont des femmes. Calculer la fréquence des cadres parmi les femmes.",
+              ["Cadres : $0{,}4 \\times 250 = 100$ ; femmes cadres : $0{,}3 \\times 100 = 30$.",
+               f"Parmi les $120$ femmes : $f = \\dfrac{{30}}{{120}} = {fx(F(30, 120))}$. Attention : « $30\\,\\%$ des cadres » et « $25\\,\\%$ des femmes » ne portent pas sur la même sous-population."],
+              f"$f = {fx(F(30, 120))}$"))
+    # l) problèmes : moyenne, ajout ou suppression d'une valeur (4)
     P = [("Un élève a obtenu $11$, $14$ et $9$. Quelle note doit-il obtenir au quatrième devoir pour avoir $12$ de moyenne ?",
           ["Il faut un total de $4 \\times 12 = 48$ points.", "$48 - (11 + 14 + 9) = 48 - 34 = 14$."], "$14$"),
-         ("Un élève a $12$ en maths (coefficient 3), $9$ en physique (coefficient 2) et $15$ en anglais (coefficient 1). Calculer sa moyenne.",
-          ["$\\bar x = \\dfrac{12 \\times 3 + 9 \\times 2 + 15 \\times 1}{3 + 2 + 1} = \\dfrac{69}{6}$.", "$\\bar x = 11{,}5$."], "$11{,}5$"),
-         ("Dans une entreprise, neuf salariés gagnent entre $1\\,800$ € et $2\\,200$ € et le directeur gagne $15\\,000$ €. Quel indicateur décrit le mieux le salaire « typique » : la moyenne ou la médiane ?",
-          ["La moyenne est tirée vers le haut par la valeur extrême de $15\\,000$ €.", "La médiane n'est pas sensible à cette valeur extrême."], "La médiane"),
          ("Un groupe de 20 élèves a $12$ de moyenne, un groupe de 30 élèves a $10$ de moyenne. Quelle est la moyenne de l'ensemble des 50 élèves ?",
           ["Total des points : $20 \\times 12 + 30 \\times 10 = 540$.", "$\\bar x = \\dfrac{540}{50} = 10{,}8$ (et non $11$, moyenne des deux moyennes)."], "$10{,}8$"),
-         ("Les températures d'une semaine sont $12$, $14$, $13$, $15$, $11$, $14$ et $32$ °C (une erreur de capteur). Comparer moyenne et médiane.",
-          ["Moyenne : $\\dfrac{111}{7} \\approx 15{,}9$ °C.", "Médiane : série rangée $11, 12, 13, 14, 14, 15, 32$, donc $14$ °C.",
-           "La valeur aberrante fausse la moyenne mais pas la médiane."], "Moyenne $\\approx 15{,}9$ °C ; médiane $14$ °C"),
-         ("Dans un lycée, il y a 120 élèves de seconde, dont 70 filles ; 45 de ces filles font du sport. Quel pourcentage des filles fait du sport ?",
-          ["On calcule par rapport au total des filles (et non au total des élèves).", "$\\dfrac{45}{70} \\approx 0{,}643$, soit environ $64{,}3\\,\\%$."], "Environ $64{,}3\\,\\%$"),
          ("Une série de 5 valeurs a pour moyenne $8$. On ajoute la valeur $20$. Quelle est la nouvelle moyenne ?",
           ["Somme initiale : $5 \\times 8 = 40$ ; nouvelle somme $60$.", "Nouvelle moyenne : $\\dfrac{60}{6} = 10$."], "$10$"),
-         ("Vrai ou faux : la médiane d'une série est la moyenne de la plus petite et de la plus grande valeur.",
-          ["Faux : la médiane partage la série ordonnée en deux moitiés.", "Exemple : pour $1, 2, 10$, la médiane est $2$ alors que $\\dfrac{1 + 10}{2} = 5{,}5$."], "Faux"),
-         ("Les fréquences de trois valeurs sont $0{,}35$, $0{,}4$ et $f$. Calculer $f$.",
-          ["La somme des fréquences vaut $1$.", "$f = 1 - 0{,}35 - 0{,}4 = 0{,}25$."], "$f = 0{,}25$"),
-         ("Pourquoi l'écart interquartile est-il un indicateur de dispersion plus robuste que l'étendue ?",
-          ["L'étendue ne dépend que des deux valeurs extrêmes.", "L'écart interquartile concerne les $50\\,\\%$ centraux et ignore les valeurs extrêmes."],
-          "Il n'est pas influencé par les valeurs extrêmes")]
+         ("On considère la série $4 \\,;\\, 7 \\,;\\, 9 \\,;\\, 12 \\,;\\, 30$. Calculer sa moyenne et sa médiane, puis les recalculer après avoir supprimé la valeur $30$. Quel indicateur est le plus modifié ?",
+          ["Avant : $\\bar x = \\dfrac{62}{5} = 12{,}4$ et $\\mathrm{Me} = 9$.",
+           "Après : $\\bar x = \\dfrac{32}{4} = 8$ et $\\mathrm{Me} = \\dfrac{7 + 9}{2} = 8$.",
+           "La moyenne baisse de $4{,}4$, la médiane seulement de $1$ : la moyenne est plus sensible à une valeur extrême."],
+          "Moyenne : $12{,}4$ puis $8$ ; médiane : $9$ puis $8$ ; la moyenne est la plus modifiée")]
     for e, c, r in P:
         E.append(("probleme", "probleme", e, c, r))
     return _fin(E)
@@ -2059,14 +2352,14 @@ def g2_vecteurs():
     E = []
     # a) coordonnées d'un vecteur
     for (xa, ya), (xb, yb) in [((1, 5), (4, 3)), ((-2, 3), (5, -1)), ((0, -4), (-3, 2)), ((F(1, 2), 2), (3, F(-1, 2))),
-                               ((-5, -2), (-1, -7)), ((6, 0), (0, 6))]:
+                               ((-5, -2), (-1, -7))]:
         E.append(("application", "coordonnees",
                   f"Dans un repère, ${_P('A', xa, ya)}$ et ${_P('B', xb, yb)}$. Calculer les coordonnées de $\\overrightarrow{{\\mathrm{{AB}}}}$.",
                   ["Arrivée moins départ : $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} x_\\mathrm{B} - x_\\mathrm{A} \\\\ y_\\mathrm{B} - y_\\mathrm{A} \\end{pmatrix}$.",
                    f"$\\overrightarrow{{\\mathrm{{AB}}}}{vec(F(xb) - xa, F(yb) - ya)}$."],
                   f"$\\overrightarrow{{\\mathrm{{AB}}}}{vec(F(xb) - xa, F(yb) - ya)}$"))
     # b) somme
-    for (a, b), (c, d) in [((2, 3), (4, -1)), ((-3, 5), (3, -5)), ((0, 7), (-2, -4)), ((F(3, 2), -2), (F(1, 2), 6)), ((-6, -1), (2, 8))]:
+    for (a, b), (c, d) in [((2, 3), (4, -1)), ((-3, 5), (3, -5)), ((0, 7), (-2, -4)), ((F(3, 2), -2), (F(1, 2), 6))]:
         E.append(("application", "somme",
                   f"On donne $\\vec{{u}}{vec(a, b)}$ et $\\vec{{v}}{vec(c, d)}$. Calculer les coordonnées de $\\vec{{u}} + \\vec{{v}}$.",
                   ["On additionne composante par composante.", f"$\\vec{{u}} + \\vec{{v}}$ a pour coordonnées ${vec(F(a) + c, F(b) + d)}$."],
@@ -2081,8 +2374,7 @@ def g2_vecteurs():
                    f"On additionne : $\\vec{{w}}{vec(x, y)}$."],
                   f"$\\vec{{w}}{vec(x, y)}$"))
     # d) colinéarité
-    for (a, b), (c, d) in [((2, 3), (6, 9)), ((4, -2), (-6, 3)), ((1, 5), (3, 14)), ((-3, 7), (6, -14)), ((F(1, 2), 2), (1, 4)),
-                           ((5, 2), (2, 5)), ((0, 3), (0, -7))]:
+    for (a, b), (c, d) in [((2, 3), (6, 9)), ((4, -2), (-6, 3)), ((1, 5), (3, 14)), ((F(1, 2), 2), (1, 4)), ((0, 3), (0, -7))]:
         det = F(a) * d - F(b) * c
         E.append(("intermediaire", "colinearite",
                   f"Les vecteurs $\\vec{{u}}{vec(a, b)}$ et $\\vec{{v}}{vec(c, d)}$ sont-ils colinéaires ?",
@@ -2091,7 +2383,7 @@ def g2_vecteurs():
                    "Le déterminant est nul : les vecteurs sont colinéaires." if det == 0 else "Le déterminant n'est pas nul : les vecteurs ne sont pas colinéaires."],
                   ("Oui" if det == 0 else "Non") + f" (déterminant ${fx(det)}$)"))
     # e) milieu
-    for (xa, ya), (xb, yb) in [((2, 4), (6, 10)), ((-3, 1), (5, -7)), ((0, 0), (7, 3)), ((-4, -5), (-1, 2)), ((F(1, 2), 3), (F(5, 2), -2)), ((10, -6), (-2, 6))]:
+    for (xa, ya), (xb, yb) in [((2, 4), (6, 10)), ((-3, 1), (5, -7)), ((0, 0), (7, 3)), ((-4, -5), (-1, 2)), ((F(1, 2), 3), (F(5, 2), -2))]:
         mx, my = (F(xa) + xb) / 2, (F(ya) + yb) / 2
         E.append(("application", "milieu",
                   f"Calculer les coordonnées du milieu $\\mathrm{{I}}$ de $[\\mathrm{{AB}}]$ avec ${_P('A', xa, ya)}$ et ${_P('B', xb, yb)}$.",
@@ -2099,7 +2391,7 @@ def g2_vecteurs():
                    f"${_P('I', mx, my)}$."],
                   f"${_P('I', mx, my)}$"))
     # f) norme (repère orthonormé)
-    for x, y in [(3, 4), (-5, 12), (2, 4), (-1, -3), (6, -8), (4, 4)]:
+    for x, y in [(3, 4), (-5, 12), (2, 4), (-1, -3), (6, -8)]:
         n2 = x * x + y * y
         rac = racine(n2)
         approx = "" if math.isqrt(n2) ** 2 == n2 else f" \\approx {nb(math.sqrt(n2), 2)}"
@@ -2108,6 +2400,40 @@ def g2_vecteurs():
                   ["$\\lVert \\vec{u} \\rVert = \\sqrt{x^2 + y^2}$.",
                    f"$\\lVert \\vec{{u}} \\rVert = \\sqrt{{{par(x)}^2 + {par(y)}^2}} = \\sqrt{{{n2}}}{_rac_suite(n2)}{approx}$."],
                   f"$\\lVert \\vec{{u}} \\rVert = {rac}${'' if not approx else ' (environ $' + nb(math.sqrt(n2), 2) + '$)'}"))
+    # f bis) base orthonormée (i, j) et décomposition selon deux vecteurs non colinéaires
+    I, J = "\\vec{\\imath}", "\\vec{\\jmath}"
+    VV, VW = "\\vec{v}", "\\vec{w}"
+
+    def comb(x, y, a=I, b=J):
+        t = []
+        for c, v in ((x, a), (y, b)):
+            if c == 0:
+                continue
+            m = "" if abs(c) == 1 else f"{abs(c)}\\,"
+            t.append((("-" if c < 0 else "") if not t else ("- " if c < 0 else "+ ")) + m + v)
+        return " ".join(t)
+    for x, y in [(3, -2), (0, 4)]:
+        E.append(("application", "base-orthonormee",
+                  f"$(\\vec{{\\imath}}, \\vec{{\\jmath}})$ est une base orthonormée. Donner les coordonnées du vecteur $\\vec{{u}} = {comb(x, y)}$.",
+                  ["Si $\\vec{u} = x\\,\\vec{\\imath} + y\\,\\vec{\\jmath}$, alors $\\vec{u}$ a pour coordonnées $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$.",
+                   ("Il n'y a pas de terme en $\\vec{\\imath}$ : " if x == 0 else "Ici ") + f"$x = {x}$ et $y = {y}$."],
+                  f"$\\vec{{u}}{vec(x, y)}$"))
+    E.append(("application", "base-orthonormee",
+              "$(\\vec{\\imath}, \\vec{\\jmath})$ est une base orthonormée et $\\vec{u}\\begin{pmatrix} -2 \\\\ 7 \\end{pmatrix}$. Écrire $\\vec{u}$ en fonction de $\\vec{\\imath}$ et $\\vec{\\jmath}$.",
+              ["Les coordonnées $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ signifient $\\vec{u} = x\\,\\vec{\\imath} + y\\,\\vec{\\jmath}$."],
+              f"$\\vec{{u}} = {comb(-2, 7)}$"))
+    E.append(("intermediaire", "base-orthonormee",
+              f"$(\\vec{{\\imath}}, \\vec{{\\jmath}})$ est une base orthonormée. Calculer la norme du vecteur $\\vec{{u}} = {comb(5, -12)}$.",
+              ["$\\vec{u}$ a pour coordonnées $\\begin{pmatrix} 5 \\\\ -12 \\end{pmatrix}$ ; la base étant orthonormée, $\\lVert \\vec{u} \\rVert = \\sqrt{x^2 + y^2}$.",
+               "$\\lVert \\vec{u} \\rVert = \\sqrt{5^2 + (-12)^2} = \\sqrt{169} = 13$."],
+              "$\\lVert \\vec{u} \\rVert = 13$"))
+    for (v1, v2), (w1, w2), (a, b) in [((1, 1), (1, -1), (3, 2)), ((2, 1), (1, 3), (1, 2))]:
+        u1, u2 = a * v1 + b * w1, a * v2 + b * w2
+        E.append(("approfondissement", "base-orthonormee",
+                  f"On donne $\\vec{{v}}{vec(v1, v2)}$, $\\vec{{w}}{vec(w1, w2)}$ et $\\vec{{u}}{vec(u1, u2)}$. Les vecteurs $\\vec{{v}}$ et $\\vec{{w}}$ ne sont pas colinéaires. Trouver les réels $a$ et $b$ tels que $\\vec{{u}} = a\\,\\vec{{v}} + b\\,\\vec{{w}}$.",
+                  [f"$a\\,\\vec{{v}} + b\\,\\vec{{w}}$ a pour coordonnées $\\begin{{pmatrix}} {coef(v1)}a + {coef(w1)}b \\\\ {poly([v2, 0], 'a')} {'+' if w2 > 0 else '-'} {coef(abs(w2))}b \\end{{pmatrix}}$ : on résout le système $\\begin{{cases}} {coef(v1)}a + {coef(w1)}b = {u1} \\\\ {poly([v2, 0], 'a')} {'+' if w2 > 0 else '-'} {coef(abs(w2))}b = {u2} \\end{{cases}}$.",
+                   f"On exprime $b$ en fonction de $a$ grâce à la première équation, puis on remplace dans la seconde : on trouve $a = {a}$ et $b = {b}$. Vérification : ${a} \\times {vec(v1, v2)} + {b} \\times {vec(w1, w2)} = {vec(u1, u2)}$."],
+                  f"$a = {a}$ et $b = {b}$, soit $\\vec{{u}} = {comb(a, b, VV, VW)}$"))
     # g) alignement
     for A, B, C in [((1, 2), (3, 6), (5, 10)), ((0, 1), (2, 4), (6, 9)), ((-1, 3), (1, 1), (4, -2)), ((2, -1), (4, 3), (5, 6)), ((-2, -2), (0, 1), (4, 7))]:
         u = (B[0] - A[0], B[1] - A[1])

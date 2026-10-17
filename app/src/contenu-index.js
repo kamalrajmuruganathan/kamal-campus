@@ -3,7 +3,7 @@
  * Produit par scripts/generer-index.mjs. Relancer `npm run preparer`
  * après tout ajout ou suppression de chapitre.
  *
- * 956 chapitres indexés.
+ * 959 chapitres indexés.
  */
 
 import qcm0 from './../../contenu/cp/allemand/begrussungen/qcm.json';
@@ -1232,692 +1232,698 @@ import qcm611 from './../../contenu/seconde/maths/vecteurs/qcm.json';
 import flash611 from './../../contenu/seconde/maths/vecteurs/flashcards.json';
 import qcm612 from './../../contenu/seconde/maths/droites-du-plan/qcm.json';
 import flash612 from './../../contenu/seconde/maths/droites-du-plan/flashcards.json';
-import qcm613 from './../../contenu/seconde/maths/statistiques/qcm.json';
-import flash613 from './../../contenu/seconde/maths/statistiques/flashcards.json';
-import qcm614 from './../../contenu/seconde/maths/probabilites/qcm.json';
-import flash614 from './../../contenu/seconde/maths/probabilites/flashcards.json';
-import qcm615 from './../../contenu/seconde/maths/algorithmique/qcm.json';
-import flash615 from './../../contenu/seconde/maths/algorithmique/flashcards.json';
-import qcm616 from './../../contenu/seconde/physique-chimie/description-matiere/qcm.json';
-import flash616 from './../../contenu/seconde/physique-chimie/description-matiere/flashcards.json';
-import qcm617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/qcm.json';
-import flash617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/flashcards.json';
-import qcm618 from './../../contenu/seconde/physique-chimie/transformations-matiere/qcm.json';
-import flash618 from './../../contenu/seconde/physique-chimie/transformations-matiere/flashcards.json';
-import qcm619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/qcm.json';
-import flash619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/flashcards.json';
-import qcm620 from './../../contenu/seconde/physique-chimie/ondes-signaux/qcm.json';
-import flash620 from './../../contenu/seconde/physique-chimie/ondes-signaux/flashcards.json';
-import qcm621 from './../../contenu/seconde/ses/production-richesses/qcm.json';
-import flash621 from './../../contenu/seconde/ses/production-richesses/flashcards.json';
-import qcm622 from './../../contenu/seconde/ses/mesure-production-pib/qcm.json';
-import flash622 from './../../contenu/seconde/ses/mesure-production-pib/flashcards.json';
-import qcm623 from './../../contenu/seconde/ses/consommation-revenu/qcm.json';
-import flash623 from './../../contenu/seconde/ses/consommation-revenu/flashcards.json';
-import qcm624 from './../../contenu/seconde/ses/marche-formation-prix/qcm.json';
-import flash624 from './../../contenu/seconde/ses/marche-formation-prix/flashcards.json';
-import qcm625 from './../../contenu/seconde/ses/socialisation-introduction/qcm.json';
-import flash625 from './../../contenu/seconde/ses/socialisation-introduction/flashcards.json';
-import qcm626 from './../../contenu/seconde/ses/opinion-publique/qcm.json';
-import flash626 from './../../contenu/seconde/ses/opinion-publique/flashcards.json';
-import qcm627 from './../../contenu/seconde/snt/internet/qcm.json';
-import flash627 from './../../contenu/seconde/snt/internet/flashcards.json';
-import qcm628 from './../../contenu/seconde/snt/le-web/qcm.json';
-import flash628 from './../../contenu/seconde/snt/le-web/flashcards.json';
-import qcm629 from './../../contenu/seconde/snt/reseaux-sociaux/qcm.json';
-import flash629 from './../../contenu/seconde/snt/reseaux-sociaux/flashcards.json';
-import qcm630 from './../../contenu/seconde/snt/donnees-structurees/qcm.json';
-import flash630 from './../../contenu/seconde/snt/donnees-structurees/flashcards.json';
-import qcm631 from './../../contenu/seconde/snt/localisation-cartographie-gps/qcm.json';
-import flash631 from './../../contenu/seconde/snt/localisation-cartographie-gps/flashcards.json';
-import qcm632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/qcm.json';
-import flash632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/flashcards.json';
-import qcm633 from './../../contenu/seconde/snt/photographie-numerique/qcm.json';
-import flash633 from './../../contenu/seconde/snt/photographie-numerique/flashcards.json';
-import qcm634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/qcm.json';
-import flash634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/flashcards.json';
-import qcm635 from './../../contenu/seconde/svt/adn-et-information-genetique/qcm.json';
-import flash635 from './../../contenu/seconde/svt/adn-et-information-genetique/flashcards.json';
-import qcm636 from './../../contenu/seconde/svt/metabolisme-des-cellules/qcm.json';
-import flash636 from './../../contenu/seconde/svt/metabolisme-des-cellules/flashcards.json';
-import qcm637 from './../../contenu/seconde/svt/biodiversite-et-evolution/qcm.json';
-import flash637 from './../../contenu/seconde/svt/biodiversite-et-evolution/flashcards.json';
-import qcm638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/qcm.json';
-import flash638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/flashcards.json';
-import qcm639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/qcm.json';
-import flash639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/flashcards.json';
-import qcm640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/qcm.json';
-import flash640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/flashcards.json';
-import qcm641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/qcm.json';
-import flash641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/flashcards.json';
-import qcm642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/qcm.json';
-import flash642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/flashcards.json';
-import qcm643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/qcm.json';
-import flash643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/flashcards.json';
-import qcm644 from './../../contenu/premiere/allemand/passiv/qcm.json';
-import flash644 from './../../contenu/premiere/allemand/passiv/flashcards.json';
-import qcm645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/qcm.json';
-import flash645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/flashcards.json';
-import qcm646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/qcm.json';
-import flash646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/flashcards.json';
-import qcm647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/qcm.json';
-import flash647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/flashcards.json';
-import qcm648 from './../../contenu/premiere/allemand/landeskunde-literatur/qcm.json';
-import flash648 from './../../contenu/premiere/allemand/landeskunde-literatur/flashcards.json';
-import qcm649 from './../../contenu/premiere/anglais/aspects-simple-continu/qcm.json';
-import flash649 from './../../contenu/premiere/anglais/aspects-simple-continu/flashcards.json';
-import qcm650 from './../../contenu/premiere/anglais/gerondif-infinitif/qcm.json';
-import flash650 from './../../contenu/premiere/anglais/gerondif-infinitif/flashcards.json';
-import qcm651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/qcm.json';
-import flash651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/flashcards.json';
-import qcm652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/qcm.json';
-import flash652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/flashcards.json';
-import qcm653 from './../../contenu/premiere/anglais/voix-passive-emplois/qcm.json';
-import flash653 from './../../contenu/premiere/anglais/voix-passive-emplois/flashcards.json';
-import qcm654 from './../../contenu/premiere/anglais/futur-et-hypotheses/qcm.json';
-import flash654 from './../../contenu/premiere/anglais/futur-et-hypotheses/flashcards.json';
-import qcm655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/qcm.json';
-import flash655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/flashcards.json';
-import qcm656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/qcm.json';
-import flash656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/flashcards.json';
-import qcm657 from './../../contenu/premiere/anglais/civilisation-litterature/qcm.json';
-import flash657 from './../../contenu/premiere/anglais/civilisation-litterature/flashcards.json';
-import qcm658 from './../../contenu/premiere/arts/architecture/qcm.json';
-import flash658 from './../../contenu/premiere/arts/architecture/flashcards.json';
-import qcm659 from './../../contenu/premiere/arts/histoire-musique/qcm.json';
-import flash659 from './../../contenu/premiere/arts/histoire-musique/flashcards.json';
-import qcm660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/qcm.json';
-import flash660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/flashcards.json';
-import qcm661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/qcm.json';
-import flash661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/flashcards.json';
-import qcm662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/qcm.json';
-import flash662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/flashcards.json';
-import qcm663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/qcm.json';
-import flash663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/flashcards.json';
-import qcm664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/qcm.json';
-import flash664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/flashcards.json';
-import qcm665 from './../../contenu/premiere/espagnol/subjuntivo-usos/qcm.json';
-import flash665 from './../../contenu/premiere/espagnol/subjuntivo-usos/flashcards.json';
-import qcm666 from './../../contenu/premiere/espagnol/relativos/qcm.json';
-import flash666 from './../../contenu/premiere/espagnol/relativos/flashcards.json';
-import qcm667 from './../../contenu/premiere/espagnol/perifrasis/qcm.json';
-import flash667 from './../../contenu/premiere/espagnol/perifrasis/flashcards.json';
-import qcm668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/qcm.json';
-import flash668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/flashcards.json';
-import qcm669 from './../../contenu/premiere/espagnol/voz-pasiva/qcm.json';
-import flash669 from './../../contenu/premiere/espagnol/voz-pasiva/flashcards.json';
-import qcm670 from './../../contenu/premiere/espagnol/estilo-indirecto/qcm.json';
-import flash670 from './../../contenu/premiere/espagnol/estilo-indirecto/flashcards.json';
-import qcm671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/qcm.json';
-import flash671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/flashcards.json';
-import qcm672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/qcm.json';
-import flash672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/flashcards.json';
-import qcm673 from './../../contenu/premiere/espagnol/civilizacion-literatura/qcm.json';
-import flash673 from './../../contenu/premiere/espagnol/civilizacion-literatura/flashcards.json';
-import qcm674 from './../../contenu/premiere/francais/grammaire-premiere/qcm.json';
-import flash674 from './../../contenu/premiere/francais/grammaire-premiere/flashcards.json';
-import qcm675 from './../../contenu/premiere/francais/commentaire-litteraire/qcm.json';
-import flash675 from './../../contenu/premiere/francais/commentaire-litteraire/flashcards.json';
-import qcm676 from './../../contenu/premiere/francais/roman-et-recit/qcm.json';
-import flash676 from './../../contenu/premiere/francais/roman-et-recit/flashcards.json';
-import qcm677 from './../../contenu/premiere/francais/poesie-19-21/qcm.json';
-import flash677 from './../../contenu/premiere/francais/poesie-19-21/flashcards.json';
-import qcm678 from './../../contenu/premiere/francais/contraction-essai/qcm.json';
-import flash678 from './../../contenu/premiere/francais/contraction-essai/flashcards.json';
-import qcm679 from './../../contenu/premiere/francais/litterature-idees-16-18/qcm.json';
-import flash679 from './../../contenu/premiere/francais/litterature-idees-16-18/flashcards.json';
-import qcm680 from './../../contenu/premiere/francais/dissertation/qcm.json';
-import flash680 from './../../contenu/premiere/francais/dissertation/flashcards.json';
-import qcm681 from './../../contenu/premiere/francais/theatre-17-21/qcm.json';
-import flash681 from './../../contenu/premiere/francais/theatre-17-21/flashcards.json';
-import qcm682 from './../../contenu/premiere/francais/epreuve-orale/qcm.json';
-import flash682 from './../../contenu/premiere/francais/epreuve-orale/flashcards.json';
-import qcm683 from './../../contenu/premiere/hggsp/democratie/qcm.json';
-import flash683 from './../../contenu/premiere/hggsp/democratie/flashcards.json';
-import qcm684 from './../../contenu/premiere/hggsp/puissances-internationales/qcm.json';
-import flash684 from './../../contenu/premiere/hggsp/puissances-internationales/flashcards.json';
-import qcm685 from './../../contenu/premiere/hggsp/frontieres/qcm.json';
-import flash685 from './../../contenu/premiere/hggsp/frontieres/flashcards.json';
-import qcm686 from './../../contenu/premiere/hggsp/s-informer/qcm.json';
-import flash686 from './../../contenu/premiere/hggsp/s-informer/flashcards.json';
-import qcm687 from './../../contenu/premiere/hggsp/etats-et-religions/qcm.json';
-import flash687 from './../../contenu/premiere/hggsp/etats-et-religions/flashcards.json';
-import qcm688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/qcm.json';
-import flash688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/flashcards.json';
-import qcm689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/qcm.json';
-import flash689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/flashcards.json';
-import qcm690 from './../../contenu/premiere/hist-geo/industrialisation-19e/qcm.json';
-import flash690 from './../../contenu/premiere/hist-geo/industrialisation-19e/flashcards.json';
-import qcm691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/qcm.json';
-import flash691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/flashcards.json';
-import qcm692 from './../../contenu/premiere/hist-geo/metropolisation-france/qcm.json';
-import flash692 from './../../contenu/premiere/hist-geo/metropolisation-france/flashcards.json';
-import qcm693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/qcm.json';
-import flash693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/flashcards.json';
-import qcm694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/qcm.json';
-import flash694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/flashcards.json';
-import qcm695 from './../../contenu/premiere/italien/congiuntivo-usi/qcm.json';
-import flash695 from './../../contenu/premiere/italien/congiuntivo-usi/flashcards.json';
-import qcm696 from './../../contenu/premiere/italien/pronomi-relativi/qcm.json';
-import flash696 from './../../contenu/premiere/italien/pronomi-relativi/flashcards.json';
-import qcm697 from './../../contenu/premiere/italien/perifrasi/qcm.json';
-import flash697 from './../../contenu/premiere/italien/perifrasi/flashcards.json';
-import qcm698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/qcm.json';
-import flash698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/flashcards.json';
-import qcm699 from './../../contenu/premiere/italien/forma-passiva/qcm.json';
-import flash699 from './../../contenu/premiere/italien/forma-passiva/flashcards.json';
-import qcm700 from './../../contenu/premiere/italien/discorso-indiretto/qcm.json';
-import flash700 from './../../contenu/premiere/italien/discorso-indiretto/flashcards.json';
-import qcm701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/qcm.json';
-import flash701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/flashcards.json';
-import qcm702 from './../../contenu/premiere/italien/civilta-rinascimento/qcm.json';
-import flash702 from './../../contenu/premiere/italien/civilta-rinascimento/flashcards.json';
-import qcm703 from './../../contenu/premiere/italien/civilta-letteratura/qcm.json';
-import flash703 from './../../contenu/premiere/italien/civilta-letteratura/flashcards.json';
-import qcm704 from './../../contenu/premiere/langues-anciennes/mythologie/qcm.json';
-import flash704 from './../../contenu/premiere/langues-anciennes/mythologie/flashcards.json';
-import qcm705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/qcm.json';
-import flash705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/flashcards.json';
-import qcm706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/qcm.json';
-import flash706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/flashcards.json';
-import qcm707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/qcm.json';
-import flash707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/flashcards.json';
-import qcm708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/qcm.json';
-import flash708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/flashcards.json';
-import qcm709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/qcm.json';
-import flash709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/flashcards.json';
-import qcm710 from './../../contenu/premiere/maths-specialite/second-degre/qcm.json';
-import flash710 from './../../contenu/premiere/maths-specialite/second-degre/flashcards.json';
-import qcm711 from './../../contenu/premiere/maths-specialite/suites-numeriques/qcm.json';
-import flash711 from './../../contenu/premiere/maths-specialite/suites-numeriques/flashcards.json';
-import qcm712 from './../../contenu/premiere/maths-specialite/derivation/qcm.json';
-import flash712 from './../../contenu/premiere/maths-specialite/derivation/flashcards.json';
-import qcm713 from './../../contenu/premiere/maths-specialite/variations-courbes/qcm.json';
-import flash713 from './../../contenu/premiere/maths-specialite/variations-courbes/flashcards.json';
-import qcm714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/qcm.json';
-import flash714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/flashcards.json';
-import qcm715 from './../../contenu/premiere/maths-specialite/trigonometrie/qcm.json';
-import flash715 from './../../contenu/premiere/maths-specialite/trigonometrie/flashcards.json';
-import qcm716 from './../../contenu/premiere/maths-specialite/produit-scalaire/qcm.json';
-import flash716 from './../../contenu/premiere/maths-specialite/produit-scalaire/flashcards.json';
-import qcm717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/qcm.json';
-import flash717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/flashcards.json';
-import qcm718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/qcm.json';
-import flash718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/flashcards.json';
-import qcm719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/qcm.json';
-import flash719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/flashcards.json';
-import qcm720 from './../../contenu/premiere/nsi/representation-des-donnees/qcm.json';
-import flash720 from './../../contenu/premiere/nsi/representation-des-donnees/flashcards.json';
-import qcm721 from './../../contenu/premiere/nsi/types-construits/qcm.json';
-import flash721 from './../../contenu/premiere/nsi/types-construits/flashcards.json';
-import qcm722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/qcm.json';
-import flash722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/flashcards.json';
-import qcm723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/qcm.json';
-import flash723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/flashcards.json';
-import qcm724 from './../../contenu/premiere/nsi/architecture-et-systeme/qcm.json';
-import flash724 from './../../contenu/premiere/nsi/architecture-et-systeme/flashcards.json';
-import qcm725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/qcm.json';
-import flash725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/flashcards.json';
-import qcm726 from './../../contenu/premiere/physique-chimie/transformations-matiere/qcm.json';
-import flash726 from './../../contenu/premiere/physique-chimie/transformations-matiere/flashcards.json';
-import qcm727 from './../../contenu/premiere/physique-chimie/chimie-organique/qcm.json';
-import flash727 from './../../contenu/premiere/physique-chimie/chimie-organique/flashcards.json';
-import qcm728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/qcm.json';
-import flash728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/flashcards.json';
-import qcm729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/qcm.json';
-import flash729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/flashcards.json';
-import qcm730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/qcm.json';
-import flash730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/flashcards.json';
-import qcm731 from './../../contenu/premiere/physique-chimie/ondes-signaux/qcm.json';
-import flash731 from './../../contenu/premiere/physique-chimie/ondes-signaux/flashcards.json';
-import qcm732 from './../../contenu/premiere/ses/marche-concurrentiel/qcm.json';
-import flash732 from './../../contenu/premiere/ses/marche-concurrentiel/flashcards.json';
-import qcm733 from './../../contenu/premiere/ses/marches-imparfaits/qcm.json';
-import flash733 from './../../contenu/premiere/ses/marches-imparfaits/flashcards.json';
-import qcm734 from './../../contenu/premiere/ses/defaillances-de-marche/qcm.json';
-import flash734 from './../../contenu/premiere/ses/defaillances-de-marche/flashcards.json';
-import qcm735 from './../../contenu/premiere/ses/monnaie-et-financement/qcm.json';
-import flash735 from './../../contenu/premiere/ses/monnaie-et-financement/flashcards.json';
-import qcm736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/qcm.json';
-import flash736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/flashcards.json';
-import qcm737 from './../../contenu/premiere/ses/liens-sociaux/qcm.json';
-import flash737 from './../../contenu/premiere/ses/liens-sociaux/flashcards.json';
-import qcm738 from './../../contenu/premiere/ses/deviance-controle-social/qcm.json';
-import flash738 from './../../contenu/premiere/ses/deviance-controle-social/flashcards.json';
-import qcm739 from './../../contenu/premiere/ses/voter-participation/qcm.json';
-import flash739 from './../../contenu/premiere/ses/voter-participation/flashcards.json';
-import qcm740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/qcm.json';
-import flash740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/flashcards.json';
-import qcm741 from './../../contenu/premiere/si/chaine-denergie/qcm.json';
-import flash741 from './../../contenu/premiere/si/chaine-denergie/flashcards.json';
-import qcm742 from './../../contenu/premiere/si/chaine-dinformation/qcm.json';
-import flash742 from './../../contenu/premiere/si/chaine-dinformation/flashcards.json';
-import qcm743 from './../../contenu/premiere/si/comportement-des-materiaux/qcm.json';
-import flash743 from './../../contenu/premiere/si/comportement-des-materiaux/flashcards.json';
-import qcm744 from './../../contenu/premiere/si/mecanique-des-solides/qcm.json';
-import flash744 from './../../contenu/premiere/si/mecanique-des-solides/flashcards.json';
-import qcm745 from './../../contenu/premiere/svt/mutations-et-variabilite/qcm.json';
-import flash745 from './../../contenu/premiere/svt/mutations-et-variabilite/flashcards.json';
-import qcm746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/qcm.json';
-import flash746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/flashcards.json';
-import qcm747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/qcm.json';
-import flash747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/flashcards.json';
-import qcm748 from './../../contenu/premiere/svt/ecosystemes-et-services/qcm.json';
-import flash748 from './../../contenu/premiere/svt/ecosystemes-et-services/flashcards.json';
-import qcm749 from './../../contenu/premiere/svt/variation-genetique-et-sante/qcm.json';
-import flash749 from './../../contenu/premiere/svt/variation-genetique-et-sante/flashcards.json';
-import qcm750 from './../../contenu/premiere-techno/maths/suites-numeriques/qcm.json';
-import flash750 from './../../contenu/premiere-techno/maths/suites-numeriques/flashcards.json';
-import qcm751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/qcm.json';
-import flash751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/flashcards.json';
-import qcm752 from './../../contenu/premiere-techno/maths/derivation/qcm.json';
-import flash752 from './../../contenu/premiere-techno/maths/derivation/flashcards.json';
-import qcm753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/qcm.json';
-import flash753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/flashcards.json';
-import qcm754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/qcm.json';
-import flash754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/flashcards.json';
-import qcm755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
-import flash755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
-import qcm756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/qcm.json';
-import flash756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/flashcards.json';
-import qcm757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/qcm.json';
-import flash757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/flashcards.json';
-import qcm758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/qcm.json';
-import flash758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/flashcards.json';
-import qcm759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/qcm.json';
-import flash759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/flashcards.json';
-import qcm760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/qcm.json';
-import flash760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/flashcards.json';
-import qcm761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/qcm.json';
-import flash761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/flashcards.json';
-import qcm762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/qcm.json';
-import flash762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/flashcards.json';
-import qcm763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/qcm.json';
-import flash763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/flashcards.json';
-import qcm764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/qcm.json';
-import flash764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/flashcards.json';
-import qcm765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/qcm.json';
-import flash765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/flashcards.json';
-import qcm766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/qcm.json';
-import flash766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/flashcards.json';
-import qcm767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/qcm.json';
-import flash767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/flashcards.json';
-import qcm768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/qcm.json';
-import flash768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/flashcards.json';
-import qcm769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/qcm.json';
-import flash769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/flashcards.json';
-import qcm770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/qcm.json';
-import flash770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/flashcards.json';
-import qcm771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/qcm.json';
-import flash771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/flashcards.json';
-import qcm772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/qcm.json';
-import flash772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/flashcards.json';
-import qcm773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/qcm.json';
-import flash773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/flashcards.json';
-import qcm774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/qcm.json';
-import flash774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/flashcards.json';
-import qcm775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/qcm.json';
-import flash775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/flashcards.json';
-import qcm776 from './../../contenu/terminale/allemand/konnektoren-argumentation/qcm.json';
-import flash776 from './../../contenu/terminale/allemand/konnektoren-argumentation/flashcards.json';
-import qcm777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/qcm.json';
-import flash777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/flashcards.json';
-import qcm778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/qcm.json';
-import flash778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/flashcards.json';
-import qcm779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/qcm.json';
-import flash779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/flashcards.json';
-import qcm780 from './../../contenu/terminale/allemand/nominalstil/qcm.json';
-import flash780 from './../../contenu/terminale/allemand/nominalstil/flashcards.json';
-import qcm781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/qcm.json';
-import flash781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/flashcards.json';
-import qcm782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/qcm.json';
-import flash782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/flashcards.json';
-import qcm783 from './../../contenu/terminale/anglais/systeme-verbal/qcm.json';
-import flash783 from './../../contenu/terminale/anglais/systeme-verbal/flashcards.json';
-import qcm784 from './../../contenu/terminale/anglais/modalite/qcm.json';
-import flash784 from './../../contenu/terminale/anglais/modalite/flashcards.json';
-import qcm785 from './../../contenu/terminale/anglais/irreel-hypotheses/qcm.json';
-import flash785 from './../../contenu/terminale/anglais/irreel-hypotheses/flashcards.json';
-import qcm786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/qcm.json';
-import flash786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/flashcards.json';
-import qcm787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/qcm.json';
-import flash787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/flashcards.json';
-import qcm788 from './../../contenu/terminale/anglais/structures-complexes/qcm.json';
-import flash788 from './../../contenu/terminale/anglais/structures-complexes/flashcards.json';
-import qcm789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/qcm.json';
-import flash789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/flashcards.json';
-import qcm790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/qcm.json';
-import flash790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/flashcards.json';
-import qcm791 from './../../contenu/terminale/arts/cinema/qcm.json';
-import flash791 from './../../contenu/terminale/arts/cinema/flashcards.json';
-import qcm792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/qcm.json';
-import flash792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/flashcards.json';
-import qcm793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/qcm.json';
-import flash793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/flashcards.json';
-import qcm794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/qcm.json';
-import flash794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/flashcards.json';
-import qcm795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/qcm.json';
-import flash795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/flashcards.json';
-import qcm796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/qcm.json';
-import flash796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/flashcards.json';
-import qcm797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/qcm.json';
-import flash797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/flashcards.json';
-import qcm798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/qcm.json';
-import flash798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/flashcards.json';
-import qcm799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/qcm.json';
-import flash799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/flashcards.json';
-import qcm800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/qcm.json';
-import flash800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/flashcards.json';
-import qcm801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/qcm.json';
-import flash801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/flashcards.json';
-import qcm802 from './../../contenu/terminale/espagnol/concordancia-tiempos/qcm.json';
-import flash802 from './../../contenu/terminale/espagnol/concordancia-tiempos/flashcards.json';
-import qcm803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/qcm.json';
-import flash803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/flashcards.json';
-import qcm804 from './../../contenu/terminale/espagnol/conectores-argumentacion/qcm.json';
-import flash804 from './../../contenu/terminale/espagnol/conectores-argumentacion/flashcards.json';
-import qcm805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/qcm.json';
-import flash805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/flashcards.json';
-import qcm806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/qcm.json';
-import flash806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/flashcards.json';
-import qcm807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/qcm.json';
-import flash807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/flashcards.json';
-import qcm808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/qcm.json';
-import flash808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/flashcards.json';
-import qcm809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/qcm.json';
-import flash809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/flashcards.json';
-import qcm810 from './../../contenu/terminale/grand-oral/construire-l-expose/qcm.json';
-import flash810 from './../../contenu/terminale/grand-oral/construire-l-expose/flashcards.json';
-import qcm811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/qcm.json';
-import flash811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/flashcards.json';
-import qcm812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/qcm.json';
-import flash812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/flashcards.json';
-import qcm813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/qcm.json';
-import flash813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/flashcards.json';
-import qcm814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/qcm.json';
-import flash814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/flashcards.json';
-import qcm815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/qcm.json';
-import flash815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/flashcards.json';
-import qcm816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/qcm.json';
-import flash816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/flashcards.json';
-import qcm817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/qcm.json';
-import flash817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/flashcards.json';
-import qcm818 from './../../contenu/terminale/hggsp/histoire-et-memoires/qcm.json';
-import flash818 from './../../contenu/terminale/hggsp/histoire-et-memoires/flashcards.json';
-import qcm819 from './../../contenu/terminale/hggsp/patrimoine/qcm.json';
-import flash819 from './../../contenu/terminale/hggsp/patrimoine/flashcards.json';
-import qcm820 from './../../contenu/terminale/hggsp/environnement/qcm.json';
-import flash820 from './../../contenu/terminale/hggsp/environnement/flashcards.json';
-import qcm821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/qcm.json';
-import flash821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/flashcards.json';
-import qcm822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/qcm.json';
-import flash822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/flashcards.json';
-import qcm823 from './../../contenu/terminale/hist-geo/guerre-froide/qcm.json';
-import flash823 from './../../contenu/terminale/hist-geo/guerre-froide/flashcards.json';
-import qcm824 from './../../contenu/terminale/hist-geo/decolonisation/qcm.json';
-import flash824 from './../../contenu/terminale/hist-geo/decolonisation/flashcards.json';
-import qcm825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/qcm.json';
-import flash825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/flashcards.json';
-import qcm826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/qcm.json';
-import flash826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/flashcards.json';
-import qcm827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/qcm.json';
-import flash827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/flashcards.json';
-import qcm828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/qcm.json';
-import flash828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/flashcards.json';
-import qcm829 from './../../contenu/terminale/italien/usi-avanzati/qcm.json';
-import flash829 from './../../contenu/terminale/italien/usi-avanzati/flashcards.json';
-import qcm830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/qcm.json';
-import flash830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/flashcards.json';
-import qcm831 from './../../contenu/terminale/italien/concordanza-tempi/qcm.json';
-import flash831 from './../../contenu/terminale/italien/concordanza-tempi/flashcards.json';
-import qcm832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/qcm.json';
-import flash832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/flashcards.json';
-import qcm833 from './../../contenu/terminale/italien/connettivi-argomentazione/qcm.json';
-import flash833 from './../../contenu/terminale/italien/connettivi-argomentazione/flashcards.json';
-import qcm834 from './../../contenu/terminale/italien/strutture-enfatiche/qcm.json';
-import flash834 from './../../contenu/terminale/italien/strutture-enfatiche/flashcards.json';
-import qcm835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/qcm.json';
-import flash835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/flashcards.json';
-import qcm836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/qcm.json';
-import flash836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/flashcards.json';
-import qcm837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/qcm.json';
-import flash837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/flashcards.json';
-import qcm838 from './../../contenu/terminale/maths-complementaires/suites-evolution/qcm.json';
-import flash838 from './../../contenu/terminale/maths-complementaires/suites-evolution/flashcards.json';
-import qcm839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/qcm.json';
-import flash839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/flashcards.json';
-import qcm840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/qcm.json';
-import flash840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/flashcards.json';
-import qcm841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/qcm.json';
-import flash841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/flashcards.json';
-import qcm842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/qcm.json';
-import flash842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/flashcards.json';
-import qcm843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/qcm.json';
-import flash843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/flashcards.json';
-import qcm844 from './../../contenu/terminale/maths-complementaires/calcul-integral/qcm.json';
-import flash844 from './../../contenu/terminale/maths-complementaires/calcul-integral/flashcards.json';
-import qcm845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/qcm.json';
-import flash845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/flashcards.json';
-import qcm846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/qcm.json';
-import flash846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/flashcards.json';
-import qcm847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/qcm.json';
-import flash847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/flashcards.json';
-import qcm848 from './../../contenu/terminale/maths-expertes/arithmetique/qcm.json';
-import flash848 from './../../contenu/terminale/maths-expertes/arithmetique/flashcards.json';
-import qcm849 from './../../contenu/terminale/maths-expertes/graphes-matrices/qcm.json';
-import flash849 from './../../contenu/terminale/maths-expertes/graphes-matrices/flashcards.json';
-import qcm850 from './../../contenu/terminale/maths-specialite/logique-ensembles/qcm.json';
-import flash850 from './../../contenu/terminale/maths-specialite/logique-ensembles/flashcards.json';
-import qcm851 from './../../contenu/terminale/maths-specialite/suites/qcm.json';
-import flash851 from './../../contenu/terminale/maths-specialite/suites/flashcards.json';
-import qcm852 from './../../contenu/terminale/maths-specialite/limites-fonctions/qcm.json';
-import flash852 from './../../contenu/terminale/maths-specialite/limites-fonctions/flashcards.json';
-import qcm853 from './../../contenu/terminale/maths-specialite/continuite/qcm.json';
-import flash853 from './../../contenu/terminale/maths-specialite/continuite/flashcards.json';
-import qcm854 from './../../contenu/terminale/maths-specialite/derivation-convexite/qcm.json';
-import flash854 from './../../contenu/terminale/maths-specialite/derivation-convexite/flashcards.json';
-import qcm855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/qcm.json';
-import flash855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/flashcards.json';
-import qcm856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/qcm.json';
-import flash856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/flashcards.json';
-import qcm857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/qcm.json';
-import flash857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/flashcards.json';
-import qcm858 from './../../contenu/terminale/maths-specialite/calcul-integral/qcm.json';
-import flash858 from './../../contenu/terminale/maths-specialite/calcul-integral/flashcards.json';
-import qcm859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/qcm.json';
-import flash859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/flashcards.json';
-import qcm860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/qcm.json';
-import flash860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/flashcards.json';
-import qcm861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/qcm.json';
-import flash861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/flashcards.json';
-import qcm862 from './../../contenu/terminale/maths-specialite/listes/qcm.json';
-import flash862 from './../../contenu/terminale/maths-specialite/listes/flashcards.json';
-import qcm863 from './../../contenu/terminale/maths-specialite/loi-binomiale/qcm.json';
-import flash863 from './../../contenu/terminale/maths-specialite/loi-binomiale/flashcards.json';
-import qcm864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/qcm.json';
-import flash864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/flashcards.json';
-import qcm865 from './../../contenu/terminale/nsi/programmation-et-complexite/qcm.json';
-import flash865 from './../../contenu/terminale/nsi/programmation-et-complexite/flashcards.json';
-import qcm866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/qcm.json';
-import flash866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/flashcards.json';
-import qcm867 from './../../contenu/terminale/nsi/structures-de-donnees/qcm.json';
-import flash867 from './../../contenu/terminale/nsi/structures-de-donnees/flashcards.json';
-import qcm868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/qcm.json';
-import flash868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/flashcards.json';
-import qcm869 from './../../contenu/terminale/nsi/reseaux-et-routage/qcm.json';
-import flash869 from './../../contenu/terminale/nsi/reseaux-et-routage/flashcards.json';
-import qcm870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/qcm.json';
-import flash870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/flashcards.json';
-import qcm871 from './../../contenu/terminale/philosophie/methode-dissertation/qcm.json';
-import flash871 from './../../contenu/terminale/philosophie/methode-dissertation/flashcards.json';
-import qcm872 from './../../contenu/terminale/philosophie/methode-explication-texte/qcm.json';
-import flash872 from './../../contenu/terminale/philosophie/methode-explication-texte/flashcards.json';
-import qcm873 from './../../contenu/terminale/philosophie/reperes-conceptuels/qcm.json';
-import flash873 from './../../contenu/terminale/philosophie/reperes-conceptuels/flashcards.json';
-import qcm874 from './../../contenu/terminale/philosophie/conscience/qcm.json';
-import flash874 from './../../contenu/terminale/philosophie/conscience/flashcards.json';
-import qcm875 from './../../contenu/terminale/philosophie/inconscient/qcm.json';
-import flash875 from './../../contenu/terminale/philosophie/inconscient/flashcards.json';
-import qcm876 from './../../contenu/terminale/philosophie/temps/qcm.json';
-import flash876 from './../../contenu/terminale/philosophie/temps/flashcards.json';
-import qcm877 from './../../contenu/terminale/philosophie/langage/qcm.json';
-import flash877 from './../../contenu/terminale/philosophie/langage/flashcards.json';
-import qcm878 from './../../contenu/terminale/philosophie/raison/qcm.json';
-import flash878 from './../../contenu/terminale/philosophie/raison/flashcards.json';
-import qcm879 from './../../contenu/terminale/philosophie/verite/qcm.json';
-import flash879 from './../../contenu/terminale/philosophie/verite/flashcards.json';
-import qcm880 from './../../contenu/terminale/philosophie/science/qcm.json';
-import flash880 from './../../contenu/terminale/philosophie/science/flashcards.json';
-import qcm881 from './../../contenu/terminale/philosophie/technique/qcm.json';
-import flash881 from './../../contenu/terminale/philosophie/technique/flashcards.json';
-import qcm882 from './../../contenu/terminale/philosophie/travail/qcm.json';
-import flash882 from './../../contenu/terminale/philosophie/travail/flashcards.json';
-import qcm883 from './../../contenu/terminale/philosophie/art/qcm.json';
-import flash883 from './../../contenu/terminale/philosophie/art/flashcards.json';
-import qcm884 from './../../contenu/terminale/philosophie/nature/qcm.json';
-import flash884 from './../../contenu/terminale/philosophie/nature/flashcards.json';
-import qcm885 from './../../contenu/terminale/philosophie/religion/qcm.json';
-import flash885 from './../../contenu/terminale/philosophie/religion/flashcards.json';
-import qcm886 from './../../contenu/terminale/philosophie/liberte/qcm.json';
-import flash886 from './../../contenu/terminale/philosophie/liberte/flashcards.json';
-import qcm887 from './../../contenu/terminale/philosophie/devoir/qcm.json';
-import flash887 from './../../contenu/terminale/philosophie/devoir/flashcards.json';
-import qcm888 from './../../contenu/terminale/philosophie/bonheur/qcm.json';
-import flash888 from './../../contenu/terminale/philosophie/bonheur/flashcards.json';
-import qcm889 from './../../contenu/terminale/philosophie/justice/qcm.json';
-import flash889 from './../../contenu/terminale/philosophie/justice/flashcards.json';
-import qcm890 from './../../contenu/terminale/philosophie/etat/qcm.json';
-import flash890 from './../../contenu/terminale/philosophie/etat/flashcards.json';
-import qcm891 from './../../contenu/terminale/physique-chimie/acide-base-ph/qcm.json';
-import flash891 from './../../contenu/terminale/physique-chimie/acide-base-ph/flashcards.json';
-import qcm892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/qcm.json';
-import flash892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/flashcards.json';
-import qcm893 from './../../contenu/terminale/physique-chimie/titrages/qcm.json';
-import flash893 from './../../contenu/terminale/physique-chimie/titrages/flashcards.json';
-import qcm894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/qcm.json';
-import flash894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/flashcards.json';
-import qcm895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/qcm.json';
-import flash895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/flashcards.json';
-import qcm896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/qcm.json';
-import flash896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/flashcards.json';
-import qcm897 from './../../contenu/terminale/physique-chimie/electrolyse/qcm.json';
-import flash897 from './../../contenu/terminale/physique-chimie/electrolyse/flashcards.json';
-import qcm898 from './../../contenu/terminale/physique-chimie/synthese-organique/qcm.json';
-import flash898 from './../../contenu/terminale/physique-chimie/synthese-organique/flashcards.json';
-import qcm899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/qcm.json';
-import flash899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/flashcards.json';
-import qcm900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/qcm.json';
-import flash900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/flashcards.json';
-import qcm901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/qcm.json';
-import flash901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/flashcards.json';
-import qcm902 from './../../contenu/terminale/physique-chimie/gaz-parfait/qcm.json';
-import flash902 from './../../contenu/terminale/physique-chimie/gaz-parfait/flashcards.json';
-import qcm903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/qcm.json';
-import flash903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/flashcards.json';
-import qcm904 from './../../contenu/terminale/physique-chimie/dipole-rc/qcm.json';
-import flash904 from './../../contenu/terminale/physique-chimie/dipole-rc/flashcards.json';
-import qcm905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/qcm.json';
-import flash905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/flashcards.json';
-import qcm906 from './../../contenu/terminale/physique-chimie/lunette-photons/qcm.json';
-import flash906 from './../../contenu/terminale/physique-chimie/lunette-photons/flashcards.json';
-import qcm907 from './../../contenu/terminale/ses/sources-croissance/qcm.json';
-import flash907 from './../../contenu/terminale/ses/sources-croissance/flashcards.json';
-import qcm908 from './../../contenu/terminale/ses/commerce-mondialisation/qcm.json';
-import flash908 from './../../contenu/terminale/ses/commerce-mondialisation/flashcards.json';
-import qcm909 from './../../contenu/terminale/ses/marche-du-travail-chomage/qcm.json';
-import flash909 from './../../contenu/terminale/ses/marche-du-travail-chomage/flashcards.json';
-import qcm910 from './../../contenu/terminale/ses/monnaie-crises-financieres/qcm.json';
-import flash910 from './../../contenu/terminale/ses/monnaie-crises-financieres/flashcards.json';
-import qcm911 from './../../contenu/terminale/ses/politiques-economiques/qcm.json';
-import flash911 from './../../contenu/terminale/ses/politiques-economiques/flashcards.json';
-import qcm912 from './../../contenu/terminale/ses/structure-sociale-classes/qcm.json';
-import flash912 from './../../contenu/terminale/ses/structure-sociale-classes/flashcards.json';
-import qcm913 from './../../contenu/terminale/ses/mobilite-sociale/qcm.json';
-import flash913 from './../../contenu/terminale/ses/mobilite-sociale/flashcards.json';
-import qcm914 from './../../contenu/terminale/ses/ecole-et-inegalites/qcm.json';
-import flash914 from './../../contenu/terminale/ses/ecole-et-inegalites/flashcards.json';
-import qcm915 from './../../contenu/terminale/ses/engagement-politique/qcm.json';
-import flash915 from './../../contenu/terminale/ses/engagement-politique/flashcards.json';
-import qcm916 from './../../contenu/terminale/si/modelisation-des-mouvements/qcm.json';
-import flash916 from './../../contenu/terminale/si/modelisation-des-mouvements/flashcards.json';
-import qcm917 from './../../contenu/terminale/si/energie-dans-les-systemes/qcm.json';
-import flash917 from './../../contenu/terminale/si/energie-dans-les-systemes/flashcards.json';
-import qcm918 from './../../contenu/terminale/si/resistance-des-structures/qcm.json';
-import flash918 from './../../contenu/terminale/si/resistance-des-structures/flashcards.json';
-import qcm919 from './../../contenu/terminale/si/transmission-de-linformation/qcm.json';
-import flash919 from './../../contenu/terminale/si/transmission-de-linformation/flashcards.json';
-import qcm920 from './../../contenu/terminale/si/asservissement-et-regulation/qcm.json';
-import flash920 from './../../contenu/terminale/si/asservissement-et-regulation/flashcards.json';
-import qcm921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/qcm.json';
-import flash921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/flashcards.json';
-import qcm922 from './../../contenu/terminale/svt/evolution-et-speciation/qcm.json';
-import flash922 from './../../contenu/terminale/svt/evolution-et-speciation/flashcards.json';
-import qcm923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/qcm.json';
-import flash923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/flashcards.json';
-import qcm924 from './../../contenu/terminale/svt/climats-passes-et-actuels/qcm.json';
-import flash924 from './../../contenu/terminale/svt/climats-passes-et-actuels/flashcards.json';
-import qcm925 from './../../contenu/terminale/svt/reflexe-et-motricite/qcm.json';
-import flash925 from './../../contenu/terminale/svt/reflexe-et-motricite/flashcards.json';
-import qcm926 from './../../contenu/terminale/svt/glycemie-et-diabete/qcm.json';
-import flash926 from './../../contenu/terminale/svt/glycemie-et-diabete/flashcards.json';
-import qcm927 from './../../contenu/terminale-techno/maths/logique-ensembles/qcm.json';
-import flash927 from './../../contenu/terminale-techno/maths/logique-ensembles/flashcards.json';
-import qcm928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/qcm.json';
-import flash928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/flashcards.json';
-import qcm929 from './../../contenu/terminale-techno/maths/fonction-inverse/qcm.json';
-import flash929 from './../../contenu/terminale-techno/maths/fonction-inverse/flashcards.json';
-import qcm930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/qcm.json';
-import flash930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/flashcards.json';
-import qcm931 from './../../contenu/terminale-techno/maths/logarithme-decimal/qcm.json';
-import flash931 from './../../contenu/terminale-techno/maths/logarithme-decimal/flashcards.json';
-import qcm932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/qcm.json';
-import flash932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/flashcards.json';
-import qcm933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/qcm.json';
-import flash933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/flashcards.json';
-import qcm934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/qcm.json';
-import flash934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/flashcards.json';
-import qcm935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/qcm.json';
-import flash935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/flashcards.json';
-import qcm936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/qcm.json';
-import flash936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/flashcards.json';
-import qcm937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
-import flash937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
-import qcm938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/qcm.json';
-import flash938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/flashcards.json';
-import qcm939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/qcm.json';
-import flash939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/flashcards.json';
-import qcm940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/qcm.json';
-import flash940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/flashcards.json';
-import qcm941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/qcm.json';
-import flash941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/flashcards.json';
-import qcm942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/qcm.json';
-import flash942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/flashcards.json';
-import qcm943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/qcm.json';
-import flash943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/flashcards.json';
-import qcm944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/qcm.json';
-import flash944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/flashcards.json';
-import qcm945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/qcm.json';
-import flash945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/flashcards.json';
-import qcm946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/qcm.json';
-import flash946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/flashcards.json';
-import qcm947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/qcm.json';
-import flash947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/flashcards.json';
-import qcm948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/qcm.json';
-import flash948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/flashcards.json';
-import qcm949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/qcm.json';
-import flash949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/flashcards.json';
-import qcm950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/qcm.json';
-import flash950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/flashcards.json';
-import qcm951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/qcm.json';
-import flash951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/flashcards.json';
-import qcm952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/qcm.json';
-import flash952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/flashcards.json';
-import qcm953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/qcm.json';
-import flash953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/flashcards.json';
-import qcm954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/qcm.json';
-import flash954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/flashcards.json';
-import qcm955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/qcm.json';
-import flash955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/flashcards.json';
+import qcm613 from './../../contenu/seconde/maths/information-chiffree/qcm.json';
+import flash613 from './../../contenu/seconde/maths/information-chiffree/flashcards.json';
+import qcm614 from './../../contenu/seconde/maths/statistiques/qcm.json';
+import flash614 from './../../contenu/seconde/maths/statistiques/flashcards.json';
+import qcm615 from './../../contenu/seconde/maths/probabilites/qcm.json';
+import flash615 from './../../contenu/seconde/maths/probabilites/flashcards.json';
+import qcm616 from './../../contenu/seconde/maths/algorithmique/qcm.json';
+import flash616 from './../../contenu/seconde/maths/algorithmique/flashcards.json';
+import qcm617 from './../../contenu/seconde/physique-chimie/description-matiere/qcm.json';
+import flash617 from './../../contenu/seconde/physique-chimie/description-matiere/flashcards.json';
+import qcm618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/qcm.json';
+import flash618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/flashcards.json';
+import qcm619 from './../../contenu/seconde/physique-chimie/transformations-matiere/qcm.json';
+import flash619 from './../../contenu/seconde/physique-chimie/transformations-matiere/flashcards.json';
+import qcm620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/qcm.json';
+import flash620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/flashcards.json';
+import qcm621 from './../../contenu/seconde/physique-chimie/ondes-signaux/qcm.json';
+import flash621 from './../../contenu/seconde/physique-chimie/ondes-signaux/flashcards.json';
+import qcm622 from './../../contenu/seconde/ses/production-richesses/qcm.json';
+import flash622 from './../../contenu/seconde/ses/production-richesses/flashcards.json';
+import qcm623 from './../../contenu/seconde/ses/mesure-production-pib/qcm.json';
+import flash623 from './../../contenu/seconde/ses/mesure-production-pib/flashcards.json';
+import qcm624 from './../../contenu/seconde/ses/consommation-revenu/qcm.json';
+import flash624 from './../../contenu/seconde/ses/consommation-revenu/flashcards.json';
+import qcm625 from './../../contenu/seconde/ses/marche-formation-prix/qcm.json';
+import flash625 from './../../contenu/seconde/ses/marche-formation-prix/flashcards.json';
+import qcm626 from './../../contenu/seconde/ses/socialisation-introduction/qcm.json';
+import flash626 from './../../contenu/seconde/ses/socialisation-introduction/flashcards.json';
+import qcm627 from './../../contenu/seconde/ses/opinion-publique/qcm.json';
+import flash627 from './../../contenu/seconde/ses/opinion-publique/flashcards.json';
+import qcm628 from './../../contenu/seconde/snt/internet/qcm.json';
+import flash628 from './../../contenu/seconde/snt/internet/flashcards.json';
+import qcm629 from './../../contenu/seconde/snt/le-web/qcm.json';
+import flash629 from './../../contenu/seconde/snt/le-web/flashcards.json';
+import qcm630 from './../../contenu/seconde/snt/reseaux-sociaux/qcm.json';
+import flash630 from './../../contenu/seconde/snt/reseaux-sociaux/flashcards.json';
+import qcm631 from './../../contenu/seconde/snt/donnees-structurees/qcm.json';
+import flash631 from './../../contenu/seconde/snt/donnees-structurees/flashcards.json';
+import qcm632 from './../../contenu/seconde/snt/localisation-cartographie-gps/qcm.json';
+import flash632 from './../../contenu/seconde/snt/localisation-cartographie-gps/flashcards.json';
+import qcm633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/qcm.json';
+import flash633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/flashcards.json';
+import qcm634 from './../../contenu/seconde/snt/photographie-numerique/qcm.json';
+import flash634 from './../../contenu/seconde/snt/photographie-numerique/flashcards.json';
+import qcm635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/qcm.json';
+import flash635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/flashcards.json';
+import qcm636 from './../../contenu/seconde/svt/adn-et-information-genetique/qcm.json';
+import flash636 from './../../contenu/seconde/svt/adn-et-information-genetique/flashcards.json';
+import qcm637 from './../../contenu/seconde/svt/metabolisme-des-cellules/qcm.json';
+import flash637 from './../../contenu/seconde/svt/metabolisme-des-cellules/flashcards.json';
+import qcm638 from './../../contenu/seconde/svt/biodiversite-et-evolution/qcm.json';
+import flash638 from './../../contenu/seconde/svt/biodiversite-et-evolution/flashcards.json';
+import qcm639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/qcm.json';
+import flash639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/flashcards.json';
+import qcm640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/qcm.json';
+import flash640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/flashcards.json';
+import qcm641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/qcm.json';
+import flash641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/flashcards.json';
+import qcm642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/qcm.json';
+import flash642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/flashcards.json';
+import qcm643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/qcm.json';
+import flash643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/flashcards.json';
+import qcm644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/qcm.json';
+import flash644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/flashcards.json';
+import qcm645 from './../../contenu/premiere/allemand/passiv/qcm.json';
+import flash645 from './../../contenu/premiere/allemand/passiv/flashcards.json';
+import qcm646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/qcm.json';
+import flash646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/flashcards.json';
+import qcm647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/qcm.json';
+import flash647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/flashcards.json';
+import qcm648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/qcm.json';
+import flash648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/flashcards.json';
+import qcm649 from './../../contenu/premiere/allemand/landeskunde-literatur/qcm.json';
+import flash649 from './../../contenu/premiere/allemand/landeskunde-literatur/flashcards.json';
+import qcm650 from './../../contenu/premiere/anglais/aspects-simple-continu/qcm.json';
+import flash650 from './../../contenu/premiere/anglais/aspects-simple-continu/flashcards.json';
+import qcm651 from './../../contenu/premiere/anglais/gerondif-infinitif/qcm.json';
+import flash651 from './../../contenu/premiere/anglais/gerondif-infinitif/flashcards.json';
+import qcm652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/qcm.json';
+import flash652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/flashcards.json';
+import qcm653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/qcm.json';
+import flash653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/flashcards.json';
+import qcm654 from './../../contenu/premiere/anglais/voix-passive-emplois/qcm.json';
+import flash654 from './../../contenu/premiere/anglais/voix-passive-emplois/flashcards.json';
+import qcm655 from './../../contenu/premiere/anglais/futur-et-hypotheses/qcm.json';
+import flash655 from './../../contenu/premiere/anglais/futur-et-hypotheses/flashcards.json';
+import qcm656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/qcm.json';
+import flash656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/flashcards.json';
+import qcm657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/qcm.json';
+import flash657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/flashcards.json';
+import qcm658 from './../../contenu/premiere/anglais/civilisation-litterature/qcm.json';
+import flash658 from './../../contenu/premiere/anglais/civilisation-litterature/flashcards.json';
+import qcm659 from './../../contenu/premiere/arts/architecture/qcm.json';
+import flash659 from './../../contenu/premiere/arts/architecture/flashcards.json';
+import qcm660 from './../../contenu/premiere/arts/histoire-musique/qcm.json';
+import flash660 from './../../contenu/premiere/arts/histoire-musique/flashcards.json';
+import qcm661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/qcm.json';
+import flash661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/flashcards.json';
+import qcm662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/qcm.json';
+import flash662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/flashcards.json';
+import qcm663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/qcm.json';
+import flash663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/flashcards.json';
+import qcm664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/qcm.json';
+import flash664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/flashcards.json';
+import qcm665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/qcm.json';
+import flash665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/flashcards.json';
+import qcm666 from './../../contenu/premiere/espagnol/subjuntivo-usos/qcm.json';
+import flash666 from './../../contenu/premiere/espagnol/subjuntivo-usos/flashcards.json';
+import qcm667 from './../../contenu/premiere/espagnol/relativos/qcm.json';
+import flash667 from './../../contenu/premiere/espagnol/relativos/flashcards.json';
+import qcm668 from './../../contenu/premiere/espagnol/perifrasis/qcm.json';
+import flash668 from './../../contenu/premiere/espagnol/perifrasis/flashcards.json';
+import qcm669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/qcm.json';
+import flash669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/flashcards.json';
+import qcm670 from './../../contenu/premiere/espagnol/voz-pasiva/qcm.json';
+import flash670 from './../../contenu/premiere/espagnol/voz-pasiva/flashcards.json';
+import qcm671 from './../../contenu/premiere/espagnol/estilo-indirecto/qcm.json';
+import flash671 from './../../contenu/premiere/espagnol/estilo-indirecto/flashcards.json';
+import qcm672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/qcm.json';
+import flash672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/flashcards.json';
+import qcm673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/qcm.json';
+import flash673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/flashcards.json';
+import qcm674 from './../../contenu/premiere/espagnol/civilizacion-literatura/qcm.json';
+import flash674 from './../../contenu/premiere/espagnol/civilizacion-literatura/flashcards.json';
+import qcm675 from './../../contenu/premiere/francais/grammaire-premiere/qcm.json';
+import flash675 from './../../contenu/premiere/francais/grammaire-premiere/flashcards.json';
+import qcm676 from './../../contenu/premiere/francais/commentaire-litteraire/qcm.json';
+import flash676 from './../../contenu/premiere/francais/commentaire-litteraire/flashcards.json';
+import qcm677 from './../../contenu/premiere/francais/roman-et-recit/qcm.json';
+import flash677 from './../../contenu/premiere/francais/roman-et-recit/flashcards.json';
+import qcm678 from './../../contenu/premiere/francais/poesie-19-21/qcm.json';
+import flash678 from './../../contenu/premiere/francais/poesie-19-21/flashcards.json';
+import qcm679 from './../../contenu/premiere/francais/contraction-essai/qcm.json';
+import flash679 from './../../contenu/premiere/francais/contraction-essai/flashcards.json';
+import qcm680 from './../../contenu/premiere/francais/litterature-idees-16-18/qcm.json';
+import flash680 from './../../contenu/premiere/francais/litterature-idees-16-18/flashcards.json';
+import qcm681 from './../../contenu/premiere/francais/dissertation/qcm.json';
+import flash681 from './../../contenu/premiere/francais/dissertation/flashcards.json';
+import qcm682 from './../../contenu/premiere/francais/theatre-17-21/qcm.json';
+import flash682 from './../../contenu/premiere/francais/theatre-17-21/flashcards.json';
+import qcm683 from './../../contenu/premiere/francais/epreuve-orale/qcm.json';
+import flash683 from './../../contenu/premiere/francais/epreuve-orale/flashcards.json';
+import qcm684 from './../../contenu/premiere/hggsp/democratie/qcm.json';
+import flash684 from './../../contenu/premiere/hggsp/democratie/flashcards.json';
+import qcm685 from './../../contenu/premiere/hggsp/puissances-internationales/qcm.json';
+import flash685 from './../../contenu/premiere/hggsp/puissances-internationales/flashcards.json';
+import qcm686 from './../../contenu/premiere/hggsp/frontieres/qcm.json';
+import flash686 from './../../contenu/premiere/hggsp/frontieres/flashcards.json';
+import qcm687 from './../../contenu/premiere/hggsp/s-informer/qcm.json';
+import flash687 from './../../contenu/premiere/hggsp/s-informer/flashcards.json';
+import qcm688 from './../../contenu/premiere/hggsp/etats-et-religions/qcm.json';
+import flash688 from './../../contenu/premiere/hggsp/etats-et-religions/flashcards.json';
+import qcm689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/qcm.json';
+import flash689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/flashcards.json';
+import qcm690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/qcm.json';
+import flash690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/flashcards.json';
+import qcm691 from './../../contenu/premiere/hist-geo/industrialisation-19e/qcm.json';
+import flash691 from './../../contenu/premiere/hist-geo/industrialisation-19e/flashcards.json';
+import qcm692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/qcm.json';
+import flash692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/flashcards.json';
+import qcm693 from './../../contenu/premiere/hist-geo/metropolisation-france/qcm.json';
+import flash693 from './../../contenu/premiere/hist-geo/metropolisation-france/flashcards.json';
+import qcm694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/qcm.json';
+import flash694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/flashcards.json';
+import qcm695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/qcm.json';
+import flash695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/flashcards.json';
+import qcm696 from './../../contenu/premiere/italien/congiuntivo-usi/qcm.json';
+import flash696 from './../../contenu/premiere/italien/congiuntivo-usi/flashcards.json';
+import qcm697 from './../../contenu/premiere/italien/pronomi-relativi/qcm.json';
+import flash697 from './../../contenu/premiere/italien/pronomi-relativi/flashcards.json';
+import qcm698 from './../../contenu/premiere/italien/perifrasi/qcm.json';
+import flash698 from './../../contenu/premiere/italien/perifrasi/flashcards.json';
+import qcm699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/qcm.json';
+import flash699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/flashcards.json';
+import qcm700 from './../../contenu/premiere/italien/forma-passiva/qcm.json';
+import flash700 from './../../contenu/premiere/italien/forma-passiva/flashcards.json';
+import qcm701 from './../../contenu/premiere/italien/discorso-indiretto/qcm.json';
+import flash701 from './../../contenu/premiere/italien/discorso-indiretto/flashcards.json';
+import qcm702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/qcm.json';
+import flash702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/flashcards.json';
+import qcm703 from './../../contenu/premiere/italien/civilta-rinascimento/qcm.json';
+import flash703 from './../../contenu/premiere/italien/civilta-rinascimento/flashcards.json';
+import qcm704 from './../../contenu/premiere/italien/civilta-letteratura/qcm.json';
+import flash704 from './../../contenu/premiere/italien/civilta-letteratura/flashcards.json';
+import qcm705 from './../../contenu/premiere/langues-anciennes/mythologie/qcm.json';
+import flash705 from './../../contenu/premiere/langues-anciennes/mythologie/flashcards.json';
+import qcm706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/qcm.json';
+import flash706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/flashcards.json';
+import qcm707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/qcm.json';
+import flash707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/flashcards.json';
+import qcm708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/qcm.json';
+import flash708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/flashcards.json';
+import qcm709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/qcm.json';
+import flash709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/flashcards.json';
+import qcm710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/qcm.json';
+import flash710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/flashcards.json';
+import qcm711 from './../../contenu/premiere/maths-specialite/second-degre/qcm.json';
+import flash711 from './../../contenu/premiere/maths-specialite/second-degre/flashcards.json';
+import qcm712 from './../../contenu/premiere/maths-specialite/suites-numeriques/qcm.json';
+import flash712 from './../../contenu/premiere/maths-specialite/suites-numeriques/flashcards.json';
+import qcm713 from './../../contenu/premiere/maths-specialite/derivation/qcm.json';
+import flash713 from './../../contenu/premiere/maths-specialite/derivation/flashcards.json';
+import qcm714 from './../../contenu/premiere/maths-specialite/variations-courbes/qcm.json';
+import flash714 from './../../contenu/premiere/maths-specialite/variations-courbes/flashcards.json';
+import qcm715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/qcm.json';
+import flash715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/flashcards.json';
+import qcm716 from './../../contenu/premiere/maths-specialite/trigonometrie/qcm.json';
+import flash716 from './../../contenu/premiere/maths-specialite/trigonometrie/flashcards.json';
+import qcm717 from './../../contenu/premiere/maths-specialite/produit-scalaire/qcm.json';
+import flash717 from './../../contenu/premiere/maths-specialite/produit-scalaire/flashcards.json';
+import qcm718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/qcm.json';
+import flash718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/flashcards.json';
+import qcm719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/qcm.json';
+import flash719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/flashcards.json';
+import qcm720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/qcm.json';
+import flash720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/flashcards.json';
+import qcm721 from './../../contenu/premiere/nsi/representation-des-donnees/qcm.json';
+import flash721 from './../../contenu/premiere/nsi/representation-des-donnees/flashcards.json';
+import qcm722 from './../../contenu/premiere/nsi/types-construits/qcm.json';
+import flash722 from './../../contenu/premiere/nsi/types-construits/flashcards.json';
+import qcm723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/qcm.json';
+import flash723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/flashcards.json';
+import qcm724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/qcm.json';
+import flash724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/flashcards.json';
+import qcm725 from './../../contenu/premiere/nsi/architecture-et-systeme/qcm.json';
+import flash725 from './../../contenu/premiere/nsi/architecture-et-systeme/flashcards.json';
+import qcm726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/qcm.json';
+import flash726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/flashcards.json';
+import qcm727 from './../../contenu/premiere/physique-chimie/transformations-matiere/qcm.json';
+import flash727 from './../../contenu/premiere/physique-chimie/transformations-matiere/flashcards.json';
+import qcm728 from './../../contenu/premiere/physique-chimie/chimie-organique/qcm.json';
+import flash728 from './../../contenu/premiere/physique-chimie/chimie-organique/flashcards.json';
+import qcm729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/qcm.json';
+import flash729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/flashcards.json';
+import qcm730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/qcm.json';
+import flash730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/flashcards.json';
+import qcm731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/qcm.json';
+import flash731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/flashcards.json';
+import qcm732 from './../../contenu/premiere/physique-chimie/ondes-signaux/qcm.json';
+import flash732 from './../../contenu/premiere/physique-chimie/ondes-signaux/flashcards.json';
+import qcm733 from './../../contenu/premiere/ses/marche-concurrentiel/qcm.json';
+import flash733 from './../../contenu/premiere/ses/marche-concurrentiel/flashcards.json';
+import qcm734 from './../../contenu/premiere/ses/marches-imparfaits/qcm.json';
+import flash734 from './../../contenu/premiere/ses/marches-imparfaits/flashcards.json';
+import qcm735 from './../../contenu/premiere/ses/defaillances-de-marche/qcm.json';
+import flash735 from './../../contenu/premiere/ses/defaillances-de-marche/flashcards.json';
+import qcm736 from './../../contenu/premiere/ses/monnaie-et-financement/qcm.json';
+import flash736 from './../../contenu/premiere/ses/monnaie-et-financement/flashcards.json';
+import qcm737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/qcm.json';
+import flash737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/flashcards.json';
+import qcm738 from './../../contenu/premiere/ses/liens-sociaux/qcm.json';
+import flash738 from './../../contenu/premiere/ses/liens-sociaux/flashcards.json';
+import qcm739 from './../../contenu/premiere/ses/deviance-controle-social/qcm.json';
+import flash739 from './../../contenu/premiere/ses/deviance-controle-social/flashcards.json';
+import qcm740 from './../../contenu/premiere/ses/voter-participation/qcm.json';
+import flash740 from './../../contenu/premiere/ses/voter-participation/flashcards.json';
+import qcm741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/qcm.json';
+import flash741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/flashcards.json';
+import qcm742 from './../../contenu/premiere/si/chaine-denergie/qcm.json';
+import flash742 from './../../contenu/premiere/si/chaine-denergie/flashcards.json';
+import qcm743 from './../../contenu/premiere/si/chaine-dinformation/qcm.json';
+import flash743 from './../../contenu/premiere/si/chaine-dinformation/flashcards.json';
+import qcm744 from './../../contenu/premiere/si/comportement-des-materiaux/qcm.json';
+import flash744 from './../../contenu/premiere/si/comportement-des-materiaux/flashcards.json';
+import qcm745 from './../../contenu/premiere/si/mecanique-des-solides/qcm.json';
+import flash745 from './../../contenu/premiere/si/mecanique-des-solides/flashcards.json';
+import qcm746 from './../../contenu/premiere/svt/mutations-et-variabilite/qcm.json';
+import flash746 from './../../contenu/premiere/svt/mutations-et-variabilite/flashcards.json';
+import qcm747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/qcm.json';
+import flash747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/flashcards.json';
+import qcm748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/qcm.json';
+import flash748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/flashcards.json';
+import qcm749 from './../../contenu/premiere/svt/ecosystemes-et-services/qcm.json';
+import flash749 from './../../contenu/premiere/svt/ecosystemes-et-services/flashcards.json';
+import qcm750 from './../../contenu/premiere/svt/variation-genetique-et-sante/qcm.json';
+import flash750 from './../../contenu/premiere/svt/variation-genetique-et-sante/flashcards.json';
+import qcm751 from './../../contenu/premiere-techno/maths/suites-numeriques/qcm.json';
+import flash751 from './../../contenu/premiere-techno/maths/suites-numeriques/flashcards.json';
+import qcm752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/qcm.json';
+import flash752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/flashcards.json';
+import qcm753 from './../../contenu/premiere-techno/maths/derivation/qcm.json';
+import flash753 from './../../contenu/premiere-techno/maths/derivation/flashcards.json';
+import qcm754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/qcm.json';
+import flash754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/flashcards.json';
+import qcm755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/qcm.json';
+import flash755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/flashcards.json';
+import qcm756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
+import flash756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
+import qcm757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/qcm.json';
+import flash757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/flashcards.json';
+import qcm758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/qcm.json';
+import flash758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/flashcards.json';
+import qcm759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/qcm.json';
+import flash759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/flashcards.json';
+import qcm760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/qcm.json';
+import flash760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/flashcards.json';
+import qcm761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/qcm.json';
+import flash761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/flashcards.json';
+import qcm762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/qcm.json';
+import flash762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/flashcards.json';
+import qcm763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/qcm.json';
+import flash763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/flashcards.json';
+import qcm764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/qcm.json';
+import flash764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/flashcards.json';
+import qcm765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/qcm.json';
+import flash765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/flashcards.json';
+import qcm766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/qcm.json';
+import flash766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/flashcards.json';
+import qcm767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/qcm.json';
+import flash767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/flashcards.json';
+import qcm768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/qcm.json';
+import flash768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/flashcards.json';
+import qcm769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/qcm.json';
+import flash769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/flashcards.json';
+import qcm770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/qcm.json';
+import flash770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/flashcards.json';
+import qcm771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/qcm.json';
+import flash771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/flashcards.json';
+import qcm772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/qcm.json';
+import flash772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/flashcards.json';
+import qcm773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/qcm.json';
+import flash773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/flashcards.json';
+import qcm774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/qcm.json';
+import flash774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/flashcards.json';
+import qcm775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/qcm.json';
+import flash775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/flashcards.json';
+import qcm776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/qcm.json';
+import flash776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/flashcards.json';
+import qcm777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/qcm.json';
+import flash777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/flashcards.json';
+import qcm778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/qcm.json';
+import flash778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/flashcards.json';
+import qcm779 from './../../contenu/terminale/allemand/konnektoren-argumentation/qcm.json';
+import flash779 from './../../contenu/terminale/allemand/konnektoren-argumentation/flashcards.json';
+import qcm780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/qcm.json';
+import flash780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/flashcards.json';
+import qcm781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/qcm.json';
+import flash781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/flashcards.json';
+import qcm782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/qcm.json';
+import flash782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/flashcards.json';
+import qcm783 from './../../contenu/terminale/allemand/nominalstil/qcm.json';
+import flash783 from './../../contenu/terminale/allemand/nominalstil/flashcards.json';
+import qcm784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/qcm.json';
+import flash784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/flashcards.json';
+import qcm785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/qcm.json';
+import flash785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/flashcards.json';
+import qcm786 from './../../contenu/terminale/anglais/systeme-verbal/qcm.json';
+import flash786 from './../../contenu/terminale/anglais/systeme-verbal/flashcards.json';
+import qcm787 from './../../contenu/terminale/anglais/modalite/qcm.json';
+import flash787 from './../../contenu/terminale/anglais/modalite/flashcards.json';
+import qcm788 from './../../contenu/terminale/anglais/irreel-hypotheses/qcm.json';
+import flash788 from './../../contenu/terminale/anglais/irreel-hypotheses/flashcards.json';
+import qcm789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/qcm.json';
+import flash789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/flashcards.json';
+import qcm790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/qcm.json';
+import flash790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/flashcards.json';
+import qcm791 from './../../contenu/terminale/anglais/structures-complexes/qcm.json';
+import flash791 from './../../contenu/terminale/anglais/structures-complexes/flashcards.json';
+import qcm792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/qcm.json';
+import flash792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/flashcards.json';
+import qcm793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/qcm.json';
+import flash793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/flashcards.json';
+import qcm794 from './../../contenu/terminale/arts/cinema/qcm.json';
+import flash794 from './../../contenu/terminale/arts/cinema/flashcards.json';
+import qcm795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/qcm.json';
+import flash795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/flashcards.json';
+import qcm796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/qcm.json';
+import flash796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/flashcards.json';
+import qcm797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/qcm.json';
+import flash797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/flashcards.json';
+import qcm798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/qcm.json';
+import flash798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/flashcards.json';
+import qcm799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/qcm.json';
+import flash799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/flashcards.json';
+import qcm800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/qcm.json';
+import flash800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/flashcards.json';
+import qcm801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/qcm.json';
+import flash801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/flashcards.json';
+import qcm802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/qcm.json';
+import flash802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/flashcards.json';
+import qcm803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/qcm.json';
+import flash803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/flashcards.json';
+import qcm804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/qcm.json';
+import flash804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/flashcards.json';
+import qcm805 from './../../contenu/terminale/espagnol/concordancia-tiempos/qcm.json';
+import flash805 from './../../contenu/terminale/espagnol/concordancia-tiempos/flashcards.json';
+import qcm806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/qcm.json';
+import flash806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/flashcards.json';
+import qcm807 from './../../contenu/terminale/espagnol/conectores-argumentacion/qcm.json';
+import flash807 from './../../contenu/terminale/espagnol/conectores-argumentacion/flashcards.json';
+import qcm808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/qcm.json';
+import flash808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/flashcards.json';
+import qcm809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/qcm.json';
+import flash809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/flashcards.json';
+import qcm810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/qcm.json';
+import flash810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/flashcards.json';
+import qcm811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/qcm.json';
+import flash811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/flashcards.json';
+import qcm812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/qcm.json';
+import flash812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/flashcards.json';
+import qcm813 from './../../contenu/terminale/grand-oral/construire-l-expose/qcm.json';
+import flash813 from './../../contenu/terminale/grand-oral/construire-l-expose/flashcards.json';
+import qcm814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/qcm.json';
+import flash814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/flashcards.json';
+import qcm815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/qcm.json';
+import flash815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/flashcards.json';
+import qcm816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/qcm.json';
+import flash816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/flashcards.json';
+import qcm817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/qcm.json';
+import flash817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/flashcards.json';
+import qcm818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/qcm.json';
+import flash818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/flashcards.json';
+import qcm819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/qcm.json';
+import flash819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/flashcards.json';
+import qcm820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/qcm.json';
+import flash820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/flashcards.json';
+import qcm821 from './../../contenu/terminale/hggsp/histoire-et-memoires/qcm.json';
+import flash821 from './../../contenu/terminale/hggsp/histoire-et-memoires/flashcards.json';
+import qcm822 from './../../contenu/terminale/hggsp/patrimoine/qcm.json';
+import flash822 from './../../contenu/terminale/hggsp/patrimoine/flashcards.json';
+import qcm823 from './../../contenu/terminale/hggsp/environnement/qcm.json';
+import flash823 from './../../contenu/terminale/hggsp/environnement/flashcards.json';
+import qcm824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/qcm.json';
+import flash824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/flashcards.json';
+import qcm825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/qcm.json';
+import flash825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/flashcards.json';
+import qcm826 from './../../contenu/terminale/hist-geo/guerre-froide/qcm.json';
+import flash826 from './../../contenu/terminale/hist-geo/guerre-froide/flashcards.json';
+import qcm827 from './../../contenu/terminale/hist-geo/decolonisation/qcm.json';
+import flash827 from './../../contenu/terminale/hist-geo/decolonisation/flashcards.json';
+import qcm828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/qcm.json';
+import flash828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/flashcards.json';
+import qcm829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/qcm.json';
+import flash829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/flashcards.json';
+import qcm830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/qcm.json';
+import flash830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/flashcards.json';
+import qcm831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/qcm.json';
+import flash831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/flashcards.json';
+import qcm832 from './../../contenu/terminale/italien/usi-avanzati/qcm.json';
+import flash832 from './../../contenu/terminale/italien/usi-avanzati/flashcards.json';
+import qcm833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/qcm.json';
+import flash833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/flashcards.json';
+import qcm834 from './../../contenu/terminale/italien/concordanza-tempi/qcm.json';
+import flash834 from './../../contenu/terminale/italien/concordanza-tempi/flashcards.json';
+import qcm835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/qcm.json';
+import flash835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/flashcards.json';
+import qcm836 from './../../contenu/terminale/italien/connettivi-argomentazione/qcm.json';
+import flash836 from './../../contenu/terminale/italien/connettivi-argomentazione/flashcards.json';
+import qcm837 from './../../contenu/terminale/italien/strutture-enfatiche/qcm.json';
+import flash837 from './../../contenu/terminale/italien/strutture-enfatiche/flashcards.json';
+import qcm838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/qcm.json';
+import flash838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/flashcards.json';
+import qcm839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/qcm.json';
+import flash839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/flashcards.json';
+import qcm840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/qcm.json';
+import flash840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/flashcards.json';
+import qcm841 from './../../contenu/terminale/maths-complementaires/suites-evolution/qcm.json';
+import flash841 from './../../contenu/terminale/maths-complementaires/suites-evolution/flashcards.json';
+import qcm842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/qcm.json';
+import flash842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/flashcards.json';
+import qcm843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/qcm.json';
+import flash843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/flashcards.json';
+import qcm844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/qcm.json';
+import flash844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/flashcards.json';
+import qcm845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/qcm.json';
+import flash845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/flashcards.json';
+import qcm846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/qcm.json';
+import flash846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/flashcards.json';
+import qcm847 from './../../contenu/terminale/maths-complementaires/calcul-integral/qcm.json';
+import flash847 from './../../contenu/terminale/maths-complementaires/calcul-integral/flashcards.json';
+import qcm848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/qcm.json';
+import flash848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/flashcards.json';
+import qcm849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/qcm.json';
+import flash849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/flashcards.json';
+import qcm850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/qcm.json';
+import flash850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/flashcards.json';
+import qcm851 from './../../contenu/terminale/maths-expertes/arithmetique/qcm.json';
+import flash851 from './../../contenu/terminale/maths-expertes/arithmetique/flashcards.json';
+import qcm852 from './../../contenu/terminale/maths-expertes/graphes-matrices/qcm.json';
+import flash852 from './../../contenu/terminale/maths-expertes/graphes-matrices/flashcards.json';
+import qcm853 from './../../contenu/terminale/maths-specialite/logique-ensembles/qcm.json';
+import flash853 from './../../contenu/terminale/maths-specialite/logique-ensembles/flashcards.json';
+import qcm854 from './../../contenu/terminale/maths-specialite/suites/qcm.json';
+import flash854 from './../../contenu/terminale/maths-specialite/suites/flashcards.json';
+import qcm855 from './../../contenu/terminale/maths-specialite/limites-fonctions/qcm.json';
+import flash855 from './../../contenu/terminale/maths-specialite/limites-fonctions/flashcards.json';
+import qcm856 from './../../contenu/terminale/maths-specialite/continuite/qcm.json';
+import flash856 from './../../contenu/terminale/maths-specialite/continuite/flashcards.json';
+import qcm857 from './../../contenu/terminale/maths-specialite/derivation-convexite/qcm.json';
+import flash857 from './../../contenu/terminale/maths-specialite/derivation-convexite/flashcards.json';
+import qcm858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/qcm.json';
+import flash858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/flashcards.json';
+import qcm859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/qcm.json';
+import flash859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/flashcards.json';
+import qcm860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/qcm.json';
+import flash860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/flashcards.json';
+import qcm861 from './../../contenu/terminale/maths-specialite/calcul-integral/qcm.json';
+import flash861 from './../../contenu/terminale/maths-specialite/calcul-integral/flashcards.json';
+import qcm862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/qcm.json';
+import flash862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/flashcards.json';
+import qcm863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/qcm.json';
+import flash863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/flashcards.json';
+import qcm864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/qcm.json';
+import flash864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/flashcards.json';
+import qcm865 from './../../contenu/terminale/maths-specialite/listes/qcm.json';
+import flash865 from './../../contenu/terminale/maths-specialite/listes/flashcards.json';
+import qcm866 from './../../contenu/terminale/maths-specialite/loi-binomiale/qcm.json';
+import flash866 from './../../contenu/terminale/maths-specialite/loi-binomiale/flashcards.json';
+import qcm867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/qcm.json';
+import flash867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/flashcards.json';
+import qcm868 from './../../contenu/terminale/nsi/programmation-et-complexite/qcm.json';
+import flash868 from './../../contenu/terminale/nsi/programmation-et-complexite/flashcards.json';
+import qcm869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/qcm.json';
+import flash869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/flashcards.json';
+import qcm870 from './../../contenu/terminale/nsi/structures-de-donnees/qcm.json';
+import flash870 from './../../contenu/terminale/nsi/structures-de-donnees/flashcards.json';
+import qcm871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/qcm.json';
+import flash871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/flashcards.json';
+import qcm872 from './../../contenu/terminale/nsi/reseaux-et-routage/qcm.json';
+import flash872 from './../../contenu/terminale/nsi/reseaux-et-routage/flashcards.json';
+import qcm873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/qcm.json';
+import flash873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/flashcards.json';
+import qcm874 from './../../contenu/terminale/philosophie/methode-dissertation/qcm.json';
+import flash874 from './../../contenu/terminale/philosophie/methode-dissertation/flashcards.json';
+import qcm875 from './../../contenu/terminale/philosophie/methode-explication-texte/qcm.json';
+import flash875 from './../../contenu/terminale/philosophie/methode-explication-texte/flashcards.json';
+import qcm876 from './../../contenu/terminale/philosophie/reperes-conceptuels/qcm.json';
+import flash876 from './../../contenu/terminale/philosophie/reperes-conceptuels/flashcards.json';
+import qcm877 from './../../contenu/terminale/philosophie/conscience/qcm.json';
+import flash877 from './../../contenu/terminale/philosophie/conscience/flashcards.json';
+import qcm878 from './../../contenu/terminale/philosophie/inconscient/qcm.json';
+import flash878 from './../../contenu/terminale/philosophie/inconscient/flashcards.json';
+import qcm879 from './../../contenu/terminale/philosophie/temps/qcm.json';
+import flash879 from './../../contenu/terminale/philosophie/temps/flashcards.json';
+import qcm880 from './../../contenu/terminale/philosophie/langage/qcm.json';
+import flash880 from './../../contenu/terminale/philosophie/langage/flashcards.json';
+import qcm881 from './../../contenu/terminale/philosophie/raison/qcm.json';
+import flash881 from './../../contenu/terminale/philosophie/raison/flashcards.json';
+import qcm882 from './../../contenu/terminale/philosophie/verite/qcm.json';
+import flash882 from './../../contenu/terminale/philosophie/verite/flashcards.json';
+import qcm883 from './../../contenu/terminale/philosophie/science/qcm.json';
+import flash883 from './../../contenu/terminale/philosophie/science/flashcards.json';
+import qcm884 from './../../contenu/terminale/philosophie/technique/qcm.json';
+import flash884 from './../../contenu/terminale/philosophie/technique/flashcards.json';
+import qcm885 from './../../contenu/terminale/philosophie/travail/qcm.json';
+import flash885 from './../../contenu/terminale/philosophie/travail/flashcards.json';
+import qcm886 from './../../contenu/terminale/philosophie/art/qcm.json';
+import flash886 from './../../contenu/terminale/philosophie/art/flashcards.json';
+import qcm887 from './../../contenu/terminale/philosophie/nature/qcm.json';
+import flash887 from './../../contenu/terminale/philosophie/nature/flashcards.json';
+import qcm888 from './../../contenu/terminale/philosophie/religion/qcm.json';
+import flash888 from './../../contenu/terminale/philosophie/religion/flashcards.json';
+import qcm889 from './../../contenu/terminale/philosophie/liberte/qcm.json';
+import flash889 from './../../contenu/terminale/philosophie/liberte/flashcards.json';
+import qcm890 from './../../contenu/terminale/philosophie/devoir/qcm.json';
+import flash890 from './../../contenu/terminale/philosophie/devoir/flashcards.json';
+import qcm891 from './../../contenu/terminale/philosophie/bonheur/qcm.json';
+import flash891 from './../../contenu/terminale/philosophie/bonheur/flashcards.json';
+import qcm892 from './../../contenu/terminale/philosophie/justice/qcm.json';
+import flash892 from './../../contenu/terminale/philosophie/justice/flashcards.json';
+import qcm893 from './../../contenu/terminale/philosophie/etat/qcm.json';
+import flash893 from './../../contenu/terminale/philosophie/etat/flashcards.json';
+import qcm894 from './../../contenu/terminale/physique-chimie/acide-base-ph/qcm.json';
+import flash894 from './../../contenu/terminale/physique-chimie/acide-base-ph/flashcards.json';
+import qcm895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/qcm.json';
+import flash895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/flashcards.json';
+import qcm896 from './../../contenu/terminale/physique-chimie/titrages/qcm.json';
+import flash896 from './../../contenu/terminale/physique-chimie/titrages/flashcards.json';
+import qcm897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/qcm.json';
+import flash897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/flashcards.json';
+import qcm898 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/qcm.json';
+import flash898 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/flashcards.json';
+import qcm899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/qcm.json';
+import flash899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/flashcards.json';
+import qcm900 from './../../contenu/terminale/physique-chimie/electrolyse/qcm.json';
+import flash900 from './../../contenu/terminale/physique-chimie/electrolyse/flashcards.json';
+import qcm901 from './../../contenu/terminale/physique-chimie/synthese-organique/qcm.json';
+import flash901 from './../../contenu/terminale/physique-chimie/synthese-organique/flashcards.json';
+import qcm902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/qcm.json';
+import flash902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/flashcards.json';
+import qcm903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/qcm.json';
+import flash903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/flashcards.json';
+import qcm904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/qcm.json';
+import flash904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/flashcards.json';
+import qcm905 from './../../contenu/terminale/physique-chimie/gaz-parfait/qcm.json';
+import flash905 from './../../contenu/terminale/physique-chimie/gaz-parfait/flashcards.json';
+import qcm906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/qcm.json';
+import flash906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/flashcards.json';
+import qcm907 from './../../contenu/terminale/physique-chimie/dipole-rc/qcm.json';
+import flash907 from './../../contenu/terminale/physique-chimie/dipole-rc/flashcards.json';
+import qcm908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/qcm.json';
+import flash908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/flashcards.json';
+import qcm909 from './../../contenu/terminale/physique-chimie/lunette-photons/qcm.json';
+import flash909 from './../../contenu/terminale/physique-chimie/lunette-photons/flashcards.json';
+import qcm910 from './../../contenu/terminale/ses/sources-croissance/qcm.json';
+import flash910 from './../../contenu/terminale/ses/sources-croissance/flashcards.json';
+import qcm911 from './../../contenu/terminale/ses/commerce-mondialisation/qcm.json';
+import flash911 from './../../contenu/terminale/ses/commerce-mondialisation/flashcards.json';
+import qcm912 from './../../contenu/terminale/ses/marche-du-travail-chomage/qcm.json';
+import flash912 from './../../contenu/terminale/ses/marche-du-travail-chomage/flashcards.json';
+import qcm913 from './../../contenu/terminale/ses/monnaie-crises-financieres/qcm.json';
+import flash913 from './../../contenu/terminale/ses/monnaie-crises-financieres/flashcards.json';
+import qcm914 from './../../contenu/terminale/ses/politiques-economiques/qcm.json';
+import flash914 from './../../contenu/terminale/ses/politiques-economiques/flashcards.json';
+import qcm915 from './../../contenu/terminale/ses/structure-sociale-classes/qcm.json';
+import flash915 from './../../contenu/terminale/ses/structure-sociale-classes/flashcards.json';
+import qcm916 from './../../contenu/terminale/ses/mobilite-sociale/qcm.json';
+import flash916 from './../../contenu/terminale/ses/mobilite-sociale/flashcards.json';
+import qcm917 from './../../contenu/terminale/ses/ecole-et-inegalites/qcm.json';
+import flash917 from './../../contenu/terminale/ses/ecole-et-inegalites/flashcards.json';
+import qcm918 from './../../contenu/terminale/ses/engagement-politique/qcm.json';
+import flash918 from './../../contenu/terminale/ses/engagement-politique/flashcards.json';
+import qcm919 from './../../contenu/terminale/si/modelisation-des-mouvements/qcm.json';
+import flash919 from './../../contenu/terminale/si/modelisation-des-mouvements/flashcards.json';
+import qcm920 from './../../contenu/terminale/si/energie-dans-les-systemes/qcm.json';
+import flash920 from './../../contenu/terminale/si/energie-dans-les-systemes/flashcards.json';
+import qcm921 from './../../contenu/terminale/si/resistance-des-structures/qcm.json';
+import flash921 from './../../contenu/terminale/si/resistance-des-structures/flashcards.json';
+import qcm922 from './../../contenu/terminale/si/transmission-de-linformation/qcm.json';
+import flash922 from './../../contenu/terminale/si/transmission-de-linformation/flashcards.json';
+import qcm923 from './../../contenu/terminale/si/asservissement-et-regulation/qcm.json';
+import flash923 from './../../contenu/terminale/si/asservissement-et-regulation/flashcards.json';
+import qcm924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/qcm.json';
+import flash924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/flashcards.json';
+import qcm925 from './../../contenu/terminale/svt/evolution-et-speciation/qcm.json';
+import flash925 from './../../contenu/terminale/svt/evolution-et-speciation/flashcards.json';
+import qcm926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/qcm.json';
+import flash926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/flashcards.json';
+import qcm927 from './../../contenu/terminale/svt/climats-passes-et-actuels/qcm.json';
+import flash927 from './../../contenu/terminale/svt/climats-passes-et-actuels/flashcards.json';
+import qcm928 from './../../contenu/terminale/svt/reflexe-et-motricite/qcm.json';
+import flash928 from './../../contenu/terminale/svt/reflexe-et-motricite/flashcards.json';
+import qcm929 from './../../contenu/terminale/svt/glycemie-et-diabete/qcm.json';
+import flash929 from './../../contenu/terminale/svt/glycemie-et-diabete/flashcards.json';
+import qcm930 from './../../contenu/terminale-techno/maths/logique-ensembles/qcm.json';
+import flash930 from './../../contenu/terminale-techno/maths/logique-ensembles/flashcards.json';
+import qcm931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/qcm.json';
+import flash931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/flashcards.json';
+import qcm932 from './../../contenu/terminale-techno/maths/fonction-inverse/qcm.json';
+import flash932 from './../../contenu/terminale-techno/maths/fonction-inverse/flashcards.json';
+import qcm933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/qcm.json';
+import flash933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/flashcards.json';
+import qcm934 from './../../contenu/terminale-techno/maths/logarithme-decimal/qcm.json';
+import flash934 from './../../contenu/terminale-techno/maths/logarithme-decimal/flashcards.json';
+import qcm935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/qcm.json';
+import flash935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/flashcards.json';
+import qcm936 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/qcm.json';
+import flash936 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/flashcards.json';
+import qcm937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/qcm.json';
+import flash937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/flashcards.json';
+import qcm938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/qcm.json';
+import flash938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/flashcards.json';
+import qcm939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/qcm.json';
+import flash939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/flashcards.json';
+import qcm940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
+import flash940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
+import qcm941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/qcm.json';
+import flash941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/flashcards.json';
+import qcm942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/qcm.json';
+import flash942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/flashcards.json';
+import qcm943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/qcm.json';
+import flash943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/flashcards.json';
+import qcm944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/qcm.json';
+import flash944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/flashcards.json';
+import qcm945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/qcm.json';
+import flash945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/flashcards.json';
+import qcm946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/qcm.json';
+import flash946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/flashcards.json';
+import qcm947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/qcm.json';
+import flash947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/flashcards.json';
+import qcm948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/qcm.json';
+import flash948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/flashcards.json';
+import qcm949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/qcm.json';
+import flash949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/flashcards.json';
+import qcm950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/qcm.json';
+import flash950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/flashcards.json';
+import qcm951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/qcm.json';
+import flash951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/flashcards.json';
+import qcm952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/qcm.json';
+import flash952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/flashcards.json';
+import qcm953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/qcm.json';
+import flash953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/flashcards.json';
+import qcm954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/qcm.json';
+import flash954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/flashcards.json';
+import qcm955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/qcm.json';
+import flash955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/flashcards.json';
+import qcm956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/qcm.json';
+import flash956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/flashcards.json';
+import qcm957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/qcm.json';
+import flash957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/flashcards.json';
+import qcm958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/qcm.json';
+import flash958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/flashcards.json';
 import formulaire0 from './../../formulaires/francais-conjugaison.md';
 import formulaire1 from './../../formulaires/francais-homophones.md';
 import formulaire2 from './../../formulaires/allemand-conjugaison.md';
@@ -13855,9 +13861,9 @@ export const CHAPITRES = [
     prerequis: ["Numération de position des nombres entiers (école élémentaire)","Écritures des nombres décimaux (cours moyen)","Fractions décimales (cours moyen)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 23,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
     qcm: qcm263,
     flashcards: flash263,
@@ -13893,9 +13899,9 @@ export const CHAPITRES = [
     prerequis: ["Fraction comme partie d'un tout (CM1-CM2)","Nombres décimaux et numération décimale (CM2-6e)","Division (CM2-6e)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 23,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
     qcm: qcm265,
     flashcards: flash265,
@@ -15337,9 +15343,9 @@ export const CHAPITRES = [
     prerequis: ["Priorités opératoires (6e)","Nombres relatifs (5e)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 21,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
     qcm: qcm341,
     flashcards: flash341,
@@ -20372,9 +20378,9 @@ export const CHAPITRES = [
     prerequis: ["Fractions, puissances, priorités opératoires (cycle 4)","Développement et factorisation simples (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
     qcm: qcm606,
     flashcards: flash606,
@@ -20448,9 +20454,9 @@ export const CHAPITRES = [
     prerequis: ["Notion de fonction (Seconde)","Calcul numérique et algébrique (Seconde)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
     qcm: qcm610,
     flashcards: flash610,
@@ -20467,9 +20473,9 @@ export const CHAPITRES = [
     prerequis: ["Repérage dans le plan (cycle 4)","Translations et symétries (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 21,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: ["geo-distance","geo-produit-scalaire"],
     qcm: qcm611,
     flashcards: flash611,
@@ -20494,6 +20500,25 @@ export const CHAPITRES = [
     flashcards: flash612,
   },
   {
+    id: "2nde-math-information-chiffree",
+    dossier: "information-chiffree",
+    niveau: "seconde",
+    parcours: "maths",
+    titre: "Information chiffrée : proportions et évolutions",
+    matiere: "mathematiques",
+    programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
+    duree: 12,
+    prerequis: ["Fractions et pourcentages (cycle 4)","Proportionnalité (cycle 4)"],
+    statut: "brouillon",
+    reluPar: null,
+    nbQuestions: 20,
+    nbExercices: 50,
+    nbFlashcards: 12,
+    outils: [],
+    qcm: qcm613,
+    flashcards: flash613,
+  },
+  {
     id: "2nde-math-statistiques",
     dossier: "statistiques",
     niveau: "seconde",
@@ -20501,16 +20526,16 @@ export const CHAPITRES = [
     titre: "Statistiques",
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
-    duree: 12,
+    duree: 16,
     prerequis: ["Moyenne et médiane (cycle 4)","Pourcentages (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 31,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 22,
     outils: ["stats"],
-    qcm: qcm613,
-    flashcards: flash613,
+    qcm: qcm614,
+    flashcards: flash614,
   },
   {
     id: "2nde-math-probabilites",
@@ -20524,12 +20549,12 @@ export const CHAPITRES = [
     prerequis: ["Fractions et pourcentages (Seconde)","Statistiques (Seconde)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 23,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 16,
     outils: [],
-    qcm: qcm614,
-    flashcards: flash614,
+    qcm: qcm615,
+    flashcards: flash615,
   },
   {
     id: "2nde-math-algorithmique",
@@ -20547,8 +20572,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm615,
-    flashcards: flash615,
+    qcm: qcm616,
+    flashcards: flash616,
   },
   {
     id: "2nde-pc-description-matiere",
@@ -20566,8 +20591,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["dilution"],
-    qcm: qcm616,
-    flashcards: flash616,
+    qcm: qcm617,
+    flashcards: flash617,
   },
   {
     id: "2nde-pc-modelisation-microscopique",
@@ -20585,8 +20610,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm617,
-    flashcards: flash617,
+    qcm: qcm618,
+    flashcards: flash618,
   },
   {
     id: "2nde-pc-transformations-matiere",
@@ -20604,8 +20629,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm618,
-    flashcards: flash618,
+    qcm: qcm619,
+    flashcards: flash619,
   },
   {
     id: "2nde-pc-mouvement-interactions",
@@ -20623,8 +20648,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm619,
-    flashcards: flash619,
+    qcm: qcm620,
+    flashcards: flash620,
   },
   {
     id: "2nde-pc-ondes-signaux",
@@ -20642,8 +20667,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm620,
-    flashcards: flash620,
+    qcm: qcm621,
+    flashcards: flash621,
   },
   {
     id: "2nde-ses-production-richesses",
@@ -20661,8 +20686,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm621,
-    flashcards: flash621,
+    qcm: qcm622,
+    flashcards: flash622,
   },
   {
     id: "2nde-ses-mesure-production-pib",
@@ -20680,8 +20705,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm622,
-    flashcards: flash622,
+    qcm: qcm623,
+    flashcards: flash623,
   },
   {
     id: "2nde-ses-consommation-revenu",
@@ -20699,8 +20724,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm623,
-    flashcards: flash623,
+    qcm: qcm624,
+    flashcards: flash624,
   },
   {
     id: "2nde-ses-marche-formation-prix",
@@ -20718,8 +20743,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm624,
-    flashcards: flash624,
+    qcm: qcm625,
+    flashcards: flash625,
   },
   {
     id: "2nde-ses-socialisation-introduction",
@@ -20737,8 +20762,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm625,
-    flashcards: flash625,
+    qcm: qcm626,
+    flashcards: flash626,
   },
   {
     id: "2nde-ses-opinion-publique",
@@ -20756,8 +20781,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm626,
-    flashcards: flash626,
+    qcm: qcm627,
+    flashcards: flash627,
   },
   {
     id: "2nde-snt-internet",
@@ -20775,8 +20800,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm627,
-    flashcards: flash627,
+    qcm: qcm628,
+    flashcards: flash628,
   },
   {
     id: "2nde-snt-le-web",
@@ -20794,8 +20819,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm628,
-    flashcards: flash628,
+    qcm: qcm629,
+    flashcards: flash629,
   },
   {
     id: "2nde-snt-reseaux-sociaux",
@@ -20813,8 +20838,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm629,
-    flashcards: flash629,
+    qcm: qcm630,
+    flashcards: flash630,
   },
   {
     id: "2nde-snt-donnees-structurees",
@@ -20832,8 +20857,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm630,
-    flashcards: flash630,
+    qcm: qcm631,
+    flashcards: flash631,
   },
   {
     id: "2nde-snt-localisation-cartographie-gps",
@@ -20851,8 +20876,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm631,
-    flashcards: flash631,
+    qcm: qcm632,
+    flashcards: flash632,
   },
   {
     id: "2nde-snt-informatique-embarquee-objets-connectes",
@@ -20870,8 +20895,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm632,
-    flashcards: flash632,
+    qcm: qcm633,
+    flashcards: flash633,
   },
   {
     id: "2nde-snt-photographie-numerique",
@@ -20889,8 +20914,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm633,
-    flashcards: flash633,
+    qcm: qcm634,
+    flashcards: flash634,
   },
   {
     id: "2nde-svt-la-cellule-unite-du-vivant",
@@ -20908,8 +20933,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm634,
-    flashcards: flash634,
+    qcm: qcm635,
+    flashcards: flash635,
   },
   {
     id: "2nde-svt-adn-et-information-genetique",
@@ -20927,8 +20952,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm635,
-    flashcards: flash635,
+    qcm: qcm636,
+    flashcards: flash636,
   },
   {
     id: "2nde-svt-metabolisme-des-cellules",
@@ -20946,8 +20971,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm636,
-    flashcards: flash636,
+    qcm: qcm637,
+    flashcards: flash637,
   },
   {
     id: "2nde-svt-biodiversite-et-evolution",
@@ -20965,8 +20990,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm637,
-    flashcards: flash637,
+    qcm: qcm638,
+    flashcards: flash638,
   },
   {
     id: "2nde-svt-la-terre-dans-le-systeme-solaire",
@@ -20984,8 +21009,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm638,
-    flashcards: flash638,
+    qcm: qcm639,
+    flashcards: flash639,
   },
   {
     id: "2nde-svt-corps-humain-et-effort-physique",
@@ -21003,8 +21028,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm639,
-    flashcards: flash639,
+    qcm: qcm640,
+    flashcards: flash640,
   },
   {
     id: "1re-allemand-verben-mit-praepositionen",
@@ -21022,8 +21047,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm640,
-    flashcards: flash640,
+    qcm: qcm641,
+    flashcards: flash641,
   },
   {
     id: "1re-allemand-infinitiv-mit-zu",
@@ -21041,8 +21066,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm641,
-    flashcards: flash641,
+    qcm: qcm642,
+    flashcards: flash642,
   },
   {
     id: "1re-allemand-nebensaetze-obwohl-damit",
@@ -21060,8 +21085,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm642,
-    flashcards: flash642,
+    qcm: qcm643,
+    flashcards: flash643,
   },
   {
     id: "1re-allemand-wortschatz-arbeit-studium",
@@ -21079,8 +21104,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm643,
-    flashcards: flash643,
+    qcm: qcm644,
+    flashcards: flash644,
   },
   {
     id: "1re-allemand-passiv",
@@ -21098,8 +21123,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm644,
-    flashcards: flash644,
+    qcm: qcm645,
+    flashcards: flash645,
   },
   {
     id: "1re-allemand-konjunktiv-2-vertiefung",
@@ -21117,8 +21142,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm645,
-    flashcards: flash645,
+    qcm: qcm646,
+    flashcards: flash646,
   },
   {
     id: "1re-allemand-wortschatz-gesellschaft-engagement",
@@ -21136,8 +21161,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm646,
-    flashcards: flash646,
+    qcm: qcm647,
+    flashcards: flash647,
   },
   {
     id: "1re-allemand-landeskunde-deutsche-geschichte",
@@ -21155,8 +21180,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm647,
-    flashcards: flash647,
+    qcm: qcm648,
+    flashcards: flash648,
   },
   {
     id: "1re-allemand-landeskunde-literatur",
@@ -21174,8 +21199,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm648,
-    flashcards: flash648,
+    qcm: qcm649,
+    flashcards: flash649,
   },
   {
     id: "1re-anglais-aspects-simple-continu",
@@ -21193,8 +21218,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm649,
-    flashcards: flash649,
+    qcm: qcm650,
+    flashcards: flash650,
   },
   {
     id: "1re-anglais-gerondif-infinitif",
@@ -21212,8 +21237,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm650,
-    flashcards: flash650,
+    qcm: qcm651,
+    flashcards: flash651,
   },
   {
     id: "1re-anglais-relatives-determinatives-explicatives",
@@ -21231,8 +21256,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm651,
-    flashcards: flash651,
+    qcm: qcm652,
+    flashcards: flash652,
   },
   {
     id: "1re-anglais-vocabulaire-travail-etudes",
@@ -21250,8 +21275,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm652,
-    flashcards: flash652,
+    qcm: qcm653,
+    flashcards: flash653,
   },
   {
     id: "1re-anglais-voix-passive-emplois",
@@ -21269,8 +21294,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm653,
-    flashcards: flash653,
+    qcm: qcm654,
+    flashcards: flash654,
   },
   {
     id: "1re-anglais-futur-et-hypotheses",
@@ -21288,8 +21313,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm654,
-    flashcards: flash654,
+    qcm: qcm655,
+    flashcards: flash655,
   },
   {
     id: "1re-anglais-vocabulaire-societe-engagement",
@@ -21307,8 +21332,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm655,
-    flashcards: flash655,
+    qcm: qcm656,
+    flashcards: flash656,
   },
   {
     id: "1re-anglais-civilisation-histoire-usa",
@@ -21326,8 +21351,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm656,
-    flashcards: flash656,
+    qcm: qcm657,
+    flashcards: flash657,
   },
   {
     id: "1re-anglais-civilisation-litterature",
@@ -21345,8 +21370,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm657,
-    flashcards: flash657,
+    qcm: qcm658,
+    flashcards: flash658,
   },
   {
     id: "1re-arts-architecture",
@@ -21364,8 +21389,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm658,
-    flashcards: flash658,
+    qcm: qcm659,
+    flashcards: flash659,
   },
   {
     id: "1re-arts-histoire-musique",
@@ -21383,8 +21408,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm659,
-    flashcards: flash659,
+    qcm: qcm660,
+    flashcards: flash660,
   },
   {
     id: "1esc-une-longue-histoire-de-la-matiere",
@@ -21402,8 +21427,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm660,
-    flashcards: flash660,
+    qcm: qcm661,
+    flashcards: flash661,
   },
   {
     id: "1esc-le-soleil-notre-source-denergie",
@@ -21421,8 +21446,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm661,
-    flashcards: flash661,
+    qcm: qcm662,
+    flashcards: flash662,
   },
   {
     id: "1esc-la-terre-un-astre-singulier",
@@ -21440,8 +21465,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm662,
-    flashcards: flash662,
+    qcm: qcm663,
+    flashcards: flash663,
   },
   {
     id: "1esc-la-biodiversite-et-son-evolution",
@@ -21459,8 +21484,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm663,
-    flashcards: flash663,
+    qcm: qcm664,
+    flashcards: flash664,
   },
   {
     id: "1esc-son-et-musique",
@@ -21478,8 +21503,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm664,
-    flashcards: flash664,
+    qcm: qcm665,
+    flashcards: flash665,
   },
   {
     id: "1re-espagnol-subjuntivo-usos",
@@ -21497,8 +21522,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm665,
-    flashcards: flash665,
+    qcm: qcm666,
+    flashcards: flash666,
   },
   {
     id: "1re-espagnol-relativos",
@@ -21516,8 +21541,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm666,
-    flashcards: flash666,
+    qcm: qcm667,
+    flashcards: flash667,
   },
   {
     id: "1re-espagnol-perifrasis",
@@ -21535,8 +21560,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm667,
-    flashcards: flash667,
+    qcm: qcm668,
+    flashcards: flash668,
   },
   {
     id: "1re-espagnol-vocabulario-trabajo-estudios",
@@ -21554,8 +21579,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm668,
-    flashcards: flash668,
+    qcm: qcm669,
+    flashcards: flash669,
   },
   {
     id: "1re-espagnol-voz-pasiva",
@@ -21573,8 +21598,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm669,
-    flashcards: flash669,
+    qcm: qcm670,
+    flashcards: flash670,
   },
   {
     id: "1re-espagnol-estilo-indirecto",
@@ -21592,8 +21617,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm670,
-    flashcards: flash670,
+    qcm: qcm671,
+    flashcards: flash671,
   },
   {
     id: "1re-espagnol-vocabulario-sociedad-ciudadania",
@@ -21611,8 +21636,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm671,
-    flashcards: flash671,
+    qcm: qcm672,
+    flashcards: flash672,
   },
   {
     id: "1re-espagnol-civilizacion-historia-latinoamerica",
@@ -21630,8 +21655,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm672,
-    flashcards: flash672,
+    qcm: qcm673,
+    flashcards: flash673,
   },
   {
     id: "1re-espagnol-civilizacion-literatura",
@@ -21649,8 +21674,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm673,
-    flashcards: flash673,
+    qcm: qcm674,
+    flashcards: flash674,
   },
   {
     id: "1re-francais-grammaire-premiere",
@@ -21668,8 +21693,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm674,
-    flashcards: flash674,
+    qcm: qcm675,
+    flashcards: flash675,
   },
   {
     id: "1re-francais-commentaire-litteraire",
@@ -21687,8 +21712,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm675,
-    flashcards: flash675,
+    qcm: qcm676,
+    flashcards: flash676,
   },
   {
     id: "1re-francais-roman-et-recit",
@@ -21706,8 +21731,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm676,
-    flashcards: flash676,
+    qcm: qcm677,
+    flashcards: flash677,
   },
   {
     id: "1re-francais-poesie-19-21",
@@ -21725,8 +21750,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm677,
-    flashcards: flash677,
+    qcm: qcm678,
+    flashcards: flash678,
   },
   {
     id: "1re-francais-contraction-essai",
@@ -21744,8 +21769,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm678,
-    flashcards: flash678,
+    qcm: qcm679,
+    flashcards: flash679,
   },
   {
     id: "1re-francais-litterature-idees-16-18",
@@ -21763,8 +21788,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm679,
-    flashcards: flash679,
+    qcm: qcm680,
+    flashcards: flash680,
   },
   {
     id: "1re-francais-dissertation",
@@ -21782,8 +21807,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm680,
-    flashcards: flash680,
+    qcm: qcm681,
+    flashcards: flash681,
   },
   {
     id: "1re-francais-theatre-17-21",
@@ -21801,8 +21826,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm681,
-    flashcards: flash681,
+    qcm: qcm682,
+    flashcards: flash682,
   },
   {
     id: "1re-francais-epreuve-orale",
@@ -21820,8 +21845,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm682,
-    flashcards: flash682,
+    qcm: qcm683,
+    flashcards: flash683,
   },
   {
     id: "1re-hggsp-democratie",
@@ -21839,8 +21864,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm683,
-    flashcards: flash683,
+    qcm: qcm684,
+    flashcards: flash684,
   },
   {
     id: "1re-hggsp-puissances-internationales",
@@ -21858,8 +21883,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm684,
-    flashcards: flash684,
+    qcm: qcm685,
+    flashcards: flash685,
   },
   {
     id: "1re-hggsp-frontieres",
@@ -21877,8 +21902,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm685,
-    flashcards: flash685,
+    qcm: qcm686,
+    flashcards: flash686,
   },
   {
     id: "1re-hggsp-s-informer",
@@ -21896,8 +21921,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm686,
-    flashcards: flash686,
+    qcm: qcm687,
+    flashcards: flash687,
   },
   {
     id: "1re-hggsp-etats-et-religions",
@@ -21915,8 +21940,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm687,
-    flashcards: flash687,
+    qcm: qcm688,
+    flashcards: flash688,
   },
   {
     id: "1re-hist-geo-revolution-francaise-empire",
@@ -21934,8 +21959,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm688,
-    flashcards: flash688,
+    qcm: qcm689,
+    flashcards: flash689,
   },
   {
     id: "1re-hist-geo-nations-nationalites-europe",
@@ -21953,8 +21978,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm689,
-    flashcards: flash689,
+    qcm: qcm690,
+    flashcards: flash690,
   },
   {
     id: "1re-hist-geo-industrialisation-19e",
@@ -21972,8 +21997,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm690,
-    flashcards: flash690,
+    qcm: qcm691,
+    flashcards: flash691,
   },
   {
     id: "1re-hist-geo-premiere-guerre-et-consequences",
@@ -21991,8 +22016,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm691,
-    flashcards: flash691,
+    qcm: qcm692,
+    flashcards: flash692,
   },
   {
     id: "1re-hist-geo-metropolisation-france",
@@ -22010,8 +22035,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm692,
-    flashcards: flash692,
+    qcm: qcm693,
+    flashcards: flash693,
   },
   {
     id: "1re-hist-geo-espaces-productifs-et-ruraux",
@@ -22029,8 +22054,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm693,
-    flashcards: flash693,
+    qcm: qcm694,
+    flashcards: flash694,
   },
   {
     id: "1re-hist-geo-emc-republique-laicite",
@@ -22048,8 +22073,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm694,
-    flashcards: flash694,
+    qcm: qcm695,
+    flashcards: flash695,
   },
   {
     id: "1re-italien-congiuntivo-usi",
@@ -22067,8 +22092,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm695,
-    flashcards: flash695,
+    qcm: qcm696,
+    flashcards: flash696,
   },
   {
     id: "1re-italien-pronomi-relativi",
@@ -22086,8 +22111,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm696,
-    flashcards: flash696,
+    qcm: qcm697,
+    flashcards: flash697,
   },
   {
     id: "1re-italien-perifrasi",
@@ -22105,8 +22130,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm697,
-    flashcards: flash697,
+    qcm: qcm698,
+    flashcards: flash698,
   },
   {
     id: "1re-italien-vocabolario-lavoro-studi",
@@ -22124,8 +22149,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm698,
-    flashcards: flash698,
+    qcm: qcm699,
+    flashcards: flash699,
   },
   {
     id: "1re-italien-forma-passiva",
@@ -22143,8 +22168,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm699,
-    flashcards: flash699,
+    qcm: qcm700,
+    flashcards: flash700,
   },
   {
     id: "1re-italien-discorso-indiretto",
@@ -22162,8 +22187,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm700,
-    flashcards: flash700,
+    qcm: qcm701,
+    flashcards: flash701,
   },
   {
     id: "1re-italien-vocabolario-societa-cittadinanza",
@@ -22181,8 +22206,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm701,
-    flashcards: flash701,
+    qcm: qcm702,
+    flashcards: flash702,
   },
   {
     id: "1re-italien-civilta-rinascimento",
@@ -22200,8 +22225,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm702,
-    flashcards: flash702,
+    qcm: qcm703,
+    flashcards: flash703,
   },
   {
     id: "1re-italien-civilta-letteratura",
@@ -22219,8 +22244,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm703,
-    flashcards: flash703,
+    qcm: qcm704,
+    flashcards: flash704,
   },
   {
     id: "1re-lca-mythologie",
@@ -22238,8 +22263,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm704,
-    flashcards: flash704,
+    qcm: qcm705,
+    flashcards: flash705,
   },
   {
     id: "1re-lca-latin-auteurs",
@@ -22257,8 +22282,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm705,
-    flashcards: flash705,
+    qcm: qcm706,
+    flashcards: flash706,
   },
   {
     id: "1es-math-information-chiffree",
@@ -22276,8 +22301,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm706,
-    flashcards: flash706,
+    qcm: qcm707,
+    flashcards: flash707,
   },
   {
     id: "1es-math-phenomenes-evolution",
@@ -22291,12 +22316,12 @@ export const CHAPITRES = [
     prerequis: ["Fonctions affines (Seconde)","Fonctions de référence (Seconde)","Analyse de l'information chiffrée (Première)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
-    qcm: qcm707,
-    flashcards: flash707,
+    qcm: qcm708,
+    flashcards: flash708,
   },
   {
     id: "1es-math-statistiques-bivariees",
@@ -22314,8 +22339,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm708,
-    flashcards: flash708,
+    qcm: qcm709,
+    flashcards: flash709,
   },
   {
     id: "1es-math-phenomenes-aleatoires",
@@ -22333,8 +22358,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm709,
-    flashcards: flash709,
+    qcm: qcm710,
+    flashcards: flash710,
   },
   {
     id: "1spe-math-second-degre",
@@ -22348,12 +22373,12 @@ export const CHAPITRES = [
     prerequis: ["Fonction carré (Seconde)","Identités remarquables (Seconde)","Équation produit nul (Seconde)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: ["second-degre"],
-    qcm: qcm710,
-    flashcards: flash710,
+    qcm: qcm711,
+    flashcards: flash711,
   },
   {
     id: "1spe-math-suites-numeriques",
@@ -22371,8 +22396,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm711,
-    flashcards: flash711,
+    qcm: qcm712,
+    flashcards: flash712,
   },
   {
     id: "1spe-math-derivation",
@@ -22390,8 +22415,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    qcm: qcm712,
-    flashcards: flash712,
+    qcm: qcm713,
+    flashcards: flash713,
   },
   {
     id: "1spe-math-variations-courbes",
@@ -22409,8 +22434,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm713,
-    flashcards: flash713,
+    qcm: qcm714,
+    flashcards: flash714,
   },
   {
     id: "1spe-math-fonction-exponentielle",
@@ -22428,8 +22453,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm714,
-    flashcards: flash714,
+    qcm: qcm715,
+    flashcards: flash715,
   },
   {
     id: "1spe-math-trigonometrie",
@@ -22447,8 +22472,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-valeurs","trigo-equation"],
-    qcm: qcm715,
-    flashcards: flash715,
+    qcm: qcm716,
+    flashcards: flash716,
   },
   {
     id: "1spe-math-produit-scalaire",
@@ -22462,12 +22487,12 @@ export const CHAPITRES = [
     prerequis: ["Vecteurs et coordonnées (Seconde)","Trigonométrie (Première)","Théorème de Pythagore (collège)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: ["geo-produit-scalaire"],
-    qcm: qcm716,
-    flashcards: flash716,
+    qcm: qcm717,
+    flashcards: flash717,
   },
   {
     id: "1spe-math-geometrie-reperee",
@@ -22481,12 +22506,12 @@ export const CHAPITRES = [
     prerequis: ["Produit scalaire (Première)","Équations de droites (Seconde)","Second degré (Première)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: ["geo-distance","geo-droite"],
-    qcm: qcm717,
-    flashcards: flash717,
+    qcm: qcm718,
+    flashcards: flash718,
   },
   {
     id: "1spe-math-probabilites-conditionnelles",
@@ -22504,8 +22529,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm718,
-    flashcards: flash718,
+    qcm: qcm719,
+    flashcards: flash719,
   },
   {
     id: "1spe-math-variables-aleatoires",
@@ -22523,8 +22548,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm719,
-    flashcards: flash719,
+    qcm: qcm720,
+    flashcards: flash720,
   },
   {
     id: "1nsi-representation-des-donnees",
@@ -22542,8 +22567,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm720,
-    flashcards: flash720,
+    qcm: qcm721,
+    flashcards: flash721,
   },
   {
     id: "1nsi-types-construits",
@@ -22561,8 +22586,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm721,
-    flashcards: flash721,
+    qcm: qcm722,
+    flashcards: flash722,
   },
   {
     id: "1nsi-traitement-de-donnees-en-tables",
@@ -22580,8 +22605,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm722,
-    flashcards: flash722,
+    qcm: qcm723,
+    flashcards: flash723,
   },
   {
     id: "1nsi-interactions-web-client-serveur",
@@ -22599,8 +22624,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm723,
-    flashcards: flash723,
+    qcm: qcm724,
+    flashcards: flash724,
   },
   {
     id: "1nsi-architecture-et-systeme",
@@ -22618,8 +22643,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm724,
-    flashcards: flash724,
+    qcm: qcm725,
+    flashcards: flash725,
   },
   {
     id: "1nsi-algorithmique-tris-et-recherche",
@@ -22637,8 +22662,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm725,
-    flashcards: flash725,
+    qcm: qcm726,
+    flashcards: flash726,
   },
   {
     id: "1spe-pc-transformations-matiere",
@@ -22652,12 +22677,12 @@ export const CHAPITRES = [
     prerequis: ["Quantité de matière et concentration (Seconde)","Transformations de la matière (Seconde)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 23,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 16,
     outils: ["masse-molaire","dilution"],
-    qcm: qcm726,
-    flashcards: flash726,
+    qcm: qcm727,
+    flashcards: flash727,
   },
   {
     id: "1spe-pc-chimie-organique",
@@ -22675,8 +22700,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm727,
-    flashcards: flash727,
+    qcm: qcm728,
+    flashcards: flash728,
   },
   {
     id: "1spe-pc-mouvement-interactions",
@@ -22694,8 +22719,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm728,
-    flashcards: flash728,
+    qcm: qcm729,
+    flashcards: flash729,
   },
   {
     id: "1spe-pc-energie-mecanique",
@@ -22713,8 +22738,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    qcm: qcm729,
-    flashcards: flash729,
+    qcm: qcm730,
+    flashcards: flash730,
   },
   {
     id: "1spe-pc-energie-electrique",
@@ -22732,8 +22757,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm730,
-    flashcards: flash730,
+    qcm: qcm731,
+    flashcards: flash731,
   },
   {
     id: "1spe-pc-ondes-signaux",
@@ -22751,8 +22776,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm731,
-    flashcards: flash731,
+    qcm: qcm732,
+    flashcards: flash732,
   },
   {
     id: "1re-ses-marche-concurrentiel",
@@ -22770,8 +22795,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm732,
-    flashcards: flash732,
+    qcm: qcm733,
+    flashcards: flash733,
   },
   {
     id: "1re-ses-marches-imparfaits",
@@ -22789,8 +22814,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm733,
-    flashcards: flash733,
+    qcm: qcm734,
+    flashcards: flash734,
   },
   {
     id: "1re-ses-defaillances-de-marche",
@@ -22808,8 +22833,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm734,
-    flashcards: flash734,
+    qcm: qcm735,
+    flashcards: flash735,
   },
   {
     id: "1re-ses-monnaie-et-financement",
@@ -22827,8 +22852,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm735,
-    flashcards: flash735,
+    qcm: qcm736,
+    flashcards: flash736,
   },
   {
     id: "1re-ses-socialisation-primaire-secondaire",
@@ -22846,8 +22871,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm736,
-    flashcards: flash736,
+    qcm: qcm737,
+    flashcards: flash737,
   },
   {
     id: "1re-ses-liens-sociaux",
@@ -22865,8 +22890,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm737,
-    flashcards: flash737,
+    qcm: qcm738,
+    flashcards: flash738,
   },
   {
     id: "1re-ses-deviance-controle-social",
@@ -22884,8 +22909,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm738,
-    flashcards: flash738,
+    qcm: qcm739,
+    flashcards: flash739,
   },
   {
     id: "1re-ses-voter-participation",
@@ -22903,8 +22928,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm739,
-    flashcards: flash739,
+    qcm: qcm740,
+    flashcards: flash740,
   },
   {
     id: "1si-analyse-fonctionnelle-des-systemes",
@@ -22922,8 +22947,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm740,
-    flashcards: flash740,
+    qcm: qcm741,
+    flashcards: flash741,
   },
   {
     id: "1si-chaine-denergie",
@@ -22941,8 +22966,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm741,
-    flashcards: flash741,
+    qcm: qcm742,
+    flashcards: flash742,
   },
   {
     id: "1si-chaine-dinformation",
@@ -22960,8 +22985,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm742,
-    flashcards: flash742,
+    qcm: qcm743,
+    flashcards: flash743,
   },
   {
     id: "1si-comportement-des-materiaux",
@@ -22979,8 +23004,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm743,
-    flashcards: flash743,
+    qcm: qcm744,
+    flashcards: flash744,
   },
   {
     id: "1si-mecanique-des-solides",
@@ -22998,8 +23023,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm744,
-    flashcards: flash744,
+    qcm: qcm745,
+    flashcards: flash745,
   },
   {
     id: "1svt-mutations-et-variabilite",
@@ -23017,8 +23042,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm745,
-    flashcards: flash745,
+    qcm: qcm746,
+    flashcards: flash746,
   },
   {
     id: "1svt-expression-du-patrimoine-genetique",
@@ -23036,8 +23061,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm746,
-    flashcards: flash746,
+    qcm: qcm747,
+    flashcards: flash747,
   },
   {
     id: "1svt-dynamique-interne-de-la-terre",
@@ -23055,8 +23080,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm747,
-    flashcards: flash747,
+    qcm: qcm748,
+    flashcards: flash748,
   },
   {
     id: "1svt-ecosystemes-et-services",
@@ -23074,8 +23099,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm748,
-    flashcards: flash748,
+    qcm: qcm749,
+    flashcards: flash749,
   },
   {
     id: "1svt-variation-genetique-et-sante",
@@ -23093,8 +23118,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm749,
-    flashcards: flash749,
+    qcm: qcm750,
+    flashcards: flash750,
   },
   {
     id: "1techno-math-suites-numeriques",
@@ -23112,8 +23137,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm750,
-    flashcards: flash750,
+    qcm: qcm751,
+    flashcards: flash751,
   },
   {
     id: "1techno-math-fonctions-variable-reelle",
@@ -23131,8 +23156,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm751,
-    flashcards: flash751,
+    qcm: qcm752,
+    flashcards: flash752,
   },
   {
     id: "1techno-math-derivation",
@@ -23150,8 +23175,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    qcm: qcm752,
-    flashcards: flash752,
+    qcm: qcm753,
+    flashcards: flash753,
   },
   {
     id: "1techno-math-statistiques-deux-variables",
@@ -23169,8 +23194,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm753,
-    flashcards: flash753,
+    qcm: qcm754,
+    flashcards: flash754,
   },
   {
     id: "1techno-math-probabilites-variables-aleatoires",
@@ -23184,12 +23209,12 @@ export const CHAPITRES = [
     prerequis: ["Probabilités (Seconde)","Suites et pourcentages (Première techno)"],
     statut: "brouillon",
     reluPar: null,
-    nbQuestions: 20,
+    nbQuestions: 22,
     nbExercices: 50,
-    nbFlashcards: 12,
+    nbFlashcards: 15,
     outils: [],
-    qcm: qcm754,
-    flashcards: flash754,
+    qcm: qcm755,
+    flashcards: flash755,
   },
   {
     id: "1sti2d-mesure-incertitudes",
@@ -23207,8 +23232,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm755,
-    flashcards: flash755,
+    qcm: qcm756,
+    flashcards: flash756,
   },
   {
     id: "1sti2d-trigonometrie",
@@ -23222,12 +23247,31 @@ export const CHAPITRES = [
     prerequis: ["Cosinus et sinus dans le triangle rectangle (collège)","Cercle et repérage (Seconde)"],
     statut: "brouillon",
     reluPar: null,
+    nbQuestions: 22,
+    nbExercices: 50,
+    nbFlashcards: 15,
+    outils: ["trigo-valeurs","trigo-equation"],
+    qcm: qcm757,
+    flashcards: flash757,
+  },
+  {
+    id: "1sti2d-derivees",
+    dossier: "derivees",
+    niveau: "premiere-techno",
+    parcours: "pc-maths-sti2d-stl",
+    titre: "Dérivées : calculs et applications physiques",
+    matiere: "mathematiques",
+    programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
+    duree: 15,
+    prerequis: ["Dérivation (enseignement commun de Première technologique)","Trigonométrie et fonctions sinusoïdales (Première STI2D/STL)"],
+    statut: "brouillon",
+    reluPar: null,
     nbQuestions: 20,
     nbExercices: 50,
     nbFlashcards: 12,
-    outils: ["trigo-valeurs","trigo-equation"],
-    qcm: qcm756,
-    flashcards: flash756,
+    outils: ["derivee"],
+    qcm: qcm758,
+    flashcards: flash758,
   },
   {
     id: "1sti2d-energie",
@@ -23245,8 +23289,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm757,
-    flashcards: flash757,
+    qcm: qcm759,
+    flashcards: flash759,
   },
   {
     id: "1sti2d-produit-scalaire",
@@ -23264,8 +23308,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    qcm: qcm758,
-    flashcards: flash758,
+    qcm: qcm760,
+    flashcards: flash760,
   },
   {
     id: "1sti2d-nombres-complexes",
@@ -23279,12 +23323,31 @@ export const CHAPITRES = [
     prerequis: ["Trigonométrie (Première STI2D/STL)","Vecteurs et repérage (Seconde)"],
     statut: "brouillon",
     reluPar: null,
+    nbQuestions: 22,
+    nbExercices: 50,
+    nbFlashcards: 15,
+    outils: ["complexe-forme","complexe-operations"],
+    qcm: qcm761,
+    flashcards: flash761,
+  },
+  {
+    id: "1sti2d-primitives",
+    dossier: "primitives",
+    niveau: "premiere-techno",
+    parcours: "pc-maths-sti2d-stl",
+    titre: "Primitives et méthode d'Euler",
+    matiere: "mathematiques",
+    programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
+    duree: 13,
+    prerequis: ["Dérivées : calculs et applications physiques (Première STI2D/STL)","Trigonométrie et fonctions sinusoïdales (Première STI2D/STL)"],
+    statut: "brouillon",
+    reluPar: null,
     nbQuestions: 20,
     nbExercices: 50,
     nbFlashcards: 12,
-    outils: ["complexe-forme","complexe-operations"],
-    qcm: qcm759,
-    flashcards: flash759,
+    outils: [],
+    qcm: qcm762,
+    flashcards: flash762,
   },
   {
     id: "1sti2d-ondes-information",
@@ -23302,8 +23365,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm760,
-    flashcards: flash760,
+    qcm: qcm763,
+    flashcards: flash763,
   },
   {
     id: "1st2s-pc-securite-chimique-acide-base",
@@ -23321,8 +23384,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm761,
-    flashcards: flash761,
+    qcm: qcm764,
+    flashcards: flash764,
   },
   {
     id: "1st2s-pc-oxydoreduction-desinfectants",
@@ -23340,8 +23403,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["dilution"],
-    qcm: qcm762,
-    flashcards: flash762,
+    qcm: qcm765,
+    flashcards: flash765,
   },
   {
     id: "1st2s-pc-risques-electriques",
@@ -23359,8 +23422,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm763,
-    flashcards: flash763,
+    qcm: qcm766,
+    flashcards: flash766,
   },
   {
     id: "1st2s-pc-ondes-sonores-audition",
@@ -23378,8 +23441,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm764,
-    flashcards: flash764,
+    qcm: qcm767,
+    flashcards: flash767,
   },
   {
     id: "1st2s-pc-lumiere-vision-lentilles",
@@ -23397,8 +23460,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm765,
-    flashcards: flash765,
+    qcm: qcm768,
+    flashcards: flash768,
   },
   {
     id: "1st2s-pc-infrarouge-securite-routiere",
@@ -23416,8 +23479,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    qcm: qcm766,
-    flashcards: flash766,
+    qcm: qcm769,
+    flashcards: flash769,
   },
   {
     id: "1stl-spcl-securite-chimie-verte",
@@ -23435,8 +23498,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm767,
-    flashcards: flash767,
+    qcm: qcm770,
+    flashcards: flash770,
   },
   {
     id: "1stl-spcl-mesure-incertitudes-labo",
@@ -23454,8 +23517,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm768,
-    flashcards: flash768,
+    qcm: qcm771,
+    flashcards: flash771,
   },
   {
     id: "1stl-spcl-instrumentation-chaine-mesure",
@@ -23473,8 +23536,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm769,
-    flashcards: flash769,
+    qcm: qcm772,
+    flashcards: flash772,
   },
   {
     id: "1stl-spcl-analyses-spectroscopies-dosages",
@@ -23492,8 +23555,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm770,
-    flashcards: flash770,
+    qcm: qcm773,
+    flashcards: flash773,
   },
   {
     id: "1stl-spcl-syntheses-extraction-purification",
@@ -23511,8 +23574,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm771,
-    flashcards: flash771,
+    qcm: qcm774,
+    flashcards: flash774,
   },
   {
     id: "1stl-spcl-image-couleur-vision",
@@ -23530,8 +23593,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm772,
-    flashcards: flash772,
+    qcm: qcm775,
+    flashcards: flash775,
   },
   {
     id: "1stl-spcl-image-photographie-lentilles",
@@ -23549,8 +23612,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm773,
-    flashcards: flash773,
+    qcm: qcm776,
+    flashcards: flash776,
   },
   {
     id: "1stl-spcl-appareil-photo-image-numerique",
@@ -23568,8 +23631,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm774,
-    flashcards: flash774,
+    qcm: qcm777,
+    flashcards: flash777,
   },
   {
     id: "tale-allemand-komplexe-satzgefuege",
@@ -23587,8 +23650,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm775,
-    flashcards: flash775,
+    qcm: qcm778,
+    flashcards: flash778,
   },
   {
     id: "tale-allemand-konnektoren-argumentation",
@@ -23606,8 +23669,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm776,
-    flashcards: flash776,
+    qcm: qcm779,
+    flashcards: flash779,
   },
   {
     id: "tale-allemand-partizipialkonstruktionen",
@@ -23625,8 +23688,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm777,
-    flashcards: flash777,
+    qcm: qcm780,
+    flashcards: flash780,
   },
   {
     id: "tale-allemand-wortschatz-wirtschaft-globalisierung",
@@ -23644,8 +23707,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm778,
-    flashcards: flash778,
+    qcm: qcm781,
+    flashcards: flash781,
   },
   {
     id: "tale-allemand-konjunktiv-1-indirekte-rede",
@@ -23663,8 +23726,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm779,
-    flashcards: flash779,
+    qcm: qcm782,
+    flashcards: flash782,
   },
   {
     id: "tale-allemand-nominalstil",
@@ -23682,8 +23745,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm780,
-    flashcards: flash780,
+    qcm: qcm783,
+    flashcards: flash783,
   },
   {
     id: "tale-allemand-wortschatz-gesellschaft-welt",
@@ -23701,8 +23764,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm781,
-    flashcards: flash781,
+    qcm: qcm784,
+    flashcards: flash784,
   },
   {
     id: "tale-allemand-landeskunde-deutsch-in-der-welt",
@@ -23720,8 +23783,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm782,
-    flashcards: flash782,
+    qcm: qcm785,
+    flashcards: flash785,
   },
   {
     id: "tale-anglais-systeme-verbal",
@@ -23739,8 +23802,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm783,
-    flashcards: flash783,
+    qcm: qcm786,
+    flashcards: flash786,
   },
   {
     id: "tale-anglais-modalite",
@@ -23758,8 +23821,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm784,
-    flashcards: flash784,
+    qcm: qcm787,
+    flashcards: flash787,
   },
   {
     id: "tale-anglais-irreel-hypotheses",
@@ -23777,8 +23840,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm785,
-    flashcards: flash785,
+    qcm: qcm788,
+    flashcards: flash788,
   },
   {
     id: "tale-anglais-vocabulaire-economie-mondialisation",
@@ -23796,8 +23859,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm786,
-    flashcards: flash786,
+    qcm: qcm789,
+    flashcards: flash789,
   },
   {
     id: "tale-anglais-discours-rapporte-concordance",
@@ -23815,8 +23878,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm787,
-    flashcards: flash787,
+    qcm: qcm790,
+    flashcards: flash790,
   },
   {
     id: "tale-anglais-structures-complexes",
@@ -23834,8 +23897,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm788,
-    flashcards: flash788,
+    qcm: qcm791,
+    flashcards: flash791,
   },
   {
     id: "tale-anglais-vocabulaire-sciences-societe",
@@ -23853,8 +23916,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm789,
-    flashcards: flash789,
+    qcm: qcm792,
+    flashcards: flash792,
   },
   {
     id: "tale-anglais-civilisation-anglais-monde",
@@ -23872,8 +23935,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm790,
-    flashcards: flash790,
+    qcm: qcm793,
+    flashcards: flash793,
   },
   {
     id: "tale-arts-cinema",
@@ -23891,8 +23954,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm791,
-    flashcards: flash791,
+    qcm: qcm794,
+    flashcards: flash794,
   },
   {
     id: "tale-esc-atmosphere-effet-de-serre-climat",
@@ -23910,8 +23973,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm792,
-    flashcards: flash792,
+    qcm: qcm795,
+    flashcards: flash795,
   },
   {
     id: "tale-esc-energie-carbone-transition",
@@ -23929,8 +23992,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm793,
-    flashcards: flash793,
+    qcm: qcm796,
+    flashcards: flash796,
   },
   {
     id: "tale-esc-production-conversion-energie-electrique",
@@ -23948,8 +24011,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm794,
-    flashcards: flash794,
+    qcm: qcm797,
+    flashcards: flash797,
   },
   {
     id: "tale-esc-une-histoire-du-vivant",
@@ -23967,8 +24030,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm795,
-    flashcards: flash795,
+    qcm: qcm798,
+    flashcards: flash798,
   },
   {
     id: "tale-esc-evolution-et-biodiversite",
@@ -23986,27 +24049,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm796,
-    flashcards: flash796,
-  },
-  {
-    id: "tale-esc-du-genotype-au-phenotype",
-    dossier: "du-genotype-au-phenotype",
-    niveau: "terminale",
-    parcours: "enseignement-scientifique",
-    titre: "Du génotype au phénotype",
-    matiere: "enseignement-scientifique",
-    programme: "Terminale — Enseignement scientifique (programme officiel)",
-    duree: 14,
-    prerequis: ["ADN, gènes et information génétique (Seconde)","Notion d'allèle et de caractère héréditaire (Cycle 4)","Chapitre « Une histoire du vivant » (unité du vivant, code génétique)"],
-    statut: "brouillon",
-    reluPar: null,
-    nbQuestions: 20,
-    nbExercices: 50,
-    nbFlashcards: 12,
-    outils: [],
-    qcm: qcm797,
-    flashcards: flash797,
+    qcm: qcm799,
+    flashcards: flash799,
   },
   {
     id: "tale-esc-modeles-demographiques",
@@ -24024,8 +24068,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm798,
-    flashcards: flash798,
+    qcm: qcm800,
+    flashcards: flash800,
   },
   {
     id: "tale-esc-probabilites-bayes-ia",
@@ -24043,8 +24087,27 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm799,
-    flashcards: flash799,
+    qcm: qcm801,
+    flashcards: flash801,
+  },
+  {
+    id: "tale-esc-du-genotype-au-phenotype",
+    dossier: "du-genotype-au-phenotype",
+    niveau: "terminale",
+    parcours: "enseignement-scientifique",
+    titre: "Du génotype au phénotype",
+    matiere: "enseignement-scientifique",
+    programme: "Terminale — Enseignement scientifique (chapitre de complément, hors programme)",
+    duree: 14,
+    prerequis: ["ADN, gènes et information génétique (Seconde)","Notion d'allèle et de caractère héréditaire (Cycle 4)","Chapitre « Une histoire du vivant » (unité du vivant, code génétique)"],
+    statut: "brouillon",
+    reluPar: null,
+    nbQuestions: 20,
+    nbExercices: 50,
+    nbFlashcards: 12,
+    outils: [],
+    qcm: qcm802,
+    flashcards: flash802,
   },
   {
     id: "tale-espagnol-ser-estar-avanzado",
@@ -24062,8 +24125,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm800,
-    flashcards: flash800,
+    qcm: qcm803,
+    flashcards: flash803,
   },
   {
     id: "tale-espagnol-subjuntivo-imperfecto",
@@ -24081,8 +24144,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm801,
-    flashcards: flash801,
+    qcm: qcm804,
+    flashcards: flash804,
   },
   {
     id: "tale-espagnol-concordancia-tiempos",
@@ -24100,8 +24163,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm802,
-    flashcards: flash802,
+    qcm: qcm805,
+    flashcards: flash805,
   },
   {
     id: "tale-espagnol-vocabulario-economia-globalizacion",
@@ -24119,8 +24182,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm803,
-    flashcards: flash803,
+    qcm: qcm806,
+    flashcards: flash806,
   },
   {
     id: "tale-espagnol-conectores-argumentacion",
@@ -24138,8 +24201,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm804,
-    flashcards: flash804,
+    qcm: qcm807,
+    flashcards: flash807,
   },
   {
     id: "tale-espagnol-estructuras-enfaticas",
@@ -24157,8 +24220,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm805,
-    flashcards: flash805,
+    qcm: qcm808,
+    flashcards: flash808,
   },
   {
     id: "tale-espagnol-vocabulario-sociedad-mundo",
@@ -24176,8 +24239,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm806,
-    flashcards: flash806,
+    qcm: qcm809,
+    flashcards: flash809,
   },
   {
     id: "tale-espagnol-civilizacion-espanol-mundo",
@@ -24195,8 +24258,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm807,
-    flashcards: flash807,
+    qcm: qcm810,
+    flashcards: flash810,
   },
   {
     id: "tale-grandoral-comprendre-l-epreuve",
@@ -24214,8 +24277,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm808,
-    flashcards: flash808,
+    qcm: qcm811,
+    flashcards: flash811,
   },
   {
     id: "tale-grandoral-choisir-formuler-ses-questions",
@@ -24233,8 +24296,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm809,
-    flashcards: flash809,
+    qcm: qcm812,
+    flashcards: flash812,
   },
   {
     id: "tale-grandoral-construire-l-expose",
@@ -24252,8 +24315,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm810,
-    flashcards: flash810,
+    qcm: qcm813,
+    flashcards: flash813,
   },
   {
     id: "tale-grandoral-voix-posture-et-stress",
@@ -24271,8 +24334,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm811,
-    flashcards: flash811,
+    qcm: qcm814,
+    flashcards: flash814,
   },
   {
     id: "tale-grandoral-l-echange-avec-le-jury",
@@ -24290,8 +24353,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm812,
-    flashcards: flash812,
+    qcm: qcm815,
+    flashcards: flash815,
   },
   {
     id: "tale-grandoral-le-projet-d-orientation",
@@ -24309,8 +24372,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm813,
-    flashcards: flash813,
+    qcm: qcm816,
+    flashcards: flash816,
   },
   {
     id: "tale-grandoral-criteres-et-erreurs",
@@ -24328,8 +24391,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm814,
-    flashcards: flash814,
+    qcm: qcm817,
+    flashcards: flash817,
   },
   {
     id: "tale-grandoral-s-entrainer-et-checklist",
@@ -24347,8 +24410,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm815,
-    flashcards: flash815,
+    qcm: qcm818,
+    flashcards: flash818,
   },
   {
     id: "tale-hggsp-nouveaux-espaces-conquete",
@@ -24366,8 +24429,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm816,
-    flashcards: flash816,
+    qcm: qcm819,
+    flashcards: flash819,
   },
   {
     id: "tale-hggsp-faire-la-guerre-faire-la-paix",
@@ -24385,8 +24448,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm817,
-    flashcards: flash817,
+    qcm: qcm820,
+    flashcards: flash820,
   },
   {
     id: "tale-hggsp-histoire-et-memoires",
@@ -24404,8 +24467,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm818,
-    flashcards: flash818,
+    qcm: qcm821,
+    flashcards: flash821,
   },
   {
     id: "tale-hggsp-patrimoine",
@@ -24423,8 +24486,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm819,
-    flashcards: flash819,
+    qcm: qcm822,
+    flashcards: flash822,
   },
   {
     id: "tale-hggsp-environnement",
@@ -24442,8 +24505,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm820,
-    flashcards: flash820,
+    qcm: qcm823,
+    flashcards: flash823,
   },
   {
     id: "tale-hggsp-enjeu-de-la-connaissance",
@@ -24461,8 +24524,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm821,
-    flashcards: flash821,
+    qcm: qcm824,
+    flashcards: flash824,
   },
   {
     id: "tale-hist-geo-seconde-guerre-mondiale-genocides",
@@ -24480,8 +24543,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm822,
-    flashcards: flash822,
+    qcm: qcm825,
+    flashcards: flash825,
   },
   {
     id: "tale-hist-geo-guerre-froide",
@@ -24499,8 +24562,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm823,
-    flashcards: flash823,
+    qcm: qcm826,
+    flashcards: flash826,
   },
   {
     id: "tale-hist-geo-decolonisation",
@@ -24518,8 +24581,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm824,
-    flashcards: flash824,
+    qcm: qcm827,
+    flashcards: flash827,
   },
   {
     id: "tale-hist-geo-monde-depuis-1990",
@@ -24537,8 +24600,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm825,
-    flashcards: flash825,
+    qcm: qcm828,
+    flashcards: flash828,
   },
   {
     id: "tale-hist-geo-mers-oceans-mondialisation",
@@ -24556,8 +24619,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm826,
-    flashcards: flash826,
+    qcm: qcm829,
+    flashcards: flash829,
   },
   {
     id: "tale-hist-geo-puissances-et-france-dans-le-monde",
@@ -24575,8 +24638,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm827,
-    flashcards: flash827,
+    qcm: qcm830,
+    flashcards: flash830,
   },
   {
     id: "tale-hist-geo-emc-democratie-engagement",
@@ -24594,8 +24657,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm828,
-    flashcards: flash828,
+    qcm: qcm831,
+    flashcards: flash831,
   },
   {
     id: "tale-italien-usi-avanzati",
@@ -24613,8 +24676,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm829,
-    flashcards: flash829,
+    qcm: qcm832,
+    flashcards: flash832,
   },
   {
     id: "tale-italien-congiuntivo-imperfetto",
@@ -24632,8 +24695,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm830,
-    flashcards: flash830,
+    qcm: qcm833,
+    flashcards: flash833,
   },
   {
     id: "tale-italien-concordanza-tempi",
@@ -24651,8 +24714,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm831,
-    flashcards: flash831,
+    qcm: qcm834,
+    flashcards: flash834,
   },
   {
     id: "tale-italien-vocabolario-economia-globalizzazione",
@@ -24670,8 +24733,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm832,
-    flashcards: flash832,
+    qcm: qcm835,
+    flashcards: flash835,
   },
   {
     id: "tale-italien-connettivi-argomentazione",
@@ -24689,8 +24752,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm833,
-    flashcards: flash833,
+    qcm: qcm836,
+    flashcards: flash836,
   },
   {
     id: "tale-italien-strutture-enfatiche",
@@ -24708,8 +24771,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm834,
-    flashcards: flash834,
+    qcm: qcm837,
+    flashcards: flash837,
   },
   {
     id: "tale-italien-vocabolario-societa-mondo",
@@ -24727,8 +24790,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm835,
-    flashcards: flash835,
+    qcm: qcm838,
+    flashcards: flash838,
   },
   {
     id: "tale-italien-civilta-italiano-nel-mondo",
@@ -24746,8 +24809,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm836,
-    flashcards: flash836,
+    qcm: qcm839,
+    flashcards: flash839,
   },
   {
     id: "tale-lca-civilisation-antique",
@@ -24765,8 +24828,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm837,
-    flashcards: flash837,
+    qcm: qcm840,
+    flashcards: flash840,
   },
   {
     id: "tale-compl-math-suites-evolution",
@@ -24784,8 +24847,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm838,
-    flashcards: flash838,
+    qcm: qcm841,
+    flashcards: flash841,
   },
   {
     id: "tale-compl-math-probabilites-bayes-binomiale",
@@ -24803,8 +24866,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm839,
-    flashcards: flash839,
+    qcm: qcm842,
+    flashcards: flash842,
   },
   {
     id: "tale-compl-math-derivation-convexite",
@@ -24822,8 +24885,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm840,
-    flashcards: flash840,
+    qcm: qcm843,
+    flashcards: flash843,
   },
   {
     id: "tale-compl-math-continuite-tvi",
@@ -24841,8 +24904,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm841,
-    flashcards: flash841,
+    qcm: qcm844,
+    flashcards: flash844,
   },
   {
     id: "tale-compl-math-exponentielle-logarithme",
@@ -24860,8 +24923,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm842,
-    flashcards: flash842,
+    qcm: qcm845,
+    flashcards: flash845,
   },
   {
     id: "tale-compl-math-primitives-equations-differentielles",
@@ -24879,8 +24942,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm843,
-    flashcards: flash843,
+    qcm: qcm846,
+    flashcards: flash846,
   },
   {
     id: "tale-compl-math-calcul-integral",
@@ -24898,8 +24961,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm844,
-    flashcards: flash844,
+    qcm: qcm847,
+    flashcards: flash847,
   },
   {
     id: "tale-compl-math-lois-densite-temps-attente",
@@ -24917,8 +24980,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm845,
-    flashcards: flash845,
+    qcm: qcm848,
+    flashcards: flash848,
   },
   {
     id: "tale-exp-math-complexes-algebrique",
@@ -24936,8 +24999,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-operations","second-degre-complexe"],
-    qcm: qcm846,
-    flashcards: flash846,
+    qcm: qcm849,
+    flashcards: flash849,
   },
   {
     id: "tale-exp-math-complexes-geometrique",
@@ -24955,8 +25018,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme"],
-    qcm: qcm847,
-    flashcards: flash847,
+    qcm: qcm850,
+    flashcards: flash850,
   },
   {
     id: "tale-exp-math-arithmetique",
@@ -24974,8 +25037,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["pgcd-euclide","congruences","decomposition-premiers"],
-    qcm: qcm848,
-    flashcards: flash848,
+    qcm: qcm851,
+    flashcards: flash851,
   },
   {
     id: "tale-exp-math-graphes-matrices",
@@ -24993,8 +25056,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm849,
-    flashcards: flash849,
+    qcm: qcm852,
+    flashcards: flash852,
   },
   {
     id: "tale-spe-math-logique-ensembles",
@@ -25012,8 +25075,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm850,
-    flashcards: flash850,
+    qcm: qcm853,
+    flashcards: flash853,
   },
   {
     id: "tale-spe-math-suites",
@@ -25031,8 +25094,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm851,
-    flashcards: flash851,
+    qcm: qcm854,
+    flashcards: flash854,
   },
   {
     id: "tale-spe-math-limites-fonctions",
@@ -25050,8 +25113,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm852,
-    flashcards: flash852,
+    qcm: qcm855,
+    flashcards: flash855,
   },
   {
     id: "tale-spe-math-continuite",
@@ -25069,8 +25132,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm853,
-    flashcards: flash853,
+    qcm: qcm856,
+    flashcards: flash856,
   },
   {
     id: "tale-spe-math-derivation-convexite",
@@ -25088,8 +25151,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm854,
-    flashcards: flash854,
+    qcm: qcm857,
+    flashcards: flash857,
   },
   {
     id: "tale-spe-math-fonction-logarithme",
@@ -25107,8 +25170,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm855,
-    flashcards: flash855,
+    qcm: qcm858,
+    flashcards: flash858,
   },
   {
     id: "tale-spe-math-fonctions-trigonometriques",
@@ -25126,8 +25189,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-equation"],
-    qcm: qcm856,
-    flashcards: flash856,
+    qcm: qcm859,
+    flashcards: flash859,
   },
   {
     id: "tale-spe-math-primitives-equations-differentielles",
@@ -25145,8 +25208,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm857,
-    flashcards: flash857,
+    qcm: qcm860,
+    flashcards: flash860,
   },
   {
     id: "tale-spe-math-calcul-integral",
@@ -25164,8 +25227,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm858,
-    flashcards: flash858,
+    qcm: qcm861,
+    flashcards: flash861,
   },
   {
     id: "tale-spe-math-vecteurs-droites-plans-espace",
@@ -25183,8 +25246,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm859,
-    flashcards: flash859,
+    qcm: qcm862,
+    flashcards: flash862,
   },
   {
     id: "tale-spe-math-produit-scalaire-espace",
@@ -25202,8 +25265,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    qcm: qcm860,
-    flashcards: flash860,
+    qcm: qcm863,
+    flashcards: flash863,
   },
   {
     id: "tale-spe-math-combinatoire-denombrement",
@@ -25221,8 +25284,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm861,
-    flashcards: flash861,
+    qcm: qcm864,
+    flashcards: flash864,
   },
   {
     id: "tale-spe-math-listes",
@@ -25240,8 +25303,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm862,
-    flashcards: flash862,
+    qcm: qcm865,
+    flashcards: flash865,
   },
   {
     id: "tale-spe-math-loi-binomiale",
@@ -25259,8 +25322,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm863,
-    flashcards: flash863,
+    qcm: qcm866,
+    flashcards: flash866,
   },
   {
     id: "tale-spe-math-sommes-variables-concentration",
@@ -25278,8 +25341,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm864,
-    flashcards: flash864,
+    qcm: qcm867,
+    flashcards: flash867,
   },
   {
     id: "tale-nsi-programmation-et-complexite",
@@ -25297,8 +25360,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm865,
-    flashcards: flash865,
+    qcm: qcm868,
+    flashcards: flash868,
   },
   {
     id: "tale-nsi-recursivite-et-diviser-pour-regner",
@@ -25316,8 +25379,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm866,
-    flashcards: flash866,
+    qcm: qcm869,
+    flashcards: flash869,
   },
   {
     id: "tale-nsi-structures-de-donnees",
@@ -25335,8 +25398,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm867,
-    flashcards: flash867,
+    qcm: qcm870,
+    flashcards: flash870,
   },
   {
     id: "tale-nsi-bases-de-donnees-et-sql",
@@ -25354,8 +25417,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm868,
-    flashcards: flash868,
+    qcm: qcm871,
+    flashcards: flash871,
   },
   {
     id: "tale-nsi-reseaux-et-routage",
@@ -25373,8 +25436,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm869,
-    flashcards: flash869,
+    qcm: qcm872,
+    flashcards: flash872,
   },
   {
     id: "tale-nsi-algorithmes-de-graphes",
@@ -25392,8 +25455,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm870,
-    flashcards: flash870,
+    qcm: qcm873,
+    flashcards: flash873,
   },
   {
     id: "tale-philo-methode-dissertation",
@@ -25411,8 +25474,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm871,
-    flashcards: flash871,
+    qcm: qcm874,
+    flashcards: flash874,
   },
   {
     id: "tale-philo-methode-explication-texte",
@@ -25430,8 +25493,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm872,
-    flashcards: flash872,
+    qcm: qcm875,
+    flashcards: flash875,
   },
   {
     id: "tale-philo-reperes-conceptuels",
@@ -25449,8 +25512,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm873,
-    flashcards: flash873,
+    qcm: qcm876,
+    flashcards: flash876,
   },
   {
     id: "tale-philo-conscience",
@@ -25468,8 +25531,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm874,
-    flashcards: flash874,
+    qcm: qcm877,
+    flashcards: flash877,
   },
   {
     id: "tale-philo-inconscient",
@@ -25487,8 +25550,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm875,
-    flashcards: flash875,
+    qcm: qcm878,
+    flashcards: flash878,
   },
   {
     id: "tale-philo-temps",
@@ -25506,8 +25569,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm876,
-    flashcards: flash876,
+    qcm: qcm879,
+    flashcards: flash879,
   },
   {
     id: "tale-philo-langage",
@@ -25525,8 +25588,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm877,
-    flashcards: flash877,
+    qcm: qcm880,
+    flashcards: flash880,
   },
   {
     id: "tale-philo-raison",
@@ -25544,8 +25607,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm878,
-    flashcards: flash878,
+    qcm: qcm881,
+    flashcards: flash881,
   },
   {
     id: "tale-philo-verite",
@@ -25563,8 +25626,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm879,
-    flashcards: flash879,
+    qcm: qcm882,
+    flashcards: flash882,
   },
   {
     id: "tale-philo-science",
@@ -25582,8 +25645,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm880,
-    flashcards: flash880,
+    qcm: qcm883,
+    flashcards: flash883,
   },
   {
     id: "tale-philo-technique",
@@ -25601,8 +25664,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm881,
-    flashcards: flash881,
+    qcm: qcm884,
+    flashcards: flash884,
   },
   {
     id: "tale-philo-travail",
@@ -25620,8 +25683,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm882,
-    flashcards: flash882,
+    qcm: qcm885,
+    flashcards: flash885,
   },
   {
     id: "tale-philo-art",
@@ -25639,8 +25702,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm883,
-    flashcards: flash883,
+    qcm: qcm886,
+    flashcards: flash886,
   },
   {
     id: "tale-philo-nature",
@@ -25658,8 +25721,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm884,
-    flashcards: flash884,
+    qcm: qcm887,
+    flashcards: flash887,
   },
   {
     id: "tale-philo-religion",
@@ -25677,8 +25740,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm885,
-    flashcards: flash885,
+    qcm: qcm888,
+    flashcards: flash888,
   },
   {
     id: "tale-philo-liberte",
@@ -25696,8 +25759,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm886,
-    flashcards: flash886,
+    qcm: qcm889,
+    flashcards: flash889,
   },
   {
     id: "tale-philo-devoir",
@@ -25715,8 +25778,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm887,
-    flashcards: flash887,
+    qcm: qcm890,
+    flashcards: flash890,
   },
   {
     id: "tale-philo-bonheur",
@@ -25734,8 +25797,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm888,
-    flashcards: flash888,
+    qcm: qcm891,
+    flashcards: flash891,
   },
   {
     id: "tale-philo-justice",
@@ -25753,8 +25816,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm889,
-    flashcards: flash889,
+    qcm: qcm892,
+    flashcards: flash892,
   },
   {
     id: "tale-philo-etat",
@@ -25772,8 +25835,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm890,
-    flashcards: flash890,
+    qcm: qcm893,
+    flashcards: flash893,
   },
   {
     id: "tale-spe-pc-acide-base-ph",
@@ -25791,8 +25854,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm891,
-    flashcards: flash891,
+    qcm: qcm894,
+    flashcards: flash894,
   },
   {
     id: "tale-spe-pc-methodes-physiques-analyse",
@@ -25810,8 +25873,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm892,
-    flashcards: flash892,
+    qcm: qcm895,
+    flashcards: flash895,
   },
   {
     id: "tale-spe-pc-titrages",
@@ -25829,8 +25892,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm893,
-    flashcards: flash893,
+    qcm: qcm896,
+    flashcards: flash896,
   },
   {
     id: "tale-spe-pc-cinetique-chimique",
@@ -25848,8 +25911,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm894,
-    flashcards: flash894,
+    qcm: qcm897,
+    flashcards: flash897,
   },
   {
     id: "tale-spe-pc-transformations-nucleaires",
@@ -25867,8 +25930,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm895,
-    flashcards: flash895,
+    qcm: qcm898,
+    flashcards: flash898,
   },
   {
     id: "tale-spe-pc-equilibre-sens-evolution",
@@ -25886,8 +25949,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm896,
-    flashcards: flash896,
+    qcm: qcm899,
+    flashcards: flash899,
   },
   {
     id: "tale-spe-pc-electrolyse",
@@ -25905,8 +25968,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm897,
-    flashcards: flash897,
+    qcm: qcm900,
+    flashcards: flash900,
   },
   {
     id: "tale-spe-pc-synthese-organique",
@@ -25924,8 +25987,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm898,
-    flashcards: flash898,
+    qcm: qcm901,
+    flashcards: flash901,
   },
   {
     id: "tale-spe-pc-decrire-mouvement",
@@ -25943,8 +26006,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm899,
-    flashcards: flash899,
+    qcm: qcm902,
+    flashcards: flash902,
   },
   {
     id: "tale-spe-pc-lois-newton-champs",
@@ -25962,8 +26025,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm900,
-    flashcards: flash900,
+    qcm: qcm903,
+    flashcards: flash903,
   },
   {
     id: "tale-spe-pc-ecoulement-fluide",
@@ -25981,8 +26044,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm901,
-    flashcards: flash901,
+    qcm: qcm904,
+    flashcards: flash904,
   },
   {
     id: "tale-spe-pc-gaz-parfait",
@@ -26000,8 +26063,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm902,
-    flashcards: flash902,
+    qcm: qcm905,
+    flashcards: flash905,
   },
   {
     id: "tale-spe-pc-premier-principe-thermique",
@@ -26019,8 +26082,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm903,
-    flashcards: flash903,
+    qcm: qcm906,
+    flashcards: flash906,
   },
   {
     id: "tale-spe-pc-dipole-rc",
@@ -26038,8 +26101,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm904,
-    flashcards: flash904,
+    qcm: qcm907,
+    flashcards: flash907,
   },
   {
     id: "tale-spe-pc-phenomenes-ondulatoires",
@@ -26057,8 +26120,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm905,
-    flashcards: flash905,
+    qcm: qcm908,
+    flashcards: flash908,
   },
   {
     id: "tale-spe-pc-lunette-photons",
@@ -26076,8 +26139,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm906,
-    flashcards: flash906,
+    qcm: qcm909,
+    flashcards: flash909,
   },
   {
     id: "tale-ses-sources-croissance",
@@ -26095,8 +26158,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm907,
-    flashcards: flash907,
+    qcm: qcm910,
+    flashcards: flash910,
   },
   {
     id: "tale-ses-commerce-mondialisation",
@@ -26114,8 +26177,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm908,
-    flashcards: flash908,
+    qcm: qcm911,
+    flashcards: flash911,
   },
   {
     id: "tale-ses-marche-du-travail-chomage",
@@ -26133,8 +26196,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm909,
-    flashcards: flash909,
+    qcm: qcm912,
+    flashcards: flash912,
   },
   {
     id: "tale-ses-monnaie-crises-financieres",
@@ -26152,8 +26215,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm910,
-    flashcards: flash910,
+    qcm: qcm913,
+    flashcards: flash913,
   },
   {
     id: "tale-ses-politiques-economiques",
@@ -26171,8 +26234,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm911,
-    flashcards: flash911,
+    qcm: qcm914,
+    flashcards: flash914,
   },
   {
     id: "tale-ses-structure-sociale-classes",
@@ -26190,8 +26253,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm912,
-    flashcards: flash912,
+    qcm: qcm915,
+    flashcards: flash915,
   },
   {
     id: "tale-ses-mobilite-sociale",
@@ -26209,8 +26272,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm913,
-    flashcards: flash913,
+    qcm: qcm916,
+    flashcards: flash916,
   },
   {
     id: "tale-ses-ecole-et-inegalites",
@@ -26228,8 +26291,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm914,
-    flashcards: flash914,
+    qcm: qcm917,
+    flashcards: flash917,
   },
   {
     id: "tale-ses-engagement-politique",
@@ -26247,8 +26310,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm915,
-    flashcards: flash915,
+    qcm: qcm918,
+    flashcards: flash918,
   },
   {
     id: "tale-si-modelisation-des-mouvements",
@@ -26266,8 +26329,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm916,
-    flashcards: flash916,
+    qcm: qcm919,
+    flashcards: flash919,
   },
   {
     id: "tale-si-energie-dans-les-systemes",
@@ -26285,8 +26348,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm917,
-    flashcards: flash917,
+    qcm: qcm920,
+    flashcards: flash920,
   },
   {
     id: "tale-si-resistance-des-structures",
@@ -26304,8 +26367,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm918,
-    flashcards: flash918,
+    qcm: qcm921,
+    flashcards: flash921,
   },
   {
     id: "tale-si-transmission-de-linformation",
@@ -26323,8 +26386,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm919,
-    flashcards: flash919,
+    qcm: qcm922,
+    flashcards: flash922,
   },
   {
     id: "tale-si-asservissement-et-regulation",
@@ -26342,8 +26405,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm920,
-    flashcards: flash920,
+    qcm: qcm923,
+    flashcards: flash923,
   },
   {
     id: "tale-svt-brassage-genetique-et-meiose",
@@ -26361,8 +26424,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm921,
-    flashcards: flash921,
+    qcm: qcm924,
+    flashcards: flash924,
   },
   {
     id: "tale-svt-evolution-et-speciation",
@@ -26380,8 +26443,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm922,
-    flashcards: flash922,
+    qcm: qcm925,
+    flashcards: flash925,
   },
   {
     id: "tale-svt-geothermie-et-flux-de-chaleur",
@@ -26399,8 +26462,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm923,
-    flashcards: flash923,
+    qcm: qcm926,
+    flashcards: flash926,
   },
   {
     id: "tale-svt-climats-passes-et-actuels",
@@ -26418,8 +26481,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm924,
-    flashcards: flash924,
+    qcm: qcm927,
+    flashcards: flash927,
   },
   {
     id: "tale-svt-reflexe-et-motricite",
@@ -26437,8 +26500,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm925,
-    flashcards: flash925,
+    qcm: qcm928,
+    flashcards: flash928,
   },
   {
     id: "tale-svt-glycemie-et-diabete",
@@ -26456,8 +26519,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm926,
-    flashcards: flash926,
+    qcm: qcm929,
+    flashcards: flash929,
   },
   {
     id: "tale-techno-math-logique-ensembles",
@@ -26475,8 +26538,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm927,
-    flashcards: flash927,
+    qcm: qcm930,
+    flashcards: flash930,
   },
   {
     id: "tale-techno-math-suites-arithmetiques-geometriques",
@@ -26494,8 +26557,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm928,
-    flashcards: flash928,
+    qcm: qcm931,
+    flashcards: flash931,
   },
   {
     id: "tale-techno-math-fonction-inverse",
@@ -26513,8 +26576,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm929,
-    flashcards: flash929,
+    qcm: qcm932,
+    flashcards: flash932,
   },
   {
     id: "tale-techno-math-fonctions-exponentielles",
@@ -26532,8 +26595,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm930,
-    flashcards: flash930,
+    qcm: qcm933,
+    flashcards: flash933,
   },
   {
     id: "tale-techno-math-logarithme-decimal",
@@ -26551,8 +26614,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm931,
-    flashcards: flash931,
+    qcm: qcm934,
+    flashcards: flash934,
   },
   {
     id: "tale-techno-math-statistiques-deux-variables",
@@ -26570,8 +26633,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm932,
-    flashcards: flash932,
+    qcm: qcm935,
+    flashcards: flash935,
   },
   {
     id: "tale-techno-math-probabilites-conditionnelles",
@@ -26589,8 +26652,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm933,
-    flashcards: flash933,
+    qcm: qcm936,
+    flashcards: flash936,
   },
   {
     id: "tale-techno-math-variables-aleatoires-binomiale",
@@ -26608,8 +26671,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm934,
-    flashcards: flash934,
+    qcm: qcm937,
+    flashcards: flash937,
   },
   {
     id: "tale-techno-math-algorithmique-programmation",
@@ -26627,8 +26690,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm935,
-    flashcards: flash935,
+    qcm: qcm938,
+    flashcards: flash938,
   },
   {
     id: "tale-techno-math-activites-geometriques-std2a",
@@ -26646,8 +26709,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm936,
-    flashcards: flash936,
+    qcm: qcm939,
+    flashcards: flash939,
   },
   {
     id: "tale-sti2d-pc-mesure-incertitudes",
@@ -26665,8 +26728,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm937,
-    flashcards: flash937,
+    qcm: qcm940,
+    flashcards: flash940,
   },
   {
     id: "tale-sti2d-math-exponentielle-logarithme",
@@ -26684,8 +26747,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm938,
-    flashcards: flash938,
+    qcm: qcm941,
+    flashcards: flash941,
   },
   {
     id: "tale-sti2d-pc-matiere-materiaux",
@@ -26703,8 +26766,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm939,
-    flashcards: flash939,
+    qcm: qcm942,
+    flashcards: flash942,
   },
   {
     id: "tale-sti2d-math-integration-composition",
@@ -26722,8 +26785,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm940,
-    flashcards: flash940,
+    qcm: qcm943,
+    flashcards: flash943,
   },
   {
     id: "tale-sti2d-math-equations-differentielles",
@@ -26741,8 +26804,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm941,
-    flashcards: flash941,
+    qcm: qcm944,
+    flashcards: flash944,
   },
   {
     id: "tale-sti2d-pc-energie-mecanique-fluides",
@@ -26760,8 +26823,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    qcm: qcm942,
-    flashcards: flash942,
+    qcm: qcm945,
+    flashcards: flash945,
   },
   {
     id: "tale-sti2d-pc-energie-electrique-thermique",
@@ -26779,8 +26842,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm943,
-    flashcards: flash943,
+    qcm: qcm946,
+    flashcards: flash946,
   },
   {
     id: "tale-sti2d-math-complexes-exponentielle",
@@ -26798,8 +26861,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme","complexe-operations","second-degre-complexe"],
-    qcm: qcm944,
-    flashcards: flash944,
+    qcm: qcm947,
+    flashcards: flash947,
   },
   {
     id: "tale-sti2d-pc-ondes-signaux",
@@ -26817,8 +26880,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm945,
-    flashcards: flash945,
+    qcm: qcm948,
+    flashcards: flash948,
   },
   {
     id: "tale-st2s-pc-molecules-organiques",
@@ -26836,8 +26899,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm946,
-    flashcards: flash946,
+    qcm: qcm949,
+    flashcards: flash949,
   },
   {
     id: "tale-st2s-pc-biomolecules-eau",
@@ -26855,8 +26918,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm947,
-    flashcards: flash947,
+    qcm: qcm950,
+    flashcards: flash950,
   },
   {
     id: "tale-st2s-pc-glucides-ressources-naturelles",
@@ -26874,8 +26937,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm948,
-    flashcards: flash948,
+    qcm: qcm951,
+    flashcards: flash951,
   },
   {
     id: "tale-st2s-pc-besoins-energetiques-alimentation",
@@ -26893,8 +26956,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm949,
-    flashcards: flash949,
+    qcm: qcm952,
+    flashcards: flash952,
   },
   {
     id: "tale-st2s-pc-fluides-pression-sanguine",
@@ -26912,8 +26975,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm950,
-    flashcards: flash950,
+    qcm: qcm953,
+    flashcards: flash953,
   },
   {
     id: "tale-stl-spcl-composition-systemes-chimiques",
@@ -26931,8 +26994,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire","dilution"],
-    qcm: qcm951,
-    flashcards: flash951,
+    qcm: qcm954,
+    flashcards: flash954,
   },
   {
     id: "tale-stl-spcl-syntheses-mecanismes",
@@ -26950,8 +27013,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm952,
-    flashcards: flash952,
+    qcm: qcm955,
+    flashcards: flash955,
   },
   {
     id: "tale-stl-spcl-ondes-mecaniques-em-spectres",
@@ -26969,8 +27032,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm953,
-    flashcards: flash953,
+    qcm: qcm956,
+    flashcards: flash956,
   },
   {
     id: "tale-stl-spcl-ondes-transmission-stockage",
@@ -26988,8 +27051,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm954,
-    flashcards: flash954,
+    qcm: qcm957,
+    flashcards: flash957,
   },
   {
     id: "tale-stl-spcl-systemes-procedes-flux",
@@ -27007,8 +27070,8 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm955,
-    flashcards: flash955,
+    qcm: qcm958,
+    flashcards: flash958,
   },
 ];
 

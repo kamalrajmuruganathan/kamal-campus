@@ -194,31 +194,31 @@
   },
   {
    "id": 14,
-   "difficulte": "moyen",
-   "notion": "carre-variations",
-   "enonce": "Sur l'intervalle $[0\\,;+\\infty[$, la fonction carré est :",
+   "difficulte": "facile",
+   "notion": "valeur-absolue",
+   "enonce": "Que vaut $|-4|$ ?",
    "choix": [
-    "décroissante",
-    "croissante",
-    "constante",
-    "décroissante puis croissante"
+    "$-4$",
+    "$0$",
+    "$16$",
+    "$4$"
    ],
-   "reponse": 1,
-   "explication": "La fonction carré décroît sur $]-\\infty\\,;0]$ puis **croît** sur $[0\\,;+\\infty[$. Sur les positifs, plus $x$ grandit, plus $x^2$ grandit : elle est donc croissante."
+   "reponse": 3,
+   "explication": "$|x|$ est la distance entre $x$ et $0$ : la distance entre $-4$ et $0$ vaut $4$. Une valeur absolue n'est jamais négative."
   },
   {
    "id": 15,
    "difficulte": "moyen",
-   "notion": "racine",
-   "enonce": "Comparer $\\sqrt{5}$ et $\\sqrt{7}$.",
+   "notion": "valeur-absolue-variations",
+   "enonce": "Sur quel intervalle la fonction valeur absolue $x \\mapsto |x|$ est-elle croissante ?",
    "choix": [
-    "$\\sqrt{5} > \\sqrt{7}$",
-    "$\\sqrt{5} < \\sqrt{7}$",
-    "$\\sqrt{5} = \\sqrt{7}$",
-    "on ne peut pas les comparer"
+    "$\\mathbb{R}$ tout entier",
+    "$]-\\infty\\,;0]$",
+    "$[0\\,;+\\infty[$",
+    "Elle n'est croissante sur aucun intervalle"
    ],
-   "reponse": 1,
-   "explication": "La fonction racine carrée est croissante sur $[0\\,;+\\infty[$ : elle conserve l'ordre. Comme $5 < 7$, on a $\\sqrt{5} < \\sqrt{7}$."
+   "reponse": 2,
+   "explication": "Sa courbe a la forme d'un « V » : la fonction est décroissante sur $]-\\infty\\,;0]$ puis croissante sur $[0\\,;+\\infty[$, avec un minimum $0$ en $0$."
   },
   {
    "id": 16,
@@ -289,6 +289,34 @@
    ],
    "reponse": 0,
    "explication": "Sur $[1\\,;+\\infty[$, on a $x^2 \\geqslant x \\geqslant \\sqrt{x}$ (par exemple pour $x = 4$ : $16 \\geqslant 4 \\geqslant 2$). C'est sur $[0\\,;1]$ que l'ordre s'inverse, avec $\\sqrt{x} \\geqslant x \\geqslant x^2$."
+  },
+  {
+   "id": 21,
+   "difficulte": "moyen",
+   "notion": "valeur-absolue",
+   "enonce": "Quelles sont les solutions de l'équation $|x| = 3$ ?",
+   "choix": [
+    "$3$ seulement",
+    "$-3$ seulement",
+    "$-3$ et $3$",
+    "Il n'y en a aucune"
+   ],
+   "reponse": 2,
+   "explication": "Les nombres situés à la distance $3$ de $0$ sont $3$ et $-3$ : $|3| = |-3| = 3$."
+  },
+  {
+   "id": 22,
+   "difficulte": "difficile",
+   "notion": "valeur-absolue",
+   "enonce": "Quel est l'ensemble des solutions de l'inéquation $|x| \\leqslant 2$ ?",
+   "choix": [
+    "$]-\\infty\\,;2]$",
+    "$[-2\\,;2]$",
+    "$[0\\,;2]$",
+    "$]-\\infty\\,;-2] \\cup [2\\,;+\\infty[$"
+   ],
+   "reponse": 1,
+   "explication": "$|x| \\leqslant 2$ signifie que la distance entre $x$ et $0$ est au plus $2$ : $-2 \\leqslant x \\leqslant 2$."
   }
  ]
 }

@@ -181,30 +181,30 @@
     {
       "id": 13,
       "difficulte": "facile",
-      "notion": "notations",
-      "enonce": "Comment note-t-on la probabilité que $X$ prenne la valeur $3$ ?",
+      "notion": "independance",
+      "enonce": "$\\mathrm{A}$ est un événement de probabilité non nulle. Que signifie « $\\mathrm{B}$ est indépendant de $\\mathrm{A}$ » ?",
       "choix": [
-        "$\\{X = 3\\}$",
-        "$P(X = 3)$",
-        "$E(X)$",
-        "$X = 3$"
+        "$P_{\\mathrm{A}}(\\mathrm{B}) = P(\\mathrm{B})$",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0$",
+        "$P_{\\mathrm{A}}(\\mathrm{B}) = P(\\mathrm{A})$",
+        "$P(\\mathrm{A}) + P(\\mathrm{B}) = 1$"
       ],
-      "reponse": 1,
-      "explication": "$P(X = 3)$ est un **nombre** entre $0$ et $1$ : la probabilité de l'événement. L'écriture $\\{X = 3\\}$, avec des accolades, désigne l'**événement** lui-même, pas sa probabilité."
+      "reponse": 0,
+      "explication": "Savoir que $\\mathrm{A}$ est réalisé ne change pas la probabilité de $\\mathrm{B}$ : $P_{\\mathrm{A}}(\\mathrm{B}) = P(\\mathrm{B})$, ce qui revient à $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B})$. Piège : $P(\\mathrm{A} \\cap \\mathrm{B}) = 0$ signifie que les événements sont **incompatibles** (ils ne peuvent pas se produire ensemble), ce qui est tout autre chose."
     },
     {
       "id": 14,
       "difficulte": "moyen",
-      "notion": "loi-bernoulli",
-      "enonce": "Une variable aléatoire suit une loi de Bernoulli de paramètre $p = 0{,}45$. Que vaut son espérance ?",
+      "notion": "independance",
+      "enonce": "$\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants, avec $P(\\mathrm{A}) = 0{,}4$ et $P(\\mathrm{B}) = 0{,}5$. Que vaut $P(\\mathrm{A} \\cap \\mathrm{B})$ ?",
       "choix": [
-        "$0{,}45$",
-        "$0{,}55$",
-        "$1$",
-        "$0{,}225$"
+        "$0{,}2$",
+        "$0{,}9$",
+        "$0{,}1$",
+        "$0{,}45$"
       ],
       "reponse": 0,
-      "explication": "Pour une loi de Bernoulli, $E(X) = 0 \\times (1-p) + 1 \\times p = p = 0{,}45$. L'espérance **est** le paramètre $p$."
+      "explication": "Pour deux événements indépendants, $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}4 \\times 0{,}5 = 0{,}2$. On **multiplie** les probabilités : les additionner ($0{,}9$) n'a pas de sens ici."
     },
     {
       "id": 15,
@@ -289,6 +289,34 @@
       ],
       "reponse": 0,
       "explication": "On passe par l'événement contraire : « aucune défectueuse » a pour probabilité $0{,}9 \\times 0{,}9 = 0{,}81$. Donc « au moins une » vaut $1 - 0{,}81 = 0{,}19$. Le choix $0{,}2$ additionne naïvement $0{,}1 + 0{,}1$."
+    },
+    {
+      "id": 21,
+      "difficulte": "moyen",
+      "notion": "independance",
+      "enonce": "On sait que $P(\\mathrm{A}) = 0{,}3$, $P(\\mathrm{B}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}12$. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils indépendants ?",
+      "choix": [
+        "Oui, car $0{,}3 \\times 0{,}4 = 0{,}12$",
+        "Non, car $P(\\mathrm{A} \\cap \\mathrm{B}) \\neq 0$",
+        "Non, car $0{,}3 + 0{,}4 \\neq 1$",
+        "On ne peut pas le savoir"
+      ],
+      "reponse": 0,
+      "explication": "On compare $P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}3 \\times 0{,}4 = 0{,}12$ à $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}12$ : l'égalité est vérifiée, les événements sont indépendants. Un $P(\\mathrm{A} \\cap \\mathrm{B})$ non nul ne prouve rien, et la somme $P(\\mathrm{A}) + P(\\mathrm{B})$ n'intervient pas."
+    },
+    {
+      "id": 22,
+      "difficulte": "difficile",
+      "notion": "probabilites-totales",
+      "enonce": "On sait que $P(\\mathrm{A}) = 0{,}6$, $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}1$ et $P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}3$. Que vaut $P(\\mathrm{B})$ ?",
+      "choix": [
+        "$0{,}18$",
+        "$0{,}4$",
+        "$0{,}2$",
+        "$0{,}06$"
+      ],
+      "reponse": 0,
+      "explication": "Formule des probabilités totales : $P(\\mathrm{B}) = P(\\mathrm{A}) \\times P_{\\mathrm{A}}(\\mathrm{B}) + P(\\overline{\\mathrm{A}}) \\times P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}6 \\times 0{,}1 + 0{,}4 \\times 0{,}3 = 0{,}06 + 0{,}12 = 0{,}18$. On additionne les probabilités des **deux chemins** qui mènent à $\\mathrm{B}$ ; $0{,}06$ n'en compte qu'un seul."
     }
   ]
 }

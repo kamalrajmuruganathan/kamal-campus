@@ -1,0 +1,192 @@
+{
+  "1": {
+    "reponse": "$\\mathbb{Z}$ (entiers relatifs)",
+    "accepte": [
+      "Z",
+      "ℤ",
+      "entiers relatifs"
+    ]
+  },
+  "2": {
+    "reponse": "$\\mathbb{D}$ (décimaux)",
+    "accepte": [
+      "D",
+      "𝔻",
+      "décimaux",
+      "nombres décimaux"
+    ]
+  },
+  "3": {
+    "reponse": "$\\mathbb{Q}$ (rationnels)",
+    "accepte": [
+      "Q",
+      "ℚ",
+      "rationnels",
+      "nombres rationnels"
+    ]
+  },
+  "4": {
+    "reponse": "$\\mathbb{N}$ (entiers naturels)",
+    "accepte": [
+      "N",
+      "ℕ",
+      "entiers naturels"
+    ]
+  },
+  "5": {
+    "reponse": "$\\mathbb{R}$ (réels)",
+    "accepte": [
+      "R",
+      "ℝ",
+      "réels",
+      "nombres réels"
+    ]
+  },
+  "28": {
+    "reponse": "$(2k + 1)^2 = 2(2k^2 + 2k) + 1$ : c'est un nombre impair",
+    "criteres": [
+      {
+        "idee": "Un nombre impair s'écrit 2k + 1 avec k entier",
+        "mots": [
+          "2k+1",
+          "impair s'ecrit"
+        ]
+      },
+      {
+        "idee": "On développe : (2k + 1)² = 4k² + 4k + 1",
+        "mots": [
+          "4k^2",
+          "developpe"
+        ]
+      },
+      {
+        "idee": "On l'écrit 2(2k² + 2k) + 1 : c'est de la forme 2m + 1, donc impair",
+        "mots": [
+          "2m+1",
+          "forme",
+          "impair"
+        ]
+      }
+    ]
+  },
+  "29": {
+    "reponse": "$\\sqrt{a}\\sqrt{b}$ est positif et son carré vaut $ab$ : c'est donc $\\sqrt{ab}$",
+    "criteres": [
+      {
+        "idee": "Le produit √a × √b est positif",
+        "mots": [
+          "positif"
+        ]
+      },
+      {
+        "idee": "Son carré vaut ab",
+        "mots": [
+          "carre"
+        ]
+      },
+      {
+        "idee": "√(ab) est le seul nombre positif dont le carré vaut ab : ils sont égaux",
+        "mots": [
+          "seul",
+          "egaux",
+          "unique"
+        ]
+      }
+    ]
+  },
+  "33": {
+    "reponse": "$10$ et $14$ : $\\sqrt{a + b} \\neq \\sqrt{a} + \\sqrt{b}$ en général",
+    "accepte": [
+      "10 et 14",
+      "10 ; 14"
+    ]
+  },
+  "34": {
+    "reponse": "Faux ($\\sqrt{a^2} = |a|$)",
+    "accepte": [
+      "faux"
+    ]
+  },
+  "38": {
+    "reponse": "$|x - 6| \\leqslant 4$",
+    "accepte": [
+      "|x - 6| ≤ 4"
+    ]
+  },
+  "44": {
+    "reponse": "Non, $\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{5}{6}$",
+    "accepte": [
+      "non"
+    ]
+  },
+  "45": {
+    "reponse": "Si $\\dfrac{1}{3} = \\dfrac{n}{10^k}$, alors $10^k = 3n$ serait multiple de $3$ ; or $10^k$ a pour reste $1$ dans la division par $3$ : contradiction, $\\dfrac{1}{3}$ n'est pas décimal",
+    "criteres": [
+      {
+        "idee": "Par l'absurde, on suppose 1/3 = n/10^k",
+        "mots": [
+          "absurde",
+          "suppose"
+        ]
+      },
+      {
+        "idee": "Alors 10^k = 3n serait un multiple de 3",
+        "mots": [
+          "multiple"
+        ]
+      },
+      {
+        "idee": "Or 10^k a pour reste 1 dans la division par 3 : contradiction",
+        "mots": [
+          "reste",
+          "contradiction"
+        ]
+      }
+    ]
+  },
+  "46": {
+    "reponse": "Par l'absurde : $p^2 = 2q^2$ donne $p$ pair, puis $q$ pair, ce qui contredit l'irréductibilité de $\\dfrac{p}{q}$ ; donc $\\sqrt{2}$ est irrationnel",
+    "criteres": [
+      {
+        "idee": "Par l'absurde, on suppose √2 = p/q avec une fraction irréductible",
+        "mots": [
+          "absurde",
+          "irreductible",
+          "suppose"
+        ]
+      },
+      {
+        "idee": "p² = 2q², donc p² est pair, donc p est pair",
+        "mots": [
+          "pair"
+        ]
+      },
+      {
+        "idee": "En écrivant p = 2k, on obtient q² = 2k² : q est pair aussi",
+        "mots": [
+          "2k^2",
+          "aussi"
+        ]
+      },
+      {
+        "idee": "p et q pairs : la fraction n'est pas irréductible, contradiction",
+        "mots": [
+          "contradiction",
+          "contredit"
+        ]
+      }
+    ]
+  },
+  "50": {
+    "reponse": "$S = \\{-1\\,;1\\}$",
+    "accepte": [
+      "{-1 ; 1}",
+      "{1 ; -1}",
+      "-1 et 1",
+      "1 et -1",
+      "-1 ; 1",
+      "-1 ou 1",
+      "1 ou -1"
+    ]
+  }
+}
