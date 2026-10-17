@@ -169,14 +169,23 @@ où $s$ est l'écart-type de la série.
 ### Sur une mesure unique
 
 Quand on ne dispose que d'**une seule** mesure, on ne peut rien calculer
-statistiquement : on **estime** $u(X)$ à partir de l'instrument.
+statistiquement : on **estime** $u(X)$ à partir de l'instrument (évaluation de
+**type B**). On repère la **demi-largeur** $a$ de l'intervalle dans lequel la valeur
+est sûrement comprise ($\text{lecture} \pm a$), puis on divise par $\sqrt{3}$ :
 
-| Situation | Estimation courante |
-|---|---|
-| Instrument gradué (règle, éprouvette) | la moitié de la plus petite graduation |
-| Appareil numérique | l'indication du constructeur, ou le dernier chiffre affiché |
+$$\boxed{u(X) = \frac{a}{\sqrt{3}}}$$
 
-> **Exemple.** Règle graduée au millimètre : $u \approx 0{,}5\ \mathrm{mm}$.
+| Situation | Demi-largeur $a$ | Incertitude-type |
+|---|---|---|
+| Lecture sur un instrument gradué (règle, éprouvette) | une **demi-graduation** | $u = \dfrac{\text{graduation}/2}{\sqrt{3}} = \dfrac{\text{graduation}}{\sqrt{12}}$ |
+| Appareil numérique, sans notice | une demi-unité du dernier chiffre affiché | $u = \dfrac{\text{résolution}}{\sqrt{12}}$ |
+| Tolérance $\pm t$ donnée par le constructeur | la tolérance $t$ | $u = \dfrac{t}{\sqrt{3}}$ |
+
+> **Exemple.** Règle graduée au millimètre : $a = 0{,}5\ \mathrm{mm}$, donc
+> $u = \dfrac{1}{\sqrt{12}} \approx 0{,}29\ \mathrm{mm}$, soit $u \approx 0{,}3\ \mathrm{mm}$.
+
+> ⚠️ **Ne confonds pas $a$ et $u$.** La demi-graduation ($0{,}5$ mm) est la
+> **demi-largeur** de l'intervalle, pas l'incertitude-type : on divise encore par $\sqrt{3}$.
 
 ---
 
@@ -202,10 +211,11 @@ Le nombre de chiffres écrits doit refléter la **précision réelle** de la mes
 | Produit, quotient | on garde le **nombre de chiffres significatifs** du facteur le moins précis |
 | Somme, différence | on garde le nombre de **décimales** du terme le moins précis |
 
-> L'incertitude s'écrit avec **un seul chiffre significatif** en général, et la valeur
-> est arrondie **au même rang** qu'elle. Écrire $m = 12{,}4567 \pm 0{,}2$ g n'a pas de
-> sens : si l'incertitude porte sur le dixième, les chiffres suivants ne veulent rien
-> dire. On écrit $m = 12{,}5 \pm 0{,}2$ g.
+> L'incertitude s'arrondit **au plus proche**, avec **un ou deux chiffres
+> significatifs** (un seul le plus souvent), et la valeur est arrondie **au même rang**
+> qu'elle. Écrire $m = 12{,}4567 \pm 0{,}2$ g n'a pas de sens : si l'incertitude porte
+> sur le dixième, les chiffres suivants ne veulent rien dire. On écrit
+> $m = 12{,}5 \pm 0{,}2$ g.
 
 ---
 
@@ -272,8 +282,8 @@ mesures portant sur des grandeurs différentes.
 | Erreur aléatoire | dégrade la **fidélité** — corrigée en **répétant** |
 | Erreur systématique | dégrade la **justesse** — corrigée en **étalonnant** |
 | Incertitude-type, type A | $u = \dfrac{s}{\sqrt{n}}$ |
-| Mesure unique | $u$ **estimée** d'après l'instrument |
-| Écriture | $X = X_{\text{mes}} \pm u(X)$, incertitude à 1 chiffre significatif |
+| Mesure unique (type B) | $u = \dfrac{a}{\sqrt{3}}$ ; lecture d'une graduation : $u = \dfrac{\text{graduation}}{\sqrt{12}}$ |
+| Écriture | $X = X_{\text{mes}} \pm u(X)$, incertitude arrondie au plus proche à 1 ou 2 chiffres significatifs, valeur au même rang |
 | Validité | écart à la référence **en nombre d'incertitudes-types** |
 
 ---
@@ -290,11 +300,13 @@ mesures portant sur des grandeurs différentes.
    pas $u = s$.
 6. **Recopier tous les chiffres de la calculatrice** : un calcul n'ajoute pas de
    précision.
-7. **Donner l'incertitude avec trois chiffres significatifs** : un seul suffit, et la
-   valeur s'arrondit au même rang.
-8. **Conclure qu'une mesure est fausse** parce qu'elle diffère de la référence, sans
+7. **Donner l'incertitude avec trois chiffres significatifs** : un ou deux suffisent
+   (un seul le plus souvent), et la valeur s'arrondit au même rang.
+8. **Prendre la demi-graduation pour l'incertitude-type** : pour une lecture, $a$ vaut
+   une demi-graduation et $u = \dfrac{a}{\sqrt{3}}$.
+9. **Conclure qu'une mesure est fausse** parce qu'elle diffère de la référence, sans
    avoir évalué l'écart **en nombre d'incertitudes-types**.
-9. **Oublier de convertir** avant de comparer deux valeurs.
+10. **Oublier de convertir** avant de comparer deux valeurs.
 
 ---
 
@@ -344,8 +356,12 @@ Ce que la relecture du texte officiel a changé :
 - La formule u = s/√n (§ 6) : le texte demande « une évaluation par une approche
   statistique (type A) » sans écrire la formule. Vérifier qu'elle est bien celle
   attendue en STI2D/STL, et non l'écart-type seul.
-- Les estimations pour une mesure unique (demi-graduation) sont un usage, non un
-  contenu du texte : à valider.
+- MESURE UNIQUE — convention harmonisée le 17/10/2026 avec SPCL 1re (mesure-incertitudes-labo)
+  et terminale STI2D/STL : type B u = a/√3 (a = demi-largeur) ; lecture sur une graduation :
+  a = ½ graduation, donc u = graduation/√12 (règle au mm : 0,29 ≈ 0,3 mm). L'ancienne règle
+  « u ≈ ½ graduation » (sans √3) a été retirée de la fiche, du QCM, des cartes et des exercices.
+- ARRONDI — harmonisé le 17/10/2026 : incertitude au plus proche, 1 ou 2 chiffres significatifs
+  (1 le plus souvent ; les énoncés précisent quand c'est nécessaire), valeur au même rang.
 - La liste des préfixes n'est pas dans cette section du programme ; conservée comme
   outil pratique.
 

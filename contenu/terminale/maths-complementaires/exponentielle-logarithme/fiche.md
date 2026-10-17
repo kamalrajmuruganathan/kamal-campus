@@ -230,14 +230,14 @@ En **décroissance** ($0<q<1$, ex. désintégration radioactive), $\ln q<0$ : di
 | Notion | À mémoriser |
 |---|---|
 | Exp — algèbre | $e^{a+b}=e^a e^b$, $e^{-a}=\frac{1}{e^a}$, $(e^a)^n=e^{na}$ |
-| Exp — dérivée | $(e^x)'=e^x$, $(e^u)'=u'e^u$ |
+| Exp — dérivée | $(e^x)'=e^x$, $(e^u)'=u'e^u$ ($u$ dérivable) |
 | Exp — limites | $\lim\limits_{-\infty}e^x=0^+$, $\lim\limits_{+\infty}e^x=+\infty$ |
 | Ln — définition | $\ln x=y\iff x=e^y$, avec $x>0$ |
 | Compensation | $\ln(e^x)=x$ et $e^{\ln x}=x$ |
 | Valeurs clés | $\ln 1=0$, $\ln e=1$, $e^0=1$ |
 | Produit / quotient | $\ln(ab)=\ln a+\ln b$ ; $\ln\!\frac ab=\ln a-\ln b$ |
 | Puissance | $\ln(a^{n})=n\ln a$ |
-| Ln — dérivée | $(\ln x)'=\frac1x$, $(\ln u)'=\frac{u'}{u}$ |
+| Ln — dérivée | $(\ln x)'=\frac1x$, $(\ln u)'=\frac{u'}{u}$ ($u$ dérivable et $u>0$) |
 | Ln — variations | strictement **croissante** sur $]0\,;+\infty[$ |
 | Ln — limites | $\lim\limits_{0^+}\ln=-\infty$, $\lim\limits_{+\infty}\ln=+\infty$ |
 | Croissances comparées | $\frac{e^x}{x^n}\to+\infty$ ; $\frac{\ln x}{x^n}\to 0$ ; $x^n\ln x\to 0$ en $0^+$ |
