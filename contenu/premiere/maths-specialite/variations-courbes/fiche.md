@@ -168,25 +168,3 @@ On retrouve **par le calcul** l'abscisse du sommet vue au chapitre précédent.
 5. **Confondre les deux symétries** : paire → axe des ordonnées, impaire → origine.
 6. **Négliger les valeurs aux extrémums** dans le tableau : un tableau sans les images n'est
    pas complet.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité maths première générale,
-section « Variations et courbes représentatives des fonctions » (ligne 2077 du .txt).
-
-Éléments lisibles dans l'extraction : fonctions paires/impaires avec traduction géométrique,
-caractérisation des fonctions constantes, nombre dérivé en un extrémum, tangente à la courbe
-représentative, et « étudier en lien avec la dérivation une fonction polynôme du second degré ».
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le théorème « f' > 0 ⟹ f croissante » est-il admis ou démontré ?
-- La notion de point d'inflexion est-elle au programme de première ou de terminale ?
-  Je l'ai seulement nommée en passant sur le contre-exemple x³, sans la développer.
-- Le périmètre exact des capacités attendues (l'extraction est tronquée en fin de section).
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

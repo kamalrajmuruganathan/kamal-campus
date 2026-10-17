@@ -186,29 +186,3 @@ long de chaque chemin, additionner les chemins.
 5. **Oublier de compter les chemins** dans une répétition d'épreuves de Bernoulli.
 6. **Utiliser $P(\mathrm{A} \cap \mathrm{B}) = P(\mathrm{A})P(\mathrm{B})$ sans indépendance.**
    Cette formule n'est valable que si l'indépendance est établie ou donnée par l'énoncé.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité maths première générale,
-section « Probabilités conditionnelles et indépendance » (ligne 2811 du .txt extrait).
-
-Éléments lisibles : indépendance de deux évènements, formule des probabilités totales,
-succession de deux épreuves indépendantes avec représentation par arbre ou tableau,
-et « pour n ≤ 4, répétition de n épreuves de Bernoulli indépendantes et identiques ».
-La limite n ≤ 4 est explicite dans le programme — je l'ai respectée et signalée.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- L'extraction a perdu une partie du bloc « Contenus » (fragment « è nements ). » avant la
-  formule des probabilités totales) : vérifier qu'aucune notion n'est omise, notamment
-  l'indépendance de deux variables aléatoires.
-- La loi binomiale n'est PAS mentionnée pour la première (elle relève de la terminale) :
-  je ne l'ai pas introduite, mais la limite n ≤ 4 le confirme indirectement — à valider.
-- Le coefficient binomial n'est donc pas utilisé : les chemins se comptent à la main sur
-  l'arbre. À confirmer.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

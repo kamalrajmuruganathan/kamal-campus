@@ -164,33 +164,3 @@ multiplier le long de chacun, additionner.
 6. **Appliquer $P(\mathrm{A} \cap \mathrm{B}) = P(\mathrm{A})P(\mathrm{B})$** sans que
    l'indépendance soit établie.
 7. **Conclure d'une forte probabilité conditionnelle à une causalité.**
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques intégrées à
-l'enseignement scientifique, première générale, partie « Phénomènes aléatoires ».
-
-Capacités attendues explicitement lisibles dans l'extraction :
-« Calculer des probabilités conditionnelles à l'aide d'un TABLEAU CROISÉ D'EFFECTIFS
-ou d'un ARBRE PONDÉRÉ » et « Représenter par un arbre de probabilités la répétition
-de n épreuves aléatoires identiques et indépendantes de Bernoulli avec n ≤ 4 ».
-Le tableau croisé est donc mis en avant à parité avec l'arbre — c'est une différence
-notable avec le programme de spécialité, où l'arbre domine. La section 2 reflète ce
-choix.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le vocabulaire attendu : le programme parle-t-il de « probabilités totales » ou
-  reste-t-il sur une formulation par l'arbre ?
-- La notation P_A(B) est-elle celle du programme, ou utilise-t-il P(B|A) ?
-- Le paradoxe du dépistage (section 2) est un exemple que j'ai choisi : vérifier
-  qu'il correspond bien à l'esprit du programme, qui privilégie les problématiques
-  de santé publique et l'esprit critique.
-- L'indépendance de deux VARIABLES ALÉATOIRES est-elle au programme, ou seulement
-  celle de deux événements ?
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

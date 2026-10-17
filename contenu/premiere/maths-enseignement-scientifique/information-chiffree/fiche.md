@@ -171,31 +171,3 @@ Quand on compare deux pourcentages, il faut distinguer deux façons de dire l'é
    $n$-ième du coefficient.
 6. **Comparer des pourcentages calculés sur des bases différentes.**
 7. **Oublier de préciser la base** d'un pourcentage dans une conclusion rédigée.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, « Programme de mathématiques intégré
-à l'enseignement scientifique en classe de première générale »
-(docs/programme-prem_gen_non_spe-2026.pdf), partie « Analyse de l'information chiffrée ».
-
-Le programme insiste explicitement sur le développement de l'ESPRIT CRITIQUE et sur
-l'ancrage dans des problématiques d'actualité (développement durable, changement
-climatique, biodiversité, économie, démographie, santé publique). La section 7 traduit
-cette intention.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le périmètre exact des « Automatismes » : le programme comporte une rubrique dédiée
-  dont l'extraction est trop dégradée pour être exploitée. Vérifier quelles capacités
-  de calcul mental sont explicitement exigibles.
-- L'évolution moyenne (racine n-ième) est-elle au programme de ce parcours, ou
-  réservée à la spécialité ? Je l'ai incluse car classique, à confirmer.
-- Les indices (base 100) sont-ils exigibles ? Je ne les ai PAS traités.
-- Le programme mentionne l'usage du TABLEUR : vérifier s'il est attendu ici ou
-  seulement dans la partie statistique.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

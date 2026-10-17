@@ -185,35 +185,3 @@ la **tangente y est horizontale**.
 6. **Annoncer une variation sur une réunion d'intervalles.**
 7. **Oublier les images** dans le tableau de variations : un tableau sans valeurs est
    incomplet.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques, première de la voie
-technologique (docs/programme-premiere-techno-2026.pdf), partie « Analyse », section
-« Dérivation » (ligne 2071 du .txt extrait).
-
-Le découpage de la fiche suit EXACTEMENT celui du programme, dont l'extraction est
-lisible sur ce point : « Point de vue local : approche graphique de la notion de
-nombre dérivé ; Sécantes à une courbe passant par un point donné ; taux de variation
-en un point ; Tangente à une courbe en un point, définie comme position limite des
-sécantes passant par ce point ; Nombre dérivé en un point défini comme limite du taux
-de variation en ce point ; Équation réduite de la tangente en un point » puis
-« Point de vue global : Fonction dérivée ; Fonctions dérivées de : … ».
-
-PÉRIMÈTRE TRANCHÉ (05/10/2026) d'après docs/programme-premiere-techno-2026.txt,
-lignes 440-441 : « Fonctions dérivées de : x ↦ x², x ↦ x³ » et « Dérivée d'une
-somme, dérivée de kf (k ∈ ℝ), dérivée d'un polynôme de degré inférieur ou égal
-à 3 ». Sont donc retenus : k, x, x², x³, somme, kf, polynômes de degré ≤ 3.
-Retirés de la fiche, du QCM, des cartes et des exercices car HORS PROGRAMME en
-voie technologique : dérivées de 1/x et de √x, dérivée d'un produit (uv)' et
-d'un quotient (u/v)'. Un produit de deux facteurs affines se traite en
-développant d'abord. Contextes recommandés par le programme (commentaires) :
-vitesse instantanée et coût marginal.
-Reste à confronter au PDF : les démonstrations éventuellement exigibles.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -150,25 +150,3 @@ Solutions : $x \in \left]-\infty\,;-3\right] \cup \left[1\,;+\infty\right[$
 6. **Fermer le crochet sur une valeur interdite** dans le résultat.
 7. **Confondre $\cup$ et $\cap$** : les solutions d'une inéquation produit forment souvent une
    **réunion** de deux intervalles.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Algèbre » (ligne 1941 du .txt extrait).
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le périmètre exact des inéquations en seconde : les inéquations produit et quotient
-  sont-elles exigibles, ou seulement le premier degré ? J'ai inclus les deux, ce qui est
-  l'usage courant, mais à vérifier sur le nouveau texte.
-- Les systèmes de deux équations à deux inconnues relèvent-ils de ce chapitre ou de la
-  section « Droites du plan » ? Je ne les ai pas traités ici.
-- Le programme mentionne « Déterminer par balayage un encadrement de … » (visible dans
-  l'extraction) : cette méthode approchée est-elle rattachée aux équations ? À vérifier et
-  à ajouter le cas échéant.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -158,30 +158,3 @@ le point et regarde.
    solutions.
 6. **Apprendre les angles associés par cœur.** Ils se retrouvent en dix secondes sur un cercle
    dessiné à main levée, et la mémoire trahit toujours en contrôle.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité maths première générale,
-section « Trigonométrie » (ligne 2368 du .txt extrait).
-
-Éléments lisibles dans l'extraction : enroulement de la droite numérique, cosinus et sinus
-d'un réel, lien avec le triangle rectangle, valeurs remarquables, placer un point sur le
-cercle trigonométrique, déterminer par lecture du cercle les angles associés.
-Une DÉMONSTRATION est explicitement mentionnée : « Calcul de cos, sin » pour les angles
-associés.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le programme mentionne une « Approximation de … » dont l'extraction a perdu l'objet.
-  Il s'agit probablement de sin(x) ≈ x au voisinage de 0 — à vérifier et à ajouter si c'est
-  le cas, car c'est une capacité attendue distinctive.
-- Les fonctions cosinus et sinus comme fonctions (courbes représentatives, périodicité
-  graphique, dérivées) sont-elles au programme de première ou de terminale ? Je ne les ai
-  pas traitées ici.
-- La résolution d'équations trigonométriques (cos x = a) est-elle exigible en première ?
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

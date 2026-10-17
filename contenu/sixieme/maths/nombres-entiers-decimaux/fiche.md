@@ -226,7 +226,52 @@ jamais. On en donne alors une **valeur arrondie**.
 
 ---
 
-## 11. Pièges de calcul
+## 11. Calculer avec les nombres décimaux
+
+### Additionner et soustraire
+
+On pose l'opération en **alignant les virgules** (les unités sous les unités, les dixièmes
+sous les dixièmes…). On peut compléter avec des zéros pour avoir le même nombre de chiffres
+après la virgule.
+
+> **Exemple.** $12{,}5 + 3{,}75 = 16{,}25$ et $8 - 2{,}35 = 8{,}00 - 2{,}35 = 5{,}65$.
+
+### Multiplier deux nombres décimaux
+
+1. On calcule le produit **sans tenir compte des virgules**.
+2. Dans le résultat, on place la virgule pour avoir **autant de chiffres après la virgule
+   qu'il y en a en tout dans les deux facteurs**.
+
+> **Exemple.** $2{,}4 \times 1{,}3$ : on calcule $24 \times 13 = 312$. Il y a $1 + 1 = 2$ chiffres
+> après la virgule dans les facteurs, donc $2{,}4 \times 1{,}3 = 3{,}12$.
+
+**Contrôler avec un ordre de grandeur** : $2{,}4 \times 1{,}3$ est proche de $2 \times 1 = 2$ ; le
+résultat $3{,}12$ est plausible, alors que $31{,}2$ ou $0{,}312$ ne le sont pas.
+
+> ⚠️ Multiplier par un nombre plus petit que $1$ donne un résultat **plus petit** que le nombre
+> de départ : $8 \times 0{,}5 = 4$.
+
+### Diviser un décimal par un entier
+
+On pose la division ; quand on « descend » le chiffre des dixièmes, on place la virgule au
+quotient.
+
+> **Exemple.** $7{,}5 \div 3 = 2{,}5$ (car $3 \times 2{,}5 = 7{,}5$). Et $9 \div 4 = 2{,}25$ : on continue
+> la division après la virgule en ajoutant des zéros ($9 = 9{,}00$).
+
+### La division euclidienne
+
+Diviser un entier $a$ par un entier $b$ (non nul), c'est trouver le **quotient** $q$ et le
+**reste** $r$ entiers tels que
+
+$$a = b \times q + r \qquad \text{avec } r < b$$
+
+> **Exemple.** $47$ œufs rangés par boîtes de $6$ : $47 = 6 \times 7 + 5$. On remplit $7$ boîtes
+> et il reste $5$ œufs ($5 < 6$).
+
+---
+
+## 12. Pièges de calcul
 
 - **« Plus il y a de chiffres, plus c'est grand »** est faux : $3{,}5 > 3{,}45$.
 - **Le zéro final** ne change pas la valeur : $2{,}7 = 2{,}70$. Mais un zéro
@@ -236,7 +281,7 @@ jamais. On en donne alors une **valeur arrondie**.
 
 ---
 
-## 12. Tableau récapitulatif
+## 13. Tableau récapitulatif
 
 | Notion | À retenir |
 |---|---|
@@ -252,7 +297,7 @@ jamais. On en donne alors une **valeur arrondie**.
 
 ---
 
-## 13. Les erreurs qui coûtent des points
+## 14. Les erreurs qui coûtent des points
 
 1. **Comparer en comptant les chiffres après la virgule** : $3{,}45$ n'est pas
    plus grand que $3{,}5$.
@@ -265,53 +310,3 @@ jamais. On en donne alors une **valeur arrondie**.
    rang demandé décide.
 6. **Oublier qu'un entier est un décimal** : $6 = 6{,}0$, on peut le comparer et
    le placer comme les autres.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : /tmp/kamal-campus/docs/programme-college-cycle3-maths-2025.txt
-« Programme de cycle 3 (2025) », section Sixième, entrée « Les nombres entiers et
-décimaux », lignes 657 à 757.
-
-Éléments explicitement lisibles dans la source et utilisés ici :
-- « le milliard est introduit » (l. 662) → section 3, grands nombres.
-- « écriture sous forme de pourcentage » / « connaître la définition d'un
-  pourcentage » (l. 666, 722) → section 4.
-- Automatismes l. 682-702 : relations entre 1/1000, 1/100, 1/10 et 1 ;
-  équivalences 1/10 = 0,1 ; 1/100 = 0,01 ; 1/1000 = 0,001 → section 2.
-- Exemple des quatre écritures de 4,107 (l. 703-709) : repris tel quel en
-  section 5 (4107/1000 ; 4 + 107/1000 ; 4 + 1/10 + 7/1000 ; 4,107).
-- Multiplication / division d'un décimal par 1, 10, 100, 1000 et par 0,1 / 0,01
-  (l. 710-712, 732) → section 6, traitée UNIQUEMENT comme procédure de
-  numération (déplacement de la virgule), pas comme opération générale.
-- Objectifs d'apprentissage l. 718-730 : valeur des chiffres selon le rang ;
-  unités de numération ; grands nombres ; reconnaître un décimal ; différentes
-  écritures (virgule, fraction, nombre mixte, pourcentage) ; demi-droite graduée
-  (placer / repérer, abscisse) ; comparer / ordonner ; arrondi à l'unité, au
-  dixième, au centième, y compris nombres non décimaux ; encadrer / intercaler.
-
-PÉRIMÈTRE (décision à confirmer par le relecteur) :
-- La consigne demandait de couvrir : numération de position, lecture/écriture des
-  grands nombres et des décimaux, demi-droite graduée, comparaison, encadrement,
-  arrondi, décomposition. La fiche s'y tient.
-- Les OPÉRATIONS présentes dans la source mais HORS de cette liste n'ont PAS été
-  traitées comme telles : addition/soustraction de décimaux (l. 731), sens et
-  calcul de la multiplication de deux décimaux (l. 734-737), division décimale
-  et division euclidienne (l. 738-741), ordre de grandeur pour contrôler (l. 736).
-  À confirmer : ces opérations relèvent-elles d'un chapitre séparé ?
-
-POINTS À SOUMETTRE AU RELECTEUR :
-- Définition de « nombre décimal » (section 4) : la source dit « reconnaître un
-  nombre décimal » sans donner de définition formelle. J'ai retenu « écriture à
-  virgule finie / fraction décimale », cohérent avec l'opposition « nombres non
-  décimaux » de la source (l. 729). À valider.
-- « Nombre mixte » (section 5) : la source le cite comme écriture (l. 723) sans
-  le définir ; je l'ai présenté comme « entier + fraction inférieure à 1 ».
-- Exemple d'arrondi d'un non-décimal : j'ai pris 2 ÷ 3 ≈ 0,67. La division n'est
-  pas l'objet du chapitre ; vérifier que l'exemple reste acceptable en 6e.
-
-Rédaction originale à partir du programme officiel. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -161,25 +161,3 @@ Le **tableau de variations** résume ces informations avec des flèches.
 5. **Confondre le maximum et l'abscisse où il est atteint.**
 6. **Lire une inéquation graphique à l'envers** : $f(x) > k$ se lit là où la courbe est
    **au-dessus** de l'horizontale.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), sections « Notion de fonction » (ligne 945 du .txt) et
-« Fonctions et représentations » (ligne 1419). Le programme mentionne explicitement les
-représentations « par des programmes de calcul, par des tableaux de valeurs » (ligne 2773)
-et les « extrémums » (ligne 2996) — j'ai structuré la fiche autour de ces marqueurs.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les définitions formelles de croissance/décroissance sont-elles exigibles en seconde, ou
-  seulement l'approche par tableau et lecture graphique ?
-- La résolution graphique d'inéquations est-elle explicitement au programme ?
-- Le programme mentionne « Déterminer par balayage un encadrement de … » : cette méthode
-  se rattache-t-elle à ce chapitre (résolution approchée de f(x) = k) ?
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

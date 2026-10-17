@@ -39,6 +39,15 @@ $$\pi \text{ rad} = 180°$$
 |---|---|---|---|---|---|---|---|
 | Radians | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\pi$ | $2\pi$ |
 
+### Angles orientés et mesure principale
+
+Un angle orienté de vecteurs a une infinité de mesures en radians : si $\theta$ est l'une d'elles, les autres
+sont $\theta + 2k\pi$ ($k$ entier relatif). La **mesure principale** est l'unique mesure comprise dans
+l'intervalle $]-\pi\,;\pi]$.
+
+> **Exemple.** $\dfrac{7\pi}{3} = \dfrac{\pi}{3} + 2\pi$ : sa mesure principale est $\dfrac{\pi}{3}$.
+> $\dfrac{5\pi}{4} = -\dfrac{3\pi}{4} + 2\pi$ : sa mesure principale est $-\dfrac{3\pi}{4}$.
+
 ### Conversions
 
 $$\text{radians} = \text{degrés} \times \frac{\pi}{180}
@@ -193,39 +202,3 @@ $$\boxed{T = \frac{2\pi}{\omega}} \qquad\qquad \boxed{f = \frac{1}{T} = \frac{\o
 6. **Confondre abscisse et ordonnée** : $\cos$ est l'abscisse.
 7. **Croire que la phase $\varphi$ change l'amplitude** : elle ne fait que décaler la
    courbe horizontalement.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO spécial n° 1 du 22 janvier 2019, « Programme de
-physique-chimie et mathématiques de première STI2D et STL »
-(docs/programme-premiere-sti2d-stl-pc-maths.pdf), partie « Programme de
-mathématiques », section « Géométrie dans le plan — Trigonométrie ».
-
-Contenus explicitement lisibles dans l'extraction : « Cercle trigonométrique,
-radian », « Fonctions circulaires sinus et cosinus : périodicité, variations,
-parité. Valeurs remarquables en 0, [π/6, π/4, π/3, π/2] », et surtout
-« Fonctions t ↦ A cos(ωt + φ) et t ↦ A sin(ωt + φ) : amplitude, périodicité, phase à
-[l'origine] » — c'est ce dernier point qui distingue ce programme de celui de la voie
-générale, et la section 6 lui est consacrée.
-
-Capacités attendues lisibles : « Effectuer des conversions de degré en radian, de
-radian en degré », « Résoudre, par lecture sur le cercle trigonométrique, des
-équations du type cos(x) = a et sin(x) = a », « Connaître et utiliser les relations
-entre sinus et cosinus des angles associés : −x ; π−x ; π+x ; π/2−x ; π/2+x ».
-La liste des angles associés de la section 4 suit exactement cette énumération.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La DÉRIVÉE des fonctions sinus et cosinus est-elle au programme de première ici ?
-  Je ne l'ai PAS traitée — le programme comporte une section « Analyse — Dérivées »
-  distincte dont l'extraction est trop dégradée pour trancher.
-- La représentation graphique des fonctions sinusoïdales (tracé complet avec
-  décalage de phase) est-elle exigible, ou seulement la lecture des paramètres ?
-- L'exemple du réseau électrique (325 V, 50 Hz) est un choix personnel : vérifier
-  qu'il correspond aux contextes visés par le programme.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

@@ -126,6 +126,14 @@ $$\boxed{\Delta = b^2 - 4ac}$$
 | $\Delta = 0$ | une racine double $x_0 = \dfrac{-b}{2a}$ | $a(x-x_0)^2$ |
 | $\Delta < 0$ | aucune racine réelle | pas de factorisation dans $\mathbb{R}$ |
 
+> **Démonstration (exigible).** Pour $a \neq 0$, on fait apparaître le début d'un carré :
+> $$ax^2 + bx + c = a\left[\left(x + \frac{b}{2a}\right)^2 - \frac{b^2}{4a^2} + \frac{c}{a}\right] = a\left[\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right].$$
+> - Si $\Delta < 0$, le crochet est la somme d'un carré (positif ou nul) et du nombre strictement positif $-\dfrac{\Delta}{4a^2}$ : il ne s'annule jamais, il n'y a pas de racine.
+> - Si $\Delta = 0$, $ax^2 + bx + c = a\left(x + \dfrac{b}{2a}\right)^2$ : une seule racine, $-\dfrac{b}{2a}$.
+> - Si $\Delta > 0$, on écrit $\dfrac{\Delta}{4a^2} = \left(\dfrac{\sqrt{\Delta}}{2a}\right)^2$ et on factorise la différence de deux carrés :
+>   $ax^2 + bx + c = a\left(x + \dfrac{b}{2a} - \dfrac{\sqrt{\Delta}}{2a}\right)\left(x + \dfrac{b}{2a} + \dfrac{\sqrt{\Delta}}{2a}\right)$,
+>   d'où les deux racines $\dfrac{-b + \sqrt{\Delta}}{2a}$ et $\dfrac{-b - \sqrt{\Delta}}{2a}$.
+
 > **Exemple.** $f(x) = 2x^2 - 3x - 2$.
 > $\Delta = 9 + 16 = 25 > 0$, $\sqrt{\Delta} = 5$.
 > $x_1 = \frac{3-5}{4} = -\frac{1}{2}$ et $x_2 = \frac{3+5}{4} = 2$.
@@ -194,26 +202,3 @@ la droite d'équation $x = \alpha$.
 4. **Sortir le Δ par réflexe** alors qu'une racine évidente sautait aux yeux. Le programme
    demande explicitement de diversifier les stratégies.
 5. **Conclure « pas de solution » quand $\Delta < 0$** sans préciser *dans $\mathbb{R}$*.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité mathématiques première générale
-(docs/programme-premiere-specialite-maths-2026.pdf), section « Équations, fonctions polynômes
-du second degré ».
-
-Rédaction 100 % originale à partir du programme officiel — aucun emprunt à un manuel.
-
-⚠️ À FAIRE VÉRIFIER PAR UN PROFESSEUR DE MATHÉMATIQUES avant publication :
-- Les §6 (forme canonique) et §5 (tableau de signes) ne sont pas explicitement cités dans
-  l'extrait du programme que j'ai pu lire ; ils sont classiques et nécessaires, mais confirmer
-  qu'ils sont bien attendus en première spécialité dans le nouveau texte.
-- Le mot « discriminant » n'apparaît pas dans le programme extrait. Confirmer en ouvrant le PDF
-  que ce n'est pas un artefact d'extraction.
-- Vérifier qu'aucune démonstration exigible n'est omise (le programme mentionne une section
-  « Démonstration » que mon extraction n'a pas restituée entièrement).
-
-Statut : brouillon, non relu.
--->

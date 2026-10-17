@@ -94,6 +94,26 @@ $$\mathrm{Q}_3 - \mathrm{Q}_1$$
 
 Il contient les $50\,\%$ centraux de la série et **ignore les valeurs extrêmes** — c'est sa force.
 
+### Écart type
+
+L'**écart type**, noté $\sigma$, mesure la dispersion des valeurs **autour de la moyenne** $\bar x$.
+Pour une série de valeurs $x_i$ d'effectifs $n_i$ (effectif total $N$) :
+
+$$\sigma = \sqrt{\dfrac{n_1(x_1 - \bar x)^2 + n_2(x_2 - \bar x)^2 + \dots + n_p(x_p - \bar x)^2}{N}}$$
+
+En pratique, on l'obtient avec la **calculatrice** ou un **tableur** ; il faut surtout savoir
+l'**interpréter** : plus $\sigma$ est grand, plus les valeurs sont dispersées autour de la moyenne.
+Il s'exprime dans la même unité que les valeurs.
+
+> **Exemple.** Les séries $6,\ 8,\ 10,\ 12,\ 14$ et $9,\ 10,\ 10,\ 10,\ 11$ ont la même moyenne $10$.
+> Pour la première, les carrés des écarts à la moyenne sont $16,\ 4,\ 0,\ 4,\ 16$, de moyenne
+> $\dfrac{40}{5} = 8$, d'où $\sigma = \sqrt{8} \approx 2{,}83$.
+> Pour la seconde : $1,\ 0,\ 0,\ 0,\ 1$, de moyenne $\dfrac{2}{5} = 0{,}4$, d'où $\sigma = \sqrt{0{,}4} \approx 0{,}63$.
+> Même moyenne, mais la seconde série est beaucoup plus **resserrée**.
+
+Pour comparer deux séries, on utilise un **couple d'indicateurs** : (moyenne ; écart type) ou
+(médiane ; écart interquartile). Comme la moyenne, l'écart type est sensible aux valeurs extrêmes.
+
 ---
 
 ## 4. Linéarité de la moyenne
@@ -116,6 +136,15 @@ Un **tableau croisé** (ou à double entrée) présente deux caractères simulta
 > colonne. La question doit préciser lequel — et une confusion ici change complètement
 > l'interprétation.
 
+- La **fréquence marginale** d'une modalité est son effectif total (ligne ou colonne « Total »)
+  divisé par l'effectif total du tableau.
+- La **fréquence conditionnelle** de $B$ parmi $A$ est $\dfrac{\text{effectif de } A \text{ et } B}{\text{effectif de } A}$ :
+  on se restreint à la sous-population $A$.
+
+> **Exemple.** Dans un lycée de $500$ élèves, $200$ sont externes, dont $50$ font du sport en club.
+> La fréquence des sportifs **parmi les externes** est $\dfrac{50}{200} = 0{,}25$ ; la fréquence des
+> externes dans tout le lycée (fréquence marginale) est $\dfrac{200}{500} = 0{,}4$.
+
 ---
 
 ## 6. À retenir absolument
@@ -126,6 +155,7 @@ Un **tableau croisé** (ou à double entrée) présente deux caractères simulta
 | Médiane | partage en deux moitiés, **ordonner d'abord** |
 | Étendue | max $-$ min |
 | Écart interquartile | $\mathrm{Q}_3 - \mathrm{Q}_1$, robuste |
+| Écart type | $\sigma$, dispersion autour de la moyenne (calculatrice) |
 | Fréquences | $\sum f_i = 1$ |
 | Linéarité | $\bar y = a\bar x + b$ |
 
@@ -145,27 +175,3 @@ Un **tableau croisé** (ou à double entrée) présente deux caractères simulta
    commenter la présence de valeurs extrêmes.
 7. **Confondre écart interquartile et intervalle interquartile** : le premier est un nombre,
    le second un intervalle.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Statistiques » (lignes 1475 et 3241 du .txt).
-L'extraction fait apparaître explicitement « Croisement de deux variables qualitatives » et
-« Dresser le tableau croisé de deux variables », d'où la section 5.
-Le programme met aussi en garde (ligne 3606) : « leur utilisation inappropriée mène facilement
-à de fausses affirmations » — j'ai traduit cet avertissement dans les erreurs à éviter.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- L'écart-type est-il au programme de seconde, ou seulement en première ? Je ne l'ai PAS
-  inclus — à vérifier, c'est un point de périmètre net.
-- Les diagrammes en boîte (boîtes à moustaches) sont-ils exigibles ?
-- La convention de calcul des quartiles varie selon les manuels : celle retenue par le
-  programme doit être confirmée, car elle change les résultats numériques.
-- Les démonstrations ou capacités liées à la linéarité de la moyenne.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

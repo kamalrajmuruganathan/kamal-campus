@@ -47,9 +47,26 @@ $$\boxed{\vec{u} \cdot \vec{v} = x x' + y y'}$$
 
 C'est la formule qu'on utilise en pratique dès qu'on a des coordonnées.
 
+En particulier, dans une base orthonormée $(\vec{\imath}, \vec{\jmath})$, les coordonnées de $\vec{u}$ s'obtiennent
+par produits scalaires avec les vecteurs de la base :
+
+$$x = \vec{u} \cdot \vec{\imath} \qquad\qquad y = \vec{u} \cdot \vec{\jmath}$$
+
+(car $\vec{\imath} \cdot \vec{\imath} = 1$ et $\vec{\jmath} \cdot \vec{\imath} = 0$).
+
 ### c. Avec les normes seules
 
 $$\vec{u} \cdot \vec{v} = \frac{1}{2}\left(\|\vec{u} + \vec{v}\|^2 - \|\vec{u}\|^2 - \|\vec{v}\|^2\right)$$
+
+### d. Avec la projection orthogonale
+
+Si $\mathrm{A} \neq \mathrm{B}$ et si $\mathrm{H}$ est le projeté orthogonal de $\mathrm{C}$ sur la droite $(\mathrm{AB})$ :
+
+$$\overrightarrow{\mathrm{AB}} \cdot \overrightarrow{\mathrm{AC}} = \overrightarrow{\mathrm{AB}} \cdot \overrightarrow{\mathrm{AH}} =
+\begin{cases} \mathrm{AB} \times \mathrm{AH} & \text{si } \overrightarrow{\mathrm{AB}} \text{ et } \overrightarrow{\mathrm{AH}} \text{ sont de même sens} \\ -\,\mathrm{AB} \times \mathrm{AH} & \text{s'ils sont de sens contraires} \end{cases}$$
+
+> **Exemple.** Dans un carré $\mathrm{ABCD}$ de côté $4$, le projeté orthogonal de $\mathrm{C}$ sur $(\mathrm{AB})$
+> est $\mathrm{B}$, donc $\overrightarrow{\mathrm{AB}} \cdot \overrightarrow{\mathrm{AC}} = \mathrm{AB} \times \mathrm{AB} = 16$.
 
 ---
 
@@ -182,32 +199,3 @@ $\mathrm{MI}^2 - \mathrm{IA}^2$, nul si et seulement si $\mathrm{MI} = \mathrm{I
 5. **Utiliser la formule $xx' + yy'$ dans une base non orthonormée.** Elle n'y est pas valable.
 6. **Appliquer Al-Kashi avec le mauvais angle** : l'angle utilisé doit être celui **opposé**
    au côté $a$ qu'on calcule.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, spécialité maths première générale,
-section « Calcul vectoriel et produit scalaire » (ligne 2500 du .txt extrait).
-
-Éléments explicitement lisibles dans l'extraction : bilinéarité, symétrie, expression du
-produit scalaire et de la norme en base orthonormée, critère d'orthogonalité, expression des
-coordonnées en termes de produits scalaires avec les vecteurs de la base, développement de
-‖u+v‖², théorème d'Al-Kashi. Deux DÉMONSTRATIONS exigibles sont nommées : Al-Kashi avec le
-produit scalaire, et l'ensemble des points M tels que MA·MB = 0. Approfondissement possible
-mentionné : la loi des sinus.
-Le programme précise aussi : « Les élèves doivent conserver une pratique du calcul vectoriel
-en géométrie non repérée. »
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- L'expression des coordonnées via les produits scalaires avec les vecteurs de la base
-  (x = u·i et y = u·j) est au programme — je ne l'ai pas développée, à ajouter.
-- La définition retenue en premier par le programme (normes et angle, ou coordonnées ?)
-- La loi des sinus est en approfondissement possible : à ajouter ou non selon le choix
-  pédagogique.
-- Les démonstrations que j'esquisse doivent être rédigées en entier pour être exploitables.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

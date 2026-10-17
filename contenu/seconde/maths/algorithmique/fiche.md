@@ -199,27 +199,3 @@ de = randint(1, 6)     # entier au hasard entre 1 et 6 inclus
 7. **Écrire une boucle `while` dont la condition ne devient jamais fausse.**
 8. **Confondre les bornes de `range` et de `randint`** : la première exclut la borne
    supérieure, la seconde l'inclut.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), bloc « Algorithmique et programmation » (lignes 33, 594,
-818 du .txt extrait). L'extraction fait apparaître « Variables et instructions élémentaires »
-(ligne 892) et « Fonctions à un ou plusieurs arguments » (ligne 950), ainsi que
-« Déterminer par balayage un encadrement de … », d'où la section 6.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les listes sont-elles au programme de seconde ? Je les utilise dans un exemple — à vérifier,
-  car c'est un point de périmètre.
-- Le programme précise-t-il les modules autorisés (random, math) ?
-- Les fonctions à plusieurs arguments sont explicitement mentionnées : le périmètre exact
-  (récursivité exclue ? portée des variables ?) reste à confirmer.
-- Le programme mentionne (ligne 1761) une restriction « Toute autre utilisation est hors
-  programme » : vérifier qu'elle ne concerne pas ce bloc.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

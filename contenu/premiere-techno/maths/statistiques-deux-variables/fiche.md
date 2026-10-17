@@ -152,38 +152,3 @@ Deux variables peuvent évoluer ensemble sans que l'une cause l'autre.
    $U = RI$, la pente est une résistance, en ohms.
 7. **Interpréter $b$ sans contexte** : l'ordonnée à l'origine n'a parfois aucun sens
    physique.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques, première de la voie
-technologique (docs/programme-premiere-techno-2026.pdf), partie « Statistiques et
-probabilités », section statistiques (ligne 2273 du .txt extrait).
-
-Éléments explicitement lisibles : « Nuage de points associé à une série statistique à
-deux variables quantitatives », « Ajustement affine, point moyen », capacités
-« Représenter un nuage de points », « Savoir calculer les coordonnées du point
-moyen », « Déterminer et utiliser un ajustement affine ».
-
-⚠️ DIFFÉRENCE NOTABLE AVEC LES AUTRES PARCOURS : le commentaire du programme indique
-explicitement « La méthode des moindres carrés est présentée », avec la formulation
-d'un minimum. Les moindres carrés sont donc AU PROGRAMME en voie technologique, alors
-que le parcours « enseignement scientifique » mentionne plutôt un ajustement au jugé
-ou par la droite de Mayer. La section 3 reflète cette différence.
-
-Le programme cite explicitement comme contexte les « mesures expérimentales de
-grandeurs liées par une relation linéaire en physique-chimie (intensité et tension) »,
-d'où l'exemple filé de la loi d'Ohm.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Les FORMULES des coefficients des moindres carrés sont-elles exigibles, ou seulement
-  l'usage de la calculatrice ? J'ai retenu la seconde lecture.
-- Le COEFFICIENT DE CORRÉLATION est-il au programme ? Je ne l'ai PAS introduit.
-- Le programme mentionne d'autres contextes avant « mesures expérimentales » que
-  l'extraction a perdus : vérifier qu'aucun n'est structurant.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

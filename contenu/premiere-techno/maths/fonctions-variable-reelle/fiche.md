@@ -158,33 +158,3 @@ où la parabole coupe l'axe des abscisses. Elle peut en avoir **deux**, **une** 
    la courbe est au-dessus de l'axe, le second où elle monte.
 6. **Croire qu'une parabole coupe toujours l'axe des abscisses.**
 7. **Lire une inéquation graphique à l'envers** : $f(x) > k$ se lit **au-dessus**.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, mathématiques, première de la voie
-technologique (docs/programme-premiere-techno-2026.pdf), partie « Analyse », section
-« Fonctions de la variable réelle » (ligne 1830 du .txt extrait).
-
-Éléments explicitement lisibles dans l'extraction : « expression littérale,
-représentation graphique », « Taux de variation entre deux valeurs de la variable »,
-« Fonctions monotones sur un intervalle, LIEN AVEC LE SIGNE DU TAUX DE VARIATION »,
-et pour le second degré : « allure, axe de symétrie, coordonnées du sommet en lien
-avec la symétrie et tableau de variation de la fonction », « Racines ».
-
-Le programme insiste sur le TAUX DE VARIATION comme notion charnière — la fiche est
-construite autour, plutôt que sur une simple liste de fonctions de référence.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le DISCRIMINANT est-il au programme de la voie technologique, ou les racines sont-
-  elles obtenues autrement (forme factorisée, lecture graphique, calculatrice) ?
-  Je ne l'ai PAS introduit — point de périmètre décisif à trancher.
-- La forme canonique est-elle exigible, ou seulement les coordonnées du sommet ?
-- Quelles fonctions de référence sont au programme de première technologique ?
-  L'extraction est coupée après « Fonctions dérivées de : » dans la section suivante.
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->

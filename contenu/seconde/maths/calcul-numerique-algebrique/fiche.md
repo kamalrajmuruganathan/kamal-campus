@@ -42,6 +42,18 @@ $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subset \mathbb{Q} \subset \m
 > $\sqrt{2}$ et $\pi$ sont **irrationnels** : ils ne s'écrivent pas comme quotient de deux
 > entiers. Leur écriture décimale est infinie et non périodique.
 
+### Deux démonstrations à connaître
+
+**$\dfrac{1}{3}$ n'est pas décimal.** Supposons $\dfrac{1}{3} = \dfrac{n}{10^k}$ avec $n$ et $k$ entiers naturels.
+Alors $10^k = 3n$ : $10^k$ serait un multiple de $3$. Or $10^k = 99\ldots9 + 1$ et $99\ldots9$ est un
+multiple de $3$ : la division de $10^k$ par $3$ a pour reste $1$. Contradiction : $\dfrac{1}{3}$ n'est pas décimal.
+
+**$\sqrt{2}$ est irrationnel.** Supposons $\sqrt{2} = \dfrac{p}{q}$, fraction **irréductible** ($p$ et $q$
+entiers, $q \neq 0$). En élevant au carré : $p^2 = 2q^2$, donc $p^2$ est pair, donc $p$ est pair
+(le carré d'un nombre impair est impair). On écrit $p = 2k$ : $4k^2 = 2q^2$, soit $q^2 = 2k^2$,
+donc $q$ est pair lui aussi. $p$ et $q$ seraient tous deux divisibles par $2$ : la fraction ne serait
+pas irréductible. Contradiction : $\sqrt{2}$ n'est pas rationnel.
+
 ---
 
 ## 2. Puissances
@@ -71,6 +83,13 @@ $$\sqrt{a} \times \sqrt{b} = \sqrt{ab} \qquad\qquad \frac{\sqrt{a}}{\sqrt{b}} = 
 > ⚠️ **$\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$.** Contre-exemple :
 > $\sqrt{9+16} = \sqrt{25} = 5$, alors que $\sqrt 9 + \sqrt{16} = 3 + 4 = 7$.
 > La racine ne « traverse » ni l'addition ni la soustraction.
+
+> **Démonstration de $\sqrt{ab} = \sqrt{a}\,\sqrt{b}$** ($a \geqslant 0$, $b \geqslant 0$). Le nombre
+> $\sqrt{a}\,\sqrt{b}$ est positif et son carré vaut $\left(\sqrt{a}\right)^2\left(\sqrt{b}\right)^2 = ab$.
+> Or $\sqrt{ab}$ est **le** nombre positif dont le carré vaut $ab$ : les deux nombres sont égaux.
+
+> **Racine d'un carré.** Pour tout réel $a$, $\sqrt{a^2} = \lvert a \rvert$ (et non $a$ si $a < 0$) :
+> $\sqrt{(-3)^2} = \sqrt{9} = 3$.
 
 ### Simplifier une racine
 
@@ -149,6 +168,11 @@ C'est la seule façon de résoudre la plupart des équations de Seconde.
 
 > Le crochet est **toujours ouvert** du côté de l'infini : on n'atteint jamais $+\infty$.
 
+Pour $r > 0$ : $\lvert x - a \rvert \leqslant r \iff a - r \leqslant x \leqslant a + r$, soit $x \in [a - r\,;a + r]$
+(les nombres situés à une distance au plus $r$ de $a$).
+
+> **Exemple.** $\lvert x - 5 \rvert \leqslant 2 \iff x \in [3\,;7]$.
+
 ---
 
 ## 8. À retenir absolument
@@ -176,26 +200,3 @@ C'est la seule façon de résoudre la plupart des équations de Seconde.
 6. **Simplifier une fraction en barrant un terme d'une somme** : dans
    $\dfrac{x+2}{2}$, on ne peut rien barrer.
 7. **Fermer un crochet sur l'infini** : on écrit $[3\,;+\infty[$, jamais $[3\,;+\infty]$.
-
----
-
-<!--
-NOTES DE PRODUCTION — ne pas afficher dans l'application
-
-Source : programme officiel BO du 2 avril 2026, classe de seconde générale et technologique
-(docs/programme-seconde-2026.pdf), blocs « Nombres et calculs » et « Calcul numérique et
-algébrique ». Le programme comporte une rubrique « Automatismes » explicite, dont s'inspire
-l'insistance de cette fiche sur les réflexes de calcul.
-
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- Le programme contient une section « Arithmétique » distincte (ligne 1656 du .txt) :
-  divisibilité, nombres premiers, décomposition. Elle fait l'objet d'une fiche séparée —
-  vérifier qu'il n'y a pas de recouvrement à arbitrer.
-- La valeur absolue et les intervalles : périmètre exact à confirmer (distance sur la droite
-  réelle, encadrements, approximation).
-- Les « Démonstrations » exigibles de ce bloc (l'irrationalité de √2 en est une candidate
-  classique).
-
-Rédaction originale à partir du programme. Aucun emprunt à un manuel.
-Statut : brouillon, non relu.
--->
