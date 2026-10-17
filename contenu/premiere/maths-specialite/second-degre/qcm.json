@@ -191,20 +191,6 @@
     },
     {
       "id": 17,
-      "difficulte": "moyen",
-      "notion": "somme-produit-reciproque",
-      "enonce": "Deux nombres ont pour somme $3$ et pour produit $-10$. De quelle équation sont-ils les racines ?",
-      "choix": [
-        "$x^2 - 3x - 10 = 0$",
-        "$x^2 + 3x - 10 = 0$",
-        "$x^2 - 3x + 10 = 0$",
-        "$x^2 + 10x - 3 = 0$"
-      ],
-      "reponse": 0,
-      "explication": "Deux nombres de somme $s$ et de produit $p$ sont racines de $x^2 - sx + p$. Ici $s = 3$ et $p = -10$, d'où $x^2 - 3x - 10$. Ce sont $5$ et $-2$. Piège : le signe **moins** porte sur la somme, pas sur le produit."
-    },
-    {
-      "id": 18,
       "difficulte": "difficile",
       "notion": "signe",
       "enonce": "$f(x) = x^2 - x - 6$ a pour racines $-2$ et $3$. Sur quel intervalle a-t-on $f(x) < 0$ ?",
@@ -218,16 +204,7 @@
       "explication": "Le trinôme est du signe de $a$ à l'**extérieur** des racines. Ici $a = 1 > 0$, donc $f$ est positive à l'extérieur et **négative entre** les racines : $]-2\\,;3[$. Piège : confondre l'intérieur et l'extérieur des racines."
     },
     {
-      "id": 19,
-      "difficulte": "difficile",
-      "notion": "forme-canonique",
-      "enonce": "Quelles sont les coordonnées du sommet de la parabole d'équation $y = 2x^2 - 8x + 5$ ?",
-      "choix": ["$(2\\,;-3)$", "$(-2\\,;29)$", "$(2\\,;5)$", "$(4\\,;5)$"],
-      "reponse": 0,
-      "explication": "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-8}{4} = 2$, puis $\\beta = f(2) = 2 \\times 4 - 8 \\times 2 + 5 = 8 - 16 + 5 = -3$. Le sommet est $(2\\,;-3)$. Comme $a > 0$, c'est un **minimum**. Piège : oublier le signe moins et lire $\\alpha = -2$."
-    },
-    {
-      "id": 20,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "factorisation",
       "enonce": "Quelle est la forme factorisée de $f(x) = 3x^2 + 5x - 2$ ?",
@@ -241,7 +218,7 @@
       "explication": "$\\Delta = 25 + 24 = 49$, $\\sqrt{\\Delta} = 7$, donc $x_1 = \\dfrac{-5-7}{6} = -2$ et $x_2 = \\dfrac{-5+7}{6} = \\dfrac{1}{3}$. La forme est $3(x+2)\\left(x - \\dfrac{1}{3}\\right)$ ; en distribuant le $3$ dans la seconde parenthèse : $(x+2)(3x-1)$. Vérification : $(x+2)(3x-1) = 3x^2 + 5x - 2$ ✓."
     },
     {
-      "id": 21,
+      "id": 19,
       "difficulte": "difficile",
       "notion": "demonstration",
       "enonce": "Dans la démonstration du cas $\\Delta > 0$, quelle identité permet de factoriser $\\left(x + \\dfrac{b}{2a}\\right)^2 - \\dfrac{\\Delta}{4a^2}$ ?",
@@ -255,7 +232,7 @@
       "explication": "Comme $\\Delta > 0$, on peut écrire $\\dfrac{\\Delta}{4a^2} = \\left(\\dfrac{\\sqrt{\\Delta}}{2a}\\right)^2$ : on obtient une **différence de deux carrés**, que l'on factorise en $(A - B)(A + B)$. Les deux facteurs s'annulent en $\\dfrac{-b + \\sqrt{\\Delta}}{2a}$ et $\\dfrac{-b - \\sqrt{\\Delta}}{2a}$ : ce sont les deux racines. $A^2 - B^2$ n'est pas égal à $(A - B)^2$."
     },
     {
-      "id": 22,
+      "id": 20,
       "difficulte": "moyen",
       "notion": "demonstration",
       "enonce": "On a écrit $f(x) = x^2 - 4x + 7$ sous la forme $f(x) = (x - 2)^2 + 3$. Que peut-on en conclure ?",

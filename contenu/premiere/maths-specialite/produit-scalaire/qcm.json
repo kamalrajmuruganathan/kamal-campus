@@ -123,15 +123,6 @@
     {
       "id": 11,
       "difficulte": "facile",
-      "notion": "coordonnees",
-      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 1 \\\\ -2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}$. Que vaut $\\vec{u} \\cdot \\vec{v}$ ?",
-      "choix": ["$-2$", "$2$", "$10$", "$7$"],
-      "reponse": 0,
-      "explication": "$\\vec{u} \\cdot \\vec{v} = xx' + yy' = 1 \\times 4 + (-2) \\times 3 = 4 - 6 = -2$. Piège : oublier le signe de $-2$ dans la seconde coordonnée et calculer $4 + 6 = 10$."
-    },
-    {
-      "id": 12,
-      "difficulte": "facile",
       "notion": "carre-scalaire",
       "enonce": "Pour un vecteur $\\vec{u}$, que vaut le carré scalaire $\\vec{u} \\cdot \\vec{u}$ ?",
       "choix": ["$\\|\\vec{u}\\|^2$", "$0$", "$2\\|\\vec{u}\\|$", "$\\|\\vec{u}\\|$"],
@@ -139,7 +130,7 @@
       "explication": "Le carré scalaire vaut $\\vec{u} \\cdot \\vec{u} = \\|\\vec{u}\\|^2$ : c'est le carré de la norme. Piège : confondre avec la norme elle-même $\\|\\vec{u}\\|$, qui en est la racine carrée."
     },
     {
-      "id": 13,
+      "id": 12,
       "difficulte": "facile",
       "notion": "coordonnees",
       "enonce": "Dans une base orthonormée $(\\vec{\\imath}, \\vec{\\jmath})$, on donne $\\vec{u}\\begin{pmatrix} -3 \\\\ 7 \\end{pmatrix}$. Que vaut $\\vec{u} \\cdot \\vec{\\imath}$ ?",
@@ -153,7 +144,7 @@
       "explication": "En base orthonormée, $\\vec{u} \\cdot \\vec{\\imath}$ est l'**abscisse** de $\\vec{u}$ : $\\vec{u} \\cdot \\vec{\\imath} = -3 \\times 1 + 7 \\times 0 = -3$. L'ordonnée $7$ s'obtient avec $\\vec{u} \\cdot \\vec{\\jmath}$."
     },
     {
-      "id": 14,
+      "id": 13,
       "difficulte": "moyen",
       "notion": "projection",
       "enonce": "$\\mathrm{ABCD}$ est un carré de côté $5$. Que vaut $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ ?",
@@ -167,7 +158,7 @@
       "explication": "Le projeté orthogonal de $\\mathrm{C}$ sur $(\\mathrm{AB})$ est $\\mathrm{B}$, donc $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AB}} = 5^2 = 25$. On retrouve $5 \\times 5\\sqrt{2} \\times \\cos 45° = 25$. Multiplier les longueurs $\\mathrm{AB} \\times \\mathrm{AC} = 25\\sqrt{2}$ oublie le cosinus."
     },
     {
-      "id": 15,
+      "id": 14,
       "difficulte": "moyen",
       "notion": "developpement",
       "enonce": "Quelle est la bonne écriture de $\\|\\vec{u} - \\vec{v}\\|^2$ ?",
@@ -181,7 +172,7 @@
       "explication": "C'est l'analogue de $(a-b)^2 = a^2 - 2ab + b^2$ : le double produit devient $-2\\,\\vec{u}\\cdot\\vec{v}$. Piège : oublier le facteur $2$, ou garder un $+$ au lieu du $-$."
     },
     {
-      "id": 16,
+      "id": 15,
       "difficulte": "moyen",
       "notion": "orthogonalite",
       "enonce": "Pour quelle valeur de $k$ les vecteurs $\\vec{u}\\begin{pmatrix} 2 \\\\ k \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ 6 \\end{pmatrix}$ sont-ils orthogonaux ?",
@@ -190,16 +181,7 @@
       "explication": "Orthogonalité : $\\vec{u} \\cdot \\vec{v} = 0$, soit $2 \\times 3 + k \\times 6 = 6 + 6k = 0$, d'où $k = -1$. Piège : oublier le terme $2 \\times 3$ et écrire $6k = 0$, donc $k = 0$."
     },
     {
-      "id": 17,
-      "difficulte": "moyen",
-      "notion": "signe-angle",
-      "enonce": "Si $\\vec{u} \\cdot \\vec{v} > 0$ avec $\\vec{u}$ et $\\vec{v}$ non nuls, l'angle entre les deux vecteurs est :",
-      "choix": ["aigu", "droit", "obtus", "plat"],
-      "reponse": 0,
-      "explication": "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\theta$ : les normes étant positives, un produit scalaire positif impose $\\cos\\theta > 0$, donc un angle **aigu** (entre $0$ et $\\frac{\\pi}{2}$). Piège : associer « positif » à « droit »."
-    },
-    {
-      "id": 18,
+      "id": 16,
       "difficulte": "difficile",
       "notion": "al-kashi",
       "enonce": "Dans un triangle, $b = 7$, $c = 3$ et $\\widehat{\\mathrm{A}} = 120°$ (donc $\\cos\\widehat{\\mathrm{A}} = -0{,}5$). Que vaut $a^2$ ?",
@@ -208,7 +190,7 @@
       "explication": "Al-Kashi : $a^2 = b^2 + c^2 - 2bc\\cos\\widehat{\\mathrm{A}} = 49 + 9 - 2 \\times 7 \\times 3 \\times (-0{,}5) = 58 + 21 = 79$. Piège : oublier que $\\cos 120° < 0$ rend le dernier terme **positif** ; en le comptant négatif on obtient $37$."
     },
     {
-      "id": 19,
+      "id": 17,
       "difficulte": "difficile",
       "notion": "angle",
       "enonce": "$\\|\\vec{u}\\| = 5$, $\\|\\vec{v}\\| = 2$ et $\\vec{u} \\cdot \\vec{v} = -5$. Que vaut $\\cos\\theta$ ?",
@@ -217,7 +199,7 @@
       "explication": "$\\cos\\theta = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|} = \\dfrac{-5}{5 \\times 2} = \\dfrac{-5}{10} = -\\dfrac{1}{2}$, soit $\\theta = 120°$. Le signe négatif confirme un angle obtus. Piège : oublier de diviser par le produit des normes et garder $-5$, valeur impossible pour un cosinus."
     },
     {
-      "id": 20,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "developpement",
       "enonce": "On sait que $\\|\\vec{u}\\| = 3$, $\\|\\vec{v}\\| = 4$ et $\\vec{u} \\cdot \\vec{v} = 5$. Que vaut $\\|\\vec{u} + \\vec{v}\\|^2$ ?",
@@ -226,7 +208,7 @@
       "explication": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2 = 9 + 2 \\times 5 + 16 = 35$. Piège : oublier le double produit $2\\,\\vec{u}\\cdot\\vec{v}$ et obtenir $9 + 16 = 25$ (valable seulement si les vecteurs étaient orthogonaux)."
     },
     {
-      "id": 21,
+      "id": 19,
       "difficulte": "difficile",
       "notion": "projection",
       "enonce": "$\\mathrm{H}$ est le projeté orthogonal de $\\mathrm{C}$ sur la droite $(\\mathrm{AB})$, avec $\\mathrm{AB} = 6$ et $\\mathrm{AH} = 2$ ; les vecteurs $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{AH}}$ sont de sens contraires. Que vaut $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ ?",
@@ -240,7 +222,7 @@
       "explication": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = \\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AH}}$. Les vecteurs étant de sens contraires, le produit scalaire vaut $-\\mathrm{AB} \\times \\mathrm{AH} = -6 \\times 2 = -12$. Oublier le signe donne $12$ : l'angle $\\widehat{\\mathrm{BAC}}$ est ici obtus."
     },
     {
-      "id": 22,
+      "id": 20,
       "difficulte": "moyen",
       "notion": "coordonnees",
       "enonce": "Pourquoi l'abscisse $x$ d'un vecteur $\\vec{u}$ dans une base orthonormée $(\\vec{\\imath}, \\vec{\\jmath})$ vérifie-t-elle $x = \\vec{u} \\cdot \\vec{\\imath}$ ?",

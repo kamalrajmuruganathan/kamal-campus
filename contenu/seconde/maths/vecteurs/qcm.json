@@ -153,20 +153,6 @@
     {
       "id": 11,
       "difficulte": "facile",
-      "notion": "coordonnees",
-      "enonce": "$\\mathrm{A}(-1\\,;2)$ et $\\mathrm{B}(3\\,;-4)$. Quelles sont les coordonnées de $\\overrightarrow{\\mathrm{AB}}$ ?",
-      "choix": [
-        "$\\begin{pmatrix} -4 \\\\ 6 \\end{pmatrix}$",
-        "$\\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix}$",
-        "$\\begin{pmatrix} 4 \\\\ -6 \\end{pmatrix}$",
-        "$\\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}$"
-      ],
-      "reponse": 2,
-      "explication": "**Arrivée moins départ** : $(3-(-1)\\,;-4-2) = (4\\,;-6)$. Le choix $\\begin{pmatrix} -4 \\\\ 6 \\end{pmatrix}$ est le vecteur opposé $\\overrightarrow{\\mathrm{BA}}$, et $\\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix}$ additionne les coordonnées au lieu de les soustraire."
-    },
-    {
-      "id": 12,
-      "difficulte": "facile",
       "notion": "milieu",
       "enonce": "Quel est le milieu de $[\\mathrm{AB}]$ avec $\\mathrm{A}(2\\,;-3)$ et $\\mathrm{B}(8\\,;5)$ ?",
       "choix": [
@@ -179,7 +165,7 @@
       "explication": "On prend la **moyenne** de chaque coordonnée : $\\left(\\dfrac{2+8}{2}\\,;\\dfrac{-3+5}{2}\\right) = (5\\,;1)$. Le choix $(6\\,;8)$ calcule la différence, c'est-à-dire les coordonnées de $\\overrightarrow{\\mathrm{AB}}$."
     },
     {
-      "id": 13,
+      "id": 12,
       "difficulte": "facile",
       "notion": "base-orthonormee",
       "enonce": "Dans une base orthonormée $(\\vec{\\imath}, \\vec{\\jmath})$, quelles sont les coordonnées de $\\vec{u} = 4\\,\\vec{\\imath} - \\vec{\\jmath}$ ?",
@@ -193,7 +179,7 @@
       "explication": "$\\vec{u} = x\\,\\vec{\\imath} + y\\,\\vec{\\jmath}$ a pour coordonnées $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ : ici $x = 4$ et $y = -1$ (le coefficient de $\\vec{\\jmath}$ est $-1$)."
     },
     {
-      "id": 14,
+      "id": 13,
       "difficulte": "moyen",
       "notion": "base-orthonormee",
       "enonce": "Que faut-il pour que deux vecteurs $\\vec{\\imath}$ et $\\vec{\\jmath}$ forment une base orthonormée ?",
@@ -207,7 +193,7 @@
       "explication": "« Ortho » : directions perpendiculaires ; « normée » : chaque vecteur a une norme égale à $1$."
     },
     {
-      "id": 15,
+      "id": 14,
       "difficulte": "moyen",
       "notion": "determinant",
       "enonce": "Que vaut le déterminant des vecteurs $\\vec{u}\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ ?",
@@ -221,7 +207,7 @@
       "explication": "Le déterminant est $xy' - yx' = 5 \\times 4 - 2 \\times 3 = 20 - 6 = 14$. Il est **non nul**, donc les deux vecteurs ne sont pas colinéaires. Croiser à l'envers donnerait $-14$."
     },
     {
-      "id": 16,
+      "id": 15,
       "difficulte": "moyen",
       "notion": "somme-coordonnees",
       "enonce": "Soit $\\vec{u}\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 5 \\\\ 1 \\end{pmatrix}$. Quelles sont les coordonnées de $\\vec{u} + \\vec{v}$ ?",
@@ -235,7 +221,7 @@
       "explication": "On additionne **composante par composante** : $(2+5\\,;-3+1) = (7\\,;-2)$. Le choix $\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ soustrait au lieu d'additionner, et $\\begin{pmatrix} 10 \\\\ -3 \\end{pmatrix}$ multiplie les composantes."
     },
     {
-      "id": 17,
+      "id": 16,
       "difficulte": "moyen",
       "notion": "chasles",
       "enonce": "Que vaut $\\overrightarrow{\\mathrm{AB}} + \\overrightarrow{\\mathrm{BC}} + \\overrightarrow{\\mathrm{CD}}$ ?",
@@ -249,7 +235,7 @@
       "explication": "On applique Chasles en chaîne : $\\mathrm{B}$ puis $\\mathrm{C}$ disparaissent successivement, il reste $\\overrightarrow{\\mathrm{AD}}$. Le choix $\\overrightarrow{\\mathrm{DA}}$ en est l'opposé."
     },
     {
-      "id": 18,
+      "id": 17,
       "difficulte": "difficile",
       "notion": "colinearite",
       "enonce": "Pour quelle valeur de $k$ les vecteurs $\\begin{pmatrix} k \\\\ 3 \\end{pmatrix}$ et $\\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}$ sont-ils colinéaires ?",
@@ -263,7 +249,7 @@
       "explication": "Le déterminant doit être nul : $k \\times 6 - 3 \\times 4 = 0$, soit $6k = 12$ et $k = 2$. Vérification : $\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} \\times 2 = \\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}$ ✓."
     },
     {
-      "id": 19,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "alignement",
       "enonce": "Les points $\\mathrm{A}(1\\,;2)$, $\\mathrm{B}(4\\,;3)$ et $\\mathrm{C}(7\\,;5)$ sont-ils alignés ?",
@@ -277,7 +263,7 @@
       "explication": "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 6 \\\\ 3 \\end{pmatrix}$ : le déterminant vaut $3 \\times 3 - 1 \\times 6 = 3 \\neq 0$. Les vecteurs ne sont pas colinéaires, donc les points **ne sont pas alignés**."
     },
     {
-      "id": 20,
+      "id": 19,
       "difficulte": "difficile",
       "notion": "multiplication",
       "enonce": "Soit $\\vec{u}\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$. Quelles sont les coordonnées de $-3\\,\\vec{u}$ ?",
@@ -291,7 +277,7 @@
       "explication": "On multiplie **chaque** composante par $-3$ : $(-3 \\times 3\\,;-3 \\times (-2)) = (-9\\,;6)$. Le piège $\\begin{pmatrix} 9 \\\\ -6 \\end{pmatrix}$ oublie que $-3 \\times (-2) = +6$ (deux signes moins donnent un plus)."
     },
     {
-      "id": 21,
+      "id": 20,
       "difficulte": "difficile",
       "notion": "combinaison",
       "enonce": "On donne $\\vec{v}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$ et $\\vec{w}\\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$. Quelles sont les coordonnées de $2\\,\\vec{v} + 3\\,\\vec{w}$ ?",

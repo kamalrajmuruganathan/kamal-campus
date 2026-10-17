@@ -1076,12 +1076,13 @@ def gen_1_transformations_matiere():
           [f"$n(\\mathrm{{Zn}}) = {val(n_zn, 'mol')}$ ; $n(\\mathrm{{Cu^{{2+}}}}) = 5{{,}}0\\times 10^{{-2}} \\times 0{{,}}100 = {val(n_cu, 'mol', 2)}$.",
            f"Coefficients égaux à 1 : les ions cuivre sont limitants, $x_{{\\max}} = {val(xm, 'mol', 2)}$.", f"$m(\\mathrm{{Cu}}) = {sci(xm, 2)} \\times 63{{,}}5 = {val(xm * 63.5, 'g', 2)}$."],
           f"$m(\\mathrm{{Cu}}) \\approx {val(xm * 63.5, 'g', 2)}$")
-    n_ag, n_cl = 0.020 * 0.10, 0.030 * 0.050
-    xm = min(n_ag, n_cl)
-    L.add("probleme", "avancement", "On mélange $20\\ \\mathrm{mL}$ de nitrate d'argent à $0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$ et $30\\ \\mathrm{mL}$ de chlorure de sodium à $0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$. Il se forme un précipité : $\\mathrm{Ag^+} + \\mathrm{Cl^-} \\longrightarrow \\mathrm{AgCl}$. Quelle masse de chlorure d'argent ($M = 143{,}4\\ \\mathrm{g\\cdot mol^{-1}}$) obtient-on ?",
-          [f"$n(\\mathrm{{Ag^+}}) = 0{{,}}10 \\times 0{{,}}020 = {val(n_ag, 'mol', 2)}$ ; $n(\\mathrm{{Cl^-}}) = 0{{,}}050 \\times 0{{,}}030 = {val(n_cl, 'mol', 2)}$.",
-           f"Les ions chlorure sont limitants : $x_{{\\max}} = {val(xm, 'mol', 2)}$.", f"$m = {sci(xm, 2)} \\times 143{{,}}4 = {val(xm * 143.4, 'g', 2)}$."],
-          f"$m(\\mathrm{{AgCl}}) \\approx {val(xm * 143.4, 'g', 2)}$")
+    n_ag, n_cu = 0.050 * 0.10, 0.254 / 63.5
+    xm = min(n_ag / 2, n_cu)
+    L.add("probleme", "avancement", "On plonge $0{,}254\\ \\mathrm{g}$ de fil de cuivre ($M = 63{,}5\\ \\mathrm{g\\cdot mol^{-1}}$) dans $50{,}0\\ \\mathrm{mL}$ de nitrate d'argent à $0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$ : $2\\,\\mathrm{Ag^+} + \\mathrm{Cu} \\longrightarrow 2\\,\\mathrm{Ag} + \\mathrm{Cu^{2+}}$. Quelle masse d'argent ($M = 107{,}9\\ \\mathrm{g\\cdot mol^{-1}}$) se dépose ?",
+          [f"$n(\\mathrm{{Ag^+}}) = 0{{,}}10 \\times 50{{,}}0\\times 10^{{-3}} = {val(n_ag, 'mol', 2)}$ ; $n(\\mathrm{{Cu}}) = \\dfrac{{0{{,}}254}}{{63{{,}}5}} = {val(n_cu, 'mol')}$.",
+           f"Rapports : $\\dfrac{{{sci(n_ag, 2)}}}{{2}} = {sci(n_ag / 2, 2)}$ et $\\dfrac{{{sci(n_cu)}}}{{1}}$ : les ions argent sont limitants, $x_{{\\max}} = {val(xm, 'mol', 2)}$.",
+           f"$n(\\mathrm{{Ag}}) = 2x_{{\\max}} = {val(2 * xm, 'mol', 2)}$ ; $m = {sci(2 * xm, 2)} \\times 107{{,}}9 = {val(2 * xm * 107.9, 'g', 2)}$."],
+          f"$m(\\mathrm{{Ag}}) \\approx {val(2 * xm * 107.9, 'g', 2)}$")
     # --- Beer-Lambert (8)
     L.add("application", "beer-lambert", "Une solution de permanganate de potassium de concentration $2{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ est placée dans une cuve de $1{,}0\\ \\mathrm{cm}$. À $525\\ \\mathrm{nm}$, $\\varepsilon = 2{,}4\\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. Calculer l'absorbance.",
           [f"$A = \\varepsilon \\ell c = 2{{,}}4\\times 10^{{3}} \\times 1{{,}}0 \\times 2{{,}}0\\times 10^{{-4}} = {num(0.48, 2)}$ (sans unité)."], "$A = 0{,}48$")
@@ -1108,7 +1109,7 @@ def gen_1_transformations_matiere():
             ("On titre $10{,}0\\ \\mathrm{mL}$ d'une solution de diiode par du thiosulfate de sodium à $5{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 8{,}0\\ \\mathrm{mL}$. Réaction : $\\mathrm{I_2} + 2\\,\\mathrm{S_2O_3^{2-}} \\longrightarrow 2\\,\\mathrm{I^-} + \\mathrm{S_4O_6^{2-}}$.", "10.0", "0.0500", "8.0", "\\mathrm{I_2}", 1, 2, "diiode", 2),
             ("On titre $20{,}0\\ \\mathrm{mL}$ d'une solution d'ions fer(II) par du permanganate de potassium à $2{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 15{,}0\\ \\mathrm{mL}$. Réaction : $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\longrightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$.", "20.0", "0.0200", "15.0", "\\mathrm{Fe^{2+}}", 5, 1, "fer", 3),
             ("On titre $10{,}0\\ \\mathrm{mL}$ d'eau oxygénée diluée par du permanganate de potassium à $2{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 12{,}0\\ \\mathrm{mL}$. Réaction : $2\\,\\mathrm{MnO_4^-} + 5\\,\\mathrm{H_2O_2} + 6\\,\\mathrm{H^+} \\longrightarrow 2\\,\\mathrm{Mn^{2+}} + 5\\,\\mathrm{O_2} + 8\\,\\mathrm{H_2O}$.", "10.0", "0.0200", "12.0", "\\mathrm{H_2O_2}", 5, 2, "eau oxygénée", 3),
-            ("On titre $50{,}0\\ \\mathrm{mL}$ d'une eau minérale par du nitrate d'argent à $1{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $V_E = 6{,}2\\ \\mathrm{mL}$. Réaction : $\\mathrm{Ag^+} + \\mathrm{Cl^-} \\longrightarrow \\mathrm{AgCl}$.", "50.0", "0.0100", "6.2", "\\mathrm{Cl^-}", 1, 1, "chlorure", 2)]:
+            ("On titre $25{,}0\\ \\mathrm{mL}$ d'un vin blanc par une solution de diiode à $1{,}00\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$, en présence d'empois d'amidon ; la teinte bleue persiste à partir de $V_E = 6{,}4\\ \\mathrm{mL}$. Réaction : $\\mathrm{I_2} + \\mathrm{SO_2} + 2\\,\\mathrm{H_2O} \\longrightarrow 2\\,\\mathrm{I^-} + \\mathrm{SO_4^{2-}} + 4\\,\\mathrm{H^+}$.", "25.0", "0.0100", "6.4", "\\mathrm{SO_2}", 1, 1, "dioxyde de soufre", 2)]:
         VA, cB, VE = float(VAs), float(cBs), float(VEs)
         cBt = ex(cBs) if cB >= 0.1 else sci(cB, 3)
         nB = cB * VE / 1000
@@ -1124,10 +1125,10 @@ def gen_1_transformations_matiere():
         if quoi == "vinaigre":
             cor.append(f"Vinaigre commercial (10 fois plus concentré) : ${val(cA * 10, MOLL, sig)}$.")
             rep = f"${val(cA, MOLL, sig)}$ puis ${val(cA * 10, MOLL, sig)}$"
-        if quoi == "chlorure":
-            cor.append(f"En masse : ${sci(cA, 2)} \\times 35{{,}}5 = {val(cA * 35.5, GL, 2)}$, soit environ ${num(cA * 35500, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$ ($M(\\mathrm{{Cl}}) = 35{{,}}5\\ \\mathrm{{g\\cdot mol^{{-1}}}}$).")
-            rep += f", soit ${num(cA * 35500, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$"
-        L.add("intermediaire" if coefA == coefB else "approfondissement", "titrage", ctx + ("" if quoi == "vinaigre" else f" Calculer la concentration en {'ions ' if quoi in ('fer', 'chlorure') else ''}{quoi if quoi != 'fer' else 'fer(II)'}" + (" (en mol par litre puis en mg par litre)." if quoi == "chlorure" else ".")),
+        if quoi == "dioxyde de soufre":
+            cor.append(f"En masse (avec la valeur non arrondie de $c$) : ${sci(cA, 3)} \\times 64{{,}}1 = {val(cA * 64.1, GL, 3)}$, soit environ ${num(cA * 64100, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$ ($M(\\mathrm{{SO_2}}) = 64{{,}}1\\ \\mathrm{{g\\cdot mol^{{-1}}}}$).")
+            rep += f", soit ${num(cA * 64100, 2)}\\ \\mathrm{{mg\\cdot L^{{-1}}}}$"
+        L.add("intermediaire" if coefA == coefB else "approfondissement", "titrage", ctx + ("" if quoi == "vinaigre" else f" Calculer la concentration en {'ions ' if quoi == 'fer' else ''}{quoi if quoi != 'fer' else 'fer(II)'}" + (" (en mol par litre puis en mg par litre)." if quoi == "dioxyde de soufre" else ".")),
               cor, rep)
     L.qa("application", "titrage", [
         ("Lors du titrage d'ions fer(II) par le permanganate (violet), comment repère-t-on l'équivalence ?",
@@ -1231,11 +1232,12 @@ def gen_1_transformations_matiere():
         ("L'absorbance d'une solution s'exprime en $\\mathrm{mol\\cdot L^{-1}}$.", False, "Faux : l'absorbance est sans unité ; c'est la concentration qui s'exprime en $\\mathrm{mol\\cdot L^{-1}}$."),
         ("La relation $c_A V_A = c_B V_E$ est valable pour tous les titrages.", False, "Faux : seulement si les nombres stœchiométriques valent 1 ; sinon on écrit $\\dfrac{n_A}{a} = \\dfrac{n_B}{b}$."),
         ("À l'équivalence d'un titrage, le réactif titrant est en excès.", False, "Faux : à l'équivalence, réactif titré et réactif titrant sont tous deux entièrement consommés ; le titrant n'est en excès qu'après."),
-        ("La conductimétrie ne permet de suivre une transformation que si des ions y participent.", True, "Vrai : la conductivité d'une solution est due aux ions qu'elle contient."),
+        ("Au cours d'un titrage, le réactif limitant change à l'équivalence.", True, "Vrai : avant l'équivalence, le réactif titrant versé est entièrement consommé (il est limitant) ; après, c'est le réactif titré qui est épuisé."),
     ])
     L.qa("intermediaire", "cours", [
-        ("Lors d'un titrage suivi par conductimétrie, comment repère-t-on l'équivalence sur la courbe ?",
-         ["La conductivité évolue linéairement de part et d'autre de l'équivalence, avec deux pentes différentes.", "L'équivalence correspond au point de rupture de pente."], "Par la rupture de pente"),
+        ("On titre une solution de diiode (brun-jaune) par une solution incolore d'ions thiosulfate ; les produits sont incolores. Comment repère-t-on l'équivalence ?",
+         ["Avant l'équivalence, les ions thiosulfate versés sont entièrement consommés : il reste du diiode et la solution reste colorée (elle pâlit peu à peu).",
+          "À l'équivalence, le diiode est entièrement consommé : la solution se décolore."], "Par la décoloration de la solution"),
         ("Pourquoi trace-t-on une courbe d'étalonnage $A = f(c)$ avant de doser une solution par spectrophotométrie ?",
          ["Elle vérifie que $A$ est proportionnelle à $c$ dans le domaine étudié et fournit le coefficient de proportionnalité.", "On lit ensuite la concentration de la solution inconnue à partir de son absorbance."],
          "Pour relier l'absorbance mesurée à la concentration"),

@@ -252,34 +252,6 @@
       "id": 18,
       "difficulte": "difficile",
       "notion": "repetition",
-      "enonce": "On répète $4$ fois une épreuve de succès $p = 0{,}5$. Quelle est la probabilité d'obtenir exactement $1$ succès ?",
-      "choix": [
-        "$0{,}25$",
-        "$0{,}0625$",
-        "$0{,}5$",
-        "$0{,}125$"
-      ],
-      "reponse": 0,
-      "explication": "Il y a $4$ chemins avec exactement $1$ succès (SÉÉÉ, ÉSÉÉ, ÉÉSÉ, ÉÉÉS), chacun de probabilité $0{,}5^4 = 0{,}0625$. Total : $4 \\times 0{,}0625 = 0{,}25$. Le choix $0{,}0625$ oublie de **compter les chemins**."
-    },
-    {
-      "id": 19,
-      "difficulte": "difficile",
-      "notion": "gain-algebrique",
-      "enonce": "Un billet de tombola coûte $5$ €. Il fait gagner $50$ € avec probabilité $0{,}05$, sinon rien. Quelle est l'espérance de gain (algébrique) ?",
-      "choix": [
-        "$-2{,}5$ €",
-        "$2{,}25$ €",
-        "$-0{,}25$ €",
-        "$45$ €"
-      ],
-      "reponse": 0,
-      "explication": "Le gain **algébrique** retranche la mise : $X = 45$ € avec probabilité $0{,}05$, $X = -5$ € avec probabilité $0{,}95$. Donc $E(X) = 45 \\times 0{,}05 + (-5) \\times 0{,}95 = 2{,}25 - 4{,}75 = -2{,}5$ €. Oublier de retrancher la mise est l'erreur classique."
-    },
-    {
-      "id": 20,
-      "difficulte": "difficile",
-      "notion": "repetition",
       "enonce": "Une machine produit $10\\,\\%$ de pièces défectueuses. Sur $2$ pièces prélevées indépendamment, quelle est la probabilité qu'**au moins une** soit défectueuse ?",
       "choix": [
         "$0{,}19$",
@@ -291,7 +263,7 @@
       "explication": "On passe par l'événement contraire : « aucune défectueuse » a pour probabilité $0{,}9 \\times 0{,}9 = 0{,}81$. Donc « au moins une » vaut $1 - 0{,}81 = 0{,}19$. Le choix $0{,}2$ additionne naïvement $0{,}1 + 0{,}1$."
     },
     {
-      "id": 21,
+      "id": 19,
       "difficulte": "moyen",
       "notion": "independance",
       "enonce": "On sait que $P(\\mathrm{A}) = 0{,}3$, $P(\\mathrm{B}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}12$. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils indépendants ?",
@@ -305,7 +277,7 @@
       "explication": "On compare $P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}3 \\times 0{,}4 = 0{,}12$ à $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}12$ : l'égalité est vérifiée, les événements sont indépendants. Un $P(\\mathrm{A} \\cap \\mathrm{B})$ non nul ne prouve rien, et la somme $P(\\mathrm{A}) + P(\\mathrm{B})$ n'intervient pas."
     },
     {
-      "id": 22,
+      "id": 20,
       "difficulte": "difficile",
       "notion": "probabilites-totales",
       "enonce": "On sait que $P(\\mathrm{A}) = 0{,}6$, $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}1$ et $P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}3$. Que vaut $P(\\mathrm{B})$ ?",

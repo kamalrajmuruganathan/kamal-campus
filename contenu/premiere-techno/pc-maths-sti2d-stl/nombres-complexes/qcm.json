@@ -198,15 +198,6 @@
     {
       "id": 16,
       "difficulte": "moyen",
-      "notion": "produit",
-      "enonce": "Que vaut $(1 + \\mathrm{i})^2$ ?",
-      "choix": ["$2\\mathrm{i}$", "$2$", "$1 + 2\\mathrm{i}$", "$-2\\mathrm{i}$"],
-      "reponse": 0,
-      "explication": "$(1+\\mathrm{i})^2 = 1 + 2\\mathrm{i} + \\mathrm{i}^2 = 1 + 2\\mathrm{i} - 1 = 2\\mathrm{i}$. Le choix $1 + 2\\mathrm{i}$ oublie de remplacer $\\mathrm{i}^2$ par $-1$ — l'erreur type des produits."
-    },
-    {
-      "id": 17,
-      "difficulte": "moyen",
       "notion": "conjugue",
       "enonce": "Dans le plan complexe, l'image de $\\bar{z}$ est le symétrique de celle de $z$ par rapport :",
       "choix": [
@@ -219,7 +210,7 @@
       "explication": "Le conjugué change $b$ en $-b$ sans toucher $a$ : le point $(a\\,;b)$ devient $(a\\,;-b)$, son symétrique par rapport à l'axe des **abscisses** (axe des réels). C'est l'interprétation géométrique attendue."
     },
     {
-      "id": 18,
+      "id": 17,
       "difficulte": "difficile",
       "notion": "quotient",
       "enonce": "Que vaut $\\dfrac{3 + \\mathrm{i}}{1 - \\mathrm{i}}$ ?",
@@ -228,7 +219,7 @@
       "explication": "On multiplie par le conjugué du dénominateur : $\\dfrac{(3+\\mathrm{i})(1+\\mathrm{i})}{(1-\\mathrm{i})(1+\\mathrm{i})} = \\dfrac{2 + 4\\mathrm{i}}{2} = 1 + 2\\mathrm{i}$. Oublier de diviser par $|1-\\mathrm{i}|^2 = 2$ donne le choix $2 + 4\\mathrm{i}$."
     },
     {
-      "id": 19,
+      "id": 18,
       "difficulte": "difficile",
       "notion": "forme-trigonometrique",
       "enonce": "Quelle est la forme algébrique de $z = 2\\left(\\cos\\dfrac{\\pi}{3} + \\mathrm{i}\\sin\\dfrac{\\pi}{3}\\right)$ ?",
@@ -242,7 +233,7 @@
       "explication": "$a = r\\cos\\theta = 2 \\times \\dfrac{1}{2} = 1$ et $b = r\\sin\\theta = 2 \\times \\dfrac{\\sqrt{3}}{2} = \\sqrt{3}$, d'où $z = 1 + \\mathrm{i}\\sqrt{3}$. Le choix $\\dfrac{1}{2} + \\dfrac{\\sqrt{3}}{2}\\mathrm{i}$ oublie de multiplier par le module $r = 2$."
     },
     {
-      "id": 20,
+      "id": 19,
       "difficulte": "difficile",
       "notion": "module",
       "enonce": "On sait que $|z| = 3$ et $|z'| = 4$. Que vaut $|z \\times z'|$ ?",
@@ -251,7 +242,7 @@
       "explication": "Le module d'un produit est le produit des modules : $|zz'| = |z| \\times |z'| = 3 \\times 4 = 12$. Le choix $7$ additionne les modules, le choix $5$ applique à tort une somme de type $\\sqrt{3^2+4^2}$."
     },
     {
-      "id": 21,
+      "id": 20,
       "difficulte": "moyen",
       "notion": "conjugue",
       "enonce": "On sait que $\\dfrac{z}{z'} = 2 - 3\\mathrm{i}$ (avec $z' \\neq 0$). Que vaut $\\dfrac{\\bar{z}}{\\bar{z'}}$ ?",
@@ -263,20 +254,6 @@
       ],
       "reponse": 0,
       "explication": "Le conjugué d'un quotient est le quotient des conjugués : $\\dfrac{\\bar{z}}{\\bar{z'}} = \\overline{\\left(\\dfrac{z}{z'}\\right)} = \\overline{2 - 3\\mathrm{i}} = 2 + 3\\mathrm{i}$. Le quotient n'est pas inversé."
-    },
-    {
-      "id": 22,
-      "difficulte": "difficile",
-      "notion": "conjugue",
-      "enonce": "Pour tout nombre complexe $z$, à quoi est égal $\\overline{z^2}$ ?",
-      "choix": [
-        "$\\left(\\bar{z}\\right)^2$",
-        "$-z^2$",
-        "$z^2$",
-        "$|z|^2$"
-      ],
-      "reponse": 0,
-      "explication": "$z^2 = z \\times z$, et le conjugué d'un produit est le produit des conjugués : $\\overline{z^2} = \\bar{z} \\times \\bar{z} = \\left(\\bar{z}\\right)^2$. Ne pas confondre avec $z \\times \\bar{z} = |z|^2$. Exemple : $z = \\mathrm{i}$ donne $\\overline{\\mathrm{i}^2} = -1 = (-\\mathrm{i})^2$."
     }
   ]
 }

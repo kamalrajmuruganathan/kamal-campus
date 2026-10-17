@@ -166,20 +166,6 @@
   },
   {
    "id": 12,
-   "difficulte": "facile",
-   "notion": "encadrement",
-   "enonce": "Une probabilité est toujours comprise :",
-   "choix": [
-    "entre $-1$ et $1$",
-    "entre $0$ et $1$",
-    "entre $0$ et $100$",
-    "au-dessus de $1$"
-   ],
-   "reponse": 1,
-   "explication": "Par définition, $0 \\leqslant P(\\mathrm{A}) \\leqslant 1$. Une valeur négative ou supérieure à $1$ signale une erreur de calcul. Les pourcentages (de $0$ à $100$) sont une autre écriture, mais la probabilité elle-même reste entre $0$ et $1$."
-  },
-  {
-   "id": 13,
    "difficulte": "moyen",
    "notion": "probabilite-conditionnelle",
    "enonce": "On a $P(\\mathrm{A}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Que vaut $P_{\\mathrm{A}}(\\mathrm{B})$ ?",
@@ -193,7 +179,7 @@
    "explication": "$P_{\\mathrm{A}}(\\mathrm{B}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})} = \\dfrac{0{,}2}{0{,}5} = 0{,}4$. Une probabilité ne peut pas valoir $2{,}5$."
   },
   {
-   "id": 14,
+   "id": 13,
    "difficulte": "moyen",
    "notion": "arbre-pondere",
    "enonce": "Dans un arbre pondéré, $P(\\mathrm{A}) = 0{,}6$ et $P_{\\mathrm{A}}(\\mathrm{B}) = 0{,}5$. Que vaut $P(\\mathrm{A} \\cap \\mathrm{B})$ ?",
@@ -207,7 +193,7 @@
    "explication": "La probabilité d'un chemin est le produit des probabilités de ses branches : $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}6 \\times 0{,}5 = 0{,}3$."
   },
   {
-   "id": 15,
+   "id": 14,
    "difficulte": "moyen",
    "notion": "incompatibles",
    "enonce": "Deux événements $\\mathrm{A}$ et $\\mathrm{B}$ sont incompatibles, avec $P(\\mathrm{A}) = 0{,}2$ et $P(\\mathrm{B}) = 0{,}5$. Que vaut $P(\\mathrm{A} \\cup \\mathrm{B})$ ?",
@@ -221,7 +207,7 @@
    "explication": "Incompatibles signifie $\\mathrm{A} \\cap \\mathrm{B} = \\varnothing$, donc $P(\\mathrm{A} \\cap \\mathrm{B}) = 0$ et l'addition simple suffit : $0{,}2 + 0{,}5 = 0{,}7$. L'addition n'est légitime que dans ce cas."
   },
   {
-   "id": 16,
+   "id": 15,
    "difficulte": "moyen",
    "notion": "equiprobabilite",
    "enonce": "Une urne contient $4$ boules rouges et $6$ boules bleues, bien mélangées et de même taille. On en tire une au hasard. Quelle est la probabilité d'obtenir une rouge ?",
@@ -235,7 +221,7 @@
    "explication": "Les boules sont équiprobables : $P(\\text{rouge}) = \\dfrac{4}{10} = \\dfrac{2}{5}$. Le piège $\\dfrac{4}{6}$ consiste à mettre le nombre de bleues au dénominateur au lieu du total."
   },
   {
-   "id": 17,
+   "id": 16,
    "difficulte": "moyen",
    "notion": "arbre-pondere",
    "enonce": "Dans un arbre pondéré, la branche de $\\mathrm{A}$ vers $\\mathrm{B}$ porte $0{,}35$. Quelle probabilité porte la branche de $\\mathrm{A}$ vers $\\overline{\\mathrm{B}}$ ?",
@@ -249,35 +235,7 @@
    "explication": "Les probabilités des branches issues d'un même nœud ont pour somme $1$ : $P_{\\mathrm{A}}\\left(\\overline{\\mathrm{B}}\\right) = 1 - 0{,}35 = 0{,}65$."
   },
   {
-   "id": 18,
-   "difficulte": "difficile",
-   "notion": "contraire",
-   "enonce": "On lance deux fois une pièce équilibrée. Quelle est la probabilité d'obtenir **au moins un** pile ?",
-   "choix": [
-    "$\\dfrac{1}{2}$",
-    "$\\dfrac{3}{4}$",
-    "$\\dfrac{1}{4}$",
-    "$1$"
-   ],
-   "reponse": 1,
-   "explication": "On passe par le contraire « aucun pile », c'est-à-dire deux faces : $P = \\dfrac{1}{4}$. Donc « au moins un pile » vaut $1 - \\dfrac{1}{4} = \\dfrac{3}{4}$. C'est le réflexe rentable pour les « au moins un »."
-  },
-  {
-   "id": 19,
-   "difficulte": "difficile",
-   "notion": "equiprobabilite",
-   "enonce": "Un dé est **pipé** (déséquilibré). Peut-on calculer la probabilité d'une face avec $\\dfrac{\\text{favorables}}{\\text{possibles}}$ ?",
-   "choix": [
-    "Oui, cette formule est toujours valable",
-    "Non, cette formule exige l'équiprobabilité des issues",
-    "Oui, car un dé a toujours $6$ faces",
-    "Non, un dé pipé n'a pas de probabilité"
-   ],
-   "reponse": 1,
-   "explication": "La formule favorables sur possibles n'est valable **que** lorsque les issues sont équiprobables. Un dé pipé n'a pas ses six faces également probables : il faut la loi de probabilité de chaque face. C'est la faute de fond du chapitre."
-  },
-  {
-   "id": 20,
+   "id": 17,
    "difficulte": "difficile",
    "notion": "union",
    "enonce": "On a $P(\\mathrm{A}) = 0{,}5$ et $P(\\mathrm{B}) = 0{,}6$. Un élève trouve $P(\\mathrm{A} \\cup \\mathrm{B}) = 1{,}1$. Que penser de ce résultat ?",
@@ -291,7 +249,7 @@
    "explication": "Une probabilité ne peut pas dépasser $1$ : le résultat $1{,}1$ signale l'oubli du terme $-P(\\mathrm{A} \\cap \\mathrm{B})$ dans la formule d'union. Ils ne peuvent pas être incompatibles, car $0{,}5 + 0{,}6 = 1{,}1 > 1$ serait alors la vraie valeur, ce qui est impossible."
   },
   {
-   "id": 21,
+   "id": 18,
    "difficulte": "difficile",
    "notion": "probabilite-conditionnelle",
    "enonce": "Dans une classe de $30$ élèves, $12$ sont demi-pensionnaires, dont $8$ filles. On choisit au hasard un élève demi-pensionnaire. Quelle est la probabilité que ce soit une fille ?",
@@ -305,7 +263,7 @@
    "explication": "On se restreint aux $12$ demi-pensionnaires, dont $8$ filles : $P = \\dfrac{8}{12} = \\dfrac{2}{3}$. Le calcul $\\dfrac{8}{30} = \\dfrac{4}{15}$ donne la probabilité d'être une fille **et** demi-pensionnaire."
   },
   {
-   "id": 22,
+   "id": 19,
    "difficulte": "difficile",
    "notion": "probabilite-conditionnelle",
    "enonce": "Un test de dépistage est positif chez $95\\,\\%$ des malades. Une personne a un test positif. Peut-on dire qu'elle a $95\\,\\%$ de chances d'être malade ?",
@@ -319,7 +277,7 @@
    "explication": "Il ne faut pas inverser le conditionnement : à cause des faux positifs, $P_{\\mathrm{T}}(\\mathrm{M})$ peut être très inférieure à $P_{\\mathrm{M}}(\\mathrm{T})$, surtout pour une maladie rare."
   },
   {
-   "id": 23,
+   "id": 20,
    "difficulte": "moyen",
    "notion": "loi-des-grands-nombres",
    "enonce": "On lance un dé équilibré un très grand nombre de fois. Que dit la loi des grands nombres sur la fréquence d'apparition du $6$ ?",
