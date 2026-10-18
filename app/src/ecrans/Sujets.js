@@ -14,7 +14,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
-import { SUJETS, LIBELLES_NIVEAU } from '../contenu-index';
+import { SUJETS, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { estRelu } from '../../lib/relecture';
 
 export default function Sujets() {
@@ -60,7 +60,7 @@ export default function Sujets() {
             key={s.id}
             t={t}
             titre={s.titre}
-            sousTitre={`${s.examen || (LIBELLES_NIVEAU[s.niveau] ?? s.niveau)} · ${s.matiere === 'physique-chimie' ? 'Physique-chimie' : 'Mathématiques'}`}
+            sousTitre={`${s.examen || (LIBELLES_NIVEAU[s.niveau] ?? s.niveau)} · ${LIBELLES_MATIERE[s.matiere] ?? s.matiere}`}
             couleur={couleurMatiere(t, s.matiere)}
             onPress={() => setActif(s)}
           />

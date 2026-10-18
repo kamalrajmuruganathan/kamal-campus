@@ -6,7 +6,7 @@
  *  - réglages/préférences -> ceux du device le PLUS récemment actif
  */
 
-import { fusionnerCarnets } from '../../lib/carnet';
+import { fusionnerCarnets, fusionnerJournauxMaitrisees } from '../../lib/carnet';
 
 const max = (x, y) => Math.max(x || 0, y || 0);
 const rangDate = (p) => (p && (p.dernierJourValide || p.jourCourant)) || '';
@@ -94,6 +94,9 @@ export function fusionnerProfils(a, b) {
   // Carnet d'erreurs : par clé, la version la plus récente gagne.
   if (Array.isArray(a.carnet) || Array.isArray(b.carnet)) f.carnet = fusionnerCarnets(a.carnet, b.carnet);
   f.carnetMaitrisees = Math.max(a.carnetMaitrisees || 0, b.carnetMaitrisees || 0);
+  if (a.carnetMaitriseesJours || b.carnetMaitriseesJours) {
+    f.carnetMaitriseesJours = fusionnerJournauxMaitrisees(a.carnetMaitriseesJours, b.carnetMaitriseesJours);
+  }
 
   // Exercices réussis : union par chapitre.
   f.exosReussis = {};
@@ -103,6 +106,9 @@ export function fusionnerProfils(a, b) {
       f.exosReussis[id] = [...new Set([...(f.exosReussis[id] || []), ...src[id]])];
     }
   }
+
+  // Dictées : meilleure note et nombre d'essais maximaux, dernière note la plus récente.
+  if (a.dictees || b.dictees) f.dictees = fusionnerDictees(a.dictees, b.dictees);
 
   // Ligue : semaine la plus récente ; à semaine égale, max d'XP.
   const la = a.ligue || {};

@@ -648,6 +648,27 @@ for (const c of chapitres) {
 }
 console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
 
+// ─────────────────────────── dictées (dictees/*.json) ───────────────────────────
+// Web : copiées dans public/donnees/dictees/ (chargées à la demande par src/dictees-donnees.web.js).
+// Téléphone : importées directement par src/dictees-donnees.native.js.
+const DICTEES_DIR = join(RACINE_APP, '..', 'dictees');
+if (existsSync(DICTEES_DIR)) {
+  const dest = join(DONNEES, 'dictees');
+  mkdirSync(dest, { recursive: true });
+  let nb = 0;
+  for (const f of readdirSync(DICTEES_DIR).filter((x) => x.endsWith('.json'))) {
+    try {
+      const data = JSON.parse(readFileSync(join(DICTEES_DIR, f), 'utf8'));
+      for (const d of data.dictees ?? []) {
+        if (!d.texte || !Array.isArray(d.phrases) || d.phrases.join(' ') !== d.texte) console.warn(`  ⚠️  dictée ${d.id} : découpage en phrases incohérent`);
+      }
+      nb += (data.dictees ?? []).length;
+      writeFileSync(join(dest, f), JSON.stringify(data));
+    } catch { console.warn(`  ⚠️  dictées illisibles : ${f}`); }
+  }
+  console.log(`✓ ${nb} dictées → public/donnees/dictees/`);
+}
+
 const nonRelus = chapitres.filter((c) => !estRelu(c)).length;
 console.log(`✓ ${chapitres.length} chapitres indexés → src/contenu-index.js`);
 console.log(`  ${chapitres.reduce((s, c) => s + c.nbQuestions, 0)} questions au total`);

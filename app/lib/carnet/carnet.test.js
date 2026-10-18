@@ -68,3 +68,20 @@ test('reprise de l’ancienne réserve et fusion entre appareils', () => {
   assert.equal(libelleJour('2026-10-14', J), 'demain');
   assert.equal(libelleJour('2026-10-20', J), 'le 20/10');
 });
+
+import { noterMaitriseesDuJour, fusionnerJournauxMaitrisees } from './index.js';
+
+test('journal des erreurs maîtrisées : ajout, oubli des vieux jours, fusion', () => {
+  let j = noterMaitriseesDuJour(undefined, '2026-10-18', 0);
+  assert.deepEqual(j, {});
+  j = noterMaitriseesDuJour(j, '2026-10-18', 2);
+  j = noterMaitriseesDuJour(j, '2026-10-18', 1);
+  assert.deepEqual(j, { '2026-10-18': 3 });
+  j = noterMaitriseesDuJour({ '2026-07-01': 4, '2026-10-01': 1 }, '2026-10-18', 1);
+  assert.deepEqual(j, { '2026-10-01': 1, '2026-10-18': 1 });
+  assert.deepEqual(
+    fusionnerJournauxMaitrisees({ '2026-10-17': 2, '2026-10-18': 1 }, { '2026-10-18': 3 }),
+    { '2026-10-17': 2, '2026-10-18': 3 },
+  );
+  assert.deepEqual(fusionnerJournauxMaitrisees(null, []), {});
+});

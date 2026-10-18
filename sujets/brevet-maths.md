@@ -166,9 +166,9 @@ afficher p
    *(barème : 4 pts)*
 
 2. Le nombre de bouquets doit **diviser** à la fois $84$ et $126$ : on cherche donc le
-   plus grand diviseur commun, c'est-à-dire $\mathrm{PGCD}(84\,;126)$. En prenant chaque
+   plus grand diviseur commun à $84$ et $126$. En prenant chaque
    facteur premier commun à la plus petite puissance :
-   $$\mathrm{PGCD}(84\,;126) = 2 \times 3 \times 7 = 42.$$
+   $$2 \times 3 \times 7 = 42.$$
    Le fleuriste peut réaliser au maximum **$42$ bouquets identiques**. *(4 pts)*
 
 3. Chaque bouquet contient alors :

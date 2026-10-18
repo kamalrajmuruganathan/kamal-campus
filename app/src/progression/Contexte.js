@@ -18,7 +18,8 @@ import { planifier as planifierSrs } from '../../lib/srs';
 import { ajouterXp as ligueAjouterXp } from '../../lib/ligue';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { majErreurs } from '../../lib/erreurs';
-import { noter as noterCarnet, resultatsQcm, cleExo, depuisAnciennesErreurs } from '../../lib/carnet';
+import { noter as noterCarnet, resultatsQcm, cleExo, depuisAnciennesErreurs, noterMaitriseesDuJour } from '../../lib/carnet';
+import { xpDictee, noterDictee } from '../../lib/dictee';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide, synchroniser, definirUtilisateur } from './stockage';
 import { useAuth } from '../cloud/AuthContexte';
 import { resynchroniserSiPermis } from '../notifications';
@@ -147,6 +148,7 @@ export function ProgressionProvider({ children }) {
           total: res.total,
           points: res.points,
           matiere: matiere || null,
+          ...(chapitreId ? { chapitreId } : {}),
         },
         ...profil.historique,
       ].slice(0, MAX_HISTORIQUE);
@@ -171,6 +173,7 @@ export function ProgressionProvider({ children }) {
       const nc = noterCarnet(carnetDe(profil, jour), resultatsQcm(questions, reponses, { chapitreId, titre, matiere }), jour);
       suivant.carnet = nc.carnet;
       suivant.carnetMaitrisees = (profil.carnetMaitrisees || 0) + nc.maitrisees;
+      suivant.carnetMaitriseesJours = noterMaitriseesDuJour(profil.carnetMaitriseesJours, jour, nc.maitrisees);
 
       setProfil(suivant);
       sauverProfil(suivant);
@@ -200,7 +203,7 @@ export function ProgressionProvider({ children }) {
    *            monteeDeNiveau, badgesGagnes}}
    */
   const enregistrerFlashcards = useCallback(
-    ({ connues = 0, total = 0, titre = 'Cartes de révision', matiere = null }) => {
+    ({ connues = 0, total = 0, titre = 'Cartes de révision', matiere = null, chapitreId = null }) => {
       const points = connues * XP_PAR_CARTE_CONNUE;
       const niveauAvant = niveauPourXp(profil.xp).niveau;
       const niveauApres = niveauPourXp(profil.xp + points).niveau;
@@ -223,6 +226,7 @@ export function ProgressionProvider({ children }) {
           total,
           points,
           matiere: matiere || null,
+          ...(chapitreId ? { chapitreId } : {}),
         },
         ...profil.historique,
       ].slice(0, MAX_HISTORIQUE);
@@ -345,6 +349,47 @@ export function ProgressionProvider({ children }) {
   }, [profil]);
 
   /**
+   * Enregistre une dictée corrigée (écran Dictées). XP = la note arrondie, mais seulement
+   * ce qui dépasse la meilleure note déjà obtenue à cette dictée (refaire une dictée
+   * rapporte de l'XP si l'on progresse). Suivi dans `profil.dictees[id]`.
+   * @param {{id, titre, note, matiere?}} arg
+   * @returns {{points, meilleureAvant, monteeDeNiveau, niveauApres}}
+   */
+  const enregistrerDictee = useCallback(({ id, titre, note, matiere = 'francais' }) => {
+    const meilleureAvant = (profil.dictees || {})[id]?.meilleure ?? null;
+    const points = xpDictee(note, meilleureAvant);
+    const niveauAvant = niveauPourXp(profil.xp).niveau;
+    const niveauApres = niveauPourXp(profil.xp + points).niveau;
+    setProfil((p) => {
+      const suivant = {
+        ...p,
+        xp: p.xp + points,
+        xpParMatiere: { ...p.xpParMatiere },
+        dictees: noterDictee(p.dictees, id, note, dateLocale(new Date())),
+        historique: [
+          { date: new Date().toISOString(), titre: `Dictée : ${titre}`, justes: note, total: 10, points, matiere },
+          ...(p.historique || []),
+        ].slice(0, MAX_HISTORIQUE),
+      };
+      if (points > 0) {
+        suivant.xpParMatiere[matiere] = (suivant.xpParMatiere[matiere] || 0) + points;
+        const s = calculerSerie(suivant, points);
+        Object.assign(suivant, {
+          jourCourant: s.jourCourant,
+          xpDuJour: s.xpDuJour,
+          serieJours: s.serieJours,
+          dernierJourValide: s.dernierJourValide,
+          meilleureSerieJours: s.meilleureSerieJours,
+        });
+        suivant.ligue = ligueAjouterXp(p.ligue, points, dateLocale(new Date()));
+      }
+      sauverProfil(suivant);
+      return suivant;
+    });
+    return { points, meilleureAvant, niveauApres, monteeDeNiveau: niveauApres > niveauAvant };
+  }, [profil]);
+
+  /**
    * Note un exercice (réussi ou raté) dans le carnet d'erreurs.
    * @param {{chapitreId, exoId, juste, titre?, matiere?}} arg
    */
@@ -357,7 +402,12 @@ export function ProgressionProvider({ children }) {
       // Rien à faire : réussite d'un exercice absent du carnet.
       if (juste && !avant.some((e) => e.cle === cle)) return p;
       const nc = noterCarnet(avant, [{ cle, juste, infos: { type: 'exo', chapitreId, exoId: String(exoId), titre, matiere } }], jour);
-      const suivant = { ...p, carnet: nc.carnet, carnetMaitrisees: (p.carnetMaitrisees || 0) + nc.maitrisees };
+      const suivant = {
+        ...p,
+        carnet: nc.carnet,
+        carnetMaitrisees: (p.carnetMaitrisees || 0) + nc.maitrisees,
+        carnetMaitriseesJours: noterMaitriseesDuJour(p.carnetMaitriseesJours, jour, nc.maitrisees),
+      };
       sauverProfil(suivant);
       return suivant;
     });
@@ -416,7 +466,7 @@ export function ProgressionProvider({ children }) {
     <ProgressionContexte.Provider
       value={{
         profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme, enregistrerExercice,
-        noterExerciceCarnet, reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
+        enregistrerDictee, noterExerciceCarnet, reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
       }}
     >
       {children}
@@ -445,6 +495,7 @@ export function useProgression() {
         badgesGagnes: [], serieJour: { atteint: false, serie: 0, objectif: 50 },
       }),
       enregistrerExercice: () => ({ points: 0, deja: false, niveauApres: 1, monteeDeNiveau: false }),
+      enregistrerDictee: () => ({ points: 0, meilleureAvant: null, niveauApres: 1, monteeDeNiveau: false }),
       noterExerciceCarnet: () => {},
       reinitialiser: () => {},
       definirReglages: () => {},
