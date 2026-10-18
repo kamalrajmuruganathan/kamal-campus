@@ -107,6 +107,9 @@ export function fusionnerProfils(a, b) {
     }
   }
 
+  // Dictées : meilleure note et nombre d'essais maximaux, dernière note la plus récente.
+  if (a.dictees || b.dictees) f.dictees = fusionnerDictees(a.dictees, b.dictees);
+
   // Ligue : semaine la plus récente ; à semaine égale, max d'XP.
   const la = a.ligue || {};
   const lb = b.ligue || {};

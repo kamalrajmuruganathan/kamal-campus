@@ -328,6 +328,14 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="✍️ Dictées"
+            sousTitre="Écoute, écris, corrige : du CP à la 3e, et en anglais, espagnol, allemand, italien"
+            couleur={t.couleur.francais}
+            onPress={() => navigation.navigate('Dictees')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="📒 Mon carnet d’erreurs"
             sousTitre={(() => {
               const jour = dateLocale(new Date());

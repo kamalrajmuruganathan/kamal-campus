@@ -56,6 +56,7 @@ import Discussion from './src/ecrans/Discussion';
 import Controle from './src/ecrans/Controle';
 import Classement from './src/ecrans/Classement';
 import EspaceParent from './src/ecrans/EspaceParent';
+import Dictees from './src/ecrans/Dictees';
 
 // Sur le web, Alert.alert de React Native ne fait rien (fonction vide de react-native-web) :
 // les confirmations et messages d'erreur de toute l'appli passaient inaperçus.
@@ -170,6 +171,7 @@ function Navigation() {
         <Pile.Screen name="Controle" component={Controle} options={{ title: 'Je révise mon contrôle' }} />
         <Pile.Screen name="Classement" component={Classement} options={{ title: 'Classement de la semaine' }} />
         <Pile.Screen name="EspaceParent" component={EspaceParent} options={{ title: 'Espace parent' }} />
+        <Pile.Screen name="Dictees" component={Dictees} options={{ title: 'Dictées' }} />
         <Pile.Screen name="Discussion" component={Discussion} options={({ route }) => ({ title: route.params?.pseudo ?? 'Discussion' })} />
       </Pile.Navigator>
     </NavigationContainer>

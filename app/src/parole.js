@@ -53,18 +53,25 @@ export function matiereParlante(matiere) {
   return LANGUES_PARLEES.includes(matiere);
 }
 
-/** Lit `texte` à voix haute dans la langue de `matiere`. */
-export function parler(texte, matiere) {
+/**
+ * Lit `texte` à voix haute dans la langue de `matiere`.
+ * Options : `vitesse` ('lent' | 'normal' | 'rapide') pour cette lecture seulement
+ * (sinon la préférence du profil), `onFin` appelé quand la lecture se termine.
+ */
+export function parler(texte, matiere, { vitesse = null, onFin = null } = {}) {
   try {
     if (!texte) return;
     lectureCourante++;
     Speech.stop();
     const locale = localeMatiere(matiere);
-    const opts = { language: locale, rate: vitesseCourante, pitch: 1.0 };
+    const rate = vitesse ? (VITESSES[vitesse] ?? vitesseCourante) : vitesseCourante;
+    const opts = { language: locale, rate, pitch: 1.0 };
+    if (onFin) { opts.onDone = onFin; opts.onStopped = onFin; opts.onError = onFin; }
     if (voixChoisies[locale]) opts.voice = voixChoisies[locale];
     Speech.speak(String(texte), opts);
   } catch {
     // brique indisponible : on ignore silencieusement
+    if (onFin) onFin();
   }
 }
 

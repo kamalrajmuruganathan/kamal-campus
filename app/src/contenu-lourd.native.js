@@ -1577,6 +1577,7 @@ import exercice529 from './../../contenu/troisieme/maths/translations-vecteurs/e
 import attendus529 from './../../contenu/troisieme/maths/translations-vecteurs/attendus.json';
 import fiche530 from './../../contenu/troisieme/maths/representation-espace/fiche.md';
 import exercice530 from './../../contenu/troisieme/maths/representation-espace/exercice.json';
+import attendus530 from './../../contenu/troisieme/maths/representation-espace/attendus.json';
 import fiche531 from './../../contenu/troisieme/maths/statistiques/fiche.md';
 import exercice531 from './../../contenu/troisieme/maths/statistiques/exercice.json';
 import fiche532 from './../../contenu/troisieme/maths/probabilites/fiche.md';
@@ -5292,6 +5293,7 @@ const ATTENDUS = {
   "3e-math-fonctions": attendus526,
   "3e-math-triangles": attendus528,
   "3e-math-translations-vecteurs": attendus529,
+  "3e-math-representation-espace": attendus530,
   "3e-math-probabilites": attendus532,
   "3e-math-pensee-informatique": attendus533,
   "3e-pc-masse-volumique": attendus534,
