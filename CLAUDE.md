@@ -327,3 +327,4 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Espace parent** : bilan de la semaine (comparaison semaine d'avant, carnet, examens, contrôles, conseils, partage).
   **Kamal doit exécuter une fois `outils/sql/espace_parent_v2.sql`** (sans lui, ces rubriques restent masquées).
 - Relecture indépendante des 140 dictées et 17 sujets : aucune faute dans les textes, 7 retouches (étiquettes, énoncés).
+- **Publié le 18/10/2026** : PR #10 fusionnée (main `e823310`), contrôle qualité et déploiement Pages verts. Tout le § 22 est en ligne.
