@@ -316,3 +316,5 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   `relu_par` (+ `relu_le`) ; l'appli affiche alors « ✅ Relu par …, le … » (`app/lib/relecture`). Ne jamais marquer une fiche relue soi-même.
 - **Lecture à voix haute** : détection de langue par indices (titres français lus en français dans les fiches de langues).
 - **Autocorrection** : comparaisons/encadrements, limites ±∞, égalités de calcul, équations de mise en problème (5e) → 66,8 %.
+- **Publié le 18/10/2026** : PR #9 fusionnée (main `4f86faf`), contrôle qualité et déploiement Pages verts. Tout le § 21 est en ligne
+  (le bouton « Signaler une erreur » n'enregistre rien tant que `outils/sql/signalements.sql` n'a pas été exécuté).
