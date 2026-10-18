@@ -14,6 +14,7 @@ import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { FORMULAIRES, LIBELLES_NIVEAU } from '../contenu-index';
+import { estRelu } from '../../lib/relecture';
 
 export default function Formulaires() {
   const t = useTheme();
@@ -28,7 +29,7 @@ export default function Formulaires() {
               <Text style={{ color: t.couleur.accent, fontSize: t.police.petite }}>‹ Tous les formulaires</Text>
             </Pressable>
           </View>
-          {!actif.reluPar && (
+          {!estRelu(actif) && (
             <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
               <Bandeau t={t} texte={'⚠️ Formulaire non relu par un professeur. Vérifie avec ton cours.'} />
             </View>

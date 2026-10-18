@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSy
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fusionnerAttendus } from '../lib/autocorrection/index.js';
+import { estRelu } from '../lib/relecture/index.js';
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const RACINE_APP = join(ICI, '..');
@@ -224,6 +225,7 @@ for (const niveau of dossiers(CONTENU)) {
         prerequis: meta.prerequis ?? [],
         statut: meta.statut ?? 'brouillon',
         reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+        reluLe: meta.relu_le === 'null' ? null : (meta.relu_le ?? null),
         nbQuestions,
         nbExercices,
         aExercice,
@@ -304,6 +306,7 @@ if (existsSync(FORMULAIRES_DIR)) {
       matiere: meta.matiere ?? 'mathematiques',
       statut: meta.statut ?? 'brouillon',
       reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+      reluLe: meta.relu_le === 'null' ? null : (meta.relu_le ?? null),
       chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
     });
   }
@@ -318,6 +321,7 @@ const entreesFormulaires = formulaires.map((f, i) => `  {
     matiere: ${JSON.stringify(f.matiere)},
     statut: ${JSON.stringify(f.statut)},
     reluPar: ${JSON.stringify(f.reluPar)},
+    reluLe: ${JSON.stringify(f.reluLe)},
     contenu: formulaire${i},
   },`).join('\n');
 
@@ -337,6 +341,7 @@ if (existsSync(SUJETS_DIR)) {
       matiere: meta.matiere ?? 'mathematiques',
       statut: meta.statut ?? 'brouillon',
       reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+      reluLe: meta.relu_le === 'null' ? null : (meta.relu_le ?? null),
       chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
     });
   }
@@ -358,6 +363,7 @@ if (existsSync(QUIZ_DIR)) {
         matiere: data.matiere ?? 'mathematiques',
         statut: data.statut ?? 'brouillon',
         reluPar: data.relu_par === 'null' ? null : (data.relu_par ?? null),
+        reluLe: data.relu_le === 'null' ? null : (data.relu_le ?? null),
         nbQuestions: (data.questions ?? []).length,
         chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
       });
@@ -374,6 +380,7 @@ const entreesQuiz = quiz.map((q, i) => `  {
     matiere: ${JSON.stringify(q.matiere)},
     statut: ${JSON.stringify(q.statut)},
     reluPar: ${JSON.stringify(q.reluPar)},
+    reluLe: ${JSON.stringify(q.reluLe)},
     nbQuestions: ${q.nbQuestions},
     questions: quiz${i}.questions,
   },`).join('\n');
@@ -387,6 +394,7 @@ const entreesSujets = sujets.map((s, i) => `  {
     matiere: ${JSON.stringify(s.matiere)},
     statut: ${JSON.stringify(s.statut)},
     reluPar: ${JSON.stringify(s.reluPar)},
+    reluLe: ${JSON.stringify(s.reluLe)},
     contenu: sujet${i},
   },`).join('\n');
 
@@ -411,6 +419,7 @@ const entrees = chapitres.map((c, i) => `  {
     prerequis: ${JSON.stringify(c.prerequis)},
     statut: ${JSON.stringify(c.statut)},
     reluPar: ${JSON.stringify(c.reluPar)},
+    reluLe: ${JSON.stringify(c.reluLe)},
     nbQuestions: ${c.nbQuestions},
     nbExercices: ${c.nbExercices},
     nbFlashcards: ${c.nbFlashcards},
@@ -639,9 +648,9 @@ for (const c of chapitres) {
 }
 console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
 
-const nonRelus = chapitres.filter((c) => !c.reluPar).length;
+const nonRelus = chapitres.filter((c) => !estRelu(c)).length;
 console.log(`✓ ${chapitres.length} chapitres indexés → src/contenu-index.js`);
 console.log(`  ${chapitres.reduce((s, c) => s + c.nbQuestions, 0)} questions au total`);
 if (nonRelus) {
-  console.log(`  ⚠️  ${nonRelus} chapitre(s) non relu(s) par un professeur — statut brouillon`);
+  console.log(`  ⚠️  ${nonRelus} chapitre(s) non relu(s) par un professeur (statut: relu + relu_par requis)`);
 }

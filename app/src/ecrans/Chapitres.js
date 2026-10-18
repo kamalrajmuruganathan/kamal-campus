@@ -12,6 +12,7 @@ import { chapitresDe } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { composerQcm, poolQuestions } from '../../lib/quizmix';
 import HorsLigneParcours from '../composants/HorsLigneParcours';
+import { estRelu } from '../../lib/relecture';
 
 const TAILLE_QCM_PARCOURS = 15;
 
@@ -33,7 +34,7 @@ export default function Chapitres({ route, navigation }) {
   const maitrises = liste.filter((c) => etat(c.id) === 'maitrise').length;
   const idxProchain = liste.findIndex((c) => etat(c.id) !== 'maitrise'); // prochaine étape suggérée
 
-  const nonRelus = liste.filter((c) => !c.reluPar).length;
+  const nonRelus = liste.filter((c) => !estRelu(c)).length;
   const totalQuestions = poolQuestions(liste).length;
   const accentParcours = couleurMatiere(t, liste[0]?.matiere);
 

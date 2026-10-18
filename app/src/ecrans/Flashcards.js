@@ -22,6 +22,7 @@ import { parlerSequence } from '../parole';
 import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
+import { estRelu } from '../../lib/relecture';
 
 export default function Flashcards({ route, navigation }) {
   const t = useTheme();
@@ -160,7 +161,7 @@ export default function Flashcards({ route, navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
       <View style={{ flex: 1, padding: t.espace.l }}>
-        {!chapitre.reluPar && (
+        {!estRelu(chapitre) && (
           <Bandeau t={t} texte={'⚠️ Cartes non relues par un professeur. Vérifie avec ton cours.'} />
         )}
 

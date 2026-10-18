@@ -79,6 +79,9 @@ export default function CarnetExercices() {
               dejaReussi={(reussis[e.chapitreId] || []).includes(String(e.exoId))}
               resultat={resultats[e.cle]}
               lecture={lectureActive(e.matiere || chapitre?.matiere, chapitre?.niveau, profil)}
+              chapitreId={e.chapitreId}
+              niveau={chapitre?.niveau}
+              exoId={String(e.exoId)}
               onResultat={(juste) => {
                 setResultats((r) => ({ ...r, [e.cle]: r[e.cle] === true ? true : juste }));
                 noterExerciceCarnet({ chapitreId: e.chapitreId, exoId: e.exoId, juste, titre: e.titre, matiere: e.matiere });

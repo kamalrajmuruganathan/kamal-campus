@@ -15,6 +15,7 @@ import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { SUJETS, LIBELLES_NIVEAU } from '../contenu-index';
+import { estRelu } from '../../lib/relecture';
 
 export default function Sujets() {
   const t = useTheme();
@@ -29,7 +30,7 @@ export default function Sujets() {
               <Text style={{ color: t.couleur.accent, fontSize: t.police.petite }}>‹ Tous les sujets</Text>
             </Pressable>
           </View>
-          {!actif.reluPar && (
+          {!estRelu(actif) && (
             <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
               <Bandeau t={t} texte={'⚠️ Sujet et corrigé non relus par un professeur. À vérifier avant de t\'y fier.'} />
             </View>
