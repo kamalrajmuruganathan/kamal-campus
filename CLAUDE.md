@@ -306,3 +306,13 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Après la PR #8 (sur `upgrade-sdk57`, non publié)** : autocorrection — sens des évolutions contrôlé (« baisse » ≠ « +25 % »),
   puissances « 2^8 », a√b, vecteurs « −2i + 7j », division euclidienne, angles en π (`app/lib/expressions/exactes.js`) ;
   107 exercices de plus vérifiés (66,4 %). 1re PC : titrages colorimétriques seulement, schéma `montage-titrage-colorimetrique`.
+
+## 21. Zoom, signalements, voix, autocorrection (18/10/2026)
+- **Zoom sur les schémas** : toucher un schéma l'ouvre en plein écran (pincement, double-tap, + / −, déplacement, Échap/retour) :
+  `app/src/composants/ZoomSchema{,.web}.js`, `pageZoomSchema.js`, `preparer-katex.mjs`. Version native écrite, non testée sur téléphone.
+- **« ⚠️ Signaler une erreur »** (fiche, QCM, exercices) → table Supabase `signalements` (insertion seule, aucune lecture par
+  l'appli). **Kamal doit exécuter une fois `outils/sql/signalements.sql`** dans Supabase (SQL Editor). Lecture : Table editor.
+- **Relecture par un professeur** : guide `docs/guide-relecture-professeur.md` ; une fiche est relue si `statut: relu` ET
+  `relu_par` (+ `relu_le`) ; l'appli affiche alors « ✅ Relu par …, le … » (`app/lib/relecture`). Ne jamais marquer une fiche relue soi-même.
+- **Lecture à voix haute** : détection de langue par indices (titres français lus en français dans les fiches de langues).
+- **Autocorrection** : comparaisons/encadrements, limites ±∞, égalités de calcul, équations de mise en problème (5e) → 66,8 %.

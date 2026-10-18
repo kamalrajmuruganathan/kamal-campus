@@ -15,7 +15,7 @@
 
 import { analyserCalcul, comparerCalcul, valeurLitterale } from '../expressions/index.js';
 import { analyserAutre, comparerAutre, consigneAutre } from '../expressions/autres.js';
-import { analyserExacte, comparerExacte, consigneExacte, analyserSuite, comparerSuite, consigneSuite } from '../expressions/exactes.js';
+import { analyserExacte, comparerExacte, consigneExacte, analyserSuite, comparerSuite, consigneSuite, analyserFraction } from '../expressions/exactes.js';
 
 /** Matières de langues étrangères : traductions, phrases → plus strict. */
 const LANGUES = new Set(['anglais', 'allemand', 'espagnol', 'italien', 'langues-anciennes']);
@@ -488,6 +488,9 @@ export function analyserExercice(ex, matiere = null) {
   const base = analyser(ex && ex.reponse, matiere);
   // Une grille d'idées (réponse à expliquer) l'emporte sur le calcul.
   if (LANGUES.has(matiere) || (ex && ex.criteres)) return base;
+  // « Écris 4,6 sous forme d'une fraction décimale » : l'écriture compte (« 4,6 » recopié ne suffit pas).
+  const fraction = analyserFraction(ex);
+  if (fraction) return { type: 'auto', alternatives: [{ kind: 'exacte', exacte: fraction }] };
   // Expression ou équation (« 6x + 8 », « f'(x) = 3x² − 2 », « 2x + 5y + 4 = 0 ») : comparée par calcul.
   const calcul = analyserCalcul(ex);
   if (calcul) return { type: 'auto', alternatives: [{ kind: 'calcul', calcul }] };
