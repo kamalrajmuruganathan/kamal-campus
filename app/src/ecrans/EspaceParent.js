@@ -13,7 +13,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
-  View, Text, TextInput, Pressable, ScrollView, ActivityIndicator, Alert, Platform, StyleSheet,
+  View, Text, TextInput, Pressable, ScrollView, ActivityIndicator, Alert, Platform, StyleSheet, Share,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../useTheme';
@@ -23,9 +23,11 @@ import {
   creerCodeParent, monCodeParent, listerMesParents, retirerParent,
   lierEnfant, listerMesEnfants, lireSuiviEnfant, delierEnfant,
 } from '../cloud/parents';
-import { chapitreParId, LIBELLES_MATIERE } from '../contenu-index';
+import { chapitreParId, LIBELLES_MATIERE, CHAPITRES } from '../contenu-index';
 import { dateLocale } from '../../lib/serie';
-import { resumeEnfant, pourcentage, texteDerniereActivite } from '../../lib/parent';
+import {
+  resumeEnfant, pourcentage, texteDerniereActivite, bilanSemaine, texteBilan, jourCourt, jourLong,
+} from '../../lib/parent';
 
 const WEB = Platform.OS === 'web';
 const JOURS_COURTS = ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'];
@@ -60,6 +62,29 @@ function jourSemaine(aaaammjj) {
   return JOURS_COURTS[new Date(Date.UTC(a, m - 1, j)).getUTCDay()];
 }
 const pluriel = (n, mot, motPluriel = `${mot}s`) => `${n} ${n > 1 ? motPluriel : mot}`;
+
+// Titres de tous les chapitres : une session de l'historique sans identifiant
+// (anciennes versions) compte comme « chapitre travaillé » si son titre en est un.
+let titresChapitres = null;
+function estTitreDeChapitre(titre) {
+  if (!titresChapitres) titresChapitres = new Set(CHAPITRES.map((c) => c.titre));
+  return titresChapitres.has(titre);
+}
+
+/** Partage le texte (feuille de partage du téléphone, sinon copie). Renvoie 'partage' | 'copie' | null. */
+async function partagerTexte(titre, texte) {
+  if (WEB && typeof navigator !== 'undefined') {
+    if (typeof navigator.share === 'function') {
+      try { await navigator.share({ title: titre, text: texte }); return 'partage'; }
+      catch (e) { if (e && e.name === 'AbortError') return 'annule'; }
+    }
+    if (navigator.clipboard?.writeText) {
+      try { await navigator.clipboard.writeText(texte); return 'copie'; } catch { /* on montre le texte */ }
+    }
+    return null;
+  }
+  try { await Share.share({ title: titre, message: texte }); return 'partage'; } catch { return null; }
+}
 
 export default function EspaceParent({ navigation }) {
   const t = useTheme();
@@ -343,6 +368,12 @@ function FicheSuivi({ t, enfant, gererErreur, onArreter }) {
     matiereDeChapitre: (id) => chapitreParId(id)?.matiere ?? null,
     libelleMatiere: (m) => LIBELLES_MATIERE[m] ?? m,
   }), [data, aujourdhui]);
+  const bilan = useMemo(() => bilanSemaine(data, {
+    aujourdhui,
+    titreChapitre: (id) => chapitreParId(id)?.titre ?? null,
+    libelleMatiere: (m) => LIBELLES_MATIERE[m] ?? m,
+    estTitreDeChapitre,
+  }), [data, aujourdhui]);
 
   if (chargement) return <ActivityIndicator style={{ marginTop: t.espace.xl }} color={C.accent} />;
 
@@ -366,14 +397,20 @@ function FicheSuivi({ t, enfant, gererErreur, onArreter }) {
       </View>
 
       {r.vide ? (
-        <Carte t={t} style={{ marginTop: t.espace.m }}>
-          <Text style={{ color: C.texte, fontSize: t.police.normale, lineHeight: 21 }}>
-            Aucune progression enregistrée pour l’instant. Elle apparaîtra ici dès la première session
-            (QCM, cartes de révision ou énigme) faite avec ce compte.
-          </Text>
-        </Carte>
+        <>
+          <Carte t={t} style={{ marginTop: t.espace.m }}>
+            <Text style={{ color: C.texte, fontSize: t.police.normale, lineHeight: 21 }}>
+              Aucune progression enregistrée pour l’instant. Elle apparaîtra ici dès la première session
+              (QCM, cartes de révision ou énigme) faite avec ce compte.
+            </Text>
+          </Carte>
+          <Conseils t={t} conseils={bilan.conseils} />
+        </>
       ) : (
         <>
+          <BilanDeLaSemaine t={t} bilan={bilan} nom={nom} />
+
+          <Text style={[st.section, { color: C.attenue, marginTop: t.espace.xl }]}>DEPUIS LE DÉBUT</Text>
           {/* Chiffres clés */}
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
             <Chiffre t={t} valeur={`Niveau ${r.niveau}`} legende={r.rang} />
@@ -485,6 +522,205 @@ function FicheSuivi({ t, enfant, gererErreur, onArreter }) {
       <Pressable onPress={onArreter} accessibilityRole="button" style={{ marginTop: t.espace.xl, alignSelf: 'center', padding: 10 }}>
         <Text style={{ color: C.erreur, fontWeight: '700', fontSize: t.police.petite }}>Ne plus suivre {nom}</Text>
       </Pressable>
+    </View>
+  );
+}
+
+// ── Bilan de la semaine ─────────────────────────────────────────────────────
+
+/** Rappel neutre de la semaine précédente : « semaine d’avant : 2 ». */
+const avant = (n) => `semaine d’avant : ${n}`;
+
+function BilanDeLaSemaine({ t, bilan, nom }) {
+  const C = t.couleur;
+  const [retour, setRetour] = useState(null); // 'copie' | 'texte' | null
+  const a = bilan.activite.cetteSemaine;
+  const ap = bilan.activite.semainePrecedente;
+  const ch = bilan.chapitres.cetteSemaine;
+  const texte = useMemo(() => texteBilan(bilan, nom), [bilan, nom]);
+
+  async function partager() {
+    const r = await partagerTexte(`Bilan de la semaine de ${nom}`, texte);
+    if (r === 'copie') setRetour('copie');
+    else if (r === null) setRetour('texte');
+    else setRetour(null);
+  }
+
+  return (
+    <View style={{ marginTop: t.espace.m }}>
+      <View style={[{ padding: t.espace.m, borderRadius: t.rayon.m, backgroundColor: C.accent + '14', borderWidth: 1, borderColor: C.accent + '55' }]}>
+        <View style={[st.ligne, { alignItems: 'flex-start' }]}>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: C.texte, fontSize: t.police.moyenne, fontWeight: '800' }}>📅 Bilan de la semaine</Text>
+            <Text style={{ color: C.attenue, fontSize: t.police.petite, marginTop: 2 }}>7 derniers jours : {bilan.periode.texte}</Text>
+          </View>
+          <Pressable
+            onPress={partager}
+            accessibilityRole="button"
+            accessibilityLabel="Partager le bilan"
+            style={{ paddingVertical: 8, paddingHorizontal: 12, borderRadius: t.rayon.s, backgroundColor: C.accent }}
+          >
+            <Text style={{ color: C.accentTexte, fontWeight: '700', fontSize: t.police.petite }}>📤 Partager</Text>
+          </Pressable>
+        </View>
+
+        {retour === 'copie' ? (
+          <Text style={{ color: C.succes, fontSize: t.police.petite, marginTop: t.espace.s, fontWeight: '700' }}>✓ Bilan copié : vous pouvez le coller dans un message.</Text>
+        ) : null}
+        {retour === 'texte' ? (
+          <View style={{ marginTop: t.espace.s }}>
+            <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginBottom: 4 }}>Sélectionnez le texte ci-dessous pour le copier :</Text>
+            <TextInput
+              value={texte}
+              multiline
+              editable={false}
+              selectTextOnFocus
+              accessibilityLabel="Texte du bilan"
+              style={{ color: C.texte, backgroundColor: C.fond, borderWidth: 1, borderColor: C.trait, borderRadius: t.rayon.s, padding: 10, minHeight: 160, fontSize: t.police.petite }}
+            />
+          </View>
+        ) : null}
+
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
+          <GrosChiffre t={t} valeur={a.joursActifs} unite="/ 7" legende={a.joursActifs > 1 ? 'jours de travail' : 'jour de travail'} detail={avant(ap.joursActifs)} />
+          <GrosChiffre t={t} valeur={a.sessions} legende={a.sessions > 1 ? 'sessions' : 'session'} detail={`${a.xp} XP · ${avant(ap.sessions)}`} />
+          <GrosChiffre t={t} valeur={ch.length} legende={ch.length > 1 ? 'chapitres travaillés' : 'chapitre travaillé'} detail={avant(bilan.chapitres.semainePrecedente)} />
+        </View>
+        {bilan.activite.precedentePartielle ? (
+          <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: t.espace.s }}>
+            Seules les 30 dernières sessions sont conservées : la semaine précédente peut être incomplète.
+          </Text>
+        ) : null}
+        {ch.length > 0 ? (
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: t.espace.m }}>
+            {ch.slice(0, 8).map((c) => (
+              <View key={c.cle} style={{ paddingVertical: 4, paddingHorizontal: 10, borderRadius: 999, backgroundColor: C.surface, borderWidth: 1, borderColor: (c.matiere && couleurMatiere(t, c.matiere)) || C.trait }}>
+                <Text style={{ color: C.texte, fontSize: t.police.minuscule }} numberOfLines={1}>{c.titre}</Text>
+              </View>
+            ))}
+            {ch.length > 8 ? <Text style={{ color: C.attenue, fontSize: t.police.minuscule, alignSelf: 'center' }}>et {ch.length - 8} autres</Text> : null}
+          </View>
+        ) : null}
+      </View>
+
+      <Conseils t={t} conseils={bilan.conseils} />
+
+      {/* Contrôles à venir */}
+      {bilan.controles && bilan.controles.length > 0 ? (
+        <>
+          <Text style={[st.section, { color: C.attenue, marginTop: t.espace.l }]}>CONTRÔLES À VENIR</Text>
+          {bilan.controles.slice(0, 3).map((c) => (
+            <Carte key={c.id} t={t} style={{ marginTop: t.espace.s }}>
+              <View style={st.ligne}>
+                <Text style={{ flex: 1, color: C.texte, fontWeight: '700', fontSize: t.police.normale }}>{c.titre}</Text>
+                <Text style={{ color: c.joursRestants <= 3 ? C.accent : C.attenue, fontWeight: '700', fontSize: t.police.petite }}>{c.quand}</Text>
+              </View>
+              <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+                {jourLong(c.dateControle)}{c.chapitres.length ? ` · ${c.chapitres.join(', ')}` : ''}
+              </Text>
+              {c.total > 0 ? (
+                <>
+                  <View style={[st.piste, { backgroundColor: C.trait, marginTop: t.espace.s }]}>
+                    <View style={{ width: `${Math.round((c.ratio || 0) * 100)}%`, height: '100%', backgroundColor: c.ratio >= 1 ? C.succes : C.accent, borderRadius: 4 }} />
+                  </View>
+                  <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 4 }}>
+                    Plan de révision : {c.faites} {c.faites > 1 ? 'tâches faites' : 'tâche faite'} sur {c.total} ({pourcentage(c.ratio)})
+                  </Text>
+                </>
+              ) : null}
+            </Carte>
+          ))}
+        </>
+      ) : null}
+
+      {/* Carnet d'erreurs */}
+      {bilan.carnet ? (
+        <>
+          <Text style={[st.section, { color: C.attenue, marginTop: t.espace.l }]}>CARNET D’ERREURS</Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.s }}>
+            <GrosChiffre t={t} valeur={bilan.carnet.aRevoirAujourdhui} legende="à revoir aujourd’hui" />
+            {bilan.carnet.maitriseesCetteSemaine != null ? (
+              <GrosChiffre t={t} valeur={bilan.carnet.maitriseesCetteSemaine} legende={bilan.carnet.maitriseesCetteSemaine > 1 ? 'maîtrisées cette semaine' : 'maîtrisée cette semaine'} couleur={bilan.carnet.maitriseesCetteSemaine ? C.succes : null} />
+            ) : (
+              <GrosChiffre t={t} valeur={bilan.carnet.maitriseesTotal} legende={bilan.carnet.maitriseesTotal > 1 ? 'maîtrisées depuis le début' : 'maîtrisée depuis le début'} couleur={bilan.carnet.maitriseesTotal ? C.succes : null} />
+            )}
+            <GrosChiffre t={t} valeur={bilan.carnet.ajoutesCetteSemaine} legende={bilan.carnet.ajoutesCetteSemaine > 1 ? 'nouvelles cette semaine' : 'nouvelle cette semaine'} />
+          </View>
+          {bilan.carnet.chapitresARevoir.length > 0 ? (
+            <Text style={{ color: C.attenue, fontSize: t.police.petite, marginTop: t.espace.s, lineHeight: 19 }}>
+              Surtout dans : {bilan.carnet.chapitresARevoir.map((c) => `${c.titre} (${c.nombre})`).join(', ')}.
+            </Text>
+          ) : null}
+          <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 4, lineHeight: 17 }}>
+            Chaque erreur revient le lendemain, puis 3 et 7 jours plus tard ; après 3 réussites, elle est maîtrisée.
+          </Text>
+        </>
+      ) : null}
+
+      {/* Examens sur mesure */}
+      {bilan.examens && bilan.examens.length > 0 ? (
+        <>
+          <Text style={[st.section, { color: C.attenue, marginTop: t.espace.l }]}>DERNIERS EXAMENS SUR MESURE</Text>
+          {bilan.examens.map((ex) => (
+            <View key={ex.id} style={[st.ligne, { backgroundColor: C.surface, borderColor: C.trait, borderWidth: 1, borderRadius: t.rayon.m, marginTop: t.espace.s, padding: t.espace.m, alignItems: 'flex-start' }]}>
+              <View style={{ flex: 1, minWidth: 0 }}>
+                <Text style={{ color: C.texte, fontWeight: '700', fontSize: t.police.petite }}>
+                  {ex.libelleMatiere || 'Examen'}{ex.nbChapitres ? ` · ${pluriel(ex.nbChapitres, 'chapitre')}` : ''}
+                </Text>
+                <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+                  Le {jourCourt(ex.date)}{ex.cetteSemaine ? ' (cette semaine)' : ''}
+                </Text>
+                {ex.aRevoir && ex.aRevoir.length > 0 ? (
+                  <Text style={{ color: C.texte, fontSize: t.police.minuscule, marginTop: 4, lineHeight: 17 }}>
+                    À revoir : {ex.aRevoir.map((c) => c.titre).join(', ')}
+                  </Text>
+                ) : ex.aRevoir ? (
+                  <Text style={{ color: C.succes, fontSize: t.police.minuscule, marginTop: 4 }}>Aucun chapitre à revoir</Text>
+                ) : null}
+              </View>
+              <Text style={{ color: ex.note20 >= 12 ? C.succes : C.texte, fontSize: t.police.grande, fontWeight: '800', fontVariant: ['tabular-nums'] }}>
+                {ex.note}<Text style={{ fontSize: t.police.petite, color: C.attenue }}>/20</Text>
+              </Text>
+            </View>
+          ))}
+        </>
+      ) : null}
+
+      {bilan.version < 2 ? (
+        <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: t.espace.m, lineHeight: 17 }}>
+          Bientôt ici : carnet d’erreurs, examens sur mesure et contrôles à venir. (Pour l’administrateur : exécuter
+          outils/sql/espace_parent_v2.sql dans Supabase.)
+        </Text>
+      ) : null}
+    </View>
+  );
+}
+
+function Conseils({ t, conseils }) {
+  const C = t.couleur;
+  if (!conseils || conseils.length === 0) return null;
+  return (
+    <Carte t={t} style={{ marginTop: t.espace.m }}>
+      <Text style={{ color: C.texte, fontWeight: '800', fontSize: t.police.normale }}>💡 Nos idées pour cette semaine</Text>
+      {conseils.map((c, i) => (
+        <View key={i} style={{ flexDirection: 'row', gap: 10, marginTop: t.espace.s, alignItems: 'flex-start' }}>
+          <Text style={{ fontSize: t.police.moyenne }}>{c.icone}</Text>
+          <Text style={{ flex: 1, color: C.texte, fontSize: t.police.petite, lineHeight: 20 }}>{c.texte}</Text>
+        </View>
+      ))}
+    </Carte>
+  );
+}
+
+function GrosChiffre({ t, valeur, unite, legende, detail, couleur }) {
+  const C = t.couleur;
+  return (
+    <View style={{ flexGrow: 1, flexBasis: '30%', minWidth: 100, padding: t.espace.m, backgroundColor: C.surface, borderRadius: t.rayon.m, borderWidth: 1, borderColor: C.trait }}>
+      <Text style={{ color: couleur || C.texte, fontSize: t.police.titre, fontWeight: '800', fontVariant: ['tabular-nums'] }}>
+        {valeur}{unite ? <Text style={{ fontSize: t.police.normale, color: C.attenue, fontWeight: '700' }}> {unite}</Text> : null}
+      </Text>
+      <Text style={{ color: C.texte, fontSize: t.police.petite, fontWeight: '600', marginTop: 2 }}>{legende}</Text>
+      {detail ? <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 4, lineHeight: 16 }}>{detail}</Text> : null}
     </View>
   );
 }

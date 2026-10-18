@@ -56,6 +56,7 @@ export default function Flashcards({ route, navigation }) {
           total: cartes.length,
           titre: chapitre?.titre ?? 'Cartes',
           matiere: chapitre?.matiere ?? null,
+          chapitreId: chapitre?.id ?? null,
         }),
       );
     }

@@ -166,3 +166,30 @@ export function libelleJour(jour, aujourdhui) {
   const [, m, j] = jour.split('-');
   return `le ${j}/${m}`;
 }
+
+/** Nombre de jours gardés dans le journal des erreurs maîtrisées. */
+export const JOURS_JOURNAL_MAITRISEES = 60;
+
+/**
+ * Journal daté des erreurs maîtrisées : { 'AAAA-MM-JJ': n } (pour le bilan de la
+ * semaine de l'Espace parent). Ajoute `n` au jour donné et oublie les jours trop anciens.
+ */
+export function noterMaitriseesDuJour(journal, jour, n, garder = JOURS_JOURNAL_MAITRISEES) {
+  const base = journal && typeof journal === 'object' && !Array.isArray(journal) ? journal : {};
+  if (!(n > 0) || !jour) return base;
+  const limite = ajouterJours(jour, -garder);
+  const suivant = {};
+  for (const [j, v] of Object.entries(base)) if (j > limite && Number(v) > 0) suivant[j] = Number(v);
+  suivant[jour] = (suivant[jour] || 0) + n;
+  return suivant;
+}
+
+/** Fusion de deux journaux (appareils différents) : par jour, le plus grand nombre. */
+export function fusionnerJournauxMaitrisees(a, b) {
+  const f = {};
+  for (const src of [a, b]) {
+    if (!src || typeof src !== 'object' || Array.isArray(src)) continue;
+    for (const [j, v] of Object.entries(src)) if (Number(v) > 0) f[j] = Math.max(f[j] || 0, Number(v));
+  }
+  return f;
+}

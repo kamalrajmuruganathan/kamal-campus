@@ -182,6 +182,7 @@ export default function ExamenSurMesure({ navigation }) {
         format: epreuve.format.id,
         note20: note.note20,
         chapitres: epreuve.chapitres,
+        aRevoir: note.aRevoir,
       }),
     });
 

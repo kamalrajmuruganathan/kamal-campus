@@ -18,7 +18,7 @@ import { planifier as planifierSrs } from '../../lib/srs';
 import { ajouterXp as ligueAjouterXp } from '../../lib/ligue';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { majErreurs } from '../../lib/erreurs';
-import { noter as noterCarnet, resultatsQcm, cleExo, depuisAnciennesErreurs } from '../../lib/carnet';
+import { noter as noterCarnet, resultatsQcm, cleExo, depuisAnciennesErreurs, noterMaitriseesDuJour } from '../../lib/carnet';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide, synchroniser, definirUtilisateur } from './stockage';
 import { useAuth } from '../cloud/AuthContexte';
 import { resynchroniserSiPermis } from '../notifications';
@@ -147,6 +147,7 @@ export function ProgressionProvider({ children }) {
           total: res.total,
           points: res.points,
           matiere: matiere || null,
+          ...(chapitreId ? { chapitreId } : {}),
         },
         ...profil.historique,
       ].slice(0, MAX_HISTORIQUE);
@@ -171,6 +172,7 @@ export function ProgressionProvider({ children }) {
       const nc = noterCarnet(carnetDe(profil, jour), resultatsQcm(questions, reponses, { chapitreId, titre, matiere }), jour);
       suivant.carnet = nc.carnet;
       suivant.carnetMaitrisees = (profil.carnetMaitrisees || 0) + nc.maitrisees;
+      suivant.carnetMaitriseesJours = noterMaitriseesDuJour(profil.carnetMaitriseesJours, jour, nc.maitrisees);
 
       setProfil(suivant);
       sauverProfil(suivant);
@@ -200,7 +202,7 @@ export function ProgressionProvider({ children }) {
    *            monteeDeNiveau, badgesGagnes}}
    */
   const enregistrerFlashcards = useCallback(
-    ({ connues = 0, total = 0, titre = 'Cartes de révision', matiere = null }) => {
+    ({ connues = 0, total = 0, titre = 'Cartes de révision', matiere = null, chapitreId = null }) => {
       const points = connues * XP_PAR_CARTE_CONNUE;
       const niveauAvant = niveauPourXp(profil.xp).niveau;
       const niveauApres = niveauPourXp(profil.xp + points).niveau;
@@ -223,6 +225,7 @@ export function ProgressionProvider({ children }) {
           total,
           points,
           matiere: matiere || null,
+          ...(chapitreId ? { chapitreId } : {}),
         },
         ...profil.historique,
       ].slice(0, MAX_HISTORIQUE);
@@ -357,7 +360,12 @@ export function ProgressionProvider({ children }) {
       // Rien à faire : réussite d'un exercice absent du carnet.
       if (juste && !avant.some((e) => e.cle === cle)) return p;
       const nc = noterCarnet(avant, [{ cle, juste, infos: { type: 'exo', chapitreId, exoId: String(exoId), titre, matiere } }], jour);
-      const suivant = { ...p, carnet: nc.carnet, carnetMaitrisees: (p.carnetMaitrisees || 0) + nc.maitrisees };
+      const suivant = {
+        ...p,
+        carnet: nc.carnet,
+        carnetMaitrisees: (p.carnetMaitrisees || 0) + nc.maitrisees,
+        carnetMaitriseesJours: noterMaitriseesDuJour(p.carnetMaitriseesJours, jour, nc.maitrisees),
+      };
       sauverProfil(suivant);
       return suivant;
     });
