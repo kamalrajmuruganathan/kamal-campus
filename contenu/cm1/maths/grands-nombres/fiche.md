@@ -31,10 +31,10 @@ juste dans un tableau bien ordonné. (Les millions viendront en CM2.)
 Un grand nombre se range dans un tableau. On regroupe les chiffres par **paquets
 de trois**, en partant de la droite. Chaque paquet s'appelle une **classe**.
 
-| Classe des mille | | | Classe des unités | | |
-|---|---|---|---|---|---|
-| c | d | u | c | d | u |
-| 2 | 0 | 5 | 3 | 1 | 7 |
+| Classe des mille | Classe des unités |
+|:---:|:---:|
+| **2 0 5** | **3 1 7** |
+| 2 centaines de mille, 0 dizaine de mille, 5 unités de mille | 3 centaines, 1 dizaine, 7 unités |
 
 Ce nombre se lit : **deux cent cinq mille trois cent dix-sept**.
 On l'écrit en chiffres : **205 317**.

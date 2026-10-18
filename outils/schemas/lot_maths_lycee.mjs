@@ -1131,8 +1131,8 @@ SCHEMAS.venn = venn;
   const serie = [4, 6, 7, 8, 9, 10, 11, 12, 12, 14, 16, 19];
   const X = (v) => 40 + v * 26;
   const yb = 150;
-  const el = [{ type: 'fleche', x1: 30, y1: 230, x2: 580, y2: 230, couleur: 'gris', epaisseur: 1.6, pointe: 9 }];
-  for (let v = 0; v <= 20; v += 2) { el.push({ type: 'ligne', x1: X(v), y1: 226, x2: X(v), y2: 234, couleur: 'gris', epaisseur: 1.2 }); el.push({ type: 'texte', x: X(v), y: 250, t: String(v), taille: 12, couleur: 'gris' }); }
+  const el = [{ type: 'fleche', x1: 30, y1: 255, x2: 580, y2: 255, couleur: 'gris', epaisseur: 1.6, pointe: 9 }];
+  for (let v = 0; v <= 20; v += 2) { el.push({ type: 'ligne', x1: X(v), y1: 251, x2: X(v), y2: 259, couleur: 'gris', epaisseur: 1.2 }); el.push({ type: 'texte', x: X(v), y: 279, t: String(v), taille: 16, couleur: 'gris' }); }
   const vus = {};
   serie.forEach((v) => { vus[v] = (vus[v] || 0) + 1; el.push({ type: 'cercle', x: X(v), y: 66 - (vus[v] - 1) * 14, r: 5, couleur: 'encre', fond: 'encre', opacite: 0.8, epaisseur: 1 }); });
   const [mi, q1, me, q3, ma] = [4, 7, 10.5, 12, 19];
@@ -1140,11 +1140,11 @@ SCHEMAS.venn = venn;
   el.push({ type: 'ligne', x1: X(mi), y1: yb - 12, x2: X(mi), y2: yb + 12, epaisseur: 2 }, { type: 'ligne', x1: X(ma), y1: yb - 12, x2: X(ma), y2: yb + 12, epaisseur: 2 });
   el.push({ type: 'rect', x: X(q1), y: yb - 26, w: X(q3) - X(q1), h: 52, fond: 'bleu', opacite: 0.15, bord: 'bleu', epaisseur: 2 });
   el.push({ type: 'ligne', x1: X(me), y1: yb - 26, x2: X(me), y2: yb + 26, couleur: 'rouge', epaisseur: 3 });
-  [[mi, 'min = 4'], [q1, 'Q₁ = 7'], [me, 'Me = 10,5'], [q3, 'Q₃ = 12'], [ma, 'max = 19']].forEach(([v, t], i) => el.push({ type: 'texte', x: X(v), y: i % 2 ? yb + 46 : yb - 34, t, taille: 13, couleur: v === me ? 'rouge' : 'encre', gras: v !== mi && v !== ma }));
-  el.push({ type: 'ligne', x1: X(q1), y1: 205, x2: X(q3), y2: 205, couleur: 'violet', epaisseur: 2 });
-  el.push({ type: 'texte', x: (X(q1) + X(q3)) / 2 + 160, y: 210, t: 'écart interquartile : 12 − 7 = 5', couleur: 'violet', taille: 13, gras: true });
-  el.push({ type: 'texte', x: 40, y: 22, t: 'Série de 12 valeurs : 4 6 7 8 9 10 11 12 12 14 16 19', taille: 13, ancre: 'start', couleur: 'gris' });
-  pose(F, 'boite-moustaches', 'libre', { W: 600, H: 265, elements: el }, 'Série de 12 valeurs résumée par ses indicateurs : Q₁ = 7 (rang 3), médiane 10,5, Q₃ = 12 (rang 9). La boîte, de Q₁ à Q₃, contient la moitié centrale des valeurs.', '### Écart interquartile');
+  [[mi, 'min = 4'], [q1, 'Q₁ = 7'], [me, 'Me = 10,5'], [q3, 'Q₃ = 12'], [ma, 'max = 19']].forEach(([v, t], i) => el.push({ type: 'texte', x: X(v), y: i % 2 ? yb + 48 : yb - 36, t, taille: 17, couleur: v === me ? 'rouge' : 'encre', gras: v !== mi && v !== ma }));
+  el.push({ type: 'ligne', x1: X(q1), y1: 210, x2: X(q3), y2: 210, couleur: 'violet', epaisseur: 2 });
+  el.push({ type: 'texte', x: (X(q1) + X(q3)) / 2, y: 234, t: 'écart interquartile : 12 − 7 = 5', couleur: 'violet', taille: 17, gras: true });
+  el.push({ type: 'texte', x: 40, y: 22, t: 'Série de 12 valeurs : 4 6 7 8 9 10 11 12 12 14 16 19', taille: 17, ancre: 'start', couleur: 'gris' });
+  pose(F, 'boite-moustaches', 'libre', { W: 600, H: 292, elements: el }, 'Série de 12 valeurs résumée par ses indicateurs : Q₁ = 7 (rang 3), médiane 10,5, Q₃ = 12 (rang 9). La boîte, de Q₁ à Q₃, contient la moitié centrale des valeurs.', '### Écart interquartile');
 }
 {
   const F = 'seconde/maths/vecteurs';

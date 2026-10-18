@@ -1040,7 +1040,7 @@ function cercleVocab({ compas = false }) {
 }
 
 function equerre({ noms = ['aigu', 'droit', 'obtus'], infos = ['plus fermé', 'il suit l\'équerre', 'plus ouvert'] }) {
-  const W = 640, H = 250;
+  const W = 640, H = 266;
   let g = '';
   [60, 90, 125].forEach((deg, i) => {
     const x0 = 15 + i * 210;
@@ -1054,8 +1054,8 @@ function equerre({ noms = ['aigu', 'droit', 'obtus'], infos = ['plus fermé', 'i
     if (deg !== 90) g += arcAngle(vx, vy, 34, 0, deg, { couleur: c, ep: 2.2 });
     g += `<circle cx="${vx}" cy="${vy}" r="4.5" fill="${ENCRE}"/>`;
     const xt = x0 + 95;
-    g += texte(xt, 214, noms[i], { taille: 17, gras: true, couleur: c });
-    g += texte(xt, 236, infos[i], { taille: 14, gras: true, couleur: ATTENUE });
+    g += texte(xt, 220, noms[i], { taille: 22, gras: true, couleur: c });
+    g += texte(xt, 249, infos[i], { taille: 18, gras: true, couleur: ATTENUE });
   });
   return enveloppe(W, H, g);
 }

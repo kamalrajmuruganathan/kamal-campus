@@ -530,10 +530,13 @@ export function angle({ deg = 52 } = {}) {
     `<path d="M ${O.x + r} ${O.y} A ${r} ${r} 0 0 0 ${nb(O.x + r * Math.cos(a))} ${nb(O.y - r * Math.sin(a))}" fill="none" stroke="${ROUGE}" stroke-width="2.2"/>` +
     // points
     `<circle cx="${O.x}" cy="${O.y}" r="3.5" fill="${ENCRE}"/>` +
-    `<text x="${O.x - 14}" y="${O.y + 6}" font-size="16" fill="${ENCRE}">O</text>` +
+    `<text x="${O.x - 8}" y="${O.y + 24}" font-size="16" fill="${ENCRE}" text-anchor="middle">O</text>` +
     `<text x="${A.x - 6}" y="${A.y + 20}" font-size="15" fill="${ATTENUE}">A</text>` +
     `<text x="${nb(B.x) + 6}" y="${nb(B.y) - 4}" font-size="15" fill="${ATTENUE}">B</text>` +
-    `<text x="${O.x + r + 14}" y="${O.y - 16}" font-size="15" fill="${ROUGE}">angle ÂOB</text>`;
+    // « angle AOB » avec le chapeau au-dessus des TROIS lettres (notation de l'angle de sommet O)
+    `<text x="${O.x + r + 14}" y="${O.y - 16}" font-size="15" fill="${ROUGE}">angle</text>` +
+    `<text x="${O.x + r + 73}" y="${O.y - 16}" font-size="15" fill="${ROUGE}" text-anchor="middle">AOB</text>` +
+    `<polyline points="${O.x + r + 57},${O.y - 31} ${O.x + r + 73},${O.y - 37} ${O.x + r + 89},${O.y - 31}" fill="none" stroke="${ROUGE}" stroke-width="1.4"/>`;
   return enveloppe(W, H, corps);
 }
 

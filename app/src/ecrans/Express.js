@@ -138,7 +138,7 @@ export default function Express({ navigation }) {
           return (
             <Pressable key={i} onPress={() => valider(i)} disabled={repondu} style={({ pressed }) => [st.choix, { backgroundColor: fond, borderColor: bord, borderRadius: t.rayon.m, marginTop: t.espace.s, opacity: pressed && !repondu ? 0.7 : 1 }]}>
               <Text style={{ width: 24, color: t.couleur.attenue, fontWeight: '700' }}>{LETTRES[i]}</Text>
-              <View style={{ flex: 1 }}><VisionneuseFiche markdown={choix} /></View>
+              <View style={{ flex: 1 }}><VisionneuseFiche markdown={choix} inerte /></View>
             </Pressable>
           );
         })}

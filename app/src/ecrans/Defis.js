@@ -300,7 +300,7 @@ function VueQuestion({ jeu, t, onRep, onClose }) {
             <Pressable key={i} onPress={() => onRep(i)} disabled={jeu.choisi != null}
               style={{ flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: bord, backgroundColor: fond, borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 4 }}>
               <Text style={{ color: C.attenue, fontWeight: '700', width: 24 }}>{LETTRES[i]}</Text>
-              <View style={{ flex: 1 }}><VisionneuseFiche markdown={o.txt} /></View>
+              <View style={{ flex: 1 }}><VisionneuseFiche markdown={o.txt} inerte /></View>
               {jeu.choisi != null && o.ok && <Text style={{ color: C.succes, fontSize: 18 }}>✓</Text>}
               {jeu.choisi != null && i === jeu.choisi && !o.ok && <Text style={{ color: C.erreur, fontSize: 18 }}>✕</Text>}
             </Pressable>

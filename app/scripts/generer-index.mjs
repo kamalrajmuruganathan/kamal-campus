@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSy
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fusionnerAttendus } from '../lib/autocorrection/index.js';
+import { estRelu } from '../lib/relecture/index.js';
 
 const ICI = dirname(fileURLToPath(import.meta.url));
 const RACINE_APP = join(ICI, '..');
@@ -224,6 +225,7 @@ for (const niveau of dossiers(CONTENU)) {
         prerequis: meta.prerequis ?? [],
         statut: meta.statut ?? 'brouillon',
         reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+        reluLe: meta.relu_le === 'null' ? null : (meta.relu_le ?? null),
         nbQuestions,
         nbExercices,
         aExercice,
@@ -304,6 +306,7 @@ if (existsSync(FORMULAIRES_DIR)) {
       matiere: meta.matiere ?? 'mathematiques',
       statut: meta.statut ?? 'brouillon',
       reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+      reluLe: meta.relu_le === 'null' ? null : (meta.relu_le ?? null),
       chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
     });
   }
@@ -318,6 +321,7 @@ const entreesFormulaires = formulaires.map((f, i) => `  {
     matiere: ${JSON.stringify(f.matiere)},
     statut: ${JSON.stringify(f.statut)},
     reluPar: ${JSON.stringify(f.reluPar)},
+    reluLe: ${JSON.stringify(f.reluLe)},
     contenu: formulaire${i},
   },`).join('\n');
 
@@ -337,6 +341,7 @@ if (existsSync(SUJETS_DIR)) {
       matiere: meta.matiere ?? 'mathematiques',
       statut: meta.statut ?? 'brouillon',
       reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+      reluLe: meta.relu_le === 'null' ? null : (meta.relu_le ?? null),
       chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
     });
   }
@@ -358,6 +363,7 @@ if (existsSync(QUIZ_DIR)) {
         matiere: data.matiere ?? 'mathematiques',
         statut: data.statut ?? 'brouillon',
         reluPar: data.relu_par === 'null' ? null : (data.relu_par ?? null),
+        reluLe: data.relu_le === 'null' ? null : (data.relu_le ?? null),
         nbQuestions: (data.questions ?? []).length,
         chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
       });
@@ -374,6 +380,7 @@ const entreesQuiz = quiz.map((q, i) => `  {
     matiere: ${JSON.stringify(q.matiere)},
     statut: ${JSON.stringify(q.statut)},
     reluPar: ${JSON.stringify(q.reluPar)},
+    reluLe: ${JSON.stringify(q.reluLe)},
     nbQuestions: ${q.nbQuestions},
     questions: quiz${i}.questions,
   },`).join('\n');
@@ -387,6 +394,7 @@ const entreesSujets = sujets.map((s, i) => `  {
     matiere: ${JSON.stringify(s.matiere)},
     statut: ${JSON.stringify(s.statut)},
     reluPar: ${JSON.stringify(s.reluPar)},
+    reluLe: ${JSON.stringify(s.reluLe)},
     contenu: sujet${i},
   },`).join('\n');
 
@@ -411,6 +419,7 @@ const entrees = chapitres.map((c, i) => `  {
     prerequis: ${JSON.stringify(c.prerequis)},
     statut: ${JSON.stringify(c.statut)},
     reluPar: ${JSON.stringify(c.reluPar)},
+    reluLe: ${JSON.stringify(c.reluLe)},
     nbQuestions: ${c.nbQuestions},
     nbExercices: ${c.nbExercices},
     nbFlashcards: ${c.nbFlashcards},
@@ -418,6 +427,57 @@ const entrees = chapitres.map((c, i) => `  {
     qcm: qcm${i},
     flashcards: ${c.cheminFlashcards ? `flash${i}` : 'null'},
   },`).join('\n');
+
+// ── Accents des notions de QCM ───────────────────────────────────────────────
+// Beaucoup de questions ont une notion écrite comme un identifiant
+// (« evolution-reciproque »). Pour l'afficher à l'élève (« Notions à revoir »),
+// on rétablit les accents mot à mot, d'après la forme la plus fréquente de
+// chaque mot dans les fiches et les QCM du même groupe (le français pour les
+// matières enseignées en français, chaque langue vivante ou ancienne à part).
+// Un mot ambigu (« a/à », « cote/côte/côté »…) n'est pas touché.
+const LANGUES = new Set(['anglais', 'espagnol', 'allemand', 'italien', 'langues-anciennes']);
+// Mots qu'on laisse tels quels : le sens dépend du chapitre (« cote » d'une pièce / « côté »).
+const NOTIONS_A_LAISSER = new Set(['cote']);
+const groupeNotion = (matiere) => (LANGUES.has(matiere) ? matiere : 'fr');
+const sansAccent = (m) => m.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const groupes = new Map(); // groupe → { formes: Map(mot sans accent → Map(forme → nombre)), mots: Set }
+for (const c of chapitres) {
+  const g = groupeNotion(c.matiere);
+  if (!groupes.has(g)) groupes.set(g, { formes: new Map(), mots: new Set(), textes: [] });
+  const G = groupes.get(g);
+  try { G.textes.push(readFileSync(join(RACINE_APP, 'src', c.cheminFiche.replace(/^\.\//, '')), 'utf8')); } catch { /* fiche absente */ }
+  try {
+    const q = JSON.parse(readFileSync(join(RACINE_APP, 'src', c.cheminQcm.replace(/^\.\//, '')), 'utf8'));
+    for (const x of q.questions ?? []) {
+      G.textes.push(`${x.enonce ?? ''} ${x.explication ?? ''}`);
+      if (typeof x.notion === 'string' && /^[a-z0-9-]+$/.test(x.notion)) for (const m of x.notion.split('-')) if (m) G.mots.add(m);
+    }
+  } catch { /* qcm illisible : déjà signalé */ }
+}
+const ACCENTS_NOTIONS = {};
+for (const [g, G] of groupes) {
+  for (const t of G.textes) {
+    for (const m of t.toLowerCase().match(/[a-zàâäçéèêëîïôöùûüÿœæñß]+/g) ?? []) {
+      const cle = sansAccent(m);
+      if (!G.mots.has(cle)) continue;
+      const f = G.formes.get(cle) ?? new Map();
+      f.set(m, (f.get(m) ?? 0) + 1);
+      G.formes.set(cle, f);
+    }
+  }
+  const dico = {};
+  for (const m of [...G.mots].sort()) {
+    const f = G.formes.get(m);
+    if (!f) continue;
+    const tri = [...f.entries()].sort((x, y) => y[1] - x[1]);
+    const [meilleure, n] = tri[0];
+    if (meilleure === m || n < 2) continue;
+    if (tri.length > 1 && tri[1][1] >= 0.2 * n) continue; // ambigu
+    if (NOTIONS_A_LAISSER.has(m)) continue;
+    dico[m] = meilleure;
+  }
+  ACCENTS_NOTIONS[g] = dico;
+}
 
 const sortie = `/**
  * FICHIER GÉNÉRÉ — NE PAS MODIFIER À LA MAIN.
@@ -447,6 +507,21 @@ ${entreesQuiz}
 export const LIBELLES_NIVEAU = ${JSON.stringify(LIBELLES_NIVEAU, null, 2)};
 export const LIBELLES_PARCOURS = ${JSON.stringify(LIBELLES_PARCOURS, null, 2)};
 export const LIBELLES_MATIERE = ${JSON.stringify(LIBELLES_MATIERE, null, 2)};
+
+/** Accents à rétablir dans les notions de QCM écrites comme des identifiants. */
+export const ACCENTS_NOTIONS = ${JSON.stringify(ACCENTS_NOTIONS)};
+
+/**
+ * « evolution-reciproque » → « évolution réciproque » (texte déjà lisible : inchangé).
+ * \`matiere\` choisit le dictionnaire (français, ou la langue étudiée).
+ */
+export function libelleNotion(notion, matiere) {
+  const s = String(notion ?? '');
+  if (!/^[a-z0-9-]+$/.test(s)) return s;
+  const groupe = ${JSON.stringify([...LANGUES])}.includes(matiere) ? matiere : 'fr';
+  const dico = ACCENTS_NOTIONS[groupe] ?? {};
+  return s.split('-').filter(Boolean).map((m) => dico[m] ?? m).join(' ');
+}
 
 export const CHAPITRES = [
 ${entrees}
@@ -573,9 +648,9 @@ for (const c of chapitres) {
 }
 console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
 
-const nonRelus = chapitres.filter((c) => !c.reluPar).length;
+const nonRelus = chapitres.filter((c) => !estRelu(c)).length;
 console.log(`✓ ${chapitres.length} chapitres indexés → src/contenu-index.js`);
 console.log(`  ${chapitres.reduce((s, c) => s + c.nbQuestions, 0)} questions au total`);
 if (nonRelus) {
-  console.log(`  ⚠️  ${nonRelus} chapitre(s) non relu(s) par un professeur — statut brouillon`);
+  console.log(`  ⚠️  ${nonRelus} chapitre(s) non relu(s) par un professeur (statut: relu + relu_par requis)`);
 }

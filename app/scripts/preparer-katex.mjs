@@ -128,6 +128,8 @@ table {
 }
 th, td { border: 1px solid var(--trait); padding: 8px 11px; text-align: left; }
 th { background: var(--encadre); font-weight: 620; }
+/* Tableau sans en-tête (« | | | » en Markdown) : pas de bande grise vide */
+thead:not(:has(th:not(:empty))) { display: none; }
 hr { border: 0; border-top: 1px solid var(--trait); margin: 2em 0; }
 ul, ol { padding-left: 1.4em; margin: 0 0 1em; }
 li { margin-bottom: .4em; }
@@ -140,6 +142,20 @@ img {
   display: block;
   margin: 1.3em auto;
   border-radius: 8px;
+}
+/* Schémas : on peut les toucher pour les agrandir en plein écran. Petit
+   indice discret « 🔍 Toucher pour agrandir » sous l'image (il ne cache rien). */
+.schema-zoom {
+  display: block; position: relative; width: 100%;
+  margin: 1.3em auto; border-radius: 8px; cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+.schema-zoom img { margin: 0; }
+.schema-zoom:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.schema-zoom .indice {
+  display: block; margin-top: 4px; text-align: center;
+  font-size: 12px; line-height: 1.4; color: var(--attenue);
+  pointer-events: none; user-select: none; -webkit-user-select: none;
 }
 /* Formules : on autorise le défilement horizontal plutôt que le débordement */
 .katex-display {
@@ -172,7 +188,62 @@ const gabarit = `<!doctype html>
       ],
       throwOnError: false,
     });
+    // Formule courte suivie d'une ponctuation (« le pas $h$. ») : on les garde sur
+    // la même ligne, sinon le point peut partir seul au début de la ligne suivante.
+    Array.prototype.forEach.call(document.querySelectorAll('#contenu .katex'), function (k) {
+      if (k.closest('.katex-display')) return;
+      // auto-render entoure chaque formule d'un <span> sans classe : on part de lui.
+      var p = k.parentNode;
+      if (p && p.nodeName === 'SPAN' && !p.className && p.childNodes.length === 1) k = p;
+      var n = k.nextSibling;
+      if (!n || n.nodeType !== 3) return;
+      var t = n.nodeValue, i = 0;
+      while (i < t.length && '.,;:!?)…»\u00a0'.indexOf(t.charAt(i)) >= 0) i++;
+      if (!i) return;
+      var h = k.querySelector('.katex-html');
+      if ((h ? h.textContent : k.textContent).length > 24) return;
+      var s = document.createElement('span');
+      s.style.whiteSpace = 'nowrap';
+      k.parentNode.insertBefore(s, k);
+      s.appendChild(k);
+      s.appendChild(document.createTextNode(t.slice(0, i)));
+      n.nodeValue = t.slice(i);
+    });
   }
+  // Schémas : chaque image devient un bouton « Agrandir le schéma ». Le toucher
+  // envoie l'image et sa légende à l'appli, qui l'ouvre en plein écran
+  // (ZoomSchema). Un glissé (défilement de la fiche) ne déclenche pas de clic.
+  (function () {
+    function ouvrir(img) {
+      var msg = { type: 'schema', src: img.getAttribute('src'), legende: img.getAttribute('alt') || '' };
+      if (window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify(msg));
+      else if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ type: 'kc-schema', src: msg.src, legende: msg.legende }, '*');
+      }
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('#contenu img'), function (img) {
+      var src = img.getAttribute('src') || '';
+      if (src.indexOf('data:image/svg+xml') !== 0 || img.closest('.schema-zoom')) return;
+      var b = document.createElement('span');
+      b.className = 'schema-zoom';
+      b.setAttribute('role', 'button');
+      b.setAttribute('tabindex', '0');
+      var leg = (img.getAttribute('alt') || '').trim();
+      b.setAttribute('aria-label', 'Agrandir le schéma' + (leg ? ' : ' + leg : ''));
+      b.title = 'Toucher pour agrandir';
+      img.parentNode.insertBefore(b, img);
+      b.appendChild(img);
+      var i = document.createElement('span');
+      i.className = 'indice';
+      i.setAttribute('aria-hidden', 'true');
+      b.appendChild(i);
+      i.textContent = '🔍 Toucher pour agrandir';
+      b.addEventListener('click', function () { ouvrir(img); });
+      b.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ouvrir(img); }
+      });
+    });
+  })();
   // Signale la hauteur du CONTENU à React Native, pour dimensionner la WebView.
   // On mesure le bloc #contenu (pas documentElement, qui renvoie la hauteur de
   // la WebView elle-même quand le contenu est court) et on ajoute les marges du

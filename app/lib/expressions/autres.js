@@ -5,7 +5,8 @@
  *  - coordonnées d'un point ou couple (« M(2 ; 1) », « (u ; v) = (-3 ; 8) ») ;
  *  - équations de réaction chimique ajustées (« 2 H2 + O2 -> 2 H2O »).
  */
-import { lire, latexVersSimple, variables } from './index.js';
+import { lire, latexVersSimple, variables, egales } from './index.js';
+import { signature } from './exactes.js';
 
 const plat = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
@@ -215,15 +216,124 @@ function lireEuclide(texte, latex) {
   return null;
 }
 
+// ─── Comparaisons, encadrements, rangements ──────────────────────────────
+
+const OPS = { '<': '<', '>': '>', '≤': '≤', '≥': '≥' };
+const INVERSE = { '<': '>', '>': '<', '≤': '≥', '≥': '≤' };
+
+/** « 4 < \sqrt{20} < 5 » → { termes: [arbres], ops: ['<', '<'] } (sans lettre), ou null. */
+function lireChaine(texte, latex) {
+  let s = String(texte).trim();
+  if (latex) {
+    s = s.replace(/^\$|\$\.?$/g, '').replace(/\$\s*\.?\s*$/, '')
+      .replace(/\\(?:leqslant|leq|le)\b/g, '≤').replace(/\\(?:geqslant|geq|ge)\b/g, '≥');
+    if (/\\(?:approx|neq|in|int|lim)\b|≈/.test(s)) return null;
+  } else {
+    s = s.replace(/[.]$/, '').replace(/<=|⩽/g, '≤').replace(/>=|⩾/g, '≥');
+  }
+  const morceaux = s.split(/\s*([<>≤≥])\s*/);
+  if (morceaux.length < 3 || morceaux.length % 2 === 0) return null;
+  const termes = [];
+  const ops = [];
+  for (let k = 0; k < morceaux.length; k++) {
+    if (k % 2) { ops.push(OPS[morceaux[k]]); continue; }
+    const lu = lire(morceaux[k], { latex });
+    if (!lu || lu.kind !== 'expr' || variables(lu.a).size) return null;
+    termes.push(lu.a);
+  }
+  return { termes, ops };
+}
+
+/** Valeur numérique d'un terme sans lettre (NaN si incalculable). */
+const nombre = (a) => evaluerConstante(a);
+
+/** La chaîne est-elle vraie (« 4 < √20 < 5 ») ? */
+function chaineVraie(c) {
+  return c.ops.every((op, k) => {
+    const x = nombre(c.termes[k]);
+    const y = nombre(c.termes[k + 1]);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+    return op === '<' ? x < y : op === '>' ? x > y : op === '≤' ? x <= y : x >= y;
+  });
+}
+
+function memesChaines(att, s) {
+  if (!s || s.termes.length !== att.termes.length) return false;
+  // « 5 > √20 > 4 » = « 4 < √20 < 5 » : on retourne la chaîne écrite dans l'autre sens.
+  if (s.ops.every((op, k) => op === INVERSE[att.ops[s.ops.length - 1 - k]]) && !s.ops.every((op, k) => op === att.ops[k])) {
+    s = { termes: [...s.termes].reverse(), ops: [...s.ops].reverse().map((op) => INVERSE[op]) };
+  }
+  if (!s.ops.every((op, k) => op === att.ops[k])) return false;
+  // Chaque terme : même valeur ET même écriture (« √20 », pas « 4,47 »).
+  return att.termes.every((t, k) => egales(t, s.termes[k]) === true && signature(t) === signature(s.termes[k]));
+}
+
+/** « 124 ; 130 ; 160 » ou « 124, 130, 160 » (rangement sans les signes), ou null. */
+function lireListe(texte) {
+  const parts = String(texte).trim().replace(/[.]$/, '').split(/\s*;\s*|,\s+/);
+  if (parts.length < 2) return null;
+  const termes = parts.map((x) => lire(x));
+  return termes.every((t) => t && t.kind === 'expr' && !variables(t.a).size) ? termes.map((t) => t.a) : null;
+}
+
+// ─── Égalités de calcul (« 3 × 5 = 15 ») ────────────────────────────────
+
+/** « 3 × 5 = 15 », « 15 = 5 × 3 », « 6 + 4 = 10 » → { op, a, b, c } (entiers), ou null. */
+function lireEgalite(texte, latex) {
+  let s = String(texte).trim();
+  s = latex ? s.replace(/^\$|\$\.?$/g, '').replace(/\$\s*\.?\s*$/, '').replace(/\\times|\\cdot/g, '×').replace(/\\div/g, '÷').replace(/(\d)\\[,;: ]\s*(?=\d{3})/g, '$1')
+    : s.replace(/[.]$/, '').replace(/(\d)[\s\u00a0\u202f](?=\d{3}\b)/g, '$1').replace(/[*·xX]/g, '×').replace(/[−–]/g, '-').replace(/:/g, '÷');
+  const n = '(\\d+)';
+  const op = '\\s*([×+\\-÷])\\s*';
+  let m = s.match(new RegExp(`^${n}${op}${n}\\s*=\\s*${n}$`));
+  if (m) return { op: m[2], a: +m[1], b: +m[3], c: +m[4] };
+  m = s.match(new RegExp(`^${n}\\s*=\\s*${n}${op}${n}$`));
+  if (m) return { op: m[3], a: +m[2], b: +m[4], c: +m[1] };
+  return null;
+}
+
+const calculer = (q) => (q.op === '×' ? q.a * q.b : q.op === '+' ? q.a + q.b : q.op === '-' ? q.a - q.b : q.a / q.b);
+
 // ─── Exercice ─────────────────────────────────────────────────────────────
 
-/** Analyse d'une réponse d'un de ces trois types, ou null. */
+/** Analyse d'une réponse d'un de ces types, ou null. */
 export function analyserAutre(ex) {
   if (!ex || typeof ex.reponse !== 'string' || typeof ex.enonce !== 'string') return null;
   const r = ex.reponse.trim();
   if (!/^\$[^$]+\$\s*\.?$/.test(r)) return null;
   if (/d[ée]montr|montrer|justifi|prouv|expliqu|interpr[ée]t|comment/i.test(ex.enonce)) return null;
   const e = plat(ex.enonce);
+  // Limite infinie : « +∞ » ou « -∞ » (le signe est exigé).
+  const inf = r.match(/^\$\s*([+-])\s*\\infty\s*\$\s*\.?$/);
+  if (inf) return { kind: 'infini', signe: inf[1] };
+  // « Compare 124 et 130 : écris < ou > » : un seul signe.
+  const symbole = r.match(/^\$\s*(<|>|=|\\leqslant|\\geqslant)\s*\$\s*\.?$/);
+  if (symbole && /compare/.test(e)) {
+    const sym = symbole[1] === '\\leqslant' ? '≤' : symbole[1] === '\\geqslant' ? '≥' : symbole[1];
+    // « Compare 124 et 130 » : la comparaison écrite en entier (« 124 < 130 ») est juste aussi.
+    const m = ex.enonce.replace(/(\d)(?:\\,|\s)(?=\d{3}\b)/g, '$1').match(/compare\s+\$?\s*(\d+(?:[.,]\d+)?)\s*\$?\s+et\s+\$?\s*(\d+(?:[.,]\d+)?)/i);
+    const c = m && sym !== '=' && lireChaine(`${m[1]} ${sym} ${m[2]}`, false);
+    return { kind: 'symbole', s: sym, c: c && chaineVraie(c) ? c : null };
+  }
+  // Comparaison, encadrement, rangement : « 4 < √20 < 5 », « -5 < -1 < 0 < 2 < 3 ».
+  if (/<|>|\\[lg]eq/.test(r)) {
+    const c = lireChaine(r, true);
+    if (!c || !chaineVraie(c)) return null;
+    // La même chaîne déjà écrite dans l'énoncé : recopier suffirait.
+    for (const q of ex.enonce.matchAll(/\$([^$]+)\$/g)) { if (memesChaines(c, lireChaine(`$${q[1]}$`, true))) return null; }
+    const range = /\brange|ordre (?:croissant|decroissant)/.test(e) && new Set(c.ops).size === 1;
+    return { kind: 'chaine', c, range };
+  }
+  // « Écris 5 + 5 + 5 avec le signe × , puis calcule » → « 3 × 5 = 15 ».
+  const eg = lireEgalite(r, true);
+  if (eg) {
+    if (calculer(eg) !== eg.c) return null;
+    for (const q of ex.enonce.matchAll(/\$([^$]+)\$/g)) {
+      const x = lireEgalite(`$${q[1]}$`, true);
+      if (x && x.op === eg.op && x.c === eg.c && [x.a, x.b].sort().join() === [eg.a, eg.b].sort().join()) return null;
+    }
+    return { kind: 'egalite', ...eg };
+  }
   if (/division euclidienne/.test(e)) {
     const eu = lireEuclide(r, true);
     if (!eu) return null;
@@ -260,6 +370,27 @@ export function analyserAutre(ex) {
 
 export function comparerAutre(saisie, a) {
   if (!a || !String(saisie || '').trim()) return false;
+  if (a.kind === 'infini') {
+    const t = plat(saisie).replace(/[.]$/, '').replace(/^.*=\s*/, '').replace(/[−–]/g, '-').replace(/\s+/g, ' ').trim();
+    const m = t.match(/^(\+|-|plus|moins)\s*(?:l'\s*)?(?:∞|inf|infini|oo)$/);
+    return !!m && (m[1] === '+' || m[1] === 'plus' ? '+' : '-') === a.signe;
+  }
+  if (a.kind === 'symbole') {
+    const t = String(saisie).trim().replace(/[.]$/, '').replace(/<=|⩽/g, '≤').replace(/>=|⩾/g, '≥');
+    return t === a.s || (!!a.c && memesChaines(a.c, lireChaine(saisie, false)));
+  }
+  if (a.kind === 'chaine') {
+    if (memesChaines(a.c, lireChaine(saisie, false))) return true;
+    // Rangement : la liste dans le bon ordre suffit (« -5 ; -1 ; 0 ; 2 ; 3 »).
+    const l = a.range && !/[<>≤≥]/.test(saisie) && lireListe(saisie);
+    return !!l && l.length === a.c.termes.length && a.c.termes.every((t, k) => egales(t, l[k]) === true && signature(t) === signature(l[k]));
+  }
+  if (a.kind === 'egalite') {
+    const q = lireEgalite(saisie, false);
+    if (!q || q.op !== a.op || q.c !== a.c) return false;
+    // Addition et multiplication : l'ordre des deux nombres est libre.
+    return (q.a === a.a && q.b === a.b) || ((a.op === '×' || a.op === '+') && q.a === a.b && q.b === a.a);
+  }
   if (a.kind === 'intervalle') return memesIntervalles(a.iv, lireIntervalles(saisie, false) || inequation(saisie));
   if (a.kind === 'couple') {
     const c = lireCouple(saisie, false);
@@ -282,6 +413,10 @@ export function comparerAutre(saisie, a) {
 
 export function consigneAutre(a) {
   if (!a) return '';
+  if (a.kind === 'infini') return '+∞ ou -∞ (on peut écrire +inf, -inf)';
+  if (a.kind === 'symbole') return 'un signe : < ou >';
+  if (a.kind === 'chaine') return a.range ? 'les nombres rangés, avec < ou >, ou séparés par « ; »' : 'avec < ou > (≤ : <=), par ex. 3 < √10 < 4';
+  if (a.kind === 'egalite') return `le calcul et son résultat, par ex. 4 ${a.op} 2 = ${a.op === '×' ? 8 : a.op === '+' ? 6 : a.op === '-' ? 2 : 2}`;
   if (a.kind === 'intervalle') return 'un intervalle, par ex. ]-∞ ; 5[ ou [2 ; 3] ∪ [4 ; +∞[';
   if (a.kind === 'euclide') return `l'égalité, par ex. 47 = 6 × 7 + 5 (reste plus petit que le diviseur)`;
   if (a.kind === 'couple') return a.c.length === 3 ? 'des coordonnées, par ex. (2 ; -1 ; 3)' : 'des coordonnées, par ex. (2 ; -1)';

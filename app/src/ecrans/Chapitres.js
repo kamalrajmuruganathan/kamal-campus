@@ -12,6 +12,7 @@ import { chapitresDe } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { composerQcm, poolQuestions } from '../../lib/quizmix';
 import HorsLigneParcours from '../composants/HorsLigneParcours';
+import { estRelu } from '../../lib/relecture';
 
 const TAILLE_QCM_PARCOURS = 15;
 
@@ -33,7 +34,7 @@ export default function Chapitres({ route, navigation }) {
   const maitrises = liste.filter((c) => etat(c.id) === 'maitrise').length;
   const idxProchain = liste.findIndex((c) => etat(c.id) !== 'maitrise'); // prochaine étape suggérée
 
-  const nonRelus = liste.filter((c) => !c.reluPar).length;
+  const nonRelus = liste.filter((c) => !estRelu(c)).length;
   const totalQuestions = poolQuestions(liste).length;
   const accentParcours = couleurMatiere(t, liste[0]?.matiere);
 
@@ -54,7 +55,7 @@ export default function Chapitres({ route, navigation }) {
             t={t}
             texte={
               `⚠️ ${nonRelus} fiche${nonRelus > 1 ? 's' : ''} de ce parcours ${nonRelus > 1 ? 'n’ont' : 'n’a'} pas encore ` +
-              'été relue par un professeur. Le contenu est rédigé à partir des programmes officiels, ' +
+              `été relue${nonRelus > 1 ? 's' : ''} par un professeur. Le contenu est rédigé à partir des programmes officiels, ` +
               'mais vérifie avec ton cours avant un contrôle.'
             }
           />

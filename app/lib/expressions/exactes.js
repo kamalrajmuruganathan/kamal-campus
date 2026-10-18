@@ -74,10 +74,23 @@ function preparer(texte, latex) {
   return s;
 }
 
-/** Lit UN morceau : point, « nom = valeur », vecteur (i, j) ou expression. null si illisible. */
+// Unités permises après une valeur dans une suite saisie (« 26 cm », « 27 € », « 62,8 cm³ »).
+const UNITES = /^(.*?(?:[\dπ)]|(?<![a-zA-Z])pi))\s*(€|euros?|[kcdm]?m[²³]?|[kcdm]?m\^?[23]|[km]?g|[cm]?L|min|h|s)\.?$/;
+const normUnite = (u) => (/^euros?$/i.test(u) ? '€' : u.replace(/\^?2$/, '²').replace(/\^?3$/, '³'));
+
+/**
+ * Lit UN morceau : point, « nom = valeur », vecteur (i, j), vecteur nul, équation
+ * (« x + 15 = 42 ») ou expression. null si illisible.
+ */
 function lireMorceau(texte, latex) {
   let s = preparer(texte, latex);
   if (!s) return null;
+  // Vecteur nul : « vecteur nul », « \vec{0} », « vec 0 » (« 0⃗ » est lu comme 0).
+  if (latex ? /^\\vec\s*\{?\s*0\s*\}?$/.test(s) : /^(?:le\s+)?vecteur\s+nul$|^vec\s*\(?\s*0\s*\)?$/i.test(s)) return { k: 'nul' };
+  // Unité après une valeur (saisie ou forme écrite à la main seulement).
+  let unite = '';
+  const mu = !latex && s.match(UNITES);
+  if (mu && !/[a-zA-Z]\s*$/.test(mu[1].replace(/(?<![a-zA-Z])pi$/, 'π'))) { s = mu[1].trim(); unite = normUnite(mu[2]); }
   // Point ou couple : « H(1 ; 2) », « (8 ; 2) », « \mathrm{H}(3\,;3) ».
   let p = latex ? s.replace(/\\(?:mathrm|text)\{([A-Za-z]+)\}/g, '$1').replace(/\\[,!: ]/g, ' ') : s;
   p = p.replace(/^(?:point\s+)?[A-Za-z]{0,2}'?\s*(?=\()/i, '');
@@ -95,10 +108,20 @@ function lireMorceau(texte, latex) {
     .replace(/^(?:\\mathrm\{)?[A-Z]{1,2}'?\}?\s*=\s*/, '');
   if (/VEC_/.test(s)) return null;
   const lu = lire(s, { latex });
-  if (!lu || lu.kind !== 'expr') return null;
+  if (!lu) return null;
+  if (lu.kind === 'eq') {
+    // « x + 15 = 42 » ; « x = 27 » écrit « 27 = x » est une équation déjà résolue.
+    if (unite) return null;
+    const [g, d] = lu.a.termes;
+    const seul = (x) => x.t === 'var';
+    const resolue = (seul(g) && !variables(d).size) || (seul(d) && !variables(g).size);
+    return variables(lu.a).size ? { k: 'eq', a: lu.a, resolue } : null;
+  }
+  if (lu.kind !== 'expr') return null;
   const vars = variables(lu.a);
+  if (unite && vars.size) return null;
   if ([...vars].every((v) => v === 'i' || v === 'j') && vars.size) return { k: 'vecteur', a: lu.a };
-  return { k: vars.size ? 'expr' : 'valeur', a: lu.a };
+  return vars.size ? { k: 'expr', a: lu.a } : { k: 'valeur', a: lu.a, unite };
 }
 
 /** Découpe aux séparateurs de premier niveau : « ; », « et », « , » suivi d'un espace, retour à la ligne. */
@@ -112,7 +135,7 @@ function decouper(texte) {
     if (c === '(' || c === '{' || c === '[') prof++;
     if (c === ')' || c === '}' || c === ']') prof--;
     if (prof === 0) {
-      if (c === ';' || c === '\n' || (c === ',' && /\s/.test(s[i + 1] || ''))) { out.push(cur); cur = ''; continue; }
+      if (c === ';' || c === '\n' || c === '≈' || (c === ',' && /\s/.test(s[i + 1] || ''))) { out.push(cur); cur = ''; continue; }
       const et = s.slice(i).match(/^\s+(?:et|puis)\s+/i);
       if (et) { out.push(cur); cur = ''; i += et[0].length - 1; continue; }
     }
@@ -130,12 +153,18 @@ export function lireSuite(texte, latex = false) {
   return out.every(Boolean) ? out : null;
 }
 
-/** Forme écrite à la main (attendus.json) vérifiable par calcul : au moins un morceau « exact ». */
+/**
+ * Forme écrite à la main (attendus.json) vérifiable par calcul : au moins un morceau « exact »
+ * (point, vecteur, vecteur nul, valeur avec π ou √…), ou une équation / expression suivie
+ * d'autres réponses (« x + 15 = 42 ; 27 € », « 4x + 6 ; 26 cm »).
+ */
 export function analyserSuite(forme) {
   const suite = lireSuite(forme, false);
   if (!suite) return null;
-  if (!suite.some((m) => m.k === 'point' || m.k === 'vecteur' || special(m.a))) return null;
-  if (suite.some((m) => m.k === 'expr')) return null; // lettres autres que i, j : non
+  const litteral = suite.some((m) => m.k === 'eq' || m.k === 'expr');
+  if (litteral && suite.length < 2) return null; // une expression seule : vérifiée ailleurs (consigne de forme)
+  if (!litteral && !suite.some((m) => m.k === 'point' || m.k === 'vecteur' || m.k === 'nul' || special(m.a))) return null;
+  if (suite.some((m) => m.k === 'eq' && m.resolue)) return null;
   return suite;
 }
 
@@ -146,8 +175,20 @@ function memeValeur(att, s, strict) {
 }
 
 function memeMorceau(att, s) {
-  if (!s || att.k !== s.k) return false;
+  if (!s) return false;
+  // Vecteur nul : « vecteur nul », « 0⃗ » / « 0 », « (0 ; 0) ».
+  if (att.k === 'nul') return s.k === 'nul' || (s.k === 'valeur' && !s.unite && egales(s.a, { t: 'num', v: 0 }) === true)
+    || (s.k === 'point' && s.a.every((x) => egales(x, { t: 'num', v: 0 }) === true));
+  if (att.k !== s.k) return false;
   if (att.k === 'point') return att.a.length === s.a.length && att.a.every((x, i) => memeValeur(x, s.a[i], special(x)));
+  // Équation : la même (à un facteur près), écrite avec les mêmes nombres, et pas déjà résolue
+  // (« x + 15 = 42 » = « 15 + x = 42 » = « 42 = x + 15 », mais pas « x = 27 » ni « x - 27 = 0 »).
+  if (att.k === 'eq') return !s.resolue && egales(att.a, s.a, { mode: 'proportionnel' }) === true && signature(att.a) === signature(s.a);
+  // Valeur : l'unité est facultative, mais si elle est écrite, ce doit être la bonne.
+  if (att.k === 'valeur' && s.unite && s.unite !== att.unite) return false;
+  // Nombre décimal attendu (« 1,5 ») : le calcul doit être fait (ni « 9/6 », ni « 42 - 15 »).
+  const nombre = (x) => x.t === 'num' || (x.t === 'add' && x.termes.length === 1 && x.termes[0].t === 'num');
+  if (att.k === 'valeur' && nombre(att.a) && !nombre(s.a)) return false;
   return memeValeur(att.a, s.a, true);
 }
 
@@ -172,9 +213,16 @@ export function analyserExacte(ex) {
   const r = ex.reponse.trim();
   if (!/^\$[^$]+\$\s*\.?$/.test(r) || INTERDIT.test(ex.enonce)) return null;
   if (/\\(?:approx|simeq|pm|infty|in|leq|geq|leqslant|geqslant|neq)\b|[<>]/.test(r)) return null;
+  const fraction = analyserFraction(ex);
+  if (fraction) return fraction;
   const m = lireMorceau(r, true);
-  if (!m || m.k === 'point' || egales(m.a, m.a) !== true) return null;
+  if (!m || m.k === 'point' || m.k === 'eq' || m.k === 'nul' || egales(m.a, m.a) !== true) return null;
   const e = plat(ex.enonce);
+  // « Réécris 4xy en faisant apparaître tous les signes × » : mêmes facteurs, chacun séparé par ×.
+  if (/fai\w* appara\w*.{0,20}signes?/.test(e) && /\\times/.test(r) && !/[+\-]|\\[dt]?frac|\^/.test(r.replace(/\\times/g, ''))) {
+    const fact = facteursFois(r, true);
+    if (fact && fact.length >= 2) return { kind: 'exacte', morceau: m, facteurs: fact };
+  }
   if (m.k === 'valeur' && !special(m.a)) return null; // simple nombre : déjà géré ailleurs
   // Puissance seule (« 2⁸ ») : la forme n'est exigée que si l'énoncé la demande (sinon 256 est juste aussi).
   if (m.k === 'valeur' && !/sqrt|pi|ln|exp|cos|sin|tan|\be\b/.test(latexVersSimple(r) || '')
@@ -197,6 +245,12 @@ export function analyserExacte(ex) {
 
 export function comparerExacte(saisie, a) {
   if (!a || !String(saisie || '').trim()) return false;
+  if (a.fraction) return comparerFraction(saisie, a);
+  // Tous les signes × écrits : mêmes facteurs (dans n'importe quel ordre), chacun séparé par ×.
+  if (a.facteurs) {
+    const f = facteursFois(saisie, false);
+    return !!f && f.length === a.facteurs.length && [...f].sort().join('|') === [...a.facteurs].sort().join('|');
+  }
   // Sans « × » : ni signe ×, *, ·, ni nombre écrit après une lettre (« a7 »).
   if (a.sansFois && /[×*·⋅∙]|[\p{L})]\s*\d/u.test(saisie)) return false;
   const s = lireSuite(saisie, false);
@@ -205,12 +259,71 @@ export function comparerExacte(saisie, a) {
 
 export function consigneExacte(a) {
   if (!a) return '';
+  if (a.fraction === 'decimale') return 'une fraction décimale, par ex. 75/100';
+  if (a.fraction === 'mixte') return 'un entier + une fraction, par ex. 3 + 25/100';
+  if (a.facteurs) return 'avec tous les signes ×, par ex. 3 × a × b';
   if (a.morceau.k === 'vecteur') return 'en fonction de i et j, par ex. -2i + 7j';
   return 'valeur exacte : √ ou sqrt, π ou pi, puissance avec ^ (2^8) ou ⁸';
 }
 
 export function consigneSuite(suite) {
   const n = suite.length;
-  const base = 'valeur exacte (√ ou sqrt, π ou pi, 2^8)';
+  let base = 'valeur exacte (√ ou sqrt, π ou pi, 2^8)';
+  if (suite.some((m) => m.k === 'eq')) base = "l'équation puis la solution, par ex. 3x + 2 = 11 ; 3";
+  else if (suite.some((m) => m.k === 'expr')) base = "l'expression puis sa valeur, par ex. 3x + 2 ; 14";
+  else if (suite.some((m) => m.k === 'nul')) base = 'coordonnées (2 ; -1), vecteur nul : 0';
+  else if (!suite.some((m) => m.k !== 'point' && m.k !== 'vecteur' && special(m.a))) base = 'coordonnées, par ex. (2 ; -1)';
   return n > 1 ? `${n} réponses dans l'ordre, séparées par « ; » — ${base}` : base;
+}
+
+// ─── Écritures imposées : facteurs séparés par ×, fractions décimales, nombres mixtes ──
+
+/** « 4 × x × y » → ['4', 'x', 'y'] ; null s'il manque un signe × (« 4xy », « 4 × xy »). */
+function facteursFois(texte, latex) {
+  let s = String(texte).trim();
+  s = latex ? s.replace(/^\$+|\$+\s*\.?$/g, '').replace(/\\(?:times|cdot)/g, '×').replace(/\\[,;: !]/g, ' ')
+    : s.replace(/[.]$/, '').replace(/[*·⋅∙]/g, '×');
+  const f = s.split('×').map((x) => x.trim().replace(/,/g, '.'));
+  // Chaque facteur : un nombre ou une seule lettre.
+  return f.every((x) => /^(?:\d+(?:\.\d+)?|[a-zA-Z])$/.test(x)) ? f.map((x) => (/^\d/.test(x) ? String(Number(x)) : x)) : null;
+}
+
+/** « 4107/1000 », « 30 + 45/100 », « 45/100 + 30 » → { entier, num, den } (entiers), ou null. */
+function lireFraction(texte, latex) {
+  const simple = latex ? latexVersSimple(texte) : String(texte).trim().replace(/[.]$/, '').replace(/(\d)[\s  ](?=\d{3}\b)/g, '$1');
+  if (simple == null || /\d\s+\d/.test(simple)) return null; // « 4 6/10 » : ambigu
+  const t = simple.replace(/\s+/g, '').replace(/[()]/g, '');
+  let m = t.match(/^(\d+)\/(\d+)$/);
+  if (m) return { entier: null, num: +m[1], den: +m[2] };
+  m = t.match(/^(\d+)\+(\d+)\/(\d+)$/);
+  if (m) return { entier: +m[1], num: +m[2], den: +m[3] };
+  m = t.match(/^(\d+)\/(\d+)\+(\d+)$/);
+  if (m) return { entier: +m[3], num: +m[1], den: +m[2] };
+  return null;
+}
+
+const puissanceDe10 = (n) => n >= 10 && /^10*$/.test(String(n));
+
+/**
+ * « Écris 4,107 sous forme d'une fraction décimale » (réponse a/10ⁿ) ou « … sous forme d'un
+ * nombre mixte » (réponse E + a/b) : la valeur ET l'écriture demandée sont contrôlées.
+ */
+export function analyserFraction(ex) {
+  if (!ex || typeof ex.reponse !== 'string' || typeof ex.enonce !== 'string') return null;
+  const e = plat(ex.enonce);
+  const f = lireFraction(ex.reponse, true);
+  if (!f || !f.den) return null;
+  if (/fraction decimale/.test(e) && f.entier == null && puissanceDe10(f.den)) return { kind: 'exacte', fraction: 'decimale', num: f.num, den: f.den };
+  if (/nombre mixte|un entier \+ une fraction/.test(e) && f.entier != null && f.num < f.den) return { kind: 'exacte', fraction: 'mixte', entier: f.entier, num: f.num, den: f.den };
+  return null;
+}
+
+function comparerFraction(saisie, a) {
+  const f = lireFraction(saisie, false);
+  if (!f || !f.den) return false;
+  // Même valeur (calcul entier, sans arrondi).
+  const memeValeur = (n, d) => n * a.den === a.num * d;
+  if (a.fraction === 'decimale') return f.entier == null && puissanceDe10(f.den) && memeValeur(f.num, f.den);
+  // Nombre mixte : la partie entière, puis une fraction inférieure à 1 de même valeur.
+  return f.entier === a.entier && f.num < f.den && memeValeur(f.num, f.den);
 }

@@ -30,8 +30,20 @@ export function restaurerFormules(html, formules) {
   return html.replace(/KCMATH(\d+)KCMATH/g, (m, n) => (formules[Number(n)] !== undefined ? echapperHtml(formules[Number(n)]) : m));
 }
 
-/** Rendu complet : protéger → markdown-it → restaurer. */
+/**
+ * Typographie française : l'espace avant « : ; ? ! » » et après « « » devient
+ * insécable, pour que la ponctuation ne commence jamais une ligne.
+ * Le code (<pre>, <code>) et les balises ne sont pas touchés.
+ */
+export function espacesInsecables(html) {
+  return String(html)
+    .split(/(<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>|<[^>]+>)/)
+    .map((m, i) => (i % 2 === 1 ? m : m.replace(/ ([:;?!»])/g, '\u00a0$1').replace(/« /g, '«\u00a0')))
+    .join('');
+}
+
+/** Rendu complet : protéger → markdown-it → espaces insécables → restaurer. */
 export function rendreAvecFormules(md, markdown) {
   const { texte, formules } = protegerFormules(markdown);
-  return restaurerFormules(md.render(texte), formules);
+  return restaurerFormules(espacesInsecables(md.render(texte)), formules);
 }

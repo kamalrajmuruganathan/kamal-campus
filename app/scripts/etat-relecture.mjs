@@ -5,7 +5,7 @@
  * Scanne l'en-tête de chaque fiche (statut, relu_par) et produit une page
  * autonome (hors-ligne, thème clair/sombre) montrant l'avancement de la
  * validation matière par matière, avec un tableau filtrable de tous les
- * chapitres. Un chapitre est « relu » quand `relu_par` n'est pas null.
+ * chapitres. Un chapitre est « relu » quand `statut: relu` ET `relu_par` n'est pas null.
  *
  * Le relecteur coche au fil de l'eau (mémorisé dans le navigateur) et peut
  * exporter la liste des ids relus ; la source de vérité reste `relu_par`
@@ -61,7 +61,7 @@ for (const niveau of readdirSync(CONTENU)) {
       const fiche = join(dP, slug, 'fiche.md'); if (!existsSync(fiche)) continue;
       const e = entete(readFileSync(fiche, 'utf8'));
       const mat = e.matiere || parcours;
-      const relu = e.relu_par && !['null', ''].includes(e.relu_par);
+      const relu = ['relu', 'publie'].includes(e.statut) && e.relu_par && !['null', ''].includes(e.relu_par);
       chapitres.push({ id: e.id || `${niveau}-${parcours}-${slug}`, titre: e.titre || slug, niveau, matiere: mat, statut: e.statut || 'brouillon', relu: !!relu, reluPar: relu ? e.relu_par : null });
     }
   }

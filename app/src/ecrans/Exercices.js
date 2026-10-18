@@ -20,6 +20,9 @@ import { couleurMatiere } from '../theme';
 import { Bandeau, Etiquette } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
+import SignalerErreur from '../composants/SignalerErreur';
+import { cibleExo } from '../../lib/signalement';
+import { estRelu, mentionRelecture } from '../../lib/relecture';
 import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { chapitreParId } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
@@ -105,7 +108,7 @@ function Verdict({ juste, texte, t }) {
   );
 }
 
-export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat, lecture = lectureActive(matiere) }) {
+export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resultat, onResultat, lecture = lectureActive(matiere), chapitreId, niveau, exoId }) {
   const auto = useMemo(() => typeExercice(ex, matiere) === 'auto', [ex, matiere]);
   const unite = useMemo(() => (auto ? uniteExercice(ex, matiere) : ''), [auto, ex, matiere]);
   const consigne = useMemo(() => (auto ? consigneExercice(ex, matiere) : ''), [auto, ex, matiere]);
@@ -339,6 +342,19 @@ export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resul
       )}
 
       {corrigeAffiche && <VisionneuseFiche markdown={corrigeMarkdown(ex)} />}
+
+      {/* Signaler une erreur (énoncé ou corrigé), une fois le corrigé lu. */}
+      {corrigeAffiche && chapitreId && (
+        <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
+          <SignalerErreur
+            t={t}
+            chapitreId={chapitreId}
+            niveau={niveau}
+            cible={cibleExo(exoId ?? idExo(ex, index))}
+            extrait={ex.enonce}
+          />
+        </View>
+      )}
     </View>
   );
 }
@@ -426,7 +442,11 @@ export default function Exercices({ route }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
       <ScrollView contentContainerStyle={{ paddingBottom: t.espace.xxl }} keyboardShouldPersistTaps="handled">
-        {!chapitre.reluPar && (
+        {estRelu(chapitre) ? (
+          <Text style={{ color: t.couleur.succes, fontSize: t.police.petite, paddingHorizontal: t.espace.l, paddingTop: t.espace.l }}>
+            {mentionRelecture(chapitre)}
+          </Text>
+        ) : (
           <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
             <Bandeau
               t={t}
@@ -497,6 +517,9 @@ export default function Exercices({ route }) {
               resultat={resultats[id]}
               onResultat={(juste) => surResultat(id, juste)}
               lecture={lectureActive(chapitre.matiere, chapitre.niveau, profil)}
+              chapitreId={chapitre.id}
+              niveau={chapitre.niveau}
+              exoId={id}
             />
           );
         })}

@@ -129,7 +129,7 @@ export default function Duel({ route, navigation }) {
               style={({ pressed }) => [st.choix, { backgroundColor: fond, borderColor: bord, borderRadius: t.rayon.m, marginTop: t.espace.s, opacity: pressed && !repondu ? 0.7 : 1 }]}
             >
               <Text style={{ color: t.couleur.attenue, fontWeight: '700', width: 24 }}>{LETTRES[i]}</Text>
-              <View style={{ flex: 1 }}><VisionneuseFiche markdown={choix} /></View>
+              <View style={{ flex: 1 }}><VisionneuseFiche markdown={choix} inerte /></View>
               {repondu && estBon && <Text style={{ color: t.couleur.succes, fontSize: 18 }}>✓</Text>}
               {repondu && estChoisi && !estBon && <Text style={{ color: t.couleur.erreur, fontSize: 18 }}>✕</Text>}
             </Pressable>

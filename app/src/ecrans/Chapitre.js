@@ -11,6 +11,8 @@ import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
+import SignalerErreur from '../composants/SignalerErreur';
+import { estRelu, mentionRelecture } from '../../lib/relecture';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
 import { lectureActive, segmentsFiche } from '../../lib/lecture';
@@ -49,7 +51,11 @@ export default function Chapitre({ route, navigation }) {
           <Text style={{ fontSize: 24 }}>{estFavori ? '⭐' : '☆'}</Text>
         </Pressable>
 
-        {!chapitre.reluPar && (
+        {estRelu(chapitre) ? (
+          <Text style={{ color: t.couleur.succes, fontSize: t.police.petite, paddingHorizontal: t.espace.l, paddingTop: t.espace.s }}>
+            {mentionRelecture(chapitre)}
+          </Text>
+        ) : (
           <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
             <Bandeau
               t={t}
@@ -84,6 +90,11 @@ export default function Chapitre({ route, navigation }) {
           </View>
         )}
         {etat === 'ok' && <VisionneuseFiche markdown={fiche} />}
+        {etat === 'ok' && (
+          <View style={{ paddingHorizontal: t.espace.l, paddingBottom: t.espace.m }}>
+            <SignalerErreur t={t} chapitreId={chapitre.id} niveau={chapitre.niveau} cible="fiche" />
+          </View>
+        )}
 
         <View style={{ paddingHorizontal: t.espace.l }}>
           <Pressable

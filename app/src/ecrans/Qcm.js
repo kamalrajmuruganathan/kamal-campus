@@ -19,10 +19,12 @@ import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
 import CarteResultat from '../composants/CarteResultat';
+import SignalerErreur from '../composants/SignalerErreur';
+import { cibleQcm } from '../../lib/signalement';
 import { matiereParlante } from '../parole';
 import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { partagerVue } from '../partage';
-import { chapitreParId } from '../contenu-index';
+import { chapitreParId, libelleNotion } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { melanger } from '../../lib/quizmix';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
@@ -160,7 +162,7 @@ export default function Qcm({ route, navigation }) {
                   key={n}
                   style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 6 }}
                 >
-                  • {n.replace(/-/g, ' ')}
+                  • {libelleNotion(n, chapitre?.matiere)}
                 </Text>
               ))}
               <Text
@@ -270,6 +272,11 @@ export default function Qcm({ route, navigation }) {
 
   const suivant = () => { setIndex(index + 1); setChoisi(null); };
 
+  // Signalement d'erreur : possible quand on sait de quel chapitre vient la question
+  // (QCM d'un chapitre, ou question du carnet d'erreurs qui garde son chapitre dans _chap).
+  const chapSignal = chapitre?.id ?? q._chap ?? null;
+  const niveauSignal = chapitre?.niveau ?? chapitreParId(chapSignal)?.niveau ?? null;
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
@@ -348,7 +355,7 @@ export default function Qcm({ route, navigation }) {
                 {LETTRES[i]}
               </Text>
               <View style={{ flex: 1 }}>
-                <VisionneuseFiche markdown={choix} />
+                <VisionneuseFiche markdown={choix} inerte />
               </View>
               {repondu && estBon && <Text style={{ color: t.couleur.succes, fontSize: 18 }}>✓</Text>}
               {repondu && estChoisi && !estBon && <Text style={{ color: t.couleur.erreur, fontSize: 18 }}>✕</Text>}
@@ -384,6 +391,18 @@ export default function Qcm({ route, navigation }) {
               </View>
             )}
           </View>
+        )}
+
+        {repondu && chapSignal && (
+          <SignalerErreur
+            key={`signal-${index}`}
+            t={t}
+            chapitreId={chapSignal}
+            niveau={niveauSignal}
+            cible={cibleQcm(q, { genere: aGenerateur(chapSignal) })}
+            extrait={q.enonce}
+            style={{ marginTop: t.espace.s }}
+          />
         )}
 
         {repondu && (

@@ -645,7 +645,7 @@ function QuestionQcm({ t, question, choisi, onChoisir }) {
               {LETTRES[i]}
             </Text>
             <View style={{ flex: 1 }}>
-              <VisionneuseFiche markdown={choix} />
+              <VisionneuseFiche markdown={choix} inerte />
             </View>
           </Pressable>
         );
