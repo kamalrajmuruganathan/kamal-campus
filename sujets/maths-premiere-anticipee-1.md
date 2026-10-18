@@ -201,7 +201,7 @@ $v_{11} \approx 9\,492$ ($v_{11} > u_{11}$). La fonction renvoie **$11$** (déce
 Modèle B : $v_0 + \dots + v_{11} = 5\,000 \times \dfrac{1 - 1{,}06^{12}}{1 - 1{,}06} \approx 84\,350$ abonnés-mois,
 soit environ $843{,}50$ €.
 Sur la première année, le modèle A rapporte un peu plus, bien que le modèle B finisse par dépasser
-le modèle A à partir du onzième mois.
+le modèle A à partir de $n = 11$ (décembre 2026).
 
 ### Exercice 3 — Un jeu de hasard
 

@@ -64,7 +64,7 @@ justification ne rapporte pas tous les points.
    $[\mathrm{AA}']$ ? Le segment $[\mathrm{AB}]$ mesure $5$ cm ; que mesure son symétrique
    $[\mathrm{A'B'}]$ par rapport à $\mathrm{O}$ ? Justifie.
 4. Deux droites parallèles $(d_1)$ et $(d_2)$ sont coupées par une sécante $(\Delta)$. Un des
-   angles formés avec $(d_1)$ mesure $115°$. Quelle est la mesure de l'angle alterne-interne
+   angles formés avec $(d_1)$, situé entre les deux droites, mesure $115°$. Quelle est la mesure de l'angle alterne-interne
    qui lui correspond avec $(d_2)$ ? Justifie.
 5. $\mathrm{ABCD}$ est un parallélogramme avec $\mathrm{AB} = 6$ cm, $\mathrm{BC} = 4$ cm et
    $\widehat{\mathrm{DAB}} = 70°$. Donne les longueurs $\mathrm{CD}$ et $\mathrm{AD}$, puis la mesure

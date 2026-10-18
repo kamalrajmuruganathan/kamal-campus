@@ -318,3 +318,12 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Autocorrection** : comparaisons/encadrements, limites ±∞, égalités de calcul, équations de mise en problème (5e) → 66,8 %.
 - **Publié le 18/10/2026** : PR #9 fusionnée (main `4f86faf`), contrôle qualité et déploiement Pages verts. Tout le § 21 est en ligne
   (le bouton « Signaler une erreur » n'enregistre rien tant que `outils/sql/signalements.sql` n'a pas été exécuté).
+
+## 22. Dictées, sujets, bilan parent (18/10/2026)
+- **Dictées** : `dictees/*.json` (140 dictées originales : 12 par niveau CP → 3e, 8 par langue). Règle : `phrases.join(' ') === texte`.
+  Logique `app/lib/dictee` (comparaison mot par mot, types de fautes, note /10) ; écran `Dictees.js` (carte « ✍️ Dictées ») ;
+  `src/dictees-donnees.{web,native}.js` (web : `public/donnees/dictees/`, chargé à l'ouverture) ; XP `enregistrerDictee`, `profil.dictees`.
+- **Sujets** : 17 sujets originaux de maths/PC ajoutés (195 au total). `outils/verifier-katex.cjs` ne couvre pas `sujets/`.
+- **Espace parent** : bilan de la semaine (comparaison semaine d'avant, carnet, examens, contrôles, conseils, partage).
+  **Kamal doit exécuter une fois `outils/sql/espace_parent_v2.sql`** (sans lui, ces rubriques restent masquées).
+- Relecture indépendante des 140 dictées et 17 sujets : aucune faute dans les textes, 7 retouches (étiquettes, énoncés).

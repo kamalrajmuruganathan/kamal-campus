@@ -30,7 +30,7 @@ alimenté par une batterie, l'aide à pédaler.
 
 **Document 1 — Caractéristiques du vélo**
 - Batterie : énergie stockée lorsqu'elle est chargée $E = 500$ Wh.
-- Moteur : puissance $P = 250$ W ; rendement $80\,\%$.
+- Moteur : puissance électrique consommée $P = 250$ W ; rendement $80\,\%$.
 - L'assistance s'arrête automatiquement au-delà de $25$ km/h.
 - Masse du vélo : $25$ kg.
 
