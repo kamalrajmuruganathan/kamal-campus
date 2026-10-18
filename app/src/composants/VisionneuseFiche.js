@@ -17,6 +17,7 @@ import { WebView } from 'react-native-webview';
 import MarkdownIt from 'markdown-it';
 import { rendreAvecFormules } from '../../lib/markdownmath';
 import { GABARIT_HTML } from '../visionneuse';
+import ZoomSchema from './ZoomSchema';
 
 const md = new MarkdownIt({
   html: false,      // aucun HTML brut : c'est ce qui neutralise les notes de production
@@ -48,6 +49,8 @@ export function nettoyerFiche(markdown) {
 export default function VisionneuseFiche({ markdown, style }) {
   const [hauteur, setHauteur] = useState(64);
   const [pret, setPret] = useState(false);
+  // Schéma touché dans la fiche → plein écran (message envoyé par le gabarit).
+  const [schema, setSchema] = useState(null);
 
   const html = useMemo(() => {
     const corps = rendreAvecFormules(md, nettoyerFiche(markdown));
@@ -70,12 +73,15 @@ export default function VisionneuseFiche({ markdown, style }) {
             if (msg.type === 'hauteur' && msg.valeur > 0) {
               setHauteur(msg.valeur + 6);
               setPret(true);
+            } else if (msg.type === 'schema' && String(msg.src || '').startsWith('data:image/svg+xml')) {
+              setSchema({ src: String(msg.src), legende: String(msg.legende || '') });
             }
           } catch {
             /* message ignoré */
           }
         }}
       />
+      <ZoomSchema schema={schema} onFermer={() => setSchema(null)} />
       {!pret && (
         <View style={styles.chargement} pointerEvents="none">
           <ActivityIndicator />
