@@ -31,7 +31,7 @@ function evaluerConstante(n) {
     }
     case 'fn': {
       const x = evaluerConstante(n.a);
-      return { sqrt: Math.sqrt, ln: Math.log, exp: Math.exp, cos: Math.cos, sin: Math.sin, tan: Math.tan }[n.v](x);
+      return { sqrt: Math.sqrt, ln: Math.log, log: Math.log10, exp: Math.exp, cos: Math.cos, sin: Math.sin, tan: Math.tan }[n.v](x);
     }
     default: return NaN;
   }
@@ -71,6 +71,7 @@ function lireIntervalles(texte, latex) {
     s = s.replace(/[.]$/, '').replace(/−/g, '-').replace(/\s+[uU]\s+|\s*U\s*(?=[\[\]])/g, ' ∪ ');
   }
   s = s.replace(/^[A-Za-z_]{1,3}\s*=\s*/, '').trim(); // « S = », « D = »
+  s = s.replace(/^[a-z]\s*(?:∈|\\in\b|appartient\s+à)\s*/, '').trim(); // « x ∈ ]0 ; 6] »
   if (/^(?:\\mathbb\{R\}|ℝ|R)$/.test(s)) return [{ a: -INF, b: INF, fa: false, fb: false }];
   const morceaux = s.split('∪').map((x) => x.trim());
   const out = [];
@@ -150,7 +151,12 @@ function lireCouple(texte, latex) {
 const INDICES = '₀₁₂₃₄₅₆₇₈₉';
 const EXPOSANTS = '⁰¹²³⁴⁵⁶⁷⁸⁹';
 
-/** « 2 H2 + O2 -> 2 H2O » → { reactifs: {H2: 2, O2: 1}, produits: {H2O: 2} } ou null. */
+/**
+ * « 2 H2 + O2 -> 2 H2O » → { reactifs, produits }, chaque membre étant une liste de
+ * { alts: [clé…], coef } ; ou null. Une charge collée à un chiffre (« Fe3+ », « NH4+ »,
+ * « Cr2O72- ») est ambiguë : les deux lectures sont gardées (Fe³⁺ ou « Fe3 » de charge +).
+ * « Cr2O7^2- », « Cr2O7 2- » et le LaTeX « Cr_2O_7^{2-} » ne le sont pas.
+ */
 function lireReaction(texte, latex) {
   let s = String(texte).trim();
   if (latex) {
@@ -158,44 +164,62 @@ function lireReaction(texte, latex) {
     s = s.replace(/^\$|\$\.?$/g, '').replace(/\$\s*\.?\s*$/, '')
       .replace(/\\(?:longrightarrow|rightarrow|to)\b/g, ' -> ')
       .replace(/\\(?:mathrm|text)\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g, '$1')
-      .replace(/_\{([^{}]*)\}|_(\w)/g, '$1$2').replace(/\^\{([^{}]*)\}|\^([+\-]|\d[+\-]?)/g, '$1$2')
+      .replace(/_\{([^{}]*)\}|_(\w)/g, '$1$2').replace(/\^\{([^{}]*)\}|\^([+\-]|\d[+\-]?)/g, '^$1$2')
       .replace(/\\[,;: !]/g, ' ');
     if (/\\/.test(s)) return null;
   } else {
-    s = [...s].map((c) => (INDICES.includes(c) ? String(INDICES.indexOf(c)) : EXPOSANTS.includes(c) ? String(EXPOSANTS.indexOf(c)) : c)).join('')
-      .replace(/⁺/g, '+').replace(/⁻/g, '-').replace(/[−–]/g, '-').replace(/\^/g, '');
+    s = [...s].map((c) => (INDICES.includes(c) ? String(INDICES.indexOf(c)) : EXPOSANTS.includes(c) ? '^' + String(EXPOSANTS.indexOf(c)) : c)).join('')
+      .replace(/⁺/g, '^+').replace(/⁻/g, '^-').replace(/[−–]/g, '-').replace(/\^(\d)\^(?=\d|[+-])/g, '^$1').replace(/\^+/g, '^');
   }
   s = s.replace(/\((?:aq|s|l|g)\)/g, '');
   const cotes = s.split(/\s*(?:->|→|⟶|=>|=)\s*/);
   if (cotes.length !== 2) return null;
   const membre = (t) => {
-    const out = {};
+    const out = [];
     let i = 0;
     t = t.trim();
     while (i < t.length) {
       while (t[i] === ' ') i++;
-      const m = t.slice(i).match(/^(\d*)\s*((?:[A-Z][a-z]?\d*|\((?:[A-Z][a-z]?\d*)+\)\d*)+|e)(\d*[+-])?/);
+      // Charge : « ^2- » (explicite), « 2- » séparée par une espace, ou collée (« Fe3+ »).
+      const m = t.slice(i).match(/^(\d*)\s*((?:[A-Z][a-z]?\d*|\((?:[A-Z][a-z]?\d*)+\)\d*)+|e)(\^\s*\d*[+-]|\s\d+[+-](?=\s|$)|[+-])?/);
       if (!m || !m[2]) return null;
       const coef = m[1] ? parseInt(m[1], 10) : 1;
       if (!coef) return null;
-      const esp = m[2] + (m[3] ? '^' + (m[3].length === 1 ? '1' + m[3] : m[3]) : '');
-      out[esp] = (out[esp] || 0) + coef;
+      const f = m[2];
+      const q = m[3] ? m[3].replace(/[\s^]/g, '') : '';
+      const cle = (form, ch) => form + (ch ? '^' + (ch.length === 1 ? '1' + ch : ch) : '');
+      const alts = [cle(f, q)];
+      // « Fe3+ » : aussi Fe³⁺ (le dernier chiffre est la charge).
+      if (m[3] && /^[+-]$/.test(m[3]) && /[A-Za-z)]\d+$/.test(f)) {
+        const d = f.slice(-1);
+        const reste = f.slice(0, -1);
+        if (d !== '0' && d !== '1') alts.push(cle(reste, d + q));
+      }
+      out.push({ alts, coef });
       i += m[0].length;
       while (t[i] === ' ') i++;
       if (i < t.length) { if (t[i] !== '+') return null; i++; }
     }
-    return Object.keys(out).length ? out : null;
+    return out.length ? out : null;
   };
   // Sans espaces (« 2H2+O2 »), un « + » suivi d'une espèce est un signe d'addition, pas une charge.
-  const lireMembre = (t) => membre(t) || (latex ? null : membre(t.replace(/\+(?=\s*\d*(?:[A-Z(]|e[-+]?(?:\s|$)))/g, ' + ')));
+  const lireMembre = (t) => membre(t) || (latex ? null : membre(t.replace(/\+(?=\s*\d*(?:[A-Z(]|e[-+^]?(?:\s|$)))/g, ' + ')));
   const reactifs = lireMembre(cotes[0]);
   const produits = lireMembre(cotes[1]);
   return reactifs && produits ? { reactifs, produits } : null;
 }
 
-const memesEspeces = (x, y) => {
-  const kx = Object.keys(x);
-  return kx.length === Object.keys(y).length && kx.every((k) => y[k] === x[k]);
+/** Membre attendu (lecture unique) et membre saisi (lectures possibles) : mêmes espèces, mêmes nombres ? */
+const memesEspeces = (saisi, attendu) => {
+  const att = {};
+  for (const x of attendu) att[x.alts[0]] = (att[x.alts[0]] || 0) + x.coef;
+  const lu = {};
+  for (const x of saisi) {
+    const k = x.alts.find((a) => a in att) || x.alts[0];
+    lu[k] = (lu[k] || 0) + x.coef;
+  }
+  const ka = Object.keys(att);
+  return ka.length === Object.keys(lu).length && ka.every((k) => lu[k] === att[k]);
 };
 
 // ─── Division euclidienne ─────────────────────────────────────────────────
@@ -344,6 +368,16 @@ export function analyserAutre(ex) {
     if (eu.a !== +d * q + eu.r || eu.r < 0 || eu.r >= +d) return null;
     return { kind: 'euclide', a: eu.a, d: +d, q, r: eu.r };
   }
+  // Demi-équation électronique (« ClO⁻ + 2 H⁺ + 2 e⁻ = Cl⁻ + H₂O ») : mêmes espèces, mêmes nombres.
+  if (/demi-?\s*[eé]quation/.test(e) && /=/.test(r) && /e\s*\^\s*\{?\s*-/.test(r) && !/\\(?:longrightarrow|rightarrow)\b/.test(r)) {
+    const reac = lireReaction(r, true);
+    if (!reac || ![...reac.reactifs, ...reac.produits].some((x) => x.alts[0] === 'e^1-')) return null;
+    for (const m of ex.enonce.matchAll(/\$([^$]+)\$/g)) {
+      const q = lireReaction(`$${m[1]}$`, true);
+      if (q && memesEspeces(q.reactifs, reac.reactifs) && memesEspeces(q.produits, reac.produits)) return null;
+    }
+    return { kind: 'reaction', reac, demi: true };
+  }
   if (/\\(?:longrightarrow|rightarrow)\b/.test(r)) {
     const reac = lireReaction(r, true);
     if (!reac) return null;
@@ -354,7 +388,7 @@ export function analyserAutre(ex) {
     }
     return { kind: 'reaction', reac };
   }
-  if (/\\infty|\\cup|^\$\s*[A-Z]?\s*=?\s*\\?,?\s*[\[\]]/.test(r) && !/\\equiv|\\setminus/.test(r)) {
+  if (/\\infty|\\cup|^\$\s*[A-Z]?\s*=?\s*\\?,?\s*(?:\\left\s*)?[\[\]]/.test(r) && !/\\equiv|\\setminus/.test(r)) {
     const iv = lireIntervalles(r, true);
     return iv ? { kind: 'intervalle', iv } : null;
   }
@@ -362,7 +396,8 @@ export function analyserAutre(ex) {
     const c = lireCouple(r, true);
     if (!c) return null;
     // « Donne un vecteur directeur » : plusieurs bonnes réponses.
-    if (/\bun vecteur|\bune solution|\bun couple|\bun point\b/.test(e)) return null;
+    // (« Un point M est situé … » : le point est seulement présenté, ses coordonnées sont uniques.)
+    if (/\bun vecteur|\bune solution|\bun couple|\bun point\b/.test(e.replace(/\bun point \$?[a-z]'?\$? (?:est|se trouve)\b/g, ''))) return null;
     return { kind: 'couple', c };
   }
   return null;
@@ -406,7 +441,10 @@ export function comparerAutre(saisie, a) {
   }
   if (a.kind === 'reaction') {
     const q = lireReaction(saisie, false);
-    return !!q && memesEspeces(q.reactifs, a.reac.reactifs) && memesEspeces(q.produits, a.reac.produits);
+    if (!q) return false;
+    if (memesEspeces(q.reactifs, a.reac.reactifs) && memesEspeces(q.produits, a.reac.produits)) return true;
+    // Demi-équation écrite dans l'autre sens (« Cl⁻ + H₂O = ClO⁻ + 2 H⁺ + 2 e⁻ ») : même couple, même équilibre.
+    return !!a.demi && memesEspeces(q.reactifs, a.reac.produits) && memesEspeces(q.produits, a.reac.reactifs);
   }
   return false;
 }
@@ -420,6 +458,7 @@ export function consigneAutre(a) {
   if (a.kind === 'intervalle') return 'un intervalle, par ex. ]-∞ ; 5[ ou [2 ; 3] ∪ [4 ; +∞[';
   if (a.kind === 'euclide') return `l'égalité, par ex. 47 = 6 × 7 + 5 (reste plus petit que le diviseur)`;
   if (a.kind === 'couple') return a.c.length === 3 ? 'des coordonnées, par ex. (2 ; -1 ; 3)' : 'des coordonnées, par ex. (2 ; -1)';
+  if (a.kind === 'reaction' && a.demi) return 'une demi-équation, par ex. Fe3+ + e- = Fe2+ (électrons : e-)';
   return 'une équation, par ex. 2 H2 + O2 -> 2 H2O (charges : Fe3+, Cl-)';
 }
 

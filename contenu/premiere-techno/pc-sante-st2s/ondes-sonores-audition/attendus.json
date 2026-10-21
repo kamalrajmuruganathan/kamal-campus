@@ -1,4 +1,28 @@
 {
+  "2": {
+    "reponse": "Rue passante : $L = 80$ dB. Chuchotement : $L = 30$ dB.",
+    "accepte": [
+      "80 dB ; 30 dB"
+    ]
+  },
+  "3": {
+    "reponse": "$I = 10^{-3}$ W·m⁻², soit $10^{9}$ (un milliard) de fois l'intensité de référence $I_0$.",
+    "accepte": [
+      "10^-3 W/m² ; 10^9"
+    ]
+  },
+  "5": {
+    "reponse": "$I = 10^{-2}$ W·m⁻². Avec bouchons : $80$ dB (intensité divisée par $100$), soit en dessous du seuil de danger de $85$ dB.",
+    "accepte": [
+      "10^-2 W/m² ; 80 dB ; 100 ; oui"
+    ]
+  },
+  "8": {
+    "reponse": "$L_1 = 70$ dB, $L_2 = 80$ dB. Écart de $10$ dB pour une intensité $\\times 10$. Les deux restent sous le seuil de danger de $85$ dB.",
+    "accepte": [
+      "70 dB ; 80 dB ; 10 dB ; 10 ; non"
+    ]
+  },
   "11": {
     "reponse": "Le son a besoin d'un milieu matériel ; il ne se propage pas dans le vide.",
     "criteres": [
@@ -36,11 +60,36 @@
       "externe, moyenne, interne, externe, moyenne"
     ]
   },
+  "15": {
+    "reponse": "$f = 2\\,000$ Hz ; audible.",
+    "accepte": [
+      "2 000 Hz ; audible",
+      "2 000 Hz ; oui"
+    ]
+  },
+  "16": {
+    "reponse": "$T = 0{,}010$ s $= 10$ ms.",
+    "accepte": [
+      "0,010 s ; 10 ms"
+    ]
+  },
+  "18": {
+    "reponse": "a) $0$ dB (seuil d'audibilité) ; b) $120$ dB (seuil de douleur).",
+    "accepte": [
+      "0 dB ; 120 dB"
+    ]
+  },
   "20": {
     "reponse": "Conduit auditif → tympan → osselets → cellules ciliées → nerf auditif.",
     "accepte": [
       "conduit auditif → tympan → osselets → cellules ciliées → nerf auditif",
       "conduit auditif, tympan, osselets, cellules ciliées, nerf auditif"
+    ]
+  },
+  "25": {
+    "reponse": "Intensité $\\times 4$ ; $L \\approx 76$ dB.",
+    "accepte": [
+      "4 ; 76 dB"
     ]
   },
   "27": {
@@ -50,6 +99,12 @@
       "divisée par deux",
       "elle a été divisée par 2",
       "elle a été divisée par deux"
+    ]
+  },
+  "28": {
+    "reponse": "Il manque le facteur $10$ : $L = 60$ dB.",
+    "accepte": [
+      "60 dB"
     ]
   },
   "29": {
@@ -167,6 +222,12 @@
       }
     ]
   },
+  "36": {
+    "reponse": "$80$ dB ; intensité divisée par environ $316$ ; $I = 10^{-4}$ W·m⁻².",
+    "accepte": [
+      "80 dB ; 316 ; 10^-4 W/m²"
+    ]
+  },
   "38": {
     "reponse": "$88$ dB pour $4$ h ; $94$ dB pour $1$ h.",
     "accepte": [
@@ -174,6 +235,19 @@
       "88 dB et 94 dB",
       "88 ; 94",
       "88 et 94"
+    ]
+  },
+  "39": {
+    "reponse": "$85$ dB ; seuil atteint ; $9$ machines au maximum ($\\approx 84{,}5$ dB).",
+    "accepte": [
+      "85 dB ; oui ; 9"
+    ]
+  },
+  "42": {
+    "reponse": "$L \\approx 97$ dB ; danger ; environ $30$ min sans risque.",
+    "accepte": [
+      "97 dB ; oui ; 30 min",
+      "97 dB ; oui ; 0,5 h"
     ]
   },
   "43": {
@@ -211,6 +285,38 @@
           "irreversible"
         ]
       }
+    ]
+  },
+  "44": {
+    "reponse": "$3{,}5 \\times 10^{6}$ Hz ; $175$ fois plus ; ultrasons inaudibles.",
+    "accepte": [
+      "3,5 × 10^6 Hz ; 175"
+    ]
+  },
+  "45": {
+    "reponse": "$T = 2{,}5$ ms ; $f = 400$ Hz.",
+    "accepte": [
+      "2,5 ms ; 400 Hz"
+    ]
+  },
+  "46": {
+    "reponse": "$I \\approx 2{,}0 \\times 10^{-2}$ W·m⁻² ; $7{,}5$ min sans protection ; $88$ dB avec bouchons ; protégé pour $2$ h.",
+    "accepte": [
+      "2,0 × 10^-2 W/m² ; 7,5 min ; 88 dB ; oui"
+    ]
+  },
+  "47": {
+    "reponse": "$I \\approx 2{,}5 \\times 10^{-3}$ W·m⁻² ; $1$ h, donc danger ; intensité divisée par $\\approx 8$ ; oui, sans risque à $85$ dB.",
+    "accepte": [
+      "2,5 × 10^-3 W/m² ; 1 h ; oui ; 8 ; oui"
+    ]
+  },
+  "50": {
+    "reponse": "$\\approx 88$ dB ; $4$ h ; danger ; $78$ dB avec casque : protégé.",
+    "accepte": [
+      "88 dB ; 4 h ; danger ; 78 dB",
+      "88 dB ; 4 h ; en danger ; 78 dB",
+      "88 dB ; 4 h ; dangereux ; 78 dB"
     ]
   }
 }
