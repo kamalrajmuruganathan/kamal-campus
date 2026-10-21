@@ -333,3 +333,5 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Publié le 18/10/2026** : PR #10 fusionnée (main `e823310`), contrôle qualité et déploiement Pages verts. Tout le § 22 est en ligne.
 - **21/10/2026 : Kamal a exécuté `outils/sql/signalements.sql` et `outils/sql/espace_parent_v2.sql` dans Supabase.**
   Les signalements sont enregistrés (Table editor → signalements) et le bilan parent complet est actif.
+- **Publié le 21/10/2026** : PR #11 fusionnée (main `bfb7f21`). Corrections après vérification en ligne : virgule décimale
+  dans les QCM générés (`nombreLatex`), vitrine lisible sur téléphone avec des textes exacts, ménage du cache hors ligne (`menage()`).
