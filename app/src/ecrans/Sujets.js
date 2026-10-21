@@ -17,7 +17,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { SUJETS, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { estRelu } from '../../lib/relecture';
 
-export default function Sujets() {
+export default function Sujets({ navigation }) {
   const t = useTheme();
   const [actif, setActif] = useState(null);
 
@@ -29,6 +29,22 @@ export default function Sujets() {
             <Pressable onPress={() => setActif(null)} accessibilityRole="button">
               <Text style={{ color: t.couleur.accent, fontSize: t.police.petite }}>‹ Tous les sujets</Text>
             </Pressable>
+          </View>
+          <View style={{ paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}>
+            <Pressable
+              onPress={() => navigation.navigate('Epreuve', { id: actif.id })}
+              accessibilityRole="button"
+              accessibilityLabel="Passer l'épreuve en conditions réelles"
+              style={({ pressed }) => ({
+                minHeight: 48, borderRadius: t.rayon.m, backgroundColor: t.couleur.accent,
+                alignItems: 'center', justifyContent: 'center', paddingHorizontal: 14, opacity: pressed ? 0.75 : 1,
+              })}
+            >
+              <Text style={{ color: t.couleur.accentTexte, fontWeight: '800', fontSize: t.police.normale }}>⏱️ Passer l'épreuve</Text>
+            </Pressable>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 6, lineHeight: 17 }}>
+              En conditions réelles : chrono, corrigé caché jusqu'à la fin, puis auto-évaluation et note sur 20.
+            </Text>
           </View>
           {!estRelu(actif) && (
             <View style={{ padding: t.espace.l, paddingBottom: 0 }}>

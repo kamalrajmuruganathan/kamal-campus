@@ -6,7 +6,11 @@
  *  - réglages/préférences -> ceux du device le PLUS récemment actif
  */
 
-import { fusionnerCarnets, fusionnerJournauxMaitrisees } from '../../lib/carnet';
+import { fusionnerCarnets, fusionnerJournauxMaitrisees } from '../../lib/carnet/index.js';
+import { fusionnerDictees } from '../../lib/dictee/index.js';
+import { fusionnerSemaines } from '../../lib/defisSemaine/index.js';
+import { fusionnerVacances } from '../../lib/vacances/index.js';
+import { fusionnerEpreuves } from '../../lib/epreuve/index.js';
 
 const max = (x, y) => Math.max(x || 0, y || 0);
 const rangDate = (p) => (p && (p.dernierJourValide || p.jourCourant)) || '';
@@ -146,6 +150,16 @@ export function fusionnerProfils(a, b) {
       .sort((x, y) => String(y.date || '').localeCompare(String(x.date || '')) || String(y.id).localeCompare(String(x.id)))
       .slice(0, 30);
   }
+
+  // Défis de la semaine : compteurs de la semaine (max), récompenses réunies ; total cumulé : max.
+  if (a.semaine || b.semaine) f.semaine = fusionnerSemaines(a.semaine, b.semaine);
+  f.defisSemaineReussis = max(a.defisSemaineReussis, b.defisSemaineReussis);
+
+  // Révisions de vacances : même plan → séances cochées réunies ; sinon le plan le plus récent.
+  if (a.vacances || b.vacances) f.vacances = fusionnerVacances(a.vacances, b.vacances);
+
+  // Épreuves en conditions réelles : union par id, plus récentes d'abord, 30 au plus.
+  if (Array.isArray(a.epreuves) || Array.isArray(b.epreuves)) f.epreuves = fusionnerEpreuves(a.epreuves, b.epreuves);
 
   return f;
 }

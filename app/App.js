@@ -24,6 +24,7 @@ import Qcm from './src/ecrans/Qcm';
 import Outils from './src/ecrans/Outils';
 import Formulaires from './src/ecrans/Formulaires';
 import Sujets from './src/ecrans/Sujets';
+import Epreuve from './src/ecrans/Epreuve';
 import BacBlanc from './src/ecrans/BacBlanc';
 import Profil from './src/ecrans/Profil';
 import Badges from './src/ecrans/Badges';
@@ -57,6 +58,9 @@ import Controle from './src/ecrans/Controle';
 import Classement from './src/ecrans/Classement';
 import EspaceParent from './src/ecrans/EspaceParent';
 import Dictees from './src/ecrans/Dictees';
+import Vacances from './src/ecrans/Vacances';
+import DefisSemaine from './src/ecrans/DefisSemaine';
+import Annonces from './src/composants/Annonces';
 
 // Sur le web, Alert.alert de React Native ne fait rien (fonction vide de react-native-web) :
 // les confirmations et messages d'erreur de toute l'appli passaient inaperçus.
@@ -132,6 +136,7 @@ function Navigation() {
         <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
         <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
         <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
+        <Pile.Screen name="Epreuve" component={Epreuve} options={{ title: 'Passer l\u2019épreuve' }} />
         <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
         <Pile.Screen
           name="Profil"
@@ -172,8 +177,11 @@ function Navigation() {
         <Pile.Screen name="Classement" component={Classement} options={{ title: 'Classement de la semaine' }} />
         <Pile.Screen name="EspaceParent" component={EspaceParent} options={{ title: 'Espace parent' }} />
         <Pile.Screen name="Dictees" component={Dictees} options={{ title: 'Dictées' }} />
+        <Pile.Screen name="Vacances" component={Vacances} options={{ title: 'Révisions de vacances' }} />
+        <Pile.Screen name="DefisSemaine" component={DefisSemaine} options={{ title: 'Défis de la semaine' }} />
         <Pile.Screen name="Discussion" component={Discussion} options={({ route }) => ({ title: route.params?.pseudo ?? 'Discussion' })} />
       </Pile.Navigator>
+      <Annonces />
     </NavigationContainer>
   );
 }

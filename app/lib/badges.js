@@ -17,7 +17,19 @@ export function statsDerivees(profil) {
   const chaps = Object.values(p.chapitres || {});
   const maitrises = chaps.filter((c) => c.meilleurScore >= 0.8).length;
   const matieresEntamees = Object.values(p.xpParMatiere || {}).filter((v) => v > 0).length;
-  return { niveau, maitrises, matieresEntamees };
+  const exos = Object.values(p.exosReussis || {}).reduce((t, l) => t + (Array.isArray(l) ? l.length : 0), 0);
+  const dictees = Object.values(p.dictees || {}).filter((d) => d && typeof d === 'object');
+  const examens = (Array.isArray(p.examens) ? p.examens : []).filter(Boolean);
+  return {
+    niveau,
+    maitrises,
+    matieresEntamees,
+    exos,
+    dictees: dictees.length,
+    dicteesParfaites: dictees.filter((d) => (d.meilleure ?? 0) >= 10).length,
+    examens: examens.length,
+    meilleurExamen: examens.reduce((m, e) => Math.max(m, Number(e.note20) || 0), 0),
+  };
 }
 
 /**
@@ -52,6 +64,26 @@ export const BADGES = [
 
   { id: 'enigmes-10', icone: '🧩', titre: 'Curieux', desc: 'Résoudre 10 énigmes', cible: 10, valeur: (p) => p.enigmesResolues || 0 },
   { id: 'enigmes-50', icone: '🧠', titre: 'Fin limier', desc: 'Résoudre 50 énigmes', cible: 50, valeur: (p) => p.enigmesResolues || 0 },
+
+  { id: 'exos-10', icone: '✏️', titre: 'Petite main', desc: 'Réussir 10 exercices', cible: 10, valeur: (p, s) => s.exos },
+  { id: 'exos-100', icone: '🖋️', titre: 'Cent exercices', desc: 'Réussir 100 exercices différents', cible: 100, valeur: (p, s) => s.exos },
+  { id: 'exos-500', icone: '📐', titre: 'Bourreau de travail', desc: 'Réussir 500 exercices différents', cible: 500, valeur: (p, s) => s.exos },
+
+  { id: 'dictee-1', icone: '✍️', titre: 'Plume', desc: 'Faire une première dictée', cible: 1, valeur: (p, s) => s.dictees },
+  { id: 'dictees-10', icone: '📜', titre: 'Écrivain', desc: 'Faire 10 dictées différentes', cible: 10, valeur: (p, s) => s.dictees },
+  { id: 'dictee-parfaite', icone: '🪶', titre: 'Zéro faute', desc: 'Obtenir 10/10 à une dictée', cible: 1, valeur: (p, s) => s.dicteesParfaites },
+
+  { id: 'examen-1', icone: '🎓', titre: 'Candidat', desc: 'Passer un examen sur mesure', cible: 1, valeur: (p, s) => s.examens },
+  { id: 'examen-5', icone: '🗂️', titre: 'Habitué des examens', desc: 'Passer 5 examens sur mesure', cible: 5, valeur: (p, s) => s.examens },
+  { id: 'examen-16', icone: '🥇', titre: 'Mention très bien', desc: 'Obtenir au moins 16/20 à un examen sur mesure', cible: 16, valeur: (p, s) => s.meilleurExamen },
+
+  { id: 'carnet-10', icone: '📒', titre: 'Plus jamais', desc: 'Maîtriser 10 erreurs du carnet', cible: 10, valeur: (p) => p.carnetMaitrisees || 0 },
+  { id: 'carnet-50', icone: '🛡️', titre: 'Tirer les leçons', desc: 'Maîtriser 50 erreurs du carnet', cible: 50, valeur: (p) => p.carnetMaitrisees || 0 },
+
+  { id: 'defis-semaine-1', icone: '🎯', titre: 'Défi relevé', desc: 'Réussir un défi de la semaine', cible: 1, valeur: (p) => p.defisSemaineReussis || 0 },
+  { id: 'defis-semaine-12', icone: '🏹', titre: 'Chasseur de défis', desc: 'Réussir 12 défis de la semaine', cible: 12, valeur: (p) => p.defisSemaineReussis || 0 },
+
+  { id: 'flash-250', icone: '🗃️', titre: 'Mémoire d’éléphant', desc: 'Réviser 250 cartes connues', cible: 250, valeur: (p) => p.flashcardsConnues || 0 },
 
   { id: 'deux-matieres', icone: '⚗️', titre: 'Touche-à-tout', desc: 'Gagner des points en maths ET en physique-chimie', cible: 2, valeur: (p, s) => s.matieresEntamees },
 ];

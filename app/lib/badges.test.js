@@ -78,3 +78,31 @@ test('tous les badges ont un id unique et une cible positive', () => {
   assert.equal(new Set(ids).size, ids.length);
   for (const b of BADGES) assert.ok(b.cible > 0, `${b.id} doit avoir une cible > 0`);
 });
+
+test('badges des fonctions récentes : exercices, dictées, examens, carnet, défis de la semaine', () => {
+  const p = profil({
+    exosReussis: { a: ['1', '2', '3', '4', '5'], b: ['1', '2', '3', '4', '5'], c: 'abimé' },
+    dictees: { d1: { meilleure: 10, derniere: 9, essais: 2, date: '2026-10-20' }, d2: { meilleure: 7 }, x: null },
+    examens: [{ id: 'e1', note20: 16.5 }, { id: 'e2', note20: 9 }, null],
+    carnetMaitrisees: 10,
+    defisSemaineReussis: 1,
+  });
+  const s = statsDerivees(p);
+  assert.equal(s.exos, 10);
+  assert.equal(s.dictees, 2);
+  assert.equal(s.dicteesParfaites, 1);
+  assert.equal(s.examens, 2);
+  assert.equal(s.meilleurExamen, 16.5);
+  const obtenus = new Set(evaluerBadges(p).filter((b) => b.obtenu).map((b) => b.id));
+  for (const id of ['exos-10', 'dictee-1', 'dictee-parfaite', 'examen-1', 'examen-16', 'carnet-10', 'defis-semaine-1']) {
+    assert.ok(obtenus.has(id), id);
+  }
+  for (const id of ['exos-100', 'dictees-10', 'examen-5', 'carnet-50', 'defis-semaine-12']) assert.ok(!obtenus.has(id), id);
+  // Les nouveaux badges apparaissent dans badgesNouveaux.
+  const nv = badgesNouveaux(profil(), p).map((b) => b.id);
+  assert.ok(nv.includes('examen-16'));
+});
+
+test('identifiants de badges uniques', () => {
+  assert.equal(new Set(BADGES.map((b) => b.id)).size, BADGES.length);
+});

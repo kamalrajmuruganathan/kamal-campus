@@ -26,6 +26,8 @@ import { quetesDuJour, quetesFaites } from '../../lib/quetes';
 import { prochaineAction } from '../coach';
 import { useLangue } from '../i18n';
 import { resume as resumeCarnet, depuisAnciennesErreurs } from '../../lib/carnet';
+import { defisDeLaSemaine, nombreReussis } from '../../lib/defisSemaine';
+import { etatDuJour, libelleSeance, planActif } from '../../lib/vacances';
 
 export default function Accueil({ navigation }) {
   const t = useTheme();
@@ -59,6 +61,9 @@ export default function Accueil({ navigation }) {
 
   // Contrôle à préparer : tâche du jour du plan de révision le plus proche.
   const ctrl = useMemo(() => tacheDuJour(profil, jourA), [profil, jourA]);
+  // Défis de la semaine et révisions de vacances.
+  const defisSem = useMemo(() => defisDeLaSemaine(profil, jourA), [profil, jourA]);
+  const vac = useMemo(() => etatDuJour(planActif(profil.vacances), jourA), [profil.vacances, jourA]);
 
   const listeNiveaux = niveaux();
   const totalQuestions = CHAPITRES.reduce((s, c) => s + c.nbQuestions, 0);
@@ -212,6 +217,54 @@ export default function Accueil({ navigation }) {
             </View>
           ))}
         </View>
+
+        {/* Défis de la semaine — 3 défis tirés chaque lundi, bonus d'XP */}
+        <Pressable
+          onPress={() => navigation.navigate('DefisSemaine')}
+          accessibilityRole="button"
+          accessibilityLabel={`Défis de la semaine, ${nombreReussis(defisSem)} sur ${defisSem.length} réussis`}
+          style={({ pressed }) => ({ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m, opacity: pressed ? 0.8 : 1 })}
+        >
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Text style={{ color: t.couleur.texte, fontWeight: '650', fontSize: t.police.petite }}>🎯 Défis de la semaine</Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule }}>{nombreReussis(defisSem)} / {defisSem.length} ›</Text>
+          </View>
+          {defisSem.map((d) => (
+            <View key={d.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 }}>
+              <Text style={{ fontSize: 15 }}>{d.fait ? '✅' : d.icone}</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={{ color: d.fait ? t.couleur.attenue : t.couleur.texte, fontSize: t.police.minuscule, textDecorationLine: d.fait ? 'line-through' : 'none' }}>
+                  {d.fait ? d.texte : `${d.texte} (${d.valeur}/${d.cible})`}
+                </Text>
+                <View style={{ height: 5, borderRadius: 3, backgroundColor: t.couleur.trait, overflow: 'hidden', marginTop: 3 }}>
+                  <View style={{ width: `${Math.round(d.progres * 100)}%`, height: '100%', backgroundColor: t.couleur.accent }} />
+                </View>
+              </View>
+            </View>
+          ))}
+        </Pressable>
+
+        {/* Révisions de vacances — séance à faire aujourd'hui (ou en retard) */}
+        {vac && vac.aFaire && (
+          <Pressable
+            onPress={() => navigation.navigate('Vacances')}
+            accessibilityRole="button"
+            style={({ pressed }) => [{
+              marginTop: t.espace.m, borderRadius: t.rayon.l, padding: t.espace.l,
+              backgroundColor: t.couleur.surface, borderWidth: 2, borderColor: t.couleur.succes,
+              opacity: pressed ? 0.85 : 1, flexDirection: 'row', alignItems: 'center', gap: t.espace.m,
+            }]}
+          >
+            <Text style={{ fontSize: 28 }}>🏖️</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: t.couleur.succes, fontSize: t.police.minuscule, fontWeight: '800', letterSpacing: 0.5, textTransform: 'uppercase' }}>
+                Révisions de vacances · {vac.faites}/{vac.total}
+              </Text>
+              <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '700', marginTop: 2 }}>{libelleSeance(vac.aFaire)}</Text>
+            </View>
+            <Text style={{ color: t.couleur.succes, fontSize: 22 }}>›</Text>
+          </Pressable>
+        )}
 
         {/* Bilan de la semaine — mis en avant le dimanche */}
         {dimanche && profil.qcmTermines > 0 && (
@@ -390,6 +443,16 @@ export default function Accueil({ navigation }) {
             sousTitre="Choisis tes chapitres et la date : un programme jour par jour"
             couleur={t.couleur.accent}
             onPress={() => navigation.navigate('Controle')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="🏖️ Révisions de vacances"
+            sousTitre={vac
+              ? (vac.termine ? `Programme terminé : ${vac.faites}/${vac.total} séances` : `${vac.faites}/${vac.total} séances faites · environ 20 min par jour`)
+              : 'Revois l’année passée : un programme de 20 min par jour, de 2 à 6 semaines'}
+            couleur={t.couleur.succes}
+            onPress={() => navigation.navigate('Vacances')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
