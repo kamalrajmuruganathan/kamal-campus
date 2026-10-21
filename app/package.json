@@ -7,6 +7,7 @@
   "type": "module",
   "scripts": {
     "preparer": "node scripts/generer-index.mjs && node scripts/preparer-katex.mjs",
+    "eas-build-post-install": "npm run preparer",
     "start": "npm run preparer && expo start",
     "android": "npm run preparer && expo start --android",
     "ios": "npm run preparer && expo start --ios",
@@ -29,6 +30,7 @@
     "expo-sharing": "~57.0.18",
     "expo-speech": "~57.0.2",
     "expo-status-bar": "~57.0.1",
+    "expo-system-ui": "~57.0.3",
     "katex": "^0.16.11",
     "markdown-it": "^14.1.0",
     "react": "19.2.3",

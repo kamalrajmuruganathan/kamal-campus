@@ -12,7 +12,7 @@
  *     npm run preparer
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fusionnerAttendus } from '../lib/autocorrection/index.js';
@@ -559,34 +559,36 @@ writeFileSync(SORTIE, sortie, 'utf8');
 // ─────────────── contenu lourd chargé à la demande (fiches + exercices) ───────────────
 // Web : fichiers statiques copiés dans public/donnees/<niveau>/<parcours>/<dossier>/,
 // téléchargés seulement quand l'élève ouvre le chapitre (l'appli démarre bien plus vite).
-// Téléphone (Expo natif) : imports classiques, comme avant.
+// Téléphone (Expo natif) : voir lourdNatif ci-dessous.
 const ENTETE_LOURD = `/**
  * FICHIER GÉNÉRÉ par scripts/generer-index.mjs — NE PAS MODIFIER À LA MAIN.
  * Fiches et exercices, chargés à la demande : chargerFiche(id) et chargerExercices(id)
  * renvoient une promesse (texte Markdown / objet exercice.json, ou null).
  */
 `;
+// Téléphone : chaque fiche / exercice (déjà fusionné avec attendus.json) est un petit module à part,
+// app/donnees-natif/<niveau>/<parcours>/<dossier>/{fiche,exercice}.js (dossier ignoré par git, recréé
+// ici), chargé seulement à l'ouverture du chapitre (require dans une fonction). Chaque module exporte
+// le texte JSON avec les caractères non ASCII écrits \uXXXX : Hermes stockerait sinon tout texte
+// accentué en UTF-16 (taille doublée). D'où le JSON.parse.
+const cheminNatif = (c, f) => `../donnees-natif/${c.niveau}/${c.parcours}/${c.dossier}/${f}`;
 const lourdNatif = `${ENTETE_LOURD}
-import { fusionnerAttendus } from '../lib/autocorrection';
-${chapitres.map((c, i) => `import fiche${i} from '${c.cheminFiche}';` + (c.cheminExercice ? `\nimport exercice${i} from '${c.cheminExercice}';` : '') + (c.cheminAttendus ? `\nimport attendus${i} from '${c.cheminAttendus}';` : '')).join('\n')}
-
 const FICHES = {
-${chapitres.map((c, i) => `  ${JSON.stringify(c.id)}: fiche${i},`).join('\n')}
+${chapitres.map((c) => `  ${JSON.stringify(c.id)}: () => require(${JSON.stringify(cheminNatif(c, 'fiche.js'))}),`).join('\n')}
 };
 const EXERCICES = {
-${chapitres.filter((c) => c.cheminExercice).map((c) => `  ${JSON.stringify(c.id)}: exercice${chapitres.indexOf(c)},`).join('\n')}
+${chapitres.filter((c) => c.cheminExercice).map((c) => `  ${JSON.stringify(c.id)}: () => require(${JSON.stringify(cheminNatif(c, 'exercice.js'))}),`).join('\n')}
 };
 
-const ATTENDUS = {
-${chapitres.filter((c) => c.cheminAttendus).map((c) => `  ${JSON.stringify(c.id)}: attendus${chapitres.indexOf(c)},`).join('\n')}
-};
-
-export async function chargerFiche(id) { return FICHES[id] ?? null; }
-export function cheminDonnees() { return null; }
-export async function chargerExercices(id) {
-  const ex = EXERCICES[id] ?? null;
-  return ex && ATTENDUS[id] ? fusionnerAttendus(ex, ATTENDUS[id]).exercice : ex;
+function lire(table, id) {
+  const f = table[id];
+  if (!f) return null;
+  try { return JSON.parse(f()); } catch { return null; }
 }
+
+export async function chargerFiche(id) { return lire(FICHES, id); }
+export function cheminDonnees() { return null; }
+export async function chargerExercices(id) { return lire(EXERCICES, id); }
 `;
 const chemins = Object.fromEntries(chapitres.map((c) => [c.id, `${c.niveau}/${c.parcours}/${c.dossier}`]));
 const exAvec = chapitres.filter((c) => c.cheminExercice).map((c) => c.id);
@@ -631,11 +633,22 @@ writeFileSync(join(RACINE_APP, 'src', 'contenu-lourd.native.js'), lourdNatif, 'u
 writeFileSync(join(RACINE_APP, 'src', 'contenu-lourd.web.js'), lourdWeb, 'utf8');
 // Copie des fichiers pour le web (dossier ignoré par git, recréé à chaque « npm run preparer »).
 const DONNEES = join(RACINE_APP, 'public', 'donnees');
+const DONNEES_NATIF = join(RACINE_APP, 'donnees-natif');
+rmSync(DONNEES_NATIF, { recursive: true, force: true });
+/** Module natif : `module.exports = "<texte JSON en ASCII>"` (é → \u00e9, lu par JSON.parse). */
+function moduleNatif(valeur) {
+  const ascii = JSON.stringify(valeur).replace(/[\u0080-\uffff]/g, (ch) => '\\u' + ch.charCodeAt(0).toString(16).padStart(4, '0'));
+  return '// Fichier genere par scripts/generer-index.mjs (ne pas modifier)\nmodule.exports = ' + JSON.stringify(ascii) + ';\n';
+}
 for (const c of chapitres) {
   const dest = join(DONNEES, c.niveau, c.parcours, c.dossier);
   mkdirSync(dest, { recursive: true });
   const src = join(CONTENU, c.niveau, c.parcours, c.dossier);
-  writeFileSync(join(dest, 'fiche.md'), readFileSync(join(src, 'fiche.md')));
+  const fiche = readFileSync(join(src, 'fiche.md'), 'utf8');
+  writeFileSync(join(dest, 'fiche.md'), fiche);
+  const destNatif = join(DONNEES_NATIF, c.niveau, c.parcours, c.dossier);
+  mkdirSync(destNatif, { recursive: true });
+  writeFileSync(join(destNatif, 'fiche.js'), moduleNatif(fiche));
   if (c.cheminExercice) {
     let ex = JSON.parse(readFileSync(join(src, 'exercice.json'), 'utf8'));
     if (c.cheminAttendus) {
@@ -644,9 +657,10 @@ for (const c of chapitres) {
       if (r.ecarts.length) console.warn(`  ⚠️  attendus.json périmé (exercices ${r.ecarts.join(', ')}) : ${c.id}`);
     }
     writeFileSync(join(dest, 'exercice.json'), JSON.stringify(ex));
+    writeFileSync(join(destNatif, 'exercice.js'), moduleNatif(ex));
   }
 }
-console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
+console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/ + donnees-natif/`);
 
 // ─────────────────────────── dictées (dictees/*.json) ───────────────────────────
 // Web : copiées dans public/donnees/dictees/ (chargées à la demande par src/dictees-donnees.web.js).
