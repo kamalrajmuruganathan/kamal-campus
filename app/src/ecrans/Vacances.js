@@ -77,14 +77,13 @@ export default function Vacances({ navigation }) {
     );
   };
 
-  const lancerBilan = (s) => {
+  const lancerBilan = async (s) => {
     const ids = s.chapitres || [];
     const parChapitre = Math.max(2, Math.ceil(TAILLE_BILAN / Math.max(1, ids.length)));
-    const questions = melanger(ids.flatMap((id) => {
-      try { return construireQuestions(id, parChapitre); } catch { return []; }
-    })).slice(0, TAILLE_BILAN);
+    const lots = await Promise.all(ids.map((id) => construireQuestions(id, parChapitre).catch(() => [])));
+    const questions = melanger(lots.flat()).slice(0, TAILLE_BILAN);
     if (!questions.length) {
-      Alert.alert('QCM indisponible', 'Ces chapitres n’ont pas de questions de QCM : coche la séance quand tu as relu tes fiches.');
+      Alert.alert('QCM indisponible', 'Ces chapitres n’ont pas de questions de QCM (ou elles n’ont pas pu être chargées : vérifie ta connexion à Internet). Tu peux cocher la séance quand tu as relu tes fiches.');
       return;
     }
     navigation.navigate('Qcm', { questions, titre: s.titreBilan, matiere: null });

@@ -25,6 +25,8 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { useProgression } from '../progression/Contexte';
 import { SUJETS, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { estRelu } from '../../lib/relecture';
+import { useSujet } from '../useContenu';
+import EtatChargement from '../composants/EtatChargement';
 import { dateLocale } from '../../lib/serie';
 import {
   analyserSujet, calculerNote, NIVEAUX, nombreFr,
@@ -62,7 +64,13 @@ export default function Epreuve({ route, navigation }) {
   const C = t.couleur;
   const { profil, enregistrerEpreuve } = useProgression();
   const sujetId = route?.params?.id;
-  const sujet = useMemo(() => (SUJETS || []).find((s) => s.id === sujetId) || null, [sujetId]);
+  const infoSujet = useMemo(() => (SUJETS || []).find((s) => s.id === sujetId) || null, [sujetId]);
+  // Le texte du sujet est chargé à la demande (il n'est pas dans l'index).
+  const texteSujet = useSujet(infoSujet ? sujetId : null);
+  const sujet = useMemo(
+    () => (infoSujet && texteSujet.donnee ? { ...infoSujet, contenu: texteSujet.donnee } : null),
+    [infoSujet, texteSujet.donnee],
+  );
   const analyse = useMemo(() => (sujet ? analyserSujet(sujet) : null), [sujet]);
 
   const [phase, setPhase] = useState('accueil'); // accueil | epreuve | correction | resultat
@@ -114,6 +122,10 @@ export default function Epreuve({ route, navigation }) {
   }, [phase, chrono, restant, dureeMs]);
 
   useEffect(() => { defilement.current?.scrollTo?.({ y: 0, animated: false }); }, [phase, page]);
+
+  if (infoSujet && texteSujet.etat !== 'ok') {
+    return <EtatChargement t={t} etat={texteSujet.etat} quoi="le sujet" recharger={texteSujet.recharger} />;
+  }
 
   if (!sujet || !analyse) {
     return (

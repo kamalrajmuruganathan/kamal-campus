@@ -6,1924 +6,6 @@
  * 959 chapitres indexés.
  */
 
-import qcm0 from './../../contenu/cp/allemand/begrussungen/qcm.json';
-import flash0 from './../../contenu/cp/allemand/begrussungen/flashcards.json';
-import qcm1 from './../../contenu/cp/allemand/zahlen/qcm.json';
-import flash1 from './../../contenu/cp/allemand/zahlen/flashcards.json';
-import qcm2 from './../../contenu/cp/allemand/farben/qcm.json';
-import flash2 from './../../contenu/cp/allemand/farben/flashcards.json';
-import qcm3 from './../../contenu/cp/allemand/tiere/qcm.json';
-import flash3 from './../../contenu/cp/allemand/tiere/flashcards.json';
-import qcm4 from './../../contenu/cp/anglais/greetings/qcm.json';
-import flash4 from './../../contenu/cp/anglais/greetings/flashcards.json';
-import qcm5 from './../../contenu/cp/anglais/numbers/qcm.json';
-import flash5 from './../../contenu/cp/anglais/numbers/flashcards.json';
-import qcm6 from './../../contenu/cp/anglais/colours/qcm.json';
-import flash6 from './../../contenu/cp/anglais/colours/flashcards.json';
-import qcm7 from './../../contenu/cp/anglais/animals/qcm.json';
-import flash7 from './../../contenu/cp/anglais/animals/flashcards.json';
-import qcm8 from './../../contenu/cp/espagnol/saludos/qcm.json';
-import flash8 from './../../contenu/cp/espagnol/saludos/flashcards.json';
-import qcm9 from './../../contenu/cp/espagnol/numeros/qcm.json';
-import flash9 from './../../contenu/cp/espagnol/numeros/flashcards.json';
-import qcm10 from './../../contenu/cp/espagnol/colores/qcm.json';
-import flash10 from './../../contenu/cp/espagnol/colores/flashcards.json';
-import qcm11 from './../../contenu/cp/espagnol/animales/qcm.json';
-import flash11 from './../../contenu/cp/espagnol/animales/flashcards.json';
-import qcm12 from './../../contenu/cp/francais/sons-voyelles/qcm.json';
-import flash12 from './../../contenu/cp/francais/sons-voyelles/flashcards.json';
-import qcm13 from './../../contenu/cp/francais/syllabes/qcm.json';
-import flash13 from './../../contenu/cp/francais/syllabes/flashcards.json';
-import qcm14 from './../../contenu/cp/francais/sons-complexes/qcm.json';
-import flash14 from './../../contenu/cp/francais/sons-complexes/flashcards.json';
-import qcm15 from './../../contenu/cp/francais/nom-determinant/qcm.json';
-import flash15 from './../../contenu/cp/francais/nom-determinant/flashcards.json';
-import qcm16 from './../../contenu/cp/francais/la-phrase/qcm.json';
-import flash16 from './../../contenu/cp/francais/la-phrase/flashcards.json';
-import qcm17 from './../../contenu/cp/hist-geo/vivre-ensemble/qcm.json';
-import flash17 from './../../contenu/cp/hist-geo/vivre-ensemble/flashcards.json';
-import qcm18 from './../../contenu/cp/hist-geo/le-temps-qui-passe/qcm.json';
-import flash18 from './../../contenu/cp/hist-geo/le-temps-qui-passe/flashcards.json';
-import qcm19 from './../../contenu/cp/hist-geo/se-reperer-espace/qcm.json';
-import flash19 from './../../contenu/cp/hist-geo/se-reperer-espace/flashcards.json';
-import qcm20 from './../../contenu/cp/hist-geo/ecole-autrefois/qcm.json';
-import flash20 from './../../contenu/cp/hist-geo/ecole-autrefois/flashcards.json';
-import qcm21 from './../../contenu/cp/italien/saluti/qcm.json';
-import flash21 from './../../contenu/cp/italien/saluti/flashcards.json';
-import qcm22 from './../../contenu/cp/italien/numeri/qcm.json';
-import flash22 from './../../contenu/cp/italien/numeri/flashcards.json';
-import qcm23 from './../../contenu/cp/italien/colori/qcm.json';
-import flash23 from './../../contenu/cp/italien/colori/flashcards.json';
-import qcm24 from './../../contenu/cp/italien/animali/qcm.json';
-import flash24 from './../../contenu/cp/italien/animali/flashcards.json';
-import qcm25 from './../../contenu/cp/maths/nombres-jusqu-a-20/qcm.json';
-import flash25 from './../../contenu/cp/maths/nombres-jusqu-a-20/flashcards.json';
-import qcm26 from './../../contenu/cp/maths/comparer-ranger/qcm.json';
-import flash26 from './../../contenu/cp/maths/comparer-ranger/flashcards.json';
-import qcm27 from './../../contenu/cp/maths/addition/qcm.json';
-import flash27 from './../../contenu/cp/maths/addition/flashcards.json';
-import qcm28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/qcm.json';
-import flash28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/flashcards.json';
-import qcm29 from './../../contenu/cp/maths/dizaines-et-unites/qcm.json';
-import flash29 from './../../contenu/cp/maths/dizaines-et-unites/flashcards.json';
-import qcm30 from './../../contenu/cp/maths/soustraction/qcm.json';
-import flash30 from './../../contenu/cp/maths/soustraction/flashcards.json';
-import qcm31 from './../../contenu/cp/maths/formes-geometriques/qcm.json';
-import flash31 from './../../contenu/cp/maths/formes-geometriques/flashcards.json';
-import qcm32 from './../../contenu/cp/maths/calcul-mental/qcm.json';
-import flash32 from './../../contenu/cp/maths/calcul-mental/flashcards.json';
-import qcm33 from './../../contenu/cp/maths/longueurs-et-masses/qcm.json';
-import flash33 from './../../contenu/cp/maths/longueurs-et-masses/flashcards.json';
-import qcm34 from './../../contenu/cp/maths/le-temps-qui-passe/qcm.json';
-import flash34 from './../../contenu/cp/maths/le-temps-qui-passe/flashcards.json';
-import qcm35 from './../../contenu/cp/maths/problemes/qcm.json';
-import flash35 from './../../contenu/cp/maths/problemes/flashcards.json';
-import qcm36 from './../../contenu/cp/sciences/le-corps-et-les-cinq-sens/qcm.json';
-import flash36 from './../../contenu/cp/sciences/le-corps-et-les-cinq-sens/flashcards.json';
-import qcm37 from './../../contenu/cp/sciences/le-vivant-animaux-et-vegetaux/qcm.json';
-import flash37 from './../../contenu/cp/sciences/le-vivant-animaux-et-vegetaux/flashcards.json';
-import qcm38 from './../../contenu/cp/sciences/les-objets-du-quotidien/qcm.json';
-import flash38 from './../../contenu/cp/sciences/les-objets-du-quotidien/flashcards.json';
-import qcm39 from './../../contenu/cp/sciences/solides-et-liquides/qcm.json';
-import flash39 from './../../contenu/cp/sciences/solides-et-liquides/flashcards.json';
-import qcm40 from './../../contenu/cp/sciences/le-temps-et-les-saisons/qcm.json';
-import flash40 from './../../contenu/cp/sciences/le-temps-et-les-saisons/flashcards.json';
-import qcm41 from './../../contenu/ce1/allemand/wochentage/qcm.json';
-import flash41 from './../../contenu/ce1/allemand/wochentage/flashcards.json';
-import qcm42 from './../../contenu/ce1/allemand/familie/qcm.json';
-import flash42 from './../../contenu/ce1/allemand/familie/flashcards.json';
-import qcm43 from './../../contenu/ce1/allemand/koerper/qcm.json';
-import flash43 from './../../contenu/ce1/allemand/koerper/flashcards.json';
-import qcm44 from './../../contenu/ce1/allemand/essen/qcm.json';
-import flash44 from './../../contenu/ce1/allemand/essen/flashcards.json';
-import qcm45 from './../../contenu/ce1/anglais/days/qcm.json';
-import flash45 from './../../contenu/ce1/anglais/days/flashcards.json';
-import qcm46 from './../../contenu/ce1/anglais/family/qcm.json';
-import flash46 from './../../contenu/ce1/anglais/family/flashcards.json';
-import qcm47 from './../../contenu/ce1/anglais/body/qcm.json';
-import flash47 from './../../contenu/ce1/anglais/body/flashcards.json';
-import qcm48 from './../../contenu/ce1/anglais/food/qcm.json';
-import flash48 from './../../contenu/ce1/anglais/food/flashcards.json';
-import qcm49 from './../../contenu/ce1/espagnol/dias/qcm.json';
-import flash49 from './../../contenu/ce1/espagnol/dias/flashcards.json';
-import qcm50 from './../../contenu/ce1/espagnol/familia/qcm.json';
-import flash50 from './../../contenu/ce1/espagnol/familia/flashcards.json';
-import qcm51 from './../../contenu/ce1/espagnol/cuerpo/qcm.json';
-import flash51 from './../../contenu/ce1/espagnol/cuerpo/flashcards.json';
-import qcm52 from './../../contenu/ce1/espagnol/comida/qcm.json';
-import flash52 from './../../contenu/ce1/espagnol/comida/flashcards.json';
-import qcm53 from './../../contenu/ce1/francais/types-de-phrases/qcm.json';
-import flash53 from './../../contenu/ce1/francais/types-de-phrases/flashcards.json';
-import qcm54 from './../../contenu/ce1/francais/noms-propres-communs/qcm.json';
-import flash54 from './../../contenu/ce1/francais/noms-propres-communs/flashcards.json';
-import qcm55 from './../../contenu/ce1/francais/singulier-pluriel/qcm.json';
-import flash55 from './../../contenu/ce1/francais/singulier-pluriel/flashcards.json';
-import qcm56 from './../../contenu/ce1/francais/le-verbe/qcm.json';
-import flash56 from './../../contenu/ce1/francais/le-verbe/flashcards.json';
-import qcm57 from './../../contenu/ce1/francais/present-etre-avoir/qcm.json';
-import flash57 from './../../contenu/ce1/francais/present-etre-avoir/flashcards.json';
-import qcm58 from './../../contenu/ce1/hist-geo/regles-et-droits/qcm.json';
-import flash58 from './../../contenu/ce1/hist-geo/regles-et-droits/flashcards.json';
-import qcm59 from './../../contenu/ce1/hist-geo/calendrier-frise/qcm.json';
-import flash59 from './../../contenu/ce1/hist-geo/calendrier-frise/flashcards.json';
-import qcm60 from './../../contenu/ce1/hist-geo/plans-et-cartes/qcm.json';
-import flash60 from './../../contenu/ce1/hist-geo/plans-et-cartes/flashcards.json';
-import qcm61 from './../../contenu/ce1/hist-geo/la-france-paysages/qcm.json';
-import flash61 from './../../contenu/ce1/hist-geo/la-france-paysages/flashcards.json';
-import qcm62 from './../../contenu/ce1/italien/giorni/qcm.json';
-import flash62 from './../../contenu/ce1/italien/giorni/flashcards.json';
-import qcm63 from './../../contenu/ce1/italien/famiglia/qcm.json';
-import flash63 from './../../contenu/ce1/italien/famiglia/flashcards.json';
-import qcm64 from './../../contenu/ce1/italien/corpo/qcm.json';
-import flash64 from './../../contenu/ce1/italien/corpo/flashcards.json';
-import qcm65 from './../../contenu/ce1/italien/cibo/qcm.json';
-import flash65 from './../../contenu/ce1/italien/cibo/flashcards.json';
-import qcm66 from './../../contenu/ce1/maths/nombres-jusqu-a-1000/qcm.json';
-import flash66 from './../../contenu/ce1/maths/nombres-jusqu-a-1000/flashcards.json';
-import qcm67 from './../../contenu/ce1/maths/addition-posee/qcm.json';
-import flash67 from './../../contenu/ce1/maths/addition-posee/flashcards.json';
-import qcm68 from './../../contenu/ce1/maths/calcul-mental/qcm.json';
-import flash68 from './../../contenu/ce1/maths/calcul-mental/flashcards.json';
-import qcm69 from './../../contenu/ce1/maths/soustraction-posee/qcm.json';
-import flash69 from './../../contenu/ce1/maths/soustraction-posee/flashcards.json';
-import qcm70 from './../../contenu/ce1/maths/figures-planes/qcm.json';
-import flash70 from './../../contenu/ce1/maths/figures-planes/flashcards.json';
-import qcm71 from './../../contenu/ce1/maths/moities-et-doubles/qcm.json';
-import flash71 from './../../contenu/ce1/maths/moities-et-doubles/flashcards.json';
-import qcm72 from './../../contenu/ce1/maths/tables-de-multiplication/qcm.json';
-import flash72 from './../../contenu/ce1/maths/tables-de-multiplication/flashcards.json';
-import qcm73 from './../../contenu/ce1/maths/symetrie-et-quadrillage/qcm.json';
-import flash73 from './../../contenu/ce1/maths/symetrie-et-quadrillage/flashcards.json';
-import qcm74 from './../../contenu/ce1/maths/solides/qcm.json';
-import flash74 from './../../contenu/ce1/maths/solides/flashcards.json';
-import qcm75 from './../../contenu/ce1/maths/mesures-et-monnaie/qcm.json';
-import flash75 from './../../contenu/ce1/maths/mesures-et-monnaie/flashcards.json';
-import qcm76 from './../../contenu/ce1/maths/problemes/qcm.json';
-import flash76 from './../../contenu/ce1/maths/problemes/flashcards.json';
-import qcm77 from './../../contenu/ce1/sciences/se-reperer-dans-le-temps/qcm.json';
-import flash77 from './../../contenu/ce1/sciences/se-reperer-dans-le-temps/flashcards.json';
-import qcm78 from './../../contenu/ce1/sciences/les-etats-de-leau/qcm.json';
-import flash78 from './../../contenu/ce1/sciences/les-etats-de-leau/flashcards.json';
-import qcm79 from './../../contenu/ce1/sciences/cycles-de-vie-des-etres-vivants/qcm.json';
-import flash79 from './../../contenu/ce1/sciences/cycles-de-vie-des-etres-vivants/flashcards.json';
-import qcm80 from './../../contenu/ce1/sciences/alimentation-et-hygiene/qcm.json';
-import flash80 from './../../contenu/ce1/sciences/alimentation-et-hygiene/flashcards.json';
-import qcm81 from './../../contenu/ce1/sciences/materiaux-et-objets-techniques/qcm.json';
-import flash81 from './../../contenu/ce1/sciences/materiaux-et-objets-techniques/flashcards.json';
-import qcm82 from './../../contenu/ce2/allemand/zahlen-alter/qcm.json';
-import flash82 from './../../contenu/ce2/allemand/zahlen-alter/flashcards.json';
-import qcm83 from './../../contenu/ce2/allemand/gefuehle/qcm.json';
-import flash83 from './../../contenu/ce2/allemand/gefuehle/flashcards.json';
-import qcm84 from './../../contenu/ce2/allemand/kleidung/qcm.json';
-import flash84 from './../../contenu/ce2/allemand/kleidung/flashcards.json';
-import qcm85 from './../../contenu/ce2/allemand/wetter-jahreszeiten/qcm.json';
-import flash85 from './../../contenu/ce2/allemand/wetter-jahreszeiten/flashcards.json';
-import qcm86 from './../../contenu/ce2/anglais/numbers-age/qcm.json';
-import flash86 from './../../contenu/ce2/anglais/numbers-age/flashcards.json';
-import qcm87 from './../../contenu/ce2/anglais/feelings/qcm.json';
-import flash87 from './../../contenu/ce2/anglais/feelings/flashcards.json';
-import qcm88 from './../../contenu/ce2/anglais/clothes/qcm.json';
-import flash88 from './../../contenu/ce2/anglais/clothes/flashcards.json';
-import qcm89 from './../../contenu/ce2/anglais/weather-seasons/qcm.json';
-import flash89 from './../../contenu/ce2/anglais/weather-seasons/flashcards.json';
-import qcm90 from './../../contenu/ce2/espagnol/numeros-edad/qcm.json';
-import flash90 from './../../contenu/ce2/espagnol/numeros-edad/flashcards.json';
-import qcm91 from './../../contenu/ce2/espagnol/sentimientos/qcm.json';
-import flash91 from './../../contenu/ce2/espagnol/sentimientos/flashcards.json';
-import qcm92 from './../../contenu/ce2/espagnol/ropa/qcm.json';
-import flash92 from './../../contenu/ce2/espagnol/ropa/flashcards.json';
-import qcm93 from './../../contenu/ce2/espagnol/tiempo-estaciones/qcm.json';
-import flash93 from './../../contenu/ce2/espagnol/tiempo-estaciones/flashcards.json';
-import qcm94 from './../../contenu/ce2/francais/classes-de-mots/qcm.json';
-import flash94 from './../../contenu/ce2/francais/classes-de-mots/flashcards.json';
-import qcm95 from './../../contenu/ce2/francais/passe-present-futur/qcm.json';
-import flash95 from './../../contenu/ce2/francais/passe-present-futur/flashcards.json';
-import qcm96 from './../../contenu/ce2/francais/present-premier-groupe/qcm.json';
-import flash96 from './../../contenu/ce2/francais/present-premier-groupe/flashcards.json';
-import qcm97 from './../../contenu/ce2/francais/accord-sujet-verbe/qcm.json';
-import flash97 from './../../contenu/ce2/francais/accord-sujet-verbe/flashcards.json';
-import qcm98 from './../../contenu/ce2/francais/homophones-a-et/qcm.json';
-import flash98 from './../../contenu/ce2/francais/homophones-a-et/flashcards.json';
-import qcm99 from './../../contenu/ce2/hist-geo/prehistoire/qcm.json';
-import flash99 from './../../contenu/ce2/hist-geo/prehistoire/flashcards.json';
-import qcm100 from './../../contenu/ce2/hist-geo/gaulois-romains/qcm.json';
-import flash100 from './../../contenu/ce2/hist-geo/gaulois-romains/flashcards.json';
-import qcm101 from './../../contenu/ce2/hist-geo/terre-continents-oceans/qcm.json';
-import flash101 from './../../contenu/ce2/hist-geo/terre-continents-oceans/flashcards.json';
-import qcm102 from './../../contenu/ce2/hist-geo/symboles-republique/qcm.json';
-import flash102 from './../../contenu/ce2/hist-geo/symboles-republique/flashcards.json';
-import qcm103 from './../../contenu/ce2/italien/numeri-eta/qcm.json';
-import flash103 from './../../contenu/ce2/italien/numeri-eta/flashcards.json';
-import qcm104 from './../../contenu/ce2/italien/sentimenti/qcm.json';
-import flash104 from './../../contenu/ce2/italien/sentimenti/flashcards.json';
-import qcm105 from './../../contenu/ce2/italien/vestiti/qcm.json';
-import flash105 from './../../contenu/ce2/italien/vestiti/flashcards.json';
-import qcm106 from './../../contenu/ce2/italien/tempo-stagioni/qcm.json';
-import flash106 from './../../contenu/ce2/italien/tempo-stagioni/flashcards.json';
-import qcm107 from './../../contenu/ce2/maths/nombres-jusqu-a-10000/qcm.json';
-import flash107 from './../../contenu/ce2/maths/nombres-jusqu-a-10000/flashcards.json';
-import qcm108 from './../../contenu/ce2/maths/calcul-mental/qcm.json';
-import flash108 from './../../contenu/ce2/maths/calcul-mental/flashcards.json';
-import qcm109 from './../../contenu/ce2/maths/multiplication-posee/qcm.json';
-import flash109 from './../../contenu/ce2/maths/multiplication-posee/flashcards.json';
-import qcm110 from './../../contenu/ce2/maths/angles-et-polygones/qcm.json';
-import flash110 from './../../contenu/ce2/maths/angles-et-polygones/flashcards.json';
-import qcm111 from './../../contenu/ce2/maths/sens-de-la-division/qcm.json';
-import flash111 from './../../contenu/ce2/maths/sens-de-la-division/flashcards.json';
-import qcm112 from './../../contenu/ce2/maths/perimetre-et-mesures/qcm.json';
-import flash112 from './../../contenu/ce2/maths/perimetre-et-mesures/flashcards.json';
-import qcm113 from './../../contenu/ce2/maths/symetrie-axiale/qcm.json';
-import flash113 from './../../contenu/ce2/maths/symetrie-axiale/flashcards.json';
-import qcm114 from './../../contenu/ce2/maths/fractions-simples/qcm.json';
-import flash114 from './../../contenu/ce2/maths/fractions-simples/flashcards.json';
-import qcm115 from './../../contenu/ce2/maths/solides-et-patrons/qcm.json';
-import flash115 from './../../contenu/ce2/maths/solides-et-patrons/flashcards.json';
-import qcm116 from './../../contenu/ce2/maths/tableaux-et-graphiques/qcm.json';
-import flash116 from './../../contenu/ce2/maths/tableaux-et-graphiques/flashcards.json';
-import qcm117 from './../../contenu/ce2/maths/problemes/qcm.json';
-import flash117 from './../../contenu/ce2/maths/problemes/flashcards.json';
-import qcm118 from './../../contenu/ce2/sciences/classer-les-animaux/qcm.json';
-import flash118 from './../../contenu/ce2/sciences/classer-les-animaux/flashcards.json';
-import qcm119 from './../../contenu/ce2/sciences/plantes-et-milieux-de-vie/qcm.json';
-import flash119 from './../../contenu/ce2/sciences/plantes-et-milieux-de-vie/flashcards.json';
-import qcm120 from './../../contenu/ce2/sciences/melanges-et-solutions/qcm.json';
-import flash120 from './../../contenu/ce2/sciences/melanges-et-solutions/flashcards.json';
-import qcm121 from './../../contenu/ce2/sciences/circuits-electriques-simples/qcm.json';
-import flash121 from './../../contenu/ce2/sciences/circuits-electriques-simples/flashcards.json';
-import qcm122 from './../../contenu/ce2/sciences/la-terre-le-soleil-la-lune/qcm.json';
-import flash122 from './../../contenu/ce2/sciences/la-terre-le-soleil-la-lune/flashcards.json';
-import qcm123 from './../../contenu/cm1/allemand/laender-nationalitaeten/qcm.json';
-import flash123 from './../../contenu/cm1/allemand/laender-nationalitaeten/flashcards.json';
-import qcm124 from './../../contenu/cm1/allemand/haus/qcm.json';
-import flash124 from './../../contenu/cm1/allemand/haus/flashcards.json';
-import qcm125 from './../../contenu/cm1/allemand/uhrzeit-tagesablauf/qcm.json';
-import flash125 from './../../contenu/cm1/allemand/uhrzeit-tagesablauf/flashcards.json';
-import qcm126 from './../../contenu/cm1/allemand/sport-hobbys/qcm.json';
-import flash126 from './../../contenu/cm1/allemand/sport-hobbys/flashcards.json';
-import qcm127 from './../../contenu/cm1/anglais/countries-nationalities/qcm.json';
-import flash127 from './../../contenu/cm1/anglais/countries-nationalities/flashcards.json';
-import qcm128 from './../../contenu/cm1/anglais/house-rooms/qcm.json';
-import flash128 from './../../contenu/cm1/anglais/house-rooms/flashcards.json';
-import qcm129 from './../../contenu/cm1/anglais/time-routine/qcm.json';
-import flash129 from './../../contenu/cm1/anglais/time-routine/flashcards.json';
-import qcm130 from './../../contenu/cm1/anglais/sports-hobbies/qcm.json';
-import flash130 from './../../contenu/cm1/anglais/sports-hobbies/flashcards.json';
-import qcm131 from './../../contenu/cm1/espagnol/paises-nacionalidades/qcm.json';
-import flash131 from './../../contenu/cm1/espagnol/paises-nacionalidades/flashcards.json';
-import qcm132 from './../../contenu/cm1/espagnol/casa/qcm.json';
-import flash132 from './../../contenu/cm1/espagnol/casa/flashcards.json';
-import qcm133 from './../../contenu/cm1/espagnol/hora-rutina/qcm.json';
-import flash133 from './../../contenu/cm1/espagnol/hora-rutina/flashcards.json';
-import qcm134 from './../../contenu/cm1/espagnol/deportes-ocio/qcm.json';
-import flash134 from './../../contenu/cm1/espagnol/deportes-ocio/flashcards.json';
-import qcm135 from './../../contenu/cm1/francais/accords-groupe-nominal/qcm.json';
-import flash135 from './../../contenu/cm1/francais/accords-groupe-nominal/flashcards.json';
-import qcm136 from './../../contenu/cm1/francais/complement-objet/qcm.json';
-import flash136 from './../../contenu/cm1/francais/complement-objet/flashcards.json';
-import qcm137 from './../../contenu/cm1/francais/futur-simple/qcm.json';
-import flash137 from './../../contenu/cm1/francais/futur-simple/flashcards.json';
-import qcm138 from './../../contenu/cm1/francais/imparfait/qcm.json';
-import flash138 from './../../contenu/cm1/francais/imparfait/flashcards.json';
-import qcm139 from './../../contenu/cm1/francais/passe-compose/qcm.json';
-import flash139 from './../../contenu/cm1/francais/passe-compose/flashcards.json';
-import qcm140 from './../../contenu/cm1/hist-geo/moyen-age/qcm.json';
-import flash140 from './../../contenu/cm1/hist-geo/moyen-age/flashcards.json';
-import qcm141 from './../../contenu/cm1/hist-geo/temps-modernes/qcm.json';
-import flash141 from './../../contenu/cm1/hist-geo/temps-modernes/flashcards.json';
-import qcm142 from './../../contenu/cm1/hist-geo/habiter-ville-campagne/qcm.json';
-import flash142 from './../../contenu/cm1/hist-geo/habiter-ville-campagne/flashcards.json';
-import qcm143 from './../../contenu/cm1/hist-geo/egalite-discriminations/qcm.json';
-import flash143 from './../../contenu/cm1/hist-geo/egalite-discriminations/flashcards.json';
-import qcm144 from './../../contenu/cm1/italien/paesi-nazionalita/qcm.json';
-import flash144 from './../../contenu/cm1/italien/paesi-nazionalita/flashcards.json';
-import qcm145 from './../../contenu/cm1/italien/casa/qcm.json';
-import flash145 from './../../contenu/cm1/italien/casa/flashcards.json';
-import qcm146 from './../../contenu/cm1/italien/ora-routine/qcm.json';
-import flash146 from './../../contenu/cm1/italien/ora-routine/flashcards.json';
-import qcm147 from './../../contenu/cm1/italien/sport-tempo-libero/qcm.json';
-import flash147 from './../../contenu/cm1/italien/sport-tempo-libero/flashcards.json';
-import qcm148 from './../../contenu/cm1/maths/grands-nombres/qcm.json';
-import flash148 from './../../contenu/cm1/maths/grands-nombres/flashcards.json';
-import qcm149 from './../../contenu/cm1/maths/multiplication-posee/qcm.json';
-import flash149 from './../../contenu/cm1/maths/multiplication-posee/flashcards.json';
-import qcm150 from './../../contenu/cm1/maths/division-euclidienne/qcm.json';
-import flash150 from './../../contenu/cm1/maths/division-euclidienne/flashcards.json';
-import qcm151 from './../../contenu/cm1/maths/angles/qcm.json';
-import flash151 from './../../contenu/cm1/maths/angles/flashcards.json';
-import qcm152 from './../../contenu/cm1/maths/fractions/qcm.json';
-import flash152 from './../../contenu/cm1/maths/fractions/flashcards.json';
-import qcm153 from './../../contenu/cm1/maths/nombres-decimaux/qcm.json';
-import flash153 from './../../contenu/cm1/maths/nombres-decimaux/flashcards.json';
-import qcm154 from './../../contenu/cm1/maths/operations-decimaux/qcm.json';
-import flash154 from './../../contenu/cm1/maths/operations-decimaux/flashcards.json';
-import qcm155 from './../../contenu/cm1/maths/symetrie-axiale/qcm.json';
-import flash155 from './../../contenu/cm1/maths/symetrie-axiale/flashcards.json';
-import qcm156 from './../../contenu/cm1/maths/durees/qcm.json';
-import flash156 from './../../contenu/cm1/maths/durees/flashcards.json';
-import qcm157 from './../../contenu/cm1/maths/cercle-triangles-perimetre-aire/qcm.json';
-import flash157 from './../../contenu/cm1/maths/cercle-triangles-perimetre-aire/flashcards.json';
-import qcm158 from './../../contenu/cm1/maths/proportionnalite/qcm.json';
-import flash158 from './../../contenu/cm1/maths/proportionnalite/flashcards.json';
-import qcm159 from './../../contenu/cm1/maths/tableaux-et-graphiques/qcm.json';
-import flash159 from './../../contenu/cm1/maths/tableaux-et-graphiques/flashcards.json';
-import qcm160 from './../../contenu/cm1/sciences/la-matiere-et-ses-transformations/qcm.json';
-import flash160 from './../../contenu/cm1/sciences/la-matiere-et-ses-transformations/flashcards.json';
-import qcm161 from './../../contenu/cm1/sciences/les-fonctions-du-vivant-la-nutrition/qcm.json';
-import flash161 from './../../contenu/cm1/sciences/les-fonctions-du-vivant-la-nutrition/flashcards.json';
-import qcm162 from './../../contenu/cm1/sciences/chaines-alimentaires-et-ecosystemes/qcm.json';
-import flash162 from './../../contenu/cm1/sciences/chaines-alimentaires-et-ecosystemes/flashcards.json';
-import qcm163 from './../../contenu/cm1/sciences/energie-et-circuits-electriques/qcm.json';
-import flash163 from './../../contenu/cm1/sciences/energie-et-circuits-electriques/flashcards.json';
-import qcm164 from './../../contenu/cm1/sciences/le-systeme-solaire/qcm.json';
-import flash164 from './../../contenu/cm1/sciences/le-systeme-solaire/flashcards.json';
-import qcm165 from './../../contenu/cm2/allemand/personen-beschreiben/qcm.json';
-import flash165 from './../../contenu/cm2/allemand/personen-beschreiben/flashcards.json';
-import qcm166 from './../../contenu/cm2/allemand/alltag-praesens/qcm.json';
-import flash166 from './../../contenu/cm2/allemand/alltag-praesens/flashcards.json';
-import qcm167 from './../../contenu/cm2/allemand/essen-mahlzeiten/qcm.json';
-import flash167 from './../../contenu/cm2/allemand/essen-mahlzeiten/flashcards.json';
-import qcm168 from './../../contenu/cm2/allemand/stadt-wegbeschreibung/qcm.json';
-import flash168 from './../../contenu/cm2/allemand/stadt-wegbeschreibung/flashcards.json';
-import qcm169 from './../../contenu/cm2/anglais/describing-people/qcm.json';
-import flash169 from './../../contenu/cm2/anglais/describing-people/flashcards.json';
-import qcm170 from './../../contenu/cm2/anglais/daily-habits/qcm.json';
-import flash170 from './../../contenu/cm2/anglais/daily-habits/flashcards.json';
-import qcm171 from './../../contenu/cm2/anglais/food-meals/qcm.json';
-import flash171 from './../../contenu/cm2/anglais/food-meals/flashcards.json';
-import qcm172 from './../../contenu/cm2/anglais/town-directions/qcm.json';
-import flash172 from './../../contenu/cm2/anglais/town-directions/flashcards.json';
-import qcm173 from './../../contenu/cm2/espagnol/describir-personas/qcm.json';
-import flash173 from './../../contenu/cm2/espagnol/describir-personas/flashcards.json';
-import qcm174 from './../../contenu/cm2/espagnol/presente-rutinas/qcm.json';
-import flash174 from './../../contenu/cm2/espagnol/presente-rutinas/flashcards.json';
-import qcm175 from './../../contenu/cm2/espagnol/comida-comidas/qcm.json';
-import flash175 from './../../contenu/cm2/espagnol/comida-comidas/flashcards.json';
-import qcm176 from './../../contenu/cm2/espagnol/ciudad-direcciones/qcm.json';
-import flash176 from './../../contenu/cm2/espagnol/ciudad-direcciones/flashcards.json';
-import qcm177 from './../../contenu/cm2/francais/sens-des-mots/qcm.json';
-import flash177 from './../../contenu/cm2/francais/sens-des-mots/flashcards.json';
-import qcm178 from './../../contenu/cm2/francais/complements-circonstanciels/qcm.json';
-import flash178 from './../../contenu/cm2/francais/complements-circonstanciels/flashcards.json';
-import qcm179 from './../../contenu/cm2/francais/homophones-ces-ses/qcm.json';
-import flash179 from './../../contenu/cm2/francais/homophones-ces-ses/flashcards.json';
-import qcm180 from './../../contenu/cm2/francais/accord-participe-passe/qcm.json';
-import flash180 from './../../contenu/cm2/francais/accord-participe-passe/flashcards.json';
-import qcm181 from './../../contenu/cm2/francais/plus-que-parfait/qcm.json';
-import flash181 from './../../contenu/cm2/francais/plus-que-parfait/flashcards.json';
-import qcm182 from './../../contenu/cm2/hist-geo/revolution-empire/qcm.json';
-import flash182 from './../../contenu/cm2/hist-geo/revolution-empire/flashcards.json';
-import qcm183 from './../../contenu/cm2/hist-geo/republique-democratie/qcm.json';
-import flash183 from './../../contenu/cm2/hist-geo/republique-democratie/flashcards.json';
-import qcm184 from './../../contenu/cm2/hist-geo/se-deplacer-communiquer/qcm.json';
-import flash184 from './../../contenu/cm2/hist-geo/se-deplacer-communiquer/flashcards.json';
-import qcm185 from './../../contenu/cm2/hist-geo/citoyennete-engagement/qcm.json';
-import flash185 from './../../contenu/cm2/hist-geo/citoyennete-engagement/flashcards.json';
-import qcm186 from './../../contenu/cm2/italien/descrivere-persone/qcm.json';
-import flash186 from './../../contenu/cm2/italien/descrivere-persone/flashcards.json';
-import qcm187 from './../../contenu/cm2/italien/presente-routine/qcm.json';
-import flash187 from './../../contenu/cm2/italien/presente-routine/flashcards.json';
-import qcm188 from './../../contenu/cm2/italien/cibo-pasti/qcm.json';
-import flash188 from './../../contenu/cm2/italien/cibo-pasti/flashcards.json';
-import qcm189 from './../../contenu/cm2/italien/citta-indicazioni/qcm.json';
-import flash189 from './../../contenu/cm2/italien/citta-indicazioni/flashcards.json';
-import qcm190 from './../../contenu/cm2/maths/grands-nombres/qcm.json';
-import flash190 from './../../contenu/cm2/maths/grands-nombres/flashcards.json';
-import qcm191 from './../../contenu/cm2/maths/calcul-mental/qcm.json';
-import flash191 from './../../contenu/cm2/maths/calcul-mental/flashcards.json';
-import qcm192 from './../../contenu/cm2/maths/fractions-et-operations/qcm.json';
-import flash192 from './../../contenu/cm2/maths/fractions-et-operations/flashcards.json';
-import qcm193 from './../../contenu/cm2/maths/operations-sur-les-decimaux/qcm.json';
-import flash193 from './../../contenu/cm2/maths/operations-sur-les-decimaux/flashcards.json';
-import qcm194 from './../../contenu/cm2/maths/division-posee/qcm.json';
-import flash194 from './../../contenu/cm2/maths/division-posee/flashcards.json';
-import qcm195 from './../../contenu/cm2/maths/angles-et-mesures/qcm.json';
-import flash195 from './../../contenu/cm2/maths/angles-et-mesures/flashcards.json';
-import qcm196 from './../../contenu/cm2/maths/symetrie-axiale/qcm.json';
-import flash196 from './../../contenu/cm2/maths/symetrie-axiale/flashcards.json';
-import qcm197 from './../../contenu/cm2/maths/proportionnalite-et-pourcentages/qcm.json';
-import flash197 from './../../contenu/cm2/maths/proportionnalite-et-pourcentages/flashcards.json';
-import qcm198 from './../../contenu/cm2/maths/aires-perimetres-volumes/qcm.json';
-import flash198 from './../../contenu/cm2/maths/aires-perimetres-volumes/flashcards.json';
-import qcm199 from './../../contenu/cm2/maths/solides-et-patrons/qcm.json';
-import flash199 from './../../contenu/cm2/maths/solides-et-patrons/flashcards.json';
-import qcm200 from './../../contenu/cm2/maths/graphiques-et-donnees/qcm.json';
-import flash200 from './../../contenu/cm2/maths/graphiques-et-donnees/flashcards.json';
-import qcm201 from './../../contenu/cm2/maths/problemes/qcm.json';
-import flash201 from './../../contenu/cm2/maths/problemes/flashcards.json';
-import qcm202 from './../../contenu/cm2/sciences/corps-humain-digestion-et-respiration/qcm.json';
-import flash202 from './../../contenu/cm2/sciences/corps-humain-digestion-et-respiration/flashcards.json';
-import qcm203 from './../../contenu/cm2/sciences/reproduction-des-etres-vivants/qcm.json';
-import flash203 from './../../contenu/cm2/sciences/reproduction-des-etres-vivants/flashcards.json';
-import qcm204 from './../../contenu/cm2/sciences/mouvements-et-forces/qcm.json';
-import flash204 from './../../contenu/cm2/sciences/mouvements-et-forces/flashcards.json';
-import qcm205 from './../../contenu/cm2/sciences/objets-programmes-et-informatique/qcm.json';
-import flash205 from './../../contenu/cm2/sciences/objets-programmes-et-informatique/flashcards.json';
-import qcm206 from './../../contenu/cm2/sciences/environnement-et-developpement-durable/qcm.json';
-import flash206 from './../../contenu/cm2/sciences/environnement-et-developpement-durable/flashcards.json';
-import qcm207 from './../../contenu/sixieme/allemand/phonetik-laute/qcm.json';
-import flash207 from './../../contenu/sixieme/allemand/phonetik-laute/flashcards.json';
-import qcm208 from './../../contenu/sixieme/allemand/personalpronomen/qcm.json';
-import flash208 from './../../contenu/sixieme/allemand/personalpronomen/flashcards.json';
-import qcm209 from './../../contenu/sixieme/allemand/sein-haben/qcm.json';
-import flash209 from './../../contenu/sixieme/allemand/sein-haben/flashcards.json';
-import qcm210 from './../../contenu/sixieme/allemand/artikel-genus/qcm.json';
-import flash210 from './../../contenu/sixieme/allemand/artikel-genus/flashcards.json';
-import qcm211 from './../../contenu/sixieme/allemand/wortschatz-schule/qcm.json';
-import flash211 from './../../contenu/sixieme/allemand/wortschatz-schule/flashcards.json';
-import qcm212 from './../../contenu/sixieme/allemand/praesens-regelmaessig/qcm.json';
-import flash212 from './../../contenu/sixieme/allemand/praesens-regelmaessig/flashcards.json';
-import qcm213 from './../../contenu/sixieme/allemand/satzstellung/qcm.json';
-import flash213 from './../../contenu/sixieme/allemand/satzstellung/flashcards.json';
-import qcm214 from './../../contenu/sixieme/allemand/fragesaetze/qcm.json';
-import flash214 from './../../contenu/sixieme/allemand/fragesaetze/flashcards.json';
-import qcm215 from './../../contenu/sixieme/allemand/wortschatz-essen/qcm.json';
-import flash215 from './../../contenu/sixieme/allemand/wortschatz-essen/flashcards.json';
-import qcm216 from './../../contenu/sixieme/allemand/landeskunde-deutschland/qcm.json';
-import flash216 from './../../contenu/sixieme/allemand/landeskunde-deutschland/flashcards.json';
-import qcm217 from './../../contenu/sixieme/anglais/phonetique-sons/qcm.json';
-import flash217 from './../../contenu/sixieme/anglais/phonetique-sons/flashcards.json';
-import qcm218 from './../../contenu/sixieme/anglais/se-presenter/qcm.json';
-import flash218 from './../../contenu/sixieme/anglais/se-presenter/flashcards.json';
-import qcm219 from './../../contenu/sixieme/anglais/articles-pluriels/qcm.json';
-import flash219 from './../../contenu/sixieme/anglais/articles-pluriels/flashcards.json';
-import qcm220 from './../../contenu/sixieme/anglais/vocabulaire-ecole/qcm.json';
-import flash220 from './../../contenu/sixieme/anglais/vocabulaire-ecole/flashcards.json';
-import qcm221 from './../../contenu/sixieme/anglais/have-got/qcm.json';
-import flash221 from './../../contenu/sixieme/anglais/have-got/flashcards.json';
-import qcm222 from './../../contenu/sixieme/anglais/there-is-there-are/qcm.json';
-import flash222 from './../../contenu/sixieme/anglais/there-is-there-are/flashcards.json';
-import qcm223 from './../../contenu/sixieme/anglais/present-simple/qcm.json';
-import flash223 from './../../contenu/sixieme/anglais/present-simple/flashcards.json';
-import qcm224 from './../../contenu/sixieme/anglais/questions-auxiliaires/qcm.json';
-import flash224 from './../../contenu/sixieme/anglais/questions-auxiliaires/flashcards.json';
-import qcm225 from './../../contenu/sixieme/anglais/vocabulaire-nourriture-repas/qcm.json';
-import flash225 from './../../contenu/sixieme/anglais/vocabulaire-nourriture-repas/flashcards.json';
-import qcm226 from './../../contenu/sixieme/anglais/civilisation-royaume-uni/qcm.json';
-import flash226 from './../../contenu/sixieme/anglais/civilisation-royaume-uni/flashcards.json';
-import qcm227 from './../../contenu/sixieme/arts/langage-plastique/qcm.json';
-import flash227 from './../../contenu/sixieme/arts/langage-plastique/flashcards.json';
-import qcm228 from './../../contenu/sixieme/arts/prehistoire-antiquite/qcm.json';
-import flash228 from './../../contenu/sixieme/arts/prehistoire-antiquite/flashcards.json';
-import qcm229 from './../../contenu/sixieme/espagnol/fonetica-sonidos/qcm.json';
-import flash229 from './../../contenu/sixieme/espagnol/fonetica-sonidos/flashcards.json';
-import qcm230 from './../../contenu/sixieme/espagnol/pronombres-personales/qcm.json';
-import flash230 from './../../contenu/sixieme/espagnol/pronombres-personales/flashcards.json';
-import qcm231 from './../../contenu/sixieme/espagnol/ser-estar/qcm.json';
-import flash231 from './../../contenu/sixieme/espagnol/ser-estar/flashcards.json';
-import qcm232 from './../../contenu/sixieme/espagnol/articulos-genero/qcm.json';
-import flash232 from './../../contenu/sixieme/espagnol/articulos-genero/flashcards.json';
-import qcm233 from './../../contenu/sixieme/espagnol/plural/qcm.json';
-import flash233 from './../../contenu/sixieme/espagnol/plural/flashcards.json';
-import qcm234 from './../../contenu/sixieme/espagnol/articulos-contractos/qcm.json';
-import flash234 from './../../contenu/sixieme/espagnol/articulos-contractos/flashcards.json';
-import qcm235 from './../../contenu/sixieme/espagnol/vocabulario-escuela/qcm.json';
-import flash235 from './../../contenu/sixieme/espagnol/vocabulario-escuela/flashcards.json';
-import qcm236 from './../../contenu/sixieme/espagnol/presente-regular/qcm.json';
-import flash236 from './../../contenu/sixieme/espagnol/presente-regular/flashcards.json';
-import qcm237 from './../../contenu/sixieme/espagnol/vocabulario-comida/qcm.json';
-import flash237 from './../../contenu/sixieme/espagnol/vocabulario-comida/flashcards.json';
-import qcm238 from './../../contenu/sixieme/espagnol/civilizacion-espana/qcm.json';
-import flash238 from './../../contenu/sixieme/espagnol/civilizacion-espana/flashcards.json';
-import qcm239 from './../../contenu/sixieme/francais/classes-grammaticales/qcm.json';
-import flash239 from './../../contenu/sixieme/francais/classes-grammaticales/flashcards.json';
-import qcm240 from './../../contenu/sixieme/francais/phrase-simple/qcm.json';
-import flash240 from './../../contenu/sixieme/francais/phrase-simple/flashcards.json';
-import qcm241 from './../../contenu/sixieme/francais/present-indicatif/qcm.json';
-import flash241 from './../../contenu/sixieme/francais/present-indicatif/flashcards.json';
-import qcm242 from './../../contenu/sixieme/francais/homophones-grammaticaux/qcm.json';
-import flash242 from './../../contenu/sixieme/francais/homophones-grammaticaux/flashcards.json';
-import qcm243 from './../../contenu/sixieme/francais/imparfait-passe-simple/qcm.json';
-import flash243 from './../../contenu/sixieme/francais/imparfait-passe-simple/flashcards.json';
-import qcm244 from './../../contenu/sixieme/francais/passe-compose-accord/qcm.json';
-import flash244 from './../../contenu/sixieme/francais/passe-compose-accord/flashcards.json';
-import qcm245 from './../../contenu/sixieme/francais/recit-conte-fable/qcm.json';
-import flash245 from './../../contenu/sixieme/francais/recit-conte-fable/flashcards.json';
-import qcm246 from './../../contenu/sixieme/hist-geo/premiers-etats-ecritures/qcm.json';
-import flash246 from './../../contenu/sixieme/hist-geo/premiers-etats-ecritures/flashcards.json';
-import qcm247 from './../../contenu/sixieme/hist-geo/monde-grec/qcm.json';
-import flash247 from './../../contenu/sixieme/hist-geo/monde-grec/flashcards.json';
-import qcm248 from './../../contenu/sixieme/hist-geo/rome-republique-empire/qcm.json';
-import flash248 from './../../contenu/sixieme/hist-geo/rome-republique-empire/flashcards.json';
-import qcm249 from './../../contenu/sixieme/hist-geo/judaisme-christianisme/qcm.json';
-import flash249 from './../../contenu/sixieme/hist-geo/judaisme-christianisme/flashcards.json';
-import qcm250 from './../../contenu/sixieme/hist-geo/habiter-metropole/qcm.json';
-import flash250 from './../../contenu/sixieme/hist-geo/habiter-metropole/flashcards.json';
-import qcm251 from './../../contenu/sixieme/hist-geo/habiter-espaces-contraintes/qcm.json';
-import flash251 from './../../contenu/sixieme/hist-geo/habiter-espaces-contraintes/flashcards.json';
-import qcm252 from './../../contenu/sixieme/hist-geo/emc-college-droits/qcm.json';
-import flash252 from './../../contenu/sixieme/hist-geo/emc-college-droits/flashcards.json';
-import qcm253 from './../../contenu/sixieme/italien/fonetica-suoni/qcm.json';
-import flash253 from './../../contenu/sixieme/italien/fonetica-suoni/flashcards.json';
-import qcm254 from './../../contenu/sixieme/italien/pronomi-personali/qcm.json';
-import flash254 from './../../contenu/sixieme/italien/pronomi-personali/flashcards.json';
-import qcm255 from './../../contenu/sixieme/italien/essere-avere/qcm.json';
-import flash255 from './../../contenu/sixieme/italien/essere-avere/flashcards.json';
-import qcm256 from './../../contenu/sixieme/italien/articoli-genere/qcm.json';
-import flash256 from './../../contenu/sixieme/italien/articoli-genere/flashcards.json';
-import qcm257 from './../../contenu/sixieme/italien/plurale/qcm.json';
-import flash257 from './../../contenu/sixieme/italien/plurale/flashcards.json';
-import qcm258 from './../../contenu/sixieme/italien/preposizioni-articolate/qcm.json';
-import flash258 from './../../contenu/sixieme/italien/preposizioni-articolate/flashcards.json';
-import qcm259 from './../../contenu/sixieme/italien/vocabolario-scuola/qcm.json';
-import flash259 from './../../contenu/sixieme/italien/vocabolario-scuola/flashcards.json';
-import qcm260 from './../../contenu/sixieme/italien/presente-regolare/qcm.json';
-import flash260 from './../../contenu/sixieme/italien/presente-regolare/flashcards.json';
-import qcm261 from './../../contenu/sixieme/italien/vocabolario-cibo/qcm.json';
-import flash261 from './../../contenu/sixieme/italien/vocabolario-cibo/flashcards.json';
-import qcm262 from './../../contenu/sixieme/italien/civilta-italia/qcm.json';
-import flash262 from './../../contenu/sixieme/italien/civilta-italia/flashcards.json';
-import qcm263 from './../../contenu/sixieme/maths/nombres-entiers-decimaux/qcm.json';
-import flash263 from './../../contenu/sixieme/maths/nombres-entiers-decimaux/flashcards.json';
-import qcm264 from './../../contenu/sixieme/maths/configurations-planes/qcm.json';
-import flash264 from './../../contenu/sixieme/maths/configurations-planes/flashcards.json';
-import qcm265 from './../../contenu/sixieme/maths/fractions/qcm.json';
-import flash265 from './../../contenu/sixieme/maths/fractions/flashcards.json';
-import qcm266 from './../../contenu/sixieme/maths/longueurs-aires-volumes/qcm.json';
-import flash266 from './../../contenu/sixieme/maths/longueurs-aires-volumes/flashcards.json';
-import qcm267 from './../../contenu/sixieme/maths/durees/qcm.json';
-import flash267 from './../../contenu/sixieme/maths/durees/flashcards.json';
-import qcm268 from './../../contenu/sixieme/maths/proportionnalite/qcm.json';
-import flash268 from './../../contenu/sixieme/maths/proportionnalite/flashcards.json';
-import qcm269 from './../../contenu/sixieme/maths/initiation-algebre/qcm.json';
-import flash269 from './../../contenu/sixieme/maths/initiation-algebre/flashcards.json';
-import qcm270 from './../../contenu/sixieme/maths/gestion-donnees/qcm.json';
-import flash270 from './../../contenu/sixieme/maths/gestion-donnees/flashcards.json';
-import qcm271 from './../../contenu/sixieme/maths/probabilites/qcm.json';
-import flash271 from './../../contenu/sixieme/maths/probabilites/flashcards.json';
-import qcm272 from './../../contenu/sixieme/maths/pensee-informatique/qcm.json';
-import flash272 from './../../contenu/sixieme/maths/pensee-informatique/flashcards.json';
-import qcm273 from './../../contenu/sixieme/svt/caracteristiques-du-vivant/qcm.json';
-import flash273 from './../../contenu/sixieme/svt/caracteristiques-du-vivant/flashcards.json';
-import qcm274 from './../../contenu/sixieme/svt/classification-des-etres-vivants/qcm.json';
-import flash274 from './../../contenu/sixieme/svt/classification-des-etres-vivants/flashcards.json';
-import qcm275 from './../../contenu/sixieme/svt/besoins-des-vegetaux/qcm.json';
-import flash275 from './../../contenu/sixieme/svt/besoins-des-vegetaux/flashcards.json';
-import qcm276 from './../../contenu/sixieme/svt/origine-de-la-matiere-organique/qcm.json';
-import flash276 from './../../contenu/sixieme/svt/origine-de-la-matiere-organique/flashcards.json';
-import qcm277 from './../../contenu/sixieme/svt/peuplement-des-milieux/qcm.json';
-import flash277 from './../../contenu/sixieme/svt/peuplement-des-milieux/flashcards.json';
-import qcm278 from './../../contenu/sixieme/techno/objets-techniques-et-besoins/qcm.json';
-import flash278 from './../../contenu/sixieme/techno/objets-techniques-et-besoins/flashcards.json';
-import qcm279 from './../../contenu/sixieme/techno/fonctionnement-dun-objet/qcm.json';
-import flash279 from './../../contenu/sixieme/techno/fonctionnement-dun-objet/flashcards.json';
-import qcm280 from './../../contenu/sixieme/techno/materiaux-et-familles/qcm.json';
-import flash280 from './../../contenu/sixieme/techno/materiaux-et-familles/flashcards.json';
-import qcm281 from './../../contenu/sixieme/techno/representation-dun-objet/qcm.json';
-import flash281 from './../../contenu/sixieme/techno/representation-dun-objet/flashcards.json';
-import qcm282 from './../../contenu/sixieme/techno/initiation-programmation/qcm.json';
-import flash282 from './../../contenu/sixieme/techno/initiation-programmation/flashcards.json';
-import qcm283 from './../../contenu/cinquieme/allemand/negation/qcm.json';
-import flash283 from './../../contenu/cinquieme/allemand/negation/flashcards.json';
-import qcm284 from './../../contenu/cinquieme/allemand/akkusativ/qcm.json';
-import flash284 from './../../contenu/cinquieme/allemand/akkusativ/flashcards.json';
-import qcm285 from './../../contenu/cinquieme/allemand/possessivartikel/qcm.json';
-import flash285 from './../../contenu/cinquieme/allemand/possessivartikel/flashcards.json';
-import qcm286 from './../../contenu/cinquieme/allemand/wortschatz-stadt-reisen/qcm.json';
-import flash286 from './../../contenu/cinquieme/allemand/wortschatz-stadt-reisen/flashcards.json';
-import qcm287 from './../../contenu/cinquieme/allemand/trennbare-verben/qcm.json';
-import flash287 from './../../contenu/cinquieme/allemand/trennbare-verben/flashcards.json';
-import qcm288 from './../../contenu/cinquieme/allemand/modalverben/qcm.json';
-import flash288 from './../../contenu/cinquieme/allemand/modalverben/flashcards.json';
-import qcm289 from './../../contenu/cinquieme/allemand/wortschatz-natur-tiere/qcm.json';
-import flash289 from './../../contenu/cinquieme/allemand/wortschatz-natur-tiere/flashcards.json';
-import qcm290 from './../../contenu/cinquieme/allemand/praeteritum-sein-haben/qcm.json';
-import flash290 from './../../contenu/cinquieme/allemand/praeteritum-sein-haben/flashcards.json';
-import qcm291 from './../../contenu/cinquieme/allemand/landeskunde-oesterreich-schweiz/qcm.json';
-import flash291 from './../../contenu/cinquieme/allemand/landeskunde-oesterreich-schweiz/flashcards.json';
-import qcm292 from './../../contenu/cinquieme/anglais/present-continu/qcm.json';
-import flash292 from './../../contenu/cinquieme/anglais/present-continu/flashcards.json';
-import qcm293 from './../../contenu/cinquieme/anglais/prepositions/qcm.json';
-import flash293 from './../../contenu/cinquieme/anglais/prepositions/flashcards.json';
-import qcm294 from './../../contenu/cinquieme/anglais/vocabulaire-ville-voyages/qcm.json';
-import flash294 from './../../contenu/cinquieme/anglais/vocabulaire-ville-voyages/flashcards.json';
-import qcm295 from './../../contenu/cinquieme/anglais/preterit-simple/qcm.json';
-import flash295 from './../../contenu/cinquieme/anglais/preterit-simple/flashcards.json';
-import qcm296 from './../../contenu/cinquieme/anglais/comparatifs-superlatifs/qcm.json';
-import flash296 from './../../contenu/cinquieme/anglais/comparatifs-superlatifs/flashcards.json';
-import qcm297 from './../../contenu/cinquieme/anglais/vocabulaire-nature-animaux/qcm.json';
-import flash297 from './../../contenu/cinquieme/anglais/vocabulaire-nature-animaux/flashcards.json';
-import qcm298 from './../../contenu/cinquieme/anglais/modaux-can-must/qcm.json';
-import flash298 from './../../contenu/cinquieme/anglais/modaux-can-must/flashcards.json';
-import qcm299 from './../../contenu/cinquieme/anglais/futur-will-going-to/qcm.json';
-import flash299 from './../../contenu/cinquieme/anglais/futur-will-going-to/flashcards.json';
-import qcm300 from './../../contenu/cinquieme/anglais/civilisation-etats-unis/qcm.json';
-import flash300 from './../../contenu/cinquieme/anglais/civilisation-etats-unis/flashcards.json';
-import qcm301 from './../../contenu/cinquieme/arts/la-couleur/qcm.json';
-import flash301 from './../../contenu/cinquieme/arts/la-couleur/flashcards.json';
-import qcm302 from './../../contenu/cinquieme/arts/moyen-age/qcm.json';
-import flash302 from './../../contenu/cinquieme/arts/moyen-age/flashcards.json';
-import qcm303 from './../../contenu/cinquieme/espagnol/interrogacion-negacion/qcm.json';
-import flash303 from './../../contenu/cinquieme/espagnol/interrogacion-negacion/flashcards.json';
-import qcm304 from './../../contenu/cinquieme/espagnol/ser-estar-usos/qcm.json';
-import flash304 from './../../contenu/cinquieme/espagnol/ser-estar-usos/flashcards.json';
-import qcm305 from './../../contenu/cinquieme/espagnol/hay-estar/qcm.json';
-import flash305 from './../../contenu/cinquieme/espagnol/hay-estar/flashcards.json';
-import qcm306 from './../../contenu/cinquieme/espagnol/posesivos/qcm.json';
-import flash306 from './../../contenu/cinquieme/espagnol/posesivos/flashcards.json';
-import qcm307 from './../../contenu/cinquieme/espagnol/vocabulario-ciudad-viajes/qcm.json';
-import flash307 from './../../contenu/cinquieme/espagnol/vocabulario-ciudad-viajes/flashcards.json';
-import qcm308 from './../../contenu/cinquieme/espagnol/presente-irregular/qcm.json';
-import flash308 from './../../contenu/cinquieme/espagnol/presente-irregular/flashcards.json';
-import qcm309 from './../../contenu/cinquieme/espagnol/gustar/qcm.json';
-import flash309 from './../../contenu/cinquieme/espagnol/gustar/flashcards.json';
-import qcm310 from './../../contenu/cinquieme/espagnol/vocabulario-naturaleza-animales/qcm.json';
-import flash310 from './../../contenu/cinquieme/espagnol/vocabulario-naturaleza-animales/flashcards.json';
-import qcm311 from './../../contenu/cinquieme/espagnol/civilizacion-mexico-latinoamerica/qcm.json';
-import flash311 from './../../contenu/cinquieme/espagnol/civilizacion-mexico-latinoamerica/flashcards.json';
-import qcm312 from './../../contenu/cinquieme/francais/expansions-du-nom/qcm.json';
-import flash312 from './../../contenu/cinquieme/francais/expansions-du-nom/flashcards.json';
-import qcm313 from './../../contenu/cinquieme/francais/propositions/qcm.json';
-import flash313 from './../../contenu/cinquieme/francais/propositions/flashcards.json';
-import qcm314 from './../../contenu/cinquieme/francais/temps-composes/qcm.json';
-import flash314 from './../../contenu/cinquieme/francais/temps-composes/flashcards.json';
-import qcm315 from './../../contenu/cinquieme/francais/futur-conditionnel/qcm.json';
-import flash315 from './../../contenu/cinquieme/francais/futur-conditionnel/flashcards.json';
-import qcm316 from './../../contenu/cinquieme/francais/champ-lexical-connotation/qcm.json';
-import flash316 from './../../contenu/cinquieme/francais/champ-lexical-connotation/flashcards.json';
-import qcm317 from './../../contenu/cinquieme/francais/discours-direct-indirect/qcm.json';
-import flash317 from './../../contenu/cinquieme/francais/discours-direct-indirect/flashcards.json';
-import qcm318 from './../../contenu/cinquieme/francais/texte-de-theatre/qcm.json';
-import flash318 from './../../contenu/cinquieme/francais/texte-de-theatre/flashcards.json';
-import qcm319 from './../../contenu/cinquieme/hist-geo/islam-debuts-expansion/qcm.json';
-import flash319 from './../../contenu/cinquieme/hist-geo/islam-debuts-expansion/flashcards.json';
-import qcm320 from './../../contenu/cinquieme/hist-geo/occident-feodal/qcm.json';
-import flash320 from './../../contenu/cinquieme/hist-geo/occident-feodal/flashcards.json';
-import qcm321 from './../../contenu/cinquieme/hist-geo/roi-et-ville-moyen-age/qcm.json';
-import flash321 from './../../contenu/cinquieme/hist-geo/roi-et-ville-moyen-age/flashcards.json';
-import qcm322 from './../../contenu/cinquieme/hist-geo/renaissance-humanisme-reformes/qcm.json';
-import flash322 from './../../contenu/cinquieme/hist-geo/renaissance-humanisme-reformes/flashcards.json';
-import qcm323 from './../../contenu/cinquieme/hist-geo/demographie-developpement/qcm.json';
-import flash323 from './../../contenu/cinquieme/hist-geo/demographie-developpement/flashcards.json';
-import qcm324 from './../../contenu/cinquieme/hist-geo/ressources-eau-alimentation-energie/qcm.json';
-import flash324 from './../../contenu/cinquieme/hist-geo/ressources-eau-alimentation-energie/flashcards.json';
-import qcm325 from './../../contenu/cinquieme/hist-geo/emc-egalite-developpement-durable/qcm.json';
-import flash325 from './../../contenu/cinquieme/hist-geo/emc-egalite-developpement-durable/flashcards.json';
-import qcm326 from './../../contenu/cinquieme/italien/interrogazione-negazione/qcm.json';
-import flash326 from './../../contenu/cinquieme/italien/interrogazione-negazione/flashcards.json';
-import qcm327 from './../../contenu/cinquieme/italien/essere-esserci/qcm.json';
-import flash327 from './../../contenu/cinquieme/italien/essere-esserci/flashcards.json';
-import qcm328 from './../../contenu/cinquieme/italien/ce-ci-sono/qcm.json';
-import flash328 from './../../contenu/cinquieme/italien/ce-ci-sono/flashcards.json';
-import qcm329 from './../../contenu/cinquieme/italien/possessivi/qcm.json';
-import flash329 from './../../contenu/cinquieme/italien/possessivi/flashcards.json';
-import qcm330 from './../../contenu/cinquieme/italien/vocabolario-citta-viaggi/qcm.json';
-import flash330 from './../../contenu/cinquieme/italien/vocabolario-citta-viaggi/flashcards.json';
-import qcm331 from './../../contenu/cinquieme/italien/presente-irregolare/qcm.json';
-import flash331 from './../../contenu/cinquieme/italien/presente-irregolare/flashcards.json';
-import qcm332 from './../../contenu/cinquieme/italien/piacere/qcm.json';
-import flash332 from './../../contenu/cinquieme/italien/piacere/flashcards.json';
-import qcm333 from './../../contenu/cinquieme/italien/vocabolario-natura-animali/qcm.json';
-import flash333 from './../../contenu/cinquieme/italien/vocabolario-natura-animali/flashcards.json';
-import qcm334 from './../../contenu/cinquieme/italien/civilta-regioni-citta/qcm.json';
-import flash334 from './../../contenu/cinquieme/italien/civilta-regioni-citta/flashcards.json';
-import qcm335 from './../../contenu/cinquieme/langues-anciennes/latin-decouverte/qcm.json';
-import flash335 from './../../contenu/cinquieme/langues-anciennes/latin-decouverte/flashcards.json';
-import qcm336 from './../../contenu/cinquieme/langues-anciennes/latin-present/qcm.json';
-import flash336 from './../../contenu/cinquieme/langues-anciennes/latin-present/flashcards.json';
-import qcm337 from './../../contenu/cinquieme/maths/operations/qcm.json';
-import flash337 from './../../contenu/cinquieme/maths/operations/flashcards.json';
-import qcm338 from './../../contenu/cinquieme/maths/fractions/qcm.json';
-import flash338 from './../../contenu/cinquieme/maths/fractions/flashcards.json';
-import qcm339 from './../../contenu/cinquieme/maths/nombres-relatifs/qcm.json';
-import flash339 from './../../contenu/cinquieme/maths/nombres-relatifs/flashcards.json';
-import qcm340 from './../../contenu/cinquieme/maths/reperage/qcm.json';
-import flash340 from './../../contenu/cinquieme/maths/reperage/flashcards.json';
-import qcm341 from './../../contenu/cinquieme/maths/calcul-litteral/qcm.json';
-import flash341 from './../../contenu/cinquieme/maths/calcul-litteral/flashcards.json';
-import qcm342 from './../../contenu/cinquieme/maths/puissances/qcm.json';
-import flash342 from './../../contenu/cinquieme/maths/puissances/flashcards.json';
-import qcm343 from './../../contenu/cinquieme/maths/proportionnalite/qcm.json';
-import flash343 from './../../contenu/cinquieme/maths/proportionnalite/flashcards.json';
-import qcm344 from './../../contenu/cinquieme/maths/triangles-angles/qcm.json';
-import flash344 from './../../contenu/cinquieme/maths/triangles-angles/flashcards.json';
-import qcm345 from './../../contenu/cinquieme/maths/parallelogrammes/qcm.json';
-import flash345 from './../../contenu/cinquieme/maths/parallelogrammes/flashcards.json';
-import qcm346 from './../../contenu/cinquieme/maths/transformations/qcm.json';
-import flash346 from './../../contenu/cinquieme/maths/transformations/flashcards.json';
-import qcm347 from './../../contenu/cinquieme/maths/representation-espace/qcm.json';
-import flash347 from './../../contenu/cinquieme/maths/representation-espace/flashcards.json';
-import qcm348 from './../../contenu/cinquieme/maths/fonctions/qcm.json';
-import flash348 from './../../contenu/cinquieme/maths/fonctions/flashcards.json';
-import qcm349 from './../../contenu/cinquieme/maths/statistiques/qcm.json';
-import flash349 from './../../contenu/cinquieme/maths/statistiques/flashcards.json';
-import qcm350 from './../../contenu/cinquieme/maths/probabilites/qcm.json';
-import flash350 from './../../contenu/cinquieme/maths/probabilites/flashcards.json';
-import qcm351 from './../../contenu/cinquieme/maths/pensee-informatique/qcm.json';
-import flash351 from './../../contenu/cinquieme/maths/pensee-informatique/flashcards.json';
-import qcm352 from './../../contenu/cinquieme/physique-chimie/proprietes-matiere/qcm.json';
-import flash352 from './../../contenu/cinquieme/physique-chimie/proprietes-matiere/flashcards.json';
-import qcm353 from './../../contenu/cinquieme/physique-chimie/corps-purs-melanges/qcm.json';
-import flash353 from './../../contenu/cinquieme/physique-chimie/corps-purs-melanges/flashcards.json';
-import qcm354 from './../../contenu/cinquieme/physique-chimie/transformation-chimique/qcm.json';
-import flash354 from './../../contenu/cinquieme/physique-chimie/transformation-chimique/flashcards.json';
-import qcm355 from './../../contenu/cinquieme/physique-chimie/mouvement-vitesse/qcm.json';
-import flash355 from './../../contenu/cinquieme/physique-chimie/mouvement-vitesse/flashcards.json';
-import qcm356 from './../../contenu/cinquieme/physique-chimie/energie-electricite/qcm.json';
-import flash356 from './../../contenu/cinquieme/physique-chimie/energie-electricite/flashcards.json';
-import qcm357 from './../../contenu/cinquieme/physique-chimie/signaux-sonores-lumineux/qcm.json';
-import flash357 from './../../contenu/cinquieme/physique-chimie/signaux-sonores-lumineux/flashcards.json';
-import qcm358 from './../../contenu/cinquieme/svt/respiration-et-milieux-de-vie/qcm.json';
-import flash358 from './../../contenu/cinquieme/svt/respiration-et-milieux-de-vie/flashcards.json';
-import qcm359 from './../../contenu/cinquieme/svt/nutrition-et-systeme-digestif/qcm.json';
-import flash359 from './../../contenu/cinquieme/svt/nutrition-et-systeme-digestif/flashcards.json';
-import qcm360 from './../../contenu/cinquieme/svt/circulation-et-sang/qcm.json';
-import flash360 from './../../contenu/cinquieme/svt/circulation-et-sang/flashcards.json';
-import qcm361 from './../../contenu/cinquieme/svt/reproduction-et-puberte/qcm.json';
-import flash361 from './../../contenu/cinquieme/svt/reproduction-et-puberte/flashcards.json';
-import qcm362 from './../../contenu/cinquieme/svt/roches-erosion-et-paysages/qcm.json';
-import flash362 from './../../contenu/cinquieme/svt/roches-erosion-et-paysages/flashcards.json';
-import qcm363 from './../../contenu/cinquieme/techno/besoin-et-cahier-des-charges/qcm.json';
-import flash363 from './../../contenu/cinquieme/techno/besoin-et-cahier-des-charges/flashcards.json';
-import qcm364 from './../../contenu/cinquieme/techno/proprietes-des-materiaux/qcm.json';
-import flash364 from './../../contenu/cinquieme/techno/proprietes-des-materiaux/flashcards.json';
-import qcm365 from './../../contenu/cinquieme/techno/structures-et-stabilite/qcm.json';
-import flash365 from './../../contenu/cinquieme/techno/structures-et-stabilite/flashcards.json';
-import qcm366 from './../../contenu/cinquieme/techno/chaine-denergie/qcm.json';
-import flash366 from './../../contenu/cinquieme/techno/chaine-denergie/flashcards.json';
-import qcm367 from './../../contenu/cinquieme/techno/programmation-et-capteurs/qcm.json';
-import flash367 from './../../contenu/cinquieme/techno/programmation-et-capteurs/flashcards.json';
-import qcm368 from './../../contenu/quatrieme/allemand/dativ/qcm.json';
-import flash368 from './../../contenu/quatrieme/allemand/dativ/flashcards.json';
-import qcm369 from './../../contenu/quatrieme/allemand/pronomen-akkusativ-dativ/qcm.json';
-import flash369 from './../../contenu/quatrieme/allemand/pronomen-akkusativ-dativ/flashcards.json';
-import qcm370 from './../../contenu/quatrieme/allemand/wechselpraepositionen/qcm.json';
-import flash370 from './../../contenu/quatrieme/allemand/wechselpraepositionen/flashcards.json';
-import qcm371 from './../../contenu/quatrieme/allemand/wortschatz-sport-freizeit/qcm.json';
-import flash371 from './../../contenu/quatrieme/allemand/wortschatz-sport-freizeit/flashcards.json';
-import qcm372 from './../../contenu/quatrieme/allemand/perfekt/qcm.json';
-import flash372 from './../../contenu/quatrieme/allemand/perfekt/flashcards.json';
-import qcm373 from './../../contenu/quatrieme/allemand/imperativ/qcm.json';
-import flash373 from './../../contenu/quatrieme/allemand/imperativ/flashcards.json';
-import qcm374 from './../../contenu/quatrieme/allemand/wortschatz-gesundheit-koerper/qcm.json';
-import flash374 from './../../contenu/quatrieme/allemand/wortschatz-gesundheit-koerper/flashcards.json';
-import qcm375 from './../../contenu/quatrieme/allemand/komparativ-superlativ/qcm.json';
-import flash375 from './../../contenu/quatrieme/allemand/komparativ-superlativ/flashcards.json';
-import qcm376 from './../../contenu/quatrieme/allemand/landeskunde-staedte/qcm.json';
-import flash376 from './../../contenu/quatrieme/allemand/landeskunde-staedte/flashcards.json';
-import qcm377 from './../../contenu/quatrieme/allemand/landeskunde-feste-traditionen/qcm.json';
-import flash377 from './../../contenu/quatrieme/allemand/landeskunde-feste-traditionen/flashcards.json';
-import qcm378 from './../../contenu/quatrieme/anglais/word-order/qcm.json';
-import flash378 from './../../contenu/quatrieme/anglais/word-order/flashcards.json';
-import qcm379 from './../../contenu/quatrieme/anglais/quantifieurs/qcm.json';
-import flash379 from './../../contenu/quatrieme/anglais/quantifieurs/flashcards.json';
-import qcm380 from './../../contenu/quatrieme/anglais/vocabulaire-sport-loisirs/qcm.json';
-import flash380 from './../../contenu/quatrieme/anglais/vocabulaire-sport-loisirs/flashcards.json';
-import qcm381 from './../../contenu/quatrieme/anglais/present-perfect/qcm.json';
-import flash381 from './../../contenu/quatrieme/anglais/present-perfect/flashcards.json';
-import qcm382 from './../../contenu/quatrieme/anglais/preterit-vs-present-perfect/qcm.json';
-import flash382 from './../../contenu/quatrieme/anglais/preterit-vs-present-perfect/flashcards.json';
-import qcm383 from './../../contenu/quatrieme/anglais/vocabulaire-sante-corps/qcm.json';
-import flash383 from './../../contenu/quatrieme/anglais/vocabulaire-sante-corps/flashcards.json';
-import qcm384 from './../../contenu/quatrieme/anglais/propositions-relatives/qcm.json';
-import flash384 from './../../contenu/quatrieme/anglais/propositions-relatives/flashcards.json';
-import qcm385 from './../../contenu/quatrieme/anglais/discours-indirect/qcm.json';
-import flash385 from './../../contenu/quatrieme/anglais/discours-indirect/flashcards.json';
-import qcm386 from './../../contenu/quatrieme/anglais/civilisation-londres/qcm.json';
-import flash386 from './../../contenu/quatrieme/anglais/civilisation-londres/flashcards.json';
-import qcm387 from './../../contenu/quatrieme/anglais/civilisation-australie/qcm.json';
-import flash387 from './../../contenu/quatrieme/anglais/civilisation-australie/flashcards.json';
-import qcm388 from './../../contenu/quatrieme/arts/langage-musical/qcm.json';
-import flash388 from './../../contenu/quatrieme/arts/langage-musical/flashcards.json';
-import qcm389 from './../../contenu/quatrieme/arts/renaissance/qcm.json';
-import flash389 from './../../contenu/quatrieme/arts/renaissance/flashcards.json';
-import qcm390 from './../../contenu/quatrieme/espagnol/muy-mucho/qcm.json';
-import flash390 from './../../contenu/quatrieme/espagnol/muy-mucho/flashcards.json';
-import qcm391 from './../../contenu/quatrieme/espagnol/comparativos-superlativos/qcm.json';
-import flash391 from './../../contenu/quatrieme/espagnol/comparativos-superlativos/flashcards.json';
-import qcm392 from './../../contenu/quatrieme/espagnol/estar-gerundio/qcm.json';
-import flash392 from './../../contenu/quatrieme/espagnol/estar-gerundio/flashcards.json';
-import qcm393 from './../../contenu/quatrieme/espagnol/vocabulario-deporte-ocio/qcm.json';
-import flash393 from './../../contenu/quatrieme/espagnol/vocabulario-deporte-ocio/flashcards.json';
-import qcm394 from './../../contenu/quatrieme/espagnol/preterito-perfecto/qcm.json';
-import flash394 from './../../contenu/quatrieme/espagnol/preterito-perfecto/flashcards.json';
-import qcm395 from './../../contenu/quatrieme/espagnol/preterito-indefinido/qcm.json';
-import flash395 from './../../contenu/quatrieme/espagnol/preterito-indefinido/flashcards.json';
-import qcm396 from './../../contenu/quatrieme/espagnol/vocabulario-salud-cuerpo/qcm.json';
-import flash396 from './../../contenu/quatrieme/espagnol/vocabulario-salud-cuerpo/flashcards.json';
-import qcm397 from './../../contenu/quatrieme/espagnol/futuro/qcm.json';
-import flash397 from './../../contenu/quatrieme/espagnol/futuro/flashcards.json';
-import qcm398 from './../../contenu/quatrieme/espagnol/civilizacion-ciudades/qcm.json';
-import flash398 from './../../contenu/quatrieme/espagnol/civilizacion-ciudades/flashcards.json';
-import qcm399 from './../../contenu/quatrieme/espagnol/civilizacion-argentina/qcm.json';
-import flash399 from './../../contenu/quatrieme/espagnol/civilizacion-argentina/flashcards.json';
-import qcm400 from './../../contenu/quatrieme/francais/propositions-subordonnees/qcm.json';
-import flash400 from './../../contenu/quatrieme/francais/propositions-subordonnees/flashcards.json';
-import qcm401 from './../../contenu/quatrieme/francais/voix-active-passive/qcm.json';
-import flash401 from './../../contenu/quatrieme/francais/voix-active-passive/flashcards.json';
-import qcm402 from './../../contenu/quatrieme/francais/valeurs-des-temps/qcm.json';
-import flash402 from './../../contenu/quatrieme/francais/valeurs-des-temps/flashcards.json';
-import qcm403 from './../../contenu/quatrieme/francais/present-subjonctif/qcm.json';
-import flash403 from './../../contenu/quatrieme/francais/present-subjonctif/flashcards.json';
-import qcm404 from './../../contenu/quatrieme/francais/figures-de-style/qcm.json';
-import flash404 from './../../contenu/quatrieme/francais/figures-de-style/flashcards.json';
-import qcm405 from './../../contenu/quatrieme/francais/recit-realiste-fantastique/qcm.json';
-import flash405 from './../../contenu/quatrieme/francais/recit-realiste-fantastique/flashcards.json';
-import qcm406 from './../../contenu/quatrieme/francais/la-lettre/qcm.json';
-import flash406 from './../../contenu/quatrieme/francais/la-lettre/flashcards.json';
-import qcm407 from './../../contenu/quatrieme/hist-geo/commerce-traite-lumieres/qcm.json';
-import flash407 from './../../contenu/quatrieme/hist-geo/commerce-traite-lumieres/flashcards.json';
-import qcm408 from './../../contenu/quatrieme/hist-geo/revolution-francaise-empire/qcm.json';
-import flash408 from './../../contenu/quatrieme/hist-geo/revolution-francaise-empire/flashcards.json';
-import qcm409 from './../../contenu/quatrieme/hist-geo/revolution-industrielle/qcm.json';
-import flash409 from './../../contenu/quatrieme/hist-geo/revolution-industrielle/flashcards.json';
-import qcm410 from './../../contenu/quatrieme/hist-geo/conquetes-colonisation/qcm.json';
-import flash410 from './../../contenu/quatrieme/hist-geo/conquetes-colonisation/flashcards.json';
-import qcm411 from './../../contenu/quatrieme/hist-geo/urbanisation-du-monde/qcm.json';
-import flash411 from './../../contenu/quatrieme/hist-geo/urbanisation-du-monde/flashcards.json';
-import qcm412 from './../../contenu/quatrieme/hist-geo/mobilites-humaines/qcm.json';
-import flash412 from './../../contenu/quatrieme/hist-geo/mobilites-humaines/flashcards.json';
-import qcm413 from './../../contenu/quatrieme/hist-geo/emc-libertes-et-loi/qcm.json';
-import flash413 from './../../contenu/quatrieme/hist-geo/emc-libertes-et-loi/flashcards.json';
-import qcm414 from './../../contenu/quatrieme/italien/molto-troppo/qcm.json';
-import flash414 from './../../contenu/quatrieme/italien/molto-troppo/flashcards.json';
-import qcm415 from './../../contenu/quatrieme/italien/comparativi-superlativi/qcm.json';
-import flash415 from './../../contenu/quatrieme/italien/comparativi-superlativi/flashcards.json';
-import qcm416 from './../../contenu/quatrieme/italien/stare-gerundio/qcm.json';
-import flash416 from './../../contenu/quatrieme/italien/stare-gerundio/flashcards.json';
-import qcm417 from './../../contenu/quatrieme/italien/vocabolario-sport-tempo-libero/qcm.json';
-import flash417 from './../../contenu/quatrieme/italien/vocabolario-sport-tempo-libero/flashcards.json';
-import qcm418 from './../../contenu/quatrieme/italien/passato-prossimo/qcm.json';
-import flash418 from './../../contenu/quatrieme/italien/passato-prossimo/flashcards.json';
-import qcm419 from './../../contenu/quatrieme/italien/imperfetto/qcm.json';
-import flash419 from './../../contenu/quatrieme/italien/imperfetto/flashcards.json';
-import qcm420 from './../../contenu/quatrieme/italien/vocabolario-salute-corpo/qcm.json';
-import flash420 from './../../contenu/quatrieme/italien/vocabolario-salute-corpo/flashcards.json';
-import qcm421 from './../../contenu/quatrieme/italien/futuro/qcm.json';
-import flash421 from './../../contenu/quatrieme/italien/futuro/flashcards.json';
-import qcm422 from './../../contenu/quatrieme/italien/civilta-firenze-venezia/qcm.json';
-import flash422 from './../../contenu/quatrieme/italien/civilta-firenze-venezia/flashcards.json';
-import qcm423 from './../../contenu/quatrieme/italien/civilta-cucina-tradizioni/qcm.json';
-import flash423 from './../../contenu/quatrieme/italien/civilta-cucina-tradizioni/flashcards.json';
-import qcm424 from './../../contenu/quatrieme/langues-anciennes/latin-declinaisons/qcm.json';
-import flash424 from './../../contenu/quatrieme/langues-anciennes/latin-declinaisons/flashcards.json';
-import qcm425 from './../../contenu/quatrieme/langues-anciennes/latin-temps-passe/qcm.json';
-import flash425 from './../../contenu/quatrieme/langues-anciennes/latin-temps-passe/flashcards.json';
-import qcm426 from './../../contenu/quatrieme/maths/operations-nombres-relatifs/qcm.json';
-import flash426 from './../../contenu/quatrieme/maths/operations-nombres-relatifs/flashcards.json';
-import qcm427 from './../../contenu/quatrieme/maths/nombres-rationnels/qcm.json';
-import flash427 from './../../contenu/quatrieme/maths/nombres-rationnels/flashcards.json';
-import qcm428 from './../../contenu/quatrieme/maths/puissances/qcm.json';
-import flash428 from './../../contenu/quatrieme/maths/puissances/flashcards.json';
-import qcm429 from './../../contenu/quatrieme/maths/calcul-litteral/qcm.json';
-import flash429 from './../../contenu/quatrieme/maths/calcul-litteral/flashcards.json';
-import qcm430 from './../../contenu/quatrieme/maths/reperage/qcm.json';
-import flash430 from './../../contenu/quatrieme/maths/reperage/flashcards.json';
-import qcm431 from './../../contenu/quatrieme/maths/proportionnalite/qcm.json';
-import flash431 from './../../contenu/quatrieme/maths/proportionnalite/flashcards.json';
-import qcm432 from './../../contenu/quatrieme/maths/racine-carree/qcm.json';
-import flash432 from './../../contenu/quatrieme/maths/racine-carree/flashcards.json';
-import qcm433 from './../../contenu/quatrieme/maths/triangles/qcm.json';
-import flash433 from './../../contenu/quatrieme/maths/triangles/flashcards.json';
-import qcm434 from './../../contenu/quatrieme/maths/parallelogrammes-translations/qcm.json';
-import flash434 from './../../contenu/quatrieme/maths/parallelogrammes-translations/flashcards.json';
-import qcm435 from './../../contenu/quatrieme/maths/transformations/qcm.json';
-import flash435 from './../../contenu/quatrieme/maths/transformations/flashcards.json';
-import qcm436 from './../../contenu/quatrieme/maths/representation-espace/qcm.json';
-import flash436 from './../../contenu/quatrieme/maths/representation-espace/flashcards.json';
-import qcm437 from './../../contenu/quatrieme/maths/fonctions/qcm.json';
-import flash437 from './../../contenu/quatrieme/maths/fonctions/flashcards.json';
-import qcm438 from './../../contenu/quatrieme/maths/statistiques/qcm.json';
-import flash438 from './../../contenu/quatrieme/maths/statistiques/flashcards.json';
-import qcm439 from './../../contenu/quatrieme/maths/probabilites/qcm.json';
-import flash439 from './../../contenu/quatrieme/maths/probabilites/flashcards.json';
-import qcm440 from './../../contenu/quatrieme/maths/pensee-informatique/qcm.json';
-import flash440 from './../../contenu/quatrieme/maths/pensee-informatique/flashcards.json';
-import qcm441 from './../../contenu/quatrieme/physique-chimie/organisation-matiere/qcm.json';
-import flash441 from './../../contenu/quatrieme/physique-chimie/organisation-matiere/flashcards.json';
-import qcm442 from './../../contenu/quatrieme/physique-chimie/transformation-conservation-masse/qcm.json';
-import flash442 from './../../contenu/quatrieme/physique-chimie/transformation-conservation-masse/flashcards.json';
-import qcm443 from './../../contenu/quatrieme/physique-chimie/mouvement-vitesse/qcm.json';
-import flash443 from './../../contenu/quatrieme/physique-chimie/mouvement-vitesse/flashcards.json';
-import qcm444 from './../../contenu/quatrieme/physique-chimie/interactions-forces/qcm.json';
-import flash444 from './../../contenu/quatrieme/physique-chimie/interactions-forces/flashcards.json';
-import qcm445 from './../../contenu/quatrieme/physique-chimie/puissance-energie/qcm.json';
-import flash445 from './../../contenu/quatrieme/physique-chimie/puissance-energie/flashcards.json';
-import qcm446 from './../../contenu/quatrieme/physique-chimie/propagation-signal/qcm.json';
-import flash446 from './../../contenu/quatrieme/physique-chimie/propagation-signal/flashcards.json';
-import qcm447 from './../../contenu/quatrieme/svt/seismes-et-volcans/qcm.json';
-import flash447 from './../../contenu/quatrieme/svt/seismes-et-volcans/flashcards.json';
-import qcm448 from './../../contenu/quatrieme/svt/tectonique-des-plaques/qcm.json';
-import flash448 from './../../contenu/quatrieme/svt/tectonique-des-plaques/flashcards.json';
-import qcm449 from './../../contenu/quatrieme/svt/energie-dans-lorganisme/qcm.json';
-import flash449 from './../../contenu/quatrieme/svt/energie-dans-lorganisme/flashcards.json';
-import qcm450 from './../../contenu/quatrieme/svt/systeme-nerveux-et-comportement/qcm.json';
-import flash450 from './../../contenu/quatrieme/svt/systeme-nerveux-et-comportement/flashcards.json';
-import qcm451 from './../../contenu/quatrieme/svt/reproduction-et-transmission-de-la-vie/qcm.json';
-import flash451 from './../../contenu/quatrieme/svt/reproduction-et-transmission-de-la-vie/flashcards.json';
-import qcm452 from './../../contenu/quatrieme/techno/chaine-dinformation/qcm.json';
-import flash452 from './../../contenu/quatrieme/techno/chaine-dinformation/flashcards.json';
-import qcm453 from './../../contenu/quatrieme/techno/modelisation-volumique/qcm.json';
-import flash453 from './../../contenu/quatrieme/techno/modelisation-volumique/flashcards.json';
-import qcm454 from './../../contenu/quatrieme/techno/reseaux-informatiques/qcm.json';
-import flash454 from './../../contenu/quatrieme/techno/reseaux-informatiques/flashcards.json';
-import qcm455 from './../../contenu/quatrieme/techno/programmation-evenementielle/qcm.json';
-import flash455 from './../../contenu/quatrieme/techno/programmation-evenementielle/flashcards.json';
-import qcm456 from './../../contenu/quatrieme/techno/confort-et-domotique/qcm.json';
-import flash456 from './../../contenu/quatrieme/techno/confort-et-domotique/flashcards.json';
-import qcm457 from './../../contenu/troisieme/allemand/phonetik-betonung-umlaute/qcm.json';
-import flash457 from './../../contenu/troisieme/allemand/phonetik-betonung-umlaute/flashcards.json';
-import qcm458 from './../../contenu/troisieme/allemand/praepositionen-zeit/qcm.json';
-import flash458 from './../../contenu/troisieme/allemand/praepositionen-zeit/flashcards.json';
-import qcm459 from './../../contenu/troisieme/allemand/wechselpraepositionen-vertiefung/qcm.json';
-import flash459 from './../../contenu/troisieme/allemand/wechselpraepositionen-vertiefung/flashcards.json';
-import qcm460 from './../../contenu/troisieme/allemand/praeteritum/qcm.json';
-import flash460 from './../../contenu/troisieme/allemand/praeteritum/flashcards.json';
-import qcm461 from './../../contenu/troisieme/allemand/wortschatz-technik-internet/qcm.json';
-import flash461 from './../../contenu/troisieme/allemand/wortschatz-technik-internet/flashcards.json';
-import qcm462 from './../../contenu/troisieme/allemand/nebensaetze-weil-dass/qcm.json';
-import flash462 from './../../contenu/troisieme/allemand/nebensaetze-weil-dass/flashcards.json';
-import qcm463 from './../../contenu/troisieme/allemand/wortstellung-nebensatz/qcm.json';
-import flash463 from './../../contenu/troisieme/allemand/wortstellung-nebensatz/flashcards.json';
-import qcm464 from './../../contenu/troisieme/allemand/futur/qcm.json';
-import flash464 from './../../contenu/troisieme/allemand/futur/flashcards.json';
-import qcm465 from './../../contenu/troisieme/allemand/wortschatz-umwelt/qcm.json';
-import flash465 from './../../contenu/troisieme/allemand/wortschatz-umwelt/flashcards.json';
-import qcm466 from './../../contenu/troisieme/allemand/landeskunde-persoenlichkeiten/qcm.json';
-import flash466 from './../../contenu/troisieme/allemand/landeskunde-persoenlichkeiten/flashcards.json';
-import qcm467 from './../../contenu/troisieme/allemand/landeskunde-deutschsprachige-welt/qcm.json';
-import flash467 from './../../contenu/troisieme/allemand/landeskunde-deutschsprachige-welt/flashcards.json';
-import qcm468 from './../../contenu/troisieme/anglais/phonetique-accentuation/qcm.json';
-import flash468 from './../../contenu/troisieme/anglais/phonetique-accentuation/flashcards.json';
-import qcm469 from './../../contenu/troisieme/anglais/present-perfect-since-for/qcm.json';
-import flash469 from './../../contenu/troisieme/anglais/present-perfect-since-for/flashcards.json';
-import qcm470 from './../../contenu/troisieme/anglais/preterit-continu/qcm.json';
-import flash470 from './../../contenu/troisieme/anglais/preterit-continu/flashcards.json';
-import qcm471 from './../../contenu/troisieme/anglais/question-tags/qcm.json';
-import flash471 from './../../contenu/troisieme/anglais/question-tags/flashcards.json';
-import qcm472 from './../../contenu/troisieme/anglais/vocabulaire-technologie/qcm.json';
-import flash472 from './../../contenu/troisieme/anglais/vocabulaire-technologie/flashcards.json';
-import qcm473 from './../../contenu/troisieme/anglais/modaux-deduction-conseil/qcm.json';
-import flash473 from './../../contenu/troisieme/anglais/modaux-deduction-conseil/flashcards.json';
-import qcm474 from './../../contenu/troisieme/anglais/voix-passive/qcm.json';
-import flash474 from './../../contenu/troisieme/anglais/voix-passive/flashcards.json';
-import qcm475 from './../../contenu/troisieme/anglais/conditionnel-if/qcm.json';
-import flash475 from './../../contenu/troisieme/anglais/conditionnel-if/flashcards.json';
-import qcm476 from './../../contenu/troisieme/anglais/vocabulaire-environnement/qcm.json';
-import flash476 from './../../contenu/troisieme/anglais/vocabulaire-environnement/flashcards.json';
-import qcm477 from './../../contenu/troisieme/anglais/civilisation-canada/qcm.json';
-import flash477 from './../../contenu/troisieme/anglais/civilisation-canada/flashcards.json';
-import qcm478 from './../../contenu/troisieme/anglais/civilisation-monde-anglophone/qcm.json';
-import flash478 from './../../contenu/troisieme/anglais/civilisation-monde-anglophone/flashcards.json';
-import qcm479 from './../../contenu/troisieme/arts/art-moderne/qcm.json';
-import flash479 from './../../contenu/troisieme/arts/art-moderne/flashcards.json';
-import qcm480 from './../../contenu/troisieme/arts/art-contemporain/qcm.json';
-import flash480 from './../../contenu/troisieme/arts/art-contemporain/flashcards.json';
-import qcm481 from './../../contenu/troisieme/espagnol/fonetica-acentuacion/qcm.json';
-import flash481 from './../../contenu/troisieme/espagnol/fonetica-acentuacion/flashcards.json';
-import qcm482 from './../../contenu/troisieme/espagnol/preposiciones/qcm.json';
-import flash482 from './../../contenu/troisieme/espagnol/preposiciones/flashcards.json';
-import qcm483 from './../../contenu/troisieme/espagnol/indefinido-irregular/qcm.json';
-import flash483 from './../../contenu/troisieme/espagnol/indefinido-irregular/flashcards.json';
-import qcm484 from './../../contenu/troisieme/espagnol/imperfecto-indefinido/qcm.json';
-import flash484 from './../../contenu/troisieme/espagnol/imperfecto-indefinido/flashcards.json';
-import qcm485 from './../../contenu/troisieme/espagnol/vocabulario-tecnologia/qcm.json';
-import flash485 from './../../contenu/troisieme/espagnol/vocabulario-tecnologia/flashcards.json';
-import qcm486 from './../../contenu/troisieme/espagnol/pronombres-cod-coi/qcm.json';
-import flash486 from './../../contenu/troisieme/espagnol/pronombres-cod-coi/flashcards.json';
-import qcm487 from './../../contenu/troisieme/espagnol/imperativo/qcm.json';
-import flash487 from './../../contenu/troisieme/espagnol/imperativo/flashcards.json';
-import qcm488 from './../../contenu/troisieme/espagnol/por-para/qcm.json';
-import flash488 from './../../contenu/troisieme/espagnol/por-para/flashcards.json';
-import qcm489 from './../../contenu/troisieme/espagnol/vocabulario-medioambiente/qcm.json';
-import flash489 from './../../contenu/troisieme/espagnol/vocabulario-medioambiente/flashcards.json';
-import qcm490 from './../../contenu/troisieme/espagnol/civilizacion-fiestas-tradiciones/qcm.json';
-import flash490 from './../../contenu/troisieme/espagnol/civilizacion-fiestas-tradiciones/flashcards.json';
-import qcm491 from './../../contenu/troisieme/espagnol/civilizacion-mundo-hispanohablante/qcm.json';
-import flash491 from './../../contenu/troisieme/espagnol/civilizacion-mundo-hispanohablante/flashcards.json';
-import qcm492 from './../../contenu/troisieme/francais/phrase-complexe/qcm.json';
-import flash492 from './../../contenu/troisieme/francais/phrase-complexe/flashcards.json';
-import qcm493 from './../../contenu/troisieme/francais/connecteurs-logiques/qcm.json';
-import flash493 from './../../contenu/troisieme/francais/connecteurs-logiques/flashcards.json';
-import qcm494 from './../../contenu/troisieme/francais/modes-et-valeurs/qcm.json';
-import flash494 from './../../contenu/troisieme/francais/modes-et-valeurs/flashcards.json';
-import qcm495 from './../../contenu/troisieme/francais/lexique-melioratif-pejoratif/qcm.json';
-import flash495 from './../../contenu/troisieme/francais/lexique-melioratif-pejoratif/flashcards.json';
-import qcm496 from './../../contenu/troisieme/francais/autobiographie/qcm.json';
-import flash496 from './../../contenu/troisieme/francais/autobiographie/flashcards.json';
-import qcm497 from './../../contenu/troisieme/francais/argumentation/qcm.json';
-import flash497 from './../../contenu/troisieme/francais/argumentation/flashcards.json';
-import qcm498 from './../../contenu/troisieme/francais/poesie-engagee/qcm.json';
-import flash498 from './../../contenu/troisieme/francais/poesie-engagee/flashcards.json';
-import qcm499 from './../../contenu/troisieme/hist-geo/premiere-guerre-mondiale/qcm.json';
-import flash499 from './../../contenu/troisieme/hist-geo/premiere-guerre-mondiale/flashcards.json';
-import qcm500 from './../../contenu/troisieme/hist-geo/totalitarismes/qcm.json';
-import flash500 from './../../contenu/troisieme/hist-geo/totalitarismes/flashcards.json';
-import qcm501 from './../../contenu/troisieme/hist-geo/seconde-guerre-mondiale/qcm.json';
-import flash501 from './../../contenu/troisieme/hist-geo/seconde-guerre-mondiale/flashcards.json';
-import qcm502 from './../../contenu/troisieme/hist-geo/france-depuis-1945-ve-republique/qcm.json';
-import flash502 from './../../contenu/troisieme/hist-geo/france-depuis-1945-ve-republique/flashcards.json';
-import qcm503 from './../../contenu/troisieme/hist-geo/aires-urbaines-espaces-productifs/qcm.json';
-import flash503 from './../../contenu/troisieme/hist-geo/aires-urbaines-espaces-productifs/flashcards.json';
-import qcm504 from './../../contenu/troisieme/hist-geo/france-union-europeenne-monde/qcm.json';
-import flash504 from './../../contenu/troisieme/hist-geo/france-union-europeenne-monde/flashcards.json';
-import qcm505 from './../../contenu/troisieme/hist-geo/emc-defense-citoyennete/qcm.json';
-import flash505 from './../../contenu/troisieme/hist-geo/emc-defense-citoyennete/flashcards.json';
-import qcm506 from './../../contenu/troisieme/italien/fonetica-accento/qcm.json';
-import flash506 from './../../contenu/troisieme/italien/fonetica-accento/flashcards.json';
-import qcm507 from './../../contenu/troisieme/italien/preposizioni/qcm.json';
-import flash507 from './../../contenu/troisieme/italien/preposizioni/flashcards.json';
-import qcm508 from './../../contenu/troisieme/italien/passato-prossimo-ausiliari/qcm.json';
-import flash508 from './../../contenu/troisieme/italien/passato-prossimo-ausiliari/flashcards.json';
-import qcm509 from './../../contenu/troisieme/italien/imperfetto-vs-passato/qcm.json';
-import flash509 from './../../contenu/troisieme/italien/imperfetto-vs-passato/flashcards.json';
-import qcm510 from './../../contenu/troisieme/italien/vocabolario-tecnologia/qcm.json';
-import flash510 from './../../contenu/troisieme/italien/vocabolario-tecnologia/flashcards.json';
-import qcm511 from './../../contenu/troisieme/italien/pronomi-diretti-indiretti/qcm.json';
-import flash511 from './../../contenu/troisieme/italien/pronomi-diretti-indiretti/flashcards.json';
-import qcm512 from './../../contenu/troisieme/italien/particella-ne-ci/qcm.json';
-import flash512 from './../../contenu/troisieme/italien/particella-ne-ci/flashcards.json';
-import qcm513 from './../../contenu/troisieme/italien/imperativo/qcm.json';
-import flash513 from './../../contenu/troisieme/italien/imperativo/flashcards.json';
-import qcm514 from './../../contenu/troisieme/italien/vocabolario-ambiente/qcm.json';
-import flash514 from './../../contenu/troisieme/italien/vocabolario-ambiente/flashcards.json';
-import qcm515 from './../../contenu/troisieme/italien/civilta-feste-tradizioni/qcm.json';
-import flash515 from './../../contenu/troisieme/italien/civilta-feste-tradizioni/flashcards.json';
-import qcm516 from './../../contenu/troisieme/italien/civilta-mondo-italofono/qcm.json';
-import flash516 from './../../contenu/troisieme/italien/civilta-mondo-italofono/flashcards.json';
-import qcm517 from './../../contenu/troisieme/langues-anciennes/civilisation-romaine/qcm.json';
-import flash517 from './../../contenu/troisieme/langues-anciennes/civilisation-romaine/flashcards.json';
-import qcm518 from './../../contenu/troisieme/langues-anciennes/latin-propositions/qcm.json';
-import flash518 from './../../contenu/troisieme/langues-anciennes/latin-propositions/flashcards.json';
-import qcm519 from './../../contenu/troisieme/langues-anciennes/grec-decouverte/qcm.json';
-import flash519 from './../../contenu/troisieme/langues-anciennes/grec-decouverte/flashcards.json';
-import qcm520 from './../../contenu/troisieme/maths/multiples-diviseurs/qcm.json';
-import flash520 from './../../contenu/troisieme/maths/multiples-diviseurs/flashcards.json';
-import qcm521 from './../../contenu/troisieme/maths/nombres-rationnels/qcm.json';
-import flash521 from './../../contenu/troisieme/maths/nombres-rationnels/flashcards.json';
-import qcm522 from './../../contenu/troisieme/maths/puissances/qcm.json';
-import flash522 from './../../contenu/troisieme/maths/puissances/flashcards.json';
-import qcm523 from './../../contenu/troisieme/maths/calcul-litteral/qcm.json';
-import flash523 from './../../contenu/troisieme/maths/calcul-litteral/flashcards.json';
-import qcm524 from './../../contenu/troisieme/maths/reperage/qcm.json';
-import flash524 from './../../contenu/troisieme/maths/reperage/flashcards.json';
-import qcm525 from './../../contenu/troisieme/maths/proportionnalite/qcm.json';
-import flash525 from './../../contenu/troisieme/maths/proportionnalite/flashcards.json';
-import qcm526 from './../../contenu/troisieme/maths/fonctions/qcm.json';
-import flash526 from './../../contenu/troisieme/maths/fonctions/flashcards.json';
-import qcm527 from './../../contenu/troisieme/maths/racine-carree/qcm.json';
-import flash527 from './../../contenu/troisieme/maths/racine-carree/flashcards.json';
-import qcm528 from './../../contenu/troisieme/maths/triangles/qcm.json';
-import flash528 from './../../contenu/troisieme/maths/triangles/flashcards.json';
-import qcm529 from './../../contenu/troisieme/maths/translations-vecteurs/qcm.json';
-import flash529 from './../../contenu/troisieme/maths/translations-vecteurs/flashcards.json';
-import qcm530 from './../../contenu/troisieme/maths/representation-espace/qcm.json';
-import flash530 from './../../contenu/troisieme/maths/representation-espace/flashcards.json';
-import qcm531 from './../../contenu/troisieme/maths/statistiques/qcm.json';
-import flash531 from './../../contenu/troisieme/maths/statistiques/flashcards.json';
-import qcm532 from './../../contenu/troisieme/maths/probabilites/qcm.json';
-import flash532 from './../../contenu/troisieme/maths/probabilites/flashcards.json';
-import qcm533 from './../../contenu/troisieme/maths/pensee-informatique/qcm.json';
-import flash533 from './../../contenu/troisieme/maths/pensee-informatique/flashcards.json';
-import qcm534 from './../../contenu/troisieme/physique-chimie/masse-volumique/qcm.json';
-import flash534 from './../../contenu/troisieme/physique-chimie/masse-volumique/flashcards.json';
-import qcm535 from './../../contenu/troisieme/physique-chimie/atomes-ions-ph/qcm.json';
-import flash535 from './../../contenu/troisieme/physique-chimie/atomes-ions-ph/flashcards.json';
-import qcm536 from './../../contenu/troisieme/physique-chimie/transformations-chimiques/qcm.json';
-import flash536 from './../../contenu/troisieme/physique-chimie/transformations-chimiques/flashcards.json';
-import qcm537 from './../../contenu/troisieme/physique-chimie/poids-gravitation-forces/qcm.json';
-import flash537 from './../../contenu/troisieme/physique-chimie/poids-gravitation-forces/flashcards.json';
-import qcm538 from './../../contenu/troisieme/physique-chimie/conversions-energie-signaux/qcm.json';
-import flash538 from './../../contenu/troisieme/physique-chimie/conversions-energie-signaux/flashcards.json';
-import qcm539 from './../../contenu/troisieme/svt/genetique-et-heredite/qcm.json';
-import flash539 from './../../contenu/troisieme/svt/genetique-et-heredite/flashcards.json';
-import qcm540 from './../../contenu/troisieme/svt/evolution-des-especes/qcm.json';
-import flash540 from './../../contenu/troisieme/svt/evolution-des-especes/flashcards.json';
-import qcm541 from './../../contenu/troisieme/svt/immunite-et-defenses/qcm.json';
-import flash541 from './../../contenu/troisieme/svt/immunite-et-defenses/flashcards.json';
-import qcm542 from './../../contenu/troisieme/svt/hormones-et-reproduction/qcm.json';
-import flash542 from './../../contenu/troisieme/svt/hormones-et-reproduction/flashcards.json';
-import qcm543 from './../../contenu/troisieme/svt/activites-humaines-et-environnement/qcm.json';
-import flash543 from './../../contenu/troisieme/svt/activites-humaines-et-environnement/flashcards.json';
-import qcm544 from './../../contenu/troisieme/techno/demarche-de-projet/qcm.json';
-import flash544 from './../../contenu/troisieme/techno/demarche-de-projet/flashcards.json';
-import qcm545 from './../../contenu/troisieme/techno/evolution-des-objets-techniques/qcm.json';
-import flash545 from './../../contenu/troisieme/techno/evolution-des-objets-techniques/flashcards.json';
-import qcm546 from './../../contenu/troisieme/techno/internet-et-reseaux/qcm.json';
-import flash546 from './../../contenu/troisieme/techno/internet-et-reseaux/flashcards.json';
-import qcm547 from './../../contenu/troisieme/techno/objets-connectes/qcm.json';
-import flash547 from './../../contenu/troisieme/techno/objets-connectes/flashcards.json';
-import qcm548 from './../../contenu/troisieme/techno/programmation-et-robotique/qcm.json';
-import flash548 from './../../contenu/troisieme/techno/programmation-et-robotique/flashcards.json';
-import qcm549 from './../../contenu/seconde/allemand/konnektoren/qcm.json';
-import flash549 from './../../contenu/seconde/allemand/konnektoren/flashcards.json';
-import qcm550 from './../../contenu/seconde/allemand/adjektivdeklination/qcm.json';
-import flash550 from './../../contenu/seconde/allemand/adjektivdeklination/flashcards.json';
-import qcm551 from './../../contenu/seconde/allemand/genitiv/qcm.json';
-import flash551 from './../../contenu/seconde/allemand/genitiv/flashcards.json';
-import qcm552 from './../../contenu/seconde/allemand/verben-mit-dativ/qcm.json';
-import flash552 from './../../contenu/seconde/allemand/verben-mit-dativ/flashcards.json';
-import qcm553 from './../../contenu/seconde/allemand/wortschatz-medien-technik/qcm.json';
-import flash553 from './../../contenu/seconde/allemand/wortschatz-medien-technik/flashcards.json';
-import qcm554 from './../../contenu/seconde/allemand/relativsaetze/qcm.json';
-import flash554 from './../../contenu/seconde/allemand/relativsaetze/flashcards.json';
-import qcm555 from './../../contenu/seconde/allemand/konjunktiv-2/qcm.json';
-import flash555 from './../../contenu/seconde/allemand/konjunktiv-2/flashcards.json';
-import qcm556 from './../../contenu/seconde/allemand/wortschatz-kultur-kunst/qcm.json';
-import flash556 from './../../contenu/seconde/allemand/wortschatz-kultur-kunst/flashcards.json';
-import qcm557 from './../../contenu/seconde/allemand/landeskunde-institutionen-deutschland/qcm.json';
-import flash557 from './../../contenu/seconde/allemand/landeskunde-institutionen-deutschland/flashcards.json';
-import qcm558 from './../../contenu/seconde/allemand/landeskunde-musik-kunst/qcm.json';
-import flash558 from './../../contenu/seconde/allemand/landeskunde-musik-kunst/flashcards.json';
-import qcm559 from './../../contenu/seconde/anglais/temps-du-present/qcm.json';
-import flash559 from './../../contenu/seconde/anglais/temps-du-present/flashcards.json';
-import qcm560 from './../../contenu/seconde/anglais/temps-du-passe/qcm.json';
-import flash560 from './../../contenu/seconde/anglais/temps-du-passe/flashcards.json';
-import qcm561 from './../../contenu/seconde/anglais/modaux/qcm.json';
-import flash561 from './../../contenu/seconde/anglais/modaux/flashcards.json';
-import qcm562 from './../../contenu/seconde/anglais/phrasal-verbs/qcm.json';
-import flash562 from './../../contenu/seconde/anglais/phrasal-verbs/flashcards.json';
-import qcm563 from './../../contenu/seconde/anglais/vocabulaire-medias-numerique/qcm.json';
-import flash563 from './../../contenu/seconde/anglais/vocabulaire-medias-numerique/flashcards.json';
-import qcm564 from './../../contenu/seconde/anglais/hypotheses-if/qcm.json';
-import flash564 from './../../contenu/seconde/anglais/hypotheses-if/flashcards.json';
-import qcm565 from './../../contenu/seconde/anglais/discours-rapporte/qcm.json';
-import flash565 from './../../contenu/seconde/anglais/discours-rapporte/flashcards.json';
-import qcm566 from './../../contenu/seconde/anglais/vocabulaire-culture-arts/qcm.json';
-import flash566 from './../../contenu/seconde/anglais/vocabulaire-culture-arts/flashcards.json';
-import qcm567 from './../../contenu/seconde/anglais/civilisation-institutions-uk/qcm.json';
-import flash567 from './../../contenu/seconde/anglais/civilisation-institutions-uk/flashcards.json';
-import qcm568 from './../../contenu/seconde/anglais/civilisation-irlande/qcm.json';
-import flash568 from './../../contenu/seconde/anglais/civilisation-irlande/flashcards.json';
-import qcm569 from './../../contenu/seconde/arts/grands-courants/qcm.json';
-import flash569 from './../../contenu/seconde/arts/grands-courants/flashcards.json';
-import qcm570 from './../../contenu/seconde/espagnol/tiempos-pasado/qcm.json';
-import flash570 from './../../contenu/seconde/espagnol/tiempos-pasado/flashcards.json';
-import qcm571 from './../../contenu/seconde/espagnol/ser-estar-haber/qcm.json';
-import flash571 from './../../contenu/seconde/espagnol/ser-estar-haber/flashcards.json';
-import qcm572 from './../../contenu/seconde/espagnol/verbos-pronominales/qcm.json';
-import flash572 from './../../contenu/seconde/espagnol/verbos-pronominales/flashcards.json';
-import qcm573 from './../../contenu/seconde/espagnol/vocabulario-medios-tecnologia/qcm.json';
-import flash573 from './../../contenu/seconde/espagnol/vocabulario-medios-tecnologia/flashcards.json';
-import qcm574 from './../../contenu/seconde/espagnol/condicional/qcm.json';
-import flash574 from './../../contenu/seconde/espagnol/condicional/flashcards.json';
-import qcm575 from './../../contenu/seconde/espagnol/subjuntivo-presente/qcm.json';
-import flash575 from './../../contenu/seconde/espagnol/subjuntivo-presente/flashcards.json';
-import qcm576 from './../../contenu/seconde/espagnol/oraciones-condicionales/qcm.json';
-import flash576 from './../../contenu/seconde/espagnol/oraciones-condicionales/flashcards.json';
-import qcm577 from './../../contenu/seconde/espagnol/vocabulario-cultura-arte/qcm.json';
-import flash577 from './../../contenu/seconde/espagnol/vocabulario-cultura-arte/flashcards.json';
-import qcm578 from './../../contenu/seconde/espagnol/civilizacion-instituciones-espana/qcm.json';
-import flash578 from './../../contenu/seconde/espagnol/civilizacion-instituciones-espana/flashcards.json';
-import qcm579 from './../../contenu/seconde/espagnol/civilizacion-arte-pintura/qcm.json';
-import flash579 from './../../contenu/seconde/espagnol/civilizacion-arte-pintura/flashcards.json';
-import qcm580 from './../../contenu/seconde/francais/grammaire-seconde/qcm.json';
-import flash580 from './../../contenu/seconde/francais/grammaire-seconde/flashcards.json';
-import qcm581 from './../../contenu/seconde/francais/procedes-analyse/qcm.json';
-import flash581 from './../../contenu/seconde/francais/procedes-analyse/flashcards.json';
-import qcm582 from './../../contenu/seconde/francais/genres-et-registres/qcm.json';
-import flash582 from './../../contenu/seconde/francais/genres-et-registres/flashcards.json';
-import qcm583 from './../../contenu/seconde/francais/la-poesie/qcm.json';
-import flash583 from './../../contenu/seconde/francais/la-poesie/flashcards.json';
-import qcm584 from './../../contenu/seconde/francais/le-theatre/qcm.json';
-import flash584 from './../../contenu/seconde/francais/le-theatre/flashcards.json';
-import qcm585 from './../../contenu/seconde/francais/le-roman/qcm.json';
-import flash585 from './../../contenu/seconde/francais/le-roman/flashcards.json';
-import qcm586 from './../../contenu/seconde/francais/litterature-idees/qcm.json';
-import flash586 from './../../contenu/seconde/francais/litterature-idees/flashcards.json';
-import qcm587 from './../../contenu/seconde/hist-geo/mediterranee-antique/qcm.json';
-import flash587 from './../../contenu/seconde/hist-geo/mediterranee-antique/flashcards.json';
-import qcm588 from './../../contenu/seconde/hist-geo/mediterranee-medievale/qcm.json';
-import flash588 from './../../contenu/seconde/hist-geo/mediterranee-medievale/flashcards.json';
-import qcm589 from './../../contenu/seconde/hist-geo/humanisme-renaissance/qcm.json';
-import flash589 from './../../contenu/seconde/hist-geo/humanisme-renaissance/flashcards.json';
-import qcm590 from './../../contenu/seconde/hist-geo/revolutions-angleterre-amerique/qcm.json';
-import flash590 from './../../contenu/seconde/hist-geo/revolutions-angleterre-amerique/flashcards.json';
-import qcm591 from './../../contenu/seconde/hist-geo/environnement-developpement-durable/qcm.json';
-import flash591 from './../../contenu/seconde/hist-geo/environnement-developpement-durable/flashcards.json';
-import qcm592 from './../../contenu/seconde/hist-geo/territoires-villes-mondialisation/qcm.json';
-import flash592 from './../../contenu/seconde/hist-geo/territoires-villes-mondialisation/flashcards.json';
-import qcm593 from './../../contenu/seconde/hist-geo/emc-la-liberte/qcm.json';
-import flash593 from './../../contenu/seconde/hist-geo/emc-la-liberte/flashcards.json';
-import qcm594 from './../../contenu/seconde/italien/tempi-del-passato/qcm.json';
-import flash594 from './../../contenu/seconde/italien/tempi-del-passato/flashcards.json';
-import qcm595 from './../../contenu/seconde/italien/essere-stare-esserci/qcm.json';
-import flash595 from './../../contenu/seconde/italien/essere-stare-esserci/flashcards.json';
-import qcm596 from './../../contenu/seconde/italien/verbi-riflessivi/qcm.json';
-import flash596 from './../../contenu/seconde/italien/verbi-riflessivi/flashcards.json';
-import qcm597 from './../../contenu/seconde/italien/vocabolario-media-tecnologia/qcm.json';
-import flash597 from './../../contenu/seconde/italien/vocabolario-media-tecnologia/flashcards.json';
-import qcm598 from './../../contenu/seconde/italien/condizionale/qcm.json';
-import flash598 from './../../contenu/seconde/italien/condizionale/flashcards.json';
-import qcm599 from './../../contenu/seconde/italien/congiuntivo-presente/qcm.json';
-import flash599 from './../../contenu/seconde/italien/congiuntivo-presente/flashcards.json';
-import qcm600 from './../../contenu/seconde/italien/periodo-ipotetico/qcm.json';
-import flash600 from './../../contenu/seconde/italien/periodo-ipotetico/flashcards.json';
-import qcm601 from './../../contenu/seconde/italien/vocabolario-cultura-arte/qcm.json';
-import flash601 from './../../contenu/seconde/italien/vocabolario-cultura-arte/flashcards.json';
-import qcm602 from './../../contenu/seconde/italien/civilta-istituzioni-italia/qcm.json';
-import flash602 from './../../contenu/seconde/italien/civilta-istituzioni-italia/flashcards.json';
-import qcm603 from './../../contenu/seconde/italien/civilta-arte-pittura/qcm.json';
-import flash603 from './../../contenu/seconde/italien/civilta-arte-pittura/flashcards.json';
-import qcm604 from './../../contenu/seconde/langues-anciennes/latin-syntaxe/qcm.json';
-import flash604 from './../../contenu/seconde/langues-anciennes/latin-syntaxe/flashcards.json';
-import qcm605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/qcm.json';
-import flash605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/flashcards.json';
-import qcm606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/qcm.json';
-import flash606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/flashcards.json';
-import qcm607 from './../../contenu/seconde/maths/arithmetique/qcm.json';
-import flash607 from './../../contenu/seconde/maths/arithmetique/flashcards.json';
-import qcm608 from './../../contenu/seconde/maths/equations-inequations/qcm.json';
-import flash608 from './../../contenu/seconde/maths/equations-inequations/flashcards.json';
-import qcm609 from './../../contenu/seconde/maths/notion-de-fonction/qcm.json';
-import flash609 from './../../contenu/seconde/maths/notion-de-fonction/flashcards.json';
-import qcm610 from './../../contenu/seconde/maths/fonctions-de-reference/qcm.json';
-import flash610 from './../../contenu/seconde/maths/fonctions-de-reference/flashcards.json';
-import qcm611 from './../../contenu/seconde/maths/vecteurs/qcm.json';
-import flash611 from './../../contenu/seconde/maths/vecteurs/flashcards.json';
-import qcm612 from './../../contenu/seconde/maths/droites-du-plan/qcm.json';
-import flash612 from './../../contenu/seconde/maths/droites-du-plan/flashcards.json';
-import qcm613 from './../../contenu/seconde/maths/information-chiffree/qcm.json';
-import flash613 from './../../contenu/seconde/maths/information-chiffree/flashcards.json';
-import qcm614 from './../../contenu/seconde/maths/statistiques/qcm.json';
-import flash614 from './../../contenu/seconde/maths/statistiques/flashcards.json';
-import qcm615 from './../../contenu/seconde/maths/probabilites/qcm.json';
-import flash615 from './../../contenu/seconde/maths/probabilites/flashcards.json';
-import qcm616 from './../../contenu/seconde/maths/algorithmique/qcm.json';
-import flash616 from './../../contenu/seconde/maths/algorithmique/flashcards.json';
-import qcm617 from './../../contenu/seconde/physique-chimie/description-matiere/qcm.json';
-import flash617 from './../../contenu/seconde/physique-chimie/description-matiere/flashcards.json';
-import qcm618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/qcm.json';
-import flash618 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/flashcards.json';
-import qcm619 from './../../contenu/seconde/physique-chimie/transformations-matiere/qcm.json';
-import flash619 from './../../contenu/seconde/physique-chimie/transformations-matiere/flashcards.json';
-import qcm620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/qcm.json';
-import flash620 from './../../contenu/seconde/physique-chimie/mouvement-interactions/flashcards.json';
-import qcm621 from './../../contenu/seconde/physique-chimie/ondes-signaux/qcm.json';
-import flash621 from './../../contenu/seconde/physique-chimie/ondes-signaux/flashcards.json';
-import qcm622 from './../../contenu/seconde/ses/production-richesses/qcm.json';
-import flash622 from './../../contenu/seconde/ses/production-richesses/flashcards.json';
-import qcm623 from './../../contenu/seconde/ses/mesure-production-pib/qcm.json';
-import flash623 from './../../contenu/seconde/ses/mesure-production-pib/flashcards.json';
-import qcm624 from './../../contenu/seconde/ses/consommation-revenu/qcm.json';
-import flash624 from './../../contenu/seconde/ses/consommation-revenu/flashcards.json';
-import qcm625 from './../../contenu/seconde/ses/marche-formation-prix/qcm.json';
-import flash625 from './../../contenu/seconde/ses/marche-formation-prix/flashcards.json';
-import qcm626 from './../../contenu/seconde/ses/socialisation-introduction/qcm.json';
-import flash626 from './../../contenu/seconde/ses/socialisation-introduction/flashcards.json';
-import qcm627 from './../../contenu/seconde/ses/opinion-publique/qcm.json';
-import flash627 from './../../contenu/seconde/ses/opinion-publique/flashcards.json';
-import qcm628 from './../../contenu/seconde/snt/internet/qcm.json';
-import flash628 from './../../contenu/seconde/snt/internet/flashcards.json';
-import qcm629 from './../../contenu/seconde/snt/le-web/qcm.json';
-import flash629 from './../../contenu/seconde/snt/le-web/flashcards.json';
-import qcm630 from './../../contenu/seconde/snt/reseaux-sociaux/qcm.json';
-import flash630 from './../../contenu/seconde/snt/reseaux-sociaux/flashcards.json';
-import qcm631 from './../../contenu/seconde/snt/donnees-structurees/qcm.json';
-import flash631 from './../../contenu/seconde/snt/donnees-structurees/flashcards.json';
-import qcm632 from './../../contenu/seconde/snt/localisation-cartographie-gps/qcm.json';
-import flash632 from './../../contenu/seconde/snt/localisation-cartographie-gps/flashcards.json';
-import qcm633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/qcm.json';
-import flash633 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/flashcards.json';
-import qcm634 from './../../contenu/seconde/snt/photographie-numerique/qcm.json';
-import flash634 from './../../contenu/seconde/snt/photographie-numerique/flashcards.json';
-import qcm635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/qcm.json';
-import flash635 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/flashcards.json';
-import qcm636 from './../../contenu/seconde/svt/adn-et-information-genetique/qcm.json';
-import flash636 from './../../contenu/seconde/svt/adn-et-information-genetique/flashcards.json';
-import qcm637 from './../../contenu/seconde/svt/metabolisme-des-cellules/qcm.json';
-import flash637 from './../../contenu/seconde/svt/metabolisme-des-cellules/flashcards.json';
-import qcm638 from './../../contenu/seconde/svt/biodiversite-et-evolution/qcm.json';
-import flash638 from './../../contenu/seconde/svt/biodiversite-et-evolution/flashcards.json';
-import qcm639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/qcm.json';
-import flash639 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/flashcards.json';
-import qcm640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/qcm.json';
-import flash640 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/flashcards.json';
-import qcm641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/qcm.json';
-import flash641 from './../../contenu/premiere/allemand/verben-mit-praepositionen/flashcards.json';
-import qcm642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/qcm.json';
-import flash642 from './../../contenu/premiere/allemand/infinitiv-mit-zu/flashcards.json';
-import qcm643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/qcm.json';
-import flash643 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/flashcards.json';
-import qcm644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/qcm.json';
-import flash644 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/flashcards.json';
-import qcm645 from './../../contenu/premiere/allemand/passiv/qcm.json';
-import flash645 from './../../contenu/premiere/allemand/passiv/flashcards.json';
-import qcm646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/qcm.json';
-import flash646 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/flashcards.json';
-import qcm647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/qcm.json';
-import flash647 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/flashcards.json';
-import qcm648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/qcm.json';
-import flash648 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/flashcards.json';
-import qcm649 from './../../contenu/premiere/allemand/landeskunde-literatur/qcm.json';
-import flash649 from './../../contenu/premiere/allemand/landeskunde-literatur/flashcards.json';
-import qcm650 from './../../contenu/premiere/anglais/aspects-simple-continu/qcm.json';
-import flash650 from './../../contenu/premiere/anglais/aspects-simple-continu/flashcards.json';
-import qcm651 from './../../contenu/premiere/anglais/gerondif-infinitif/qcm.json';
-import flash651 from './../../contenu/premiere/anglais/gerondif-infinitif/flashcards.json';
-import qcm652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/qcm.json';
-import flash652 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/flashcards.json';
-import qcm653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/qcm.json';
-import flash653 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/flashcards.json';
-import qcm654 from './../../contenu/premiere/anglais/voix-passive-emplois/qcm.json';
-import flash654 from './../../contenu/premiere/anglais/voix-passive-emplois/flashcards.json';
-import qcm655 from './../../contenu/premiere/anglais/futur-et-hypotheses/qcm.json';
-import flash655 from './../../contenu/premiere/anglais/futur-et-hypotheses/flashcards.json';
-import qcm656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/qcm.json';
-import flash656 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/flashcards.json';
-import qcm657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/qcm.json';
-import flash657 from './../../contenu/premiere/anglais/civilisation-histoire-usa/flashcards.json';
-import qcm658 from './../../contenu/premiere/anglais/civilisation-litterature/qcm.json';
-import flash658 from './../../contenu/premiere/anglais/civilisation-litterature/flashcards.json';
-import qcm659 from './../../contenu/premiere/arts/architecture/qcm.json';
-import flash659 from './../../contenu/premiere/arts/architecture/flashcards.json';
-import qcm660 from './../../contenu/premiere/arts/histoire-musique/qcm.json';
-import flash660 from './../../contenu/premiere/arts/histoire-musique/flashcards.json';
-import qcm661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/qcm.json';
-import flash661 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/flashcards.json';
-import qcm662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/qcm.json';
-import flash662 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/flashcards.json';
-import qcm663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/qcm.json';
-import flash663 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/flashcards.json';
-import qcm664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/qcm.json';
-import flash664 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/flashcards.json';
-import qcm665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/qcm.json';
-import flash665 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/flashcards.json';
-import qcm666 from './../../contenu/premiere/espagnol/subjuntivo-usos/qcm.json';
-import flash666 from './../../contenu/premiere/espagnol/subjuntivo-usos/flashcards.json';
-import qcm667 from './../../contenu/premiere/espagnol/relativos/qcm.json';
-import flash667 from './../../contenu/premiere/espagnol/relativos/flashcards.json';
-import qcm668 from './../../contenu/premiere/espagnol/perifrasis/qcm.json';
-import flash668 from './../../contenu/premiere/espagnol/perifrasis/flashcards.json';
-import qcm669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/qcm.json';
-import flash669 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/flashcards.json';
-import qcm670 from './../../contenu/premiere/espagnol/voz-pasiva/qcm.json';
-import flash670 from './../../contenu/premiere/espagnol/voz-pasiva/flashcards.json';
-import qcm671 from './../../contenu/premiere/espagnol/estilo-indirecto/qcm.json';
-import flash671 from './../../contenu/premiere/espagnol/estilo-indirecto/flashcards.json';
-import qcm672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/qcm.json';
-import flash672 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/flashcards.json';
-import qcm673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/qcm.json';
-import flash673 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/flashcards.json';
-import qcm674 from './../../contenu/premiere/espagnol/civilizacion-literatura/qcm.json';
-import flash674 from './../../contenu/premiere/espagnol/civilizacion-literatura/flashcards.json';
-import qcm675 from './../../contenu/premiere/francais/grammaire-premiere/qcm.json';
-import flash675 from './../../contenu/premiere/francais/grammaire-premiere/flashcards.json';
-import qcm676 from './../../contenu/premiere/francais/commentaire-litteraire/qcm.json';
-import flash676 from './../../contenu/premiere/francais/commentaire-litteraire/flashcards.json';
-import qcm677 from './../../contenu/premiere/francais/roman-et-recit/qcm.json';
-import flash677 from './../../contenu/premiere/francais/roman-et-recit/flashcards.json';
-import qcm678 from './../../contenu/premiere/francais/poesie-19-21/qcm.json';
-import flash678 from './../../contenu/premiere/francais/poesie-19-21/flashcards.json';
-import qcm679 from './../../contenu/premiere/francais/contraction-essai/qcm.json';
-import flash679 from './../../contenu/premiere/francais/contraction-essai/flashcards.json';
-import qcm680 from './../../contenu/premiere/francais/litterature-idees-16-18/qcm.json';
-import flash680 from './../../contenu/premiere/francais/litterature-idees-16-18/flashcards.json';
-import qcm681 from './../../contenu/premiere/francais/dissertation/qcm.json';
-import flash681 from './../../contenu/premiere/francais/dissertation/flashcards.json';
-import qcm682 from './../../contenu/premiere/francais/theatre-17-21/qcm.json';
-import flash682 from './../../contenu/premiere/francais/theatre-17-21/flashcards.json';
-import qcm683 from './../../contenu/premiere/francais/epreuve-orale/qcm.json';
-import flash683 from './../../contenu/premiere/francais/epreuve-orale/flashcards.json';
-import qcm684 from './../../contenu/premiere/hggsp/democratie/qcm.json';
-import flash684 from './../../contenu/premiere/hggsp/democratie/flashcards.json';
-import qcm685 from './../../contenu/premiere/hggsp/puissances-internationales/qcm.json';
-import flash685 from './../../contenu/premiere/hggsp/puissances-internationales/flashcards.json';
-import qcm686 from './../../contenu/premiere/hggsp/frontieres/qcm.json';
-import flash686 from './../../contenu/premiere/hggsp/frontieres/flashcards.json';
-import qcm687 from './../../contenu/premiere/hggsp/s-informer/qcm.json';
-import flash687 from './../../contenu/premiere/hggsp/s-informer/flashcards.json';
-import qcm688 from './../../contenu/premiere/hggsp/etats-et-religions/qcm.json';
-import flash688 from './../../contenu/premiere/hggsp/etats-et-religions/flashcards.json';
-import qcm689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/qcm.json';
-import flash689 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/flashcards.json';
-import qcm690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/qcm.json';
-import flash690 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/flashcards.json';
-import qcm691 from './../../contenu/premiere/hist-geo/industrialisation-19e/qcm.json';
-import flash691 from './../../contenu/premiere/hist-geo/industrialisation-19e/flashcards.json';
-import qcm692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/qcm.json';
-import flash692 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/flashcards.json';
-import qcm693 from './../../contenu/premiere/hist-geo/metropolisation-france/qcm.json';
-import flash693 from './../../contenu/premiere/hist-geo/metropolisation-france/flashcards.json';
-import qcm694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/qcm.json';
-import flash694 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/flashcards.json';
-import qcm695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/qcm.json';
-import flash695 from './../../contenu/premiere/hist-geo/emc-republique-laicite/flashcards.json';
-import qcm696 from './../../contenu/premiere/italien/congiuntivo-usi/qcm.json';
-import flash696 from './../../contenu/premiere/italien/congiuntivo-usi/flashcards.json';
-import qcm697 from './../../contenu/premiere/italien/pronomi-relativi/qcm.json';
-import flash697 from './../../contenu/premiere/italien/pronomi-relativi/flashcards.json';
-import qcm698 from './../../contenu/premiere/italien/perifrasi/qcm.json';
-import flash698 from './../../contenu/premiere/italien/perifrasi/flashcards.json';
-import qcm699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/qcm.json';
-import flash699 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/flashcards.json';
-import qcm700 from './../../contenu/premiere/italien/forma-passiva/qcm.json';
-import flash700 from './../../contenu/premiere/italien/forma-passiva/flashcards.json';
-import qcm701 from './../../contenu/premiere/italien/discorso-indiretto/qcm.json';
-import flash701 from './../../contenu/premiere/italien/discorso-indiretto/flashcards.json';
-import qcm702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/qcm.json';
-import flash702 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/flashcards.json';
-import qcm703 from './../../contenu/premiere/italien/civilta-rinascimento/qcm.json';
-import flash703 from './../../contenu/premiere/italien/civilta-rinascimento/flashcards.json';
-import qcm704 from './../../contenu/premiere/italien/civilta-letteratura/qcm.json';
-import flash704 from './../../contenu/premiere/italien/civilta-letteratura/flashcards.json';
-import qcm705 from './../../contenu/premiere/langues-anciennes/mythologie/qcm.json';
-import flash705 from './../../contenu/premiere/langues-anciennes/mythologie/flashcards.json';
-import qcm706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/qcm.json';
-import flash706 from './../../contenu/premiere/langues-anciennes/latin-auteurs/flashcards.json';
-import qcm707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/qcm.json';
-import flash707 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/flashcards.json';
-import qcm708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/qcm.json';
-import flash708 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/flashcards.json';
-import qcm709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/qcm.json';
-import flash709 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/flashcards.json';
-import qcm710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/qcm.json';
-import flash710 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/flashcards.json';
-import qcm711 from './../../contenu/premiere/maths-specialite/second-degre/qcm.json';
-import flash711 from './../../contenu/premiere/maths-specialite/second-degre/flashcards.json';
-import qcm712 from './../../contenu/premiere/maths-specialite/suites-numeriques/qcm.json';
-import flash712 from './../../contenu/premiere/maths-specialite/suites-numeriques/flashcards.json';
-import qcm713 from './../../contenu/premiere/maths-specialite/derivation/qcm.json';
-import flash713 from './../../contenu/premiere/maths-specialite/derivation/flashcards.json';
-import qcm714 from './../../contenu/premiere/maths-specialite/variations-courbes/qcm.json';
-import flash714 from './../../contenu/premiere/maths-specialite/variations-courbes/flashcards.json';
-import qcm715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/qcm.json';
-import flash715 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/flashcards.json';
-import qcm716 from './../../contenu/premiere/maths-specialite/trigonometrie/qcm.json';
-import flash716 from './../../contenu/premiere/maths-specialite/trigonometrie/flashcards.json';
-import qcm717 from './../../contenu/premiere/maths-specialite/produit-scalaire/qcm.json';
-import flash717 from './../../contenu/premiere/maths-specialite/produit-scalaire/flashcards.json';
-import qcm718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/qcm.json';
-import flash718 from './../../contenu/premiere/maths-specialite/geometrie-reperee/flashcards.json';
-import qcm719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/qcm.json';
-import flash719 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/flashcards.json';
-import qcm720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/qcm.json';
-import flash720 from './../../contenu/premiere/maths-specialite/variables-aleatoires/flashcards.json';
-import qcm721 from './../../contenu/premiere/nsi/representation-des-donnees/qcm.json';
-import flash721 from './../../contenu/premiere/nsi/representation-des-donnees/flashcards.json';
-import qcm722 from './../../contenu/premiere/nsi/types-construits/qcm.json';
-import flash722 from './../../contenu/premiere/nsi/types-construits/flashcards.json';
-import qcm723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/qcm.json';
-import flash723 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/flashcards.json';
-import qcm724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/qcm.json';
-import flash724 from './../../contenu/premiere/nsi/interactions-web-client-serveur/flashcards.json';
-import qcm725 from './../../contenu/premiere/nsi/architecture-et-systeme/qcm.json';
-import flash725 from './../../contenu/premiere/nsi/architecture-et-systeme/flashcards.json';
-import qcm726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/qcm.json';
-import flash726 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/flashcards.json';
-import qcm727 from './../../contenu/premiere/physique-chimie/transformations-matiere/qcm.json';
-import flash727 from './../../contenu/premiere/physique-chimie/transformations-matiere/flashcards.json';
-import qcm728 from './../../contenu/premiere/physique-chimie/chimie-organique/qcm.json';
-import flash728 from './../../contenu/premiere/physique-chimie/chimie-organique/flashcards.json';
-import qcm729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/qcm.json';
-import flash729 from './../../contenu/premiere/physique-chimie/mouvement-interactions/flashcards.json';
-import qcm730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/qcm.json';
-import flash730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/flashcards.json';
-import qcm731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/qcm.json';
-import flash731 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/flashcards.json';
-import qcm732 from './../../contenu/premiere/physique-chimie/ondes-signaux/qcm.json';
-import flash732 from './../../contenu/premiere/physique-chimie/ondes-signaux/flashcards.json';
-import qcm733 from './../../contenu/premiere/ses/marche-concurrentiel/qcm.json';
-import flash733 from './../../contenu/premiere/ses/marche-concurrentiel/flashcards.json';
-import qcm734 from './../../contenu/premiere/ses/marches-imparfaits/qcm.json';
-import flash734 from './../../contenu/premiere/ses/marches-imparfaits/flashcards.json';
-import qcm735 from './../../contenu/premiere/ses/defaillances-de-marche/qcm.json';
-import flash735 from './../../contenu/premiere/ses/defaillances-de-marche/flashcards.json';
-import qcm736 from './../../contenu/premiere/ses/monnaie-et-financement/qcm.json';
-import flash736 from './../../contenu/premiere/ses/monnaie-et-financement/flashcards.json';
-import qcm737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/qcm.json';
-import flash737 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/flashcards.json';
-import qcm738 from './../../contenu/premiere/ses/liens-sociaux/qcm.json';
-import flash738 from './../../contenu/premiere/ses/liens-sociaux/flashcards.json';
-import qcm739 from './../../contenu/premiere/ses/deviance-controle-social/qcm.json';
-import flash739 from './../../contenu/premiere/ses/deviance-controle-social/flashcards.json';
-import qcm740 from './../../contenu/premiere/ses/voter-participation/qcm.json';
-import flash740 from './../../contenu/premiere/ses/voter-participation/flashcards.json';
-import qcm741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/qcm.json';
-import flash741 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/flashcards.json';
-import qcm742 from './../../contenu/premiere/si/chaine-denergie/qcm.json';
-import flash742 from './../../contenu/premiere/si/chaine-denergie/flashcards.json';
-import qcm743 from './../../contenu/premiere/si/chaine-dinformation/qcm.json';
-import flash743 from './../../contenu/premiere/si/chaine-dinformation/flashcards.json';
-import qcm744 from './../../contenu/premiere/si/comportement-des-materiaux/qcm.json';
-import flash744 from './../../contenu/premiere/si/comportement-des-materiaux/flashcards.json';
-import qcm745 from './../../contenu/premiere/si/mecanique-des-solides/qcm.json';
-import flash745 from './../../contenu/premiere/si/mecanique-des-solides/flashcards.json';
-import qcm746 from './../../contenu/premiere/svt/mutations-et-variabilite/qcm.json';
-import flash746 from './../../contenu/premiere/svt/mutations-et-variabilite/flashcards.json';
-import qcm747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/qcm.json';
-import flash747 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/flashcards.json';
-import qcm748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/qcm.json';
-import flash748 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/flashcards.json';
-import qcm749 from './../../contenu/premiere/svt/ecosystemes-et-services/qcm.json';
-import flash749 from './../../contenu/premiere/svt/ecosystemes-et-services/flashcards.json';
-import qcm750 from './../../contenu/premiere/svt/variation-genetique-et-sante/qcm.json';
-import flash750 from './../../contenu/premiere/svt/variation-genetique-et-sante/flashcards.json';
-import qcm751 from './../../contenu/premiere-techno/maths/suites-numeriques/qcm.json';
-import flash751 from './../../contenu/premiere-techno/maths/suites-numeriques/flashcards.json';
-import qcm752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/qcm.json';
-import flash752 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/flashcards.json';
-import qcm753 from './../../contenu/premiere-techno/maths/derivation/qcm.json';
-import flash753 from './../../contenu/premiere-techno/maths/derivation/flashcards.json';
-import qcm754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/qcm.json';
-import flash754 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/flashcards.json';
-import qcm755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/qcm.json';
-import flash755 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/flashcards.json';
-import qcm756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
-import flash756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
-import qcm757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/qcm.json';
-import flash757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/flashcards.json';
-import qcm758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/qcm.json';
-import flash758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/derivees/flashcards.json';
-import qcm759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/qcm.json';
-import flash759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/flashcards.json';
-import qcm760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/qcm.json';
-import flash760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/flashcards.json';
-import qcm761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/qcm.json';
-import flash761 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/flashcards.json';
-import qcm762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/qcm.json';
-import flash762 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/primitives/flashcards.json';
-import qcm763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/qcm.json';
-import flash763 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/flashcards.json';
-import qcm764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/qcm.json';
-import flash764 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/flashcards.json';
-import qcm765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/qcm.json';
-import flash765 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/flashcards.json';
-import qcm766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/qcm.json';
-import flash766 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/flashcards.json';
-import qcm767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/qcm.json';
-import flash767 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/flashcards.json';
-import qcm768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/qcm.json';
-import flash768 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/flashcards.json';
-import qcm769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/qcm.json';
-import flash769 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/flashcards.json';
-import qcm770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/qcm.json';
-import flash770 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/flashcards.json';
-import qcm771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/qcm.json';
-import flash771 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/flashcards.json';
-import qcm772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/qcm.json';
-import flash772 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/flashcards.json';
-import qcm773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/qcm.json';
-import flash773 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/flashcards.json';
-import qcm774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/qcm.json';
-import flash774 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/flashcards.json';
-import qcm775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/qcm.json';
-import flash775 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/flashcards.json';
-import qcm776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/qcm.json';
-import flash776 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/flashcards.json';
-import qcm777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/qcm.json';
-import flash777 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/flashcards.json';
-import qcm778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/qcm.json';
-import flash778 from './../../contenu/terminale/allemand/komplexe-satzgefuege/flashcards.json';
-import qcm779 from './../../contenu/terminale/allemand/konnektoren-argumentation/qcm.json';
-import flash779 from './../../contenu/terminale/allemand/konnektoren-argumentation/flashcards.json';
-import qcm780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/qcm.json';
-import flash780 from './../../contenu/terminale/allemand/partizipialkonstruktionen/flashcards.json';
-import qcm781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/qcm.json';
-import flash781 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/flashcards.json';
-import qcm782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/qcm.json';
-import flash782 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/flashcards.json';
-import qcm783 from './../../contenu/terminale/allemand/nominalstil/qcm.json';
-import flash783 from './../../contenu/terminale/allemand/nominalstil/flashcards.json';
-import qcm784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/qcm.json';
-import flash784 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/flashcards.json';
-import qcm785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/qcm.json';
-import flash785 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/flashcards.json';
-import qcm786 from './../../contenu/terminale/anglais/systeme-verbal/qcm.json';
-import flash786 from './../../contenu/terminale/anglais/systeme-verbal/flashcards.json';
-import qcm787 from './../../contenu/terminale/anglais/modalite/qcm.json';
-import flash787 from './../../contenu/terminale/anglais/modalite/flashcards.json';
-import qcm788 from './../../contenu/terminale/anglais/irreel-hypotheses/qcm.json';
-import flash788 from './../../contenu/terminale/anglais/irreel-hypotheses/flashcards.json';
-import qcm789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/qcm.json';
-import flash789 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/flashcards.json';
-import qcm790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/qcm.json';
-import flash790 from './../../contenu/terminale/anglais/discours-rapporte-concordance/flashcards.json';
-import qcm791 from './../../contenu/terminale/anglais/structures-complexes/qcm.json';
-import flash791 from './../../contenu/terminale/anglais/structures-complexes/flashcards.json';
-import qcm792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/qcm.json';
-import flash792 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/flashcards.json';
-import qcm793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/qcm.json';
-import flash793 from './../../contenu/terminale/anglais/civilisation-anglais-monde/flashcards.json';
-import qcm794 from './../../contenu/terminale/arts/cinema/qcm.json';
-import flash794 from './../../contenu/terminale/arts/cinema/flashcards.json';
-import qcm795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/qcm.json';
-import flash795 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/flashcards.json';
-import qcm796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/qcm.json';
-import flash796 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/flashcards.json';
-import qcm797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/qcm.json';
-import flash797 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/flashcards.json';
-import qcm798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/qcm.json';
-import flash798 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/flashcards.json';
-import qcm799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/qcm.json';
-import flash799 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/flashcards.json';
-import qcm800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/qcm.json';
-import flash800 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/flashcards.json';
-import qcm801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/qcm.json';
-import flash801 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/flashcards.json';
-import qcm802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/qcm.json';
-import flash802 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/flashcards.json';
-import qcm803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/qcm.json';
-import flash803 from './../../contenu/terminale/espagnol/ser-estar-avanzado/flashcards.json';
-import qcm804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/qcm.json';
-import flash804 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/flashcards.json';
-import qcm805 from './../../contenu/terminale/espagnol/concordancia-tiempos/qcm.json';
-import flash805 from './../../contenu/terminale/espagnol/concordancia-tiempos/flashcards.json';
-import qcm806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/qcm.json';
-import flash806 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/flashcards.json';
-import qcm807 from './../../contenu/terminale/espagnol/conectores-argumentacion/qcm.json';
-import flash807 from './../../contenu/terminale/espagnol/conectores-argumentacion/flashcards.json';
-import qcm808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/qcm.json';
-import flash808 from './../../contenu/terminale/espagnol/estructuras-enfaticas/flashcards.json';
-import qcm809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/qcm.json';
-import flash809 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/flashcards.json';
-import qcm810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/qcm.json';
-import flash810 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/flashcards.json';
-import qcm811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/qcm.json';
-import flash811 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/flashcards.json';
-import qcm812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/qcm.json';
-import flash812 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/flashcards.json';
-import qcm813 from './../../contenu/terminale/grand-oral/construire-l-expose/qcm.json';
-import flash813 from './../../contenu/terminale/grand-oral/construire-l-expose/flashcards.json';
-import qcm814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/qcm.json';
-import flash814 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/flashcards.json';
-import qcm815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/qcm.json';
-import flash815 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/flashcards.json';
-import qcm816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/qcm.json';
-import flash816 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/flashcards.json';
-import qcm817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/qcm.json';
-import flash817 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/flashcards.json';
-import qcm818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/qcm.json';
-import flash818 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/flashcards.json';
-import qcm819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/qcm.json';
-import flash819 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/flashcards.json';
-import qcm820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/qcm.json';
-import flash820 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/flashcards.json';
-import qcm821 from './../../contenu/terminale/hggsp/histoire-et-memoires/qcm.json';
-import flash821 from './../../contenu/terminale/hggsp/histoire-et-memoires/flashcards.json';
-import qcm822 from './../../contenu/terminale/hggsp/patrimoine/qcm.json';
-import flash822 from './../../contenu/terminale/hggsp/patrimoine/flashcards.json';
-import qcm823 from './../../contenu/terminale/hggsp/environnement/qcm.json';
-import flash823 from './../../contenu/terminale/hggsp/environnement/flashcards.json';
-import qcm824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/qcm.json';
-import flash824 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/flashcards.json';
-import qcm825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/qcm.json';
-import flash825 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/flashcards.json';
-import qcm826 from './../../contenu/terminale/hist-geo/guerre-froide/qcm.json';
-import flash826 from './../../contenu/terminale/hist-geo/guerre-froide/flashcards.json';
-import qcm827 from './../../contenu/terminale/hist-geo/decolonisation/qcm.json';
-import flash827 from './../../contenu/terminale/hist-geo/decolonisation/flashcards.json';
-import qcm828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/qcm.json';
-import flash828 from './../../contenu/terminale/hist-geo/monde-depuis-1990/flashcards.json';
-import qcm829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/qcm.json';
-import flash829 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/flashcards.json';
-import qcm830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/qcm.json';
-import flash830 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/flashcards.json';
-import qcm831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/qcm.json';
-import flash831 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/flashcards.json';
-import qcm832 from './../../contenu/terminale/italien/usi-avanzati/qcm.json';
-import flash832 from './../../contenu/terminale/italien/usi-avanzati/flashcards.json';
-import qcm833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/qcm.json';
-import flash833 from './../../contenu/terminale/italien/congiuntivo-imperfetto/flashcards.json';
-import qcm834 from './../../contenu/terminale/italien/concordanza-tempi/qcm.json';
-import flash834 from './../../contenu/terminale/italien/concordanza-tempi/flashcards.json';
-import qcm835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/qcm.json';
-import flash835 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/flashcards.json';
-import qcm836 from './../../contenu/terminale/italien/connettivi-argomentazione/qcm.json';
-import flash836 from './../../contenu/terminale/italien/connettivi-argomentazione/flashcards.json';
-import qcm837 from './../../contenu/terminale/italien/strutture-enfatiche/qcm.json';
-import flash837 from './../../contenu/terminale/italien/strutture-enfatiche/flashcards.json';
-import qcm838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/qcm.json';
-import flash838 from './../../contenu/terminale/italien/vocabolario-societa-mondo/flashcards.json';
-import qcm839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/qcm.json';
-import flash839 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/flashcards.json';
-import qcm840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/qcm.json';
-import flash840 from './../../contenu/terminale/langues-anciennes/civilisation-antique/flashcards.json';
-import qcm841 from './../../contenu/terminale/maths-complementaires/suites-evolution/qcm.json';
-import flash841 from './../../contenu/terminale/maths-complementaires/suites-evolution/flashcards.json';
-import qcm842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/qcm.json';
-import flash842 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/flashcards.json';
-import qcm843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/qcm.json';
-import flash843 from './../../contenu/terminale/maths-complementaires/derivation-convexite/flashcards.json';
-import qcm844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/qcm.json';
-import flash844 from './../../contenu/terminale/maths-complementaires/continuite-tvi/flashcards.json';
-import qcm845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/qcm.json';
-import flash845 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/flashcards.json';
-import qcm846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/qcm.json';
-import flash846 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/flashcards.json';
-import qcm847 from './../../contenu/terminale/maths-complementaires/calcul-integral/qcm.json';
-import flash847 from './../../contenu/terminale/maths-complementaires/calcul-integral/flashcards.json';
-import qcm848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/qcm.json';
-import flash848 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/flashcards.json';
-import qcm849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/qcm.json';
-import flash849 from './../../contenu/terminale/maths-expertes/complexes-algebrique/flashcards.json';
-import qcm850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/qcm.json';
-import flash850 from './../../contenu/terminale/maths-expertes/complexes-geometrique/flashcards.json';
-import qcm851 from './../../contenu/terminale/maths-expertes/arithmetique/qcm.json';
-import flash851 from './../../contenu/terminale/maths-expertes/arithmetique/flashcards.json';
-import qcm852 from './../../contenu/terminale/maths-expertes/graphes-matrices/qcm.json';
-import flash852 from './../../contenu/terminale/maths-expertes/graphes-matrices/flashcards.json';
-import qcm853 from './../../contenu/terminale/maths-specialite/logique-ensembles/qcm.json';
-import flash853 from './../../contenu/terminale/maths-specialite/logique-ensembles/flashcards.json';
-import qcm854 from './../../contenu/terminale/maths-specialite/suites/qcm.json';
-import flash854 from './../../contenu/terminale/maths-specialite/suites/flashcards.json';
-import qcm855 from './../../contenu/terminale/maths-specialite/limites-fonctions/qcm.json';
-import flash855 from './../../contenu/terminale/maths-specialite/limites-fonctions/flashcards.json';
-import qcm856 from './../../contenu/terminale/maths-specialite/continuite/qcm.json';
-import flash856 from './../../contenu/terminale/maths-specialite/continuite/flashcards.json';
-import qcm857 from './../../contenu/terminale/maths-specialite/derivation-convexite/qcm.json';
-import flash857 from './../../contenu/terminale/maths-specialite/derivation-convexite/flashcards.json';
-import qcm858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/qcm.json';
-import flash858 from './../../contenu/terminale/maths-specialite/fonction-logarithme/flashcards.json';
-import qcm859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/qcm.json';
-import flash859 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/flashcards.json';
-import qcm860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/qcm.json';
-import flash860 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/flashcards.json';
-import qcm861 from './../../contenu/terminale/maths-specialite/calcul-integral/qcm.json';
-import flash861 from './../../contenu/terminale/maths-specialite/calcul-integral/flashcards.json';
-import qcm862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/qcm.json';
-import flash862 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/flashcards.json';
-import qcm863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/qcm.json';
-import flash863 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/flashcards.json';
-import qcm864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/qcm.json';
-import flash864 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/flashcards.json';
-import qcm865 from './../../contenu/terminale/maths-specialite/listes/qcm.json';
-import flash865 from './../../contenu/terminale/maths-specialite/listes/flashcards.json';
-import qcm866 from './../../contenu/terminale/maths-specialite/loi-binomiale/qcm.json';
-import flash866 from './../../contenu/terminale/maths-specialite/loi-binomiale/flashcards.json';
-import qcm867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/qcm.json';
-import flash867 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/flashcards.json';
-import qcm868 from './../../contenu/terminale/nsi/programmation-et-complexite/qcm.json';
-import flash868 from './../../contenu/terminale/nsi/programmation-et-complexite/flashcards.json';
-import qcm869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/qcm.json';
-import flash869 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/flashcards.json';
-import qcm870 from './../../contenu/terminale/nsi/structures-de-donnees/qcm.json';
-import flash870 from './../../contenu/terminale/nsi/structures-de-donnees/flashcards.json';
-import qcm871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/qcm.json';
-import flash871 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/flashcards.json';
-import qcm872 from './../../contenu/terminale/nsi/reseaux-et-routage/qcm.json';
-import flash872 from './../../contenu/terminale/nsi/reseaux-et-routage/flashcards.json';
-import qcm873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/qcm.json';
-import flash873 from './../../contenu/terminale/nsi/algorithmes-de-graphes/flashcards.json';
-import qcm874 from './../../contenu/terminale/philosophie/methode-dissertation/qcm.json';
-import flash874 from './../../contenu/terminale/philosophie/methode-dissertation/flashcards.json';
-import qcm875 from './../../contenu/terminale/philosophie/methode-explication-texte/qcm.json';
-import flash875 from './../../contenu/terminale/philosophie/methode-explication-texte/flashcards.json';
-import qcm876 from './../../contenu/terminale/philosophie/reperes-conceptuels/qcm.json';
-import flash876 from './../../contenu/terminale/philosophie/reperes-conceptuels/flashcards.json';
-import qcm877 from './../../contenu/terminale/philosophie/conscience/qcm.json';
-import flash877 from './../../contenu/terminale/philosophie/conscience/flashcards.json';
-import qcm878 from './../../contenu/terminale/philosophie/inconscient/qcm.json';
-import flash878 from './../../contenu/terminale/philosophie/inconscient/flashcards.json';
-import qcm879 from './../../contenu/terminale/philosophie/temps/qcm.json';
-import flash879 from './../../contenu/terminale/philosophie/temps/flashcards.json';
-import qcm880 from './../../contenu/terminale/philosophie/langage/qcm.json';
-import flash880 from './../../contenu/terminale/philosophie/langage/flashcards.json';
-import qcm881 from './../../contenu/terminale/philosophie/raison/qcm.json';
-import flash881 from './../../contenu/terminale/philosophie/raison/flashcards.json';
-import qcm882 from './../../contenu/terminale/philosophie/verite/qcm.json';
-import flash882 from './../../contenu/terminale/philosophie/verite/flashcards.json';
-import qcm883 from './../../contenu/terminale/philosophie/science/qcm.json';
-import flash883 from './../../contenu/terminale/philosophie/science/flashcards.json';
-import qcm884 from './../../contenu/terminale/philosophie/technique/qcm.json';
-import flash884 from './../../contenu/terminale/philosophie/technique/flashcards.json';
-import qcm885 from './../../contenu/terminale/philosophie/travail/qcm.json';
-import flash885 from './../../contenu/terminale/philosophie/travail/flashcards.json';
-import qcm886 from './../../contenu/terminale/philosophie/art/qcm.json';
-import flash886 from './../../contenu/terminale/philosophie/art/flashcards.json';
-import qcm887 from './../../contenu/terminale/philosophie/nature/qcm.json';
-import flash887 from './../../contenu/terminale/philosophie/nature/flashcards.json';
-import qcm888 from './../../contenu/terminale/philosophie/religion/qcm.json';
-import flash888 from './../../contenu/terminale/philosophie/religion/flashcards.json';
-import qcm889 from './../../contenu/terminale/philosophie/liberte/qcm.json';
-import flash889 from './../../contenu/terminale/philosophie/liberte/flashcards.json';
-import qcm890 from './../../contenu/terminale/philosophie/devoir/qcm.json';
-import flash890 from './../../contenu/terminale/philosophie/devoir/flashcards.json';
-import qcm891 from './../../contenu/terminale/philosophie/bonheur/qcm.json';
-import flash891 from './../../contenu/terminale/philosophie/bonheur/flashcards.json';
-import qcm892 from './../../contenu/terminale/philosophie/justice/qcm.json';
-import flash892 from './../../contenu/terminale/philosophie/justice/flashcards.json';
-import qcm893 from './../../contenu/terminale/philosophie/etat/qcm.json';
-import flash893 from './../../contenu/terminale/philosophie/etat/flashcards.json';
-import qcm894 from './../../contenu/terminale/physique-chimie/acide-base-ph/qcm.json';
-import flash894 from './../../contenu/terminale/physique-chimie/acide-base-ph/flashcards.json';
-import qcm895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/qcm.json';
-import flash895 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/flashcards.json';
-import qcm896 from './../../contenu/terminale/physique-chimie/titrages/qcm.json';
-import flash896 from './../../contenu/terminale/physique-chimie/titrages/flashcards.json';
-import qcm897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/qcm.json';
-import flash897 from './../../contenu/terminale/physique-chimie/cinetique-chimique/flashcards.json';
-import qcm898 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/qcm.json';
-import flash898 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/flashcards.json';
-import qcm899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/qcm.json';
-import flash899 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/flashcards.json';
-import qcm900 from './../../contenu/terminale/physique-chimie/electrolyse/qcm.json';
-import flash900 from './../../contenu/terminale/physique-chimie/electrolyse/flashcards.json';
-import qcm901 from './../../contenu/terminale/physique-chimie/synthese-organique/qcm.json';
-import flash901 from './../../contenu/terminale/physique-chimie/synthese-organique/flashcards.json';
-import qcm902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/qcm.json';
-import flash902 from './../../contenu/terminale/physique-chimie/decrire-mouvement/flashcards.json';
-import qcm903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/qcm.json';
-import flash903 from './../../contenu/terminale/physique-chimie/lois-newton-champs/flashcards.json';
-import qcm904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/qcm.json';
-import flash904 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/flashcards.json';
-import qcm905 from './../../contenu/terminale/physique-chimie/gaz-parfait/qcm.json';
-import flash905 from './../../contenu/terminale/physique-chimie/gaz-parfait/flashcards.json';
-import qcm906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/qcm.json';
-import flash906 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/flashcards.json';
-import qcm907 from './../../contenu/terminale/physique-chimie/dipole-rc/qcm.json';
-import flash907 from './../../contenu/terminale/physique-chimie/dipole-rc/flashcards.json';
-import qcm908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/qcm.json';
-import flash908 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/flashcards.json';
-import qcm909 from './../../contenu/terminale/physique-chimie/lunette-photons/qcm.json';
-import flash909 from './../../contenu/terminale/physique-chimie/lunette-photons/flashcards.json';
-import qcm910 from './../../contenu/terminale/ses/sources-croissance/qcm.json';
-import flash910 from './../../contenu/terminale/ses/sources-croissance/flashcards.json';
-import qcm911 from './../../contenu/terminale/ses/commerce-mondialisation/qcm.json';
-import flash911 from './../../contenu/terminale/ses/commerce-mondialisation/flashcards.json';
-import qcm912 from './../../contenu/terminale/ses/marche-du-travail-chomage/qcm.json';
-import flash912 from './../../contenu/terminale/ses/marche-du-travail-chomage/flashcards.json';
-import qcm913 from './../../contenu/terminale/ses/monnaie-crises-financieres/qcm.json';
-import flash913 from './../../contenu/terminale/ses/monnaie-crises-financieres/flashcards.json';
-import qcm914 from './../../contenu/terminale/ses/politiques-economiques/qcm.json';
-import flash914 from './../../contenu/terminale/ses/politiques-economiques/flashcards.json';
-import qcm915 from './../../contenu/terminale/ses/structure-sociale-classes/qcm.json';
-import flash915 from './../../contenu/terminale/ses/structure-sociale-classes/flashcards.json';
-import qcm916 from './../../contenu/terminale/ses/mobilite-sociale/qcm.json';
-import flash916 from './../../contenu/terminale/ses/mobilite-sociale/flashcards.json';
-import qcm917 from './../../contenu/terminale/ses/ecole-et-inegalites/qcm.json';
-import flash917 from './../../contenu/terminale/ses/ecole-et-inegalites/flashcards.json';
-import qcm918 from './../../contenu/terminale/ses/engagement-politique/qcm.json';
-import flash918 from './../../contenu/terminale/ses/engagement-politique/flashcards.json';
-import qcm919 from './../../contenu/terminale/si/modelisation-des-mouvements/qcm.json';
-import flash919 from './../../contenu/terminale/si/modelisation-des-mouvements/flashcards.json';
-import qcm920 from './../../contenu/terminale/si/energie-dans-les-systemes/qcm.json';
-import flash920 from './../../contenu/terminale/si/energie-dans-les-systemes/flashcards.json';
-import qcm921 from './../../contenu/terminale/si/resistance-des-structures/qcm.json';
-import flash921 from './../../contenu/terminale/si/resistance-des-structures/flashcards.json';
-import qcm922 from './../../contenu/terminale/si/transmission-de-linformation/qcm.json';
-import flash922 from './../../contenu/terminale/si/transmission-de-linformation/flashcards.json';
-import qcm923 from './../../contenu/terminale/si/asservissement-et-regulation/qcm.json';
-import flash923 from './../../contenu/terminale/si/asservissement-et-regulation/flashcards.json';
-import qcm924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/qcm.json';
-import flash924 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/flashcards.json';
-import qcm925 from './../../contenu/terminale/svt/evolution-et-speciation/qcm.json';
-import flash925 from './../../contenu/terminale/svt/evolution-et-speciation/flashcards.json';
-import qcm926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/qcm.json';
-import flash926 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/flashcards.json';
-import qcm927 from './../../contenu/terminale/svt/climats-passes-et-actuels/qcm.json';
-import flash927 from './../../contenu/terminale/svt/climats-passes-et-actuels/flashcards.json';
-import qcm928 from './../../contenu/terminale/svt/reflexe-et-motricite/qcm.json';
-import flash928 from './../../contenu/terminale/svt/reflexe-et-motricite/flashcards.json';
-import qcm929 from './../../contenu/terminale/svt/glycemie-et-diabete/qcm.json';
-import flash929 from './../../contenu/terminale/svt/glycemie-et-diabete/flashcards.json';
-import qcm930 from './../../contenu/terminale-techno/maths/logique-ensembles/qcm.json';
-import flash930 from './../../contenu/terminale-techno/maths/logique-ensembles/flashcards.json';
-import qcm931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/qcm.json';
-import flash931 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/flashcards.json';
-import qcm932 from './../../contenu/terminale-techno/maths/fonction-inverse/qcm.json';
-import flash932 from './../../contenu/terminale-techno/maths/fonction-inverse/flashcards.json';
-import qcm933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/qcm.json';
-import flash933 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/flashcards.json';
-import qcm934 from './../../contenu/terminale-techno/maths/logarithme-decimal/qcm.json';
-import flash934 from './../../contenu/terminale-techno/maths/logarithme-decimal/flashcards.json';
-import qcm935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/qcm.json';
-import flash935 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/flashcards.json';
-import qcm936 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/qcm.json';
-import flash936 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/flashcards.json';
-import qcm937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/qcm.json';
-import flash937 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/flashcards.json';
-import qcm938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/qcm.json';
-import flash938 from './../../contenu/terminale-techno/maths/algorithmique-programmation/flashcards.json';
-import qcm939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/qcm.json';
-import flash939 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/flashcards.json';
-import qcm940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
-import flash940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
-import qcm941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/qcm.json';
-import flash941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/flashcards.json';
-import qcm942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/qcm.json';
-import flash942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/flashcards.json';
-import qcm943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/qcm.json';
-import flash943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/flashcards.json';
-import qcm944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/qcm.json';
-import flash944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/flashcards.json';
-import qcm945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/qcm.json';
-import flash945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/flashcards.json';
-import qcm946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/qcm.json';
-import flash946 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/flashcards.json';
-import qcm947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/qcm.json';
-import flash947 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/flashcards.json';
-import qcm948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/qcm.json';
-import flash948 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/flashcards.json';
-import qcm949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/qcm.json';
-import flash949 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/flashcards.json';
-import qcm950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/qcm.json';
-import flash950 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/flashcards.json';
-import qcm951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/qcm.json';
-import flash951 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/flashcards.json';
-import qcm952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/qcm.json';
-import flash952 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/flashcards.json';
-import qcm953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/qcm.json';
-import flash953 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/flashcards.json';
-import qcm954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/qcm.json';
-import flash954 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/flashcards.json';
-import qcm955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/qcm.json';
-import flash955 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/flashcards.json';
-import qcm956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/qcm.json';
-import flash956 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/flashcards.json';
-import qcm957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/qcm.json';
-import flash957 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/flashcards.json';
-import qcm958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/qcm.json';
-import flash958 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/flashcards.json';
 import formulaire0 from './../../formulaires/francais-conjugaison.md';
 import formulaire1 from './../../formulaires/francais-homophones.md';
 import formulaire2 from './../../formulaires/allemand-conjugaison.md';
@@ -1952,585 +34,6 @@ import formulaire24 from './../../formulaires/techno-maths.md';
 import formulaire25 from './../../formulaires/st2s-physique-chimie-sante.md';
 import formulaire26 from './../../formulaires/sti2d-stl-pc-maths.md';
 import formulaire27 from './../../formulaires/stl-spcl.md';
-import sujet0 from './../../sujets/maths-sixieme-evaluation-trimestre.md';
-import sujet1 from './../../sujets/maths-cinquieme-evaluation-trimestre.md';
-import sujet2 from './../../sujets/maths-quatrieme-evaluation-trimestre.md';
-import sujet3 from './../../sujets/sj-arts-01.md';
-import sujet4 from './../../sujets/sj-arts-02.md';
-import sujet5 from './../../sujets/sj-francais-01.md';
-import sujet6 from './../../sujets/sj-francais-02.md';
-import sujet7 from './../../sujets/sj-francais-03.md';
-import sujet8 from './../../sujets/sj-francais-04.md';
-import sujet9 from './../../sujets/sj-hist-geo-01.md';
-import sujet10 from './../../sujets/sj-hist-geo-02.md';
-import sujet11 from './../../sujets/sj-hist-geo-03.md';
-import sujet12 from './../../sujets/sj-hist-geo-04.md';
-import sujet13 from './../../sujets/sj-langues-anciennes-01.md';
-import sujet14 from './../../sujets/sj-langues-anciennes-02.md';
-import sujet15 from './../../sujets/brevet-maths-2.md';
-import sujet16 from './../../sujets/brevet-maths-3.md';
-import sujet17 from './../../sujets/brevet-maths-4.md';
-import sujet18 from './../../sujets/brevet-maths-5.md';
-import sujet19 from './../../sujets/brevet-maths.md';
-import sujet20 from './../../sujets/sciences-brevet-pc-svt.md';
-import sujet21 from './../../sujets/sciences-brevet-pc-techno.md';
-import sujet22 from './../../sujets/sciences-brevet-pc.md';
-import sujet23 from './../../sujets/sciences-brevet-college.md';
-import sujet24 from './../../sujets/sj-techno-01.md';
-import sujet25 from './../../sujets/sj-techno-02.md';
-import sujet26 from './../../sujets/sj-techno-03.md';
-import sujet27 from './../../sujets/sj-techno-04.md';
-import sujet28 from './../../sujets/sj-techno-05.md';
-import sujet29 from './../../sujets/sj-techno-06.md';
-import sujet30 from './../../sujets/sj-allemand-01.md';
-import sujet31 from './../../sujets/sj-allemand-02.md';
-import sujet32 from './../../sujets/sj-allemand-03.md';
-import sujet33 from './../../sujets/sj-anglais-01.md';
-import sujet34 from './../../sujets/sj-anglais-02.md';
-import sujet35 from './../../sujets/sj-anglais-03.md';
-import sujet36 from './../../sujets/sj-arts-03.md';
-import sujet37 from './../../sujets/sj-arts-04.md';
-import sujet38 from './../../sujets/sj-espagnol-01.md';
-import sujet39 from './../../sujets/sj-espagnol-02.md';
-import sujet40 from './../../sujets/sj-espagnol-03.md';
-import sujet41 from './../../sujets/sj-italien-01.md';
-import sujet42 from './../../sujets/sj-italien-02.md';
-import sujet43 from './../../sujets/sj-italien-03.md';
-import sujet44 from './../../sujets/sj-langues-anciennes-03.md';
-import sujet45 from './../../sujets/sj-langues-anciennes-05.md';
-import sujet46 from './../../sujets/maths-seconde-controle-commun-1.md';
-import sujet47 from './../../sujets/maths-seconde-controle-commun-2.md';
-import sujet48 from './../../sujets/sj-snt-01.md';
-import sujet49 from './../../sujets/sj-snt-02.md';
-import sujet50 from './../../sujets/sj-snt-03.md';
-import sujet51 from './../../sujets/sj-snt-04.md';
-import sujet52 from './../../sujets/sj-snt-05.md';
-import sujet53 from './../../sujets/sj-snt-06.md';
-import sujet54 from './../../sujets/sj-snt-07.md';
-import sujet55 from './../../sujets/sj-snt-08.md';
-import sujet56 from './../../sujets/sj-snt-09.md';
-import sujet57 from './../../sujets/snt-seconde-entrainement.md';
-import sujet58 from './../../sujets/svt-seconde-entrainement.md';
-import sujet59 from './../../sujets/sj-allemand-04.md';
-import sujet60 from './../../sujets/sj-allemand-05.md';
-import sujet61 from './../../sujets/sj-allemand-06.md';
-import sujet62 from './../../sujets/sj-anglais-04.md';
-import sujet63 from './../../sujets/sj-anglais-05.md';
-import sujet64 from './../../sujets/sj-anglais-06.md';
-import sujet65 from './../../sujets/sj-arts-05.md';
-import sujet66 from './../../sujets/sj-espagnol-04.md';
-import sujet67 from './../../sujets/sj-espagnol-05.md';
-import sujet68 from './../../sujets/sj-espagnol-06.md';
-import sujet69 from './../../sujets/sj-francais-05.md';
-import sujet70 from './../../sujets/sj-francais-06.md';
-import sujet71 from './../../sujets/sj-francais-07.md';
-import sujet72 from './../../sujets/sj-francais-08.md';
-import sujet73 from './../../sujets/sj-francais-09.md';
-import sujet74 from './../../sujets/sj-francais-10.md';
-import sujet75 from './../../sujets/sj-hggsp-01.md';
-import sujet76 from './../../sujets/sj-hggsp-02.md';
-import sujet77 from './../../sujets/sj-hggsp-03.md';
-import sujet78 from './../../sujets/sj-hist-geo-05.md';
-import sujet79 from './../../sujets/sj-hist-geo-06.md';
-import sujet80 from './../../sujets/sj-hist-geo-07.md';
-import sujet81 from './../../sujets/sj-italien-04.md';
-import sujet82 from './../../sujets/sj-italien-05.md';
-import sujet83 from './../../sujets/sj-italien-06.md';
-import sujet84 from './../../sujets/sj-langues-anciennes-04.md';
-import sujet85 from './../../sujets/maths-premiere-anticipee-1.md';
-import sujet86 from './../../sujets/maths-premiere-anticipee-2.md';
-import sujet87 from './../../sujets/nsi-premiere-entrainement.md';
-import sujet88 from './../../sujets/pc-premiere-entrainement.md';
-import sujet89 from './../../sujets/sj-ses-01.md';
-import sujet90 from './../../sujets/sj-ses-02.md';
-import sujet91 from './../../sujets/sj-ses-03.md';
-import sujet92 from './../../sujets/si-premiere-entrainement.md';
-import sujet93 from './../../sujets/sj-allemand-07.md';
-import sujet94 from './../../sujets/sj-allemand-08.md';
-import sujet95 from './../../sujets/sj-allemand-09.md';
-import sujet96 from './../../sujets/sj-allemand-10.md';
-import sujet97 from './../../sujets/sj-anglais-07.md';
-import sujet98 from './../../sujets/sj-anglais-08.md';
-import sujet99 from './../../sujets/sj-anglais-09.md';
-import sujet100 from './../../sujets/sj-anglais-10.md';
-import sujet101 from './../../sujets/sj-arts-06.md';
-import sujet102 from './../../sujets/ens-scientifique-terminale.md';
-import sujet103 from './../../sujets/sj-enseignement-scientifique-01.md';
-import sujet104 from './../../sujets/sj-enseignement-scientifique-02.md';
-import sujet105 from './../../sujets/sj-enseignement-scientifique-03.md';
-import sujet106 from './../../sujets/sj-enseignement-scientifique-04.md';
-import sujet107 from './../../sujets/sj-enseignement-scientifique-05.md';
-import sujet108 from './../../sujets/sj-enseignement-scientifique-06.md';
-import sujet109 from './../../sujets/sj-enseignement-scientifique-07.md';
-import sujet110 from './../../sujets/sj-enseignement-scientifique-08.md';
-import sujet111 from './../../sujets/sj-enseignement-scientifique-09.md';
-import sujet112 from './../../sujets/sj-espagnol-07.md';
-import sujet113 from './../../sujets/sj-espagnol-08.md';
-import sujet114 from './../../sujets/sj-espagnol-09.md';
-import sujet115 from './../../sujets/sj-espagnol-10.md';
-import sujet116 from './../../sujets/sj-hggsp-04.md';
-import sujet117 from './../../sujets/sj-hggsp-05.md';
-import sujet118 from './../../sujets/sj-hggsp-06.md';
-import sujet119 from './../../sujets/sj-hggsp-07.md';
-import sujet120 from './../../sujets/sj-hggsp-08.md';
-import sujet121 from './../../sujets/sj-hggsp-09.md';
-import sujet122 from './../../sujets/sj-hggsp-10.md';
-import sujet123 from './../../sujets/sj-hist-geo-08.md';
-import sujet124 from './../../sujets/sj-hist-geo-09.md';
-import sujet125 from './../../sujets/sj-hist-geo-10.md';
-import sujet126 from './../../sujets/sj-italien-07.md';
-import sujet127 from './../../sujets/sj-italien-08.md';
-import sujet128 from './../../sujets/sj-italien-09.md';
-import sujet129 from './../../sujets/sj-italien-10.md';
-import sujet130 from './../../sujets/sj-langues-anciennes-06.md';
-import sujet131 from './../../sujets/bac-maths-complementaires.md';
-import sujet132 from './../../sujets/bac-maths-expertes.md';
-import sujet133 from './../../sujets/bac-spe-maths-2.md';
-import sujet134 from './../../sujets/bac-spe-maths-3.md';
-import sujet135 from './../../sujets/bac-spe-maths-4.md';
-import sujet136 from './../../sujets/bac-spe-maths-5.md';
-import sujet137 from './../../sujets/bac-spe-maths.md';
-import sujet138 from './../../sujets/sj-mathematiques-01.md';
-import sujet139 from './../../sujets/sj-mathematiques-02.md';
-import sujet140 from './../../sujets/sj-mathematiques-03.md';
-import sujet141 from './../../sujets/bac-nsi-terminale.md';
-import sujet142 from './../../sujets/sj-nsi-01.md';
-import sujet143 from './../../sujets/sj-nsi-02.md';
-import sujet144 from './../../sujets/sj-nsi-03.md';
-import sujet145 from './../../sujets/sj-nsi-04.md';
-import sujet146 from './../../sujets/sj-nsi-05.md';
-import sujet147 from './../../sujets/sj-nsi-06.md';
-import sujet148 from './../../sujets/sj-nsi-07.md';
-import sujet149 from './../../sujets/sj-nsi-08.md';
-import sujet150 from './../../sujets/sj-philosophie-01.md';
-import sujet151 from './../../sujets/sj-philosophie-02.md';
-import sujet152 from './../../sujets/sj-philosophie-03.md';
-import sujet153 from './../../sujets/sj-philosophie-04.md';
-import sujet154 from './../../sujets/sj-philosophie-05.md';
-import sujet155 from './../../sujets/sj-philosophie-06.md';
-import sujet156 from './../../sujets/sj-philosophie-07.md';
-import sujet157 from './../../sujets/sj-philosophie-08.md';
-import sujet158 from './../../sujets/sj-philosophie-09.md';
-import sujet159 from './../../sujets/sj-philosophie-10.md';
-import sujet160 from './../../sujets/bac-pc-terminale.md';
-import sujet161 from './../../sujets/bac-physique-chimie-2.md';
-import sujet162 from './../../sujets/bac-physique-chimie-3.md';
-import sujet163 from './../../sujets/bac-physique-chimie.md';
-import sujet164 from './../../sujets/sj-physique-chimie-01.md';
-import sujet165 from './../../sujets/sj-physique-chimie-02.md';
-import sujet166 from './../../sujets/sj-physique-chimie-03.md';
-import sujet167 from './../../sujets/sj-ses-04.md';
-import sujet168 from './../../sujets/sj-ses-05.md';
-import sujet169 from './../../sujets/sj-ses-06.md';
-import sujet170 from './../../sujets/sj-ses-07.md';
-import sujet171 from './../../sujets/sj-ses-08.md';
-import sujet172 from './../../sujets/sj-ses-09.md';
-import sujet173 from './../../sujets/sj-ses-10.md';
-import sujet174 from './../../sujets/bac-si-terminale.md';
-import sujet175 from './../../sujets/sj-si-01.md';
-import sujet176 from './../../sujets/sj-si-02.md';
-import sujet177 from './../../sujets/sj-si-03.md';
-import sujet178 from './../../sujets/sj-si-04.md';
-import sujet179 from './../../sujets/sj-si-05.md';
-import sujet180 from './../../sujets/sj-si-06.md';
-import sujet181 from './../../sujets/sj-si-07.md';
-import sujet182 from './../../sujets/sj-si-08.md';
-import sujet183 from './../../sujets/bac-svt-terminale.md';
-import sujet184 from './../../sujets/sj-svt-01.md';
-import sujet185 from './../../sujets/sj-svt-02.md';
-import sujet186 from './../../sujets/sj-svt-03.md';
-import sujet187 from './../../sujets/sj-svt-04.md';
-import sujet188 from './../../sujets/sj-svt-05.md';
-import sujet189 from './../../sujets/sj-svt-06.md';
-import sujet190 from './../../sujets/sj-svt-07.md';
-import sujet191 from './../../sujets/bac-techno-maths.md';
-import sujet192 from './../../sujets/bac-st2s-pc-sante.md';
-import sujet193 from './../../sujets/bac-sti2d-pc-maths.md';
-import sujet194 from './../../sujets/bac-stl-spcl.md';
-import quiz0 from './../../quiz/eval-sciences-ce2.json';
-import quiz1 from './../../quiz/eval-sciences-cm1.json';
-import quiz2 from './../../quiz/eval-sciences-cm2.json';
-import quiz3 from './../../quiz/bb-arts-01.json';
-import quiz4 from './../../quiz/bb-arts-11.json';
-import quiz5 from './../../quiz/bb-francais-01.json';
-import quiz6 from './../../quiz/bb-francais-11.json';
-import quiz7 from './../../quiz/bb-hist-geo-01.json';
-import quiz8 from './../../quiz/bb-hist-geo-11.json';
-import quiz9 from './../../quiz/revision-6e-maths.json';
-import quiz10 from './../../quiz/bb-techno-01.json';
-import quiz11 from './../../quiz/bb-techno-02.json';
-import quiz12 from './../../quiz/bb-techno-11.json';
-import quiz13 from './../../quiz/bb-techno-12.json';
-import quiz14 from './../../quiz/bb-arts-02.json';
-import quiz15 from './../../quiz/bb-arts-12.json';
-import quiz16 from './../../quiz/bb-arts-15.json';
-import quiz17 from './../../quiz/bb-francais-02.json';
-import quiz18 from './../../quiz/bb-francais-12.json';
-import quiz19 from './../../quiz/bb-hist-geo-02.json';
-import quiz20 from './../../quiz/bb-hist-geo-12.json';
-import quiz21 from './../../quiz/bb-langues-anciennes-01.json';
-import quiz22 from './../../quiz/bb-langues-anciennes-02.json';
-import quiz23 from './../../quiz/bb-langues-anciennes-11.json';
-import quiz24 from './../../quiz/bb-langues-anciennes-12.json';
-import quiz25 from './../../quiz/revision-5e-maths.json';
-import quiz26 from './../../quiz/bb-techno-03.json';
-import quiz27 from './../../quiz/bb-techno-04.json';
-import quiz28 from './../../quiz/bb-techno-13.json';
-import quiz29 from './../../quiz/bb-techno-14.json';
-import quiz30 from './../../quiz/bb-arts-03.json';
-import quiz31 from './../../quiz/bb-arts-13.json';
-import quiz32 from './../../quiz/bb-francais-03.json';
-import quiz33 from './../../quiz/bb-francais-13.json';
-import quiz34 from './../../quiz/bb-hist-geo-03.json';
-import quiz35 from './../../quiz/bb-hist-geo-13.json';
-import quiz36 from './../../quiz/bb-hist-geo-14.json';
-import quiz37 from './../../quiz/bb-langues-anciennes-03.json';
-import quiz38 from './../../quiz/bb-langues-anciennes-04.json';
-import quiz39 from './../../quiz/bb-langues-anciennes-13.json';
-import quiz40 from './../../quiz/bb-langues-anciennes-14.json';
-import quiz41 from './../../quiz/revision-4e-maths.json';
-import quiz42 from './../../quiz/bb-techno-05.json';
-import quiz43 from './../../quiz/bb-techno-06.json';
-import quiz44 from './../../quiz/bb-techno-07.json';
-import quiz45 from './../../quiz/bb-techno-15.json';
-import quiz46 from './../../quiz/bb-techno-16.json';
-import quiz47 from './../../quiz/bb-techno-17.json';
-import quiz48 from './../../quiz/bb-arts-04.json';
-import quiz49 from './../../quiz/bb-arts-05.json';
-import quiz50 from './../../quiz/bb-arts-14.json';
-import quiz51 from './../../quiz/bb-francais-04.json';
-import quiz52 from './../../quiz/bb-francais-14.json';
-import quiz53 from './../../quiz/bb-hist-geo-04.json';
-import quiz54 from './../../quiz/bb-hist-geo-05.json';
-import quiz55 from './../../quiz/bb-hist-geo-15.json';
-import quiz56 from './../../quiz/bb-langues-anciennes-05.json';
-import quiz57 from './../../quiz/bb-langues-anciennes-15.json';
-import quiz58 from './../../quiz/brevet-blanc-maths.json';
-import quiz59 from './../../quiz/brevet-blanc-pc-college.json';
-import quiz60 from './../../quiz/revision-college-pc.json';
-import quiz61 from './../../quiz/brevet-blanc-svt-college.json';
-import quiz62 from './../../quiz/bb-techno-08.json';
-import quiz63 from './../../quiz/bb-techno-09.json';
-import quiz64 from './../../quiz/bb-techno-10.json';
-import quiz65 from './../../quiz/bb-techno-18.json';
-import quiz66 from './../../quiz/bb-techno-19.json';
-import quiz67 from './../../quiz/bb-techno-20.json';
-import quiz68 from './../../quiz/brevet-blanc-techno-college.json';
-import quiz69 from './../../quiz/bb-allemand-01.json';
-import quiz70 from './../../quiz/bb-allemand-02.json';
-import quiz71 from './../../quiz/bb-allemand-03.json';
-import quiz72 from './../../quiz/bb-allemand-04.json';
-import quiz73 from './../../quiz/bb-allemand-05.json';
-import quiz74 from './../../quiz/bb-anglais-01.json';
-import quiz75 from './../../quiz/bb-anglais-02.json';
-import quiz76 from './../../quiz/bb-anglais-03.json';
-import quiz77 from './../../quiz/bb-anglais-04.json';
-import quiz78 from './../../quiz/bb-anglais-05.json';
-import quiz79 from './../../quiz/bb-arts-06.json';
-import quiz80 from './../../quiz/bb-arts-07.json';
-import quiz81 from './../../quiz/bb-arts-16.json';
-import quiz82 from './../../quiz/bb-arts-19.json';
-import quiz83 from './../../quiz/bb-espagnol-01.json';
-import quiz84 from './../../quiz/bb-espagnol-02.json';
-import quiz85 from './../../quiz/bb-espagnol-03.json';
-import quiz86 from './../../quiz/bb-espagnol-04.json';
-import quiz87 from './../../quiz/bb-espagnol-05.json';
-import quiz88 from './../../quiz/bb-francais-05.json';
-import quiz89 from './../../quiz/bb-francais-06.json';
-import quiz90 from './../../quiz/bb-francais-09.json';
-import quiz91 from './../../quiz/bb-francais-15.json';
-import quiz92 from './../../quiz/bb-francais-16.json';
-import quiz93 from './../../quiz/bb-francais-17.json';
-import quiz94 from './../../quiz/bb-hist-geo-06.json';
-import quiz95 from './../../quiz/bb-hist-geo-07.json';
-import quiz96 from './../../quiz/bb-hist-geo-16.json';
-import quiz97 from './../../quiz/bb-hist-geo-17.json';
-import quiz98 from './../../quiz/bb-italien-01.json';
-import quiz99 from './../../quiz/bb-italien-02.json';
-import quiz100 from './../../quiz/bb-italien-03.json';
-import quiz101 from './../../quiz/bb-italien-04.json';
-import quiz102 from './../../quiz/bb-italien-05.json';
-import quiz103 from './../../quiz/bb-langues-anciennes-06.json';
-import quiz104 from './../../quiz/bb-langues-anciennes-07.json';
-import quiz105 from './../../quiz/bb-langues-anciennes-16.json';
-import quiz106 from './../../quiz/bb-langues-anciennes-17.json';
-import quiz107 from './../../quiz/bac-blanc-seconde-maths.json';
-import quiz108 from './../../quiz/revision-seconde-pc.json';
-import quiz109 from './../../quiz/bb-ses-01.json';
-import quiz110 from './../../quiz/bb-ses-02.json';
-import quiz111 from './../../quiz/bb-ses-03.json';
-import quiz112 from './../../quiz/bb-ses-11.json';
-import quiz113 from './../../quiz/bb-ses-12.json';
-import quiz114 from './../../quiz/bb-ses-13.json';
-import quiz115 from './../../quiz/bac-blanc-snt-seconde.json';
-import quiz116 from './../../quiz/bb-snt-01.json';
-import quiz117 from './../../quiz/bb-snt-02.json';
-import quiz118 from './../../quiz/bb-snt-03.json';
-import quiz119 from './../../quiz/bb-snt-04.json';
-import quiz120 from './../../quiz/bb-snt-05.json';
-import quiz121 from './../../quiz/bb-snt-06.json';
-import quiz122 from './../../quiz/bb-snt-07.json';
-import quiz123 from './../../quiz/bb-snt-08.json';
-import quiz124 from './../../quiz/bb-snt-09.json';
-import quiz125 from './../../quiz/bb-snt-10.json';
-import quiz126 from './../../quiz/bb-snt-11.json';
-import quiz127 from './../../quiz/bb-snt-12.json';
-import quiz128 from './../../quiz/bb-snt-13.json';
-import quiz129 from './../../quiz/bb-snt-14.json';
-import quiz130 from './../../quiz/bb-snt-15.json';
-import quiz131 from './../../quiz/bb-snt-16.json';
-import quiz132 from './../../quiz/bb-snt-17.json';
-import quiz133 from './../../quiz/bb-snt-18.json';
-import quiz134 from './../../quiz/bb-snt-19.json';
-import quiz135 from './../../quiz/bac-blanc-svt-seconde.json';
-import quiz136 from './../../quiz/bb-allemand-06.json';
-import quiz137 from './../../quiz/bb-allemand-07.json';
-import quiz138 from './../../quiz/bb-allemand-08.json';
-import quiz139 from './../../quiz/bb-allemand-09.json';
-import quiz140 from './../../quiz/bb-allemand-10.json';
-import quiz141 from './../../quiz/bb-allemand-11.json';
-import quiz142 from './../../quiz/bb-allemand-12.json';
-import quiz143 from './../../quiz/bb-allemand-13.json';
-import quiz144 from './../../quiz/bb-allemand-14.json';
-import quiz145 from './../../quiz/bb-anglais-06.json';
-import quiz146 from './../../quiz/bb-anglais-07.json';
-import quiz147 from './../../quiz/bb-anglais-08.json';
-import quiz148 from './../../quiz/bb-anglais-09.json';
-import quiz149 from './../../quiz/bb-anglais-10.json';
-import quiz150 from './../../quiz/bb-anglais-11.json';
-import quiz151 from './../../quiz/bb-anglais-12.json';
-import quiz152 from './../../quiz/bb-anglais-13.json';
-import quiz153 from './../../quiz/bb-anglais-14.json';
-import quiz154 from './../../quiz/bb-arts-08.json';
-import quiz155 from './../../quiz/bb-arts-17.json';
-import quiz156 from './../../quiz/bb-arts-20.json';
-import quiz157 from './../../quiz/bac-blanc-ens-scientifique-premiere.json';
-import quiz158 from './../../quiz/bb-espagnol-06.json';
-import quiz159 from './../../quiz/bb-espagnol-07.json';
-import quiz160 from './../../quiz/bb-espagnol-08.json';
-import quiz161 from './../../quiz/bb-espagnol-09.json';
-import quiz162 from './../../quiz/bb-espagnol-10.json';
-import quiz163 from './../../quiz/bb-espagnol-11.json';
-import quiz164 from './../../quiz/bb-espagnol-12.json';
-import quiz165 from './../../quiz/bb-espagnol-13.json';
-import quiz166 from './../../quiz/bb-espagnol-14.json';
-import quiz167 from './../../quiz/bb-francais-07.json';
-import quiz168 from './../../quiz/bb-francais-08.json';
-import quiz169 from './../../quiz/bb-francais-10.json';
-import quiz170 from './../../quiz/bb-francais-18.json';
-import quiz171 from './../../quiz/bb-francais-19.json';
-import quiz172 from './../../quiz/bb-francais-20.json';
-import quiz173 from './../../quiz/bb-hggsp-01.json';
-import quiz174 from './../../quiz/bb-hggsp-02.json';
-import quiz175 from './../../quiz/bb-hggsp-03.json';
-import quiz176 from './../../quiz/bb-hggsp-04.json';
-import quiz177 from './../../quiz/bb-hggsp-05.json';
-import quiz178 from './../../quiz/bb-hggsp-11.json';
-import quiz179 from './../../quiz/bb-hggsp-12.json';
-import quiz180 from './../../quiz/bb-hggsp-13.json';
-import quiz181 from './../../quiz/bb-hggsp-14.json';
-import quiz182 from './../../quiz/bb-hggsp-15.json';
-import quiz183 from './../../quiz/bb-hist-geo-08.json';
-import quiz184 from './../../quiz/bb-hist-geo-09.json';
-import quiz185 from './../../quiz/bb-hist-geo-18.json';
-import quiz186 from './../../quiz/bb-italien-06.json';
-import quiz187 from './../../quiz/bb-italien-07.json';
-import quiz188 from './../../quiz/bb-italien-08.json';
-import quiz189 from './../../quiz/bb-italien-09.json';
-import quiz190 from './../../quiz/bb-italien-10.json';
-import quiz191 from './../../quiz/bb-italien-11.json';
-import quiz192 from './../../quiz/bb-italien-12.json';
-import quiz193 from './../../quiz/bb-italien-13.json';
-import quiz194 from './../../quiz/bb-italien-14.json';
-import quiz195 from './../../quiz/bb-langues-anciennes-08.json';
-import quiz196 from './../../quiz/bb-langues-anciennes-09.json';
-import quiz197 from './../../quiz/bb-langues-anciennes-18.json';
-import quiz198 from './../../quiz/bb-langues-anciennes-19.json';
-import quiz199 from './../../quiz/bac-blanc-premiere-spe-maths.json';
-import quiz200 from './../../quiz/revision-premiere-ens-scientifique.json';
-import quiz201 from './../../quiz/bac-blanc-nsi-premiere.json';
-import quiz202 from './../../quiz/bac-blanc-pc-premiere.json';
-import quiz203 from './../../quiz/bac-blanc-premiere-pc.json';
-import quiz204 from './../../quiz/bb-ses-04.json';
-import quiz205 from './../../quiz/bb-ses-05.json';
-import quiz206 from './../../quiz/bb-ses-06.json';
-import quiz207 from './../../quiz/bb-ses-14.json';
-import quiz208 from './../../quiz/bb-ses-15.json';
-import quiz209 from './../../quiz/bb-ses-16.json';
-import quiz210 from './../../quiz/bac-blanc-si-premiere.json';
-import quiz211 from './../../quiz/revision-premiere-techno-maths.json';
-import quiz212 from './../../quiz/bb-allemand-15.json';
-import quiz213 from './../../quiz/bb-allemand-16.json';
-import quiz214 from './../../quiz/bb-allemand-17.json';
-import quiz215 from './../../quiz/bb-allemand-18.json';
-import quiz216 from './../../quiz/bb-allemand-19.json';
-import quiz217 from './../../quiz/bb-allemand-20.json';
-import quiz218 from './../../quiz/bb-anglais-15.json';
-import quiz219 from './../../quiz/bb-anglais-16.json';
-import quiz220 from './../../quiz/bb-anglais-17.json';
-import quiz221 from './../../quiz/bb-anglais-18.json';
-import quiz222 from './../../quiz/bb-anglais-19.json';
-import quiz223 from './../../quiz/bb-anglais-20.json';
-import quiz224 from './../../quiz/bb-arts-09.json';
-import quiz225 from './../../quiz/bb-arts-10.json';
-import quiz226 from './../../quiz/bb-arts-18.json';
-import quiz227 from './../../quiz/bac-blanc-ens-scientifique-terminale.json';
-import quiz228 from './../../quiz/bb-enseignement-scientifique-01.json';
-import quiz229 from './../../quiz/bb-enseignement-scientifique-02.json';
-import quiz230 from './../../quiz/bb-enseignement-scientifique-03.json';
-import quiz231 from './../../quiz/bb-enseignement-scientifique-04.json';
-import quiz232 from './../../quiz/bb-enseignement-scientifique-05.json';
-import quiz233 from './../../quiz/bb-enseignement-scientifique-06.json';
-import quiz234 from './../../quiz/bb-enseignement-scientifique-07.json';
-import quiz235 from './../../quiz/bb-enseignement-scientifique-08.json';
-import quiz236 from './../../quiz/bb-enseignement-scientifique-09.json';
-import quiz237 from './../../quiz/bb-enseignement-scientifique-10.json';
-import quiz238 from './../../quiz/bb-enseignement-scientifique-11.json';
-import quiz239 from './../../quiz/bb-enseignement-scientifique-12.json';
-import quiz240 from './../../quiz/bb-enseignement-scientifique-13.json';
-import quiz241 from './../../quiz/bb-enseignement-scientifique-14.json';
-import quiz242 from './../../quiz/bb-enseignement-scientifique-15.json';
-import quiz243 from './../../quiz/bb-enseignement-scientifique-16.json';
-import quiz244 from './../../quiz/bb-enseignement-scientifique-17.json';
-import quiz245 from './../../quiz/bb-enseignement-scientifique-18.json';
-import quiz246 from './../../quiz/bb-espagnol-15.json';
-import quiz247 from './../../quiz/bb-espagnol-16.json';
-import quiz248 from './../../quiz/bb-espagnol-17.json';
-import quiz249 from './../../quiz/bb-espagnol-18.json';
-import quiz250 from './../../quiz/bb-espagnol-19.json';
-import quiz251 from './../../quiz/bb-espagnol-20.json';
-import quiz252 from './../../quiz/bb-hggsp-06.json';
-import quiz253 from './../../quiz/bb-hggsp-07.json';
-import quiz254 from './../../quiz/bb-hggsp-08.json';
-import quiz255 from './../../quiz/bb-hggsp-09.json';
-import quiz256 from './../../quiz/bb-hggsp-10.json';
-import quiz257 from './../../quiz/bb-hggsp-16.json';
-import quiz258 from './../../quiz/bb-hggsp-17.json';
-import quiz259 from './../../quiz/bb-hggsp-18.json';
-import quiz260 from './../../quiz/bb-hggsp-19.json';
-import quiz261 from './../../quiz/bb-hggsp-20.json';
-import quiz262 from './../../quiz/bb-hist-geo-10.json';
-import quiz263 from './../../quiz/bb-hist-geo-19.json';
-import quiz264 from './../../quiz/bb-hist-geo-20.json';
-import quiz265 from './../../quiz/bb-italien-15.json';
-import quiz266 from './../../quiz/bb-italien-16.json';
-import quiz267 from './../../quiz/bb-italien-17.json';
-import quiz268 from './../../quiz/bb-italien-18.json';
-import quiz269 from './../../quiz/bb-italien-19.json';
-import quiz270 from './../../quiz/bb-italien-20.json';
-import quiz271 from './../../quiz/bb-langues-anciennes-10.json';
-import quiz272 from './../../quiz/bb-langues-anciennes-20.json';
-import quiz273 from './../../quiz/bac-blanc-maths-complementaires.json';
-import quiz274 from './../../quiz/bac-blanc-maths-expertes.json';
-import quiz275 from './../../quiz/bac-blanc-spe-maths.json';
-import quiz276 from './../../quiz/bb-mathematiques-01.json';
-import quiz277 from './../../quiz/bb-mathematiques-02.json';
-import quiz278 from './../../quiz/bb-mathematiques-03.json';
-import quiz279 from './../../quiz/bb-mathematiques-04.json';
-import quiz280 from './../../quiz/bb-mathematiques-05.json';
-import quiz281 from './../../quiz/bb-mathematiques-06.json';
-import quiz282 from './../../quiz/bb-mathematiques-07.json';
-import quiz283 from './../../quiz/revision-terminale-ens-scientifique.json';
-import quiz284 from './../../quiz/bac-blanc-nsi-terminale.json';
-import quiz285 from './../../quiz/bb-nsi-01.json';
-import quiz286 from './../../quiz/bb-nsi-02.json';
-import quiz287 from './../../quiz/bb-nsi-03.json';
-import quiz288 from './../../quiz/bb-nsi-04.json';
-import quiz289 from './../../quiz/bb-nsi-05.json';
-import quiz290 from './../../quiz/bb-nsi-06.json';
-import quiz291 from './../../quiz/bb-nsi-07.json';
-import quiz292 from './../../quiz/bb-nsi-08.json';
-import quiz293 from './../../quiz/bb-nsi-09.json';
-import quiz294 from './../../quiz/bb-nsi-10.json';
-import quiz295 from './../../quiz/bb-nsi-11.json';
-import quiz296 from './../../quiz/bb-nsi-12.json';
-import quiz297 from './../../quiz/bb-nsi-13.json';
-import quiz298 from './../../quiz/bb-nsi-14.json';
-import quiz299 from './../../quiz/bb-nsi-15.json';
-import quiz300 from './../../quiz/bb-nsi-16.json';
-import quiz301 from './../../quiz/bb-nsi-17.json';
-import quiz302 from './../../quiz/bb-nsi-18.json';
-import quiz303 from './../../quiz/bb-philosophie-01.json';
-import quiz304 from './../../quiz/bb-philosophie-02.json';
-import quiz305 from './../../quiz/bb-philosophie-03.json';
-import quiz306 from './../../quiz/bb-philosophie-04.json';
-import quiz307 from './../../quiz/bb-philosophie-05.json';
-import quiz308 from './../../quiz/bb-philosophie-06.json';
-import quiz309 from './../../quiz/bb-philosophie-07.json';
-import quiz310 from './../../quiz/bb-philosophie-08.json';
-import quiz311 from './../../quiz/bb-philosophie-09.json';
-import quiz312 from './../../quiz/bb-philosophie-10.json';
-import quiz313 from './../../quiz/bb-philosophie-11.json';
-import quiz314 from './../../quiz/bb-philosophie-12.json';
-import quiz315 from './../../quiz/bb-philosophie-13.json';
-import quiz316 from './../../quiz/bb-philosophie-14.json';
-import quiz317 from './../../quiz/bb-philosophie-15.json';
-import quiz318 from './../../quiz/bb-philosophie-16.json';
-import quiz319 from './../../quiz/bb-philosophie-17.json';
-import quiz320 from './../../quiz/bb-philosophie-18.json';
-import quiz321 from './../../quiz/bb-philosophie-19.json';
-import quiz322 from './../../quiz/bb-philosophie-20.json';
-import quiz323 from './../../quiz/bac-blanc-pc-terminale.json';
-import quiz324 from './../../quiz/bac-blanc-terminale-pc.json';
-import quiz325 from './../../quiz/bb-physique-chimie-01.json';
-import quiz326 from './../../quiz/bb-physique-chimie-02.json';
-import quiz327 from './../../quiz/bb-physique-chimie-03.json';
-import quiz328 from './../../quiz/bb-physique-chimie-04.json';
-import quiz329 from './../../quiz/bb-physique-chimie-05.json';
-import quiz330 from './../../quiz/bb-physique-chimie-06.json';
-import quiz331 from './../../quiz/bb-physique-chimie-07.json';
-import quiz332 from './../../quiz/bb-physique-chimie-08.json';
-import quiz333 from './../../quiz/bb-physique-chimie-09.json';
-import quiz334 from './../../quiz/bb-physique-chimie-10.json';
-import quiz335 from './../../quiz/bb-ses-07.json';
-import quiz336 from './../../quiz/bb-ses-08.json';
-import quiz337 from './../../quiz/bb-ses-09.json';
-import quiz338 from './../../quiz/bb-ses-10.json';
-import quiz339 from './../../quiz/bb-ses-17.json';
-import quiz340 from './../../quiz/bb-ses-18.json';
-import quiz341 from './../../quiz/bb-ses-19.json';
-import quiz342 from './../../quiz/bb-ses-20.json';
-import quiz343 from './../../quiz/bac-blanc-si-terminale.json';
-import quiz344 from './../../quiz/bb-si-01.json';
-import quiz345 from './../../quiz/bb-si-02.json';
-import quiz346 from './../../quiz/bb-si-03.json';
-import quiz347 from './../../quiz/bb-si-04.json';
-import quiz348 from './../../quiz/bb-si-05.json';
-import quiz349 from './../../quiz/bb-si-06.json';
-import quiz350 from './../../quiz/bb-si-07.json';
-import quiz351 from './../../quiz/bb-si-08.json';
-import quiz352 from './../../quiz/bb-si-09.json';
-import quiz353 from './../../quiz/bb-si-10.json';
-import quiz354 from './../../quiz/bb-si-11.json';
-import quiz355 from './../../quiz/bb-si-12.json';
-import quiz356 from './../../quiz/bb-si-13.json';
-import quiz357 from './../../quiz/bb-si-14.json';
-import quiz358 from './../../quiz/bb-si-15.json';
-import quiz359 from './../../quiz/bb-si-16.json';
-import quiz360 from './../../quiz/bb-si-17.json';
-import quiz361 from './../../quiz/bb-si-18.json';
-import quiz362 from './../../quiz/bac-blanc-svt-terminale.json';
-import quiz363 from './../../quiz/bb-svt-01.json';
-import quiz364 from './../../quiz/bb-svt-02.json';
-import quiz365 from './../../quiz/bb-svt-03.json';
-import quiz366 from './../../quiz/bb-svt-04.json';
-import quiz367 from './../../quiz/bb-svt-05.json';
-import quiz368 from './../../quiz/bb-svt-06.json';
-import quiz369 from './../../quiz/bb-svt-07.json';
-import quiz370 from './../../quiz/bb-svt-08.json';
-import quiz371 from './../../quiz/bb-svt-09.json';
-import quiz372 from './../../quiz/bb-svt-10.json';
-import quiz373 from './../../quiz/bb-svt-11.json';
-import quiz374 from './../../quiz/bb-svt-12.json';
-import quiz375 from './../../quiz/bb-svt-13.json';
-import quiz376 from './../../quiz/bb-svt-14.json';
-import quiz377 from './../../quiz/bb-svt-15.json';
-import quiz378 from './../../quiz/bb-svt-16.json';
-import quiz379 from './../../quiz/bb-svt-17.json';
-import quiz380 from './../../quiz/bac-blanc-techno-maths.json';
-import quiz381 from './../../quiz/bac-blanc-spcl.json';
-import quiz382 from './../../quiz/bac-blanc-st2s.json';
-import quiz383 from './../../quiz/bac-blanc-sti2d-pc.json';
 
 export const FORMULAIRES = [
   {
@@ -2825,7 +328,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet0,
   },
   {
     id: "maths-cinquieme-evaluation-trimestre",
@@ -2836,7 +338,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet1,
   },
   {
     id: "maths-quatrieme-evaluation-trimestre",
@@ -2847,7 +348,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet2,
   },
   {
     id: "sj-arts-01",
@@ -2858,7 +358,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet3,
   },
   {
     id: "sj-arts-02",
@@ -2869,7 +368,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet4,
   },
   {
     id: "sj-francais-01",
@@ -2880,7 +378,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet5,
   },
   {
     id: "sj-francais-02",
@@ -2891,7 +388,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet6,
   },
   {
     id: "sj-francais-03",
@@ -2902,7 +398,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet7,
   },
   {
     id: "sj-francais-04",
@@ -2913,7 +408,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet8,
   },
   {
     id: "sj-hist-geo-01",
@@ -2924,7 +418,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet9,
   },
   {
     id: "sj-hist-geo-02",
@@ -2935,7 +428,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet10,
   },
   {
     id: "sj-hist-geo-03",
@@ -2946,7 +438,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet11,
   },
   {
     id: "sj-hist-geo-04",
@@ -2957,7 +448,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet12,
   },
   {
     id: "sj-langues-anciennes-01",
@@ -2968,7 +458,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet13,
   },
   {
     id: "sj-langues-anciennes-02",
@@ -2979,7 +468,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet14,
   },
   {
     id: "brevet-maths-2",
@@ -2990,7 +478,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet15,
   },
   {
     id: "brevet-maths-3",
@@ -3001,7 +488,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet16,
   },
   {
     id: "brevet-maths-4",
@@ -3012,7 +498,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet17,
   },
   {
     id: "brevet-maths-5",
@@ -3023,7 +508,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet18,
   },
   {
     id: "brevet-maths",
@@ -3034,7 +518,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet19,
   },
   {
     id: "sciences-brevet-pc-svt",
@@ -3045,7 +528,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet20,
   },
   {
     id: "sciences-brevet-pc-techno",
@@ -3056,7 +538,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet21,
   },
   {
     id: "sciences-brevet-pc",
@@ -3067,7 +548,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet22,
   },
   {
     id: "sciences-brevet-college",
@@ -3078,7 +558,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet23,
   },
   {
     id: "sj-techno-01",
@@ -3089,7 +568,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet24,
   },
   {
     id: "sj-techno-02",
@@ -3100,7 +578,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet25,
   },
   {
     id: "sj-techno-03",
@@ -3111,7 +588,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet26,
   },
   {
     id: "sj-techno-04",
@@ -3122,7 +598,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet27,
   },
   {
     id: "sj-techno-05",
@@ -3133,7 +608,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet28,
   },
   {
     id: "sj-techno-06",
@@ -3144,7 +618,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet29,
   },
   {
     id: "sj-allemand-01",
@@ -3155,7 +628,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet30,
   },
   {
     id: "sj-allemand-02",
@@ -3166,7 +638,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet31,
   },
   {
     id: "sj-allemand-03",
@@ -3177,7 +648,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet32,
   },
   {
     id: "sj-anglais-01",
@@ -3188,7 +658,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet33,
   },
   {
     id: "sj-anglais-02",
@@ -3199,7 +668,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet34,
   },
   {
     id: "sj-anglais-03",
@@ -3210,7 +678,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet35,
   },
   {
     id: "sj-arts-03",
@@ -3221,7 +688,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet36,
   },
   {
     id: "sj-arts-04",
@@ -3232,7 +698,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet37,
   },
   {
     id: "sj-espagnol-01",
@@ -3243,7 +708,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet38,
   },
   {
     id: "sj-espagnol-02",
@@ -3254,7 +718,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet39,
   },
   {
     id: "sj-espagnol-03",
@@ -3265,7 +728,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet40,
   },
   {
     id: "sj-italien-01",
@@ -3276,7 +738,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet41,
   },
   {
     id: "sj-italien-02",
@@ -3287,7 +748,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet42,
   },
   {
     id: "sj-italien-03",
@@ -3298,7 +758,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet43,
   },
   {
     id: "sj-langues-anciennes-03",
@@ -3309,7 +768,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet44,
   },
   {
     id: "sj-langues-anciennes-05",
@@ -3320,7 +778,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet45,
   },
   {
     id: "maths-seconde-controle-commun-1",
@@ -3331,7 +788,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet46,
   },
   {
     id: "maths-seconde-controle-commun-2",
@@ -3342,7 +798,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet47,
   },
   {
     id: "sj-snt-01",
@@ -3353,7 +808,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet48,
   },
   {
     id: "sj-snt-02",
@@ -3364,7 +818,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet49,
   },
   {
     id: "sj-snt-03",
@@ -3375,7 +828,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet50,
   },
   {
     id: "sj-snt-04",
@@ -3386,7 +838,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet51,
   },
   {
     id: "sj-snt-05",
@@ -3397,7 +848,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet52,
   },
   {
     id: "sj-snt-06",
@@ -3408,7 +858,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet53,
   },
   {
     id: "sj-snt-07",
@@ -3419,7 +868,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet54,
   },
   {
     id: "sj-snt-08",
@@ -3430,7 +878,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet55,
   },
   {
     id: "sj-snt-09",
@@ -3441,7 +888,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet56,
   },
   {
     id: "snt-seconde-entrainement",
@@ -3452,7 +898,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet57,
   },
   {
     id: "svt-seconde-entrainement",
@@ -3463,7 +908,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet58,
   },
   {
     id: "sj-allemand-04",
@@ -3474,7 +918,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet59,
   },
   {
     id: "sj-allemand-05",
@@ -3485,7 +928,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet60,
   },
   {
     id: "sj-allemand-06",
@@ -3496,7 +938,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet61,
   },
   {
     id: "sj-anglais-04",
@@ -3507,7 +948,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet62,
   },
   {
     id: "sj-anglais-05",
@@ -3518,7 +958,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet63,
   },
   {
     id: "sj-anglais-06",
@@ -3529,7 +968,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet64,
   },
   {
     id: "sj-arts-05",
@@ -3540,7 +978,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet65,
   },
   {
     id: "sj-espagnol-04",
@@ -3551,7 +988,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet66,
   },
   {
     id: "sj-espagnol-05",
@@ -3562,7 +998,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet67,
   },
   {
     id: "sj-espagnol-06",
@@ -3573,7 +1008,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet68,
   },
   {
     id: "sj-francais-05",
@@ -3584,7 +1018,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet69,
   },
   {
     id: "sj-francais-06",
@@ -3595,7 +1028,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet70,
   },
   {
     id: "sj-francais-07",
@@ -3606,7 +1038,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet71,
   },
   {
     id: "sj-francais-08",
@@ -3617,7 +1048,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet72,
   },
   {
     id: "sj-francais-09",
@@ -3628,7 +1058,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet73,
   },
   {
     id: "sj-francais-10",
@@ -3639,7 +1068,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet74,
   },
   {
     id: "sj-hggsp-01",
@@ -3650,7 +1078,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet75,
   },
   {
     id: "sj-hggsp-02",
@@ -3661,7 +1088,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet76,
   },
   {
     id: "sj-hggsp-03",
@@ -3672,7 +1098,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet77,
   },
   {
     id: "sj-hist-geo-05",
@@ -3683,7 +1108,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet78,
   },
   {
     id: "sj-hist-geo-06",
@@ -3694,7 +1118,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet79,
   },
   {
     id: "sj-hist-geo-07",
@@ -3705,7 +1128,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet80,
   },
   {
     id: "sj-italien-04",
@@ -3716,7 +1138,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet81,
   },
   {
     id: "sj-italien-05",
@@ -3727,7 +1148,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet82,
   },
   {
     id: "sj-italien-06",
@@ -3738,7 +1158,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet83,
   },
   {
     id: "sj-langues-anciennes-04",
@@ -3749,7 +1168,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet84,
   },
   {
     id: "maths-premiere-anticipee-1",
@@ -3760,7 +1178,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet85,
   },
   {
     id: "maths-premiere-anticipee-2",
@@ -3771,7 +1188,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet86,
   },
   {
     id: "nsi-premiere-entrainement",
@@ -3782,7 +1198,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet87,
   },
   {
     id: "pc-premiere-entrainement",
@@ -3793,7 +1208,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet88,
   },
   {
     id: "sj-ses-01",
@@ -3804,7 +1218,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet89,
   },
   {
     id: "sj-ses-02",
@@ -3815,7 +1228,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet90,
   },
   {
     id: "sj-ses-03",
@@ -3826,7 +1238,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet91,
   },
   {
     id: "si-premiere-entrainement",
@@ -3837,7 +1248,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet92,
   },
   {
     id: "sj-allemand-07",
@@ -3848,7 +1258,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet93,
   },
   {
     id: "sj-allemand-08",
@@ -3859,7 +1268,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet94,
   },
   {
     id: "sj-allemand-09",
@@ -3870,7 +1278,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet95,
   },
   {
     id: "sj-allemand-10",
@@ -3881,7 +1288,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet96,
   },
   {
     id: "sj-anglais-07",
@@ -3892,7 +1298,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet97,
   },
   {
     id: "sj-anglais-08",
@@ -3903,7 +1308,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet98,
   },
   {
     id: "sj-anglais-09",
@@ -3914,7 +1318,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet99,
   },
   {
     id: "sj-anglais-10",
@@ -3925,7 +1328,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet100,
   },
   {
     id: "sj-arts-06",
@@ -3936,7 +1338,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet101,
   },
   {
     id: "ens-scientifique-terminale",
@@ -3947,7 +1348,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet102,
   },
   {
     id: "sj-enseignement-scientifique-01",
@@ -3958,7 +1358,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet103,
   },
   {
     id: "sj-enseignement-scientifique-02",
@@ -3969,7 +1368,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet104,
   },
   {
     id: "sj-enseignement-scientifique-03",
@@ -3980,7 +1378,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet105,
   },
   {
     id: "sj-enseignement-scientifique-04",
@@ -3991,7 +1388,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet106,
   },
   {
     id: "sj-enseignement-scientifique-05",
@@ -4002,7 +1398,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet107,
   },
   {
     id: "sj-enseignement-scientifique-06",
@@ -4013,7 +1408,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet108,
   },
   {
     id: "sj-enseignement-scientifique-07",
@@ -4024,7 +1418,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet109,
   },
   {
     id: "sj-enseignement-scientifique-08",
@@ -4035,7 +1428,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet110,
   },
   {
     id: "sj-enseignement-scientifique-09",
@@ -4046,7 +1438,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet111,
   },
   {
     id: "sj-espagnol-07",
@@ -4057,7 +1448,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet112,
   },
   {
     id: "sj-espagnol-08",
@@ -4068,7 +1458,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet113,
   },
   {
     id: "sj-espagnol-09",
@@ -4079,7 +1468,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet114,
   },
   {
     id: "sj-espagnol-10",
@@ -4090,7 +1478,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet115,
   },
   {
     id: "sj-hggsp-04",
@@ -4101,7 +1488,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet116,
   },
   {
     id: "sj-hggsp-05",
@@ -4112,7 +1498,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet117,
   },
   {
     id: "sj-hggsp-06",
@@ -4123,7 +1508,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet118,
   },
   {
     id: "sj-hggsp-07",
@@ -4134,7 +1518,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet119,
   },
   {
     id: "sj-hggsp-08",
@@ -4145,7 +1528,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet120,
   },
   {
     id: "sj-hggsp-09",
@@ -4156,7 +1538,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet121,
   },
   {
     id: "sj-hggsp-10",
@@ -4167,7 +1548,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet122,
   },
   {
     id: "sj-hist-geo-08",
@@ -4178,7 +1558,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet123,
   },
   {
     id: "sj-hist-geo-09",
@@ -4189,7 +1568,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet124,
   },
   {
     id: "sj-hist-geo-10",
@@ -4200,7 +1578,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet125,
   },
   {
     id: "sj-italien-07",
@@ -4211,7 +1588,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet126,
   },
   {
     id: "sj-italien-08",
@@ -4222,7 +1598,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet127,
   },
   {
     id: "sj-italien-09",
@@ -4233,7 +1608,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet128,
   },
   {
     id: "sj-italien-10",
@@ -4244,7 +1618,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet129,
   },
   {
     id: "sj-langues-anciennes-06",
@@ -4255,7 +1628,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet130,
   },
   {
     id: "bac-maths-complementaires",
@@ -4266,7 +1638,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet131,
   },
   {
     id: "bac-maths-expertes",
@@ -4277,7 +1648,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet132,
   },
   {
     id: "bac-spe-maths-2",
@@ -4288,7 +1658,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet133,
   },
   {
     id: "bac-spe-maths-3",
@@ -4299,7 +1668,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet134,
   },
   {
     id: "bac-spe-maths-4",
@@ -4310,7 +1678,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet135,
   },
   {
     id: "bac-spe-maths-5",
@@ -4321,7 +1688,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet136,
   },
   {
     id: "bac-spe-maths",
@@ -4332,7 +1698,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet137,
   },
   {
     id: "sj-mathematiques-01",
@@ -4343,7 +1708,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet138,
   },
   {
     id: "sj-mathematiques-02",
@@ -4354,7 +1718,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet139,
   },
   {
     id: "sj-mathematiques-03",
@@ -4365,7 +1728,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet140,
   },
   {
     id: "bac-nsi-terminale",
@@ -4376,7 +1738,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet141,
   },
   {
     id: "sj-nsi-01",
@@ -4387,7 +1748,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet142,
   },
   {
     id: "sj-nsi-02",
@@ -4398,7 +1758,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet143,
   },
   {
     id: "sj-nsi-03",
@@ -4409,7 +1768,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet144,
   },
   {
     id: "sj-nsi-04",
@@ -4420,7 +1778,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet145,
   },
   {
     id: "sj-nsi-05",
@@ -4431,7 +1788,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet146,
   },
   {
     id: "sj-nsi-06",
@@ -4442,7 +1798,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet147,
   },
   {
     id: "sj-nsi-07",
@@ -4453,7 +1808,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet148,
   },
   {
     id: "sj-nsi-08",
@@ -4464,7 +1818,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet149,
   },
   {
     id: "sj-philosophie-01",
@@ -4475,7 +1828,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet150,
   },
   {
     id: "sj-philosophie-02",
@@ -4486,7 +1838,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet151,
   },
   {
     id: "sj-philosophie-03",
@@ -4497,7 +1848,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet152,
   },
   {
     id: "sj-philosophie-04",
@@ -4508,7 +1858,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet153,
   },
   {
     id: "sj-philosophie-05",
@@ -4519,7 +1868,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet154,
   },
   {
     id: "sj-philosophie-06",
@@ -4530,7 +1878,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet155,
   },
   {
     id: "sj-philosophie-07",
@@ -4541,7 +1888,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet156,
   },
   {
     id: "sj-philosophie-08",
@@ -4552,7 +1898,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet157,
   },
   {
     id: "sj-philosophie-09",
@@ -4563,7 +1908,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet158,
   },
   {
     id: "sj-philosophie-10",
@@ -4574,7 +1918,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet159,
   },
   {
     id: "bac-pc-terminale",
@@ -4585,7 +1928,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet160,
   },
   {
     id: "bac-physique-chimie-2",
@@ -4596,7 +1938,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet161,
   },
   {
     id: "bac-physique-chimie-3",
@@ -4607,7 +1948,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet162,
   },
   {
     id: "bac-physique-chimie",
@@ -4618,7 +1958,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet163,
   },
   {
     id: "sj-physique-chimie-01",
@@ -4629,7 +1968,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet164,
   },
   {
     id: "sj-physique-chimie-02",
@@ -4640,7 +1978,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet165,
   },
   {
     id: "sj-physique-chimie-03",
@@ -4651,7 +1988,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet166,
   },
   {
     id: "sj-ses-04",
@@ -4662,7 +1998,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet167,
   },
   {
     id: "sj-ses-05",
@@ -4673,7 +2008,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet168,
   },
   {
     id: "sj-ses-06",
@@ -4684,7 +2018,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet169,
   },
   {
     id: "sj-ses-07",
@@ -4695,7 +2028,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet170,
   },
   {
     id: "sj-ses-08",
@@ -4706,7 +2038,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet171,
   },
   {
     id: "sj-ses-09",
@@ -4717,7 +2048,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet172,
   },
   {
     id: "sj-ses-10",
@@ -4728,7 +2058,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet173,
   },
   {
     id: "bac-si-terminale",
@@ -4739,7 +2068,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet174,
   },
   {
     id: "sj-si-01",
@@ -4750,7 +2078,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet175,
   },
   {
     id: "sj-si-02",
@@ -4761,7 +2088,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet176,
   },
   {
     id: "sj-si-03",
@@ -4772,7 +2098,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet177,
   },
   {
     id: "sj-si-04",
@@ -4783,7 +2108,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet178,
   },
   {
     id: "sj-si-05",
@@ -4794,7 +2118,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet179,
   },
   {
     id: "sj-si-06",
@@ -4805,7 +2128,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet180,
   },
   {
     id: "sj-si-07",
@@ -4816,7 +2138,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet181,
   },
   {
     id: "sj-si-08",
@@ -4827,7 +2148,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet182,
   },
   {
     id: "bac-svt-terminale",
@@ -4838,7 +2158,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet183,
   },
   {
     id: "sj-svt-01",
@@ -4849,7 +2168,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet184,
   },
   {
     id: "sj-svt-02",
@@ -4860,7 +2178,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet185,
   },
   {
     id: "sj-svt-03",
@@ -4871,7 +2188,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet186,
   },
   {
     id: "sj-svt-04",
@@ -4882,7 +2198,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet187,
   },
   {
     id: "sj-svt-05",
@@ -4893,7 +2208,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet188,
   },
   {
     id: "sj-svt-06",
@@ -4904,7 +2218,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet189,
   },
   {
     id: "sj-svt-07",
@@ -4915,7 +2228,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet190,
   },
   {
     id: "bac-techno-maths",
@@ -4926,7 +2238,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet191,
   },
   {
     id: "bac-st2s-pc-sante",
@@ -4937,7 +2248,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet192,
   },
   {
     id: "bac-sti2d-pc-maths",
@@ -4948,7 +2258,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet193,
   },
   {
     id: "bac-stl-spcl",
@@ -4959,7 +2268,6 @@ export const SUJETS = [
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
-    contenu: sujet194,
   },
 ];
 
@@ -4974,7 +2282,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz0.questions,
   },
   {
     id: "eval-sciences-cm1",
@@ -4986,7 +2293,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz1.questions,
   },
   {
     id: "eval-sciences-cm2",
@@ -4998,7 +2304,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz2.questions,
   },
   {
     id: "bb-arts-01",
@@ -5010,7 +2315,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz3.questions,
   },
   {
     id: "bb-arts-11",
@@ -5022,7 +2326,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz4.questions,
   },
   {
     id: "bb-francais-01",
@@ -5034,7 +2337,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz5.questions,
   },
   {
     id: "bb-francais-11",
@@ -5046,7 +2348,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz6.questions,
   },
   {
     id: "bb-hist-geo-01",
@@ -5058,7 +2359,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz7.questions,
   },
   {
     id: "bb-hist-geo-11",
@@ -5070,7 +2370,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz8.questions,
   },
   {
     id: "revision-6e-maths",
@@ -5082,7 +2381,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 18,
-    questions: quiz9.questions,
   },
   {
     id: "bb-techno-01",
@@ -5094,7 +2392,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz10.questions,
   },
   {
     id: "bb-techno-02",
@@ -5106,7 +2403,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz11.questions,
   },
   {
     id: "bb-techno-11",
@@ -5118,7 +2414,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz12.questions,
   },
   {
     id: "bb-techno-12",
@@ -5130,7 +2425,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz13.questions,
   },
   {
     id: "bb-arts-02",
@@ -5142,7 +2436,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz14.questions,
   },
   {
     id: "bb-arts-12",
@@ -5154,7 +2447,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz15.questions,
   },
   {
     id: "bb-arts-15",
@@ -5166,7 +2458,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz16.questions,
   },
   {
     id: "bb-francais-02",
@@ -5178,7 +2469,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz17.questions,
   },
   {
     id: "bb-francais-12",
@@ -5190,7 +2480,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz18.questions,
   },
   {
     id: "bb-hist-geo-02",
@@ -5202,7 +2491,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz19.questions,
   },
   {
     id: "bb-hist-geo-12",
@@ -5214,7 +2502,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz20.questions,
   },
   {
     id: "bb-langues-anciennes-01",
@@ -5226,7 +2513,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz21.questions,
   },
   {
     id: "bb-langues-anciennes-02",
@@ -5238,7 +2524,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz22.questions,
   },
   {
     id: "bb-langues-anciennes-11",
@@ -5250,7 +2535,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz23.questions,
   },
   {
     id: "bb-langues-anciennes-12",
@@ -5262,7 +2546,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz24.questions,
   },
   {
     id: "revision-5e-maths",
@@ -5274,7 +2557,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 20,
-    questions: quiz25.questions,
   },
   {
     id: "bb-techno-03",
@@ -5286,7 +2568,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz26.questions,
   },
   {
     id: "bb-techno-04",
@@ -5298,7 +2579,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz27.questions,
   },
   {
     id: "bb-techno-13",
@@ -5310,7 +2590,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz28.questions,
   },
   {
     id: "bb-techno-14",
@@ -5322,7 +2601,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz29.questions,
   },
   {
     id: "bb-arts-03",
@@ -5334,7 +2612,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz30.questions,
   },
   {
     id: "bb-arts-13",
@@ -5346,7 +2623,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz31.questions,
   },
   {
     id: "bb-francais-03",
@@ -5358,7 +2634,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz32.questions,
   },
   {
     id: "bb-francais-13",
@@ -5370,7 +2645,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz33.questions,
   },
   {
     id: "bb-hist-geo-03",
@@ -5382,7 +2656,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz34.questions,
   },
   {
     id: "bb-hist-geo-13",
@@ -5394,7 +2667,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz35.questions,
   },
   {
     id: "bb-hist-geo-14",
@@ -5406,7 +2678,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz36.questions,
   },
   {
     id: "bb-langues-anciennes-03",
@@ -5418,7 +2689,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz37.questions,
   },
   {
     id: "bb-langues-anciennes-04",
@@ -5430,7 +2700,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz38.questions,
   },
   {
     id: "bb-langues-anciennes-13",
@@ -5442,7 +2711,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz39.questions,
   },
   {
     id: "bb-langues-anciennes-14",
@@ -5454,7 +2722,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz40.questions,
   },
   {
     id: "revision-4e-maths",
@@ -5466,7 +2733,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 20,
-    questions: quiz41.questions,
   },
   {
     id: "bb-techno-05",
@@ -5478,7 +2744,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz42.questions,
   },
   {
     id: "bb-techno-06",
@@ -5490,7 +2755,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz43.questions,
   },
   {
     id: "bb-techno-07",
@@ -5502,7 +2766,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz44.questions,
   },
   {
     id: "bb-techno-15",
@@ -5514,7 +2777,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz45.questions,
   },
   {
     id: "bb-techno-16",
@@ -5526,7 +2788,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz46.questions,
   },
   {
     id: "bb-techno-17",
@@ -5538,7 +2799,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz47.questions,
   },
   {
     id: "bb-arts-04",
@@ -5550,7 +2810,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz48.questions,
   },
   {
     id: "bb-arts-05",
@@ -5562,7 +2821,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz49.questions,
   },
   {
     id: "bb-arts-14",
@@ -5574,7 +2832,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz50.questions,
   },
   {
     id: "bb-francais-04",
@@ -5586,7 +2843,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz51.questions,
   },
   {
     id: "bb-francais-14",
@@ -5598,7 +2854,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz52.questions,
   },
   {
     id: "bb-hist-geo-04",
@@ -5610,7 +2865,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz53.questions,
   },
   {
     id: "bb-hist-geo-05",
@@ -5622,7 +2876,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz54.questions,
   },
   {
     id: "bb-hist-geo-15",
@@ -5634,7 +2887,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz55.questions,
   },
   {
     id: "bb-langues-anciennes-05",
@@ -5646,7 +2898,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz56.questions,
   },
   {
     id: "bb-langues-anciennes-15",
@@ -5658,7 +2909,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz57.questions,
   },
   {
     id: "brevet-blanc-maths",
@@ -5670,7 +2920,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 22,
-    questions: quiz58.questions,
   },
   {
     id: "brevet-blanc-pc-college",
@@ -5682,7 +2931,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz59.questions,
   },
   {
     id: "revision-college-pc",
@@ -5694,7 +2942,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 20,
-    questions: quiz60.questions,
   },
   {
     id: "brevet-blanc-svt-college",
@@ -5706,7 +2953,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz61.questions,
   },
   {
     id: "bb-techno-08",
@@ -5718,7 +2964,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz62.questions,
   },
   {
     id: "bb-techno-09",
@@ -5730,7 +2975,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz63.questions,
   },
   {
     id: "bb-techno-10",
@@ -5742,7 +2986,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz64.questions,
   },
   {
     id: "bb-techno-18",
@@ -5754,7 +2997,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz65.questions,
   },
   {
     id: "bb-techno-19",
@@ -5766,7 +3008,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz66.questions,
   },
   {
     id: "bb-techno-20",
@@ -5778,7 +3019,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz67.questions,
   },
   {
     id: "brevet-blanc-techno-college",
@@ -5790,7 +3030,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz68.questions,
   },
   {
     id: "bb-allemand-01",
@@ -5802,7 +3041,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz69.questions,
   },
   {
     id: "bb-allemand-02",
@@ -5814,7 +3052,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz70.questions,
   },
   {
     id: "bb-allemand-03",
@@ -5826,7 +3063,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz71.questions,
   },
   {
     id: "bb-allemand-04",
@@ -5838,7 +3074,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz72.questions,
   },
   {
     id: "bb-allemand-05",
@@ -5850,7 +3085,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz73.questions,
   },
   {
     id: "bb-anglais-01",
@@ -5862,7 +3096,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz74.questions,
   },
   {
     id: "bb-anglais-02",
@@ -5874,7 +3107,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz75.questions,
   },
   {
     id: "bb-anglais-03",
@@ -5886,7 +3118,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz76.questions,
   },
   {
     id: "bb-anglais-04",
@@ -5898,7 +3129,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz77.questions,
   },
   {
     id: "bb-anglais-05",
@@ -5910,7 +3140,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz78.questions,
   },
   {
     id: "bb-arts-06",
@@ -5922,7 +3151,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz79.questions,
   },
   {
     id: "bb-arts-07",
@@ -5934,7 +3162,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz80.questions,
   },
   {
     id: "bb-arts-16",
@@ -5946,7 +3173,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz81.questions,
   },
   {
     id: "bb-arts-19",
@@ -5958,7 +3184,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz82.questions,
   },
   {
     id: "bb-espagnol-01",
@@ -5970,7 +3195,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz83.questions,
   },
   {
     id: "bb-espagnol-02",
@@ -5982,7 +3206,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz84.questions,
   },
   {
     id: "bb-espagnol-03",
@@ -5994,7 +3217,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz85.questions,
   },
   {
     id: "bb-espagnol-04",
@@ -6006,7 +3228,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz86.questions,
   },
   {
     id: "bb-espagnol-05",
@@ -6018,7 +3239,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz87.questions,
   },
   {
     id: "bb-francais-05",
@@ -6030,7 +3250,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz88.questions,
   },
   {
     id: "bb-francais-06",
@@ -6042,7 +3261,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz89.questions,
   },
   {
     id: "bb-francais-09",
@@ -6054,7 +3272,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz90.questions,
   },
   {
     id: "bb-francais-15",
@@ -6066,7 +3283,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz91.questions,
   },
   {
     id: "bb-francais-16",
@@ -6078,7 +3294,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz92.questions,
   },
   {
     id: "bb-francais-17",
@@ -6090,7 +3305,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz93.questions,
   },
   {
     id: "bb-hist-geo-06",
@@ -6102,7 +3316,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz94.questions,
   },
   {
     id: "bb-hist-geo-07",
@@ -6114,7 +3327,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz95.questions,
   },
   {
     id: "bb-hist-geo-16",
@@ -6126,7 +3338,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz96.questions,
   },
   {
     id: "bb-hist-geo-17",
@@ -6138,7 +3349,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz97.questions,
   },
   {
     id: "bb-italien-01",
@@ -6150,7 +3360,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz98.questions,
   },
   {
     id: "bb-italien-02",
@@ -6162,7 +3371,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz99.questions,
   },
   {
     id: "bb-italien-03",
@@ -6174,7 +3382,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz100.questions,
   },
   {
     id: "bb-italien-04",
@@ -6186,7 +3393,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz101.questions,
   },
   {
     id: "bb-italien-05",
@@ -6198,7 +3404,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz102.questions,
   },
   {
     id: "bb-langues-anciennes-06",
@@ -6210,7 +3415,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz103.questions,
   },
   {
     id: "bb-langues-anciennes-07",
@@ -6222,7 +3426,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz104.questions,
   },
   {
     id: "bb-langues-anciennes-16",
@@ -6234,7 +3437,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz105.questions,
   },
   {
     id: "bb-langues-anciennes-17",
@@ -6246,7 +3448,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz106.questions,
   },
   {
     id: "bac-blanc-seconde-maths",
@@ -6258,7 +3459,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 20,
-    questions: quiz107.questions,
   },
   {
     id: "revision-seconde-pc",
@@ -6270,7 +3470,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 18,
-    questions: quiz108.questions,
   },
   {
     id: "bb-ses-01",
@@ -6282,7 +3481,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz109.questions,
   },
   {
     id: "bb-ses-02",
@@ -6294,7 +3492,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz110.questions,
   },
   {
     id: "bb-ses-03",
@@ -6306,7 +3503,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz111.questions,
   },
   {
     id: "bb-ses-11",
@@ -6318,7 +3514,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz112.questions,
   },
   {
     id: "bb-ses-12",
@@ -6330,7 +3525,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz113.questions,
   },
   {
     id: "bb-ses-13",
@@ -6342,7 +3536,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz114.questions,
   },
   {
     id: "bac-blanc-snt-seconde",
@@ -6354,7 +3547,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz115.questions,
   },
   {
     id: "bb-snt-01",
@@ -6366,7 +3558,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz116.questions,
   },
   {
     id: "bb-snt-02",
@@ -6378,7 +3569,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz117.questions,
   },
   {
     id: "bb-snt-03",
@@ -6390,7 +3580,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz118.questions,
   },
   {
     id: "bb-snt-04",
@@ -6402,7 +3591,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz119.questions,
   },
   {
     id: "bb-snt-05",
@@ -6414,7 +3602,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz120.questions,
   },
   {
     id: "bb-snt-06",
@@ -6426,7 +3613,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz121.questions,
   },
   {
     id: "bb-snt-07",
@@ -6438,7 +3624,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz122.questions,
   },
   {
     id: "bb-snt-08",
@@ -6450,7 +3635,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz123.questions,
   },
   {
     id: "bb-snt-09",
@@ -6462,7 +3646,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz124.questions,
   },
   {
     id: "bb-snt-10",
@@ -6474,7 +3657,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz125.questions,
   },
   {
     id: "bb-snt-11",
@@ -6486,7 +3668,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz126.questions,
   },
   {
     id: "bb-snt-12",
@@ -6498,7 +3679,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz127.questions,
   },
   {
     id: "bb-snt-13",
@@ -6510,7 +3690,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz128.questions,
   },
   {
     id: "bb-snt-14",
@@ -6522,7 +3701,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz129.questions,
   },
   {
     id: "bb-snt-15",
@@ -6534,7 +3712,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz130.questions,
   },
   {
     id: "bb-snt-16",
@@ -6546,7 +3723,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz131.questions,
   },
   {
     id: "bb-snt-17",
@@ -6558,7 +3734,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz132.questions,
   },
   {
     id: "bb-snt-18",
@@ -6570,7 +3745,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz133.questions,
   },
   {
     id: "bb-snt-19",
@@ -6582,7 +3756,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz134.questions,
   },
   {
     id: "bac-blanc-svt-seconde",
@@ -6594,7 +3767,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz135.questions,
   },
   {
     id: "bb-allemand-06",
@@ -6606,7 +3778,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz136.questions,
   },
   {
     id: "bb-allemand-07",
@@ -6618,7 +3789,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz137.questions,
   },
   {
     id: "bb-allemand-08",
@@ -6630,7 +3800,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz138.questions,
   },
   {
     id: "bb-allemand-09",
@@ -6642,7 +3811,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz139.questions,
   },
   {
     id: "bb-allemand-10",
@@ -6654,7 +3822,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz140.questions,
   },
   {
     id: "bb-allemand-11",
@@ -6666,7 +3833,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz141.questions,
   },
   {
     id: "bb-allemand-12",
@@ -6678,7 +3844,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz142.questions,
   },
   {
     id: "bb-allemand-13",
@@ -6690,7 +3855,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz143.questions,
   },
   {
     id: "bb-allemand-14",
@@ -6702,7 +3866,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz144.questions,
   },
   {
     id: "bb-anglais-06",
@@ -6714,7 +3877,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz145.questions,
   },
   {
     id: "bb-anglais-07",
@@ -6726,7 +3888,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz146.questions,
   },
   {
     id: "bb-anglais-08",
@@ -6738,7 +3899,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz147.questions,
   },
   {
     id: "bb-anglais-09",
@@ -6750,7 +3910,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz148.questions,
   },
   {
     id: "bb-anglais-10",
@@ -6762,7 +3921,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz149.questions,
   },
   {
     id: "bb-anglais-11",
@@ -6774,7 +3932,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz150.questions,
   },
   {
     id: "bb-anglais-12",
@@ -6786,7 +3943,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz151.questions,
   },
   {
     id: "bb-anglais-13",
@@ -6798,7 +3954,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz152.questions,
   },
   {
     id: "bb-anglais-14",
@@ -6810,7 +3965,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz153.questions,
   },
   {
     id: "bb-arts-08",
@@ -6822,7 +3976,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz154.questions,
   },
   {
     id: "bb-arts-17",
@@ -6834,7 +3987,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz155.questions,
   },
   {
     id: "bb-arts-20",
@@ -6846,7 +3998,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz156.questions,
   },
   {
     id: "bac-blanc-ens-scientifique-premiere",
@@ -6858,7 +4009,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz157.questions,
   },
   {
     id: "bb-espagnol-06",
@@ -6870,7 +4020,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz158.questions,
   },
   {
     id: "bb-espagnol-07",
@@ -6882,7 +4031,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz159.questions,
   },
   {
     id: "bb-espagnol-08",
@@ -6894,7 +4042,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz160.questions,
   },
   {
     id: "bb-espagnol-09",
@@ -6906,7 +4053,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz161.questions,
   },
   {
     id: "bb-espagnol-10",
@@ -6918,7 +4064,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz162.questions,
   },
   {
     id: "bb-espagnol-11",
@@ -6930,7 +4075,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz163.questions,
   },
   {
     id: "bb-espagnol-12",
@@ -6942,7 +4086,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz164.questions,
   },
   {
     id: "bb-espagnol-13",
@@ -6954,7 +4097,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz165.questions,
   },
   {
     id: "bb-espagnol-14",
@@ -6966,7 +4108,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz166.questions,
   },
   {
     id: "bb-francais-07",
@@ -6978,7 +4119,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz167.questions,
   },
   {
     id: "bb-francais-08",
@@ -6990,7 +4130,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz168.questions,
   },
   {
     id: "bb-francais-10",
@@ -7002,7 +4141,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz169.questions,
   },
   {
     id: "bb-francais-18",
@@ -7014,7 +4152,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz170.questions,
   },
   {
     id: "bb-francais-19",
@@ -7026,7 +4163,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz171.questions,
   },
   {
     id: "bb-francais-20",
@@ -7038,7 +4174,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz172.questions,
   },
   {
     id: "bb-hggsp-01",
@@ -7050,7 +4185,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz173.questions,
   },
   {
     id: "bb-hggsp-02",
@@ -7062,7 +4196,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz174.questions,
   },
   {
     id: "bb-hggsp-03",
@@ -7074,7 +4207,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz175.questions,
   },
   {
     id: "bb-hggsp-04",
@@ -7086,7 +4218,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz176.questions,
   },
   {
     id: "bb-hggsp-05",
@@ -7098,7 +4229,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz177.questions,
   },
   {
     id: "bb-hggsp-11",
@@ -7110,7 +4240,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz178.questions,
   },
   {
     id: "bb-hggsp-12",
@@ -7122,7 +4251,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz179.questions,
   },
   {
     id: "bb-hggsp-13",
@@ -7134,7 +4262,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz180.questions,
   },
   {
     id: "bb-hggsp-14",
@@ -7146,7 +4273,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz181.questions,
   },
   {
     id: "bb-hggsp-15",
@@ -7158,7 +4284,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz182.questions,
   },
   {
     id: "bb-hist-geo-08",
@@ -7170,7 +4295,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz183.questions,
   },
   {
     id: "bb-hist-geo-09",
@@ -7182,7 +4306,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz184.questions,
   },
   {
     id: "bb-hist-geo-18",
@@ -7194,7 +4317,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz185.questions,
   },
   {
     id: "bb-italien-06",
@@ -7206,7 +4328,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz186.questions,
   },
   {
     id: "bb-italien-07",
@@ -7218,7 +4339,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz187.questions,
   },
   {
     id: "bb-italien-08",
@@ -7230,7 +4350,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz188.questions,
   },
   {
     id: "bb-italien-09",
@@ -7242,7 +4361,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz189.questions,
   },
   {
     id: "bb-italien-10",
@@ -7254,7 +4372,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz190.questions,
   },
   {
     id: "bb-italien-11",
@@ -7266,7 +4383,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz191.questions,
   },
   {
     id: "bb-italien-12",
@@ -7278,7 +4394,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz192.questions,
   },
   {
     id: "bb-italien-13",
@@ -7290,7 +4405,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz193.questions,
   },
   {
     id: "bb-italien-14",
@@ -7302,7 +4416,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz194.questions,
   },
   {
     id: "bb-langues-anciennes-08",
@@ -7314,7 +4427,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz195.questions,
   },
   {
     id: "bb-langues-anciennes-09",
@@ -7326,7 +4438,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz196.questions,
   },
   {
     id: "bb-langues-anciennes-18",
@@ -7338,7 +4449,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz197.questions,
   },
   {
     id: "bb-langues-anciennes-19",
@@ -7350,7 +4460,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz198.questions,
   },
   {
     id: "bac-blanc-premiere-spe-maths",
@@ -7362,7 +4471,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 20,
-    questions: quiz199.questions,
   },
   {
     id: "revision-premiere-ens-scientifique",
@@ -7374,7 +4482,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 10,
-    questions: quiz200.questions,
   },
   {
     id: "bac-blanc-nsi-premiere",
@@ -7386,7 +4493,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz201.questions,
   },
   {
     id: "bac-blanc-pc-premiere",
@@ -7398,7 +4504,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz202.questions,
   },
   {
     id: "bac-blanc-premiere-pc",
@@ -7410,7 +4515,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 18,
-    questions: quiz203.questions,
   },
   {
     id: "bb-ses-04",
@@ -7422,7 +4526,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz204.questions,
   },
   {
     id: "bb-ses-05",
@@ -7434,7 +4537,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz205.questions,
   },
   {
     id: "bb-ses-06",
@@ -7446,7 +4548,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz206.questions,
   },
   {
     id: "bb-ses-14",
@@ -7458,7 +4559,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz207.questions,
   },
   {
     id: "bb-ses-15",
@@ -7470,7 +4570,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz208.questions,
   },
   {
     id: "bb-ses-16",
@@ -7482,7 +4581,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz209.questions,
   },
   {
     id: "bac-blanc-si-premiere",
@@ -7494,7 +4592,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz210.questions,
   },
   {
     id: "revision-premiere-techno-maths",
@@ -7506,7 +4603,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 10,
-    questions: quiz211.questions,
   },
   {
     id: "bb-allemand-15",
@@ -7518,7 +4614,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz212.questions,
   },
   {
     id: "bb-allemand-16",
@@ -7530,7 +4625,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz213.questions,
   },
   {
     id: "bb-allemand-17",
@@ -7542,7 +4636,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz214.questions,
   },
   {
     id: "bb-allemand-18",
@@ -7554,7 +4647,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz215.questions,
   },
   {
     id: "bb-allemand-19",
@@ -7566,7 +4658,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz216.questions,
   },
   {
     id: "bb-allemand-20",
@@ -7578,7 +4669,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz217.questions,
   },
   {
     id: "bb-anglais-15",
@@ -7590,7 +4680,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz218.questions,
   },
   {
     id: "bb-anglais-16",
@@ -7602,7 +4691,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz219.questions,
   },
   {
     id: "bb-anglais-17",
@@ -7614,7 +4702,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz220.questions,
   },
   {
     id: "bb-anglais-18",
@@ -7626,7 +4713,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz221.questions,
   },
   {
     id: "bb-anglais-19",
@@ -7638,7 +4724,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz222.questions,
   },
   {
     id: "bb-anglais-20",
@@ -7650,7 +4735,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz223.questions,
   },
   {
     id: "bb-arts-09",
@@ -7662,7 +4746,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz224.questions,
   },
   {
     id: "bb-arts-10",
@@ -7674,7 +4757,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz225.questions,
   },
   {
     id: "bb-arts-18",
@@ -7686,7 +4768,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz226.questions,
   },
   {
     id: "bac-blanc-ens-scientifique-terminale",
@@ -7698,7 +4779,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz227.questions,
   },
   {
     id: "bb-enseignement-scientifique-01",
@@ -7710,7 +4790,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz228.questions,
   },
   {
     id: "bb-enseignement-scientifique-02",
@@ -7722,7 +4801,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz229.questions,
   },
   {
     id: "bb-enseignement-scientifique-03",
@@ -7734,7 +4812,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz230.questions,
   },
   {
     id: "bb-enseignement-scientifique-04",
@@ -7746,7 +4823,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz231.questions,
   },
   {
     id: "bb-enseignement-scientifique-05",
@@ -7758,7 +4834,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz232.questions,
   },
   {
     id: "bb-enseignement-scientifique-06",
@@ -7770,7 +4845,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz233.questions,
   },
   {
     id: "bb-enseignement-scientifique-07",
@@ -7782,7 +4856,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz234.questions,
   },
   {
     id: "bb-enseignement-scientifique-08",
@@ -7794,7 +4867,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz235.questions,
   },
   {
     id: "bb-enseignement-scientifique-09",
@@ -7806,7 +4878,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz236.questions,
   },
   {
     id: "bb-enseignement-scientifique-10",
@@ -7818,7 +4889,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz237.questions,
   },
   {
     id: "bb-enseignement-scientifique-11",
@@ -7830,7 +4900,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz238.questions,
   },
   {
     id: "bb-enseignement-scientifique-12",
@@ -7842,7 +4911,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz239.questions,
   },
   {
     id: "bb-enseignement-scientifique-13",
@@ -7854,7 +4922,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz240.questions,
   },
   {
     id: "bb-enseignement-scientifique-14",
@@ -7866,7 +4933,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz241.questions,
   },
   {
     id: "bb-enseignement-scientifique-15",
@@ -7878,7 +4944,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz242.questions,
   },
   {
     id: "bb-enseignement-scientifique-16",
@@ -7890,7 +4955,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz243.questions,
   },
   {
     id: "bb-enseignement-scientifique-17",
@@ -7902,7 +4966,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz244.questions,
   },
   {
     id: "bb-enseignement-scientifique-18",
@@ -7914,7 +4977,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz245.questions,
   },
   {
     id: "bb-espagnol-15",
@@ -7926,7 +4988,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz246.questions,
   },
   {
     id: "bb-espagnol-16",
@@ -7938,7 +4999,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz247.questions,
   },
   {
     id: "bb-espagnol-17",
@@ -7950,7 +5010,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz248.questions,
   },
   {
     id: "bb-espagnol-18",
@@ -7962,7 +5021,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz249.questions,
   },
   {
     id: "bb-espagnol-19",
@@ -7974,7 +5032,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz250.questions,
   },
   {
     id: "bb-espagnol-20",
@@ -7986,7 +5043,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz251.questions,
   },
   {
     id: "bb-hggsp-06",
@@ -7998,7 +5054,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz252.questions,
   },
   {
     id: "bb-hggsp-07",
@@ -8010,7 +5065,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz253.questions,
   },
   {
     id: "bb-hggsp-08",
@@ -8022,7 +5076,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz254.questions,
   },
   {
     id: "bb-hggsp-09",
@@ -8034,7 +5087,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz255.questions,
   },
   {
     id: "bb-hggsp-10",
@@ -8046,7 +5098,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz256.questions,
   },
   {
     id: "bb-hggsp-16",
@@ -8058,7 +5109,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz257.questions,
   },
   {
     id: "bb-hggsp-17",
@@ -8070,7 +5120,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz258.questions,
   },
   {
     id: "bb-hggsp-18",
@@ -8082,7 +5131,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz259.questions,
   },
   {
     id: "bb-hggsp-19",
@@ -8094,7 +5142,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz260.questions,
   },
   {
     id: "bb-hggsp-20",
@@ -8106,7 +5153,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz261.questions,
   },
   {
     id: "bb-hist-geo-10",
@@ -8118,7 +5164,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz262.questions,
   },
   {
     id: "bb-hist-geo-19",
@@ -8130,7 +5175,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz263.questions,
   },
   {
     id: "bb-hist-geo-20",
@@ -8142,7 +5186,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz264.questions,
   },
   {
     id: "bb-italien-15",
@@ -8154,7 +5197,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz265.questions,
   },
   {
     id: "bb-italien-16",
@@ -8166,7 +5208,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz266.questions,
   },
   {
     id: "bb-italien-17",
@@ -8178,7 +5219,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz267.questions,
   },
   {
     id: "bb-italien-18",
@@ -8190,7 +5230,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz268.questions,
   },
   {
     id: "bb-italien-19",
@@ -8202,7 +5241,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz269.questions,
   },
   {
     id: "bb-italien-20",
@@ -8214,7 +5252,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz270.questions,
   },
   {
     id: "bb-langues-anciennes-10",
@@ -8226,7 +5263,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz271.questions,
   },
   {
     id: "bb-langues-anciennes-20",
@@ -8238,7 +5274,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz272.questions,
   },
   {
     id: "bac-blanc-maths-complementaires",
@@ -8250,7 +5285,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 16,
-    questions: quiz273.questions,
   },
   {
     id: "bac-blanc-maths-expertes",
@@ -8262,7 +5296,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz274.questions,
   },
   {
     id: "bac-blanc-spe-maths",
@@ -8274,7 +5307,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 25,
-    questions: quiz275.questions,
   },
   {
     id: "bb-mathematiques-01",
@@ -8286,7 +5318,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz276.questions,
   },
   {
     id: "bb-mathematiques-02",
@@ -8298,7 +5329,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz277.questions,
   },
   {
     id: "bb-mathematiques-03",
@@ -8310,7 +5340,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz278.questions,
   },
   {
     id: "bb-mathematiques-04",
@@ -8322,7 +5351,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz279.questions,
   },
   {
     id: "bb-mathematiques-05",
@@ -8334,7 +5362,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz280.questions,
   },
   {
     id: "bb-mathematiques-06",
@@ -8346,7 +5373,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz281.questions,
   },
   {
     id: "bb-mathematiques-07",
@@ -8358,7 +5384,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz282.questions,
   },
   {
     id: "revision-terminale-ens-scientifique",
@@ -8370,7 +5395,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz283.questions,
   },
   {
     id: "bac-blanc-nsi-terminale",
@@ -8382,7 +5406,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz284.questions,
   },
   {
     id: "bb-nsi-01",
@@ -8394,7 +5417,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz285.questions,
   },
   {
     id: "bb-nsi-02",
@@ -8406,7 +5428,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz286.questions,
   },
   {
     id: "bb-nsi-03",
@@ -8418,7 +5439,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz287.questions,
   },
   {
     id: "bb-nsi-04",
@@ -8430,7 +5450,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz288.questions,
   },
   {
     id: "bb-nsi-05",
@@ -8442,7 +5461,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz289.questions,
   },
   {
     id: "bb-nsi-06",
@@ -8454,7 +5472,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz290.questions,
   },
   {
     id: "bb-nsi-07",
@@ -8466,7 +5483,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz291.questions,
   },
   {
     id: "bb-nsi-08",
@@ -8478,7 +5494,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz292.questions,
   },
   {
     id: "bb-nsi-09",
@@ -8490,7 +5505,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz293.questions,
   },
   {
     id: "bb-nsi-10",
@@ -8502,7 +5516,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz294.questions,
   },
   {
     id: "bb-nsi-11",
@@ -8514,7 +5527,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz295.questions,
   },
   {
     id: "bb-nsi-12",
@@ -8526,7 +5538,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz296.questions,
   },
   {
     id: "bb-nsi-13",
@@ -8538,7 +5549,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz297.questions,
   },
   {
     id: "bb-nsi-14",
@@ -8550,7 +5560,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz298.questions,
   },
   {
     id: "bb-nsi-15",
@@ -8562,7 +5571,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz299.questions,
   },
   {
     id: "bb-nsi-16",
@@ -8574,7 +5582,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz300.questions,
   },
   {
     id: "bb-nsi-17",
@@ -8586,7 +5593,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz301.questions,
   },
   {
     id: "bb-nsi-18",
@@ -8598,7 +5604,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz302.questions,
   },
   {
     id: "bb-philosophie-01",
@@ -8610,7 +5615,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz303.questions,
   },
   {
     id: "bb-philosophie-02",
@@ -8622,7 +5626,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz304.questions,
   },
   {
     id: "bb-philosophie-03",
@@ -8634,7 +5637,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz305.questions,
   },
   {
     id: "bb-philosophie-04",
@@ -8646,7 +5648,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz306.questions,
   },
   {
     id: "bb-philosophie-05",
@@ -8658,7 +5659,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz307.questions,
   },
   {
     id: "bb-philosophie-06",
@@ -8670,7 +5670,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz308.questions,
   },
   {
     id: "bb-philosophie-07",
@@ -8682,7 +5681,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz309.questions,
   },
   {
     id: "bb-philosophie-08",
@@ -8694,7 +5692,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz310.questions,
   },
   {
     id: "bb-philosophie-09",
@@ -8706,7 +5703,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz311.questions,
   },
   {
     id: "bb-philosophie-10",
@@ -8718,7 +5714,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz312.questions,
   },
   {
     id: "bb-philosophie-11",
@@ -8730,7 +5725,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz313.questions,
   },
   {
     id: "bb-philosophie-12",
@@ -8742,7 +5736,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz314.questions,
   },
   {
     id: "bb-philosophie-13",
@@ -8754,7 +5747,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz315.questions,
   },
   {
     id: "bb-philosophie-14",
@@ -8766,7 +5758,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz316.questions,
   },
   {
     id: "bb-philosophie-15",
@@ -8778,7 +5769,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz317.questions,
   },
   {
     id: "bb-philosophie-16",
@@ -8790,7 +5780,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz318.questions,
   },
   {
     id: "bb-philosophie-17",
@@ -8802,7 +5791,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz319.questions,
   },
   {
     id: "bb-philosophie-18",
@@ -8814,7 +5802,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz320.questions,
   },
   {
     id: "bb-philosophie-19",
@@ -8826,7 +5813,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz321.questions,
   },
   {
     id: "bb-philosophie-20",
@@ -8838,7 +5824,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz322.questions,
   },
   {
     id: "bac-blanc-pc-terminale",
@@ -8850,7 +5835,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz323.questions,
   },
   {
     id: "bac-blanc-terminale-pc",
@@ -8862,7 +5846,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 24,
-    questions: quiz324.questions,
   },
   {
     id: "bb-physique-chimie-01",
@@ -8874,7 +5857,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz325.questions,
   },
   {
     id: "bb-physique-chimie-02",
@@ -8886,7 +5868,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz326.questions,
   },
   {
     id: "bb-physique-chimie-03",
@@ -8898,7 +5879,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz327.questions,
   },
   {
     id: "bb-physique-chimie-04",
@@ -8910,7 +5890,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz328.questions,
   },
   {
     id: "bb-physique-chimie-05",
@@ -8922,7 +5901,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz329.questions,
   },
   {
     id: "bb-physique-chimie-06",
@@ -8934,7 +5912,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz330.questions,
   },
   {
     id: "bb-physique-chimie-07",
@@ -8946,7 +5923,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz331.questions,
   },
   {
     id: "bb-physique-chimie-08",
@@ -8958,7 +5934,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz332.questions,
   },
   {
     id: "bb-physique-chimie-09",
@@ -8970,7 +5945,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz333.questions,
   },
   {
     id: "bb-physique-chimie-10",
@@ -8982,7 +5956,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz334.questions,
   },
   {
     id: "bb-ses-07",
@@ -8994,7 +5967,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz335.questions,
   },
   {
     id: "bb-ses-08",
@@ -9006,7 +5978,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz336.questions,
   },
   {
     id: "bb-ses-09",
@@ -9018,7 +5989,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz337.questions,
   },
   {
     id: "bb-ses-10",
@@ -9030,7 +6000,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz338.questions,
   },
   {
     id: "bb-ses-17",
@@ -9042,7 +6011,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz339.questions,
   },
   {
     id: "bb-ses-18",
@@ -9054,7 +6022,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz340.questions,
   },
   {
     id: "bb-ses-19",
@@ -9066,7 +6033,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz341.questions,
   },
   {
     id: "bb-ses-20",
@@ -9078,7 +6044,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz342.questions,
   },
   {
     id: "bac-blanc-si-terminale",
@@ -9090,7 +6055,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz343.questions,
   },
   {
     id: "bb-si-01",
@@ -9102,7 +6066,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz344.questions,
   },
   {
     id: "bb-si-02",
@@ -9114,7 +6077,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz345.questions,
   },
   {
     id: "bb-si-03",
@@ -9126,7 +6088,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz346.questions,
   },
   {
     id: "bb-si-04",
@@ -9138,7 +6099,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz347.questions,
   },
   {
     id: "bb-si-05",
@@ -9150,7 +6110,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz348.questions,
   },
   {
     id: "bb-si-06",
@@ -9162,7 +6121,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz349.questions,
   },
   {
     id: "bb-si-07",
@@ -9174,7 +6132,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz350.questions,
   },
   {
     id: "bb-si-08",
@@ -9186,7 +6143,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz351.questions,
   },
   {
     id: "bb-si-09",
@@ -9198,7 +6154,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz352.questions,
   },
   {
     id: "bb-si-10",
@@ -9210,7 +6165,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz353.questions,
   },
   {
     id: "bb-si-11",
@@ -9222,7 +6176,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz354.questions,
   },
   {
     id: "bb-si-12",
@@ -9234,7 +6187,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz355.questions,
   },
   {
     id: "bb-si-13",
@@ -9246,7 +6198,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz356.questions,
   },
   {
     id: "bb-si-14",
@@ -9258,7 +6209,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz357.questions,
   },
   {
     id: "bb-si-15",
@@ -9270,7 +6220,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz358.questions,
   },
   {
     id: "bb-si-16",
@@ -9282,7 +6231,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz359.questions,
   },
   {
     id: "bb-si-17",
@@ -9294,7 +6242,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz360.questions,
   },
   {
     id: "bb-si-18",
@@ -9306,7 +6253,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz361.questions,
   },
   {
     id: "bac-blanc-svt-terminale",
@@ -9318,7 +6264,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz362.questions,
   },
   {
     id: "bb-svt-01",
@@ -9330,7 +6275,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz363.questions,
   },
   {
     id: "bb-svt-02",
@@ -9342,7 +6286,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz364.questions,
   },
   {
     id: "bb-svt-03",
@@ -9354,7 +6297,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz365.questions,
   },
   {
     id: "bb-svt-04",
@@ -9366,7 +6308,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz366.questions,
   },
   {
     id: "bb-svt-05",
@@ -9378,7 +6319,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz367.questions,
   },
   {
     id: "bb-svt-06",
@@ -9390,7 +6330,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz368.questions,
   },
   {
     id: "bb-svt-07",
@@ -9402,7 +6341,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz369.questions,
   },
   {
     id: "bb-svt-08",
@@ -9414,7 +6352,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz370.questions,
   },
   {
     id: "bb-svt-09",
@@ -9426,7 +6363,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz371.questions,
   },
   {
     id: "bb-svt-10",
@@ -9438,7 +6374,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz372.questions,
   },
   {
     id: "bb-svt-11",
@@ -9450,7 +6385,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz373.questions,
   },
   {
     id: "bb-svt-12",
@@ -9462,7 +6396,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz374.questions,
   },
   {
     id: "bb-svt-13",
@@ -9474,7 +6407,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz375.questions,
   },
   {
     id: "bb-svt-14",
@@ -9486,7 +6418,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz376.questions,
   },
   {
     id: "bb-svt-15",
@@ -9498,7 +6429,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz377.questions,
   },
   {
     id: "bb-svt-16",
@@ -9510,7 +6440,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz378.questions,
   },
   {
     id: "bb-svt-17",
@@ -9522,7 +6451,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 12,
-    questions: quiz379.questions,
   },
   {
     id: "bac-blanc-techno-maths",
@@ -9534,7 +6462,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 20,
-    questions: quiz380.questions,
   },
   {
     id: "bac-blanc-spcl",
@@ -9546,7 +6473,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 18,
-    questions: quiz381.questions,
   },
   {
     id: "bac-blanc-st2s",
@@ -9558,7 +6484,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 18,
-    questions: quiz382.questions,
   },
   {
     id: "bac-blanc-sti2d-pc",
@@ -9570,7 +6495,6 @@ export const QUIZ = [
     reluPar: null,
     reluLe: null,
     nbQuestions: 18,
-    questions: quiz383.questions,
   },
 ];
 
@@ -9670,7 +6594,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Aucun (première leçon d'allemand)","Savoir reconnaître son prénom"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9678,8 +6601,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm0,
-    flashcards: flash0,
   },
   {
     id: "cp-allemand-zahlen",
@@ -9690,7 +6611,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir compter jusqu'à 12 en français","Avoir vu la leçon \"Hallo! Se saluer\""],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9698,8 +6618,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm1,
-    flashcards: flash1,
   },
   {
     id: "cp-allemand-farben",
@@ -9710,7 +6628,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les couleurs en français","Avoir vu la leçon \"Hallo! Se saluer\""],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9718,8 +6635,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm2,
-    flashcards: flash2,
   },
   {
     id: "cp-allemand-tiere",
@@ -9730,7 +6645,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les animaux courants en français","Avoir vu la leçon \"Die Farben\""],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9738,8 +6652,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm3,
-    flashcards: flash3,
   },
   {
     id: "cp-anglais-greetings",
@@ -9750,7 +6662,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir dire bonjour et merci en français","Connaître son prénom"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9758,8 +6669,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm4,
-    flashcards: flash4,
   },
   {
     id: "cp-anglais-numbers",
@@ -9770,7 +6679,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Compter jusqu'à 12 en français","Reconnaître les chiffres de 0 à 12"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9778,8 +6686,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm5,
-    flashcards: flash5,
   },
   {
     id: "cp-anglais-colours",
@@ -9790,7 +6696,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Reconnaître et nommer les couleurs en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9798,8 +6703,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm6,
-    flashcards: flash6,
   },
   {
     id: "cp-anglais-animals",
@@ -9810,7 +6713,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Nommer des animaux courants en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9818,8 +6720,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm7,
-    flashcards: flash7,
   },
   {
     id: "cp-espagnol-saludos",
@@ -9830,7 +6730,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 10,
-    prerequis: ["Aucun (première leçon d'espagnol)","Savoir reconnaître son prénom"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9838,8 +6737,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm8,
-    flashcards: flash8,
   },
   {
     id: "cp-espagnol-numeros",
@@ -9850,7 +6747,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 10,
-    prerequis: ["Savoir compter jusqu'à 12 en français","Connaître les mots ¡Hola! et gracias"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9858,8 +6754,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm9,
-    flashcards: flash9,
   },
   {
     id: "cp-espagnol-colores",
@@ -9870,7 +6764,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 10,
-    prerequis: ["Connaître quelques objets du quotidien","Savoir dire ¡Hola! et gracias"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9878,8 +6771,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm10,
-    flashcards: flash10,
   },
   {
     id: "cp-espagnol-animales",
@@ -9890,7 +6781,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 10,
-    prerequis: ["Connaître les articles el et la","Savoir dire quelques couleurs (negro, blanco)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9898,8 +6788,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm11,
-    flashcards: flash11,
   },
   {
     id: "cp-francais-sons-voyelles",
@@ -9910,7 +6798,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Connaître le nom des lettres de l'alphabet","Savoir écouter un mot que la maîtresse ou le maître prononce"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9918,8 +6805,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm12,
-    flashcards: flash12,
   },
   {
     id: "cp-francais-syllabes",
@@ -9930,7 +6815,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Connaître les voyelles a, e, i, o, u, y","Savoir dire le son des consonnes (b, l, m, r...)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9938,8 +6822,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm13,
-    flashcards: flash13,
   },
   {
     id: "cp-francais-sons-complexes",
@@ -9950,7 +6832,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Connaître les voyelles et les consonnes","Savoir fusionner une consonne et une voyelle en syllabe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9958,8 +6839,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm14,
-    flashcards: flash14,
   },
   {
     id: "cp-francais-nom-determinant",
@@ -9970,7 +6849,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Savoir lire des mots simples","Reconnaître le début et la fin d'une phrase"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9978,8 +6856,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm15,
-    flashcards: flash15,
   },
   {
     id: "cp-francais-la-phrase",
@@ -9990,7 +6866,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Savoir lire des mots simples","Reconnaître les lettres majuscules et minuscules"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -9998,8 +6873,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm16,
-    flashcards: flash16,
   },
   {
     id: "cp-hist-geo-vivre-ensemble",
@@ -10010,7 +6883,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Connaître les mots de politesse","Savoir écouter et attendre son tour"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10018,8 +6890,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm17,
-    flashcards: flash17,
   },
   {
     id: "cp-hist-geo-le-temps-qui-passe",
@@ -10030,7 +6900,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Compter jusqu'à douze","Nommer les moments d'une journée"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10038,8 +6907,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm18,
-    flashcards: flash18,
   },
   {
     id: "cp-hist-geo-se-reperer-espace",
@@ -10050,7 +6917,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Connaître sa main droite et sa main gauche","Nommer les lieux de l'école"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10058,8 +6924,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm19,
-    flashcards: flash19,
   },
   {
     id: "cp-hist-geo-ecole-autrefois",
@@ -10070,7 +6934,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Nommer ses affaires d'écolier","Comprendre les mots « autrefois » et « aujourd'hui »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10078,8 +6941,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm20,
-    flashcards: flash20,
   },
   {
     id: "cp-italien-saluti",
@@ -10090,7 +6951,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Aucun (premier chapitre d'italien)","Savoir dire bonjour en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10098,8 +6958,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm21,
-    flashcards: flash21,
   },
   {
     id: "cp-italien-numeri",
@@ -10110,7 +6968,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir compter jusqu'à 12 en français","Connaître les chiffres de 0 à 12"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10118,8 +6975,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm22,
-    flashcards: flash22,
   },
   {
     id: "cp-italien-colori",
@@ -10130,7 +6985,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les couleurs en français","Chapitre « Ciao! Se saluer » conseillé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10138,8 +6992,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm23,
-    flashcards: flash23,
   },
   {
     id: "cp-italien-animali",
@@ -10150,7 +7002,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les animaux en français","Chapitre « I colori » conseillé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10158,8 +7009,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm24,
-    flashcards: flash24,
   },
   {
     id: "cp-math-nombres-jusqu-a-20",
@@ -10170,7 +7019,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10178,8 +7026,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm25,
-    flashcards: flash25,
   },
   {
     id: "cp-math-comparer-ranger",
@@ -10190,7 +7036,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10198,8 +7043,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm26,
-    flashcards: flash26,
   },
   {
     id: "cp-math-addition",
@@ -10210,7 +7053,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10218,8 +7060,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm27,
-    flashcards: flash27,
   },
   {
     id: "cp-math-se-reperer-et-quadrillage",
@@ -10230,7 +7070,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10238,8 +7077,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm28,
-    flashcards: flash28,
   },
   {
     id: "cp-math-dizaines-et-unites",
@@ -10250,7 +7087,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10258,8 +7094,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm29,
-    flashcards: flash29,
   },
   {
     id: "cp-math-soustraction",
@@ -10270,7 +7104,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10278,8 +7111,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm30,
-    flashcards: flash30,
   },
   {
     id: "cp-math-formes-geometriques",
@@ -10290,7 +7121,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10298,8 +7128,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm31,
-    flashcards: flash31,
   },
   {
     id: "cp-math-calcul-mental",
@@ -10310,7 +7138,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10318,8 +7145,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm32,
-    flashcards: flash32,
   },
   {
     id: "cp-math-longueurs-et-masses",
@@ -10330,7 +7155,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10338,8 +7162,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm33,
-    flashcards: flash33,
   },
   {
     id: "cp-math-le-temps-qui-passe",
@@ -10350,7 +7172,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10358,8 +7179,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm34,
-    flashcards: flash34,
   },
   {
     id: "cp-math-problemes",
@@ -10370,7 +7189,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10378,8 +7196,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm35,
-    flashcards: flash35,
   },
   {
     id: "cp-sciences-le-corps-et-les-cinq-sens",
@@ -10390,7 +7206,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10398,8 +7213,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm36,
-    flashcards: flash36,
   },
   {
     id: "cp-sciences-le-vivant-animaux-et-vegetaux",
@@ -10410,7 +7223,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10418,8 +7230,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm37,
-    flashcards: flash37,
   },
   {
     id: "cp-sciences-les-objets-du-quotidien",
@@ -10430,7 +7240,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10438,8 +7247,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm38,
-    flashcards: flash38,
   },
   {
     id: "cp-sciences-solides-et-liquides",
@@ -10450,7 +7257,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10458,8 +7264,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm39,
-    flashcards: flash39,
   },
   {
     id: "cp-sciences-le-temps-et-les-saisons",
@@ -10470,7 +7274,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10478,8 +7281,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm40,
-    flashcards: flash40,
   },
   {
     id: "ce1-allemand-wochentage",
@@ -10490,7 +7291,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir compter jusqu'à 7","Connaître les articles der, die, das"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10498,8 +7298,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm41,
-    flashcards: flash41,
   },
   {
     id: "ce1-allemand-familie",
@@ -10510,7 +7308,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir se saluer et se présenter en allemand","Connaître les articles der, die, das"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10518,8 +7315,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm42,
-    flashcards: flash42,
   },
   {
     id: "ce1-allemand-koerper",
@@ -10530,7 +7325,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das","Connaître les couleurs (die Farben)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10538,8 +7332,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm43,
-    flashcards: flash43,
   },
   {
     id: "ce1-allemand-essen",
@@ -10550,7 +7342,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das","Savoir compter jusqu'à 12"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10558,8 +7349,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm44,
-    flashcards: flash44,
   },
   {
     id: "ce1-anglais-days",
@@ -10570,7 +7359,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Connaître l'alphabet anglais","Savoir compter jusqu'à 7 en anglais"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10578,8 +7366,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm45,
-    flashcards: flash45,
   },
   {
     id: "ce1-anglais-family",
@@ -10590,7 +7376,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Connaître l'alphabet anglais","Savoir dire bonjour en anglais"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10598,8 +7383,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm46,
-    flashcards: flash46,
   },
   {
     id: "ce1-anglais-body",
@@ -10610,7 +7393,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Connaître l'alphabet anglais","Savoir compter jusqu'à 10 en anglais"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10618,8 +7400,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm47,
-    flashcards: flash47,
   },
   {
     id: "ce1-anglais-food",
@@ -10630,7 +7410,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Connaître l'alphabet anglais","Savoir dire *I like* (j'aime)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10638,8 +7417,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm48,
-    flashcards: flash48,
   },
   {
     id: "ce1-espagnol-dias",
@@ -10650,7 +7427,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Savoir dire bonjour en espagnol (¡Hola!)","Connaître quelques mots simples en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10658,8 +7434,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm49,
-    flashcards: flash49,
   },
   {
     id: "ce1-espagnol-familia",
@@ -10670,7 +7444,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Savoir dire bonjour en espagnol (¡Hola!)","Connaître quelques mots simples en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10678,8 +7451,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm50,
-    flashcards: flash50,
   },
   {
     id: "ce1-espagnol-cuerpo",
@@ -10690,7 +7461,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Savoir dire bonjour en espagnol (¡Hola!)","Connaître les articles el et la"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10698,8 +7468,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm51,
-    flashcards: flash51,
   },
   {
     id: "ce1-espagnol-comida",
@@ -10710,7 +7478,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 10,
-    prerequis: ["Savoir dire bonjour en espagnol (¡Hola!)","Connaître les articles el et la"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10718,8 +7485,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm52,
-    flashcards: flash52,
   },
   {
     id: "ce1-francais-types-de-phrases",
@@ -10730,7 +7495,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Savoir qu'une phrase commence par une majuscule et finit par un point","Reconnaître une phrase dans un texte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10738,8 +7502,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm53,
-    flashcards: flash53,
   },
   {
     id: "ce1-francais-noms-propres-communs",
@@ -10750,7 +7512,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Savoir qu'un nom désigne une personne, un animal ou une chose","Reconnaître les petits mots le, la, un, une devant un nom"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10758,8 +7519,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm54,
-    flashcards: flash54,
   },
   {
     id: "ce1-francais-singulier-pluriel",
@@ -10770,7 +7529,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Reconnaître un nom commun","Connaître les petits mots le, la, un, une, les, des"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10778,8 +7536,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm55,
-    flashcards: flash55,
   },
   {
     id: "ce1-francais-le-verbe",
@@ -10790,7 +7546,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Reconnaître une phrase et les mots qui la composent","Savoir qu'une phrase raconte souvent une action"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10798,8 +7553,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm56,
-    flashcards: flash56,
   },
   {
     id: "ce1-francais-present-etre-avoir",
@@ -10810,7 +7563,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Connaître les pronoms je, tu, il, elle, nous, vous, ils, elles","Savoir reconnaître le verbe dans une phrase"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10818,8 +7570,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm57,
-    flashcards: flash57,
   },
   {
     id: "ce1-hist-geo-regles-et-droits",
@@ -10830,7 +7580,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Savoir vivre en groupe dans la classe","Connaître les mots respect et politesse"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10838,8 +7587,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm58,
-    flashcards: flash58,
   },
   {
     id: "ce1-hist-geo-calendrier-frise",
@@ -10850,7 +7597,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Connaître les jours de la semaine","Savoir compter jusqu'à 31"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10858,8 +7604,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm59,
-    flashcards: flash59,
   },
   {
     id: "ce1-hist-geo-plans-et-cartes",
@@ -10870,7 +7614,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Savoir se repérer dans la classe et l'école","Connaître les mots gauche et droite"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10878,8 +7621,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm60,
-    flashcards: flash60,
   },
   {
     id: "ce1-hist-geo-la-france-paysages",
@@ -10890,7 +7631,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Questionner le monde — cycle 2",
     duree: 12,
-    prerequis: ["Savoir ce qu'est un pays","Connaître les points cardinaux"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10898,8 +7638,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm61,
-    flashcards: flash61,
   },
   {
     id: "ce1-italien-giorni",
@@ -10910,7 +7648,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots italiens simples","Savoir compter jusqu'à 7"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10918,8 +7655,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm62,
-    flashcards: flash62,
   },
   {
     id: "ce1-italien-famiglia",
@@ -10930,7 +7665,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir dire bonjour en italien","Connaître quelques mots simples"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10938,8 +7672,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm63,
-    flashcards: flash63,
   },
   {
     id: "ce1-italien-corpo",
@@ -10950,7 +7682,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots italiens simples","Savoir dire il/la (le/la)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10958,8 +7689,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm64,
-    flashcards: flash64,
   },
   {
     id: "ce1-italien-cibo",
@@ -10970,7 +7699,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots italiens simples","Savoir dire il/la (le/la)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10978,8 +7706,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm65,
-    flashcards: flash65,
   },
   {
     id: "ce1-math-nombres-jusqu-a-1000",
@@ -10990,7 +7716,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Lire et écrire les nombres jusqu'à 100 (CP)","Compter de 1 en 1 et de 10 en 10 (CP)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -10998,8 +7723,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm66,
-    flashcards: flash66,
   },
   {
     id: "ce1-math-addition-posee",
@@ -11010,7 +7733,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Connaître les nombres jusqu'à 1000","Additions simples et compléments à 10 (CP)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11018,8 +7740,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm67,
-    flashcards: flash67,
   },
   {
     id: "ce1-math-calcul-mental",
@@ -11030,7 +7750,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Connaître les nombres jusqu'à 1000","Compléments à 10 (CP)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11038,8 +7757,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm68,
-    flashcards: flash68,
   },
   {
     id: "ce1-math-soustraction-posee",
@@ -11050,7 +7767,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Connaître les nombres jusqu'à 1000","Savoir poser une addition","Compléments et petites soustractions (CP)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11058,8 +7774,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm69,
-    flashcards: flash69,
   },
   {
     id: "ce1-math-figures-planes",
@@ -11070,7 +7784,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Reconnaître les formes simples (CP)","Utiliser une règle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11078,8 +7791,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm70,
-    flashcards: flash70,
   },
   {
     id: "ce1-math-moities-et-doubles",
@@ -11090,7 +7801,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Additions simples","Partage en deux parts égales"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11098,8 +7808,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm71,
-    flashcards: flash71,
   },
   {
     id: "ce1-math-tables-de-multiplication",
@@ -11110,7 +7818,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Additionner des petits nombres","Compter de 2 en 2, de 5 en 5, de 10 en 10"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11118,8 +7825,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm72,
-    flashcards: flash72,
   },
   {
     id: "ce1-math-symetrie-et-quadrillage",
@@ -11130,7 +7835,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Repérer des cases et des nœuds","Reconnaître des figures planes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11138,8 +7842,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm73,
-    flashcards: flash73,
   },
   {
     id: "ce1-math-solides",
@@ -11150,7 +7852,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Reconnaître les figures planes (carré, rectangle, triangle, cercle)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11158,8 +7859,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm74,
-    flashcards: flash74,
   },
   {
     id: "ce1-math-mesures-et-monnaie",
@@ -11170,7 +7869,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Additionner et soustraire de petits nombres","Lire les nombres jusqu'à 1000"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11178,8 +7876,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm75,
-    flashcards: flash75,
   },
   {
     id: "ce1-math-problemes",
@@ -11190,7 +7886,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Additions et soustractions jusqu'à 1000","Lire un énoncé simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11198,8 +7893,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm76,
-    flashcards: flash76,
   },
   {
     id: "ce1-sciences-se-reperer-dans-le-temps",
@@ -11210,7 +7903,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11218,8 +7910,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm77,
-    flashcards: flash77,
   },
   {
     id: "ce1-sciences-les-etats-de-leau",
@@ -11230,7 +7920,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11238,8 +7927,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm78,
-    flashcards: flash78,
   },
   {
     id: "ce1-sciences-cycles-de-vie-des-etres-vivants",
@@ -11250,7 +7937,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11258,8 +7944,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm79,
-    flashcards: flash79,
   },
   {
     id: "ce1-sciences-alimentation-et-hygiene",
@@ -11270,7 +7954,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11278,8 +7961,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm80,
-    flashcards: flash80,
   },
   {
     id: "ce1-sciences-materiaux-et-objets-techniques",
@@ -11290,7 +7971,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11298,8 +7978,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm81,
-    flashcards: flash81,
   },
   {
     id: "ce2-allemand-zahlen-alter",
@@ -11310,7 +7988,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet et quelques mots simples en allemand","Savoir compter jusqu'à 20 en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11318,8 +7995,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm82,
-    flashcards: flash82,
   },
   {
     id: "ce2-allemand-gefuehle",
@@ -11330,7 +8005,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe sein (bin, bist, ist)","Savoir se présenter simplement en allemand"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11338,8 +8012,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm83,
-    flashcards: flash83,
   },
   {
     id: "ce2-allemand-kleidung",
@@ -11350,7 +8022,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles der / die / das","Savoir nommer quelques couleurs en allemand"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11358,8 +8029,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm84,
-    flashcards: flash84,
   },
   {
     id: "ce2-allemand-wetter-jahreszeiten",
@@ -11370,7 +8039,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots simples en allemand","Savoir nommer les quatre saisons en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11378,8 +8046,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm85,
-    flashcards: flash85,
   },
   {
     id: "ce2-anglais-numbers-age",
@@ -11390,7 +8056,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les chiffres de 0 à 10 en français","Savoir répéter des mots simples en anglais"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11398,8 +8063,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm86,
-    flashcards: flash86,
   },
   {
     id: "ce2-anglais-feelings",
@@ -11410,7 +8073,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe be (am, is, are)","Savoir utiliser I, you, he, she"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11418,8 +8080,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm87,
-    flashcards: flash87,
   },
   {
     id: "ce2-anglais-clothes",
@@ -11430,7 +8090,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques couleurs en anglais","Savoir utiliser I et you"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11438,8 +8097,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm88,
-    flashcards: flash88,
   },
   {
     id: "ce2-anglais-weather-seasons",
@@ -11450,7 +8107,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots simples en anglais","Savoir dire les quatre saisons en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11458,8 +8114,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm89,
-    flashcards: flash89,
   },
   {
     id: "ce2-espagnol-numeros-edad",
@@ -11470,7 +8124,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir compter jusqu'à 12 en espagnol (chapitre du CP)","Connaître les salutations simples (hola, ¿cómo estás?)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11478,8 +8131,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm90,
-    flashcards: flash90,
   },
   {
     id: "ce2-espagnol-sentimientos",
@@ -11490,7 +8141,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les salutations et ¿cómo estás ?","Savoir accorder au masculin/féminin (-o / -a)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11498,8 +8148,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm91,
-    flashcards: flash91,
   },
   {
     id: "ce2-espagnol-ropa",
@@ -11510,7 +8158,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques couleurs en espagnol (rojo, azul, verde…)","Savoir utiliser les articles el / la / los / las"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11518,8 +8165,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm92,
-    flashcards: flash92,
   },
   {
     id: "ce2-espagnol-tiempo-estaciones",
@@ -11530,7 +8175,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 2, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir poser une question simple avec ¿qué…?","Connaître quelques couleurs et mots du quotidien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11538,8 +8182,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm93,
-    flashcards: flash93,
   },
   {
     id: "ce2-francais-classes-de-mots",
@@ -11550,7 +8192,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Savoir lire une phrase simple","Connaître le nom et le petit mot devant le nom (le, la, un, une)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11558,8 +8199,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm94,
-    flashcards: flash94,
   },
   {
     id: "ce2-francais-passe-present-futur",
@@ -11570,7 +8209,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Reconnaître le verbe dans une phrase","Savoir conjuguer au présent les verbes en -er"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11578,8 +8216,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm95,
-    flashcards: flash95,
   },
   {
     id: "ce2-francais-present-premier-groupe",
@@ -11590,7 +8226,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Reconnaître le verbe et son infinitif","Connaître les pronoms de conjugaison"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11598,8 +8233,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm96,
-    flashcards: flash96,
   },
   {
     id: "ce2-francais-accord-sujet-verbe",
@@ -11610,7 +8243,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Reconnaître le nom et le verbe","Connaître les pronoms je, tu, il, elle, nous, vous, ils, elles"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11618,8 +8250,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm97,
-    flashcards: flash97,
   },
   {
     id: "ce2-francais-homophones-a-et",
@@ -11630,7 +8260,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 2",
     duree: 12,
-    prerequis: ["Reconnaître le verbe avoir et le verbe être","Conjuguer avoir et être au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11638,8 +8267,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm98,
-    flashcards: flash98,
   },
   {
     id: "ce2-hist-geo-prehistoire",
@@ -11650,7 +8277,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir lire une frise du temps","Comprendre les mots « autrefois » et « il y a très longtemps »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11658,8 +8284,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm99,
-    flashcards: flash99,
   },
   {
     id: "ce2-hist-geo-gaulois-romains",
@@ -11670,7 +8294,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir situer un événement sur une frise","Comprendre qu'un pays peut être conquis par un autre"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11678,8 +8301,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm100,
-    flashcards: flash100,
   },
   {
     id: "ce2-hist-geo-terre-continents-oceans",
@@ -11690,7 +8311,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir que la Terre est une planète ronde","Distinguer la terre (les continents) et l'eau (les océans)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11698,8 +8318,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm101,
-    flashcards: flash101,
   },
   {
     id: "ce2-hist-geo-symboles-republique",
@@ -11710,7 +8328,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir que la France est une République","Reconnaître les couleurs bleu, blanc et rouge"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11718,8 +8335,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm102,
-    flashcards: flash102,
   },
   {
     id: "ce2-italien-numeri-eta",
@@ -11730,7 +8345,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet italien","Savoir se saluer (Ciao, Buongiorno)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11738,8 +8352,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm103,
-    flashcards: flash103,
   },
   {
     id: "ce2-italien-sentimenti",
@@ -11750,7 +8362,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir saluer (Ciao, Buongiorno)","Connaître le verbe stare (introduction)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11758,8 +8369,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm104,
-    flashcards: flash104,
   },
   {
     id: "ce2-italien-vestiti",
@@ -11770,7 +8379,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles il / la / le","Savoir dire les couleurs de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11778,8 +8386,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm105,
-    flashcards: flash105,
   },
   {
     id: "ce2-italien-tempo-stagioni",
@@ -11790,7 +8396,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les nombres de base","Savoir répondre à Come stai ?"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11798,8 +8403,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm106,
-    flashcards: flash106,
   },
   {
     id: "ce2-math-nombres-jusqu-a-10000",
@@ -11810,7 +8413,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Lire et écrire les nombres jusqu'à 1 000 (CE1)","Connaître les dizaines et les centaines"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11818,8 +8420,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm107,
-    flashcards: flash107,
   },
   {
     id: "ce2-math-calcul-mental",
@@ -11830,7 +8430,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Connaître les nombres jusqu'à 1000","Additionner et soustraire de petits nombres","Connaître les tables de 2 et de 5"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11838,8 +8437,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm108,
-    flashcards: flash108,
   },
   {
     id: "ce2-math-multiplication-posee",
@@ -11850,7 +8447,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Connaître les tables de multiplication (2, 3, 4, 5, 10)","Savoir ce qu'est une multiplication (addition répétée)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11858,8 +8454,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm109,
-    flashcards: flash109,
   },
   {
     id: "ce2-math-angles-et-polygones",
@@ -11870,7 +8464,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Reconnaître un carré, un rectangle, un triangle","Utiliser une règle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11878,8 +8471,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm110,
-    flashcards: flash110,
   },
   {
     id: "ce2-math-sens-de-la-division",
@@ -11890,7 +8481,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Connaître les tables de multiplication","Savoir multiplier (paquets égaux)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11898,8 +8488,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm111,
-    flashcards: flash111,
   },
   {
     id: "ce2-math-perimetre-et-mesures",
@@ -11910,7 +8498,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Additionner et multiplier","Utiliser une règle graduée"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11918,8 +8505,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm112,
-    flashcards: flash112,
   },
   {
     id: "ce2-math-symetrie-axiale",
@@ -11930,7 +8515,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Utiliser une règle","Reconnaître un carré et un rectangle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11938,8 +8522,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm113,
-    flashcards: flash113,
   },
   {
     id: "ce2-math-fractions-simples",
@@ -11950,7 +8532,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 6,
-    prerequis: ["Partager en parts égales","Connaître le vocabulaire moitié et double"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11958,8 +8539,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm114,
-    flashcards: flash114,
   },
   {
     id: "ce2-math-solides-et-patrons",
@@ -11970,7 +8549,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Reconnaître un carré, un rectangle, un triangle","Compter jusqu'à 12"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11978,8 +8556,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm115,
-    flashcards: flash115,
   },
   {
     id: "ce2-math-tableaux-et-graphiques",
@@ -11990,7 +8566,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Additionner et soustraire jusqu'à 100","Comparer des nombres"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -11998,8 +8573,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm116,
-    flashcards: flash116,
   },
   {
     id: "ce2-math-problemes",
@@ -12010,7 +8583,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 2 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Additionner et soustraire jusqu'à 1000","Connaître les tables de multiplication","Lire un énoncé simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12018,8 +8590,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm117,
-    flashcards: flash117,
   },
   {
     id: "ce2-sciences-classer-les-animaux",
@@ -12030,7 +8600,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12038,8 +8607,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm118,
-    flashcards: flash118,
   },
   {
     id: "ce2-sciences-plantes-et-milieux-de-vie",
@@ -12050,7 +8617,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12058,8 +8624,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm119,
-    flashcards: flash119,
   },
   {
     id: "ce2-sciences-melanges-et-solutions",
@@ -12070,7 +8634,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12078,8 +8641,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm120,
-    flashcards: flash120,
   },
   {
     id: "ce2-sciences-circuits-electriques-simples",
@@ -12090,7 +8651,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12098,8 +8658,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm121,
-    flashcards: flash121,
   },
   {
     id: "ce2-sciences-la-terre-le-soleil-la-lune",
@@ -12110,7 +8668,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 2 — Questionner le monde (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12118,8 +8675,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm122,
-    flashcards: flash122,
   },
   {
     id: "cm1-allemand-laender-nationalitaeten",
@@ -12130,7 +8685,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Savoir se présenter (Ich heiße …)","Connaître le verbe kommen au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12138,8 +8692,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm123,
-    flashcards: flash123,
   },
   {
     id: "cm1-allemand-haus",
@@ -12150,7 +8702,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das","Savoir dire Das ist … (c'est …)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12158,8 +8709,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm124,
-    flashcards: flash124,
   },
   {
     id: "cm1-allemand-uhrzeit-tagesablauf",
@@ -12170,7 +8719,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les nombres de 1 à 12 (die Zahlen)","Savoir conjuguer un verbe au présent avec ich et du"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12178,8 +8726,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm125,
-    flashcards: flash125,
   },
   {
     id: "cm1-allemand-sport-hobbys",
@@ -12190,7 +8736,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Savoir conjuguer un verbe au présent (ich, du, er/sie)","Connaître quelques activités du quotidien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12198,8 +8743,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm126,
-    flashcards: flash126,
   },
   {
     id: "cm1-anglais-countries-nationalities",
@@ -12210,7 +8753,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Savoir dire I am / you are","Connaître quelques pays"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12218,8 +8760,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm127,
-    flashcards: flash127,
   },
   {
     id: "cm1-anglais-house-rooms",
@@ -12230,7 +8770,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques objets du quotidien","Savoir dire a / an"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12238,8 +8777,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm128,
-    flashcards: flash128,
   },
   {
     id: "cm1-anglais-time-routine",
@@ -12250,7 +8787,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Savoir compter jusqu'à 12 en anglais","Connaître les jours de la semaine"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12258,8 +8794,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm129,
-    flashcards: flash129,
   },
   {
     id: "cm1-anglais-sports-hobbies",
@@ -12270,7 +8804,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3 (CM1), CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe like","Savoir dire I / you"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12278,8 +8811,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm130,
-    flashcards: flash130,
   },
   {
     id: "cm1-espagnol-paises-nacionalidades",
@@ -12290,7 +8821,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe ser (soy, eres, es)","Savoir accorder masculin / féminin"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12298,8 +8828,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm131,
-    flashcards: flash131,
   },
   {
     id: "cm1-espagnol-casa",
@@ -12310,7 +8838,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles el / la et le genre des noms","Connaître les nombres de 0 à 12"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12318,8 +8845,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm132,
-    flashcards: flash132,
   },
   {
     id: "cm1-espagnol-hora-rutina",
@@ -12330,7 +8855,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les nombres de 0 à 12 en espagnol","Savoir se présenter en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12338,8 +8862,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm133,
-    flashcards: flash133,
   },
   {
     id: "cm1-espagnol-deportes-ocio",
@@ -12350,7 +8872,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe « gustar » (me gusta)","Savoir dire ce que l'on aime"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12358,8 +8879,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm134,
-    flashcards: flash134,
   },
   {
     id: "cm1-francais-accords-groupe-nominal",
@@ -12370,7 +8889,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître le nom, le déterminant et l'adjectif","Connaître le singulier et le pluriel des noms"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12378,8 +8896,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm135,
-    flashcards: flash135,
   },
   {
     id: "cm1-francais-complement-objet",
@@ -12390,7 +8906,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître le verbe et son sujet","Distinguer le verbe et son infinitif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12398,8 +8913,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm136,
-    flashcards: flash136,
   },
   {
     id: "cm1-francais-futur-simple",
@@ -12410,7 +8923,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Connaître les trois groupes de verbes","Savoir reconnaître l'infinitif d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12418,8 +8930,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm137,
-    flashcards: flash137,
   },
   {
     id: "cm1-francais-imparfait",
@@ -12430,7 +8940,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Connaître les trois groupes de verbes","Savoir conjuguer au présent de l'indicatif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12438,8 +8947,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm138,
-    flashcards: flash138,
   },
   {
     id: "cm1-francais-passe-compose",
@@ -12450,7 +8957,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Conjuguer être et avoir au présent","Reconnaître l'infinitif et le participe passé d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12458,8 +8964,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm139,
-    flashcards: flash139,
   },
   {
     id: "cm1-hist-geo-moyen-age",
@@ -12470,7 +8974,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir placer un siècle sur une frise du temps","Connaître la fin de l'Antiquité et des Romains"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12478,8 +8981,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm140,
-    flashcards: flash140,
   },
   {
     id: "cm1-hist-geo-temps-modernes",
@@ -12490,7 +8991,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir situer une date sur une frise du temps","Connaître la fin du Moyen Âge (vers 1492)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12498,8 +8998,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm141,
-    flashcards: flash141,
   },
   {
     id: "cm1-hist-geo-habiter-ville-campagne",
@@ -12510,7 +9008,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir lire une carte simple de la France","Connaître les mots « ville » et « campagne »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12518,8 +9015,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm142,
-    flashcards: flash142,
   },
   {
     id: "cm1-hist-geo-egalite-discriminations",
@@ -12530,7 +9025,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Connaître la devise de la République française","Savoir ce qu'est une règle de vie commune"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12538,8 +9032,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm143,
-    flashcards: flash143,
   },
   {
     id: "cm1-italien-paesi-nazionalita",
@@ -12550,7 +9042,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir conjuguer *essere* au présent","Connaître le masculin et le féminin des adjectifs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12558,8 +9049,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm144,
-    flashcards: flash144,
   },
   {
     id: "cm1-italien-casa",
@@ -12570,7 +9059,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles définis (il, la, lo, l')","Savoir utiliser « c'è » et « ci sono »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12578,8 +9066,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm145,
-    flashcards: flash145,
   },
   {
     id: "cm1-italien-ora-routine",
@@ -12590,7 +9076,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les nombres de 0 à 60 en italien","Savoir conjuguer *essere* au présent (è / sono)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12598,8 +9083,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm146,
-    flashcards: flash146,
   },
   {
     id: "cm1-italien-sport-tempo-libero",
@@ -12610,7 +9093,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le présent des verbes réguliers en italien","Savoir utiliser « mi piace »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12618,8 +9100,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm147,
-    flashcards: flash147,
   },
   {
     id: "cm1-math-grands-nombres",
@@ -12630,7 +9110,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Nombres jusqu'à 1000 (CE1-CE2)","Dizaines, centaines, milliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12638,8 +9117,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm148,
-    flashcards: flash148,
   },
   {
     id: "cm1-math-multiplication-posee",
@@ -12650,7 +9127,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Les tables de multiplication","Les grands nombres"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12658,8 +9134,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm149,
-    flashcards: flash149,
   },
   {
     id: "cm1-math-division-euclidienne",
@@ -12670,7 +9144,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Tables de multiplication","Sens du partage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12678,8 +9151,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm150,
-    flashcards: flash150,
   },
   {
     id: "cm1-math-angles",
@@ -12690,7 +9161,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Utiliser la règle et l'équerre","Reconnaître l'angle droit"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12698,8 +9168,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm151,
-    flashcards: flash151,
   },
   {
     id: "cm1-math-fractions",
@@ -12710,7 +9178,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Partages et parts égales","Division en parts égales (CE2)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12718,8 +9185,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm152,
-    flashcards: flash152,
   },
   {
     id: "cm1-math-nombres-decimaux",
@@ -12730,7 +9195,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Les fractions décimales (dixièmes, centièmes)","Les grands nombres"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12738,8 +9202,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm153,
-    flashcards: flash153,
   },
   {
     id: "cm1-math-operations-decimaux",
@@ -12750,7 +9212,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Les nombres décimaux","Addition et soustraction posées (nombres entiers)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12758,8 +9219,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm154,
-    flashcards: flash154,
   },
   {
     id: "cm1-math-symetrie-axiale",
@@ -12770,7 +9229,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Utiliser la règle et l'équerre","Reconnaître les figures géométriques"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12778,8 +9236,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm155,
-    flashcards: flash155,
   },
   {
     id: "cm1-math-durees",
@@ -12790,7 +9246,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Lire l'heure","Addition et soustraction"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12798,8 +9253,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm156,
-    flashcards: flash156,
   },
   {
     id: "cm1-math-cercle-triangles-perimetre-aire",
@@ -12810,7 +9263,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Figures planes (carré, rectangle)","Mesurer avec la règle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12818,8 +9270,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm157,
-    flashcards: flash157,
   },
   {
     id: "cm1-math-proportionnalite",
@@ -12830,7 +9280,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Les tables de multiplication","La multiplication et la division"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12838,8 +9287,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm158,
-    flashcards: flash158,
   },
   {
     id: "cm1-math-tableaux-et-graphiques",
@@ -12850,7 +9297,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Lire les nombres entiers","Addition et soustraction"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12858,8 +9304,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm159,
-    flashcards: flash159,
   },
   {
     id: "cm1-sciences-la-matiere-et-ses-transformations",
@@ -12870,7 +9314,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Distinguer solide et liquide","Mesurer une masse et un volume"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12878,8 +9321,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm160,
-    flashcards: flash160,
   },
   {
     id: "cm1-sciences-les-fonctions-du-vivant-la-nutrition",
@@ -12890,7 +9331,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Le vivant et le non-vivant","Les besoins des êtres vivants (CE2)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12898,8 +9338,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm161,
-    flashcards: flash161,
   },
   {
     id: "cm1-sciences-chaines-alimentaires-et-ecosystemes",
@@ -12910,7 +9348,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Les régimes alimentaires des animaux","La nutrition des végétaux"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12918,8 +9355,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm162,
-    flashcards: flash162,
   },
   {
     id: "cm1-sciences-energie-et-circuits-electriques",
@@ -12930,7 +9365,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Objets techniques du quotidien","Notion de matière"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12938,8 +9372,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm163,
-    flashcards: flash163,
   },
   {
     id: "cm1-sciences-le-systeme-solaire",
@@ -12950,7 +9382,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Le jour et la nuit","Observer le ciel"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12958,8 +9389,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm164,
-    flashcards: flash164,
   },
   {
     id: "cm2-allemand-personen-beschreiben",
@@ -12970,7 +9399,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les verbes sein et haben","Connaître les couleurs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12978,8 +9406,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm165,
-    flashcards: flash165,
   },
   {
     id: "cm2-allemand-alltag-praesens",
@@ -12990,7 +9416,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels (ich, du, er/sie...)","Reconnaître un verbe à l'infinitif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -12998,8 +9423,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm166,
-    flashcards: flash166,
   },
   {
     id: "cm2-allemand-essen-mahlzeiten",
@@ -13010,7 +9433,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles der / die / das","Savoir compter jusqu'à 20"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13018,8 +9440,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm167,
-    flashcards: flash167,
   },
   {
     id: "cm2-allemand-stadt-wegbeschreibung",
@@ -13030,7 +9450,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles der / die / das","Savoir dire bonjour et poser une question simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13038,8 +9457,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm168,
-    flashcards: flash168,
   },
   {
     id: "cm2-anglais-describing-people",
@@ -13050,7 +9467,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe be (am, is, are)","Savoir quelques couleurs en anglais"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13058,8 +9474,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm169,
-    flashcards: flash169,
   },
   {
     id: "cm2-anglais-daily-habits",
@@ -13070,7 +9484,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms sujets (I, you, he, she…)","Savoir dire l'heure et les moments de la journée"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13078,8 +9491,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm170,
-    flashcards: flash170,
   },
   {
     id: "cm2-anglais-food-meals",
@@ -13090,7 +9501,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots de nourriture simples","Savoir dire I like / I don't like"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13098,8 +9508,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm171,
-    flashcards: flash171,
   },
   {
     id: "cm2-anglais-town-directions",
@@ -13110,7 +9518,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les nombres et quelques lieux","Savoir dire where is…?"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13118,8 +9525,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm172,
-    flashcards: flash172,
   },
   {
     id: "cm2-espagnol-describir-personas",
@@ -13130,7 +9535,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe ser","Savoir accorder un adjectif (masculin / féminin)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13138,8 +9542,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm173,
-    flashcards: flash173,
   },
   {
     id: "cm2-espagnol-presente-rutinas",
@@ -13150,7 +9552,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels (yo, tú, él…)","Savoir dire l'heure et les moments de la journée"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13158,8 +9559,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm174,
-    flashcards: flash174,
   },
   {
     id: "cm2-espagnol-comida-comidas",
@@ -13170,7 +9569,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots de nourriture simples en espagnol","Savoir dire me gusta / no me gusta"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13178,8 +9576,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm175,
-    flashcards: flash175,
   },
   {
     id: "cm2-espagnol-ciudad-direcciones",
@@ -13190,7 +9586,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles el / la","Savoir dire ¿Dónde está?"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13198,8 +9593,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm176,
-    flashcards: flash176,
   },
   {
     id: "cm2-francais-sens-des-mots",
@@ -13210,7 +9603,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître la nature d'un mot (nom, verbe, adjectif)","Utiliser un dictionnaire"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13218,8 +9610,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm177,
-    flashcards: flash177,
   },
   {
     id: "cm2-francais-complements-circonstanciels",
@@ -13230,7 +9620,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître le sujet et le verbe dans une phrase","Distinguer le complément d'objet (COD, COI)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13238,8 +9627,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm178,
-    flashcards: flash178,
   },
   {
     id: "cm2-francais-homophones-ces-ses",
@@ -13250,7 +9637,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Distinguer un déterminant d'un verbe","Conjuguer être et avoir au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13258,8 +9644,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm179,
-    flashcards: flash179,
   },
   {
     id: "cm2-francais-accord-participe-passe",
@@ -13270,7 +9654,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître les auxiliaires être et avoir","Connaître le passé composé et le COD"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13278,8 +9661,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm180,
-    flashcards: flash180,
   },
   {
     id: "cm2-francais-plus-que-parfait",
@@ -13290,7 +9671,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Conjuguer être et avoir à l'imparfait","Connaître le passé composé et les participes passés"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13298,8 +9678,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm181,
-    flashcards: flash181,
   },
   {
     id: "cm2-hist-geo-revolution-empire",
@@ -13310,7 +9688,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Situer un événement sur une frise du temps","Savoir ce qu'est un roi et un régime politique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13318,8 +9695,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm182,
-    flashcards: flash182,
   },
   {
     id: "cm2-hist-geo-republique-democratie",
@@ -13330,7 +9705,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Connaître la Révolution française de 1789","Savoir ce qu'est un citoyen"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13338,8 +9712,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm183,
-    flashcards: flash183,
   },
   {
     id: "cm2-hist-geo-se-deplacer-communiquer",
@@ -13350,7 +9722,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Lire une carte simple de la France","Connaître quelques moyens de transport"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13358,8 +9729,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm184,
-    flashcards: flash184,
   },
   {
     id: "cm2-hist-geo-citoyennete-engagement",
@@ -13370,7 +9739,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Connaître les symboles de la République","Savoir ce que sont une règle et le respect"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13378,8 +9746,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm185,
-    flashcards: flash185,
   },
   {
     id: "cm2-italien-descrivere-persone",
@@ -13390,7 +9756,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe essere (être)","Connaître quelques couleurs (cp)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13398,8 +9763,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm186,
-    flashcards: flash186,
   },
   {
     id: "cm2-italien-presente-routine",
@@ -13410,7 +9773,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms io, tu, lui/lei","Savoir lire l'heure en italien (cm1)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13418,8 +9780,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm187,
-    flashcards: flash187,
   },
   {
     id: "cm2-italien-cibo-pasti",
@@ -13430,7 +9790,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base du cibo (ce1)","Savoir dire ciao et grazie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13438,8 +9797,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm188,
-    flashcards: flash188,
   },
   {
     id: "cm2-italien-citta-indicazioni",
@@ -13450,7 +9807,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques verbes simples","Savoir dire dove (où)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13458,8 +9814,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm189,
-    flashcards: flash189,
   },
   {
     id: "cm2-math-grands-nombres",
@@ -13470,7 +9824,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Lire et écrire les nombres jusqu'au million","Connaître les mots dizaine, centaine, millier","Ranger des nombres du plus petit au plus grand"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13478,8 +9831,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm190,
-    flashcards: flash190,
   },
   {
     id: "cm2-math-calcul-mental",
@@ -13490,7 +9841,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Tables d'addition et de multiplication","Multiplier et diviser par 10, 100","Doubles et moitiés simples"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13498,8 +9848,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm191,
-    flashcards: flash191,
   },
   {
     id: "cm2-math-fractions-et-operations",
@@ -13510,7 +9858,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Partager une quantité en parts égales","Les nombres décimaux","La division"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13518,8 +9865,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm192,
-    flashcards: flash192,
   },
   {
     id: "cm2-math-operations-sur-les-decimaux",
@@ -13530,7 +9875,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Lire et écrire les nombres décimaux","Addition et soustraction posées avec des entiers","Tables de multiplication"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13538,8 +9882,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm193,
-    flashcards: flash193,
   },
   {
     id: "cm2-math-division-posee",
@@ -13550,7 +9892,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Connaître les tables de multiplication","Soustraction posée avec retenue","Sens du partage et du regroupement"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13558,8 +9899,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm194,
-    flashcards: flash194,
   },
   {
     id: "cm2-math-angles-et-mesures",
@@ -13570,7 +9909,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Tracer des droites et des segments à la règle","Utiliser l'équerre","Reconnaître les figures planes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13578,8 +9916,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm195,
-    flashcards: flash195,
   },
   {
     id: "cm2-math-symetrie-axiale",
@@ -13590,7 +9926,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Reconnaître les figures planes usuelles","Se repérer sur un quadrillage","Utiliser la règle et l'équerre"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13598,8 +9933,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm196,
-    flashcards: flash196,
   },
   {
     id: "cm2-math-proportionnalite-et-pourcentages",
@@ -13610,7 +9943,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["La multiplication et la division","Les nombres décimaux","Lire un tableau"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13618,8 +9950,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm197,
-    flashcards: flash197,
   },
   {
     id: "cm2-math-aires-perimetres-volumes",
@@ -13630,7 +9960,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Mesurer des longueurs et changer d'unité","La multiplication","Reconnaître le carré et le rectangle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13638,8 +9967,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm198,
-    flashcards: flash198,
   },
   {
     id: "cm2-math-solides-et-patrons",
@@ -13650,7 +9977,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Reconnaître carré, rectangle, triangle, disque","Vocabulaire côté et angle droit","Utiliser une règle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13658,8 +9984,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm199,
-    flashcards: flash199,
   },
   {
     id: "cm2-math-graphiques-et-donnees",
@@ -13670,7 +9994,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 7,
-    prerequis: ["Lire un nombre dans un tableau","Additionner et soustraire","La multiplication"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13678,8 +10001,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm200,
-    flashcards: flash200,
   },
   {
     id: "cm2-math-problemes",
@@ -13690,7 +10011,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Cycle 3 — mathématiques (programme officiel)",
     duree: 8,
-    prerequis: ["Les quatre opérations (addition, soustraction, multiplication, division)","Lire un énoncé et repérer les nombres","Connaître les unités (euro, mètre, heure)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13698,8 +10018,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm201,
-    flashcards: flash201,
   },
   {
     id: "cm2-sciences-corps-humain-digestion-et-respiration",
@@ -13710,7 +10028,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Connaître les grandes parties du corps humain","Savoir que les aliments et l'air sont indispensables à la vie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13718,8 +10035,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm202,
-    flashcards: flash202,
   },
   {
     id: "cm2-sciences-reproduction-des-etres-vivants",
@@ -13730,7 +10045,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Distinguer le vivant du non-vivant","Connaître les grandes catégories d'animaux et de végétaux"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13738,8 +10052,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm203,
-    flashcards: flash203,
   },
   {
     id: "cm2-sciences-mouvements-et-forces",
@@ -13750,7 +10062,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Lire une durée et une distance","Se repérer dans l'espace"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13758,8 +10069,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm204,
-    flashcards: flash204,
   },
   {
     id: "cm2-sciences-objets-programmes-et-informatique",
@@ -13770,7 +10079,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Reconnaître un objet technique","Suivre et donner une consigne dans l'ordre"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13778,8 +10086,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm205,
-    flashcards: flash205,
   },
   {
     id: "cm2-sciences-environnement-et-developpement-durable",
@@ -13790,7 +10096,6 @@ export const CHAPITRES = [
     matiere: "sciences",
     programme: "Cycle 3 — Sciences et technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Connaître le vivant, l'air, l'eau et le sol","Savoir qu'un être vivant a des besoins"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13798,8 +10103,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm206,
-    flashcards: flash206,
   },
   {
     id: "6e-allemand-phonetik-laute",
@@ -13810,7 +10113,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet latin (a à z)","Savoir distinguer voyelles et consonnes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13818,8 +10120,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm207,
-    flashcards: flash207,
   },
   {
     id: "6e-allemand-personalpronomen",
@@ -13830,7 +10130,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les verbes sein et haben","Savoir que les noms ont un genre (der/die/das)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13838,8 +10137,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm208,
-    flashcards: flash208,
   },
   {
     id: "6e-allemand-sein-haben",
@@ -13850,7 +10147,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels sujets (ich, du, er, sie, es...)","Savoir compter jusqu'à 20 en allemand"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13858,8 +10154,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm209,
-    flashcards: flash209,
   },
   {
     id: "6e-allemand-artikel-genus",
@@ -13870,7 +10164,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir que les noms allemands prennent une majuscule","Connaître quelques noms courants (Schule, Buch, Katze...)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13878,8 +10171,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm210,
-    flashcards: flash210,
   },
   {
     id: "6e-allemand-wortschatz-schule",
@@ -13890,7 +10181,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir que les noms allemands prennent une majuscule","Connaître les trois articles définis der / die / das"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13898,8 +10188,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm211,
-    flashcards: flash211,
   },
   {
     id: "6e-allemand-praesens-regelmaessig",
@@ -13910,7 +10198,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels (ich, du, er...)","Connaître les verbes sein et haben"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13918,8 +10205,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm212,
-    flashcards: flash212,
   },
   {
     id: "6e-allemand-satzstellung",
@@ -13930,7 +10215,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir conjuguer un verbe au présent","Connaître quelques mots interrogatifs (wo, was, wie...)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13938,8 +10222,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm213,
-    flashcards: flash213,
   },
   {
     id: "6e-allemand-fragesaetze",
@@ -13950,7 +10232,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les verbes sein et haben au présent","Savoir que le verbe conjugué occupe la position 2 dans une phrase affirmative"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13958,8 +10239,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm214,
-    flashcards: flash214,
   },
   {
     id: "6e-allemand-wortschatz-essen",
@@ -13970,7 +10249,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir que tous les noms allemands prennent une majuscule","Connaître les trois articles définis der / die / das"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13978,8 +10256,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm215,
-    flashcards: flash215,
   },
   {
     id: "6e-allemand-landeskunde-deutschland",
@@ -13990,7 +10266,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir situer l'Allemagne en Europe","Connaître quelques mots de base en allemand"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -13998,8 +10273,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm216,
-    flashcards: flash216,
   },
   {
     id: "6e-anglais-phonetique-sons",
@@ -14010,7 +10283,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet latin et savoir lire l'anglais","Connaître quelques mots simples (nombres, couleurs)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14018,8 +10290,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm217,
-    flashcards: flash217,
   },
   {
     id: "6e-anglais-se-presenter",
@@ -14030,7 +10300,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet anglais","Savoir compter jusqu'à 20 en anglais"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14038,8 +10307,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm218,
-    flashcards: flash218,
   },
   {
     id: "6e-anglais-articles-pluriels",
@@ -14050,7 +10317,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe be au présent","Savoir lire l'alphabet anglais et les sons des voyelles"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14058,8 +10324,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm219,
-    flashcards: flash219,
   },
   {
     id: "6e-anglais-vocabulaire-ecole",
@@ -14070,7 +10334,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet anglais","Savoir dire bonjour et se présenter"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14078,8 +10341,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm220,
-    flashcards: flash220,
   },
   {
     id: "6e-anglais-have-got",
@@ -14090,7 +10351,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms sujets","Savoir utiliser le présent simple à la forme affirmative"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14098,8 +10358,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm221,
-    flashcards: flash221,
   },
   {
     id: "6e-anglais-there-is-there-are",
@@ -14110,7 +10368,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe be au présent","Connaître le singulier et le pluriel des noms"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14118,8 +10375,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm222,
-    flashcards: flash222,
   },
   {
     id: "6e-anglais-present-simple",
@@ -14130,7 +10385,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms sujets et le verbe be","Connaître quelques verbes d'action courants (play, work, like…)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14138,8 +10392,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm223,
-    flashcards: flash223,
   },
   {
     id: "6e-anglais-questions-auxiliaires",
@@ -14150,7 +10402,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le présent simple et le -s de la 3e personne","Savoir conjuguer le verbe be"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14158,8 +10409,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm224,
-    flashcards: flash224,
   },
   {
     id: "6e-anglais-vocabulaire-nourriture-repas",
@@ -14170,7 +10419,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet anglais","Savoir dire ce que l'on aime avec I like"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14178,8 +10426,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm225,
-    flashcards: flash225,
   },
   {
     id: "6e-anglais-civilisation-royaume-uni",
@@ -14190,7 +10436,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques mots d'anglais du quotidien","Savoir lire une carte simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14198,8 +10443,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm226,
-    flashcards: flash226,
   },
   {
     id: "6e-arts-langage-plastique",
@@ -14210,7 +10453,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Savoir observer et décrire une image avec ses mots","Connaître le matériel de dessin de base (crayon, feutre, pinceau)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14218,8 +10460,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm227,
-    flashcards: flash227,
   },
   {
     id: "6e-arts-prehistoire-antiquite",
@@ -14230,7 +10470,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Situer la préhistoire et l'Antiquité sur une frise du temps","Savoir décrire une image avec un vocabulaire simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14238,8 +10477,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm228,
-    flashcards: flash228,
   },
   {
     id: "6e-espagnol-fonetica-sonidos",
@@ -14250,7 +10487,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet français","Savoir lire des mots simples en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14258,8 +10494,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm229,
-    flashcards: flash229,
   },
   {
     id: "6e-espagnol-pronombres-personales",
@@ -14270,7 +10504,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le verbe ser au présent","Savoir ce qu'est le sujet d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14278,8 +10511,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm230,
-    flashcards: flash230,
   },
   {
     id: "6e-espagnol-ser-estar",
@@ -14290,7 +10521,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels sujets (yo, tú, él…)","Savoir se présenter en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14298,8 +10528,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm231,
-    flashcards: flash231,
   },
   {
     id: "6e-espagnol-articulos-genero",
@@ -14310,7 +10538,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Reconnaître un nom commun","Connaître le verbe ser au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14318,8 +10545,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm232,
-    flashcards: flash232,
   },
   {
     id: "6e-espagnol-plural",
@@ -14330,7 +10555,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles définis (el, la, los, las)","Reconnaître voyelles et consonnes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14338,8 +10562,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm233,
-    flashcards: flash233,
   },
   {
     id: "6e-espagnol-articulos-contractos",
@@ -14350,7 +10572,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles définis el, la, los, las","Savoir utiliser les prépositions a et de"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14358,8 +10579,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm234,
-    flashcards: flash234,
   },
   {
     id: "6e-espagnol-vocabulario-escuela",
@@ -14370,7 +10589,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles définis (el, la, los, las)","Savoir se présenter en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14378,8 +10596,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm235,
-    flashcards: flash235,
   },
   {
     id: "6e-espagnol-presente-regular",
@@ -14390,7 +10606,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels sujets","Reconnaître l'infinitif d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14398,8 +10613,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm236,
-    flashcards: flash236,
   },
   {
     id: "6e-espagnol-vocabulario-comida",
@@ -14410,7 +10623,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles définis (el, la, los, las)","Savoir compter et employer le verbe querer (vouloir)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14418,8 +10630,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm237,
-    flashcards: flash237,
   },
   {
     id: "6e-espagnol-civilizacion-espana",
@@ -14430,7 +10640,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1",
     duree: 12,
-    prerequis: ["Savoir situer les grands pays d'Europe sur une carte","Connaître quelques mots espagnols de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14438,8 +10647,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm238,
-    flashcards: flash238,
   },
   {
     id: "6e-francais-classes-grammaticales",
@@ -14450,7 +10657,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Savoir reconnaître un nom, un verbe et un adjectif","Distinguer le singulier et le pluriel"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14458,8 +10664,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm239,
-    flashcards: flash239,
   },
   {
     id: "6e-francais-phrase-simple",
@@ -14470,7 +10674,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître un verbe conjugué","Connaître les principales classes grammaticales"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14478,8 +10681,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm240,
-    flashcards: flash240,
   },
   {
     id: "6e-francais-present-indicatif",
@@ -14490,7 +10691,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Reconnaître l'infinitif d'un verbe","Connaître les pronoms personnels sujets"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14498,8 +10698,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm241,
-    flashcards: flash241,
   },
   {
     id: "6e-francais-homophones-grammaticaux",
@@ -14510,7 +10708,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 12,
-    prerequis: ["Savoir conjuguer être et avoir au présent","Reconnaître un verbe et un déterminant"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14518,8 +10715,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm242,
-    flashcards: flash242,
   },
   {
     id: "6e-francais-imparfait-passe-simple",
@@ -14530,7 +10725,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 13,
-    prerequis: ["Reconnaître les trois groupes de verbes","Savoir conjuguer au présent de l'indicatif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14538,8 +10732,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm243,
-    flashcards: flash243,
   },
   {
     id: "6e-francais-passe-compose-accord",
@@ -14550,7 +10742,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 13,
-    prerequis: ["Savoir conjuguer être et avoir au présent","Reconnaître l'infinitif et le participe passé d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14558,8 +10749,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm244,
-    flashcards: flash244,
   },
   {
     id: "6e-francais-recit-conte-fable",
@@ -14570,7 +10759,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 3",
     duree: 13,
-    prerequis: ["Distinguer imparfait et passé simple","Savoir ce qu'est un narrateur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14578,8 +10766,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm245,
-    flashcards: flash245,
   },
   {
     id: "6e-hist-geo-premiers-etats-ecritures",
@@ -14590,7 +10776,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir placer un événement avant ou après J.-C.","Connaître les mots « fleuve » et « ville »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14598,8 +10783,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm246,
-    flashcards: flash246,
   },
   {
     id: "6e-hist-geo-monde-grec",
@@ -14610,7 +10793,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir situer un événement avant J.-C.","Connaître le mot « cité »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14618,8 +10800,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm247,
-    flashcards: flash247,
   },
   {
     id: "6e-hist-geo-rome-republique-empire",
@@ -14630,7 +10810,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir ranger des dates avant J.-C. dans l'ordre","Connaître le mot « cité »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14638,8 +10817,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm248,
-    flashcards: flash248,
   },
   {
     id: "6e-hist-geo-judaisme-christianisme",
@@ -14650,7 +10827,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Connaître l'Empire romain (chapitre sur Rome)","Savoir situer un siècle avant/après J.-C."],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14658,8 +10834,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm249,
-    flashcards: flash249,
   },
   {
     id: "6e-hist-geo-habiter-metropole",
@@ -14670,7 +10844,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir ce qu'est une ville","Savoir lire une carte simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14678,8 +10851,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm250,
-    flashcards: flash250,
   },
   {
     id: "6e-hist-geo-habiter-espaces-contraintes",
@@ -14690,7 +10861,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir ce qu'est la densité de population","Savoir lire une carte du monde simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14698,8 +10868,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm251,
-    flashcards: flash251,
   },
   {
     id: "6e-hist-geo-emc-college-droits",
@@ -14710,7 +10878,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 3",
     duree: 12,
-    prerequis: ["Savoir ce qu'est une règle de vie commune","Connaître le mot « droit » et le mot « devoir »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14718,8 +10885,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm252,
-    flashcards: flash252,
   },
   {
     id: "6e-italien-fonetica-suoni",
@@ -14730,7 +10895,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les cinq voyelles","Savoir lire des mots simples en italien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14738,8 +10902,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm253,
-    flashcards: flash253,
   },
   {
     id: "6e-italien-pronomi-personali",
@@ -14750,7 +10912,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les verbes essere et avere","Savoir se présenter simplement"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14758,8 +10919,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm254,
-    flashcards: flash254,
   },
   {
     id: "6e-italien-essere-avere",
@@ -14770,7 +10929,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet italien","Savoir compter jusqu'à douze en italien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14778,8 +10936,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm255,
-    flashcards: flash255,
   },
   {
     id: "6e-italien-articoli-genere",
@@ -14790,7 +10946,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître quelques noms courants en italien","Savoir distinguer voyelles et consonnes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14798,8 +10953,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm256,
-    flashcards: flash256,
   },
   {
     id: "6e-italien-plurale",
@@ -14810,7 +10963,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître le genre des noms","Maîtriser les articles définis singuliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14818,8 +10970,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm257,
-    flashcards: flash257,
   },
   {
     id: "6e-italien-preposizioni-articolate",
@@ -14830,7 +10980,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Maîtriser les articles définis (il, lo, la, i, gli, le)","Connaître les prépositions di, a, da, in, su"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14838,8 +10987,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm258,
-    flashcards: flash258,
   },
   {
     id: "6e-italien-vocabolario-scuola",
@@ -14850,7 +10997,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître l'alphabet italien","Connaître les articles définis (il, la, lo, l')"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14858,8 +11004,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm259,
-    flashcards: flash259,
   },
   {
     id: "6e-italien-presente-regolare",
@@ -14870,7 +11014,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels sujets","Savoir reconnaître l'infinitif d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14878,8 +11021,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm260,
-    flashcards: flash260,
   },
   {
     id: "6e-italien-vocabolario-cibo",
@@ -14890,7 +11031,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Connaître les articles définis italiens","Savoir compter et employer les nombres"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14898,8 +11038,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm261,
-    flashcards: flash261,
   },
   {
     id: "6e-italien-civilta-italia",
@@ -14910,7 +11048,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 3, CECRL A1",
     duree: 12,
-    prerequis: ["Savoir situer l'Europe sur une carte","Connaître le nom du pays où l'on parle italien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14918,8 +11055,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm262,
-    flashcards: flash262,
   },
   {
     id: "6e-math-nombres-entiers-decimaux",
@@ -14930,7 +11065,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Numération de position des nombres entiers (école élémentaire)","Écritures des nombres décimaux (cours moyen)","Fractions décimales (cours moyen)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14938,8 +11072,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm263,
-    flashcards: flash263,
   },
   {
     id: "6e-math-configurations-planes",
@@ -14950,7 +11082,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 14,
-    prerequis: ["Vocabulaire de base (point, droite, segment) et codage des angles droits (CM1-CM2)","Reconnaître un carré, un rectangle, un triangle (CM)","Reconnaître les axes de symétrie d'une figure (CM)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14958,8 +11089,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm264,
-    flashcards: flash264,
   },
   {
     id: "6e-math-fractions",
@@ -14970,7 +11099,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Fraction comme partie d'un tout (CM1-CM2)","Nombres décimaux et numération décimale (CM2-6e)","Division (CM2-6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14978,8 +11106,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm265,
-    flashcards: flash265,
   },
   {
     id: "6e-math-longueurs-aires-volumes",
@@ -14990,7 +11116,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Unités du système décimal et préfixes kilo à milli (CM1-CM2)","Périmètre du carré et du rectangle (CM1-CM2)","Multiplication et division par 10, 100, 1000 (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -14998,8 +11123,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm266,
-    flashcards: flash266,
   },
   {
     id: "6e-math-durees",
@@ -15010,7 +11133,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 10,
-    prerequis: ["Lire l'heure sur une horloge à aiguilles et sur un affichage digital (école primaire)","Les quatre opérations sur les nombres entiers (CM1-CM2)","Division euclidienne (quotient et reste) (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15018,8 +11140,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm267,
-    flashcards: flash267,
   },
   {
     id: "6e-math-proportionnalite",
@@ -15030,7 +11150,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Effet d'une multiplication sur une grandeur (CM1-CM2)","Multiplication et division posées (CM2-6e)","Double, moitié, tiers, quart (CM)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15038,8 +11157,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm268,
-    flashcards: flash268,
   },
   {
     id: "6e-math-initiation-algebre",
@@ -15050,7 +11167,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 9,
-    prerequis: ["Suites de nombres et régularités (CM1-CM2)","Les quatre opérations sur les entiers (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15058,8 +11174,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm269,
-    flashcards: flash269,
   },
   {
     id: "6e-math-gestion-donnees",
@@ -15070,7 +11184,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Lire un tableau et un diagramme en barres (CM1-CM2)","Nombres décimaux et pourcentages simples (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15078,8 +11191,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm270,
-    flashcards: flash270,
   },
   {
     id: "6e-math-probabilites",
@@ -15090,7 +11201,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 10,
-    prerequis: ["Compter les résultats possibles d'un tirage (CM2)","Fractions simples (CM1-CM2-6e)","Écriture décimale et pourcentages simples (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15098,8 +11208,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm271,
-    flashcards: flash271,
   },
   {
     id: "6e-math-pensee-informatique",
@@ -15110,7 +11218,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Programme de cycle 3 (2025) — applicable en 6e à la rentrée 2026",
     duree: 9,
-    prerequis: ["Codage de déplacements sur quadrillage (CM1-CM2)","Programmes de calcul simples (CM2)","Programmes de construction géométrique simples (CM2)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15118,8 +11225,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm272,
-    flashcards: flash272,
   },
   {
     id: "6e-svt-caracteristiques-du-vivant",
@@ -15130,7 +11235,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 3 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Distinguer le vivant du non-vivant"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15138,8 +11242,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm273,
-    flashcards: flash273,
   },
   {
     id: "6e-svt-classification-des-etres-vivants",
@@ -15150,7 +11252,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 3 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Les caractéristiques du vivant"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15158,8 +11259,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm274,
-    flashcards: flash274,
   },
   {
     id: "6e-svt-besoins-des-vegetaux",
@@ -15170,7 +11269,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 3 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Les caractéristiques du vivant"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15178,8 +11276,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm275,
-    flashcards: flash275,
   },
   {
     id: "6e-svt-origine-de-la-matiere-organique",
@@ -15190,7 +11286,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 3 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Les caractéristiques du vivant","Les besoins des végétaux"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15198,8 +11293,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm276,
-    flashcards: flash276,
   },
   {
     id: "6e-svt-peuplement-des-milieux",
@@ -15210,7 +11303,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 3 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Les caractéristiques du vivant","La classification des êtres vivants"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15218,8 +11310,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm277,
-    flashcards: flash277,
   },
   {
     id: "6e-techno-objets-techniques-et-besoins",
@@ -15230,7 +11320,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 3 — Sciences et technologie / Technologie (programme officiel)",
     duree: 7,
-    prerequis: [],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15238,8 +11327,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm278,
-    flashcards: flash278,
   },
   {
     id: "6e-techno-fonctionnement-dun-objet",
@@ -15250,7 +11337,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 3 — Sciences et technologie / Technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Objets techniques et besoins"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15258,8 +11344,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm279,
-    flashcards: flash279,
   },
   {
     id: "6e-techno-materiaux-et-familles",
@@ -15270,7 +11354,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 3 — Sciences et technologie / Technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Objets techniques et besoins"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15278,8 +11361,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm280,
-    flashcards: flash280,
   },
   {
     id: "6e-techno-representation-dun-objet",
@@ -15290,7 +11371,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 3 — Sciences et technologie / Technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Objets techniques et besoins"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15298,8 +11378,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm281,
-    flashcards: flash281,
   },
   {
     id: "6e-techno-initiation-programmation",
@@ -15310,7 +11388,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 3 — Sciences et technologie / Technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Le fonctionnement d'un objet technique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15318,8 +11395,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm282,
-    flashcards: flash282,
   },
   {
     id: "5e-allemand-negation",
@@ -15330,7 +11405,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître les articles ein/eine/ein","Savoir reconnaître un verbe, un nom et un adjectif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15338,8 +11412,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm283,
-    flashcards: flash283,
   },
   {
     id: "5e-allemand-akkusativ",
@@ -15350,7 +11422,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître les articles der/die/das (genre des noms)","Savoir conjuguer haben au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15358,8 +11429,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm284,
-    flashcards: flash284,
   },
   {
     id: "5e-allemand-possessivartikel",
@@ -15370,7 +11439,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels (ich, du, er...)","Maîtriser les articles ein/kein et l'accusatif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15378,8 +11446,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm285,
-    flashcards: flash285,
   },
   {
     id: "5e-allemand-wortschatz-stadt-reisen",
@@ -15390,7 +11456,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître les articles définis der / die / das","Savoir dire quelques moyens de transport simples"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15398,8 +11463,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm286,
-    flashcards: flash286,
   },
   {
     id: "5e-allemand-trennbare-verben",
@@ -15410,7 +11473,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Maîtriser la règle du verbe en position 2","Savoir conjuguer un verbe au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15418,8 +11480,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm287,
-    flashcards: flash287,
   },
   {
     id: "5e-allemand-modalverben",
@@ -15430,7 +11490,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Savoir conjuguer un verbe régulier au présent","Connaître la règle du verbe en position 2"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15438,8 +11497,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm288,
-    flashcards: flash288,
   },
   {
     id: "5e-allemand-wortschatz-natur-tiere",
@@ -15450,7 +11507,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Savoir que tous les noms allemands prennent une majuscule","Connaître les trois articles définis der / die / das"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15458,8 +11514,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm289,
-    flashcards: flash289,
   },
   {
     id: "5e-allemand-praeteritum-sein-haben",
@@ -15470,7 +11524,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître sein et haben au présent (ich bin, ich habe)","Connaître les pronoms personnels sujets"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15478,8 +11531,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm290,
-    flashcards: flash290,
   },
   {
     id: "5e-allemand-landeskunde-oesterreich-schweiz",
@@ -15490,7 +11541,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître l'Allemagne, sa capitale et son drapeau","Savoir situer les pays d'Europe centrale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15498,8 +11548,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm291,
-    flashcards: flash291,
   },
   {
     id: "5e-anglais-present-continu",
@@ -15510,7 +11558,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le verbe be au présent (am, is, are)","Les pronoms personnels sujets"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15518,8 +11565,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm292,
-    flashcards: flash292,
   },
   {
     id: "5e-anglais-prepositions",
@@ -15530,7 +11575,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire des lieux et de la maison","Savoir dire l'heure et les jours de la semaine"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15538,8 +11582,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm293,
-    flashcards: flash293,
   },
   {
     id: "5e-anglais-vocabulaire-ville-voyages",
@@ -15550,7 +11592,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base de l'école","Savoir utiliser there is / there are"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15558,8 +11599,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm294,
-    flashcards: flash294,
   },
   {
     id: "5e-anglais-preterit-simple",
@@ -15570,7 +11609,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le présent simple","Le verbe be au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15578,8 +11616,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm295,
-    flashcards: flash295,
   },
   {
     id: "5e-anglais-comparatifs-superlatifs",
@@ -15590,7 +11626,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Les adjectifs courants","Le nombre de syllabes d'un mot"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15598,8 +11633,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm296,
-    flashcards: flash296,
   },
   {
     id: "5e-anglais-vocabulaire-nature-animaux",
@@ -15610,7 +11643,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître les articles a / an","Savoir former un pluriel régulier en -s"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15618,8 +11650,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm297,
-    flashcards: flash297,
   },
   {
     id: "5e-anglais-modaux-can-must",
@@ -15630,7 +11660,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["La base verbale","La phrase affirmative, négative et interrogative"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15638,8 +11667,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm298,
-    flashcards: flash298,
   },
   {
     id: "5e-anglais-futur-will-going-to",
@@ -15650,7 +11677,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le verbe be au présent","La base verbale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15658,8 +11684,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm299,
-    flashcards: flash299,
   },
   {
     id: "5e-anglais-civilisation-etats-unis",
@@ -15670,7 +11694,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître le Royaume-Uni et ses symboles","Savoir situer un pays sur une carte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15678,8 +11701,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm300,
-    flashcards: flash300,
   },
   {
     id: "5e-arts-la-couleur",
@@ -15690,7 +11711,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Reconnaître et nommer les couleurs de base","Savoir utiliser peinture, pinceaux et palette"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15698,8 +11718,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm301,
-    flashcards: flash301,
   },
   {
     id: "5e-arts-moyen-age",
@@ -15710,7 +11728,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Situer le Moyen Âge sur une frise (Ve-XVe siècle)","Connaître le vocabulaire de base de l'architecture (mur, colonne, fenêtre)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15718,8 +11735,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm302,
-    flashcards: flash302,
   },
   {
     id: "5e-espagnol-interrogacion-negacion",
@@ -15730,7 +11745,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le présent de l'indicatif","Les pronoms personnels sujets"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15738,8 +11752,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm303,
-    flashcards: flash303,
   },
   {
     id: "5e-espagnol-ser-estar-usos",
@@ -15750,7 +11762,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le présent des verbes ser et estar","Les adjectifs et leur accord"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15758,8 +11769,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm304,
-    flashcards: flash304,
   },
   {
     id: "5e-espagnol-hay-estar",
@@ -15770,7 +11779,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître le présent du verbe estar","Savoir distinguer article défini et indéfini"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15778,8 +11786,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm305,
-    flashcards: flash305,
   },
   {
     id: "5e-espagnol-posesivos",
@@ -15790,7 +11796,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le genre et le nombre des noms","Les articles définis"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15798,8 +11803,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm306,
-    flashcards: flash306,
   },
   {
     id: "5e-espagnol-vocabulario-ciudad-viajes",
@@ -15810,7 +11813,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître la différence entre ser et estar","Savoir employer les prépositions de lieu"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15818,8 +11820,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm307,
-    flashcards: flash307,
   },
   {
     id: "5e-espagnol-presente-irregular",
@@ -15830,7 +11830,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers en -ar/-er/-ir","Les pronoms personnels sujets"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15838,8 +11837,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm308,
-    flashcards: flash308,
   },
   {
     id: "5e-espagnol-gustar",
@@ -15850,7 +11847,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Les pronoms personnels","Le présent de l'indicatif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15858,8 +11854,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm309,
-    flashcards: flash309,
   },
   {
     id: "5e-espagnol-vocabulario-naturaleza-animales",
@@ -15870,7 +11864,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître les articles et le pluriel des noms","Savoir décrire avec ser et estar"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15878,8 +11871,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm310,
-    flashcards: flash310,
   },
   {
     id: "5e-espagnol-civilizacion-mexico-latinoamerica",
@@ -15890,7 +11881,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A1-A2",
     duree: 12,
-    prerequis: ["Savoir situer le continent américain sur une carte","Connaître les points cardinaux en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15898,8 +11888,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm311,
-    flashcards: flash311,
   },
   {
     id: "5e-francais-expansions-du-nom",
@@ -15910,7 +11898,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Reconnaître un nom et un groupe nominal","Distinguer l'adjectif qualificatif du nom"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15918,8 +11905,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm312,
-    flashcards: flash312,
   },
   {
     id: "5e-francais-propositions",
@@ -15930,7 +11915,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Reconnaître un verbe conjugué","Identifier le sujet et le verbe d'une phrase"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15938,8 +11922,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm313,
-    flashcards: flash313,
   },
   {
     id: "5e-francais-temps-composes",
@@ -15950,7 +11932,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Conjuguer être et avoir aux temps simples","Connaître le participe passé des verbes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15958,8 +11939,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm314,
-    flashcards: flash314,
   },
   {
     id: "5e-francais-futur-conditionnel",
@@ -15970,7 +11949,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Connaître l'infinitif des verbes","Distinguer les trois groupes de verbes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15978,8 +11956,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm315,
-    flashcards: flash315,
   },
   {
     id: "5e-francais-champ-lexical-connotation",
@@ -15990,7 +11966,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Chercher un mot dans le dictionnaire","Connaître synonymes et familles de mots"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -15998,8 +11973,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm316,
-    flashcards: flash316,
   },
   {
     id: "5e-francais-discours-direct-indirect",
@@ -16010,7 +11983,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Reconnaître les pronoms personnels","Connaître les temps de l'indicatif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16018,8 +11990,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm317,
-    flashcards: flash317,
   },
   {
     id: "5e-francais-texte-de-theatre",
@@ -16030,7 +12000,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer un texte narratif d'un dialogue","Connaître la notion de personnage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16038,8 +12007,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm318,
-    flashcards: flash318,
   },
   {
     id: "5e-hist-geo-islam-debuts-expansion",
@@ -16050,7 +12017,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Se repérer sur une frise et une carte","Connaître les grandes religions monothéistes (judaïsme, christianisme)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16058,8 +12024,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm319,
-    flashcards: flash319,
   },
   {
     id: "5e-hist-geo-occident-feodal",
@@ -16070,7 +12034,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Situer le Moyen Âge sur une frise","Connaître le rôle de l'Église au Moyen Âge"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16078,8 +12041,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm320,
-    flashcards: flash320,
   },
   {
     id: "5e-hist-geo-roi-et-ville-moyen-age",
@@ -16090,7 +12051,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Connaître la féodalité (seigneurs et vassaux)","Se repérer sur une frise du Moyen Âge"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16098,8 +12058,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm321,
-    flashcards: flash321,
   },
   {
     id: "5e-hist-geo-renaissance-humanisme-reformes",
@@ -16110,7 +12068,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 13,
-    prerequis: ["Situer le XVe et le XVIe siècle sur une frise","Connaître le rôle de l'Église au Moyen Âge"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16118,8 +12075,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm322,
-    flashcards: flash322,
   },
   {
     id: "5e-hist-geo-demographie-developpement",
@@ -16130,7 +12085,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Lire une carte du monde et un graphique simple","Connaître les continents et les océans"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16138,8 +12092,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm323,
-    flashcards: flash323,
   },
   {
     id: "5e-hist-geo-ressources-eau-alimentation-energie",
@@ -16150,7 +12102,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 13,
-    prerequis: ["Connaître la croissance démographique mondiale","Lire une carte et un graphique simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16158,8 +12109,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm324,
-    flashcards: flash324,
   },
   {
     id: "5e-hist-geo-emc-egalite-developpement-durable",
@@ -16170,7 +12119,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Connaître la devise de la République française","Savoir ce qu'est le développement durable"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16178,8 +12126,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm325,
-    flashcards: flash325,
   },
   {
     id: "5e-italien-interrogazione-negazione",
@@ -16190,7 +12136,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes (réguliers et irréguliers)","Le vocabulaire de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16198,8 +12143,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm326,
-    flashcards: flash326,
   },
   {
     id: "5e-italien-essere-esserci",
@@ -16210,7 +12153,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le verbe essere au présent (io sono, tu sei…)","Les articles et le genre des noms"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16218,8 +12160,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm327,
-    flashcards: flash327,
   },
   {
     id: "5e-italien-ce-ci-sono",
@@ -16230,7 +12170,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le singulier et le pluriel des noms","Les verbes essere et esserci (c'è / ci sono)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16238,8 +12177,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm328,
-    flashcards: flash328,
   },
   {
     id: "5e-italien-possessivi",
@@ -16250,7 +12187,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Les articles définis (il, la, i, le, lo, gli, l')","Le genre et le nombre des noms"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16258,8 +12194,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm329,
-    flashcards: flash329,
   },
   {
     id: "5e-italien-vocabolario-citta-viaggi",
@@ -16270,7 +12204,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base de la vie quotidienne","Maîtriser les articles définis italiens"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16278,8 +12211,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm330,
-    flashcards: flash330,
   },
   {
     id: "5e-italien-presente-irregolare",
@@ -16290,7 +12221,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers (-are / -ere / -ire)","Les pronoms personnels sujets (io, tu, lui/lei…)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16298,8 +12228,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm331,
-    flashcards: flash331,
   },
   {
     id: "5e-italien-piacere",
@@ -16310,7 +12238,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers","Le genre et le nombre des noms"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16318,8 +12245,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm332,
-    flashcards: flash332,
   },
   {
     id: "5e-italien-vocabolario-natura-animali",
@@ -16330,7 +12255,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base du quotidien","Savoir employer c'è / ci sono"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16338,8 +12262,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm333,
-    flashcards: flash333,
   },
   {
     id: "5e-italien-civilta-regioni-citta",
@@ -16350,7 +12272,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A1-A2",
     duree: 12,
-    prerequis: ["Connaître la capitale et le drapeau de l'Italie","Savoir lire une carte de l'Italie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16358,8 +12279,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm334,
-    flashcards: flash334,
   },
   {
     id: "5e-lca-latin-decouverte",
@@ -16370,7 +12289,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["Aucun prérequis en latin","Savoir ce qu'est un sujet et un COD en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16378,8 +12296,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm335,
-    flashcards: flash335,
   },
   {
     id: "5e-lca-latin-present",
@@ -16390,7 +12306,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["Découverte du latin et de la 1re déclinaison","Notion de personne et de conjugaison en français"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16398,8 +12313,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm336,
-    flashcards: flash336,
   },
   {
     id: "5e-math-operations",
@@ -16410,7 +12323,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Les quatre opérations sur les nombres décimaux (6e)","Division euclidienne, quotient et reste (6e)","Tables de multiplication (cycle 3)","Critères de divisibilité par 2, 5 et 10 (CM1-CM2)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16418,8 +12330,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm337,
-    flashcards: flash337,
   },
   {
     id: "5e-math-fractions",
@@ -16430,7 +12340,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Fractions simples (CM1-CM2-6e)","Division euclidienne (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16438,8 +12347,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm338,
-    flashcards: flash338,
   },
   {
     id: "5e-math-nombres-relatifs",
@@ -16450,7 +12357,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 15,
-    prerequis: ["Nombres décimaux (CM1-CM2-6e)","Droite graduée (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16458,8 +12364,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm339,
-    flashcards: flash339,
   },
   {
     id: "5e-math-reperage",
@@ -16470,7 +12374,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Demi-droite graduée et nombres décimaux (6e)","Nombres relatifs (5e)","Fractions simples (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16478,8 +12381,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm340,
-    flashcards: flash340,
   },
   {
     id: "5e-math-calcul-litteral",
@@ -16490,7 +12391,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Priorités opératoires (6e)","Nombres relatifs (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16498,8 +12398,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm341,
-    flashcards: flash341,
   },
   {
     id: "5e-math-puissances",
@@ -16510,7 +12408,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 10,
-    prerequis: ["Tables de multiplication (CM1-CM2-6e)","Priorités opératoires (5e)","Unités d'aire et de volume (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16518,8 +12415,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm342,
-    flashcards: flash342,
   },
   {
     id: "5e-math-proportionnalite",
@@ -16530,7 +12425,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Fractions (5e)","Multiplication et division de décimaux (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16538,8 +12432,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm343,
-    flashcards: flash343,
   },
   {
     id: "5e-math-triangles-angles",
@@ -16550,7 +12442,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Angles et mesures (6e)","Droites parallèles et perpendiculaires (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16558,8 +12449,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm344,
-    flashcards: flash344,
   },
   {
     id: "5e-math-parallelogrammes",
@@ -16570,7 +12459,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Droites parallèles et perpendiculaires (6e)","Angles et triangles (5e)","Aires des figures usuelles (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16578,8 +12466,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm345,
-    flashcards: flash345,
   },
   {
     id: "5e-math-transformations",
@@ -16590,7 +12476,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Symétrie axiale (6e)","Milieu d'un segment (6e)","Médiatrice d'un segment (6e-5e)","Report de longueurs au compas (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16598,8 +12483,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm346,
-    flashcards: flash346,
   },
   {
     id: "5e-math-representation-espace",
@@ -16610,7 +12493,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Reconnaitre un cube, un pavé droit, un patron de cube (6e)","Aire du rectangle, du triangle, du carré (6e-5e)","Conversions d'unités de longueur (6e)","Périmètre du cercle et nombre $\\pi$ (6e-5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16618,8 +12500,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm347,
-    flashcards: flash347,
   },
   {
     id: "5e-math-fonctions",
@@ -16630,7 +12510,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Proportionnalité (5e)","Repérage sur une droite et dans le plan (5e)","Calcul littéral, écrire une expression avec une lettre (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16638,8 +12517,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm348,
-    flashcards: flash348,
   },
   {
     id: "5e-math-statistiques",
@@ -16650,7 +12527,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Fractions et écritures décimales (5e)","Proportionnalité et pourcentages (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16658,8 +12534,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm349,
-    flashcards: flash349,
   },
   {
     id: "5e-math-probabilites",
@@ -16670,7 +12544,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Fractions et écritures décimales (5e)","Statistiques — effectifs et fréquences (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16678,8 +12551,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm350,
-    flashcards: flash350,
   },
   {
     id: "5e-math-pensee-informatique",
@@ -16690,7 +12561,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 5e à la rentrée 2026",
     duree: 10,
-    prerequis: ["Instruction et séquence d'instructions (6e)","Répéter une séquence d'instructions pour accomplir une tâche (6e)","Programmes de calcul (CM2-6e)","Priorités opératoires et parenthèses (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16698,8 +12568,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm351,
-    flashcards: flash351,
   },
   {
     id: "5e-pc-proprietes-matiere",
@@ -16710,7 +12578,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 5e",
     duree: 11,
-    prerequis: ["Les trois états de la matière (école, 6e)","Lire une graduation (école, 6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16718,8 +12585,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm352,
-    flashcards: flash352,
   },
   {
     id: "5e-pc-corps-purs-melanges",
@@ -16730,7 +12595,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 5e",
     duree: 12,
-    prerequis: ["Les trois états de la matière (école, 6e)","Masse et volume d'un échantillon (5e)","Lire une graduation, mL et L (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16738,8 +12602,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm353,
-    flashcards: flash353,
   },
   {
     id: "5e-pc-transformation-chimique",
@@ -16750,7 +12612,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 5e",
     duree: 11,
-    prerequis: ["Changements d'état physique (5e)","Espèces chimiques, corps purs et mélanges (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16758,8 +12619,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm354,
-    flashcards: flash354,
   },
   {
     id: "5e-pc-mouvement-vitesse",
@@ -16770,7 +12629,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 5e",
     duree: 11,
-    prerequis: ["Lire une graduation (école, 6e)","Les durées : h, min, s (maths, 6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16778,8 +12636,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm355,
-    flashcards: flash355,
   },
   {
     id: "5e-pc-energie-electricite",
@@ -16790,7 +12646,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 5e",
     duree: 12,
-    prerequis: ["Grandeurs et unités de mesure (6e)","Notion de circuit électrique, pile et lampe (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16798,8 +12653,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm356,
-    flashcards: flash356,
   },
   {
     id: "5e-pc-signaux-sonores-lumineux",
@@ -16810,7 +12663,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 5e",
     duree: 12,
-    prerequis: ["Lire une graduation et un chronomètre (école, 6e)","Multiplier et diviser par 1000 (maths, 6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16818,8 +12670,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm357,
-    flashcards: flash357,
   },
   {
     id: "5e-svt-respiration-et-milieux-de-vie",
@@ -16830,7 +12680,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Savoir que les êtres vivants ont besoin de dioxygène","Connaître les grandes fonctions du corps humain (respiration)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16838,8 +12687,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm358,
-    flashcards: flash358,
   },
   {
     id: "5e-svt-nutrition-et-systeme-digestif",
@@ -16850,7 +12697,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Connaître le trajet des aliments dans le tube digestif","Savoir que le sang transporte des substances dans le corps"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16858,8 +12704,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm359,
-    flashcards: flash359,
   },
   {
     id: "5e-svt-circulation-et-sang",
@@ -16870,7 +12714,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Savoir que la digestion produit des nutriments","Savoir que la respiration apporte du dioxygène"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16878,8 +12721,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm360,
-    flashcards: flash360,
   },
   {
     id: "5e-svt-reproduction-et-puberte",
@@ -16890,7 +12731,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Savoir que les êtres vivants se reproduisent","Connaître les grandes parties du corps humain"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16898,8 +12738,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm361,
-    flashcards: flash361,
   },
   {
     id: "5e-svt-roches-erosion-et-paysages",
@@ -16910,7 +12748,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Savoir observer un paysage et distinguer roche, eau et végétation","Connaître les états de l'eau (solide, liquide, gaz)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16918,8 +12755,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm362,
-    flashcards: flash362,
   },
   {
     id: "5e-techno-besoin-et-cahier-des-charges",
@@ -16930,7 +12765,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 7,
-    prerequis: ["Objets techniques et leurs fonctions","Distinguer objet naturel et objet technique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16938,8 +12772,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm363,
-    flashcards: flash363,
   },
   {
     id: "5e-techno-proprietes-des-materiaux",
@@ -16950,7 +12782,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Distinguer objet et matériau","Notion de conducteur et d'isolant"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16958,8 +12789,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm364,
-    flashcards: flash364,
   },
   {
     id: "5e-techno-structures-et-stabilite",
@@ -16970,7 +12799,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Propriétés des matériaux","Notion de force et d'effort"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16978,8 +12806,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm365,
-    flashcards: flash365,
   },
   {
     id: "5e-techno-chaine-denergie",
@@ -16990,7 +12816,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Notion d'énergie et de circuit électrique","Objets techniques et leurs fonctions"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -16998,8 +12823,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm366,
-    flashcards: flash366,
   },
   {
     id: "5e-techno-programmation-et-capteurs",
@@ -17010,7 +12833,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Chaîne d'énergie","Notion d'objet technique programmable"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17018,8 +12840,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm367,
-    flashcards: flash367,
   },
   {
     id: "4e-allemand-dativ",
@@ -17030,7 +12850,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Der Akkusativ","Die Artikel (der/die/das) und das Genus","Die Personalpronomen"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17038,8 +12857,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm368,
-    flashcards: flash368,
   },
   {
     id: "4e-allemand-pronomen-akkusativ-dativ",
@@ -17050,7 +12867,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 13,
-    prerequis: ["Connaître les pronoms personnels sujets (Nominativ)","Savoir distinguer l'accusatif et le datif (COD / COI)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17058,8 +12874,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm369,
-    flashcards: flash369,
   },
   {
     id: "4e-allemand-wechselpraepositionen",
@@ -17070,7 +12884,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Der Akkusativ","Der Dativ","Les articles (der/die/das)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17078,8 +12891,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm370,
-    flashcards: flash370,
   },
   {
     id: "4e-allemand-wortschatz-sport-freizeit",
@@ -17090,7 +12901,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Savoir conjuguer les verbes réguliers au présent","Connaître les trois articles définis der / die / das"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17098,8 +12908,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm371,
-    flashcards: flash371,
   },
   {
     id: "4e-allemand-perfekt",
@@ -17110,7 +12918,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers","Les verbes sein et haben","Les verbes irréguliers courants"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17118,8 +12925,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm372,
-    flashcards: flash372,
   },
   {
     id: "4e-allemand-imperativ",
@@ -17130,7 +12935,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers","Les pronoms personnels","Les verbes à particule séparable"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17138,8 +12942,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm373,
-    flashcards: flash373,
   },
   {
     id: "4e-allemand-wortschatz-gesundheit-koerper",
@@ -17150,7 +12952,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître les articles définis der / die / das","Savoir utiliser le verbe haben (avoir)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17158,8 +12959,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm374,
-    flashcards: flash374,
   },
   {
     id: "4e-allemand-komparativ-superlativ",
@@ -17170,7 +12969,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Les adjectifs de base","Le verbe sein","L'ordre des mots (verbe en position 2)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17178,8 +12976,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm375,
-    flashcards: flash375,
   },
   {
     id: "4e-allemand-landeskunde-staedte",
@@ -17190,7 +12986,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître l'Allemagne, sa capitale et son drapeau","Savoir situer les grandes villes sur une carte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17198,8 +12993,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm376,
-    flashcards: flash376,
   },
   {
     id: "4e-allemand-landeskunde-feste-traditionen",
@@ -17210,7 +13003,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître les mois et les saisons en allemand","Savoir situer l'Allemagne, l'Autriche et la Suisse (DACH)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17218,8 +13010,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm377,
-    flashcards: flash377,
   },
   {
     id: "4e-anglais-word-order",
@@ -17230,7 +13020,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître le présent simple et le présent continu","Savoir reconnaître sujet, verbe et complément"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17238,8 +13027,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm378,
-    flashcards: flash378,
   },
   {
     id: "4e-anglais-quantifieurs",
@@ -17250,7 +13037,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le pluriel des noms","La phrase affirmative, négative et interrogative"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17258,8 +13044,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm379,
-    flashcards: flash379,
   },
   {
     id: "4e-anglais-vocabulaire-sport-loisirs",
@@ -17270,7 +13054,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Savoir conjuguer un verbe au présent simple","Connaître la forme en -ing"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17278,8 +13061,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm380,
-    flashcards: flash380,
   },
   {
     id: "4e-anglais-present-perfect",
@@ -17290,7 +13071,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent simple du verbe have","Le prétérit et les participes passés des verbes réguliers et irréguliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17298,8 +13078,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm381,
-    flashcards: flash381,
   },
   {
     id: "4e-anglais-preterit-vs-present-perfect",
@@ -17310,7 +13088,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le prétérit simple (verbes réguliers et irréguliers)","La formation du present perfect (have + participe passé)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17318,8 +13095,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm382,
-    flashcards: flash382,
   },
   {
     id: "4e-anglais-vocabulaire-sante-corps",
@@ -17330,7 +13105,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de la vie quotidienne","Savoir utiliser have got et le présent simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17338,8 +13112,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm383,
-    flashcards: flash383,
   },
   {
     id: "4e-anglais-propositions-relatives",
@@ -17350,7 +13122,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Distinguer une personne, une chose et un lieu","Construire une phrase simple sujet-verbe-complément"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17358,8 +13129,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm384,
-    flashcards: flash384,
   },
   {
     id: "4e-anglais-discours-indirect",
@@ -17370,7 +13139,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent simple et le prétérit","Les pronoms personnels sujets et compléments"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17378,8 +13146,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm385,
-    flashcards: flash385,
   },
   {
     id: "4e-anglais-civilisation-londres",
@@ -17390,7 +13156,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître les nations et capitales du Royaume-Uni","Savoir décrire une ville simplement"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17398,8 +13163,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm386,
-    flashcards: flash386,
   },
   {
     id: "4e-anglais-civilisation-australie",
@@ -17410,7 +13173,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base de la géographie","Savoir situer un pays sur une carte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17418,8 +13180,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm387,
-    flashcards: flash387,
   },
   {
     id: "4e-arts-langage-musical",
@@ -17430,7 +13190,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Savoir écouter un extrait et repérer un instrument","Connaître les notes de la gamme (do, ré, mi…)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17438,8 +13197,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm388,
-    flashcards: flash388,
   },
   {
     id: "4e-arts-renaissance",
@@ -17450,7 +13207,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Situer la Renaissance (XVe-XVIe siècle) et l'Italie sur une carte","Connaître le vocabulaire de base de la peinture (support, composition)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17458,8 +13214,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm389,
-    flashcards: flash389,
   },
   {
     id: "4e-espagnol-muy-mucho",
@@ -17470,7 +13224,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Distinguer un adjectif d'un adverbe","Connaître l'accord en genre et en nombre"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17478,8 +13231,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm390,
-    flashcards: flash390,
   },
   {
     id: "4e-espagnol-comparativos-superlativos",
@@ -17490,7 +13241,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Les adjectifs et leur accord","Le vocabulaire de la description"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17498,8 +13248,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm391,
-    flashcards: flash391,
   },
   {
     id: "4e-espagnol-estar-gerundio",
@@ -17510,7 +13258,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent du verbe estar","Reconnaître les verbes en -ar, -er, -ir"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17518,8 +13265,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm392,
-    flashcards: flash392,
   },
   {
     id: "4e-espagnol-vocabulario-deporte-ocio",
@@ -17530,7 +13275,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Savoir conjuguer gustar et les verbes similaires","Connaître le présent des verbes irréguliers (jugar, hacer)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17538,8 +13282,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm393,
-    flashcards: flash393,
   },
   {
     id: "4e-espagnol-preterito-perfecto",
@@ -17550,7 +13292,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent de l'indicatif","Reconnaître les verbes en -ar, -er, -ir"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17558,8 +13299,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm394,
-    flashcards: flash394,
   },
   {
     id: "4e-espagnol-preterito-indefinido",
@@ -17570,7 +13309,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Reconnaître les verbes en -ar, -er, -ir","Le pretérito perfecto"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17578,8 +13316,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm395,
-    flashcards: flash395,
   },
   {
     id: "4e-espagnol-vocabulario-salud-cuerpo",
@@ -17590,7 +13326,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître le fonctionnement du verbe gustar","Savoir employer tener dans les expressions courantes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17598,8 +13333,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm396,
-    flashcards: flash396,
   },
   {
     id: "4e-espagnol-futuro",
@@ -17610,7 +13343,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent du verbe ir","Reconnaître l'infinitif des verbes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17618,8 +13350,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm397,
-    flashcards: flash397,
   },
   {
     id: "4e-espagnol-civilizacion-ciudades",
@@ -17630,7 +13360,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A2",
     duree: 12,
-    prerequis: ["Savoir situer les grandes régions d'Espagne","Connaître le vocabulaire de la ville en espagnol"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17638,8 +13367,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm398,
-    flashcards: flash398,
   },
   {
     id: "4e-espagnol-civilizacion-argentina",
@@ -17650,7 +13377,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A2",
     duree: 12,
-    prerequis: ["Savoir situer l'Amérique latine sur une carte","Connaître le vocabulaire de base des pays et nationalités"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17658,8 +13384,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm399,
-    flashcards: flash399,
   },
   {
     id: "4e-francais-propositions-subordonnees",
@@ -17670,7 +13394,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer phrase simple et phrase complexe","Reconnaître le verbe conjugué et son sujet","Connaître les pronoms relatifs simples (qui, que, où, dont)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17678,8 +13401,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm400,
-    flashcards: flash400,
   },
   {
     id: "4e-francais-voix-active-passive",
@@ -17690,7 +13411,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Reconnaître le sujet, le verbe et le COD","Conjuguer l'auxiliaire être aux temps de l'indicatif","Accorder le participe passé employé avec être"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17698,8 +13418,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm401,
-    flashcards: flash401,
   },
   {
     id: "4e-francais-valeurs-des-temps",
@@ -17710,7 +13428,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Conjuguer imparfait, passé simple et présent","Distinguer récit et discours","Repérer le premier plan et l'arrière-plan d'un récit"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17718,8 +13435,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm402,
-    flashcards: flash402,
   },
   {
     id: "4e-francais-present-subjonctif",
@@ -17730,7 +13445,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Conjuguer les verbes au présent de l'indicatif","Reconnaître une proposition subordonnée conjonctive","Distinguer indicatif et impératif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17738,8 +13452,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm403,
-    flashcards: flash403,
   },
   {
     id: "4e-francais-figures-de-style",
@@ -17750,7 +13462,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer sens propre et sens figuré","Repérer un champ lexical","Reconnaître une image dans un texte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17758,8 +13469,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm404,
-    flashcards: flash404,
   },
   {
     id: "4e-francais-recit-realiste-fantastique",
@@ -17770,7 +13479,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer narrateur et auteur","Reconnaître le schéma narratif","Repérer une description dans un récit"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17778,8 +13486,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm405,
-    flashcards: flash405,
   },
   {
     id: "4e-francais-la-lettre",
@@ -17790,7 +13496,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer un texte formel d'un texte familier","Reconnaître les marques de la 1re et de la 2e personne","Connaître les niveaux de langue"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17798,8 +13503,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm406,
-    flashcards: flash406,
   },
   {
     id: "4e-hist-geo-commerce-traite-lumieres",
@@ -17810,7 +13513,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Repères du XVIIe-XVIIIe siècle","Notion de colonie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17818,8 +13520,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm407,
-    flashcards: flash407,
   },
   {
     id: "4e-hist-geo-revolution-francaise-empire",
@@ -17830,7 +13530,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Notions de roi et de monarchie","Repères du XVIIIe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17838,8 +13537,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm408,
-    flashcards: flash408,
   },
   {
     id: "4e-hist-geo-revolution-industrielle",
@@ -17850,7 +13547,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Notions d'énergie et de commerce","Repères du XVIIIe-XIXe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17858,8 +13554,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm409,
-    flashcards: flash409,
   },
   {
     id: "4e-hist-geo-conquetes-colonisation",
@@ -17870,7 +13564,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Notion de colonie et de commerce","Repères du XIXe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17878,8 +13571,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm410,
-    flashcards: flash410,
   },
   {
     id: "4e-hist-geo-urbanisation-du-monde",
@@ -17890,7 +13581,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Notion de ville et de population","Lecture d'une carte du monde"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17898,8 +13588,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm411,
-    flashcards: flash411,
   },
   {
     id: "4e-hist-geo-mobilites-humaines",
@@ -17910,7 +13598,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Lecture d'une carte du monde","Notion de mondialisation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17918,8 +13605,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm412,
-    flashcards: flash412,
   },
   {
     id: "4e-hist-geo-emc-libertes-et-loi",
@@ -17930,7 +13615,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 12,
-    prerequis: ["Symboles et principes de la République","Notion de démocratie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17938,8 +13622,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm413,
-    flashcards: flash413,
   },
   {
     id: "4e-italien-molto-troppo",
@@ -17950,7 +13632,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["L'accord des noms et des adjectifs en genre et en nombre","Le genre des noms"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17958,8 +13639,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm414,
-    flashcards: flash414,
   },
   {
     id: "4e-italien-comparativi-superlativi",
@@ -17970,7 +13649,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Les adjectifs qualificatifs et leur accord","Les articles définis"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17978,8 +13656,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm415,
-    flashcards: flash415,
   },
   {
     id: "4e-italien-stare-gerundio",
@@ -17990,7 +13666,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers","Le verbe stare au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -17998,8 +13673,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm416,
-    flashcards: flash416,
   },
   {
     id: "4e-italien-vocabolario-sport-tempo-libero",
@@ -18010,7 +13683,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître le présent des verbes réguliers","Savoir employer le verbe piacere (mi piace)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18018,8 +13690,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm417,
-    flashcards: flash417,
   },
   {
     id: "4e-italien-passato-prossimo",
@@ -18030,7 +13700,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent de essere et avere","Le participe passé des verbes réguliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18038,8 +13707,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm418,
-    flashcards: flash418,
   },
   {
     id: "4e-italien-imperfetto",
@@ -18050,7 +13717,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers","Le passato prossimo"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18058,8 +13724,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm419,
-    flashcards: flash419,
   },
   {
     id: "4e-italien-vocabolario-salute-corpo",
@@ -18070,7 +13734,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître le verbe avere au présent","Savoir employer le verbe stare"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18078,8 +13741,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm420,
-    flashcards: flash420,
   },
   {
     id: "4e-italien-futuro",
@@ -18090,7 +13751,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers","Le présent des verbes irréguliers (essere, avere, fare)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18098,8 +13758,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm421,
-    flashcards: flash421,
   },
   {
     id: "4e-italien-civilta-firenze-venezia",
@@ -18110,7 +13768,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître les régions et grandes villes d'Italie","Savoir situer la Toscane et la Vénétie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18118,8 +13775,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm422,
-    flashcards: flash422,
   },
   {
     id: "4e-italien-civilta-cucina-tradizioni",
@@ -18130,7 +13785,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2",
     duree: 12,
-    prerequis: ["Connaître les régions et grandes villes d'Italie","Savoir nommer des aliments simples en italien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18138,8 +13792,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm423,
-    flashcards: flash423,
   },
   {
     id: "4e-lca-latin-declinaisons",
@@ -18150,7 +13802,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["1re déclinaison (rosa) et les six cas","Présent de l'indicatif (esse, 1re conjugaison)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18158,8 +13809,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm424,
-    flashcards: flash424,
   },
   {
     id: "4e-lca-latin-temps-passe",
@@ -18170,7 +13819,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["Présent de l'indicatif (esse, 1re conjugaison)","Notion de radical verbal"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18178,8 +13826,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm425,
-    flashcards: flash425,
   },
   {
     id: "4e-math-operations-nombres-relatifs",
@@ -18190,7 +13836,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Nombres relatifs : opposé, valeur absolue, comparaison (5e)","Somme et différence de nombres relatifs (5e)","Distributivité $k(a+b) = ka + kb$ (5e)","Tables de multiplication (cycle 3)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18198,8 +13843,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm426,
-    flashcards: flash426,
   },
   {
     id: "4e-math-nombres-rationnels",
@@ -18210,7 +13853,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Fractions et nombres rationnels (5e)","Nombres relatifs (5e)","Opérations sur les nombres relatifs (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18218,8 +13860,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm427,
-    flashcards: flash427,
   },
   {
     id: "4e-math-puissances",
@@ -18230,7 +13870,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Puissances : carré et cube (5e)","Priorités opératoires (5e)","Multiplication et division de nombres relatifs (4e)","Multiplier et diviser par 10, 100, 1 000 (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18238,8 +13877,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm428,
-    flashcards: flash428,
   },
   {
     id: "4e-math-calcul-litteral",
@@ -18250,7 +13887,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Calcul littéral — réduire, développer, factoriser (5e)","Distributivité simple k(a + b) = ka + kb (5e)","Équations du type ax = c et x + b = c (5e)","Opérations sur les nombres relatifs (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18258,8 +13894,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm429,
-    flashcards: flash429,
   },
   {
     id: "4e-math-reperage",
@@ -18270,7 +13904,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 9,
-    prerequis: ["Repérage sur une droite et dans le plan (5e) — c'est le socle, relis-le d'abord","Nombres relatifs : comparaison et repérage sur une droite graduée (5e)","Opérations sur les nombres relatifs (4e)","Nombres rationnels et fractions (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18278,8 +13911,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm430,
-    flashcards: flash430,
   },
   {
     id: "4e-math-proportionnalite",
@@ -18290,7 +13921,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Proportionnalité — reconnaître, coefficient, retour à l'unité, linéarité (5e)","Produit en croix et pourcentages simples (5e)","Écritures fractionnaires et simplification (5e)","Multiplication et division de nombres rationnels (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18298,8 +13928,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm431,
-    flashcards: flash431,
   },
   {
     id: "4e-math-racine-carree",
@@ -18310,7 +13938,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 10,
-    prerequis: ["Carré d'un nombre et carrés parfaits de 0 à 12 (5e-4e)","Aire d'un carré (6e)","Comparaison de nombres décimaux (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18318,8 +13945,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm432,
-    flashcards: flash432,
   },
   {
     id: "4e-math-triangles",
@@ -18330,7 +13955,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 14,
-    prerequis: ["Angles et triangles, somme des angles (5e)","Médiatrice et cercle circonscrit (5e)","Propriétés des diagonales du rectangle (5e)","Racine carrée (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18338,8 +13962,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm433,
-    flashcards: flash433,
   },
   {
     id: "4e-math-parallelogrammes-translations",
@@ -18350,7 +13972,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Parallélogrammes — propriétés et propriétés caractéristiques (5e)","Transformations — symétrie axiale et demi-tour (5e)","Angles et droites parallèles (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18358,8 +13979,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm434,
-    flashcards: flash434,
   },
   {
     id: "4e-math-transformations",
@@ -18370,7 +13989,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Symétrie axiale et demi-tour, ou symétrie centrale (5e — chapitre « Transformations : symétrie axiale et demi-tour »)","Milieu d'un segment (6e)","Droites parallèles, tracé à la règle et à l'équerre (6e)","Report de longueurs au compas (6e)","Mesure d'un angle au rapporteur (6e-5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18378,8 +13996,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm435,
-    flashcards: flash435,
   },
   {
     id: "4e-math-representation-espace",
@@ -18390,7 +14006,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Pavé droit, cube, prisme droit, cylindre de révolution — perspective cavalière, patrons et volumes (5e, chapitre « Représentation de l'espace »)","Aire du triangle, du rectangle, du disque (5e)","Unités de volume et de capacité (5e)","Théorème de Pythagore (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18398,8 +14013,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm436,
-    flashcards: flash436,
   },
   {
     id: "4e-math-fonctions",
@@ -18410,7 +14023,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Fonctions — dépendance entre deux grandeurs, « en fonction de » (5e)","Tableau de valeurs et lecture graphique (5e)","Calcul littéral — substituer, réduire, développer (5e puis 4e)","Priorités opératoires et enchaînements d'opérations (5e)","Opérations sur les nombres relatifs (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18418,8 +14030,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm437,
-    flashcards: flash437,
   },
   {
     id: "4e-math-statistiques",
@@ -18430,7 +14040,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Effectifs, fréquences et moyenne simple (5e)","Tableaux d'effectifs, diagrammes en barres et circulaires (5e)","Ranger des nombres décimaux dans l'ordre croissant (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18438,8 +14047,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm438,
-    flashcards: flash438,
   },
   {
     id: "4e-math-probabilites",
@@ -18450,7 +14057,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Probabilités — expérience aléatoire, issue, événement, équiprobabilité (5e)","Statistiques — effectifs et fréquences (5e)","Fractions — simplifier, additionner, soustraire (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18458,8 +14064,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm439,
-    flashcards: flash439,
   },
   {
     id: "4e-math-pensee-informatique",
@@ -18470,7 +14074,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 4e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Instruction, séquence, entrées et sorties d'un programme (5e — « La pensée informatique »)","Variable lue et expression informatique (5e — « La pensée informatique »)","Boucle inconditionnelle « répéter n fois » (5e — « La pensée informatique »)","Comparer et ranger des nombres relatifs (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18478,8 +14081,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm440,
-    flashcards: flash440,
   },
   {
     id: "4e-pc-organisation-matiere",
@@ -18490,7 +14091,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 4e",
     duree: 12,
-    prerequis: ["Corps purs et mélanges ; solvant, soluté, solution (5e)","Changements d'état physique (5e)","Masse, volume, température d'un échantillon (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18498,8 +14098,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm441,
-    flashcards: flash441,
   },
   {
     id: "4e-pc-transformation-conservation-masse",
@@ -18510,7 +14108,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 4e",
     duree: 12,
-    prerequis: ["La matière est faite d'atomes et de molécules (5e)","Symboles et formules : O2, H2O, CO2 (5e)","Mélanges et corps purs (5e)","Mesurer une masse avec une balance (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18518,8 +14115,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm442,
-    flashcards: flash442,
   },
   {
     id: "4e-pc-mouvement-vitesse",
@@ -18530,7 +14125,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 4e",
     duree: 11,
-    prerequis: ["Caractériser un mouvement (5e)","Trajectoire rectiligne, circulaire, curviligne (5e)","Mesure de durées (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18538,8 +14132,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm443,
-    flashcards: flash443,
   },
   {
     id: "4e-pc-interactions-forces",
@@ -18550,7 +14142,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 4e",
     duree: 12,
-    prerequis: ["Notion de mouvement (5e)","Objets et matériaux (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18558,8 +14149,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm444,
-    flashcards: flash444,
   },
   {
     id: "4e-pc-puissance-energie",
@@ -18570,7 +14159,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 4e",
     duree: 12,
-    prerequis: ["L'énergie se mesure en joule ; stocks et transferts (5e)","Tension (volt) et intensité (ampère) dans un circuit (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18578,8 +14166,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm445,
-    flashcards: flash445,
   },
   {
     id: "4e-pc-propagation-signal",
@@ -18590,7 +14176,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 4e",
     duree: 11,
-    prerequis: ["Grandeurs et mesures, unités (6e-5e)","Vitesse et relation distance-durée (maths, 4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18598,8 +14183,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm446,
-    flashcards: flash446,
   },
   {
     id: "4e-svt-seismes-et-volcans",
@@ -18610,7 +14193,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Savoir que la Terre a une structure interne","Lire une carte simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18618,8 +14200,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm447,
-    flashcards: flash447,
   },
   {
     id: "4e-svt-tectonique-des-plaques",
@@ -18630,7 +14210,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Connaître l'existence des séismes et des volcans","Savoir lire une carte du monde"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18638,8 +14217,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm448,
-    flashcards: flash448,
   },
   {
     id: "4e-svt-energie-dans-lorganisme",
@@ -18650,7 +14227,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Connaître les grands systèmes (digestif, respiratoire, circulatoire)","Savoir qu'un organe est fait de cellules"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18658,8 +14234,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm449,
-    flashcards: flash449,
   },
   {
     id: "4e-svt-systeme-nerveux-et-comportement",
@@ -18670,7 +14244,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Connaître les organes des sens","Savoir qu'un organe est fait de cellules"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18678,8 +14251,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm450,
-    flashcards: flash450,
   },
   {
     id: "4e-svt-reproduction-et-transmission-de-la-vie",
@@ -18690,7 +14261,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Distinguer une cellule d'un organe","Connaître les grandes fonctions du vivant"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18698,8 +14268,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm451,
-    flashcards: flash451,
   },
   {
     id: "4e-techno-chaine-dinformation",
@@ -18710,7 +14278,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 11,
-    prerequis: ["Fonctions d'un objet technique (5e)","Notion de capteur et d'actionneur (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18718,8 +14285,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm452,
-    flashcards: flash452,
   },
   {
     id: "4e-techno-modelisation-volumique",
@@ -18730,7 +14295,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 11,
-    prerequis: ["Représentation d'un objet, croquis et schéma (5e)","Notion de fonction technique (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18738,8 +14302,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm453,
-    flashcards: flash453,
   },
   {
     id: "4e-techno-reseaux-informatiques",
@@ -18750,7 +14312,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 12,
-    prerequis: ["Notion d'objet connecté (5e)","Chaîne d'information (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18758,8 +14319,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm454,
-    flashcards: flash454,
   },
   {
     id: "4e-techno-programmation-evenementielle",
@@ -18770,7 +14329,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 12,
-    prerequis: ["Notions d'algorithme, boucle et condition (5e)","Chaîne d'information, capteurs et actionneurs (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18778,8 +14336,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm455,
-    flashcards: flash455,
   },
   {
     id: "4e-techno-confort-et-domotique",
@@ -18790,7 +14346,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 12,
-    prerequis: ["Objet technique, fonctions et solutions techniques (5e)","Chaîne d'énergie et chaîne d'information (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18798,8 +14353,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm456,
-    flashcards: flash456,
   },
   {
     id: "3e-allemand-phonetik-betonung-umlaute",
@@ -18810,7 +14363,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les Umlaute ä, ö, ü et le signe ß","Savoir former le pluriel et le comparatif de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18818,8 +14370,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm457,
-    flashcards: flash457,
   },
   {
     id: "3e-allemand-praepositionen-zeit",
@@ -18830,7 +14380,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 13,
-    prerequis: ["Connaître les jours, mois et saisons en allemand","Savoir dire l'heure (Uhrzeit)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18838,8 +14387,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm458,
-    flashcards: flash458,
   },
   {
     id: "3e-allemand-wechselpraepositionen-vertiefung",
@@ -18850,7 +14397,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Les Wechselpräpositionen (Akkusativ/Dativ)","Le Akkusativ et le Dativ","La déclinaison de l'article défini"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18858,8 +14404,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm459,
-    flashcards: flash459,
   },
   {
     id: "3e-allemand-praeteritum",
@@ -18870,7 +14414,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers et irréguliers","Les verbes sein et haben","Le Perfekt (haben/sein + Partizip II)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18878,8 +14421,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm460,
-    flashcards: flash460,
   },
   {
     id: "3e-allemand-wortschatz-technik-internet",
@@ -18890,7 +14431,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les trois articles définis der / die / das","Savoir former des phrases simples au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18898,8 +14438,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm461,
-    flashcards: flash461,
   },
   {
     id: "3e-allemand-nebensaetze-weil-dass",
@@ -18910,7 +14448,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["La position du verbe en position 2 dans la principale","Le présent et le Perfekt","Les questions avec warum"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18918,8 +14455,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm462,
-    flashcards: flash462,
   },
   {
     id: "3e-allemand-wortstellung-nebensatz",
@@ -18930,7 +14465,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Les conjonctions weil et dass","Le Perfekt et les verbes séparables","Le verbe en position 2 dans la principale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18938,8 +14472,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm463,
-    flashcards: flash463,
   },
   {
     id: "3e-allemand-futur",
@@ -18950,7 +14482,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Le présent des verbes réguliers et irréguliers","La place du verbe (position 2) et le rejet à la fin","Les verbes sein et haben"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18958,8 +14489,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm464,
-    flashcards: flash464,
   },
   {
     id: "3e-allemand-wortschatz-umwelt",
@@ -18970,7 +14499,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les articles définis der / die / das","Savoir utiliser müssen (devoir) pour exprimer une nécessité"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18978,8 +14506,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm465,
-    flashcards: flash465,
   },
   {
     id: "3e-allemand-landeskunde-persoenlichkeiten",
@@ -18990,7 +14516,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître quelques repères de géographie allemande","Savoir lire des phrases simples au présent et au prétérit"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -18998,8 +14523,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm466,
-    flashcards: flash466,
   },
   {
     id: "3e-allemand-landeskunde-deutschsprachige-welt",
@@ -19010,7 +14533,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les pays DACH et leurs capitales","Savoir situer les pays germanophones en Europe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19018,8 +14540,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm467,
-    flashcards: flash467,
   },
   {
     id: "3e-anglais-phonetique-accentuation",
@@ -19030,7 +14550,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le prétérit régulier en -ed","Connaître le pluriel des noms et le -s de la 3e personne"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19038,8 +14557,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm468,
-    flashcards: flash468,
   },
   {
     id: "3e-anglais-present-perfect-since-for",
@@ -19050,7 +14567,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Reconnaître le present perfect (have/has + participe passé)","Connaître les participes passés des verbes irréguliers courants"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19058,8 +14574,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm469,
-    flashcards: flash469,
   },
   {
     id: "3e-anglais-preterit-continu",
@@ -19070,7 +14584,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le prétérit simple (réguliers et irréguliers)","Savoir former le -ing des verbes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19078,8 +14591,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm470,
-    flashcards: flash470,
   },
   {
     id: "3e-anglais-question-tags",
@@ -19090,7 +14601,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les auxiliaires be, do, have et les modaux","Savoir conjuguer aux principaux temps (présent, prétérit)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19098,8 +14608,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm471,
-    flashcards: flash471,
   },
   {
     id: "3e-anglais-vocabulaire-technologie",
@@ -19110,7 +14618,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire du quotidien","Savoir employer les verbes d'action au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19118,8 +14625,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm472,
-    flashcards: flash472,
   },
   {
     id: "3e-anglais-modaux-deduction-conseil",
@@ -19130,7 +14635,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les modaux de base (can, must)","Savoir qu'un modal est suivi de la base verbale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19138,8 +14642,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm473,
-    flashcards: flash473,
   },
   {
     id: "3e-anglais-voix-passive",
@@ -19150,7 +14652,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le verbe be conjugué à tous les temps","Connaître les participes passés (réguliers et irréguliers)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19158,8 +14659,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm474,
-    flashcards: flash474,
   },
   {
     id: "3e-anglais-conditionnel-if",
@@ -19170,7 +14669,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le présent simple et le prétérit","Savoir employer will et would"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19178,8 +14676,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm475,
-    flashcards: flash475,
   },
   {
     id: "3e-anglais-vocabulaire-environnement",
@@ -19190,7 +14686,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Maîtriser le vocabulaire de la vie quotidienne","Savoir exprimer une opinion simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19198,8 +14693,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm476,
-    flashcards: flash476,
   },
   {
     id: "3e-anglais-civilisation-canada",
@@ -19210,7 +14703,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Savoir situer un pays et ses grandes villes","Connaître le vocabulaire de la géographie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19218,8 +14710,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm477,
-    flashcards: flash477,
   },
   {
     id: "3e-anglais-civilisation-monde-anglophone",
@@ -19230,7 +14720,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le Royaume-Uni et les États-Unis","Savoir situer les continents et quelques pays"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19238,8 +14727,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm478,
-    flashcards: flash478,
   },
   {
     id: "3e-arts-art-moderne",
@@ -19250,7 +14737,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Situer la fin du XIXe et le début du XXe siècle","Connaître le vocabulaire de la couleur et de la composition"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19258,8 +14744,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm479,
-    flashcards: flash479,
   },
   {
     id: "3e-arts-art-contemporain",
@@ -19270,7 +14754,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Histoire des arts — cycle 3/4",
     duree: 12,
-    prerequis: ["Connaître les grands mouvements de l'art moderne (cubisme, abstraction)","Savoir décrire une œuvre et son message"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19278,8 +14761,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm480,
-    flashcards: flash480,
   },
   {
     id: "3e-espagnol-fonetica-acentuacion",
@@ -19290,7 +14771,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Savoir découper un mot en syllabes","Distinguer voyelles fortes (a, e, o) et faibles (i, u)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19298,8 +14778,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm481,
-    flashcards: flash481,
   },
   {
     id: "3e-espagnol-preposiciones",
@@ -19310,7 +14788,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Reconnaître le COD dans une phrase","Connaître les pronoms personnels"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19318,8 +14795,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm482,
-    flashcards: flash482,
   },
   {
     id: "3e-espagnol-indefinido-irregular",
@@ -19330,7 +14805,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le pretérito indefinido des verbes réguliers","Savoir raconter un événement passé et ponctuel"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19338,8 +14812,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm483,
-    flashcards: flash483,
   },
   {
     id: "3e-espagnol-imperfecto-indefinido",
@@ -19350,7 +14822,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les terminaisons du pretérito indefinido","Connaître les terminaisons de l'imperfecto"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19358,8 +14829,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm484,
-    flashcards: flash484,
   },
   {
     id: "3e-espagnol-vocabulario-tecnologia",
@@ -19370,7 +14839,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Savoir exprimer une opinion (creo que, pienso que)","Connaître le présent et le passé composé (pretérito perfecto)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19378,8 +14846,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm485,
-    flashcards: flash485,
   },
   {
     id: "3e-espagnol-pronombres-cod-coi",
@@ -19390,7 +14856,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Distinguer le complément d'objet direct et indirect","Connaître les pronoms personnels sujets"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19398,8 +14863,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm486,
-    flashcards: flash486,
   },
   {
     id: "3e-espagnol-imperativo",
@@ -19410,7 +14873,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le présent de l'indicatif","Connaître les pronoms personnels compléments"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19418,8 +14880,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm487,
-    flashcards: flash487,
   },
   {
     id: "3e-espagnol-por-para",
@@ -19430,7 +14890,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les prépositions de base en espagnol","Savoir exprimer la cause et le but simplement"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19438,8 +14897,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm488,
-    flashcards: flash488,
   },
   {
     id: "3e-espagnol-vocabulario-medioambiente",
@@ -19450,7 +14907,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Savoir employer l'infinitif après hay que / es importante","Connaître les verbes d'opinion (creo que, pienso que)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19458,8 +14914,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm489,
-    flashcards: flash489,
   },
   {
     id: "3e-espagnol-civilizacion-fiestas-tradiciones",
@@ -19470,7 +14924,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les grands pays hispanophones","Savoir situer l'Espagne et le Mexique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19478,8 +14931,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm490,
-    flashcards: flash490,
   },
   {
     id: "3e-espagnol-civilizacion-mundo-hispanohablante",
@@ -19490,7 +14941,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître l'Espagne et l'Amérique latine hispanophone","Savoir situer les continents sur une carte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19498,8 +14948,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm491,
-    flashcards: flash491,
   },
   {
     id: "3e-francais-phrase-complexe",
@@ -19510,7 +14958,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Reconnaître un verbe conjugué","Distinguer les classes de mots","Identifier le sujet et le verbe d'une proposition"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19518,8 +14965,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm492,
-    flashcards: flash492,
   },
   {
     id: "3e-francais-connecteurs-logiques",
@@ -19530,7 +14975,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer les classes de mots","Reconnaître thèse et argument","Repérer les propositions d'une phrase complexe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19538,8 +14982,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm493,
-    flashcards: flash493,
   },
   {
     id: "3e-francais-modes-et-valeurs",
@@ -19550,7 +14992,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Conjuguer aux temps simples de l'indicatif","Reconnaître une proposition subordonnée","Identifier le sujet d'un verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19558,8 +14999,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm494,
-    flashcards: flash494,
   },
   {
     id: "3e-francais-lexique-melioratif-pejoratif",
@@ -19570,7 +15009,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer les classes de mots","Comprendre le sens propre et le sens figuré","Repérer synonymes et antonymes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19578,8 +15016,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm495,
-    flashcards: flash495,
   },
   {
     id: "3e-francais-autobiographie",
@@ -19590,7 +15026,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer auteur, narrateur et personnage","Reconnaître les temps du récit","Identifier le point de vue narratif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19598,8 +15033,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm496,
-    flashcards: flash496,
   },
   {
     id: "3e-francais-argumentation",
@@ -19610,7 +15043,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Distinguer un texte narratif d'un texte argumentatif","Reconnaître une phrase complexe","Repérer le thème d'un paragraphe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19618,8 +15050,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm497,
-    flashcards: flash497,
   },
   {
     id: "3e-francais-poesie-engagee",
@@ -19630,7 +15060,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programmes de français — cycle 4",
     duree: 12,
-    prerequis: ["Reconnaître les vers, les strophes et les rimes","Identifier les principales figures de style","Repérer le thème et le registre d'un texte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19638,8 +15067,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm498,
-    flashcards: flash498,
   },
   {
     id: "3e-hist-geo-premiere-guerre-mondiale",
@@ -19650,7 +15077,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Savoir se repérer sur une frise chronologique","Connaître les grandes puissances européennes du début du XXe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19658,8 +15084,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm499,
-    flashcards: flash499,
   },
   {
     id: "3e-hist-geo-totalitarismes",
@@ -19670,7 +15094,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Connaître les conséquences de la Première Guerre mondiale","Savoir ce qu'est une démocratie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19678,8 +15101,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm500,
-    flashcards: flash500,
   },
   {
     id: "3e-hist-geo-seconde-guerre-mondiale",
@@ -19690,7 +15111,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Connaître les régimes totalitaires de l'entre-deux-guerres","Savoir ce qu'est un génocide"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19698,8 +15118,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm501,
-    flashcards: flash501,
   },
   {
     id: "3e-hist-geo-france-depuis-1945-ve-republique",
@@ -19710,7 +15128,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Connaître la fin de la Seconde Guerre mondiale","Savoir ce qu'est une démocratie et une République"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19718,8 +15135,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm502,
-    flashcards: flash502,
   },
   {
     id: "3e-hist-geo-aires-urbaines-espaces-productifs",
@@ -19730,7 +15145,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Savoir lire une carte de la France","Connaître le vocabulaire de la ville et de la campagne"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19738,8 +15152,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm503,
-    flashcards: flash503,
   },
   {
     id: "3e-hist-geo-france-union-europeenne-monde",
@@ -19750,7 +15162,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Savoir situer la France et l'Europe sur un planisphère","Connaître le vocabulaire de la mondialisation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19758,8 +15169,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm504,
-    flashcards: flash504,
   },
   {
     id: "3e-hist-geo-emc-defense-citoyennete",
@@ -19770,7 +15179,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Histoire-géographie-EMC — cycle 4",
     duree: 14,
-    prerequis: ["Connaître les symboles de la République","Savoir ce qu'est une élection"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19778,8 +15186,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm505,
-    flashcards: flash505,
   },
   {
     id: "3e-italien-fonetica-accento",
@@ -19790,7 +15196,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Savoir lire les sons de l'italien","Connaître les voyelles et les consonnes doubles"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19798,8 +15203,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm506,
-    flashcards: flash506,
   },
   {
     id: "3e-italien-preposizioni",
@@ -19810,7 +15213,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les articles définis","Connaître les prépositions articulées de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19818,8 +15220,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm507,
-    flashcards: flash507,
   },
   {
     id: "3e-italien-passato-prossimo-ausiliari",
@@ -19830,7 +15230,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le présent de essere et avere","Connaître le passato prossimo (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19838,8 +15237,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm508,
-    flashcards: flash508,
   },
   {
     id: "3e-italien-imperfetto-vs-passato",
@@ -19850,7 +15247,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le passato prossimo","Connaître l'imperfetto (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19858,8 +15254,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm509,
-    flashcards: flash509,
   },
   {
     id: "3e-italien-vocabolario-tecnologia",
@@ -19870,7 +15264,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le présent des verbes réguliers","Savoir employer les verbes en -are courants"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19878,8 +15271,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm510,
-    flashcards: flash510,
   },
   {
     id: "3e-italien-pronomi-diretti-indiretti",
@@ -19890,7 +15281,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les pronoms personnels sujets","Connaître le passato prossimo"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19898,8 +15288,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm511,
-    flashcards: flash511,
   },
   {
     id: "3e-italien-particella-ne-ci",
@@ -19910,7 +15298,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître les pronoms directs et indirects","Connaître c'è / ci sono (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19918,8 +15305,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm512,
-    flashcards: flash512,
   },
   {
     id: "3e-italien-imperativo",
@@ -19930,7 +15315,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le présent de l'indicatif","Connaître les pronoms personnels et réfléchis"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19938,8 +15322,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm513,
-    flashcards: flash513,
   },
   {
     id: "3e-italien-vocabolario-ambiente",
@@ -19950,7 +15332,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de la nature","Savoir employer dovere et bisogna"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19958,8 +15339,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm514,
-    flashcards: flash514,
   },
   {
     id: "3e-italien-civilta-feste-tradizioni",
@@ -19970,7 +15349,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître le calendrier et les nombres en italien","Savoir situer les grandes villes d'Italie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19978,8 +15356,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm515,
-    flashcards: flash515,
   },
   {
     id: "3e-italien-civilta-mondo-italofono",
@@ -19990,7 +15366,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — cycle 4, CECRL A2-B1",
     duree: 12,
-    prerequis: ["Connaître l'Italie et ses symboles","Savoir situer l'Italie et ses voisins sur une carte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -19998,8 +15373,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm516,
-    flashcards: flash516,
   },
   {
     id: "3e-lca-civilisation-romaine",
@@ -20010,7 +15383,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["Notions de base sur la Rome antique","Repères chronologiques : royauté, République, Empire"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20018,8 +15390,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm517,
-    flashcards: flash517,
   },
   {
     id: "3e-lca-latin-propositions",
@@ -20030,7 +15400,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["Les déclinaisons (cas et fonctions)","Notion de participe passé","Imparfait et parfait"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20038,8 +15407,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm518,
-    flashcards: flash518,
   },
   {
     id: "3e-lca-grec-decouverte",
@@ -20050,7 +15417,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "Langues et cultures de l'Antiquité — cycle 4",
     duree: 12,
-    prerequis: ["Aucun prérequis en grec","Curiosité pour l'étymologie et les langues anciennes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20058,8 +15424,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm519,
-    flashcards: flash519,
   },
   {
     id: "3e-math-multiples-diviseurs",
@@ -20070,7 +15434,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Multiples, diviseurs et critères de divisibilité (5e — chapitre « Opérations »)","Division euclidienne, quotient et reste (6e)","Tables de multiplication (cycle 3)","Fractions égales et simplification (5e)","Puissances et notation exposant (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20078,8 +15441,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["decomposition-premiers"],
-    qcm: qcm520,
-    flashcards: flash520,
   },
   {
     id: "3e-math-nombres-rationnels",
@@ -20090,7 +15451,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 11,
-    prerequis: ["Fractions et nombres rationnels (5e)","Critères de divisibilité par 2, 3, 5, 9 (5e)","Nombre rationnel, opposé, inverse (4e)","Additionner, soustraire, multiplier, diviser des fractions (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20098,8 +15458,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm521,
-    flashcards: flash521,
   },
   {
     id: "3e-math-puissances",
@@ -20110,7 +15468,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 14,
-    prerequis: ["Puissances : carré et cube (5e)","Puissances d'exposant positif, produit de puissances (4e)","Inverse d'un nombre et sa notation (4e)","Multiplication et division de fractions (4e-3e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20118,8 +15475,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm522,
-    flashcards: flash522,
   },
   {
     id: "3e-math-calcul-litteral",
@@ -20130,7 +15485,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 14,
-    prerequis: ["Calcul littéral — réduire, développer, factoriser (5e)","Distributivité simple $k(a+b) = ka + kb$ (5e)","Équations du premier degré $ax+b=c$ et $ax+b=cx+d$ (4e)","Démontrer avec le calcul algébrique (4e)","Carrés des entiers de 0 à 12 (3e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20138,8 +15492,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm523,
-    flashcards: flash523,
   },
   {
     id: "3e-math-reperage",
@@ -20150,7 +15502,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 10,
-    prerequis: ["Repérage sur une droite et dans le plan (5e) — toutes les définitions y sont","Repérage sur une droite et dans le plan (4e) — les mêmes automatismes, en relatifs","Nombres relatifs et nombres rationnels (4e)","Représenter une grandeur en fonction d'une autre par un graphique (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20158,8 +15509,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm524,
-    flashcards: flash524,
   },
   {
     id: "3e-math-proportionnalite",
@@ -20170,7 +15519,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Proportionnalité — reconnaître, coefficient, retour à l'unité, linéarité (5e)","Échelles et vitesse (5e)","Grandeurs quotients, rapports et ratios (4e)","Quatrième proportionnelle et produit en croix (4e)","Coefficient multiplicateur d'une augmentation ou d'une diminution (4e)","Théorème de Thalès dans les triangles emboités (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20178,8 +15526,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm525,
-    flashcards: flash525,
   },
   {
     id: "3e-math-fonctions",
@@ -20190,7 +15536,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 14,
-    prerequis: ["Fonctions — dépendance entre deux grandeurs, « en fonction de » (5e)","Fonctions — programme de calcul, variable, notation $P(n)$ (4e)","Proportionnalité et coefficient de proportionnalité (5e puis 4e)","Calcul littéral — substituer, résoudre $ax + b = c$ (4e)","Repérage et lecture graphique dans un repère (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20198,8 +15543,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm526,
-    flashcards: flash526,
   },
   {
     id: "3e-math-racine-carree",
@@ -20210,7 +15553,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Définition de la racine carrée d'un nombre positif et encadrement (4e)","Carrés des nombres entiers de 0 à 12 (4e)","Fonction carré et sa représentation graphique (3e)","Équation produit nul et identité a² − b² = (a − b)(a + b) (3e)","Égalité de Pythagore dans un triangle rectangle (3e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20218,8 +15560,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm527,
-    flashcards: flash527,
   },
   {
     id: "3e-math-triangles",
@@ -20230,7 +15570,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 15,
-    prerequis: ["Théorème de Pythagore, sa réciproque, sa contraposée (4e)","Les trois théorèmes de la droite des milieux (4e)","Triangle rectangle et cercle circonscrit (4e)","Proportionnalité et égalité des produits en croix (5e)","Racine carrée, résoudre x² = a (3e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20238,8 +15577,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm528,
-    flashcards: flash528,
   },
   {
     id: "3e-math-translations-vecteurs",
@@ -20250,7 +15587,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Parallélogrammes — propriétés caractéristiques et diagonales (5e)","Symétrie axiale et demi-tour (5e)","Translation — effet et propriétés de conservation (4e)","Lien translation / parallélogramme (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20258,8 +15594,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm529,
-    flashcards: flash529,
   },
   {
     id: "3e-math-representation-espace",
@@ -20270,7 +15604,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Solides, perspective cavalière, patrons, volumes du cube, du pavé, du prisme, du cylindre (5e, chapitre « Représentation de l'espace »)","Pyramide, cône de révolution et règle du tiers pour le volume (4e, chapitre « Représentation de l'espace »)","Aire du disque $\\mathcal{A} = \\pi r^2$ (5e)","Théorème de Pythagore (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20278,8 +15611,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm530,
-    flashcards: flash530,
   },
   {
     id: "3e-math-statistiques",
@@ -20290,7 +15621,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 12,
-    prerequis: ["Effectifs, fréquences, tableau d'effectifs et diagrammes (5e)","Moyenne pondérée, médiane sur données brutes, étendue (4e)","Ranger des nombres décimaux dans l'ordre croissant (6e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20298,8 +15628,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm531,
-    flashcards: flash531,
   },
   {
     id: "3e-math-probabilites",
@@ -20310,7 +15638,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Probabilités — évènement, réunion, intersection, complémentaire, ensemble vide (4e)","Probabilités — probabilité d'un évènement et de son contraire, expériences à deux épreuves (4e)","Probabilités — équiprobabilité, fréquence et probabilité (5e)","Statistiques — effectifs et fréquences (5e)","Fractions — additionner et soustraire (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20318,8 +15645,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm532,
-    flashcards: flash532,
   },
   {
     id: "3e-math-pensee-informatique",
@@ -20330,7 +15655,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 5 mars 2026 — cycle 4, applicable en 3e à la rentrée 2026",
     duree: 13,
-    prerequis: ["Représenter une condition simple, les six comparaisons (4e — « La pensée informatique »)","Instruction conditionnelle « si … alors … sinon … fin si » (4e — « La pensée informatique »)","Manipuler une variable, « mettre … dans … », initialiser un compteur (4e — « La pensée informatique »)","Boucle inconditionnelle « répéter n fois » (5e — « La pensée informatique »)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20338,8 +15662,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm533,
-    flashcards: flash533,
   },
   {
     id: "3e-pc-masse-volumique",
@@ -20350,7 +15672,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 3e",
     duree: 12,
-    prerequis: ["Masse, volume et unités (5e)","Lire une éprouvette graduée (5e)","Proportionnalité et puissances de 10 (maths, 4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20358,8 +15679,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm534,
-    flashcards: flash534,
   },
   {
     id: "3e-pc-atomes-ions-ph",
@@ -20370,7 +15689,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 3e",
     duree: 14,
-    prerequis: ["Constitution de la matière, molécules et atomes (4e)","Notion d'espèce chimique et de mélange (5e-4e)","Conducteur, isolant et courant électrique (4e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20378,8 +15696,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm535,
-    flashcards: flash535,
   },
   {
     id: "3e-pc-transformations-chimiques",
@@ -20390,7 +15706,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 3e",
     duree: 13,
-    prerequis: ["Transformation chimique (5e)","Atomes, ions et molécules (3e)","Corps purs et mélanges (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20398,8 +15713,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm536,
-    flashcards: flash536,
   },
   {
     id: "3e-pc-poids-gravitation-forces",
@@ -20410,7 +15723,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 3e",
     duree: 12,
-    prerequis: ["Modéliser une action par une force (4e)","Interactions de contact et à distance (4e)","Mouvement et vitesse v = d/t (5e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20418,8 +15730,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm537,
-    flashcards: flash537,
   },
   {
     id: "3e-pc-conversions-energie-signaux",
@@ -20430,7 +15740,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Programme de physique-chimie du cycle 4 (BO) — classe de 3e",
     duree: 15,
-    prerequis: ["Énergie et ses formes, circuit électrique (5e)","Signaux sonores et lumineux, vitesse d'un signal (5e-4e)","Puissances de 10 et notation scientifique (3e maths)","Proportionnalité et grandeurs-produits (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20438,8 +15747,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm538,
-    flashcards: flash538,
   },
   {
     id: "3e-svt-genetique-et-heredite",
@@ -20450,7 +15757,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["La cellule, unité du vivant","La reproduction sexuée des êtres vivants"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20458,8 +15764,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm539,
-    flashcards: flash539,
   },
   {
     id: "3e-svt-evolution-des-especes",
@@ -20470,7 +15774,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["La biodiversité et la classification du vivant","L'ADN et l'information génétique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20478,8 +15781,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm540,
-    flashcards: flash540,
   },
   {
     id: "3e-svt-immunite-et-defenses",
@@ -20490,7 +15791,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Les micro-organismes et l'hygiène","Le sang et sa composition"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20498,8 +15798,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm541,
-    flashcards: flash541,
   },
   {
     id: "3e-svt-hormones-et-reproduction",
@@ -20510,7 +15808,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["La reproduction sexuée et la fécondation","Le sang comme milieu de transport"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20518,8 +15815,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm542,
-    flashcards: flash542,
   },
   {
     id: "3e-svt-activites-humaines-et-environnement",
@@ -20530,7 +15825,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Cycle 4 — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Les écosystèmes et les relations alimentaires","Le cycle du carbone et le rôle du dioxyde de carbone"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20538,8 +15832,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm543,
-    flashcards: flash543,
   },
   {
     id: "3e-techno-demarche-de-projet",
@@ -20550,7 +15842,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Analyser un objet technique (cycle 4)","Fonctions et contraintes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20558,8 +15849,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm544,
-    flashcards: flash544,
   },
   {
     id: "3e-techno-evolution-des-objets-techniques",
@@ -20570,7 +15859,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Fonction d'usage d'un objet technique","Analyser un objet technique (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20578,8 +15866,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm545,
-    flashcards: flash545,
   },
   {
     id: "3e-techno-internet-et-reseaux",
@@ -20590,7 +15876,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Utiliser un ordinateur et un navigateur","Notions de données numériques (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20598,8 +15883,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm546,
-    flashcards: flash546,
   },
   {
     id: "3e-techno-objets-connectes",
@@ -20610,7 +15893,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Chaîne d'énergie et chaîne d'information","Notions de programmation (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20618,8 +15900,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm547,
-    flashcards: flash547,
   },
   {
     id: "3e-techno-programmation-et-robotique",
@@ -20630,7 +15910,6 @@ export const CHAPITRES = [
     matiere: "techno",
     programme: "Cycle 4 — Technologie (programme officiel)",
     duree: 8,
-    prerequis: ["Notions de base de Scratch","Chaîne d'information (capteurs, actionneurs)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20638,8 +15917,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm548,
-    flashcards: flash548,
   },
   {
     id: "2nde-allemand-konnektoren",
@@ -20650,7 +15927,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Connaître la règle du verbe en position 2 (Verbzweitstellung)","Savoir renvoyer le verbe à la fin dans une subordonnée"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20658,8 +15934,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm549,
-    flashcards: flash549,
   },
   {
     id: "2nde-allemand-adjektivdeklination",
@@ -20670,7 +15944,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das et les articles indéfinis ein/eine","Maîtriser les quatre cas (Nominativ, Akkusativ, Dativ, Genitiv)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20678,8 +15951,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm550,
-    flashcards: flash550,
   },
   {
     id: "2nde-allemand-genitiv",
@@ -20690,7 +15961,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Connaître les articles définis et indéfinis","Maîtriser le Nominativ, l'Akkusativ et le Dativ"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20698,8 +15968,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm551,
-    flashcards: flash551,
   },
   {
     id: "2nde-allemand-verben-mit-dativ",
@@ -20710,7 +15978,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 14,
-    prerequis: ["Maîtriser les terminaisons du datif (dem, der, dem, den + -n au pluriel)","Connaître les pronoms personnels au datif (mir, dir, ihm, ihr, uns, euch, ihnen)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20718,8 +15985,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm552,
-    flashcards: flash552,
   },
   {
     id: "2nde-allemand-wortschatz-medien-technik",
@@ -20730,7 +15995,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das","Savoir conjuguer un verbe au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20738,8 +16002,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm553,
-    flashcards: flash553,
   },
   {
     id: "2nde-allemand-relativsaetze",
@@ -20750,7 +16012,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das et les quatre cas","Savoir placer le verbe à la fin dans une subordonnée (Nebensatz)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20758,8 +16019,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm554,
-    flashcards: flash554,
   },
   {
     id: "2nde-allemand-konjunktiv-2",
@@ -20770,7 +16029,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Conjuguer haben, sein et les modaux au présent","Connaître la subordonnée en wenn et la place du verbe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20778,8 +16036,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm555,
-    flashcards: flash555,
   },
   {
     id: "2nde-allemand-wortschatz-kultur-kunst",
@@ -20790,7 +16046,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (2nde), CECRL B1",
     duree: 12,
-    prerequis: ["Connaître les articles der, die, das","Savoir exprimer un goût simple (ich mag)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20798,8 +16053,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm556,
-    flashcards: flash556,
   },
   {
     id: "2nde-allemand-landeskunde-institutionen-deutschland",
@@ -20810,7 +16063,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée, CECRL B1",
     duree: 12,
-    prerequis: ["Savoir situer l'Allemagne en Europe et nommer sa capitale","Connaître le vocabulaire de base sur les pays et les symboles"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20818,8 +16070,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm557,
-    flashcards: flash557,
   },
   {
     id: "2nde-allemand-landeskunde-musik-kunst",
@@ -20830,7 +16080,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître quelques grandes figures germanophones","Savoir situer les grandes époques (baroque, classicisme, XXe siècle)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20838,8 +16087,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm558,
-    flashcards: flash558,
   },
   {
     id: "2nde-anglais-temps-du-present",
@@ -20850,7 +16097,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent simple et le -s de la 3e personne","Le présent continu (be + -ing)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20858,8 +16104,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm559,
-    flashcards: flash559,
   },
   {
     id: "2nde-anglais-temps-du-passe",
@@ -20870,7 +16114,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le prétérit simple (verbes réguliers et irréguliers)","Le present perfect (have + participe passé)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20878,8 +16121,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm560,
-    flashcards: flash560,
   },
   {
     id: "2nde-anglais-modaux",
@@ -20890,7 +16131,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Les modaux can et must","Le présent simple et la base verbale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20898,8 +16138,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm561,
-    flashcards: flash561,
   },
   {
     id: "2nde-anglais-phrasal-verbs",
@@ -20910,7 +16148,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 13,
-    prerequis: ["Connaître les verbes courants et les pronoms compléments","Savoir reconnaître un complément d'objet direct"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20918,8 +16155,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm562,
-    flashcards: flash562,
   },
   {
     id: "2nde-anglais-vocabulaire-medias-numerique",
@@ -20930,7 +16165,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent simple et le présent continu","Un lexique de base sur la vie quotidienne"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20938,8 +16172,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm563,
-    flashcards: flash563,
   },
   {
     id: "2nde-anglais-hypotheses-if",
@@ -20950,7 +16182,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent simple","Le prétérit simple et le futur (will)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20958,8 +16189,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm564,
-    flashcards: flash564,
   },
   {
     id: "2nde-anglais-discours-rapporte",
@@ -20970,7 +16199,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Les temps du présent et du passé","Les pronoms personnels et possessifs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20978,8 +16206,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm565,
-    flashcards: flash565,
   },
   {
     id: "2nde-anglais-vocabulaire-culture-arts",
@@ -20990,7 +16216,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent simple et le présent continu","Un lexique de base sur les loisirs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -20998,8 +16223,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm566,
-    flashcards: flash566,
   },
   {
     id: "2nde-anglais-civilisation-institutions-uk",
@@ -21010,7 +16233,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Vocabulaire de base sur les pays anglophones","Savoir situer le Royaume-Uni sur une carte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21018,8 +16240,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm567,
-    flashcards: flash567,
   },
   {
     id: "2nde-anglais-civilisation-irlande",
@@ -21030,7 +16250,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Situer les nations des îles Britanniques","Maîtriser le vocabulaire de la géographie et des symboles"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21038,8 +16257,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm568,
-    flashcards: flash568,
   },
   {
     id: "2nde-arts-grands-courants",
@@ -21050,7 +16267,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Enseignement artistique — lycée",
     duree: 14,
-    prerequis: ["Savoir situer les grandes périodes historiques (XVIIe, XVIIIe, XIXe siècle)","Connaître le vocabulaire de base de la peinture (composition, couleur, lumière)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21058,8 +16274,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm569,
-    flashcards: flash569,
   },
   {
     id: "2nde-espagnol-tiempos-pasado",
@@ -21070,7 +16284,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître la conjugaison du présent de l'indicatif","Avoir vu le pretérito indefinido et l'imperfecto au collège"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21078,8 +16291,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm570,
-    flashcards: flash570,
   },
   {
     id: "2nde-espagnol-ser-estar-haber",
@@ -21090,7 +16301,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître la conjugaison au présent de ser, estar et haber","Savoir accorder les adjectifs en genre et en nombre"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21098,8 +16308,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm571,
-    flashcards: flash571,
   },
   {
     id: "2nde-espagnol-verbos-pronominales",
@@ -21110,7 +16318,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le présent de l'indicatif","Savoir conjuguer un verbe régulier"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21118,8 +16325,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm572,
-    flashcards: flash572,
   },
   {
     id: "2nde-espagnol-vocabulario-medios-tecnologia",
@@ -21130,7 +16335,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base de la vie quotidienne","Savoir former une phrase simple au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21138,8 +16342,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm573,
-    flashcards: flash573,
   },
   {
     id: "2nde-espagnol-condicional",
@@ -21150,7 +16352,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le futur simple et ses radicaux irréguliers","Savoir conjuguer l'imperfecto"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21158,8 +16359,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm574,
-    flashcards: flash574,
   },
   {
     id: "2nde-espagnol-subjuntivo-presente",
@@ -21170,7 +16369,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le présent de l'indicatif régulier et irrégulier","Savoir repérer le radical de la 1re personne (yo) au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21178,8 +16376,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm575,
-    flashcards: flash575,
   },
   {
     id: "2nde-espagnol-oraciones-condicionales",
@@ -21190,7 +16386,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le présent, le futur et le conditionnel","Avoir découvert le subjonctif présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21198,8 +16393,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm576,
-    flashcards: flash576,
   },
   {
     id: "2nde-espagnol-vocabulario-cultura-arte",
@@ -21210,7 +16403,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base de la vie quotidienne","Savoir former une phrase simple au présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21218,8 +16410,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm577,
-    flashcards: flash577,
   },
   {
     id: "2nde-espagnol-civilizacion-instituciones-espana",
@@ -21230,7 +16420,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B1",
     duree: 12,
-    prerequis: ["Situer l'Espagne sur une carte de l'Europe","Connaître le vocabulaire de base de la géographie et de la politique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21238,8 +16427,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm578,
-    flashcards: flash578,
   },
   {
     id: "2nde-espagnol-civilizacion-arte-pintura",
@@ -21250,7 +16437,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL B1",
     duree: 12,
-    prerequis: ["Connaître les grandes villes et musées d'Espagne","Savoir situer l'Espagne et le Mexique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21258,8 +16444,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm579,
-    flashcards: flash579,
   },
   {
     id: "2nde-francais-grammaire-seconde",
@@ -21270,7 +16454,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 14,
-    prerequis: ["Reconnaître sujet et verbe","Distinguer phrase simple et phrase complexe","Identifier une proposition"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21278,8 +16461,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm580,
-    flashcards: flash580,
   },
   {
     id: "2nde-francais-procedes-analyse",
@@ -21290,7 +16471,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 14,
-    prerequis: ["Reconnaître une comparaison et une métaphore","Repérer un champ lexical","Distinguer sens propre et sens figuré"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21298,8 +16478,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm581,
-    flashcards: flash581,
   },
   {
     id: "2nde-francais-genres-et-registres",
@@ -21310,7 +16488,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 13,
-    prerequis: ["Distinguer prose et vers","Reconnaître un récit, un dialogue de théâtre, un poème","Repérer le champ lexical d'un texte"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21318,8 +16495,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm582,
-    flashcards: flash582,
   },
   {
     id: "2nde-francais-la-poesie",
@@ -21330,7 +16505,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 13,
-    prerequis: ["Reconnaître un vers et une strophe","Distinguer prose et poésie","Repérer une rime"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21338,8 +16512,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm583,
-    flashcards: flash583,
   },
   {
     id: "2nde-francais-le-theatre",
@@ -21350,7 +16522,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 13,
-    prerequis: ["Distinguer un texte de théâtre d'un récit","Reconnaître réplique et didascalie","Situer le XVIIe siècle et le classicisme"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21358,8 +16529,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm584,
-    flashcards: flash584,
   },
   {
     id: "2nde-francais-le-roman",
@@ -21370,7 +16539,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 13,
-    prerequis: ["Distinguer récit et discours","Reconnaître un narrateur et des personnages","Situer quelques grands mouvements littéraires"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21378,8 +16546,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm585,
-    flashcards: flash585,
   },
   {
     id: "2nde-francais-litterature-idees",
@@ -21390,7 +16556,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — seconde",
     duree: 13,
-    prerequis: ["Distinguer une opinion d'un fait","Reconnaître un texte argumentatif","Identifier un connecteur logique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21398,8 +16563,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm586,
-    flashcards: flash586,
   },
   {
     id: "2nde-hist-geo-mediterranee-antique",
@@ -21410,7 +16573,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Savoir situer un siècle avant et après J.-C.","Connaître la notion de cité et d'empire"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21418,8 +16580,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm587,
-    flashcards: flash587,
   },
   {
     id: "2nde-hist-geo-mediterranee-medievale",
@@ -21430,7 +16590,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Situer le Moyen Âge (Ve-XVe siècle)","Connaître les grandes religions monothéistes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21438,8 +16597,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm588,
-    flashcards: flash588,
   },
   {
     id: "2nde-hist-geo-humanisme-renaissance",
@@ -21450,7 +16607,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Situer les XVe et XVIe siècles","Connaître la fin du Moyen Âge"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21458,8 +16614,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm589,
-    flashcards: flash589,
   },
   {
     id: "2nde-hist-geo-revolutions-angleterre-amerique",
@@ -21470,7 +16624,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Situer les XVIIe et XVIIIe siècles","Connaître la notion de monarchie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21478,8 +16631,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm590,
-    flashcards: flash590,
   },
   {
     id: "2nde-hist-geo-environnement-developpement-durable",
@@ -21490,7 +16641,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Notion de ressource naturelle","Savoir lire un schéma simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21498,8 +16648,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm591,
-    flashcards: flash591,
   },
   {
     id: "2nde-hist-geo-territoires-villes-mondialisation",
@@ -21510,7 +16658,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Savoir lire une carte du monde","Notion de ville et de population"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21518,8 +16665,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm592,
-    flashcards: flash592,
   },
   {
     id: "2nde-hist-geo-emc-la-liberte",
@@ -21530,7 +16675,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — seconde",
     duree: 12,
-    prerequis: ["Connaître la devise de la République","Notion de loi et de droits"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21538,8 +16682,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm593,
-    flashcards: flash593,
   },
   {
     id: "2nde-italien-tempi-del-passato",
@@ -21550,7 +16692,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent de l'indicatif (are/ere/ire)","Les verbes essere et avere"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21558,8 +16699,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm594,
-    flashcards: flash594,
   },
   {
     id: "2nde-italien-essere-stare-esserci",
@@ -21570,7 +16709,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent de l'indicatif","Le gérondif (stare + gerundio)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21578,8 +16716,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm595,
-    flashcards: flash595,
   },
   {
     id: "2nde-italien-verbi-riflessivi",
@@ -21590,7 +16726,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent de l'indicatif","Le passato prossimo avec essere et l'accord du participe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21598,8 +16733,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm596,
-    flashcards: flash596,
   },
   {
     id: "2nde-italien-vocabolario-media-tecnologia",
@@ -21610,7 +16743,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Un lexique de base sur la vie quotidienne","Le présent des verbes réguliers et irréguliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21618,8 +16750,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm597,
-    flashcards: flash597,
   },
   {
     id: "2nde-italien-condizionale",
@@ -21630,7 +16760,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le futur simple (radical et terminaisons)","Les verbes essere et avere"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21638,8 +16767,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm598,
-    flashcards: flash598,
   },
   {
     id: "2nde-italien-congiuntivo-presente",
@@ -21650,7 +16777,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le présent de l'indicatif (are/ere/ire)","Les verbes irréguliers essere, avere, fare"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21658,8 +16784,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm599,
-    flashcards: flash599,
   },
   {
     id: "2nde-italien-periodo-ipotetico",
@@ -21670,7 +16794,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Le conditionnel présent et passé","Le congiuntivo (introduction)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21678,8 +16801,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm600,
-    flashcards: flash600,
   },
   {
     id: "2nde-italien-vocabolario-cultura-arte",
@@ -21690,7 +16811,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de seconde, CECRL B1",
     duree: 12,
-    prerequis: ["Un lexique de base sur les loisirs","Le passato prossimo"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21698,8 +16818,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm601,
-    flashcards: flash601,
   },
   {
     id: "2nde-italien-civilta-istituzioni-italia",
@@ -21710,7 +16828,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B1",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base sur l'Italie (Roma, regioni)","Comprendre un texte documentaire simple en italien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21718,8 +16835,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm602,
-    flashcards: flash602,
   },
   {
     id: "2nde-italien-civilta-arte-pittura",
@@ -21730,7 +16845,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B1",
     duree: 12,
-    prerequis: ["Situer la Renaissance en Italie (Firenze, Roma)","Comprendre un texte documentaire simple en italien"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21738,8 +16852,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm603,
-    flashcards: flash603,
   },
   {
     id: "2nde-lca-latin-syntaxe",
@@ -21750,7 +16862,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "LCA — lycée",
     duree: 14,
-    prerequis: ["Alphabet et prononciation du latin","Notion de déclinaison (1re et 2e)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21758,8 +16869,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm604,
-    flashcards: flash604,
   },
   {
     id: "2nde-lca-grec-morphologie",
@@ -21770,7 +16879,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "LCA — lycée",
     duree: 13,
-    prerequis: ["Curiosité pour une nouvelle écriture","Aucune connaissance préalable du grec requise"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21778,8 +16886,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm605,
-    flashcards: flash605,
   },
   {
     id: "2nde-math-calcul-numerique-algebrique",
@@ -21790,7 +16896,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 13,
-    prerequis: ["Fractions, puissances, priorités opératoires (cycle 4)","Développement et factorisation simples (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21798,8 +16903,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm606,
-    flashcards: flash606,
   },
   {
     id: "2nde-math-arithmetique",
@@ -21810,7 +16913,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Multiples et diviseurs (cycle 4)","Calcul littéral (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21818,8 +16920,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm607,
-    flashcards: flash607,
   },
   {
     id: "2nde-math-equations-inequations",
@@ -21830,7 +16930,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Calcul numérique et algébrique (Seconde)","Équations du premier degré (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21838,8 +16937,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm608,
-    flashcards: flash608,
   },
   {
     id: "2nde-math-notion-de-fonction",
@@ -21850,7 +16947,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Repérage dans le plan (cycle 4)","Calcul littéral (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21858,8 +16954,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm609,
-    flashcards: flash609,
   },
   {
     id: "2nde-math-fonctions-de-reference",
@@ -21870,7 +16964,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 13,
-    prerequis: ["Notion de fonction (Seconde)","Calcul numérique et algébrique (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21878,8 +16971,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm610,
-    flashcards: flash610,
   },
   {
     id: "2nde-math-vecteurs",
@@ -21890,7 +16981,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 13,
-    prerequis: ["Repérage dans le plan (cycle 4)","Translations et symétries (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21898,8 +16988,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-distance","geo-produit-scalaire"],
-    qcm: qcm611,
-    flashcards: flash611,
   },
   {
     id: "2nde-math-droites-du-plan",
@@ -21910,7 +16998,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Vecteurs (Seconde)","Fonctions affines (Seconde)","Équations et inéquations (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21918,8 +17005,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-droite","geo-distance"],
-    qcm: qcm612,
-    flashcards: flash612,
   },
   {
     id: "2nde-math-information-chiffree",
@@ -21930,7 +17015,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Fractions et pourcentages (cycle 4)","Proportionnalité (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21938,8 +17022,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm613,
-    flashcards: flash613,
   },
   {
     id: "2nde-math-statistiques",
@@ -21950,7 +17032,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 16,
-    prerequis: ["Moyenne et médiane (cycle 4)","Pourcentages (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21958,8 +17039,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm614,
-    flashcards: flash614,
   },
   {
     id: "2nde-math-probabilites",
@@ -21970,7 +17049,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Fractions et pourcentages (Seconde)","Statistiques (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21978,8 +17056,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm615,
-    flashcards: flash615,
   },
   {
     id: "2nde-math-algorithmique",
@@ -21990,7 +17066,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Scratch et notions d'algorithme (cycle 4)","Notion de fonction (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -21998,8 +17073,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm616,
-    flashcards: flash616,
   },
   {
     id: "2nde-pc-description-matiere",
@@ -22010,7 +17083,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 13,
-    prerequis: ["États de la matière (cycle 4)","Proportionnalité (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22018,8 +17090,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["dilution"],
-    qcm: qcm617,
-    flashcards: flash617,
   },
   {
     id: "2nde-pc-modelisation-microscopique",
@@ -22030,7 +17100,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 13,
-    prerequis: ["Atomes et molécules (cycle 4)","Puissances de dix (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22038,8 +17107,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm618,
-    flashcards: flash618,
   },
   {
     id: "2nde-pc-transformations-matiere",
@@ -22050,7 +17117,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 12,
-    prerequis: ["Description et caractérisation de la matière (Seconde)","Modélisation microscopique (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22058,8 +17124,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm619,
-    flashcards: flash619,
   },
   {
     id: "2nde-pc-mouvement-interactions",
@@ -22070,7 +17134,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 13,
-    prerequis: ["Vitesse et mouvement (cycle 4)","Vecteurs (Seconde, maths)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22078,8 +17141,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm620,
-    flashcards: flash620,
   },
   {
     id: "2nde-pc-ondes-signaux",
@@ -22090,7 +17151,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 13,
-    prerequis: ["Lumière et vision (cycle 4)","Circuits électriques (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22098,8 +17158,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm621,
-    flashcards: flash621,
   },
   {
     id: "2nde-ses-production-richesses",
@@ -22110,7 +17168,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — seconde",
     duree: 13,
-    prerequis: ["Notion de bien et de service","Savoir calculer un pourcentage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22118,8 +17175,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm622,
-    flashcards: flash622,
   },
   {
     id: "2nde-ses-mesure-production-pib",
@@ -22130,7 +17185,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — seconde",
     duree: 13,
-    prerequis: ["Notion de valeur ajoutée","Savoir calculer un pourcentage et un taux de variation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22138,8 +17192,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm623,
-    flashcards: flash623,
   },
   {
     id: "2nde-ses-consommation-revenu",
@@ -22150,7 +17202,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — seconde",
     duree: 13,
-    prerequis: ["Notion de revenu et de prix","Savoir calculer un pourcentage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22158,8 +17209,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm624,
-    flashcards: flash624,
   },
   {
     id: "2nde-ses-marche-formation-prix",
@@ -22170,7 +17219,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — seconde",
     duree: 13,
-    prerequis: ["Notion de bien, de service et de prix","Lecture d'un tableau de données"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22178,8 +17226,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm625,
-    flashcards: flash625,
   },
   {
     id: "2nde-ses-socialisation-introduction",
@@ -22190,7 +17236,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — seconde",
     duree: 13,
-    prerequis: ["Notion de groupe social","Vocabulaire : norme, règle, valeur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22198,8 +17243,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm626,
-    flashcards: flash626,
   },
   {
     id: "2nde-ses-opinion-publique",
@@ -22210,7 +17253,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — seconde",
     duree: 13,
-    prerequis: ["Notion de média et de citoyenneté","Savoir lire un pourcentage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22218,8 +17260,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm627,
-    flashcards: flash627,
   },
   {
     id: "2nde-snt-internet",
@@ -22230,7 +17270,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Seconde — SNT (programme officiel)",
     duree: 7,
-    prerequis: ["Notion d'ordinateur et de fichier","Utilisation courante d'une connexion Internet"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22238,8 +17277,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm628,
-    flashcards: flash628,
   },
   {
     id: "2nde-snt-le-web",
@@ -22250,7 +17287,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Seconde — SNT (programme officiel)",
     duree: 7,
-    prerequis: ["Internet (réseau, adresse IP, DNS)","Utilisation d'un navigateur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22258,8 +17294,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm629,
-    flashcards: flash629,
   },
   {
     id: "2nde-snt-reseaux-sociaux",
@@ -22270,7 +17304,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Seconde — SNT (programme officiel)",
     duree: 7,
-    prerequis: ["Internet et le Web","Notion de données personnelles"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22278,8 +17311,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm630,
-    flashcards: flash630,
   },
   {
     id: "2nde-snt-donnees-structurees",
@@ -22290,7 +17321,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Seconde — SNT (programme officiel)",
     duree: 7,
-    prerequis: ["Notion de fichier","Utilisation d'un tableur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22298,8 +17328,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm631,
-    flashcards: flash631,
   },
   {
     id: "2nde-snt-localisation-cartographie-gps",
@@ -22310,7 +17338,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Seconde — SNT (programme officiel)",
     duree: 7,
-    prerequis: ["Coordonnées et repérage","Notion d'onde et de satellite"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22318,8 +17345,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm632,
-    flashcards: flash632,
   },
   {
     id: "2nde-snt-informatique-embarquee-objets-connectes",
@@ -22330,7 +17355,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Seconde — SNT (programme officiel)",
     duree: 7,
-    prerequis: ["Notion de programme et d'algorithme","Internet et données"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22338,8 +17362,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm633,
-    flashcards: flash633,
   },
   {
     id: "2nde-snt-photographie-numerique",
@@ -22350,7 +17372,6 @@ export const CHAPITRES = [
     matiere: "snt",
     programme: "Programme de SNT — seconde",
     duree: 8,
-    prerequis: ["Notion de bit et d'octet","Représentation binaire des nombres (compter jusqu'à 255)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22358,8 +17379,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm634,
-    flashcards: flash634,
   },
   {
     id: "2nde-svt-la-cellule-unite-du-vivant",
@@ -22370,7 +17389,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Seconde — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Le vivant, sa diversité et les fonctions qui le caractérisent (cycle 4)","Utilisation du microscope optique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22378,8 +17396,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm635,
-    flashcards: flash635,
   },
   {
     id: "2nde-svt-adn-et-information-genetique",
@@ -22390,7 +17406,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Seconde — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["La cellule, unité du vivant","Noyau et chromosomes (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22398,8 +17413,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm636,
-    flashcards: flash636,
   },
   {
     id: "2nde-svt-metabolisme-des-cellules",
@@ -22410,7 +17423,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Seconde — SVT (programme officiel)",
     duree: 7,
-    prerequis: ["La cellule, unité du vivant","Besoins des êtres vivants (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22418,8 +17430,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm637,
-    flashcards: flash637,
   },
   {
     id: "2nde-svt-biodiversite-et-evolution",
@@ -22430,7 +17440,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Seconde — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["L'ADN et l'information génétique","Classification des êtres vivants (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22438,8 +17447,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm638,
-    flashcards: flash638,
   },
   {
     id: "2nde-svt-la-terre-dans-le-systeme-solaire",
@@ -22450,7 +17457,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Seconde — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Le système solaire (cycle 3)","La Terre, planète habitée (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22458,8 +17464,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm639,
-    flashcards: flash639,
   },
   {
     id: "2nde-svt-corps-humain-et-effort-physique",
@@ -22470,7 +17474,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Seconde — SVT (programme officiel)",
     duree: 8,
-    prerequis: ["Le métabolisme des cellules","Fonctions de nutrition (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22478,8 +17481,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm640,
-    flashcards: flash640,
   },
   {
     id: "1re-allemand-verben-mit-praepositionen",
@@ -22490,7 +17491,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["L'accusatif et le datif","Les questions avec wo/was","Les pronoms personnels"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22498,8 +17498,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm641,
-    flashcards: flash641,
   },
   {
     id: "1re-allemand-infinitiv-mit-zu",
@@ -22510,7 +17508,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["Les verbes séparables et inséparables","La place du verbe dans la phrase","Les modaux (qui, eux, se construisent SANS zu)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22518,8 +17515,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm642,
-    flashcards: flash642,
   },
   {
     id: "1re-allemand-nebensaetze-obwohl-damit",
@@ -22530,7 +17525,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["La Wortstellung dans la subordonnée (verbe à la fin)","Les subordonnées avec weil et dass","L'infinitif avec zu"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22538,8 +17532,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm643,
-    flashcards: flash643,
   },
   {
     id: "1re-allemand-wortschatz-arbeit-studium",
@@ -22550,7 +17542,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["Maîtriser le présent et le parfait","Connaître les prépositions suivies du datif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22558,8 +17549,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm644,
-    flashcards: flash644,
   },
   {
     id: "1re-allemand-passiv",
@@ -22570,7 +17559,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le Partizip II (participe passé) et le Perfekt","Le Präteritum de werden (wurde)","Le complément au datif et à l'accusatif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22578,8 +17566,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm645,
-    flashcards: flash645,
   },
   {
     id: "1re-allemand-konjunktiv-2-vertiefung",
@@ -22590,7 +17576,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le Konjunktiv II de base (würde, hätte, wäre)","Le Präteritum des verbes forts et faibles","Le Partizip II et le Perfekt"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22598,8 +17583,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm646,
-    flashcards: flash646,
   },
   {
     id: "1re-allemand-wortschatz-gesellschaft-engagement",
@@ -22610,7 +17593,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (1re), CECRL B1-B2",
     duree: 12,
-    prerequis: ["Connaître les verbes pronominaux (sich)","Savoir construire une phrase avec un verbe à particule séparable"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22618,8 +17600,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm647,
-    flashcards: flash647,
   },
   {
     id: "1re-allemand-landeskunde-deutsche-geschichte",
@@ -22630,7 +17610,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée, CECRL B1-B2",
     duree: 13,
-    prerequis: ["Connaître les grandes institutions allemandes (BRD, DDR, Grundgesetz)","Savoir situer les deux guerres mondiales dans le XXe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22638,8 +17617,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm648,
-    flashcards: flash648,
   },
   {
     id: "1re-allemand-landeskunde-literatur",
@@ -22650,7 +17627,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — première, LELE, CECRL B1-B2",
     duree: 13,
-    prerequis: ["Connaître quelques grandes figures germanophones (Goethe, Bach)","Savoir situer les grandes périodes du XVIIIe au XXe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22658,8 +17634,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm649,
-    flashcards: flash649,
   },
   {
     id: "1re-anglais-aspects-simple-continu",
@@ -22670,7 +17644,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — lycée, cycle terminal, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le présent simple et le présent continu (be + -ing)","Le prétérit simple et le present perfect"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22678,8 +17651,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm650,
-    flashcards: flash650,
   },
   {
     id: "1re-anglais-gerondif-infinitif",
@@ -22690,7 +17661,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — lycée, cycle terminal, CECRL B1-B2",
     duree: 12,
-    prerequis: ["La forme en -ing et l'infinitif avec to","Les verbes de goût (like, enjoy, hate)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22698,8 +17668,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm651,
-    flashcards: flash651,
   },
   {
     id: "1re-anglais-relatives-determinatives-explicatives",
@@ -22710,7 +17678,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — lycée, cycle terminal, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Les pronoms relatifs who, which, that","La différence entre sujet et complément dans une phrase"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22718,8 +17685,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm652,
-    flashcards: flash652,
   },
   {
     id: "1re-anglais-vocabulaire-travail-etudes",
@@ -22730,7 +17695,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de première, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Un lexique de base sur la vie quotidienne et l'école","Le présent simple et le present perfect"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22738,8 +17702,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm653,
-    flashcards: flash653,
   },
   {
     id: "1re-anglais-voix-passive-emplois",
@@ -22750,7 +17712,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — lycée, cycle terminal, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le verbe be à tous les temps","Le participe passé des verbes réguliers et irréguliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22758,8 +17719,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm654,
-    flashcards: flash654,
   },
   {
     id: "1re-anglais-futur-et-hypotheses",
@@ -22770,7 +17729,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — lycée, cycle terminal, CECRL B1-B2",
     duree: 12,
-    prerequis: ["will, be going to et le présent continu à valeur de futur","Les phrases en if de type 0, 1 et 2"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22778,8 +17736,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm655,
-    flashcards: flash655,
   },
   {
     id: "1re-anglais-vocabulaire-societe-engagement",
@@ -22790,7 +17746,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de première, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Un lexique de base sur la vie quotidienne","Savoir exprimer un avis simple"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22798,8 +17753,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm656,
-    flashcards: flash656,
   },
   {
     id: "1re-anglais-civilisation-histoire-usa",
@@ -22810,7 +17763,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de première, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Situer les États-Unis sur une carte","Vocabulaire de base de la géographie et de la politique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22818,8 +17770,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm657,
-    flashcards: flash657,
   },
   {
     id: "1re-anglais-civilisation-litterature",
@@ -22830,7 +17780,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de première, LELE, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Connaître le vocabulaire de base de la lecture","Situer les grandes périodes de l'histoire britannique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22838,8 +17787,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm658,
-    flashcards: flash658,
   },
   {
     id: "1re-arts-architecture",
@@ -22850,7 +17797,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Enseignement artistique — lycée",
     duree: 15,
-    prerequis: ["Connaître les grandes périodes historiques","Savoir observer un édifice (façade, plan, matériaux)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22858,8 +17804,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm659,
-    flashcards: flash659,
   },
   {
     id: "1re-arts-histoire-musique",
@@ -22870,7 +17814,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Enseignement artistique — lycée",
     duree: 15,
-    prerequis: ["Connaître le vocabulaire musical de base (rythme, mélodie, harmonie)","Savoir situer les grandes périodes (XVIIe au XXe siècle)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22878,8 +17821,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm660,
-    flashcards: flash660,
   },
   {
     id: "1esc-une-longue-histoire-de-la-matiere",
@@ -22890,7 +17831,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Première — Enseignement scientifique (programme officiel)",
     duree: 12,
-    prerequis: ["Constitution de l'atome (Seconde)","Molécules et matière organique (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22898,8 +17838,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm661,
-    flashcards: flash661,
   },
   {
     id: "1esc-le-soleil-notre-source-denergie",
@@ -22910,7 +17848,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Première — Enseignement scientifique (programme officiel)",
     duree: 13,
-    prerequis: ["Sources et formes d'énergie (Seconde)","Rayonnement solaire et Terre (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22918,8 +17855,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm662,
-    flashcards: flash662,
   },
   {
     id: "1esc-la-terre-un-astre-singulier",
@@ -22930,7 +17865,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Première — Enseignement scientifique (programme officiel)",
     duree: 12,
-    prerequis: ["Le système solaire (cycle 4)","Proportionnalité et angles (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22938,8 +17872,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm663,
-    flashcards: flash663,
   },
   {
     id: "1esc-la-biodiversite-et-son-evolution",
@@ -22950,7 +17882,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Première — Enseignement scientifique (programme officiel)",
     duree: 12,
-    prerequis: ["Évolution et sélection naturelle (cycle 4)","Fréquences et proportions (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22958,8 +17889,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm664,
-    flashcards: flash664,
   },
   {
     id: "1esc-son-et-musique",
@@ -22970,7 +17899,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Première — Enseignement scientifique (programme officiel)",
     duree: 13,
-    prerequis: ["Signaux sonores (cycle 4)","Fréquence et période (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22978,8 +17906,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm665,
-    flashcards: flash665,
   },
   {
     id: "1re-espagnol-subjuntivo-usos",
@@ -22990,7 +17916,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B1-B2",
     duree: 14,
-    prerequis: ["Conjuguer le présent du subjonctif régulier et les principaux irréguliers","Distinguer indicatif et subjonctif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -22998,8 +17923,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm666,
-    flashcards: flash666,
   },
   {
     id: "1re-espagnol-relativos",
@@ -23010,7 +17933,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B1-B2",
     duree: 13,
-    prerequis: ["Identifier une proposition subordonnée","Connaître les prépositions courantes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23018,8 +17940,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm667,
-    flashcards: flash667,
   },
   {
     id: "1re-espagnol-perifrasis",
@@ -23030,7 +17950,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B1-B2",
     duree: 13,
-    prerequis: ["Former le gérondif et le participe passé","Conjuguer les verbes irréguliers courants"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23038,8 +17957,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm668,
-    flashcards: flash668,
   },
   {
     id: "1re-espagnol-vocabulario-trabajo-estudios",
@@ -23050,7 +17967,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Maîtriser le présent de l'indicatif","Connaître le vocabulaire de base de la vie quotidienne"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23058,8 +17974,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm669,
-    flashcards: flash669,
   },
   {
     id: "1re-espagnol-voz-pasiva",
@@ -23070,7 +17984,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B1-B2",
     duree: 13,
-    prerequis: ["Distinguer ser et estar","Accorder le participe passé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23078,8 +17991,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm670,
-    flashcards: flash670,
   },
   {
     id: "1re-espagnol-estilo-indirecto",
@@ -23090,7 +18001,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B1-B2",
     duree: 14,
-    prerequis: ["Maîtriser les temps du passé (indefinido, imperfecto, pluscuamperfecto)","Connaître les pronoms personnels et les possessifs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23098,8 +18008,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm671,
-    flashcards: flash671,
   },
   {
     id: "1re-espagnol-vocabulario-sociedad-ciudadania",
@@ -23110,7 +18018,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Maîtriser le vocabulaire courant de la vie quotidienne","Savoir exprimer une opinion simple à l'écrit et à l'oral"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23118,8 +18025,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm672,
-    flashcards: flash672,
   },
   {
     id: "1re-espagnol-civilizacion-historia-latinoamerica",
@@ -23130,7 +18035,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Situer l'Amérique latine sur une carte","Connaître les repères chronologiques de base (siècles)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23138,8 +18042,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm673,
-    flashcards: flash673,
   },
   {
     id: "1re-espagnol-civilizacion-literatura",
@@ -23150,7 +18052,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — CECRL B1-B2 (LELE)",
     duree: 12,
-    prerequis: ["Connaître les grands pays hispanophones","Avoir des repères sur l'histoire de l'Espagne et de l'Amérique latine"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23158,8 +18059,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm674,
-    flashcards: flash674,
   },
   {
     id: "1re-francais-grammaire-premiere",
@@ -23170,7 +18069,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 13,
-    prerequis: ["Reconnaître un verbe et un nom","Distinguer proposition principale et subordonnée","Connaître les pronoms relatifs et les conjonctions"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23178,8 +18076,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm675,
-    flashcards: flash675,
   },
   {
     id: "1re-francais-commentaire-litteraire",
@@ -23190,7 +18086,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 14,
-    prerequis: ["Connaître le vocabulaire d'analyse (figures, procédés)","Savoir citer un texte","Distinguer analyser et résumer"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23198,8 +18093,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm676,
-    flashcards: flash676,
   },
   {
     id: "1re-francais-roman-et-recit",
@@ -23210,7 +18103,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 15,
-    prerequis: ["Distinguer récit et discours","Reconnaître les temps du passé","Repérer un narrateur à la 1re ou à la 3e personne"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23218,8 +18110,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm677,
-    flashcards: flash677,
   },
   {
     id: "1re-francais-poesie-19-21",
@@ -23230,7 +18120,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 15,
-    prerequis: ["Distinguer vers et prose","Reconnaître une strophe et une rime","Connaître le vocabulaire de base des figures de style"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23238,8 +18127,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm678,
-    flashcards: flash678,
   },
   {
     id: "1re-francais-contraction-essai",
@@ -23250,7 +18137,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 14,
-    prerequis: ["Repérer la thèse et le plan d'un texte","Reformuler avec ses propres mots","Savoir argumenter avec des exemples"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23258,8 +18144,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm679,
-    flashcards: flash679,
   },
   {
     id: "1re-francais-litterature-idees-16-18",
@@ -23270,7 +18154,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 15,
-    prerequis: ["Distinguer un texte argumentatif d'un récit","Repérer une thèse et des arguments","Reconnaître les connecteurs logiques"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23278,8 +18161,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm680,
-    flashcards: flash680,
   },
   {
     id: "1re-francais-dissertation",
@@ -23290,7 +18171,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 14,
-    prerequis: ["Connaître une œuvre intégrale et son parcours","Distinguer thèse, argument et exemple","Savoir organiser un raisonnement"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23298,8 +18178,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm681,
-    flashcards: flash681,
   },
   {
     id: "1re-francais-theatre-17-21",
@@ -23310,7 +18188,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 15,
-    prerequis: ["Reconnaître un texte de théâtre","Distinguer dialogue et didascalie","Connaître les registres comique et tragique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23318,8 +18195,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm682,
-    flashcards: flash682,
   },
   {
     id: "1re-francais-epreuve-orale",
@@ -23330,7 +18205,6 @@ export const CHAPITRES = [
     matiere: "francais",
     programme: "Programme de français — première (bac)",
     duree: 14,
-    prerequis: ["Savoir lire un texte à voix haute","Connaître le vocabulaire d'analyse","Avoir lu au moins une œuvre en entier"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23338,8 +18212,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm683,
-    flashcards: flash683,
   },
   {
     id: "1re-hggsp-democratie",
@@ -23350,7 +18222,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — première (spécialité)",
     duree: 12,
-    prerequis: ["Situer l'Antiquité grecque sur une frise","Connaître la notion de citoyenneté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23358,8 +18229,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm684,
-    flashcards: flash684,
   },
   {
     id: "1re-hggsp-puissances-internationales",
@@ -23370,7 +18239,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — première (spécialité)",
     duree: 12,
-    prerequis: ["Connaître la notion d'État","Situer la Guerre froide dans le temps"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23378,8 +18246,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm685,
-    flashcards: flash685,
   },
   {
     id: "1re-hggsp-frontieres",
@@ -23390,7 +18256,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — première (spécialité)",
     duree: 12,
-    prerequis: ["Connaître la notion d'État et de territoire","Lire une carte politique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23398,8 +18263,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm686,
-    flashcards: flash686,
   },
   {
     id: "1re-hggsp-s-informer",
@@ -23410,7 +18273,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — première (spécialité)",
     duree: 12,
-    prerequis: ["Distinguer un fait d'une opinion","Connaître les principaux médias"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23418,8 +18280,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm687,
-    flashcards: flash687,
   },
   {
     id: "1re-hggsp-etats-et-religions",
@@ -23430,7 +18290,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — première (spécialité)",
     duree: 12,
-    prerequis: ["Connaître la notion d'État","Distinguer croyance et institution"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23438,8 +18297,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm688,
-    flashcards: flash688,
   },
   {
     id: "1re-hist-geo-revolution-francaise-empire",
@@ -23450,7 +18307,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Connaître la monarchie absolue en France au XVIIIe siècle","Repérer les principaux siècles sur une frise"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23458,8 +18314,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm689,
-    flashcards: flash689,
   },
   {
     id: "1re-hist-geo-nations-nationalites-europe",
@@ -23470,7 +18324,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Situer l'Europe au milieu du XIXe siècle","Connaître la notion de nation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23478,8 +18331,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm690,
-    flashcards: flash690,
   },
   {
     id: "1re-hist-geo-industrialisation-19e",
@@ -23490,7 +18341,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Situer le XIXe siècle sur une frise","Connaître les débuts de la Révolution industrielle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23498,8 +18348,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm691,
-    flashcards: flash691,
   },
   {
     id: "1re-hist-geo-premiere-guerre-et-consequences",
@@ -23510,7 +18358,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Situer le début du XXe siècle sur une frise","Connaître les grandes puissances européennes vers 1900"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23518,8 +18365,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm692,
-    flashcards: flash692,
   },
   {
     id: "1re-hist-geo-metropolisation-france",
@@ -23530,7 +18375,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Connaître la carte de la France et ses grandes villes","Savoir ce qu'est une ville"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23538,8 +18382,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm693,
-    flashcards: flash693,
   },
   {
     id: "1re-hist-geo-espaces-productifs-et-ruraux",
@@ -23550,7 +18392,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Connaître les grands secteurs de l'économie (primaire, secondaire, tertiaire)","Savoir localiser les grandes régions françaises"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23558,8 +18399,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm694,
-    flashcards: flash694,
   },
   {
     id: "1re-hist-geo-emc-republique-laicite",
@@ -23570,7 +18409,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — première",
     duree: 12,
-    prerequis: ["Connaître les symboles de la République française","Savoir ce qu'est une démocratie"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23578,8 +18416,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm695,
-    flashcards: flash695,
   },
   {
     id: "1re-italien-congiuntivo-usi",
@@ -23590,7 +18426,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — voie générale, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le subjonctif présent (formes) — vu en 2nde","Les subordonnées avec « che »"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23598,8 +18433,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm696,
-    flashcards: flash696,
   },
   {
     id: "1re-italien-pronomi-relativi",
@@ -23610,7 +18443,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — voie générale, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Les prépositions simples et articulées (a, di, in, con…)","La distinction sujet / COD"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23618,8 +18450,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm697,
-    flashcards: flash697,
   },
   {
     id: "1re-italien-perifrasi",
@@ -23630,7 +18460,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — voie générale, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le présent et l'imperfetto de « stare »","L'infinitif des verbes"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23638,8 +18467,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm698,
-    flashcards: flash698,
   },
   {
     id: "1re-italien-vocabolario-lavoro-studi",
@@ -23650,7 +18477,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de première, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le lexique de la vie quotidienne","Le futur et le conditionnel"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23658,8 +18484,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm699,
-    flashcards: flash699,
   },
   {
     id: "1re-italien-forma-passiva",
@@ -23670,7 +18494,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — voie générale, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Le participe passé et son accord","Les temps de l'auxiliaire essere"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23678,8 +18501,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm700,
-    flashcards: flash700,
   },
   {
     id: "1re-italien-discorso-indiretto",
@@ -23690,7 +18511,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — voie générale, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Les temps du passé (passato prossimo, imperfetto, trapassato)","Le futur et le conditionnel"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23698,8 +18518,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm701,
-    flashcards: flash701,
   },
   {
     id: "1re-italien-vocabolario-societa-cittadinanza",
@@ -23710,7 +18528,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe de première, CECRL B1-B2",
     duree: 12,
-    prerequis: ["Un lexique sur la vie en société","Le subjonctif présent"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23718,8 +18535,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm702,
-    flashcards: flash702,
   },
   {
     id: "1re-italien-civilta-rinascimento",
@@ -23730,7 +18545,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B1-B2",
     duree: 12,
-    prerequis: ["Connaître quelques artistes italiens (Leonardo, Michelangelo)","Situer Firenze, Roma et Venezia"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23738,8 +18552,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm703,
-    flashcards: flash703,
   },
   {
     id: "1re-italien-civilta-letteratura",
@@ -23750,7 +18562,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B1-B2 (LELE)",
     duree: 12,
-    prerequis: ["Comprendre un texte documentaire en italien","Connaître quelques repères de l'histoire italienne"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23758,8 +18569,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm704,
-    flashcards: flash704,
   },
   {
     id: "1re-lca-mythologie",
@@ -23770,7 +18579,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "LCA — lycée",
     duree: 14,
-    prerequis: ["Culture générale sur l'Antiquité","Curiosité pour les récits mythologiques"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23778,8 +18586,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm705,
-    flashcards: flash705,
   },
   {
     id: "1re-lca-latin-auteurs",
@@ -23790,7 +18596,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "LCA — lycée",
     duree: 15,
-    prerequis: ["Bases de syntaxe latine","Notions de civilisation romaine"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23798,8 +18603,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm706,
-    flashcards: flash706,
   },
   {
     id: "1es-math-information-chiffree",
@@ -23810,7 +18613,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques intégrées à l'enseignement scientifique",
     duree: 13,
-    prerequis: ["Pourcentages et proportions (Seconde)","Fonctions affines (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23818,8 +18620,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm707,
-    flashcards: flash707,
   },
   {
     id: "1es-math-phenomenes-evolution",
@@ -23830,7 +18630,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques intégrées à l'enseignement scientifique",
     duree: 14,
-    prerequis: ["Fonctions affines (Seconde)","Fonctions de référence (Seconde)","Analyse de l'information chiffrée (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23838,8 +18637,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm708,
-    flashcards: flash708,
   },
   {
     id: "1es-math-statistiques-bivariees",
@@ -23850,7 +18647,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques intégrées à l'enseignement scientifique",
     duree: 13,
-    prerequis: ["Statistiques à un caractère (Seconde)","Fonctions affines (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23858,8 +18654,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm709,
-    flashcards: flash709,
   },
   {
     id: "1es-math-phenomenes-aleatoires",
@@ -23870,7 +18664,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques intégrées à l'enseignement scientifique",
     duree: 13,
-    prerequis: ["Probabilités (Seconde)","Statistiques à deux caractères (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23878,8 +18671,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm710,
-    flashcards: flash710,
   },
   {
     id: "1spe-math-second-degre",
@@ -23890,7 +18681,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Fonction carré (Seconde)","Identités remarquables (Seconde)","Équation produit nul (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23898,8 +18688,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["second-degre"],
-    qcm: qcm711,
-    flashcards: flash711,
   },
   {
     id: "1spe-math-suites-numeriques",
@@ -23910,7 +18698,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 14,
-    prerequis: ["Fonctions affines (Seconde)","Pourcentages et évolutions (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23918,8 +18705,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm712,
-    flashcards: flash712,
   },
   {
     id: "1spe-math-derivation",
@@ -23930,7 +18715,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 15,
-    prerequis: ["Fonctions de référence (Seconde)","Équation de droite et coefficient directeur (Seconde)","Second degré (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23938,8 +18722,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    qcm: qcm713,
-    flashcards: flash713,
   },
   {
     id: "1spe-math-variations-courbes",
@@ -23950,7 +18732,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 13,
-    prerequis: ["Dérivation (Première)","Second degré (Première)","Fonctions de référence (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23958,8 +18739,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm714,
-    flashcards: flash714,
   },
   {
     id: "1spe-math-fonction-exponentielle",
@@ -23970,7 +18749,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 13,
-    prerequis: ["Dérivation (Première)","Suites géométriques (Première)","Puissances (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23978,8 +18756,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm715,
-    flashcards: flash715,
   },
   {
     id: "1spe-math-trigonometrie",
@@ -23990,7 +18766,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 14,
-    prerequis: ["Cosinus et sinus dans le triangle rectangle (collège)","Cercle et repérage (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -23998,8 +18773,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-valeurs","trigo-equation"],
-    qcm: qcm716,
-    flashcards: flash716,
   },
   {
     id: "1spe-math-produit-scalaire",
@@ -24010,7 +18783,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 15,
-    prerequis: ["Vecteurs et coordonnées (Seconde)","Trigonométrie (Première)","Théorème de Pythagore (collège)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24018,8 +18790,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    qcm: qcm717,
-    flashcards: flash717,
   },
   {
     id: "1spe-math-geometrie-reperee",
@@ -24030,7 +18800,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 12,
-    prerequis: ["Produit scalaire (Première)","Équations de droites (Seconde)","Second degré (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24038,8 +18807,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-distance","geo-droite"],
-    qcm: qcm718,
-    flashcards: flash718,
   },
   {
     id: "1spe-math-probabilites-conditionnelles",
@@ -24050,7 +18817,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 14,
-    prerequis: ["Probabilités (Seconde)","Proportions et pourcentages (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24058,8 +18824,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm719,
-    flashcards: flash719,
   },
   {
     id: "1spe-math-variables-aleatoires",
@@ -24070,7 +18834,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — applicable rentrée 2026-2027",
     duree: 16,
-    prerequis: ["Probabilités conditionnelles (Première)","Moyenne et écart-type (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24078,8 +18841,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm720,
-    flashcards: flash720,
   },
   {
     id: "1nsi-representation-des-donnees",
@@ -24090,7 +18851,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Première — spécialité NSI (programme officiel)",
     duree: 14,
-    prerequis: ["Notion de nombre entier et de base de numération (collège)","Bases de la programmation Python (variables, types)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24098,8 +18858,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm721,
-    flashcards: flash721,
   },
   {
     id: "1nsi-types-construits",
@@ -24110,7 +18868,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Première — spécialité NSI (programme officiel)",
     duree: 13,
-    prerequis: ["Types de base et variables en Python","Boucles (for, while) et instruction conditionnelle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24118,8 +18875,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm722,
-    flashcards: flash722,
   },
   {
     id: "1nsi-traitement-de-donnees-en-tables",
@@ -24130,7 +18885,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Première — spécialité NSI (programme officiel)",
     duree: 13,
-    prerequis: ["Types construits (listes, dictionnaires)","Boucles et fonctions en Python"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24138,8 +18892,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm723,
-    flashcards: flash723,
   },
   {
     id: "1nsi-interactions-web-client-serveur",
@@ -24150,7 +18902,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Première — spécialité NSI (programme officiel)",
     duree: 14,
-    prerequis: ["Notion de réseau et d'adresse (collège / SNT seconde)","Bases de HTML"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24158,8 +18909,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm724,
-    flashcards: flash724,
   },
   {
     id: "1nsi-architecture-et-systeme",
@@ -24170,7 +18919,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Première — spécialité NSI (programme officiel)",
     duree: 14,
-    prerequis: ["Représentation binaire des données","Notion de programme et d'instruction"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24178,8 +18926,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm725,
-    flashcards: flash725,
   },
   {
     id: "1nsi-algorithmique-tris-et-recherche",
@@ -24190,7 +18936,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Première — spécialité NSI (programme officiel)",
     duree: 15,
-    prerequis: ["Listes (types construits)","Boucles for et while, comparaisons"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24198,8 +18943,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm726,
-    flashcards: flash726,
   },
   {
     id: "1spe-pc-transformations-matiere",
@@ -24210,7 +18953,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 15,
-    prerequis: ["Quantité de matière et concentration (Seconde)","Transformations de la matière (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24218,8 +18960,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire","dilution"],
-    qcm: qcm727,
-    flashcards: flash727,
   },
   {
     id: "1spe-pc-chimie-organique",
@@ -24230,7 +18970,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie, première générale",
     duree: 16,
-    prerequis: ["Synthèse d'une espèce chimique, montage à reflux (Seconde)","Chromatographie sur couche mince (Seconde)","Transformations exothermiques et endothermiques (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24238,8 +18977,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm728,
-    flashcards: flash728,
   },
   {
     id: "1spe-pc-mouvement-interactions",
@@ -24250,7 +18987,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 12,
-    prerequis: ["Mouvement et interactions (Seconde)","Vecteurs (Seconde, maths)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24258,8 +18994,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm729,
-    flashcards: flash729,
   },
   {
     id: "1spe-pc-energie-mecanique",
@@ -24270,7 +19004,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 13,
-    prerequis: ["Mouvement et interactions (Seconde)","Énergie électrique (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24278,8 +19011,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    qcm: qcm730,
-    flashcards: flash730,
   },
   {
     id: "1spe-pc-energie-electrique",
@@ -24290,7 +19021,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 12,
-    prerequis: ["Loi d'Ohm et circuits (Seconde)","Puissances de dix (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24298,8 +19028,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm731,
-    flashcards: flash731,
   },
   {
     id: "1spe-pc-ondes-signaux",
@@ -24310,7 +19038,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019",
     duree: 13,
-    prerequis: ["Ondes et signaux (Seconde)","Lentilles convergentes (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24318,8 +19045,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm732,
-    flashcards: flash732,
   },
   {
     id: "1re-ses-marche-concurrentiel",
@@ -24330,7 +19055,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Savoir ce qu'est un marché","Distinguer offreur et demandeur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24338,8 +19062,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm733,
-    flashcards: flash733,
   },
   {
     id: "1re-ses-marches-imparfaits",
@@ -24350,7 +19072,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Connaître le marché concurrentiel et l'équilibre","Savoir ce qu'est la concurrence pure et parfaite"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24358,8 +19079,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm734,
-    flashcards: flash734,
   },
   {
     id: "1re-ses-defaillances-de-marche",
@@ -24370,7 +19089,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Comprendre le fonctionnement d'un marché","Savoir ce qu'est un prix"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24378,8 +19096,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm735,
-    flashcards: flash735,
   },
   {
     id: "1re-ses-monnaie-et-financement",
@@ -24390,7 +19106,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Savoir ce qu'est un revenu","Distinguer épargne et consommation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24398,8 +19113,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm736,
-    flashcards: flash736,
   },
   {
     id: "1re-ses-socialisation-primaire-secondaire",
@@ -24410,7 +19123,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Savoir ce qu'est la socialisation","Connaître les principales instances de socialisation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24418,8 +19130,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm737,
-    flashcards: flash737,
   },
   {
     id: "1re-ses-liens-sociaux",
@@ -24430,7 +19140,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Savoir ce qu'est la socialisation","Comprendre la notion de groupe social"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24438,8 +19147,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm738,
-    flashcards: flash738,
   },
   {
     id: "1re-ses-deviance-controle-social",
@@ -24450,7 +19157,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Distinguer normes et valeurs","Savoir ce qu'est une norme sociale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24458,8 +19164,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm739,
-    flashcards: flash739,
   },
   {
     id: "1re-ses-voter-participation",
@@ -24470,7 +19174,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — première (spécialité)",
     duree: 12,
-    prerequis: ["Savoir ce qu'est une démocratie","Comprendre la notion de citoyenneté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24478,8 +19181,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm740,
-    flashcards: flash740,
   },
   {
     id: "1si-analyse-fonctionnelle-des-systemes",
@@ -24490,7 +19191,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Première — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 14,
-    prerequis: ["Notion de système et d'objet technique (collège, technologie)","Lecture d'un schéma et d'un tableau"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24498,8 +19198,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm741,
-    flashcards: flash741,
   },
   {
     id: "1si-chaine-denergie",
@@ -24510,7 +19208,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Première — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 15,
-    prerequis: ["Analyse fonctionnelle des systèmes (Première SI)","Puissance électrique P = U × I (Seconde/collège)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24518,8 +19215,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm742,
-    flashcards: flash742,
   },
   {
     id: "1si-chaine-dinformation",
@@ -24530,7 +19225,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Première — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 14,
-    prerequis: ["Analyse fonctionnelle des systèmes (Première SI)","Notion de tension et de signal électrique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24538,8 +19232,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm743,
-    flashcards: flash743,
   },
   {
     id: "1si-comportement-des-materiaux",
@@ -24550,7 +19242,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Première — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 15,
-    prerequis: ["Force et intensité en newtons (Première SI, statique)","Notion d'aire d'une section"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24558,8 +19249,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm744,
-    flashcards: flash744,
   },
   {
     id: "1si-mecanique-des-solides",
@@ -24570,7 +19259,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Première — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 16,
-    prerequis: ["Notion de force et de poids (Seconde/physique)","Trigonométrie de base (sinus, cosinus)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24578,8 +19266,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm745,
-    flashcards: flash745,
   },
   {
     id: "1svt-mutations-et-variabilite",
@@ -24590,7 +19276,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Première — spécialité SVT (programme officiel)",
     duree: 14,
-    prerequis: ["ADN, gène et information génétique (Seconde)","Réplication de l'ADN et cycle cellulaire (Première)","Universalité et variabilité de l'ADN (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24598,8 +19283,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm746,
-    flashcards: flash746,
   },
   {
     id: "1svt-expression-du-patrimoine-genetique",
@@ -24610,7 +19293,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Première — spécialité SVT (programme officiel)",
     duree: 15,
-    prerequis: ["ADN, gène et information génétique (Seconde)","Universalité et variabilité de la molécule d'ADN (Seconde)","Cellule, noyau et cytoplasme (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24618,8 +19300,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm747,
-    flashcards: flash747,
   },
   {
     id: "1svt-dynamique-interne-de-la-terre",
@@ -24630,7 +19310,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Première — spécialité SVT (programme officiel)",
     duree: 16,
-    prerequis: ["Tectonique des plaques, séismes et volcans (Quatrième)","Structure interne du globe (Seconde / cycle 4)","Roches et minéraux (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24638,8 +19317,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm748,
-    flashcards: flash748,
   },
   {
     id: "1svt-ecosystemes-et-services",
@@ -24650,7 +19327,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Première — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Chaînes alimentaires et écosystèmes (cycle 3)","Biodiversité et évolution (Seconde)","Photosynthèse et métabolisme (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24658,8 +19334,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm749,
-    flashcards: flash749,
   },
   {
     id: "1svt-variation-genetique-et-sante",
@@ -24670,7 +19344,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Première — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["ADN et information génétique (Seconde)","Mutations et variabilité génétique (Première)","Expression du patrimoine génétique (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24678,8 +19351,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm750,
-    flashcards: flash750,
   },
   {
     id: "1techno-math-suites-numeriques",
@@ -24690,7 +19361,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — première, voie technologique",
     duree: 13,
-    prerequis: ["Pourcentages et évolutions (Seconde)","Fonctions affines (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24698,8 +19368,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm751,
-    flashcards: flash751,
   },
   {
     id: "1techno-math-fonctions-variable-reelle",
@@ -24710,7 +19378,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — première, voie technologique",
     duree: 13,
-    prerequis: ["Notion de fonction (Seconde)","Fonctions de référence (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24718,8 +19385,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm752,
-    flashcards: flash752,
   },
   {
     id: "1techno-math-derivation",
@@ -24730,7 +19395,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — première, voie technologique",
     duree: 14,
-    prerequis: ["Fonctions de la variable réelle (Première techno)","Équations de droites (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24738,8 +19402,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    qcm: qcm753,
-    flashcards: flash753,
   },
   {
     id: "1techno-math-statistiques-deux-variables",
@@ -24750,7 +19412,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — première, voie technologique",
     duree: 12,
-    prerequis: ["Statistiques à un caractère (Seconde)","Fonctions affines (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24758,8 +19419,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm754,
-    flashcards: flash754,
   },
   {
     id: "1techno-math-probabilites-variables-aleatoires",
@@ -24770,7 +19429,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — première, voie technologique",
     duree: 13,
-    prerequis: ["Probabilités (Seconde)","Suites et pourcentages (Première techno)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24778,8 +19436,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm755,
-    flashcards: flash755,
   },
   {
     id: "1sti2d-mesure-incertitudes",
@@ -24790,7 +19446,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 14,
-    prerequis: ["Grandeurs et unités (Seconde)","Statistiques à un caractère (Seconde)","Moyenne et écart-type (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24798,8 +19453,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm756,
-    flashcards: flash756,
   },
   {
     id: "1sti2d-trigonometrie",
@@ -24810,7 +19463,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 14,
-    prerequis: ["Cosinus et sinus dans le triangle rectangle (collège)","Cercle et repérage (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24818,8 +19470,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-valeurs","trigo-equation"],
-    qcm: qcm757,
-    flashcards: flash757,
   },
   {
     id: "1sti2d-derivees",
@@ -24830,7 +19480,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 15,
-    prerequis: ["Dérivation (enseignement commun de Première technologique)","Trigonométrie et fonctions sinusoïdales (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24838,8 +19487,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    qcm: qcm758,
-    flashcards: flash758,
   },
   {
     id: "1sti2d-energie",
@@ -24850,7 +19497,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 14,
-    prerequis: ["Loi d'Ohm et circuits (Seconde)","Mesure et incertitudes (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24858,8 +19504,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm759,
-    flashcards: flash759,
   },
   {
     id: "1sti2d-produit-scalaire",
@@ -24870,7 +19514,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 13,
-    prerequis: ["Vecteurs et coordonnées (Seconde)","Trigonométrie (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24878,8 +19521,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    qcm: qcm760,
-    flashcards: flash760,
   },
   {
     id: "1sti2d-nombres-complexes",
@@ -24890,7 +19531,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 14,
-    prerequis: ["Trigonométrie (Première STI2D/STL)","Vecteurs et repérage (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24898,8 +19538,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme","complexe-operations"],
-    qcm: qcm761,
-    flashcards: flash761,
   },
   {
     id: "1sti2d-primitives",
@@ -24910,7 +19548,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 13,
-    prerequis: ["Dérivées : calculs et applications physiques (Première STI2D/STL)","Trigonométrie et fonctions sinusoïdales (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24918,8 +19555,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm762,
-    flashcards: flash762,
   },
   {
     id: "1sti2d-ondes-information",
@@ -24930,7 +19565,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n° 1 du 22 janvier 2019 — physique-chimie et mathématiques, STI2D et STL",
     duree: 16,
-    prerequis: ["Trigonométrie et fonctions sinusoïdales (Première STI2D/STL)","Énergie (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24938,8 +19572,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm763,
-    flashcards: flash763,
   },
   {
     id: "1st2s-pc-securite-chimique-acide-base",
@@ -24950,7 +19582,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 15,
-    prerequis: ["Espèces chimiques et solutions (Seconde)","Écriture scientifique et puissances de 10 (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24958,8 +19589,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm764,
-    flashcards: flash764,
   },
   {
     id: "1st2s-pc-oxydoreduction-desinfectants",
@@ -24970,7 +19599,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 15,
-    prerequis: ["Espèces chimiques et solutions (Seconde)","Équations de réaction et conservation des éléments (Seconde)","Concentration d'une solution (Sécurité chimique, 1re)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24978,8 +19606,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["dilution"],
-    qcm: qcm765,
-    flashcards: flash765,
   },
   {
     id: "1st2s-pc-risques-electriques",
@@ -24990,7 +19616,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 15,
-    prerequis: ["Circuits électriques, tension et intensité (cycle 4)","Écriture scientifique et puissances de 10 (Seconde)","Conversions d'unités (préfixes milli-, kilo-)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -24998,8 +19623,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm766,
-    flashcards: flash766,
   },
   {
     id: "1st2s-pc-ondes-sonores-audition",
@@ -25010,7 +19633,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 15,
-    prerequis: ["Fréquence et période d'un signal, relation f = 1/T (cycle 4)","Écriture scientifique et puissances de 10 (Seconde)","Logarithme décimal : log(10^n) = n (introduit ici, en lien avec les maths)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25018,8 +19640,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm767,
-    flashcards: flash767,
   },
   {
     id: "1st2s-pc-lumiere-vision-lentilles",
@@ -25030,7 +19650,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 16,
-    prerequis: ["Propagation rectiligne de la lumière et rayon lumineux (cycle 4)","Écriture scientifique et conversions d'unités (m, cm, mm)","Inverse d'un nombre et notion de proportionnalité (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25038,8 +19657,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm768,
-    flashcards: flash768,
   },
   {
     id: "1st2s-pc-infrarouge-securite-routiere",
@@ -25050,7 +19667,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 16,
-    prerequis: ["Écriture scientifique et puissances de 10 (Seconde)","Conversions d'unités (préfixes micro-, milli-, kilo-)","Énergie et vitesse, notion de force (cycle 4)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25058,8 +19674,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    qcm: qcm769,
-    flashcards: flash769,
   },
   {
     id: "1stl-spcl-securite-chimie-verte",
@@ -25070,7 +19684,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 15,
-    prerequis: ["Grandeurs, unités du Système international et conversions (Seconde)","Masse molaire et quantité de matière (Seconde)","Écriture d'une équation de réaction (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25078,8 +19691,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm770,
-    flashcards: flash770,
   },
   {
     id: "1stl-spcl-mesure-incertitudes-labo",
@@ -25090,7 +19701,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 15,
-    prerequis: ["Grandeurs, unités du Système international et conversions (Seconde)","Chiffres significatifs et notation scientifique (Seconde)","Moyenne d'une série de valeurs (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25098,8 +19708,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm771,
-    flashcards: flash771,
   },
   {
     id: "1stl-spcl-instrumentation-chaine-mesure",
@@ -25110,7 +19718,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 17,
-    prerequis: ["Grandeurs, unités du Système international et conversions (Seconde)","Chiffres significatifs et puissances de 10 (Seconde)","Justesse et fidélité (Mesure et incertitudes en laboratoire, SPCL 1re)","Codage binaire, bit et octet (Appareil photo et image numérique, SPCL 1re)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25118,8 +19725,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm772,
-    flashcards: flash772,
   },
   {
     id: "1stl-spcl-analyses-spectroscopies-dosages",
@@ -25130,7 +19735,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 16,
-    prerequis: ["Grandeurs, unités du Système international et conversions (Seconde)","Concentration en quantité de matière et dilution (Seconde)","Espèces chimiques, groupes caractéristiques (Seconde)","Absorption de la lumière et couleur (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25138,8 +19742,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm773,
-    flashcards: flash773,
   },
   {
     id: "1stl-spcl-syntheses-extraction-purification",
@@ -25150,7 +19752,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 15,
-    prerequis: ["Quantité de matière et masse molaire (Seconde)","Écriture et équilibrage d'une équation de réaction (Seconde)","Espèces chimiques, mélanges et corps purs (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25158,8 +19759,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm774,
-    flashcards: flash774,
   },
   {
     id: "1stl-spcl-image-couleur-vision",
@@ -25170,7 +19769,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 15,
-    prerequis: ["Lentilles convergentes et image d'un objet (Seconde)","Lumière blanche et lumières colorées, spectre (Seconde)","Absorption de la lumière et couleur d'un objet (Seconde)","Grandeurs, unités et puissances de 10 (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25178,8 +19776,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm775,
-    flashcards: flash775,
   },
   {
     id: "1stl-spcl-image-photographie-lentilles",
@@ -25190,7 +19786,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 16,
-    prerequis: ["Image d'un objet à travers une lentille convergente (Seconde)","Propagation rectiligne de la lumière, rayon lumineux (Seconde)","Image : couleur et vision (SPCL, 1re) — modèle optique de l'œil","Grandeurs, unités et puissances de 10 (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25198,8 +19793,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm776,
-    flashcards: flash776,
   },
   {
     id: "1stl-spcl-appareil-photo-image-numerique",
@@ -25210,7 +19803,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO du 22 janvier 2019 — SPCL, série STL, classe de première",
     duree: 17,
-    prerequis: ["Image : photographie et lentilles (SPCL, 1re) — lentille convergente, distance focale, image réelle sur un écran","Image : couleur et vision (SPCL, 1re) — modèle colorimétrique RVB","Grandeurs, unités et puissances de 10 (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25218,8 +19810,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm777,
-    flashcards: flash777,
   },
   {
     id: "tale-allemand-komplexe-satzgefuege",
@@ -25230,7 +19820,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Les Nebensätze et la place du verbe","Les Relativsätze","L'Infinitiv mit zu","Le Plusquamperfekt"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25238,8 +19827,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm778,
-    flashcards: flash778,
   },
   {
     id: "tale-allemand-konnektoren-argumentation",
@@ -25250,7 +19837,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Les Nebensätze et la place du verbe","Les Konnektoren de base","Le Genitiv"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25258,8 +19844,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm779,
-    flashcards: flash779,
   },
   {
     id: "tale-allemand-partizipialkonstruktionen",
@@ -25270,7 +19854,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Savoir former le Partizip II","Maîtriser la déclinaison de l'adjectif épithète","Connaître les subordonnées relatives et le passif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25278,8 +19861,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm780,
-    flashcards: flash780,
   },
   {
     id: "tale-allemand-wortschatz-wirtschaft-globalisierung",
@@ -25290,7 +19871,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (terminale), CECRL B2",
     duree: 12,
-    prerequis: ["Maîtriser le vocabulaire de la société","Savoir nuancer une opinion (Konnektoren)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25298,8 +19878,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm781,
-    flashcards: flash781,
   },
   {
     id: "tale-allemand-konjunktiv-1-indirekte-rede",
@@ -25310,7 +19888,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître la conjugaison au présent et le Perfekt","Maîtriser le Konjunktiv II (würde, hätte, wäre)","Savoir former le participe passé (Partizip II)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25318,8 +19895,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm782,
-    flashcards: flash782,
   },
   {
     id: "tale-allemand-nominalstil",
@@ -25330,7 +19905,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Maîtriser le génitif et les prépositions","Connaître les subordonnées (weil, obwohl, wenn, nachdem)","Savoir décliner articles et adjectifs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25338,8 +19912,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm783,
-    flashcards: flash783,
   },
   {
     id: "tale-allemand-wortschatz-gesellschaft-welt",
@@ -25350,7 +19922,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée (Tale), CECRL B2",
     duree: 12,
-    prerequis: ["Disposer d'un vocabulaire de base sur l'actualité","Savoir construire une phrase complexe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25358,8 +19929,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm784,
-    flashcards: flash784,
   },
   {
     id: "tale-allemand-landeskunde-deutsch-in-der-welt",
@@ -25370,7 +19939,6 @@ export const CHAPITRES = [
     matiere: "allemand",
     programme: "Programme de langues vivantes — lycée, CECRL B2",
     duree: 13,
-    prerequis: ["Connaître les pays germanophones (DACH)","Maîtriser le vocabulaire culturel de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25378,8 +19946,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm785,
-    flashcards: flash785,
   },
   {
     id: "tale-anglais-systeme-verbal",
@@ -25390,7 +19956,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Maîtriser le présent simple et continu","Connaître le prétérit et le present perfect","Savoir former les participes passés irréguliers"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25398,8 +19963,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm786,
-    flashcards: flash786,
   },
   {
     id: "tale-anglais-modalite",
@@ -25410,7 +19973,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître les modaux de base (can, must, should, may, might)","Savoir former le participe passé","Comprendre la structure modal + base verbale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25418,8 +19980,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm787,
-    flashcards: flash787,
   },
   {
     id: "tale-anglais-irreel-hypotheses",
@@ -25430,7 +19990,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître les conditionnels de type 0, 1 et 2","Maîtriser le prétérit et le past perfect","Savoir former le conditionnel avec would"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25438,8 +19997,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm788,
-    flashcards: flash788,
   },
   {
     id: "tale-anglais-vocabulaire-economie-mondialisation",
@@ -25450,7 +20007,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de terminale, CECRL B2",
     duree: 12,
-    prerequis: ["Un lexique de base sur le travail et la société","Savoir structurer une argumentation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25458,8 +20014,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm789,
-    flashcards: flash789,
   },
   {
     id: "tale-anglais-discours-rapporte-concordance",
@@ -25470,7 +20024,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Distinguer discours direct et indirect","Connaître les temps du passé (prétérit, past perfect)","Maîtriser les modaux et leur forme passée"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25478,8 +20031,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm790,
-    flashcards: flash790,
   },
   {
     id: "tale-anglais-structures-complexes",
@@ -25490,7 +20041,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Maîtriser la voix passive","Connaître l'ordre canonique sujet-verbe-complément","Savoir manier les adverbes de fréquence et de manière"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25498,8 +20048,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm791,
-    flashcards: flash791,
   },
   {
     id: "tale-anglais-vocabulaire-sciences-societe",
@@ -25510,7 +20058,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de terminale, CECRL B2",
     duree: 12,
-    prerequis: ["Un lexique B1 sur l'actualité et le numérique","Les connecteurs logiques de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25518,8 +20065,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm792,
-    flashcards: flash792,
   },
   {
     id: "tale-anglais-civilisation-anglais-monde",
@@ -25530,7 +20075,6 @@ export const CHAPITRES = [
     matiere: "anglais",
     programme: "Programme de langues vivantes — classe de terminale, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître les principaux pays anglophones","Notions d'histoire coloniale britannique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25538,8 +20082,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm793,
-    flashcards: flash793,
   },
   {
     id: "tale-arts-cinema",
@@ -25550,7 +20092,6 @@ export const CHAPITRES = [
     matiere: "arts",
     programme: "Enseignement artistique — lycée",
     duree: 15,
-    prerequis: ["Savoir décrire une image (cadrage, composition)","Connaître les grandes périodes du XXe siècle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25558,8 +20099,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm794,
-    flashcards: flash794,
   },
   {
     id: "tale-esc-atmosphere-effet-de-serre-climat",
@@ -25570,7 +20109,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Enseignement scientifique — terminale générale, BO du 22 janvier 2019 (version aménagée 2023)",
     duree: 16,
-    prerequis: ["Puissance et énergie ; le watt (Première)","Rayonnement électromagnétique, infrarouge et ultraviolet (Première)","Température, échelles °C et kelvin (Seconde)","Rayonnement du corps humain et loi de Wien (Enseignement scientifique, Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25578,8 +20116,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm795,
-    flashcards: flash795,
   },
   {
     id: "tale-esc-energie-carbone-transition",
@@ -25590,7 +20126,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Enseignement scientifique — terminale générale, BO du 22 janvier 2019 (version aménagée 2023)",
     duree: 15,
-    prerequis: ["Combustion et réaction chimique (Seconde)","Masse molaire et quantité de matière (Seconde)","Effet de serre et bilan radiatif (Terminale, enseignement scientifique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25598,8 +20133,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm796,
-    flashcards: flash796,
   },
   {
     id: "tale-esc-production-conversion-energie-electrique",
@@ -25610,7 +20143,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "Enseignement scientifique — terminale générale, BO du 22 janvier 2019 (version aménagée 2023)",
     duree: 15,
-    prerequis: ["Puissance et énergie ; le watt et le joule (Première)","Loi d'Ohm et effet Joule (Première / Seconde)","Champ magnétique, aimant et bobine (Première)","Énergie chimique d'une transformation (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25618,8 +20150,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm797,
-    flashcards: flash797,
   },
   {
     id: "tale-esc-une-histoire-du-vivant",
@@ -25630,7 +20160,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Terminale — Enseignement scientifique (programme officiel)",
     duree: 14,
-    prerequis: ["Cellule, ADN et information génétique (Cycle 4 et Seconde)","Parenté des êtres vivants et biodiversité (Cycle 4)","Notion d'espèce et de reproduction sexuée (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25638,8 +20167,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm798,
-    flashcards: flash798,
   },
   {
     id: "tale-esc-evolution-et-biodiversite",
@@ -25650,7 +20177,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Terminale — Enseignement scientifique (programme officiel)",
     duree: 15,
-    prerequis: ["Chapitre « Une histoire du vivant » (biodiversité, arbre du vivant)","Chapitre « Du génotype au phénotype » (allèles, mutations)","Reproduction sexuée et notion d'espèce (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25658,8 +20184,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm799,
-    flashcards: flash799,
   },
   {
     id: "tale-esc-modeles-demographiques",
@@ -25670,7 +20194,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Enseignement scientifique — terminale générale, BO du 22 janvier 2019 (version aménagée 2023)",
     duree: 16,
-    prerequis: ["Phénomènes d'évolution, modélisation par des fonctions (Enseignement scientifique, Première)","Suites arithmétiques et géométriques (Première)","Taux d'évolution et coefficient multiplicateur (Première)","Calculatrice ou tableur (mode tableau, puissances successives)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25678,8 +20201,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm800,
-    flashcards: flash800,
   },
   {
     id: "tale-esc-probabilites-bayes-ia",
@@ -25690,7 +20211,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "Enseignement scientifique — terminale générale, BO du 22 janvier 2019 (version aménagée 2023)",
     duree: 16,
-    prerequis: ["Probabilités, événements et arbres pondérés (Première)","Probabilité conditionnelle (Terminale, enseignement scientifique)","Fréquence et fluctuation d'échantillonnage (Seconde)","Proportions et pourcentages (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25698,8 +20218,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm801,
-    flashcards: flash801,
   },
   {
     id: "tale-esc-du-genotype-au-phenotype",
@@ -25710,7 +20228,6 @@ export const CHAPITRES = [
     matiere: "enseignement-scientifique",
     programme: "Terminale — Enseignement scientifique (chapitre de complément, hors programme)",
     duree: 14,
-    prerequis: ["ADN, gènes et information génétique (Seconde)","Notion d'allèle et de caractère héréditaire (Cycle 4)","Chapitre « Une histoire du vivant » (unité du vivant, code génétique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25718,8 +20235,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm802,
-    flashcards: flash802,
   },
   {
     id: "tale-espagnol-ser-estar-avanzado",
@@ -25730,7 +20245,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître les emplois de base de ser et estar","Savoir former le participe passé","Maîtriser l'accord de l'adjectif"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25738,8 +20252,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm803,
-    flashcards: flash803,
   },
   {
     id: "tale-espagnol-subjuntivo-imperfecto",
@@ -25750,7 +20262,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître le subjonctif présent","Maîtriser le passé simple (indefinido), y compris les irréguliers","Savoir former le conditionnel simple et composé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25758,8 +20269,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm804,
-    flashcards: flash804,
   },
   {
     id: "tale-espagnol-concordancia-tiempos",
@@ -25770,7 +20279,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître le subjonctif présent et le subjonctif imparfait","Maîtriser les temps du passé (imperfecto, indefinido, pluscuamperfecto)","Savoir former le conditionnel simple et composé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25778,8 +20286,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm805,
-    flashcards: flash805,
   },
   {
     id: "tale-espagnol-vocabulario-economia-globalizacion",
@@ -25790,7 +20296,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B2",
     duree: 12,
-    prerequis: ["Maîtriser le vocabulaire de la société et de l'actualité","Savoir structurer une argumentation à l'écrit"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25798,8 +20303,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm806,
-    flashcards: flash806,
   },
   {
     id: "tale-espagnol-conectores-argumentacion",
@@ -25810,7 +20313,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Savoir construire une phrase complexe","Connaître l'indicatif et le subjonctif présent","Avoir un vocabulaire d'opinion de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25818,8 +20320,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm807,
-    flashcards: flash807,
   },
   {
     id: "tale-espagnol-estructuras-enfaticas",
@@ -25830,7 +20330,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — cycle terminal, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître les pronoms relatifs (que, quien, el que, lo que)","Maîtriser l'accord de ser avec le sujet","Savoir distinguer personnes et choses"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25838,8 +20337,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm808,
-    flashcards: flash808,
   },
   {
     id: "tale-espagnol-vocabulario-sociedad-mundo",
@@ -25850,7 +20347,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B2",
     duree: 12,
-    prerequis: ["Maîtriser un vocabulaire courant large","Savoir exprimer une opinion et argumenter"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25858,8 +20354,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm809,
-    flashcards: flash809,
   },
   {
     id: "tale-espagnol-civilizacion-espanol-mundo",
@@ -25870,7 +20364,6 @@ export const CHAPITRES = [
     matiere: "espagnol",
     programme: "Programme de langues vivantes — lycée, CECRL B2",
     duree: 12,
-    prerequis: ["Connaître les principaux pays hispanophones","Savoir lire des données chiffrées simples"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25878,8 +20371,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm810,
-    flashcards: flash810,
   },
   {
     id: "tale-grandoral-comprendre-l-epreuve",
@@ -25890,7 +20381,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Connaître ses deux enseignements de spécialité de Terminale","Savoir que le Grand oral a lieu en fin d'année de Terminale"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25898,8 +20388,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm811,
-    flashcards: flash811,
   },
   {
     id: "tale-grandoral-choisir-formuler-ses-questions",
@@ -25910,7 +20398,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Avoir suivi ses deux enseignements de spécialité en Terminale","Connaître le déroulé général de l'épreuve"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25918,8 +20405,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm812,
-    flashcards: flash812,
   },
   {
     id: "tale-grandoral-construire-l-expose",
@@ -25930,7 +20415,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Avoir choisi et formulé sa question","Connaître les trois temps de l'épreuve"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25938,8 +20422,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm813,
-    flashcards: flash813,
   },
   {
     id: "tale-grandoral-voix-posture-et-stress",
@@ -25950,7 +20432,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Connaître le déroulé de l'épreuve","Avoir commencé à préparer son exposé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25958,8 +20439,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm814,
-    flashcards: flash814,
   },
   {
     id: "tale-grandoral-l-echange-avec-le-jury",
@@ -25970,7 +20449,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Avoir préparé son exposé","Connaître le déroulé des trois temps"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25978,8 +20456,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm815,
-    flashcards: flash815,
   },
   {
     id: "tale-grandoral-le-projet-d-orientation",
@@ -25990,7 +20466,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Connaître les trois temps de l'épreuve","Avoir une première idée de ses envies d'études ou de métier"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -25998,8 +20473,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm816,
-    flashcards: flash816,
   },
   {
     id: "tale-grandoral-criteres-et-erreurs",
@@ -26010,7 +20483,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Connaître les trois temps de l'épreuve","Avoir travaillé l'exposé et l'échange"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26018,8 +20490,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm817,
-    flashcards: flash817,
   },
   {
     id: "tale-grandoral-s-entrainer-et-checklist",
@@ -26030,7 +20500,6 @@ export const CHAPITRES = [
     matiere: "grand-oral",
     programme: "Grand oral — épreuve du baccalauréat",
     duree: 12,
-    prerequis: ["Avoir choisi ses questions et préparé un exposé","Connaître le déroulé, les critères et les erreurs à éviter"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26038,8 +20507,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm818,
-    flashcards: flash818,
   },
   {
     id: "tale-hggsp-nouveaux-espaces-conquete",
@@ -26050,7 +20517,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Savoir situer les grandes puissances et lire une carte du monde","Comprendre les notions de souveraineté et de ressources"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26058,8 +20524,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm819,
-    flashcards: flash819,
   },
   {
     id: "tale-hggsp-faire-la-guerre-faire-la-paix",
@@ -26070,7 +20534,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — terminale (spécialité)",
     duree: 16,
-    prerequis: ["Connaître les grands conflits du XXe siècle","Savoir situer l'ONU et son rôle"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26078,8 +20541,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm820,
-    flashcards: flash820,
   },
   {
     id: "tale-hggsp-histoire-et-memoires",
@@ -26090,7 +20551,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Connaître la Seconde Guerre mondiale et le régime de Vichy","Savoir ce qu'est un témoignage et une source historique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26098,8 +20558,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm821,
-    flashcards: flash821,
   },
   {
     id: "tale-hggsp-patrimoine",
@@ -26110,7 +20568,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Connaître le rôle de l'UNESCO","Savoir distinguer un monument et un site"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26118,8 +20575,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm822,
-    flashcards: flash822,
   },
   {
     id: "tale-hggsp-environnement",
@@ -26130,7 +20585,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — terminale (spécialité)",
     duree: 16,
-    prerequis: ["Connaître les grands enjeux du changement climatique","Savoir ce qu'est le développement durable"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26138,8 +20592,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm823,
-    flashcards: flash823,
   },
   {
     id: "tale-hggsp-enjeu-de-la-connaissance",
@@ -26150,7 +20602,6 @@ export const CHAPITRES = [
     matiere: "hggsp",
     programme: "Programme de HGGSP — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Comprendre ce qu'est une source d'information","Connaître le rôle de la recherche et des universités"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26158,8 +20609,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm824,
-    flashcards: flash824,
   },
   {
     id: "tale-hist-geo-seconde-guerre-mondiale-genocides",
@@ -26170,7 +20619,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître les régimes totalitaires des années 1930 (nazisme, stalinisme, fascisme)","Situer les principales puissances européennes vers 1939"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26178,8 +20626,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm825,
-    flashcards: flash825,
   },
   {
     id: "tale-hist-geo-guerre-froide",
@@ -26190,7 +20636,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître l'issue de la Seconde Guerre mondiale et l'émergence des deux superpuissances","Savoir situer les États-Unis et l'URSS"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26198,8 +20643,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm826,
-    flashcards: flash826,
   },
   {
     id: "tale-hist-geo-decolonisation",
@@ -26210,7 +20653,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître l'existence des empires coloniaux européens au début du XXe siècle","Situer le contexte de l'après-Seconde Guerre mondiale et de la guerre froide"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26218,8 +20660,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm827,
-    flashcards: flash827,
   },
   {
     id: "tale-hist-geo-monde-depuis-1990",
@@ -26230,7 +20670,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître la fin de la guerre froide et la disparition de l'URSS (1991)","Savoir ce qu'est la Ve République (fondée en 1958)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26238,8 +20677,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm828,
-    flashcards: flash828,
   },
   {
     id: "tale-hist-geo-mers-oceans-mondialisation",
@@ -26250,7 +20687,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître la notion de mondialisation","Savoir situer les grands océans et continents"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26258,8 +20694,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm829,
-    flashcards: flash829,
   },
   {
     id: "tale-hist-geo-puissances-et-france-dans-le-monde",
@@ -26270,7 +20704,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître la notion de mondialisation et de monde multipolaire","Savoir situer les grandes puissances (États-Unis, Chine, Union européenne)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26278,8 +20711,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm830,
-    flashcards: flash830,
   },
   {
     id: "tale-hist-geo-emc-democratie-engagement",
@@ -26290,7 +20721,6 @@ export const CHAPITRES = [
     matiere: "hist-geo",
     programme: "Programme d'histoire-géographie — terminale",
     duree: 14,
-    prerequis: ["Connaître les principes de la République française","Savoir ce qu'est le droit de vote"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26298,8 +20728,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm831,
-    flashcards: flash831,
   },
   {
     id: "tale-italien-usi-avanzati",
@@ -26310,7 +20738,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B2",
     duree: 12,
-    prerequis: ["Le présent et les auxiliaires","Le gérondif (gerundio)","La forme passive de base"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26318,8 +20745,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm832,
-    flashcards: flash832,
   },
   {
     id: "tale-italien-congiuntivo-imperfetto",
@@ -26330,7 +20755,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B2",
     duree: 12,
-    prerequis: ["Le subjonctif présent","Le conditionnel présent","Les phrases hypothétiques de base (se)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26338,8 +20762,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm833,
-    flashcards: flash833,
   },
   {
     id: "tale-italien-concordanza-tempi",
@@ -26350,7 +20772,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B2",
     duree: 12,
-    prerequis: ["Le subjonctif présent et passé","L'imparfait et le plus-que-parfait du subjonctif","Le conditionnel présent et passé"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26358,8 +20779,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm834,
-    flashcards: flash834,
   },
   {
     id: "tale-italien-vocabolario-economia-globalizzazione",
@@ -26370,7 +20789,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe terminale, CECRL B2",
     duree: 12,
-    prerequis: ["Un lexique sur la société et le monde","Les structures argumentatives"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26378,8 +20796,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm835,
-    flashcards: flash835,
   },
   {
     id: "tale-italien-connettivi-argomentazione",
@@ -26390,7 +20806,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B2",
     duree: 12,
-    prerequis: ["Le subjonctif présent","Les propositions subordonnées","Le vocabulaire de l'opinion"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26398,8 +20813,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm836,
-    flashcards: flash836,
   },
   {
     id: "tale-italien-strutture-enfatiche",
@@ -26410,7 +20823,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B2",
     duree: 12,
-    prerequis: ["Les pronoms clitiques (COD/COI)","Les particules ne et ci","La phrase simple et l'ordre des mots"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26418,8 +20830,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm837,
-    flashcards: flash837,
   },
   {
     id: "tale-italien-vocabolario-societa-mondo",
@@ -26430,7 +20840,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — classe terminale, CECRL B2",
     duree: 12,
-    prerequis: ["Le lexique de la citoyenneté","Le subjonctif et les connecteurs logiques"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26438,8 +20847,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm838,
-    flashcards: flash838,
   },
   {
     id: "tale-italien-civilta-italiano-nel-mondo",
@@ -26450,7 +20857,6 @@ export const CHAPITRES = [
     matiere: "italien",
     programme: "Programme de langues vivantes — CECRL B2",
     duree: 12,
-    prerequis: ["Comprendre un texte documentaire en italien","Connaître des repères sur l'Italie et sa culture"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26458,8 +20864,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm839,
-    flashcards: flash839,
   },
   {
     id: "tale-lca-civilisation-antique",
@@ -26470,7 +20874,6 @@ export const CHAPITRES = [
     matiere: "langues-anciennes",
     programme: "LCA — lycée",
     duree: 16,
-    prerequis: ["Repères de mythologie et d'histoire antique","Lecture d'auteurs latins et grecs"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26478,8 +20881,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm840,
-    flashcards: flash840,
   },
   {
     id: "tale-compl-math-suites-evolution",
@@ -26490,7 +20891,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 15,
-    prerequis: ["Suites arithmétiques et géométriques (Première)","Taux d'évolution et coefficient multiplicateur (Première)","Sens de variation d'une suite (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26498,8 +20898,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm841,
-    flashcards: flash841,
   },
   {
     id: "tale-compl-math-probabilites-bayes-binomiale",
@@ -26510,7 +20908,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 15,
-    prerequis: ["Probabilités, événements et arbres pondérés (Première)","Union, intersection et événement contraire (Seconde)","Puissances et calcul fractionnaire (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26518,8 +20915,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm842,
-    flashcards: flash842,
   },
   {
     id: "tale-compl-math-derivation-convexite",
@@ -26530,7 +20925,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 15,
-    prerequis: ["Nombre dérivé et fonction dérivée (Première spécialité)","Dérivées des fonctions de référence et opérations (Première spécialité)","Équation de la tangente en un point (Première spécialité)","Fonction exponentielle (Première spécialité)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26538,8 +20932,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm843,
-    flashcards: flash843,
   },
   {
     id: "tale-compl-math-continuite-tvi",
@@ -26550,7 +20942,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 11,
-    prerequis: ["Limite d'une fonction en un point et en l'infini (Terminale)","Dérivation et sens de variation (Première)","Tableau de variations (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26558,8 +20949,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm844,
-    flashcards: flash844,
   },
   {
     id: "tale-compl-math-exponentielle-logarithme",
@@ -26570,7 +20959,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 15,
-    prerequis: ["Fonction exponentielle (Première)","Dérivation et variations","Limites de fonctions"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26578,8 +20966,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm845,
-    flashcards: flash845,
   },
   {
     id: "tale-compl-math-primitives-equations-differentielles",
@@ -26590,7 +20976,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 12,
-    prerequis: ["Dérivation et dérivées des fonctions usuelles (Première)","Fonctions exponentielle et logarithme népérien (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26598,8 +20983,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm846,
-    flashcards: flash846,
   },
   {
     id: "tale-compl-math-calcul-integral",
@@ -26610,7 +20993,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 12,
-    prerequis: ["Primitives des fonctions usuelles (Terminale, chapitre voisin « Primitives et équations différentielles »)","Continuité et dérivation (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26618,8 +21000,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm847,
-    flashcards: flash847,
   },
   {
     id: "tale-compl-math-lois-densite-temps-attente",
@@ -26630,7 +21010,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths complémentaires, terminale générale",
     duree: 13,
-    prerequis: ["Calcul intégral (Terminale, chapitre voisin « Calcul intégral (calculs d'aires) »)","Fonction exponentielle (Terminale, chapitre « Fonctions logarithme et exponentielle »)","Probabilités conditionnelles (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26638,8 +21017,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm848,
-    flashcards: flash848,
   },
   {
     id: "tale-exp-math-complexes-algebrique",
@@ -26650,7 +21027,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths expertes, terminale générale",
     duree: 14,
-    prerequis: ["Équations du second degré et discriminant (Première)","Identités remarquables (Seconde)","Calcul littéral et fractions (collège / Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26658,8 +21034,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-operations","second-degre-complexe"],
-    qcm: qcm849,
-    flashcards: flash849,
   },
   {
     id: "tale-exp-math-complexes-geometrique",
@@ -26670,7 +21044,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths expertes, terminale générale",
     duree: 15,
-    prerequis: ["Nombres complexes — point de vue algébrique (maths expertes)","Trigonométrie et cercle trigonométrique (Première)","Vecteurs et repérage du plan (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26678,8 +21051,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme"],
-    qcm: qcm850,
-    flashcards: flash850,
   },
   {
     id: "tale-exp-math-arithmetique",
@@ -26690,7 +21061,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths expertes, terminale générale",
     duree: 16,
-    prerequis: ["Ensembles de nombres et notation (Seconde)","Raisonnement par récurrence (Terminale)","Équations du premier degré à coefficients entiers (Collège)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26698,8 +21068,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["pgcd-euclide","congruences","decomposition-premiers"],
-    qcm: qcm851,
-    flashcards: flash851,
   },
   {
     id: "tale-exp-math-graphes-matrices",
@@ -26710,7 +21078,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — option maths expertes, terminale générale",
     duree: 16,
-    prerequis: ["Calcul matriciel et systèmes (notions de Première/Terminale)","Suites numériques (Terminale)","Probabilités et arbres pondérés (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26718,8 +21085,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm852,
-    flashcards: flash852,
   },
   {
     id: "tale-spe-math-logique-ensembles",
@@ -26730,7 +21095,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 10,
-    prerequis: ["Ensembles de nombres $\\mathbb{N}, \\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$ (Seconde)","Intervalles de $\\mathbb{R}$ (Seconde)","Notion de fonction et d'équation (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26738,8 +21102,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm853,
-    flashcards: flash853,
   },
   {
     id: "tale-spe-math-suites",
@@ -26750,7 +21112,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Suites arithmétiques et géométriques (Première spé — chapitre « Suites numériques, modèles discrets »)","Approche intuitive de la limite (Première spé)","Sens de variation d'une suite (Première spé)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26758,8 +21119,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm854,
-    flashcards: flash854,
   },
   {
     id: "tale-spe-math-limites-fonctions",
@@ -26770,7 +21129,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Dérivation (Première)","Fonctions de référence : puissances, racine carrée, exponentielle (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26778,8 +21136,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm855,
-    flashcards: flash855,
   },
   {
     id: "tale-spe-math-continuite",
@@ -26790,7 +21146,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Limite d'une fonction en un point et en l'infini (Terminale)","Dérivation et sens de variation (Première)","Suites et convergence (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26798,8 +21153,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm856,
-    flashcards: flash856,
   },
   {
     id: "tale-spe-math-derivation-convexite",
@@ -26810,7 +21163,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Nombre dérivé et fonction dérivée (Première spécialité)","Dérivées des fonctions de référence et opérations (Première spécialité)","Lien entre signe de la dérivée et variations (Première spécialité)","Équation de la tangente (Première spécialité)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26818,8 +21170,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm857,
-    flashcards: flash857,
   },
   {
     id: "tale-spe-math-fonction-logarithme",
@@ -26830,7 +21180,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 13,
-    prerequis: ["Fonction exponentielle (Première)","Dérivation et variations (Première)","Limites de fonctions (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26838,8 +21187,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm858,
-    flashcards: flash858,
   },
   {
     id: "tale-spe-math-fonctions-trigonometriques",
@@ -26850,7 +21197,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 13,
-    prerequis: ["Trigonométrie et cercle trigonométrique (Première spécialité)","Dérivation et sens de variation (Première spécialité)","Composée de fonctions et dérivée de la composée (Terminale spécialité)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26858,8 +21204,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-equation"],
-    qcm: qcm859,
-    flashcards: flash859,
   },
   {
     id: "tale-spe-math-primitives-equations-differentielles",
@@ -26870,7 +21214,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Dérivation et dérivées des fonctions usuelles (Première)","Fonction exponentielle (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26878,8 +21221,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm860,
-    flashcards: flash860,
   },
   {
     id: "tale-spe-math-calcul-integral",
@@ -26890,7 +21231,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Primitives d'une fonction continue (Terminale, chapitre voisin « Primitives, équations différentielles »)","Continuité et dérivation (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26898,8 +21238,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm861,
-    flashcards: flash861,
   },
   {
     id: "tale-spe-math-vecteurs-droites-plans-espace",
@@ -26910,7 +21248,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 13,
-    prerequis: ["Vecteurs du plan, colinéarité et combinaisons linéaires (Seconde, puis Première spé)","Repérage dans le plan, coordonnées d'un vecteur (Seconde)","Translations (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26918,8 +21255,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm862,
-    flashcards: flash862,
   },
   {
     id: "tale-spe-math-produit-scalaire-espace",
@@ -26930,7 +21265,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 15,
-    prerequis: ["Vecteurs, droites et plans de l'espace (Terminale spé — chapitre « Vecteurs, droites et plans de l'espace »)","Produit scalaire dans le plan (Première spé)","Colinéarité et bases de l'espace (Terminale spé)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26938,8 +21272,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    qcm: qcm863,
-    flashcards: flash863,
   },
   {
     id: "tale-spe-math-combinatoire-denombrement",
@@ -26950,7 +21282,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Ensembles, cardinal d'un ensemble fini (Seconde)","Arbres de dénombrement et probabilités (Seconde – Première)","Puissances et notation exposant (collège – Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26958,8 +21289,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm864,
-    flashcards: flash864,
   },
   {
     id: "tale-spe-math-listes",
@@ -26970,7 +21299,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 9,
-    prerequis: ["Boucle for et fonction range (Seconde)","Notion d'ensemble : appartenance, inclusion (Terminale, vocabulaire ensembliste)","Combinatoire et dénombrement (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26978,8 +21306,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm865,
-    flashcards: flash865,
   },
   {
     id: "tale-spe-math-loi-binomiale",
@@ -26990,7 +21316,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Coefficients binomiaux (Terminale, chapitre « Combinatoire et dénombrement »)","Probabilités conditionnelles et indépendance (Première)","Arbres pondérés et probabilités totales (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -26998,8 +21323,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm866,
-    flashcards: flash866,
   },
   {
     id: "tale-spe-math-sommes-variables-concentration",
@@ -27010,7 +21333,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028",
     duree: 14,
-    prerequis: ["Loi binomiale et schéma de Bernoulli (Terminale spé — chapitre « Loi binomiale »)","Variables aléatoires, espérance et variance (Première spé)","Loi de Bernoulli (Première spé)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27018,8 +21340,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm867,
-    flashcards: flash867,
   },
   {
     id: "tale-nsi-programmation-et-complexite",
@@ -27030,7 +21350,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Terminale — spécialité NSI (programme officiel)",
     duree: 14,
-    prerequis: ["Programmation Python (fonctions, boucles, tests) de Première","Notions d'algorithmes de tri et de recherche"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27038,8 +21357,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm868,
-    flashcards: flash868,
   },
   {
     id: "tale-nsi-recursivite-et-diviser-pour-regner",
@@ -27050,7 +21367,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Terminale — spécialité NSI (programme officiel)",
     duree: 13,
-    prerequis: ["Fonctions et conditions en Python (Première)","Notion de pile d'appels"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27058,8 +21374,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm869,
-    flashcards: flash869,
   },
   {
     id: "tale-nsi-structures-de-donnees",
@@ -27070,7 +21384,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Terminale — spécialité NSI (programme officiel)",
     duree: 14,
-    prerequis: ["Programmation Python de Première (fonctions, listes, dictionnaires, classes)","Notion de type et d'interface abstraite d'un type"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27078,8 +21391,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm870,
-    flashcards: flash870,
   },
   {
     id: "tale-nsi-bases-de-donnees-et-sql",
@@ -27090,7 +21401,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Terminale — spécialité NSI (programme officiel)",
     duree: 15,
-    prerequis: ["Notion de données structurées (tables, dictionnaires) de Première","Manipulation de collections en Python"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27098,8 +21408,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm871,
-    flashcards: flash871,
   },
   {
     id: "tale-nsi-reseaux-et-routage",
@@ -27110,7 +21418,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Terminale — spécialité NSI (programme officiel)",
     duree: 13,
-    prerequis: ["Notions de réseau et d'adresse IP de Première","Graphes (chapitre voisin) pour comprendre le routage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27118,8 +21425,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm872,
-    flashcards: flash872,
   },
   {
     id: "tale-nsi-algorithmes-de-graphes",
@@ -27130,7 +21435,6 @@ export const CHAPITRES = [
     matiere: "nsi",
     programme: "Terminale — spécialité NSI (programme officiel)",
     duree: 14,
-    prerequis: ["Piles et files (chapitre « Structures de données »)","Récursivité (chapitre voisin)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27138,8 +21442,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm873,
-    flashcards: flash873,
   },
   {
     id: "tale-philo-methode-dissertation",
@@ -27150,7 +21452,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["Les notions du programme","Les repères conceptuels"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27158,8 +21459,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm874,
-    flashcards: flash874,
   },
   {
     id: "tale-philo-methode-explication-texte",
@@ -27170,7 +21469,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["Les notions du programme","Les repères conceptuels"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27178,8 +21476,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm875,
-    flashcards: flash875,
   },
   {
     id: "tale-philo-reperes-conceptuels",
@@ -27190,7 +21486,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["Les notions du programme"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27198,8 +21493,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm876,
-    flashcards: flash876,
   },
   {
     id: "tale-philo-conscience",
@@ -27210,7 +21503,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["L'inconscient","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27218,8 +21510,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm877,
-    flashcards: flash877,
   },
   {
     id: "tale-philo-inconscient",
@@ -27230,7 +21520,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La conscience","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27238,8 +21527,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm878,
-    flashcards: flash878,
   },
   {
     id: "tale-philo-temps",
@@ -27250,7 +21537,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La conscience","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27258,8 +21544,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm879,
-    flashcards: flash879,
   },
   {
     id: "tale-philo-langage",
@@ -27270,7 +21554,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La conscience","La vérité"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27278,8 +21561,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm880,
-    flashcards: flash880,
   },
   {
     id: "tale-philo-raison",
@@ -27290,7 +21571,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La conscience","La vérité"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27298,8 +21578,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm881,
-    flashcards: flash881,
   },
   {
     id: "tale-philo-verite",
@@ -27310,7 +21588,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La raison","La conscience"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27318,8 +21595,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm882,
-    flashcards: flash882,
   },
   {
     id: "tale-philo-science",
@@ -27330,7 +21605,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La vérité","La raison"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27338,8 +21612,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm883,
-    flashcards: flash883,
   },
   {
     id: "tale-philo-technique",
@@ -27350,7 +21622,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La science","Le travail"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27358,8 +21629,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm884,
-    flashcards: flash884,
   },
   {
     id: "tale-philo-travail",
@@ -27370,7 +21639,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La technique","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27378,8 +21646,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm885,
-    flashcards: flash885,
   },
   {
     id: "tale-philo-art",
@@ -27390,7 +21656,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La technique","La vérité"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27398,8 +21663,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm886,
-    flashcards: flash886,
   },
   {
     id: "tale-philo-nature",
@@ -27410,7 +21673,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La technique","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27418,8 +21680,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm887,
-    flashcards: flash887,
   },
   {
     id: "tale-philo-religion",
@@ -27430,7 +21690,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La raison","La conscience"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27438,8 +21697,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm888,
-    flashcards: flash888,
   },
   {
     id: "tale-philo-liberte",
@@ -27450,7 +21707,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La conscience","Le devoir"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27458,8 +21714,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm889,
-    flashcards: flash889,
   },
   {
     id: "tale-philo-devoir",
@@ -27470,7 +21724,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La liberté","Le bonheur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27478,8 +21731,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm890,
-    flashcards: flash890,
   },
   {
     id: "tale-philo-bonheur",
@@ -27490,7 +21741,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["Le devoir","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27498,8 +21748,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm891,
-    flashcards: flash891,
   },
   {
     id: "tale-philo-justice",
@@ -27510,7 +21758,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["L'État","Le devoir"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27518,8 +21765,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm892,
-    flashcards: flash892,
   },
   {
     id: "tale-philo-etat",
@@ -27530,7 +21775,6 @@ export const CHAPITRES = [
     matiere: "philosophie",
     programme: "Programme de philosophie — terminale",
     duree: 15,
-    prerequis: ["La justice","La liberté"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27538,8 +21782,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm893,
-    flashcards: flash893,
   },
   {
     id: "tale-spe-pc-acide-base-ph",
@@ -27550,7 +21792,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Espèces chimiques et concentration (Seconde)","Réaction chimique et équation de réaction (Première)","Fonction logarithme décimal $\\log$ (Maths, Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27558,8 +21799,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm894,
-    flashcards: flash894,
   },
   {
     id: "tale-spe-pc-methodes-physiques-analyse",
@@ -27570,7 +21809,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Concentration en quantité de matière (Seconde)","Dilution et facteur de dilution (Seconde)","Absorption de la lumière et couleur (Première)","Fonction linéaire et coefficient directeur (Maths)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27578,8 +21816,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm895,
-    flashcards: flash895,
   },
   {
     id: "tale-spe-pc-titrages",
@@ -27590,7 +21826,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Concentration, quantité de matière et dilution (Seconde et Première)","Réaction acide-base et pH (Terminale, 1.1)","Conductance et conductivité, loi de Kohlrausch (Terminale, 1.2)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27598,8 +21833,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm896,
-    flashcards: flash896,
   },
   {
     id: "tale-spe-pc-cinetique-chimique",
@@ -27610,7 +21843,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Quantité de matière et concentration (Seconde)","Avancement d'une réaction et tableau d'avancement (Première)","Loi de Beer-Lambert et conductimétrie (Terminale, méthodes physiques d'analyse)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27618,8 +21850,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm897,
-    flashcards: flash897,
   },
   {
     id: "tale-spe-pc-transformations-nucleaires",
@@ -27630,7 +21860,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Constitution du noyau atomique, écriture $^{A}_{Z}\\text{X}$ (Seconde)","Fonction exponentielle (Terminale, maths ou spécialité)","Puissances de 10 et écriture scientifique"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27638,8 +21867,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm898,
-    flashcards: flash898,
   },
   {
     id: "tale-spe-pc-equilibre-sens-evolution",
@@ -27650,7 +21877,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Réaction chimique et tableau d'avancement (Première)","Concentration et quantité de matière (Seconde)","Transformations acide-base et pH (Terminale)","Fonction logarithme décimal $\\log$ (Maths, Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27658,8 +21884,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm899,
-    flashcards: flash899,
   },
   {
     id: "tale-spe-pc-electrolyse",
@@ -27670,7 +21894,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Oxydoréduction et demi-équations électroniques (Première)","Sens d'évolution spontanée et quotient de réaction (Terminale)","Quantité de matière, masse molaire, volume molaire"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27678,8 +21901,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm900,
-    flashcards: flash900,
   },
   {
     id: "tale-spe-pc-synthese-organique",
@@ -27690,7 +21911,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Structure des entités organiques et groupes caractéristiques (Première)","Vitesse de réaction et facteurs cinétiques (Terminale)","Rendement d'une transformation, réactif limitant (Première)","Électronégativité et polarisation des liaisons (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27698,8 +21918,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm901,
-    flashcards: flash901,
   },
   {
     id: "tale-spe-pc-decrire-mouvement",
@@ -27710,7 +21928,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Vecteurs et coordonnées (Seconde)","Vitesse moyenne et référentiel (Seconde)","Dérivée d'une fonction (Maths, Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27718,8 +21935,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm902,
-    flashcards: flash902,
   },
   {
     id: "tale-spe-pc-lois-newton-champs",
@@ -27730,7 +21945,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 16,
-    prerequis: ["Vecteurs position, vitesse et accélération (Terminale, 2.1)","Forces et interactions ; poids et champ de pesanteur (Première/Seconde)","Dérivation d'une fonction (Terminale maths)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27738,8 +21952,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm903,
-    flashcards: flash903,
   },
   {
     id: "tale-spe-pc-ecoulement-fluide",
@@ -27750,7 +21962,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Masse volumique et pression (Seconde)","Forces et principe d'inertie (Première)","Énergie cinétique et énergie potentielle (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27758,8 +21969,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm904,
-    flashcards: flash904,
   },
   {
     id: "tale-spe-pc-gaz-parfait",
@@ -27770,7 +21979,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Quantité de matière et mole (Seconde)","Pression et forces pressantes (Seconde)","Écriture scientifique et conversions d'unités (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27778,8 +21986,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm905,
-    flashcards: flash905,
   },
   {
     id: "tale-spe-pc-premier-principe-thermique",
@@ -27790,7 +21996,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Énergie mécanique et travail d'une force (Première)","Modèle du gaz parfait, température thermodynamique (Terminale)","Puissance et énergie (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27798,8 +22003,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm906,
-    flashcards: flash906,
   },
   {
     id: "tale-spe-pc-dipole-rc",
@@ -27810,7 +22013,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Loi d'Ohm et loi des mailles (Première)","Intensité et charge électrique (Première)","Dérivée d'une fonction, fonction exponentielle (maths)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27818,8 +22020,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm907,
-    flashcards: flash907,
   },
   {
     id: "tale-spe-pc-phenomenes-ondulatoires",
@@ -27830,7 +22030,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 15,
-    prerequis: ["Ondes et signaux (Première spécialité)","Relation fondamentale λ = v·T = v/f (Première)","Fonction logarithme décimal (Maths spécialité)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27838,8 +22037,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm908,
-    flashcards: flash908,
   },
   {
     id: "tale-spe-pc-lunette-photons",
@@ -27850,7 +22047,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité physique-chimie, terminale générale",
     duree: 14,
-    prerequis: ["Lentilles minces convergentes et relation de conjugaison (Première)","Ondes et signaux, relation $\\lambda = c/\\nu$ (Première)","Énergie cinétique $E_c = \\tfrac{1}{2}mv^2$ (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27858,8 +22054,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm909,
-    flashcards: flash909,
   },
   {
     id: "tale-ses-sources-croissance",
@@ -27870,7 +22064,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Notion de PIB et de valeur ajoutée","Calcul d'un taux de variation en pourcentage"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27878,8 +22071,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm910,
-    flashcards: flash910,
   },
   {
     id: "tale-ses-commerce-mondialisation",
@@ -27890,7 +22081,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Notion de spécialisation et d'échange","Lecture de pourcentages et d'indices"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27898,8 +22088,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm911,
-    flashcards: flash911,
   },
   {
     id: "tale-ses-marche-du-travail-chomage",
@@ -27910,7 +22098,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Mécanisme de l'offre et de la demande","Notion de population active"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27918,8 +22105,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm912,
-    flashcards: flash912,
   },
   {
     id: "tale-ses-monnaie-crises-financieres",
@@ -27930,7 +22115,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Fonctions de la monnaie","Distinction financement interne et externe"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27938,8 +22122,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm913,
-    flashcards: flash913,
   },
   {
     id: "tale-ses-politiques-economiques",
@@ -27950,7 +22132,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Notion de demande globale","Distinction déficit et dette publics"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27958,8 +22139,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm914,
-    flashcards: flash914,
   },
   {
     id: "tale-ses-structure-sociale-classes",
@@ -27970,7 +22149,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Notion de groupe social","Lecture de tableaux et de coefficients"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27978,8 +22156,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm915,
-    flashcards: flash915,
   },
   {
     id: "tale-ses-mobilite-sociale",
@@ -27990,7 +22166,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Nomenclature des PCS","Lecture d'un tableau à double entrée et de pourcentages"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -27998,8 +22173,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm916,
-    flashcards: flash916,
   },
   {
     id: "tale-ses-ecole-et-inegalites",
@@ -28010,7 +22183,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 15,
-    prerequis: ["Notion de capital culturel","Lecture de pourcentages et de taux"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28018,8 +22190,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm917,
-    flashcards: flash917,
   },
   {
     id: "tale-ses-engagement-politique",
@@ -28030,7 +22200,6 @@ export const CHAPITRES = [
     matiere: "ses",
     programme: "Programme de SES — terminale (spécialité)",
     duree: 12,
-    prerequis: ["Voter : une affaire individuelle ou collective ? (première)","Notions de base sur l'opinion publique et la socialisation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28038,8 +22207,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm918,
-    flashcards: flash918,
   },
   {
     id: "tale-si-modelisation-des-mouvements",
@@ -28050,7 +22217,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Terminale — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 14,
-    prerequis: ["Vecteurs et repères (Seconde / Première SI)","Dérivation (Première)","Forces et principe d'inertie (Physique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28058,8 +22224,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm919,
-    flashcards: flash919,
   },
   {
     id: "tale-si-energie-dans-les-systemes",
@@ -28070,7 +22234,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Terminale — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 13,
-    prerequis: ["Grandeurs électriques (tension, courant)","Puissance et énergie (Première SI)","Mouvement et forces (Physique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28078,8 +22241,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm920,
-    flashcards: flash920,
   },
   {
     id: "tale-si-resistance-des-structures",
@@ -28090,7 +22251,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Terminale — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 13,
-    prerequis: ["Forces et actions mécaniques (Première SI)","Aires et unités","Proportionnalité"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28098,8 +22258,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm921,
-    flashcards: flash921,
   },
   {
     id: "tale-si-transmission-de-linformation",
@@ -28110,7 +22268,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Terminale — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 13,
-    prerequis: ["Grandeurs numériques et binaire (Première SI)","Chaîne d'information (acquérir, traiter, communiquer)","Notions de signal"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28118,8 +22275,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm922,
-    flashcards: flash922,
   },
   {
     id: "tale-si-asservissement-et-regulation",
@@ -28130,7 +22285,6 @@ export const CHAPITRES = [
     matiere: "si",
     programme: "Terminale — spécialité Sciences de l'ingénieur (programme officiel)",
     duree: 14,
-    prerequis: ["Modélisation des systèmes par schéma-blocs (Première SI)","Notion de fonction et de proportionnalité","Grandeurs physiques et unités"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28138,8 +22292,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm923,
-    flashcards: flash923,
   },
   {
     id: "tale-svt-brassage-genetique-et-meiose",
@@ -28150,7 +22302,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Terminale — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Chromosomes, gènes et allèles (Première spécialité SVT)","Réplication de l'ADN et cycle cellulaire (Première)","Notion de caryotype et cellules diploïdes/haploïdes (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28158,8 +22309,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm924,
-    flashcards: flash924,
   },
   {
     id: "tale-svt-evolution-et-speciation",
@@ -28170,7 +22319,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Terminale — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Mutations et diversité des allèles (Première spécialité SVT)","Brassage génétique et méiose (Terminale)","Notion d'espèce et de biodiversité (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28178,8 +22326,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm925,
-    flashcards: flash925,
   },
   {
     id: "tale-svt-geothermie-et-flux-de-chaleur",
@@ -28190,7 +22336,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Terminale — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Structure interne de la Terre (Première spécialité SVT)","Tectonique des plaques (Quatrième et Première)","Notion de radioactivité (Physique-Chimie)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28198,8 +22343,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm926,
-    flashcards: flash926,
   },
   {
     id: "tale-svt-climats-passes-et-actuels",
@@ -28210,7 +22353,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Terminale — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Effet de serre et bilan radiatif (Seconde / Enseignement scientifique)","Cycle du carbone (Première)","Notions de géologie et sédimentation"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28218,8 +22360,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm927,
-    flashcards: flash927,
   },
   {
     id: "tale-svt-reflexe-et-motricite",
@@ -28230,7 +22370,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Terminale — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Système nerveux et communication nerveuse (Seconde / cycle 4)","Cellule et membrane (Seconde)","Notion de neurone"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28238,8 +22377,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm928,
-    flashcards: flash928,
   },
   {
     id: "tale-svt-glycemie-et-diabete",
@@ -28250,7 +22387,6 @@ export const CHAPITRES = [
     matiere: "svt",
     programme: "Terminale — spécialité SVT (programme officiel)",
     duree: 7,
-    prerequis: ["Nutrition et système digestif (cycle 4)","Communication hormonale (Première / cycle 4)","Notion de cellule et de récepteur"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28258,8 +22394,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm929,
-    flashcards: flash929,
   },
   {
     id: "tale-techno-math-logique-ensembles",
@@ -28270,7 +22404,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 13,
-    prerequis: ["Intervalles de nombres réels (Seconde)","Notations des ensembles de nombres $\\mathbb{N}$, $\\mathbb{Z}$, $\\mathbb{R}$ (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28278,8 +22411,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm930,
-    flashcards: flash930,
   },
   {
     id: "tale-techno-math-suites-arithmetiques-geometriques",
@@ -28290,7 +22421,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 14,
-    prerequis: ["Suites numériques (Première technologique)","Pourcentages et évolutions successives (automatismes)","Puissances d'un nombre (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28298,8 +22428,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    qcm: qcm931,
-    flashcards: flash931,
   },
   {
     id: "tale-techno-math-fonction-inverse",
@@ -28310,7 +22438,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 12,
-    prerequis: ["Dérivation (Première technologique)","Fonctions de la variable réelle (Première technologique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28318,8 +22445,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm932,
-    flashcards: flash932,
   },
   {
     id: "tale-techno-math-fonctions-exponentielles",
@@ -28330,7 +22455,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 13,
-    prerequis: ["Suites arithmétiques et géométriques (Terminale technologique)","Suites numériques (Première technologique)","Puissances d'un nombre et racine carrée (Seconde)","Pourcentages et évolutions successives (automatismes)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28338,8 +22462,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm933,
-    flashcards: flash933,
   },
   {
     id: "tale-techno-math-logarithme-decimal",
@@ -28350,7 +22472,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 12,
-    prerequis: ["Fonctions exponentielles x ↦ aˣ (Terminale technologique)","Suites arithmétiques et géométriques (Terminale technologique)","Puissances de 10 (Seconde)","Pourcentages et évolutions successives (automatismes)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28358,8 +22479,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm934,
-    flashcards: flash934,
   },
   {
     id: "tale-techno-math-statistiques-deux-variables",
@@ -28370,7 +22489,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 13,
-    prerequis: ["Statistiques à deux variables, ajustement affine (Première technologique)","Fonction logarithme décimal (Terminale technologique)","Fonctions exponentielles x ↦ a^x (Terminale technologique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28378,8 +22496,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm935,
-    flashcards: flash935,
   },
   {
     id: "tale-techno-math-probabilites-conditionnelles",
@@ -28390,7 +22506,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 13,
-    prerequis: ["Probabilités et variables aléatoires (Première technologique)","Vocabulaire ensembliste — intersection, complémentaire (Terminale techno)","Proportions et pourcentages (automatismes)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28398,8 +22513,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm936,
-    flashcards: flash936,
   },
   {
     id: "tale-techno-math-variables-aleatoires-binomiale",
@@ -28410,7 +22523,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 14,
-    prerequis: ["Probabilités et variables aléatoires (Première technologique)","Probabilités conditionnelles et arbres pondérés (Terminale techno)","Puissances et calcul avec des pourcentages (automatismes)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28418,8 +22530,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm937,
-    flashcards: flash937,
   },
   {
     id: "tale-techno-math-algorithmique-programmation",
@@ -28430,7 +22540,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique, applicable rentrée 2027",
     duree: 11,
-    prerequis: ["Variables, boucle for et fonction range en Python (Seconde, algorithmique)","Suites arithmétiques et géométriques (Terminale technologique)","Moyenne d'une série statistique (Première technologique)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28438,8 +22547,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm938,
-    flashcards: flash938,
   },
   {
     id: "tale-techno-math-activites-geometriques-std2a",
@@ -28450,7 +22557,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO du 2 avril 2026 — mathématiques, terminale technologique (STD2A), applicable rentrée 2027",
     duree: 15,
-    prerequis: ["Théorème de Pythagore et cercle (collège)","Trigonométrie dans le triangle rectangle (Seconde)","Solides usuels et vocabulaire de l'espace (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28458,8 +22564,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm939,
-    flashcards: flash939,
   },
   {
     id: "tale-sti2d-pc-mesure-incertitudes",
@@ -28470,7 +22574,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 13,
-    prerequis: ["Mesure et incertitudes (Première STI2D/STL — chapitre mesure-incertitudes, même parcours)","Puissances de dix et conversions d'unités (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28478,8 +22581,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    qcm: qcm940,
-    flashcards: flash940,
   },
   {
     id: "tale-sti2d-math-exponentielle-logarithme",
@@ -28490,7 +22591,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 15,
-    prerequis: ["Fonctions exponentielles x ↦ aˣ (Première STI2D/STL)","Dérivation (Première STI2D/STL)","Suites géométriques (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28498,8 +22598,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm941,
-    flashcards: flash941,
   },
   {
     id: "tale-sti2d-pc-matiere-materiaux",
@@ -28510,7 +22608,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 16,
-    prerequis: ["Constitution de l'atome, écriture du noyau (Seconde)","Énergie, puissance, rendement (Première STI2D/STL)","Fonctions exponentielle et logarithme (Maths, Terminale STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28518,8 +22615,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm942,
-    flashcards: flash942,
   },
   {
     id: "tale-sti2d-math-integration-composition",
@@ -28530,7 +22625,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 14,
-    prerequis: ["Dérivation (Première STI2D/STL)","Fonction exponentielle de base e (Terminale STI2D/STL)","Fonction logarithme népérien (Terminale STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28538,8 +22632,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm943,
-    flashcards: flash943,
   },
   {
     id: "tale-sti2d-math-equations-differentielles",
@@ -28550,7 +22642,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 13,
-    prerequis: ["Fonction exponentielle de base e et logarithme népérien (chapitre exponentielle-logarithme, même parcours)","Dérivation, dérivée de $e^{kx}$ (Première STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28558,8 +22649,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm944,
-    flashcards: flash944,
   },
   {
     id: "tale-sti2d-pc-energie-mecanique-fluides",
@@ -28570,7 +22659,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 15,
-    prerequis: ["Énergie : conversions, chaînes et rendement (Première STI2D/STL — chapitre energie, même parcours)","Principe d'inertie et notion de force (Seconde)","Mesure et incertitudes (terminale) — pour l'écriture des résultats"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28578,8 +22666,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    qcm: qcm945,
-    flashcards: flash945,
   },
   {
     id: "tale-sti2d-pc-energie-electrique-thermique",
@@ -28590,7 +22676,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 14,
-    prerequis: ["Puissance, énergie et rendement d'une conversion (Première STI2D/STL)","Loi d'Ohm et puissance électrique (Première STI2D/STL)","Puissances de dix et conversions d'unités (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28598,8 +22683,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    qcm: qcm946,
-    flashcards: flash946,
   },
   {
     id: "tale-sti2d-math-complexes-exponentielle",
@@ -28610,7 +22693,6 @@ export const CHAPITRES = [
     matiere: "mathematiques",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 15,
-    prerequis: ["Nombres complexes — forme algébrique, module, argument, forme trigonométrique (Première STI2D/STL)","Trigonométrie (Première STI2D/STL)","Primitives (Terminale STI2D/STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28618,8 +22700,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme","complexe-operations","second-degre-complexe"],
-    qcm: qcm947,
-    flashcards: flash947,
   },
   {
     id: "tale-sti2d-pc-ondes-signaux",
@@ -28630,7 +22710,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — spécialité PC et maths, terminale STI2D/STL",
     duree: 14,
-    prerequis: ["Ondes et information (Première STI2D/STL — chapitre ondes-information, même parcours)","Nombres complexes et exponentielle complexe (Terminale STI2D/STL — transformer a·cos(ωt) + b·sin(ωt) en A·cos(ωt + φ))","Fonctions exponentielle et logarithme népérien (Terminale STI2D/STL — logarithme décimal)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28638,8 +22717,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm948,
-    flashcards: flash948,
   },
   {
     id: "tale-st2s-pc-molecules-organiques",
@@ -28650,7 +22727,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 16,
-    prerequis: ["Atomes, électrons et classification périodique (Seconde)","Molécules et liaisons covalentes, notion de formule brute (Seconde)","Écriture des ions et couches électroniques (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28658,8 +22734,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm949,
-    flashcards: flash949,
   },
   {
     id: "tale-st2s-pc-biomolecules-eau",
@@ -28670,7 +22744,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 17,
-    prerequis: ["Molécules organiques : description et structure (pc-sante-st2s)","Fonctions chimiques : alcool, acide carboxylique, amine, ester, amide (Terminale)","Molécules et liaisons covalentes (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28678,8 +22751,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm950,
-    flashcards: flash950,
   },
   {
     id: "tale-st2s-pc-glucides-ressources-naturelles",
@@ -28690,7 +22761,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 18,
-    prerequis: ["Biomolécules et propriétés de l'eau (pc-sante-st2s)","Molécules organiques : description et structure (pc-sante-st2s)","Écriture scientifique et conversions d'unités (Seconde)","Ions, formules et concentration d'une solution (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28698,8 +22768,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm951,
-    flashcards: flash951,
   },
   {
     id: "tale-st2s-pc-besoins-energetiques-alimentation",
@@ -28710,7 +22778,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 17,
-    prerequis: ["Énergie, unité joule et conversions d'unités (Seconde)","Écriture scientifique et puissances de 10 (Seconde)","Transformation chimique et combustion (Seconde)","Molécules organiques : glucides, lipides, protides (Tale ST2S)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28718,8 +22785,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    qcm: qcm952,
-    flashcards: flash952,
   },
   {
     id: "tale-st2s-pc-fluides-pression-sanguine",
@@ -28730,7 +22795,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°1 du 22 janvier 2019 — physique-chimie pour la santé, série ST2S",
     duree: 16,
-    prerequis: ["Écriture scientifique et puissances de 10 (Seconde)","Conversions d'unités (préfixes milli-, centi-, kilo-)","Aire d'un disque et d'un rectangle (collège)","Masse volumique ρ = m/V (Seconde)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28738,8 +22802,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm953,
-    flashcards: flash953,
   },
   {
     id: "tale-stl-spcl-composition-systemes-chimiques",
@@ -28750,7 +22812,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — SPCL, série STL, classe terminale",
     duree: 20,
-    prerequis: ["Concentration en quantité de matière, dilution (Seconde / Première)","Réactions acide-base et d'oxydoréduction, écriture d'équations (Première)","Quantité de matière, tableau d'avancement (Première)","Dosage direct par titrage, équivalence (Première STL)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28758,8 +22819,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire","dilution"],
-    qcm: qcm954,
-    flashcards: flash954,
   },
   {
     id: "tale-stl-spcl-syntheses-mecanismes",
@@ -28770,7 +22829,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — SPCL, série STL, classe terminale",
     duree: 22,
-    prerequis: ["Synthèses chimiques : extraction et purification (Première STL)","Réactif limitant, rendement, quantité de matière (Première STL)","Écriture et équilibrage d'une équation de réaction (Seconde / Première)","Représentation de Lewis et liaison covalente (Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28778,8 +22836,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm955,
-    flashcards: flash955,
   },
   {
     id: "tale-stl-spcl-ondes-mecaniques-em-spectres",
@@ -28790,7 +22846,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — SPCL, série STL, classe terminale",
     duree: 20,
-    prerequis: ["Ondes et signaux, relation $\\lambda = v \\times T$ (Première)","Ondes sonores, ondes transversales et longitudinales (Première)","Spectroscopies UV-visible et infrarouge, loi de Beer-Lambert (Première STL)","Puissances de 10 et chiffres significatifs (Seconde / Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28798,8 +22853,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm956,
-    flashcards: flash956,
   },
   {
     id: "tale-stl-spcl-ondes-transmission-stockage",
@@ -28810,7 +22863,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — SPCL, série STL, classe terminale",
     duree: 22,
-    prerequis: ["Ondes : mécaniques, électromagnétiques et spectres (Terminale STL SPCL)","Ondes électromagnétiques, spectre et relation $\\lambda = c/f$ (Première / Terminale STL)","Puissances de 10, préfixes k/M/G, chiffres significatifs (Seconde / Première)","Fonction logarithme décimal $\\log$ (Terminale)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28818,8 +22870,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm957,
-    flashcards: flash957,
   },
   {
     id: "tale-stl-spcl-systemes-procedes-flux",
@@ -28830,7 +22880,6 @@ export const CHAPITRES = [
     matiere: "physique-chimie",
     programme: "BO spécial n°8 du 25 juillet 2019 — SPCL, série STL, classe terminale",
     duree: 20,
-    prerequis: ["Instrumentation : la chaîne de mesure (Première STL SPCL)","Capteur, conditionneur, régulation tout ou rien, hystérésis (Première STL SPCL)","Puissance, énergie et relation $E = P\\,t$ (Première STL)","Masse volumique $\\rho$, grandeurs et unités du SI, conversions (Seconde / Première)"],
     statut: "brouillon",
     reluPar: null,
     reluLe: null,
@@ -28838,8 +22887,6 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    qcm: qcm958,
-    flashcards: flash958,
   },
 ];
 

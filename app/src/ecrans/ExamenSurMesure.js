@@ -23,6 +23,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { useProgression } from '../progression/Contexte';
 import { CHAPITRES, LIBELLES_NIVEAU, LIBELLES_MATIERE, LIBELLES_PARCOURS, niveaux } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
+import { questionsDuQcm } from '../useContenu';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
 import { typeExercice, uniteExercice, consigneExercice } from '../../lib/autocorrection';
 import { formaterChrono, tempsRestant, phaseChrono } from '../../lib/examen';
@@ -42,17 +43,17 @@ const nomMatiere = (m) => LIBELLES_MATIERE[m] ?? m;
 const nomNiveau = (n) => LIBELLES_NIVEAU[n] ?? n;
 
 /** Le chapitre a-t-il des questions de QCM (banque ou générateur) ? */
-const aDesQcm = (c) => aGenerateur(c.id) || (c.qcm?.questions?.length ?? 0) > 0;
+const aDesQcm = (c) => aGenerateur(c.id) || (c.nbQuestions ?? 0) > 0;
 
-/** Questions de QCM d'un chapitre : générées si possible, sinon la banque écrite. */
-function questionsDuChapitre(c, n, rand) {
+/** Questions de QCM d'un chapitre : générées si possible, sinon la banque écrite (chargée à la demande). */
+async function questionsDuChapitre(c, n, rand) {
   if (aGenerateur(c.id)) {
     try {
       const qs = genererQuestions(c.id, n, rand);
       if (qs.length) return qs;
     } catch { /* on retombe sur la banque */ }
   }
-  return c.qcm?.questions ?? [];
+  return (await questionsDuQcm(c.id)) ?? [];
 }
 
 /** Exercices auto-corrigeables d'un chapitre (chargés à la demande). */
@@ -108,12 +109,15 @@ export default function ExamenSurMesure({ navigation }) {
     const graine = Date.now();
     const rand = creerAlea(graine);
     const besoin = format.nbQcm + format.nbExos;
+    // Questions générées d'abord, dans l'ordre des chapitres (même tirage pour une même graine).
+    const qcms = [];
+    for (const c of chaps) qcms.push(await questionsDuChapitre(c, besoin, rand).catch(() => []));
     const exos = await Promise.all(chaps.map((c) => exercicesAutoDu(c).catch(() => [])));
     if (!vivantRef.current) return;
     const entree = chaps.map((c, i) => ({
       id: c.id,
       matiere: c.matiere,
-      questionsQcm: questionsDuChapitre(c, besoin, rand),
+      questionsQcm: qcms[i],
       exercicesAuto: exos[i],
     }));
     const items = composerExamen({ chapitres: entree, nbQcm: format.nbQcm, nbExos: format.nbExos, graine });

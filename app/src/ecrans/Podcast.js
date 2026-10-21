@@ -16,23 +16,24 @@ import { theme, couleurMatiere } from '../theme';
 import { chapitreParId } from '../contenu-index';
 import { parlerSequence, arreterParole, texteBrut } from '../parole';
 import { useFiche } from '../useFiche';
+import { useCartes } from '../useContenu';
 
 export default function Podcast({ route }) {
   const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
   const { fiche } = useFiche(route.params.id);
+  const { donnee: paquet } = useCartes(chapitre ? chapitre.id : null); // cartes chargées à la demande
 
   // Construit la playlist : cours + cartes (recto/verso).
   const segments = useMemo(() => {
     if (!chapitre) return [];
     const segs = fiche ? [{ titre: 'Cours', texte: texteBrut(fiche) }] : [];
-    const cartes = chapitre.flashcards?.cartes ?? [];
-    cartes.forEach((c, i) => {
+    (paquet?.cartes ?? []).forEach((c, i) => {
       segs.push({ titre: `Carte ${i + 1} — question`, texte: c.recto });
       segs.push({ titre: `Carte ${i + 1} — réponse`, texte: c.verso });
     });
     return segs;
-  }, [chapitre, fiche]);
+  }, [chapitre, fiche, paquet]);
 
   const [enLecture, setEnLecture] = useState(false);
   const [courant, setCourant] = useState(-1);
@@ -68,7 +69,7 @@ export default function Podcast({ route }) {
       <View style={{ padding: t.espace.l, paddingBottom: t.espace.s }}>
         <Text style={{ color: t.couleur.texte, fontSize: t.police.grande, fontWeight: '800' }}>🎧 {chapitre.titre}</Text>
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 2 }}>
-          {segments.length} segments · cours + {(chapitre.flashcards?.cartes?.length ?? 0)} cartes
+          {segments.length} segments · cours + {paquet?.cartes?.length ?? 0} cartes
         </Text>
         <Pressable
           onPress={() => (enLecture ? pause() : lire(courant < 0 ? 0 : courant))}

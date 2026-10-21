@@ -5,7 +5,8 @@
  * déjà disponibles, et de suivre l'état du réseau.
  */
 import { useEffect, useState } from 'react';
-import { chargerFiche, chargerExercices, cheminDonnees } from './contenu-lourd';
+import { chargerFiche, chargerExercices, chargerQcm, chargerCartes, cheminDonnees } from './contenu-lourd';
+import { chapitreParId } from './contenu-index';
 
 const CACHE = 'kamal-campus-v1';
 
@@ -30,7 +31,11 @@ export function useEnLigne() {
   return enLigne;
 }
 
-/** Nombre de chapitres de la liste dont la fiche est déjà gardée sur l'appareil. */
+/**
+ * Nombre de chapitres de la liste déjà gardés sur l'appareil : la fiche ET le QCM
+ * (un chapitre téléchargé avant que les QCM soient chargés à la demande n'a que
+ * sa fiche : il est compté comme à télécharger de nouveau).
+ */
 export async function compterDisponibles(ids) {
   if (!horsLigneDisponible()) return 0;
   try {
@@ -41,7 +46,9 @@ export async function compterDisponibles(ids) {
     const liste = [...urls];
     for (const id of ids) {
       const chemin = cheminDonnees(id);
-      if (chemin && liste.some((u) => u.endsWith(`/donnees/${chemin}/fiche.md`))) n += 1;
+      const a = (f) => liste.some((u) => u.endsWith(`/donnees/${chemin}/${f}`));
+      const avecQcm = (chapitreParId(id)?.nbQuestions ?? 0) > 0;
+      if (chemin && a('fiche.md') && (!avecQcm || a('qcm.json'))) n += 1;
     }
     return n;
   } catch {
@@ -50,14 +57,14 @@ export async function compterDisponibles(ids) {
 }
 
 /**
- * Télécharge la fiche et les exercices de chaque chapitre (le service worker en
- * garde une copie). onProgression(fait, total) est appelé après chaque chapitre.
+ * Télécharge la fiche, les exercices, le QCM et les cartes de chaque chapitre
+ * (le service worker en garde une copie). onProgression(fait, total) est appelé après chaque chapitre.
  * Renvoie le nombre de chapitres téléchargés sans erreur.
  */
 export async function telechargerHorsLigne(ids, onProgression = () => {}) {
   let ok = 0;
   for (let i = 0; i < ids.length; i += 1) {
-    const [fiche] = await Promise.all([chargerFiche(ids[i]), chargerExercices(ids[i])]);
+    const [fiche] = await Promise.all([chargerFiche(ids[i]), chargerExercices(ids[i]), chargerQcm(ids[i]), chargerCartes(ids[i])]);
     if (fiche) ok += 1;
     onProgression(i + 1, ids.length);
   }

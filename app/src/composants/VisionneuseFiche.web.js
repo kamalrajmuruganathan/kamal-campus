@@ -12,9 +12,32 @@ import { useMemo, useRef, useState, useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import MarkdownIt from 'markdown-it';
 import { rendreAvecFormules } from '../../lib/markdownmath';
-import { GABARIT_HTML } from '../visionneuse';
 import { useSombre } from '../useSombre';
 import ZoomSchema from './ZoomSchema';
+
+// Gabarit HTML avec KaTeX et ses polices (≈ 650 Ko) : morceau à part, téléchargé dès le
+// démarrage mais sans retarder l'affichage de l'accueil (qui n'en a pas besoin).
+let GABARIT_HTML = null;
+const promesseGabarit = import('../visionneuse')
+  .then((m) => { GABARIT_HTML = m.GABARIT_HTML; return GABARIT_HTML; })
+  .catch(() => null);
+
+function useGabarit() {
+  const [gabarit, setGabarit] = useState(GABARIT_HTML);
+  const [essai, setEssai] = useState(0);
+  useEffect(() => {
+    if (gabarit) return undefined;
+    let vivant = true;
+    const p = essai === 0 ? promesseGabarit : import('../visionneuse').then((m) => { GABARIT_HTML = m.GABARIT_HTML; return GABARIT_HTML; });
+    p.then((g) => {
+      if (!vivant) return;
+      if (g) setGabarit(g);
+      else setTimeout(() => { if (vivant) setEssai((n) => n + 1); }, 3000); // réseau coupé : on réessaie
+    }).catch(() => { if (vivant) setTimeout(() => setEssai((n) => n + 1), 3000); });
+    return () => { vivant = false; };
+  }, [gabarit, essai]);
+  return gabarit;
+}
 
 const md = new MarkdownIt({
   html: false,
@@ -60,11 +83,13 @@ export default function VisionneuseFiche({ markdown, style, inerte = false }) {
   const [hauteur, setHauteur] = useState(64);
   const iframeRef = useRef(null);
   const sombre = useSombre();
+  const gabarit = useGabarit();
 
   const html = useMemo(() => {
+    if (!gabarit) return null;
     const corps = rendreAvecFormules(md, nettoyerFiche(markdown));
-    return adapterGabarit(GABARIT_HTML, sombre, inerte).replace('__HTML__', () => JSON.stringify(corps));
-  }, [markdown, sombre, inerte]);
+    return adapterGabarit(gabarit, sombre, inerte).replace('__HTML__', () => JSON.stringify(corps));
+  }, [markdown, sombre, inerte, gabarit]);
 
   const mesurer = useCallback(() => {
     const f = iframeRef.current;
@@ -108,6 +133,7 @@ export default function VisionneuseFiche({ markdown, style, inerte = false }) {
 
   return (
     <View style={[{ position: 'relative' }, style]}>
+      {html === null ? <View style={{ height: hauteur }} /> : (
       <iframe
         ref={iframeRef}
         srcDoc={html}
@@ -124,6 +150,7 @@ export default function VisionneuseFiche({ markdown, style, inerte = false }) {
           pointerEvents: inerte ? 'none' : 'auto',
         }}
       />
+      )}
       <ZoomSchema schema={schema} onFermer={fermerSchema} />
     </View>
   );

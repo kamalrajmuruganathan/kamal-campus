@@ -28,6 +28,8 @@ import { chapitreParId, libelleNotion } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { melanger } from '../../lib/quizmix';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
+import { useQcm } from '../useContenu';
+import EtatChargement from '../composants/EtatChargement';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 // Nombre de questions tirées / générées à chaque QCM de chapitre.
@@ -43,6 +45,9 @@ export default function Qcm({ route, navigation }) {
 
   // `tirage` s'incrémente à chaque « Recommencer » pour re-piocher au hasard.
   const [tirage, setTirage] = useState(0);
+  // Banque écrite du chapitre : chargée à la demande (pas pour un générateur ni des questions fournies).
+  const avecBanque = !route.params?.questions && !!chapitre && !aGenerateur(chapitre.id);
+  const banqueQcm = useQcm(avecBanque ? chapitre.id : null);
   const questions = useMemo(() => {
     // QCM de révision / bac blanc / parcours : questions déjà fournies.
     if (route.params?.questions) return route.params.questions;
@@ -52,10 +57,10 @@ export default function Qcm({ route, navigation }) {
     if (chapitre && aGenerateur(chapitre.id)) {
       return genererQuestions(chapitre.id, TAILLE_QCM_CHAPITRE);
     }
-    const banque = chapitre?.qcm?.questions ?? [];
+    const banque = banqueQcm.donnee?.questions ?? [];
     return melanger(banque).slice(0, TAILLE_QCM_CHAPITRE);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chapitre, route.params, tirage]);
+  }, [chapitre, route.params, tirage, banqueQcm.donnee]);
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [reponses, setReponses] = useState([]);
@@ -80,6 +85,10 @@ export default function Qcm({ route, navigation }) {
       );
     }
   }, [estTermine]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (avecBanque && banqueQcm.etat !== 'ok') {
+    return <EtatChargement t={t} etat={banqueQcm.etat} quoi="le QCM" recharger={banqueQcm.recharger} />;
+  }
 
   if (questions.length === 0) {
     return (

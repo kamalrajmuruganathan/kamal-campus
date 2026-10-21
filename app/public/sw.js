@@ -1,7 +1,7 @@
 // Service worker de Kamal Campus.
 //  - Rend l'appli installable et affiche les rappels de révision.
 //  - Hors connexion : garde une copie de l'appli et des chapitres déjà ouverts
-//    (fiches, exercices), pour pouvoir réviser sans internet.
+//    (fiches, exercices, QCM, cartes, sujets), pour pouvoir réviser sans internet.
 //
 // Stratégie « réseau d'abord » : avec internet, on prend TOUJOURS la version en
 // ligne (le contenu reste à jour) et on met la copie à jour au passage ; sans

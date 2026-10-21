@@ -6,7 +6,7 @@
  * jugement « je savais / à revoir » reprogramme la carte (J+1, J+3, J+7…).
  */
 
-import { useState, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -18,18 +18,31 @@ import { CHAPITRES } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { clesDues } from '../../lib/srs';
 import { dateLocale } from '../../lib/serie';
+import { chargerCartes } from '../useContenu';
+import EtatChargement from '../composants/EtatChargement';
 
 const MAX_SESSION = 30; // on plafonne une session pour rester digeste
 
-// Index de toutes les cartes de l'appli : cle « idChapitre#index » → contenu.
-function construireIndex() {
+// Clés de toutes les cartes de l'appli (« idChapitre#index »), d'après l'index des chapitres.
+function toutesLesCles() {
+  const cles = [];
+  for (const c of CHAPITRES) for (let i = 0; i < (c.nbFlashcards || 0); i += 1) cles.push(`${c.id}#${i}`);
+  return cles;
+}
+
+// Contenu des cartes de la session : cle → { recto, verso, matiere, titre }. Les cartes sont
+// chargées à la demande, seulement pour les chapitres de la session. null si un chargement échoue.
+async function chargerIndex(cles) {
+  const ids = [...new Set(cles.map((k) => k.slice(0, k.lastIndexOf('#'))))];
+  const paquets = await Promise.all(ids.map((id) => chargerCartes(id)));
+  if (paquets.some((p) => !p)) return null;
   const idx = {};
-  for (const c of CHAPITRES) {
-    const cartes = c.flashcards?.cartes ?? [];
-    cartes.forEach((carte, i) => {
-      idx[`${c.id}#${i}`] = { recto: carte.recto, verso: carte.verso, matiere: c.matiere, titre: c.titre };
+  ids.forEach((id, n) => {
+    const c = CHAPITRES.find((x) => x.id === id);
+    (paquets[n].cartes ?? []).forEach((carte, i) => {
+      idx[`${id}#${i}`] = { recto: carte.recto, verso: carte.verso, matiere: c?.matiere, titre: c?.titre };
     });
-  }
+  });
   return idx;
 }
 
@@ -37,10 +50,17 @@ export default function RevisionSRS({ navigation }) {
   const t = useSombre() ? theme(true) : theme(false);
   const { profil, noterCarteSrs } = useProgression();
 
-  const index = useMemo(construireIndex, []);
   const jour = dateLocale(new Date());
   // File figée à l'ouverture (ne rétrécit pas sous nos pieds quand on note).
-  const [file] = useState(() => clesDues(profil.srs, Object.keys(index), jour).slice(0, MAX_SESSION));
+  const [file] = useState(() => clesDues(profil.srs, toutesLesCles(), jour).slice(0, MAX_SESSION));
+  const [index, setIndex] = useState(undefined); // undefined = chargement, null = échec
+  const [essai, setEssai] = useState(0);
+  useEffect(() => {
+    let vivant = true;
+    setIndex(undefined);
+    chargerIndex(file).then((x) => { if (vivant) setIndex(x); });
+    return () => { vivant = false; };
+  }, [file, essai]);
 
   const [i, setI] = useState(0);
   const [face, setFace] = useState('recto');
@@ -85,6 +105,10 @@ export default function RevisionSRS({ navigation }) {
         </View>
       </SafeAreaView>
     );
+  }
+
+  if (!index || file.some((k) => !index[k])) {
+    return <EtatChargement t={t} etat={index === undefined ? 'chargement' : 'erreur'} quoi="les cartes" recharger={() => setEssai((n) => n + 1)} />;
   }
 
   const cle = file[i];

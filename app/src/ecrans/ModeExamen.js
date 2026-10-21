@@ -16,6 +16,7 @@ import { couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { QUIZ, LIBELLES_NIVEAU } from '../contenu-index';
+import { chargerQuiz } from '../useContenu';
 import { useProgression } from '../progression/Contexte';
 import {
   dureeConseillee,
@@ -42,9 +43,19 @@ export default function ModeExamen({ navigation }) {
   const duree = epreuve ? epreuve.duree : 0;
   const restant = tempsRestant(duree, ecoule);
 
-  const lancer = (quiz) => {
-    const questions = quiz.questions || [];
-    if (!questions.length) return;
+  const [enCharge, setEnCharge] = useState(null); // quiz en cours de chargement
+
+  // Les questions sont chargées à la demande, au moment de lancer l'épreuve.
+  const lancer = async (quiz) => {
+    if (enCharge) return;
+    setEnCharge(quiz.id);
+    const data = await chargerQuiz(quiz.id);
+    setEnCharge(null);
+    const questions = data?.questions || [];
+    if (!questions.length) {
+      Alert.alert('Épreuve indisponible', 'Impossible de charger les questions. Vérifie ta connexion à Internet.');
+      return;
+    }
     setEpreuve({
       questions,
       titre: quiz.titre,
@@ -134,13 +145,13 @@ export default function ModeExamen({ navigation }) {
             score et le corrigé s’affichent seulement à la fin. L’XP compte normalement.
           </Text>
           {QUIZ.map((q) => {
-            const n = (q.questions || []).length;
+            const n = q.nbQuestions || 0;
             return (
               <Carte
                 key={q.id}
                 t={t}
                 titre={q.titre}
-                sousTitre={`${q.examen || (LIBELLES_NIVEAU[q.niveau] ?? q.niveau)} · ${n} questions · ${formaterChrono(dureeConseillee(n))}`}
+                sousTitre={enCharge === q.id ? 'Chargement des questions…' : `${q.examen || (LIBELLES_NIVEAU[q.niveau] ?? q.niveau)} · ${n} questions · ${formaterChrono(dureeConseillee(n))}`}
                 couleur={couleurMatiere(t, q.matiere)}
                 onPress={() => lancer(q)}
               />

@@ -83,13 +83,12 @@ export default function Controle({ navigation, route }) {
     );
   };
 
-  const lancerBilan = (plan) => {
+  const lancerBilan = async (plan) => {
     const parChapitre = Math.ceil(TAILLE_QCM_BILAN / Math.max(1, plan.chapitres.length));
-    const questions = melanger(plan.chapitres.flatMap((id) => {
-      try { return construireQuestions(id, parChapitre); } catch { return []; }
-    })).slice(0, TAILLE_QCM_BILAN);
+    const lots = await Promise.all(plan.chapitres.map((id) => construireQuestions(id, parChapitre).catch(() => [])));
+    const questions = melanger(lots.flat()).slice(0, TAILLE_QCM_BILAN);
     if (questions.length === 0) {
-      Alert.alert('QCM indisponible', 'Ces chapitres n’ont pas encore de questions de QCM.');
+      Alert.alert('QCM indisponible', 'Ces chapitres n’ont pas encore de questions de QCM (ou elles n’ont pas pu être chargées : vérifie ta connexion à Internet).');
       return;
     }
     navigation.navigate('Qcm', {

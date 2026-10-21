@@ -8,7 +8,7 @@
 
 import { useTheme } from '../useTheme';
 import { useState } from 'react';
-import { View, Text, ScrollView, Pressable, useColorScheme } from 'react-native';
+import { View, Text, ScrollView, Pressable, useColorScheme, ActivityIndicator } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -16,10 +16,12 @@ import { Carte, Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { SUJETS, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { estRelu } from '../../lib/relecture';
+import { useSujet } from '../useContenu';
 
 export default function Sujets({ navigation }) {
   const t = useTheme();
   const [actif, setActif] = useState(null);
+  const texte = useSujet(actif ? actif.id : null); // texte du sujet chargé à la demande
 
   if (actif) {
     return (
@@ -51,7 +53,25 @@ export default function Sujets({ navigation }) {
               <Bandeau t={t} texte={'⚠️ Sujet et corrigé non relus par un professeur. À vérifier avant de t\'y fier.'} />
             </View>
           )}
-          <VisionneuseFiche markdown={actif.contenu} />
+          {texte.etat === 'ok' && texte.donnee ? (
+            <VisionneuseFiche markdown={texte.donnee} />
+          ) : (
+            <View style={{ padding: t.espace.xl, alignItems: 'center' }}>
+              {texte.etat === 'erreur' ? (
+                <>
+                  <Text style={{ color: t.couleur.texte, textAlign: 'center' }}>Impossible de charger le sujet. Vérifie ta connexion à Internet.</Text>
+                  <Pressable onPress={texte.recharger} accessibilityRole="button" style={{ marginTop: t.espace.m, padding: t.espace.m }}>
+                    <Text style={{ color: t.couleur.accent, fontWeight: '700' }}>Réessayer</Text>
+                  </Pressable>
+                </>
+              ) : (
+                <>
+                  <ActivityIndicator color={t.couleur.accent} />
+                  <Text style={{ color: t.couleur.attenue, marginTop: t.espace.s }}>Chargement du sujet…</Text>
+                </>
+              )}
+            </View>
+          )}
         </ScrollView>
       </SafeAreaView>
     );

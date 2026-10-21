@@ -3,14 +3,16 @@
  */
 
 import { useTheme } from '../useTheme';
-import { View, Text, ScrollView, Pressable, useColorScheme, useWindowDimensions } from 'react-native';
+import { View, Text, ScrollView, Pressable, useColorScheme, useWindowDimensions, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
 import { chapitresDe } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
-import { composerQcm, poolQuestions } from '../../lib/quizmix';
+import { useState } from 'react';
+import { composerQcm } from '../../lib/quizmix';
+import { chargerQcm } from '../useContenu';
 import HorsLigneParcours from '../composants/HorsLigneParcours';
 import { estRelu } from '../../lib/relecture';
 
@@ -35,11 +37,21 @@ export default function Chapitres({ route, navigation }) {
   const idxProchain = liste.findIndex((c) => etat(c.id) !== 'maitrise'); // prochaine étape suggérée
 
   const nonRelus = liste.filter((c) => !estRelu(c)).length;
-  const totalQuestions = poolQuestions(liste).length;
+  const totalQuestions = liste.reduce((n, c) => n + (c.nbQuestions || 0), 0);
+  const [chargeParcours, setChargeParcours] = useState(false);
   const accentParcours = couleurMatiere(t, liste[0]?.matiere);
 
-  const lancerQcmParcours = () => {
-    const questions = composerQcm(liste, TAILLE_QCM_PARCOURS);
+  const lancerQcmParcours = async () => {
+    if (chargeParcours) return;
+    // Les QCM des chapitres sont chargés à la demande (déjà en mémoire s'ils ont été ouverts).
+    setChargeParcours(true);
+    const qcms = await Promise.all(liste.map((c) => chargerQcm(c.id)));
+    setChargeParcours(false);
+    const questions = composerQcm(liste.map((c, i) => ({ qcm: qcms[i] })), TAILLE_QCM_PARCOURS);
+    if (!questions.length) {
+      Alert.alert('QCM indisponible', 'Impossible de charger les questions. Vérifie ta connexion à Internet.');
+      return;
+    }
     navigation.navigate('Qcm', {
       questions,
       titre: `QCM — ${titre ?? 'parcours'}`,
@@ -65,7 +77,7 @@ export default function Chapitres({ route, navigation }) {
           <Carte
             t={t}
             titre="QCM du parcours"
-            sousTitre={`${Math.min(TAILLE_QCM_PARCOURS, totalQuestions)} questions mélangées de tout le parcours`}
+            sousTitre={chargeParcours ? 'Chargement des questions…' : `${Math.min(TAILLE_QCM_PARCOURS, totalQuestions)} questions mélangées de tout le parcours`}
             detail="Teste-toi sur l'ensemble des chapitres à la fois"
             couleur={accentParcours}
             onPress={lancerQcmParcours}
