@@ -105,19 +105,22 @@ boule $V_{\text{boule}} = \dfrac{4}{3}\times \pi \times r^3$.
 
 ## Exercice 5 — Repérage et parallélogramme (18 points)
 
-Dans un repère orthonormé du plan, on considère les points :
+Dans un repère orthonormé du plan (unité : $1$ cm), on considère les points :
 $$\mathrm{A}(-2\,;1), \qquad \mathrm{B}(2\,;3), \qquad \mathrm{C}(4\,;-1).$$
 
-1. Placer les points $\mathrm{A}$, $\mathrm{B}$ et $\mathrm{C}$ dans un repère.
-2. Déterminer les coordonnées du vecteur $\overrightarrow{\mathrm{AB}}$.
-3. On veut placer un point $\mathrm{D}$ tel que $\mathrm{ABCD}$ soit un **parallélogramme**.
-   a. Traduire cette condition par une **égalité de vecteurs**.
-   b. En déduire les coordonnées du point $\mathrm{D}$.
-4. Calculer les coordonnées du **milieu** $\mathrm{I}$ du segment $[\mathrm{AC}]$, puis
-   celles du milieu du segment $[\mathrm{BD}]$. Que remarque-t-on ? Quelle propriété du
-   parallélogramme cela illustre-t-il ?
-5. Déterminer les coordonnées de l'image du point $\mathrm{B}$ par la **translation** de
-   vecteur $\overrightarrow{\mathrm{AC}}$.
+1. Placer les points $\mathrm{A}$, $\mathrm{B}$ et $\mathrm{C}$ dans le repère.
+2. On veut placer un point $\mathrm{D}$ tel que $\mathrm{ABCD}$ soit un **parallélogramme**.
+   a. Rappeler la propriété des diagonales d'un parallélogramme.
+   b. Placer le milieu $\mathrm{I}$ du segment $[\mathrm{AC}]$ et lire ses coordonnées.
+   c. En déduire une construction du point $\mathrm{D}$, puis lire ses coordonnées.
+3. a. En s'aidant du quadrillage et du théorème de Pythagore, calculer les longueurs
+      $\mathrm{AB}$ et $\mathrm{BC}$. On donnera les valeurs exactes.
+   b. Calculer la longueur $\mathrm{AC}$, puis démontrer que le triangle $\mathrm{ABC}$ est
+      rectangle en $\mathrm{B}$.
+4. Déduire des questions précédentes la nature précise du quadrilatère $\mathrm{ABCD}$.
+   Justifier.
+5. Construire l'image $\mathrm{B'}$ du point $\mathrm{B}$ par la **translation** qui
+   transforme $\mathrm{A}$ en $\mathrm{C}$, puis lire les coordonnées de $\mathrm{B'}$.
 
 ---
 
@@ -227,33 +230,44 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
 1. Placement des points $\mathrm{A}(-2\,;1)$, $\mathrm{B}(2\,;3)$, $\mathrm{C}(4\,;-1)$
    dans le repère (construction). *(3 pts)*
 
-2. $\overrightarrow{\mathrm{AB}} \begin{pmatrix} x_{\mathrm B} - x_{\mathrm A} \\ y_{\mathrm B} - y_{\mathrm A}\end{pmatrix} = \begin{pmatrix} 2 - (-2) \\ 3 - 1 \end{pmatrix} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$.
+2. a. Les diagonales d'un parallélogramme se coupent en leur **milieu**. *(1 pt)*
+
+   b. Pour aller de $\mathrm{A}$ à $\mathrm{C}$, on se déplace de $6$ carreaux vers la droite
+   et de $2$ carreaux vers le bas. Le milieu $\mathrm{I}$ est à mi-chemin : $3$ carreaux vers
+   la droite et $1$ carreau vers le bas à partir de $\mathrm{A}$. Donc $\mathrm{I}(1\,;0)$.
+   *(2 pts)*
+
+   c. $\mathrm{ABCD}$ est un parallélogramme si ses diagonales $[\mathrm{AC}]$ et
+   $[\mathrm{BD}]$ ont le même milieu : $\mathrm{I}$ doit donc être le milieu de
+   $[\mathrm{BD}]$, c'est-à-dire que $\mathrm{D}$ est le **symétrique de $\mathrm{B}$ par
+   rapport à $\mathrm{I}$**. Pour aller de $\mathrm{B}$ à $\mathrm{I}$, on se déplace de
+   $1$ carreau vers la gauche et de $3$ carreaux vers le bas ; on recommence à partir de
+   $\mathrm{I}$ : $\mathrm{D}(0\,;-3)$. *(2 pts)*
+
+3. a. Le segment $[\mathrm{AB}]$ est l'hypoténuse d'un triangle rectangle dont les côtés de
+   l'angle droit mesurent $4$ cm (horizontalement) et $2$ cm (verticalement). D'après le
+   théorème de Pythagore :
+   $$\mathrm{AB}^2 = 4^2 + 2^2 = 16 + 4 = 20, \qquad \mathrm{AB} = \sqrt{20}\ \text{cm} \approx 4{,}5\ \text{cm}.$$
+   De même, de $\mathrm{B}$ à $\mathrm{C}$ : $2$ cm horizontalement et $4$ cm verticalement :
+   $$\mathrm{BC}^2 = 2^2 + 4^2 = 4 + 16 = 20, \qquad \mathrm{BC} = \sqrt{20}\ \text{cm}.$$
    *(3 pts)*
 
-3. a. $\mathrm{ABCD}$ est un parallélogramme si et seulement si
-   $\overrightarrow{\mathrm{AB}} = \overrightarrow{\mathrm{DC}}$. *(2 pts)*
+   b. De $\mathrm{A}$ à $\mathrm{C}$ : $6$ cm horizontalement et $2$ cm verticalement, donc
+   $\mathrm{AC}^2 = 6^2 + 2^2 = 36 + 4 = 40$ et $\mathrm{AC} = \sqrt{40}\ \text{cm}$.
+   Dans le triangle $\mathrm{ABC}$, le plus grand côté est $[\mathrm{AC}]$ :
+   $$\mathrm{AB}^2 + \mathrm{BC}^2 = 20 + 20 = 40 = \mathrm{AC}^2.$$
+   D'après la **réciproque du théorème de Pythagore**, le triangle $\mathrm{ABC}$ est
+   rectangle en $\mathrm{B}$. *(3 pts)*
 
-   b. Notons $\mathrm{D}(x\,;y)$. Alors
-   $\overrightarrow{\mathrm{DC}} = \begin{pmatrix} 4 - x \\ -1 - y \end{pmatrix}$. L'égalité
-   $\overrightarrow{\mathrm{DC}} = \overrightarrow{\mathrm{AB}} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$
-   donne :
-   $$\begin{cases} 4 - x = 4 \\ -1 - y = 2 \end{cases} \iff
-   \begin{cases} x = 0 \\ y = -3 \end{cases}.$$
-   Donc $\mathrm{D}(0\,;-3)$. *(4 pts)*
+4. $\mathrm{ABCD}$ est un parallélogramme (question 2) qui a un **angle droit** en
+   $\mathrm{B}$ : c'est un rectangle. Il a aussi deux **côtés consécutifs de même longueur**
+   ($\mathrm{AB} = \mathrm{BC} = \sqrt{20}$ cm) : c'est un losange. Étant à la fois un
+   rectangle et un losange, $\mathrm{ABCD}$ est un **carré**. *(2 pts)*
 
-4. Milieu $\mathrm{I}$ de $[\mathrm{AC}]$ :
-   $\mathrm{I}\left(\dfrac{-2 + 4}{2}\,;\dfrac{1 + (-1)}{2}\right) = \mathrm{I}(1\,;0)$.
-   Milieu de $[\mathrm{BD}]$ :
-   $\left(\dfrac{2 + 0}{2}\,;\dfrac{3 + (-3)}{2}\right) = (1\,;0)$.
-   Les deux milieux sont **confondus** : les diagonales $[\mathrm{AC}]$ et $[\mathrm{BD}]$
-   ont le même milieu. C'est bien une propriété caractéristique du **parallélogramme**
-   (les diagonales se coupent en leur milieu), ce qui confirme le résultat de la question 3.
-   *(3 pts)*
-
-5. $\overrightarrow{\mathrm{AC}} = \begin{pmatrix} 4 - (-2) \\ -1 - 1 \end{pmatrix} = \begin{pmatrix} 6 \\ -2 \end{pmatrix}$. L'image $\mathrm{B'}$ de $\mathrm{B}$ par la
-   translation de vecteur $\overrightarrow{\mathrm{AC}}$ vérifie
-   $\overrightarrow{\mathrm{BB'}} = \overrightarrow{\mathrm{AC}}$, donc
-   $$\mathrm{B'}\big(2 + 6\,;\ 3 + (-2)\big) = \mathrm{B'}(8\,;1).$$ *(3 pts)*
+5. La translation qui transforme $\mathrm{A}$ en $\mathrm{C}$ correspond au déplacement
+   « $6$ carreaux vers la droite et $2$ carreaux vers le bas ». En l'appliquant au point
+   $\mathrm{B}(2\,;3)$, on obtient $\mathrm{B'}(2 + 6\,;3 - 2)$, soit $\mathrm{B'}(8\,;1)$.
+   *(Contrôle : $\mathrm{ACB'B}$ est un parallélogramme.)* *(2 pts)*
 
 ## Exercice 6 — Calcul littéral
 
@@ -280,4 +294,4 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
    $\text{largeur} \times \text{longueur} = 5 \times 8 = 40$ cm².
    *(Vérification : périmètre $= 2\times(5 + 8) = 26$ cm ✓.)* *(2 pts)*
 
-<!-- notes : thèmes couverts (tous DIFFÉRENTS du sujet brevet-maths.md) — Ex1 probabilités (équiprobabilité, proba d'un événement et de son contraire, mise en équation d'une proba : +2 secteurs) ; Ex2 pourcentages (deux remises successives → 32,5 % et non 35 %) + vitesse moyenne/durée (120 km/h, 2 h 30) ; Ex3 puissances et notation scientifique (a=1,5e10, b=4,2e-5, A=3e-4, lumière du Soleil 500 s = 8 min 20 s, rapport 3,5) ; Ex4 géométrie dans l'espace, solide composé cylindre + demi-boule (9π + 2,25π = 11,25π ≈ 35,3 m³ ≈ 35 343 L) ; Ex5 repérage, vecteurs, parallélogramme (D(0;−3), diagonales de même milieu I(1;0)) et translation (B'(8;1)) ; Ex6 calcul littéral (développement, identité remarquable, factorisation par facteur commun) + mise en équation d'un problème (rectangle : largeur 5, longueur 8, aire 40). Le sujet brevet-maths.md couvrait : PGCD/fractions, Pythagore/trigo/Thalès, statistiques, fonctions affines, volume du cône, programme de calcul + algorithmique — aucun recouvrement ici. Tout est dans le programme du cycle 4. Calculs vérifiés. Points à vérifier en relecture : cohérence du barème /100 ; le tracé attendu de l'Ex5 Q1 ; l'ordre des sommets ABCD (convention AB = DC retenue) ; arrondis (28,3 / 7,1 / 35,3 m³). -->
+<!-- notes : thèmes couverts (tous DIFFÉRENTS du sujet brevet-maths.md) — Ex1 probabilités (équiprobabilité, proba d'un événement et de son contraire, mise en équation d'une proba : +2 secteurs) ; Ex2 pourcentages (deux remises successives → 32,5 % et non 35 %) + vitesse moyenne/durée (120 km/h, 2 h 30) ; Ex3 puissances et notation scientifique (a=1,5e10, b=4,2e-5, A=3e-4, lumière du Soleil 500 s = 8 min 20 s, rapport 3,5) ; Ex4 géométrie dans l'espace, solide composé cylindre + demi-boule (9π + 2,25π = 11,25π ≈ 35,3 m³ ≈ 35 343 L) ; Ex5 repérage (lecture sur quadrillage), parallélogramme par ses diagonales (I(1;0), D(0;−3) symétrique de B), Pythagore et sa réciproque (AB=BC=√20, AC=√40 → ABC rectangle en B → ABCD carré), translation (B'(8;1)) — sans vecteurs ni formule du milieu (programme de 2de) ; Ex6 calcul littéral (développement, identité remarquable, factorisation par facteur commun) + mise en équation d'un problème (rectangle : largeur 5, longueur 8, aire 40). Le sujet brevet-maths.md couvrait : PGCD/fractions, Pythagore/trigo/Thalès, statistiques, fonctions affines, volume du cône, programme de calcul + algorithmique — aucun recouvrement ici. Tout est dans le programme du cycle 4. Calculs vérifiés. Points à vérifier en relecture : cohérence du barème /100 ; le tracé attendu de l'Ex5 Q1 ; arrondis (28,3 / 7,1 / 35,3 m³). -->

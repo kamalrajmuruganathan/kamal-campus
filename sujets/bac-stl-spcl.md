@@ -52,16 +52,16 @@ Le technicien prépare une **gamme d'étalons** de concentration connue en $\mat
 et mesure leur absorbance $A$ à $\lambda_{\max}$, dans une cuve d'épaisseur
 $\ell = 1{,}0\ \text{cm}$ (le « blanc » est fait sur l'eau distillée).
 
-| $c$ (mmol·L⁻¹) | $5{,}0$ | $10{,}0$ | $15{,}0$ | $20{,}0$ | $25{,}0$ |
+| $c$ (mmol·L⁻¹) | $20{,}0$ | $40{,}0$ | $60{,}0$ | $80{,}0$ | $100{,}0$ |
 |---|---|---|---|---|---|
-| $A$ | $0{,}20$ | $0{,}40$ | $0{,}60$ | $0{,}80$ | $1{,}00$ |
+| $A$ | $0{,}24$ | $0{,}48$ | $0{,}72$ | $0{,}96$ | $1{,}20$ |
 
 3. Énoncer la **loi de Beer-Lambert** en précisant les grandeurs et leurs unités.
 4. Montrer que les mesures sont compatibles avec une droite d'étalonnage **passant par
    l'origine**, et déterminer son coefficient directeur $k$ (avec $c$ en $\text{mol·L}^{-1}$).
 5. Le technicien prélève $10{,}0\ \text{mL}$ du bain et les dilue pour obtenir
    $200{,}0\ \text{mL}$ de solution fille. L'absorbance de la solution fille, mesurée dans
-   les **mêmes conditions**, vaut $A_x = 0{,}50$.
+   les **mêmes conditions**, vaut $A_x = 0{,}51$.
    a. Déterminer la concentration $c_x$ en $\mathrm{Cu^{2+}}$ de la solution fille.
    b. En déduire la concentration $c_0$ en $\mathrm{Cu^{2+}}$ du bain de départ. On
       précisera le **facteur de dilution** utilisé.
@@ -199,20 +199,21 @@ Pour maintenir un local à température confortable, un thermostat commande un r
    et $c$ la concentration en quantité de matière ($\text{mol·L}^{-1}$). *(1 pt)*
 
 4. Le rapport $A/c$ est constant : par exemple
-   $\dfrac{0{,}20}{5{,}0} = \dfrac{0{,}40}{10{,}0} = \dots = \dfrac{1{,}00}{25{,}0} = 0{,}040\ \text{(mmol·L}^{-1})^{-1}$. L'absorbance est donc **proportionnelle** à $c$ :
+   $\dfrac{0{,}24}{20{,}0} = \dfrac{0{,}48}{40{,}0} = \dots = \dfrac{1{,}20}{100{,}0} = 0{,}012\ \text{(mmol·L}^{-1})^{-1}$. L'absorbance est donc **proportionnelle** à $c$ :
    la droite $A = f(c)$ passe par l'origine. Avec $c$ en $\text{mol·L}^{-1}$
-   ($5{,}0\ \text{mmol·L}^{-1} = 5{,}0\times 10^{-3}\ \text{mol·L}^{-1}$) :
-   $$k = \frac{A}{c} = \frac{0{,}20}{5{,}0\times 10^{-3}} = 40\ \text{L·mol}^{-1}.$$
-   La droite d'étalonnage a pour équation $A = 40\,c$. *(2 pts)*
+   ($20{,}0\ \text{mmol·L}^{-1} = 2{,}00\times 10^{-2}\ \text{mol·L}^{-1}$) :
+   $$k = \frac{A}{c} = \frac{0{,}24}{2{,}00\times 10^{-2}} = 12\ \text{L·mol}^{-1}.$$
+   La droite d'étalonnage a pour équation $A = 12\,c$. Comme $k = \varepsilon\,\ell$ avec $\ell = 1{,}0\ \text{cm}$,
+   $\varepsilon \approx 12\ \text{L·mol}^{-1}\text{·cm}^{-1}$ (valeur usuelle pour l'ion cuivre(II) vers $800\ \text{nm}$). *(2 pts)*
 
-5. a. On lit $c_x$ sur la droite : $c_x = \dfrac{A_x}{k} = \dfrac{0{,}50}{40} = 1{,}25\times 10^{-2}\ \text{mol·L}^{-1} = 12{,}5\ \text{mmol·L}^{-1}$ (bien dans la
+5. a. On lit $c_x$ sur la droite : $c_x = \dfrac{A_x}{k} = \dfrac{0{,}51}{12} = 4{,}25\times 10^{-2}\ \text{mol·L}^{-1} = 42{,}5\ \text{mmol·L}^{-1}$ (bien dans la
    gamme des étalons). *(1,5 pt)*
 
    b. Le prélèvement de $10{,}0\ \text{mL}$ a été amené à $200{,}0\ \text{mL}$ : le facteur
    de dilution est $F = \dfrac{200{,}0}{10{,}0} = 20$. La solution mère est donc $20$ fois
    plus concentrée :
-   $$c_0 = F \times c_x = 20 \times 1{,}25\times 10^{-2} = 0{,}25\ \text{mol·L}^{-1}.$$
-   Le bain contient $\mathrm{Cu^{2+}}$ à $c_0 = 0{,}25\ \text{mol·L}^{-1}$. *(1 pt)*
+   $$c_0 = F \times c_x = 20 \times 4{,}25\times 10^{-2} = 0{,}85\ \text{mol·L}^{-1}.$$
+   Le bain contient $\mathrm{Cu^{2+}}$ à $c_0 \approx 0{,}85\ \text{mol·L}^{-1}$ (ordre de grandeur habituel pour un bain de cuivrage). *(1 pt)*
 
 ### Partie B — Titrage
 
@@ -336,4 +337,4 @@ Pour maintenir un local à température confortable, un thermostat commande un r
     $21\ \text{°C}$) créent une **zone morte** : le radiateur chauffe jusqu'à $21\ \text{°C}$,
     s'arrête, et ne redémarre qu'une fois la température retombée à $19\ \text{°C}$. *(1 pt)*
 
-<!-- notes : thèmes couverts — Ex1 chimie (dosages) : spectrophotométrie UV-visible + couleur complémentaire + loi de Beer-Lambert + droite d'étalonnage (pente k=40 L/mol) + facteur de dilution (×20 → c0=0,25 mol/L) ; titrage acide-base d'un vinaigre (équivalence 1–1, n_A=1,20e-3 mol, C_A=0,120 mol/L, C=1,20 mol/L, C_m=72 g/L). Ex2 ondes : mécaniques vs EM ; échographie λ=v/f=0,77 mm et d=vΔt/2=10,0 cm ; télémétrie laser D=cΔt'/2=30,0 m ; effet Doppler (rapprochement→f plus grande, redshift→éloignement) ; spectre d'absorption et f=c/λ=4,57e14 Hz (visible). Ex3 instrumentation : chaîne de mesure (4 maillons) ; capteur linéaire S=20,0 mV/°C, U0=0,50 V, θ=60,0 °C ; CAN 10 bits, 1024 niveaux, q=4,88 mV, N=348, résolution en température ≈0,24 °C, pas de saturation ; hystérésis. Programme SPCL STL (1re + Tale). Vérifications : calculs et unités contrôlés ; A≤1 sur toute la gamme ; N=trunc(348,2)=348. Points à vérifier en relecture : convention quantum q=calibre/2^n (cohérente avec la fiche instrumentation) ; valeur de ε de Cu2+ purement pédagogique ; arrondis (0,77 mm, 4,57e14 Hz) et chiffres significatifs. -->
+<!-- notes : thèmes couverts — Ex1 chimie (dosages) : spectrophotométrie UV-visible + couleur complémentaire + loi de Beer-Lambert + droite d'étalonnage (pente k=12 L/mol, ε≈12 L·mol⁻¹·cm⁻¹ réaliste pour Cu²⁺ aq vers 800 nm) + facteur de dilution (×20 → c_x=42,5 mmol/L, c0=0,85 mol/L) ; titrage acide-base d'un vinaigre (équivalence 1–1, n_A=1,20e-3 mol, C_A=0,120 mol/L, C=1,20 mol/L, C_m=72 g/L). Ex2 ondes : mécaniques vs EM ; échographie λ=v/f=0,77 mm et d=vΔt/2=10,0 cm ; télémétrie laser D=cΔt'/2=30,0 m ; effet Doppler (rapprochement→f plus grande, redshift→éloignement) ; spectre d'absorption et f=c/λ=4,57e14 Hz (visible). Ex3 instrumentation : chaîne de mesure (4 maillons) ; capteur linéaire S=20,0 mV/°C, U0=0,50 V, θ=60,0 °C ; CAN 10 bits, 1024 niveaux, q=4,88 mV, N=348, résolution en température ≈0,24 °C, pas de saturation ; hystérésis. Programme SPCL STL (1re + Tale). Vérifications : calculs et unités contrôlés ; A≤1,2 sur toute la gamme (domaine linéaire), A_x=0,51 dans la gamme ; N=trunc(348,2)=348. Points à vérifier en relecture : convention quantum q=calibre/2^n (cohérente avec la fiche instrumentation) ; arrondis (0,77 mm, 4,57e14 Hz) et chiffres significatifs. -->

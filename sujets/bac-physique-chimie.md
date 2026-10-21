@@ -63,7 +63,7 @@ $$\mathrm{CH_3COOH}_{(aq)} + \mathrm{HO^-}_{(aq)} \longrightarrow
 \mathrm{CH_3COO^-}_{(aq)} + \mathrm{H_2O}_{(\ell)}$$
 
 Le tracé de la courbe $\mathrm{pH} = f(V_B)$ présente un saut de pH pour un volume de soude
-versé $V_{\text{éq}} = 10{,}0$ mL. Le pH vaut alors environ $8{,}4$.
+versé $V_{\text{éq}} = 10{,}0$ mL. Le pH vaut alors environ $8{,}7$.
 
 1. Rappeler les trois propriétés que doit vérifier une réaction pour servir de support à un
    titrage.
@@ -75,7 +75,7 @@ versé $V_{\text{éq}} = 10{,}0$ mL. Le pH vaut alors environ $8{,}4$.
 5. En déduire la concentration $C_0$ en acide éthanoïque du vinaigre commercial.
 6. Calculer le **titre massique** $t$ (en g·L⁻¹) puis le **degré d'acidité** du vinaigre.
    L'indication « 6° » de l'étiquette est-elle vérifiée ?
-7. Le pH à l'équivalence vaut $8{,}4$, donc supérieur à $7$. Expliquer pourquoi le milieu
+7. Le pH à l'équivalence vaut $8{,}7$, donc supérieur à $7$. Expliquer pourquoi le milieu
    est basique à l'équivalence.
 8. On dispose de deux indicateurs colorés : l'hélianthine (zone de virage $3{,}1 - 4{,}4$)
    et la phénolphtaléine (zone de virage $8{,}2 - 10{,}0$). Lequel conviendrait pour repérer
@@ -222,8 +222,8 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
    partiellement avec l'eau ($\mathrm{CH_3COO^-} + \mathrm{H_2O} \rightleftharpoons \mathrm{CH_3COOH} + \mathrm{HO^-}$) en libérant des ions $\mathrm{HO^-}$ : le milieu est
    donc **basique**, d'où un pH $> 7$.
 
-8. La zone de virage de l'indicateur doit **encadrer le pH à l'équivalence** ($8{,}4$). La
-   **phénolphtaléine** (zone $8{,}2 - 10{,}0$) contient $8{,}4$ : elle convient. L'hélianthine
+8. La zone de virage de l'indicateur doit **encadrer le pH à l'équivalence** ($8{,}7$). La
+   **phénolphtaléine** (zone $8{,}2 - 10{,}0$) contient $8{,}7$ : elle convient. L'hélianthine
    (zone $3{,}1 - 4{,}4$) virerait beaucoup trop tôt : elle ne convient pas.
 
 ## Exercice 2 — Le coup franc
@@ -357,7 +357,7 @@ résolution de l'équa. diff. RC·u'_C+u_C=E, vérification de la solution E(1�
 homogénéité de RC, τ=100 s (R=100 kΩ), u_C(τ)≈3,2 V (63%), i(t)=(E/R)e^{−t/τ}, i_0=50 µA, seuil 4,0 V
 atteint à t_1=τ·ln5≈1,6×10² s, régime permanent à 5τ=5,0×10² s. Tous les résultats recalculés.
 Points à vérifier à la relecture : rendu des schémas de forces (Ex2) et de l'arbre/courbes
-absents (à fournir en version élève) ; valeur pH_éq≈8,4 donnée (dépend de la dilution, cohérente
-avec un acide faible) ; g=9,8 (et non 9,81) retenu et annoncé dans les données ; chiffres
+absents (à fournir en version élève) ; valeur pH_éq≈8,7 donnée (calcul : pKa=4,76, [CH3COO−]≈0,067 mol/L sans l'eau ajoutée → pH≈8,8 ;
+≈8,6 avec ~50 mL d'eau → 8,7 retenu) ; g=9,8 (et non 9,81) retenu et annoncé dans les données ; chiffres
 significatifs harmonisés à 2 CS. Programme : BO spécial n°8 du 25 juillet 2019, spécialité PC
 terminale. -->
