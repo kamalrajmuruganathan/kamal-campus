@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   LONGUEUR_MAX, TYPES, cibleQcm, cibleExo, cibleValide, preparerSignalement,
-  estTableAbsente, restants, longueur,
+  estTableAbsente, restants, longueur, MESSAGE_ENVOYE, MESSAGE_ECHEC,
 } from './index.js';
 
 const base = { chapitreId: 'cm1-math-cercle', niveau: 'cm1', type: 'contenu', cible: 'fiche', message: 'Le périmètre est faux.' };
@@ -64,4 +64,10 @@ test('estTableAbsente', () => {
   assert.ok(estTableAbsente({ message: 'relation "public.signalements" does not exist' }));
   assert.ok(!estTableAbsente({ code: '42501', message: 'new row violates row-level security policy' }));
   assert.ok(!estTableAbsente(null));
+});
+
+test('messages : « Merci ! » seulement quand l’envoi a réussi', () => {
+  assert.ok(MESSAGE_ENVOYE.startsWith('Merci !'));
+  assert.ok(!MESSAGE_ECHEC.includes('Merci'));
+  assert.equal(MESSAGE_ECHEC, 'Le signalement n’a pas pu être envoyé. Réessaie plus tard.');
 });

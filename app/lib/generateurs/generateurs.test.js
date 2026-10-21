@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import * as M from './modeles.js';
 import { aGenerateur, genererQuestions, REGISTRE } from './index.js';
+import { nombreLatex } from './noyau.js';
 
 // RNG déterministe (mulberry32) pour des tests reproductibles.
 function rng(graine) {
@@ -194,5 +195,53 @@ test('français : chapitres de conjugaison branchés produisent 20 questions', (
     const qs = genererQuestions(id, 20, rng(11));
     assert.equal(qs.length, 20, `${id} : 20 questions`);
     for (const q of qs) { assert.equal(new Set(q.choix).size, 4); assert.ok(q.reponse >= 0 && q.reponse < 4); }
+  }
+});
+
+// Virgule française : un nombre décimal calculé en JavaScript ne doit jamais
+// s'afficher « 84.5 » (point décimal) dans un énoncé, un choix ou une explication.
+const POINT_DECIMAL = /\d\.\d/;
+
+test('nombreLatex : virgule décimale {,}, milliers et arrondi', () => {
+  assert.equal(nombreLatex(84.5), '84{,}5');
+  assert.equal(nombreLatex(0.1 + 0.2), '0{,}3');
+  assert.equal(nombreLatex(-2.5), '-2{,}5');
+  assert.equal(nombreLatex(100), '100');
+  assert.equal(nombreLatex(1000), '1000');
+  assert.equal(nombreLatex(12500), '12\\,500');
+  assert.equal(nombreLatex(1250.5, 0), '1251');
+  assert.equal(nombreLatex(-0.0000001), '0');
+});
+
+test('aucun générateur n’affiche un nombre avec un point décimal', () => {
+  const rand = rng(2026);
+  for (const gen of GENERATEURS) {
+    for (let i = 0; i < 2000; i++) {
+      const q = gen(rand);
+      for (const texte of [q.enonce, q.explication, ...q.choix]) {
+        assert.ok(!POINT_DECIMAL.test(texte), `${gen.name} : point décimal dans « ${texte} »`);
+      }
+    }
+  }
+});
+
+test('racineCarreParfait : le distracteur « moitié » s’écrit avec une virgule', () => {
+  const rand = rng(7);
+  let vuDecimal = false;
+  for (let i = 0; i < 500; i++) {
+    const q = M.racineCarreParfait(rand);
+    for (const c of q.choix) if (c.includes('{,}')) vuDecimal = true;
+  }
+  assert.ok(vuDecimal, 'un carré impair doit donner une moitié décimale écrite « …{,}5 »');
+});
+
+test('chapitres équipés : 200 questions par chapitre, aucun point décimal', () => {
+  const rand = rng(31);
+  for (const id of Object.keys(REGISTRE)) {
+    for (const q of genererQuestions(id, 200, rand)) {
+      for (const texte of [q.enonce, q.explication, ...q.choix]) {
+        assert.ok(!POINT_DECIMAL.test(texte), `${id} : point décimal dans « ${texte} »`);
+      }
+    }
   }
 });

@@ -44,6 +44,22 @@ export function avecSigne(n) {
   return n >= 0 ? `+ ${n}` : `- ${-n}`;
 }
 
+/**
+ * Nombre pour un passage LaTeX ($…$), à la française : virgule décimale `{,}`
+ * (« 84{,}5 », jamais « 84.5 ») et espace fine `\,` entre les milliers à partir
+ * de 10 000 (« 12\,500 »). Arrondi à `decimales` chiffres (6 par défaut) pour
+ * effacer le bruit des flottants (0,1 + 0,2), zéros inutiles retirés.
+ */
+export function nombreLatex(x, decimales = 6) {
+  const signe = x < 0 ? '-' : '';
+  let texte = Math.abs(Number(x.toFixed(decimales))).toFixed(decimales);
+  if (decimales > 0) texte = texte.replace(/\.?0+$/, '');
+  const [ent, dec] = texte.split('.');
+  const entier = ent.length > 4 ? ent.replace(/\B(?=(\d{3})+(?!\d))/g, '\\,') : ent;
+  const nombre = dec ? `${entier}{,}${dec}` : entier;
+  return nombre === '0' ? '0' : signe + nombre;
+}
+
 /** PGCD (valeurs absolues). */
 export function pgcd(a, b) {
   a = Math.abs(a); b = Math.abs(b);

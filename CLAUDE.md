@@ -224,7 +224,10 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   bouton « 📥 Réviser sans internet » dans la liste des chapitres (`composants/HorsLigneParcours.js`) ; bandeau
   « Hors connexion » (`composants/BandeauHorsLigne.js`, dans App.js). `contenu-lourd.web.js` exporte `cheminDonnees(id)`.
   Testé dans Chromium : téléchargement de 15 chapitres, coupure réseau, rechargement, fiche lisible avec formules.
-  Si on change la stratégie du SW, incrémenter le nom du cache (v2…).
+  **Ne pas changer le nom du cache** `kamal-campus-v1` (aussi dans `src/horsLigne.web.js`) : un nouveau nom effacerait les
+  chapitres téléchargés par les élèves. Ménage (21/10) : quand une nouvelle page ou un nouveau bundle est mis en cache, `menage()`
+  supprime les anciens fichiers `_expo/static/…` (≈ 16 Mo par publication) non cités par la page ni par ses bundles
+  (morceaux chargés à la demande gardés) ; il ne touche jamais à `donnees/`.
 - **Grilles d'idées (12/10/2026, non publié)** : 11 614 exercices « à rédiger » ont dans `attendus.json` une ligne
   `{ "reponse": …, "criteres": [{ "idee": "…", "mots": ["racine", …] }] }` (2 à 6 idées, 1 à 8 mots-clés ≥ 3 lettres
   une fois nettoyés). Dans `Exercices.js` : l'élève écrit, « Voir le corrigé », l'appli pré-coche les idées dont un
@@ -327,3 +330,6 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Espace parent** : bilan de la semaine (comparaison semaine d'avant, carnet, examens, contrôles, conseils, partage).
   **Kamal doit exécuter une fois `outils/sql/espace_parent_v2.sql`** (sans lui, ces rubriques restent masquées).
 - Relecture indépendante des 140 dictées et 17 sujets : aucune faute dans les textes, 7 retouches (étiquettes, énoncés).
+- **Publié le 18/10/2026** : PR #10 fusionnée (main `e823310`), contrôle qualité et déploiement Pages verts. Tout le § 22 est en ligne.
+- **21/10/2026 : Kamal a exécuté `outils/sql/signalements.sql` et `outils/sql/espace_parent_v2.sql` dans Supabase.**
+  Les signalements sont enregistrés (Table editor → signalements) et le bilan parent complet est actif.

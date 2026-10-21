@@ -7,7 +7,7 @@
  */
 
 import {
-  entier, entierNonNul, choisir, avecSigne, fracLatex, pgcd, construireQuestion,
+  entier, entierNonNul, choisir, avecSigne, fracLatex, nombreLatex, pgcd, construireQuestion,
 } from './noyau.js';
 
 // ── Collège / calcul ─────────────────────────────────────────────────────────
@@ -569,7 +569,7 @@ export function racineCarreParfait(rand) {
     notion: 'racine-carree',
     enonce: `Que vaut $\\sqrt{${N}}$ ?`,
     bonne: `$${k}$`,
-    distracteurs: [`$${k + 1}$`, `$${k - 1}$`, `$${N / 2}$`, `$${k + 2}$`],
+    distracteurs: [`$${k + 1}$`, `$${k - 1}$`, `$${nombreLatex(N / 2)}$`, `$${k + 2}$`],
     explication: `$\\sqrt{${N}} = ${k}$ car $${k}^2 = ${N}$. La racine carrée n'est pas la moitié du nombre.`,
   }, rand);
 }
