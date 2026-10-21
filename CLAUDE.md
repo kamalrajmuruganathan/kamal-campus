@@ -335,3 +335,21 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   Les signalements sont enregistrés (Table editor → signalements) et le bilan parent complet est actif.
 - **Publié le 21/10/2026** : PR #11 fusionnée (main `bfb7f21`). Corrections après vérification en ligne : virgule décimale
   dans les QCM générés (`nombreLatex`), vitrine lisible sur téléphone avec des textes exacts, ménage du cache hors ligne (`menage()`).
+
+## 23. Les 9 chantiers du 21/10/2026 — sur `upgrade-sdk57`, non publiés
+- **Signalements** : lisibles directement par Claude avec l'outil Supabase (projet `zxhxevucpuudknyfidla`,
+  `select … from signalements where not traite`). Au 21/10 : table vide.
+- **Sujets** : `node outils/verifier-katex.cjs` couvre aussi `sujets/` (0 erreur). Brevet de français noté sur 100 (réécriture dans
+  les 18 pts de grammaire) ; parties de sciences du DNB = 30 min, 25 pts.
+- **Épreuve en conditions réelles** : `app/lib/epreuve` + `Epreuve.js` (chrono, pause, reprise, auto-évaluation question par question,
+  note /20 selon le barème du sujet ou estimation annoncée), `profil.epreuves` (30 max, fusionné).
+- **Révisions de vacances** (`app/lib/vacances`, `Vacances.js`, `profil.vacances`) ; **défis de la semaine** (`app/lib/defisSemaine`,
+  `DefisSemaine.js`, `profil.semaine`, bonus une seule fois) ; 16 badges de plus ; bannières `composants/Annonces.js`.
+- **Dictées** : 280 (24 par niveau CP–3e, 16 par langue), relues indépendamment.
+- **Autocorrection** : 70,0 % des exercices vérifiés (`node app/scripts/verifier-attendus.mjs`).
+- **Appli mobile** : `app/eas.json`, guide `docs/guide-appli-mobile.md` ; données natives générées dans `app/donnees-natif/` (ignoré
+  par git, recréé par `npm run preparer`). Jamais testée sur un vrai téléphone.
+- **Chargement à la demande** : QCM, cartes, sujets et quiz ne sont plus dans le bundle (16 Mo → 2,1 Mo). Utiliser `src/useContenu.js`
+  (`useQcm`, `useCartes`, `useSujet`, `chargerQcm`…) ; ne plus lire `chapitre.qcm`, `chapitre.flashcards`, `sujet.contenu`,
+  `quiz.questions`. Écrans rares chargés à part via `src/ecransParesseux{,.web}.js`.
+- Correctif : `fusionnerDictees` n'était pas importé dans `cloud/fusion.js` (synchronisation en erreur en ligne).
