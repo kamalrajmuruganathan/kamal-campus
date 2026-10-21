@@ -48,6 +48,11 @@ jobs:
           set -e
           rm -rf site && mkdir -p site/app
           cp web-vitrine/*.html site/
+          # Nombre réel de chapitres (un dossier contenu/<niveau>/<parcours>/<slug>/ par chapitre)
+          # écrit dans chaque <span class="nb-chapitres">…</span> de la vitrine.
+          NB=$(ls -d contenu/*/*/*/ | wc -l)
+          sed -i -E "s#(<span class=\"nb-chapitres\">)[0-9]+(</span>)#\1${NB}\2#g" site/*.html
+          echo "Vitrine : ${NB} chapitres"
           cp -r app/dist/* site/app/
           touch site/.nojekyll site/app/.nojekyll
           echo "Site assemblé : $(find site -type f | wc -l) fichiers"

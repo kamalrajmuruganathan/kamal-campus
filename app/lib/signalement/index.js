@@ -26,7 +26,7 @@ const IDS_TYPES = new Set(TYPES.map((x) => x.id));
 /** Message affiché quand l'envoi a réussi. */
 export const MESSAGE_ENVOYE = 'Merci ! Ton signalement a été envoyé. Un professeur le lira.';
 /** Message affiché quand l'envoi a échoué (table absente, réseau…) : jamais de plantage. */
-export const MESSAGE_ECHEC = 'Merci ! Le signalement n’a pas pu être envoyé : réessaie plus tard.';
+export const MESSAGE_ECHEC = 'Le signalement n’a pas pu être envoyé. Réessaie plus tard.';
 
 /** Cible « fiche ». */
 export const CIBLE_FICHE = 'fiche';

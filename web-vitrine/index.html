@@ -1,4 +1,9 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kamal Campus</title>
+<meta name="description" content="Kamal Campus, l'appli de révision du CP à la Terminale : cours, QCM, exercices corrigés, dictées et examens blancs. Gratuite et sans publicité.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Figtree:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
@@ -234,7 +239,7 @@
 
   /* formula card detail */
   .chalk {
-    background: var(--ink); border-radius: 20px; padding: 30px 28px; color: #eef3fb; box-shadow: var(--shadow); position: relative;
+    background: #16243a; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 30px 28px; color: #eef3fb; box-shadow: var(--shadow); position: relative;
   }
   .chalk .tag { font-family: "Space Mono", monospace; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
   .formula { font-family: "Space Mono", monospace; font-size: 1.02rem; padding: 13px 15px; margin-top: 14px; background: rgba(255,255,255,.06); border-radius: 11px; border: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
@@ -262,13 +267,13 @@
 
   /* --- final CTA --- */
   .final {
-    text-align: center; background: linear-gradient(150deg, var(--blue), var(--blue-deep));
+    text-align: center; background: linear-gradient(150deg, #1f6feb, #0b3f9e);
     border-radius: 26px; padding: 54px 30px; color: #fff; box-shadow: var(--shadow);
   }
   .final h2 { color: #fff; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; }
   .final p { color: #dbe8ff; margin-top: 14px; font-size: 1.08rem; max-width: 44ch; margin-inline: auto; }
   .final .hero-cta { justify-content: center; }
-  .final .btn-primary { background: #fff; color: var(--blue-deep); }
+  .final .btn-primary { background: #fff; color: #0b3f9e; }
   .final .btn-ghost { color: #fff; border-color: rgba(255,255,255,.5); }
   .final .btn-ghost:hover { border-color: #fff; color: #fff; }
   .final .chip { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); color: #eaf1ff; }
@@ -293,7 +298,7 @@
     <nav class="bar-nav">
       <a class="navlink" href="#reviser">Réviser</a>
       <a class="navlink" href="#jeux">Jeux</a>
-      <a class="navlink" href="#hors-ligne">Hors-ligne</a>
+      <a class="navlink" href="#hors-ligne">Hors connexion</a>
       <a class="navlink" href="#faq">FAQ</a>
       <button class="theme-toggle" id="themeBtn" aria-label="Changer de thème" title="Changer de thème">◐</button>
       <a class="btn btn-primary btn-sm" href="./app/">Lancer l'appli</a>
@@ -307,15 +312,15 @@
       <div>
         <span class="eyebrow">Révision · CP → Terminale</span>
         <h1>Révise partout,<br><span class="hl">retrouve tout</span>.</h1>
-        <p class="lede">L'appli de révision qui tient dans la poche : cours, exercices, jeux et outils pas à pas — 100 % hors-ligne, sans pub et sans compte.</p>
+        <p class="lede">L'appli de révision qui tient dans la poche : cours, exercices corrigés, dictées, examens blancs et outils pas à pas. Gratuite, sans publicité, et révisable hors connexion après téléchargement des chapitres.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="./app/">▶ Lancer l'appli dans le navigateur</a>
           <a class="btn btn-ghost" href="#reviser">Découvrir</a>
         </div>
         <div class="trust-row">
-          <span class="chip"><b>✓</b> Fonctionne <b>hors-ligne</b></span>
+          <span class="chip"><b>✓</b> Révisable <b>hors connexion</b></span>
           <span class="chip"><b>✓</b> Sans pub · sans pistage</span>
-          <span class="chip"><b>✓</b> Aucun compte requis</span>
+          <span class="chip"><b>✓</b> Compte gratuit</span>
         </div>
       </div>
 
@@ -334,14 +339,14 @@
             </div>
             <div class="scr-body">
               <div class="scr-defi">
-                <div class="t">🎯 Défi du jour</div>
-                <div class="s">5 questions · +50 XP bonus</div>
+                <div class="t">📒 Carnet d'erreurs</div>
+                <div class="s">4 questions à revoir aujourd'hui</div>
               </div>
               <div class="scr-tiles">
-                <div class="scr-tile"><div class="dot" style="background:#e7f0ff">📐</div><div class="lab">Maths</div><div class="sub">78 chapitres</div></div>
-                <div class="scr-tile"><div class="dot" style="background:#ffe7de">📖</div><div class="lab">Français</div><div class="sub">64 chapitres</div></div>
-                <div class="scr-tile"><div class="dot" style="background:#e4f7ec">⚗️</div><div class="lab">Physique</div><div class="sub">52 chapitres</div></div>
-                <div class="scr-tile"><div class="dot" style="background:#fff2d6">🌍</div><div class="lab">Histoire-Géo</div><div class="sub">60 chapitres</div></div>
+                <div class="scr-tile"><div class="dot" style="background:#e7f0ff">📐</div><div class="lab">Maths</div><div class="sub">CP → Terminale</div></div>
+                <div class="scr-tile"><div class="dot" style="background:#ffe7de">📖</div><div class="lab">Français</div><div class="sub">Dictées</div></div>
+                <div class="scr-tile"><div class="dot" style="background:#e4f7ec">⚗️</div><div class="lab">Physique</div><div class="sub">Schémas</div></div>
+                <div class="scr-tile"><div class="dot" style="background:#fff2d6">🌍</div><div class="lab">Histoire-Géo</div><div class="sub">Frises</div></div>
               </div>
             </div>
           </div>
@@ -355,9 +360,9 @@
       <div class="band">
         <div class="stats">
           <div class="stat"><div class="n">21</div><div class="l">matières couvertes</div></div>
-          <div class="stat"><div class="n">956</div><div class="l">chapitres de cours</div></div>
-          <div class="stat"><div class="n">~30</div><div class="l">outils pas à pas</div></div>
-          <div class="stat"><div class="n">7<small>+</small></div><div class="l">jeux &amp; défis</div></div>
+          <div class="stat"><div class="n"><span class="nb-chapitres">959</span></div><div class="l">chapitres de cours</div></div>
+          <div class="stat"><div class="n">50</div><div class="l">exercices corrigés par chapitre</div></div>
+          <div class="stat"><div class="n">140</div><div class="l">dictées</div></div>
         </div>
       </div>
     </div>
@@ -367,45 +372,63 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Réviser autrement</span>
-        <h2>De la fiche express au parcours guidé</h2>
+        <h2>De la révision express au plan de révision</h2>
         <p>Choisis ta façon de réviser selon le temps que tu as : cinq minutes avant le cours, ou un plan complet jusqu'au jour de l'examen.</p>
       </div>
       <div class="features">
         <article class="fcard reveal">
           <div class="ficon">⚡</div>
-          <h3>Anti-sèches</h3>
-          <p>L'essentiel d'un chapitre en 30 secondes : formules et points-clés, rédigés à la main ou extraits automatiquement des 956 fiches.</p>
-          <ul><li>Révision de dernière minute</li><li>QCM express</li></ul>
+          <h3>Révision express</h3>
+          <p>Un maximum de questions en 2 minutes chrono : idéal juste avant le cours. Chaque chapitre a aussi son QCM et ses cartes de révision.</p>
+          <ul><li>QCM chrono</li><li>Cartes de révision</li></ul>
         </article>
         <article class="fcard reveal">
           <div class="ficon">🗓️</div>
-          <h3>Parcours guidé</h3>
-          <p>Tu choisis ton niveau, tes matières et la date de l'examen — l'appli te fait un plan jour par jour jusqu'au jour J.</p>
-          <ul><li>Compte à rebours</li><li>Plan quotidien</li></ul>
+          <h3>Je révise mon contrôle</h3>
+          <p>Tu choisis tes chapitres et la date du contrôle : l'appli te prépare un programme jour par jour jusqu'au jour&nbsp;J.</p>
+          <ul><li>Plan quotidien</li><li>Planning d'étude</li></ul>
         </article>
         <article class="fcard reveal">
           <div class="ficon">🧩</div>
-          <h3>Corrigés pas à pas</h3>
-          <p>Les exercices se dévoilent une étape à la fois : on réfléchit entre chaque étape, la réponse arrive à la fin.</p>
-          <ul><li>Mode examen</li><li>Réviser mes erreurs</li></ul>
+          <h3>Exercices corrigés pas à pas</h3>
+          <p>50 exercices par chapitre, avec un corrigé détaillé étape par étape. Pour la plupart, tu tapes ta réponse et l'appli la vérifie.</p>
+          <ul><li>Correction automatique</li><li>Corrigé détaillé</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">📝</div>
-          <h3>Fiches méthode</h3>
-          <p>12 méthodologies par type d'épreuve : dissertation, commentaire, problème de maths, grand oral, étude de doc…</p>
-          <ul><li>Collège &amp; lycée</li><li>Gérer son temps</li></ul>
+          <div class="ficon">📒</div>
+          <h3>Carnet d'erreurs</h3>
+          <p>Les questions et les exercices ratés reviennent au bon moment, après 1, 3 puis 7 jours, jusqu'à ce que tu les maîtrises.</p>
+          <ul><li>Répétition espacée</li><li>Suivi des erreurs</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">📊</div>
-          <h3>Suivi &amp; motivation</h3>
-          <p>Points forts, points faibles, priorité du moment et objectifs de maîtrise par matière — plus XP, séries, badges et ligue.</p>
-          <ul><li>Bilan partageable</li><li>Suivi des erreurs</li></ul>
+          <div class="ficon">✍️</div>
+          <h3>Dictées</h3>
+          <p>Écoute, écris, corrige : 140 dictées du CP à la 3<sup>e</sup>, et en anglais, espagnol, allemand et italien, notées sur 10.</p>
+          <ul><li>Lecture à voix haute</li><li>Fautes classées par type</li></ul>
+        </article>
+        <article class="fcard reveal">
+          <div class="ficon">🎓</div>
+          <h3>Examens et sujets</h3>
+          <p>Mode examen, examen sur mesure noté sur 20, sujets type brevet et bac, et liens vers les annales officielles.</p>
+          <ul><li>Noté sur 20</li><li>Brevet &amp; bac</li></ul>
         </article>
         <article class="fcard reveal">
           <div class="ficon">🖼️</div>
           <h3>Cours illustrés</h3>
-          <p>Des fiches claires avec schémas intégrés en maths, physique et sciences — et les formules rendues proprement.</p>
-          <ul><li>956 chapitres</li><li>Schémas SVG</li></ul>
+          <p>Des fiches claires avec schémas intégrés en maths, physique-chimie, sciences, histoire-géographie et technologie, et des formules rendues proprement.</p>
+          <ul><li><span class="nb-chapitres">959</span> chapitres</li><li>Schémas</li></ul>
+        </article>
+        <article class="fcard reveal">
+          <div class="ficon">📊</div>
+          <h3>Suivi &amp; motivation</h3>
+          <p>Statistiques par matière, chapitres à revoir en priorité, bilan de la semaine, XP, séries, badges et ligue hebdomadaire.</p>
+          <ul><li>Bilan de la semaine</li><li>Espace parent</li></ul>
+        </article>
+        <article class="fcard reveal">
+          <div class="ficon">🔊</div>
+          <h3>Écouter le cours</h3>
+          <p>Le bouton « Écouter » lit la fiche, l'énoncé ou la question à voix haute : en langues vivantes, au CP, au CE1, ou partout si tu le choisis.</p>
+          <ul><li>Langues vivantes</li><li>CP · CE1</li></ul>
         </article>
       </div>
     </div>
@@ -415,45 +438,45 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Apprendre en jouant</span>
-        <h2>Sept jeux pour réviser sans s'en rendre compte</h2>
-        <p>Des défis courts, un score, un record à battre. Parfaits pour transformer cinq minutes d'attente en révision.</p>
+        <h2>Des défis pour réviser sans s'en rendre compte</h2>
+        <p>Des parties courtes, un score, des amis à battre. Parfait pour transformer cinq minutes d'attente en révision.</p>
       </div>
       <div class="features">
         <article class="fcard reveal">
-          <div class="ficon">✖️</div>
-          <h3>Cross Math</h3>
-          <p>Des grilles d'équations croisées générées à l'infini, avec solution garantie unique. Chrono, score et record.</p>
-          <ul><li>4 niveaux</li><li>Grandes grilles</li></ul>
+          <div class="ficon">👥</div>
+          <h3>Défis entre amis</h3>
+          <p>Ajoute tes amis, défie-les sur un chapitre : ils rejouent exactement les mêmes questions, et vous comparez vos scores.</p>
+          <ul><li>Mêmes questions</li><li>Score sur 10</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">⏱️</div>
-          <h3>Vrai / Faux chrono</h3>
-          <p>Juger un flux d'affirmations le plus vite possible : égalités, fractions, parité, faits maths &amp; sciences.</p>
-          <ul><li>Contre la montre</li></ul>
+          <div class="ficon">⚔️</div>
+          <h3>Duel à deux</h3>
+          <p>Un duel sur un même téléphone : chacun son tour, qui aura le meilleur score ?</p>
+          <ul><li>Même téléphone</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">🃏</div>
-          <h3>Memory des formules</h3>
-          <p>Associer un nom à sa formule : aires, périmètres, identités remarquables, physique.</p>
-          <ul><li>Toutes matières</li></ul>
+          <div class="ficon">📲</div>
+          <h3>Défi à distance</h3>
+          <p>Envoie un QR code ou un code à un ami : mêmes questions, et vous comparez vos scores.</p>
+          <ul><li>QR code</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">🎯</div>
-          <h3>Le compte est bon</h3>
-          <p>Atteindre une cible en combinant des nombres. Génération toujours soluble, et un indice si tu bloques.</p>
-          <ul><li>Solveur intégré</li></ul>
+          <div class="ficon">🏆</div>
+          <h3>Ligue hebdo</h3>
+          <p>Grimpe du Bronze au Diamant en gagnant des XP chaque semaine.</p>
+          <ul><li>Bronze → Diamant</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">🔤</div>
-          <h3>Pendu des définitions</h3>
-          <p>Deviner un mot à partir de sa définition — le vocabulaire de toutes les matières.</p>
-          <ul><li>Vocabulaire</li></ul>
+          <div class="ficon">🥇</div>
+          <h3>Classement entre amis</h3>
+          <p>Qui a gagné le plus d'XP cette semaine ? Le classement se remet à zéro chaque semaine.</p>
+          <ul><li>Entre amis</li></ul>
         </article>
         <article class="fcard reveal">
-          <div class="ficon">🗓️</div>
-          <h3>Défi du jour</h3>
-          <p>Un défi unique, identique pour tous chaque jour : 5 questions mélangées, bonus d'XP et série à entretenir.</p>
-          <ul><li>Nouveau chaque jour</li></ul>
+          <div class="ficon">🧠</div>
+          <h3>Énigmes</h3>
+          <p>Suites logiques, grilles de logique, calcul mental et allumettes : des énigmes pour tous les niveaux, qui rapportent de l'XP.</p>
+          <ul><li>Tous niveaux</li></ul>
         </article>
       </div>
     </div>
@@ -465,15 +488,16 @@
         <div class="reveal">
           <span class="eyebrow">Outils de calcul</span>
           <h2 style="font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;margin-top:8px;">On te montre toutes les étapes, pas juste le résultat</h2>
-          <p style="color:var(--ink-soft);font-size:1.06rem;margin-top:12px;">Une trentaine d'outils en algèbre, géométrie, trigonométrie, dérivées, suites, stats, arithmétique, chimie et physique — chacun détaille son raisonnement. Regroupés par domaine, avec recherche et partage des étapes.</p>
+          <p style="color:var(--ink-soft);font-size:1.06rem;margin-top:12px;">Une vingtaine d'outils (second degré, suites, statistiques, dérivées, géométrie repérée, trigonométrie, arithmétique, nombres complexes, chimie et physique), chacun avec son raisonnement détaillé. Et un résolveur qui affiche les étapes d'un calcul ou d'une équation.</p>
           <div class="subjects" style="margin-top:22px;">
-            <span class="subj">Développer / factoriser</span>
             <span class="subj">Second degré</span>
-            <span class="subj">Pythagore &amp; Thalès</span>
-            <span class="subj">Vecteurs</span>
-            <span class="subj">Dérivées</span>
+            <span class="subj">Suites</span>
+            <span class="subj">Dérivée et variations</span>
+            <span class="subj">Produit scalaire</span>
             <span class="subj">PGCD &amp; Bézout</span>
+            <span class="subj">Nombres complexes</span>
             <span class="subj">Masse molaire</span>
+            <span class="subj">Loi d'Ohm</span>
           </div>
         </div>
         <div class="chalk reveal">
@@ -492,12 +516,12 @@
       <div class="offline">
         <div class="reveal">
           <span class="eyebrow">La promesse</span>
-          <h2 style="font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;margin-top:8px;">Rien ne quitte ton téléphone</h2>
-          <p style="color:var(--ink-soft);font-size:1.06rem;margin-top:12px;">Kamal Campus est pensée pour réviser partout — dans le métro, en vacances, en zone blanche — et pour laisser les parents tranquilles.</p>
+          <h2 style="font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;margin-top:8px;">Réviser partout, même sans réseau</h2>
+          <p style="color:var(--ink-soft);font-size:1.06rem;margin-top:12px;">Kamal Campus est pensée pour réviser partout — dans le métro, en vacances, en zone blanche et pour laisser les parents tranquilles.</p>
           <div class="promise-list">
-            <div class="promise"><div class="pk">✓</div><div><div class="pt">100 % hors-ligne</div><div class="ps">Tout le contenu est embarqué dans l'appli. Aucune connexion nécessaire, jamais.</div></div></div>
-            <div class="promise"><div class="pk">✓</div><div><div class="pt">Aucune donnée collectée</div><div class="ps">Pas de compte, pas de pistage, pas de publicité. Ta progression reste sur ton appareil.</div></div></div>
-            <div class="promise"><div class="pk">✓</div><div><div class="pt">Sûr pour les élèves</div><div class="ps">Classée tout public. Rien à acheter en cours de route pour réviser.</div></div></div>
+            <div class="promise"><div class="pk">✓</div><div><div class="pt">Révisable hors connexion</div><div class="ps">Télécharge les chapitres de ta classe avec le bouton « Réviser sans internet » : fiches et exercices restent lisibles sans réseau.</div></div></div>
+            <div class="promise"><div class="pk">✓</div><div><div class="pt">Compte gratuit, données réduites au minimum</div><div class="ps">Une adresse e-mail et un mot de passe suffisent. Ta progression est enregistrée sur ton compte pour la retrouver sur tous tes appareils. Pas de pistage, pas de revente de données.</div></div></div>
+            <div class="promise"><div class="pk">✓</div><div><div class="pt">Sûr pour les élèves</div><div class="ps">Aucune publicité et rien à acheter pour réviser. Avant 15 ans, on crée son compte avec l'accord d'un parent.</div></div></div>
           </div>
         </div>
         <div class="reveal">
@@ -524,10 +548,10 @@
         <h2>Ce qu'on nous demande souvent</h2>
       </div>
       <div class="faq">
-        <details class="qa reveal" open><summary>Faut-il une connexion internet ?</summary><p>Non. Une fois l'appli installée, tout fonctionne hors-ligne : cours, exercices, jeux et outils. Idéal en déplacement ou en zone sans réseau.</p></details>
-        <details class="qa reveal"><summary>Est-ce gratuit ? Y a-t-il des pubs ?</summary><p>Aucune publicité et aucun pistage. La progression reste stockée uniquement sur l'appareil.</p></details>
-        <details class="qa reveal"><summary>Quels niveaux et matières sont couverts ?</summary><p>Du CP à la Terminale : 21 matières et 956 chapitres de cours, avec exercices et fiches méthode adaptés à chaque niveau.</p></details>
-        <details class="qa reveal"><summary>Faut-il créer un compte ?</summary><p>Non. Aucune inscription, aucune adresse e-mail demandée. On ouvre l'appli et on révise.</p></details>
+        <details class="qa reveal" open><summary>Faut-il une connexion internet ?</summary><p>Oui pour te connecter et télécharger les chapitres. Ensuite, les chapitres téléchargés (fiches et exercices) se révisent hors connexion : pratique en déplacement ou en zone sans réseau.</p></details>
+        <details class="qa reveal"><summary>Est-ce gratuit ? Y a-t-il des pubs ?</summary><p>Oui, c'est gratuit : aucune publicité, aucun achat, aucun pistage. Ta progression est enregistrée sur ton compte, pour la retrouver sur le web comme sur le téléphone.</p></details>
+        <details class="qa reveal"><summary>Quels niveaux et matières sont couverts ?</summary><p>Du CP à la Terminale : 21 matières et <span class="nb-chapitres">959</span> chapitres de cours, chacun avec sa fiche, son QCM, ses cartes de révision et 50 exercices corrigés.</p></details>
+        <details class="qa reveal"><summary>Faut-il créer un compte ?</summary><p>Oui, un compte gratuit : une adresse e-mail et un mot de passe suffisent. Il garde ta progression et te permet de la retrouver sur tous tes appareils. Si tu as moins de 15 ans, demande d'abord l'accord d'un parent.</p></details>
         <details class="qa reveal"><summary>Puis-je l'utiliser dans le navigateur ?</summary><p>Oui : la version web se lance directement depuis ce site avec le bouton « Lancer l'appli ». L'application mobile arrive sur les stores.</p></details>
       </div>
     </div>
@@ -543,7 +567,7 @@
           <a class="btn btn-ghost" href="#reviser">Revoir les fonctionnalités</a>
         </div>
         <div class="trust-row" style="justify-content:center;margin-top:24px;">
-          <span class="chip"><b>✓</b> Hors-ligne</span>
+          <span class="chip"><b>✓</b> Hors connexion</span>
           <span class="chip"><b>✓</b> Sans pub</span>
           <span class="chip"><b>✓</b> CP → Terminale</span>
         </div>
@@ -558,11 +582,11 @@
     <nav class="foot-links">
       <a href="#reviser">Réviser</a>
       <a href="#jeux">Jeux</a>
-      <a href="#hors-ligne">Hors-ligne</a>
+      <a href="#hors-ligne">Hors connexion</a>
       <a href="./politique-confidentialite.html">Confidentialité</a>
       <a href="./app/">Lancer l'appli</a>
     </nav>
-    <div class="muted">© <span id="yr"></span> Kamal Campus · Révision hors-ligne</div>
+    <div class="muted">© <span id="yr"></span> Kamal Campus · Révision du CP à la Terminale</div>
   </div>
 </footer>
 
