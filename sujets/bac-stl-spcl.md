@@ -199,15 +199,13 @@ Pour maintenir un local à température confortable, un thermostat commande un r
    et $c$ la concentration en quantité de matière ($\text{mol·L}^{-1}$). *(1 pt)*
 
 4. Le rapport $A/c$ est constant : par exemple
-   $\dfrac{0{,}20}{5{,}0} = \dfrac{0{,}40}{10{,}0} = \dots = \dfrac{1{,}00}{25{,}0}
-   = 0{,}040\ \text{(mmol·L}^{-1})^{-1}$. L'absorbance est donc **proportionnelle** à $c$ :
+   $\dfrac{0{,}20}{5{,}0} = \dfrac{0{,}40}{10{,}0} = \dots = \dfrac{1{,}00}{25{,}0} = 0{,}040\ \text{(mmol·L}^{-1})^{-1}$. L'absorbance est donc **proportionnelle** à $c$ :
    la droite $A = f(c)$ passe par l'origine. Avec $c$ en $\text{mol·L}^{-1}$
    ($5{,}0\ \text{mmol·L}^{-1} = 5{,}0\times 10^{-3}\ \text{mol·L}^{-1}$) :
    $$k = \frac{A}{c} = \frac{0{,}20}{5{,}0\times 10^{-3}} = 40\ \text{L·mol}^{-1}.$$
    La droite d'étalonnage a pour équation $A = 40\,c$. *(2 pts)*
 
-5. a. On lit $c_x$ sur la droite : $c_x = \dfrac{A_x}{k} = \dfrac{0{,}50}{40}
-   = 1{,}25\times 10^{-2}\ \text{mol·L}^{-1} = 12{,}5\ \text{mmol·L}^{-1}$ (bien dans la
+5. a. On lit $c_x$ sur la droite : $c_x = \dfrac{A_x}{k} = \dfrac{0{,}50}{40} = 1{,}25\times 10^{-2}\ \text{mol·L}^{-1} = 12{,}5\ \text{mmol·L}^{-1}$ (bien dans la
    gamme des étalons). *(1,5 pt)*
 
    b. Le prélèvement de $10{,}0\ \text{mL}$ a été amené à $200{,}0\ \text{mL}$ : le facteur
@@ -333,8 +331,8 @@ Pour maintenir un local à température confortable, un thermostat commande un r
 ### Partie C — Une régulation en tout ou rien
 
 10. Utiliser deux seuils différents s'appelle l'**hystérésis**. Avec un seuil unique, une
-    température oscillant autour de ce seuil ferait **claqueter** le radiateur
-    (marche/arrêt très rapprochés), ce qui l'userait. Les deux seuils ($19\ \text{°C}$ et
+    température oscillant autour de ce seuil ferait **démarrer et s'arrêter**
+    sans cesse le radiateur (marche/arrêt très rapprochés), ce qui l'userait. Les deux seuils ($19\ \text{°C}$ et
     $21\ \text{°C}$) créent une **zone morte** : le radiateur chauffe jusqu'à $21\ \text{°C}$,
     s'arrête, et ne redémarre qu'une fois la température retombée à $19\ \text{°C}$. *(1 pt)*
 

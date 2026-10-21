@@ -146,8 +146,7 @@ inactive la semaine $n$. La semaine $0$, toutes les personnes sont actives : $\p
    La solution de partie imaginaire positive est $z_A = 1 + i\sqrt{3}$ (l'autre est
    $\overline{z_A} = 1 - i\sqrt{3}$).
 
-2. $z_A^{\,2} = (1 + i\sqrt{3})^2 = 1 + 2i\sqrt{3} + (i\sqrt{3})^2 = 1 + 2i\sqrt{3} - 3
-   = -2 + 2i\sqrt{3}.$
+2. $z_A^{\,2} = (1 + i\sqrt{3})^2 = 1 + 2i\sqrt{3} + (i\sqrt{3})^2 = 1 + 2i\sqrt{3} - 3 = -2 + 2i\sqrt{3}.$
 
 3. a. $|z_A| = \sqrt{1^2 + (\sqrt{3})^2} = \sqrt{1 + 3} = 2$. Pour l'argument $\theta$ :
    $$\cos\theta = \dfrac{1}{2}, \qquad \sin\theta = \dfrac{\sqrt{3}}{2},$$
@@ -218,7 +217,7 @@ inactive la semaine $n$. La semaine $0$, toutes les personnes sont actives : $\p
    b. Soit $(x\,;y)$ une solution. En soustrayant $7\times 3 - 5\times 4 = 1$ de
    $7x - 5y = 1$ :
    $$7(x - 3) - 5(y - 4) = 0 \quad\Longleftrightarrow\quad 7(x - 3) = 5(y - 4).$$
-   Ainsi $5 \mid 7(x - 3)$ ; comme $\mathrm{pgcd}(5,7) = 1$, le théorème de Gauss donne
+   Ainsi $5 \mid 7(x - 3)$ ; comme $\mathrm{PGCD}(5\,;7) = 1$, le théorème de Gauss donne
    $5 \mid (x - 3)$, donc $x - 3 = 5k$ soit $x = 3 + 5k$ pour un entier $k$. En reportant :
    $7\times 5k = 5(y - 4)$, d'où $y - 4 = 7k$, c'est-à-dire $y = 4 + 7k$.
    Réciproquement, tout couple $x = 3 + 5k$, $y = 4 + 7k$ vérifie
@@ -278,12 +277,10 @@ inactive la semaine $n$. La semaine $0$, toutes les personnes sont actives : $\p
    $$P = \begin{pmatrix} 0{,}8 & 0{,}2 \\ 0{,}3 & 0{,}7 \end{pmatrix}.$$
    Ligne $1$ : $0{,}8 + 0{,}2 = 1$ ; ligne $2$ : $0{,}3 + 0{,}7 = 1$. ✓
 
-3. $\pi_1 = \pi_0\,P = (\,1\ \ 0\,)\begin{pmatrix} 0{,}8 & 0{,}2 \\ 0{,}3 & 0{,}7 \end{pmatrix}
-   = (\,0{,}8\ \ 0{,}2\,)$. Après une semaine, une personne (partie active) a la probabilité
+3. $\pi_1 = \pi_0\,P = (\,1\ \ 0\,)\begin{pmatrix} 0{,}8 & 0{,}2 \\ 0{,}3 & 0{,}7 \end{pmatrix} = (\,0{,}8\ \ 0{,}2\,)$. Après une semaine, une personne initialement active a la probabilité
    $0{,}8$ d'être encore active et $0{,}2$ d'être devenue inactive.
 
-4. a. $v_{n+1} = a_{n+1} - 0{,}6 = (0{,}5\,a_n + 0{,}3) - 0{,}6 = 0{,}5\,a_n - 0{,}3
-   = 0{,}5\,(a_n - 0{,}6) = 0{,}5\,v_n.$
+4. a. $v_{n+1} = a_{n+1} - 0{,}6 = (0{,}5\,a_n + 0{,}3) - 0{,}6 = 0{,}5\,a_n - 0{,}3 = 0{,}5\,(a_n - 0{,}6) = 0{,}5\,v_n.$
    Donc $(v_n)$ est **géométrique de raison $0{,}5$**, de premier terme
    $v_0 = a_0 - 0{,}6 = 1 - 0{,}6 = 0{,}4$.
 

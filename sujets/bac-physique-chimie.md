@@ -129,12 +129,12 @@ frottements de l'air** et la poussée d'Archimède. L'origine des dates est l'in
 
 ## Exercice 3 — Le retardateur d'un éclairage (6 points)
 
-Pour éteindre progressivement l'éclairage d'une cage d'escalier, on utilise un dipôle RC :
+Pour éteindre automatiquement l'éclairage d'une cage d'escalier, on utilise un dipôle RC :
 un condensateur se charge à travers une résistance, et une minuterie électronique coupe la
 lampe lorsque la tension aux bornes du condensateur atteint une valeur seuil.
 
 Le montage comporte un générateur idéal de tension continue de f.é.m. $E = 5{,}0$ V, un
-conducteur ohmique de résistance $R = 1{,}0$ kΩ et un condensateur de capacité
+conducteur ohmique de résistance $R = 100$ kΩ et un condensateur de capacité
 $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le condensateur est
 **déchargé** et on ferme l'interrupteur. On note $u_C$ la tension aux bornes du condensateur
 (convention récepteur) et $i$ l'intensité du courant dans le circuit.
@@ -164,8 +164,7 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
    correspond-elle ?
 5. Montrer que l'intensité du courant s'écrit $i(t) = \dfrac{E}{R}\,e^{-t/\tau}$. Calculer sa
    valeur $i_0$ à la date $t = 0$. Que vaut $i$ lorsque le condensateur est chargé ?
-6. La minuterie coupe l'éclairage lorsque $u_C$ atteint la valeur seuil $u_{\text{seuil}} =
-   4{,}0$ V. Déterminer la durée $t_1$ au bout de laquelle l'éclairage s'éteint.
+6. La minuterie coupe l'éclairage lorsque $u_C$ atteint la valeur seuil $u_{\text{seuil}} = 4{,}0$ V. Déterminer la durée $t_1$ au bout de laquelle l'éclairage s'éteint.
 7. Au bout de combien de temps peut-on considérer le régime permanent atteint ? Expliquer.
 
 ---
@@ -176,15 +175,13 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
 
 ### Partie A
 
-1. $M(\mathrm{CH_3COOH}) = M(\mathrm{C_2H_4O_2}) = 2\times 12{,}0 + 4\times 1{,}0 + 2\times 16{,}0
-   = 24{,}0 + 4{,}0 + 32{,}0 = \boxed{60{,}0 \text{ g·mol}^{-1}}$.
+1. $M(\mathrm{CH_3COOH}) = M(\mathrm{C_2H_4O_2}) = 2\times 12{,}0 + 4\times 1{,}0 + 2\times 16{,}0 = 24{,}0 + 4{,}0 + 32{,}0 = \boxed{60{,}0 \text{ g·mol}^{-1}}$.
 
 2. **Protocole de dilution (facteur $F = 10$).** À l'aide de la **pipette jaugée de
    $10{,}0$ mL** munie d'une propipette, prélever $10{,}0$ mL de vinaigre commercial et les
    introduire dans la **fiole jaugée de $100{,}0$ mL**. Compléter avec de l'eau distillée
    jusqu'au trait de jauge, boucher et homogénéiser en retournant plusieurs fois. Le facteur
-   de dilution est bien $F = \dfrac{V_{\text{fille}}}{V_{\text{prélevé}}} = \dfrac{100{,}0}{10{,}0}
-   = 10$.
+   de dilution est bien $F = \dfrac{V_{\text{fille}}}{V_{\text{prélevé}}} = \dfrac{100{,}0}{10{,}0} = 10$.
 
 3. La dilution **conserve la quantité de matière** d'acide prélevée (on n'ajoute que de
    l'eau, aucune espèce acide), mais elle **divise la concentration** par $10$ (le même
@@ -216,14 +213,13 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
    $$C_0 = 10 \times C_S = 10 \times 0{,}10 = \boxed{1{,}0 \text{ mol·L}^{-1}}.$$
 
 6. Titre massique : $t = C_0 \times M = 1{,}0 \times 60{,}0 = 60$ g·L⁻¹, soit $60$ g d'acide
-   par litre de vinaigre. Comme $\rho = 1{,}00$ g·mL⁻¹, un litre de vinaigre pèse $1000$ g ;
-   $60$ g d'acide pour $1000$ g de vinaigre, soit **$6{,}0$ g pour $100$ g** : le degré
+   par litre de vinaigre. Comme $\rho = 1{,}00$ g·mL⁻¹, un litre de vinaigre a une masse de $1\,000$ g ;
+   $60$ g d'acide pour $1\,000$ g de vinaigre, soit **$6{,}0$ g pour $100$ g** : le degré
    d'acidité vaut $\boxed{6{,}0°}$. L'indication « 6° » de l'étiquette est **vérifiée**.
 
 7. L'acide éthanoïque est un **acide faible**. À l'équivalence, tout l'acide a été transformé
    en sa **base conjuguée**, l'ion éthanoate $\mathrm{CH_3COO^-}$. Cet ion réagit
-   partiellement avec l'eau ($\mathrm{CH_3COO^-} + \mathrm{H_2O} \rightleftharpoons
-   \mathrm{CH_3COOH} + \mathrm{HO^-}$) en libérant des ions $\mathrm{HO^-}$ : le milieu est
+   partiellement avec l'eau ($\mathrm{CH_3COO^-} + \mathrm{H_2O} \rightleftharpoons \mathrm{CH_3COOH} + \mathrm{HO^-}$) en libérant des ions $\mathrm{HO^-}$ : le milieu est
    donc **basique**, d'où un pH $> 7$.
 
 8. La zone de virage de l'indicateur doit **encadrer le pH à l'équivalence** ($8{,}4$). La
@@ -261,16 +257,14 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
 
    b. $$y_{\max} = y(t_S) = -\tfrac{1}{2}g\,t_S^{2} + (v_0\sin\alpha)\,t_S
    = -\tfrac12 \times 9{,}8 \times 0{,}87^{2} + 8{,}49 \times 0{,}87 \approx \boxed{3{,}7 \text{ m}}.$$
-   *(Contrôle : $y_{\max} = \dfrac{(v_0\sin\alpha)^2}{2g} = \dfrac{8{,}49^2}{19{,}6} \approx
-   3{,}7$ m ✓.)*
+   *(Contrôle : $y_{\max} = \dfrac{(v_0\sin\alpha)^2}{2g} = \dfrac{8{,}49^2}{19{,}6} \approx 3{,}7$ m ✓.)*
 
 4. a. De $x(t) = (v_0\cos\alpha)\,t$ on tire $t = \dfrac{x}{v_0\cos\alpha}$. En reportant dans
    $y(t)$ :
    $$y = -\tfrac12 g\left(\frac{x}{v_0\cos\alpha}\right)^{2} + (v_0\sin\alpha)\frac{x}{v_0\cos\alpha}
    = -\frac{g}{2\,v_0^{2}\cos^{2}\alpha}\,x^{2} + (\tan\alpha)\,x.$$
 
-   b. Numériquement, $2\,v_0^{2}\cos^{2}\alpha = 2 \times 12^{2} \times (\cos 45°)^2
-   = 2 \times 144 \times 0{,}5 = 144$, donc le coefficient de $x^2$ vaut
+   b. Numériquement, $2\,v_0^{2}\cos^{2}\alpha = 2 \times 12^{2} \times (\cos 45°)^2 = 2 \times 144 \times 0{,}5 = 144$, donc le coefficient de $x^2$ vaut
    $-\dfrac{9{,}8}{144} \approx -0{,}068$, et $\tan 45° = 1$ :
    $$y(x) = -0{,}068\,x^{2} + x.$$
    Le coefficient de $x^2$ étant négatif, la trajectoire est une **parabole** tournant sa
@@ -322,21 +316,16 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
    Cette expression vaut $E$ (second membre) pour **tout** $t$ si et seulement si
    $\dfrac{RC}{\tau} - 1 = 0$, c'est-à-dire $\boxed{\tau = RC}$.
 
-3. a. $[\,R\,]\times[\,C\,] = \Omega \times \text{F} = \dfrac{\text{V}}{\text{A}} \times
-   \dfrac{\text{C}}{\text{V}} = \dfrac{\text{C}}{\text{A}} = \dfrac{\text{C}}{\text{C·s}^{-1}}
-   = \text{s}$. Le produit $RC$ est bien homogène à un **temps**.
+3. a. $[\,R\,]\times[\,C\,] = \Omega \times \text{F} = \dfrac{\text{V}}{\text{A}} \times \dfrac{\text{C}}{\text{V}} = \dfrac{\text{C}}{\text{A}} = \dfrac{\text{C}}{\text{C·s}^{-1}} = \text{s}$. Le produit $RC$ est bien homogène à un **temps**.
 
-   b. En unités SI : $R = 1{,}0$ kΩ $= 1{,}0\times 10^{3}$ Ω et $C = 1{,}0$ mF $= 1{,}0\times
-   10^{-3}$ F, donc
-   $$\tau = RC = 1{,}0\times 10^{3} \times 1{,}0\times 10^{-3} = \boxed{1{,}0 \text{ s}}.$$
+   b. En unités SI : $R = 100$ kΩ $= 1{,}0\times 10^{5}$ Ω et $C = 1{,}0$ mF $= 1{,}0\times 10^{-3}$ F, donc
+   $$\tau = RC = 1{,}0\times 10^{5} \times 1{,}0\times 10^{-3} = \boxed{1{,}0\times 10^{2} \text{ s}} = 100 \text{ s}.$$
 
-4. $u_C(\tau) = E\left(1 - e^{-1}\right) = 5{,}0 \times (1 - 0{,}368) = 5{,}0 \times 0{,}632
-   \approx \boxed{3{,}2 \text{ V}}$, soit environ **$63\,\%$ de $E$**.
+4. $u_C(\tau) = E\left(1 - e^{-1}\right) = 5{,}0 \times (1 - 0{,}368) = 5{,}0 \times 0{,}632 \approx \boxed{3{,}2 \text{ V}}$, soit environ **$63\,\%$ de $E$**.
 
-5. $i(t) = C\,\dfrac{\mathrm{d}u_C}{\mathrm{d}t} = C \times \dfrac{E}{\tau}\,e^{-t/\tau}
-   = C \times \dfrac{E}{RC}\,e^{-t/\tau} = \dfrac{E}{R}\,e^{-t/\tau}$. À $t = 0$ :
-   $$i_0 = \frac{E}{R} = \frac{5{,}0}{1{,}0\times 10^{3}} = 5{,}0\times 10^{-3} \text{ A}
-   = \boxed{5{,}0 \text{ mA}}.$$
+5. $i(t) = C\,\dfrac{\mathrm{d}u_C}{\mathrm{d}t} = C \times \dfrac{E}{\tau}\,e^{-t/\tau} = C \times \dfrac{E}{RC}\,e^{-t/\tau} = \dfrac{E}{R}\,e^{-t/\tau}$. À $t = 0$ :
+   $$i_0 = \frac{E}{R} = \frac{5{,}0}{1{,}0\times 10^{5}} = 5{,}0\times 10^{-5} \text{ A}
+   = \boxed{50\ \mu\text{A}}.$$
    Une fois le condensateur chargé, $u_C$ est constante, donc
    $i = C\,\dfrac{\mathrm{d}u_C}{\mathrm{d}t} = \boxed{0}$ : plus aucun courant ne circule.
 
@@ -344,11 +333,11 @@ $C = 1{,}0$ mF, montés en série avec un interrupteur. À la date $t = 0$, le c
    $$E\left(1 - e^{-t_1/\tau}\right) = 4{,}0 \;\Longrightarrow\; 1 - e^{-t_1/\tau} = \frac{4{,}0}{5{,}0} = 0{,}8
    \;\Longrightarrow\; e^{-t_1/\tau} = 0{,}2.$$
    Donc $-\dfrac{t_1}{\tau} = \ln 0{,}2$, soit
-   $$t_1 = -\tau\ln 0{,}2 = \tau\ln 5 = 1{,}0 \times 1{,}61 \approx \boxed{1{,}6 \text{ s}}.$$
-   L'éclairage s'éteint environ $1{,}6$ s après le déclenchement.
+   $$t_1 = -\tau\ln 0{,}2 = \tau\ln 5 = 100 \times 1{,}61 \approx \boxed{1{,}6\times 10^{2} \text{ s}}.$$
+   L'éclairage s'éteint environ $160$ s (près de $2$ min $40$ s) après le déclenchement.
 
 7. Le régime permanent est atteint (à moins de $1\,\%$ près) au bout d'environ $5\tau$, soit
-   $5 \times 1{,}0 = \boxed{5{,}0 \text{ s}}$. Au-delà, $u_C \approx E$ et le courant est
+   $5 \times 100 = \boxed{5{,}0\times 10^{2} \text{ s}}$ (environ $8$ min). Au-delà, $u_C \approx E$ et le courant est
    pratiquement nul.
 
 <!-- notes : thèmes couverts —
@@ -365,8 +354,8 @@ passe sous la barre à 14 m), rôle des frottements. Vérifiés : v0x=v0y≈8,49
 y_max≈3,7 m ; y(x)=−0,068x²+x ; y(9,15)≈3,5 m>2,0 ; y(14)≈0,7 m<2,44 → but. g=9,8 m/s².
 Ex3 Ondes et signaux (« Dipôle RC ») : q=Cu, q_max=5,0 mC, i=C·du/dt, établissement et
 résolution de l'équa. diff. RC·u'_C+u_C=E, vérification de la solution E(1−e^{−t/τ}),
-homogénéité de RC, τ=1,0 s, u_C(τ)≈3,2 V (63%), i(t)=(E/R)e^{−t/τ}, i_0=5,0 mA, seuil 4,0 V
-atteint à t_1=τ·ln5≈1,6 s, régime permanent à 5τ=5,0 s. Tous les résultats recalculés.
+homogénéité de RC, τ=100 s (R=100 kΩ), u_C(τ)≈3,2 V (63%), i(t)=(E/R)e^{−t/τ}, i_0=50 µA, seuil 4,0 V
+atteint à t_1=τ·ln5≈1,6×10² s, régime permanent à 5τ=5,0×10² s. Tous les résultats recalculés.
 Points à vérifier à la relecture : rendu des schémas de forces (Ex2) et de l'arbre/courbes
 absents (à fournir en version élève) ; valeur pH_éq≈8,4 donnée (dépend de la dilution, cohérente
 avec un acide faible) ; g=9,8 (et non 9,81) retenu et annoncé dans les données ; chiffres

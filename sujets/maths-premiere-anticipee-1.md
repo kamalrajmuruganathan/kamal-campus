@@ -196,8 +196,7 @@ duquel le modèle B donne plus d'abonnés que le modèle A. À la calculatrice :
 $u_{10} = 9\,000$ et $v_{10} \approx 8\,954$ ($v_{10} \leqslant u_{10}$) ; $u_{11} = 9\,400$ et
 $v_{11} \approx 9\,492$ ($v_{11} > u_{11}$). La fonction renvoie **$11$** (décembre 2026).
 
-**5.** Modèle A : $u_0 + \dots + u_{11} = 12 \times 5\,000 + 400 \times (0 + 1 + \dots + 11)
-= 60\,000 + 400 \times 66 = 86\,400$ abonnés-mois, soit $864$ €.
+**5.** Modèle A : $u_0 + \dots + u_{11} = 12 \times 5\,000 + 400 \times (0 + 1 + \dots + 11) = 60\,000 + 400 \times 66 = 86\,400$ abonnés-mois, soit $864$ €.
 Modèle B : $v_0 + \dots + v_{11} = 5\,000 \times \dfrac{1 - 1{,}06^{12}}{1 - 1{,}06} \approx 84\,350$ abonnés-mois,
 soit environ $843{,}50$ €.
 Sur la première année, le modèle A rapporte un peu plus, bien que le modèle B finisse par dépasser

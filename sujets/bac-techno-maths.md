@@ -174,16 +174,16 @@ $$6\,000 - 1\,000\times 0{,}85^n > 5\,900 \iff -1\,000\times 0{,}85^n > -100
 $$0{,}85^n < 0{,}1 \iff \log(0{,}85^n) < \log(0{,}1) \iff n\,\log(0{,}85) < -1.$$
 Comme $\log(0{,}85) \approx -0{,}0706 < 0$, on divise en changeant le sens :
 $$n > \frac{-1}{\log(0{,}85)} \approx \frac{-1}{-0{,}0706} \approx 14{,}17.$$
-Le plus petit entier convient : $n = 15$. Vérification : $u_{14} \approx 5\,897 < 5\,900$
-et $u_{15} \approx 5\,913 > 5\,900$. C'est donc en l'année $2026 + 15 = \boxed{2041}$.
+Le plus petit entier qui convient est $n = 15$. Vérification : $u_{14} \approx 5\,897 < 5\,900$
+et $u_{15} \approx 5\,913 > 5\,900$. C'est donc en $2026 + 15 = \boxed{2041}$.
 
 **5.** La condition de continuation de la boucle est « tant que le nombre d'abonnés
 n'a pas encore dépassé $5\,900$ », soit :
 ```
 tant que u ≤ 5900 faire
 ```
-(ou de façon équivalente `tant que u < 5900`, `5\,913 > 5\,900` étant strict). La
-valeur renvoyée est $n = 15$.
+(on peut aussi écrire `tant que u < 5900`, car aucun terme $u_n$ n'est égal à $5\,900$).
+La valeur renvoyée est $n = 15$.
 
 ---
 
@@ -211,8 +211,7 @@ Autrement dit, $1{,}8\,\%$ des composants proviennent de A **et** sont défectue
 $$P(D) = P(A\cap D) + P(B\cap D) = 0{,}018 + 0{,}4 \times 0{,}06 = 0{,}018 + 0{,}024
 = 0{,}042.$$
 
-**4.** $\displaystyle P_D(A) = \frac{P(A\cap D)}{P(D)} = \frac{0{,}018}{0{,}042}
-\approx 0{,}429.$
+**4.** $\displaystyle P_D(A) = \frac{P(A\cap D)}{P(D)} = \frac{0{,}018}{0{,}042} \approx 0{,}429.$
 
 ### Partie B
 
@@ -221,13 +220,11 @@ un tirage avec remise), une épreuve à deux issues : « défectueux » (succès
 $p = 0{,}04$) ou « non défectueux ». La variable $X$ compte le nombre de succès : elle
 suit la **loi binomiale $\mathcal{B}(n = 20\,;\ p = 0{,}04)$**.
 
-**2.** $P(X = 0) = \dbinom{20}{0}\,(0{,}04)^0\,(0{,}96)^{20} = 0{,}96^{20}
-\approx 0{,}442.$
+**2.** $P(X = 0) = \dbinom{20}{0}\,(0{,}04)^0\,(0{,}96)^{20} = 0{,}96^{20} \approx 0{,}442.$
 
 **3.** $P(X \geqslant 1) = 1 - P(X = 0) \approx 1 - 0{,}442 = 0{,}558.$
 
-**4.** $P(X = 1) = \dbinom{20}{1}\,(0{,}04)^1\,(0{,}96)^{19}
-= 20 \times 0{,}04 \times 0{,}96^{19} \approx 0{,}368.$
+**4.** $P(X = 1) = \dbinom{20}{1}\,(0{,}04)^1\,(0{,}96)^{19} = 20 \times 0{,}04 \times 0{,}96^{19} \approx 0{,}368.$
 Donc $P(X \leqslant 1) = P(X=0) + P(X=1) \approx 0{,}442 + 0{,}368 = 0{,}810.$
 
 **5.** $E(X) = n p = 20 \times 0{,}04 = 0{,}8.$ En moyenne, sur un grand nombre
@@ -255,8 +252,7 @@ $(x_i\,;z_i)$ est sensiblement rectiligne.
 **3.** À la calculatrice, la droite des moindres carrés de $z$ en $x$ est :
 $$z = 0{,}200\,x + 0{,}302.$$
 
-**4.** On a $y = 10^{z} = 10^{0{,}200\,x + 0{,}302} = 10^{0{,}302} \times
-\left(10^{0{,}200}\right)^{x}$. Or $10^{0{,}302} \approx 2{,}00$ et
+**4.** On a $y = 10^{z} = 10^{0{,}200\,x + 0{,}302} = 10^{0{,}302} \times \left(10^{0{,}200}\right)^{x}$. Or $10^{0{,}302} \approx 2{,}00$ et
 $10^{0{,}200} \approx 1{,}58$, donc
 $$y \approx 2{,}00 \times 1{,}58^{\,x}.$$
 Le coefficient $m = 1{,}58$ est un coefficient multiplicateur : chaque année, le nombre
@@ -270,6 +266,6 @@ On estime donc environ $\boxed{80\ \text{milliers}}$ de visiteurs uniques en $20
 **6.** On cherche $y > 100$, soit $10^{0{,}200\,x + 0{,}302} > 100 = 10^{2}$. La
 fonction $10^{(\cdot)}$ étant strictement croissante :
 $$0{,}200\,x + 0{,}302 > 2 \iff 0{,}200\,x > 1{,}698 \iff x > 8{,}49.$$
-Le plus petit entier convient : $x = 9$, soit l'année $2026 + 9 = \boxed{2035}$.
+Le plus petit entier qui convient est $x = 9$, soit l'année $2026 + 9 = \boxed{2035}$.
 
 <!-- notes : thèmes couverts — Ex1 suites arithmético-géométriques (v_n=u_n-6000), variation, limite, résolution 0,85^n<0,1 par log, algorithme ; Ex2 probabilités conditionnelles (arbre, proba totales, P_D(A)) + loi binomiale B(20;0,04), E(X) ; Ex3 stats à deux variables avec changement de variable z=log(y), régression z=0,200x+0,302, retour à y=2,00×1,58^x, extrapolation. Tous les calculs vérifiés numériquement (u1=5150, u2=5277,5, n=15 → 2041 ; P(D)=0,042, P_D(A)≈0,429 ; P(X=0)≈0,442, P(X=1)≈0,368, E=0,8 ; régression a=0,200 b=0,302, x=8→79,8, seuil 100 → x=9 → 2035). Points à vérifier : cohérence programme BO 2 avril 2026 terminale techno (suites, expo/log décimal, proba conditionnelles/binomiale, stats deux variables) — OK. -->

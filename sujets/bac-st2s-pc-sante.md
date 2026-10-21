@@ -259,16 +259,13 @@ avec $I_0 = 1{,}0\times 10^{-12}\ \text{W·m}^{-2}$.
 
 ### Partie B
 
-1. $L = 10\,\log\!\left(\dfrac{1{,}0\times 10^{-3}}{1{,}0\times 10^{-12}}\right)
-   = 10\,\log(10^{9}) = 10\times 9 = \boxed{90\ \text{dB}}$.
+1. $L = 10\,\log\!\left(\dfrac{1{,}0\times 10^{-3}}{1{,}0\times 10^{-12}}\right) = 10\,\log(10^{9}) = 10\times 9 = \boxed{90\ \text{dB}}$.
 
-2. $L = 10\,\log\!\left(\dfrac{1{,}0\times 10^{-2}}{1{,}0\times 10^{-12}}\right)
-   = 10\,\log(10^{10}) = 10\times 10 = \boxed{100\ \text{dB}}$.
+2. $L = 10\,\log\!\left(\dfrac{1{,}0\times 10^{-2}}{1{,}0\times 10^{-12}}\right) = 10\,\log(10^{10}) = 10\times 10 = \boxed{100\ \text{dB}}$.
 
 3. a. Avec les bouchons : $L' = 100 - 20 = \boxed{80\ \text{dB}}$.
 
-   b. $I = I_0\times 10^{\,L'/10} = 1{,}0\times 10^{-12}\times 10^{80/10}
-   = 10^{-12}\times 10^{8} = \boxed{1{,}0\times 10^{-4}\ \text{W·m}^{-2}}$.
+   b. $I = I_0\times 10^{\,L'/10} = 1{,}0\times 10^{-12}\times 10^{80/10} = 10^{-12}\times 10^{8} = \boxed{1{,}0\times 10^{-4}\ \text{W·m}^{-2}}$.
 
 4. Le concert atteint $100\ \text{dB} > 85\ \text{dB}$ : il **présente un risque auditif**.
    Ce risque dépend aussi de la **durée d'exposition** : plus l'exposition à un niveau

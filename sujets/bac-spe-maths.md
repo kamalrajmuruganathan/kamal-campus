@@ -290,8 +290,7 @@ $$\mathrm{A}(0\,;0\,;0),\quad \mathrm{B}(1\,;0\,;0),\quad \mathrm{D}(0\,;1\,;0),
 
 ## Exercice 4 — Géométrie dans l'espace
 
-1. $\overrightarrow{\mathrm{BD}} = \mathrm{D} - \mathrm{B} = (0-1\,;\,1-0\,;\,0-0)
-   = (-1\,;1\,;0)$ et
+1. $\overrightarrow{\mathrm{BD}} = \mathrm{D} - \mathrm{B} = (0-1\,;\,1-0\,;\,0-0) = (-1\,;1\,;0)$ et
    $\overrightarrow{\mathrm{BE}} = \mathrm{E} - \mathrm{B} = (-1\,;0\,;1)$.
 
 2. a. $\vec{n}\cdot\overrightarrow{\mathrm{BD}} = 1\times(-1) + 1\times 1 + 1\times 0 = 0$
@@ -321,8 +320,7 @@ $$\mathrm{A}(0\,;0\,;0),\quad \mathrm{B}(1\,;0\,;0),\quad \mathrm{D}(0\,;1\,;0),
 
    b. Le centre de gravité de $\mathrm{BDE}$ a pour coordonnées la moyenne de celles de
    $\mathrm{B}$, $\mathrm{D}$, $\mathrm{E}$ :
-   $\left(\tfrac{1+0+0}{3}\,;\tfrac{0+1+0}{3}\,;\tfrac{0+0+1}{3}\right)
-   = \left(\tfrac13\,;\tfrac13\,;\tfrac13\right) = \mathrm{K}$. De plus, le vecteur
+   $\left(\tfrac{1+0+0}{3}\,;\tfrac{0+1+0}{3}\,;\tfrac{0+0+1}{3}\right) = \left(\tfrac13\,;\tfrac13\,;\tfrac13\right) = \mathrm{K}$. De plus, le vecteur
    directeur de $(\mathrm{AG})$ est $(1\,;1\,;1) = \vec{n}$, vecteur normal au plan
    $(\mathrm{BDE})$ : la droite $(\mathrm{AG})$ est donc **perpendiculaire** au plan
    $(\mathrm{BDE})$.

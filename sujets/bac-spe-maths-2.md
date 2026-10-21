@@ -195,15 +195,13 @@ $$\mathrm{A}(2\,;0\,;0), \qquad \mathrm{B}(0\,;3\,;0), \qquad \mathrm{C}(0\,;0\,
 3. La condition $\theta(0) = 80$ donne $C\,e^{0} + 20 = 80$, soit $C = 60$. Ainsi
    $$\theta(t) = 20 + 60\,e^{-0{,}2\,t}.$$
 
-4. $\theta(5) = 20 + 60\,e^{-0{,}2\times 5} = 20 + 60\,e^{-1} \approx 20 + 22{,}07
-   = 42{,}1\ \text{°C}$.
+4. $\theta(5) = 20 + 60\,e^{-0{,}2\times 5} = 20 + 60\,e^{-1} \approx 20 + 22{,}07 = 42{,}1\ \text{°C}$.
 
 5. Comme $-0{,}2 < 0$, $\displaystyle\lim_{t\to+\infty} e^{-0{,}2\,t} = 0$, donc
    $\displaystyle\lim_{t\to+\infty} \theta(t) = 20$. À long terme, le café se met à
    l'équilibre avec la pièce : sa température tend vers $20\ \text{°C}$.
 
-6. $\theta(t) = 30 \iff 20 + 60\,e^{-0{,}2\,t} = 30 \iff e^{-0{,}2\,t} = \dfrac{10}{60}
-   = \dfrac{1}{6}$. En passant au logarithme :
+6. $\theta(t) = 30 \iff 20 + 60\,e^{-0{,}2\,t} = 30 \iff e^{-0{,}2\,t} = \dfrac{10}{60} = \dfrac{1}{6}$. En passant au logarithme :
    $-0{,}2\,t = \ln\!\left(\dfrac{1}{6}\right) = -\ln 6$, d'où
    $$t = \frac{\ln 6}{0{,}2} \approx \frac{1{,}792}{0{,}2} \approx 9{,}0\ \text{min}.$$
    Le café atteint $30\ \text{°C}$ au bout d'environ $9{,}0$ minutes.
@@ -226,16 +224,14 @@ $$\mathrm{A}(2\,;0\,;0), \qquad \mathrm{B}(0\,;3\,;0), \qquad \mathrm{C}(0\,;0\,
 
 2. $P(X = 10) = 0{,}8^{10} \approx 0{,}1074$.
 
-3. $P(X = 8) = \dbinom{10}{8}\,0{,}8^{8}\,0{,}2^{2} = 45 \times 0{,}8^{8}\times 0{,}04
-   \approx 0{,}3020$.
+3. $P(X = 8) = \dbinom{10}{8}\,0{,}8^{8}\,0{,}2^{2} = 45 \times 0{,}8^{8}\times 0{,}04 \approx 0{,}3020$.
 
 4. $P(X \geqslant 8) = P(X = 8) + P(X = 9) + P(X = 10)$, avec
    $P(X = 9) = \dbinom{10}{9}\,0{,}8^{9}\,0{,}2 \approx 0{,}2684$. Donc
    $$P(X \geqslant 8) \approx 0{,}3020 + 0{,}2684 + 0{,}1074 = 0{,}6778.$$
 
 5. $E(X) = n\,p = 10 \times 0{,}8 = 8$ et
-   $\sigma(X) = \sqrt{n\,p\,(1-p)} = \sqrt{10 \times 0{,}8 \times 0{,}2} = \sqrt{1{,}6}
-   \approx 1{,}26$. En moyenne, sur de nombreuses séries de $10$ lancers, la joueuse en
+   $\sigma(X) = \sqrt{n\,p\,(1-p)} = \sqrt{10 \times 0{,}8 \times 0{,}2} = \sqrt{1{,}6} \approx 1{,}26$. En moyenne, sur de nombreuses séries de $10$ lancers, la joueuse en
    réussit **$8$**.
 
 ### Partie B
@@ -259,15 +255,12 @@ $$\mathrm{A}(2\,;0\,;0), \qquad \mathrm{B}(0\,;3\,;0), \qquad \mathrm{C}(0\,;0\,
 1. $\overrightarrow{\mathrm{AB}} = \mathrm{B} - \mathrm{A} = (-2\,;3\,;0)$ et
    $\overrightarrow{\mathrm{AC}} = \mathrm{C} - \mathrm{A} = (-2\,;0\,;4)$.
 
-2. $\overrightarrow{\mathrm{AB}} \cdot \overrightarrow{\mathrm{AC}}
-   = (-2)\times(-2) + 3\times 0 + 0\times 4 = 4$.
+2. $\overrightarrow{\mathrm{AB}} \cdot \overrightarrow{\mathrm{AC}} = (-2)\times(-2) + 3\times 0 + 0\times 4 = 4$.
    Ce produit scalaire est **non nul**, donc les vecteurs ne sont pas orthogonaux : le
    triangle $\mathrm{ABC}$ **n'est pas** rectangle en $\mathrm{A}$.
 
-3. a. $\vec{n}\cdot\overrightarrow{\mathrm{AB}} = 6\times(-2) + 4\times 3 + 3\times 0
-   = -12 + 12 + 0 = 0$ et
-   $\vec{n}\cdot\overrightarrow{\mathrm{AC}} = 6\times(-2) + 4\times 0 + 3\times 4
-   = -12 + 0 + 12 = 0$. Comme $\vec{n}$ est orthogonal à deux vecteurs non colinéaires du
+3. a. $\vec{n}\cdot\overrightarrow{\mathrm{AB}} = 6\times(-2) + 4\times 3 + 3\times 0 = -12 + 12 + 0 = 0$ et
+   $\vec{n}\cdot\overrightarrow{\mathrm{AC}} = 6\times(-2) + 4\times 0 + 3\times 4 = -12 + 0 + 12 = 0$. Comme $\vec{n}$ est orthogonal à deux vecteurs non colinéaires du
    plan $(\mathrm{ABC})$, c'est un **vecteur normal** à ce plan.
 
    b. Le plan admet une équation de la forme $6x + 4y + 3z + d = 0$. Il passe par

@@ -159,8 +159,7 @@ fonctionnent plus de $20\,000$ heures.
    $$C'(t) = 20 \times (-0{,}2)\,e^{-0{,}2t} - 20\times(-1)\,e^{-t}
    = -4\,e^{-0{,}2t} + 20\,e^{-t} = 4\left(5\,e^{-t} - e^{-0{,}2t}\right).$$
 
-   b. $C'(t) = 0 \iff 5\,e^{-t} = e^{-0{,}2t} \iff 5 = \dfrac{e^{-0{,}2t}}{e^{-t}}
-   = e^{-0{,}2t + t} = e^{0{,}8t}$. En passant au logarithme :
+   b. $C'(t) = 0 \iff 5\,e^{-t} = e^{-0{,}2t} \iff 5 = \dfrac{e^{-0{,}2t}}{e^{-t}} = e^{-0{,}2t + t} = e^{0{,}8t}$. En passant au logarithme :
    $0{,}8\,t = \ln 5$, d'où
    $$t = \frac{\ln 5}{0{,}8} \approx 2{,}01 \text{ h}.$$
 
@@ -243,13 +242,12 @@ fonctionnent plus de $20\,000$ heures.
    $\displaystyle\lim_{n\to+\infty} u_n = 200$. À long terme, le nombre d'abonnés se
    **stabilise autour de $200$ milliers**.
 
-5. a. $u_n < 250 \iff 200 + 300 \times 0{,}75^{\,n} < 250 \iff 300 \times 0{,}75^{\,n} < 50
-   \iff 0{,}75^{\,n} < \dfrac{1}{6}$. En passant au logarithme (la fonction $\ln$ est
+5. a. $u_n < 250 \iff 200 + 300 \times 0{,}75^{\,n} < 250 \iff 300 \times 0{,}75^{\,n} < 50 \iff 0{,}75^{\,n} < \dfrac{1}{6}$. En passant au logarithme (la fonction $\ln$ est
    croissante) et en divisant par $\ln 0{,}75 < 0$ (ce qui **inverse** le sens) :
    $$n\ln 0{,}75 < \ln\tfrac{1}{6} \iff n > \frac{\ln \frac{1}{6}}{\ln 0{,}75} \approx 6{,}23.$$
    Le plus petit entier convenable est donc $n = 7$.
    *(Vérification : $u_6 = 200 + 300\times 0{,}75^{6} \approx 253{,}4 > 250$ et
-   $u_7 = 200 + 300\times 0{,}75^{7} \approx 240{,}1 < 250$.)*
+   $u_7 = 200 + 300\times 0{,}75^{7} \approx 240{,}0 < 250$.)*
 
    b. La boucle doit se poursuivre **tant que $u \geqslant 250$**. La ligne à compléter est :
    `tant que u ≥ 250 faire`. L'algorithme **renvoie $n = 7$**, soit l'année
@@ -262,11 +260,9 @@ fonctionnent plus de $20\,000$ heures.
 1. $E(X) = \dfrac{1}{\lambda} = 20\,000$, donc
    $\lambda = \dfrac{1}{20\,000} = \boxed{5\times 10^{-5} \text{ h}^{-1}}$.
 
-2. $P(X > 10\,000) = e^{-\lambda \times 10\,000} = e^{-5\times 10^{-5} \times 10\,000}
-   = e^{-0{,}5} \approx \boxed{0{,}607}$.
+2. $P(X > 10\,000) = e^{-\lambda \times 10\,000} = e^{-5\times 10^{-5} \times 10\,000} = e^{-0{,}5} \approx \boxed{0{,}607}$.
 
-3. $P(X \leqslant 30\,000) = 1 - e^{-\lambda \times 30\,000} = 1 - e^{-1{,}5}
-   \approx 1 - 0{,}223 = \boxed{0{,}777}$.
+3. $P(X \leqslant 30\,000) = 1 - e^{-\lambda \times 30\,000} = 1 - e^{-1{,}5} \approx 1 - 0{,}223 = \boxed{0{,}777}$.
 
 4. $$P(10\,000 \leqslant X \leqslant 30\,000) = P(X \leqslant 30\,000) - P(X \leqslant 10\,000)
    = \left(1 - e^{-1{,}5}\right) - \left(1 - e^{-0{,}5}\right) = e^{-0{,}5} - e^{-1{,}5}.$$
@@ -290,15 +286,12 @@ fonctionnent plus de $20\,000$ heures.
 ### Partie B
 
 1. On répète $10$ fois, de façon **identique et indépendante**, une épreuve de Bernoulli à
-   deux issues : « l'ampoule dépasse $20\,000$ h » (succès, probabilité $p = e^{-1} \approx
-   0{,}368$) ou non. $Y$ compte le nombre de succès : $Y$ suit donc la loi binomiale
+   deux issues : « l'ampoule dépasse $20\,000$ h » (succès, probabilité $p = e^{-1} \approx 0{,}368$) ou non. $Y$ compte le nombre de succès : $Y$ suit donc la loi binomiale
    $\mathcal{B}(10\,;\,0{,}368)$.
 
-2. $P(Y = 0) = \dbinom{10}{0}\,p^{0}\,(1 - p)^{10} = (1 - 0{,}368)^{10} = 0{,}632^{10}
-   \approx \boxed{0{,}010}$.
+2. $P(Y = 0) = \dbinom{10}{0}\,p^{0}\,(1 - p)^{10} = (1 - 0{,}368)^{10} = 0{,}632^{10} \approx \boxed{0{,}010}$.
 
-3. $P(Y \geqslant 1) = 1 - P(Y = 0) = 1 - 0{,}632^{10} \approx 1 - 0{,}010
-   = \boxed{0{,}990}$.
+3. $P(Y \geqslant 1) = 1 - P(Y = 0) = 1 - 0{,}632^{10} \approx 1 - 0{,}010 = \boxed{0{,}990}$.
 
 4. $E(Y) = n\,p = 10 \times 0{,}368 = \boxed{3{,}68}$. Sur de nombreux lots de $10$ ampoules,
    on peut s'attendre à ce qu'**en moyenne $3{,}68$ ampoules** (soit environ $3$ à $4$)
@@ -315,7 +308,7 @@ Ex2 (Suites et modèles d'évolution) : récurrence u_{n+1}=0,75u_n+50, minorati
 u_{n+1}−u_n=0,25(200−u_n), décroissance, convergence (monotone minorée), suite auxiliaire
 v_n=u_n−200 géométrique de raison 0,75 et v_0=300, terme général u_n=200+300·0,75^n, limite 200,
 inéquation u_n<250 → n>ln(1/6)/ln(0,75)≈6,23 → n=7 (année 2033), algorithme de seuil (condition
-u≥250). Contrôles : u1=425, u2=368,75, u6≈253,4, u7≈240,1.
+u≥250). Contrôles : u1=425, u2=368,75, u6≈253,4, u7≈240,0.
 Ex3 (Lois à densité + loi binomiale) : loi exponentielle λ=1/20000=5·10^{−5} h^{−1},
 P(X>10000)=e^{−0,5}≈0,607, P(X≤30000)=1−e^{−1,5}≈0,777, P(10000≤X≤30000)=e^{−0,5}−e^{−1,5}≈0,384,
 absence de vieillissement → P_{X>10000}(X>30000)=P(X>20000)=e^{−1}≈0,368, médiane

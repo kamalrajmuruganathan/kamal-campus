@@ -198,8 +198,7 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
    $$A = \frac{2\times 6}{4}\times \frac{10^{3}\times 10^{-5}}{10^{2}}
    = 3 \times 10^{\,3 - 5 - 2} = 3\times 10^{-4}.$$ *(4 pts)*
 
-3. a. $t = \dfrac{d}{c} = \dfrac{1{,}5\times 10^{11}}{3{,}0\times 10^{8}}
-   = 0{,}5\times 10^{\,11-8} = 0{,}5\times 10^{3} = 500$ s. *(3 pts)*
+3. a. $t = \dfrac{d}{c} = \dfrac{1{,}5\times 10^{11}}{3{,}0\times 10^{8}} = 0{,}5\times 10^{\,11-8} = 0{,}5\times 10^{3} = 500$ s. *(3 pts)*
 
    b. $500$ s $= 480$ s $+ 20$ s $= 8$ min $20$ s (car $480 = 8\times 60$). *(2 pts)*
 
@@ -208,8 +207,7 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
 
 ## Exercice 4 — Un silo de stockage
 
-1. $V_{\text{cyl}} = \pi \times r^2 \times h = \pi \times 1{,}5^2 \times 4
-   = \pi \times 2{,}25 \times 4 = 9\pi$ m³.
+1. $V_{\text{cyl}} = \pi \times r^2 \times h = \pi \times 1{,}5^2 \times 4 = \pi \times 2{,}25 \times 4 = 9\pi$ m³.
    Valeur approchée : $9\pi \approx 28{,}3$ m³. *(4 pts)*
 
 2. La demi-boule a pour volume la moitié de celui d'une boule de rayon $r = 1{,}5$ m :
@@ -229,9 +227,7 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
 1. Placement des points $\mathrm{A}(-2\,;1)$, $\mathrm{B}(2\,;3)$, $\mathrm{C}(4\,;-1)$
    dans le repère (construction). *(3 pts)*
 
-2. $\overrightarrow{\mathrm{AB}}
-   \begin{pmatrix} x_{\mathrm B} - x_{\mathrm A} \\ y_{\mathrm B} - y_{\mathrm A}\end{pmatrix}
-   = \begin{pmatrix} 2 - (-2) \\ 3 - 1 \end{pmatrix} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$.
+2. $\overrightarrow{\mathrm{AB}} \begin{pmatrix} x_{\mathrm B} - x_{\mathrm A} \\ y_{\mathrm B} - y_{\mathrm A}\end{pmatrix} = \begin{pmatrix} 2 - (-2) \\ 3 - 1 \end{pmatrix} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$.
    *(3 pts)*
 
 3. a. $\mathrm{ABCD}$ est un parallélogramme si et seulement si
@@ -254,8 +250,7 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
    (les diagonales se coupent en leur milieu), ce qui confirme le résultat de la question 3.
    *(3 pts)*
 
-5. $\overrightarrow{\mathrm{AC}} = \begin{pmatrix} 4 - (-2) \\ -1 - 1 \end{pmatrix}
-   = \begin{pmatrix} 6 \\ -2 \end{pmatrix}$. L'image $\mathrm{B'}$ de $\mathrm{B}$ par la
+5. $\overrightarrow{\mathrm{AC}} = \begin{pmatrix} 4 - (-2) \\ -1 - 1 \end{pmatrix} = \begin{pmatrix} 6 \\ -2 \end{pmatrix}$. L'image $\mathrm{B'}$ de $\mathrm{B}$ par la
    translation de vecteur $\overrightarrow{\mathrm{AC}}$ vérifie
    $\overrightarrow{\mathrm{BB'}} = \overrightarrow{\mathrm{AC}}$, donc
    $$\mathrm{B'}\big(2 + 6\,;\ 3 + (-2)\big) = \mathrm{B'}(8\,;1).$$ *(3 pts)*
@@ -264,8 +259,7 @@ $26$ cm. On note $x$ la largeur du rectangle, en centimètres.
 
 ### Partie A
 
-1. $E = (x + 4)(x - 1) = x\times x + x\times(-1) + 4\times x + 4\times(-1)
-   = x^2 - x + 4x - 4 = x^2 + 3x - 4$. *(3 pts)*
+1. $E = (x + 4)(x - 1) = x\times x + x\times(-1) + 4\times x + 4\times(-1) = x^2 - x + 4x - 4 = x^2 + 3x - 4$. *(3 pts)*
 
 2. $F = (2x + 1)^2 = (2x)^2 + 2\times (2x)\times 1 + 1^2 = 4x^2 + 4x + 1$. *(3 pts)*
 
