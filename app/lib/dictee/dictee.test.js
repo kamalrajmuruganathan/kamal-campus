@@ -328,7 +328,7 @@ test('contenu : un fichier par groupe, nombre de dictées', () => {
     const data = JSON.parse(readFileSync(join(DOSSIER, `${g.groupe}.json`), 'utf8'));
     assert.equal(data.groupe, g.groupe);
     assert.equal(data.matiere, g.matiere);
-    assert.equal(data.dictees.length, g.matiere === 'francais' ? 12 : 8, g.groupe);
+    assert.equal(data.dictees.length, g.matiere === 'francais' ? 24 : 16, g.groupe);
   }
 });
 
