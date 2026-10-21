@@ -10,7 +10,7 @@ relu_par: null
 
 # Brevet — Épreuve de français
 
-**Durée : 3 h 00 — /50 pts** (compréhension, grammaire et réécriture) + dictée + rédaction.
+**Durée : 3 h 00 — /100 pts** : compréhension et compétences d'interprétation (32 pts) ; grammaire et compétences linguistiques, réécriture comprise (18 pts) ; dictée (10 pts) ; rédaction (40 pts).
 Le texte support est un **extrait du domaine public**. Toutes les réponses doivent être rédigées.
 
 ## Texte
@@ -39,14 +39,14 @@ Le texte support est un **extrait du domaine public**. Toutes les réponses doiv
 
 ## Grammaire et compétences linguistiques (18 pts)
 
-9. « Maître Renard, par l'odeur alléché, lui tint ce langage. » Donnez la fonction du groupe « par l'odeur ». (3 pts)
-10. « Que vous êtes joli ! » Quel est le type et la forme de cette phrase ? Que traduit la ponctuation ? (4 pts)
-11. Relevez un adjectif qualificatif dans le texte et donnez sa fonction. (3 pts)
+9. « Maître Renard, par l'odeur alléché, lui tint ce langage. » Donnez la fonction du groupe « par l'odeur ». (2 pts)
+10. « Que vous êtes joli ! » Quel est le type et la forme de cette phrase ? Que traduit la ponctuation ? (2 pts)
+11. Relevez un adjectif qualificatif dans le texte et donnez sa fonction. (2 pts)
 12. « Le Renard tenait à peu près ce langage. » Réécrivez cette phrase au présent de l'indicatif. (2 pts)
-13. Donnez la classe grammaticale de « son » (dans « son bec ») et de « lui » (dans « lui tint »). (4 pts)
+13. Donnez la classe grammaticale de « son » (dans « son bec ») et de « lui » (dans « lui tint »). (2 pts)
 14. Cherchez le sens du mot « alléché » et donnez un mot de la même famille. (2 pts)
 
-## Réécriture (10 pts)
+### Réécriture (6 pts)
 
 Réécrivez le passage suivant en remplaçant « Maître Renard » par « Les deux renards » et en accordant tout ce qui doit l'être. Mettez le verbe au **passé simple**.
 

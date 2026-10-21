@@ -10,7 +10,7 @@ relu_par: null
 
 # Brevet — Épreuve de français
 
-**Durée : 3 h 00 — /50 pts** (compréhension, grammaire et réécriture) + dictée + rédaction.
+**Durée : 3 h 00 — /100 pts** : compréhension et compétences d'interprétation (32 pts) ; grammaire et compétences linguistiques, réécriture comprise (18 pts) ; dictée (10 pts) ; rédaction (40 pts).
 Le texte support est un texte **original**. Toutes les réponses doivent être rédigées.
 
 ## Texte
@@ -34,13 +34,13 @@ Le texte support est un texte **original**. Toutes les réponses doivent être r
 
 ## Grammaire et compétences linguistiques (18 pts)
 
-9. « Il aurait suffi d'un geste pour savoir. » Identifiez le mode et le temps du verbe souligné, et donnez sa valeur. (4 pts)
-10. « une respiration lente, régulière, qui n'était pas la sienne » : donnez la nature et la fonction de la proposition subordonnée. (4 pts)
-11. Relevez deux mots formés avec un préfixe ou un suffixe et décomposez-les (radical + affixe). (3 pts)
-12. « Thomas tourna la lettre entre ses doigts. » Réécrivez cette phrase à la forme négative. (3 pts)
-13. Donnez la classe grammaticale de « enfin », « derrière », « lentement ». (4 pts)
+9. « Il aurait suffi d'un geste pour savoir. » Identifiez le mode et le temps du verbe souligné, et donnez sa valeur. (3 pts)
+10. « une respiration lente, régulière, qui n'était pas la sienne » : donnez la nature et la fonction de la proposition subordonnée. (3 pts)
+11. Relevez deux mots formés avec un préfixe ou un suffixe et décomposez-les (radical + affixe). (2 pts)
+12. « Thomas tourna la lettre entre ses doigts. » Réécrivez cette phrase à la forme négative. (2 pts)
+13. Donnez la classe grammaticale de « enfin », « derrière », « lentement ». (2 pts)
 
-## Réécriture (10 pts)
+### Réécriture (6 pts)
 
 Réécrivez le passage suivant en mettant les verbes au **présent de l'indicatif** et en remplaçant « il » par « ils » (Thomas et son frère). Faites toutes les modifications nécessaires.
 

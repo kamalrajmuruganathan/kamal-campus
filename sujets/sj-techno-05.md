@@ -10,8 +10,10 @@ relu_par: null
 
 # Brevet des collèges — Épreuve de sciences : partie technologie (entraînement)
 
-**Durée : 1 h 00 pour la partie technologie** — **Barème indicatif : 50 points** —
+**Durée : 30 min pour la partie technologie** — **Barème indicatif : 25 points** —
 **Calculatrice autorisée.**
+
+L'épreuve de sciences du brevet dure **1 h** et porte sur **deux disciplines** : cette partie de technologie compte pour **30 minutes** et **25 points** (sur 50).
 
 Cette partie comporte **trois exercices indépendants** portant sur les structures,
 leur stabilité et le choix des matériaux. Toutes les réponses doivent être
@@ -20,14 +22,14 @@ connaissances. Le soin, la clarté et la maîtrise de la langue sont valorisés.
 
 | Exercice | 1 | 2 | 3 | Total |
 |---|---|---|---|---|
-| Points | 18 | 16 | 16 | 50 |
+| Points | 9 | 8 | 8 | 25 |
 
 Support d'étude : une **passerelle piétonne** pour franchir un ruisseau dans le
 parc à côté du collège.
 
 ---
 
-## Exercice 1 — Stabilité et sollicitations (18 points)
+## Exercice 1 — Stabilité et sollicitations (9 points)
 
 **Contexte.** On étudie une passerelle qui doit supporter le poids des piétons et
 rester stable, même quand il y a du vent.
@@ -55,22 +57,15 @@ stabilité.
 
 1. Une personne se tient au milieu du tablier. La poutre horizontale a tendance à
    se plier vers le bas. À quelle **sollicitation** est-elle soumise (document 1) ?
-   **(3 points)**
-2. Les piliers verticaux supportent le poids de la passerelle et des piétons, qui
-   les écrase vers le bas. À quelle **sollicitation** sont-ils soumis ?
-   **(3 points)**
-3. Les câbles obliques sont tendus : ils retiennent le tablier. À quelle
-   **sollicitation** sont-ils soumis ? **(3 points)**
-4. Expliquer, à l'aide du document 2, **comment les câbles aident à soutenir** le
+   **(2 points)**
+2. Expliquer, à l'aide du document 2, **comment les câbles aident à soutenir** le
    tablier et à réduire sa flexion. **(4 points)**
-5. À l'aide du document 3, expliquer pourquoi une passerelle avec des **piliers
+3. À l'aide du document 3, expliquer pourquoi une passerelle avec des **piliers
    larges à la base** est plus stable qu'avec des piliers très fins. **(3 points)**
-6. Citer un **effort extérieur** (autre que le poids des piétons) que la passerelle
-   doit pouvoir supporter sans basculer. **(2 points)**
 
 ---
 
-## Exercice 2 — Choix du matériau des poutres (16 points)
+## Exercice 2 — Choix du matériau des poutres (8 points)
 
 **Contexte.** On doit choisir le matériau des deux poutres horizontales.
 
@@ -89,22 +84,17 @@ sans gros entretien.
 
 ### Questions
 
-1. Quel matériau résiste le **mieux à la flexion** ? Lequel est le **moins cher** ?
-   **(2 points)**
-2. Pourquoi l'**acier** non protégé pose-t-il un problème dans ce projet précis
-   (document 2) ? **(3 points)**
-3. La commune hésite entre le bois traité et l'aluminium. Pour chacun, donner
-   **un avantage** dans le contexte du projet. **(4 points)**
-4. Un ingénieur recommande l'**aluminium**. En vous appuyant sur les deux
+1. Pourquoi l'**acier** non protégé pose-t-il un problème dans ce projet précis
+   (document 2) ? **(2 points)**
+2. La commune hésite entre le bois traité et l'aluminium. Pour chacun, donner
+   **un avantage** dans le contexte du projet. **(3 points)**
+3. Un ingénieur recommande l'**aluminium**. En vous appuyant sur les deux
    documents, donner **deux arguments** qui justifient ce choix (durée de vie,
-   humidité, masse…). **(4 points)**
-5. Le choix d'un matériau résulte d'un **compromis** entre plusieurs critères
-   (prix, résistance, durabilité, masse). Expliquer avec vos mots ce que signifie
-   « faire un compromis » ici. **(3 points)**
+   humidité, masse…). **(3 points)**
 
 ---
 
-## Exercice 3 — Prototype et validation (16 points)
+## Exercice 3 — Prototype et validation (8 points)
 
 **Contexte.** Avant de construire la vraie passerelle, les élèves fabriquent une
 **maquette** pour tester sa résistance.
@@ -122,12 +112,9 @@ La maquette est considérée comme **rompue** au-delà d'une flèche de 8 mm.
 ### Questions
 
 1. Décrire comment évolue la **flèche** quand on augmente la charge (document 1).
-   **(3 points)**
+   **(2 points)**
 
-2. À partir de quelle charge la maquette dépasse-t-elle la limite de rupture de
-   8 mm ? Justifier. **(3 points)**
-
-3. **Développement construit (10 points).** En une dizaine de lignes, expliquer
+2. **Développement construit (6 points).** En une dizaine de lignes, expliquer
    **à quoi sert de fabriquer et tester une maquette** avant de construire la vraie
    passerelle. Votre texte devra :
    - expliquer ce qu'on cherche à vérifier avec l'essai de charge ;
@@ -146,50 +133,32 @@ La maquette est considérée comme **rompue** au-delà d'une flèche de 8 mm.
 **1.** La poutre horizontale, qui se plie vers le bas sous le poids au milieu, est
 soumise à une **flexion**.
 
-**2.** Les piliers verticaux, écrasés vers le bas par le poids, sont soumis à une
-**compression**.
-
-**3.** Les câbles obliques tendus sont soumis à une **traction** (ils sont
-tirés/étirés).
-
-**4.** Les câbles relient le haut des piliers au milieu du tablier. En étant
+**2.** Les câbles relient le haut des piliers au milieu du tablier. En étant
 tendus, ils **tirent le tablier vers le haut** et transmettent une partie du poids
 vers les piliers : ils **soulagent la poutre**, qui se plie donc moins. La flexion
 du tablier est ainsi réduite.
 
-**5.** Des piliers larges à la base offrent une **base d'appui plus large et plus
+**3.** Des piliers larges à la base offrent une **base d'appui plus large et plus
 stable** : la structure a moins tendance à basculer et répartit mieux les efforts.
 Des piliers très fins seraient plus faciles à faire pencher ou flamber, donc moins
 stables (document 3).
 
-**6.** Par exemple, le **vent** (poussée latérale) — ou encore la poussée de l'eau
-en cas de crue, la neige. La passerelle doit y résister sans basculer.
-
 ### Exercice 2 — Choix du matériau des poutres
 
-**1.** L'**acier** résiste le mieux à la flexion (très bonne). Le **bois traité**
-est le moins cher (prix faible).
-
-**2.** La passerelle est **au-dessus de l'eau, dans un endroit humide**. Or l'acier
+**1.** La passerelle est **au-dessus de l'eau, dans un endroit humide**. Or l'acier
 non protégé **rouille** : sa durée de vie serait courte et il faudrait beaucoup
 d'entretien, ce qui contredit l'exigence « durer au moins 20 ans sans gros
 entretien ».
 
-**3.** Bois traité : avantage = **peu cher** (adapté au budget limité) et léger.
+**2.** Bois traité : avantage = **peu cher** (adapté au budget limité) et léger.
 Aluminium : avantage = **très bonne résistance à l'humidité** (ne rouille pas) et
 faible masse, donc bien adapté à un milieu humide et durable.
 
-**4.** Deux arguments pour l'aluminium : il **résiste très bien à l'humidité**
+**3.** Deux arguments pour l'aluminium : il **résiste très bien à l'humidité**
 (pas de rouille, donc durée de vie longue au-dessus de l'eau, ≥ 20 ans sans gros
 entretien) et il est **léger** tout en ayant une **bonne résistance à la flexion**
 (structure solide sans être trop lourde). Son prix moyen reste acceptable, entre
 le bois et l'acier.
-
-**5.** Faire un compromis, c'est **accepter de ne pas avoir le meilleur sur tous
-les critères à la fois** : par exemple, l'aluminium n'est pas le moins cher, mais
-on l'accepte parce qu'il est durable et résiste à l'humidité. On **équilibre** les
-avantages et les inconvénients pour retenir la solution la plus adaptée à
-l'ensemble des contraintes du projet.
 
 ### Exercice 3 — Prototype et validation
 
@@ -197,11 +166,7 @@ l'ensemble des contraintes du projet.
 régulièrement (2 mm à 200 g, 4 mm à 400 g), puis plus vite ensuite (9 mm à 600 g),
 signe que la maquette approche de la rupture.
 
-**2.** À **600 g**, la flèche vaut 9 mm, ce qui dépasse la limite de 8 mm : la
-maquette est donc rompue à partir d'une charge de **600 g** (à 400 g, la flèche
-n'était encore que de 4 mm).
-
-**3.** Éléments attendus :
+**2.** Éléments attendus :
 - On cherche à **vérifier que la structure supporte les charges prévues** sans se
   déformer excessivement ni casser (essai de charge → mesure de la flèche).
 - Il vaut mieux découvrir un défaut sur la maquette car cela **évite un accident**
