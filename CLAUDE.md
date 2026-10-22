@@ -336,7 +336,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Publié le 21/10/2026** : PR #11 fusionnée (main `bfb7f21`). Corrections après vérification en ligne : virgule décimale
   dans les QCM générés (`nombreLatex`), vitrine lisible sur téléphone avec des textes exacts, ménage du cache hors ligne (`menage()`).
 
-## 23. Les 9 chantiers du 21/10/2026 — sur `upgrade-sdk57`, non publiés
+## 23. Les 9 chantiers du 21/10/2026 — PUBLIÉS le 22/10/2026 (PR #12, main `56bfff2`)
 - **Signalements** : lisibles directement par Claude avec l'outil Supabase (projet `zxhxevucpuudknyfidla`,
   `select … from signalements where not traite`). Au 21/10 : table vide.
 - **Sujets** : `node outils/verifier-katex.cjs` couvre aussi `sujets/` (0 erreur). Brevet de français noté sur 100 (réécriture dans
