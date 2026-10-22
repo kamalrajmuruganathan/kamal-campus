@@ -25,7 +25,7 @@ export default function Badges() {
           {obtenus} / {badges.length} badges
         </Text>
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 4, marginBottom: t.espace.l }}>
-          Décroche des objectifs en réussissant des QCM et en révisant tes cartes.
+          Décroche des objectifs avec tes QCM, exercices, dictées, examens, cartes, ton carnet d’erreurs et les défis de la semaine.
         </Text>
 
         {badges.map((b) => (

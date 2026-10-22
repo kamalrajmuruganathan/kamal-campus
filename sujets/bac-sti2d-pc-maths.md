@@ -61,7 +61,7 @@ $\theta_2 = 60\ ^\circ\text{C}$.
 5. La puissance électrique du chauffe-eau est $P_{\text{élec}} = 2\,500\ \text{W}$.
    Calculer la durée $\Delta t$ nécessaire au chauffage. La convertir en heures et
    minutes.
-6. Le prix du kWh est de $0{,}25\ \text{€}$. Calculer le coût de ce chauffage.
+6. Le prix du kWh est de $0{,}20\ \text{€}$. Calculer le coût de ce chauffage.
 
 ---
 
@@ -133,19 +133,14 @@ $L = 10\log\!\left(\dfrac{I}{I_0}\right)$.
 
 ### Partie A
 
-**1.a.** $I_1 = \dfrac{P}{U_1} = \dfrac{10 \times 10^{6}}{20 \times 10^{3}}
-= 500\ \text{A}.$
+**1.a.** $I_1 = \dfrac{P}{U_1} = \dfrac{10 \times 10^{6}}{20 \times 10^{3}} = 500\ \text{A}.$
 
-**1.b.** $P_{\text{pertes},1} = R\,I_1^2 = 0{,}50 \times 500^2 = 0{,}50 \times
-250\,000 = 125\,000\ \text{W} = 125\ \text{kW}.$
+**1.b.** $P_{\text{pertes},1} = R\,I_1^2 = 0{,}50 \times 500^2 = 0{,}50 \times 250\,000 = 125\,000\ \text{W} = 125\ \text{kW}.$
 
-**2.a.** $I_2 = \dfrac{P}{U_2} = \dfrac{10 \times 10^{6}}{400 \times 10^{3}}
-= 25\ \text{A}$, donc
-$P_{\text{pertes},2} = 0{,}50 \times 25^2 = 0{,}50 \times 625 = 312{,}5\ \text{W}
-\approx 0{,}31\ \text{kW}.$
+**2.a.** $I_2 = \dfrac{P}{U_2} = \dfrac{10 \times 10^{6}}{400 \times 10^{3}} = 25\ \text{A}$, donc
+$P_{\text{pertes},2} = 0{,}50 \times 25^2 = 0{,}50 \times 625 = 312{,}5\ \text{W} \approx 0{,}31\ \text{kW}.$
 
-**2.b.** $\dfrac{P_{\text{pertes},1}}{P_{\text{pertes},2}}
-= \dfrac{125\,000}{312{,}5} = 400.$ Les pertes ont été divisées par $400$. En effet,
+**2.b.** $\dfrac{P_{\text{pertes},1}}{P_{\text{pertes},2}} = \dfrac{125\,000}{312{,}5} = 400.$ Les pertes ont été divisées par $400$. En effet,
 à puissance $P = UI$ fixée, augmenter $U$ diminue $I$ ; comme les pertes varient en
 $I^2$, multiplier la tension par $20$ divise les pertes par $20^2 = 400$. On transporte
 donc l'électricité sous très haute tension pour limiter les pertes par effet Joule.
@@ -161,12 +156,11 @@ En kWh : $Q = \dfrac{2{,}82 \times 10^{7}}{3{,}6 \times 10^{6}} \approx 7{,}84\ 
 $$E_{\text{élec}} = \frac{Q}{\eta} = \frac{2{,}82 \times 10^{7}}{0{,}90}
 \approx 3{,}14 \times 10^{7}\ \text{J} \approx 8{,}71\ \text{kWh}.$$
 
-**5.** $\Delta t = \dfrac{E_{\text{élec}}}{P_{\text{élec}}}
-= \dfrac{3{,}135 \times 10^{7}}{2\,500} \approx 1{,}25 \times 10^{4}\ \text{s}.$
+**5.** $\Delta t = \dfrac{E_{\text{élec}}}{P_{\text{élec}}} = \dfrac{3{,}135 \times 10^{7}}{2\,500} \approx 1{,}25 \times 10^{4}\ \text{s}.$
 Conversion : $12\,540\ \text{s} = \dfrac{12\,540}{3\,600} \approx 3{,}48\ \text{h}$,
 soit environ **3 h 29 min**.
 
-**6.** Coût $= E_{\text{élec}} \times 0{,}25 = 8{,}71 \times 0{,}25 \approx 2{,}18\ \text{€}.$
+**6.** Coût $= E_{\text{élec}} \times 0{,}20 = 8{,}71 \times 0{,}20 \approx 1{,}74\ \text{€}.$
 
 ---
 
@@ -179,30 +173,24 @@ soit environ **3 h 29 min**.
 $p = 150\ \text{bar} = 150 \times 10^{5}\ \text{Pa} = 1{,}5 \times 10^{7}\ \text{Pa}$
 (car $1\ \text{bar} = 10^{5}\ \text{Pa}$).
 
-**2.** $F = p \times S = 1{,}5 \times 10^{7} \times 8{,}0 \times 10^{-3}
-= 1{,}2 \times 10^{5}\ \text{N}$ (soit $120\,000\ \text{N}$).
+**2.** $F = p \times S = 1{,}5 \times 10^{7} \times 8{,}0 \times 10^{-3} = 1{,}2 \times 10^{5}\ \text{N}$ (soit $120\,000\ \text{N}$).
 
-**3.** $m = \dfrac{F}{g} = \dfrac{1{,}2 \times 10^{5}}{9{,}81}
-\approx 1{,}2 \times 10^{4}\ \text{kg} \approx 12\ \text{t}.$
+**3.** $m = \dfrac{F}{g} = \dfrac{1{,}2 \times 10^{5}}{9{,}81} \approx 1{,}2 \times 10^{4}\ \text{kg} \approx 12\ \text{t}.$
 
 ### Partie B
 
-**4.** $\omega = \dfrac{2\pi N}{60} = \dfrac{2\pi \times 1\,200}{60}
-= 2\pi \times 20 = 40\pi \approx 126\ \text{rad·s}^{-1}.$
+**4.** $\omega = \dfrac{2\pi N}{60} = \dfrac{2\pi \times 1\,200}{60} = 2\pi \times 20 = 40\pi \approx 126\ \text{rad·s}^{-1}.$
 
-**5.** $P = M\,\omega = 45 \times 125{,}66 \approx 5{,}65 \times 10^{3}\ \text{W}
-\approx 5{,}7\ \text{kW}.$
+**5.** $P = M\,\omega = 45 \times 125{,}66 \approx 5{,}65 \times 10^{3}\ \text{W} \approx 5{,}7\ \text{kW}.$
 
 ### Partie C
 
-**6.** $\Delta p = \rho\,g\,h = 1\,000 \times 9{,}81 \times 4{,}0
-= 3{,}92 \times 10^{4}\ \text{Pa}$ (soit $\approx 0{,}39\ \text{bar}$). Pression
+**6.** $\Delta p = \rho\,g\,h = 1\,000 \times 9{,}81 \times 4{,}0 = 3{,}92 \times 10^{4}\ \text{Pa}$ (soit $\approx 0{,}39\ \text{bar}$). Pression
 absolue au fond :
 $$p_{\text{fond}} = p_{\text{atm}} + \Delta p = 1{,}013 \times 10^{5} +
 0{,}392 \times 10^{5} \approx 1{,}41 \times 10^{5}\ \text{Pa} \approx 1{,}4\ \text{bar}.$$
 
-**7.** $F = \Delta p \times S' = 3{,}92 \times 10^{4} \times 0{,}20
-\approx 7{,}8 \times 10^{3}\ \text{N}$ (soit $\approx 7\,850\ \text{N}$).
+**7.** $F = \Delta p \times S' = 3{,}92 \times 10^{4} \times 0{,}20 \approx 7{,}8 \times 10^{3}\ \text{N}$ (soit $\approx 7\,850\ \text{N}$).
 
 ---
 
@@ -214,11 +202,9 @@ $$p_{\text{fond}} = p_{\text{atm}} + \Delta p = 1{,}013 \times 10^{5} +
 
 ### Partie B
 
-**2.** $L_1 = 10\log\!\left(\dfrac{I_1}{I_0}\right)
-= 10\log\!\left(\dfrac{1{,}0 \times 10^{-5}}{1{,}0 \times 10^{-12}}\right)
-= 10\log(10^{7}) = 10 \times 7 = 70\ \text{dB}.$
-C'est nettement plus fort qu'une conversation ($60\ \text{dB}$) : le port d'une
-protection auditive commence à se justifier.
+**2.** $L_1 = 10\log\!\left(\dfrac{I_1}{I_0}\right) = 10\log\!\left(\dfrac{1{,}0 \times 10^{-5}}{1{,}0 \times 10^{-12}}\right) = 10\log(10^{7}) = 10 \times 7 = 70\ \text{dB}.$
+C'est nettement plus fort qu'une conversation ($60\ \text{dB}$), mais encore
+en dessous du seuil de risque auditif ($85\ \text{dB}$, voir question 4).
 
 **3.** Avec $I = 2\,I_1 = 2{,}0 \times 10^{-5}\ \text{W·m}^{-2}$ :
 $$L_2 = 10\log\!\left(\frac{2{,}0 \times 10^{-5}}{10^{-12}}\right)
@@ -237,4 +223,4 @@ $$70 + 10\log(n) \geqslant 85 \iff 10\log(n) \geqslant 15 \iff \log(n) \geqslant
 Le seuil de $85\ \text{dB}$ est donc atteint dès **$n = 32$ machines**.
 Vérification : $L = 70 + 10\log(32) \approx 70 + 15{,}05 = 85{,}05\ \text{dB}.$
 
-<!-- notes : thèmes couverts — Ex1 énergie électrique (P=UI, pertes Joule R·I², intérêt de la THT) + énergie thermique (Q=mcΔT, kWh, rendement, durée, coût) ; Ex2 statique des fluides (p=F/S, conversions bar/Pa et cm²/m²) + dynamique rotation (ω=2πN/60, P=Mω) + hydrostatique (Δp=ρgh, pression absolue, force pressante) ; Ex3 ondes (λ=v/f) + niveau sonore (L=10log(I/I0), règle des +3 dB, L=70+10log n, seuil 85 dB). Unités et conversions soignées. Calculs vérifiés numériquement : I1=500 A, pertes 125 kW / I2=25 A, pertes 312,5 W (facteur 400) ; Q=2,82e7 J=7,84 kWh, E_élec=8,71 kWh, Δt≈3 h 29, coût 2,18 € ; F=1,2e5 N → 12 t ; ω≈126 rad/s, P≈5,65 kW ; Δp=3,92e4 Pa, p_fond≈1,41e5 Pa, F trappe≈7 850 N ; λ=0,50 m, L1=70 dB, L2=73 dB, n=32. Programme BO 25 juillet 2019 STI2D/STL — OK. -->
+<!-- notes : thèmes couverts — Ex1 énergie électrique (P=UI, pertes Joule R·I², intérêt de la THT) + énergie thermique (Q=mcΔT, kWh, rendement, durée, coût) ; Ex2 statique des fluides (p=F/S, conversions bar/Pa et cm²/m²) + dynamique rotation (ω=2πN/60, P=Mω) + hydrostatique (Δp=ρgh, pression absolue, force pressante) ; Ex3 ondes (λ=v/f) + niveau sonore (L=10log(I/I0), règle des +3 dB, L=70+10log n, seuil 85 dB). Unités et conversions soignées. Calculs vérifiés numériquement : I1=500 A, pertes 125 kW / I2=25 A, pertes 312,5 W (facteur 400) ; Q=2,82e7 J=7,84 kWh, E_élec=8,71 kWh, Δt≈3 h 29, coût 1,74 € (0,20 €/kWh) ; F=1,2e5 N → 12 t ; ω≈126 rad/s, P≈5,65 kW ; Δp=3,92e4 Pa, p_fond≈1,41e5 Pa, F trappe≈7 850 N ; λ=0,50 m, L1=70 dB, L2=73 dB, n=32. Programme BO 25 juillet 2019 STI2D/STL — OK. -->

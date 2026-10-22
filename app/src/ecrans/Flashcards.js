@@ -23,11 +23,14 @@ import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { estRelu } from '../../lib/relecture';
+import { useCartes } from '../useContenu';
+import EtatChargement from '../composants/EtatChargement';
 
 export default function Flashcards({ route, navigation }) {
   const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
-  const cartes = chapitre?.flashcards?.cartes ?? [];
+  const paquet = useCartes(chapitre ? chapitre.id : null); // cartes chargées à la demande
+  const cartes = paquet.donnee?.cartes ?? [];
 
   const [i, setI] = useState(0);
   const [face, setFace] = useState('recto');
@@ -45,7 +48,7 @@ export default function Flashcards({ route, navigation }) {
     if (fini || !profil.lectureAutoCartes || !chapitre || !lectureActive(chapitre.matiere, chapitre.niveau, profil)) return;
     const carte = cartes[i];
     if (carte) parlerSequence(segmentsTexte(face === 'recto' ? carte.recto : carte.verso, chapitre.matiere), chapitre.matiere);
-  }, [i, face, fini]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [i, face, fini, paquet.donnee]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (fini && !dejaEnregistre.current) {
@@ -61,6 +64,10 @@ export default function Flashcards({ route, navigation }) {
       );
     }
   }, [fini]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (chapitre && paquet.etat !== 'ok') {
+    return <EtatChargement t={t} etat={paquet.etat} quoi="les cartes" recharger={paquet.recharger} />;
+  }
 
   if (!chapitre || cartes.length === 0) {
     return (

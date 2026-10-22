@@ -10,8 +10,10 @@ relu_par: null
 
 # Brevet des collèges — Épreuve de sciences : partie technologie (entraînement)
 
-**Durée : 1 h 00 pour la partie technologie** — **Barème indicatif : 50 points** —
+**Durée : 30 min pour la partie technologie** — **Barème indicatif : 25 points** —
 **Calculatrice autorisée.**
+
+L'épreuve de sciences du brevet dure **1 h** et porte sur **deux disciplines** : cette partie de technologie compte pour **30 minutes** et **25 points** (sur 50).
 
 Cette partie comporte **trois exercices indépendants** portant sur la chaîne
 d'énergie et la chaîne d'information d'un objet technique. Toutes les réponses
@@ -21,13 +23,13 @@ valorisés.
 
 | Exercice | 1 | 2 | 3 | Total |
 |---|---|---|---|---|
-| Points | 18 | 16 | 16 | 50 |
+| Points | 9 | 8 | 8 | 25 |
 
 Support d'étude : le **portail coulissant automatique** d'un parking de collège.
 
 ---
 
-## Exercice 1 — La chaîne d'énergie (18 points)
+## Exercice 1 — La chaîne d'énergie (9 points)
 
 **Contexte.** Le portail du parking s'ouvre tout seul quand un véhicule autorisé
 se présente. On étudie comment l'énergie électrique fait bouger le portail.
@@ -52,21 +54,18 @@ réaliser une action. Elle comporte quatre fonctions :
 
 ### Questions
 
-1. Nommer la **source d'énergie** qui alimente le portail. **(2 points)**
-2. Associer chaque élément du document 2 à l'une des quatre fonctions de la chaîne
+1. Associer chaque élément du document 2 à l'une des quatre fonctions de la chaîne
    d'énergie du document 1 (alimenter, distribuer, convertir, transmettre).
-   **(6 points)**
-3. Le moteur électrique réalise la fonction « convertir ». Indiquer la forme
+   **(3 points)**
+2. Le moteur électrique réalise la fonction « convertir ». Indiquer la forme
    d'énergie **d'entrée** et la forme d'énergie **de sortie** du moteur.
-   **(4 points)**
-4. Expliquer le rôle du couple **pignon + crémaillère** : quel type de mouvement
-   transforment-ils, et en quel autre mouvement ? **(4 points)**
-5. Le relais peut couper l'énergie vers le moteur. À quel moment est-ce utile pour
-   la sécurité ? **(2 points)**
+   **(3 points)**
+3. Expliquer le rôle du couple **pignon + crémaillère** : quel type de mouvement
+   transforment-ils, et en quel autre mouvement ? **(3 points)**
 
 ---
 
-## Exercice 2 — La chaîne d'information (16 points)
+## Exercice 2 — La chaîne d'information (8 points)
 
 **Contexte.** Avant d'agir, le portail doit « savoir » quand ouvrir et quand
 s'arrêter. C'est le rôle de la chaîne d'information.
@@ -87,19 +86,17 @@ s'arrêter. C'est le rôle de la chaîne d'information.
 
 ### Questions
 
-1. Citer les **trois fonctions** de la chaîne d'information. **(3 points)**
+1. Citer les **trois fonctions** de la chaîne d'information. **(2 points)**
 2. Pour chacun des trois capteurs du document 2, indiquer quelle **information** il
-   acquiert. **(6 points)**
-3. La carte électronique reçoit les informations et décide. À quelle fonction de
-   la chaîne d'information correspond cette carte ? **(2 points)**
-4. Un véhicule stationne sous le portail pendant sa fermeture : la cellule
+   acquiert. **(3 points)**
+3. Un véhicule stationne sous le portail pendant sa fermeture : la cellule
    photoélectrique détecte l'obstacle. Expliquer, en reliant chaîne d'information
    et chaîne d'énergie, comment le système **empêche le portail d'écraser le
-   véhicule**. **(5 points)**
+   véhicule**. **(3 points)**
 
 ---
 
-## Exercice 3 — Analyse d'un scénario de fonctionnement (16 points)
+## Exercice 3 — Analyse d'un scénario de fonctionnement (8 points)
 
 **Contexte.** On décrit le déroulement complet d'une ouverture.
 
@@ -116,9 +113,9 @@ s'arrêter. C'est le rôle de la chaîne d'information.
 
 1. Dans ce scénario, indiquer les étapes qui relèvent de la **chaîne
    d'information** (acquérir/traiter/communiquer) et celles qui relèvent de la
-   **chaîne d'énergie** (agir sur le portail). **(4 points)**
+   **chaîne d'énergie** (agir sur le portail). **(3 points)**
 
-2. **Développement construit (9 points).** En une dizaine de lignes, décrire le
+2. **Développement construit (5 points).** En une dizaine de lignes, décrire le
    fonctionnement complet du portail en montrant comment la **chaîne
    d'information** et la **chaîne d'énergie** coopèrent. Votre texte devra :
    - partir de la détection du badge ;
@@ -126,33 +123,23 @@ s'arrêter. C'est le rôle de la chaîne d'information.
    - décrire l'action du moteur et de la transmission ;
    - expliquer comment le portail sait qu'il doit s'arrêter.
 
-3. Le capteur de fin de course tombe en panne et n'envoie plus d'information.
-   Quel risque cela crée-t-il pour le moteur et le portail ? **(3 points)**
-
 ---
 
 ## Corrigé
 
 ### Exercice 1 — La chaîne d'énergie
 
-**1.** La source d'énergie est l'**énergie électrique** fournie par le **réseau
-électrique (230 V)**.
-
-**2.** Alimenter : le **réseau électrique 230 V**. Distribuer : le **relais**
+**1.** Alimenter : le **réseau électrique 230 V**. Distribuer : le **relais**
 (il laisse passer ou coupe le courant). Convertir : le **moteur électrique**.
 Transmettre : le **pignon + la crémaillère**.
 
-**3.** Entrée du moteur : **énergie électrique**. Sortie du moteur : **énergie
+**2.** Entrée du moteur : **énergie électrique**. Sortie du moteur : **énergie
 mécanique** (mouvement de rotation).
 
-**4.** Le pignon tourne (mouvement de **rotation**) et entraîne la crémaillère, ce
+**3.** Le pignon tourne (mouvement de **rotation**) et entraîne la crémaillère, ce
 qui fait coulisser le portail en ligne droite : le couple pignon + crémaillère
 transforme un mouvement de **rotation** en un mouvement de **translation**
 (déplacement rectiligne du portail).
-
-**5.** Couper l'énergie est utile pour **arrêter le portail** en cas de danger
-(obstacle détecté), quand il est complètement ouvert ou fermé, ou en cas de
-problème : cela évite d'écraser une personne ou de forcer le moteur.
 
 ### Exercice 2 — La chaîne d'information
 
@@ -163,10 +150,7 @@ présent** ». Le capteur de fin de course acquiert l'information « **le portai
 complètement ouvert** ». La cellule photoélectrique acquiert l'information « **il y
 a (ou non) un obstacle sur le passage** ».
 
-**3.** La carte électronique correspond à la fonction **traiter** (elle décide
-quoi faire à partir des informations reçues).
-
-**4.** La cellule photoélectrique (chaîne d'information : **acquérir**) détecte le
+**3.** La cellule photoélectrique (chaîne d'information : **acquérir**) détecte le
 véhicule et envoie cette information à la carte. La carte **traite** cette
 information et décide de ne pas fermer ; elle **communique** un ordre au relais
 qui **coupe l'énergie** du moteur (chaîne d'énergie). Le moteur s'arrête (ou
@@ -195,8 +179,3 @@ refermer à l'étape 6 relève, elle, de l'information.)
   refermer.
 La chaîne d'information (capteurs + carte) pilote donc la chaîne d'énergie
 (alimentation + moteur + transmission).
-
-**3.** Si le capteur de fin de course ne prévient plus la carte, celle-ci **ne
-sait pas que le portail est arrivé au bout** : le moteur continue de tourner et
-force contre la butée. Cela peut **abîmer le moteur, la crémaillère ou le
-portail** (surchauffe, casse mécanique).

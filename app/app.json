@@ -16,14 +16,29 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.kamalcampus.app"
+      "bundleIdentifier": "com.kamalcampus.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.kamalcampus.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1f6feb"
-      }
+      },
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,14 +47,22 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "L'accès à la caméra sert à scanner le QR d'un défi lancé par un ami."
+          "cameraPermission": "L'accès à la caméra sert à scanner le QR d'un défi lancé par un ami.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#1f6feb"
         }
       ],
       "expo-sharing",
       "expo-status-bar"
     ],
     "extra": {
-      "note": "Application de revision lycee et college - Maths et Physique-Chimie"
+      "note": "Application de révision scolaire, du CP à la Terminale"
     },
     "experiments": {
       "baseUrl": "/kamal-campus/app"

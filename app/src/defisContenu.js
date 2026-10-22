@@ -3,18 +3,20 @@
 import { chapitreParId, CHAPITRES, LIBELLES_NIVEAU, LIBELLES_MATIERE, niveaux } from './contenu-index';
 import { aGenerateur, genererQuestions } from '../lib/generateurs';
 import { melanger } from '../lib/quizmix';
+import { questionsDuQcm } from './useContenu';
 
 export const NB_QUESTIONS_DEFI = 10;
 
 // Construit UNE serie de questions pour un chapitre, au moment de creer le defi.
 // - chapitre a generateur  -> questions fabriquees (reponses calculees)
 // - sinon                  -> pioche au hasard dans la banque qcm.json
-// Renvoie des objets { enonce, choix:[...], reponse, explication, difficulte, notion }.
-export function construireQuestions(chapitreId, n = NB_QUESTIONS_DEFI) {
+// Renvoie (promesse) des objets { enonce, choix:[...], reponse, explication, difficulte, notion }.
+// La banque qcm.json est chargée à la demande : [] si elle n'a pas pu l'être (pas de réseau).
+export async function construireQuestions(chapitreId, n = NB_QUESTIONS_DEFI) {
   const chap = chapitreParId(chapitreId);
   if (!chap) return [];
   if (aGenerateur(chapitreId)) return genererQuestions(chapitreId, n);
-  const banque = chap?.qcm?.questions ?? [];
+  const banque = (await questionsDuQcm(chapitreId)) ?? [];
   return melanger(banque).slice(0, n);
 }
 
@@ -31,7 +33,7 @@ let _cacheChapitres = null;
 export function chapitresJouables() {
   if (_cacheChapitres) return _cacheChapitres;
   _cacheChapitres = CHAPITRES
-    .filter((c) => aGenerateur(c.id) || (c.qcm?.questions?.length > 0))
+    .filter((c) => aGenerateur(c.id) || c.nbQuestions > 0)
     .map((c) => ({
       id: c.id, nom: c.titre, niveau: c.niveau, matiere: c.matiere,
       niv: LIBELLES_NIVEAU?.[c.niveau] ?? c.niveau,

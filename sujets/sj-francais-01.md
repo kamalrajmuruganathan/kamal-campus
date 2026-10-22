@@ -10,7 +10,7 @@ relu_par: null
 
 # Brevet — Épreuve de français
 
-**Durée : 3 h 00 — /50 pts** (compréhension, grammaire et réécriture) + dictée + rédaction.
+**Durée : 3 h 00 — /100 pts** : compréhension et compétences d'interprétation (32 pts) ; grammaire et compétences linguistiques, réécriture comprise (18 pts) ; dictée (10 pts) ; rédaction (40 pts).
 Le texte support est un texte **original**. Toutes les réponses doivent être rédigées.
 
 ## Texte
@@ -34,14 +34,14 @@ Le texte support est un texte **original**. Toutes les réponses doivent être r
 
 ## Grammaire et compétences linguistiques (18 pts)
 
-9. « Dès que la voiture s'arrêtait, l'odeur des tilleuls m'enveloppait. » Identifiez la proposition subordonnée et donnez sa nature et sa fonction. (4 pts)
-10. Dans « une vieille promesse », indiquez la classe grammaticale et la fonction de chaque mot. (3 pts)
-11. « Elle posait sa main sur ma joue. » Réécrivez cette phrase à la voix passive. (3 pts)
+9. « Dès que la voiture s'arrêtait, l'odeur des tilleuls m'enveloppait. » Identifiez la proposition subordonnée et donnez sa nature et sa fonction. (2 pts)
+10. Dans « une vieille promesse », indiquez la classe grammaticale et la fonction de chaque mot. (2 pts)
+11. « Elle posait sa main sur ma joue. » Réécrivez cette phrase à la voix passive. (2 pts)
 12. Donnez un synonyme et un antonyme de l'adjectif « sombre ». (2 pts)
-13. « Je savais qu'elle serait là. » Analysez le mode et le temps du verbe souligné, et justifiez son emploi. (3 pts)
-14. Formez un nom à partir du verbe « arriver » et employez-le dans une phrase. (3 pts)
+13. « Je savais qu'elle serait là. » Analysez le mode et le temps du verbe souligné, et justifiez son emploi. (2 pts)
+14. Formez un nom à partir du verbe « arriver » et employez-le dans une phrase. (2 pts)
 
-## Réécriture (10 pts)
+### Réécriture (6 pts)
 
 Réécrivez le passage suivant en remplaçant « je » par « nous » et en mettant les verbes au **passé composé**. Effectuez toutes les modifications nécessaires.
 

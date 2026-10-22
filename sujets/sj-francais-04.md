@@ -10,7 +10,7 @@ relu_par: null
 
 # Brevet — Épreuve de français
 
-**Durée : 3 h 00 — /50 pts** (compréhension, grammaire et réécriture) + dictée + rédaction.
+**Durée : 3 h 00 — /100 pts** : compréhension et compétences d'interprétation (32 pts) ; grammaire et compétences linguistiques, réécriture comprise (18 pts) ; dictée (10 pts) ; rédaction (40 pts).
 Le texte support est un texte **original**. Toutes les réponses doivent être rédigées.
 
 ## Texte
@@ -34,14 +34,14 @@ Le texte support est un texte **original**. Toutes les réponses doivent être r
 
 ## Grammaire et compétences linguistiques (18 pts)
 
-9. « quand la nuit tombait et que les horloges sonnaient » : identifiez les deux propositions subordonnées et donnez leur fonction commune. (4 pts)
-10. Dans « ses doigts noueux », donnez la classe grammaticale et la fonction de « noueux ». (3 pts)
-11. « on devinait tout un monde de souvenirs » : indiquez la fonction du groupe « tout un monde de souvenirs ». (3 pts)
-12. « Il portait toujours la même blouse. » Réécrivez cette phrase à la forme interrogative (deux formulations différentes). (4 pts)
+9. « quand la nuit tombait et que les horloges sonnaient » : identifiez les deux propositions subordonnées et donnez leur fonction commune. (2 pts)
+10. Dans « ses doigts noueux », donnez la classe grammaticale et la fonction de « noueux ». (2 pts)
+11. « on devinait tout un monde de souvenirs » : indiquez la fonction du groupe « tout un monde de souvenirs ». (2 pts)
+12. « Il portait toujours la même blouse. » Réécrivez cette phrase à la forme interrogative (deux formulations différentes). (2 pts)
 13. Relevez un adverbe et un connecteur logique (mot de liaison) dans le texte. (2 pts)
 14. Donnez un mot de la même famille que « horloger ». (2 pts)
 
-## Réécriture (10 pts)
+### Réécriture (6 pts)
 
 Réécrivez le passage suivant en remplaçant « il » par « elles » (deux horlogères) et en mettant les verbes à l'**imparfait**. Faites tous les accords nécessaires.
 

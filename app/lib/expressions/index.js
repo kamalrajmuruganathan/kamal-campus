@@ -12,7 +12,7 @@
 
 // ─── Lecture ──────────────────────────────────────────────────────────────
 
-const FONCTIONS = ['sqrt', 'exp', 'ln', 'cos', 'sin', 'tan'];
+const FONCTIONS = ['sqrt', 'exp', 'ln', 'log', 'cos', 'sin', 'tan'];
 
 /** Contenu de l'accolade ouvrante à la position i (s[i] === '{') et position de fin. */
 function accolade(s, i) {
@@ -37,7 +37,7 @@ export function latexVersSimple(s) {
     .replace(/\\(?:mathcal|mathit)\{([A-Za-z])\}/g, '$1')
     .replace(/\\(?:times|cdot)/g, '*')
     .replace(/\\div/g, '/')
-    .replace(/\\(ln|exp|cos|sin|tan)\b/g, ' $1 ')
+    .replace(/\\(ln|log|exp|cos|sin|tan)\b/g, ' $1 ')
     .replace(/\\pi\b/g, ' pi ');
   // Fractions et racines (de l'intérieur vers l'extérieur grâce à la récursion).
   for (let garde = 0; garde < 50; garde++) {
@@ -81,6 +81,8 @@ export function saisieVersSimple(s) {
     .replace(/÷/g, '/')
     // Exposants tapés en caractères spéciaux : « 2⁸ », « 2¹⁰ », « 3⁻² » → 2^(8), 2^(10), 3^(-2).
     .replace(/([⁺⁻]?)([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (_, sg, d) => '^(' + (sg === '⁻' ? '-' : '') + [...d].map((c) => '⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)).join('') + ')')
+    // « 3ⁿ », « eˣ » : exposant littéral.
+    .replace(/ⁿ/g, '^(n)').replace(/ˣ/g, '^(x)')
     .replace(/√/g, ' sqrt ')
     .replace(/π/g, ' pi ')
     .replace(/’/g, "'")
@@ -175,10 +177,13 @@ function arbre(toks) {
       let expo = null;
       if (voir() && voir().t === '^') { k++; expo = atome(); if (!expo) return null; }
       let a;
-      if (voir() && voir().t === '(') a = puissance();
+      // « sin(x)^3 » = (sin x)³ : l'exposant après la parenthèse porte sur la fonction.
+      if (voir() && voir().t === '(') a = atome();
       else {
         const f = [puissance()];
-        while (voir() && (voir().t === 'num' || voir().t === 'id' || voir().t === 'const')) f.push(puissance());
+        // « √3i » = √3 × i (le i des complexes, le j des vecteurs ne sont pas sous la racine).
+        while (voir() && (voir().t === 'num' || voir().t === 'id' || voir().t === 'const')
+          && !(x.v === 'sqrt' && voir().t === 'id' && (voir().v === 'i' || voir().v === 'j'))) f.push(puissance());
         a = f.some((y) => !y) ? null : f.length === 1 ? f[0] : { t: 'mul', f, inv: f.map(() => false) };
       }
       if (!a) return null;
@@ -276,6 +281,7 @@ function fonction(f, z) {
   const x = z.re;
   if (f === 'sqrt') return x >= 0 ? C(Math.sqrt(x)) : NAN;
   if (f === 'ln') return x > 0 ? C(Math.log(x)) : NAN;
+  if (f === 'log') return x > 0 ? C(Math.log10(x)) : NAN; // logarithme décimal
   return C(Math[f](x));
 }
 
@@ -326,6 +332,11 @@ export function egales(a, b, { complexe = false, mode = 'egal' } = {}) {
     if (!ok(y)) return false;
     utiles++;
     if (mode === 'egal') { if (!proches(x, y)) return false; }
+    else if (mode === 'modulo2pi') {
+      // Mesures d'angle : égales à un multiple de 2π près (« -5π/4 » = « 3π/4 »).
+      const k = (y.re - x.re) / (2 * Math.PI);
+      if (!reel(x) || !reel(y) || Math.abs(k - Math.round(k)) > 1e-9) return false;
+    }
     else if (mode === 'constante') {
       const d = add(y, C(-x.re, -x.im));
       if (ref == null) ref = d; else if (!proches(ref, d)) return false;
@@ -420,7 +431,7 @@ const plat = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCa
 
 function regleDe(enonce) {
   const e = plat(enonce);
-  const dev = /developp|\breduis|\breduire|forme algebrique/.test(e);
+  const dev = /developp|\breduis|\breduire|forme reduite|forme algebrique/.test(e);
   const fac = /factoris/.test(e);
   if (dev && fac) return null;
   if (/forme canonique/.test(e)) return 'canonique';
@@ -476,6 +487,30 @@ export function analyserCalcul(ex) {
   return { kind: 'calcul', forme: lu.kind, attendu: lu.a, nom: lu.nom || null, regle, complexe, mode, vars: [...vars], reduite: /reduite/.test(plat(ex.enonce)) };
 }
 
+/**
+ * Forme écrite à la main dans attendus.json (« 1/sqrt(x) - 3/x^2 », « f'(x) = 3x^2 + 2x »,
+ * « 2x + y - 9 = 0 ») pour une réponse qui contient aussi du texte : mêmes contrôles
+ * qu'analyserCalcul (règle de forme lue dans l'énoncé, pas de recopie de l'énoncé), ou null.
+ */
+export function analyserCalculForme(ex, forme) {
+  if (!ex || typeof ex.enonce !== 'string' || typeof forme !== 'string') return null;
+  if (/d[ée]montr|montrer|montre que|justifi|prouv|expliqu|interpr[ée]t|comment|conclu/i.test(ex.enonce)) return null;
+  const complexe = /\bi\b/.test(forme) && /\\mathbb\{C\}|complexe|affixe|alg[ée]brique|\\overline|\\bar/i.test(ex.enonce);
+  const lu = lire(forme);
+  if (!lu) return null;
+  const vars = variables(lu.a, complexe);
+  if (!vars.size && !complexe) return null;
+  const regle = regleDe(ex.enonce);
+  if (!regle) return null;
+  if (lu.kind === 'eq' && regle !== 'libre') return null;
+  if (!formeOk(lu.a, lu.a, regle, complexe)) return null;
+  const mode = lu.kind === 'eq' ? 'proportionnel' : regle === 'primitive' ? 'constante' : 'egal';
+  if (egales(lu.a, lu.a, { complexe, mode }) !== true) return null;
+  const copies = expressionsEnonce(ex.enonce, complexe);
+  if ((regle === 'libre' || regle === 'primitive') && copies.some((c) => egales(lu.a, c, { complexe, mode }) === true)) return null;
+  return { kind: 'calcul', forme: lu.kind, attendu: lu.a, nom: lu.nom || null, regle, complexe, mode, vars: [...vars], reduite: /reduite/.test(plat(ex.enonce)) };
+}
+
 /** La réponse (une formule $…$) contient-elle des lettres dans sa valeur (« E = 3(2x + 5) », « -2i ») ? */
 export function valeurLitterale(reponse) {
   const r = String(reponse || '').trim();
@@ -493,6 +528,11 @@ export function valeurLitterale(reponse) {
 export function comparerCalcul(saisie, c) {
   // Valeur sans variable (angle « -2π/3 ») : l'unité « rad » est facultative.
   if (c && !c.vars.length) saisie = String(saisie).replace(/\s*\brad(?:ians?)?\s*\.?\s*$/i, '');
+  // Primitive « à une constante près » : « … + C » (ou « + k », « avec C ∈ ℝ ») est permis.
+  if (c && c.mode === 'constante') {
+    saisie = String(saisie).replace(/\s*[,;]?\s*(?:avec|où|o[uù])?\s*[Ck]\s*(?:∈|\\in|appartient\s+à)\s*(?:ℝ|R|\\mathbb\{R\})\s*\.?\s*$/i, '')
+      .replace(/\s*\+\s*[Ck]\s*\.?\s*$/, '');
+  }
   const lu = lire(saisie);
   if (!lu || !c) return { juste: false };
   let a = lu.a;

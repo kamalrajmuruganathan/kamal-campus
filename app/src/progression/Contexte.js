@@ -20,6 +20,9 @@ import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { majErreurs } from '../../lib/erreurs';
 import { noter as noterCarnet, resultatsQcm, cleExo, depuisAnciennesErreurs, noterMaitriseesDuJour } from '../../lib/carnet';
 import { xpDictee, noterDictee } from '../../lib/dictee';
+import { compterSemaine, appliquerBonusSemaine } from '../../lib/defisSemaine';
+import { noterActiviteVacances } from '../../lib/vacances';
+import { xpEpreuve, meilleureNote, ajouterEpreuve } from '../../lib/epreuve';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide, synchroniser, definirUtilisateur } from './stockage';
 import { useAuth } from '../cloud/AuthContexte';
 import { resynchroniserSiPermis } from '../notifications';
@@ -99,6 +102,18 @@ export function ProgressionProvider({ children }) {
     definirVoix(profil.voix);
   }, [profil.voix]);
 
+  // Défis de la semaine : bonus d'XP versé une seule fois par défi réussi (lib/defisSemaine).
+  useEffect(() => {
+    if (!charge) return;
+    const jour = dateLocale(new Date());
+    setProfil((p) => {
+      const suivant = appliquerBonusSemaine(p, jour);
+      if (suivant === p) return p;
+      sauverProfil(suivant);
+      return suivant;
+    });
+  }, [profil, charge]);
+
   /**
    * Enregistre le résultat d'un QCM terminé et met à jour la progression.
    * @param {{questions, reponses, chapitreId?, titre?, matiere?}} arg
@@ -174,6 +189,10 @@ export function ProgressionProvider({ children }) {
       suivant.carnet = nc.carnet;
       suivant.carnetMaitrisees = (profil.carnetMaitrisees || 0) + nc.maitrisees;
       suivant.carnetMaitriseesJours = noterMaitriseesDuJour(profil.carnetMaitriseesJours, jour, nc.maitrisees);
+      // Défis de la semaine (QCM d'au moins 5 questions pour « ≥ 80 % » et « sans faute ») et révisions de vacances.
+      const grand = res.total >= 5;
+      suivant.semaine = compterSemaine(profil.semaine, jour, { qcm: res.total > 0 ? 1 : 0, qcm80: grand && res.taux >= 0.8 ? 1 : 0, sansFaute: grand && res.sansFaute ? 1 : 0 });
+      if (profil.vacances) suivant.vacances = noterActiviteVacances(profil.vacances, { type: 'qcm', chapitreId, titre }, jour);
 
       setProfil(suivant);
       sauverProfil(suivant);
@@ -277,6 +296,7 @@ export function ProgressionProvider({ children }) {
       ...profil,
       xp: profil.xp + points,
       enigmesResolues: (profil.enigmesResolues || 0) + (reussi ? 1 : 0),
+      semaine: compterSemaine(profil.semaine, dateLocale(new Date()), { enigmes: reussi ? 1 : 0 }),
     };
     if (reussi) {
       suivant.historique = [
@@ -341,6 +361,8 @@ export function ProgressionProvider({ children }) {
           meilleureSerieJours: s.meilleureSerieJours,
         });
         suivant.ligue = ligueAjouterXp(p.ligue, points, dateLocale(new Date()));
+        suivant.semaine = compterSemaine(p.semaine, dateLocale(new Date()), { exos: 1 });
+        if (p.vacances) suivant.vacances = noterActiviteVacances(p.vacances, { type: 'exo', chapitreId }, dateLocale(new Date()));
         sauverProfil(suivant);
         return suivant;
       });
@@ -366,6 +388,7 @@ export function ProgressionProvider({ children }) {
         xp: p.xp + points,
         xpParMatiere: { ...p.xpParMatiere },
         dictees: noterDictee(p.dictees, id, note, dateLocale(new Date())),
+        semaine: compterSemaine(p.semaine, dateLocale(new Date()), { dictees: 1 }),
         historique: [
           { date: new Date().toISOString(), titre: `Dictée : ${titre}`, justes: note, total: 10, points, matiere },
           ...(p.historique || []),
@@ -373,6 +396,49 @@ export function ProgressionProvider({ children }) {
       };
       if (points > 0) {
         suivant.xpParMatiere[matiere] = (suivant.xpParMatiere[matiere] || 0) + points;
+        const s = calculerSerie(suivant, points);
+        Object.assign(suivant, {
+          jourCourant: s.jourCourant,
+          xpDuJour: s.xpDuJour,
+          serieJours: s.serieJours,
+          dernierJourValide: s.dernierJourValide,
+          meilleureSerieJours: s.meilleureSerieJours,
+        });
+        suivant.ligue = ligueAjouterXp(p.ligue, points, dateLocale(new Date()));
+      }
+      sauverProfil(suivant);
+      return suivant;
+    });
+    return { points, meilleureAvant, niveauApres, monteeDeNiveau: niveauApres > niveauAvant };
+  }, [profil]);
+
+  /**
+   * Enregistre une épreuve passée en conditions réelles (écran Epreuve) : historique
+   * `profil.epreuves` (30 au plus) et XP (voir xpEpreuve : participation + note la
+   * première fois, puis seulement le progrès ; rien si l'épreuve a été bâclée).
+   * @param {{entree: object, tempsMs: number, dureeMs: number}} arg
+   * @returns {{points, meilleureAvant, niveauApres, monteeDeNiveau}}
+   */
+  const enregistrerEpreuve = useCallback(({ entree, tempsMs, dureeMs }) => {
+    const meilleureAvant = meilleureNote(profil.epreuves, entree.sujetId);
+    const points = xpEpreuve({ note20: entree.note20, meilleureAvant, tempsMs, dureeMs });
+    const matiere = entree.matiere || null;
+    const niveauAvant = niveauPourXp(profil.xp).niveau;
+    const niveauApres = niveauPourXp(profil.xp + points).niveau;
+    setProfil((p) => {
+      if ((p.epreuves || []).some((e) => e && e.id === entree.id)) return p; // déjà enregistrée
+      const suivant = {
+        ...p,
+        xp: p.xp + points,
+        xpParMatiere: { ...p.xpParMatiere },
+        epreuves: ajouterEpreuve(p.epreuves, { ...entree, xp: points }),
+        historique: [
+          { date: new Date().toISOString(), titre: `Épreuve : ${entree.titre}`, justes: entree.note20, total: 20, points, matiere },
+          ...(p.historique || []),
+        ].slice(0, MAX_HISTORIQUE),
+      };
+      if (points > 0) {
+        if (matiere) suivant.xpParMatiere[matiere] = (suivant.xpParMatiere[matiere] || 0) + points;
         const s = calculerSerie(suivant, points);
         Object.assign(suivant, {
           jourCourant: s.jourCourant,
@@ -445,7 +511,7 @@ export function ProgressionProvider({ children }) {
       const jour = dateLocale(new Date());
       const srs = { ...(p.srs || {}) };
       srs[cle] = planifierSrs(srs[cle], su, jour);
-      const suivant = { ...p, srs };
+      const suivant = { ...p, srs, semaine: compterSemaine(p.semaine, jour, { cartes: 1 }) };
       sauverProfil(suivant);
       return suivant;
     });
@@ -466,7 +532,7 @@ export function ProgressionProvider({ children }) {
     <ProgressionContexte.Provider
       value={{
         profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme, enregistrerExercice,
-        enregistrerDictee, noterExerciceCarnet, reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
+        enregistrerDictee, enregistrerEpreuve, noterExerciceCarnet, reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
       }}
     >
       {children}
@@ -496,6 +562,7 @@ export function useProgression() {
       }),
       enregistrerExercice: () => ({ points: 0, deja: false, niveauApres: 1, monteeDeNiveau: false }),
       enregistrerDictee: () => ({ points: 0, meilleureAvant: null, niveauApres: 1, monteeDeNiveau: false }),
+      enregistrerEpreuve: () => ({ points: 0, meilleureAvant: null, niveauApres: 1, monteeDeNiveau: false }),
       noterExerciceCarnet: () => {},
       reinitialiser: () => {},
       definirReglages: () => {},

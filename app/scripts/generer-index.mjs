@@ -12,7 +12,7 @@
  *     npm run preparer
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fusionnerAttendus } from '../lib/autocorrection/index.js';
@@ -335,6 +335,7 @@ if (existsSync(SUJETS_DIR)) {
     try { meta = lireEntete(chemin); } catch { console.warn(`  ⚠️  sujet illisible : ${f}`); continue; }
     sujets.push({
       id: meta.id ?? f.replace(/\.md$/, ''),
+      fichier: f.replace(/\.md$/, ''),
       titre: meta.titre ?? f,
       examen: meta.examen ?? '',
       niveau: meta.niveau ?? '',
@@ -357,6 +358,7 @@ if (existsSync(QUIZ_DIR)) {
       const data = JSON.parse(readFileSync(chemin, 'utf8'));
       quiz.push({
         id: data.id ?? f.replace(/\.json$/, ''),
+        fichier: f.replace(/\.json$/, ''),
         titre: data.titre ?? f,
         examen: data.examen ?? '',
         niveau: data.niveau ?? '',
@@ -371,7 +373,7 @@ if (existsSync(QUIZ_DIR)) {
   }
   quiz.sort((a, b) => rang(a.niveau) - rang(b.niveau) || a.matiere.localeCompare(b.matiere));
 }
-const importsQuiz = quiz.map((q, i) => `import quiz${i} from '${q.chemin}';`).join('\n');
+// Questions des quiz et texte des sujets : chargés à la demande (src/contenu-lourd), pas dans l'index.
 const entreesQuiz = quiz.map((q, i) => `  {
     id: ${JSON.stringify(q.id)},
     titre: ${JSON.stringify(q.titre)},
@@ -382,10 +384,8 @@ const entreesQuiz = quiz.map((q, i) => `  {
     reluPar: ${JSON.stringify(q.reluPar)},
     reluLe: ${JSON.stringify(q.reluLe)},
     nbQuestions: ${q.nbQuestions},
-    questions: quiz${i}.questions,
   },`).join('\n');
 
-const importsSujets = sujets.map((s, i) => `import sujet${i} from '${s.chemin}';`).join('\n');
 const entreesSujets = sujets.map((s, i) => `  {
     id: ${JSON.stringify(s.id)},
     titre: ${JSON.stringify(s.titre)},
@@ -395,17 +395,11 @@ const entreesSujets = sujets.map((s, i) => `  {
     statut: ${JSON.stringify(s.statut)},
     reluPar: ${JSON.stringify(s.reluPar)},
     reluLe: ${JSON.stringify(s.reluLe)},
-    contenu: sujet${i},
   },`).join('\n');
 
-const imports = chapitres.map((c, i) => {
-  // Les .md sont chargés en texte brut par le transformer Metro (voir metro.config.cjs)
-  // Fiches et exercices (le plus lourd) ne sont PAS dans l'index : ils sont chargés à la demande
-  // via src/contenu-lourd(.web|.native).js, générés plus bas.
-  let ligne = `import qcm${i} from '${c.cheminQcm}';`;
-  if (c.cheminFlashcards) ligne += `\nimport flash${i} from '${c.cheminFlashcards}';`;
-  return ligne;
-}).join('\n');
+// Fiches, exercices, QCM et cartes (le plus lourd) ne sont PAS dans l'index : ils sont chargés
+// à la demande via src/contenu-lourd(.web|.native).js, générés plus bas. L'index ne garde que
+// ce dont l'accueil, la recherche et les listes ont besoin (titres, nombres de questions…).
 
 const entrees = chapitres.map((c, i) => `  {
     id: ${JSON.stringify(c.id)},
@@ -416,7 +410,6 @@ const entrees = chapitres.map((c, i) => `  {
     matiere: ${JSON.stringify(c.matiere)},
     programme: ${JSON.stringify(c.programme)},
     duree: ${c.duree},
-    prerequis: ${JSON.stringify(c.prerequis)},
     statut: ${JSON.stringify(c.statut)},
     reluPar: ${JSON.stringify(c.reluPar)},
     reluLe: ${JSON.stringify(c.reluLe)},
@@ -424,8 +417,6 @@ const entrees = chapitres.map((c, i) => `  {
     nbExercices: ${c.nbExercices},
     nbFlashcards: ${c.nbFlashcards},
     outils: ${JSON.stringify(c.outils)},
-    qcm: qcm${i},
-    flashcards: ${c.cheminFlashcards ? `flash${i}` : 'null'},
   },`).join('\n');
 
 // ── Accents des notions de QCM ───────────────────────────────────────────────
@@ -487,10 +478,7 @@ const sortie = `/**
  * ${chapitres.length} chapitres indexés.
  */
 
-${imports}
 ${importsFormulaires}
-${importsSujets}
-${importsQuiz}
 
 export const FORMULAIRES = [
 ${entreesFormulaires}
@@ -559,41 +547,77 @@ writeFileSync(SORTIE, sortie, 'utf8');
 // ─────────────── contenu lourd chargé à la demande (fiches + exercices) ───────────────
 // Web : fichiers statiques copiés dans public/donnees/<niveau>/<parcours>/<dossier>/,
 // téléchargés seulement quand l'élève ouvre le chapitre (l'appli démarre bien plus vite).
-// Téléphone (Expo natif) : imports classiques, comme avant.
+// Téléphone (Expo natif) : voir lourdNatif ci-dessous.
 const ENTETE_LOURD = `/**
  * FICHIER GÉNÉRÉ par scripts/generer-index.mjs — NE PAS MODIFIER À LA MAIN.
- * Fiches et exercices, chargés à la demande : chargerFiche(id) et chargerExercices(id)
- * renvoient une promesse (texte Markdown / objet exercice.json, ou null).
+ * Contenu lourd, chargé à la demande (rien de tout cela n'est dans l'index) :
+ *   chargerFiche(id)      → texte Markdown de la fiche
+ *   chargerExercices(id)  → objet exercice.json (fusionné avec attendus.json)
+ *   chargerQcm(id)        → objet qcm.json ({ questions }) ; { questions: [] } si le chapitre n'en a pas
+ *   chargerCartes(id)     → objet flashcards.json ({ cartes }) ; { cartes: [] } si le chapitre n'en a pas
+ *   chargerSujet(id)      → texte Markdown d'un sujet (SUJETS)
+ *   chargerQuiz(id)       → objet quiz/<fichier>.json ({ questions… }) d'un QUIZ
+ * Chaque fonction renvoie une promesse ; null = introuvable ou réseau indisponible.
  */
 `;
+// Téléphone : chaque fiche / exercice (déjà fusionné avec attendus.json) est un petit module à part,
+// app/donnees-natif/<niveau>/<parcours>/<dossier>/{fiche,exercice}.js (dossier ignoré par git, recréé
+// ici), chargé seulement à l'ouverture du chapitre (require dans une fonction). Chaque module exporte
+// le texte JSON avec les caractères non ASCII écrits \uXXXX : Hermes stockerait sinon tout texte
+// accentué en UTF-16 (taille doublée). D'où le JSON.parse.
+const cheminNatif = (c, f) => `../donnees-natif/${c.niveau}/${c.parcours}/${c.dossier}/${f}`;
 const lourdNatif = `${ENTETE_LOURD}
-import { fusionnerAttendus } from '../lib/autocorrection';
-${chapitres.map((c, i) => `import fiche${i} from '${c.cheminFiche}';` + (c.cheminExercice ? `\nimport exercice${i} from '${c.cheminExercice}';` : '') + (c.cheminAttendus ? `\nimport attendus${i} from '${c.cheminAttendus}';` : '')).join('\n')}
-
 const FICHES = {
-${chapitres.map((c, i) => `  ${JSON.stringify(c.id)}: fiche${i},`).join('\n')}
+${chapitres.map((c) => `  ${JSON.stringify(c.id)}: () => require(${JSON.stringify(cheminNatif(c, 'fiche.js'))}),`).join('\n')}
 };
 const EXERCICES = {
-${chapitres.filter((c) => c.cheminExercice).map((c) => `  ${JSON.stringify(c.id)}: exercice${chapitres.indexOf(c)},`).join('\n')}
+${chapitres.filter((c) => c.cheminExercice).map((c) => `  ${JSON.stringify(c.id)}: () => require(${JSON.stringify(cheminNatif(c, 'exercice.js'))}),`).join('\n')}
+};
+const QCM = {
+${chapitres.filter((c) => c.nbQuestions > 0).map((c) => `  ${JSON.stringify(c.id)}: () => require(${JSON.stringify(cheminNatif(c, 'qcm.js'))}),`).join('\n')}
+};
+const CARTES = {
+${chapitres.filter((c) => c.cheminFlashcards).map((c) => `  ${JSON.stringify(c.id)}: () => require(${JSON.stringify(cheminNatif(c, 'flashcards.js'))}),`).join('\n')}
+};
+const SUJETS = {
+${sujets.map((x) => `  ${JSON.stringify(x.id)}: () => require(${JSON.stringify(`../donnees-natif/sujets/${x.fichier}.js`)}),`).join('\n')}
+};
+const QUIZ = {
+${quiz.map((x) => `  ${JSON.stringify(x.id)}: () => require(${JSON.stringify(`../donnees-natif/quiz/${x.fichier}.js`)}),`).join('\n')}
 };
 
-const ATTENDUS = {
-${chapitres.filter((c) => c.cheminAttendus).map((c) => `  ${JSON.stringify(c.id)}: attendus${chapitres.indexOf(c)},`).join('\n')}
-};
-
-export async function chargerFiche(id) { return FICHES[id] ?? null; }
-export function cheminDonnees() { return null; }
-export async function chargerExercices(id) {
-  const ex = EXERCICES[id] ?? null;
-  return ex && ATTENDUS[id] ? fusionnerAttendus(ex, ATTENDUS[id]).exercice : ex;
+function lire(table, id) {
+  const f = table[id];
+  if (!f) return null;
+  try { return JSON.parse(f()); } catch { return null; }
 }
+
+export async function chargerFiche(id) { return lire(FICHES, id); }
+export function cheminDonnees() { return null; }
+export async function chargerExercices(id) { return lire(EXERCICES, id); }
+export async function chargerQcm(id) { return QCM[id] ? lire(QCM, id) : { questions: [] }; }
+export async function chargerCartes(id) { return CARTES[id] ? lire(CARTES, id) : { cartes: [] }; }
+export async function chargerSujet(id) { return lire(SUJETS, id); }
+export async function chargerQuiz(id) { return lire(QUIZ, id); }
 `;
-const chemins = Object.fromEntries(chapitres.map((c) => [c.id, `${c.niveau}/${c.parcours}/${c.dossier}`]));
-const exAvec = chapitres.filter((c) => c.cheminExercice).map((c) => c.id);
+// Le dossier d'un chapitre (« niveau/parcours/dossier ») se déduit de l'index : on ne le répète pas.
+const sansFichier = (ok) => chapitres.filter((c) => !ok(c)).map((c) => c.id);
 const lourdWeb = `${ENTETE_LOURD}
-const CHEMINS = ${JSON.stringify(chemins)};
-const AVEC_EXERCICES = new Set(${JSON.stringify(exAvec)});
+import { chapitreParId, SUJETS, QUIZ } from './contenu-index';
+
+// Chapitres SANS exercices / QCM / cartes (listes courtes).
+const SANS_EXERCICES = new Set(${JSON.stringify(sansFichier((c) => c.cheminExercice))});
+const SANS_QCM = new Set(${JSON.stringify(sansFichier((c) => c.nbQuestions > 0))});
+const SANS_CARTES = new Set(${JSON.stringify(sansFichier((c) => c.cheminFlashcards))});
+// Fichier de chaque sujet / quiz quand il diffère de son identifiant.
+const FICHIER_SUJET = ${JSON.stringify(Object.fromEntries(sujets.filter((x) => x.fichier !== x.id).map((x) => [x.id, x.fichier])))};
+const FICHIER_QUIZ = ${JSON.stringify(Object.fromEntries(quiz.filter((x) => x.fichier !== x.id).map((x) => [x.id, x.fichier])))};
 const cache = new Map();
+
+function dossierDe(id) {
+  const c = chapitreParId(id);
+  return c ? \`\${c.niveau}/\${c.parcours}/\${c.dossier}\` : null;
+}
 
 // Dossier de l'appli (ex. /kamal-campus/app/) : on prend celui de la page, sans le nom d'écran éventuel.
 function base() {
@@ -617,25 +641,54 @@ async function telecharger(chemin, enJson) {
 }
 
 export function chargerFiche(id) {
-  const c = CHEMINS[id];
+  const c = dossierDe(id);
   return c ? telecharger(c + '/fiche.md', false) : Promise.resolve(null);
 }
 /** Dossier d'un chapitre dans public/donnees (« niveau/parcours/dossier »), ou null. */
-export function cheminDonnees(id) { return CHEMINS[id] ?? null; }
+export function cheminDonnees(id) { return dossierDe(id); }
 export function chargerExercices(id) {
-  const c = CHEMINS[id];
-  return c && AVEC_EXERCICES.has(id) ? telecharger(c + '/exercice.json', true) : Promise.resolve(null);
+  const c = dossierDe(id);
+  return c && !SANS_EXERCICES.has(id) ? telecharger(c + '/exercice.json', true) : Promise.resolve(null);
+}
+export function chargerQcm(id) {
+  const c = dossierDe(id);
+  if (!c) return Promise.resolve(null);
+  return SANS_QCM.has(id) ? Promise.resolve({ questions: [] }) : telecharger(c + '/qcm.json', true);
+}
+export function chargerCartes(id) {
+  const c = dossierDe(id);
+  if (!c) return Promise.resolve(null);
+  return SANS_CARTES.has(id) ? Promise.resolve({ cartes: [] }) : telecharger(c + '/flashcards.json', true);
+}
+export function chargerSujet(id) {
+  if (!SUJETS.some((s) => s.id === id)) return Promise.resolve(null);
+  return telecharger('sujets/' + (FICHIER_SUJET[id] ?? id) + '.md', false);
+}
+export function chargerQuiz(id) {
+  if (!QUIZ.some((q) => q.id === id)) return Promise.resolve(null);
+  return telecharger('quiz/' + (FICHIER_QUIZ[id] ?? id) + '.json', true);
 }
 `;
 writeFileSync(join(RACINE_APP, 'src', 'contenu-lourd.native.js'), lourdNatif, 'utf8');
 writeFileSync(join(RACINE_APP, 'src', 'contenu-lourd.web.js'), lourdWeb, 'utf8');
 // Copie des fichiers pour le web (dossier ignoré par git, recréé à chaque « npm run preparer »).
 const DONNEES = join(RACINE_APP, 'public', 'donnees');
+const DONNEES_NATIF = join(RACINE_APP, 'donnees-natif');
+rmSync(DONNEES_NATIF, { recursive: true, force: true });
+/** Module natif : `module.exports = "<texte JSON en ASCII>"` (é → \u00e9, lu par JSON.parse). */
+function moduleNatif(valeur) {
+  const ascii = JSON.stringify(valeur).replace(/[\u0080-\uffff]/g, (ch) => '\\u' + ch.charCodeAt(0).toString(16).padStart(4, '0'));
+  return '// Fichier genere par scripts/generer-index.mjs (ne pas modifier)\nmodule.exports = ' + JSON.stringify(ascii) + ';\n';
+}
 for (const c of chapitres) {
   const dest = join(DONNEES, c.niveau, c.parcours, c.dossier);
   mkdirSync(dest, { recursive: true });
   const src = join(CONTENU, c.niveau, c.parcours, c.dossier);
-  writeFileSync(join(dest, 'fiche.md'), readFileSync(join(src, 'fiche.md')));
+  const fiche = readFileSync(join(src, 'fiche.md'), 'utf8');
+  writeFileSync(join(dest, 'fiche.md'), fiche);
+  const destNatif = join(DONNEES_NATIF, c.niveau, c.parcours, c.dossier);
+  mkdirSync(destNatif, { recursive: true });
+  writeFileSync(join(destNatif, 'fiche.js'), moduleNatif(fiche));
   if (c.cheminExercice) {
     let ex = JSON.parse(readFileSync(join(src, 'exercice.json'), 'utf8'));
     if (c.cheminAttendus) {
@@ -644,9 +697,36 @@ for (const c of chapitres) {
       if (r.ecarts.length) console.warn(`  ⚠️  attendus.json périmé (exercices ${r.ecarts.join(', ')}) : ${c.id}`);
     }
     writeFileSync(join(dest, 'exercice.json'), JSON.stringify(ex));
+    writeFileSync(join(destNatif, 'exercice.js'), moduleNatif(ex));
+  }
+  if (c.nbQuestions > 0) {
+    const q = JSON.parse(readFileSync(join(src, 'qcm.json'), 'utf8'));
+    writeFileSync(join(dest, 'qcm.json'), JSON.stringify(q));
+    writeFileSync(join(destNatif, 'qcm.js'), moduleNatif(q));
+  }
+  if (c.cheminFlashcards) {
+    const f = JSON.parse(readFileSync(join(src, 'flashcards.json'), 'utf8'));
+    writeFileSync(join(dest, 'flashcards.json'), JSON.stringify(f));
+    writeFileSync(join(destNatif, 'flashcards.js'), moduleNatif(f));
   }
 }
-console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
+// Sujets (Markdown) et quiz de bac blanc (JSON) : même principe.
+for (const [nom, liste, ext, lire] of [
+  ['sujets', sujets, '.md', (f) => readFileSync(f, 'utf8')],
+  ['quiz', quiz, '.json', (f) => JSON.parse(readFileSync(f, 'utf8'))],
+]) {
+  const dest = join(DONNEES, nom);
+  const destNatif = join(DONNEES_NATIF, nom);
+  rmSync(dest, { recursive: true, force: true });
+  mkdirSync(dest, { recursive: true });
+  mkdirSync(destNatif, { recursive: true });
+  for (const x of liste) {
+    const valeur = lire(join(RACINE_APP, 'src', x.chemin.replace(/^\.\//, '')));
+    writeFileSync(join(dest, x.fichier + ext), typeof valeur === 'string' ? valeur : JSON.stringify(valeur));
+    writeFileSync(join(destNatif, x.fichier + '.js'), moduleNatif(valeur));
+  }
+}
+console.log(`✓ fiches, exercices, QCM, cartes, sujets et quiz à la demande → src/contenu-lourd.(web|native).js + public/donnees/ + donnees-natif/`);
 
 // ─────────────────────────── dictées (dictees/*.json) ───────────────────────────
 // Web : copiées dans public/donnees/dictees/ (chargées à la demande par src/dictees-donnees.web.js).

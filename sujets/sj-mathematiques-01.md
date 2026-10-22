@@ -105,7 +105,7 @@ En $-\infty$ : $\lim_{x\to-\infty}(x+2) = -\infty$ et $\lim_{x\to-\infty} e^{-x}
 $$f'(x) = 1\cdot e^{-x} + (x+2)\cdot(-e^{-x}) = e^{-x}\big(1 - x - 2\big) = e^{-x}(-x-1) = -(x+1)e^{-x}.$$
 
 **3.** Comme $e^{-x} > 0$, le signe de $f'(x)$ est celui de $-(x+1)$ : $f'(x) > 0$ pour $x < -1$, $f'(x) < 0$ pour $x > -1$, et $f'(-1) = 0$.
-Donc $f$ est croissante sur $]-\infty,\,-1]$ et décroissante sur $[-1,\,+\infty[$. Elle admet un maximum en $x = -1$ :
+Donc $f$ est croissante sur $]-\infty\,;-1]$ et décroissante sur $[-1\,;+\infty[$. Elle admet un maximum en $x = -1$ :
 $$f(-1) = (-1+2)e^{1} = e.$$
 
 | $x$ | $-\infty$ | | $-1$ | | $+\infty$ |
@@ -115,7 +115,7 @@ $$f(-1) = (-1+2)e^{1} = e.$$
 
 **4.** $f'(x) = -(x+1)e^{-x}$. On dérive de nouveau ($u = -(x+1)$, $u' = -1$) :
 $$f''(x) = -1\cdot e^{-x} + \big(-(x+1)\big)(-e^{-x}) = e^{-x}\big(-1 + x + 1\big) = x\,e^{-x}.$$
-Comme $e^{-x} > 0$, $f''(x)$ a le signe de $x$ : $f''(x) \ge 0$ sur $[0,+\infty[$. Donc $f$ est **convexe sur $[0,+\infty[$** (et concave sur $]-\infty,0]$). Le signe de $f''$ change en $x = 0$ : $\mathcal{C}_f$ admet un **point d'inflexion** de coordonnées $\big(0,\;f(0)\big) = (0,\,2)$.
+Comme $e^{-x} > 0$, $f''(x)$ a le signe de $x$ : $f''(x) \ge 0$ sur $[0\,;+\infty[$. Donc $f$ est **convexe sur $[0\,;+\infty[$** (et concave sur $]-\infty\,;0]$). Le signe de $f''$ change en $x = 0$ : $\mathcal{C}_f$ admet un **point d'inflexion** de coordonnées $\big(0\,;f(0)\big) = (0\,;2)$.
 
 **5.a.** $F(x) = (-x-3)e^{-x}$. Avec $u = -x-3$, $u' = -1$ :
 $$F'(x) = -1\cdot e^{-x} + (-x-3)(-e^{-x}) = e^{-x}\big(-1 + x + 3\big) = e^{-x}(x+2) = f(x).$$
@@ -125,7 +125,7 @@ Donc $F$ est bien une primitive de $f$ sur $\mathbb{R}$.
 $F(1) = (-1-3)e^{-1} = -4e^{-1} = -\dfrac{4}{e}$ et $F(0) = (-0-3)e^{0} = -3$.
 $$I = -\frac{4}{e} - (-3) = 3 - \frac{4}{e} \approx 3 - 1{,}4715 \approx \boxed{1{,}53}.$$
 
-**5.c.** Sur $[0,1]$, $f(x) \ge 0$ (car $f(0)=2>0$, $f(1)=3e^{-1}>0$ et $f$ y est continue positive). Donc $I$ est l'**aire, en unités d'aire, du domaine délimité par $\mathcal{C}_f$, l'axe des abscisses et les droites $x=0$ et $x=1$**.
+**5.c.** Sur $[0\,;1]$, $f(x) = (x+2)e^{-x} \ge 0$ car $x+2>0$ et $e^{-x}>0$. Donc $I$ est l'**aire, en unités d'aire, du domaine délimité par $\mathcal{C}_f$, l'axe des abscisses et les droites $x=0$ et $x=1$**.
 
 ### Exercice 2
 
@@ -141,7 +141,7 @@ Donc $(v_n)$ est **géométrique de raison $q = \tfrac12$** et de premier terme 
 **4.** $u_{n+1} - u_n = \left[4 - \left(\tfrac12\right)^{n+1}\right] - \left[4 - \left(\tfrac12\right)^{n}\right] = \left(\tfrac12\right)^{n} - \left(\tfrac12\right)^{n+1} = \left(\tfrac12\right)^{n}\left(1 - \tfrac12\right) = \tfrac12\left(\tfrac12\right)^{n} > 0$. La suite est donc **croissante**.
 
 **5.a.** $4 - u_n = \left(\tfrac12\right)^n$. L'inéquation devient $\left(\tfrac12\right)^n < 10^{-3}$. En passant au logarithme (fonction croissante) : $n\ln\tfrac12 < \ln 10^{-3}$, soit, comme $\ln\tfrac12 < 0$, $n > \dfrac{-3\ln 10}{\ln \tfrac12} = \dfrac{3\ln 10}{\ln 2} \approx 9{,}97$.
-Le plus petit entier convient donc pour $n = 10$ (on vérifie $\left(\tfrac12\right)^{10} = \tfrac{1}{1024} \approx 9{,}77\times10^{-4} < 10^{-3}$, tandis que $\left(\tfrac12\right)^9 \approx 1{,}95\times10^{-3}$). Donc $\boxed{n = 10}$.
+Le plus petit entier qui convient est donc $n = 10$ (on vérifie $\left(\tfrac12\right)^{10} = \tfrac{1}{1024} \approx 9{,}77\times10^{-4} < 10^{-3}$, tandis que $\left(\tfrac12\right)^9 \approx 1{,}95\times10^{-3}$). Donc $\boxed{n = 10}$.
 
 **5.b.** La boucle doit continuer tant que le seuil n'est pas atteint, c'est-à-dire tant que $4 - u \ge 10^{-3}$ :
 ```python

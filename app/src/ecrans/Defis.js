@@ -255,9 +255,10 @@ export default function Defis({ navigation }) {
 
       <ModalNouveau visible={nouveau} onClose={() => setNouveau(false)} t={t} amis={amis}
         onAmis={() => { setNouveau(false); navigation.navigate('Amis'); }}
-        onLancer={(amiId, chap) => {
+        onLancer={async (amiId, chap) => {
           setNouveau(false);
-          const raw = construireQuestions(chap.id, NB_QUESTIONS_DEFI);
+          const raw = await construireQuestions(chap.id, NB_QUESTIONS_DEFI);
+          if (!raw.length) { avertir('Questions indisponibles', 'Impossible de charger les questions de ce chapitre. Vérifie ta connexion à Internet, puis réessaie.'); return; }
           demarrer({ mode: 'creer', chapId: chap.id, raw, amiId });
         }} />
 

@@ -21,42 +21,22 @@ import Chapitre from './src/ecrans/Chapitre';
 import Exercices from './src/ecrans/Exercices';
 import Flashcards from './src/ecrans/Flashcards';
 import Qcm from './src/ecrans/Qcm';
-import Outils from './src/ecrans/Outils';
-import Formulaires from './src/ecrans/Formulaires';
-import Sujets from './src/ecrans/Sujets';
-import BacBlanc from './src/ecrans/BacBlanc';
-import Profil from './src/ecrans/Profil';
-import Badges from './src/ecrans/Badges';
-import Enigmes from './src/ecrans/Enigmes';
-import LecteurEnigme from './src/ecrans/LecteurEnigme';
-import LecteurAllumettes from './src/ecrans/LecteurAllumettes';
-import Resolveur from './src/ecrans/Resolveur';
 import Recherche from './src/ecrans/Recherche';
 import Favoris from './src/ecrans/Favoris';
 import Revision from './src/ecrans/Revision';
 import RevisionSRS from './src/ecrans/RevisionSRS';
-import Duel from './src/ecrans/Duel';
-import Ligue from './src/ecrans/Ligue';
-import Defi from './src/ecrans/Defi';
-import Defis from './src/ecrans/Defis';
-import Statistiques from './src/ecrans/Statistiques';
-import RecapHebdo from './src/ecrans/RecapHebdo';
 import Express from './src/ecrans/Express';
-import ModeExamen from './src/ecrans/ModeExamen';
-import ExamenSurMesure from './src/ecrans/ExamenSurMesure';
 import BandeauHorsLigne from './src/composants/BandeauHorsLigne';
 import ModeErreurs from './src/ecrans/ModeErreurs';
 import CarnetExercices from './src/ecrans/CarnetExercices';
-import Podcast from './src/ecrans/Podcast';
-import Annales from './src/ecrans/Annales';
-import Planning from './src/ecrans/Planning';
-import APropos from './src/ecrans/APropos';
-import Amis from './src/ecrans/Amis';
-import Discussion from './src/ecrans/Discussion';
-import Controle from './src/ecrans/Controle';
-import Classement from './src/ecrans/Classement';
-import EspaceParent from './src/ecrans/EspaceParent';
-import Dictees from './src/ecrans/Dictees';
+import Annonces from './src/composants/Annonces';
+// Écrans moins fréquents : chargés à la demande sur le web (voir src/ecransParesseux.web.js).
+import {
+  Outils, Formulaires, Sujets, Epreuve, BacBlanc, Profil, Badges, Enigmes,
+  LecteurEnigme, LecteurAllumettes, Resolveur, Duel, Ligue, Defi, Defis, Statistiques,
+  RecapHebdo, ModeExamen, ExamenSurMesure, Podcast, Annales, Planning, APropos, Amis,
+  Discussion, Controle, Classement, EspaceParent, Dictees, Vacances, DefisSemaine,
+} from './src/ecransParesseux';
 
 // Sur le web, Alert.alert de React Native ne fait rien (fonction vide de react-native-web) :
 // les confirmations et messages d'erreur de toute l'appli passaient inaperçus.
@@ -132,6 +112,7 @@ function Navigation() {
         <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
         <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
         <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
+        <Pile.Screen name="Epreuve" component={Epreuve} options={{ title: 'Passer l\u2019épreuve' }} />
         <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
         <Pile.Screen
           name="Profil"
@@ -172,8 +153,11 @@ function Navigation() {
         <Pile.Screen name="Classement" component={Classement} options={{ title: 'Classement de la semaine' }} />
         <Pile.Screen name="EspaceParent" component={EspaceParent} options={{ title: 'Espace parent' }} />
         <Pile.Screen name="Dictees" component={Dictees} options={{ title: 'Dictées' }} />
+        <Pile.Screen name="Vacances" component={Vacances} options={{ title: 'Révisions de vacances' }} />
+        <Pile.Screen name="DefisSemaine" component={DefisSemaine} options={{ title: 'Défis de la semaine' }} />
         <Pile.Screen name="Discussion" component={Discussion} options={({ route }) => ({ title: route.params?.pseudo ?? 'Discussion' })} />
       </Pile.Navigator>
+      <Annonces />
     </NavigationContainer>
   );
 }

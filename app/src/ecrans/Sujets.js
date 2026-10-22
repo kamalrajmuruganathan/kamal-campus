@@ -8,7 +8,7 @@
 
 import { useTheme } from '../useTheme';
 import { useState } from 'react';
-import { View, Text, ScrollView, Pressable, useColorScheme } from 'react-native';
+import { View, Text, ScrollView, Pressable, useColorScheme, ActivityIndicator } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -16,10 +16,12 @@ import { Carte, Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { SUJETS, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { estRelu } from '../../lib/relecture';
+import { useSujet } from '../useContenu';
 
-export default function Sujets() {
+export default function Sujets({ navigation }) {
   const t = useTheme();
   const [actif, setActif] = useState(null);
+  const texte = useSujet(actif ? actif.id : null); // texte du sujet chargé à la demande
 
   if (actif) {
     return (
@@ -30,12 +32,46 @@ export default function Sujets() {
               <Text style={{ color: t.couleur.accent, fontSize: t.police.petite }}>‹ Tous les sujets</Text>
             </Pressable>
           </View>
+          <View style={{ paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}>
+            <Pressable
+              onPress={() => navigation.navigate('Epreuve', { id: actif.id })}
+              accessibilityRole="button"
+              accessibilityLabel="Passer l'épreuve en conditions réelles"
+              style={({ pressed }) => ({
+                minHeight: 48, borderRadius: t.rayon.m, backgroundColor: t.couleur.accent,
+                alignItems: 'center', justifyContent: 'center', paddingHorizontal: 14, opacity: pressed ? 0.75 : 1,
+              })}
+            >
+              <Text style={{ color: t.couleur.accentTexte, fontWeight: '800', fontSize: t.police.normale }}>⏱️ Passer l'épreuve</Text>
+            </Pressable>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 6, lineHeight: 17 }}>
+              En conditions réelles : chrono, corrigé caché jusqu'à la fin, puis auto-évaluation et note sur 20.
+            </Text>
+          </View>
           {!estRelu(actif) && (
             <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
               <Bandeau t={t} texte={'⚠️ Sujet et corrigé non relus par un professeur. À vérifier avant de t\'y fier.'} />
             </View>
           )}
-          <VisionneuseFiche markdown={actif.contenu} />
+          {texte.etat === 'ok' && texte.donnee ? (
+            <VisionneuseFiche markdown={texte.donnee} />
+          ) : (
+            <View style={{ padding: t.espace.xl, alignItems: 'center' }}>
+              {texte.etat === 'erreur' ? (
+                <>
+                  <Text style={{ color: t.couleur.texte, textAlign: 'center' }}>Impossible de charger le sujet. Vérifie ta connexion à Internet.</Text>
+                  <Pressable onPress={texte.recharger} accessibilityRole="button" style={{ marginTop: t.espace.m, padding: t.espace.m }}>
+                    <Text style={{ color: t.couleur.accent, fontWeight: '700' }}>Réessayer</Text>
+                  </Pressable>
+                </>
+              ) : (
+                <>
+                  <ActivityIndicator color={t.couleur.accent} />
+                  <Text style={{ color: t.couleur.attenue, marginTop: t.espace.s }}>Chargement du sujet…</Text>
+                </>
+              )}
+            </View>
+          )}
         </ScrollView>
       </SafeAreaView>
     );

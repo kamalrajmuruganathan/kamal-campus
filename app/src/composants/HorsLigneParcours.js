@@ -36,10 +36,10 @@ export default function HorsLigneParcours({ t, ids, accent }) {
       </Text>
       <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 4, lineHeight: 17 }}>
         {tout
-          ? `Les ${ids.length} chapitres (fiches et exercices) sont gardés sur cet appareil.`
+          ? `Les ${ids.length} chapitres (fiches, exercices, QCM et cartes) sont gardés sur cet appareil.`
           : dispo
             ? `${dispo} / ${ids.length} chapitres gardés sur cet appareil. Télécharge les autres pour réviser dans le métro ou en avion.`
-            : 'Télécharge les fiches et les exercices de ces chapitres pour les ouvrir même sans internet.'}
+            : 'Télécharge les fiches, les exercices, les QCM et les cartes de ces chapitres pour les ouvrir même sans internet.'}
       </Text>
       {progres ? (
         <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: t.espace.s, gap: 8 }}>

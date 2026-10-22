@@ -75,8 +75,17 @@ function preparer(texte, latex) {
 }
 
 // Unités permises après une valeur dans une suite saisie (« 26 cm », « 27 € », « 62,8 cm³ »).
-const UNITES = /^(.*?(?:[\dπ)]|(?<![a-zA-Z])pi))\s*(€|euros?|[kcdm]?m[²³]?|[kcdm]?m\^?[23]|[km]?g|[cm]?L|min|h|s)\.?$/;
-const normUnite = (u) => (/^euros?$/i.test(u) ? '€' : u.replace(/\^?2$/, '²').replace(/\^?3$/, '³'));
+const UNITES = /^(.*?(?:[\dπ)]|(?<![a-zA-Z])pi))\s*(€|euros?|°C|°|%|[kcdm]?m[²³]?|[kcdm]?m\^?[23]|[km]?g|[cm]?L|min|h|s|(?:k?m|rad)\s*(?:\/\s*s|[.·]\s*s\^?(?:-|⁻)1|[.·]\s*s⁻¹)|km\/h|m?g\s*(?:\/\s*L|[.·]\s*L\^?(?:-|⁻)1|[.·]\s*L⁻¹)|mol\s*\/\s*L|[kMG]?W|[km]?V|[mµ]?A|[kM]?J|[kM]?Hz|Pa|bar|dB|N|Ω|ohms?|ans?|jours?)\.?$/;
+const normUnite = (u) => {
+  if (/^euros?$/i.test(u)) return '€';
+  if (/^ohms?$/i.test(u)) return 'Ω';
+  if (/^ans?$/.test(u)) return 'an';
+  if (/^jours?$/.test(u)) return 'jour';
+  // « m.s-1 », « m·s⁻¹ » = « m/s » ; « mg.L-1 » = « mg/L ».
+  const par = u.replace(/\s+/g, '').match(/^(.+?)(?:\/|[.·])(s|L)(?:\^?(?:-|⁻)1|⁻¹)?$/);
+  if (par) return `${par[1]}/${par[2]}`;
+  return u.replace(/\^?2$/, '²').replace(/\^?3$/, '³');
+};
 
 /**
  * Lit UN morceau : point, « nom = valeur », vecteur (i, j), vecteur nul, équation
@@ -85,6 +94,8 @@ const normUnite = (u) => (/^euros?$/i.test(u) ? '€' : u.replace(/\^?2$/, '²')
 function lireMorceau(texte, latex) {
   let s = preparer(texte, latex);
   if (!s) return null;
+  // « rad » écrit par l'élève : permis pour une valeur sans unité, refusé si des degrés sont attendus.
+  const radian = !latex && /\brad(?:ians?)?\s*\.?\s*$/i.test(String(texte).trim());
   // Vecteur nul : « vecteur nul », « \vec{0} », « vec 0 » (« 0⃗ » est lu comme 0).
   if (latex ? /^\\vec\s*\{?\s*0\s*\}?$/.test(s) : /^(?:le\s+)?vecteur\s+nul$|^vec\s*\(?\s*0\s*\)?$/i.test(s)) return { k: 'nul' };
   // Unité après une valeur (saisie ou forme écrite à la main seulement).
@@ -121,7 +132,7 @@ function lireMorceau(texte, latex) {
   const vars = variables(lu.a);
   if (unite && vars.size) return null;
   if ([...vars].every((v) => v === 'i' || v === 'j') && vars.size) return { k: 'vecteur', a: lu.a };
-  return vars.size ? { k: 'expr', a: lu.a } : { k: 'valeur', a: lu.a, unite };
+  return vars.size ? { k: 'expr', a: lu.a } : { k: 'valeur', a: lu.a, unite: unite || (radian ? 'rad' : '') };
 }
 
 /** Découpe aux séparateurs de premier niveau : « ; », « et », « , » suivi d'un espace, retour à la ligne. */
@@ -174,28 +185,49 @@ function memeValeur(att, s, strict) {
   return !strict || signature(att) === signature(s);
 }
 
-function memeMorceau(att, s) {
+function memeMorceau(att, s, libre = false, modulo = false) {
   if (!s) return false;
+  // Argument d'un complexe ou mesure d'angle « modulo 2π » : π/2 = -3π/2 = 5π/2 (écriture exacte exigée).
+  if (modulo && att.k === 'valeur' && s.k === 'valeur' && !s.unite && egales(att.a, s.a) !== true
+    && (/pi/.test(JSON.stringify(att.a)) || egales(att.a, { t: 'num', v: 0 }) === true)) {
+    return egales(att.a, s.a, { mode: 'modulo2pi' }) === true && (/pi/.test(JSON.stringify(s.a)) || !nombreSeul(s.a));
+  }
+  // Expression (« 3x + 4 », « n(n + 1)/2 ») quand l'énoncé n'impose aucune forme : toute écriture égale convient.
+  if (libre && att.k === 'expr' && s.k === 'expr') return egales(att.a, s.a) === true;
   // Vecteur nul : « vecteur nul », « 0⃗ » / « 0 », « (0 ; 0) ».
   if (att.k === 'nul') return s.k === 'nul' || (s.k === 'valeur' && !s.unite && egales(s.a, { t: 'num', v: 0 }) === true)
     || (s.k === 'point' && s.a.every((x) => egales(x, { t: 'num', v: 0 }) === true));
   if (att.k !== s.k) return false;
-  if (att.k === 'point') return att.a.length === s.a.length && att.a.every((x, i) => memeValeur(x, s.a[i], special(x)));
+  // Coordonnées : une valeur exacte peut s'écrire autrement (« 2e^(-2) » = « 2/e² »), mais pas en décimal arrondi.
+  const decimal = (x) => x.t === 'num' || (x.t === 'add' && x.termes.length === 1 && x.termes[0].t === 'num');
+  if (att.k === 'point') return att.a.length === s.a.length && att.a.every((x, i) => memeValeur(x, s.a[i], special(x) && decimal(s.a[i])));
   // Équation : la même (à un facteur près), écrite avec les mêmes nombres, et pas déjà résolue
   // (« x + 15 = 42 » = « 15 + x = 42 » = « 42 = x + 15 », mais pas « x = 27 » ni « x - 27 = 0 »).
   if (att.k === 'eq') return !s.resolue && egales(att.a, s.a, { mode: 'proportionnel' }) === true && signature(att.a) === signature(s.a);
   // Valeur : l'unité est facultative, mais si elle est écrite, ce doit être la bonne.
-  if (att.k === 'valeur' && s.unite && s.unite !== att.unite) return false;
+  if (att.k === 'valeur' && s.unite && s.unite !== att.unite && !(s.unite === 'rad' && !att.unite)) return false;
   // Nombre décimal attendu (« 1,5 ») : le calcul doit être fait (ni « 9/6 », ni « 42 - 15 »).
   const nombre = (x) => x.t === 'num' || (x.t === 'add' && x.termes.length === 1 && x.termes[0].t === 'num');
   if (att.k === 'valeur' && nombre(att.a) && !nombre(s.a)) return false;
   return memeValeur(att.a, s.a, true);
 }
 
-/** La saisie donne-t-elle la même suite, dans le même ordre ? */
-export function comparerSuite(saisie, suite) {
+/**
+ * Deux réponses courtes égales par le calcul (« π/6 » = « pi/6 », « -2π/3 » = « -(2/3)π »,
+ * « √2/2 » = « sqrt(2)/2 »), avec la même écriture. false si l'une n'est pas lisible.
+ */
+export function memeValeurEcrite(attendu, saisie) {
+  const a = lireSuite(attendu, false);
   const s = lireSuite(saisie, false);
-  return !!s && s.length === suite.length && suite.every((m, i) => memeMorceau(m, s[i]));
+  return !!a && !!s && a.length === 1 && s.length === 1 && memeMorceau(a[0], s[0]);
+}
+
+const nombreSeul = (x) => x.t === 'num' || (x.t === 'add' && x.termes.length === 1 && x.termes[0].t === 'num');
+
+/** La saisie donne-t-elle la même suite, dans le même ordre ? */
+export function comparerSuite(saisie, suite, opts = {}) {
+  const s = lireSuite(saisie, false);
+  return !!s && s.length === suite.length && suite.every((m, i) => memeMorceau(m, s[i], !!opts.libre, !!opts.modulo));
 }
 
 // ─── Réponse $…$ seule, sans attendus.json ───────────────────────────────
@@ -243,7 +275,7 @@ export function analyserExacte(ex) {
   return { kind: 'exacte', morceau: m };
 }
 
-export function comparerExacte(saisie, a) {
+export function comparerExacte(saisie, a, opts = {}) {
   if (!a || !String(saisie || '').trim()) return false;
   if (a.fraction) return comparerFraction(saisie, a);
   // Tous les signes × écrits : mêmes facteurs (dans n'importe quel ordre), chacun séparé par ×.
@@ -254,7 +286,7 @@ export function comparerExacte(saisie, a) {
   // Sans « × » : ni signe ×, *, ·, ni nombre écrit après une lettre (« a7 »).
   if (a.sansFois && /[×*·⋅∙]|[\p{L})]\s*\d/u.test(saisie)) return false;
   const s = lireSuite(saisie, false);
-  return !!s && s.length === 1 && memeMorceau(a.morceau, s[0]);
+  return !!s && s.length === 1 && memeMorceau(a.morceau, s[0], false, !!opts.modulo);
 }
 
 export function consigneExacte(a) {
@@ -270,8 +302,11 @@ export function consigneSuite(suite) {
   const n = suite.length;
   let base = 'valeur exacte (√ ou sqrt, π ou pi, 2^8)';
   if (suite.some((m) => m.k === 'eq')) base = "l'équation puis la solution, par ex. 3x + 2 = 11 ; 3";
+  else if (suite.filter((m) => m.k === 'expr').length > 1) base = 'expressions : x^2 ou x², e^(2x), ln(x), sqrt(x)';
   else if (suite.some((m) => m.k === 'expr')) base = "l'expression puis sa valeur, par ex. 3x + 2 ; 14";
   else if (suite.some((m) => m.k === 'nul')) base = 'coordonnées (2 ; -1), vecteur nul : 0';
+  // Nombres complexes (« i » seul, ni « j » ni point) : forme algébrique.
+  else if (suite.some((m) => m.k === 'vecteur') && !suite.some((m) => m.k === 'point' || (m.k === 'vecteur' && variables(m.a).has('j')))) base = 'nombres complexes : a + bi, par ex. 3 - 2i';
   else if (!suite.some((m) => m.k !== 'point' && m.k !== 'vecteur' && special(m.a))) base = 'coordonnées, par ex. (2 ; -1)';
   return n > 1 ? `${n} réponses dans l'ordre, séparées par « ; » — ${base}` : base;
 }

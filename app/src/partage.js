@@ -4,12 +4,13 @@
  * Défensif : renvoie false sans casser si une brique manque (aperçu web, etc.).
  */
 
-import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
 
 export async function partagerVue(ref) {
   try {
     if (!ref || !ref.current) return false;
+    // Chargé seulement au moment de partager (sur le web, il embarque html2canvas, ≈ 200 Ko).
+    const { captureRef } = await import('react-native-view-shot');
     const uri = await captureRef(ref, { format: 'png', quality: 0.95, result: 'tmpfile' });
     if (await Sharing.isAvailableAsync()) {
       await Sharing.shareAsync(uri, { mimeType: 'image/png', dialogTitle: 'Mon score Kamal Campus' });

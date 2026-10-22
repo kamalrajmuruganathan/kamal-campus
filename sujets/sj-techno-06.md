@@ -10,8 +10,10 @@ relu_par: null
 
 # Brevet des collèges — Épreuve de sciences : partie technologie (entraînement)
 
-**Durée : 1 h 00 pour la partie technologie** — **Barème indicatif : 50 points** —
+**Durée : 30 min pour la partie technologie** — **Barème indicatif : 25 points** —
 **Calculatrice autorisée.**
+
+L'épreuve de sciences du brevet dure **1 h** et porte sur **deux disciplines** : cette partie de technologie compte pour **30 minutes** et **25 points** (sur 50).
 
 Cette partie comporte **trois exercices indépendants** portant sur la démarche de
 projet et sur l'évolution des objets techniques dans le temps. Toutes les réponses
@@ -21,14 +23,14 @@ valorisés.
 
 | Exercice | 1 | 2 | 3 | Total |
 |---|---|---|---|---|
-| Points | 18 | 16 | 16 | 50 |
+| Points | 9 | 8 | 8 | 25 |
 
 Support d'étude : un **projet de composteur connecté** pour la cantine du collège,
 et l'**évolution de la bicyclette** au fil du temps.
 
 ---
 
-## Exercice 1 — Analyser un besoin et un cahier des charges (18 points)
+## Exercice 1 — Analyser un besoin et un cahier des charges (9 points)
 
 **Contexte.** Le collège produit beaucoup de déchets de cantine. Des élèves
 proposent de fabriquer un **composteur** équipé d'un capteur pour aider à bien
@@ -59,18 +61,11 @@ de référence pour concevoir puis évaluer le projet.
 2. À quoi sert un **cahier des charges** dans un projet (document 3) ?
    **(3 points)**
 3. Parmi les fonctions F1 à F5, laquelle est une **contrainte de coût** ? Laquelle
-   concerne le **choix des matériaux** ? **(4 points)**
-4. La fonction F3 fait intervenir un **capteur** et un **voyant**. Indiquer lequel
-   *acquiert* l'information et lequel *communique* l'information à l'utilisateur.
-   **(4 points)**
-5. Expliquer pourquoi la fonction F2 (« laisser passer l'air ») est utile pour
-   fabriquer du compost. **(2 points)**
-6. Le premier prototype coûte 75 €. Respecte-t-il le cahier des charges ? Justifier
-   en citant la fonction concernée. **(2 points)**
+   concerne le **choix des matériaux** ? **(3 points)**
 
 ---
 
-## Exercice 2 — Organiser la démarche de projet (16 points)
+## Exercice 2 — Organiser la démarche de projet (8 points)
 
 **Contexte.** L'équipe doit organiser son travail pour mener le projet à bien.
 
@@ -84,21 +79,16 @@ de référence pour concevoir puis évaluer le projet.
 ### Questions
 
 1. Remettre les étapes A à E **dans l'ordre logique** d'un projet, de la première à
-   la dernière. **(4 points)**
-2. À quelle étape utilise-t-on des **croquis** ou des **schémas** pour comparer
-   plusieurs solutions ? **(2 points)**
-3. Pourquoi l'étape de **test** (D) est-elle indispensable avant de présenter le
-   projet ? **(3 points)**
-4. Le travail est réparti entre plusieurs élèves (structure, capteur,
-   programmation, présentation). Citer **un avantage** du travail en équipe pour ce
-   projet. **(3 points)**
-5. Lors du test, le voyant reste éteint alors que le compost est sec. Proposer
+   la dernière. **(3 points)**
+2. Pourquoi l'étape de **test** (D) est-elle indispensable avant de présenter le
+   projet ? **(2 points)**
+3. Lors du test, le voyant reste éteint alors que le compost est sec. Proposer
    **deux causes possibles** de ce dysfonctionnement (capteur, programme,
-   câblage…). **(4 points)**
+   câblage…). **(3 points)**
 
 ---
 
-## Exercice 3 — Évolution des objets techniques : la bicyclette (16 points)
+## Exercice 3 — Évolution des objets techniques : la bicyclette (8 points)
 
 **Contexte.** On étudie comment la bicyclette a évolué au fil du temps.
 
@@ -122,13 +112,13 @@ de la société (santé, environnement).
 ### Questions
 
 1. Sur la draisienne, il n'y a pas de pédales. Quelle **source d'énergie** fait
-   avancer l'utilisateur ? Et sur le grand-bi ? **(3 points)**
+   avancer l'utilisateur ? Et sur le grand-bi ? **(2 points)**
 
 2. La chaîne apparaît vers 1885. Expliquer en quoi la transmission par **chaîne**
    (pédalier → roue arrière) est un **progrès** par rapport aux pédales fixées sur
-   la roue avant du grand-bi (sécurité, efficacité). **(4 points)**
+   la roue avant du grand-bi (sécurité, efficacité). **(2 points)**
 
-3. **Développement construit (9 points).** En une dizaine de lignes, en vous
+3. **Développement construit (4 points).** En une dizaine de lignes, en vous
    appuyant sur les documents 1 et 2, expliquer **comment et pourquoi la bicyclette
    a évolué** de la draisienne au vélo à assistance électrique. Votre texte devra :
    - montrer l'évolution des **solutions techniques** (transmission, matériaux,
@@ -155,35 +145,17 @@ demandé.
 **3.** Contrainte de coût : **F5** (coût inférieur à 60 €). Choix des matériaux :
 **F4** (matériaux résistants à l'extérieur).
 
-**4.** Le **capteur d'humidité** *acquiert* l'information (il mesure si le compost
-est trop sec). Le **voyant** *communique* l'information à l'utilisateur (il
-s'allume pour signaler qu'il faut arroser).
-
-**5.** Laisser passer l'air apporte du **dioxygène**, nécessaire aux micro-
-organismes qui décomposent les déchets : l'aération **accélère et améliore la
-formation du compost** (et évite les mauvaises odeurs).
-
-**6.** Non : le prototype coûte 75 €, ce qui **dépasse la limite de 60 €** fixée
-par la fonction **F5**. Il ne respecte donc pas le cahier des charges sur ce point.
-
 ### Exercice 2 — Organiser la démarche de projet
 
 **1.** Ordre logique : **C → B → A → D → E** (analyser le besoin / cahier des
 charges → rechercher des solutions → fabriquer → tester → présenter et améliorer).
 
-**2.** On utilise des croquis et des schémas à l'étape **B** (recherche d'idées et
-de solutions), pour comparer plusieurs propositions avant de choisir.
-
-**3.** Le test (D) permet de **vérifier que l'objet fonctionne et respecte le
+**2.** Le test (D) permet de **vérifier que l'objet fonctionne et respecte le
 cahier des charges** avant de le présenter. Il évite de montrer un composteur qui
 ne marche pas et permet de **corriger les défauts** (débogage, ajustements) à
 temps.
 
-**4.** Avantage du travail en équipe : on **répartit les tâches selon les
-compétences** (chacun avance en parallèle sur sa partie), on va **plus vite** et on
-**met en commun les idées**, ce qui améliore le résultat. (Une réponse suffit.)
-
-**5.** Deux causes possibles : le **capteur d'humidité est défectueux ou mal
+**3.** Deux causes possibles : le **capteur d'humidité est défectueux ou mal
 placé** (il ne mesure pas correctement) ; le **programme est mal écrit** (mauvais
 seuil, condition inversée) ; ou encore un **problème de câblage / d'alimentation**
 du voyant. (Deux causes pertinentes acceptées.)

@@ -17,6 +17,8 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { CHAPITRES, chapitreParId } from '../contenu-index';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
 import { melanger } from '../../lib/quizmix';
+import { useQcm } from '../useContenu';
+import EtatChargement from '../composants/EtatChargement';
 
 const N = 10;
 const LETTRES = ['A', 'B', 'C', 'D'];
@@ -31,17 +33,24 @@ export default function Duel({ route, navigation }) {
     return avecGen.length ? avecGen[Math.floor(Math.random() * avecGen.length)] : CHAPITRES[0];
   }, [route.params]);
 
+  // Banque écrite chargée à la demande (sauf chapitre à générateur).
+  const avecBanque = !!chapitre && !aGenerateur(chapitre.id);
+  const banqueQcm = useQcm(avecBanque ? chapitre.id : null);
   const questions = useMemo(() => {
     if (!chapitre) return [];
     if (aGenerateur(chapitre.id)) return genererQuestions(chapitre.id, N);
-    return melanger(chapitre.qcm?.questions ?? []).slice(0, N);
-  }, [chapitre]);
+    return melanger(banqueQcm.donnee?.questions ?? []).slice(0, N);
+  }, [chapitre, banqueQcm.donnee]);
 
   const accent = chapitre ? couleurMatiere(t, chapitre.matiere) : t.couleur.accent;
 
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [scores, setScores] = useState([0, 0]);
+
+  if (avecBanque && banqueQcm.etat !== 'ok') {
+    return <EtatChargement t={t} etat={banqueQcm.etat} quoi="les questions" recharger={banqueQcm.recharger} />;
+  }
 
   if (!chapitre || questions.length === 0) {
     return (
