@@ -353,3 +353,14 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   (`useQcm`, `useCartes`, `useSujet`, `chargerQcm`…) ; ne plus lire `chapitre.qcm`, `chapitre.flashcards`, `sujet.contenu`,
   `quiz.questions`. Écrans rares chargés à part via `src/ecransParesseux{,.web}.js`.
 - Correctif : `fusionnerDictees` n'était pas importé dans `cloud/fusion.js` (synchronisation en erreur en ligne).
+
+## 24. Chasse aux bugs et retouches (24/10/2026) — sur `upgrade-sdk57`, non publiées
+- **QCM : les choix n'étaient pas mélangés** (bonne réponse surtout en A/B) → `melangerChoix` (`lib/quizmix.js`) dans Qcm, Duel,
+  Mode examen, examen sur mesure ; les questions dont l'explication cite une lettre gardent leur ordre. Ne plus écrire « choix A ».
+- Générateurs de QCM : `sansDoublons` + `completerQuestions` (complétés par la banque du chapitre). Notions affichées accentuées.
+- Recherche dans les titres de sections (`src/sections-recherche.js`, généré). À propos calculé depuis l'index. SRS : cartes déjà
+  étudiées seulement. Carnet : `marquerOrigine`. Jeux au hasard dans la classe de l'élève. `src/partage.web.js`,
+  `src/useConfirmerSortie.js` (confirmation avant de quitter un examen/dictée).
+- Quiz : « Bac blanc » réservé à la 1re/Tle ; 3e = « Brevet blanc » ; 6e-4e et 2de = « Évaluation ».
+- Lycée : g = 9,8 N/kg partout (le collège peut garder 10 si l'énoncé le dit). « Une urne contient ».
+- Autocorrection : 70,8 % (clés `ordre`, `groupes`, `exacte` dans attendus.json ; `edo.js`).
