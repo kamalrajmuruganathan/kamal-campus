@@ -24,7 +24,7 @@ démarche, même incomplète, sera valorisée.
 - $\log(10^{n}) = n$ ; $10^{-2{,}5} \approx 3{,}2\times 10^{-3}$.
 - Conversion de pression : $1\ \text{cmHg} = 10\ \text{mmHg}$ ; $1\ \text{mmHg} \approx 133\ \text{Pa}$.
 - Masse volumique du sang : $\rho \approx 1060\ \text{kg·m}^{-3}$ ; pesanteur :
-  $g = 10\ \text{N·kg}^{-1}$.
+  $g = 9{,}8\ \text{N·kg}^{-1}$.
 - Intensité sonore de référence : $I_0 = 1{,}0\times 10^{-12}\ \text{W·m}^{-2}$.
 
 | Exercice | 1 (Chimie : acides et pH) | 2 (Pression sanguine) | 3 (Ondes et audition) | Total |
@@ -221,9 +221,9 @@ avec $I_0 = 1{,}0\times 10^{-12}\ \text{W·m}^{-2}$.
    $$\Delta p = \rho\times g\times h,$$
    avec $\rho$ en kg·m⁻³, $g$ en N·kg⁻¹, $h$ en m et $\Delta p$ en Pa.
 
-2. $\Delta p = \rho\,g\,h = 1060\times 10\times 1{,}3 = 13\,780\ \text{Pa} \approx \boxed{1{,}4\times 10^{4}\ \text{Pa}}$.
+2. $\Delta p = \rho\,g\,h = 1060\times 9{,}8\times 1{,}3 \approx 13\,500\ \text{Pa} \approx \boxed{1{,}4\times 10^{4}\ \text{Pa}}$.
 
-3. $\Delta p = \dfrac{13\,780}{133} \approx \boxed{104\ \text{mmHg}}$. La pression dans les
+3. $\Delta p = \dfrac{13\,500}{133} \approx \boxed{102\ \text{mmHg}}$. La pression dans les
    pieds est plus élevée qu'au niveau du cœur car, dans un fluide au repos, la pression
    **augmente avec la profondeur** : la colonne de sang située au-dessus des pieds appuie
    sur eux. C'est pourquoi la pression sanguine dépend de la **position** du corps.
@@ -294,14 +294,14 @@ avec $I_0 = 1{,}0\times 10^{-12}\ \text{W·m}^{-2}$.
 n=m/M, C_m=m/V, C=n/V=C_m/M (0,15 mol/L), pH et [H3O+]=10^{-pH}, couple acide/base
 CH3COOH/CH3COO−, produit ionique et [HO−], réaction acido-basique acide+HO−, sécurité
 (pictogramme corrosif). Ex2 physique/santé : tension systolique/diastolique, conversions
-cmHg→mmHg→Pa, statique des fluides Δp=ρgh (position debout, 104 mmHg), débit cardiaque
+cmHg→mmHg→Pa, statique des fluides Δp=ρgh (position debout, 102 mmHg), débit cardiaque
 DC=f_C×VES (5,25 puis 17,6 L/min), relation D=v×S (vitesse aorte 0,29 m/s, conversion cm²→m²).
 Ex3 physique/santé : f=1/T, kHz, domaine audible 20 Hz–20 kHz, ultrasons/échographie, niveau
 sonore L=10log(I/I0) (90 dB, 100 dB), atténuation −20 dB → 80 dB et I=I0·10^{L/10}=1e−4,
 seuil de danger 85 dB + durée, anatomie de l'oreille, cellules ciliées non régénérées,
 prothèse (amplification). Programme PC pour la santé ST2S (BO spécial n°1 du 22/1/2019).
 Unités vérifiées et résultats recalculés numériquement (n=7,7e−2 mol ; 130 mmHg=17 290 Pa ;
-Δp=13 780 Pa≈104 mmHg ; DC repos 5,25 L/min ; v=0,29 m/s ; 90 et 100 dB ; I=1e−4 W/m²).
+Δp≈13 500 Pa≈102 mmHg ; DC repos 5,25 L/min ; v=0,29 m/s ; 90 et 100 dB ; I=1e−4 W/m²).
 Points à vérifier à la relecture : arrondi retenu 1 mmHg≈133 Pa (valeur exacte 133,3) ;
-g=10 N/kg (certains sujets prennent 9,81) ; durée de l'épreuve à confirmer selon la
+g=9,8 N/kg (valeur retenue au lycée) ; durée de l'épreuve à confirmer selon la
 structure réelle de l'épreuve ST2S ; rendu du schéma anatomique de l'oreille (texte seul ici). -->

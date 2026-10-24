@@ -307,7 +307,7 @@ def g4_probabilites():
     _i=1
     while len(E)<50:
         t=_i+3; fr_=Fraction(1,t)
-        add("application","proba-urne", f"Une urne a {t} jetons dont 1 gagnant. Probabilite de gagner ?",[f"$ = {frac_latex(fr_)} $."],f"$ {frac_latex(fr_)} $")
+        add("application","proba-urne", f"Une urne contient {t} jetons dont 1 gagnant. Probabilite de gagner ?",[f"$ = {frac_latex(fr_)} $."],f"$ {frac_latex(fr_)} $")
         _i+=1
     return _fin(E)
 
@@ -710,7 +710,7 @@ def g2_probabilites():
     urnes=[(3,10),(4,10),(2,5),(7,10),(1,4),(5,8),(6,10),(3,7),(9,12),(2,9),(5,6),(4,15),(1,6),(7,15)]
     for (f,t) in urnes:
         fr_=Fraction(f,t)
-        add("application","proba-urne", f"Urne de {t} boules dont {f} gagnantes. Probabilite de gagner ?",
+        add("application","proba-urne", f"Une urne contient {t} boules dont {f} gagnantes. Probabilite de gagner ?",
             [f"$ P = \\dfrac{{{f}}}{{{t}}} = {frac_latex(fr_)} $."], f"$ {frac_latex(fr_)} $")
     for (f,t) in [(3,10),(2,5),(7,10),(1,4),(5,8),(4,9),(6,11),(3,8),(2,7),(5,12)]:
         fr_=Fraction(f,t); comp=1-fr_
@@ -719,7 +719,7 @@ def g2_probabilites():
     _i=1
     while len(E)<50:
         t=_i+4; fr_=Fraction(2,t)
-        add("application","proba-urne", f"Urne de {t} boules dont 2 gagnantes. Probabilite ?",[f"$ = {frac_latex(fr_)} $."],f"$ {frac_latex(fr_)} $")
+        add("application","proba-urne", f"Une urne contient {t} boules, dont 2 sont gagnantes. Probabilite de tirer une boule gagnante ?",[f"$ = {frac_latex(fr_)} $."],f"$ {frac_latex(fr_)} $")
         _i+=1
     return _fin(E)
 
@@ -1072,9 +1072,9 @@ def g2p_mouvement_interactions():
         add("application","vitesse", f"Un mobile parcourt {d} m en {t} s. Vitesse ?",
             [f"$ v = \\dfrac{{d}}{{t}} = \\dfrac{{{d}}}{{{t}}} = {frac_latex(v)} $ m/s."], f"$ {frac_latex(v)} $ m/s")
     for m in [2,5,10,3,8,1,4,7,6,20,15,12]:
-        P=m*10
-        add("application","poids", f"Calculer le poids d'un objet de masse {m} kg (g = 10 N/kg).",
-            [f"$ P = m\\times g = {m}\\times 10 = {P} $ N."], f"$ {P} $ N")
+        P=fr(m*9.8,1).replace(',','{,}')
+        add("application","poids", f"Calculer le poids d'un objet de masse {m} kg ($g = 9{{,}}8$ N/kg).",
+            [f"$ P = m\\times g = {m}\\times 9{{,}}8 = {P} $ N."], f"$ {P} $ N")
     _i=1
     while len(E)<50:
         d,t=50*_i,5; v=Fraction(d,t)
@@ -1248,9 +1248,9 @@ def g1p_energie_mecaniques():
         add("application","energie-cinetique", f"Energie cinetique d'un objet de masse {m} kg a {v} m/s ?",
             [f"$ E_c = \\dfrac{{1}}{{2}}mv^2 = \\dfrac{{1}}{{2}}\\times {m}\\times {v}^2 = {frac_latex(Ec)} $ J."], f"$ {frac_latex(Ec)} $ J")
     for (m,h) in [(2,3),(5,4),(10,2),(3,6),(8,5),(1,10),(6,3),(4,7),(20,2),(12,5)]:
-        Ep=m*10*h
-        add("application","energie-potentielle", f"Energie potentielle de pesanteur : masse {m} kg, hauteur {h} m (g = 10). ?",
-            [f"$ E_p = m g h = {m}\\times 10\\times {h} = {Ep} $ J."], f"$ {Ep} $ J")
+        Ep=fr(m*9.8*h,1).replace(',','{,}')
+        add("application","energie-potentielle", f"Énergie potentielle de pesanteur d'un objet de masse {m} kg à la hauteur {h} m ($g = 9{{,}}8$ N/kg) ?",
+            [f"$ E_p = m g h = {m}\\times 9{{,}}8\\times {h} = {Ep} $ J."], f"$ {Ep} $ J")
     _i=1
     while len(E)<50:
         m,v=2,_i; Ec=Fraction(1,2)*m*v*v
@@ -1698,7 +1698,7 @@ def g6_probabilites():
     _i=1
     while len(E)<50:
         t=_i+3; fr_=Fraction(1,t)
-        add("application","proba-urne", f"Un sac a {t} billes dont 1 rouge. Probabilite de tirer la rouge ?", [f"$ = {frac_latex(fr_)} $."], f"$ {frac_latex(fr_)} $")
+        add("application","proba-urne", f"Un sac contient {t} billes dont 1 rouge. Probabilite de tirer la rouge ?", [f"$ = {frac_latex(fr_)} $."], f"$ {frac_latex(fr_)} $")
         _i+=1
     return _fin(E)
 

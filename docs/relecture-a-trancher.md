@@ -74,5 +74,5 @@ Règle appliquée (CLAUDE.md § 12) : le programme officiel fait foi. Commits «
 6. Maths complémentaires : (eᵘ)′ et (ln u)′ gardés, conditions précisées (u dérivable, u > 0).
 7. Incertitudes : partout u = a/√3 (lecture : graduation/√12), arrondi au plus proche à 1 ou 2 chiffres significatifs.
 
-Reste ouvert (non bloquant) : titrage des chlorures par l'argent et conductimétrie en 1re PC ; l'autocorrection ne
+Fermé le 24/10 : titrage des chlorures et conductimétrie absents du programme de 1re et déjà retirés. Reste ouvert (non bloquant) : l'autocorrection ne
 contrôle pas le signe dans une réponse rédigée (« une baisse de 25 % » accepte « +25 % »).
