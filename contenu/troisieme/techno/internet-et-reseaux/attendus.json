@@ -427,11 +427,33 @@
       "DNS, à un annuaire"
     ]
   },
+  "21": {
+    "reponse": "TCP/IP → paquets ; HTTP → pages web ; HTTPS → pages web sécurisées.",
+    "groupes": {
+      "TCP/IP": [
+        "gérer l'envoi et le réassemblage des paquets"
+      ],
+      "HTTP": [
+        "afficher des pages web"
+      ],
+      "HTTPS": [
+        "afficher des pages web de façon sécurisée"
+      ]
+    }
+  },
   "22": {
     "reponse": "HTTP ; sa version sécurisée est HTTPS.",
     "accepte": [
       "HTTP ; HTTPS",
       "HTTP et HTTPS"
+    ]
+  },
+  "24": {
+    "reponse": "« 123456 » → « chaton2010 » → « Kx7!pL2#qW9z ».",
+    "ordre": [
+      "123456",
+      "chaton2010",
+      "Kx7!pL2#qW9z"
     ]
   },
   "25": {
@@ -657,6 +679,30 @@
           "vol"
         ]
       }
+    ]
+  },
+  "36": {
+    "reponse": "Pare-feu → filtrer les connexions ; antivirus → détecter les logiciels malveillants ; mot de passe solide → protéger l'accès au compte.",
+    "groupes": {
+      "pare-feu": [
+        "filtrer les connexions entrantes et sortantes"
+      ],
+      "antivirus": [
+        "détecter les logiciels malveillants"
+      ],
+      "mot de passe solide": [
+        "empêcher qu'on devine l'accès à un compte"
+      ]
+    }
+  },
+  "37": {
+    "reponse": "Tu tapes l'adresse → le DNS donne l'adresse IP → demande HTTPS → le serveur renvoie la page en paquets → réassemblage et affichage.",
+    "ordre": [
+      "tu tapes l'adresse du site",
+      "le DNS donne l'adresse IP du serveur",
+      "le navigateur envoie une demande HTTPS au serveur",
+      "le serveur renvoie la page en paquets",
+      "le navigateur réassemble et affiche la page¦réassemblage et affichage"
     ]
   },
   "38": {

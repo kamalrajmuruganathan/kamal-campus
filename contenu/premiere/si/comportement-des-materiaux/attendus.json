@@ -37,6 +37,13 @@
       "62,5 MPa ; non, pas validée"
     ]
   },
+  "6": {
+    "reponse": "Il faut une section d'au moins 300 mm², soit un diamètre minimal d'environ 19,5 mm (on retiendra 20 mm).",
+    "accepte": [
+      "100 MPa ; 300 mm² ; 19,5 mm",
+      "100 MPa ; 300 mm² ; 20 mm"
+    ]
+  },
   "7": {
     "reponse": "La contrainte vaut σ = 200 MPa.",
     "accepte": [
@@ -316,6 +323,16 @@
       "le module de Young E",
       "module de Young E",
       "module d'Young"
+    ]
+  },
+  "35": {
+    "reponse": "Domaine élastique → R_e → domaine plastique → R_m → rupture.",
+    "ordre": [
+      "domaine élastique",
+      "limite élastique R_e¦R_e¦Re",
+      "domaine plastique",
+      "résistance maximale R_m¦R_m¦Rm",
+      "rupture"
     ]
   },
   "36": {

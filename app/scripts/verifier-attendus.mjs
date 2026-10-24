@@ -41,6 +41,7 @@ function tousLesChapitres() {
 function aPlat(s) {
   return String(s)
     .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, (c) => String('⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)))
+    .replace(/[₀-₉]/g, (c) => String(c.charCodeAt(0) - 0x2080))
     .replace(/\{,\}/g, ',')
     .replace(/\\[,;: !]|~| | /g, '')
     .replace(/[{}$\\]/g, '')
@@ -82,7 +83,46 @@ for (const chemin of chapitres) {
         if (!a || typeof a !== 'object') { pb.push(`${ici} : valeur invalide`); continue; }
         if (a.reponse !== ex.reponse) { pb.push(`${ici} : « reponse » différente de exercice.json`); continue; }
         const cles = Object.keys(a).filter((k) => k !== 'reponse');
-        if (cles.length !== 1 || !['accepte', 'ensemble', 'criteres'].includes(cles[0])) { pb.push(`${ici} : il faut « accepte », « ensemble » OU « criteres » (et rien d'autre)`); continue; }
+        if (cles.length !== 1 || !['accepte', 'ensemble', 'criteres', 'ordre', 'groupes', 'exacte'].includes(cles[0])) { pb.push(`${ici} : il faut « accepte », « ensemble », « ordre », « groupes », « exacte » OU « criteres » (et rien d'autre)`); continue; }
+        if (cles[0] === 'exacte') {
+          // Phrases à recopier telles quelles (casse, accents, ponctuation) : 1 à 8 formes, chacune acceptée par l'appli.
+          const ex2 = a.exacte;
+          if (!Array.isArray(ex2) || !ex2.length || ex2.length > 8 || ex2.some((x) => typeof x !== 'string' || !x.trim() || x.length > 240)) { pb.push(`${ici} : « exacte » = 1 à 8 phrases (240 caractères max)`); continue; }
+          const avec = { ...ex, attendu: { exacte: ex2 } };
+          for (const f of ex2) if (!comparerExercice(f, avec, matiere)) pb.push(`${ici} : l'appli refuserait « ${f} »`);
+          if (/\p{L}/u.test(ex2[0]) && comparerExercice(ex2[0].toLowerCase() === ex2[0] ? ex2[0].toUpperCase() : ex2[0].toLowerCase(), avec, matiere)) pb.push(`${ici} : la casse n'est pas contrôlée`);
+          continue;
+        }
+        if (cles[0] === 'groupes') {
+          // Étiquettes et éléments de l'énoncé ; l'appli doit accepter la réponse recopiée et refuser un échange.
+          const gr = a.groupes;
+          const avec = { ...ex, attendu: { groupes: gr } };
+          if (!gr || typeof gr !== 'object' || Array.isArray(gr) || typeExercice(avec, matiere) !== 'auto') { pb.push(`${ici} : « groupes » = { étiquette: [éléments], … } (2 à 8 groupes, 16 éléments au plus)`); continue; }
+          const plat = (x) => ' ' + String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9ßäöüñç]+/g, ' ').trim() + ' ';
+          const en = plat(ex.enonce);
+          const premier = (x) => x.split('¦').map((v) => v.trim()).find((v) => !/^\(?[a-h1-9]\)?$/i.test(v)) || x.split('¦')[0];
+          for (const x of Object.values(gr).flat()) if (!x.split('¦').some((v) => en.includes(plat(v)))) pb.push(`${ici} : « ${x} » absent de l'énoncé`);
+          const entrees = Object.entries(gr);
+          const texte = (es) => es.map(([k, l]) => `${premier(k)} : ${l.map(premier).join(', ')}`).join(' ; ');
+          if (!comparerExercice(texte(entrees), avec, matiere)) pb.push(`${ici} : l'appli refuserait « ${texte(entrees)} »`);
+          const ech = entrees.map(([k, l], i) => [k, i === 0 ? [...l.slice(1), entrees[1][1][0]] : i === 1 ? [entrees[0][1][0], ...l.slice(1)] : l]);
+          if (comparerExercice(texte(ech), avec, matiere)) pb.push(`${ici} : l'appli accepterait un échange entre groupes`);
+          continue;
+        }
+        if (cles[0] === 'ordre') {
+          // Éléments de l'énoncé, dans le bon ordre : chacun (ou une de ses variantes « a¦b ») doit figurer
+          // dans l'énoncé ; l'appli doit accepter la liste et refuser la liste à l'envers.
+          const o = a.ordre;
+          if (!Array.isArray(o) || o.length < 2 || o.length > 8 || o.some((x) => typeof x !== 'string' || !x.trim())) { pb.push(`${ici} : « ordre » = 2 à 8 éléments`); continue; }
+          const plat = (x) => ' ' + String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9ßäöüñç]+/g, ' ').trim() + ' ';
+          const en = plat(ex.enonce);
+          for (const x of o) if (!x.split('¦').some((v) => en.includes(plat(v)))) pb.push(`${ici} : élément absent de l'énoncé : « ${x} »`);
+          const avec = { ...ex, attendu: { ordre: o } };
+          const premiers = o.map((x) => x.split('¦').map((v) => v.trim()).filter((v) => !/^\(?[a-h1-9]\)?$/i.test(v))[0] || x.split('¦')[0]);
+          if (typeExercice(avec, matiere) !== 'auto' || !comparerExercice(premiers.join(' → '), avec, matiere)) pb.push(`${ici} : l'appli refuserait « ${premiers.join(' → ')} »`);
+          if (comparerExercice([...premiers].reverse().join(' → '), avec, matiere)) pb.push(`${ici} : l'appli accepterait l'ordre inverse`);
+          continue;
+        }
         if (cles[0] === 'criteres') {
           // Grille d'idées pour une réponse rédigée : 2 à 6 idées, chacune avec 1 à 8 mots-clés,
           // dont au moins un présent (début de mot) dans la réponse ou le corrigé.
@@ -110,7 +150,7 @@ for (const chemin of chapitres) {
         if (typeExercice(avecAtt, matiere) !== 'auto') { pb.push(`${ici} : une forme n'est pas vérifiable (formule, plus de 12 mots…) : ${JSON.stringify(liste)}`); continue; }
         if (cles[0] === 'ensemble') {
           if (!comparerExercice(liste.join(', '), avecAtt, matiere)) pb.push(`${ici} : l'appli refuserait « ${liste.join(', ')} »`);
-          if (liste.some((x) => /,|\bet\b/.test(x))) pb.push(`${ici} : un élément d'« ensemble » contient une virgule ou « et » (il serait coupé en deux)`);
+          if (liste.some((x) => x.trim() !== 'et' && /(?<!\d),|,(?!\d)|\bet\b/.test(x))) pb.push(`${ici} : un élément d'« ensemble » contient une virgule ou « et » (il serait coupé en deux)`);
         } else {
           for (const f of liste) if (!comparerExercice(f, avecAtt, matiere)) pb.push(`${ici} : l'appli refuserait sa propre forme « ${f} »`);
         }

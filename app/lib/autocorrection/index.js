@@ -13,9 +13,11 @@
  * laisser l'élève juger que lui dire « faux » alors qu'il a juste.
  */
 
-import { analyserCalcul, analyserCalculForme, comparerCalcul, valeurLitterale } from '../expressions/index.js';
+import { analyserCalcul, analyserCalculForme, comparerCalcul, valeurLitterale, latexVersSimple } from '../expressions/index.js';
 import { analyserAutre, comparerAutre, consigneAutre } from '../expressions/autres.js';
 import { analyserNoyaux, egalNoyaux, consigneNoyaux } from './noyaux.js';
+import { analyserEdo, comparerEdo, consigneEdo } from './edo.js';
+import { analyserOrdre, egalOrdre, consigneOrdre, analyserGroupes, egalGroupes, consigneGroupes } from './ordre.js';
 import { analyserExacte, comparerExacte, consigneExacte, analyserSuite, comparerSuite, consigneSuite, analyserFraction, memeValeurEcrite } from '../expressions/exactes.js';
 
 /** Matières de langues étrangères : traductions, phrases → plus strict. */
@@ -486,6 +488,8 @@ function analyserForme(forme, matiere = null) {
   // « 1895 frères Lumière » : deux mots après le nombre → c'est une phrase, pas une unité
   // (sinon « 1895 » seul suffirait).
   if (nb && nb.motsUnite < 2) return { kind: 'nombre', ...nb };
+  // « Compare … : écris <, > ou = » : le signe « = » seul.
+  if (propre.trim() === '=') return { kind: 'texte', valeur: '=', articles: false, phrase: true, nombre: null };
   // Expression mathématique (« x² + 1 », « 6x ») : plusieurs écritures possibles → non.
   // (« < », « > » et les flèches sont permis : rangements, chaînes alimentaires.)
   // (« cm³ », « m² » : exposant collé à une unité, permis.)
@@ -691,6 +695,19 @@ function elements(saisie) {
  */
 export function analyserExercice(ex, matiere = null) {
   const att = ex && ex.attendu;
+  // « Remets dans l'ordre » : les éléments de l'énoncé dans le bon ordre (abréviations permises).
+  if (att && Array.isArray(att.ordre)) {
+    const o = analyserOrdre(att.ordre);
+    if (o) return { type: 'auto', alternatives: [o] };
+  }
+  // Phrase(s) à recopier exactement (transformation de temps, majuscules, ponctuation) : « exacte ».
+  if (att && Array.isArray(att.exacte) && att.exacte.length && att.exacte.length <= 8 && att.exacte.every((x) => typeof x === 'string' && x.trim())) {
+    return { type: 'auto', alternatives: [{ kind: 'exacte-phrase', formes: att.exacte, matiere }] };
+  }
+  if (att && att.groupes) {
+    const g = analyserGroupes(att.groupes);
+    if (g) return { type: 'auto', alternatives: [g] };
+  }
   if (att && Array.isArray(att.ensemble) && att.ensemble.length >= 2) {
     const items = att.ensemble.map((x) => sansDollars(nettoyer(x))).filter(Boolean);
     if (items.length === att.ensemble.length) return { type: 'auto', alternatives: [], ensemble: items };
@@ -736,6 +753,9 @@ export function analyserExercice(ex, matiere = null) {
   // « ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He », « ¹⁴₇N » : noyaux (A, Z, symbole), ordre des produits libre.
   const noyaux = analyserNoyaux(ex);
   if (noyaux) return { type: 'auto', alternatives: [noyaux] };
+  // « Résoudre y' = 5y » → « y(x) = Ce^{5x}, C ∈ ℝ » : famille de solutions (constante libre).
+  const edo = analyserEdo(ex);
+  if (edo) return { type: 'auto', alternatives: [edo] };
   // « Décroissante puis croissante ; minimum f(3) = -4 » : sens de variation et extremums.
   const varia = analyserVariations(ex);
   if (varia) return { type: 'auto', alternatives: [varia] };
@@ -988,6 +1008,18 @@ function egalCorrection(saisie, alt) {
   return !!alt.initiale && s.charAt(0).toLowerCase() === alt.valeur.charAt(0) && s.slice(1) === alt.valeur.slice(1);
 }
 
+/**
+ * Phrase « exacte » : comme une correction (casse, accents, ponctuation), et pour les conjugaisons
+ * « il / elle / on jouera », « ils (elles) ont fait » = « il jouera », « ils ont fait ».
+ */
+function phraseExacte(t, matiere) {
+  const x = phraseCorrection(String(t || '').replace(/\b(ils?)\s*(?:\/\s*elles?|\(\s*elles?\s*\))(?:\s*\/\s*on)?(?=\s)/gi, '$1')
+    .replace(/\b([Ee]r)\s*\/\s*sie\s*\/\s*es(?=\s)/g, '$1').replace(/\b([Ss]ie)\s*\/\s*Sie(?=\s)/g, '$1') // « er/sie/es spielt », « sie/Sie spielen »
+    .replace(/\s*[—–]\s*|\s+-\s+/g, ' — ') // tirets de dialogue
+    .replace(/\s*\/\/\s*/g, ' // '), matiere);
+  return x || null;
+}
+
 /** Phrase normalisée pour une correction : espaces, apostrophes, guillemets ; point final facultatif. */
 function phraseCorrection(t, matiere = null) {
   let x = String(t || '').normalize('NFC').replace(/[’ʼ`]/g, "'");
@@ -1109,9 +1141,19 @@ export function consigneExercice(ex, matiere = null) {
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'classement') return `${a.alternatives[0].groupes.length} groupes, par ex. « ${a.alternatives[0].groupes.map((g) => `${g.label} : …`).join(' ; ')} »`;
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'decomposition') return a.alternatives[0].premiers ? 'un produit de facteurs premiers, par ex. 2^3 × 3 × 5' : 'une somme, par ex. 3000 + 800 + 6 (ordre libre ; fractions : 7/10)';
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'noyaux') return consigneNoyaux(a.alternatives[0]);
+  if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'edo') return consigneEdo(a.alternatives[0]);
+  if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'ordre') return consigneOrdre(a.alternatives[0]);
+  if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'groupes') return consigneGroupes(a.alternatives[0]);
+  if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'exacte-phrase') return 'la réponse en entier (majuscules, accents et ponctuation comptent)';
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'correction') return 'la phrase corrigée en entier (majuscules, accents et ponctuation comptent)';
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'autre') return consigneAutre(a.alternatives[0].autre);
   if (a.alternatives && a.alternatives[0] && a.alternatives[0].kind === 'exacte') return consigneExacte(a.alternatives[0].exacte);
+  // Forme écrite à la main en plusieurs morceaux (« [2, 5, 4, 1] ; [1, 2, 4, 5] ») : on annonce le format.
+  // (Seulement si toutes les formes ont ce même nombre de morceaux, sans « : » ni parenthèses ou accolades.)
+  const ecrites = (a.alternatives || []).filter((x) => x.phrase); // formes d'attendus.json (pas la réponse d'origine)
+  const formesTexte = ecrites.length && ecrites.every((x) => x.kind === 'texte') && !LANGUES.has(matiere) ? ecrites.map((x) => String(x.valeur)) : [];
+  const morceaux = formesTexte.length && !formesTexte.some((v) => /[:{}()]/.test(v)) ? formesTexte[0].split(/\s;\s/).length : 0;
+  if (morceaux > 1 && formesTexte.every((v) => v.split(/\s;\s/).length === morceaux)) return `${morceaux} réponses dans l'ordre, séparées par « ; »`;
   const nbs = a.alternatives && a.alternatives.find((x) => x.kind === 'nombres');
   if (nbs) return `${nbs.liste.length} réponses dans l'ordre, séparées par « ; »`;
   const math = a.alternatives && a.alternatives.find((x) => x.kind === 'math');
@@ -1145,6 +1187,14 @@ export function comparerExercice(saisie, ex, matiere = null) {
   const a = analyserExercice(ex, matiere);
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'calcul') return comparerCalcul(saisie, a.alternatives[0].calcul).juste;
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'autre') return comparerAutre(saisie, a.alternatives[0].autre);
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'edo') return comparerEdo(s, a.alternatives[0]);
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'ordre') return egalOrdre(saisie, a.alternatives[0]);
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'groupes') return egalGroupes(saisie, a.alternatives[0]);
+  if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'exacte-phrase') {
+    const x = phraseExacte(saisie, matiere);
+    // Forme commençant par une minuscule (« je jouerai, tu joueras… ») : majuscule initiale permise.
+    return !!x && a.alternatives[0].formes.some((f) => { const y = phraseExacte(f, matiere); return y === x || (/^\p{Ll}/u.test(y) && y.charAt(0).toUpperCase() + y.slice(1) === x); });
+  }
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'exacte') return comparerExacte(s, a.alternatives[0].exacte, { modulo: moduloAngle(ex) });
   // Phrase corrigée : comparée telle quelle (les ¿ ¡ espagnols comptent, la saisie n'est pas « nettoyée »).
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'correction') return egalCorrection(saisie, a.alternatives[0]);
@@ -1249,6 +1299,7 @@ function comparerUne(s, ex, matiere) {
     if (alt.kind === 'classement') return egalClassement(s, alt);
     if (alt.kind === 'variations') return egalVariations(s, alt);
     if (alt.kind === 'formule') return lireFormule(sansPonctuationFinale(texteSaisi)) === alt.f;
+    if (alt.kind === 'texte' && /^[<>=≤≥]$/.test(alt.valeur) && comparaisonComplete(texteSaisi, alt.valeur, ex)) return true;
     if (alt.kind === 'texte') alt = { ...alt, valeur: canon(alt.valeur) };
     if (alt.phrase) {
       const opts = { articles: alt.articles, ignorerAccents: false, espaces: LANGUES.has(matiere) };
@@ -1258,10 +1309,31 @@ function comparerUne(s, ex, matiere) {
       if (!ACCENTS_STRICTS.has(matiere) && sansAccents(x).length > 3 && sansAccents(x) === sansAccents(y)) return true;
     } else if (egalTexte(alt, texteSaisi, matiere)) return true;
     if (alt.nombre && nbSaisi && (!nbSaisi.unite || alt.nombre.mots.includes(nbSaisi.unite))) {
-      return egalNombre({ ...alt.nombre, unite: '' }, { ...nbSaisi, unite: '' });
+      // « Une baisse de 25 % » : « -25 % » est juste (le sens a déjà été contrôlé par sensCompatible).
+      const baisse = nbSaisi.valeur < 0 && !LANGUES.has(matiere) && sensDe(ex && ex.reponse) === -1;
+      return egalNombre({ ...alt.nombre, unite: '' }, { ...nbSaisi, unite: '', valeur: baisse ? -nbSaisi.valeur : nbSaisi.valeur });
     }
     return false;
   });
+}
+
+/**
+ * « Compare 6/6 et 1 : écris <, > ou = » (forme acceptée : « = ») : la comparaison écrite en
+ * entier est juste aussi (« 6/6 = 1 », « 1 = 6/6 » ; « 3 < 4 » ou « 4 > 3 »), avec les deux
+ * nombres de l'énoncé écrits de la même façon.
+ */
+const INVERSE_SYMBOLE = { '<': '>', '>': '<', '≤': '≥', '≥': '≤', '=': '=' };
+function comparaisonComplete(saisie, sym, ex) {
+  const m = String((ex && ex.enonce) || '').match(/\bcompare[rz]?\s+(\$[^$]+\$|[\d,.]+)\s+et\s+(\$[^$]+\$|[\d,.]+)/i);
+  if (!m) return false;
+  const t = String(saisie).trim().replace(/[.]$/, '').replace(/<=|⩽/g, '≤').replace(/>=|⩾/g, '≥');
+  const parts = t.split(/\s*([<>=≤≥])\s*/);
+  if (parts.length !== 3 || !parts[0] || !parts[2]) return false;
+  const [g, op, d] = parts;
+  const [a, b] = [m[1], m[2]].map((x) => (x.startsWith('$') ? latexVersSimple(x) : x.replace(/\.$/, '')));
+  if (!a || !b) return false;
+  if (op === sym && memeValeurEcrite(a, g) && memeValeurEcrite(b, d)) return true;
+  return op === INVERSE_SYMBOLE[sym] && memeValeurEcrite(b, g) && memeValeurEcrite(a, d);
 }
 
 /* ------------------------------------------------------------------ */
@@ -1331,7 +1403,7 @@ export function fusionnerAttendus(exercice, attendus) {
     if (!a) return ex;
     if (a.reponse !== ex.reponse) { ecarts.push(ex.id); return ex; }
     if (a.criteres) return { ...ex, criteres: a.criteres };
-    const attendu = a.ensemble ? { ensemble: a.ensemble } : { accepte: a.accepte };
+    const attendu = a.exacte ? { exacte: a.exacte } : a.groupes ? { groupes: a.groupes } : a.ordre ? { ordre: a.ordre } : a.ensemble ? { ensemble: a.ensemble } : { accepte: a.accepte };
     return { ...ex, attendu };
   });
   return { exercice: { ...exercice, exercices }, ecarts };

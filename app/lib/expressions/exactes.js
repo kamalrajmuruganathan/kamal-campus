@@ -66,7 +66,7 @@ function preparer(texte, latex) {
       .replace(/\\(?:vec|overrightarrow)\s*([A-Za-z])\b/g, 'VEC_$1')
       .replace(/\\(?:text|mathrm)\s*\{\s*rad\s*\}|\\,\s*rad\b/g, ' rad');
   } else {
-    s = s.replace(/[.。]$/, '').replace(/⃗/g, '').replace(/[−–—]/g, '-')
+    s = s.replace(/[.。]$/, '').replace(/⃗/g, '').replace(/[−–—]/g, '-').replace(/ℓ/g, 'l')
       .replace(/\bvec\s*\(?\s*([ij])\s*\)?/gi, ' $1 ');
   }
   // Mesure d'angle : « rad » final facultatif.
@@ -75,7 +75,7 @@ function preparer(texte, latex) {
 }
 
 // Unités permises après une valeur dans une suite saisie (« 26 cm », « 27 € », « 62,8 cm³ »).
-const UNITES = /^(.*?(?:[\dπ)]|(?<![a-zA-Z])pi))\s*(€|euros?|°C|°|%|[kcdm]?m[²³]?|[kcdm]?m\^?[23]|[km]?g|[cm]?L|min|h|s|(?:k?m|rad)\s*(?:\/\s*s|[.·]\s*s\^?(?:-|⁻)1|[.·]\s*s⁻¹)|km\/h|m?g\s*(?:\/\s*L|[.·]\s*L\^?(?:-|⁻)1|[.·]\s*L⁻¹)|mol\s*\/\s*L|[kMG]?W|[km]?V|[mµ]?A|[kM]?J|[kM]?Hz|Pa|bar|dB|N|Ω|ohms?|ans?|jours?)\.?$/;
+const UNITES = /^(.*?(?:[\dπ)]|(?<![a-zA-Z])pi))\s*(€|euros?|°C|°|%|[kcdm]?m[²³]?|[kcdm]?m\^?[23]|[km]?g|[cm]?L|min|h|s|(?:k?m|rad)\s*(?:\/\s*s|[.·]\s*s\^?(?:-|⁻)1|[.·]\s*s⁻¹)|km\/h|m?g\s*(?:\/\s*L|[.·]\s*L\^?(?:-|⁻)1|[.·]\s*L⁻¹)|mol\s*\/\s*L|[kMG]?Wh|[kMG]?W|[km]?V|[mµ]?A|[kM]?J|[kM]?Hz|Pa|bar|dB|N|Ω|ohms?|ans?|jours?)\.?$/;
 const normUnite = (u) => {
   if (/^euros?$/i.test(u)) return '€';
   if (/^ohms?$/i.test(u)) return 'Ω';
@@ -98,6 +98,9 @@ function lireMorceau(texte, latex) {
   const radian = !latex && /\brad(?:ians?)?\s*\.?\s*$/i.test(String(texte).trim());
   // Vecteur nul : « vecteur nul », « \vec{0} », « vec 0 » (« 0⃗ » est lu comme 0).
   if (latex ? /^\\vec\s*\{?\s*0\s*\}?$/.test(s) : /^(?:le\s+)?vecteur\s+nul$|^vec\s*\(?\s*0\s*\)?$/i.test(s)) return { k: 'nul' };
+  // Mot ou courte expression (« décroissante », « pas de limite ») dans une suite de réponses : comparé comme un mot.
+  if (!latex && /^[\p{L}' -]+$/u.test(s) && s.split(/\s+/).length <= 3 && !/\b(?:sqrt|exp|cos|sin|tan|ln|log|pi)\b/i.test(s)
+    && (s.split(/[\s'-]+/).some((w) => w.length >= 4) || /^(?:oui|non)$/i.test(s))) return { k: 'mot', v: cleMot(s) };
   // Unité après une valeur (saisie ou forme écrite à la main seulement).
   let unite = '';
   const mu = !latex && s.match(UNITES);
@@ -115,7 +118,7 @@ function lireMorceau(texte, latex) {
   }
   // « AH = 2√5 », « ‖u‖ = √10 », « d = … » : on garde la valeur (le nom est une étiquette).
   s = s.replace(/^\\lVert\s*VEC_\w+\s*\\rVert\s*=\s*/, '').replace(/^(?:‖|\|\|)\s*\w+\s*(?:‖|\|\|)\s*=\s*/, '')
-    .replace(/^VEC_\w+\s*=\s*/, '')
+    .replace(/^VEC_\w+\s*=\s*/, '').replace(/^\|\s*\w{1,3}\s*\|\s*=\s*/, '')
     .replace(/^(?:\\mathrm\{)?[A-Z]{1,2}'?\}?\s*=\s*/, '');
   if (/VEC_/.test(s)) return null;
   const lu = lire(s, { latex });
@@ -133,6 +136,16 @@ function lireMorceau(texte, latex) {
   if (unite && vars.size) return null;
   if ([...vars].every((v) => v === 'i' || v === 'j') && vars.size) return { k: 'vecteur', a: lu.a };
   return vars.size ? { k: 'expr', a: lu.a } : { k: 'valeur', a: lu.a, unite: unite || (radian ? 'rad' : '') };
+}
+
+/**
+ * Clé d'un mot : sans accents ni casse, sans article, « strictement » facultatif (une fonction
+ * strictement décroissante est décroissante), masculin = féminin (« négatif » = « négative »).
+ */
+function cleMot(s) {
+  return plat(s).replace(/[’']/g, "'").replace(/^(?:la|le|les|une?|l')\s*/, '').replace(/^(?:suite|fonction)\s+(?=\S)/, '')
+    .replace(/\bstrictement\s+/g, '').replace(/^(?:pas d'|pas de|aucune?)\s*(solution|limite|extremum)s?$/, 'aucun $1')
+    .split(/\s+/).map((w) => w.replace(/s$/, '').replace(/ive$/, 'if').replace(/e$/, '')).join(' ').trim();
 }
 
 /** Découpe aux séparateurs de premier niveau : « ; », « et », « , » suivi d'un espace, retour à la ligne. */
@@ -198,6 +211,7 @@ function memeMorceau(att, s, libre = false, modulo = false) {
   if (att.k === 'nul') return s.k === 'nul' || (s.k === 'valeur' && !s.unite && egales(s.a, { t: 'num', v: 0 }) === true)
     || (s.k === 'point' && s.a.every((x) => egales(x, { t: 'num', v: 0 }) === true));
   if (att.k !== s.k) return false;
+  if (att.k === 'mot') return att.v === s.v;
   // Coordonnées : une valeur exacte peut s'écrire autrement (« 2e^(-2) » = « 2/e² »), mais pas en décimal arrondi.
   const decimal = (x) => x.t === 'num' || (x.t === 'add' && x.termes.length === 1 && x.termes[0].t === 'num');
   if (att.k === 'point') return att.a.length === s.a.length && att.a.every((x, i) => memeValeur(x, s.a[i], special(x) && decimal(s.a[i])));
@@ -303,11 +317,13 @@ export function consigneSuite(suite) {
   let base = 'valeur exacte (√ ou sqrt, π ou pi, 2^8)';
   if (suite.some((m) => m.k === 'eq')) base = "l'équation puis la solution, par ex. 3x + 2 = 11 ; 3";
   else if (suite.filter((m) => m.k === 'expr').length > 1) base = 'expressions : x^2 ou x², e^(2x), ln(x), sqrt(x)';
+  else if (suite.some((m) => m.k === 'expr') && suite.some((m) => m.k === 'mot')) base = 'expression puis mot, par ex. -2e^(-x) ; décroissante';
   else if (suite.some((m) => m.k === 'expr')) base = "l'expression puis sa valeur, par ex. 3x + 2 ; 14";
   else if (suite.some((m) => m.k === 'nul')) base = 'coordonnées (2 ; -1), vecteur nul : 0';
   // Nombres complexes (« i » seul, ni « j » ni point) : forme algébrique.
   else if (suite.some((m) => m.k === 'vecteur') && !suite.some((m) => m.k === 'point' || (m.k === 'vecteur' && variables(m.a).has('j')))) base = 'nombres complexes : a + bi, par ex. 3 - 2i';
-  else if (!suite.some((m) => m.k !== 'point' && m.k !== 'vecteur' && special(m.a))) base = 'coordonnées, par ex. (2 ; -1)';
+  else if (!suite.some((m) => m.k !== 'point' && m.k !== 'vecteur' && m.k !== 'mot' && special(m.a))) base = 'coordonnées, par ex. (2 ; -1)';
+  if (suite.some((m) => m.k === 'mot') && !suite.some((m) => m.k === 'expr')) base += ' ; mots : croissante, positif…';
   return n > 1 ? `${n} réponses dans l'ordre, séparées par « ; » — ${base}` : base;
 }
 
