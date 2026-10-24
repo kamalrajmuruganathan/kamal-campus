@@ -96,6 +96,8 @@ export const DefisSemaine = paresseux(() => import('./ecrans/DefisSemaine'));
 
 // Capture d'image pour « Partager » (src/partage.js) : morceau à part lui aussi.
 chargeurs.push(() => import('react-native-view-shot'));
+// Titres de sections des fiches pour la recherche (src/ecrans/Recherche.js).
+chargeurs.push(() => import('./sections-recherche'));
 
 /** Télécharge tous ces écrans en arrière-plan (une fois), pour le hors-connexion. */
 let fait = false;

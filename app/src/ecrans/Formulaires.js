@@ -13,7 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
-import { FORMULAIRES, LIBELLES_NIVEAU } from '../contenu-index';
+import { FORMULAIRES, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { estRelu } from '../../lib/relecture';
 
 export default function Formulaires() {
@@ -59,7 +59,7 @@ export default function Formulaires() {
             key={f.id}
             t={t}
             titre={f.titre}
-            sousTitre={`${LIBELLES_NIVEAU[f.niveau] ?? f.niveau} · ${f.matiere === 'physique-chimie' ? 'Physique-chimie' : 'Mathématiques'}`}
+            sousTitre={`${LIBELLES_NIVEAU[f.niveau] ?? f.niveau} · ${LIBELLES_MATIERE[f.matiere] ?? f.matiere}`}
             couleur={couleurMatiere(t, f.matiere)}
             onPress={() => setActif(f)}
           />

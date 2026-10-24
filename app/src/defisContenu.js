@@ -2,7 +2,7 @@
 // Pont entre l'ecran Defis et le contenu de l'app (memes sources que Qcm.js).
 import { chapitreParId, CHAPITRES, LIBELLES_NIVEAU, LIBELLES_MATIERE, niveaux } from './contenu-index';
 import { aGenerateur, genererQuestions } from '../lib/generateurs';
-import { melanger } from '../lib/quizmix';
+import { melanger, sansDoublons, completerQuestions } from '../lib/quizmix';
 import { questionsDuQcm } from './useContenu';
 
 export const NB_QUESTIONS_DEFI = 10;
@@ -15,9 +15,11 @@ export const NB_QUESTIONS_DEFI = 10;
 export async function construireQuestions(chapitreId, n = NB_QUESTIONS_DEFI) {
   const chap = chapitreParId(chapitreId);
   if (!chap) return [];
-  if (aGenerateur(chapitreId)) return genererQuestions(chapitreId, n);
+  // Générateur : questions sans doublon, complétées par la banque écrite s'il n'en offre pas assez.
+  const generees = aGenerateur(chapitreId) ? sansDoublons(genererQuestions(chapitreId, n)) : [];
+  if (generees.length >= n) return generees.slice(0, n);
   const banque = (await questionsDuQcm(chapitreId)) ?? [];
-  return melanger(banque).slice(0, n);
+  return generees.length ? completerQuestions(generees, banque, n) : melanger(banque).slice(0, n);
 }
 
 // Libelle lisible d'un chapitre (pour l'affichage dans les cartes de defi).

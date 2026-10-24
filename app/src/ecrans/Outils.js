@@ -17,7 +17,7 @@ import { Carte } from '../composants/communs';
 
 import { resoudreSecondDegre } from '../../lib/second-degre';
 import { suiteArithmetique, suiteGeometrique } from '../../lib/suites';
-import { analyserSerie } from '../../lib/statistiques';
+import { analyserSerie, lireListeNombres } from '../../lib/statistiques';
 import { deriver, variations } from '../../lib/derivation';
 import { masseMolaire, dilution } from '../../lib/chimie';
 import { energieCinetique, loiOhm } from '../../lib/physique';
@@ -70,8 +70,8 @@ const OUTILS = [
     id: 'stats',
     titre: 'Statistiques',
     resume: 'Moyenne, médiane, quartiles, dispersion',
-    champs: [{ clef: 'serie', libelle: 'valeurs séparées par des espaces', defaut: '12 3 8 15 6', texte: true }],
-    executer: (v) => analyserSerie(String(v.serie).trim().split(/[\s,;]+/).map(Number)),
+    champs: [{ clef: 'serie', libelle: 'valeurs séparées par des espaces (virgule décimale : 12,5)', defaut: '12 3 8 15 6', texte: true }],
+    executer: (v) => analyserSerie(lireListeNombres(v.serie)),
   },
   {
     id: 'derivee',
@@ -79,7 +79,7 @@ const OUTILS = [
     resume: 'Polynômes — coefficients du degré 0 au degré n',
     champs: [{ clef: 'coef', libelle: 'coefficients (ex. « 0 -3 0 1 » pour x³−3x)', defaut: '0 -3 0 1', texte: true }],
     executer: (v) => {
-      const c = String(v.coef).trim().split(/[\s,;]+/).map(Number);
+      const c = lireListeNombres(v.coef);
       const d = deriver(c);
       if (!d.valide) return d;
       const va = variations(c);
@@ -101,9 +101,9 @@ const OUTILS = [
     titre: 'Dilution',
     resume: 'c₁V₁ = c₂V₂ — laisse un champ vide',
     champs: [
-      { clef: 'c1', libelle: 'c₁ (g·L⁻¹ ou mol·L⁻¹)', defaut: '0.5' },
+      { clef: 'c1', libelle: 'c₁ (g·L⁻¹ ou mol·L⁻¹)', defaut: '0,5' },
       { clef: 'v1', libelle: 'V₁ (mL) — vide pour le calculer', defaut: '' },
-      { clef: 'c2', libelle: 'c₂ (même unité que c₁)', defaut: '0.1' },
+      { clef: 'c2', libelle: 'c₂ (même unité que c₁)', defaut: '0,1' },
       { clef: 'v2', libelle: 'V₂ (mL)', defaut: '200' },
     ],
     executer: (v) => dilution({ c1: v.c1, v1: v.v1, c2: v.c2, v2: v.v2, unite: 'mL', uniteC: '' }),
@@ -125,7 +125,7 @@ const OUTILS = [
     champs: [
       { clef: 'U', libelle: 'U (V)', defaut: '' },
       { clef: 'R', libelle: 'R (Ω)', defaut: '50' },
-      { clef: 'I', libelle: 'I (A)', defaut: '0.2' },
+      { clef: 'I', libelle: 'I (A)', defaut: '0,2' },
     ],
     executer: (v) => loiOhm({ U: v.U, R: v.R, I: v.I }),
   },
@@ -188,7 +188,7 @@ const OUTILS = [
     resume: 'Résout sur un tour, valeurs exactes si possible',
     champs: [
       { clef: 'type', libelle: 'cos ou sin', defaut: 'cos', texte: true },
-      { clef: 'a', libelle: 'valeur a', defaut: '0.5' },
+      { clef: 'a', libelle: 'valeur a', defaut: '0,5' },
     ],
     executer: (v) => resoudre(String(v.type).trim().toLowerCase(), v.a),
   },
@@ -408,6 +408,11 @@ function PanneauOutil({ outil, t, onRetour }) {
   );
 }
 
+// Les calculs (lib/) écrivent les décimaux avec un point (« 7.833333 ») : à l'écran,
+// on affiche la virgule décimale française (« 7,833333 »). Les coordonnées utilisent
+// déjà « ; » comme séparateur, il n'y a donc pas d'ambiguïté.
+const virgule = (s) => (typeof s === 'string' ? s.replace(/(\d)\.(\d)/g, '$1,$2') : s);
+
 function Resultat({ resultat, t }) {
   if (!resultat.valide) {
     return (
@@ -422,7 +427,7 @@ function Resultat({ resultat, t }) {
         }}
       >
         <Text style={{ color: t.couleur.erreur, fontSize: t.police.normale, lineHeight: 21 }}>
-          {resultat.erreur}
+          {virgule(resultat.erreur)}
         </Text>
       </View>
     );
@@ -453,10 +458,10 @@ function Resultat({ resultat, t }) {
           }}
         >
           <Text style={{ color: t.couleur.accent, fontSize: t.police.petite, fontWeight: '650' }}>
-            {e.titre}
+            {virgule(e.titre)}
           </Text>
           <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, marginTop: 4, lineHeight: 21 }}>
-            {e.detail}
+            {virgule(e.detail)}
           </Text>
           {e.remarque ? (
             <Text
@@ -467,7 +472,7 @@ function Resultat({ resultat, t }) {
                 lineHeight: 18,
               }}
             >
-              {e.remarque}
+              {virgule(e.remarque)}
             </Text>
           ) : null}
         </View>

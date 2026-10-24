@@ -26,12 +26,14 @@ import { lectureActive, segmentsTexte } from '../../lib/lecture';
 import { partagerVue } from '../partage';
 import { chapitreParId, libelleNotion } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
-import { melanger } from '../../lib/quizmix';
+import { melanger, melangerChoix, sansDoublons, completerQuestions } from '../../lib/quizmix';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
 import { useQcm } from '../useContenu';
 import EtatChargement from '../composants/EtatChargement';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
+// Étiquette affichée en haut de la question (« difficil » : coquille de quelques qcm.json).
+const LIBELLE_DIFFICULTE = { facile: 'Facile', moyen: 'Moyen', difficile: 'Difficile', difficil: 'Difficile' };
 // Nombre de questions tirées / générées à chaque QCM de chapitre.
 const TAILLE_QCM_CHAPITRE = 20;
 
@@ -45,22 +47,28 @@ export default function Qcm({ route, navigation }) {
 
   // `tirage` s'incrémente à chaque « Recommencer » pour re-piocher au hasard.
   const [tirage, setTirage] = useState(0);
-  // Banque écrite du chapitre : chargée à la demande (pas pour un générateur ni des questions fournies).
-  const avecBanque = !route.params?.questions && !!chapitre && !aGenerateur(chapitre.id);
+  // Chapitre à générateur : questions FABRIQUÉES à la volée (réponses calculées),
+  // sans énoncé en double. Si le générateur n'en offre pas assez de différentes
+  // (ex. 9 triangles de Pythagore), on complète avec la banque écrite du chapitre.
+  const genere = !route.params?.questions && !!chapitre && aGenerateur(chapitre.id);
+  const generees = useMemo(
+    () => (genere ? sansDoublons(genererQuestions(chapitre.id, TAILLE_QCM_CHAPITRE)) : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [chapitre, genere, tirage],
+  );
+  // Banque écrite du chapitre : chargée à la demande (pas pour des questions fournies).
+  const avecBanque = !route.params?.questions && !!chapitre && (!genere || generees.length < TAILLE_QCM_CHAPITRE);
   const banqueQcm = useQcm(avecBanque ? chapitre.id : null);
   const questions = useMemo(() => {
-    // QCM de révision / bac blanc / parcours : questions déjà fournies.
-    if (route.params?.questions) return route.params.questions;
-    // QCM de chapitre équipé d'un générateur : questions FABRIQUÉES à la volée
-    // (réservoir illimité, réponses calculées). Sinon : pioche au hasard dans
-    // la banque écrite (toute la banque si elle est plus petite).
-    if (chapitre && aGenerateur(chapitre.id)) {
-      return genererQuestions(chapitre.id, TAILLE_QCM_CHAPITRE);
-    }
-    const banque = banqueQcm.donnee?.questions ?? [];
+    // QCM de révision / bac blanc / parcours / carnet : questions déjà fournies.
+    // Les choix sont mélangés à chaque fois (la bonne réponse n'est pas toujours en A).
+    if (route.params?.questions) return route.params.questions.map((q) => melangerChoix(q));
+    const banque = (banqueQcm.donnee?.questions ?? []).map((q) => melangerChoix(q));
+    if (genere) return completerQuestions(generees, banque, TAILLE_QCM_CHAPITRE);
+    // Sinon : pioche au hasard dans la banque écrite (toute la banque si elle est plus petite).
     return melanger(banque).slice(0, TAILLE_QCM_CHAPITRE);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chapitre, route.params, tirage, banqueQcm.donnee]);
+  }, [chapitre, route.params, tirage, banqueQcm.donnee, generees]);
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [reponses, setReponses] = useState([]);
@@ -86,7 +94,9 @@ export default function Qcm({ route, navigation }) {
     }
   }, [estTermine]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (avecBanque && banqueQcm.etat !== 'ok') {
+  // Banque en cours de chargement ; en cas d'échec, un chapitre à générateur se contente
+  // de ses questions générées (hors connexion par exemple).
+  if (avecBanque && (banqueQcm.etat === 'chargement' || (banqueQcm.etat === 'erreur' && !generees.length))) {
     return <EtatChargement t={t} etat={banqueQcm.etat} quoi="le QCM" recharger={banqueQcm.recharger} />;
   }
 
@@ -182,7 +192,9 @@ export default function Qcm({ route, navigation }) {
                   lineHeight: 17,
                 }}
               >
-                Ces intitulés correspondent aux sections de la fiche : relis-les en priorité.
+                {chapitre
+                  ? 'Ces intitulés correspondent aux sections de la fiche : relis-les en priorité.'
+                  : 'Ces notions viennent des chapitres de ce QCM : relis les fiches correspondantes en priorité.'}
               </Text>
             </View>
           )}
@@ -259,7 +271,7 @@ export default function Qcm({ route, navigation }) {
               },
             ]}
           >
-            <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne }}>Revenir à la fiche</Text>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne }}>{chapitre ? 'Revenir à la fiche' : 'Retour'}</Text>
           </Pressable>
         </ScrollView>
       </SafeAreaView>
@@ -294,7 +306,7 @@ export default function Qcm({ route, navigation }) {
             Question {index + 1} / {questions.length}
           </Text>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule }}>
-            {q.difficulte}
+            {LIBELLE_DIFFICULTE[q.difficulte] ?? q.difficulte}
           </Text>
         </View>
 

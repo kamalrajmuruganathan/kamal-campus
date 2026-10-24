@@ -8,7 +8,7 @@
 
 import { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
-import { useSombre } from '../useSombre';
+import { useTheme } from '../useTheme';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
@@ -23,11 +23,17 @@ import EtatChargement from '../composants/EtatChargement';
 
 const MAX_SESSION = 30; // on plafonne une session pour rester digeste
 
-// Clés de toutes les cartes de l'appli (« idChapitre#index »), d'après l'index des chapitres.
-function toutesLesCles() {
-  const cles = [];
-  for (const c of CHAPITRES) for (let i = 0; i < (c.nbFlashcards || 0); i += 1) cles.push(`${c.id}#${i}`);
-  return cles;
+// Clés des cartes DÉJÀ ÉTUDIÉES (« idChapitre#index ») qui existent encore dans l'index.
+// Les cartes jamais vues n'entrent pas ici : sinon une révision « à revoir » proposait
+// des cartes de CP d'allemand à un élève de 4e qui n'en avait jamais ouvert.
+// (Même règle que le compteur de l'accueil, src/coach.js.)
+function clesEtudiees(srs) {
+  const nb = new Map(CHAPITRES.map((c) => [c.id, c.nbFlashcards || 0]));
+  return Object.keys(srs || {}).filter((k) => {
+    const i = k.lastIndexOf('#');
+    const n = Number(k.slice(i + 1));
+    return i > 0 && Number.isInteger(n) && n >= 0 && n < (nb.get(k.slice(0, i)) ?? 0);
+  });
 }
 
 // Contenu des cartes de la session : cle → { recto, verso, matiere, titre }. Les cartes sont
@@ -47,12 +53,12 @@ async function chargerIndex(cles) {
 }
 
 export default function RevisionSRS({ navigation }) {
-  const t = useSombre() ? theme(true) : theme(false);
+  const t = useTheme(); // suit aussi la taille du texte et le contraste choisis
   const { profil, noterCarteSrs } = useProgression();
 
   const jour = dateLocale(new Date());
   // File figée à l'ouverture (ne rétrécit pas sous nos pieds quand on note).
-  const [file] = useState(() => clesDues(profil.srs, toutesLesCles(), jour).slice(0, MAX_SESSION));
+  const [file] = useState(() => clesDues(profil.srs, clesEtudiees(profil.srs), jour).slice(0, MAX_SESSION));
   const [index, setIndex] = useState(undefined); // undefined = chargement, null = échec
   const [essai, setEssai] = useState(0);
   useEffect(() => {

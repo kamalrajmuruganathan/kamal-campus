@@ -15,9 +15,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
-import { QUIZ, LIBELLES_NIVEAU } from '../contenu-index';
+import { QUIZ, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
+import { melangerChoix } from '../../lib/quizmix';
 import { chargerQuiz } from '../useContenu';
 import { useProgression } from '../progression/Contexte';
+import { useConfirmerSortie } from '../useConfirmerSortie';
 import {
   dureeConseillee,
   formaterChrono,
@@ -34,6 +36,7 @@ export default function ModeExamen({ navigation }) {
 
   const [epreuve, setEpreuve] = useState(null); // { questions, titre, matiere, duree }
   const [phase, setPhase] = useState('menu'); // menu | jeu | fin
+  useConfirmerSortie(navigation, phase === 'jeu', 'Quitter l’examen ?', 'L’épreuve n’est pas terminée : tes réponses seront perdues.');
   const [index, setIndex] = useState(0);
   const [reponses, setReponses] = useState([]); // reponses[i] = { choisi } | null
   const [ecoule, setEcoule] = useState(0); // secondes écoulées
@@ -51,7 +54,8 @@ export default function ModeExamen({ navigation }) {
     setEnCharge(quiz.id);
     const data = await chargerQuiz(quiz.id);
     setEnCharge(null);
-    const questions = data?.questions || [];
+    // Choix mélangés : la bonne réponse n'est pas toujours à la même place.
+    const questions = (data?.questions || []).map((q) => melangerChoix(q));
     if (!questions.length) {
       Alert.alert('Épreuve indisponible', 'Impossible de charger les questions. Vérifie ta connexion à Internet.');
       return;
@@ -151,7 +155,7 @@ export default function ModeExamen({ navigation }) {
                 key={q.id}
                 t={t}
                 titre={q.titre}
-                sousTitre={enCharge === q.id ? 'Chargement des questions…' : `${q.examen || (LIBELLES_NIVEAU[q.niveau] ?? q.niveau)} · ${n} questions · ${formaterChrono(dureeConseillee(n))}`}
+                sousTitre={enCharge === q.id ? 'Chargement des questions…' : `${LIBELLES_NIVEAU[q.niveau] ?? q.niveau} · ${LIBELLES_MATIERE[q.matiere] ?? q.matiere} · ${n} questions · ${formaterChrono(dureeConseillee(n))}`}
                 couleur={couleurMatiere(t, q.matiere)}
                 onPress={() => lancer(q)}
               />
@@ -172,7 +176,7 @@ export default function ModeExamen({ navigation }) {
             {bilan.justes} / {bilan.total}
           </Text>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.moyenne, marginTop: 2 }}>
-            {bilan.pourcent}% · {bilan.appreciation}
+            {bilan.pourcent} % · {bilan.appreciation}
             {bilan.sansReponse > 0 ? ` · ${bilan.sansReponse} sans réponse` : ''}
           </Text>
 

@@ -383,7 +383,7 @@ function ModalNouveau({ visible, onClose, t, amis, onLancer, onAmis }) {
     : (matiere ? tous.filter((c) => c.niveau === classeEff && c.matiere === matiere) : []);
 
   const champ = { borderColor: C.trait, borderWidth: 1, borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 10, color: C.texte, marginBottom: 8 };
-  const chip = (on) => ({ borderWidth: 1, borderColor: on ? C.accent : C.trait, backgroundColor: on ? C.accent : 'transparent', borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 8, marginRight: 8, marginBottom: 8 });
+  const chip = (on) => ({ borderWidth: 1, borderColor: on ? C.accent : C.trait, backgroundColor: on ? C.accent : 'transparent', borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 8, marginRight: 8, marginBottom: 8, maxWidth: '100%' });
   const chipTxt = (on) => ({ color: on ? C.accentTexte : C.texte, fontWeight: '700', fontSize: t.police.petite });
 
   return (

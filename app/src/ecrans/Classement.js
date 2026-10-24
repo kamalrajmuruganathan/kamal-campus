@@ -212,7 +212,7 @@ export default function Classement({ navigation }) {
             <Text style={{ fontSize: 20, marginRight: 8 }}>{l.avatar ?? '🎓'}</Text>
             <View style={{ flex: 1 }}>
               <Text numberOfLines={1} style={{ color: C.texte, fontWeight: l.moi ? '800' : '600' }}>
-                {l.pseudo}{l.moi ? ' (toi)' : ''}
+                {l.moi && (!l.pseudo || l.pseudo === 'Moi') ? 'Toi' : `${l.pseudo}${l.moi ? ' (toi)' : ''}`}
               </Text>
               {avecSemaine ? (
                 <Text style={{ color: C.attenue, fontSize: t.police.minuscule }}>{nombre(l.xp)} XP au total</Text>

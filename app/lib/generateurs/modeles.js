@@ -140,7 +140,7 @@ export function schemaBarres6e(rand) {
   const objet = choisir(rand, ['billes', 'cartes', 'perles', 'timbres']);
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'schema-en-barres',
+    notion: 'schéma en barres',
     enonce: `${x} a ${k} fois plus de ${objet} que ${y}. Ensemble, ils en ont ${T}. Combien ${y} en a-t-il ?`,
     bonne: `${p}`,
     distracteurs: [`${T / k}`, `${p * k}`, `${T - k}`, `${p + 1}`, `${p + k}`].filter((v) => Number.isInteger(Number(v))),
@@ -566,7 +566,7 @@ export function racineCarreParfait(rand) {
   const N = k * k;
   return construireQuestion({
     difficulte: 'facile',
-    notion: 'racine-carree',
+    notion: 'racine carrée',
     enonce: `Que vaut $\\sqrt{${N}}$ ?`,
     bonne: `$${k}$`,
     distracteurs: [`$${k + 1}$`, `$${k - 1}$`, `$${nombreLatex(N / 2)}$`, `$${k + 2}$`],
@@ -613,7 +613,7 @@ export function loiOhm(rand) {
   const U = R * I;
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'loi-ohm',
+    notion: 'loi d’Ohm',
     enonce: `Une résistance de ${R} Ω est traversée par un courant de ${I} A. Quelle est la tension à ses bornes ?`,
     bonne: `${U} V`,
     distracteurs: [`${R + I} V`, `${R} V`, `${I} V`, `${U + 1} V`, `${U + 2} V`, `${U + R} V`],
@@ -801,7 +801,7 @@ export function pythagore(rand) {
   const [a, b, c] = choisir(rand, triplets);
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'pythagore',
+    notion: 'théorème de Pythagore',
     enonce: `Dans un triangle rectangle, les deux côtés de l'angle droit mesurent $${a}$ et $${b}$. Quelle est la longueur de l'hypoténuse ?`,
     bonne: `$${c}$`,
     distracteurs: [
@@ -1034,7 +1034,7 @@ export function verbeIrregulierPreterit(rand) {
   const [base, pret, pp] = choisir(rand, VERBES_IRR);
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'verbes-irreguliers',
+    notion: 'verbes irréguliers',
     enonce: `Quel est le prétérit du verbe « ${base} » ?`,
     bonne: pret,
     distracteurs: [`${base}ed`, base, pp, `${base}t`, `have ${base}`, `${base}s`],
@@ -1047,7 +1047,7 @@ export function verbeIrregulierParticipe(rand) {
   const [base, pret, pp] = choisir(rand, VERBES_IRR);
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'verbes-irreguliers',
+    notion: 'verbes irréguliers',
     enonce: `Quel est le participe passé de « ${base} » ? (have + …)`,
     bonne: pp,
     distracteurs: [`${base}ed`, base, pret, `${base}en`, `have ${base}`, `${base}s`],
@@ -1234,7 +1234,7 @@ export function preteritoRegularES(rand) {
   const bonne = stem + term[i];
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'preterito-indefinido',
+    notion: 'pretérito indefinido',
     enonce: `Conjugue « ${inf} » au pretérito indefinido avec « ${PRONOMS_ES[i]} ».`,
     bonne,
     distracteurs: term.filter((_, j) => j !== i).map((t) => stem + t).concat([stem + (grp === 'ar' ? 'ó' : 'ió')]),
@@ -1259,7 +1259,7 @@ export function praesensRegularDE(rand) {
   const bonne = stem + TERM_PRESENT_DE[i];
   return construireQuestion({
     difficulte: 'facile',
-    notion: 'praesens',
+    notion: 'présent',
     enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_DE[i]} ».`,
     bonne,
     distracteurs: [stem + 'e', stem + 'st', stem + 't', stem + 'en', stem + 'et', inf],
@@ -1284,7 +1284,7 @@ export function seinHabenModalDE(rand) {
   const uniques = [...new Set(formes)].filter((f) => f !== bonne);
   return construireQuestion({
     difficulte: 'moyen',
-    notion: 'verbes-irreguliers',
+    notion: 'verbes irréguliers',
     enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_DE[i]} ».`,
     bonne,
     distracteurs: uniques.concat([inf, formes[0], `${bonne}t`, `${bonne}st`]),
@@ -1305,7 +1305,7 @@ export function artikelGenusDE(rand) {
   const autres = ['der', 'die', 'das'].filter((a) => a !== art);
   return construireQuestion({
     difficulte: 'facile',
-    notion: 'artikel-genus',
+    notion: 'articles et genre',
     enonce: `Quel est l'article défini (nominatif) de « ${nom} » ?`,
     bonne: art,
     distracteurs: [...autres, 'dem'],

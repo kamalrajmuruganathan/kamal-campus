@@ -22,6 +22,7 @@ import { couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
 import SignalerErreur from '../composants/SignalerErreur';
 import { useProgression } from '../progression/Contexte';
+import { useConfirmerSortie } from '../useConfirmerSortie';
 import { LIBELLES_NIVEAU } from '../contenu-index';
 import { parler, arreterParole } from '../parole';
 import { chargerDictees, prechargerDictees } from '../dictees-donnees';
@@ -104,7 +105,7 @@ function descriptionFaute(f) {
   return `« ${f.ecrit} » au lieu de « ${f.attendu} »`;
 }
 
-export default function Dictees() {
+export default function Dictees({ navigation }) {
   const t = useTheme();
   const C = t.couleur;
   const { profil, enregistrerDictee } = useProgression();
@@ -125,6 +126,7 @@ export default function Dictees() {
   const [saisie, setSaisie] = useState('');
   const [message, setMessage] = useState(null);
   const [resultat, setResultat] = useState(null); // { r, points, meilleureAvant }
+  useConfirmerSortie(navigation, !!actif && !resultat && saisie.trim().length > 0, 'Quitter la dictée ?', 'Ta dictée n’est pas corrigée : ce que tu as écrit sera perdu.');
   const defilement = useRef(null);
 
   // Web : on télécharge tous les niveaux une fois (≈ 100 Ko) pour la suite hors connexion.

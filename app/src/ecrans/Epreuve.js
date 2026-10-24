@@ -403,7 +403,7 @@ export default function Epreuve({ route, navigation }) {
           <Text style={{ color: C.attenue, fontSize: t.police.minuscule }}>{p.id.startsWith('c') ? 'Critère' : 'Partie'} {page + 1} / {parties.length}</Text>
           <Text style={{ color: C.texte, fontSize: t.police.moyenne, fontWeight: '800', marginTop: 2 }}>{p.titre}</Text>
           <Text style={{ color: C.attenue, fontSize: t.police.petite, marginTop: 2 }}>
-            {nombreFr(p.points, 2)}{NBSP}point{p.points > 1 ? 's' : ''}{analyse.bareme === 'estime' ? ' (estimation)' : ''}
+            {nombreFr(p.points, 2)}{NBSP}point{p.points >= 2 ? 's' : ''}{analyse.bareme === 'estime' ? ' (estimation)' : ''}
             {p.repartitionEstimee ? ' · points des questions estimés (parts égales)' : ''}
           </Text>
 
@@ -422,7 +422,7 @@ export default function Epreuve({ route, navigation }) {
             {p.introCorrige ? <VisionneuseFiche markdown={p.introCorrige} /> : null}
             {p.questions.map((q) => (
               <View key={q.id} style={{ marginTop: t.espace.m, borderTopWidth: 1, borderColor: C.trait, paddingTop: t.espace.s }}>
-                <Text style={{ color: C.texte, fontWeight: '800' }}>{q.libelle} · {nombreFr(q.points, 2)}{NBSP}pt{q.points > 1 ? 's' : ''}</Text>
+                <Text style={{ color: C.texte, fontWeight: '800' }}>{q.libelle} · {nombreFr(q.points, 2)}{NBSP}pt{q.points >= 2 ? 's' : ''}</Text>
                 <VisionneuseFiche markdown={q.corrige} />
                 <ChoixNiveau t={t} valeur={reponses[q.id]} onChoix={lecture ? null : (n) => coter(q.id, n)} libelle={q.libelle} />
               </View>

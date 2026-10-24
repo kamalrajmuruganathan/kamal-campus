@@ -16,7 +16,8 @@ import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { CHAPITRES, chapitreParId } from '../contenu-index';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
-import { melanger } from '../../lib/quizmix';
+import { melanger, melangerChoix, sansDoublons, completerQuestions, preferNiveau } from '../../lib/quizmix';
+import { useProgression } from '../progression/Contexte';
 import { useQcm } from '../useContenu';
 import EtatChargement from '../composants/EtatChargement';
 
@@ -26,21 +27,27 @@ const LETTRES = ['A', 'B', 'C', 'D'];
 export default function Duel({ route, navigation }) {
   const t = useTheme();
 
-  // Chapitre fourni, sinon on en tire un au hasard parmi ceux à générateur.
+  const { profil } = useProgression();
+  const [tirage, setTirage] = useState(0); // « Rejouer » : nouvelles questions
+
+  // Chapitre fourni, sinon on en tire un au hasard parmi ceux à générateur (de la classe de l'élève si possible).
   const chapitre = useMemo(() => {
     if (route.params?.id) return chapitreParId(route.params.id);
-    const avecGen = CHAPITRES.filter((c) => aGenerateur(c.id));
+    const avecGen = preferNiveau(CHAPITRES.filter((c) => aGenerateur(c.id)), profil?.niveauParDefaut);
     return avecGen.length ? avecGen[Math.floor(Math.random() * avecGen.length)] : CHAPITRES[0];
-  }, [route.params]);
+  }, [route.params]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Banque écrite chargée à la demande (sauf chapitre à générateur).
-  const avecBanque = !!chapitre && !aGenerateur(chapitre.id);
+  // Questions générées sans doublon ; banque écrite (chargée à la demande) pour compléter ou à défaut.
+  const genere = !!chapitre && aGenerateur(chapitre.id);
+  const generees = useMemo(() => (genere ? sansDoublons(genererQuestions(chapitre.id, N)) : []), [chapitre, genere, tirage]);
+  const avecBanque = !!chapitre && (!genere || generees.length < N);
   const banqueQcm = useQcm(avecBanque ? chapitre.id : null);
   const questions = useMemo(() => {
     if (!chapitre) return [];
-    if (aGenerateur(chapitre.id)) return genererQuestions(chapitre.id, N);
-    return melanger(banqueQcm.donnee?.questions ?? []).slice(0, N);
-  }, [chapitre, banqueQcm.donnee]);
+    const banque = (banqueQcm.donnee?.questions ?? []).map((q) => melangerChoix(q));
+    if (genere) return completerQuestions(generees, banque, N);
+    return melanger(banque).slice(0, N);
+  }, [chapitre, genere, generees, banqueQcm.donnee, tirage]);
 
   const accent = chapitre ? couleurMatiere(t, chapitre.matiere) : t.couleur.accent;
 
@@ -48,7 +55,7 @@ export default function Duel({ route, navigation }) {
   const [choisi, setChoisi] = useState(null);
   const [scores, setScores] = useState([0, 0]);
 
-  if (avecBanque && banqueQcm.etat !== 'ok') {
+  if (avecBanque && (banqueQcm.etat === 'chargement' || (banqueQcm.etat === 'erreur' && !generees.length))) {
     return <EtatChargement t={t} etat={banqueQcm.etat} quoi="les questions" recharger={banqueQcm.recharger} />;
   }
 
@@ -64,7 +71,7 @@ export default function Duel({ route, navigation }) {
   if (index >= questions.length) {
     const [s1, s2] = scores;
     const gagnant = s1 === s2 ? 0 : (s1 > s2 ? 1 : 2);
-    const rejouer = () => { setIndex(0); setChoisi(null); setScores([0, 0]); };
+    const rejouer = () => { setTirage((n) => n + 1); setIndex(0); setChoisi(null); setScores([0, 0]); };
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: t.espace.xl }}>

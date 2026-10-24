@@ -218,3 +218,21 @@ export function frequences(effectifs) {
     ],
   };
 }
+
+/**
+ * Lit une liste de nombres tapée par un élève : « 12,5 3 8 » → [12.5, 3, 8].
+ * Séparateurs : espaces et points-virgules. La virgule est d'abord une virgule
+ * décimale (« 12,5 ») ; un groupe avec plusieurs virgules (« 12,3,8 ») est lu
+ * comme une liste. Avant, « 12,5 3 8 » donnait [12, 5, 3, 8] sans prévenir.
+ * Un élément illisible donne NaN (l'outil affiche alors une erreur).
+ */
+export function lireListeNombres(texte) {
+  const res = [];
+  for (const morceau of String(texte ?? '').trim().split(/[\s;]+/)) {
+    if (!morceau) continue;
+    const virgules = (morceau.match(/,/g) || []).length;
+    const parties = virgules >= 2 ? morceau.split(',').filter((x) => x !== '') : [morceau.replace(',', '.')];
+    for (const p of parties) res.push(p.trim() === '' ? NaN : Number(p.replace('−', '-')));
+  }
+  return res;
+}
