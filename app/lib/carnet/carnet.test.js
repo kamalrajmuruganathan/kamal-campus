@@ -85,3 +85,16 @@ test('journal des erreurs maîtrisées : ajout, oubli des vieux jours, fusion', 
   );
   assert.deepEqual(fusionnerJournauxMaitrisees(null, []), {});
 });
+
+import { marquerOrigine } from './index.js';
+
+test('marquerOrigine : le carnet range la question dans son chapitre', () => {
+  const qs = marquerOrigine([{ enonce: 'Q1' }, { enonce: 'Q2', _chap: 'autre' }], { chapitreId: 'c1', titre: 'Chap 1', matiere: 'maths' });
+  assert.equal(qs[0]._chap, 'c1');
+  assert.equal(qs[1]._chap, 'autre');
+  const r = resultatsQcm(qs, [{ juste: false }, { juste: false }], { titre: 'QCM bilan' });
+  assert.equal(r[0].infos.chapitreId, 'c1');
+  assert.equal(r[0].infos.titre, 'Chap 1');
+  assert.equal(r[0].infos.question._chap, undefined);
+  assert.deepEqual(marquerOrigine(null), []);
+});

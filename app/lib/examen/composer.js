@@ -98,6 +98,8 @@ function qcmValide(q) {
  * réponse. Renvoie une copie (la question d'origine n'est pas modifiée).
  */
 export function melangerChoix(q, rand) {
+  // Explication qui cite une lettre (« le piège du choix B ») : on garde l'ordre écrit.
+  if (/\b(choix|réponses?|propositions?|options?)\s+\(?[A-F]\b/i.test(String(q.explication ?? ''))) return { ...q };
   const ordre = melanger(q.choix.map((_, i) => i), rand);
   return { ...q, choix: ordre.map((i) => q.choix[i]), reponse: ordre.indexOf(q.reponse) };
 }

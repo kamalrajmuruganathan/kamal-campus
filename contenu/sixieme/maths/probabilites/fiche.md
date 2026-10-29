@@ -114,7 +114,7 @@ On dit alors que l'événement a **« $a$ chances sur $b$ »**.
 > ⚠️ **« Réaliser » ne veut pas dire « gagner ».** Une issue réalise l'événement dès
 > qu'elle correspond à la phrase, même si elle ne t'arrange pas.
 
-> **Compte bien TOUTES les issues pour le total.** Dans un sac de $5$ boules rouges et
+> **Compte bien TOUTES les issues pour le total.** Dans un sac qui contient $5$ boules rouges et
 > $3$ vertes, le total n'est pas $5$ ni $3$ : c'est $5 + 3 = 8$. Quand il y a beaucoup
 > d'issues, un tableau ou un arbre aide à toutes les lister sans en oublier — tu en as
 > déjà construit au CM2.

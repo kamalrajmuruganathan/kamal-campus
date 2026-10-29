@@ -21,10 +21,12 @@ import { couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { useProgression } from '../progression/Contexte';
+import { useConfirmerSortie } from '../useConfirmerSortie';
 import { CHAPITRES, LIBELLES_NIVEAU, LIBELLES_MATIERE, LIBELLES_PARCOURS, niveaux } from '../contenu-index';
 import { chargerExercices } from '../contenu-lourd';
 import { questionsDuQcm } from '../useContenu';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
+import { sansDoublons, completerQuestions } from '../../lib/quizmix';
 import { typeExercice, uniteExercice, consigneExercice } from '../../lib/autocorrection';
 import { formaterChrono, tempsRestant, phaseChrono } from '../../lib/examen';
 import {
@@ -47,13 +49,16 @@ const aDesQcm = (c) => aGenerateur(c.id) || (c.nbQuestions ?? 0) > 0;
 
 /** Questions de QCM d'un chapitre : générées si possible, sinon la banque écrite (chargée à la demande). */
 async function questionsDuChapitre(c, n, rand) {
+  let generees = [];
   if (aGenerateur(c.id)) {
     try {
-      const qs = genererQuestions(c.id, n, rand);
-      if (qs.length) return qs;
+      generees = sansDoublons(genererQuestions(c.id, n, rand));
+      if (generees.length >= n) return generees;
     } catch { /* on retombe sur la banque */ }
   }
-  return (await questionsDuQcm(c.id)) ?? [];
+  const banque = (await questionsDuQcm(c.id)) ?? [];
+  // Générateur au petit choix d'énoncés : on complète avec la banque écrite (sans doublon).
+  return generees.length ? completerQuestions(generees, banque, n, rand) : banque;
 }
 
 /** Exercices auto-corrigeables d'un chapitre (chargés à la demande). */
@@ -86,6 +91,7 @@ export default function ExamenSurMesure({ navigation }) {
   const { profil, definirReglages, enregistrerResultat, enregistrerExercice } = useProgression();
 
   const [phase, setPhase] = useState('config'); // config | chargement | epreuve | resultat
+  useConfirmerSortie(navigation, phase === 'epreuve', 'Quitter l’examen ?', 'Ta copie n’est pas rendue : tes réponses seront perdues.');
   const [epreuve, setEpreuve] = useState(null);
   const [index, setIndex] = useState(0);
   const [reponses, setReponses] = useState([]);
@@ -162,7 +168,8 @@ export default function ExamenSurMesure({ navigation }) {
       const qcm = items.map((it, i) => ({ it, i })).filter((x) => x.it.type === 'qcm');
       if (qcm.length) {
         const res = enregistrerResultat({
-          questions: qcm.map((x) => x.it.question),
+          // Chapitre d'origine de chaque question : le carnet d'erreurs la range dans son chapitre.
+          questions: qcm.map((x) => ({ ...x.it.question, _chap: x.it.chapitreId, _titre: epreuve.titres?.[x.it.chapitreId], _mat: x.it.matiere })),
           reponses: qcm.map((x) => (note.details[x.i].repondu ? { choisi: reps[x.i].choisi, juste: note.details[x.i].juste } : null)),
           titre: `Examen sur mesure — ${nomMatiere(epreuve.matiere)}`,
           matiere: epreuve.matiere,
@@ -340,6 +347,7 @@ function styleChip(t, on) {
     marginRight: 8,
     marginBottom: 8,
     minHeight: 40,
+    maxWidth: '100%', // un long titre de chapitre passe à la ligne au lieu de déborder de l'écran
     justifyContent: 'center',
   };
 }

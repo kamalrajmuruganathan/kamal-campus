@@ -17,6 +17,8 @@ import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { CHAPITRES, chapitreParId } from '../contenu-index';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
+import { preferNiveau } from '../../lib/quizmix';
+import { useProgression } from '../progression/Contexte';
 import {
   rngGraine, graineAleatoire, encoderDefi, decoderDefi, encoderResultat, decoderResultat, verdict,
 } from '../../lib/defi';
@@ -27,6 +29,7 @@ const LETTRES = ['A', 'B', 'C', 'D'];
 export default function Defi({ navigation }) {
   const t = useTheme();
   const [phase, setPhase] = useState('menu'); // menu | creer | coller | jeu | fin
+  const { profil } = useProgression();
   const [defi, setDefi] = useState(null); // { chapId, graine, n }
   const [saisie, setSaisie] = useState('');
   const [saisieResultat, setSaisieResultat] = useState('');
@@ -49,7 +52,8 @@ export default function Defi({ navigation }) {
   const demarrerJeu = () => { setIndex(0); setChoisi(null); setScore(0); setVerdictTexte(null); setSaisieResultat(''); setPhase('jeu'); };
 
   const creer = () => {
-    const gens = CHAPITRES.filter((c) => aGenerateur(c.id));
+    // Un chapitre de la classe de l'élève si possible (pas une question de CP pour un élève de 4e).
+    const gens = preferNiveau(CHAPITRES.filter((c) => aGenerateur(c.id)), profil?.niveauParDefaut);
     const c = gens[Math.floor(Math.random() * gens.length)];
     setDefi({ chapId: c.id, graine: graineAleatoire(), n: N });
     setPhase('creer');

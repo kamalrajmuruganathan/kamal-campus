@@ -12,6 +12,7 @@ import { chapitresDe } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { useState } from 'react';
 import { composerQcm } from '../../lib/quizmix';
+import { marquerOrigine } from '../../lib/carnet';
 import { chargerQcm } from '../useContenu';
 import HorsLigneParcours from '../composants/HorsLigneParcours';
 import { estRelu } from '../../lib/relecture';
@@ -47,7 +48,10 @@ export default function Chapitres({ route, navigation }) {
     setChargeParcours(true);
     const qcms = await Promise.all(liste.map((c) => chargerQcm(c.id)));
     setChargeParcours(false);
-    const questions = composerQcm(liste.map((c, i) => ({ qcm: qcms[i] })), TAILLE_QCM_PARCOURS);
+    // Chaque question garde son chapitre d'origine (carnet d'erreurs, signalement).
+    const questions = composerQcm(liste.map((c, i) => ({
+      qcm: { questions: marquerOrigine(qcms[i]?.questions, { chapitreId: c.id, titre: c.titre, matiere: c.matiere }) },
+    })), TAILLE_QCM_PARCOURS);
     if (!questions.length) {
       Alert.alert('QCM indisponible', 'Impossible de charger les questions. Vérifie ta connexion à Internet.');
       return;

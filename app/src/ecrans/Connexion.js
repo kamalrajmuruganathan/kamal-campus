@@ -23,7 +23,11 @@ function traduireErreur(msg) {
   if (m.includes('email not confirmed')) return 'Confirme d’abord ton email (vérifie ta boîte mail).';
   if (m.includes('password')) return 'Mot de passe trop court (6 caractères minimum).';
   if (m.includes('network') || m.includes('fetch')) return 'Problème de réseau. Vérifie ta connexion et réessaie.';
-  return msg;
+  if (m.includes('rate limit') || m.includes('too many')) return 'Trop de tentatives : attends quelques minutes, puis réessaie.';
+  if (m.includes('email') && (m.includes('invalid') || m.includes('valid'))) return 'Adresse email invalide. Vérifie-la.';
+  if (m.includes('signup') && m.includes('disabled')) return 'Les inscriptions sont fermées pour le moment.';
+  // Message inconnu (souvent en anglais) : on reste en français et on garde le détail entre parenthèses.
+  return `La connexion a échoué. Réessaie dans un instant.${msg ? ` (${msg})` : ''}`;
 }
 
 export default function Connexion() {

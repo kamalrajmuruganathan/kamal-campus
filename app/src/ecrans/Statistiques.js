@@ -70,7 +70,7 @@ export default function Statistiques({ navigation }) {
             {/* KPIs */}
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s }}>
               <Kpi t={t} valeur={profil.qcmTermines} libelle="QCM terminés" />
-              <Kpi t={t} valeur={`${tauxGlobal}%`} libelle="bonnes réponses" />
+              <Kpi t={t} valeur={`${tauxGlobal}\u00a0%`} libelle="bonnes réponses" />
               <Kpi t={t} valeur={actifs} libelle="jours actifs (12 sem.)" />
               <Kpi t={t} valeur={profil.meilleureSerieJours || 0} libelle="meilleure série" />
             </View>
@@ -107,7 +107,7 @@ export default function Statistiques({ navigation }) {
                         <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
                           {LIBELLES_MATIERE[m.matiere] ?? m.matiere}
                         </Text>
-                        <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule }}>{pct}% · {m.nombre} chap.</Text>
+                        <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule }}>{pct} % · {m.nombre} chap.</Text>
                       </View>
                       <View style={[st.piste, { backgroundColor: t.couleur.trait, marginTop: 4 }]}>
                         <View style={{ width: `${pct}%`, height: '100%', backgroundColor: c, borderRadius: 3 }} />
@@ -130,7 +130,7 @@ export default function Statistiques({ navigation }) {
                   >
                     <View style={{ flex: 1 }}>
                       <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }} numberOfLines={1}>{x.titre}</Text>
-                      <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 1 }}>meilleur score : {Math.round(x.score * 100)}%</Text>
+                      <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 1 }}>meilleur score : {Math.round(x.score * 100)} %</Text>
                     </View>
                     <Text style={{ color: t.couleur.accent, fontSize: t.police.grande }}>›</Text>
                   </Pressable>

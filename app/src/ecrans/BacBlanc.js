@@ -12,7 +12,7 @@ import { View, Text, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
-import { QUIZ, LIBELLES_NIVEAU } from '../contenu-index';
+import { QUIZ, LIBELLES_NIVEAU, LIBELLES_MATIERE } from '../contenu-index';
 import { chargerQuiz } from '../useContenu';
 
 export default function BacBlanc({ navigation }) {
@@ -51,7 +51,7 @@ export default function BacBlanc({ navigation }) {
             key={q.id}
             t={t}
             titre={q.titre}
-            sousTitre={enCours === q.id ? 'Chargement des questions…' : `${q.examen || (LIBELLES_NIVEAU[q.niveau] ?? q.niveau)} · ${q.nbQuestions} questions`}
+            sousTitre={enCours === q.id ? 'Chargement des questions…' : `${LIBELLES_NIVEAU[q.niveau] ?? q.niveau} · ${LIBELLES_MATIERE[q.matiere] ?? q.matiere} · ${q.nbQuestions} questions`}
             couleur={couleurMatiere(t, q.matiere)}
             onPress={() => lancer(q)}
           />

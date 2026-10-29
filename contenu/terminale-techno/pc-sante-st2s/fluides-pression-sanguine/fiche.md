@@ -193,7 +193,7 @@ $$\boxed{\Delta p = \rho \times g \times h}$$
 | Grandeur | Symbole | Unité de base |
 |---|---|---|
 | Masse volumique du fluide | $\rho$ (rhô) | kilogramme par mètre cube (kg/m³) |
-| Intensité de la pesanteur | $g$ | newton par kilogramme (N/kg), $g \approx 10$ N/kg |
+| Intensité de la pesanteur | $g$ | newton par kilogramme (N/kg), $g \approx 9{,}8$ N/kg |
 | Différence de hauteur | $h$ | mètre (m) |
 | Différence de pression | $\Delta p$ | pascal (Pa) |
 
@@ -201,15 +201,15 @@ Vérifie les unités : $\text{kg/m}^3 \times \text{N/kg} \times \text{m} = \text
 La pression au point bas est celle du point haut **augmentée** de $\Delta p$ :
 $p_{\text{bas}} = p_{\text{haut}} + \rho g h$.
 
-> **Exemple — sous l'eau.** Eau : $\rho = 1000$ kg/m³, $g = 10$ N/kg. À une profondeur
-> $h = 10$ m : $\Delta p = 1000 \times 10 \times 10 = 100\,000$ Pa $= 1{,}0 \times 10^{5}$ Pa,
+> **Exemple — sous l'eau.** Eau : $\rho = 1000$ kg/m³, $g = 9{,}8$ N/kg. À une profondeur
+> $h = 10$ m : $\Delta p = 1000 \times 9{,}8 \times 10 = 98\,000$ Pa $\approx 1{,}0 \times 10^{5}$ Pa,
 > soit environ **une atmosphère de plus**. À $10$ m sous l'eau, la pression est
 > quasiment le double de celle en surface.
 
 > **Exemple — santé.** Le sang a une masse volumique $\rho \approx 1060$ kg/m³. Debout,
 > les pieds sont à environ $h = 1{,}3$ m sous le cœur. La pression du sang y est plus
-> forte de $\Delta p = 1060 \times 10 \times 1{,}3 \approx 13\,800$ Pa, soit
-> $\dfrac{13\,800}{133} \approx 104$ mmHg de plus qu'au niveau du cœur. C'est pourquoi
+> forte de $\Delta p = 1060 \times 9{,}8 \times 1{,}3 \approx 13\,500$ Pa, soit
+> $\dfrac{13\,500}{133} \approx 102$ mmHg de plus qu'au niveau du cœur. C'est pourquoi
 > la pression sanguine dépend de la **position** du corps.
 
 > ⚠️ **La différence de pression ne dépend PAS de la forme du récipient**, seulement de
@@ -331,8 +331,8 @@ Rédaction originale à partir du programme. Aucun emprunt à un manuel.
   d'arrondi attendu (133 Pa vs 133,3 Pa) et l'usage cmHg (usage clinique français) vs
   mmHg (unité SI-adjacente internationale) — le programme cite explicitement « Pa, cmHg ».
 - MASSE VOLUMIQUE DU SANG : ρ ≈ 1060 kg/m³ (valeur physiologique courante 1050–1060).
-  g pris à 10 N/kg pour rester en cohérence avec les autres chapitres PC ; certains
-  sujets prennent 9,81. À harmoniser.
+  g pris à 9,8 N/kg, valeur retenue dans tous les chapitres du lycée (harmonisé le
+  24/10/2026).
 - LOI FONDAMENTALE : énoncée sous forme Δp = ρgh (différence entre deux points) et
   p_bas = p_haut + ρgh. Le programme parle de « variation de la pression avec la
   profondeur » : formulation simplifiée retenue (pas de convention d'axe z orienté),

@@ -17,6 +17,7 @@ import { useProgression } from '../progression/Contexte';
 import { CHAPITRES, LIBELLES_NIVEAU, LIBELLES_MATIERE, LIBELLES_PARCOURS, niveaux } from '../contenu-index';
 import { aGenerateur } from '../../lib/generateurs';
 import { melanger } from '../../lib/quizmix';
+import { marquerOrigine } from '../../lib/carnet';
 import { dateLocale } from '../../lib/serie';
 import { construireQuestions } from '../defisContenu';
 import {
@@ -85,7 +86,9 @@ export default function Controle({ navigation, route }) {
 
   const lancerBilan = async (plan) => {
     const parChapitre = Math.ceil(TAILLE_QCM_BILAN / Math.max(1, plan.chapitres.length));
-    const lots = await Promise.all(plan.chapitres.map((id) => construireQuestions(id, parChapitre).catch(() => [])));
+    const lots = await Promise.all(plan.chapitres.map((id) => construireQuestions(id, parChapitre)
+      .then((qs) => marquerOrigine(qs, { chapitreId: id, titre: plan.titres?.[id] ?? null, matiere: plan.matiere ?? null }))
+      .catch(() => [])));
     const questions = melanger(lots.flat()).slice(0, TAILLE_QCM_BILAN);
     if (questions.length === 0) {
       Alert.alert('QCM indisponible', 'Ces chapitres n’ont pas encore de questions de QCM (ou elles n’ont pas pu être chargées : vérifie ta connexion à Internet).');
@@ -356,7 +359,7 @@ function BarreAvancement({ t, faites, total, couleur }) {
         <View style={{ width: `${Math.round(p * 100)}%`, height: 6, backgroundColor: couleur }} />
       </View>
       <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 3 }}>
-        {faites}/{total} tâche{total > 1 ? 's' : ''} faite{faites > 1 ? 's' : ''}
+        {faites}/{total} tâche{total > 1 ? 's' : ''} faite{total > 1 ? 's' : ''}
       </Text>
     </View>
   );
@@ -421,7 +424,7 @@ function NouveauPlan({ t, aujourdHui, niveauDefaut, onCreer, onAnnuler }) {
     }
   };
 
-  const chip = (on) => ({ borderWidth: 1, borderColor: on ? C.accent : C.trait, backgroundColor: on ? C.accent : 'transparent', borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 8, marginRight: 8, marginBottom: 8 });
+  const chip = (on) => ({ borderWidth: 1, borderColor: on ? C.accent : C.trait, backgroundColor: on ? C.accent : 'transparent', borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 8, marginRight: 8, marginBottom: 8, maxWidth: '100%' });
   const chipTxt = (on) => ({ color: on ? C.accentTexte : C.texte, fontWeight: '700', fontSize: t.police.petite });
   const etape = { color: C.attenue, fontSize: t.police.minuscule, fontWeight: '700', marginTop: t.espace.m, marginBottom: 8 };
 

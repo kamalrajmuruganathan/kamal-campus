@@ -152,6 +152,22 @@ const dossiers = (chemin) => {
   }
 };
 
+/** Titres de niveau 2 d'une fiche, sans numéro ni mise en forme (pour la recherche). */
+function sectionsFiche(texte) {
+  const corps = texte.replace(/^---[\s\S]*?\n---\n/, '').replace(/<!--[\s\S]*?-->/g, '');
+  const titres = [];
+  for (const m of corps.matchAll(/^##\s+(.+)$/gm)) {
+    const t = m[1]
+      .replace(/^\d+[.)]\s*/, '')
+      .replace(/\$[^$]*\$/g, ' ')
+      .replace(/[*_`#]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (t && !/^(à retenir|les pièges|les erreurs|exercices?\b|pour aller plus loin)/i.test(t)) titres.push(t);
+  }
+  return titres.join(' · ');
+}
+
 const chapitres = [];
 
 for (const niveau of dossiers(CONTENU)) {
@@ -213,6 +229,13 @@ for (const niveau of dossiers(CONTENU)) {
         }
       }
 
+      // Titres de sections de la fiche (« Le théorème de Pythagore »…) : la recherche les
+      // parcourt aussi, pour trouver un chapitre par une notion absente de son titre.
+      let sections = '';
+      try {
+        sections = sectionsFiche(readFileSync(fiche, 'utf8'));
+      } catch { /* fiche illisible : déjà signalé */ }
+
       chapitres.push({
         id: meta.id ?? `${niveau}-${parcours}-${chapitre}`,
         dossier: chapitre,
@@ -232,6 +255,7 @@ for (const niveau of dossiers(CONTENU)) {
         nbFlashcards,
         aFlashcards,
         outils,
+        sections,
         cheminFiche: './' + relative(join(RACINE_APP, 'src'), fiche).split('\\').join('/'),
         cheminQcm: './' + relative(join(RACINE_APP, 'src'), qcm).split('\\').join('/'),
         cheminExercice: aExercice
@@ -447,24 +471,44 @@ for (const c of chapitres) {
 }
 const ACCENTS_NOTIONS = {};
 for (const [g, G] of groupes) {
+  const casses = new Map(); // mot sans accent → Map(forme exacte, majuscules comprises → nombre)
   for (const t of G.textes) {
-    for (const m of t.toLowerCase().match(/[a-zàâäçéèêëîïôöùûüÿœæñß]+/g) ?? []) {
+    for (const x of t.matchAll(/[A-Za-zÀ-ÖØ-öø-ÿœŒæÆß]+/g)) {
+      const brut = x[0];
+      const m = brut.toLowerCase();
       const cle = sansAccent(m);
       if (!G.mots.has(cle)) continue;
       const f = G.formes.get(cle) ?? new Map();
       f.set(m, (f.get(m) ?? 0) + 1);
       G.formes.set(cle, f);
+      // Casse : on ne regarde que les mots en milieu de phrase (« selon Sartre »,
+      // « d’Euler »), pas un début de phrase, de titre ou de liste (« Traduction : »).
+      const avant = t.slice(Math.max(0, x.index - 2), x.index);
+      if (/[a-zà-ÿ0-9,;)»] $|[a-zà-ÿ][’']$/.test(avant)) {
+        const c = casses.get(cle) ?? new Map();
+        c.set(brut, (c.get(brut) ?? 0) + 1);
+        casses.set(cle, c);
+      }
     }
   }
   const dico = {};
   for (const m of [...G.mots].sort()) {
     const f = G.formes.get(m);
     if (!f) continue;
-    const tri = [...f.entries()].sort((x, y) => y[1] - x[1]);
-    const [meilleure, n] = tri[0];
-    if (meilleure === m || n < 2) continue;
-    if (tri.length > 1 && tri[1][1] >= 0.2 * n) continue; // ambigu
     if (NOTIONS_A_LAISSER.has(m)) continue;
+    const tri = [...f.entries()].sort((x, y) => y[1] - x[1]);
+    let [meilleure, n] = tri[0];
+    const ambigu = tri.length > 1 && tri[1][1] >= 0.2 * n;
+    if (ambigu || n < 2) meilleure = m; // accents incertains : on garde le mot tel quel
+    // Nom propre ou sigle (« Sartre », « Kant », « pH ») : presque toujours écrit avec cette
+    // casse dans les fiches et les QCM → on la garde (avant : « sartre », « ph »).
+    const formesExactes = [...(casses.get(m) ?? new Map()).entries()].sort((x, y) => y[1] - x[1]);
+    const total = formesExactes.reduce((s, [, k]) => s + k, 0);
+    if (formesExactes.length && total >= 2) {
+      const [exacte, k] = formesExactes[0];
+      if (exacte !== exacte.toLowerCase() && k >= 0.9 * total && exacte.toLowerCase() === meilleure) meilleure = exacte;
+    }
+    if (meilleure === m) continue;
     dico[m] = meilleure;
   }
   ACCENTS_NOTIONS[g] = dico;
@@ -543,6 +587,17 @@ export function chapitreParId(id) {
 
 mkdirSync(dirname(SORTIE), { recursive: true });
 writeFileSync(SORTIE, sortie, 'utf8');
+
+// Titres de sections des fiches, pour la recherche : module à part, chargé par
+// l'écran Recherche seulement (import() : morceau séparé sur le web, l'index reste léger).
+const sectionsRecherche = Object.fromEntries(chapitres.filter((c) => c.sections).map((c) => [c.id, c.sections]));
+writeFileSync(
+  join(RACINE_APP, 'src', 'sections-recherche.js'),
+  `/**\n * FICHIER GÉNÉRÉ — NE PAS MODIFIER À LA MAIN (scripts/generer-index.mjs).\n`
+  + ` * Titres de sections des fiches (« Le théorème de Pythagore »…), pour l'écran Recherche.\n */\n`
+  + `export const SECTIONS = ${JSON.stringify(sectionsRecherche)};\n`,
+  'utf8',
+);
 
 // ─────────────── contenu lourd chargé à la demande (fiches + exercices) ───────────────
 // Web : fichiers statiques copiés dans public/donnees/<niveau>/<parcours>/<dossier>/,

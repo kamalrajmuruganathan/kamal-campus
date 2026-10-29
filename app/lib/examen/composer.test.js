@@ -61,6 +61,13 @@ test('melangerChoix : la bonne réponse suit son texte', () => {
   }
 });
 
+test('melangerChoix : ordre gardé si l’explication cite une lettre', () => {
+  const q = { enonce: 'Q', choix: ['un', 'deux', 'trois', 'quatre'], reponse: 2, explication: 'Le piège du choix B est…' };
+  const m = melangerChoix(q, creerAlea(3));
+  assert.deepEqual(m.choix, q.choix);
+  assert.equal(m.reponse, 2);
+});
+
 test('composerExamen : déterministe pour une graine, différent pour une autre', () => {
   const chapitres = [chap('A', 20, 10), chap('B', 20, 10), chap('C', 20, 10)];
   const e1 = composerExamen({ chapitres, nbQcm: 12, nbExos: 4, graine: 123 });

@@ -77,6 +77,18 @@ export function noter(carnet, resultats, aujourdhui, maintenant = new Date().toI
   return { carnet: arr, maitrisees };
 }
 
+/**
+ * Marque des questions avec leur chapitre d'origine (champs _chap, _titre, _mat),
+ * pour un QCM qui mélange plusieurs chapitres (bilan, parcours, examen) : le carnet
+ * d'erreurs range alors chaque question ratée dans son vrai chapitre.
+ * Une question déjà marquée garde son origine.
+ */
+export function marquerOrigine(questions, { chapitreId = null, titre = null, matiere = null } = {}) {
+  return (Array.isArray(questions) ? questions : []).map((q) => (
+    !q || q._chap ? q : { ...q, _chap: chapitreId, _titre: titre, _mat: matiere }
+  ));
+}
+
 /** Résultats d'une session de QCM → lignes pour `noter`. */
 export function resultatsQcm(questions, reponses, { chapitreId = null, titre = null, matiere = null } = {}) {
   return (Array.isArray(questions) ? questions : []).map((q, i) => {

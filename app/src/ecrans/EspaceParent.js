@@ -594,7 +594,7 @@ function BilanDeLaSemaine({ t, bilan, nom }) {
         {ch.length > 0 ? (
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: t.espace.m }}>
             {ch.slice(0, 8).map((c) => (
-              <View key={c.cle} style={{ paddingVertical: 4, paddingHorizontal: 10, borderRadius: 999, backgroundColor: C.surface, borderWidth: 1, borderColor: (c.matiere && couleurMatiere(t, c.matiere)) || C.trait }}>
+              <View key={c.cle} style={{ paddingVertical: 4, paddingHorizontal: 10, borderRadius: 999, maxWidth: '100%', backgroundColor: C.surface, borderWidth: 1, borderColor: (c.matiere && couleurMatiere(t, c.matiere)) || C.trait }}>
                 <Text style={{ color: C.texte, fontSize: t.police.minuscule }} numberOfLines={1}>{c.titre}</Text>
               </View>
             ))}

@@ -159,3 +159,15 @@ test('l’analyse expose des étapes, dont le rappel d’ordonner la série', ()
   assert.ok(r.etapes.length > 0);
   assert.ok(r.etapes.some((e) => /Ordonner la série/.test(e.remarque ?? '')));
 });
+
+import { lireListeNombres } from './statistiques.js';
+
+test('lireListeNombres : virgule décimale française', () => {
+  assert.deepEqual(lireListeNombres('12,5 3 8'), [12.5, 3, 8]);
+  assert.deepEqual(lireListeNombres('12.5;3; 8'), [12.5, 3, 8]);
+  assert.deepEqual(lireListeNombres('12,3,8'), [12, 3, 8]);
+  assert.deepEqual(lireListeNombres(' 0 -3 0 1 '), [0, -3, 0, 1]);
+  assert.deepEqual(lireListeNombres('−2 4'), [-2, 4]);
+  assert.ok(Number.isNaN(lireListeNombres('3 x')[1]));
+  assert.deepEqual(lireListeNombres(''), []);
+});

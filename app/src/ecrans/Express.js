@@ -5,7 +5,7 @@
  */
 
 import { useTheme } from '../useTheme';
-import { useMemo, useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -15,24 +15,27 @@ import { CHAPITRES } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
 import { formaterChrono } from '../../lib/examen';
+import { preferNiveau, sansDoublons } from '../../lib/quizmix';
 
 const DUREE = 120; // secondes
 const LETTRES = ['A', 'B', 'C', 'D'];
 
-function construirePool() {
-  const gens = CHAPITRES.filter((c) => aGenerateur(c.id));
+function construirePool(niveau) {
+  // Chapitres à générateur de la classe de l'élève (s'il y en a assez), sinon de toutes les classes.
+  const gens = preferNiveau(CHAPITRES.filter((c) => aGenerateur(c.id)), niveau, 3);
   const copie = gens.slice();
   const picks = [];
   for (let i = 0; i < 6 && copie.length; i += 1) picks.push(copie.splice(Math.floor(Math.random() * copie.length), 1)[0]);
   let qs = [];
   for (const c of picks) qs = qs.concat(genererQuestions(c.id, 8));
+  qs = sansDoublons(qs);
   for (let i = qs.length - 1; i > 0; i -= 1) { const j = Math.floor(Math.random() * (i + 1)); [qs[i], qs[j]] = [qs[j], qs[i]]; }
   return qs;
 }
 
 export default function Express({ navigation }) {
   const t = useTheme();
-  const { enregistrerResultat } = useProgression();
+  const { enregistrerResultat, profil } = useProgression();
 
   const [phase, setPhase] = useState('menu'); // menu | jeu | fin
   const [temps, setTemps] = useState(DUREE);
@@ -42,7 +45,7 @@ export default function Express({ navigation }) {
   const [bilan, setBilan] = useState(null);
   const finRef = useRef(false);
 
-  const pool = useMemo(construirePool, []);
+  const [pool, setPool] = useState(() => construirePool(profil?.niveauParDefaut));
 
   const terminer = () => {
     if (finRef.current) return;
@@ -62,7 +65,12 @@ export default function Express({ navigation }) {
     return () => clearTimeout(id);
   }, [phase, temps]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const demarrer = () => { finRef.current = false; setReponses([]); setIndex(0); setChoisi(null); setTemps(DUREE); setBilan(null); setPhase('jeu'); };
+  // Plus de question (réserve épuisée) : on termine, hors du rendu.
+  useEffect(() => {
+    if (phase === 'jeu' && !pool[index]) terminer();
+  }, [phase, index, pool]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const demarrer = () => { if (phase === 'fin') setPool(construirePool(profil?.niveauParDefaut)); finRef.current = false; setReponses([]); setIndex(0); setChoisi(null); setTemps(DUREE); setBilan(null); setPhase('jeu'); };
 
   if (phase === 'menu') {
     return (
@@ -104,7 +112,7 @@ export default function Express({ navigation }) {
 
   // phase jeu
   const q = pool[index];
-  if (!q) { terminer(); return <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} />; }
+  if (!q) return <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} />; // fin gérée par l'effet ci-dessus
   const repondu = choisi !== null;
   const presque = temps <= 15;
 
