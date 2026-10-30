@@ -364,3 +364,8 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Quiz : « Bac blanc » réservé à la 1re/Tle ; 3e = « Brevet blanc » ; 6e-4e et 2de = « Évaluation ».
 - Lycée : g = 9,8 N/kg partout (le collège peut garder 10 si l'énoncé le dit). « Une urne contient ».
 - Autocorrection : 70,8 % (clés `ordre`, `groupes`, `exacte` dans attendus.json ; `edo.js`).
+
+## 25. Page « Parents et écoles » — PUBLIÉE le 30/10/2026 (PR #14, main `01c8ab7`)
+- `web-vitrine/parents-et-ecoles.html` (lien dans l'en-tête et le pied de page de l'accueil), imprimable sur 2 pages A4.
+- Textes à envoyer : `docs/presentation-parents-ecoles.md` (+ PDF). Contact : kamalcampus.contact@gmail.com.
+- Ne jamais y promettre : agrément de l'Éducation nationale, contenus « validés par des professeurs », appli dans les stores.
