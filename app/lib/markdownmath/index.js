@@ -14,9 +14,13 @@ const echapperHtml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').repla
 /** @returns {{ texte: string, formules: string[] }} */
 export function protegerFormules(markdown) {
   const formules = [];
+  // Une formule en ligne peut continuer sur la ligne suivante (pas au-delà d'une ligne vide).
+  // Dans une citation (« > »), les « > » de début des lignes suivantes ne font pas partie de la formule.
   const proteger = (morceau) =>
-    morceau.replace(/(?<!\\)\$\$([\s\S]+?)(?<!\\)\$\$|(?<![\\$])\$(?!\$)((?:\\\$|[^$\n])+?)(?<!\\)\$/g, (m) => {
-      formules.push(m);
+    morceau.replace(/(?<!\\)\$\$([\s\S]+?)(?<!\\)\$\$|(?<![\\$])\$(?!\$)((?:\\\$|[^$\n]|\n(?![ \t]*(?:>[ \t]*)*\n))+?)(?<!\\)\$/g, (m, _a, _b, pos, tout) => {
+      const debutLigne = tout.lastIndexOf('\n', pos - 1) + 1;
+      const citation = /^[ \t]*>/.test(tout.slice(debutLigne, pos));
+      formules.push(citation ? m.replace(/\n[ \t]*(?:>[ \t]?)+/g, '\n') : m);
       return `KCMATH${formules.length - 1}KCMATH`;
     });
   // On découpe autour des blocs ``` et des `code` en ligne, qu'on laisse intacts.

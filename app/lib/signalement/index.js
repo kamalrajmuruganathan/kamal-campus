@@ -79,18 +79,20 @@ export function restants(message) {
  * Entrée : { chapitreId, niveau, type, cible, message, extrait, userId }
  */
 export function preparerSignalement({ chapitreId, niveau, type, cible, message, extrait, userId } = {}) {
-  const texte = String(message ?? '').trim();
+  // Le caractère nul (U+0000) est refusé par Postgres : on le retire de tous les textes.
+  const sansNul = (x) => String(x ?? '').replace(/\u0000/g, '');
+  const texte = sansNul(message).trim();
   if (!texte) return { erreur: 'Explique en quelques mots ce qui ne va pas.' };
   if (longueur(texte) > LONGUEUR_MAX) return { erreur: `Ton message est trop long (${LONGUEUR_MAX} caractères au maximum).` };
   if (!IDS_TYPES.has(type)) return { erreur: 'Choisis le type d’erreur.' };
-  const chap = String(chapitreId ?? '').trim();
+  const chap = sansNul(chapitreId).trim();
   if (!chap || chap.length > 200) return { erreur: 'Chapitre inconnu.' };
   if (!cibleValide(cible)) return { erreur: 'Cible inconnue.' };
-  const ext = String(extrait ?? '').replace(/\s+/g, ' ').trim();
+  const ext = sansNul(extrait).replace(/\s+/g, ' ').trim();
   return {
     ligne: {
       chapitre_id: chap,
-      niveau: niveau ? couper(String(niveau), 40) : null,
+      niveau: sansNul(niveau) ? couper(sansNul(niveau), 40) : null,
       type,
       cible,
       message: texte,

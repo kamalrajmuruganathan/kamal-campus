@@ -126,7 +126,7 @@ test('plan : séances datées, bilans avec les chapitres depuis le précédent, 
   assert.equal(bilans[0].final, false);
   assert.equal(bilans[1].final, true);
   assert.equal(bilans[1].chapitres.length, 8);
-  assert.equal(bilans[0].titreBilan, 'Bilan de vacances n° 1');
+  assert.equal(bilans[0].titreBilan, 'Bilan de vacances n°\u00A01');
   assert.ok(p.seances.every((s) => s.minutes >= 15 && s.minutes <= 20));
   assert.throws(() => creerPlanVacances({ semaines: 3, joursParSemaine: 5, chapitres: chapitres(), debut: DEBUT }));
   assert.throws(() => creerPlanVacances({ semaines: 2, joursParSemaine: 5, chapitres: [], debut: DEBUT }));
@@ -192,7 +192,7 @@ test('libellés en bon français', () => {
     assert.ok(!/ {2}/.test(l));
     assert.ok(!/\bde «/.test(l) || /de « /.test(l));
   }
-  assert.equal(libelleSeance({ type: 'chapitre', activite: 'qcm', titre: 'Les fractions' }), 'Lis la fiche « Les fractions », puis fais son QCM');
+  assert.equal(libelleSeance({ type: 'chapitre', activite: 'qcm', titre: 'Les fractions' }), 'Lis la fiche «\u00A0Les fractions\u00A0», puis fais son QCM');
 });
 
 test('fusion entre appareils et abandon', () => {

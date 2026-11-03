@@ -21,7 +21,8 @@ const vide = (v) => v == null || ['', 'null', '~'].includes(String(v).trim());
 /** Vrai si le contenu a été relu par un professeur identifié. */
 export function estRelu(c) {
   if (!c) return false;
-  return STATUTS_RELUS.has(String(c.statut ?? '').trim()) && !vide(c.reluPar);
+  // Le nom doit contenir au moins une lettre (« . » ou « - » ne nomment personne).
+  return STATUTS_RELUS.has(String(c.statut ?? '').trim()) && !vide(c.reluPar) && /\p{L}/u.test(String(c.reluPar));
 }
 
 const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
@@ -32,6 +33,8 @@ export function dateEnLettres(iso) {
   if (!m) return null;
   const [, a, mo, j] = m.map(Number);
   if (mo < 1 || mo > 12 || j < 1 || j > 31) return null;
+  // Date qui n'existe pas (31 avril, 29 février d'une année non bissextile…).
+  if (new Date(Date.UTC(a, mo - 1, j)).getUTCDate() !== j) return null;
   return `${j === 1 ? '1er' : j} ${MOIS[mo - 1]} ${a}`;
 }
 

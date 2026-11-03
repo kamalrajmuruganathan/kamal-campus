@@ -23,7 +23,7 @@ export const RYTHMES = [3, 5, 7]; // jours de travail par semaine
 export const EXOS_PAR_SEANCE = 3;
 export const MINUTES = { qcm: 20, exercices: 20, fiche: 15, bilan: 20 };
 
-const NBSP = ' ';
+const NBSP = '\u00A0';
 const guillemets = (s) => `«${NBSP}${s}${NBSP}»`;
 
 // Jours de la semaine travaillés (0 = dimanche … 6 = samedi) : lundi-mercredi-vendredi,

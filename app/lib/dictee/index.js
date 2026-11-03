@@ -10,7 +10,7 @@
  *  - xpDictee, noterDictee, fusionnerDictees : progression de l'élève.
  *
  * Tolérances : espaces multiples, apostrophes droites ou courbes (' ’), guillemets « » ou " ",
- * points de suspension « ... » ou « … », tirets de dialogue - – —.
+ * points de suspension « ... » ou « … », tirets de dialogue - -- – —.
  *
  * Barème (sur 10, jamais en dessous de 0) :
  *   −1   par mot manquant, mot en trop, faute d'accord ou de terminaison, autre faute d'orthographe ;
@@ -61,11 +61,11 @@ export const BAREME_TEXTE = '−1 par mot oublié, mot en trop, faute d’accord
 // ─── Découpage en jetons ─────────────────────────────────────────────────────────
 // Lettres latines (accents compris, œ, ß, ñ…) et chiffres ; pas de \p{L} (moteur Hermes).
 const L = 'A-Za-z0-9À-ÖØ-öø-ɏ';
-const RE_JETON = new RegExp(`[${L}]+(?:['’ʼ‘\`-][${L}]+)*['’]?|\\.\\.\\.|[.,;:!?…«»"“”„()¿¡—–-]`, 'g');
+const RE_JETON = new RegExp(`[${L}]+(?:['’ʼ‘\`-][${L}]+)*['’]?|\\.\\.\\.|--|[.,;:!?…«»"“”„()¿¡—–-]`, 'g');
 
 const PONCT_NORMALE = {
   '«': '"', '»': '"', '“': '"', '”': '"', '„': '"',
-  '...': '…', '–': '—', '-': '—',
+  '...': '…', '–': '—', '-': '—', '--': '—',
 };
 
 /** Forme de comparaison d'un jeton : apostrophes et guillemets unifiés. */
@@ -86,7 +86,7 @@ export function decouper(texte) {
     const t = m[0];
     const n = formeNormale(t);
     const ponct = !new RegExp(`[${L}]`).test(t);
-    jetons.push({ t, n, ponct, debut: m.index, fin: m.index + t.length });
+    jetons.push({ t, n, ponct, debut: m.index, fin: m.index + t.length, sa: ponct ? n : sansAccents(n) });
   }
   return jetons;
 }
@@ -132,13 +132,14 @@ const TERMINAISONS = new Set([
 
 /** Les deux mots ne diffèrent-ils que par leur terminaison (accord, conjugaison) ? */
 function differenceDeTerminaison(a, b) {
-  let p = 0;
-  while (p < a.length && p < b.length && a[p] === b[p]) p++;
-  const ra = a.slice(p);
-  const rb = b.slice(p);
-  if (!TERMINAISONS.has(ra) || !TERMINAISONS.has(rb)) return false;
+  let commun = 0;
+  while (commun < a.length && commun < b.length && a[commun] === b[commun]) commun++;
   const court = Math.min(a.length, b.length);
-  return p >= 2 || (court === 1 && p === 1);
+  // Le préfixe commun peut « manger » le début de la terminaison (mang-ez / mang-er : « e » commun).
+  for (let p = commun; p >= Math.max(0, commun - 2); p--) {
+    if (TERMINAISONS.has(a.slice(p)) && TERMINAISONS.has(b.slice(p))) return p >= 2 || (court === 1 && p === 1);
+  }
+  return false;
 }
 
 // Homophones grammaticaux fréquents (pour expliquer la faute).
@@ -180,9 +181,19 @@ export function classer(attendu, ecrit) {
   if (as === es) {
     const homo = sontHomophones(al, el);
     const cedille = /ç/.test(al) !== /ç/.test(el);
-    return { type: 'accent', detail: homo ? `homophones (${al} / ${el})` : cedille ? 'cédille' : 'accent oublié ou en trop' };
+    const liees = /[œæ]/.test(al) !== /[œæ]/.test(el);
+    const eszett = /ß/.test(al) !== /ß/.test(el);
+    return {
+      type: 'accent',
+      detail: homo ? `homophones (${al} / ${el})` : cedille ? 'cédille' : liees ? 'lettres soudées (œ, æ)' : eszett ? 'ß (eszett)' : 'accent oublié ou en trop',
+    };
   }
-  if (as.replace(/['-]/g, '') === es.replace(/['-]/g, '')) {
+  // Tréma allemand transcrit (« ue » pour « ü », « ae » pour « ä », « oe » pour « ö ») : faute d'accent.
+  const trema = (x) => x.replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue');
+  if (/[äöü]/.test(al) && trema(al) === trema(el)) {
+    return { type: 'accent', detail: 'tréma (ä, ö, ü)' };
+  }
+  if (as.replace(/['\- ]/g, '') === es.replace(/['\- ]/g, '')) {
     return { type: 'ponctuation', detail: 'apostrophe ou trait d’union' };
   }
   if (sontHomophones(al, el)) {
@@ -200,19 +211,48 @@ function coutSubstitution(x, y) {
   if (x.n === y.n) return 0;
   if (x.ponct !== y.ponct) return 3; // un mot ne s'aligne jamais sur un signe
   if (x.ponct) return 0.8;
-  const xs = sansAccents(x.n);
-  const ys = sansAccents(y.n);
+  const xs = x.sa ?? sansAccents(x.n); // forme sans accents calculée une fois par jeton (decouper)
+  const ys = y.sa ?? sansAccents(y.n);
   if (xs === ys) return 0.3; // accent ou majuscule seulement
-  const d = distanceLettres(xs, ys);
   const longueur = Math.max(xs.length, ys.length);
+  const ecart = Math.abs(xs.length - ys.length); // minorant de la distance : évite un calcul inutile
+  if (ecart / longueur > 0.6 && ecart > 1) return 1.6;
+  const cle = `${xs}\u0001${ys}`;
+  let d = cacheDistances.get(cle);
+  if (d === undefined) {
+    d = distanceLettres(xs, ys);
+    if (cacheDistances.size > 20000) cacheDistances.clear();
+    cacheDistances.set(cle, d);
+  }
   const r = d / longueur;
   if (r > 0.6 && d > 1) return 1.6; // mots sans rapport : une seule faute, mais l'alignement préfère un mot proche
   return 0.4 + r;
+}
+const cacheDistances = new Map();
+
+/**
+ * Un mot à trait d'union ou apostrophe écrit en deux morceaux (« dit elle » pour « dit-elle »,
+ * « l arbre » ou « l' arbre » pour « l'arbre ») : une seule faute (ou aucune pour « l' arbre »),
+ * pas un mot oublié + un mot en trop.
+ */
+function fusionnable(r, x, y) {
+  if (!r || !x || !y || r.ponct || x.ponct || y.ponct || !/['-]/.test(r.n)) return false;
+  return sansAccents(r.n).replace(/['-]/g, '') === sansAccents(x.n + y.n).replace(/['-]/g, '');
+}
+const COUT_FUSION = 0.3;
+
+/** Jeton « fusionné » : les deux morceaux de l'élève, tels qu'écrits (espace compris). */
+function jetonFusionne(saisie, x, y) {
+  const t = saisie != null ? String(saisie).slice(x.debut, y.fin) : `${x.t} ${y.t}`;
+  // « l' arbre » : seule une espace sépare l'apostrophe du mot → même forme que « l'arbre ».
+  const n = /'$/.test(x.n) ? x.n + y.n : `${x.n} ${y.n}`;
+  return { t, n, ponct: false, debut: x.debut, fin: y.fin };
 }
 
 /**
  * Aligne deux listes de jetons. Renvoie des opérations dans l'ordre du texte :
  * { op: 'egal' | 'sub' | 'manquant' | 'en_trop', i (indice dans ref), j (indice dans élève) }.
+ * Un mot écrit en deux morceaux donne { op: 'sub' | 'egal', i, j, j2 } (j2 = second morceau).
  */
 export function aligner(ref, eleve) {
   const n = ref.length;
@@ -226,6 +266,7 @@ export function aligner(ref, eleve) {
         D[i - 1][j - 1] + coutSubstitution(ref[i - 1], eleve[j - 1]),
         D[i - 1][j] + 1,
         D[i][j - 1] + 1,
+        j >= 2 && fusionnable(ref[i - 1], eleve[j - 2], eleve[j - 1]) ? D[i - 1][j - 2] + COUT_FUSION : Infinity,
       );
     }
   }
@@ -234,7 +275,10 @@ export function aligner(ref, eleve) {
   let j = m;
   const proche = (x, y) => Math.abs(x - y) < 1e-9;
   while (i > 0 || j > 0) {
-    if (i > 0 && j > 0 && proche(D[i][j], D[i - 1][j - 1] + coutSubstitution(ref[i - 1], eleve[j - 1]))) {
+    if (i > 0 && j >= 2 && fusionnable(ref[i - 1], eleve[j - 2], eleve[j - 1]) && proche(D[i][j], D[i - 1][j - 2] + COUT_FUSION)) {
+      ops.push({ op: 'sub', i: i - 1, j: j - 2, j2: j - 1 });
+      i--; j -= 2;
+    } else if (i > 0 && j > 0 && proche(D[i][j], D[i - 1][j - 1] + coutSubstitution(ref[i - 1], eleve[j - 1]))) {
       ops.push({ op: ref[i - 1].n === eleve[j - 1].n ? 'egal' : 'sub', i: i - 1, j: j - 1 });
       i--; j--;
     } else if (i > 0 && proche(D[i][j], D[i - 1][j] + 1)) {
@@ -271,7 +315,11 @@ export function corriger(texte, saisie) {
   const fautes = [];
   for (const o of ops) {
     let f = null;
-    if (o.op === 'sub') {
+    if (o.op === 'sub' && o.j2 != null) {
+      const fus = jetonFusionne(saisie, eleve[o.j], eleve[o.j2]);
+      f = classer(ref[o.i], fus);
+      if (!f) o.op = 'egal';
+    } else if (o.op === 'sub') {
       f = classer(ref[o.i], eleve[o.j]);
     } else if (o.op === 'manquant') {
       f = ref[o.i].ponct
@@ -290,7 +338,7 @@ export function corriger(texte, saisie) {
         libelle: TYPES[f.type].libelle,
         points: TYPES[f.type].points,
         attendu: o.i != null ? ref[o.i].t : null,
-        ecrit: o.j != null ? eleve[o.j].t : null,
+        ecrit: o.j2 != null ? jetonFusionne(saisie, eleve[o.j], eleve[o.j2]).t : o.j != null ? eleve[o.j].t : null,
         detail: f.detail,
         i: o.i,
         j: o.j,
@@ -336,9 +384,10 @@ export function segmentsEleve(saisie, resultat) {
       continue;
     }
     const jt = eleve[o.j];
+    const fin = o.j2 != null ? eleve[o.j2].fin : jt.fin;
     pousser(s.slice(pos, jt.debut));
-    pousser(s.slice(jt.debut, jt.fin), o.faute ?? null);
-    pos = jt.fin;
+    pousser(s.slice(jt.debut, fin), o.faute ?? null);
+    pos = fin;
   }
   pousser(s.slice(pos));
   return segs.map((x) => ({ ...x, n: x.faute != null ? fautes[x.faute].n : null }));
@@ -433,7 +482,10 @@ export function fusionnerDictees(a, b) {
       if (!x || typeof x !== 'object') continue;
       const d = f[id];
       if (!d) { f[id] = { ...x }; continue; }
-      const recent = String(x.date || '') > String(d.date || '') ? x : d;
+      // Plus récente d'abord ; à date égale, la meilleure dernière note (départage indépendant de l'ordre).
+      const dx = String(x.date || '');
+      const dd = String(d.date || '');
+      const recent = dx > dd ? x : dx < dd ? d : ((Number(x.derniere) || 0) > (Number(d.derniere) || 0) ? x : d);
       f[id] = {
         meilleure: Math.max(d.meilleure ?? 0, x.meilleure ?? 0),
         derniere: recent.derniere,
