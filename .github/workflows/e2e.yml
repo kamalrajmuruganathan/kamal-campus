@@ -1,0 +1,59 @@
+name: Tests des écrans (bout en bout)
+
+# Parcourt l'appli web comme un élève (téléphone simulé 390 × 844, Chromium) à chaque
+# pull request vers main et à chaque push sur upgrade-sdk57 : accueil, fiche et QCM,
+# exercices, résolveur, outils, dictée, examens, recherche, carnet d'erreurs,
+# hors connexion, vitrine. Supabase est entièrement simulé (aucune donnée réelle touchée).
+# En cas d'échec : rapport, captures et traces dans l'artefact « rapport-e2e ».
+# En local : cd app && npm run e2e
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ upgrade-sdk57 ]
+  workflow_dispatch:
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Installer les dépendances de l'appli
+        run: npm ci
+
+      - name: Installer Chromium pour Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Construire le site (comme GitHub Pages)
+        run: E2E_RECONSTRUIRE=1 node -e "import('./e2e/construire-site.mjs').then((m) => m.default())"
+
+      - name: Lancer les tests des écrans
+        run: npx playwright test
+
+      - name: Téléverser le rapport (en cas d'échec)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-e2e
+          path: |
+            app/e2e-rapport/
+            app/e2e-resultats/
+          retention-days: 14
