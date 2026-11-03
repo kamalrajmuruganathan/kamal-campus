@@ -90,6 +90,8 @@ export const Discussion = paresseux(() => import('./ecrans/Discussion'));
 export const Controle = paresseux(() => import('./ecrans/Controle'));
 export const Classement = paresseux(() => import('./ecrans/Classement'));
 export const EspaceParent = paresseux(() => import('./ecrans/EspaceParent'));
+export const EspaceEnseignant = paresseux(() => import('./ecrans/EspaceEnseignant'));
+export const MesClasses = paresseux(() => import('./ecrans/MesClasses'));
 export const Dictees = paresseux(() => import('./ecrans/Dictees'));
 export const Vacances = paresseux(() => import('./ecrans/Vacances'));
 export const DefisSemaine = paresseux(() => import('./ecrans/DefisSemaine'));

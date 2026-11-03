@@ -46,9 +46,9 @@ export default function Chapitre({ route, navigation }) {
           onPress={() => basculerFavori(chapitre.id)}
           accessibilityRole="button"
           accessibilityLabel={estFavori ? 'Retirer des favoris' : 'Ajouter aux favoris'}
-          style={{ alignSelf: 'flex-end', paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}
+          style={{ alignSelf: 'flex-end', minHeight: 48, justifyContent: 'center', paddingHorizontal: t.espace.l, paddingTop: t.espace.s }}
         >
-          <Text style={{ fontSize: 24 }}>{estFavori ? '⭐' : '☆'}</Text>
+          <Text aria-hidden style={{ fontSize: 24 }}>{estFavori ? '⭐' : '☆'}</Text>
         </Pressable>
 
         {estRelu(chapitre) ? (
@@ -89,7 +89,7 @@ export default function Chapitre({ route, navigation }) {
             </Pressable>
           </View>
         )}
-        {etat === 'ok' && <VisionneuseFiche markdown={fiche} />}
+        {etat === 'ok' && <VisionneuseFiche markdown={fiche} fond={t.couleur.fond} />}
         {etat === 'ok' && (
           <View style={{ paddingHorizontal: t.espace.l, paddingBottom: t.espace.m }}>
             <SignalerErreur t={t} chapitreId={chapitre.id} niveau={chapitre.niveau} cible="fiche" />

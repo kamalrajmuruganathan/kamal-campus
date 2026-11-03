@@ -325,6 +325,40 @@ export default function Profil({ navigation }) {
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
         </Pressable>
 
+        {/* Classes de l’élève */}
+        <Pressable
+          onPress={() => navigation.navigate('MesClasses')}
+          accessibilityRole="button"
+          style={({ pressed }) => [
+            st.badges,
+            { backgroundColor: t.couleur.surface, borderColor: t.couleur.trait, borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <Text style={{ fontSize: 20, marginRight: t.espace.m }}>🎒</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>Mes classes</Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>Rejoindre la classe de ton professeur, voir tes devoirs</Text>
+          </View>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
+        </Pressable>
+
+        {/* Espace enseignant */}
+        <Pressable
+          onPress={() => navigation.navigate('EspaceEnseignant')}
+          accessibilityRole="button"
+          style={({ pressed }) => [
+            st.badges,
+            { backgroundColor: t.couleur.surface, borderColor: t.couleur.trait, borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <Text style={{ fontSize: 20, marginRight: t.espace.m }}>🧑‍🏫</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>Espace enseignant</Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>Créer une classe, donner des devoirs, suivre les résultats</Text>
+          </View>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
+        </Pressable>
+
         {/* Apparence — thème clair / sombre / système */}
         <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
           <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
@@ -414,6 +448,49 @@ export default function Profil({ navigation }) {
               );
             })}
           </View>
+
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, fontWeight: '650', marginTop: t.espace.m }}>
+            LECTURE
+          </Text>
+          {[
+            { cle: 'policeDyslexie', l: 'Police adaptée à la dyslexie', d: 'Atkinson Hyperlegible : lettres faciles à distinguer (b/d, I/l/1, O/0).' },
+            { cle: 'interligneLarge', l: 'Interligne plus grand', d: 'Plus d’espace entre les lignes et entre les mots, fiches comprises.' },
+            { cle: 'animationsReduites', l: 'Réduire les animations', d: 'Pas de transitions ni d’effets animés.' },
+          ].map((o) => {
+            const actif = !!profil[o.cle];
+            return (
+              <Pressable
+                key={o.cle}
+                onPress={() => definirReglages({ [o.cle]: !actif })}
+                accessibilityRole="switch"
+                accessibilityLabel={o.l}
+                accessibilityHint={o.d}
+                accessibilityState={{ checked: actif }}
+                style={({ pressed }) => [
+                  st.pilule,
+                  {
+                    alignSelf: 'stretch',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: t.espace.s,
+                    marginTop: t.espace.s,
+                    backgroundColor: actif ? t.couleur.accent : t.couleur.fond,
+                    borderColor: actif ? t.couleur.accent : t.couleur.trait,
+                    borderRadius: t.rayon.m,
+                    opacity: pressed ? 0.7 : 1,
+                  },
+                ]}
+              >
+                <Text aria-hidden style={{ color: actif ? t.couleur.accentTexte : t.couleur.attenue, fontSize: t.police.normale, fontWeight: '800', width: 18 }}>
+                  {actif ? '✓' : '○'}
+                </Text>
+                <View style={{ flex: 1 }}>
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>{o.l}</Text>
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>{o.d}</Text>
+                </View>
+              </Pressable>
+            );
+          })}
         </View>
 
         {/* Vitesse de lecture à voix haute (synthèse vocale des langues) */}
@@ -797,7 +874,7 @@ const st = StyleSheet.create({
   section: { fontSize: 12, fontWeight: '700', letterSpacing: 0.8, marginTop: 28, marginBottom: 10 },
   badges: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, padding: 14 },
   carteJour: { borderRadius: 12, padding: 14 },
-  pilule: { paddingHorizontal: 14, paddingVertical: 8, borderRadius: 999, borderWidth: 1 },
+  pilule: { paddingHorizontal: 14, paddingVertical: 8, minHeight: 44, justifyContent: 'center', borderRadius: 999, borderWidth: 1 },
   piste: { height: 6, borderRadius: 3, overflow: 'hidden' },
   ligneMatiere: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   ligneHisto: {

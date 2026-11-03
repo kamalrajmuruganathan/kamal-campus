@@ -5,7 +5,10 @@
 import { View, Text, useColorScheme, Alert, Platform } from 'react-native';
 import { useSombre } from './src/useSombre';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { compterUsage, compterVisite } from './src/cloud/stats';
+import { evenementsPourRoute } from './lib/statsUsage';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { HeaderBackButton } from '@react-navigation/elements';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -35,7 +38,7 @@ import {
   Outils, Formulaires, Sujets, Epreuve, BacBlanc, Profil, Badges, Enigmes,
   LecteurEnigme, LecteurAllumettes, Resolveur, Duel, Ligue, Defi, Defis, Statistiques,
   RecapHebdo, ModeExamen, ExamenSurMesure, Podcast, Annales, Planning, APropos, Amis,
-  Discussion, Controle, Classement, EspaceParent, Dictees, Vacances, DefisSemaine,
+  Discussion, Controle, Classement, EspaceParent, EspaceEnseignant, MesClasses, Dictees, Vacances, DefisSemaine,
 } from './src/ecransParesseux';
 
 // Sur le web, Alert.alert de React Native ne fait rien (fonction vide de react-native-web) :
@@ -69,6 +72,19 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
 
 const Pile = createNativeStackNavigator();
 
+// Web : le bouton retour de l'en-tête s'appelait « Go back » pour les lecteurs d'écran
+// et ne mesurait que 30 px. On le nomme « Retour » et on agrandit la zone à toucher.
+const optionsRetourWeb = (navigation) => (Platform.OS !== 'web' ? {} : {
+  headerLeft: ({ canGoBack, tintColor }) => (canGoBack ? (
+    <HeaderBackButton
+      tintColor={tintColor}
+      onPress={navigation.goBack}
+      accessibilityLabel="Retour"
+      style={{ minWidth: 44, minHeight: 44, justifyContent: 'center' }}
+    />
+  ) : null),
+});
+
 function Navigation() {
   const sombre = useSombre();
   const t = theme(sombre);
@@ -92,15 +108,28 @@ function Navigation() {
   }
 
   return (
-    <NavigationContainer theme={themeNavigation}>
+    <NavigationContainer
+      theme={themeNavigation}
+      onReady={compterVisite}
+      onStateChange={(etat) => {
+        // Statistiques anonymes : nom de l'écran ouvert (et identifiant du chapitre), sans donnée personnelle.
+        let r = etat && etat.routes && etat.routes[etat.index];
+        while (r && r.state && r.state.routes) r = r.state.routes[r.state.index];
+        for (const e of evenementsPourRoute(r)) compterUsage(e.evenement, e.detail);
+      }}
+    >
       <StatusBar style={sombre ? 'light' : 'dark'} />
+      <View role="main" style={{ flex: 1 }}>
       <Pile.Navigator
         initialRouteName={profil.onboardingFait ? 'Accueil' : 'Onboarding'}
-        screenOptions={{
+        screenOptions={({ navigation }) => ({
           headerTitleStyle: { fontSize: 17 },
           headerBackTitleVisible: false,
           contentStyle: { backgroundColor: t.couleur.fond },
-        }}
+          // Accessibilité : animations coupées sur demande ; bouton retour nommé « Retour » (web).
+          animation: profil.animationsReduites ? 'none' : 'default',
+          ...optionsRetourWeb(navigation),
+        })}
       >
         <Pile.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
         <Pile.Screen name="Accueil" component={Accueil} options={{ headerShown: false }} />
@@ -152,11 +181,14 @@ function Navigation() {
         <Pile.Screen name="Controle" component={Controle} options={{ title: 'Je révise mon contrôle' }} />
         <Pile.Screen name="Classement" component={Classement} options={{ title: 'Classement de la semaine' }} />
         <Pile.Screen name="EspaceParent" component={EspaceParent} options={{ title: 'Espace parent' }} />
+        <Pile.Screen name="EspaceEnseignant" component={EspaceEnseignant} options={{ title: 'Espace enseignant' }} />
+        <Pile.Screen name="MesClasses" component={MesClasses} options={{ title: 'Mes classes' }} />
         <Pile.Screen name="Dictees" component={Dictees} options={{ title: 'Dictées' }} />
         <Pile.Screen name="Vacances" component={Vacances} options={{ title: 'Révisions de vacances' }} />
         <Pile.Screen name="DefisSemaine" component={DefisSemaine} options={{ title: 'Défis de la semaine' }} />
         <Pile.Screen name="Discussion" component={Discussion} options={({ route }) => ({ title: route.params?.pseudo ?? 'Discussion' })} />
       </Pile.Navigator>
+      </View>
       <Annonces />
     </NavigationContainer>
   );

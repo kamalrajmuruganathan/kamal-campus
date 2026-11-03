@@ -300,7 +300,7 @@ function DetailClasse({ t, classe, retour, rechargerListe, gererErreur }) {
         </CarteE>
       ) : null}
 
-      <View style={{ flexDirection: 'row', padding: 4, gap: 4, borderWidth: 1, borderColor: C.trait, backgroundColor: C.surface, borderRadius: t.rayon.m, marginTop: t.espace.m }}>
+      <View role="tablist" aria-label="Vue de la classe" style={{ flexDirection: 'row', padding: 4, gap: 4, borderWidth: 1, borderColor: C.trait, backgroundColor: C.surface, borderRadius: t.rayon.m, marginTop: t.espace.m }}>
         {[['tableau', 'Résultats'], ['devoirs', 'Devoirs'], ['eleves', 'Élèves']].map(([cle, libelle]) => {
           const actif = onglet === cle;
           return (

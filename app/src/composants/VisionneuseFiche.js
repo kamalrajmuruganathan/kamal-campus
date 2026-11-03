@@ -18,6 +18,8 @@ import MarkdownIt from 'markdown-it';
 import { rendreAvecFormules } from '../../lib/markdownmath';
 import { GABARIT_HTML } from '../visionneuse';
 import ZoomSchema from './ZoomSchema';
+import { useProgression } from '../progression/Contexte';
+import { cssFiche } from '../accessibiliteWeb';
 
 const md = new MarkdownIt({
   html: false,      // aucun HTML brut : c'est ce qui neutralise les notes de production
@@ -52,10 +54,15 @@ export default function VisionneuseFiche({ markdown, style }) {
   // Schéma touché dans la fiche → plein écran (message envoyé par le gabarit).
   const [schema, setSchema] = useState(null);
 
+  // Réglages d'accessibilité du profil (interligne, taille du texte, animations).
+  const profil = useProgression()?.profil;
+  const css = cssFiche(profil);
   const html = useMemo(() => {
     const corps = rendreAvecFormules(md, nettoyerFiche(markdown));
-    return GABARIT_HTML.replace('__HTML__', () => JSON.stringify(corps));
-  }, [markdown]);
+    return GABARIT_HTML
+      .replace('</head>', () => (css ? `<style>${css}</style></head>` : '</head>'))
+      .replace('__HTML__', () => JSON.stringify(corps));
+  }, [markdown, css]);
 
   return (
     <View style={[styles.conteneur, style]}>

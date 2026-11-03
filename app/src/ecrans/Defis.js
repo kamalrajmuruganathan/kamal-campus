@@ -409,7 +409,7 @@ function ModalNouveau({ visible, onClose, t, amis, onLancer, onAmis }) {
               </View>
             )}
             <Text style={{ color: C.attenue, fontSize: t.police.minuscule, fontWeight: '700', marginTop: t.espace.m, marginBottom: 8 }}>CHAPITRE</Text>
-            <TextInput value={filtre} onChangeText={setFiltre} placeholder="Rechercher un chapitre (toutes classes)…" placeholderTextColor={C.attenue} style={champ} autoCapitalize="none" />
+            <TextInput accessibilityLabel="Rechercher un chapitre" value={filtre} onChangeText={setFiltre} placeholder="Rechercher un chapitre (toutes classes)…" placeholderTextColor={C.attenue} style={champ} autoCapitalize="none" />
             {!f && (
               <>
                 <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginBottom: 6 }}>1. La classe</Text>

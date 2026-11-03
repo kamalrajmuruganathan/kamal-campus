@@ -14,6 +14,9 @@ import MarkdownIt from 'markdown-it';
 import { rendreAvecFormules } from '../../lib/markdownmath';
 import { useSombre } from '../useSombre';
 import ZoomSchema from './ZoomSchema';
+import { useProgression } from '../progression/Contexte';
+import { useTheme } from '../useTheme';
+import { cssFiche } from '../accessibiliteWeb';
 
 // Gabarit HTML avec KaTeX et ses polices (≈ 650 Ko) : morceau à part, téléchargé dès le
 // démarrage mais sans retarder l'affichage de l'accueil (qui n'en a pas besoin).
@@ -65,13 +68,13 @@ export function nettoyerFiche(markdown) {
  * ou le bouton qui l'entoure, sans rectangle blanc) et thème clair/sombre choisi
  * dans l'appli (réglage du profil) plutôt que celui du système.
  */
-function adapterGabarit(gabarit, sombre, inerte) {
+function adapterGabarit(gabarit, sombre, inerte, cssReglages = '', fond = null) {
   // Visionneuse inerte (dans un choix de QCM…) : le schéma ne s'agrandit pas,
   // on n'affiche donc pas l'indice « 🔍 Agrandir ».
   const enPlus = inerte ? ' .schema-zoom .indice { display: none; } .schema-zoom { cursor: inherit; }' : '';
   return gabarit
     .replace('@media (prefers-color-scheme: dark)', sombre ? '@media all' : '@media not all')
-    .replace('</head>', () => `<style>html, body { background: transparent !important; }${enPlus}</style></head>`);
+    .replace('</head>', () => `<style>html, body { background: ${/^#[0-9a-f]{3,8}$/i.test(fond || '') ? fond : 'transparent'} !important; }${enPlus}</style><style>${cssReglages}</style></head>`);
 }
 
 /**
@@ -79,17 +82,24 @@ function adapterGabarit(gabarit, sombre, inerte) {
  * QCM, carte à retourner). Sinon l'iframe garde le clic pour elle et toucher le
  * texte de la réponse ne fait rien.
  */
-export default function VisionneuseFiche({ markdown, style, inerte = false }) {
+/**
+ * `fond` (facultatif) : couleur du fond sur lequel la fiche est posée. Donnée, elle est
+ * aussi celle de l'iframe : les outils d'accessibilité mesurent alors le vrai contraste.
+ */
+export default function VisionneuseFiche({ markdown, style, inerte = false, fond = null }) {
   const [hauteur, setHauteur] = useState(64);
   const iframeRef = useRef(null);
   const sombre = useSombre();
   const gabarit = useGabarit();
+  // Réglages d'accessibilité du profil (police adaptée, interligne, taille, animations).
+  const t = useTheme();
+  const cssReglages = cssFiche(useProgression()?.profil, t.couleur.accent);
 
   const html = useMemo(() => {
     if (!gabarit) return null;
     const corps = rendreAvecFormules(md, nettoyerFiche(markdown));
-    return adapterGabarit(gabarit, sombre, inerte).replace('__HTML__', () => JSON.stringify(corps));
-  }, [markdown, sombre, inerte, gabarit]);
+    return adapterGabarit(gabarit, sombre, inerte, cssReglages, fond).replace('__HTML__', () => JSON.stringify(corps));
+  }, [markdown, sombre, inerte, gabarit, cssReglages, fond]);
 
   const mesurer = useCallback(() => {
     const f = iframeRef.current;
@@ -138,7 +148,9 @@ export default function VisionneuseFiche({ markdown, style, inerte = false }) {
         ref={iframeRef}
         srcDoc={html}
         onLoad={onLoad}
-        title="Fiche de revision"
+        title={inerte ? undefined : 'Fiche de révision'}
+        aria-hidden={inerte ? 'true' : undefined}
+        tabIndex={inerte ? -1 : undefined}
         scrolling="no"
         style={{
           width: '100%',

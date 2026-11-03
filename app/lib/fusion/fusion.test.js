@@ -341,7 +341,7 @@ test('profil vide d’un côté : l’autre est rendu tel quel (pas de perte, pa
 /** Champs « réglages » : l'appareil le plus récent l'emporte (c'est voulu). */
 const REGLAGES = new Set(['version', 'langue', 'themePref', 'tailleTexte', 'contrasteFort', 'vitesseParole', 'voix',
   'lectureAutoCartes', 'lecturePartout', 'niveauParDefaut', 'dernierChapitre', 'rappelActif', 'rappelHeure',
-  'objectifQuotidien']);
+  'objectifQuotidien', 'policeDyslexie', 'interligneLarge', 'animationsReduites']);
 
 function fichiersJs(dossier) {
   const out = [];

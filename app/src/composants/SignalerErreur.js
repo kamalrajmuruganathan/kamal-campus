@@ -47,7 +47,7 @@ export default function SignalerErreur({ t, chapitreId, niveau, cible, extrait, 
     paddingVertical: 8,
     marginRight: 8,
     marginBottom: 8,
-    minHeight: 40,
+    minHeight: 44,
     justifyContent: 'center',
   });
 
@@ -57,7 +57,7 @@ export default function SignalerErreur({ t, chapitreId, niveau, cible, extrait, 
         onPress={ouvrir}
         accessibilityRole="button"
         accessibilityLabel="Signaler une erreur"
-        style={[{ alignSelf: 'flex-start', minHeight: 36, justifyContent: 'center', paddingVertical: 4 }, style]}
+        style={[{ alignSelf: 'flex-start', minHeight: 44, justifyContent: 'center', paddingVertical: 4 }, style]}
       >
         <Text style={{ color: C.attenue, fontSize: t.police.minuscule, textDecorationLine: 'underline' }}>
           ⚠️ Signaler une erreur
@@ -72,7 +72,7 @@ export default function SignalerErreur({ t, chapitreId, niveau, cible, extrait, 
           >
             <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: t.espace.s }}>
               <Text style={{ color: C.texte, fontWeight: '700', fontSize: t.police.grande, flex: 1 }}>Signaler une erreur</Text>
-              <Pressable onPress={fermer} accessibilityRole="button" accessibilityLabel="Fermer" style={{ padding: 6 }}>
+              <Pressable onPress={fermer} accessibilityRole="button" accessibilityLabel="Fermer" style={{ minWidth: 44, minHeight: 44, alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ color: C.attenue, fontSize: 18 }}>✕</Text>
               </Pressable>
             </View>

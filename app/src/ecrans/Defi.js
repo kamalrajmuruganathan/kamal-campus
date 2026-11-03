@@ -149,6 +149,7 @@ export default function Defi({ navigation }) {
           <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '700' }}>Rejoindre un défi</Text>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 6 }}>Colle le code envoyé par ton ami :</Text>
           <TextInput
+            accessibilityLabel="Code du défi reçu"
             value={saisie}
             onChangeText={setSaisie}
             placeholder="D1~..."
@@ -208,6 +209,7 @@ export default function Defi({ navigation }) {
           <View style={{ height: t.espace.l }} />
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, alignSelf: 'flex-start' }}>Colle le code résultat de ton ami :</Text>
           <TextInput
+            accessibilityLabel="Code du résultat de ton ami"
             value={saisieResultat}
             onChangeText={setSaisieResultat}
             placeholder="S1~..."

@@ -48,6 +48,7 @@ export default function Recherche({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
       <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
         <TextInput
+          accessibilityLabel="Chercher un chapitre ou une notion"
           value={q}
           onChangeText={setQ}
           placeholder="Chercher un chapitre, une notion…"

@@ -9,7 +9,7 @@
 <style>
   :root{
     --paper:#f6f4ec; --paper-card:#fffdf8; --ink:#16243a; --ink-soft:#4a5a70;
-    --line:#dcd8c9; --grid:rgba(31,111,235,.055); --blue:#1f6feb; --blue-deep:#0b3f9e;
+    --line:#dcd8c9; --grid:rgba(31,111,235,.055); --blue:#1d67db; --blue-deep:#0b3f9e;
     --blue-tint:#e7f0ff; --craie:#ff6b45;
   }
   :root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
@@ -52,8 +52,10 @@
     border:1px solid var(--line); border-radius:999px; padding:3px 10px; margin:2px 4px 2px 0;}
   .pied{margin-top:44px; padding-top:20px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:.9rem;}
   .pied a{color:var(--blue);}
+  .pied a{display:inline-block; padding-block:12px;}
+  :focus-visible{outline:3px solid var(--blue); outline-offset:2px; border-radius:4px;}
 </style>
-<div class="wrap">
+<main class="wrap">
   <div class="top">
     <div class="logo">K</div>
     <div>
@@ -61,7 +63,7 @@
       <h1>Politique de confidentialité</h1>
     </div>
   </div>
-  <p class="maj">Dernière mise à jour : 17 septembre 2026</p>
+  <p class="maj">Dernière mise à jour : 3 novembre 2026</p>
 
   <p class="intro">Kamal Campus est une application de révision (du CP à la Terminale). Cette page explique, en clair, quelles données nous utilisons, pourquoi, et quels sont tes droits. Nous voulons rester simples et honnêtes : <strong>pas de publicité, pas de revente de données, pas de traceurs publicitaires.</strong></p>
 
@@ -95,19 +97,36 @@
   </div>
 
   <h2><span class="n">5</span> Où sont stockées tes données</h2>
-  <p>Tes données de compte et de progression sont hébergées chez notre prestataire technique <strong>Supabase</strong>, sur des serveurs situés dans l'<strong>Union européenne</strong> (région Europe centrale — Allemagne). Les échanges avec l'appli sont chiffrés (HTTPS).</p>
+  <p>Tes données de compte et de progression sont hébergées chez notre prestataire technique <strong>Supabase</strong>, sur des serveurs situés dans l'<strong>Union européenne</strong> (région Europe de l'Ouest — Irlande). Les échanges avec l'appli sont chiffrés (HTTPS).</p>
 
   <h2><span class="n">6</span> Qui peut y accéder — sécurité</h2>
   <ul>
-    <li><strong>Toi seul.</strong> Une règle de sécurité au niveau de la base (Row Level Security) fait que <strong>chaque compte ne peut lire et modifier que ses propres données</strong>. Un élève ne voit jamais la progression d'un autre.</li>
+    <li><strong>Toi seul.</strong> Une règle de sécurité au niveau de la base (Row Level Security) fait que <strong>chaque compte ne peut lire et modifier que ses propres données</strong>. Un élève ne voit jamais la progression d'un autre. Seule exception, et seulement si tu le choisis : si tu rejoins la classe d'un professeur, il voit ton pseudo et tes résultats à ses devoirs (voir la section 7).</li>
     <li>Ton mot de passe est haché, donc illisible même pour nous.</li>
     <li>Nous ne vendons, ne louons et ne partageons tes données avec <strong>aucun tiers</strong> à des fins commerciales.</li>
   </ul>
 
-  <h2><span class="n">7</span> Combien de temps nous les gardons</h2>
+  <h2><span class="n">7</span> Classes et devoirs (espace enseignant)</h2>
+  <p>Un professeur peut créer une « classe » dans Kamal Campus et te donner un <strong>code de 6 caractères</strong>. Rien n'est partagé tant que tu n'as pas tapé ce code toi-même dans « Mes classes ».</p>
+  <div class="carte">
+    <p><strong>Ce que le professeur de la classe voit, et rien d'autre :</strong></p>
+    <ul>
+      <li>le <strong>pseudo</strong> que tu choisis en rejoignant la classe (tu peux le changer quand tu veux) et la date à laquelle tu l'as rejointe ;</li>
+      <li>tes <strong>résultats aux devoirs de sa classe</strong> : pour un QCM, ton meilleur score (par exemple 14/20) ; pour des exercices, le nombre d'exercices faits et réussis ; la date à laquelle le devoir a été fait, et le nombre d'essais.</li>
+    </ul>
+    <p><strong>Ce qu'il ne voit jamais :</strong> ton adresse e-mail, ton identifiant de compte, ton profil, tes XP, ta série, tes autres résultats, ton carnet d'erreurs, tes amis ou tes messages.</p>
+  </div>
+  <ul>
+    <li><strong>Qui voit ces informations :</strong> uniquement le compte du professeur qui a créé la classe. Les autres élèves de la classe ne voient ni ton pseudo ni tes résultats.</li>
+    <li><strong>Quand ton résultat est envoyé :</strong> quand tu fais le QCM ou des exercices d'un chapitre sur lequel ton professeur t'a donné un devoir.</li>
+    <li><strong>Quitter une classe :</strong> dans l'appli, « Mes classes » → « Quitter la classe ». Ton pseudo et tes résultats dans cette classe sont alors <strong>effacés</strong>. Le professeur peut aussi te retirer de la classe (même effet). Si le professeur supprime la classe, tout est effacé.</li>
+    <li>Les données des classes sont hébergées au même endroit que le reste (section 5) et protégées de la même façon : personne ne peut les lire directement ; l'appli passe par des fonctions qui vérifient qui demande.</li>
+  </ul>
+
+  <h2><span class="n">8</span> Combien de temps nous les gardons</h2>
   <p>Nous conservons tes données <strong>tant que ton compte existe</strong>. Si tu supprimes ton compte, tes données de progression sont effacées.</p>
 
-  <h2><span class="n">8</span> Tes droits</h2>
+  <h2><span class="n">9</span> Tes droits</h2>
   <p>Conformément au RGPD, tu disposes des droits suivants :</p>
   <p>
     <span class="pastille">Accès</span>
@@ -119,22 +138,23 @@
   </p>
   <p>Pour les exercer, écris-nous à <a href="mailto:kamalcampus.contact@gmail.com">kamalcampus.contact@gmail.com</a>. Tu peux aussi, si tu estimes que tes droits ne sont pas respectés, saisir la <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
 
-  <h2><span class="n">9</span> Supprimer ton compte</h2>
+  <h2><span class="n">10</span> Supprimer ton compte</h2>
   <p>Tu peux demander la suppression de ton compte et de ta progression à tout moment en nous écrivant. Nous procédons à l'effacement dans les meilleurs délais.</p>
 
-  <h2><span class="n">10</span> Pas de pub, pas de traceurs</h2>
+  <h2><span class="n">11</span> Pas de pub, pas de traceurs</h2>
   <p>Kamal Campus n'affiche <strong>aucune publicité</strong> et n'utilise <strong>aucun traceur publicitaire ni cookie de suivi tiers</strong>. L'appli utilise uniquement un stockage local (sur ton appareil) pour garder ta session ouverte et te permettre de réviser même hors ligne.</p>
+  <p><strong>Statistiques anonymes.</strong> Pour savoir si l'appli est utilisée et améliorer les chapitres les plus consultés, nous comptons seulement des <strong>totaux par jour</strong> : nombre de visites, d'ouvertures de chaque écran et de chaque chapitre. Ces compteurs ne contiennent <strong>aucune donnée personnelle</strong> (ni compte, ni adresse IP, ni identifiant d'appareil, ni cookie) : il est impossible de savoir qui a fait quoi. Pour ne compter qu'une visite par jour, l'appli garde seulement la date de ta dernière visite sur ton appareil.</p>
 
-  <h2><span class="n">11</span> Modifications de cette politique</h2>
+  <h2><span class="n">12</span> Modifications de cette politique</h2>
   <p>Si cette politique évolue, nous mettrons à jour la date en haut de page. Les changements importants te seront signalés dans l'appli.</p>
 
-  <h2><span class="n">12</span> Nous contacter</h2>
+  <h2><span class="n">13</span> Nous contacter</h2>
   <p>Une question, une demande, un souci ? Écris-nous : <a href="mailto:kamalcampus.contact@gmail.com">kamalcampus.contact@gmail.com</a>.</p>
 
   <div class="pied">
-    <a href="/kamal-campus/">← Retour à l'accueil</a> · Kamal Campus — réviser partout, sans pub ni traceurs.
+    <a href="/kamal-campus/">← Retour à l'accueil</a> · <a href="./mentions-legales.html">Mentions légales</a> · Kamal Campus — réviser partout, sans pub ni traceurs.
   </div>
-</div>
+</main>
 <script>
   (function(){ var r=document.documentElement,s; try{s=localStorage.getItem('kc-theme');}catch(e){}
     if(s==='dark'||s==='light') r.setAttribute('data-theme',s); })();

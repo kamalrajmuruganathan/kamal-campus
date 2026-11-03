@@ -94,14 +94,14 @@ export default function Amis({ navigation }) {
       <View style={carte}>
         <Text style={titre}>Ton pseudo</Text>
         <Text style={{ color: C.texte, opacity: 0.6, marginBottom: 8, fontSize: 13 }}>C'est ce nom que tes amis utilisent pour te trouver.</Text>
-        <TextInput value={pseudoEdit} onChangeText={setPseudoEdit} autoCapitalize="none" placeholder="ton_pseudo" placeholderTextColor={sombre ? '#888' : '#aaa'} style={champ} />
+        <TextInput accessibilityLabel="Ton pseudo" value={pseudoEdit} onChangeText={setPseudoEdit} autoCapitalize="none" placeholder="ton_pseudo" placeholderTextColor={sombre ? '#888' : '#aaa'} style={champ} />
         <Pressable onPress={enregistrerPseudo} disabled={occupe} style={[btn, { marginTop: 10, opacity: occupe ? 0.6 : 1 }]}><Text style={btnTxt}>Enregistrer</Text></Pressable>
       </View>
 
       <View style={carte}>
         <Text style={titre}>Ajouter un ami</Text>
         <View style={{ flexDirection: 'row', gap: 8 }}>
-          <TextInput value={recherche} onChangeText={setRecherche} autoCapitalize="none" placeholder="Chercher un pseudo..." placeholderTextColor={sombre ? '#888' : '#aaa'} style={[champ, { flex: 1 }]} onSubmitEditing={lancerRecherche} returnKeyType="search" />
+          <TextInput accessibilityLabel="Chercher un ami par son pseudo" value={recherche} onChangeText={setRecherche} autoCapitalize="none" placeholder="Chercher un pseudo..." placeholderTextColor={sombre ? '#888' : '#aaa'} style={[champ, { flex: 1 }]} onSubmitEditing={lancerRecherche} returnKeyType="search" />
           <Pressable onPress={lancerRecherche} style={btn}><Text style={btnTxt}>Chercher</Text></Pressable>
         </View>
         {infoRecherche ? <Text style={{ color: C.texte, opacity: 0.7, fontSize: 13, marginTop: 10 }}>{infoRecherche}</Text> : null}

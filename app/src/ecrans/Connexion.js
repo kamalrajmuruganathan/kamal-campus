@@ -12,7 +12,7 @@ import {
 import { useAuth } from '../cloud/AuthContexte';
 
 const PALETTE = {
-  clair: { fond: '#f6f4ec', carte: '#fffdf8', encre: '#16243a', doux: '#4a5a70', trait: '#dcd8c9', bleu: '#1f6feb', craie: '#ff6b45' },
+  clair: { fond: '#f6f4ec', carte: '#fffdf8', encre: '#16243a', doux: '#4a5a70', trait: '#dcd8c9', bleu: '#1d67db', craie: '#ff6b45' },
   sombre: { fond: '#0d1725', carte: '#14243a', encre: '#eaf1fb', doux: '#9fb2cc', trait: '#22344e', bleu: '#4f95ff', craie: '#ff7d5c' },
 };
 
@@ -79,12 +79,12 @@ export default function Connexion() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', padding: 24 }}>
-        <View style={{ alignSelf: 'center', width: '100%', maxWidth: 420 }}>
+        <View role="main" style={{ alignSelf: 'center', width: '100%', maxWidth: 420 }}>
           <View style={{ alignItems: 'center', marginBottom: 24 }}>
             <View style={{ width: 56, height: 56, borderRadius: 15, backgroundColor: c.bleu, alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
-              <Text style={{ color: '#fff', fontSize: 26, fontWeight: '900' }}>K</Text>
+              <Text aria-hidden style={{ color: '#fff', fontSize: 26, fontWeight: '900' }}>K</Text>
             </View>
-            <Text style={{ fontSize: 24, fontWeight: '800', color: c.encre, textAlign: 'center' }}>
+            <Text accessibilityRole="header" aria-level={1} style={{ fontSize: 24, fontWeight: '800', color: c.encre, textAlign: 'center' }}>
               Révise partout, retrouve tout.
             </Text>
             <Text style={{ fontSize: 14, color: c.doux, textAlign: 'center', marginTop: 8, lineHeight: 20 }}>
@@ -98,6 +98,8 @@ export default function Connexion() {
             <Text style={{ fontSize: 12, fontWeight: '700', color: c.doux, marginBottom: 6 }}>EMAIL</Text>
             <TextInput
               value={email}
+              accessibilityLabel="Adresse e-mail"
+              autoComplete="email"
               onChangeText={setEmail}
               placeholder="ton@email.fr"
               placeholderTextColor={c.doux}
@@ -113,6 +115,8 @@ export default function Connexion() {
             <TextInput
               ref={refMdp}
               value={mdp}
+              accessibilityLabel="Mot de passe"
+              autoComplete={inscription ? 'new-password' : 'current-password'}
               onChangeText={setMdp}
               placeholder="6 caractères minimum"
               placeholderTextColor={c.doux}
@@ -136,13 +140,13 @@ export default function Connexion() {
             >
               {enCours
                 ? <ActivityIndicator color="#fff" />
-                : <Text style={{ color: '#fff', fontWeight: '800', fontSize: 16 }}>{inscription ? 'Créer mon compte' : 'Se connecter'}</Text>}
+                : <Text style={{ color: sombre ? '#0d1725' : '#fff', fontWeight: '800', fontSize: 16 }}>{inscription ? 'Créer mon compte' : 'Se connecter'}</Text>}
             </Pressable>
           </View>
 
           <Pressable
             onPress={() => { setErreur(''); setInfo(''); setMode(inscription ? 'connexion' : 'inscription'); }}
-            style={{ marginTop: 18, alignItems: 'center' }}
+            style={{ marginTop: 8, minHeight: 44, justifyContent: 'center', alignItems: 'center' }}
           >
             <Text style={{ color: c.doux, fontSize: 14 }}>
               {inscription ? 'Déjà un compte ? ' : 'Pas encore de compte ? '}
