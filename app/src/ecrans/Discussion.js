@@ -69,7 +69,7 @@ export default function Discussion({ route }) {
         })}
       </ScrollView>
       <View style={{ flexDirection: 'row', gap: 8, padding: 10, borderTopWidth: 1, borderTopColor: C.trait }}>
-        <TextInput value={texte} onChangeText={setTexte} placeholder={`Message à ${pseudo}...`} placeholderTextColor={sombre ? '#888' : '#aaa'} style={{ flex: 1, borderColor: C.trait, borderWidth: 1, borderRadius: 20, paddingHorizontal: 14, paddingVertical: 10, color: C.texte }} onSubmitEditing={envoyer} returnKeyType="send" />
+        <TextInput accessibilityLabel={`Message à ${pseudo}`} value={texte} onChangeText={setTexte} placeholder={`Message à ${pseudo}...`} placeholderTextColor={sombre ? '#888' : '#aaa'} style={{ flex: 1, borderColor: C.trait, borderWidth: 1, borderRadius: 20, paddingHorizontal: 14, paddingVertical: 10, color: C.texte }} onSubmitEditing={envoyer} returnKeyType="send" />
         <Pressable onPress={envoyer} style={{ backgroundColor: C.accent, borderRadius: 20, paddingHorizontal: 18, justifyContent: 'center' }}><Text style={{ color: '#fff', fontWeight: '700' }}>Envoyer</Text></Pressable>
       </View>
     </KeyboardAvoidingView>

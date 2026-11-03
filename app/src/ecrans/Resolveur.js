@@ -33,6 +33,7 @@ export default function Resolveur() {
         </Text>
 
         <TextInput
+          accessibilityLabel="Équation ou expression à résoudre"
           value={entree}
           onChangeText={setEntree}
           placeholder="ex. 2x + 5 = 13"

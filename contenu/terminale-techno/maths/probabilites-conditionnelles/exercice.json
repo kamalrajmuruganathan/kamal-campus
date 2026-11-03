@@ -13,504 +13,546 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}12 $ et $ P(B) = 0{,}4 $. Calculer $ P_B(A) $.",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Dans un lycée de $500$ élèves, $220$ sont internes ; parmi les internes, $132$ sont des filles ; parmi les externes, $140$ sont des filles. On choisit un élève au hasard. On note $I$ « l'élève est interne » et $G$ « l'élève est une fille ». Calculer $P_I(G)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}12}{0{,}4} = 0{,}3 $."
+        "$P_I(G) = \\dfrac{\\text{filles internes}}{\\text{internes}} = \\dfrac{132}{220}$.",
+        "$= 0{,}6$."
       ],
-      "reponse": "$ 0{,}3 $"
+      "reponse": "$0{,}6$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}1 $ et $ P(B) = 0{,}5 $. Calculer $ P_B(A) $.",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Dans un lycée de $500$ élèves, $220$ sont internes ; parmi les internes, $132$ sont des filles ; parmi les externes, $140$ sont des filles. On choisit un élève au hasard ($I$ : interne ; $G$ : fille). Calculer $P(I)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}1}{0{,}5} = 0{,}2 $."
+        "$P(I) = \\dfrac{220}{500}$.",
+        "$= 0{,}44$."
       ],
-      "reponse": "$ 0{,}2 $"
+      "reponse": "$0{,}44$"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}06 $ et $ P(B) = 0{,}3 $. Calculer $ P_B(A) $.",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On sait que $P(A) = 0{,}4$ et $P(A \\cap B) = 0{,}1$. Calculer $P_A(B)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}06}{0{,}3} = 0{,}2 $."
+        "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}1}{0{,}4} = 0{,}25$."
       ],
-      "reponse": "$ 0{,}2 $"
+      "reponse": "$0{,}25$"
     },
     {
       "id": 4,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}18 $ et $ P(B) = 0{,}6 $. Calculer $ P_B(A) $.",
+      "notion": "formule-du-produit",
+      "enonce": "$P(A) = 0{,}6$ et $P_A(B) = 0{,}3$. Calculer $P(A \\cap B)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}18}{0{,}6} = 0{,}3 $."
+        "$P(A \\cap B) = P(A) \\times P_A(B) = 0{,}6 \\times 0{,}3 = 0{,}18$."
       ],
-      "reponse": "$ 0{,}3 $"
+      "reponse": "$0{,}18$"
     },
     {
       "id": 5,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}05 $ et $ P(B) = 0{,}25 $. Calculer $ P_B(A) $.",
+      "notion": "formule-du-produit",
+      "enonce": "$P(A) = 0{,}25$ et $P_A(B) = 0{,}8$. Calculer $P(A \\cap B)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}05}{0{,}25} = 0{,}2 $."
+        "$P(A \\cap B) = P(A) \\times P_A(B) = 0{,}25 \\times 0{,}8 = 0{,}2$."
       ],
-      "reponse": "$ 0{,}2 $"
+      "reponse": "$0{,}2$"
     },
     {
       "id": 6,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}2 $ et $ P(B) = 0{,}8 $. Calculer $ P_B(A) $.",
+      "notion": "arbre-pondere",
+      "enonce": "Un arbre pondéré : $P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$. Quelle probabilité porte la branche allant de la racine à $\\overline{A}$ ?",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}2}{0{,}8} = 0{,}25 $."
+        "La somme des probabilités issues d'un même nœud vaut $1$.",
+        "$P(\\overline{A}) = 1 - 0{,}3 = 0{,}7$."
       ],
-      "reponse": "$ 0{,}25 $"
+      "reponse": "$0{,}7$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}15 $ et $ P(B) = 0{,}5 $. Calculer $ P_B(A) $.",
+      "notion": "arbre-pondere",
+      "enonce": "Un arbre pondéré : $P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$. Quelle probabilité porte la branche allant de $A$ à $\\overline{B}$ ?",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}15}{0{,}5} = 0{,}3 $."
+        "$P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}8 = 0{,}2$."
       ],
-      "reponse": "$ 0{,}3 $"
+      "reponse": "$0{,}2$"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}28 $ et $ P(B) = 0{,}7 $. Calculer $ P_B(A) $.",
+      "notion": "arbre-pondere",
+      "enonce": "Un arbre pondéré : $P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$. Calculer la probabilité du chemin $A \\to B$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}28}{0{,}7} = 0{,}4 $."
+        "Règle des chemins : on multiplie les probabilités le long du chemin.",
+        "$P(A \\cap B) = 0{,}3 \\times 0{,}8 = 0{,}24$."
       ],
-      "reponse": "$ 0{,}4 $"
+      "reponse": "$0{,}24$"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}09 $ et $ P(B) = 0{,}36 $. Calculer $ P_B(A) $.",
+      "notion": "traduire-un-enonce",
+      "enonce": "Quelle probabilité la phrase « Parmi les clients qui ont acheté ($A$), $30\\,\\%$ reviennent ($R$). » donne-t-elle : $P(A \\cap R)$, $P_A(R)$ ou $P_R(A)$ ?",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}09}{0{,}36} = 0{,}25 $."
+        "« Parmi les… » indique la population de référence : c'est la condition.",
+        "Il s'agit de $P_A(R)$."
       ],
-      "reponse": "$ 0{,}25 $"
+      "reponse": "$P_A(R)$"
     },
     {
       "id": 10,
       "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}24 $ et $ P(B) = 0{,}4 $. Calculer $ P_B(A) $.",
+      "notion": "traduire-un-enonce",
+      "enonce": "Quelle probabilité la phrase « $30\\,\\%$ des clients achètent et reviennent. » donne-t-elle : $P(A \\cap R)$, $P_A(R)$ ou $P_R(A)$ ?",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}24}{0{,}4} = 0{,}6 $."
+        "Aucune condition : « achètent **et** reviennent » est une intersection.",
+        "Il s'agit de $P(A \\cap R)$."
       ],
-      "reponse": "$ 0{,}6 $"
+      "reponse": "$P(A \\cap R)$"
     },
     {
       "id": 11,
-      "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}35 $ et $ P(B) = 0{,}5 $. Calculer $ P_B(A) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Dans un lycée de $500$ élèves, $220$ sont internes ; parmi les internes, $132$ sont des filles ; parmi les externes, $140$ sont des filles. On choisit un élève au hasard ($I$ : interne ; $G$ : fille). Calculer $P_{\\overline{I}}(G)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}35}{0{,}5} = 0{,}7 $."
+        "Externes : $500 - 220 = 280$, dont $140$ filles : $P_{\\overline{I}}(G) = \\dfrac{140}{280}$.",
+        "$= 0{,}5$."
       ],
-      "reponse": "$ 0{,}7 $"
+      "reponse": "$0{,}5$"
     },
     {
       "id": 12,
-      "difficulte": "application",
-      "notion": "conditionnelle",
-      "enonce": "On donne $ P(A\\cap B) = 0{,}08 $ et $ P(B) = 0{,}2 $. Calculer $ P_B(A) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Dans un lycée de $500$ élèves, $220$ sont internes ; parmi les internes, $132$ sont des filles ; parmi les externes, $140$ sont des filles. On choisit un élève au hasard ($I$ : interne ; $G$ : fille). Calculer $P_G(I)$.",
       "corrige": [
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}08}{0{,}2} = 0{,}4 $."
+        "Filles : $132 + 140 = 272$, dont $132$ internes : $P_G(I) = \\dfrac{132}{272}$.",
+        "$\\approx 0{,}485$ (arrondi au millième)."
       ],
-      "reponse": "$ 0{,}4 $"
+      "reponse": "$\\approx 0{,}485$"
     },
     {
       "id": 13,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}4 $ et $ P_A(B) = 0{,}5 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On sait que $P(B) = 0{,}35$ et $P(A \\cap B) = 0{,}14$. Calculer $P_B(A)$.",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}4\\times 0{,}5 = 0{,}2 $."
+        "$P_B(A) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{0{,}14}{0{,}35} = 0{,}4$."
       ],
-      "reponse": "$ 0{,}2 $"
+      "reponse": "$0{,}4$"
     },
     {
       "id": 14,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}3 $ et $ P_A(B) = 0{,}6 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "formule-du-produit",
+      "enonce": "$P(A) = 0{,}45$ et $P_A(B) = 0{,}12$. Calculer $P(A \\cap B)$.",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}3\\times 0{,}6 = 0{,}18 $."
+        "$P(A \\cap B) = P(A) \\times P_A(B) = 0{,}45 \\times 0{,}12 = 0{,}054$."
       ],
-      "reponse": "$ 0{,}18 $"
+      "reponse": "$0{,}054$"
     },
     {
       "id": 15,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}7 $ et $ P_A(B) = 0{,}2 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "formule-du-produit",
+      "enonce": "Dans une entreprise, $40\\,\\%$ des salariés sont des cadres, et $70\\,\\%$ des cadres pratiquent le télétravail. Quelle est la probabilité qu'un salarié choisi au hasard soit un cadre pratiquant le télétravail ?",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}7\\times 0{,}2 = 0{,}14 $."
+        "$C$ : « cadre », $T$ : « télétravail ». $P(C) = 0{,}4$ et $P_C(T) = 0{,}7$.",
+        "$P(C \\cap T) = 0{,}4 \\times 0{,}7 = 0{,}28$."
       ],
-      "reponse": "$ 0{,}14 $"
+      "reponse": "$0{,}28$"
     },
     {
       "id": 16,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}5 $ et $ P_A(B) = 0{,}9 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "formule-du-produit",
+      "enonce": "Une urne contient $5$ boules rouges et $3$ vertes. On tire deux boules successivement, sans remise. Quelle est la probabilité de tirer deux boules rouges ?",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}5\\times 0{,}9 = 0{,}45 $."
+        "$P(R_1) = \\dfrac{5}{8}$ ; sachant $R_1$, il reste $4$ rouges sur $7$ : $P_{R_1}(R_2) = \\dfrac{4}{7}$.",
+        "$P(R_1 \\cap R_2) = \\dfrac{5}{8} \\times \\dfrac{4}{7} = \\dfrac{20}{56} = \\dfrac{5}{14} \\approx 0{,}357$."
       ],
-      "reponse": "$ 0{,}45 $"
+      "reponse": "$\\dfrac{5}{14}$"
     },
     {
       "id": 17,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}25 $ et $ P_A(B) = 0{,}4 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "arbre-pondere",
+      "enonce": "Un arbre pondéré : $P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$. Calculer $P(\\overline{A} \\cap \\overline{B})$.",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}25\\times 0{,}4 = 0{,}1 $."
+        "$P(\\overline{A}) = 0{,}7$ et $P_{\\overline{A}}(\\overline{B}) = 1 - 0{,}4 = 0{,}6$.",
+        "$P(\\overline{A} \\cap \\overline{B}) = 0{,}7 \\times 0{,}6 = 0{,}42$."
       ],
-      "reponse": "$ 0{,}1 $"
+      "reponse": "$0{,}42$"
     },
     {
       "id": 18,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}8 $ et $ P_A(B) = 0{,}75 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "arbre-pondere",
+      "enonce": "Un arbre pondéré : $P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$. Calculer la somme des probabilités des quatre chemins.",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}8\\times 0{,}75 = 0{,}6 $."
+        "$0{,}24 + 0{,}06 + 0{,}28 + 0{,}42 = 1$.",
+        "La somme des probabilités de tous les chemins vaut toujours $1$."
       ],
-      "reponse": "$ 0{,}6 $"
+      "reponse": "$1$"
     },
     {
       "id": 19,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}6 $ et $ P_A(B) = 0{,}3 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "arbre-pondere",
+      "enonce": "Dans un arbre, une branche issue de $A$ porte $0{,}35$ vers $B$. Un élève écrit $0{,}75$ sur l'autre branche issue de $A$. Quelle est la bonne valeur ?",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}6\\times 0{,}3 = 0{,}18 $."
+        "Les branches issues d'un même nœud ont pour somme $1$.",
+        "$1 - 0{,}35 = 0{,}65$."
       ],
-      "reponse": "$ 0{,}18 $"
+      "reponse": "$0{,}65$"
     },
     {
       "id": 20,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}2 $ et $ P_A(B) = 0{,}15 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "$P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$. Calculer $P(B)$.",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}2\\times 0{,}15 = 0{,}03 $."
+        "$A$ et $\\overline{A}$ forment une partition de l'univers.",
+        "$P(B) = 0{,}3 \\times 0{,}8 + 0{,}7 \\times 0{,}4 = 0{,}52$."
       ],
-      "reponse": "$ 0{,}03 $"
+      "reponse": "$0{,}52$"
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}45 $ et $ P_A(B) = 0{,}2 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "$P(A) = 0{,}6$, $P_A(B) = 0{,}05$, $P_{\\overline{A}}(B) = 0{,}02$. Calculer $P(B)$.",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}45\\times 0{,}2 = 0{,}09 $."
+        "$A$ et $\\overline{A}$ forment une partition de l'univers.",
+        "$P(B) = 0{,}6 \\times 0{,}05 + 0{,}4 \\times 0{,}02 = 0{,}038$."
       ],
-      "reponse": "$ 0{,}09 $"
+      "reponse": "$0{,}038$"
     },
     {
       "id": 22,
-      "difficulte": "application",
-      "notion": "intersection",
-      "enonce": "On donne $ P(A) = 0{,}9 $ et $ P_A(B) = 0{,}1 $. Calculer $ P(A\\cap B) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Une usine a deux machines : la machine 1 fabrique $55\\,\\%$ des pièces, dont $4\\,\\%$ sont défectueuses ; la machine 2 fabrique les autres, dont $3\\,\\%$ sont défectueuses. Quelle est la probabilité qu'une pièce prise au hasard soit défectueuse ?",
       "corrige": [
-        "$ P(A\\cap B) = P(A)\\times P_A(B) = 0{,}9\\times 0{,}1 = 0{,}09 $."
+        "$P(D) = 0{,}55 \\times 0{,}04 + 0{,}45 \\times 0{,}03$.",
+        "$P(D) = 0{,}022 + 0{,}0135 = 0{,}0355$."
       ],
-      "reponse": "$ 0{,}09 $"
+      "reponse": "$0{,}0355$"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "On sait que $ P_A(B) = 0{,}3 $. Calculer $ P_A(\\overline{B}) $.",
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "$70\\,\\%$ des clients d'un magasin paient par carte. Parmi eux, $90\\,\\%$ sont satisfaits du passage en caisse ; parmi les autres, $60\\,\\%$. Quelle est la probabilité qu'un client soit satisfait ?",
       "corrige": [
-        "$ P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}3 = 0{,}7 $."
+        "$P(S) = 0{,}7 \\times 0{,}9 + 0{,}3 \\times 0{,}6$.",
+        "$P(S) = 0{,}63 + 0{,}18 = 0{,}81$."
       ],
-      "reponse": "$ 0{,}7 $"
+      "reponse": "$0{,}81$"
     },
     {
       "id": 24,
-      "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "On sait que $ P_A(B) = 0{,}85 $. Calculer $ P_A(\\overline{B}) $.",
+      "difficulte": "intermediaire",
+      "notion": "remonter-l-arbre",
+      "enonce": "$P(A \\cap B) = 0{,}24$ et $P(B) = 0{,}52$. Calculer $P_B(A)$, arrondie au centième.",
       "corrige": [
-        "$ P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}85 = 0{,}15 $."
+        "$P_B(A) = \\dfrac{0{,}24}{0{,}52}$.",
+        "$P_B(A) \\approx 0{,}46$."
       ],
-      "reponse": "$ 0{,}15 $"
+      "reponse": "$\\approx 0{,}46$"
     },
     {
       "id": 25,
-      "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "On sait que $ P_A(B) = 0{,}62 $. Calculer $ P_A(\\overline{B}) $.",
+      "difficulte": "intermediaire",
+      "notion": "remonter-l-arbre",
+      "enonce": "Arbre : $P(A) = 0{,}3$, $P_A(B) = 0{,}8$, $P_{\\overline{A}}(B) = 0{,}4$ (d'où $P(B) = 0{,}52$). Calculer $P_B(A)$, arrondie au centième.",
       "corrige": [
-        "$ P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}62 = 0{,}38 $."
+        "$P_B(A) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{0{,}24}{0{,}52}$.",
+        "$P_B(A) \\approx 0{,}46$."
       ],
-      "reponse": "$ 0{,}38 $"
+      "reponse": "$\\approx 0{,}46$"
     },
     {
       "id": 26,
-      "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "On sait que $ P_A(B) = 0{,}4 $. Calculer $ P_A(\\overline{B}) $.",
+      "difficulte": "intermediaire",
+      "notion": "traduire-un-enonce",
+      "enonce": "Quelle probabilité la phrase « Parmi les clients qui reviennent ($R$), $40\\,\\%$ avaient acheté ($A$). » donne-t-elle : $P(A \\cap R)$, $P_A(R)$ ou $P_R(A)$ ?",
       "corrige": [
-        "$ P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}4 = 0{,}6 $."
+        "« Parmi les… » indique la population de référence : c'est la condition.",
+        "Il s'agit de $P_R(A)$."
       ],
-      "reponse": "$ 0{,}6 $"
+      "reponse": "$P_R(A)$"
     },
     {
       "id": 27,
-      "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "On sait que $ P_A(B) = 0{,}05 $. Calculer $ P_A(\\overline{B}) $.",
+      "difficulte": "intermediaire",
+      "notion": "traduire-un-enonce",
+      "enonce": "Dans « $12\\,\\%$ des fumeurs ($F$) développent la maladie ($M$) », quelle est la valeur de $P_F(M)$ ?",
       "corrige": [
-        "$ P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}05 = 0{,}95 $."
+        "La population de référence est celle des fumeurs.",
+        "$P_F(M) = 0{,}12$."
       ],
-      "reponse": "$ 0{,}95 $"
+      "reponse": "$0{,}12$"
     },
     {
       "id": 28,
-      "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "On sait que $ P_A(B) = 0{,}27 $. Calculer $ P_A(\\overline{B}) $.",
+      "difficulte": "intermediaire",
+      "notion": "traduire-un-enonce",
+      "enonce": "« $60\\,\\%$ des élèves sont des filles ($G$), et $15\\,\\%$ des élèves sont des filles qui font de la danse ($D$). » Calculer $P_G(D)$.",
       "corrige": [
-        "$ P_A(\\overline{B}) = 1 - P_A(B) = 1 - 0{,}27 = 0{,}73 $."
+        "$P(G) = 0{,}6$ et $P(G \\cap D) = 0{,}15$.",
+        "$P_G(D) = \\dfrac{0{,}15}{0{,}6} = 0{,}25$."
       ],
-      "reponse": "$ 0{,}73 $"
+      "reponse": "$0{,}25$"
     },
     {
       "id": 29,
       "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}4 $, $ P_A(B) = 0{,}5 $ et $ P_{\\overline{A}}(B) = 0{,}2 $. Calculer $ P(B) $.",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Dans une classe de $30$ élèves, $12$ font du sport en club ($S$), dont $9$ sont des garçons ($G$) ; la classe compte $18$ garçons. On choisit un élève au hasard. Calculer $P(S \\cap G)$.",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}4\\times 0{,}5 + 0{,}6\\times 0{,}2 = 0{,}32 $."
+        "On divise par l'effectif total : $\\dfrac{9}{30}$.",
+        "$= 0{,}3$."
       ],
-      "reponse": "$ 0{,}32 $"
+      "reponse": "$0{,}3$"
     },
     {
       "id": 30,
       "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}3 $, $ P_A(B) = 0{,}8 $ et $ P_{\\overline{A}}(B) = 0{,}1 $. Calculer $ P(B) $.",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Dans une classe de $30$ élèves, $12$ font du sport en club ($S$), dont $9$ sont des garçons ($G$) ; la classe compte $18$ garçons. On choisit un élève au hasard. Calculer $P_S(G)$.",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}3\\times 0{,}8 + 0{,}7\\times 0{,}1 = 0{,}31 $."
+        "Population de référence : les $12$ sportifs, dont $9$ garçons : $\\dfrac{9}{12}$.",
+        "$= 0{,}75$."
       ],
-      "reponse": "$ 0{,}31 $"
+      "reponse": "$0{,}75$"
     },
     {
       "id": 31,
       "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}6 $, $ P_A(B) = 0{,}25 $ et $ P_{\\overline{A}}(B) = 0{,}5 $. Calculer $ P(B) $.",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Dans une classe de $30$ élèves, $12$ font du sport en club ($S$), dont $9$ sont des garçons ($G$) ; la classe compte $18$ garçons. On choisit un élève au hasard. Calculer $P_G(S)$.",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}6\\times 0{,}25 + 0{,}4\\times 0{,}5 = 0{,}35 $."
+        "Population de référence : les $18$ garçons, dont $9$ sportifs : $\\dfrac{9}{18}$.",
+        "$= 0{,}5$."
       ],
-      "reponse": "$ 0{,}35 $"
+      "reponse": "$0{,}5$"
     },
     {
       "id": 32,
       "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}5 $, $ P_A(B) = 0{,}9 $ et $ P_{\\overline{A}}(B) = 0{,}3 $. Calculer $ P(B) $.",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "On sait que $P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A \\cap B) = 0{,}2$. Calculer $P_A(B)$ puis $P_B(A)$.",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}5\\times 0{,}9 + 0{,}5\\times 0{,}3 = 0{,}6 $."
+        "$P_A(B) = \\dfrac{0{,}2}{0{,}5} = 0{,}4$.",
+        "$P_B(A) = \\dfrac{0{,}2}{0{,}4} = 0{,}5$."
       ],
-      "reponse": "$ 0{,}6 $"
+      "reponse": "$0{,}4$ et $0{,}5$"
     },
     {
       "id": 33,
-      "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}2 $, $ P_A(B) = 0{,}7 $ et $ P_{\\overline{A}}(B) = 0{,}4 $. Calculer $ P(B) $.",
+      "difficulte": "approfondissement",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "On sait que $P_A(B) = 0{,}3$. Que vaut $P_A(\\overline{B})$ ?",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}2\\times 0{,}7 + 0{,}8\\times 0{,}4 = 0{,}46 $."
+        "Sachant $A$, les événements $B$ et $\\overline{B}$ sont contraires.",
+        "$P_A(\\overline{B}) = 1 - 0{,}3 = 0{,}7$."
       ],
-      "reponse": "$ 0{,}46 $"
+      "reponse": "$0{,}7$"
     },
     {
       "id": 34,
-      "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}7 $, $ P_A(B) = 0{,}1 $ et $ P_{\\overline{A}}(B) = 0{,}2 $. Calculer $ P(B) $.",
+      "difficulte": "approfondissement",
+      "notion": "formule-du-produit",
+      "enonce": "On sait que $P(A \\cap B) = 0{,}18$ et $P_A(B) = 0{,}6$. Calculer $P(A)$.",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}7\\times 0{,}1 + 0{,}3\\times 0{,}2 = 0{,}13 $."
+        "$P(A \\cap B) = P(A) \\times P_A(B)$, donc $P(A) = \\dfrac{0{,}18}{0{,}6} = 0{,}3$."
       ],
-      "reponse": "$ 0{,}13 $"
+      "reponse": "$0{,}3$"
     },
     {
       "id": 35,
-      "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}25 $, $ P_A(B) = 0{,}6 $ et $ P_{\\overline{A}}(B) = 0{,}4 $. Calculer $ P(B) $.",
+      "difficulte": "approfondissement",
+      "notion": "formule-du-produit",
+      "enonce": "$5\\,\\%$ des pièces d'une usine sont défectueuses ; $90\\,\\%$ des pièces défectueuses sont détectées par le contrôle. Quelle proportion des pièces est défectueuse et non détectée ?",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}25\\times 0{,}6 + 0{,}75\\times 0{,}4 = 0{,}45 $."
+        "$P(D) = 0{,}05$ et $P_D(\\overline{C}) = 1 - 0{,}9 = 0{,}1$.",
+        "$P(D \\cap \\overline{C}) = 0{,}05 \\times 0{,}1 = 0{,}005$, soit $0{,}5\\,\\%$."
       ],
-      "reponse": "$ 0{,}45 $"
+      "reponse": "$0{,}005$"
     },
     {
       "id": 36,
-      "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "On donne $ P(A) = 0{,}8 $, $ P_A(B) = 0{,}95 $ et $ P_{\\overline{A}}(B) = 0{,}5 $. Calculer $ P(B) $.",
+      "difficulte": "approfondissement",
+      "notion": "arbre-pondere",
+      "enonce": "Vrai ou faux ? « Sur un arbre pondéré, la probabilité inscrite sur une branche du second niveau est une probabilité d'intersection. » Justifier.",
       "corrige": [
-        "Formule des probabilités totales : $ P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B) = 0{,}8\\times 0{,}95 + 0{,}2\\times 0{,}5 = 0{,}86 $."
+        "Une branche du second niveau porte une probabilité conditionnelle (sachant l'événement du premier niveau).",
+        "C'est le produit le long du chemin qui donne une intersection. L'affirmation est fausse."
       ],
-      "reponse": "$ 0{,}86 $"
+      "reponse": "Faux"
     },
     {
       "id": 37,
-      "difficulte": "intermediaire",
-      "notion": "tableau",
-      "enonce": "Dans un lycée de 200 élèves, 80 pratiquent un sport (événement $S$) et, parmi eux, 30 sont internes (événement $I$). On choisit un sportif au hasard. Probabilité qu'il soit interne ?",
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "On choisit au hasard une urne parmi trois (probabilité $\\dfrac{1}{3}$ chacune), qui contiennent respectivement une proportion $\\dfrac{1}{2}$, $\\dfrac{1}{4}$ et $\\dfrac{1}{5}$ de boules blanches. On tire une boule. Probabilité qu'elle soit blanche ?",
       "corrige": [
-        "$ P_S(I) = \\dfrac{30}{80} = \\dfrac{3}{8} = 0{,}375 $."
+        "Les trois urnes forment une partition.",
+        "$P(B) = \\dfrac{1}{3}\\left(\\dfrac{1}{2} + \\dfrac{1}{4} + \\dfrac{1}{5}\\right) = \\dfrac{1}{3} \\times \\dfrac{19}{20} = \\dfrac{19}{60}$."
       ],
-      "reponse": "$ \\dfrac{3}{8} $"
+      "reponse": "$\\dfrac{19}{60}$"
     },
     {
       "id": 38,
-      "difficulte": "intermediaire",
-      "notion": "tableau",
-      "enonce": "Dans un lycée de 500 élèves, 150 pratiquent un sport (événement $S$) et, parmi eux, 60 sont internes (événement $I$). On choisit un sportif au hasard. Probabilité qu'il soit interne ?",
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "On sait que $P(B) = 0{,}36$, $P_A(B) = 0{,}6$ et $P_{\\overline{A}}(B) = 0{,}2$. Calculer $P(A)$.",
       "corrige": [
-        "$ P_S(I) = \\dfrac{60}{150} = \\dfrac{2}{5} = 0{,}4 $."
+        "On pose $x = P(A)$ : $0{,}6x + 0{,}2(1 - x) = 0{,}36$.",
+        "$0{,}4x = 0{,}16$, donc $x = 0{,}4$."
       ],
-      "reponse": "$ \\dfrac{2}{5} $"
+      "reponse": "$0{,}4$"
     },
     {
       "id": 39,
-      "difficulte": "intermediaire",
-      "notion": "tableau",
-      "enonce": "Dans un lycée de 120 élèves, 40 pratiquent un sport (événement $S$) et, parmi eux, 10 sont internes (événement $I$). On choisit un sportif au hasard. Probabilité qu'il soit interne ?",
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "Vrai ou faux ? « $P(B) = P_A(B) + P_{\\overline{A}}(B)$. » Justifier.",
       "corrige": [
-        "$ P_S(I) = \\dfrac{10}{40} = \\dfrac{1}{4} = 0{,}25 $."
+        "La formule des probabilités totales pondère chaque conditionnelle : $P(B) = P(A) P_A(B) + P(\\overline{A}) P_{\\overline{A}}(B)$.",
+        "Sans les poids, la somme peut même dépasser $1$. L'affirmation est fausse."
       ],
-      "reponse": "$ \\dfrac{1}{4} $"
+      "reponse": "Faux"
     },
     {
       "id": 40,
-      "difficulte": "intermediaire",
-      "notion": "tableau",
-      "enonce": "Dans un lycée de 300 élèves, 90 pratiquent un sport (événement $S$) et, parmi eux, 27 sont internes (événement $I$). On choisit un sportif au hasard. Probabilité qu'il soit interne ?",
+      "difficulte": "approfondissement",
+      "notion": "remonter-l-arbre",
+      "enonce": "Avec les clients du magasin ($70\\,\\%$ paient par carte, $90\\,\\%$ d'entre eux satisfaits, $P(S) = 0{,}81$), un client est satisfait. Probabilité qu'il ait payé par carte, au centième ?",
       "corrige": [
-        "$ P_S(I) = \\dfrac{27}{90} = \\dfrac{3}{10} = 0{,}3 $."
+        "$P_S(C) = \\dfrac{0{,}7 \\times 0{,}9}{0{,}81} = \\dfrac{0{,}63}{0{,}81}$.",
+        "$P_S(C) \\approx 0{,}78$."
       ],
-      "reponse": "$ \\dfrac{3}{10} $"
+      "reponse": "$\\approx 0{,}78$"
     },
     {
       "id": 41,
-      "difficulte": "intermediaire",
-      "notion": "tableau",
-      "enonce": "Dans un lycée de 250 élèves, 100 pratiquent un sport (événement $S$) et, parmi eux, 35 sont internes (événement $I$). On choisit un sportif au hasard. Probabilité qu'il soit interne ?",
+      "difficulte": "approfondissement",
+      "notion": "remonter-l-arbre",
+      "enonce": "Dans un arbre de premier niveau $A$ / $\\overline{A}$, peut-on lire directement $P_B(A)$ sur une branche ?",
       "corrige": [
-        "$ P_S(I) = \\dfrac{35}{100} = \\dfrac{7}{20} = 0{,}35 $."
+        "Les branches du second niveau portent $P_A(B)$, $P_A(\\overline{B})$… (sachant $A$ ou $\\overline{A}$).",
+        "$P_B(A)$ n'y figure pas : il faut la calculer avec $\\dfrac{P(A \\cap B)}{P(B)}$. Non."
       ],
-      "reponse": "$ \\dfrac{7}{20} $"
+      "reponse": "Non"
     },
     {
       "id": 42,
-      "difficulte": "intermediaire",
-      "notion": "tableau",
-      "enonce": "Dans un lycée de 400 élèves, 160 pratiquent un sport (événement $S$) et, parmi eux, 48 sont internes (événement $I$). On choisit un sportif au hasard. Probabilité qu'il soit interne ?",
+      "difficulte": "approfondissement",
+      "notion": "remonter-l-arbre",
+      "enonce": "Vrai ou faux ? « $P_A(B) = P_B(A)$ pour tous événements $A$ et $B$. » Justifier.",
       "corrige": [
-        "$ P_S(I) = \\dfrac{48}{160} = \\dfrac{3}{10} = 0{,}3 $."
+        "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$ et $P_B(A) = \\dfrac{P(A \\cap B)}{P(B)}$.",
+        "Elles ne sont égales que si $P(A) = P(B)$ : avec le test médical, $P_M(T) = 0{,}95$ mais $P_T(M) \\approx 0{,}39$. Faux."
       ],
-      "reponse": "$ \\dfrac{3}{10} $"
+      "reponse": "Faux"
     },
     {
       "id": 43,
       "difficulte": "approfondissement",
-      "notion": "independance",
-      "enonce": "$ P(A) = 0{,}5 $, $ P(B) = 0{,}4 $ et $ P(A\\cap B) = 0{,}2 $. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "notion": "traduire-un-enonce",
+      "enonce": "« $8\\,\\%$ des pièces sont défectueuses ($D$) ; parmi elles, $75\\,\\%$ ont un défaut de peinture ($P$). » Quelle proportion des pièces a un défaut de peinture et est défectueuse ?",
       "corrige": [
-        "$ P(A)\\times P(B) = 0{,}2 = P(A\\cap B) $ : ils sont indépendants."
+        "$P(D) = 0{,}08$ et $P_D(P) = 0{,}75$.",
+        "$P(D \\cap P) = 0{,}08 \\times 0{,}75 = 0{,}06$."
       ],
-      "reponse": "oui"
+      "reponse": "$0{,}06$"
     },
     {
       "id": 44,
       "difficulte": "approfondissement",
-      "notion": "independance",
-      "enonce": "$ P(A) = 0{,}3 $, $ P(B) = 0{,}6 $ et $ P(A\\cap B) = 0{,}2 $. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Dans une classe de $30$ élèves, $12$ font du sport en club ($S$), dont $9$ sont des garçons ($G$) ; la classe compte $18$ garçons. Un élève dit : « $P_S(G) = \\dfrac{9}{30}$ ». Quelle erreur fait-il ?",
       "corrige": [
-        "$ P(A)\\times P(B) = 0{,}18 \\neq P(A\\cap B) $ : ils ne sont pas indépendants."
+        "Il divise par l'effectif total au lieu de l'effectif des sportifs.",
+        "Il a calculé $P(S \\cap G) = 0{,}3$ ; la bonne valeur est $P_S(G) = \\dfrac{9}{12} = 0{,}75$."
       ],
-      "reponse": "non"
+      "reponse": "$0{,}75$"
     },
     {
       "id": 45,
       "difficulte": "approfondissement",
-      "notion": "independance",
-      "enonce": "$ P(A) = 0{,}25 $, $ P(B) = 0{,}8 $ et $ P(A\\cap B) = 0{,}2 $. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Vrai ou faux ? « $P(A \\cap B)$ est toujours inférieure ou égale à $P_A(B)$. » Justifier.",
       "corrige": [
-        "$ P(A)\\times P(B) = 0{,}2 = P(A\\cap B) $ : ils sont indépendants."
+        "$P(A \\cap B) = P(A) \\times P_A(B)$ et $P(A) \\leqslant 1$.",
+        "Donc $P(A \\cap B) \\leqslant P_A(B)$ : l'affirmation est vraie."
       ],
-      "reponse": "oui"
+      "reponse": "Vrai"
     },
     {
       "id": 46,
       "difficulte": "approfondissement",
-      "notion": "independance",
-      "enonce": "$ P(A) = 0{,}7 $, $ P(B) = 0{,}5 $ et $ P(A\\cap B) = 0{,}3 $. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Vrai ou faux ? « Si $P_A(B) = 0{,}9$, alors $P(B) \\geqslant 0{,}9$. » Justifier.",
       "corrige": [
-        "$ P(A)\\times P(B) = 0{,}35 \\neq P(A\\cap B) $ : ils ne sont pas indépendants."
+        "Contre-exemple : $P(A) = 0{,}1$, $P_A(B) = 0{,}9$ et $P_{\\overline{A}}(B) = 0$ donnent $P(B) = 0{,}09$.",
+        "L'affirmation est fausse."
       ],
-      "reponse": "non"
+      "reponse": "Faux"
     },
     {
       "id": 47,
-      "difficulte": "approfondissement",
-      "notion": "independance",
-      "enonce": "$ P(A) = 0{,}6 $, $ P(B) = 0{,}5 $ et $ P(A\\cap B) = 0{,}3 $. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "difficulte": "probleme",
+      "notion": "probabilites-totales",
+      "enonce": "Une maladie touche $2\\,\\%$ d'une population. Un test est positif chez $95\\,\\%$ des malades et chez $3\\,\\%$ des personnes saines. Quelle est la probabilité qu'un test soit positif ?",
       "corrige": [
-        "$ P(A)\\times P(B) = 0{,}3 = P(A\\cap B) $ : ils sont indépendants."
+        "$M$ : « malade », $T$ : « test positif ». $P(M) = 0{,}02$, $P_M(T) = 0{,}95$, $P_{\\overline{M}}(T) = 0{,}03$.",
+        "$P(T) = 0{,}02 \\times 0{,}95 + 0{,}98 \\times 0{,}03 = 0{,}019 + 0{,}0294 = 0{,}0484$."
       ],
-      "reponse": "oui"
+      "reponse": "$0{,}0484$"
     },
     {
       "id": 48,
-      "difficulte": "approfondissement",
-      "notion": "independance",
-      "enonce": "$ P(A) = 0{,}4 $, $ P(B) = 0{,}45 $ et $ P(A\\cap B) = 0{,}2 $. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "difficulte": "probleme",
+      "notion": "remonter-l-arbre",
+      "enonce": "Avec le test précédent ($P(M) = 0{,}02$, $P_M(T) = 0{,}95$, $P(T) = 0{,}0484$), calculer la probabilité qu'une personne testée positive soit malade, arrondie au millième.",
       "corrige": [
-        "$ P(A)\\times P(B) = 0{,}18 \\neq P(A\\cap B) $ : ils ne sont pas indépendants."
+        "$P_T(M) = \\dfrac{P(M \\cap T)}{P(T)} = \\dfrac{0{,}02 \\times 0{,}95}{0{,}0484} = \\dfrac{0{,}019}{0{,}0484}$.",
+        "$P_T(M) \\approx 0{,}393$ : moins de $40\\,\\%$ des positifs sont malades."
       ],
-      "reponse": "non"
+      "reponse": "$\\approx 0{,}393$"
     },
     {
       "id": 49,
       "difficulte": "probleme",
-      "notion": "inversion",
-      "enonce": "On donne $ P(A) = 0{,}4 $, $ P_A(B) = 0{,}5 $ et $ P_{\\overline{A}}(B) = 0{,}2 $. Calculer $ P_B(A) $.",
+      "notion": "remonter-l-arbre",
+      "enonce": "Avec les deux machines précédentes ($55\\,\\%$ et $4\\,\\%$ de défauts ; $45\\,\\%$ et $3\\,\\%$), une pièce est défectueuse. Probabilité qu'elle vienne de la machine 1, au millième ?",
       "corrige": [
-        "$ P(B) = 0{,}4\\times 0{,}5 + 0{,}6\\times 0{,}2 = 0{,}32 $.",
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}2}{0{,}32} = 0{,}625 $."
+        "$P_D(M_1) = \\dfrac{0{,}55 \\times 0{,}04}{0{,}0355} = \\dfrac{0{,}022}{0{,}0355}$.",
+        "$P_D(M_1) \\approx 0{,}62$."
       ],
-      "reponse": "$ 0{,}625 $"
+      "reponse": "$\\approx 0{,}62$"
     },
     {
       "id": 50,
       "difficulte": "probleme",
-      "notion": "inversion",
-      "enonce": "On donne $ P(A) = 0{,}5 $, $ P_A(B) = 0{,}9 $ et $ P_{\\overline{A}}(B) = 0{,}3 $. Calculer $ P_B(A) $.",
+      "notion": "trois-nombres-a-ne-pas-confondre",
+      "enonce": "Dans un logement, on étudie les situations où de la fumée apparaît : $0{,}1\\,\\%$ sont des incendies ($I$), les autres des cuissons. Le détecteur sonne ($S$) dans $99\\,\\%$ des incendies et dans $1\\,\\%$ des cuissons. Sachant que le détecteur sonne, quelle est la probabilité qu'il s'agisse d'un incendie, au centième ?",
       "corrige": [
-        "$ P(B) = 0{,}5\\times 0{,}9 + 0{,}5\\times 0{,}3 = 0{,}6 $.",
-        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{0{,}45}{0{,}6} = 0{,}75 $."
+        "$P(I) = 0{,}001$, $P_I(S) = 0{,}99$, $P_{\\overline{I}}(S) = 0{,}01$.",
+        "$P(S) = 0{,}001 \\times 0{,}99 + 0{,}999 \\times 0{,}01 = 0{,}01098$.",
+        "$P_S(I) = \\dfrac{0{,}000\\,99}{0{,}010\\,98} \\approx 0{,}09$."
       ],
-      "reponse": "$ 0{,}75 $"
+      "reponse": "$\\approx 0{,}09$"
     }
   ]
 }

@@ -123,7 +123,7 @@ export default function EspaceParent({ navigation }) {
         </Text>
 
         {/* Onglets */}
-        <View style={[st.onglets, { backgroundColor: C.surface, borderColor: C.trait, borderRadius: t.rayon.m, marginTop: t.espace.m }]}>
+        <View role="tablist" aria-label="Qui es-tu ?" style={[st.onglets, { backgroundColor: C.surface, borderColor: C.trait, borderRadius: t.rayon.m, marginTop: t.espace.m }]}>
           {[['eleve', 'Je suis l’élève'], ['parent', 'Je suis le parent']].map(([cle, libelle]) => {
             const actif = onglet === cle;
             return (
@@ -132,7 +132,7 @@ export default function EspaceParent({ navigation }) {
                 onPress={() => setOnglet(cle)}
                 accessibilityRole="tab"
                 accessibilityState={{ selected: actif }}
-                style={{ flex: 1, paddingVertical: 10, borderRadius: t.rayon.s, backgroundColor: actif ? C.accent : 'transparent', alignItems: 'center' }}
+                style={{ flex: 1, minHeight: 44, justifyContent: 'center', paddingVertical: 10, borderRadius: t.rayon.s, backgroundColor: actif ? C.accent : 'transparent', alignItems: 'center' }}
               >
                 <Text style={{ color: actif ? C.accentTexte : C.texte, fontWeight: '700', fontSize: t.police.normale }}>{libelle}</Text>
               </Pressable>

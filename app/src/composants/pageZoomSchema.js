@@ -19,7 +19,7 @@
 const COULEURS = {
   clair: {
     fond: '#eef2f6', texte: '#16232e', attenue: '#4d5c6a', barre: '#ffffff',
-    trait: '#d5dde6', bouton: '#ffffff', boutonTexte: '#16232e', accent: '#1f6feb', accentTexte: '#ffffff',
+    trait: '#d5dde6', bouton: '#ffffff', boutonTexte: '#16232e', accent: '#1d67db', accentTexte: '#ffffff',
   },
   sombre: {
     fond: '#0b1015', texte: '#e6edf3', attenue: '#a9b6c2', barre: '#151d25',

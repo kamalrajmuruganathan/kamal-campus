@@ -57,11 +57,41 @@ export async function compterDisponibles(ids) {
 }
 
 /**
+ * Garde aussi l'appli elle-même (page d'accueil, code, styles). Sans cela, à la
+ * toute première visite, la page et son code ont été chargés AVANT que le service
+ * worker soit installé : ils ne sont pas en cache, et l'appli ouverte sans internet
+ * n'affichait que « Hors connexion », même avec des chapitres téléchargés.
+ * Les fichiers du code (nom avec empreinte) ne sont téléchargés qu'une fois ;
+ * la page d'accueil est toujours rafraîchie.
+ */
+async function garderAppli() {
+  if (!horsLigneDisponible() || typeof document === 'undefined') return;
+  try {
+    const c = await caches.open(CACHE);
+    const portee = (await navigator.serviceWorker.getRegistration())?.scope ?? new URL('./', window.location.href).href;
+    const balises = [...document.querySelectorAll('script[src], link[rel="stylesheet"][href], link[rel="manifest"][href], link[rel~="icon"][href]')]
+      .map((el) => new URL(el.getAttribute('src') ?? el.getAttribute('href'), window.location.href).href);
+    // Morceaux de code et images déjà chargés (écrans ouverts à la demande, icônes…).
+    const charges = (performance.getEntriesByType?.('resource') ?? [])
+      .map((e) => e.name.split('#')[0])
+      .filter((u) => /\/(_expo\/static|assets)\//.test(u));
+    const fichiers = [...new Set([...balises, ...charges])].filter((u) => u.startsWith(portee));
+    await c.add(portee).catch(() => {});
+    for (const u of fichiers) {
+      if (!(await c.match(u))) await c.add(u).catch(() => {});
+    }
+  } catch {
+    // Pas de cache disponible : les chapitres restent téléchargés, l'appli sera gardée à la prochaine visite.
+  }
+}
+
+/**
  * Télécharge la fiche, les exercices, le QCM et les cartes de chaque chapitre
  * (le service worker en garde une copie). onProgression(fait, total) est appelé après chaque chapitre.
  * Renvoie le nombre de chapitres téléchargés sans erreur.
  */
 export async function telechargerHorsLigne(ids, onProgression = () => {}) {
+  await garderAppli();
   let ok = 0;
   for (let i = 0; i < ids.length; i += 1) {
     const [fiche] = await Promise.all([chargerFiche(ids[i]), chargerExercices(ids[i]), chargerQcm(ids[i]), chargerCartes(ids[i])]);

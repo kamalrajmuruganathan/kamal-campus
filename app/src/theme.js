@@ -19,6 +19,8 @@ const COMMUN = {
   },
 };
 
+// Couleurs du thème clair : chaque couleur de texte atteint au moins 4,5:1 (WCAG AA)
+// sur le fond, la surface et la surface haute.
 const CLAIR = {
   ...COMMUN,
   sombre: false,
@@ -29,28 +31,28 @@ const CLAIR = {
     texte: '#16232e',
     attenue: '#5b6b7a',
     trait: '#e3e8ee',
-    accent: '#1f6feb',
+    accent: '#1d67db',
     accentTexte: '#ffffff',
-    succes: '#1a7f4b',
+    succes: '#197c4a',
     succesFond: '#e8f6ee',
     erreur: '#c02a2a',
     erreurFond: '#fdeced',
     alerte: '#8a6100',
     alerteFond: '#fff6e0',
-    maths: '#1f6feb',
+    maths: '#1d67db',
     physique: '#7a3fd4',
     anglais: '#b8336a',
     espagnol: '#c0392b',
     allemand: '#3949ab',
-    italien: '#1d9bb8',
+    italien: '#16768c',
     francais: '#9c27b0',
-    histgeo: '#a15c1e',
+    histgeo: '#9f5b1e',
     philosophie: '#7b5aa6',
-    ses: '#0f8a6a',
+    ses: '#0d7b5e',
     hggsp: '#396a7a',
-    arts: '#c0399b',
-    lca: '#7d7f34',
-    grandoral: '#0e8f9e',
+    arts: '#b83795',
+    lca: '#6e702e',
+    grandoral: '#0c7885',
   },
 };
 

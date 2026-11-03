@@ -69,7 +69,7 @@ const STYLE_APP = `
   --fond: #ffffff;
   --texte: #16232e;
   --attenue: #5b6b7a;
-  --accent: #1f6feb;
+  --accent: #1d67db;
   --trait: #e3e8ee;
   --encadre: #f3f6fa;
   --alerte-fond: #fff8e6;
@@ -243,6 +243,36 @@ const gabarit = `<!doctype html>
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ouvrir(img); }
       });
     });
+  })();
+  // Accessibilité : un tableau ou une formule qui déborde (défilement horizontal) doit
+  // pouvoir défiler au clavier → il devient focalisable, avec un nom. Les cases d'en-tête
+  // vides (coin d'un tableau à double entrée) ne sont pas des en-têtes.
+  (function () {
+    Array.prototype.forEach.call(document.querySelectorAll('#contenu th'), function (th) {
+      if (th.textContent.trim()) return;
+      var td = document.createElement('td');
+      td.className = th.className;
+      th.parentNode.replaceChild(td, th);
+    });
+    function rendreDefilable() {
+      Array.prototype.forEach.call(document.querySelectorAll('#contenu table, #contenu .katex-display'), function (el) {
+        if (el.scrollWidth > el.clientWidth + 1) {
+          if (!el.hasAttribute('tabindex')) {
+            el.setAttribute('tabindex', '0');
+            if (el.nodeName !== 'TABLE') {
+              el.setAttribute('role', 'group');
+              el.setAttribute('aria-label', 'Formule (défilement horizontal)');
+            }
+          }
+        } else if (el.getAttribute('tabindex') === '0') {
+          el.removeAttribute('tabindex');
+        }
+      });
+    }
+    rendreDefilable();
+    window.addEventListener('load', rendreDefilable);
+    window.addEventListener('resize', rendreDefilable);
+    setTimeout(rendreDefilable, 400);
   })();
   // Signale la hauteur du CONTENU à React Native, pour dimensionner la WebView.
   // On mesure le bloc #contenu (pas documentElement, qui renvoie la hauteur de

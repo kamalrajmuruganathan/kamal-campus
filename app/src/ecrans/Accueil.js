@@ -29,11 +29,13 @@ import { resume as resumeCarnet, depuisAnciennesErreurs } from '../../lib/carnet
 import { defisDeLaSemaine, nombreReussis } from '../../lib/defisSemaine';
 import { etatDuJour, libelleSeance, planActif } from '../../lib/vacances';
 import { sessionsDuJour } from '../../lib/stats';
+import { useResumeDevoirs } from '../useDevoirs';
 
 export default function Accueil({ navigation }) {
   const t = useTheme();
   const { profil } = useProgression();
   const { L } = useLangue();
+  const resumeDevoirs = useResumeDevoirs();
   const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);
   const prog = niveauPourXp(profil.xp);
   const masc = mascotteNiveau(prog.niveau);
@@ -74,7 +76,7 @@ export default function Accueil({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: t.espace.m }}>
-          <Text style={{ color: t.couleur.texte, fontSize: t.police.titre, fontWeight: '700', flexShrink: 1 }}>
+          <Text accessibilityRole="header" aria-level={1} style={{ color: t.couleur.texte, fontSize: t.police.titre, fontWeight: '700', flexShrink: 1 }}>
             {profil.prenom ? L('home.salut', { prenom: profil.prenom }) : 'Kamal Campus'}
           </Text>
           {/* Amis : toujours visible en haut de l'accueil, avec le nombre de demandes reçues */}
@@ -85,10 +87,10 @@ export default function Accueil({ navigation }) {
             style={({ pressed }) => ({
               flexDirection: 'row', alignItems: 'center', gap: 6,
               backgroundColor: t.couleur.surface, borderColor: t.couleur.trait, borderWidth: 1,
-              borderRadius: 999, paddingHorizontal: 14, paddingVertical: 8, opacity: pressed ? 0.7 : 1,
+              borderRadius: 999, paddingHorizontal: 14, paddingVertical: 8, minHeight: 44, opacity: pressed ? 0.7 : 1,
             })}
           >
-            <Text style={{ fontSize: 16 }}>👥</Text>
+            <Text aria-hidden style={{ fontSize: 16 }}>👥</Text>
             <Text style={{ color: t.couleur.texte, fontWeight: '700', fontSize: t.police.petite }}>Amis</Text>
             {nbDemandes > 0 && (
               <View style={{ backgroundColor: t.couleur.erreur, borderRadius: 999, minWidth: 20, height: 20, paddingHorizontal: 5, alignItems: 'center', justifyContent: 'center' }}>
@@ -315,7 +317,8 @@ export default function Accueil({ navigation }) {
               <Text
                 onPress={() => setNiveau(null)}
                 accessibilityRole="button"
-                style={{ color: t.couleur.accent, fontSize: t.police.petite }}
+                accessibilityLabel="Changer de niveau"
+                style={{ color: t.couleur.accent, fontSize: t.police.petite, paddingVertical: 14, paddingLeft: 12 }}
               >
                 Changer
               </Text>
@@ -474,6 +477,14 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="🧑‍🏫 Mes classes · Espace enseignant"
+            sousTitre={resumeDevoirs}
+            couleur={t.couleur.physique}
+            onPress={() => navigation.navigate('MesClasses')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="👥 Amis et défis"
             sousTitre="Ajoute tes amis, défie-les sur un chapitre et compare vos scores"
             couleur={t.couleur.accent}
@@ -577,7 +588,8 @@ export default function Accueil({ navigation }) {
             color: t.couleur.attenue,
             fontSize: t.police.petite,
             textAlign: 'center',
-            marginTop: t.espace.xl,
+            marginTop: t.espace.l,
+            paddingVertical: 14,
             textDecorationLine: 'underline',
           }}
         >

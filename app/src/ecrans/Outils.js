@@ -372,6 +372,7 @@ function PanneauOutil({ outil, t, onRetour }) {
                 {c.libelle}
               </Text>
               <TextInput
+                accessibilityLabel={c.libelle ?? c.clef}
                 value={String(valeurs[c.clef] ?? '')}
                 onChangeText={(v) => setValeurs({ ...valeurs, [c.clef]: v })}
                 keyboardType={c.texte ? 'default' : 'numbers-and-punctuation'}

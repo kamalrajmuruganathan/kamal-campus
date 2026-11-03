@@ -370,7 +370,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Textes à envoyer : `docs/presentation-parents-ecoles.md` (+ PDF). Contact : kamalcampus.contact@gmail.com.
 - Ne jamais y promettre : agrément de l'Éducation nationale, contenus « validés par des professeurs », appli dans les stores.
 
-## 26. Campagne de tests unitaires (03/11/2026) — sur `upgrade-sdk57`, non publiée
+## 26. Campagne de tests unitaires (03/11/2026) — PUBLIÉE le 03/11/2026 (PR #15, main `393b933`)
 - 744 → 1 214 tests (`cd app && npm test`, ≈ 16 s). Tests clés à garder verts :
   `lib/autocorrection/coherence.test.js` (chaque bonne réponse des 34 000 exercices vérifiables est acceptée),
   `lib/generateurs/verification.test.js` (64 générateurs recalculés), `lib/fusion/fusion.test.js` (synchro sans perte,
@@ -379,3 +379,22 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   la synchro ; -x² mal lu par le résolveur, cos/sin inutilisable ; réponses fausses acceptées (131 pour 130, étiquettes
   échangées, constante de primitive) ; note 16,25 → 16 ; lecture à voix haute des formules ; jours UTC au lieu du jour local.
 - `app/lib/format-calcul.js` (écriture des nombres des outils) ; BigInt utilisé dans suites/arithmétique/dérivation (build web OK).
+
+## 27. Les 8 chantiers du 03/11/2026 — sur `upgrade-sdk57`, non publiés
+- **Sécurité Supabase** (`outils/sql/securite_fonctions.sql`, APPLIQUÉ) : fonctions des défis réservées à `authenticated`.
+  À faire par Kamal : Authentication → activer « Leaked password protection » (si l'offre le permet).
+  La base contient aussi des tables/fonctions `thaayam_*` qui ne sont PAS à Kamal Campus : ne pas y toucher.
+- **Mentions légales** : `web-vitrine/mentions-legales.html`, éditeur « Muruganathan KAMALRAJ » (nom KAMALRAJ, prénom
+  Muruganathan, donnés par Kamal le 03/11). Confidentialité : données en Irlande (eu-west-1), pas en Allemagne.
+- **Supabase gratuit** (pause après 7 jours) : `.github/workflows/supabase-actif.yml` appelle `rpc/ping` tous les 2 jours
+  (actif seulement une fois sur `main`).
+- **Statistiques anonymes** (`outils/sql/statistiques_usage.sql`, APPLIQUÉ) : table `stats_usage` (totaux par jour), RPC
+  `compter_usage`, vue `stats_resume_7j` ; appli : `src/cloud/stats.js`, `lib/statsUsage`, `onStateChange` dans App.js.
+- **Tests des écrans** : `app/e2e/*.spec.js` (14 scénarios, Playwright, Supabase simulé), `.github/workflows/e2e.yml` ;
+  en local : `cd app && E2E_RECONSTRUIRE=1 CHROMIUM_CHEMIN=/opt/pw-browsers/chromium npx playwright test`.
+- **Espace enseignant** (`outils/sql/espace_enseignant.sql`, APPLIQUÉ) : classes, code, devoirs, résultats ; `lib/enseignant`,
+  `src/cloud/enseignant.js`, écrans `EspaceEnseignant.js` / `MesClasses.js`. L'enseignant ne voit que pseudo + résultats.
+- **Accessibilité** : plugin Babel web `app/scripts/babel-etat-accessible.cjs` (accessibilityState → aria-*), `lib/accessibilite`,
+  `src/accessibiliteWeb*.js` ; réglages Profil : police Atkinson Hyperlegible (OFL, `app/public/polices/`), interligne, animations.
+- **23 chapitres enrichis** : `scripts/gen_enrichi_h.py` (relancer `python3 scripts/gen_enrichi_h.py --attendus` après
+  `generer-exos.py`). Autocorrection 70,9 %.

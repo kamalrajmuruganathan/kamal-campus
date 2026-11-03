@@ -16,13 +16,13 @@
     --ink-soft:     #4a5a70;
     --line:         #dcd8c9;      /* notebook rule / hairlines */
     --grid:         rgba(31,111,235,.055);
-    --blue:         #1f6feb;
+    --blue:         #1d67db;
     --blue-deep:    #0b3f9e;
     --blue-tint:    #e7f0ff;
     --craie:        #ff6b45;       /* highlighter / correction accent */
     --craie-soft:   #ffe1d7;
     --gold:         #f4b400;
-    --good:         #1a9f6b;
+    --good:         #157f56;
     --shadow:       18px 22px 48px -28px rgba(16,32,60,.35);
     --shadow-sm:    0 2px 0 var(--line);
     --radius:       18px;
@@ -203,6 +203,14 @@
   /* --- stat band --- */
   .band { background: var(--ink); color: var(--paper); border-radius: 22px; }
   :root[data-theme="dark"] .band, :root:not([data-theme="light"]) .band { }
+
+  /* Accessibilité : contrastes AA en thème sombre, liens assez grands pour le doigt. */
+  .band { background: #16243a; color: #f6f4ec; }
+  :root[data-theme="dark"] .btn-primary { color: #0d1725; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary { color: #0d1725; } }
+  .bar-nav a.navlink, .foot-links a { display: inline-block; padding-block: 11px; }
+  /* Sur téléphone, le menu du haut reste masqué (sinon la page défile en largeur). */
+  @media (max-width: 720px) { .bar-nav a.navlink { display: none; } }
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 34px 30px; }
   @media (max-width: 680px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 26px 4px; } }
   .stat { text-align: center; }
@@ -295,7 +303,7 @@
 <header class="bar">
   <div class="wrap bar-in">
     <div class="brand"><span class="logo">K</span> Kamal Campus</div>
-    <nav class="bar-nav">
+    <nav class="bar-nav" aria-label="Menu principal">
       <a class="navlink" href="#reviser">Réviser</a>
       <a class="navlink" href="#jeux">Jeux</a>
       <a class="navlink" href="#hors-ligne">Hors connexion</a>
@@ -580,12 +588,13 @@
 <footer>
   <div class="wrap foot">
     <div class="brand" style="font-size:1.05rem;"><span class="logo" style="width:32px;height:32px;font-size:1rem;">K</span> Kamal Campus</div>
-    <nav class="foot-links">
+    <nav class="foot-links" aria-label="Liens du pied de page">
       <a href="#reviser">Réviser</a>
       <a href="#jeux">Jeux</a>
       <a href="#hors-ligne">Hors connexion</a>
       <a href="./parents-et-ecoles.html">Parents et écoles</a>
       <a href="./politique-confidentialite.html">Confidentialité</a>
+      <a href="./mentions-legales.html">Mentions légales</a>
       <a href="./app/">Lancer l'appli</a>
     </nav>
     <div class="muted">© <span id="yr"></span> Kamal Campus · Révision du CP à la Terminale</div>

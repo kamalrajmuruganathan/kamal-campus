@@ -94,6 +94,7 @@ export default function Onboarding({ navigation }) {
             <Text style={[st.titre, { color: t.couleur.texte }]}>{L('onb.bienvenue')}</Text>
             <Text style={[st.sous, { color: t.couleur.attenue }]}>{L('onb.prenomQ')}</Text>
             <TextInput
+              accessibilityLabel="Ton prénom"
               value={prenom}
               onChangeText={setPrenom}
               placeholder={L('onb.prenom')}

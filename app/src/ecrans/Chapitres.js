@@ -120,7 +120,7 @@ export default function Chapitres({ route, navigation }) {
                   width: 28, height: 28, borderRadius: 14, alignItems: 'center', justifyContent: 'center',
                   backgroundColor: fondPastille, borderWidth: s === 'afaire' && !prochain ? 1.5 : 0, borderColor: t.couleur.trait,
                 }}>
-                  <Text style={{ color: couleurTexteP, fontWeight: '800', fontSize: 13 }}>{texteP}</Text>
+                  <Text aria-hidden style={{ color: couleurTexteP, fontWeight: '800', fontSize: 13 }}>{texteP}</Text>
                 </View>
                 {i < liste.length - 1 && <View style={{ width: 2, flex: 1, backgroundColor: t.couleur.trait }} />}
               </View>
@@ -128,6 +128,7 @@ export default function Chapitres({ route, navigation }) {
               <Pressable
                 onPress={() => navigation.navigate('Chapitre', { id: c.id, titre: c.titre })}
                 accessibilityRole="button"
+                accessibilityLabel={`Chapitre ${i + 1} : ${c.titre}${prochain ? ', à faire' : ''}${s === 'maitrise' ? ', maîtrisé' : ''}, ${c.duree} min, ${c.nbQuestions} questions`}
                 style={({ pressed }) => [{
                   flex: 1, marginLeft: t.espace.s, marginVertical: 4, padding: t.espace.m,
                   backgroundColor: t.couleur.surface, borderRadius: t.rayon.m,

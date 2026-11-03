@@ -59,12 +59,15 @@ function Bouton({ libelle, onPress, t, couleur, plein = false, desactive = false
   return (
     <Pressable
       onPress={desactive ? undefined : onPress}
+      disabled={desactive}
       accessibilityRole="button"
       accessibilityLabel={a11y ?? libelle}
       accessibilityState={{ disabled: desactive }}
+      aria-disabled={desactive}
       style={({ pressed }) => ({
         flex: 1,
         minHeight: 44,
+        minWidth: 88,
         justifyContent: 'center',
         paddingHorizontal: t.espace.s,
         borderRadius: t.rayon.s,
@@ -179,7 +182,7 @@ export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resul
         <Etiquette
           texte={LIBELLE_DIFFICULTE[ex.difficulte] ?? 'Exercice'}
           couleurFond={accent + '22'}
-          couleurTexte={accent}
+          couleurTexte={t.couleur.texte}
           t={t}
         />
         {dejaReussi && (
@@ -187,7 +190,7 @@ export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resul
         )}
       </View>
 
-      <VisionneuseFiche markdown={enonce} />
+      <VisionneuseFiche markdown={enonce} fond={t.couleur.surface} />
 
       {lecture && (
         <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
@@ -341,7 +344,7 @@ export function CarteExercice({ ex, index, t, accent, matiere, dejaReussi, resul
         </View>
       )}
 
-      {corrigeAffiche && <VisionneuseFiche markdown={corrigeMarkdown(ex)} />}
+      {corrigeAffiche && <VisionneuseFiche markdown={corrigeMarkdown(ex)} fond={t.couleur.surface} />}
 
       {/* Signaler une erreur (énoncé ou corrigé), une fois le corrigé lu. */}
       {corrigeAffiche && chapitreId && (

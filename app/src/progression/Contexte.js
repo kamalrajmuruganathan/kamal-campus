@@ -27,6 +27,7 @@ import { chargerProfil, sauverProfil, effacerProfil, profilVide, synchroniser, d
 import { useAuth } from '../cloud/AuthContexte';
 import { resynchroniserSiPermis } from '../notifications';
 import { definirVitesseParole, definirVoix } from '../parole';
+import { noterQcmPourDevoirs, noterExercicePourDevoirs } from '../cloud/enseignant';
 
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
@@ -196,6 +197,8 @@ export function ProgressionProvider({ children }) {
 
       setProfil(suivant);
       sauverProfil(suivant);
+      // Devoir donné par un enseignant sur ce chapitre : le résultat lui est envoyé.
+      if (chapitreId) noterQcmPourDevoirs(chapitreId, res.justes, res.total);
 
       return {
         ...res,
@@ -461,6 +464,7 @@ export function ProgressionProvider({ children }) {
    */
   const noterExerciceCarnet = useCallback(({ chapitreId, exoId, juste, titre = null, matiere = null }) => {
     if (!chapitreId || exoId == null || typeof juste !== 'boolean') return;
+    noterExercicePourDevoirs(chapitreId, String(exoId), juste); // devoir « exercices » éventuel
     setProfil((p) => {
       const jour = dateLocale(new Date());
       const avant = carnetDe(p, jour);

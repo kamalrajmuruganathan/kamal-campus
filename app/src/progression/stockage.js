@@ -62,6 +62,9 @@ export function profilVide() {
     themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre'
     tailleTexte: 'normale', // accessibilité : 'normale' | 'grande' | 'tres-grande'
     contrasteFort: false, // accessibilité : contraste renforcé (basse vision)
+    policeDyslexie: false, // accessibilité (web) : police Atkinson Hyperlegible
+    interligneLarge: false, // accessibilité : interligne et espaces entre mots agrandis
+    animationsReduites: false, // accessibilité : transitions et animations coupées
     vitesseParole: 'normal', // lecture à voix haute : 'lent' | 'normal' | 'rapide'
     voix: {}, // voix préférée par langue : { 'en-US': id, 'es-ES': id, 'de-DE': id }
     lectureAutoCartes: false, // lire automatiquement la carte quand on la retourne

@@ -31,6 +31,8 @@ export { default as Discussion } from './ecrans/Discussion';
 export { default as Controle } from './ecrans/Controle';
 export { default as Classement } from './ecrans/Classement';
 export { default as EspaceParent } from './ecrans/EspaceParent';
+export { default as EspaceEnseignant } from './ecrans/EspaceEnseignant';
+export { default as MesClasses } from './ecrans/MesClasses';
 export { default as Dictees } from './ecrans/Dictees';
 export { default as Vacances } from './ecrans/Vacances';
 export { default as DefisSemaine } from './ecrans/DefisSemaine';

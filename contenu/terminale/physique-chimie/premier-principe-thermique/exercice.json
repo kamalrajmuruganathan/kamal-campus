@@ -13,502 +13,538 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $1$ kg d'eau liquide de $20$ °C à $30$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "premier-principe",
+      "enonce": "On comprime l'air d'une pompe à vélo : il reçoit un travail $W = 150$ J et cède $90$ J à l'extérieur par transfert thermique. Calculer la variation $\\Delta U$ de son énergie interne.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 1\\times 4\\,180\\times 10 = 41\\,800 $ J, soit $ 41{,}8 $ kJ."
+        "Premier principe (système fermé, au repos macroscopique) : $\\Delta U = W + Q$, les énergies reçues comptées positivement.",
+        "$W = 150$ J et $Q = -90$ J, donc $\\Delta U = 150 + (-90) = 60$ J."
       ],
-      "reponse": "$ Q = 41\\,800 $ J"
+      "reponse": "$60$ J"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $2$ kg d'eau liquide de $20$ °C à $35$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "premier-principe",
+      "enonce": "Un bloc de cuivre reçoit $Q = 2\\,500$ J par transfert thermique, sans échange de travail. Calculer la variation $\\Delta U$ de son énergie interne.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 2\\times 4\\,180\\times 15 = 125\\,400 $ J, soit $ 125{,}4 $ kJ."
+        "Premier principe (système fermé, au repos macroscopique) : $\\Delta U = W + Q$, les énergies reçues comptées positivement.",
+        "$W = 0$ J et $Q = 2\\,500$ J, donc $\\Delta U = 2\\,500$ J."
       ],
-      "reponse": "$ Q = 125\\,400 $ J"
+      "reponse": "$2\\,500$ J"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $0{,}5$ kg d'eau liquide de $20$ °C à $40$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "capacite-thermique",
+      "enonce": "On chauffe $1{,}5$ kg d'eau de $15$ °C à $100$ °C. Calculer l'énergie reçue par l'eau. On donne $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}5\\times 4\\,180\\times 20 = 41\\,800 $ J, soit $ 41{,}8 $ kJ."
+        "$Q = \\Delta U = m\\, c\\, \\Delta T$ avec $\\Delta T = 100 - 15 = 85$ K.",
+        "$Q = 1{,}5 \\times 4\\,180 \\times 85 \\approx 5{,}33 \\times 10^{5}$ J."
       ],
-      "reponse": "$ Q = 41\\,800 $ J"
+      "reponse": "$\\approx 5{,}33 \\times 10^{5}$ J"
     },
     {
       "id": 4,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $1{,}5$ kg d'eau liquide de $20$ °C à $50$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "capacite-thermique",
+      "enonce": "Un bloc de cuivre de $200$ g passe de $20$ °C à $80$ °C. Calculer l'énergie reçue. On donne $c_{\\text{Cu}} = 385\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 1{,}5\\times 4\\,180\\times 30 = 188\\,100 $ J, soit $ 188{,}1 $ kJ."
+        "$Q = m\\, c\\, \\Delta T = 0{,}200 \\times 385 \\times 60$.",
+        "$Q = 4\\,620$ J."
       ],
-      "reponse": "$ Q = 188\\,100 $ J"
+      "reponse": "$4\\,620$ J"
     },
     {
       "id": 5,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $2$ kg d'eau liquide de $20$ °C à $60$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "capacite-thermique",
+      "enonce": "$2{,}0$ kg d'eau reçoivent $25\\,080$ J. De combien leur température augmente-t-elle ? $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 2\\times 4\\,180\\times 40 = 334\\,400 $ J, soit $ 334{,}4 $ kJ."
+        "$\\Delta T = \\dfrac{Q}{m\\, c} = \\dfrac{25\\,080}{2{,}0 \\times 4\\,180}$.",
+        "$\\Delta T = 3$ K, soit $3$ °C."
       ],
-      "reponse": "$ Q = 334\\,400 $ J"
+      "reponse": "$3$ K"
     },
     {
       "id": 6,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $0{,}25$ kg d'eau liquide de $20$ °C à $80$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "puissance-et-duree",
+      "enonce": "Un radiateur de $1\\,500$ W fonctionne pendant $2$ h. Quelle énergie transfère-t-il, en kWh ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}25\\times 4\\,180\\times 60 = 62\\,700 $ J, soit $ 62{,}7 $ kJ."
+        "$E = P \\times \\Delta t = 1{,}5\\ \\mathrm{kW} \\times 2\\ \\mathrm{h} = 3$ kWh."
       ],
-      "reponse": "$ Q = 62\\,700 $ J"
+      "reponse": "$3$ kWh"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $3$ kg d'eau liquide de $20$ °C à $45$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "puissance-et-duree",
+      "enonce": "Convertir $3$ kWh en joules.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 3\\times 4\\,180\\times 25 = 313\\,500 $ J, soit $ 313{,}5 $ kJ."
+        "$1$ kWh $= 1\\,000\\ \\mathrm{W} \\times 3\\,600\\ \\mathrm{s} = 3{,}6 \\times 10^{6}$ J.",
+        "$3$ kWh $= 1{,}08 \\times 10^{7}$ J."
       ],
-      "reponse": "$ Q = 313\\,500 $ J"
+      "reponse": "$1{,}08 \\times 10^{7}$ J"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $0{,}8$ kg d'eau liquide de $20$ °C à $70$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "Spontanément, dans quel sens se fait un transfert thermique entre deux corps ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}8\\times 4\\,180\\times 50 = 167\\,200 $ J, soit $ 167{,}2 $ kJ."
+        "Du corps le plus chaud vers le corps le plus froid, jusqu'à l'équilibre thermique."
       ],
-      "reponse": "$ Q = 167\\,200 $ J"
+      "reponse": "Du plus chaud vers le plus froid"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $1$ kg d'eau liquide de $20$ °C à $95$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "Quel mode de transfert thermique intervient principalement dans la chaleur qui traverse le fond d'une casserole posée sur une plaque ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 1\\times 4\\,180\\times 75 = 313\\,500 $ J, soit $ 313{,}5 $ kJ."
+        "Transfert de proche en proche dans un solide, sans déplacement de matière."
       ],
-      "reponse": "$ Q = 313\\,500 $ J"
+      "reponse": "La conduction"
     },
     {
       "id": 10,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $0{,}2$ kg d'eau liquide de $20$ °C à $100$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "Quel mode de transfert thermique intervient principalement dans l'air chaud d'un radiateur qui monte et réchauffe toute la pièce ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}2\\times 4\\,180\\times 80 = 66\\,880 $ J, soit $ 66{,}88 $ kJ."
+        "Transfert par déplacement de matière (un fluide en mouvement)."
       ],
-      "reponse": "$ Q = 66\\,880 $ J"
+      "reponse": "La convection"
     },
     {
       "id": 11,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $4$ kg d'eau liquide de $20$ °C à $30$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "Quel mode de transfert thermique intervient principalement dans l'énergie du Soleil qui atteint la Terre à travers le vide ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 4\\times 4\\,180\\times 10 = 167\\,200 $ J, soit $ 167{,}2 $ kJ."
+        "Seul le rayonnement (ondes électromagnétiques) traverse le vide."
       ],
-      "reponse": "$ Q = 167\\,200 $ J"
+      "reponse": "Le rayonnement"
     },
     {
       "id": 12,
       "difficulte": "application",
-      "notion": "transfert-thermique",
-      "enonce": "On chauffe $0{,}5$ kg d'eau liquide de $20$ °C à $90$ °C. Quelle énergie thermique $Q$ l'eau reçoit-elle ? On donne $c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$.",
+      "notion": "flux-thermique",
+      "enonce": "Une paroi laisse passer $36\\,000$ J en $1$ min. Calculer le flux thermique.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}5\\times 4\\,180\\times 70 = 146\\,300 $ J, soit $ 146{,}3 $ kJ."
+        "$\\varphi = \\dfrac{Q}{\\Delta t} = \\dfrac{36\\,000}{60} = 600$ W."
       ],
-      "reponse": "$ Q = 146\\,300 $ J"
+      "reponse": "$600$ W"
     },
     {
       "id": 13,
-      "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc d'aluminium de masse $0{,}5$ kg voit sa température augmenter de $40$ °C. Énergie thermique reçue ? On prend $ c = 900\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "difficulte": "application",
+      "notion": "flux-thermique",
+      "enonce": "Dans quelle unité s'exprime un flux thermique ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}5\\times 900\\times 40 = 18\\,000 $ J."
+        "Un flux est une énergie par seconde : il s'exprime en watts ($1$ W $= 1\\ \\mathrm{J \\cdot s^{-1}}$)."
       ],
-      "reponse": "$ Q = 18\\,000 $ J"
+      "reponse": "Le watt"
     },
     {
       "id": 14,
-      "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc d'aluminium de masse $2$ kg voit sa température augmenter de $30$ °C. Énergie thermique reçue ? On prend $ c = 900\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "difficulte": "application",
+      "notion": "resistance-thermique",
+      "enonce": "Un mur sépare l'intérieur à $19$ °C de l'extérieur à $4$ °C ; sa résistance thermique vaut $R_{th} = 0{,}030\\ \\mathrm{K \\cdot W^{-1}}$. Calculer le flux thermique qui le traverse.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 2\\times 900\\times 30 = 54\\,000 $ J."
+        "$\\Delta T = 19 - 4 = 15$ K.",
+        "$\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{15}{0{,}030} = 500$ W."
       ],
-      "reponse": "$ Q = 54\\,000 $ J"
+      "reponse": "$500$ W"
     },
     {
       "id": 15,
-      "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc de fer de masse $1$ kg voit sa température augmenter de $100$ °C. Énergie thermique reçue ? On prend $ c = 450\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "difficulte": "application",
+      "notion": "bilan-terre-effet-de-serre",
+      "enonce": "Par quel mode de transfert la Terre reçoit-elle l'énergie du Soleil ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 1\\times 450\\times 100 = 45\\,000 $ J."
+        "Entre le Soleil et la Terre, il y a le vide spatial : seul le rayonnement le traverse."
       ],
-      "reponse": "$ Q = 45\\,000 $ J"
+      "reponse": "Le rayonnement"
     },
     {
       "id": 16,
       "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc de fer de masse $0{,}2$ kg voit sa température augmenter de $50$ °C. Énergie thermique reçue ? On prend $ c = 450\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "notion": "premier-principe",
+      "enonce": "Un gaz reçoit $1\\,000$ J par transfert thermique et fournit un travail de $400$ J au milieu extérieur en se détendant. Calculer la variation $\\Delta U$ de son énergie interne.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}2\\times 450\\times 50 = 4500 $ J."
+        "Premier principe (système fermé, au repos macroscopique) : $\\Delta U = W + Q$, les énergies reçues comptées positivement.",
+        "$W = -400$ J et $Q = 1\\,000$ J, donc $\\Delta U = 600$ J."
       ],
-      "reponse": "$ Q = 4500 $ J"
+      "reponse": "$600$ J"
     },
     {
       "id": 17,
       "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc de cuivre de masse $1$ kg voit sa température augmenter de $20$ °C. Énergie thermique reçue ? On prend $ c = 385\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "notion": "premier-principe",
+      "enonce": "Un système reçoit un travail de $200$ J et cède $200$ J par transfert thermique. Calculer la variation $\\Delta U$ de son énergie interne.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 1\\times 385\\times 20 = 7700 $ J."
+        "Premier principe (système fermé, au repos macroscopique) : $\\Delta U = W + Q$, les énergies reçues comptées positivement.",
+        "$W = 200$ J et $Q = -200$ J, donc $\\Delta U = 200 + (-200) = 0$ J."
       ],
-      "reponse": "$ Q = 7700 $ J"
+      "reponse": "$0$ J"
     },
     {
       "id": 18,
       "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc de cuivre de masse $0{,}5$ kg voit sa température augmenter de $80$ °C. Énergie thermique reçue ? On prend $ c = 385\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "notion": "premier-principe",
+      "enonce": "Un système fermé voit son énergie interne augmenter de $300$ J alors qu'il reçoit un travail de $500$ J. Quel est le transfert thermique $Q$ ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}5\\times 385\\times 80 = 15\\,400 $ J."
+        "$\\Delta U = W + Q$, donc $Q = \\Delta U - W = 300 - 500 = -200$ J.",
+        "$Q < 0$ : le système cède $200$ J à l'extérieur."
       ],
-      "reponse": "$ Q = 15\\,400 $ J"
+      "reponse": "$-200$ J"
     },
     {
       "id": 19,
       "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc d'aluminium de masse $0{,}1$ kg voit sa température augmenter de $200$ °C. Énergie thermique reçue ? On prend $ c = 900\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "notion": "premier-principe",
+      "enonce": "Quel signe a $Q$ quand un système cède de l'énergie par transfert thermique au milieu extérieur ?",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 0{,}1\\times 900\\times 200 = 18\\,000 $ J."
+        "Convention : une énergie reçue par le système est positive, une énergie cédée est négative.",
+        "$Q < 0$."
       ],
-      "reponse": "$ Q = 18\\,000 $ J"
+      "reponse": "Négatif"
     },
     {
       "id": 20,
       "difficulte": "intermediaire",
-      "notion": "transfert-thermique",
-      "enonce": "Un bloc de fer de masse $3$ kg voit sa température augmenter de $20$ °C. Énergie thermique reçue ? On prend $ c = 450\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $.",
+      "notion": "capacite-thermique",
+      "enonce": "Un bloc de $500$ g d'un métal reçoit $13\\,500$ J et sa température monte de $30$ K. Calculer sa capacité thermique massique.",
       "corrige": [
-        "$ Q = m\\,c\\,\\Delta T = 3\\times 450\\times 20 = 27\\,000 $ J."
+        "$c = \\dfrac{Q}{m\\, \\Delta T} = \\dfrac{13\\,500}{0{,}500 \\times 30}$.",
+        "$c = 900\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$ (proche de l'aluminium)."
       ],
-      "reponse": "$ Q = 27\\,000 $ J"
+      "reponse": "$900$ J·kg⁻¹·K⁻¹"
     },
     {
       "id": 21,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $1$ kg d'eau reçoit $ Q = 41\\,800 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "capacite-thermique",
+      "enonce": "Quelle est la capacité thermique $C$ de $3{,}0$ kg d'eau ? ($c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$)",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{41\\,800}{1\\times 4\\,180} = 10 $ °C."
+        "$C = m\\, c = 3{,}0 \\times 4\\,180 = 12\\,540\\ \\mathrm{J \\cdot K^{-1}}$."
       ],
-      "reponse": "$ \\Delta T = 10 $ °C"
+      "reponse": "$12\\,540$ J/K"
     },
     {
       "id": 22,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $2$ kg d'eau reçoit $ Q = 83\\,600 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "capacite-thermique",
+      "enonce": "Un thé de $250$ g (assimilé à de l'eau) refroidit de $85$ °C à $20$ °C. Calculer la variation de son énergie interne. $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{83\\,600}{2\\times 4\\,180} = 10 $ °C."
+        "$\\Delta U = m\\, c\\, (T_f - T_i) = 0{,}250 \\times 4\\,180 \\times (20 - 85)$.",
+        "$\\Delta U \\approx -6{,}79 \\times 10^{4}$ J : négative, le thé cède de l'énergie."
       ],
-      "reponse": "$ \\Delta T = 10 $ °C"
+      "reponse": "$\\approx -6{,}79 \\times 10^{4}$ J"
     },
     {
       "id": 23,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $1$ kg d'eau reçoit $ Q = 125\\,400 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "puissance-et-duree",
+      "enonce": "Une bouilloire de $2\\,000$ W chauffe $1{,}0$ kg d'eau de $20$ °C à $100$ °C. En supposant qu'il n'y a pas de pertes, combien de temps faut-il ? $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{125\\,400}{1\\times 4\\,180} = 30 $ °C."
+        "$Q = 1{,}0 \\times 4\\,180 \\times 80 = 334\\,400$ J.",
+        "$\\Delta t = \\dfrac{Q}{P} = \\dfrac{334\\,400}{2\\,000} \\approx 167{,}2$ s, soit environ $2$ min $47$ s."
       ],
-      "reponse": "$ \\Delta T = 30 $ °C"
+      "reponse": "$\\approx 167$ s"
     },
     {
       "id": 24,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $0{,}5$ kg d'eau reçoit $ Q = 20\\,900 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "puissance-et-duree",
+      "enonce": "Un four à micro-ondes chauffe $300$ g d'eau de $20$ °C à $90$ °C en $90$ s. Quelle puissance thermique l'eau a-t-elle reçue ? $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{20\\,900}{0{,}5\\times 4\\,180} = 10 $ °C."
+        "$Q = 0{,}300 \\times 4\\,180 \\times 70 = 87\\,780$ J.",
+        "$P = \\dfrac{Q}{\\Delta t} = \\dfrac{87\\,780}{90} \\approx 975{,}3$ W."
       ],
-      "reponse": "$ \\Delta T = 10 $ °C"
+      "reponse": "$\\approx 975$ W"
     },
     {
       "id": 25,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $2$ kg d'eau reçoit $ Q = 167\\,200 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "Quel mode de transfert thermique intervient principalement dans la main qui se réchauffe en tenant une tasse chaude ?",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{167\\,200}{2\\times 4\\,180} = 20 $ °C."
+        "Contact entre deux solides : transfert de proche en proche."
       ],
-      "reponse": "$ \\Delta T = 20 $ °C"
+      "reponse": "La conduction"
     },
     {
       "id": 26,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $0{,}5$ kg d'eau reçoit $ Q = 62\\,700 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "On plonge un glaçon à $0$ °C dans un verre d'eau à $20$ °C. Quel corps cède de l'énergie ?",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{62\\,700}{0{,}5\\times 4\\,180} = 30 $ °C."
+        "Le transfert va spontanément du plus chaud vers le plus froid.",
+        "L'eau du verre cède de l'énergie au glaçon."
       ],
-      "reponse": "$ \\Delta T = 30 $ °C"
+      "reponse": "L'eau du verre"
     },
     {
       "id": 27,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $3$ kg d'eau reçoit $ Q = 250\\,800 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "flux-thermique",
+      "enonce": "Une fenêtre laisse fuir un flux constant de $250$ W. Quelle énergie perd-on en $1$ h ?",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{250\\,800}{3\\times 4\\,180} = 20 $ °C."
+        "$Q = \\varphi \\times \\Delta t = 250 \\times 3\\,600 = 900\\,000$ J."
       ],
-      "reponse": "$ \\Delta T = 20 $ °C"
+      "reponse": "$9{,}0 \\times 10^{5}$ J"
     },
     {
       "id": 28,
       "difficulte": "intermediaire",
-      "notion": "variation-temperature",
-      "enonce": "Une masse de $0{,}2$ kg d'eau reçoit $ Q = 16\\,720 $ J. De combien sa température augmente-t-elle ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "notion": "flux-thermique",
+      "enonce": "Une paroi a un flux thermique de $120$ W. Quelle énergie traverse-t-elle en $24$ h, en kWh ?",
       "corrige": [
-        "$ \\Delta T = \\dfrac{Q}{m\\,c} = \\dfrac{16\\,720}{0{,}2\\times 4\\,180} = 20 $ °C."
+        "$E = 0{,}120\\ \\mathrm{kW} \\times 24\\ \\mathrm{h} = 2{,}88$ kWh."
       ],
-      "reponse": "$ \\Delta T = 20 $ °C"
+      "reponse": "$2{,}88$ kWh"
     },
     {
       "id": 29,
-      "difficulte": "approfondissement",
-      "notion": "masse",
-      "enonce": "Pour élever de $20$ °C la température d'une masse d'eau, il faut $ Q = 83\\,600 $ J. Quelle est cette masse ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "difficulte": "intermediaire",
+      "notion": "flux-thermique",
+      "enonce": "Un flux de $1{,}2$ kW traverse un mur pendant $10$ min. Calculer l'énergie transférée.",
       "corrige": [
-        "$ m = \\dfrac{Q}{c\\,\\Delta T} = \\dfrac{83\\,600}{4\\,180\\times 20} = 1 $ kg."
+        "$Q = 1\\,200 \\times 600 = 7{,}2 \\times 10^{5}$ J."
       ],
-      "reponse": "$ m = 1 $ kg"
+      "reponse": "$7{,}2 \\times 10^{5}$ J"
     },
     {
       "id": 30,
-      "difficulte": "approfondissement",
-      "notion": "masse",
-      "enonce": "Pour élever de $50$ °C la température d'une masse d'eau, il faut $ Q = 418\\,000 $ J. Quelle est cette masse ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Un mur sépare l'intérieur à $20$ °C de l'extérieur à $-5$ °C ; sa résistance thermique vaut $R_{th} = 0{,}050\\ \\mathrm{K \\cdot W^{-1}}$. Calculer le flux thermique qui le traverse.",
       "corrige": [
-        "$ m = \\dfrac{Q}{c\\,\\Delta T} = \\dfrac{418\\,000}{4\\,180\\times 50} = 2 $ kg."
+        "$\\Delta T = 20 - (-5) = 25$ K.",
+        "$\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{25}{0{,}050} = 500$ W."
       ],
-      "reponse": "$ m = 2 $ kg"
+      "reponse": "$500$ W"
     },
     {
       "id": 31,
-      "difficulte": "approfondissement",
-      "notion": "masse",
-      "enonce": "Pour élever de $60$ °C la température d'une masse d'eau, il faut $ Q = 125\\,400 $ J. Quelle est cette masse ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Un mur sépare l'intérieur à $21$ °C de l'extérieur à $6$ °C ; sa résistance thermique vaut $R_{th} = 0{,}050\\ \\mathrm{K \\cdot W^{-1}}$. Calculer le flux thermique qui le traverse.",
       "corrige": [
-        "$ m = \\dfrac{Q}{c\\,\\Delta T} = \\dfrac{125\\,400}{4\\,180\\times 60} = 0{,}5 $ kg."
+        "$\\Delta T = 21 - 6 = 15$ K.",
+        "$\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{15}{0{,}050} = 300$ W."
       ],
-      "reponse": "$ m = 0{,}5 $ kg"
+      "reponse": "$300$ W"
     },
     {
       "id": 32,
-      "difficulte": "approfondissement",
-      "notion": "masse",
-      "enonce": "Pour élever de $25$ °C la température d'une masse d'eau, il faut $ Q = 209\\,000 $ J. Quelle est cette masse ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Une paroi soumise à un écart de $15$ K laisse passer $600$ W. Calculer sa résistance thermique.",
       "corrige": [
-        "$ m = \\dfrac{Q}{c\\,\\Delta T} = \\dfrac{209\\,000}{4\\,180\\times 25} = 2 $ kg."
+        "$R_{th} = \\dfrac{\\Delta T}{\\varphi} = \\dfrac{15}{600}$.",
+        "$R_{th} = 0{,}025\\ \\mathrm{K \\cdot W^{-1}}$."
       ],
-      "reponse": "$ m = 2 $ kg"
+      "reponse": "$0{,}025$ K/W"
     },
     {
       "id": 33,
-      "difficulte": "approfondissement",
-      "notion": "masse",
-      "enonce": "Pour élever de $30$ °C la température d'une masse d'eau, il faut $ Q = 25\\,080 $ J. Quelle est cette masse ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Deux murs : $R_1 = 0{,}02\\ \\mathrm{K \\cdot W^{-1}}$ et $R_2 = 0{,}08\\ \\mathrm{K \\cdot W^{-1}}$. Lequel isole le mieux ?",
       "corrige": [
-        "$ m = \\dfrac{Q}{c\\,\\Delta T} = \\dfrac{25\\,080}{4\\,180\\times 30} = 0{,}2 $ kg."
+        "Plus $R_{th}$ est grand, plus le flux est faible à écart de température égal.",
+        "Le mur 2 isole le mieux."
       ],
-      "reponse": "$ m = 0{,}2 $ kg"
+      "reponse": "Le mur 2"
     },
     {
       "id": 34,
-      "difficulte": "approfondissement",
-      "notion": "masse",
-      "enonce": "Pour élever de $40$ °C la température d'une masse d'eau, il faut $ Q = 334\\,400 $ J. Quelle est cette masse ? ($c_{eau} = 4\\,180\\ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}}$)",
+      "difficulte": "intermediaire",
+      "notion": "bilan-terre-effet-de-serre",
+      "enonce": "Citer un gaz à effet de serre présent dans l'atmosphère.",
       "corrige": [
-        "$ m = \\dfrac{Q}{c\\,\\Delta T} = \\dfrac{334\\,400}{4\\,180\\times 40} = 2 $ kg."
+        "Vapeur d'eau, dioxyde de carbone ($\\mathrm{CO_2}$), méthane…"
       ],
-      "reponse": "$ m = 2 $ kg"
+      "reponse": "Le dioxyde de carbone"
     },
     {
       "id": 35,
-      "difficulte": "application",
-      "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = 200 $ J et un transfert thermique $ Q = 300 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "difficulte": "intermediaire",
+      "notion": "bilan-terre-effet-de-serre",
+      "enonce": "Sans effet de serre, la température moyenne de la Terre serait d'environ $-18$ °C au lieu de $+15$ °C. Quel écart de température l'effet de serre naturel apporte-t-il ?",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = 200 + 300 = 500 $ J."
+        "$15 - (-18) = 33$ °C."
       ],
-      "reponse": "$ \\Delta U = 500 $ J"
+      "reponse": "$33$ °C"
     },
     {
       "id": 36,
-      "difficulte": "application",
-      "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = 0 $ J et un transfert thermique $ Q = -150 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "difficulte": "intermediaire",
+      "notion": "loi-de-newton-du-refroidissement",
+      "enonce": "Une tasse de café à $80$ °C, de surface d'échange $S = 0{,}020$ m², est dans une pièce à $20$ °C. Avec $h = 10\\ \\mathrm{W \\cdot m^{-2} \\cdot K^{-1}}$, calculer le flux perdu.",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = 0 + (-150) = -150 $ J."
+        "$\\varphi = h\\, S\\, (T - T_{\\text{ext}}) = 10 \\times 0{,}020 \\times (80 - 20)$.",
+        "$\\varphi = 12$ W."
       ],
-      "reponse": "$ \\Delta U = -150 $ J"
+      "reponse": "$12$ W"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = 500 $ J et un transfert thermique $ Q = -200 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "difficulte": "intermediaire",
+      "notion": "loi-de-newton-du-refroidissement",
+      "enonce": "Le café précédent est maintenant à $50$ °C. Le flux perdu est-il plus grand ou plus petit qu'à $80$ °C ? Le calculer.",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = 500 + (-200) = 300 $ J."
+        "$\\varphi = 10 \\times 0{,}020 \\times (50 - 20) = 6$ W.",
+        "Le flux est plus petit : l'écart de température a diminué."
       ],
-      "reponse": "$ \\Delta U = 300 $ J"
+      "reponse": "$6$ W"
     },
     {
       "id": 38,
-      "difficulte": "application",
+      "difficulte": "approfondissement",
       "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = -100 $ J et un transfert thermique $ Q = 400 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "enonce": "Vrai ou faux ? « Si un système reçoit de l'énergie par transfert thermique, sa température augmente forcément. » Justifier.",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = -100 + 400 = 300 $ J."
+        "$\\Delta U = W + Q$ : si le système fournit en même temps un travail ($W < 0$), $\\Delta U$ peut être nulle ou négative.",
+        "Lors d'un changement d'état, l'énergie reçue ne modifie pas la température. L'affirmation est fausse."
       ],
-      "reponse": "$ \\Delta U = 300 $ J"
+      "reponse": "Faux"
     },
     {
       "id": 39,
-      "difficulte": "application",
+      "difficulte": "approfondissement",
       "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = 150 $ J et un transfert thermique $ Q = 150 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "enonce": "Une brique (système incompressible) n'échange aucun travail et reçoit $Q = 4\\,200$ J par transfert thermique. Que vaut la variation de son énergie interne ?",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = 150 + 150 = 300 $ J."
+        "Un système incompressible ne reçoit pas de travail des forces de pression : $W = 0$.",
+        "Le premier principe se réduit à $\\Delta U = Q = 4\\,200$ J."
       ],
-      "reponse": "$ \\Delta U = 300 $ J"
+      "reponse": "$4\\,200$ J"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = -300 $ J et un transfert thermique $ Q = -100 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "difficulte": "approfondissement",
+      "notion": "capacite-thermique",
+      "enonce": "Quelle masse d'eau peut-on porter de $20$ °C à $100$ °C avec $334\\,400$ J ? $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = -300 + (-100) = -400 $ J."
+        "$m = \\dfrac{Q}{c\\, \\Delta T} = \\dfrac{334\\,400}{4\\,180 \\times 80}$.",
+        "$m = 1$ kg."
       ],
-      "reponse": "$ \\Delta U = -400 $ J"
+      "reponse": "$1$ kg"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = 1200 $ J et un transfert thermique $ Q = -800 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "difficulte": "approfondissement",
+      "notion": "capacite-thermique",
+      "enonce": "On fournit la même énergie à $1$ kg d'eau ($c = 4\\,180$) et à $1$ kg d'aluminium ($c = 897$, en $\\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$). Lequel s'échauffe le plus ?",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = 1200 + (-800) = 400 $ J."
+        "$\\Delta T = \\dfrac{Q}{m\\, c}$ : à $Q$ et $m$ égaux, l'élévation est la plus grande pour le plus petit $c$.",
+        "L'aluminium s'échauffe environ $4{,}7$ fois plus que l'eau."
       ],
-      "reponse": "$ \\Delta U = 400 $ J"
+      "reponse": "L'aluminium"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "premier-principe",
-      "enonce": "Un système fermé, macroscopiquement au repos, échange un travail $ W = -50 $ J et un transfert thermique $ Q = 250 $ J. Variation de son énergie interne $ \\Delta U $ ?",
+      "difficulte": "approfondissement",
+      "notion": "puissance-et-duree",
+      "enonce": "Un chauffe-eau électrique de $200$ L chauffe l'eau de $15$ °C à $60$ °C. Quel est le coût de l'énergie reçue par l'eau, au prix de $0{,}20$ € le kWh ? ($c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$, $1$ L d'eau $= 1$ kg)",
       "corrige": [
-        "Premier principe : $ \\Delta U = W + Q = -50 + 250 = 200 $ J."
+        "$Q = 200 \\times 4\\,180 \\times 45 = 37\\,620\\,000$ J.",
+        "En kWh : $\\dfrac{37\\,620\\,000}{3{,}6 \\times 10^{6}} \\approx 10{,}45$ kWh.",
+        "Coût : $\\approx 2{,}09$ €."
       ],
-      "reponse": "$ \\Delta U = 200 $ J"
+      "reponse": "$\\approx 2{,}09$ €"
     },
     {
       "id": 43,
-      "difficulte": "intermediaire",
-      "notion": "puissance",
-      "enonce": "Une bouilloire de puissance $ P = 2000 $ W fonctionne pendant $60$ s. Énergie transférée à l'eau (sans pertes) ?",
+      "difficulte": "approfondissement",
+      "notion": "sens-et-modes-de-transfert",
+      "enonce": "Vrai ou faux ? « Un objet froid peut céder spontanément de l'énergie thermique à un objet chaud. » Justifier.",
       "corrige": [
-        "$ Q = P\\times t = 2000\\times 60 = 120\\,000 $ J."
+        "Le transfert thermique spontané va toujours du chaud vers le froid.",
+        "L'inverse demande un apport de travail (réfrigérateur, pompe à chaleur) : l'affirmation est fausse."
       ],
-      "reponse": "$ Q = 120\\,000 $ J"
+      "reponse": "Faux"
     },
     {
       "id": 44,
-      "difficulte": "intermediaire",
-      "notion": "puissance",
-      "enonce": "Une bouilloire de puissance $ P = 1500 $ W fonctionne pendant $120$ s. Énergie transférée à l'eau (sans pertes) ?",
+      "difficulte": "approfondissement",
+      "notion": "flux-thermique",
+      "enonce": "Une maison perd en moyenne $1{,}5$ kW par ses parois pendant les $150$ jours de chauffage. Quel est le coût de cette énergie à $0{,}20$ € le kWh ?",
       "corrige": [
-        "$ Q = P\\times t = 1500\\times 120 = 180\\,000 $ J."
+        "$E = 1{,}5 \\times 24 \\times 150 = 5\\,400$ kWh.",
+        "Coût : $5\\,400 \\times 0{,}20 = 1\\,080$ €."
       ],
-      "reponse": "$ Q = 180\\,000 $ J"
+      "reponse": "$1\\,080$ €"
     },
     {
       "id": 45,
-      "difficulte": "intermediaire",
-      "notion": "puissance",
-      "enonce": "Une bouilloire de puissance $ P = 1000 $ W fonctionne pendant $90$ s. Énergie transférée à l'eau (sans pertes) ?",
+      "difficulte": "approfondissement",
+      "notion": "resistance-thermique",
+      "enonce": "Après des travaux d'isolation, la résistance thermique d'un toit est multipliée par $4$. Par combien le flux perdu est-il divisé, à écart de température égal ?",
       "corrige": [
-        "$ Q = P\\times t = 1000\\times 90 = 90\\,000 $ J."
+        "$\\varphi = \\dfrac{\\Delta T}{R_{th}}$ : $\\varphi$ est inversement proportionnel à $R_{th}$.",
+        "Le flux est divisé par $4$."
       ],
-      "reponse": "$ Q = 90\\,000 $ J"
+      "reponse": "Par $4$"
     },
     {
       "id": 46,
-      "difficulte": "intermediaire",
-      "notion": "puissance",
-      "enonce": "Une bouilloire de puissance $ P = 2200 $ W fonctionne pendant $150$ s. Énergie transférée à l'eau (sans pertes) ?",
+      "difficulte": "approfondissement",
+      "notion": "bilan-terre-effet-de-serre",
+      "enonce": "Vrai ou faux ? « L'effet de serre est un phénomène uniquement causé par les activités humaines. » Justifier.",
       "corrige": [
-        "$ Q = P\\times t = 2200\\times 150 = 330\\,000 $ J."
+        "L'effet de serre naturel (vapeur d'eau, $\\mathrm{CO_2}$…) existe sans l'Homme et rend la Terre habitable.",
+        "Les activités humaines le **renforcent**. L'affirmation est fausse."
       ],
-      "reponse": "$ Q = 330\\,000 $ J"
+      "reponse": "Faux"
     },
     {
       "id": 47,
-      "difficulte": "probleme",
-      "notion": "puissance",
-      "enonce": "Il faut $ Q = 334\\,400 $ J pour porter l'eau d'une bouilloire à ébullition. Sa puissance vaut $ 2000 $ W. Durée de chauffage (sans pertes) ?",
+      "difficulte": "approfondissement",
+      "notion": "loi-de-newton-du-refroidissement",
+      "enonce": "Vrai ou faux ? « Selon la loi de Newton, un café posé dans une pièce à $20$ °C finit par descendre en dessous de $20$ °C. » Justifier.",
       "corrige": [
-        "$ t = \\dfrac{Q}{P} = \\dfrac{334\\,400}{2000} = 167{,}2 $ s."
+        "Le flux est proportionnel à $T - T_{\\text{ext}}$ : il s'annule quand $T = T_{\\text{ext}}$.",
+        "La température tend vers $20$ °C sans jamais descendre en dessous. L'affirmation est fausse."
       ],
-      "reponse": "$ t = 167{,}2 $ s"
+      "reponse": "Faux"
     },
     {
       "id": 48,
-      "difficulte": "probleme",
-      "notion": "puissance",
-      "enonce": "Il faut $ Q = 209\\,000 $ J pour porter l'eau d'une bouilloire à ébullition. Sa puissance vaut $ 1000 $ W. Durée de chauffage (sans pertes) ?",
+      "difficulte": "approfondissement",
+      "notion": "loi-de-newton-du-refroidissement",
+      "enonce": "Pourquoi un café chaud refroidit-il de plus en plus lentement ?",
       "corrige": [
-        "$ t = \\dfrac{Q}{P} = \\dfrac{209\\,000}{1000} = 209 $ s."
+        "Le flux perdu est proportionnel à l'écart $T - T_{\\text{ext}}$.",
+        "Cet écart diminue au cours du refroidissement, donc le flux aussi."
       ],
-      "reponse": "$ t = 209 $ s"
+      "reponse": "L'écart de température diminue"
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "notions",
-      "enonce": "Quelle est l'unité de la capacité thermique massique $c$ ?",
+      "difficulte": "probleme",
+      "notion": "puissance-et-duree",
+      "enonce": "Une plaque électrique fournit à $0{,}50$ kg d'eau une puissance utile de $800$ W. Combien de temps faut-il pour la porter de $20$ °C à $100$ °C ? $c_{\\text{eau}} = 4\\,180\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$.",
       "corrige": [
-        "$c$ s'exprime en $ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}} $ (ou $ \\mathrm{J\\cdot kg^{-1}\\cdot {}^{\\circ}C^{-1}} $, c'est équivalent pour un écart de température)."
+        "$Q = 0{,}50 \\times 4\\,180 \\times 80 = 167\\,200$ J.",
+        "$\\Delta t = \\dfrac{167\\,200}{800} = 209$ s, soit $3$ min $29$ s."
       ],
-      "reponse": "$ \\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}} $"
+      "reponse": "$209$ s"
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "notions",
-      "enonce": "Si $ Q > 0 $, le système reçoit-il ou cède-t-il de l'énergie thermique ?",
+      "difficulte": "probleme",
+      "notion": "resistance-thermique",
+      "enonce": "Le mur de résistance $0{,}030\\ \\mathrm{K \\cdot W^{-1}}$ (intérieur $19$ °C, extérieur $4$ °C) laisse fuir $500$ W. Combien coûte cette perte sur $24$ h, à $0{,}20$ € le kWh ?",
       "corrige": [
-        "Convention : une grandeur d'échange positive est reçue par le système."
+        "$E = 0{,}500\\ \\mathrm{kW} \\times 24\\ \\mathrm{h} = 12$ kWh.",
+        "Coût : $12 \\times 0{,}20 = 2{,}40$ €."
       ],
-      "reponse": "il la reçoit"
+      "reponse": "$2{,}40$ €"
     }
   ]
 }

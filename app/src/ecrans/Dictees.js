@@ -25,6 +25,7 @@ import { useProgression } from '../progression/Contexte';
 import { useConfirmerSortie } from '../useConfirmerSortie';
 import { LIBELLES_NIVEAU } from '../contenu-index';
 import { parler, arreterParole } from '../parole';
+import { sansEmoji } from '../../lib/accessibilite/index.js';
 import { chargerDictees, prechargerDictees } from '../dictees-donnees';
 import {
   GROUPES, TYPES, ORDRE_TYPES, BAREME_TEXTE, corriger, segmentsEleve, segmentsCorrection,
@@ -43,7 +44,7 @@ function Bouton({ t, libelle, onPress, principal = false, desactive = false, acc
     <Pressable
       onPress={desactive ? undefined : onPress}
       accessibilityRole="button"
-      accessibilityLabel={accessibilityLabel ?? libelle}
+      accessibilityLabel={accessibilityLabel ?? sansEmoji(libelle)}
       accessibilityState={{ disabled: desactive }}
       style={({ pressed }) => ({
         paddingVertical: 11,
@@ -72,6 +73,8 @@ function Pastille({ t, libelle, actif, onPress, couleur }) {
       style={({ pressed }) => ({
         paddingVertical: 8,
         paddingHorizontal: 14,
+        minHeight: 44,
+        justifyContent: 'center',
         borderRadius: 999,
         borderWidth: 1.5,
         borderColor: actif ? couleur ?? C.accent : C.trait,
@@ -87,7 +90,7 @@ function Pastille({ t, libelle, actif, onPress, couleur }) {
 function Interrupteur({ t, libelle, actif, onPress }) {
   const C = t.couleur;
   return (
-    <Pressable onPress={onPress} accessibilityRole="switch" accessibilityState={{ checked: actif }} style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 4 }}>
+    <Pressable onPress={onPress} accessibilityRole="switch" accessibilityState={{ checked: actif }} style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 4, minHeight: 44 }}>
       <View style={{ width: 22, height: 22, borderRadius: 5, borderWidth: 2, borderColor: actif ? C.accent : C.attenue, backgroundColor: actif ? C.accent : 'transparent', alignItems: 'center', justifyContent: 'center' }}>
         {actif ? <Text style={{ color: C.accentTexte, fontSize: 13, fontWeight: '900' }}>✓</Text> : null}
       </View>
@@ -318,7 +321,7 @@ export default function Dictees({ navigation }) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: C.fond }} edges={['bottom']}>
         <ScrollView ref={defilement} keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
-          <Pressable onPress={() => { arreter(); setActif(null); }} accessibilityRole="button">
+          <Pressable onPress={() => { arreter(); setActif(null); }} accessibilityRole="button" accessibilityLabel="Toutes les dictées" style={{ minHeight: 44, justifyContent: 'center', alignSelf: 'flex-start' }}>
             <Text style={{ color: C.accent, fontSize: t.police.petite }}>‹ Toutes les dictées</Text>
           </Pressable>
           <Text style={{ color: C.texte, fontSize: t.police.grande, fontWeight: '700', marginTop: t.espace.s }}>{actif.titre}</Text>
@@ -334,7 +337,7 @@ export default function Dictees({ navigation }) {
             <Text style={{ color: C.texte, fontWeight: '700', fontSize: t.police.normale }}>
               Phrase {idx + 1}{NBSP}/{NBSP}{n}{enLecture ? '  🔊' : ''}
             </Text>
-            <View accessibilityRole="progressbar" accessibilityValue={{ min: 0, max: n, now: idx + 1 }} style={{ height: 6, backgroundColor: C.trait, borderRadius: 3, marginTop: 6, overflow: 'hidden' }}>
+            <View accessibilityRole="progressbar" accessibilityLabel={`Phrase ${idx + 1} sur ${n}`} accessibilityValue={{ min: 0, max: n, now: idx + 1 }} style={{ height: 6, backgroundColor: C.trait, borderRadius: 3, marginTop: 6, overflow: 'hidden' }}>
               <View style={{ width: `${Math.round(((idx + 1) / n) * 100)}%`, height: 6, backgroundColor: C.accent }} />
             </View>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>

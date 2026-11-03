@@ -30,6 +30,8 @@ import { melanger, melangerChoix, sansDoublons, completerQuestions } from '../..
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
 import { useQcm } from '../useContenu';
 import EtatChargement from '../composants/EtatChargement';
+import { Annonce } from '../composants/communs';
+import { texteLisible } from '../../lib/accessibilite/index.js';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 // Étiquette affichée en haut de la question (« difficil » : coquille de quelques qcm.json).
@@ -93,6 +95,17 @@ export default function Qcm({ route, navigation }) {
       );
     }
   }, [estTermine]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Clavier (hooks AVANT les « return » anticipés : sinon React plante à la fin du QCM) : après une réponse, le focus passe sur « Question suivante » (Entrée pour continuer) ;
+  // à la question suivante, il revient sur la première réponse.
+  const suivantRef = useRef(null);
+  const premierChoixRef = useRef(null);
+  const focusDejaPose = useRef(false);
+  useEffect(() => {
+    if (choisi !== null) setTimeout(() => suivantRef.current?.focus?.(), 50);
+    else if (focusDejaPose.current) setTimeout(() => premierChoixRef.current?.focus?.(), 50);
+    focusDejaPose.current = true;
+  }, [choisi, index]);
 
   // Banque en cours de chargement ; en cas d'échec, un chapitre à générateur se contente
   // de ses questions générées (hors connexion par exemple).
@@ -322,7 +335,7 @@ export default function Qcm({ route, navigation }) {
           />
         </View>
 
-        <VisionneuseFiche markdown={q.enonce} style={{ marginTop: t.espace.s }} />
+        <VisionneuseFiche markdown={q.enonce} fond={t.couleur.fond} style={{ marginTop: t.espace.s }} />
 
         {lectureActive(matiere, chapitre?.niveau, profil) && (
           <View style={{ marginBottom: t.espace.s }}>
@@ -349,9 +362,13 @@ export default function Qcm({ route, navigation }) {
           return (
             <Pressable
               key={i}
+              ref={i === 0 ? premierChoixRef : undefined}
               onPress={() => valider(i)}
               disabled={repondu}
               accessibilityRole="button"
+              accessibilityLabel={`Réponse ${LETTRES[i]} : ${texteLisible(choix)}${
+                repondu && estBon ? ' (bonne réponse)' : repondu && estChoisi ? ' (ta réponse, fausse)' : ''}`}
+              accessibilityState={{ disabled: repondu }}
               style={({ pressed }) => [
                 st.choix,
                 {
@@ -378,11 +395,17 @@ export default function Qcm({ route, navigation }) {
               <View style={{ flex: 1 }}>
                 <VisionneuseFiche markdown={choix} inerte />
               </View>
-              {repondu && estBon && <Text style={{ color: t.couleur.succes, fontSize: 18 }}>✓</Text>}
-              {repondu && estChoisi && !estBon && <Text style={{ color: t.couleur.erreur, fontSize: 18 }}>✕</Text>}
+              {repondu && estBon && <Text aria-hidden style={{ color: t.couleur.succes, fontSize: 18 }}>✓</Text>}
+              {repondu && estChoisi && !estBon && <Text aria-hidden style={{ color: t.couleur.erreur, fontSize: 18 }}>✕</Text>}
             </Pressable>
           );
         })}
+
+        {/* Annonce pour les lecteurs d'écran (zone « aria-live », toujours présente). */}
+        <Annonce
+          texte={!repondu ? '' : juste ? 'Bonne réponse !'
+            : `Mauvaise réponse. La bonne réponse est la ${LETTRES[q.reponse]} : ${texteLisible(q.choix[q.reponse])}.`}
+        />
 
         {repondu && (
           <View
@@ -405,7 +428,7 @@ export default function Qcm({ route, navigation }) {
             >
               {juste ? 'Correct' : `Réponse : ${LETTRES[q.reponse]}`}
             </Text>
-            <VisionneuseFiche markdown={q.explication} />
+            <VisionneuseFiche markdown={q.explication} fond={juste ? t.couleur.succesFond : t.couleur.erreurFond} />
             {matiereParlante(matiere) && (
               <View style={{ marginTop: t.espace.s }}>
                 <BoutonEcouter t={t} matiere={matiere} texte={q.choix[q.reponse]} libelle="Écouter la réponse" />
@@ -428,7 +451,9 @@ export default function Qcm({ route, navigation }) {
 
         {repondu && (
           <Pressable
+            ref={suivantRef}
             onPress={suivant}
+            accessibilityRole="button"
             style={({ pressed }) => [
               st.bouton,
               { backgroundColor: t.couleur.accent, borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.8 : 1 },

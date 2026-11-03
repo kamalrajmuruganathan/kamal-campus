@@ -1,15 +1,18 @@
 /**
- * Petits composants partagés : carte cliquable, étiquette, bandeau.
+ * Petits composants partagés : carte cliquable, étiquette, bandeau, annonce
+ * pour les lecteurs d'écran.
  */
 
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Platform } from 'react-native';
+import { sansEmoji } from '../../lib/accessibilite/index.js';
 
 export function Carte({ titre, sousTitre, detail, couleur, onPress, t, droite }) {
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`${titre}${sousTitre ? `, ${sousTitre}` : ''}`}
+      // Les emojis du titre sont décoratifs : le lecteur d'écran lit seulement le texte.
+      accessibilityLabel={[titre, sousTitre].map(sansEmoji).filter(Boolean).join(', ')}
       style={({ pressed }) => [
         st.carte,
         {
@@ -39,7 +42,7 @@ export function Carte({ titre, sousTitre, detail, couleur, onPress, t, droite })
         ) : null}
       </View>
       {droite ?? (
-        <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande, marginLeft: t.espace.s }}>›</Text>
+        <Text aria-hidden style={{ color: t.couleur.attenue, fontSize: t.police.grande, marginLeft: t.espace.s }}>›</Text>
       )}
     </Pressable>
   );
@@ -75,7 +78,28 @@ export function Bandeau({ texte, t }) {
   );
 }
 
+/**
+ * Annonce lue par les lecteurs d'écran (« Bonne réponse ! »…) sans être affichée.
+ * La zone « aria-live » existe toujours : seul son texte change, ce qui la fait lire.
+ */
+export function Annonce({ texte, urgent = false }) {
+  return (
+    <View
+      accessibilityLiveRegion={urgent ? 'assertive' : 'polite'}
+      aria-live={urgent ? 'assertive' : 'polite'}
+      aria-atomic
+      style={st.masque}
+    >
+      <Text>{texte || ''}</Text>
+    </View>
+  );
+}
+
 const st = StyleSheet.create({
+  // Visuellement masqué, mais lu par les lecteurs d'écran (technique « sr-only »).
+  masque: Platform.OS === 'web'
+    ? { position: 'absolute', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }
+    : { position: 'absolute', width: 1, height: 1, overflow: 'hidden', opacity: 0 },
   carte: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, overflow: 'hidden' },
   liseré: { width: 4, alignSelf: 'stretch', borderRadius: 2, marginRight: 12 },
   corps: { flex: 1 },

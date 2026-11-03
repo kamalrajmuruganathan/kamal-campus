@@ -52,7 +52,7 @@ export default function HorsLigneParcours({ t, ids, accent }) {
           disabled={!enLigne}
           accessibilityRole="button"
           accessibilityLabel="Télécharger ces chapitres pour les réviser hors connexion"
-          style={{ marginTop: t.espace.s, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 14, borderRadius: t.rayon.s, backgroundColor: enLigne ? (accent || t.couleur.accent) : t.couleur.trait }}
+          style={{ marginTop: t.espace.s, alignSelf: 'flex-start', minHeight: 44, justifyContent: 'center', paddingVertical: 8, paddingHorizontal: 14, borderRadius: t.rayon.s, backgroundColor: enLigne ? (accent || t.couleur.accent) : t.couleur.trait }}
         >
           <Text style={{ color: t.couleur.accentTexte, fontWeight: '650', fontSize: t.police.petite }}>
             {enLigne ? `Télécharger ${ids.length - (dispo || 0)} chapitre${ids.length - (dispo || 0) > 1 ? 's' : ''}` : 'Pas de connexion'}

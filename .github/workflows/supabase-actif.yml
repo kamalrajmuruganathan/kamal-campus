@@ -1,0 +1,30 @@
+name: Garder Supabase actif
+
+# Un projet Supabase gratuit se met en pause après 7 jours sans activité : la connexion des élèves ne marche
+# plus tant qu'on ne le relance pas à la main. Cette tâche appelle tous les 2 jours une petite fonction « ping »
+# (outils/sql/statistiques_usage.sql) pour qu'il reste actif. La clé utilisée est la clé PUBLIQUE de l'appli
+# (la même que dans app/src/cloud/supabase.js) : elle ne donne accès qu'à ce que les règles RLS autorisent.
+
+on:
+  schedule:
+    - cron: '17 6 */2 * *'   # tous les 2 jours, vers 7 h 17 (heure de Paris en hiver)
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Appeler la fonction ping de Supabase
+        run: |
+          for essai in 1 2 3; do
+            reponse=$(curl -sS -m 30 -X POST \
+              'https://zxhxevucpuudknyfidla.supabase.co/rest/v1/rpc/ping' \
+              -H 'apikey: sb_publishable_07OkmTas1JvRtODtJlWCzQ_uSX6Wre-' \
+              -H 'Content-Type: application/json' -d '{}' || true)
+            echo "Réponse : $reponse"
+            if [ "$reponse" = '"ok"' ]; then exit 0; fi
+            sleep 20
+          done
+          echo "Supabase n'a pas répondu « ok » : vérifier le projet sur supabase.com (pause ?)."
+          exit 1
