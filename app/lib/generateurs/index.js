@@ -201,13 +201,14 @@ export function genererQuestions(id, n, rand = Math.random) {
   const questions = [];
   const vus = new Set();
   let essais = 0;
+  let decalage = 0; // après un doublon, on essaie le modèle suivant (un petit modèle s'épuise vite)
   const maxEssais = n * 12;
 
   while (questions.length < n && essais < maxEssais) {
     essais += 1;
-    const gen = gens[questions.length % gens.length];
+    const gen = gens[(questions.length + decalage) % gens.length];
     const q = gen(rand);
-    if (vus.has(q.enonce)) continue; // évite un doublon dans ce lot
+    if (vus.has(q.enonce)) { decalage += 1; continue; } // évite un doublon dans ce lot
     vus.add(q.enonce);
     questions.push({ ...q, id: questions.length + 1 });
   }
