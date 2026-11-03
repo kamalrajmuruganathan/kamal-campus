@@ -4,7 +4,7 @@
  * Chaque carte a un état : nombre de réussites d'affilée (rep), intervalle en
  * jours, facilité (ease), et date d'échéance (due, « AAAA-MM-JJ »). Quand l'élève
  * juge une carte (« je savais » / « à revoir »), on recalcule l'intervalle : plus
- * il réussit, plus la carte revient tard (J+1, J+3, J+7, J+16…). Un échec la
+ * il réussit, plus la carte revient tard (J+1, J+3, J+8, J+22…). Un échec la
  * ramène au lendemain. Pur et testable : aucune dépendance.
  */
 

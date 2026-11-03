@@ -57,13 +57,16 @@ export function appliquerXpJour(etat, points, jour) {
     xpDuJour = 0;
   }
 
-  const avant = xpDuJour;
-  xpDuJour += points;
+  xpDuJour = (Number(xpDuJour) || 0) + (Number(points) || 0);
+  // Objectif absent ou illisible : 50 XP (valeur par défaut du profil).
+  const objectif = Number(objectifQuotidien) > 0 ? Number(objectifQuotidien) : 50;
 
   let objectifAtteintMaintenant = false;
-  if (avant < objectifQuotidien && xpDuJour >= objectifQuotidien && dernierJourValide !== jour) {
-    // Objectif franchi pour la première fois aujourd'hui.
-    serieJours = estConsecutif(dernierJourValide, jour) ? serieJours + 1 : 1;
+  // Pas de condition sur l'XP « d'avant » : si l'élève abaisse son objectif en cours de
+  // journée (60 → 30 avec 40 XP déjà gagnés), le jour est validé au gain suivant.
+  if (xpDuJour >= objectif && dernierJourValide !== jour) {
+    // Objectif atteint pour la première fois aujourd'hui.
+    serieJours = estConsecutif(dernierJourValide, jour) ? (Number(serieJours) || 0) + 1 : 1;
     dernierJourValide = jour;
     meilleureSerieJours = Math.max(meilleureSerieJours, serieJours);
     objectifAtteintMaintenant = true;

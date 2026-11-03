@@ -14,12 +14,12 @@ import { niveauPourXp } from './progression.js';
 export function statsDerivees(profil) {
   const p = profil || {};
   const niveau = niveauPourXp(p.xp || 0).niveau;
-  const chaps = Object.values(p.chapitres || {});
+  const chaps = Object.values(p.chapitres || {}).filter((c) => c && typeof c === 'object');
   const maitrises = chaps.filter((c) => c.meilleurScore >= 0.8).length;
   const matieresEntamees = Object.values(p.xpParMatiere || {}).filter((v) => v > 0).length;
   const exos = Object.values(p.exosReussis || {}).reduce((t, l) => t + (Array.isArray(l) ? l.length : 0), 0);
   const dictees = Object.values(p.dictees || {}).filter((d) => d && typeof d === 'object');
-  const examens = (Array.isArray(p.examens) ? p.examens : []).filter(Boolean);
+  const examens = (Array.isArray(p.examens) ? p.examens : []).filter((e) => e && typeof e === 'object');
   return {
     niveau,
     maitrises,
@@ -85,7 +85,7 @@ export const BADGES = [
 
   { id: 'flash-250', icone: '🗃️', titre: 'Mémoire d’éléphant', desc: 'Réviser 250 cartes connues', cible: 250, valeur: (p) => p.flashcardsConnues || 0 },
 
-  { id: 'deux-matieres', icone: '⚗️', titre: 'Touche-à-tout', desc: 'Gagner des points en maths ET en physique-chimie', cible: 2, valeur: (p, s) => s.matieresEntamees },
+  { id: 'deux-matieres', icone: '⚗️', titre: 'Touche-à-tout', desc: 'Gagner des points dans deux matières différentes', cible: 2, valeur: (p, s) => s.matieresEntamees },
 ];
 
 /**

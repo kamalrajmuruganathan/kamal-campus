@@ -159,15 +159,21 @@ export function depuisAnciennesErreurs(erreurs, aujourdhui) {
     }));
 }
 
-/** Fusion de deux carnets (appareils différents) : par clé, la plus récente gagne. */
+/** Fusion de deux carnets (appareils différents) : par clé, la plus récente gagne.
+ * Le résultat est rangé de la plus ancienne mise à jour à la plus récente (MAX_CARNET
+ * au plus : les plus anciennes partent) ; il ne dépend pas de l'ordre des deux carnets. */
 export function fusionnerCarnets(a, b) {
   const m = new Map();
-  for (const e of [...(a || []), ...(b || [])]) {
+  const json = (e) => JSON.stringify(e);
+  for (const e of [...(Array.isArray(a) ? a : []), ...(Array.isArray(b) ? b : [])]) {
     if (!e || !e.cle) continue;
     const x = m.get(e.cle);
-    if (!x || String(e.maj || '') > String(x.maj || '')) m.set(e.cle, e);
+    const d = x ? String(e.maj || '').localeCompare(String(x.maj || '')) : 1;
+    if (d > 0 || (d === 0 && json(e) > json(x))) m.set(e.cle, e);
   }
-  return [...m.values()].slice(-MAX_CARNET);
+  return [...m.values()]
+    .sort((x, y) => String(x.maj || '').localeCompare(String(y.maj || '')) || (x.cle < y.cle ? -1 : x.cle > y.cle ? 1 : 0))
+    .slice(-MAX_CARNET);
 }
 
 /** « 16/10 » ou « demain » pour l'affichage d'une date de révision. */

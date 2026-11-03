@@ -11,7 +11,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { useProgression } from '../progression/Contexte';
 import { dateLocale } from '../../lib/serie';
-import { activiteParJour } from '../../lib/stats';
+import { activiteParJour, jourDeSession } from '../../lib/stats';
 import { LIGUES, etatInitial, appliquerRollover, debutSemaine, cohorte } from '../../lib/ligue';
 
 const JOURS = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -34,10 +34,10 @@ export default function RecapHebdo() {
   const ligue = appliquerRollover(profil.ligue && profil.ligue.semaine ? profil.ligue : etatInitial(jour), jour);
 
   const hist = profil.historique || [];
-  const histSem = hist.filter((h) => String(h.date || '').slice(0, 10) >= semaine);
+  const histSem = hist.filter((h) => (jourDeSession(h.date) || '') >= semaine);
   const sessions = histSem.length;
   const pts = histSem.reduce((s, h) => s + (h.points || 0), 0);
-  const joursActifs = new Set(histSem.map((h) => String(h.date || '').slice(0, 10))).size;
+  const joursActifs = new Set(histSem.map((h) => jourDeSession(h.date))).size;
 
   const jours7 = activiteParJour(hist, jour, 7);
   const maxJ = Math.max(1, ...jours7.map((j) => j.count));

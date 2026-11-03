@@ -64,7 +64,7 @@ export function cohorte(semaine, palier, xpEleve) {
     membres.push({ nom, xp, moi: false });
   }
   membres.push({ nom: 'Toi', xp: Math.max(0, Math.round(xpEleve)), moi: true });
-  membres.sort((x, y) => y.xp - x.xp || (x.moi ? 1 : -1));
+  membres.sort((x, y) => y.xp - x.xp || Number(x.moi) - Number(y.moi));
   return membres;
 }
 
