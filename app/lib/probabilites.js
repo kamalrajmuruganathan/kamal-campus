@@ -11,6 +11,8 @@
  * aux coefficients binomiaux (qui relèvent de la terminale).
  */
 
+import { nombre, par } from './format-calcul.js';
+
 const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : Number(x.toFixed(d)));
 const estProba = (p) => typeof p === 'number' && Number.isFinite(p) && p >= 0 && p <= 1;
 
@@ -87,7 +89,7 @@ export function contraire(pA) {
     probabilite: arrondi(p),
     etapes: [
       { titre: 'Formule', detail: 'P(Ā) = 1 − P(A)' },
-      { titre: 'Calcul', detail: `P(Ā) = 1 − ${pA} = ${arrondi(p)}` },
+      { titre: 'Calcul', detail: `P(Ā) = 1 − ${pA} = ${nombre(p)}` },
       { titre: 'Astuce', detail: 'Quand l’énoncé dit « au moins un… », passer par le contraire « aucun » est presque toujours plus rapide.' },
     ],
   };
@@ -108,13 +110,13 @@ export function union(pA, pB, pInter = null) {
 
   const p = pA + pB - inter;
   if (p > 1 + 1e-12) {
-    return { valide: false, erreur: `Le résultat vaut ${arrondi(p)} > 1 : les données sont incohérentes.` };
+    return { valide: false, erreur: `Le résultat vaut ${nombre(p)} > 1 : les données sont incohérentes.` };
   }
 
   const etapes = [
     { titre: 'Formule', detail: 'P(A ∪ B) = P(A) + P(B) − P(A ∩ B)' },
     { titre: 'Pourquoi soustraire', detail: 'L’intersection est comptée DEUX FOIS dans la somme : on la retranche une fois.' },
-    { titre: 'Calcul', detail: `P(A ∪ B) = ${pA} + ${pB} − ${inter} = ${arrondi(p)}` },
+    { titre: 'Calcul', detail: `P(A ∪ B) = ${pA} + ${pB} − ${inter} = ${nombre(p)}` },
   ];
   if (pInter === null) {
     etapes.push({ titre: 'Hypothèse', detail: 'Aucune intersection fournie : les événements sont supposés INCOMPATIBLES. Vérifie-le.' });
@@ -132,8 +134,8 @@ export function independants(pA, pB, pInter) {
   const ok = Math.abs(pInter - produit) < 1e-9;
   const etapes = [
     { titre: 'Critère', detail: 'A et B sont indépendants si et seulement si P(A ∩ B) = P(A) × P(B).' },
-    { titre: 'Calcul', detail: `P(A) × P(B) = ${pA} × ${pB} = ${arrondi(produit)}` },
-    { titre: 'Comparaison', detail: `P(A ∩ B) = ${pInter} ${ok ? '=' : '≠'} ${arrondi(produit)}` },
+    { titre: 'Calcul', detail: `P(A) × P(B) = ${pA} × ${pB} = ${nombre(produit)}` },
+    { titre: 'Comparaison', detail: `P(A ∩ B) = ${pInter} ${ok ? '=' : '≠'} ${nombre(produit)}` },
     { titre: 'Conclusion', detail: ok ? 'Les événements sont INDÉPENDANTS.' : 'Les événements sont DÉPENDANTS.' },
   ];
   if (pInter === 0 && pA > 0 && pB > 0) {
@@ -164,7 +166,7 @@ export function conditionnelle(pInter, pA) {
     probabilite: arrondi(p),
     etapes: [
       { titre: 'Formule', detail: 'P_A(B) = P(A ∩ B) / P(A)' },
-      { titre: 'Calcul', detail: `P_A(B) = ${pInter} / ${pA} = ${arrondi(p)}` },
+      { titre: 'Calcul', detail: `P_A(B) = ${pInter} / ${pA} = ${nombre(p)}` },
       {
         titre: '⚠️ Attention',
         detail: 'P_A(B) et P_B(A) sont DIFFÉRENTES. « Probabilité d’être malade sachant qu’on est positif » '
@@ -202,18 +204,18 @@ export function arbrePondere(pA, pB_sachantA, pB_sachantNonA) {
     pB: arrondi(pB),
     pA_sachantB: pA_sachantB === null ? null : arrondi(pA_sachantB),
     etapes: [
-      { titre: 'Somme des branches', detail: `P(A) + P(Ā) = ${pA} + ${arrondi(pNonA)} = 1 ✓` },
-      { titre: 'Chemin A puis B', detail: `${pA} × ${pB_sachantA} = ${arrondi(chemin1)}`, remarque: 'On MULTIPLIE le long d’un chemin.' },
-      { titre: 'Chemin Ā puis B', detail: `${arrondi(pNonA)} × ${pB_sachantNonA} = ${arrondi(chemin2)}` },
+      { titre: 'Somme des branches', detail: `P(A) + P(Ā) = ${pA} + ${nombre(pNonA)} = 1 ✓` },
+      { titre: 'Chemin A puis B', detail: `${pA} × ${pB_sachantA} = ${nombre(chemin1)}`, remarque: 'On MULTIPLIE le long d’un chemin.' },
+      { titre: 'Chemin Ā puis B', detail: `${nombre(pNonA)} × ${pB_sachantNonA} = ${nombre(chemin2)}` },
       {
         titre: 'Probabilités totales',
-        detail: `P(B) = ${arrondi(chemin1)} + ${arrondi(chemin2)} = ${arrondi(pB)}`,
+        detail: `P(B) = ${nombre(chemin1)} + ${nombre(chemin2)} = ${nombre(pB)}`,
         remarque: 'On ADDITIONNE les chemins qui mènent à B.',
       },
       ...(pA_sachantB !== null
         ? [{
           titre: 'Conditionnement inverse',
-          detail: `P_B(A) = ${arrondi(chemin1)} / ${arrondi(pB)} = ${arrondi(pA_sachantB)}`,
+          detail: `P_B(A) = ${nombre(chemin1)} / ${nombre(pB)} = ${nombre(pA_sachantB)}`,
           remarque: '⚠️ À ne pas confondre avec P_A(B), qui vaut ' + pB_sachantA + '.',
         }]
         : []),
@@ -273,10 +275,10 @@ export function bernoulli(n, p, k) {
         titre: 'Chemins réalisant exactement ' + k + ' succès',
         detail: chemins.length ? chemins.join(' · ') : 'aucun',
       },
-      { titre: 'Probabilité d’un chemin', detail: `${p}^${k} × ${arrondi(1 - p)}^${n - k} = ${arrondi(pChemin)}` },
+      { titre: 'Probabilité d’un chemin', detail: `${p}^${k} × ${nombre(1 - p)}^${n - k} = ${nombre(pChemin)}` },
       {
         titre: 'Total',
-        detail: `${chemins.length} chemin(s) × ${arrondi(pChemin)} = ${arrondi(total)}`,
+        detail: `${chemins.length} chemin${chemins.length > 1 ? 's' : ''} × ${nombre(pChemin)} = ${nombre(total)}`,
         remarque: '⚠️ Le facteur vient du NOMBRE DE CHEMINS. L’oublier est l’erreur type de ce chapitre.',
       },
     ],
@@ -292,7 +294,7 @@ export function verifierLoi(probabilites) {
   }
   const hors = probabilites.filter((p) => !estProba(p));
   if (hors.length) {
-    return { valide: false, erreur: `Valeur(s) hors de [0 ; 1] : ${hors.join(', ')}.` };
+    return { valide: false, erreur: `Valeur(s) invalide(s) ou hors de [0 ; 1] : ${hors.map((p) => (typeof p === 'number' ? nombre(p) : '?')).join(' ; ')}.` };
   }
   const somme = probabilites.reduce((a, b) => a + b, 0);
   const ok = Math.abs(somme - 1) < 1e-9;
@@ -301,12 +303,12 @@ export function verifierLoi(probabilites) {
     somme: arrondi(somme),
     coherente: ok,
     etapes: [
-      { titre: 'Somme', detail: `Σpᵢ = ${arrondi(somme)}` },
+      { titre: 'Somme', detail: `Σpᵢ = ${nombre(somme)}` },
       {
         titre: 'Conclusion',
         detail: ok
           ? 'La somme vaut 1 : la loi de probabilité est cohérente ✓'
-          : `La somme vaut ${arrondi(somme)} au lieu de 1 : il y a une erreur, inutile de poursuivre les calculs.`,
+          : `La somme vaut ${nombre(somme)} au lieu de 1 : il y a une erreur, inutile de poursuivre les calculs.`,
       },
     ],
   };
@@ -345,17 +347,17 @@ export function variableAleatoire(valeurs, probabilites) {
     equitable: Math.abs(E) < 1e-12,
     etapes: [
       { titre: 'Contrôle', detail: `Σpᵢ = 1 ✓` },
-      { titre: 'Espérance', detail: `E(X) = Σxᵢpᵢ = ${arrondi(E)}` },
-      { titre: 'Moyenne des carrés', detail: `E(X²) = Σxᵢ²pᵢ = ${arrondi(E2)}` },
+      { titre: 'Espérance', detail: `E(X) = Σxᵢpᵢ = ${nombre(E)}` },
+      { titre: 'Moyenne des carrés', detail: `E(X²) = Σxᵢ²pᵢ = ${nombre(E2)}` },
       {
         titre: 'Variance (König-Huygens)',
-        detail: `V(X) = E(X²) − (E(X))² = ${arrondi(E2)} − ${arrondi(E * E)} = ${arrondi(V)}`,
+        detail: `V(X) = E(X²) − (E(X))² = ${nombre(E2)} − ${nombre(E * E)} = ${nombre(V)}`,
         remarque: '« Moyenne des carrés moins carré de la moyenne » — l’ordre compte : l’inverser donnerait une variance négative.',
       },
-      { titre: 'Écart-type', detail: `σ(X) = √${arrondi(V)} = ${arrondi(sigma)}` },
+      { titre: 'Écart-type', detail: `σ(X) = √${nombre(V)} = ${nombre(sigma)}` },
       ...(Math.abs(E) < 1e-12
         ? [{ titre: 'Interprétation', detail: 'E(X) = 0 : le jeu est ÉQUITABLE.' }]
-        : [{ titre: 'Interprétation', detail: `En moyenne, on ${E > 0 ? 'gagne' : 'perd'} ${arrondi(Math.abs(E))} par partie.` }]),
+        : [{ titre: 'Interprétation', detail: `En moyenne, on ${E > 0 ? 'gagne' : 'perd'} ${nombre(Math.abs(E))} par partie.` }]),
     ],
   };
 }
@@ -372,13 +374,13 @@ export function transformationAffineVA(esperance, variance, a, b) {
     variance: arrondi(a * a * variance),
     ecartType: arrondi(Math.abs(a) * Math.sqrt(variance)),
     etapes: [
-      { titre: 'Espérance', detail: `E(aX+b) = aE(X)+b = ${a} × ${esperance} + ${b} = ${arrondi(a * esperance + b)}` },
+      { titre: 'Espérance', detail: `E(aX+b) = aE(X)+b = ${nombre(a)} × ${par(esperance)} + ${par(b)} = ${nombre(a * esperance + b)}` },
       {
         titre: 'Variance',
-        detail: `V(aX+b) = a²V(X) = ${a}² × ${variance} = ${arrondi(a * a * variance)}`,
+        detail: `V(aX+b) = a²V(X) = ${par(a)}² × ${nombre(variance)} = ${nombre(a * a * variance)}`,
         remarque: '⚠️ C’est a², pas a. Et b n’intervient PAS : un décalage ne change pas la dispersion.',
       },
-      { titre: 'Écart-type', detail: `σ(aX+b) = |a|σ(X) = ${arrondi(Math.abs(a) * Math.sqrt(variance))}` },
+      { titre: 'Écart-type', detail: `σ(aX+b) = |a|σ(X) = ${nombre(Math.abs(a) * Math.sqrt(variance))}` },
     ],
   };
 }

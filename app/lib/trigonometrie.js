@@ -12,7 +12,9 @@
  * cause d'erreur du chapitre.
  */
 
-const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : Number(x.toFixed(d)));
+import { nombre } from './format-calcul.js';
+
+const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : Number(x.toFixed(d)) || 0);
 const estNombre = (v) => typeof v === 'number' && Number.isFinite(v);
 const PI = Math.PI;
 
@@ -23,11 +25,12 @@ export function degresVersRadians(deg) {
   const rad = (deg * PI) / 180;
   return {
     valide: true,
+    degres: deg,
     radians: arrondi(rad),
     exact: exprimerEnPi(rad),
     etapes: [
       { titre: 'Formule', detail: 'radians = degrés × π/180' },
-      { titre: 'Calcul', detail: `${deg} × π/180 = ${exprimerEnPi(rad)} ≈ ${arrondi(rad)}` },
+      { titre: 'Calcul', detail: `${deg} × π/180 = ${exprimerEnPi(rad)} ≈ ${nombre(rad)}` },
     ],
   };
 }
@@ -40,7 +43,7 @@ export function radiansVersDegres(rad) {
     degres: arrondi(deg),
     etapes: [
       { titre: 'Formule', detail: 'degrés = radians × 180/π' },
-      { titre: 'Calcul', detail: `${arrondi(rad)} × 180/π = ${arrondi(deg)}°` },
+      { titre: 'Calcul', detail: `${nombre(rad)} × 180/π = ${nombre(deg)}°` },
     ],
   };
 }
@@ -53,13 +56,14 @@ function exprimerEnPi(rad) {
     const num = ratio * d;
     if (Math.abs(num - Math.round(num)) < 1e-9) {
       const n = Math.round(num);
+      if (n === 0) break; // angle minuscule mais non nul : pas « 0π »
       const g = pgcd(Math.abs(n), d);
       const nn = n / g, dd = d / g;
       if (dd === 1) return nn === 1 ? 'π' : nn === -1 ? '−π' : `${nn}π`;
       return nn === 1 ? `π/${dd}` : nn === -1 ? `−π/${dd}` : `${nn}π/${dd}`;
     }
   }
-  return `${arrondi(ratio)}π`;
+  return `${nombre(arrondi(ratio))}π`;
 }
 
 const pgcd = (a, b) => { a = Math.abs(a); b = Math.abs(b); while (b) [a, b] = [b, a % b]; return a || 1; };
@@ -94,19 +98,35 @@ const EXACTES = {
  * Renvoie les valeurs EXACTES si l'angle est remarquable.
  */
 export function cosSin(rad) {
+  // L'écran Outils passe directement le résultat de degresVersRadians(...) :
+  // on l'accepte, et on travaille alors avec les DEGRÉS exacts (60° est
+  // remarquable ; 1,047198 rad arrondi ne l'est plus).
+  let degres = null;
+  if (rad && typeof rad === 'object') {
+    if (!rad.valide) return rad;
+    degres = rad.degres;
+    rad = (degres * PI) / 180;
+  }
   if (!estNombre(rad)) return { valide: false, erreur: 'L’angle doit être un nombre (en radians).' };
-
-  const cos = Math.cos(rad);
-  const sin = Math.sin(rad);
 
   // ramène dans [0 ; 2π[ puis cherche un multiple de π/12
   let r = rad % (2 * PI);
   if (r < 0) r += 2 * PI;
-  const douziemes = (r * 12) / PI;
+  let douziemes = (r * 12) / PI;
+  if (degres !== null) {
+    const dm = ((degres % 360) + 360) % 360;
+    douziemes = dm / 15;
+    r = (dm * PI) / 180;
+  }
   const k = Math.round(douziemes);
   const remarquable = Math.abs(douziemes - k) < 1e-9 && EXACTES[k % 24] !== undefined;
 
   const exact = remarquable ? EXACTES[k % 24] : null;
+  // valeurs exactes connues : pas de « 6.123234e-17 » pour cos 90°
+  const VAL = { 0: 0, 1: 1, '−1': -1, '1/2': 0.5, '−1/2': -0.5 };
+  const lire = (t, x) => (t in VAL ? VAL[t] : x);
+  const cos = exact ? lire(exact.cos, Math.cos(r)) : Math.cos(r);
+  const sin = exact ? lire(exact.sin, Math.sin(r)) : Math.sin(r);
 
   return {
     valide: true,
@@ -117,12 +137,14 @@ export function cosSin(rad) {
     remarquable,
     quadrant: quadrant(cos, sin),
     etapes: [
-      { titre: 'Angle', detail: `${exprimerEnPi(r)} (soit ${arrondi((r * 180) / PI)}°)` },
+      { titre: 'Angle', detail: degres !== null && degres !== arrondi((r * 180) / PI)
+        ? `${nombre(degres)}° = ${exprimerEnPi(rad)} rad, même point du cercle que ${exprimerEnPi(r)} (soit ${nombre(arrondi((r * 180) / PI))}°)`
+        : `${exprimerEnPi(r)} rad (soit ${nombre(arrondi((r * 180) / PI))}°)` },
       ...(remarquable
         ? [{ titre: 'Valeurs exactes', detail: `cos = ${exact.cos}, sin = ${exact.sin}`, remarque: '⚠️ C’est la forme EXACTE qu’il faut écrire sur une copie, pas la valeur décimale.' }]
-        : [{ titre: 'Valeurs approchées', detail: `cos ≈ ${arrondi(cos)}, sin ≈ ${arrondi(sin)}` }]),
-      { titre: 'Position', detail: `Le point est dans le ${quadrant(cos, sin)}.` },
-      { titre: 'Relation fondamentale', detail: `cos² + sin² = ${arrondi(cos * cos + sin * sin)} = 1 ✓` },
+        : [{ titre: 'Valeurs approchées', detail: `cos ≈ ${nombre(arrondi(cos))}, sin ≈ ${nombre(arrondi(sin))}` }]),
+      { titre: 'Position', detail: `Le point est ${quadrant(cos, sin)}.` },
+      { titre: 'Relation fondamentale', detail: 'cos² + sin² = 1 ✓' },
     ],
   };
 }
@@ -131,10 +153,10 @@ function quadrant(c, s) {
   const eps = 1e-12;
   if (Math.abs(s) < eps) return c > 0 ? 'sur l’axe des abscisses, à droite' : 'sur l’axe des abscisses, à gauche';
   if (Math.abs(c) < eps) return s > 0 ? 'sur l’axe des ordonnées, en haut' : 'sur l’axe des ordonnées, en bas';
-  if (c > 0 && s > 0) return '1er quadrant (cos > 0, sin > 0)';
-  if (c < 0 && s > 0) return '2e quadrant (cos < 0, sin > 0)';
-  if (c < 0 && s < 0) return '3e quadrant (cos < 0, sin < 0)';
-  return '4e quadrant (cos > 0, sin < 0)';
+  if (c > 0 && s > 0) return 'dans le 1er quadrant (cos > 0, sin > 0)';
+  if (c < 0 && s > 0) return 'dans le 2e quadrant (cos < 0, sin > 0)';
+  if (c < 0 && s < 0) return 'dans le 3e quadrant (cos < 0, sin < 0)';
+  return 'dans le 4e quadrant (cos > 0, sin < 0)';
 }
 
 // ──────────────────────── relation fondamentale ─────────────────────────────
@@ -147,10 +169,11 @@ function quadrant(c, s) {
  */
 export function relationFondamentale(valeur, type, signeAutre) {
   if (!estNombre(valeur)) return { valide: false, erreur: 'La valeur doit être un nombre.' };
+  if (!['cos', 'sin'].includes(type)) return { valide: false, erreur: 'Le type doit être "cos" ou "sin".' };
   if (valeur < -1 || valeur > 1) {
     return {
       valide: false,
-      erreur: `${type} = ${valeur} est impossible : le point est sur le cercle de rayon 1, donc cos et sin restent entre −1 et 1.`,
+      erreur: `${type} = ${nombre(valeur)} est impossible : le point est sur le cercle de rayon 1, donc cos et sin restent entre −1 et 1.`,
     };
   }
   if (!['cos', 'sin'].includes(type)) return { valide: false, erreur: 'Le type doit être "cos" ou "sin".' };
@@ -168,9 +191,9 @@ export function relationFondamentale(valeur, type, signeAutre) {
     [cherche]: arrondi(val),
     etapes: [
       { titre: 'Relation', detail: 'cos²x + sin²x = 1' },
-      { titre: 'Isolation', detail: `${cherche}²x = 1 − ${type}²x = 1 − ${arrondi(valeur * valeur)} = ${arrondi(carre)}` },
-      { titre: 'Racine', detail: `${cherche}x = ±${arrondi(Math.sqrt(carre))}` },
-      { titre: 'Choix du signe', detail: `L’énoncé indique ${cherche}x ${signeAutre === 'positif' ? '> 0' : '< 0'}, donc ${cherche}x = ${arrondi(val)}.`, remarque: '⚠️ Sans indication de signe, les DEUX valeurs conviennent.' },
+      { titre: 'Isolation', detail: `${cherche}²x = 1 − ${type}²x = 1 − ${nombre(valeur * valeur)} = ${nombre(carre)}` },
+      { titre: 'Racine', detail: `${cherche}x = ±${nombre(Math.sqrt(carre))}` },
+      { titre: 'Choix du signe', detail: `L’énoncé indique ${cherche}x ${signeAutre === 'positif' ? '> 0' : '< 0'}, donc ${cherche}x = ${nombre(val)}.`, remarque: '⚠️ Sans indication de signe, les DEUX valeurs conviennent.' },
     ],
   };
 }
@@ -230,7 +253,7 @@ export function resoudre(type, a) {
   if (a < -1 || a > 1) {
     return {
       valide: false,
-      erreur: `${type} x = ${a} n’a AUCUNE solution : ${type} reste toujours compris entre −1 et 1.`,
+      erreur: `${type} x = ${nombre(a)} n’a AUCUNE solution : ${type} reste toujours compris entre −1 et 1.`,
       solutions: [],
     };
   }
@@ -246,14 +269,26 @@ export function resoudre(type, a) {
     sols = Math.abs(s1 - s2) < 1e-12 ? [s1] : [s1, s2].sort((p, q) => p - q);
   }
 
+  // forme kπ/n seulement si l'angle est vraiment remarquable ; sinon valeur approchée
+  const ecrireSol = (x) => {
+    const e = exprimerEnPi(x);
+    if (!e.includes('.')) return e;
+    return `≈ ${nombre(arrondi(x, 4))} rad (≈ ${nombre(arrondi((x * 180) / PI, 2))}°)`;
+  };
+  const exactes = sols.map((x) => !exprimerEnPi(x).includes('.'));
+  const fonctionRec = type === 'cos' ? 'arccos' : 'arcsin';
   return {
     valide: true,
     solutions: sols.map((s) => arrondi(s)),
     solutionsExactes: sols.map((s) => exprimerEnPi(s)),
     solutionsDegres: sols.map((s) => arrondi((s * 180) / PI, 2)),
     etapes: [
-      { titre: 'Équation', detail: `${type} x = ${a}` },
-      { titre: 'Solutions sur [0 ; 2π[', detail: sols.map((s) => exprimerEnPi(s)).join(' et ') },
+      { titre: 'Équation', detail: `${type} x = ${nombre(a)}` },
+      ...(exactes.every(Boolean) ? [] : [{
+        titre: 'Valeur non remarquable',
+        detail: `${nombre(a)} n’est pas une valeur remarquable : on utilise ${fonctionRec}(${nombre(a)}) à la calculatrice (mode radian).`,
+      }]),
+      { titre: 'Solutions sur [0 ; 2π[', detail: sols.map(ecrireSol).join(' et ') },
       {
         titre: '⚠️ Sur ℝ',
         detail: 'Il y a une INFINITÉ de solutions : chaque solution donne toute la famille x + 2kπ, k entier. Ne pas oublier le « + 2kπ ».',

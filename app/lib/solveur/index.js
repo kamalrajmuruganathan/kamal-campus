@@ -12,6 +12,30 @@
 import { Rationnel, ZERO } from './rationnel.js';
 import { analyser, normaliser } from './parseur.js';
 import { poserDepuisTexte } from './poser.js';
+import { resoudreSecondDegre } from '../second-degre.js';
+
+/** Écriture française d'un décimal : virgule et signe « − » (0.268 → « 0,268 »). */
+const fr = (x) => String(x === 0 ? 0 : x).replace('.', ',').replace(/^-/, '−');
+/** Rationnel → texte avec « − » : « −1/2 ». */
+const txt = (r) => r.texte().replace(/^-/, '−');
+/** Rationnel entre parenthèses s'il est négatif : « ÷ (−2) ». */
+const txtPar = (r) => (r.estNegatif() || !r.estEntier() ? `(${txt(r)})` : txt(r));
+/** Coefficient devant x : « 2x », « x », « −x », « (1/2)x ». */
+function coefX(r) {
+  if (r.egal(new Rationnel(1))) return 'x';
+  if (r.egal(new Rationnel(-1))) return '−x';
+  if (!r.estEntier()) return `${r.estNegatif() ? '−' : ''}(${txt(r.estNegatif() ? r.oppose() : r)})x`;
+  return `${txt(r)}x`;
+}
+
+/** Écriture décimale exacte d'un rationnel si elle est finie (dénominateur 2^a·5^b), sinon null. */
+function decimalExact(r) {
+  let d = r.d;
+  while (d % 2 === 0) d /= 2;
+  while (d % 5 === 0) d /= 5;
+  if (d !== 1) return null;
+  return fr(Number((r.n / r.d).toPrecision(15)));
+}
 
 // ── Mise en forme d'un AST en texte lisible ──────────────────────────────────
 
@@ -21,12 +45,24 @@ const PREC = { '+': 1, '-': 1, '*': 2, '/': 2 };
 function texteAst(node, parentPrec = 0) {
   switch (node.t) {
     case 'num': {
-      const s = node.v.texte();
-      return node.v.estNegatif() && parentPrec > 0 ? `(${s})` : s;
+      // un décimal tapé par l'élève reste écrit en décimal (« 1,5 » et non « 3/2 »)
+      const s = node.s ? node.s.replace('.', ',') : node.v.texte().replace(/^-/, '−');
+      if (node.v.estNegatif() && parentPrec > 0) return `(${s})`;
+      // une fraction dans un produit ou une puissance prend des parenthèses : (3/4) × 2
+      if (!node.s && !node.v.estEntier() && parentPrec > 1) return `(${s})`;
+      return s;
     }
     case 'var': return 'x';
-    case 'neg': return `−${texteAst(node.a, 3)}`;
-    case 'pow': return `${texteAst(node.a, 4)}^${node.n}`;
+    case 'neg': {
+      // « 3 × (−2) », « 5 − (−x) », « (−2)^2 » : parenthèses dès qu'il y a ambiguïté
+      const s = `−${texteAst(node.a, 3)}`;
+      return parentPrec > 1 ? `(${s})` : s;
+    }
+    case 'pow': {
+      // (2^3)^2 et non « 2^3^2 », que le parseur refuse
+      const s = `${texteAst(node.a, 4)}^${node.n}`;
+      return parentPrec >= 4 ? `(${s})` : s;
+    }
     case 'op': {
       const p = PREC[node.op];
       const gauche = texteAst(node.a, p);
@@ -110,11 +146,18 @@ function textePoly(p) {
     const c = p[d];
     const abs = c.estNegatif() ? c.oppose() : c;
     const signe = c.estNegatif() ? '−' : '+';
-    const mono = d === 0 ? abs.texte() : `${abs.egal(new Rationnel(1)) ? '' : abs.texte()}x${d > 1 ? `^${d}` : ''}`;
+    // « (1/2)x » et non « 1/2x », qui se lirait 1 ÷ (2x)
+    const coef = abs.egal(new Rationnel(1)) ? '' : abs.estEntier() ? abs.texte() : `(${abs.texte()})`;
+    const mono = d === 0 ? abs.texte() : `${coef}x${d > 1 ? `^${d}` : ''}`;
     if (i === 0) out += (c.estNegatif() ? '−' : '') + mono;
     else out += ` ${signe} ${mono}`;
   });
   return out;
+}
+
+function contientX(node) {
+  if (node.t === 'var') return true;
+  return ['a', 'b'].some((k) => node[k] && contientX(node[k]));
 }
 
 // ── Réduction d'un calcul numérique, étape par étape ─────────────────────────
@@ -170,6 +213,12 @@ function reduireCalcul(ast) {
   return { valeur: cur.v, etapes };
 }
 
+function pgcdEntier(a, b) {
+  a = Math.abs(a); b = Math.abs(b);
+  while (b) [a, b] = [b, a % b];
+  return a || 1;
+}
+
 // ── Racine exacte d'un rationnel (si carré parfait) ──────────────────────────
 
 function racineExacte(r) {
@@ -197,8 +246,10 @@ function resoudreEquation(D) {
   if (degre === 1) {
     etapes.push(`On ramène tout d’un côté : ${textePoly(D)} = 0.`);
     const sol = c.oppose().sur(b);
-    etapes.push(`On isole x : ${b.texte()}x = ${c.oppose().texte()}.`);
-    etapes.push(`x = ${c.oppose().texte()} ÷ ${b.texte()} = ${sol.texte()}.`);
+    etapes.push(`On isole x : ${coefX(b)} = ${txt(c.oppose())}.`);
+    if (!b.egal(new Rationnel(1))) etapes.push(`x = ${txt(c.oppose())} ÷ ${txtPar(b)} = ${txt(sol)}.`);
+    const dec = sol.estEntier() ? null : decimalExact(sol);
+    if (dec) etapes.push(`Soit x = ${dec} en écriture décimale.`);
     return { resultat: `x = ${sol.texte()}`, etapes };
   }
 
@@ -219,20 +270,34 @@ function resoudreEquation(D) {
     }
     const rac = racineExacte(delta);
     if (rac) {
-      const x1 = b.oppose().moins(rac).sur(deux_a);
-      const x2 = b.oppose().plus(rac).sur(deux_a);
+      let x1 = b.oppose().moins(rac).sur(deux_a);
+      let x2 = b.oppose().plus(rac).sur(deux_a);
+      if (x1.versNombre() > x2.versNombre()) [x1, x2] = [x2, x1]; // ordre croissant, même si a < 0
       etapes.push(`√Δ = ${rac.texte()}.`);
       etapes.push(`x = (−b ± √Δ) ÷ (2a) : x₁ = ${x1.texte()}, x₂ = ${x2.texte()}.`);
       return { resultat: `x = ${x1.texte()}  ou  x = ${x2.texte()}`, etapes };
     }
+    // Racines irrationnelles : écriture EXACTE avec √ (coefficients rendus entiers
+    // en multipliant par le dénominateur commun, ce qui ne change pas les racines),
+    // suivie d'une valeur approchée au millième.
     const s = Math.sqrt(dNum);
+    const den = [a, b, c].reduce((m, r) => (m * r.d) / pgcdEntier(m, r.d), 1);
+    const exact = resoudreSecondDegre(a.n * (den / a.d), b.n * (den / b.d), c.n * (den / c.d));
+    const ecrit = exact.valide && exact.racines.every((r) => r.radical)
+      ? exact.racines.map((r) => r.texte)
+      : null;
     const av = a.versNombre();
     const bv = b.versNombre();
-    const x1 = Math.round(((-bv - s) / (2 * av)) * 1000) / 1000;
-    const x2 = Math.round(((-bv + s) / (2 * av)) * 1000) / 1000;
-    etapes.push(`√Δ ≈ ${Math.round(s * 1000) / 1000}.`);
-    etapes.push(`x = (−b ± √Δ) ÷ (2a) : x₁ ≈ ${x1}, x₂ ≈ ${x2} (valeurs approchées).`);
-    return { resultat: `x ≈ ${x1}  ou  x ≈ ${x2}`, etapes };
+    const [x1, x2] = [(-bv - s) / (2 * av), (-bv + s) / (2 * av)]
+      .sort((p, q) => p - q)
+      .map((v) => Math.round(v * 1000) / 1000);
+    etapes.push(`√Δ = √${delta.texte()} ≈ ${fr(Math.round(s * 1000) / 1000)}.`);
+    if (ecrit) {
+      etapes.push(`x = (−b ± √Δ) ÷ (2a) : x₁ = ${ecrit[0]} ≈ ${fr(x1)}, x₂ = ${ecrit[1]} ≈ ${fr(x2)}.`);
+      return { resultat: `x = ${ecrit[0]}  ou  x = ${ecrit[1]}`, etapes };
+    }
+    etapes.push(`x = (−b ± √Δ) ÷ (2a) : x₁ ≈ ${fr(x1)}, x₂ ≈ ${fr(x2)} (valeurs approchées).`);
+    return { resultat: `x ≈ ${fr(x1)}  ou  x ≈ ${fr(x2)}`, etapes };
   }
 
   return { resultat: null, erreur: 'Équation de degré trop élevé (max 2).' };
@@ -263,7 +328,9 @@ export function resoudre(entree) {
 
     const ast = analyser(brut);
     const p = polynome(ast);
-    if (degreMax(p) >= 1) {
+    // « x − x » ou « 2(x + 1) − 2x » contiennent x mais se réduisent à une
+    // constante : c'est une expression, pas un calcul (avant : « Calcul non réductible »)
+    if (degreMax(p) >= 1 || contientX(ast)) {
       const forme = textePoly(p);
       return {
         ok: true,
@@ -276,7 +343,19 @@ export function resoudre(entree) {
     const { valeur, etapes } = reduireCalcul(ast);
     // Pour « entier op entier » (+ − ×), on ajoute l'opération posée détaillée.
     const posee = poserDepuisTexte(brut);
-    return { ok: true, type: 'calcul', entree: etapes[0], resultat: valeur.texte(), etapes, posee };
+    let resultat = valeur.texte();
+    if (!valeur.estEntier()) {
+      const dec = decimalExact(valeur);
+      const saisieDecimale = /\d\.\d|\.\d/.test(brut);
+      if (dec) {
+        etapes.push(`${valeur.texte()} = ${dec} en écriture décimale.`);
+        if (saisieDecimale) resultat = dec;
+      } else if (saisieDecimale) {
+        const approx = fr(Number(valeur.versNombre().toPrecision(6)));
+        etapes.push(`${valeur.texte()} ≈ ${approx} (valeur approchée).`);
+      }
+    }
+    return { ok: true, type: 'calcul', entree: etapes[0], resultat, etapes, posee };
   } catch (e) {
     return { ok: false, erreur: e.message || 'Expression invalide.' };
   }

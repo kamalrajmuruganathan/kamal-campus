@@ -34,30 +34,33 @@ export function poserAddition(a, b) {
   return { resultat: a + b, etapes };
 }
 
-/** Soustraction posée (a ≥ b) : emprunts expliqués. */
+/**
+ * Soustraction posée (a ≥ b), méthode « par compensation » enseignée à l'école :
+ * quand le chiffre du haut est trop petit, on lui ajoute 10 et on retient 1,
+ * que l'on ajoute au chiffre du bas du rang suivant. Chaque chiffre affiché est
+ * celui de l'opération posée (avant : « 9 − 0 » pour 1 000 − 1, où le 9 n'existe pas).
+ */
 export function poserSoustraction(a, b) {
   const A = chiffres(a);
   const B = chiffres(b);
   const n = A.length;
-  let emprunt = 0;
-  let res = '';
+  let retenue = 0;
   const etapes = [];
   for (let i = 0; i < n; i++) {
-    let da = (A[i] || 0) - emprunt;
-    const db = B[i] || 0;
-    let empruntTxt = '';
-    if (da < db) {
-      da += 10;
-      empruntTxt = ' (on emprunte 10 au rang suivant)';
-      emprunt = 1;
+    const haut = A[i] || 0;
+    const bas = (B[i] || 0) + retenue;
+    const basTxt = retenue ? `(${B[i] || 0} + ${retenue} de retenue)` : `${bas}`;
+    if (haut < bas) {
+      const c = haut + 10 - bas;
+      etapes.push(`${cap(rangNom(i))} : ${haut} est plus petit que ${basTxt} : on emprunte 10, ${haut + 10} − ${bas} = ${c}. J'écris ${c} et je retiens 1.`);
+      retenue = 1;
     } else {
-      emprunt = 0;
+      const c = haut - bas;
+      const tete = c === 0 && i === n - 1 && i > 0;
+      etapes.push(`${cap(rangNom(i))} : ${haut} − ${basTxt} = ${c}.${tete ? ' Un 0 à gauche ne s’écrit pas.' : ` J'écris ${c}.`}`);
+      retenue = 0;
     }
-    const c = da - db;
-    etapes.push(`${cap(rangNom(i))} : ${da} − ${db} = ${c}${empruntTxt}.`);
-    res = c + res;
   }
-  res = String(Number(res)); // retire les zéros de gauche
   etapes.push(`Résultat : ${a} − ${b} = ${a - b}.`);
   return { resultat: a - b, etapes };
 }

@@ -12,6 +12,10 @@
  */
 
 const estEntier = (x) => Number.isInteger(x);
+/** Nombre négatif entre parenthèses dans un produit : « 7 = (-2) × (-3) + 1 ». */
+/** « 3x », « x », « -x » (pas « 1x »). */
+const coefX = (k) => (k === 1 ? 'x' : k === -1 ? '-x' : `${k}x`);
+const par = (x) => (x < 0 ? `(${x})` : String(x === 0 ? 0 : x));
 
 /** Borne de sécurité : au-delà, les Number perdent l'exactitude entière. */
 const TROP_GRAND = 2 ** 46;
@@ -41,15 +45,16 @@ export function divisionEuclidienne(a, b) {
     return { valide: false, erreur: 'On ne divise pas par zéro : la division euclidienne exige un diviseur non nul.' };
   }
   let q = Math.floor(a / Math.abs(b));
-  let r = a - Math.abs(b) * q;
+  const r = a - Math.abs(b) * q;
   if (b < 0) q = -q;
+  if (q === 0) q = 0; // pas de « -0 »
   return {
     valide: true,
     quotient: q,
     reste: r,
     etapes: [
-      { titre: 'Division euclidienne', detail: `${a} = ${b} × ${q} + ${r}` },
-      { titre: 'Contrôle du reste', detail: `0 ≤ ${r} < ${Math.abs(b)} : le reste est bien positif et strictement inférieur à |b|.` },
+      { titre: 'Division euclidienne', detail: `${a} = ${par(b)} × ${par(q)} + ${r}` },
+      { titre: 'Contrôle du reste', detail: `0 ≤ ${r} < ${Math.abs(b)} : le reste est bien positif ou nul, et strictement inférieur à |b|.` },
     ],
   };
 }
@@ -62,12 +67,15 @@ export function divise(b, a) {
   if (refus) return refus;
   if (b === 0) return { valide: false, erreur: '0 ne divise que 0 — et diviser PAR zéro n’a pas de sens.' };
   const ok = a % b === 0;
+  // reste euclidien (toujours ≥ 0), comme dans divisionEuclidienne
+  const q = Math.floor(a / Math.abs(b)) * Math.sign(b) || 0;
+  const r = a - b * q;
   return {
     valide: true,
     divise: ok,
     etapes: [{
       titre: ok ? `${b} divise ${a}` : `${b} ne divise pas ${a}`,
-      detail: ok ? `${a} = ${b} × ${a / b}` : `${a} = ${b} × ${Math.trunc(a / b)} + ${a - b * Math.trunc(a / b)} : le reste n’est pas nul.`,
+      detail: ok ? `${a} = ${par(b)} × ${par(a / b || 0)}` : `${a} = ${par(b)} × ${par(q)} + ${r} : le reste n’est pas nul.`,
     }],
   };
 }
@@ -136,13 +144,18 @@ export function ppcm(a, b) {
   if (a === 0 || b === 0) return { valide: false, erreur: 'Le PPCM avec 0 n’a pas d’intérêt : tout multiple de 0 vaut 0.' };
   const g = pgcdEuclide(a, b);
   if (!g.valide) return g;
-  const m = Math.abs(a * b) / g.pgcd;
+  // |a × b| peut dépasser 2^53 : on divise d'abord (|a| / PGCD est entier)
+  const m = (Math.abs(a) / g.pgcd) * Math.abs(b);
+  if (!Number.isSafeInteger(m)) {
+    return { valide: false, erreur: 'Le PPCM est trop grand pour garantir un calcul exact.' };
+  }
+  const produit = BigInt(Math.abs(a)) * BigInt(Math.abs(b));
   return {
     valide: true,
     ppcm: m,
     etapes: [
       { titre: 'PGCD', detail: `PGCD(${Math.abs(a)}, ${Math.abs(b)}) = ${g.pgcd}` },
-      { titre: 'Relation', detail: `PPCM = |a × b| / PGCD = ${Math.abs(a * b)} / ${g.pgcd} = ${m}` },
+      { titre: 'Relation', detail: `PPCM = |a × b| / PGCD = ${produit} / ${g.pgcd} = ${m}` },
     ],
   };
 }
@@ -174,7 +187,7 @@ export function bezout(a, b) {
   if (b < 0) v = -v;
   etapes.push({
     titre: 'Identité de Bézout',
-    detail: `${a} × (${u}) + ${b} × (${v}) = ${r0}`,
+    detail: `${par(a)} × ${par(u)} + ${par(b)} × ${par(v)} = ${r0}`,
   });
   return { valide: true, pgcd: r0, u, v, etapes };
 }
@@ -190,7 +203,7 @@ export function reduireModulo(a, n) {
   return {
     valide: true,
     reste: r,
-    etapes: [{ titre: 'Réduction', detail: `${a} ≡ ${r} [${n}]  (car ${a} = ${n} × ${Math.floor(a / n)} + ${r})` }],
+    etapes: [{ titre: 'Réduction', detail: `${a} ≡ ${r} [${n}]  (car ${a} = ${n} × ${par(Math.floor(a / n))} + ${r})` }],
   };
 }
 
@@ -216,7 +229,7 @@ export function inverseModulaire(a, n) {
     inverse: u,
     etapes: [
       ...bz.etapes,
-      { titre: 'Lecture modulo n', detail: `${a} × ${bz.u} ≡ 1 [${n}], donc l’inverse de ${a} modulo ${n} est ${u}.` },
+      { titre: 'Lecture modulo n', detail: `${par(a)} × ${par(bz.u)} ≡ 1 [${n}], donc l’inverse de ${a} modulo ${n} est ${u}.` },
     ],
   };
 }
@@ -243,17 +256,29 @@ export function resoudreCongruence(a, b, n) {
     };
   }
   const n2 = n / d;
-  const x0 = ((((bz.u * (b / d)) % n2) + n2) % n2);
+  // b est d'abord réduit modulo n : u × b pourrait sinon dépasser 2^53
+  const bRed = ((b % n) + n) % n;
+  const uRed = ((bz.u % n2) + n2) % n2;
+  const x0 = Number((BigInt(uRed) * BigInt(bRed / d)) % BigInt(n2));
+  const LISTE_MAX = 20;
   const solutions = [];
-  for (let k = 0; k < d; k++) solutions.push(x0 + k * n2);
-  solutions.sort((p, q) => p - q);
+  for (let k = 0; k < Math.min(d, LISTE_MAX); k++) solutions.push(x0 + k * n2);
+  const ensemble = d === 1
+    ? `x ≡ ${x0} [${n}]`
+    : d <= LISTE_MAX
+      ? `x ≡ ${x0} [${n2}], c’est-à-dire x ≡ ${solutions.join(' ou ')} [${n}] (${d} solutions modulo ${n})`
+      : `x ≡ ${x0} [${n2}] (${d} solutions modulo ${n})`;
   return {
     valide: true,
     solutions,
+    nombreSolutions: d,
+    moduleReduit: n2,
     etapes: [
-      { titre: 'PGCD', detail: `PGCD(${a}, ${n}) = ${d}${d === 1 ? ' : solution unique modulo ' + n : ''}` },
-      { titre: 'Solution particulière', detail: `x₀ = ${x0}  (obtenue via les coefficients de Bézout)` },
-      { titre: 'Ensemble des solutions', detail: `x ≡ ${solutions.join(' ou ')} [${n}]` },
+      { titre: 'PGCD', detail: `PGCD(${a}, ${n}) = ${d}${d === 1 ? ' : solution unique modulo ' + n : ` : ${d} divise ${b}, il y a des solutions`}` },
+      ...(d > 1 ? [{ titre: 'Simplification', detail: `On divise tout par ${d} : ${coefX(a / d)} ≡ ${b / d} [${n2}]` }] : []),
+      { titre: 'Solution particulière', detail: `x₀ = ${x0}  (obtenue via les coefficients de Bézout : ${par(a)} × ${par(bz.u)} + ${par(n)} × ${par(bz.v)} = ${d})` },
+      { titre: 'Vérification', detail: `${par(a)} × ${x0} = ${BigInt(a) * BigInt(x0)} ≡ ${bRed} [${n}] ✓` },
+      { titre: 'Ensemble des solutions', detail: ensemble },
     ],
   };
 }
