@@ -384,8 +384,8 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Sécurité Supabase** (`outils/sql/securite_fonctions.sql`, APPLIQUÉ) : fonctions des défis réservées à `authenticated`.
   À faire par Kamal : Authentication → activer « Leaked password protection » (si l'offre le permet).
   La base contient aussi des tables/fonctions `thaayam_*` qui ne sont PAS à Kamal Campus : ne pas y toucher.
-- **Mentions légales** : `web-vitrine/mentions-legales.html` contient `__NOM_EDITEUR__` (2 fois) → à remplacer par le nom
-  donné par Kamal AVANT toute publication. Confidentialité : données en Irlande (eu-west-1), pas en Allemagne.
+- **Mentions légales** : `web-vitrine/mentions-legales.html`, éditeur « Muruganathan KAMALRAJ » (nom KAMALRAJ, prénom
+  Muruganathan, donnés par Kamal le 03/11). Confidentialité : données en Irlande (eu-west-1), pas en Allemagne.
 - **Supabase gratuit** (pause après 7 jours) : `.github/workflows/supabase-actif.yml` appelle `rpc/ping` tous les 2 jours
   (actif seulement une fois sur `main`).
 - **Statistiques anonymes** (`outils/sql/statistiques_usage.sql`, APPLIQUÉ) : table `stats_usage` (totaux par jour), RPC
