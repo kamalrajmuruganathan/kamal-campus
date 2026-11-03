@@ -13,542 +13,544 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-1} $ mol/L. Calculer son pH.",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "L'acide méthanoïque $\\mathrm{HCOOH}$ cède un proton et devient $\\mathrm{HCOO^-}$. Est-ce un acide ou une base au sens de Brönsted ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-1}) = 1$."
+        "Un acide de Brönsted cède un proton $\\mathrm{H^+}$ ; une base en capte un.",
+        "$\\mathrm{HCOOH}$ cède un proton : c'est un acide."
       ],
-      "reponse": "$ pH = 1 $"
+      "reponse": "Un acide"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 2. Est-elle acide, neutre ou basique ?",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "L'ammoniac $\\mathrm{NH_3}$ capte un proton et devient $\\mathrm{NH_4^+}$. Est-ce un acide ou une base au sens de Brönsted ?",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "Une base de Brönsted capte un proton $\\mathrm{H^+}$.",
+        "$\\mathrm{NH_3}$ capte un proton : c'est une base."
       ],
-      "reponse": "acide"
+      "reponse": "Une base"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $1$. Quelle est sa concentration en ions oxonium ?",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "Dans la réaction $\\mathrm{HCO_3^- + H_3O^+ \\to CO_2,H_2O + H_2O}$, l'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$ joue-t-il le rôle d'un acide ou d'une base ?",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-1}$ mol/L."
+        "$\\mathrm{HCO_3^-}$ capte le proton cédé par $\\mathrm{H_3O^+}$ et devient $\\mathrm{CO_2,H_2O}$.",
+        "Il joue le rôle d'une base."
       ],
-      "reponse": "$ 10^{-1} $ mol/L"
+      "reponse": "Une base"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a un pH de $8$. Quelle est la concentration $ [HO^-] $ ?",
+      "difficulte": "application",
+      "notion": "couples-acide-base",
+      "enonce": "Quelle est la base conjuguée de $\\mathrm{NH_4^+}$ ?",
       "corrige": [
-        "À 25 °C, $[H_3O^+][HO^-] = 10^{-14}$.",
-        "$[HO^-] = 10^{-14} / 10^{-8} = 10^{-6}$ mol/L."
+        "Demi-équation : $\\mathrm{NH_4^+ = NH_3 + H^+}$.",
+        "La base conjuguée est $\\mathrm{NH_3}$."
       ],
-      "reponse": "$ 10^{-6} $ mol/L"
+      "reponse": "$\\mathrm{NH_3}$"
     },
     {
       "id": 5,
-      "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a une concentration $ [HO^-] = 10^{-1} $ mol/L. Calculer son pH.",
+      "difficulte": "application",
+      "notion": "couples-acide-base",
+      "enonce": "Quelle est la base conjuguée de $\\mathrm{HCOOH}$ ?",
       "corrige": [
-        "À 25 °C, $pH = 14 + \\log [HO^-]$.",
-        "$pH = 14 - 1 = 13$."
+        "Demi-équation : $\\mathrm{HCOOH = HCOO^- + H^+}$.",
+        "La base conjuguée est $\\mathrm{HCOO^-}$."
       ],
-      "reponse": "$ pH = 13 $"
+      "reponse": "$\\mathrm{HCOO^-}$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "dilution",
-      "enonce": "On dilue $10$ fois une solution d'acide fort de pH $1$. Quel est le nouveau pH ?",
+      "difficulte": "application",
+      "notion": "couples-acide-base",
+      "enonce": "Quel est l'acide conjugué de $\\mathrm{H_2O}$ ?",
       "corrige": [
-        "Diluer 10 fois divise $[H_3O^+]$ par $10^1$ : le pH augmente de $1$.",
-        "$pH = 1 + 1 = 2$."
+        "Demi-équation : $\\mathrm{H_3O^+ = H_2O + H^+}$.",
+        "L'acide conjugué est $\\mathrm{H_3O^+}$."
       ],
-      "reponse": "$ pH = 2 $"
+      "reponse": "$\\mathrm{H_3O^+}$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-2} $ mol/L. Calculer son pH.",
+      "notion": "espece-amphotere",
+      "enonce": "L'eau est-elle une espèce amphotère ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-2}) = 2$."
+        "Elle est la base du couple $\\mathrm{H_3O^+ / H_2O}$ et l'acide du couple $\\mathrm{H_2O / HO^-}$.",
+        "Oui."
       ],
-      "reponse": "$ pH = 2 $"
+      "reponse": "Oui"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 3,5. Est-elle acide, neutre ou basique ?",
+      "notion": "calculer-un-ph",
+      "enonce": "Une solution a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$. Calculer son pH.",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "$\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log(1{,}0 \\times 10^{-3})$.",
+        "$\\mathrm{pH} \\approx 3$, soit $3{,}0$ avec une décimale."
       ],
-      "reponse": "acide"
+      "reponse": "$\\mathrm{pH} = 3{,}0$"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $2$. Quelle est sa concentration en ions oxonium ?",
+      "notion": "calculer-un-ph",
+      "enonce": "Une solution a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 2{,}5 \\times 10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$. Calculer son pH.",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-2}$ mol/L."
+        "$\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log(2{,}5 \\times 10^{-4})$.",
+        "$\\mathrm{pH} \\approx 3{,}602$, soit $3{,}6$ avec une décimale."
       ],
-      "reponse": "$ 10^{-2} $ mol/L"
+      "reponse": "$\\mathrm{pH} \\approx 3{,}6$"
     },
     {
       "id": 10,
-      "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a un pH de $9$. Quelle est la concentration $ [HO^-] $ ?",
+      "difficulte": "application",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Une solution a un pH de $3{,}6$. Calculer la concentration en ions oxonium, avec deux chiffres significatifs.",
       "corrige": [
-        "À 25 °C, $[H_3O^+][HO^-] = 10^{-14}$.",
-        "$[HO^-] = 10^{-14} / 10^{-9} = 10^{-5}$ mol/L."
+        "$[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-3{,}6}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] \\approx 2{,}5 \\times 10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$."
       ],
-      "reponse": "$ 10^{-5} $ mol/L"
+      "reponse": "$\\approx 2{,}5 \\times 10^{-4}$ mol/L"
     },
     {
       "id": 11,
-      "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a une concentration $ [HO^-] = 10^{-2} $ mol/L. Calculer son pH.",
+      "difficulte": "application",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Une eau de pluie a un pH de $5{,}2$. Calculer la concentration en ions oxonium, avec deux chiffres significatifs.",
       "corrige": [
-        "À 25 °C, $pH = 14 + \\log [HO^-]$.",
-        "$pH = 14 - 2 = 12$."
+        "$[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-5{,}2}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] \\approx 6{,}3 \\times 10^{-6}\\ \\mathrm{mol \\cdot L^{-1}}$."
       ],
-      "reponse": "$ pH = 12 $"
+      "reponse": "$\\approx 6{,}3 \\times 10^{-6}$ mol/L"
     },
     {
       "id": 12,
-      "difficulte": "approfondissement",
-      "notion": "dilution",
-      "enonce": "On dilue $10$ fois une solution d'acide fort de pH $2$. Quel est le nouveau pH ?",
+      "difficulte": "application",
+      "notion": "echelle-de-ph",
+      "enonce": "À $25$ °C, une solution a un pH de $2{,}5$. Est-elle acide, neutre ou basique ?",
       "corrige": [
-        "Diluer 10 fois divise $[H_3O^+]$ par $10^1$ : le pH augmente de $1$.",
-        "$pH = 2 + 1 = 3$."
+        "À $25$ °C : pH $< 7$ acide, pH $= 7$ neutre, pH $> 7$ basique.",
+        "Elle est acide."
       ],
-      "reponse": "$ pH = 3 $"
+      "reponse": "Acide"
     },
     {
       "id": 13,
       "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-3} $ mol/L. Calculer son pH.",
+      "notion": "echelle-de-ph",
+      "enonce": "À $25$ °C, une solution a un pH de $7{,}0$. Est-elle acide, neutre ou basique ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-3}) = 3$."
+        "À $25$ °C : pH $< 7$ acide, pH $= 7$ neutre, pH $> 7$ basique.",
+        "Elle est neutre."
       ],
-      "reponse": "$ pH = 3 $"
+      "reponse": "Neutre"
     },
     {
       "id": 14,
       "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 5. Est-elle acide, neutre ou basique ?",
+      "notion": "echelle-de-ph",
+      "enonce": "À $25$ °C, une solution a un pH de $11{,}3$. Est-elle acide, neutre ou basique ?",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "À $25$ °C : pH $< 7$ acide, pH $= 7$ neutre, pH $> 7$ basique.",
+        "Elle est basique."
       ],
-      "reponse": "acide"
+      "reponse": "Basique"
     },
     {
       "id": 15,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $3$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "intermediaire",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "L'ion méthylammonium $\\mathrm{CH_3NH_3^+}$ cède un proton et devient la méthylamine $\\mathrm{CH_3NH_2}$. Est-ce un acide ou une base au sens de Brönsted ?",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-3}$ mol/L."
+        "Il cède un proton $\\mathrm{H^+}$.",
+        "C'est un acide."
       ],
-      "reponse": "$ 10^{-3} $ mol/L"
+      "reponse": "Un acide"
     },
     {
       "id": 16,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a un pH de $10$. Quelle est la concentration $ [HO^-] $ ?",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "Un acide de Brönsted cède-t-il ou capte-t-il un proton ?",
       "corrige": [
-        "À 25 °C, $[H_3O^+][HO^-] = 10^{-14}$.",
-        "$[HO^-] = 10^{-14} / 10^{-10} = 10^{-4}$ mol/L."
+        "Un acide de Brönsted est une espèce capable de céder un proton $\\mathrm{H^+}$ (une base en capte un)."
       ],
-      "reponse": "$ 10^{-4} $ mol/L"
+      "reponse": "Il cède un proton"
     },
     {
       "id": 17,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a une concentration $ [HO^-] = 10^{-3} $ mol/L. Calculer son pH.",
+      "notion": "couples-acide-base",
+      "enonce": "Quel est l'acide conjugué de $\\mathrm{C_2H_5COO^-}$ ?",
       "corrige": [
-        "À 25 °C, $pH = 14 + \\log [HO^-]$.",
-        "$pH = 14 - 3 = 11$."
+        "Demi-équation : $\\mathrm{C_2H_5COOH = C_2H_5COO^- + H^+}$.",
+        "L'acide conjugué est $\\mathrm{C_2H_5COOH}$."
       ],
-      "reponse": "$ pH = 11 $"
+      "reponse": "$\\mathrm{C_2H_5COOH}$"
     },
     {
       "id": 18,
-      "difficulte": "approfondissement",
-      "notion": "dilution",
-      "enonce": "On dilue $10$ fois une solution d'acide fort de pH $3$. Quel est le nouveau pH ?",
+      "difficulte": "intermediaire",
+      "notion": "couples-acide-base",
+      "enonce": "Quel est l'acide conjugué de $\\mathrm{CH_3NH_2}$ ?",
       "corrige": [
-        "Diluer 10 fois divise $[H_3O^+]$ par $10^1$ : le pH augmente de $1$.",
-        "$pH = 3 + 1 = 4$."
+        "Demi-équation : $\\mathrm{CH_3NH_3^+ = CH_3NH_2 + H^+}$.",
+        "L'acide conjugué est $\\mathrm{CH_3NH_3^+}$."
       ],
-      "reponse": "$ pH = 4 $"
+      "reponse": "$\\mathrm{CH_3NH_3^+}$"
     },
     {
       "id": 19,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-4} $ mol/L. Calculer son pH.",
+      "difficulte": "intermediaire",
+      "notion": "couples-acide-base",
+      "enonce": "Quelle est la base conjuguée de $\\mathrm{HCO_3^-}$ ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-4}) = 4$."
+        "Demi-équation : $\\mathrm{HCO_3^- = CO_3^{2-} + H^+}$.",
+        "La base conjuguée est $\\mathrm{CO_3^{2-}}$."
       ],
-      "reponse": "$ pH = 4 $"
+      "reponse": "$\\mathrm{CO_3^{2-}}$"
     },
     {
       "id": 20,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 6,2. Est-elle acide, neutre ou basique ?",
+      "difficulte": "intermediaire",
+      "notion": "reaction-acide-base",
+      "enonce": "Écrire l'équation de la réaction entre l'acide éthanoïque $\\mathrm{CH_3COOH}$ et l'ammoniac $\\mathrm{NH_3}$.",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "Couples : $\\mathrm{CH_3COOH / CH_3COO^-}$ et $\\mathrm{NH_4^+ / NH_3}$.",
+        "L'acide d'un couple cède son proton à la base de l'autre."
       ],
-      "reponse": "acide"
+      "reponse": "$\\mathrm{CH_3COOH + NH_3 \\to CH_3COO^- + NH_4^+}$"
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $4$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "intermediaire",
+      "notion": "reaction-acide-base",
+      "enonce": "Écrire l'équation de la réaction entre l'acide méthanoïque $\\mathrm{HCOOH}$ et l'eau.",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-4}$ mol/L."
+        "Couples : $\\mathrm{HCOOH / HCOO^-}$ et $\\mathrm{H_3O^+ / H_2O}$ ; l'eau joue le rôle de base."
       ],
-      "reponse": "$ 10^{-4} $ mol/L"
+      "reponse": "$\\mathrm{HCOOH + H_2O \\to HCOO^- + H_3O^+}$"
     },
     {
       "id": 22,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a un pH de $11$. Quelle est la concentration $ [HO^-] $ ?",
+      "notion": "reaction-acide-base",
+      "enonce": "Écrire l'équation de la réaction entre la méthylamine $\\mathrm{CH_3NH_2}$ et l'eau.",
       "corrige": [
-        "À 25 °C, $[H_3O^+][HO^-] = 10^{-14}$.",
-        "$[HO^-] = 10^{-14} / 10^{-11} = 10^{-3}$ mol/L."
+        "Couples : $\\mathrm{CH_3NH_3^+ / CH_3NH_2}$ et $\\mathrm{H_2O / HO^-}$ ; l'eau joue le rôle d'acide."
       ],
-      "reponse": "$ 10^{-3} $ mol/L"
+      "reponse": "$\\mathrm{CH_3NH_2 + H_2O \\to CH_3NH_3^+ + HO^-}$"
     },
     {
       "id": 23,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a une concentration $ [HO^-] = 10^{-4} $ mol/L. Calculer son pH.",
+      "notion": "espece-amphotere",
+      "enonce": "L'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$ est-il amphotère ?",
       "corrige": [
-        "À 25 °C, $pH = 14 + \\log [HO^-]$.",
-        "$pH = 14 - 4 = 10$."
+        "Il est la base du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$…",
+        "… et l'acide du couple $\\mathrm{HCO_3^- / CO_3^{2-}}$ : oui."
       ],
-      "reponse": "$ pH = 10 $"
+      "reponse": "Oui"
     },
     {
       "id": 24,
-      "difficulte": "approfondissement",
-      "notion": "dilution",
-      "enonce": "On dilue $100$ fois une solution d'acide fort de pH $1$. Quel est le nouveau pH ?",
+      "difficulte": "intermediaire",
+      "notion": "espece-amphotere",
+      "enonce": "Quelle est la base conjuguée de l'eau ?",
       "corrige": [
-        "Diluer 100 fois divise $[H_3O^+]$ par $10^2$ : le pH augmente de $2$.",
-        "$pH = 1 + 2 = 3$."
+        "Couple $\\mathrm{H_2O / HO^-}$ : $\\mathrm{H_2O = HO^- + H^+}$."
       ],
-      "reponse": "$ pH = 3 $"
+      "reponse": "$\\mathrm{HO^-}$"
     },
     {
       "id": 25,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-5} $ mol/L. Calculer son pH.",
+      "difficulte": "intermediaire",
+      "notion": "calculer-un-ph",
+      "enonce": "Une solution a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 6{,}3 \\times 10^{-6}\\ \\mathrm{mol \\cdot L^{-1}}$. Calculer son pH.",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-5}) = 5$."
+        "$\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log(6{,}3 \\times 10^{-6})$.",
+        "$\\mathrm{pH} \\approx 5{,}201$, soit $5{,}2$ avec une décimale."
       ],
-      "reponse": "$ pH = 5 $"
+      "reponse": "$\\mathrm{pH} \\approx 5{,}2$"
     },
     {
       "id": 26,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 7. Est-elle acide, neutre ou basique ?",
+      "difficulte": "intermediaire",
+      "notion": "calculer-un-ph",
+      "enonce": "Une solution a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 4{,}0 \\times 10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$. Calculer son pH.",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "$\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log(4{,}0 \\times 10^{-9})$.",
+        "$\\mathrm{pH} \\approx 8{,}398$, soit $8{,}4$ avec une décimale."
       ],
-      "reponse": "neutre"
+      "reponse": "$\\mathrm{pH} \\approx 8{,}4$"
     },
     {
       "id": 27,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $5$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "intermediaire",
+      "notion": "calculer-un-ph",
+      "enonce": "Une solution a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 2{,}0 \\times 10^{-2}\\ \\mathrm{mol \\cdot L^{-1}}$. Calculer son pH.",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-5}$ mol/L."
+        "$\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log(2{,}0 \\times 10^{-2})$.",
+        "$\\mathrm{pH} \\approx 1{,}699$, soit $1{,}7$ avec une décimale."
       ],
-      "reponse": "$ 10^{-5} $ mol/L"
+      "reponse": "$\\mathrm{pH} \\approx 1{,}7$"
     },
     {
       "id": 28,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a un pH de $12$. Quelle est la concentration $ [HO^-] $ ?",
+      "notion": "calculer-un-ph",
+      "enonce": "Un jus de citron dilué contient $3{,}2$ mmol d'ions oxonium par litre. Calculer son pH.",
       "corrige": [
-        "À 25 °C, $[H_3O^+][HO^-] = 10^{-14}$.",
-        "$[HO^-] = 10^{-14} / 10^{-12} = 10^{-2}$ mol/L."
+        "Conversion : $3{,}2\\ \\mathrm{mmol \\cdot L^{-1}} = 3{,}2 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$\\mathrm{pH} = -\\log(3{,}2 \\times 10^{-3}) \\approx 2{,}495$, soit $2{,}5$."
       ],
-      "reponse": "$ 10^{-2} $ mol/L"
+      "reponse": "$\\mathrm{pH} \\approx 2{,}5$"
     },
     {
       "id": 29,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a une concentration $ [HO^-] = 10^{-5} $ mol/L. Calculer son pH.",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Le sang humain a un pH d'environ $7{,}4$. Calculer la concentration en ions oxonium, avec deux chiffres significatifs.",
       "corrige": [
-        "À 25 °C, $pH = 14 + \\log [HO^-]$.",
-        "$pH = 14 - 5 = 9$."
+        "$[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-7{,}4}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] \\approx 4{,}0 \\times 10^{-8}\\ \\mathrm{mol \\cdot L^{-1}}$."
       ],
-      "reponse": "$ pH = 9 $"
+      "reponse": "$\\approx 4{,}0 \\times 10^{-8}$ mol/L"
     },
     {
       "id": 30,
-      "difficulte": "approfondissement",
-      "notion": "dilution",
-      "enonce": "On dilue $100$ fois une solution d'acide fort de pH $2$. Quel est le nouveau pH ?",
+      "difficulte": "intermediaire",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Un vinaigre dilué a un pH de $2{,}9$. Calculer la concentration en ions oxonium, avec deux chiffres significatifs.",
       "corrige": [
-        "Diluer 100 fois divise $[H_3O^+]$ par $10^2$ : le pH augmente de $2$.",
-        "$pH = 2 + 2 = 4$."
+        "$[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-2{,}9}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] \\approx 1{,}3 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$."
       ],
-      "reponse": "$ pH = 4 $"
+      "reponse": "$\\approx 1{,}3 \\times 10^{-3}$ mol/L"
     },
     {
       "id": 31,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-6} $ mol/L. Calculer son pH.",
+      "difficulte": "intermediaire",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "L'eau de mer a un pH d'environ $8{,}3$. Calculer la concentration en ions oxonium, avec deux chiffres significatifs.",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-6}) = 6$."
+        "$[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-8{,}3}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] \\approx 5{,}0 \\times 10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$."
       ],
-      "reponse": "$ pH = 6 $"
+      "reponse": "$\\approx 5{,}0 \\times 10^{-9}$ mol/L"
     },
     {
       "id": 32,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 8. Est-elle acide, neutre ou basique ?",
+      "difficulte": "intermediaire",
+      "notion": "echelle-de-ph",
+      "enonce": "Quelle solution est la plus acide : un soda de pH $2{,}5$ ou un jus de tomate de pH $4{,}2$ ?",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "Plus le pH est petit, plus $[\\mathrm{H_3O^+}]$ est grande.",
+        "Le soda est le plus acide."
       ],
-      "reponse": "basique"
+      "reponse": "Le soda"
     },
     {
       "id": 33,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $6$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "intermediaire",
+      "notion": "acides-carboxyliques-et-amines",
+      "enonce": "Quel groupe caractéristique porte un acide carboxylique ?",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-6}$ mol/L."
+        "Un acide carboxylique porte le groupe carboxyle $\\mathrm{-COOH}$."
       ],
-      "reponse": "$ 10^{-6} $ mol/L"
+      "reponse": "Le groupe carboxyle"
     },
     {
       "id": 34,
       "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a un pH de $13$. Quelle est la concentration $ [HO^-] $ ?",
+      "notion": "acides-carboxyliques-et-amines",
+      "enonce": "Quel est l'acide conjugué de l'éthylamine $\\mathrm{C_2H_5NH_2}$ ?",
       "corrige": [
-        "À 25 °C, $[H_3O^+][HO^-] = 10^{-14}$.",
-        "$[HO^-] = 10^{-14} / 10^{-13} = 10^{-1}$ mol/L."
+        "Une amine capte un proton sur le doublet non liant de l'azote.",
+        "On obtient l'ion éthylammonium $\\mathrm{C_2H_5NH_3^+}$."
       ],
-      "reponse": "$ 10^{-1} $ mol/L"
+      "reponse": "$\\mathrm{C_2H_5NH_3^+}$"
     },
     {
       "id": 35,
-      "difficulte": "intermediaire",
-      "notion": "produit-ionique",
-      "enonce": "À 25 °C, une solution a une concentration $ [HO^-] = 10^{-6} $ mol/L. Calculer son pH.",
+      "difficulte": "approfondissement",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "Vrai ou faux ? « En solution aqueuse, l'ion $\\mathrm{H^+}$ existe seul, libre dans l'eau. » Justifier.",
       "corrige": [
-        "À 25 °C, $pH = 14 + \\log [HO^-]$.",
-        "$pH = 14 - 6 = 8$."
+        "Le proton cédé par un acide est aussitôt capté par une molécule d'eau.",
+        "Il est présent sous la forme de l'ion oxonium $\\mathrm{H_3O^+}$ : l'affirmation est fausse."
       ],
-      "reponse": "$ pH = 8 $"
+      "reponse": "Faux"
     },
     {
       "id": 36,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-7} $ mol/L. Calculer son pH.",
+      "difficulte": "approfondissement",
+      "notion": "acide-et-base-de-bronsted",
+      "enonce": "L'acide éthanoïque $\\mathrm{CH_3COOH}$ cède un proton. Quelle espèce obtient-on ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-7}) = 7$."
+        "$\\mathrm{CH_3COOH = CH_3COO^- + H^+}$.",
+        "On obtient l'ion éthanoate $\\mathrm{CH_3COO^-}$."
       ],
-      "reponse": "$ pH = 7 $"
+      "reponse": "$\\mathrm{CH_3COO^-}$"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 9,4. Est-elle acide, neutre ou basique ?",
+      "difficulte": "approfondissement",
+      "notion": "couples-acide-base",
+      "enonce": "Quelle est la base conjuguée de l'acide carbonique, noté $\\mathrm{CO_2,H_2O}$ ?",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "Demi-équation : $\\mathrm{CO_2,H_2O = HCO_3^- + H^+}$.",
+        "La base conjuguée est l'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$."
       ],
-      "reponse": "basique"
+      "reponse": "$\\mathrm{HCO_3^-}$"
     },
     {
       "id": 38,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $7$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "approfondissement",
+      "notion": "couples-acide-base",
+      "enonce": "Vrai ou faux ? « Dans un couple acide-base, l'acide et sa base conjuguée diffèrent d'un électron. » Justifier.",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-7}$ mol/L."
+        "Ils diffèrent d'un proton $\\mathrm{H^+}$ : $\\mathrm{acide = base + H^+}$.",
+        "Un échange d'électrons caractérise un couple oxydant-réducteur. L'affirmation est fausse."
       ],
-      "reponse": "$ 10^{-7} $ mol/L"
+      "reponse": "Faux"
     },
     {
       "id": 39,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-8} $ mol/L. Calculer son pH.",
+      "difficulte": "approfondissement",
+      "notion": "reaction-acide-base",
+      "enonce": "Écrire l'équation de la réaction entre les ions oxonium $\\mathrm{H_3O^+}$ et les ions hydroxyde $\\mathrm{HO^-}$.",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-8}) = 8$."
+        "Couples de l'eau : $\\mathrm{H_3O^+ / H_2O}$ et $\\mathrm{H_2O / HO^-}$.",
+        "$\\mathrm{H_3O^+}$ cède un proton à $\\mathrm{HO^-}$ : il se forme deux molécules d'eau."
       ],
-      "reponse": "$ pH = 8 $"
+      "reponse": "$\\mathrm{H_3O^+ + HO^- \\to 2\\,H_2O}$"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 11. Est-elle acide, neutre ou basique ?",
+      "difficulte": "approfondissement",
+      "notion": "reaction-acide-base",
+      "enonce": "Dans la réaction $\\mathrm{HCOOH + CH_3COO^- \\to HCOO^- + CH_3COOH}$, quelle espèce joue le rôle de base ?",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "$\\mathrm{CH_3COO^-}$ capte le proton cédé par $\\mathrm{HCOOH}$."
       ],
-      "reponse": "basique"
+      "reponse": "$\\mathrm{CH_3COO^-}$"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $8$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "approfondissement",
+      "notion": "reaction-acide-base",
+      "enonce": "Combien de protons sont échangés dans la réaction $\\mathrm{NH_4^+ + HO^- \\to NH_3 + H_2O}$ ?",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-8}$ mol/L."
+        "$\\mathrm{NH_4^+}$ cède un seul proton à $\\mathrm{HO^-}$."
       ],
-      "reponse": "$ 10^{-8} $ mol/L"
+      "reponse": "$1$"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-9} $ mol/L. Calculer son pH.",
+      "difficulte": "approfondissement",
+      "notion": "espece-amphotere",
+      "enonce": "Quel est l'acide conjugué de l'eau ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-9}) = 9$."
+        "Couple $\\mathrm{H_3O^+ / H_2O}$ : $\\mathrm{H_3O^+ = H_2O + H^+}$."
       ],
-      "reponse": "$ pH = 9 $"
+      "reponse": "$\\mathrm{H_3O^+}$"
     },
     {
       "id": 43,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 12,5. Est-elle acide, neutre ou basique ?",
+      "difficulte": "approfondissement",
+      "notion": "espece-amphotere",
+      "enonce": "Vrai ou faux ? « L'ion ammonium $\\mathrm{NH_4^+}$ est amphotère. » Justifier à l'aide des couples du cours.",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "$\\mathrm{NH_4^+}$ n'apparaît que comme acide (couple $\\mathrm{NH_4^+ / NH_3}$) ; il ne peut pas capter de proton.",
+        "L'affirmation est fausse."
       ],
-      "reponse": "basique"
+      "reponse": "Faux"
     },
     {
       "id": 44,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $9$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "approfondissement",
+      "notion": "calculer-un-ph",
+      "enonce": "On dissout $5{,}0 \\times 10^{-4}$ mol d'ions oxonium dans de l'eau pour obtenir $100$ mL de solution. Calculer le pH.",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-9}$ mol/L."
+        "$[\\mathrm{H_3O^+}] = \\dfrac{n}{V} = \\dfrac{5{,}0 \\times 10^{-4}}{0{,}100} = 5{,}0 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$\\mathrm{pH} = -\\log(5{,}0 \\times 10^{-3}) \\approx 2{,}301$, soit $2{,}3$."
       ],
-      "reponse": "$ 10^{-9} $ mol/L"
+      "reponse": "$\\mathrm{pH} \\approx 2{,}3$"
     },
     {
       "id": 45,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-10} $ mol/L. Calculer son pH.",
+      "difficulte": "approfondissement",
+      "notion": "calculer-un-ph",
+      "enonce": "Le pH d'une solution passe de $3{,}0$ à $4{,}0$. Par combien la concentration en ions oxonium a-t-elle été divisée ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-10}) = 10$."
+        "$[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}}$ : on passe de $10^{-3}$ à $10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "Elle a été divisée par $10$."
       ],
-      "reponse": "$ pH = 10 $"
+      "reponse": "Par $10$"
     },
     {
       "id": 46,
-      "difficulte": "application",
-      "notion": "nature",
-      "enonce": "À 25 °C, une solution a un pH de 13. Est-elle acide, neutre ou basique ?",
+      "difficulte": "approfondissement",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Une solution de pH $2{,}5$ a un volume de $500$ mL. Quelle quantité d'ions oxonium contient-elle ? (deux chiffres significatifs)",
       "corrige": [
-        "À 25 °C : pH < 7 acide, pH = 7 neutre, pH > 7 basique."
+        "$[\\mathrm{H_3O^+}] = 10^{-2{,}5} \\approx 3{,}2 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$n = [\\mathrm{H_3O^+}] \\times V \\approx 10^{-2{,}5} \\times 0{,}500 \\approx 1{,}6 \\times 10^{-3}$ mol."
       ],
-      "reponse": "basique"
+      "reponse": "$\\approx 1{,}6 \\times 10^{-3}$ mol"
     },
     {
       "id": 47,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $10$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "approfondissement",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Deux solutions ont pour pH $2{,}0$ et $5{,}0$. Combien de fois la première est-elle plus concentrée en ions oxonium ?",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-10}$ mol/L."
+        "$\\dfrac{10^{-2}}{10^{-5}} = 10^{3}$.",
+        "Elle est $1\\,000$ fois plus concentrée."
       ],
-      "reponse": "$ 10^{-10} $ mol/L"
+      "reponse": "$1\\,000$ fois"
     },
     {
       "id": 48,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-11} $ mol/L. Calculer son pH.",
+      "difficulte": "approfondissement",
+      "notion": "echelle-de-ph",
+      "enonce": "Vrai ou faux ? « Une solution de pH $4$ est deux fois plus acide qu'une solution de pH $8$. » Justifier.",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-11}) = 11$."
+        "$\\dfrac{10^{-4}}{10^{-8}} = 10^{4}$ : elle contient $10\\,000$ fois plus d'ions oxonium.",
+        "L'échelle de pH est logarithmique : l'affirmation est fausse."
       ],
-      "reponse": "$ pH = 11 $"
+      "reponse": "Faux"
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "Une solution a un pH égal à $11$. Quelle est sa concentration en ions oxonium ?",
+      "difficulte": "approfondissement",
+      "notion": "acides-carboxyliques-et-amines",
+      "enonce": "Pourquoi une amine est-elle une base de Brönsted ?",
       "corrige": [
-        "$[H_3O^+] = 10^{-pH}$.",
-        "$[H_3O^+] = 10^{-11}$ mol/L."
+        "L'atome d'azote porte un doublet non liant.",
+        "Il peut capter un proton $\\mathrm{H^+}$ : l'amine est une base."
       ],
-      "reponse": "$ 10^{-11} $ mol/L"
+      "reponse": "Son azote peut capter un proton"
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "calcul-pH",
-      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-12} $ mol/L. Calculer son pH.",
+      "difficulte": "probleme",
+      "notion": "concentration-a-partir-du-ph",
+      "enonce": "Une piscine doit avoir un pH compris entre $7{,}2$ et $7{,}6$. Le pH mesuré est $7{,}9$. La concentration en ions oxonium est-elle trop forte ou trop faible ?",
       "corrige": [
-        "$pH = -\\log [H_3O^+]$.",
-        "$pH = -\\log(10^{-12}) = 12$."
+        "Un pH trop élevé correspond à une concentration en ions oxonium trop faible ($[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}}$ diminue quand le pH augmente).",
+        "Elle est trop faible : il faut acidifier légèrement l'eau."
       ],
-      "reponse": "$ pH = 12 $"
+      "reponse": "Trop faible"
     }
   ]
 }

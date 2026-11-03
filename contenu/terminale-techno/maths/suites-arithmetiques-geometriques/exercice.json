@@ -14,549 +14,542 @@
       "id": 1,
       "difficulte": "application",
       "notion": "terme-general",
-      "enonce": "$(u_n)$ est arithmétique de raison $r = 5$ et $u_{4} = 23$. Calculer $u_{9}$.",
+      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 5$ et de raison $3$. Calculer $u_{20}$.",
       "corrige": [
-        "$u_n = u_p + (n - p)r$ : de $u_{4}$ à $u_{9}$, il y a $5$ pas.",
-        "$u_{9} = 23 + 5 \\times 5 = 48$."
+        "$u_n = u_0 + n\\,r$.",
+        "$u_{20} = 65$."
       ],
-      "reponse": "$u_{9} = 48$"
+      "reponse": "$65$"
     },
     {
       "id": 2,
       "difficulte": "application",
       "notion": "terme-general",
-      "enonce": "$(u_n)$ est arithmétique de raison $r = -3$ et $u_{1} = 7$. Calculer $u_{20}$.",
+      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 2$ et de raison $3$. Calculer $u_{6}$.",
       "corrige": [
-        "$u_n = u_p + (n - p)r$ : de $u_{1}$ à $u_{20}$, il y a $19$ pas.",
-        "$u_{20} = 7 + 19 \\times (-3) = -50$."
+        "$u_n = u_0 \\times q^{n}$.",
+        "$u_{6} = 1\\,458$."
       ],
-      "reponse": "$u_{20} = -50$"
+      "reponse": "$1\\,458$"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "terme-general",
-      "enonce": "$(u_n)$ est arithmétique de raison $r = 2{,}5$ et $u_{10} = 50$. Calculer $u_{30}$.",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "$(u_n)$ est arithmétique avec $u_2 = 11$ et $u_7 = 36$. Déterminer sa raison.",
       "corrige": [
-        "$u_n = u_p + (n - p)r$ : de $u_{10}$ à $u_{30}$, il y a $20$ pas.",
-        "$u_{30} = 50 + 20 \\times 2{,}5 = 100$."
-      ],
-      "reponse": "$u_{30} = 100$"
-    },
-    {
-      "id": 4,
-      "difficulte": "application",
-      "notion": "terme-general",
-      "enonce": "$(u_n)$ est arithmétique de raison $r = 4$ et $u_{3} = -8$. Calculer $u_{15}$.",
-      "corrige": [
-        "$u_n = u_p + (n - p)r$ : de $u_{3}$ à $u_{15}$, il y a $12$ pas.",
-        "$u_{15} = -8 + 12 \\times 4 = 40$."
-      ],
-      "reponse": "$u_{15} = 40$"
-    },
-    {
-      "id": 5,
-      "difficulte": "application",
-      "notion": "terme-general",
-      "enonce": "$(u_n)$ est géométrique de raison $q = 3$ et $u_{2} = 18$. Calculer $u_{5}$.",
-      "corrige": [
-        "$u_n = u_p \\times q^{n - p}$ : de $u_{2}$ à $u_{5}$, il y a $3$ pas.",
-        "$u_{5} = 18 \\times 3^{3} = 486$."
-      ],
-      "reponse": "$u_{5} = 486$"
-    },
-    {
-      "id": 6,
-      "difficulte": "application",
-      "notion": "terme-general",
-      "enonce": "$(u_n)$ est géométrique de raison $q = 0{,}5$ et $u_{1} = 1\\,000$. Calculer $u_{6}$.",
-      "corrige": [
-        "$u_n = u_p \\times q^{n - p}$ : de $u_{1}$ à $u_{6}$, il y a $5$ pas.",
-        "$u_{6} = 1\\,000 \\times 0{,}5^{5} = 31{,}25$."
-      ],
-      "reponse": "$u_{6} = 31{,}25$"
-    },
-    {
-      "id": 7,
-      "difficulte": "application",
-      "notion": "terme-general",
-      "enonce": "$(u_n)$ est géométrique de raison $q = 2$ et $u_{3} = 40$. Calculer $u_{8}$.",
-      "corrige": [
-        "$u_n = u_p \\times q^{n - p}$ : de $u_{3}$ à $u_{8}$, il y a $5$ pas.",
-        "$u_{8} = 40 \\times 2^{5} = 1\\,280$."
-      ],
-      "reponse": "$u_{8} = 1\\,280$"
-    },
-    {
-      "id": 8,
-      "difficulte": "application",
-      "notion": "terme-general",
-      "enonce": "$(u_n)$ est géométrique de raison $q = 1{,}1$ et $u_{5} = 100$. Calculer $u_{7}$.",
-      "corrige": [
-        "$u_n = u_p \\times q^{n - p}$ : de $u_{5}$ à $u_{7}$, il y a $2$ pas.",
-        "$u_{7} = 100 \\times 1{,}1^{2} = 121$."
-      ],
-      "reponse": "$u_{7} = 121$"
-    },
-    {
-      "id": 9,
-      "difficulte": "application",
-      "notion": "moyennes",
-      "enonce": "Calculer la moyenne arithmétique et la moyenne géométrique de $4$ et $9$.",
-      "corrige": [
-        "Moyenne arithmétique : $\\dfrac{4 + 9}{2} = 6{,}5$.",
-        "Moyenne géométrique : $\\sqrt{4 \\times 9} = \\sqrt{36} = 6$."
-      ],
-      "reponse": "$6{,}5$ et $6$"
-    },
-    {
-      "id": 10,
-      "difficulte": "application",
-      "notion": "moyennes",
-      "enonce": "Calculer la moyenne arithmétique et la moyenne géométrique de $2$ et $18$.",
-      "corrige": [
-        "Moyenne arithmétique : $\\dfrac{2 + 18}{2} = 10$.",
-        "Moyenne géométrique : $\\sqrt{2 \\times 18} = \\sqrt{36} = 6$."
-      ],
-      "reponse": "$10$ et $6$"
-    },
-    {
-      "id": 11,
-      "difficulte": "application",
-      "notion": "moyennes",
-      "enonce": "Calculer la moyenne arithmétique et la moyenne géométrique de $1{,}6$ et $0{,}9$.",
-      "corrige": [
-        "Moyenne arithmétique : $\\dfrac{1{,}6 + 0{,}9}{2} = 1{,}25$.",
-        "Moyenne géométrique : $\\sqrt{1{,}6 \\times 0{,}9} = \\sqrt{1{,}44} = 1{,}2$."
-      ],
-      "reponse": "$1{,}25$ et $1{,}2$"
-    },
-    {
-      "id": 12,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est arithmétique avec $u_{2} = 11$ et $u_{7} = 36$. Déterminer sa raison.",
-      "corrige": [
-        "$u_{7} = u_{2} + 5r$, donc $r = \\dfrac{36 - 11}{5} = 5$."
+        "$u_7 - u_2 = 5r = 25$.",
+        "$r = 5$."
       ],
       "reponse": "$r = 5$"
     },
     {
-      "id": 13,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est arithmétique avec $u_{0} = 100$ et $u_{8} = 60$. Déterminer sa raison.",
+      "id": 4,
+      "difficulte": "application",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "$(u_n)$ est géométrique avec $u_0 = 3$ et $u_2 = 75$, de raison positive. Déterminer $q$.",
       "corrige": [
-        "$u_{8} = u_{0} + 8r$, donc $r = \\dfrac{60 - 100}{8} = -5$."
+        "$q^2 = \\dfrac{75}{3} = 25$.",
+        "$q > 0$ : $q = 5$."
       ],
-      "reponse": "$r = -5$"
+      "reponse": "$q = 5$"
     },
     {
-      "id": 14,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est arithmétique avec $u_{5} = 3$ et $u_{12} = -11$. Déterminer sa raison.",
+      "id": 5,
+      "difficulte": "application",
+      "notion": "moyennes-arithmetique-et-geometrique",
+      "enonce": "Calculer la moyenne arithmétique de $12$ et $30$.",
       "corrige": [
-        "$u_{12} = u_{5} + 7r$, donc $r = \\dfrac{-11 - 3}{7} = -2$."
+        "$m = \\dfrac{12 + 30}{2} = 21$."
       ],
-      "reponse": "$r = -2$"
+      "reponse": "$21$"
     },
     {
-      "id": 15,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est arithmétique avec $u_{3} = 7{,}5$ et $u_{9} = 22{,}5$. Déterminer sa raison.",
+      "id": 6,
+      "difficulte": "application",
+      "notion": "moyennes-arithmetique-et-geometrique",
+      "enonce": "Calculer la moyenne géométrique de $4$ et $25$.",
       "corrige": [
-        "$u_{9} = u_{3} + 6r$, donc $r = \\dfrac{22{,}5 - 7{,}5}{6} = 2{,}5$."
+        "$g = \\sqrt{4 \\times 25} = \\sqrt{100} = 10$."
       ],
-      "reponse": "$r = 2{,}5$"
+      "reponse": "$10$"
     },
     {
-      "id": 16,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est géométrique à termes strictement positifs, avec $u_{3} = 50$ et $u_{5} = 72$. Déterminer sa raison $q$.",
-      "corrige": [
-        "$u_{5} = u_{3} \\times q^2$, donc $q^2 = \\dfrac{72}{50} = 1{,}44$.",
-        "$q > 0$, donc $q = 1{,}2$."
-      ],
-      "reponse": "$q = 1{,}2$"
-    },
-    {
-      "id": 17,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est géométrique à termes strictement positifs, avec $u_{0} = 16$ et $u_{2} = 36$. Déterminer sa raison $q$.",
-      "corrige": [
-        "$u_{2} = u_{0} \\times q^2$, donc $q^2 = \\dfrac{36}{16} = 2{,}25$.",
-        "$q > 0$, donc $q = 1{,}5$."
-      ],
-      "reponse": "$q = 1{,}5$"
-    },
-    {
-      "id": 18,
-      "difficulte": "intermediaire",
-      "notion": "raison",
-      "enonce": "$(u_n)$ est géométrique à termes strictement positifs, avec $u_{4} = 200$ et $u_{6} = 162$. Déterminer sa raison $q$.",
-      "corrige": [
-        "$u_{6} = u_{4} \\times q^2$, donc $q^2 = \\dfrac{162}{200} = 0{,}81$.",
-        "$q > 0$, donc $q = 0{,}9$."
-      ],
-      "reponse": "$q = 0{,}9$"
-    },
-    {
-      "id": 19,
-      "difficulte": "intermediaire",
+      "id": 7,
+      "difficulte": "application",
       "notion": "termes-consecutifs",
       "enonce": "Les nombres $7$, $12$ et $17$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite arithmétique ?",
       "corrige": [
-        "On teste $2b = a + c$ : $2 \\times 12 = 24$ et $7 + 17 = 24$.",
-        "Les deux membres sont égaux."
+        "Il faut $2b = a + c$ : $2 \\times 12 = 24$ et $7 + 17 = 24$.",
+        "Égalité vérifiée : oui (raison $5$)."
       ],
-      "reponse": "Oui, de raison $5$"
+      "reponse": "Oui"
     },
     {
-      "id": 20,
-      "difficulte": "intermediaire",
+      "id": 8,
+      "difficulte": "application",
       "notion": "termes-consecutifs",
-      "enonce": "Les nombres $3$, $8$ et $14$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite arithmétique ?",
+      "enonce": "Les nombres $5$, $15$ et $45$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite géométrique ?",
       "corrige": [
-        "On teste $2b = a + c$ : $2 \\times 8 = 16$ et $3 + 14 = 17$.",
-        "Les deux membres sont différents."
+        "Il faut $b^2 = a \\times c$ : $15^2 = 225$ et $5 \\times 45 = 225$.",
+        "Égalité vérifiée : oui (raison $3$)."
       ],
-      "reponse": "Non"
+      "reponse": "Oui"
     },
     {
-      "id": 21,
-      "difficulte": "intermediaire",
-      "notion": "termes-consecutifs",
-      "enonce": "Les nombres $2{,}5$, $4$ et $5{,}5$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite arithmétique ?",
-      "corrige": [
-        "On teste $2b = a + c$ : $2 \\times 4 = 8$ et $2{,}5 + 5{,}5 = 8$.",
-        "Les deux membres sont égaux."
-      ],
-      "reponse": "Oui, de raison $1{,}5$"
-    },
-    {
-      "id": 22,
-      "difficulte": "intermediaire",
-      "notion": "termes-consecutifs",
-      "enonce": "Les nombres $4$, $12$ et $36$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite géométrique ?",
-      "corrige": [
-        "On teste $b^2 = ac$ : $12^2 = 144$ et $4 \\times 36 = 144$.",
-        "Les deux membres sont égaux."
-      ],
-      "reponse": "Oui, de raison $3$"
-    },
-    {
-      "id": 23,
-      "difficulte": "intermediaire",
-      "notion": "termes-consecutifs",
-      "enonce": "Les nombres $5$, $10$ et $25$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite géométrique ?",
-      "corrige": [
-        "On teste $b^2 = ac$ : $10^2 = 100$ et $5 \\times 25 = 125$.",
-        "Les deux membres sont différents."
-      ],
-      "reponse": "Non"
-    },
-    {
-      "id": 24,
-      "difficulte": "intermediaire",
-      "notion": "termes-consecutifs",
-      "enonce": "Les nombres $50$, $60$ et $72$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite géométrique ?",
-      "corrige": [
-        "On teste $b^2 = ac$ : $60^2 = 3\\,600$ et $50 \\times 72 = 3\\,600$.",
-        "Les deux membres sont égaux."
-      ],
-      "reponse": "Oui, de raison $1{,}2$"
-    },
-    {
-      "id": 25,
-      "difficulte": "intermediaire",
-      "notion": "termes-consecutifs",
-      "enonce": "Les nombres $2$, $6$ et $12$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite géométrique ?",
-      "corrige": [
-        "On teste $b^2 = ac$ : $6^2 = 36$ et $2 \\times 12 = 24$.",
-        "Les deux membres sont différents."
-      ],
-      "reponse": "Non"
-    },
-    {
-      "id": 26,
-      "difficulte": "intermediaire",
+      "id": 9,
+      "difficulte": "application",
       "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 3$ et de raison $2$. Calculer $S = u_0 + u_1 + \\cdots + u_{9}$.",
+      "enonce": "Calculer $1 + 2 + 3 + \\cdots + 100$.",
       "corrige": [
-        "Il y a $10$ termes ; le dernier est $u_{9} = 3 + 9 \\times 2 = 21$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 10 \\times \\dfrac{3 + 21}{2} = 120$."
+        "$\\dfrac{100 \\times 101}{2} = 5\\,050$."
       ],
-      "reponse": "$S = 120$"
+      "reponse": "$5\\,050$"
     },
     {
-      "id": 27,
-      "difficulte": "intermediaire",
+      "id": 10,
+      "difficulte": "application",
       "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 100$ et de raison $-5$. Calculer $S = u_0 + u_1 + \\cdots + u_{14}$.",
+      "enonce": "Calculer $1 + 2 + \\cdots + 40$.",
       "corrige": [
-        "Il y a $15$ termes ; le dernier est $u_{14} = 100 + 14 \\times (-5) = 30$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 15 \\times \\dfrac{100 + 30}{2} = 975$."
+        "$\\dfrac{40 \\times 41}{2} = 820$."
       ],
-      "reponse": "$S = 975$"
+      "reponse": "$820$"
     },
     {
-      "id": 28,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 1$ et de raison $1$. Calculer $S = u_0 + u_1 + \\cdots + u_{99}$.",
-      "corrige": [
-        "Il y a $100$ termes ; le dernier est $u_{99} = 1 + 99 \\times 1 = 100$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 100 \\times \\dfrac{1 + 100}{2} = 5\\,050$."
-      ],
-      "reponse": "$S = 5\\,050$"
-    },
-    {
-      "id": 29,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 0{,}5$ et de raison $0{,}5$. Calculer $S = u_0 + u_1 + \\cdots + u_{19}$.",
-      "corrige": [
-        "Il y a $20$ termes ; le dernier est $u_{19} = 0{,}5 + 19 \\times 0{,}5 = 10$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 20 \\times \\dfrac{0{,}5 + 10}{2} = 105$."
-      ],
-      "reponse": "$S = 105$"
-    },
-    {
-      "id": 30,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 12$ et de raison $7$. Calculer $S = u_0 + u_1 + \\cdots + u_{29}$.",
-      "corrige": [
-        "Il y a $30$ termes ; le dernier est $u_{29} = 12 + 29 \\times 7 = 215$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 30 \\times \\dfrac{12 + 215}{2} = 3\\,405$."
-      ],
-      "reponse": "$S = 3\\,405$"
-    },
-    {
-      "id": 31,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 50$ et de raison $10$. Calculer $S = u_0 + u_1 + \\cdots + u_{11}$.",
-      "corrige": [
-        "Il y a $12$ termes ; le dernier est $u_{11} = 50 + 11 \\times 10 = 160$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 12 \\times \\dfrac{50 + 160}{2} = 1\\,260$."
-      ],
-      "reponse": "$S = 1\\,260$"
-    },
-    {
-      "id": 32,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = -20$ et de raison $3$. Calculer $S = u_0 + u_1 + \\cdots + u_{24}$.",
-      "corrige": [
-        "Il y a $25$ termes ; le dernier est $u_{24} = -20 + 24 \\times 3 = 52$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 25 \\times \\dfrac{-20 + 52}{2} = 400$."
-      ],
-      "reponse": "$S = 400$"
-    },
-    {
-      "id": 33,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 1$ et de raison $2$. Calculer $S = u_0 + u_1 + \\cdots + u_{49}$.",
-      "corrige": [
-        "Il y a $50$ termes ; le dernier est $u_{49} = 1 + 49 \\times 2 = 99$.",
-        "$S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 50 \\times \\dfrac{1 + 99}{2} = 2\\,500$."
-      ],
-      "reponse": "$S = 2\\,500$"
-    },
-    {
-      "id": 34,
-      "difficulte": "approfondissement",
-      "notion": "moyennes",
-      "enonce": "Un prix évolue de $+20\\,\\%$ puis de $+80\\,\\%$. Quel est le taux d'évolution moyen sur une période (arrondi à 0,01 %) ?",
-      "corrige": [
-        "Coefficient global : $1{,}2 \\times 1{,}8 = 2{,}16$.",
-        "Coefficient moyen : moyenne géométrique $\\sqrt{2{,}16} \\approx 1{,}46969$.",
-        "Taux moyen $\\approx 46{,}97\\,\\%$ (et non la moyenne arithmétique des taux)."
-      ],
-      "reponse": "$\\approx +46{,}97\\,\\%$"
-    },
-    {
-      "id": 35,
-      "difficulte": "approfondissement",
-      "notion": "moyennes",
-      "enonce": "Un prix évolue de $+10\\,\\%$ puis de $-10\\,\\%$. Quel est le taux d'évolution moyen sur une période (arrondi à 0,01 %) ?",
-      "corrige": [
-        "Coefficient global : $1{,}1 \\times 0{,}9 = 0{,}99$.",
-        "Coefficient moyen : moyenne géométrique $\\sqrt{0{,}99} \\approx 0{,}99499$.",
-        "Taux moyen $\\approx -0{,}50\\,\\%$ (et non la moyenne arithmétique des taux)."
-      ],
-      "reponse": "$\\approx -0{,}50\\,\\%$"
-    },
-    {
-      "id": 36,
-      "difficulte": "approfondissement",
-      "notion": "moyennes",
-      "enonce": "Un prix évolue de $+5\\,\\%$ puis de $+15\\,\\%$. Quel est le taux d'évolution moyen sur une période (arrondi à 0,01 %) ?",
-      "corrige": [
-        "Coefficient global : $1{,}05 \\times 1{,}15 = 1{,}2075$.",
-        "Coefficient moyen : moyenne géométrique $\\sqrt{1{,}2075} \\approx 1{,}09886$.",
-        "Taux moyen $\\approx 9{,}89\\,\\%$ (et non la moyenne arithmétique des taux)."
-      ],
-      "reponse": "$\\approx +9{,}89\\,\\%$"
-    },
-    {
-      "id": 37,
-      "difficulte": "approfondissement",
+      "id": 11,
+      "difficulte": "application",
       "notion": "somme-geometrique",
       "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 1$ et de raison $2$. Calculer la somme des $10$ premiers termes.",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 10$ termes.",
+        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ ($n$ = nombre de termes).",
         "$S = 1 \\times \\dfrac{1 - 2^{10}}{1 - 2} = 1\\,023$."
       ],
       "reponse": "$S = 1\\,023$"
     },
     {
-      "id": 38,
-      "difficulte": "approfondissement",
-      "notion": "somme-geometrique",
-      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 3$ et de raison $3$. Calculer la somme des $6$ premiers termes.",
+      "id": 12,
+      "difficulte": "intermediaire",
+      "notion": "terme-general",
+      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 120$ et de raison $-7$. Calculer $u_{15}$.",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 6$ termes.",
-        "$S = 3 \\times \\dfrac{1 - 3^{6}}{1 - 3} = 1\\,092$."
+        "$u_n = u_0 + n\\,r$.",
+        "$u_{15} = 15$."
       ],
-      "reponse": "$S = 1\\,092$"
+      "reponse": "$15$"
     },
     {
-      "id": 39,
-      "difficulte": "approfondissement",
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "terme-general",
+      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 4\\,096$ et de raison $\\dfrac{1}{4}$. Calculer $u_{5}$.",
+      "corrige": [
+        "$u_n = u_0 \\times q^{n}$.",
+        "$u_{5} = 4$."
+      ],
+      "reponse": "$4$"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "terme-general",
+      "enonce": "$(u_n)$ est arithmétique de raison $5$ et $u_4 = 23$. Calculer $u_9$.",
+      "corrige": [
+        "$u_9 = u_4 + (9 - 4) \\times 5 = 23 + 25 = 48$."
+      ],
+      "reponse": "$48$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "terme-general",
+      "enonce": "$(u_n)$ est géométrique de raison $2$ et $u_3 = 40$. Calculer $u_6$.",
+      "corrige": [
+        "$u_6 = u_3 \\times 2^{3} = 40 \\times 8 = 320$."
+      ],
+      "reponse": "$320$"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "$(u_n)$ est arithmétique avec $u_5 = 40$ et $u_{12} = 19$. Déterminer sa raison.",
+      "corrige": [
+        "$u_{12} - u_5 = 7r = 19 - 40 = -21$.",
+        "$r = -3$."
+      ],
+      "reponse": "$r = -3$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "$(u_n)$ est géométrique avec $u_1 = 81$ et $u_4 = 2\\,187$. Déterminer $q$.",
+      "corrige": [
+        "$q^3 = \\dfrac{2\\,187}{81} = 27$.",
+        "$q = 3$."
+      ],
+      "reponse": "$q = 3$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "moyennes-arithmetique-et-geometrique",
+      "enonce": "Un prix augmente de $20\\,\\%$ une année, puis de $8\\,\\%$ l'année suivante. Quel est le taux annuel moyen, au dixième de pourcentage ?",
+      "corrige": [
+        "Le coefficient moyen est la moyenne géométrique des coefficients : $\\sqrt{1{,}2 \\times 1{,}08} = \\sqrt{1{,}296}$.",
+        "$\\sqrt{1{,}296} \\approx 1{,}1384$ : taux moyen d'environ $13{,}8\\,\\%$ par an."
+      ],
+      "reponse": "$\\approx 13{,}8\\,\\%$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "moyennes-arithmetique-et-geometrique",
+      "enonce": "Quel nombre $b$ faut-il placer entre $8$ et $50$ pour que $8$ ; $b$ ; $50$ soient trois termes consécutifs d'une suite géométrique à termes positifs ?",
+      "corrige": [
+        "$b = \\sqrt{8 \\times 50} = \\sqrt{400} = 20$."
+      ],
+      "reponse": "$20$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "moyennes-arithmetique-et-geometrique",
+      "enonce": "Quel nombre $b$ faut-il placer entre $8$ et $50$ pour obtenir trois termes consécutifs d'une suite arithmétique ?",
+      "corrige": [
+        "$b = \\dfrac{8 + 50}{2} = 29$."
+      ],
+      "reponse": "$29$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "termes-consecutifs",
+      "enonce": "Les nombres $3$, $7$ et $12$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite arithmétique ?",
+      "corrige": [
+        "Il faut $2b = a + c$ : $2 \\times 7 = 14$ et $3 + 12 = 15$.",
+        "Égalité fausse : non."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "termes-consecutifs",
+      "enonce": "Les nombres $4$, $10$ et $25$ sont-ils, dans cet ordre, trois termes consécutifs d'une suite géométrique ?",
+      "corrige": [
+        "Il faut $b^2 = a \\times c$ : $10^2 = 100$ et $4 \\times 25 = 100$.",
+        "Égalité vérifiée : oui (raison $2{,}5$)."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "somme-arithmetique",
+      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 3$ et de raison $2$. Calculer $S = u_0 + u_1 + \\cdots + u_{9}$.",
+      "corrige": [
+        "Il y a $10$ termes ; le dernier est $u_{9} = 3 + 9 \\times (2) = 21$.",
+        "$S = 10 \\times \\dfrac{3 + 21}{2} = 120$."
+      ],
+      "reponse": "$S = 120$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "somme-arithmetique",
+      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 50$ et de raison $-4$. Calculer $S = u_0 + u_1 + \\cdots + u_{11}$.",
+      "corrige": [
+        "Il y a $12$ termes ; le dernier est $u_{11} = 50 + 11 \\times (-4) = 6$.",
+        "$S = 12 \\times \\dfrac{50 + 6}{2} = 336$."
+      ],
+      "reponse": "$S = 336$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "somme-arithmetique",
+      "enonce": "$(u_n)$ est arithmétique de premier terme $u_0 = 0{,}5$ et de raison $0{,}5$. Calculer $S = u_0 + u_1 + \\cdots + u_{19}$.",
+      "corrige": [
+        "Il y a $20$ termes ; le dernier est $u_{19} = 0{,}5 + 19 \\times (0{,}5) = 10$.",
+        "$S = 20 \\times \\dfrac{0{,}5 + 10}{2} = 105$."
+      ],
+      "reponse": "$S = 105$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "somme-geometrique",
+      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 3$ et de raison $2$. Calculer la somme des $8$ premiers termes.",
+      "corrige": [
+        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ ($n$ = nombre de termes).",
+        "$S = 3 \\times \\dfrac{1 - 2^{8}}{1 - 2} = 765$."
+      ],
+      "reponse": "$S = 765$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
       "notion": "somme-geometrique",
       "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 1\\,000$ et de raison $0{,}5$. Calculer la somme des $5$ premiers termes.",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 5$ termes.",
+        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ ($n$ = nombre de termes).",
         "$S = 1\\,000 \\times \\dfrac{1 - 0{,}5^{5}}{1 - 0{,}5} = 1\\,937{,}5$."
       ],
       "reponse": "$S = 1\\,937{,}5$"
     },
     {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "somme-geometrique",
+      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 5$ et de raison $3$. Calculer la somme des $6$ premiers termes.",
+      "corrige": [
+        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ ($n$ = nombre de termes).",
+        "$S = 5 \\times \\dfrac{1 - 3^{6}}{1 - 3} = 1\\,820$."
+      ],
+      "reponse": "$S = 1\\,820$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer $3 + 6 + 12 + \\cdots + 384$.",
+      "corrige": [
+        "Suite géométrique de premier terme $3$ et de raison $2$ ; $384 = 3 \\times 2^{7}$, donc il y a $8$ termes.",
+        "$S = 3 \\times \\dfrac{1 - 2^{8}}{1 - 2} = 3 \\times 255 = 765$."
+      ],
+      "reponse": "$765$"
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "terme-general",
+      "enonce": "$(u_n)$ est arithmétique avec $u_0 = -8$ et $r = 2{,}5$. À partir de quel rang $u_n$ est-il positif ou nul ?",
+      "corrige": [
+        "$-8 + 2{,}5n \\geqslant 0 \\iff n \\geqslant 3{,}2$.",
+        "À partir du rang $n = 4$."
+      ],
+      "reponse": "$n = 4$"
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "Un capital passe de $5\\,000$ € à $5\\,624{,}32$ € en $3$ ans, avec un taux annuel constant. Quel est ce taux ?",
+      "corrige": [
+        "$q^3 = \\dfrac{5\\,624{,}32}{5\\,000} = 1{,}124\\,864$.",
+        "$q = 1{,}124\\,864^{1/3} = 1{,}04$ : taux de $4\\,\\%$ par an."
+      ],
+      "reponse": "$4\\,\\%$"
+    },
+    {
+      "id": 32,
+      "difficulte": "approfondissement",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "$(u_n)$ est géométrique avec $u_0 = 2$ et $u_4 = 32$. Déterminer les deux valeurs possibles de $q$.",
+      "corrige": [
+        "$q^4 = 16$, donc $q = 2$ ou $q = -2$.",
+        "Les deux conviennent : $2 \\times (-2)^4 = 32$."
+      ],
+      "reponse": "$-2$ et $2$"
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "raison-a-partir-de-deux-termes",
+      "enonce": "Vrai ou faux ? « Si $u_3 = 10$ et $u_5 = 16$ pour une suite arithmétique, alors $r = 6$. » Justifier.",
+      "corrige": [
+        "$u_5 - u_3 = 2r = 6$.",
+        "$r = 3$ : l'affirmation est fausse (il y a deux pas entre $u_3$ et $u_5$)."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "moyennes-arithmetique-et-geometrique",
+      "enonce": "Vrai ou faux ? « Une hausse de $10\\,\\%$ suivie d'une hausse de $30\\,\\%$ correspond à deux hausses de $20\\,\\%$. » Justifier.",
+      "corrige": [
+        "$1{,}1 \\times 1{,}3 = 1{,}43$ alors que $1{,}2^2 = 1{,}44$.",
+        "Le taux moyen est donné par la moyenne géométrique ($\\approx 19{,}6\\,\\%$), pas arithmétique. Faux."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "termes-consecutifs",
+      "enonce": "Déterminer $x > 0$ pour que $x$ ; $6$ ; $9$ soient trois termes consécutifs d'une suite géométrique.",
+      "corrige": [
+        "$6^2 = 9x$, donc $x = \\dfrac{36}{9} = 4$."
+      ],
+      "reponse": "$x = 4$"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "termes-consecutifs",
+      "enonce": "Déterminer $x$ pour que $x$ ; $6$ ; $9$ soient trois termes consécutifs d'une suite arithmétique.",
+      "corrige": [
+        "$2 \\times 6 = x + 9$, donc $x = 3$."
+      ],
+      "reponse": "$x = 3$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "somme-arithmetique",
+      "enonce": "Calculer la somme des nombres pairs de $2$ à $200$.",
+      "corrige": [
+        "Suite arithmétique de raison $2$ : $100$ termes, de $2$ à $200$.",
+        "$S = 100 \\times \\dfrac{2 + 200}{2} = 10\\,100$."
+      ],
+      "reponse": "$10\\,100$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "somme-arithmetique",
+      "enonce": "Calculer $10 + 13 + 16 + \\cdots + 97$.",
+      "corrige": [
+        "Raison $3$ : nombre de termes $\\dfrac{97 - 10}{3} + 1 = 30$.",
+        "$S = 30 \\times \\dfrac{10 + 97}{2} = 1\\,605$."
+      ],
+      "reponse": "$1\\,605$"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "somme-arithmetique",
+      "enonce": "Un élève calcule $u_0 + \\cdots + u_9$ (suite arithmétique, $u_0 = 1$, $r = 2$) en écrivant $9 \\times \\dfrac{1 + 19}{2} = 90$. Quelle est son erreur, et le bon résultat ?",
+      "corrige": [
+        "De $u_0$ à $u_9$, il y a $10$ termes, pas $9$.",
+        "$S = 10 \\times \\dfrac{1 + 19}{2} = 100$."
+      ],
+      "reponse": "$100$"
+    },
+    {
       "id": 40,
       "difficulte": "approfondissement",
       "notion": "somme-geometrique",
-      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 5$ et de raison $2$. Calculer la somme des $8$ premiers termes.",
+      "enonce": "Calculer $\\dfrac{1}{2} + \\dfrac{1}{4} + \\cdots + \\dfrac{1}{2^{10}}$, arrondi au millième.",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 8$ termes.",
-        "$S = 5 \\times \\dfrac{1 - 2^{8}}{1 - 2} = 1\\,275$."
+        "Somme de $10$ termes, premier terme $\\dfrac{1}{2}$, raison $\\dfrac{1}{2}$.",
+        "$S = \\dfrac{1}{2} \\times \\dfrac{1 - 0{,}5^{10}}{1 - 0{,}5} = 1 - \\dfrac{1}{1\\,024} \\approx 0{,}999$."
       ],
-      "reponse": "$S = 1\\,275$"
+      "reponse": "$\\approx 0{,}999$"
     },
     {
       "id": 41,
       "difficulte": "approfondissement",
       "notion": "somme-geometrique",
-      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 200$ et de raison $1{,}1$. Calculer la somme des $4$ premiers termes.",
+      "enonce": "Légende de l'échiquier : $1$ grain sur la première case, $2$ sur la deuxième, $4$ sur la troisième… sur $64$ cases. Combien de grains en tout ? Donner une écriture avec une puissance de $2$.",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 4$ termes.",
-        "$S = 200 \\times \\dfrac{1 - 1{,}1^{4}}{1 - 1{,}1} = 928{,}2$."
+        "Somme géométrique de $64$ termes, $u_0 = 1$, $q = 2$.",
+        "$S = \\dfrac{1 - 2^{64}}{1 - 2} = 2^{64} - 1 \\approx 1{,}8 \\times 10^{19}$."
       ],
-      "reponse": "$S = 928{,}2$"
+      "reponse": "$2^{64} - 1$"
     },
     {
       "id": 42,
       "difficulte": "approfondissement",
       "notion": "somme-geometrique",
-      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 1$ et de raison $0{,}1$. Calculer la somme des $4$ premiers termes.",
+      "enonce": "Vrai ou faux ? « Dans la formule $u_0 \\dfrac{1 - q^{n}}{1 - q}$, l'exposant $n$ est l'indice du dernier terme. » Justifier.",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 4$ termes.",
-        "$S = 1 \\times \\dfrac{1 - 0{,}1^{4}}{1 - 0{,}1} = 1{,}111$."
+        "$n$ est le **nombre de termes** additionnés ; le dernier terme est $u_{n-1}$.",
+        "L'affirmation est fausse."
       ],
-      "reponse": "$S = 1{,}111$"
+      "reponse": "Faux"
     },
     {
       "id": 43,
-      "difficulte": "approfondissement",
-      "notion": "somme-geometrique",
-      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 64$ et de raison $1{,}5$. Calculer la somme des $5$ premiers termes.",
+      "difficulte": "probleme",
+      "notion": "problemes-de-cumul",
+      "enonce": "Un salarié gagne $24\\,000$ € la première année ; son salaire augmente de $600$ € par an. Combien aura-t-il gagné en tout sur $10$ ans ?",
       "corrige": [
-        "$S = u_0 \\times \\dfrac{1 - q^{n}}{1 - q}$ avec $n = 5$ termes.",
-        "$S = 64 \\times \\dfrac{1 - 1{,}5^{5}}{1 - 1{,}5} = 844$."
+        "Suite arithmétique : $u_1 = 24\\,000$, $r = 600$, $u_{10} = 24\\,000 + 9 \\times 600 = 29\\,400$.",
+        "Total : $10 \\times \\dfrac{24\\,000 + 29\\,400}{2} = 267\\,000$ €."
       ],
-      "reponse": "$S = 844$"
+      "reponse": "$267\\,000$ €"
     },
     {
       "id": 44,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "Un salarié gagne $24\\,000$ € la première année ; son salaire augmente de $600$ € par an. Quel sera son salaire la dixième année ? Combien aura-t-il gagné en tout sur ces 10 ans ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "Un autre contrat propose $24\\,000$ € la première année, puis $+2{,}5\\,\\%$ par an. Combien aura-t-il gagné en tout sur $10$ ans, à l'euro près ?",
       "corrige": [
-        "Suite arithmétique : $u_1 = 24\\,000$, $r = 600$ ; la dixième année : $u_{10} = 24\\,000 + 9 \\times 600 = 29\\,400$ €.",
-        "Total sur 10 ans (somme) : $10 \\times \\dfrac{24\\,000 + 29\\,400}{2} = 267\\,000$ €."
+        "Suite géométrique : $u_1 = 24\\,000$, $q = 1{,}025$, $10$ termes.",
+        "$S = 24\\,000 \\times \\dfrac{1 - 1{,}025^{10}}{1 - 1{,}025} \\approx 268\\,881$ €."
       ],
-      "reponse": "$29\\,400$ € la dixième année ; $267\\,000$ € en tout"
+      "reponse": "$\\approx 268\\,881$ €"
     },
     {
       "id": 45,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "Une usine produit $5\\,000$ pièces la première année, puis sa production augmente de $4\\,\\%$ par an. Quelle est la production cumulée sur 6 ans (à l'unité près) ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "Un amphithéâtre a $25$ rangées ; la première compte $20$ places et chaque rangée $2$ places de plus que la précédente. Combien de places en tout ?",
       "corrige": [
-        "Suite géométrique de premier terme $5\\,000$ et de raison $1{,}04$ ; « cumulée » : on calcule une somme de 6 termes.",
-        "$S = 5\\,000 \\times \\dfrac{1{,}04^6 - 1}{1{,}04 - 1} \\approx 33\\,165$."
+        "Dernière rangée : $20 + 24 \\times 2 = 68$.",
+        "Total : $25 \\times \\dfrac{20 + 68}{2} = 1\\,100$ places."
       ],
-      "reponse": "Environ $33\\,165$ pièces"
+      "reponse": "$1\\,100$ places"
     },
     {
       "id": 46,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "Un coureur parcourt $2$ km le premier jour d'entraînement, puis $0{,}5$ km de plus chaque jour. Quelle distance totale a-t-il parcourue au bout de 20 jours ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "Une association compte $1\\,000$ visiteurs la première semaine, puis $10\\,\\%$ de plus chaque semaine. Combien de visiteurs en tout sur $7$ semaines, à l'unité près ?",
       "corrige": [
-        "Suite arithmétique : $u_1 = 2$, $r = 0{,}5$ ; le vingtième jour : $u_{20} = 2 + 19 \\times 0{,}5 = 11{,}5$ km.",
-        "Total : $20 \\times \\dfrac{2 + 11{,}5}{2} = 135$ km."
+        "Somme géométrique : $u_1 = 1\\,000$, $q = 1{,}1$, $7$ termes.",
+        "$S = 1\\,000 \\times \\dfrac{1{,}1^{7} - 1}{0{,}1} \\approx 9\\,487$ visiteurs."
       ],
-      "reponse": "$135$ km"
+      "reponse": "$\\approx 9\\,487$ visiteurs"
     },
     {
       "id": 47,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "On place $1\\,000$ € le 1er janvier de chaque année, pendant 5 ans, à $3\\,\\%$ par an. Le dernier versement vaut $1\\,000$ €, l'avant-dernier $1\\,000 \\times 1{,}03$ €, etc. Quelle somme possède-t-on juste après le cinquième versement (au centime) ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "Une balle lâchée de $2$ m rebondit à chaque fois à $80\\,\\%$ de sa hauteur précédente. Quelle est la somme des hauteurs atteintes, de $2$ m jusqu'au $4^\\text{e}$ rebond inclus (soit $5$ hauteurs), au centimètre près ?",
       "corrige": [
-        "On additionne $1\\,000 + 1\\,000 \\times 1{,}03 + \\cdots + 1\\,000 \\times 1{,}03^4$ : somme de 5 termes d'une suite géométrique.",
-        "$S = 1\\,000 \\times \\dfrac{1{,}03^5 - 1}{0{,}03} \\approx 5\\,309{,}14$ €."
+        "Hauteurs : $2$ ; $1{,}6$ ; $1{,}28$ ; … suite géométrique de raison $0{,}8$.",
+        "$S = 2 \\times \\dfrac{1 - 0{,}8^{5}}{1 - 0{,}8} = 6{,}7232$ m."
       ],
-      "reponse": "Environ $5\\,309{,}14$ €"
+      "reponse": "$\\approx 6{,}72$ m"
     },
     {
       "id": 48,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "Dans « le loyer de la huitième année » et « le total des loyers payés sur 8 ans », laquelle des deux questions demande une somme ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "On empile des boîtes : $1$ au sommet, $2$ dessous, $3$ dessous… Combien de rangées faut-il au minimum pour utiliser plus de $1\\,000$ boîtes ?",
       "corrige": [
-        "« Le total… sur 8 ans » cumule les 8 loyers : c'est une somme.",
-        "« Le loyer de la huitième année » est un seul terme."
+        "Avec $n$ rangées : $\\dfrac{n(n + 1)}{2}$ boîtes.",
+        "$\\dfrac{44 \\times 45}{2} = 990$ et $\\dfrac{45 \\times 46}{2} = 1035$.",
+        "Il faut $45$ rangées."
       ],
-      "reponse": "Le total sur 8 ans"
+      "reponse": "$45$ rangées"
     },
     {
       "id": 49,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "Combien y a-t-il de termes dans la somme $u_3 + u_4 + \\cdots + u_{15}$ ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "Un loyer de $600$ € par mois augmente de $15$ € chaque année. Quel sera le loyer mensuel la $8^\\text{e}$ année ?",
       "corrige": [
-        "De $u_3$ à $u_{15}$ inclus : $15 - 3 + 1 = 13$ termes."
+        "$u_1 = 600$, $r = 15$.",
+        "$u_8 = 600 + 7 \\times 15 = 705$ €."
       ],
-      "reponse": "$13$ termes"
+      "reponse": "$705$ €"
     },
     {
       "id": 50,
       "difficulte": "probleme",
-      "notion": "probleme",
-      "enonce": "Une balle rebondit en perdant $20\\,\\%$ de sa hauteur à chaque rebond. Lâchée de $5$ m, quelle hauteur atteint-elle après le quatrième rebond (au cm près) ?",
+      "notion": "problemes-de-cumul",
+      "enonce": "Avec ce loyer ($600$ € par mois la première année, $+15$ € par an), quelle somme le locataire aura-t-il payée en $8$ ans ?",
       "corrige": [
-        "Chaque rebond multiplie la hauteur par $0{,}8$ : suite géométrique de raison $0{,}8$.",
-        "Après 4 rebonds : $5 \\times 0{,}8^4 = 2{,}048$ m."
+        "Somme des loyers mensuels : $8 \\times \\dfrac{600 + 705}{2} = 5\\,220$ €.",
+        "Sur $12$ mois par an : $12 \\times 5\\,220 = 62\\,640$ €."
       ],
-      "reponse": "Environ $2{,}05$ m"
+      "reponse": "$62\\,640$ €"
     }
   ]
 }
