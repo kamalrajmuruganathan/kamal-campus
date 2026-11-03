@@ -43,7 +43,7 @@ function totalAnnonce(md) {
 
 // Sujets d'histoire-géographie du brevet annoncés « /50 » alors que leurs 4 exercices font 4 × 10 = 40 points
 // (incohérence du contenu, signalée ; la note /20 reste juste puisqu'elle est rapportée au total réel).
-const TOTAL_INCOHERENT = new Set(['sj-hist-geo-01.md', 'sj-hist-geo-02.md', 'sj-hist-geo-03.md', 'sj-hist-geo-04.md']);
+const TOTAL_INCOHERENT = new Set([]);
 
 test('195 sujets : il y a bien 195 fichiers et chacun s\'analyse sans erreur', () => {
   assert.equal(SUJETS.length, 195);
