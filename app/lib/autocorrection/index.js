@@ -167,7 +167,9 @@ function normUnite(u) {
 function lireNombre(texte) {
   let s = texte.trim().replace(/^(?:≈|environ|à peu près|en)\s+/i, '').replace(/^≈\s*/, '');
   // Préfixe « Q = », « x = », « AB = », « v_0 = » (une seule égalité).
-  const pref = s.match(/^[A-Za-zΔθαλρω][A-Za-z0-9'_()]{0,5}\s*(?:=|≈)\s*/);
+  // « P(X=4) = », « E(4X - 2Y) = » : nom avec parenthèse (qui peut contenir « = »).
+  const pref = s.match(/^[A-Za-zΔθαλρω][A-Za-z0-9'_()]{0,5}\s*(?:=|≈)\s*/) || s.match(/^[A-Za-z]\s*\([^()]{1,15}\)\s*(?:=|≈)\s*/)
+    || s.match(/^t\s*_?\{?\s*1\s*\/\s*2\s*\}?\s*(?:=|≈)\s*/); // « t1/2 = 280 s » (temps de demi-réaction)
   if (pref) s = s.slice(pref[0].length);
   s = s.replace(/^≈\s*/, '');
   if (s.includes('=')) return null;
@@ -193,6 +195,7 @@ function lireNombre(texte) {
   const collee = s.slice(tout.length);
   // « L-1 », « s^-1 », « s^{-1} » : exposant −1 écrit au clavier.
   const reste = collee.trim().replace(/\^?\{?\(?-([123])\)?\}?(?![\d])/g, (_, d) => '⁻' + '¹²³'[d - 1])
+    .replace(/(\p{L})\s*\^\s*\(?\{?\s*([23])\s*\}?\)?(?![\d])/gu, (_, l, d) => l + '¹²³'[d - 1]) // « cm^2 » = « cm² »
     .replace(/(\p{L})([23])(?=[/·.\s]|$)/gu, (_, l, d) => l + '¹²³'[d - 1]); // « m3/s » = « m³/s »
   // « -4x », « 3n » : une lettre collée au nombre est une variable, pas une unité.
   if (/^[a-zA-Z]\b/.test(collee) && !/^[mgsVAWNJLhK]\b/.test(collee)) return null;
@@ -219,7 +222,8 @@ const ARTICLES = /^(?:(?:le|la|les|un|une)\s+|l'\s*)/;
 
 /** Clé de comparaison d'un texte court. */
 function cleTexte(s, { articles = true, ignorerAccents = true, espaces = false } = {}) {
-  let x = sansPonctuationFinale(nettoyer(s)).toLowerCase().replace(/œ/g, 'oe').replace(/æ/g, 'ae');
+  let x = sansPonctuationFinale(nettoyer(s)).toLowerCase().replace(/œ/g, 'oe').replace(/æ/g, 'ae')
+    .replace(/(\p{L})\s*\^\s*\(?([23])\)?(?!\d)/gu, (_, l, d) => l + '²³'[d - 2]); // « m^2 » = « m² »
   if (ignorerAccents) x = sansAccents(x);
   if (articles) {
     const sans = x.replace(ARTICLES, '');
@@ -264,6 +268,9 @@ function alternatives(r) {
     alts.push(x.trim());
     return ' ';
   });
+  // « M(-1,0,0) », « f(2) » : parenthèse collée à un nom et contenant un nombre = coordonnées ou
+  // argument, pas une explication facultative (sinon « M » seul serait accepté).
+  if (/[\p{L}']\(\s*[-+]?\d[\d\s,.;+-]*\)/u.test(base)) return null;
   const parens = [];
   base = base.replace(/\(([^()]*)\)/g, (p, x) => {
     parens.push(x.trim());
@@ -382,14 +389,18 @@ function convertir(att, saisie) {
 
 function egalNombre(att, saisie, opts = {}) {
   const { conversion = false, strict = false } = opts;
+  let converti = false;
   if (conversion && saisie.unite && att.unite && saisie.unite !== att.unite) {
     const c = convertir(att, saisie);
-    if (c) saisie = c;
+    if (c) { saisie = c; converti = true; }
   }
   if (saisie.unite && att.unite && saisie.unite !== att.unite) return false;
   if (saisie.unite && !att.unite) {
     // « 1 électron », « 8 atomes » : un nom de la réponse attendue ou de l'énoncé (pas une unité) est permis.
     if (!(opts.mots && opts.mots.has(motSimple(saisie.unite)))) return false;
+    // « 11 neutrons » alors que la réponse dit « 11 protons, 12 neutrons » : le mot est l'étiquette d'une autre valeur.
+    const vals = opts.etiquettes && opts.etiquettes.get(motSimple(saisie.unite));
+    if (vals && !vals.some((v) => Math.abs(v - saisie.valeur) <= Math.abs(v) * 1e-9)) return false;
     saisie = { ...saisie, unite: '' };
   }
   // Tolérance RELATIVE seulement (sinon 10⁻¹⁹ « égalerait » 10⁻¹⁸).
@@ -401,7 +412,11 @@ function egalNombre(att, saisie, opts = {}) {
   // Saisie plus précise que la réponse (au moins 2 chiffres significatifs attendus) :
   // on arrondit la saisie au même nombre de chiffres significatifs (314,16 → 314 ;
   // 334 800 → 3,35 × 10^5 ; 13,86 → 14).
-  if (att.chiffres >= 2 && saisie.chiffres != null && saisie.chiffres > att.chiffres && att.valeur !== 0) {
+  // Entier terminé par des zéros (« 130 perles », « 1960 », « 11000000 ») : ses zéros ne sont des
+  // zéros d'arrondi que si la réponse est approchée (« ≈ 280 s », « environ 5 700 ans ») ;
+  // sinon « 131 » ou « 1961 » seraient acceptés.
+  const entierRond = att.decimales === 0 && att.valeur % 10 === 0;
+  if (att.chiffres >= 2 && saisie.chiffres != null && saisie.chiffres > att.chiffres && att.valeur !== 0 && !((entierRond || converti) && opts.approche === false)) {
     const arrondi = Number(saisie.valeur.toPrecision(att.chiffres));
     if (Math.abs(arrondi - att.valeur) <= e) return true;
   }
@@ -480,6 +495,12 @@ function analyserForme(forme, matiere = null) {
   let avecPoint = suiteNb && suiteNb.some((x) => x.kind === 'couple') && !LANGUES.has(matiere) && analyserSuite(brut);
   if (avecPoint && avecPoint.some((m) => m.k === 'expr' || m.k === 'eq')) avecPoint = null; // « 4,24 m/s » n'est pas une expression en m et s
   if (avecPoint) return { kind: 'math', suite: avecPoint, nombres: suiteNb };
+  // Un seul point (« (-1 ; 0 ; 0) ») : comparé par calcul (« M(-1 ; 0 ; 0) », « (-1;0;0) » acceptés).
+  if (!suiteNb && !LANGUES.has(matiere) && lireCoupleNb(propre)) {
+    const point = analyserSuite(brut);
+    // (on garde aussi la comparaison de texte, qui lit « (7,3,-1) » comme trois nombres)
+    if (point) return { kind: 'math', suite: point, texte: { valeur: propre, articles: true } };
+  }
   if (suiteNb) return { kind: 'nombres', liste: suiteNb, valeur: propre, articles: !LANGUES.has(matiere), phrase: true };
   // Formule brute seule (« C3H8O ») : mêmes éléments, mêmes nombres d'atomes.
   const brute = !LANGUES.has(matiere) && lireFormule(propre);
@@ -644,7 +665,7 @@ export function lireFormule(texte) {
     .replace(/(\+{2,}|-{2,})$/, (x) => x.length + x[0]); // « Mg++ » = « Mg2+ »
   // Ion : charge écrite à la fin (« Na+ », « Mg2+ », « Mg²⁺ », « O2- » = O²⁻, « SO4 2- »).
   let charge = 0;
-  const q = t.match(/^(.*?[A-Za-z\d)])\s*\^?\s*\{?\s*(\d?)\s*([+-])\s*\}?$/);
+  const q = t.match(/^(.*?[A-Za-z\d)])\s*\^?\s*[{(]?\s*(\d?)\s*([+-])\s*[})]?$/);
   if (q) {
     charge = (q[3] === '+' ? 1 : -1) * (q[2] ? Number(q[2]) : 1);
     if (!charge) return null;
@@ -879,7 +900,8 @@ function facteursPremiers(t) {
     if (!m) return null;
     const p = Number(m[1]);
     const k = m[2] ? Number(m[2]) : 1;
-    if (p < 2 || k < 1 || k > 30) return null;
+    // Nombre géant (« 999…9 » = Infinity) : la recherche de diviseurs ne finirait jamais.
+    if (p < 2 || p > 1e12 || k < 1 || k > 30) return null;
     for (let d = 2; d * d <= p; d++) if (p % d === 0) return null;
     for (let i = 0; i < k; i++) out.push(p);
   }
@@ -1173,17 +1195,41 @@ export function consigneExercice(ex, matiere = null) {
  * à la bonne réponse mais pas écrite sous la forme demandée (développée, factorisée…).
  */
 export function diagnosticExercice(saisie, ex, matiere = null) {
+  if (String(saisie ?? '').length > SAISIE_MAX) return null;
   const a = analyserExercice(ex, matiere);
   const c = a.type === 'auto' && a.alternatives.length === 1 && a.alternatives[0].calcul;
   if (!c) return null;
-  const r = comparerCalcul(saisie, c);
+  let r;
+  try { r = comparerCalcul(saisie, c); } catch { return null; }
   return r.juste ? null : r.raison || null;
 }
 
-/** La saisie de l'élève est-elle juste pour cet exercice ? */
+/** Saisie trop longue pour être une réponse courte (et coûteuse à analyser) : refusée d'emblée. */
+const SAISIE_MAX = 2000;
+
+/** La saisie de l'élève est-elle juste pour cet exercice ? (jamais d'exception : false en cas de problème) */
 export function comparerExercice(saisie, ex, matiere = null) {
+  if (String(saisie ?? '').length > SAISIE_MAX) return false;
+  try {
+    return comparerExerciceBrut(saisie, ex, matiere);
+  } catch {
+    return false;
+  }
+}
+
+/** « P(X=4) = … », « V(3X - Y) = … » → « p(x=4) », « v(3x-y) » ; sinon null. */
+function nomParenthese(t) {
+  const m = String(t || '').match(/^\s*([A-Za-z]\s*\([^()]{1,15}\))\s*[=≈]/);
+  return m ? m[1].replace(/\s+/g, '').toLowerCase() : null;
+}
+
+function comparerExerciceBrut(saisie, ex, matiere = null) {
   const s = nettoyer(saisie);
   if (!s) return false;
+  // « P(X=5) = 0 » alors que la réponse est « P(X=4) = 0 » : la valeur est la même, mais pas la question.
+  const nomS = nomParenthese(sansDollars(s) ?? s);
+  const nomR = nomS && nomParenthese(sansDollars(nettoyer(ex && ex.reponse)));
+  if (nomS && nomR && nomS !== nomR) return false;
   const a = analyserExercice(ex, matiere);
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'calcul') return comparerCalcul(saisie, a.alternatives[0].calcul).juste;
   if (a.type === 'auto' && a.alternatives.length && a.alternatives[0].kind === 'autre') return comparerAutre(saisie, a.alternatives[0].autre);
@@ -1205,7 +1251,7 @@ export function comparerExercice(saisie, ex, matiere = null) {
   // « S = {1 ; 2} » : l'ensemble des solutions peut être précédé de « S = ».
   if (comparerUne(s, ex, matiere)) return true;
   // « S = {1 ; 2} », « f(-2) = 15 », « x = 3 ou x = -5 » : on retire les « nom = » devant les valeurs.
-  const sansNoms = s.replace(/(^|[\s;,(]|\bou\b|\bet\b)\s*\p{L}[\p{L}0-9'_]{0,5}(?:\([^()=]{0,6}\))?\s*[=≈]\s*(?!=)/gu, '$1 ').replace(/\s+/g, ' ').trim();
+  const sansNoms = s.replace(/(^|[\s;,(]|\bou\b|\bet\b)\s*(?:(?:cos|sin|tan|ln|log)\s+[a-zθα]|\p{L}[\p{L}0-9'_]{0,5}(?:\([^()=]{0,6}\))?)\s*[=≈]\s*(?!=)/gu, '$1 ').replace(/\s+/g, ' ').trim();
   if (sansNoms !== s && sansNoms !== '' && comparerUne(sansNoms, ex, matiere)) return true;
   // « S = {1/e} » : un ensemble d'une seule solution.
   const seul = sansNoms.match(/^\{\s*([^{};]+?)\s*\}$/);
@@ -1235,6 +1281,20 @@ function motsDe(ex) {
   return out;
 }
 
+/** Mots qui suivent un nombre dans la réponse (« 11 protons, 12 neutrons ») → valeurs qu'ils étiquettent. */
+function etiquettesDe(ex) {
+  const t = sansDollars(nettoyer((ex && ex.reponse) || '')) || '';
+  const out = new Map();
+  for (const m of t.matchAll(/(?<![\d,.])(\d{1,3}(?: \d{3})+|\d+)(?:[.,](\d+))?\s+(\p{L}{3,})/gu)) {
+    const mot = motSimple(m[3]);
+    if (UNITE_EN_MOT.test(mot)) continue;
+    const v = Number(m[1].replace(/\D/g, '') + (m[2] ? '.' + m[2] : ''));
+    if (!out.has(mot)) out.set(mot, []);
+    out.get(mot).push(v);
+  }
+  return out;
+}
+
 /** L'énoncé laisse-t-il libre l'écriture d'une expression (ni « réduis », ni « factorise », ni « forme »…) ? */
 function formeLibre(ex) {
   const e = sansAccents(String((ex && ex.enonce) || '').toLowerCase());
@@ -1256,6 +1316,15 @@ function moduloAngle(ex) {
 function arrondiExige(ex) {
   const e = sansAccents(String((ex && ex.enonce) || '').toLowerCase());
   return /arrondi|chiffres? significatifs?|ecri\w* correctement|bon nombre de chiffres|incertitude/.test(e);
+}
+
+/** La réponse est-elle une valeur approchée (« ≈ », « environ », « arrondi »…) ? */
+function reponseApprochee(ex) {
+  // Dans l'énoncé, « environ » décrit souvent une donnée (« environ 1 360 W/m² ») : seules les consignes comptent.
+  const r = sansAccents(String((ex && ex.reponse) || '').toLowerCase());
+  const e = sansAccents(String((ex && ex.enonce) || '').toLowerCase());
+  return /≈|\\approx|\\simeq|environ|arrondi|approch|ordre de grandeur|a peu pres|pres de|presque|chiffres? significatifs?/.test(r)
+    || /arrondi|approch|ordre de grandeur|estim|chiffres? significatifs?/.test(e);
 }
 
 function comparerUne(s, ex, matiere) {
@@ -1288,10 +1357,11 @@ function comparerUne(s, ex, matiere) {
   const canon = !LANGUES.has(matiere) && sensDe(ex && ex.reponse) ? canonSens : (x) => x;
   const texteSaisi = canon(sansDollars(s) ?? s);
   const nbSaisi = lireNombre(sansPonctuationFinale(texteSaisi));
-  const opts = { conversion: conversionPermise(ex), strict: arrondiExige(ex), mots: motsDe(ex) };
+  const opts = { conversion: conversionPermise(ex), strict: arrondiExige(ex), mots: motsDe(ex), etiquettes: etiquettesDe(ex), approche: reponseApprochee(ex) };
   return a.alternatives.some((alt) => {
     if (alt.kind === 'nombre') return !!nbSaisi && egalNombre(alt, nbSaisi, opts);
-    if (alt.kind === 'math') return comparerSuite(s, alt.suite, { libre: formeLibre(ex), modulo: moduloAngle(ex) }) || (!!alt.nombres && comparerNombres(texteSaisi, alt.nombres, matiere, opts));
+    if (alt.kind === 'math') return comparerSuite(s, alt.suite, { libre: formeLibre(ex), modulo: moduloAngle(ex) }) || (!!alt.nombres && comparerNombres(texteSaisi, alt.nombres, matiere, opts))
+      || (!!alt.texte && egalTexte(alt.texte, texteSaisi, matiere));
     if (alt.kind === 'nombres') return comparerNombres(texteSaisi, alt.liste, matiere, opts);
     if (alt.kind === 'correction') return egalCorrection(s, alt);
     if (alt.kind === 'decomposition') return egalDecomposition(s, alt);

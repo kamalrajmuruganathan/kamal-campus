@@ -168,8 +168,10 @@ function lireReaction(texte, latex) {
       .replace(/\\[,;: !]/g, ' ');
     if (/\\/.test(s)) return null;
   } else {
+    s = s.replace(/\s*\.$/, ''); // point final de la phrase
     s = [...s].map((c) => (INDICES.includes(c) ? String(INDICES.indexOf(c)) : EXPOSANTS.includes(c) ? '^' + String(EXPOSANTS.indexOf(c)) : c)).join('')
-      .replace(/⁺/g, '^+').replace(/⁻/g, '^-').replace(/[−–]/g, '-').replace(/\^(\d)\^(?=\d|[+-])/g, '^$1').replace(/\^+/g, '^');
+      .replace(/⁺/g, '^+').replace(/⁻/g, '^-').replace(/[−–]/g, '-').replace(/\^(\d)\^(?=\d|[+-])/g, '^$1').replace(/\^+/g, '^')
+      .replace(/\^\s*\(\s*(\d*\s*[+-])\s*\)/g, (_, q) => '^' + q.replace(/\s/g, '')); // « Fe^(3+) » = « Fe^3+ »
   }
   s = s.replace(/\((?:aq|s|l|g)\)/g, '');
   const cotes = s.split(/\s*(?:->|→|⟶|=>|=)\s*/);
@@ -203,7 +205,7 @@ function lireReaction(texte, latex) {
     return out.length ? out : null;
   };
   // Sans espaces (« 2H2+O2 »), un « + » suivi d'une espèce est un signe d'addition, pas une charge.
-  const lireMembre = (t) => membre(t) || (latex ? null : membre(t.replace(/\+(?=\s*\d*(?:[A-Z(]|e[-+^]?(?:\s|$)))/g, ' + ')));
+  const lireMembre = (t) => membre(t) || (latex ? null : membre(t.replace(/\+(?=\s*\d*(?:[A-Z(]|e\^?[-+]?(?:\s|$)))/g, ' + ')));
   const reactifs = lireMembre(cotes[0]);
   const produits = lireMembre(cotes[1]);
   return reactifs && produits ? { reactifs, produits } : null;
