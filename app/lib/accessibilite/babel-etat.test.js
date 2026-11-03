@@ -1,10 +1,14 @@
-import { test } from 'node:test';
+import { test as testNode } from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
-const babel = require('@babel/core');
+// Le contrôle qualité de GitHub lance les tests sans installer les paquets npm : sans @babel/core
+// (ou sa syntaxe JSX), ces tests sont sautés. Ils tournent en local et partout où les paquets sont installés.
+let babel = null;
+try { babel = require('@babel/core'); require.resolve('@babel/plugin-syntax-jsx'); } catch { babel = null; }
 const plugin = require('../../scripts/babel-etat-accessible.cjs');
+const test = (nom, fn) => testNode(nom, { skip: babel ? false : '@babel/core non installé' }, fn);
 
 const transformer = (code, filename = '/app/src/ecrans/X.js') => babel.transformSync(code, {
   filename, babelrc: false, configFile: false, plugins: ['@babel/plugin-syntax-jsx', plugin],
