@@ -16,7 +16,10 @@ export function normaliser(entree) {
     .replace(/×|·/g, '*')
     .replace(/÷|:/g, '/')
     .replace(/−/g, '-')
+    .replace(/[–—]/g, '-')
     .replace(/,/g, '.') // virgule décimale
+    .replace(/²/g, '^2')
+    .replace(/³/g, '^3')
     .replace(/\s+/g, '')
     .replace(/X/g, 'x');
 }
@@ -36,13 +39,14 @@ function tokeniser(s) {
     else if (c === '^') { toks.push({ type: 'pow' }); i += 1; }
     else if (c === '(') { toks.push({ type: 'lpar' }); i += 1; }
     else if (c === ')') { toks.push({ type: 'rpar' }); i += 1; }
+    else if (/[a-zA-ZÀ-ÿ]/.test(c)) throw new Error(`Seule l’inconnue x est gérée : « ${c} » n’est pas reconnu.`);
     else throw new Error(`Caractère non reconnu : « ${c} »`);
   }
   return toks;
 }
 
 function numRationnel(str) {
-  if ((str.match(/\./g) || []).length > 1) throw new Error(`Nombre invalide : « ${str} »`);
+  if ((str.match(/\./g) || []).length > 1 || !/\d/.test(str)) throw new Error(`Nombre invalide : « ${str.replace('.', ',')} »`);
   if (str.includes('.')) {
     const [ent, dec] = str.split('.');
     const d = 10 ** dec.length;
@@ -66,8 +70,11 @@ export function analyser(entree) {
   function base() {
     const t = pic();
     if (!t) throw new Error('Expression incomplète.');
-    if (t.type === 'op' && t.valeur === '-') { avaler(); return { t: 'neg', a: base() }; }
-    if (t.type === 'op' && t.valeur === '+') { avaler(); return base(); }
+    // Le moins unaire porte sur la PUISSANCE entière : −2^2 = −(2^2) = −4 et
+    // −x^2 = −(x^2), comme en mathématiques (avant : (−2)^2 = 4, et l'équation
+    // −x^2 + 1 = 0 devenait x^2 + 1 = 0, « sans solution »).
+    if (t.type === 'op' && t.valeur === '-') { avaler(); return { t: 'neg', a: facteur() }; }
+    if (t.type === 'op' && t.valeur === '+') { avaler(); return facteur(); }
     if (t.type === 'lpar') {
       avaler();
       const e = expr();
@@ -75,7 +82,11 @@ export function analyser(entree) {
       avaler();
       return e;
     }
-    if (t.type === 'num') { avaler(); return { t: 'num', v: numRationnel(t.valeur) }; }
+    if (t.type === 'num') {
+      avaler();
+      // on garde l'écriture décimale tapée (« 1,5 ») pour l'afficher telle quelle
+      return { t: 'num', v: numRationnel(t.valeur), ...(t.valeur.includes('.') ? { s: t.valeur } : {}) };
+    }
     if (t.type === 'var') { avaler(); return { t: 'var' }; }
     throw new Error('Expression invalide.');
   }

@@ -13,10 +13,15 @@ function pgcd(a, b) {
 
 export class Rationnel {
   constructor(n, d = 1) {
-    if (d === 0) throw new Error('division par zéro');
+    if (d === 0) throw new Error('Division par zéro : ce calcul n’a pas de sens.');
+    // Au-delà de 2^53, les nombres JavaScript perdent des chiffres : on refuse
+    // plutôt que d'afficher un résultat faux.
+    if (!Number.isSafeInteger(n) || !Number.isSafeInteger(d)) {
+      throw new Error('Nombres trop grands pour un calcul exact.');
+    }
     if (d < 0) { n = -n; d = -d; }
     const g = pgcd(n, d);
-    this.n = n / g;
+    this.n = n / g || 0; // jamais « -0 »
     this.d = d / g;
   }
 
@@ -25,7 +30,7 @@ export class Rationnel {
   plus(r) { return new Rationnel(this.n * r.d + r.n * this.d, this.d * r.d); }
   moins(r) { return new Rationnel(this.n * r.d - r.n * this.d, this.d * r.d); }
   fois(r) { return new Rationnel(this.n * r.n, this.d * r.d); }
-  sur(r) { if (r.n === 0) throw new Error('division par zéro'); return new Rationnel(this.n * r.d, this.d * r.n); }
+  sur(r) { if (r.n === 0) throw new Error('Division par zéro : ce calcul n’a pas de sens.'); return new Rationnel(this.n * r.d, this.d * r.n); }
   oppose() { return new Rationnel(-this.n, this.d); }
 
   estNul() { return this.n === 0; }

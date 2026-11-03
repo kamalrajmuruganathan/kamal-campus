@@ -337,7 +337,8 @@ function PanneauOutil({ outil, t, onRetour }) {
       } else if (brut === '' || brut === null || brut === undefined) {
         converties[champ.clef] = null;      // champ laissé vide = grandeur à calculer
       } else {
-        const n = Number(String(brut).replace(',', '.'));
+        // « 1 000 », « 1 000,5 » (espaces, y compris insécables) et « 12,5 » sont acceptés.
+        const n = Number(String(brut).replace(/[\s\u00a0\u202f]/g, '').replace(',', '.'));
         converties[champ.clef] = Number.isFinite(n) ? n : NaN;
       }
     }

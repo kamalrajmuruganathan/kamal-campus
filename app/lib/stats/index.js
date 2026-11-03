@@ -11,16 +11,38 @@ export function reculer(dateStr, n) {
   return d.toISOString().slice(0, 10);
 }
 
+const pad2 = (n) => String(n).padStart(2, '0');
+
 /**
- * Activité par jour sur les `nbJours` derniers jours (fin incluse).
+ * Jour LOCAL « AAAA-MM-JJ » d'une date de session. L'historique enregistre
+ * `new Date().toISOString()` (heure UTC) : couper la chaîne à 10 caractères
+ * donnerait le jour UTC — une session faite à 0 h 30 à Paris, ou à 21 h aux
+ * Antilles, tomberait sur le mauvais jour. Une date seule (« AAAA-MM-JJ ») est
+ * gardée telle quelle. null si illisible.
+ */
+export function jourDeSession(date) {
+  const s = String(date || '');
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+  const d = new Date(s);
+  if (!s || Number.isNaN(d.getTime())) return null;
+  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+}
+
+/** Nombre de sessions de l'historique faites le jour (local) donné. */
+export function sessionsDuJour(historique, jour, jourDe = jourDeSession) {
+  return (Array.isArray(historique) ? historique : []).filter((h) => h && jourDe(h.date) === jour).length;
+}
+
+/**
+ * Activité par jour sur les `nbJours` derniers jours (fin incluse), en jours locaux.
  * @param {Array} historique  [{ date: ISO, ... }]
  * @param {string} finJour    « AAAA-MM-JJ » (aujourd'hui)
  * @returns {{date, count}[]}  du plus ancien au plus récent
  */
-export function activiteParJour(historique, finJour, nbJours) {
+export function activiteParJour(historique, finJour, nbJours, jourDe = jourDeSession) {
   const compte = {};
-  for (const h of historique || []) {
-    const d = String(h && h.date ? h.date : '').slice(0, 10);
+  for (const h of Array.isArray(historique) ? historique : []) {
+    const d = h ? jourDe(h.date) : null;
     if (d) compte[d] = (compte[d] || 0) + 1;
   }
   const jours = [];

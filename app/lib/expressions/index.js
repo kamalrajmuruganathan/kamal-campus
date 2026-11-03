@@ -74,7 +74,7 @@ export function saisieVersSimple(s) {
   return String(s)
     .trim()
     .replace(/[.。]$/, '')
-    .replace(/(\d)[\s  ](?=\d{3}\b)/g, '$1')
+    .replace(/(\d)[\s  ](?=\d{3}(?!\d))/g, '$1') // « 1 000e^(-t) » : espace des milliers
     .replace(/(\d),(\d)/g, '$1.$2')
     .replace(/[−–—]/g, '-')
     .replace(/[×·∙⋅]/g, '*')
@@ -140,7 +140,8 @@ function arbre(toks) {
     for (;;) {
       const x = voir();
       if (x && (x.t === '*' || x.t === '/')) { k++; inv.push(x.t === '/'); f.push(unaire()); }
-      else if (debutAtome(x)) { inv.push(false); f.push(puissance()); }
+      // Deux nombres côte à côte (« 2 3 ») : ce n'est pas un produit (sinon « 1 0 » vaudrait 0).
+      else if (debutAtome(x) && !(x.t === 'num' && toks[k - 1] && toks[k - 1].t === 'num')) { inv.push(false); f.push(puissance()); }
       else break;
     }
     if (f.some((x) => !x)) return null;
@@ -210,6 +211,15 @@ function estNom(toks) {
  * « f(x) = 3x − 2 » → expr 3x − 2 ; « 2x + 5y + 4 = 0 » → eq ; « A = 2x = … = 6 » → la dernière.
  */
 export function lire(texte, { latex = false } = {}) {
+  if (String(texte ?? '').length > 2000) return null; // pas une réponse courte (et la lecture récursive déborderait)
+  try {
+    return lireBrut(texte, latex);
+  } catch {
+    return null; // parenthèses imbriquées par milliers… : illisible
+  }
+}
+
+function lireBrut(texte, latex) {
   const s = latex ? latexVersSimple(texte) : saisieVersSimple(texte);
   if (s == null || !s.trim()) return null;
   const t = jetons(s);
@@ -220,7 +230,9 @@ export function lire(texte, { latex = false } = {}) {
   if (parts.length === 1) { const a = arbre(parts[0]); return a && { kind: 'expr', a }; }
   if (estNom(parts[0])) {
     const a = arbre(parts[parts.length - 1]);
-    return a && { kind: 'expr', a, nom: parts[0].map((x) => x.v ?? x.t).join('') };
+    // « f'(x) = 6(3x - 2) = 18x - 12 » : les étapes intermédiaires sont gardées (elles doivent être justes aussi).
+    const etapes = parts.slice(1, -1).map(arbre).filter(Boolean);
+    return a && { kind: 'expr', a, nom: parts[0].map((x) => x.v ?? x.t).join(''), ...(etapes.length ? { etapes } : {}) };
   }
   if (parts.length === 2) {
     const g = arbre(parts[0]);
@@ -437,7 +449,8 @@ function regleDe(enonce) {
   if (/forme canonique/.test(e)) return 'canonique';
   if (fac) return 'factorise';
   if (dev) return 'developpe';
-  if (/primitive/.test(e)) return /telle que|tel que|verifiant|s.annule|qui vaut|prenant la valeur|passant par/.test(e) ? 'libre' : 'primitive';
+  // « avec F(0) = 3 » : une valeur imposée fixe la constante.
+  if (/primitive/.test(e)) return /telle que|tel que|verifiant|s.annule|qui vaut|prenant la valeur|passant par|passe par|[a-z]\s*\(\s*-?\d+(?:[.,]\d+)?\s*\)\s*=/.test(e) ? 'libre' : 'primitive';
   if (/simplifi|plus simplement|sous (?:la )?forme|ecri(?:s|re) .{0,30}forme/.test(e)) return null;
   return 'libre';
 }
@@ -455,6 +468,21 @@ function expressionsEnonce(enonce, complexe) {
 }
 
 /**
+ * Primitive écrite « … + C » (ou « + k ») : la constante d'intégration est retirée de
+ * l'expression attendue (sinon C serait une variable et rien ne serait jamais égal).
+ */
+function sansConstante(a) {
+  const cst = (x) => x.t === 'var' && (x.v === 'C' || x.v === 'k');
+  if (!a || a.t !== 'add' || a.termes.length < 2) return a;
+  const garde = a.termes.map((x, j) => !(cst(x) && a.signes[j] === 1));
+  if (garde.every(Boolean) || !garde.some(Boolean)) return a;
+  const termes = a.termes.filter((_, j) => garde[j]);
+  const signes = a.signes.filter((_, j) => garde[j]);
+  if (occurrences({ t: 'add', termes, signes }, 'C') || occurrences({ t: 'add', termes, signes }, 'k')) return a;
+  return termes.length === 1 && signes[0] === 1 ? termes[0] : { ...a, termes, signes };
+}
+
+/**
  * Exercice dont la réponse est une expression ou une équation : renvoie de quoi
  * comparer la saisie, ou null (l'exercice reste « à rédiger »).
  */
@@ -468,6 +496,7 @@ export function analyserCalcul(ex) {
     && /\\mathbb\{C\}|complexe|affixe|alg[ée]brique|\\overline|\\bar/i.test(ex.enonce));
   const lu = lire(r, { latex: true });
   if (!lu) return null;
+  if (regleDe(ex.enonce) === 'primitive') lu.a = sansConstante(lu.a);
   const vars = variables(lu.a, complexe);
   const special = complexe || /sqrt|ln|exp|pi|\^\(?\s*-|\^\(?\s*\(?\s*\d+\s*\/|e\^/.test(latexVersSimple(r) || '');
   if (!vars.size && !special) return null; // simple nombre : déjà géré ailleurs
@@ -498,6 +527,7 @@ export function analyserCalculForme(ex, forme) {
   const complexe = /\bi\b/.test(forme) && /\\mathbb\{C\}|complexe|affixe|alg[ée]brique|\\overline|\\bar/i.test(ex.enonce);
   const lu = lire(forme);
   if (!lu) return null;
+  if (regleDe(ex.enonce) === 'primitive') lu.a = sansConstante(lu.a);
   const vars = variables(lu.a, complexe);
   if (!vars.size && !complexe) return null;
   const regle = regleDe(ex.enonce);
@@ -551,6 +581,15 @@ export function comparerCalcul(saisie, c) {
   a = renommer(a);
   let mode = c.mode;
   let attendu = c.attendu;
+  // « 6(3x - 2) = 18x - 12 » (sans nom) : chaque membre doit valoir l'expression attendue ; le dernier est la réponse.
+  if (c.forme === 'expr' && lu.kind === 'eq' && !lu.nom) {
+    const membres = String(saisie).split('=').map((x) => lire(x));
+    if (membres.length >= 2 && membres.every((m) => m && m.kind === 'expr' && !m.nom)
+      && membres.every((m) => egales(c.attendu, renommer(m.a), { complexe: c.complexe, mode: c.mode }) === true)) {
+      const der = renommer(membres[membres.length - 1].a);
+      return formeOk(der, c.attendu, c.regle, c.complexe) ? { juste: true } : { juste: false, raison: 'forme' };
+    }
+  }
   if (c.forme === 'expr' && lu.kind === 'eq') {
     // Équation de droite donnée sous une autre forme (« 2y = x + 4 ») : permise sauf si « réduite ».
     if (c.reduite || !c.nom || !/^[a-z]$/i.test(c.nom)) return { juste: false };
@@ -566,6 +605,8 @@ export function comparerCalcul(saisie, c) {
   }
   const eg = egales(attendu, a, { complexe: c.complexe, mode });
   if (eg !== true) return { juste: false };
+  // Étapes écrites avant le résultat (« = 7(3x - 2) = 18x - 12 ») : une étape fausse rend la réponse fausse.
+  if (lu.etapes && lu.etapes.some((x) => egales(attendu, renommer(x), { complexe: c.complexe, mode }) === false)) return { juste: false };
   if (!formeOk(a, c.attendu, c.regle, c.complexe)) return { juste: false, raison: 'forme' };
   return { juste: true };
 }

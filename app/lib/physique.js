@@ -8,7 +8,9 @@
  * unité est faux.
  */
 
-const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : Number(x.toFixed(d)));
+import { nombre, par, arrondi as arrondiSig } from './format-calcul.js';
+
+const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : d === 6 ? arrondiSig(x) : Number(x.toFixed(d)));
 const estNombre = (v) => typeof v === 'number' && Number.isFinite(v);
 const estPositif = (v) => estNombre(v) && v > 0;
 
@@ -33,7 +35,7 @@ export function kmhVersMs(kmh) {
     valeur: arrondi(ms),
     unite: 'm·s⁻¹',
     etapes: [
-      { titre: 'Conversion', detail: `${kmh} / 3,6 = ${arrondi(ms)} m·s⁻¹` },
+      { titre: 'Conversion', detail: `${nombre(kmh)} / 3,6 = ${nombre(ms)} m·s⁻¹` },
       { titre: '⚠️ Sens', detail: 'On DIVISE par 3,6 pour aller des km·h⁻¹ aux m·s⁻¹. Multiplier donnerait une valeur absurde.' },
     ],
   };
@@ -57,11 +59,11 @@ export function poids(masse_kg, g = CONSTANTES.g) {
     unite: 'N',
     etapes: [
       { titre: 'Formule', detail: 'P = m × g' },
-      { titre: 'Calcul', detail: `P = ${masse_kg} × ${g} = ${arrondi(P)} N` },
+      { titre: 'Calcul', detail: `P = ${nombre(masse_kg)} × ${nombre(g)} = ${nombre(P)} N` },
       {
         titre: '⚠️ Masse ≠ poids',
-        detail: `La masse (${masse_kg} kg) est la même partout ; le poids (${arrondi(P)} N) dépend du lieu. `
-          + `Sur la Lune (g = ${CONSTANTES.g_lune}), le même objet pèserait ${arrondi(masse_kg * CONSTANTES.g_lune)} N.`,
+        detail: `La masse (${nombre(masse_kg)} kg) est la même partout ; le poids (${nombre(P)} N) dépend du lieu. `
+          + `Sur la Lune (g = ${CONSTANTES.g_lune}), le même objet pèserait ${nombre(masse_kg * CONSTANTES.g_lune)} N.`,
       },
     ],
   };
@@ -78,10 +80,10 @@ export function gravitation(m1, m2, d) {
     unite: 'N',
     etapes: [
       { titre: 'Formule', detail: 'F = G × m₁ × m₂ / d²' },
-      { titre: 'Calcul', detail: `F = ${CONSTANTES.G} × ${m1} × ${m2} / ${d}² = ${F.toExponential(3)} N` },
+      { titre: 'Calcul', detail: `F = ${nombre(CONSTANTES.G, 3)} × ${nombre(m1)} × ${nombre(m2)} / (${nombre(d)})² = ${nombre(F)} N` },
       {
         titre: '⚠️ Dépendance en d²',
-        detail: `Doubler la distance divise la force par 4, pas par 2. À ${2 * d} m, elle vaudrait ${(F / 4).toExponential(3)} N.`,
+        detail: `Doubler la distance divise la force par 4, pas par 2. À ${2 * d} m, elle vaudrait ${nombre(F / 4)} N.`,
       },
       { titre: 'Réciprocité', detail: 'Les deux corps subissent cette force avec la même valeur, en sens opposés.' },
     ],
@@ -100,7 +102,7 @@ export function vitesseMoyenne(distance_m, duree_s) {
     vitesseKmh: arrondi(v * 3.6),
     etapes: [
       { titre: 'Formule', detail: 'v = d / Δt' },
-      { titre: 'Calcul', detail: `v = ${distance_m} / ${duree_s} = ${arrondi(v)} m·s⁻¹ (soit ${arrondi(v * 3.6)} km·h⁻¹)` },
+      { titre: 'Calcul', detail: `v = ${nombre(distance_m)} / ${nombre(duree_s)} = ${nombre(v)} m·s⁻¹ (soit ${nombre(v * 3.6)} km·h⁻¹)` },
     ],
   };
 }
@@ -118,10 +120,10 @@ export function energieCinetique(masse_kg, vitesse_ms) {
     unite: 'J',
     etapes: [
       { titre: 'Formule', detail: 'Ec = ½ × m × v²' },
-      { titre: 'Calcul', detail: `Ec = 0,5 × ${masse_kg} × ${vitesse_ms}² = ${arrondi(Ec)} J` },
+      { titre: 'Calcul', detail: `Ec = 0,5 × ${nombre(masse_kg)} × ${par(vitesse_ms)}² = ${nombre(Ec)} J` },
       {
         titre: '⚠️ Dépendance en v²',
-        detail: `Doubler la vitesse QUADRUPLE l'énergie : à ${2 * vitesse_ms} m·s⁻¹, elle vaudrait ${arrondi(4 * Ec)} J. `
+        detail: `Doubler la vitesse QUADRUPLE l'énergie : à ${nombre(2 * vitesse_ms)} m·s⁻¹, elle vaudrait ${nombre(4 * Ec)} J. `
           + 'C’est l’argument physique de la sécurité routière.',
       },
       { titre: 'Unité', detail: 'La vitesse doit être en m·s⁻¹, jamais en km·h⁻¹.' },
@@ -132,6 +134,7 @@ export function energieCinetique(masse_kg, vitesse_ms) {
 /** Énergie potentielle de pesanteur Epp = mgz. */
 export function energiePotentielle(masse_kg, altitude_m, g = CONSTANTES.g) {
   if (!estNombre(masse_kg) || masse_kg < 0) return { valide: false, erreur: 'La masse doit être positive.' };
+  if (!estPositif(g)) return { valide: false, erreur: 'L’intensité de pesanteur doit être strictement positive.' };
   if (!estNombre(altitude_m)) return { valide: false, erreur: 'L’altitude doit être un nombre.' };
   const E = masse_kg * g * altitude_m;
   return {
@@ -140,7 +143,7 @@ export function energiePotentielle(masse_kg, altitude_m, g = CONSTANTES.g) {
     unite: 'J',
     etapes: [
       { titre: 'Formule', detail: 'Epp = m × g × z' },
-      { titre: 'Calcul', detail: `Epp = ${masse_kg} × ${g} × ${altitude_m} = ${arrondi(E)} J` },
+      { titre: 'Calcul', detail: `Epp = ${nombre(masse_kg)} × ${nombre(g)} × ${par(altitude_m)} = ${nombre(E)} J` },
       { titre: 'Origine des altitudes', detail: 'z se mesure depuis une origine choisie librement : seules les VARIATIONS ont un sens physique.' },
     ],
   };
@@ -160,9 +163,9 @@ export function energieMecanique(masse_kg, vitesse_ms, altitude_m, g = CONSTANTE
     energieMecanique: arrondi(Em),
     unite: 'J',
     etapes: [
-      { titre: 'Énergie cinétique', detail: `${ec.energie} J` },
-      { titre: 'Énergie potentielle', detail: `${ep.energie} J` },
-      { titre: 'Énergie mécanique', detail: `Em = Ec + Epp = ${arrondi(Em)} J` },
+      { titre: 'Énergie cinétique', detail: `${nombre(ec.energie)} J` },
+      { titre: 'Énergie potentielle', detail: `${nombre(ep.energie)} J` },
+      { titre: 'Énergie mécanique', detail: `Em = Ec + Epp = ${nombre(Em)} J` },
       { titre: 'Conservation', detail: 'Sans frottements, Em reste CONSTANTE : l’énergie se convertit d’une forme à l’autre.' },
     ],
   };
@@ -174,6 +177,7 @@ export function energieMecanique(masse_kg, vitesse_ms, altitude_m, g = CONSTANTE
  */
 export function chuteLibre(hauteur_m, g = CONSTANTES.g) {
   if (!estNombre(hauteur_m) || hauteur_m < 0) return { valide: false, erreur: 'La hauteur doit être positive.' };
+  if (!estPositif(g)) return { valide: false, erreur: 'L’intensité de pesanteur doit être strictement positive.' };
   const v = Math.sqrt(2 * g * hauteur_m);
   return {
     valide: true,
@@ -183,7 +187,7 @@ export function chuteLibre(hauteur_m, g = CONSTANTES.g) {
     etapes: [
       { titre: 'Conservation', detail: 'mgh = ½mv² (sans frottements)' },
       { titre: 'Simplification', detail: 'La MASSE SE SIMPLIFIE : v = √(2gh). Tous les corps arrivent à la même vitesse.' },
-      { titre: 'Calcul', detail: `v = √(2 × ${g} × ${hauteur_m}) = ${arrondi(v)} m·s⁻¹` },
+      { titre: 'Calcul', detail: `v = √(2 × ${nombre(g)} × ${nombre(hauteur_m)}) = ${nombre(v)} m·s⁻¹` },
     ],
   };
 }
@@ -194,9 +198,11 @@ export function travail(force_N, deplacement_m, angleDegres = 0) {
   if (!estNombre(deplacement_m) || deplacement_m < 0) return { valide: false, erreur: 'Le déplacement doit être positif.' };
   if (!estNombre(angleDegres)) return { valide: false, erreur: 'L’angle doit être un nombre.' };
 
-  const cos = Math.cos((angleDegres * Math.PI) / 180);
+  // cos(90°) vaut 6e-17 en flottant : on juge la nullité sur le cosinus, pas sur W
+  const brut = Math.cos((angleDegres * Math.PI) / 180);
+  const cos = Math.abs(brut) < 1e-12 ? 0 : brut;
   const W = force_N * deplacement_m * cos;
-  const nul = Math.abs(W) < 1e-12;
+  const nul = W === 0;
 
   return {
     valide: true,
@@ -205,7 +211,7 @@ export function travail(force_N, deplacement_m, angleDegres = 0) {
     nature: nul ? 'nul' : W > 0 ? 'moteur' : 'résistant',
     etapes: [
       { titre: 'Formule', detail: 'W = F × d × cos α' },
-      { titre: 'Calcul', detail: `W = ${force_N} × ${deplacement_m} × cos(${angleDegres}°) = ${arrondi(W)} J` },
+      { titre: 'Calcul', detail: `W = ${nombre(force_N)} × ${nombre(deplacement_m)} × cos(${nombre(angleDegres)}°) = ${nombre(W)} J` },
       {
         titre: 'Nature',
         detail: nul
@@ -219,18 +225,24 @@ export function travail(force_N, deplacement_m, angleDegres = 0) {
 // ─────────────────────────────── électricité ────────────────────────────────
 
 /** Loi d'Ohm : U = RI. */
-export function loiOhm({ U = null, R = null, I = null }) {
-  const fournis = [U, R, I].filter((x) => x !== null && x !== undefined).length;
-  if (fournis !== 2) return { valide: false, erreur: `Il faut fournir exactement deux des trois grandeurs (U, R, I). Reçu : ${fournis}.` };
+export function loiOhm({ U = null, R = null, I = null } = {}) {
+  const vide = (x) => x === null || x === undefined;
+  const fournis = [U, R, I].filter((x) => !vide(x)).length;
+  if (fournis !== 2) return { valide: false, erreur: `Il faut fournir exactement deux des trois grandeurs (U, R, I) et laisser vide celle que l’on cherche. Reçu : ${fournis}.` };
+  for (const [nom, v] of [['U', U], ['R', R], ['I', I]]) {
+    if (!vide(v) && !estNombre(v)) return { valide: false, erreur: `${nom} doit être un nombre.` };
+  }
+  if (!vide(R) && R < 0) return { valide: false, erreur: 'Une résistance est positive.' };
 
-  let manquant, valeur, unite;
-  if (U === null) { manquant = 'U'; valeur = R * I; unite = 'V'; }
-  else if (R === null) {
+  let manquant, valeur, unite, calcul;
+  if (vide(U)) { manquant = 'U'; valeur = R * I; unite = 'V'; calcul = `U = R × I = ${nombre(R)} × ${par(I)}`; }
+  else if (vide(R)) {
     if (I === 0) return { valide: false, erreur: 'I = 0 : la résistance ne peut pas être déterminée.' };
-    manquant = 'R'; valeur = U / I; unite = 'Ω';
+    manquant = 'R'; valeur = U / I; unite = 'Ω'; calcul = `R = U / I = ${nombre(U)} / ${par(I)}`;
+    if (valeur < 0) return { valide: false, erreur: 'U et I sont de signes contraires : la résistance serait négative. Vérifie les valeurs.' };
   } else {
     if (R === 0) return { valide: false, erreur: 'R = 0 : l’intensité serait infinie.' };
-    manquant = 'I'; valeur = U / R; unite = 'A';
+    manquant = 'I'; valeur = U / R; unite = 'A'; calcul = `I = U / R = ${nombre(U)} / ${nombre(R)}`;
   }
 
   return {
@@ -240,7 +252,7 @@ export function loiOhm({ U = null, R = null, I = null }) {
     unite,
     etapes: [
       { titre: 'Loi d’Ohm', detail: 'U = R × I' },
-      { titre: 'Calcul', detail: `${manquant} = ${arrondi(valeur)} ${unite}` },
+      { titre: 'Calcul', detail: `${calcul} = ${nombre(valeur)} ${unite}` },
       { titre: 'Contrôle par les unités', detail: 'Ω × A = V ✓' },
     ],
   };
@@ -256,7 +268,7 @@ export function puissanceElectrique(U_V, I_A) {
     unite: 'W',
     etapes: [
       { titre: 'Formule', detail: 'P = U × I' },
-      { titre: 'Calcul', detail: `P = ${U_V} × ${I_A} = ${arrondi(P)} W` },
+      { titre: 'Calcul', detail: `P = ${nombre(U_V)} × ${par(I_A)} = ${nombre(P)} W` },
       { titre: '⚠️ Unité', detail: 'Le watt est une PUISSANCE. Le joule et le kWh sont des ÉNERGIES.' },
     ],
   };
@@ -271,7 +283,7 @@ export function puissanceElectrique(U_V, I_A) {
 export function energieElectrique(puissance_W, duree, unite = 's') {
   const FACTEURS = { s: 1, min: 60, h: 3600 };
   const f = FACTEURS[unite];
-  if (f === undefined) return { valide: false, erreur: `Unité de durée inconnue : « ${unite} ». Utilise s, min ou h.` };
+  if (f === undefined) return { valide: false, erreur: `Unité de durée inconnue${typeof unite === 'string' ? ` : « ${unite} »` : ''}. Utilise s, min ou h.` };
   if (!estNombre(puissance_W) || puissance_W < 0) return { valide: false, erreur: 'La puissance doit être positive.' };
   if (!estNombre(duree) || duree < 0) return { valide: false, erreur: 'La durée doit être positive.' };
 
@@ -286,10 +298,10 @@ export function energieElectrique(puissance_W, duree, unite = 's') {
     energieKWh: Number(kWh.toPrecision(6)),
     dureeSecondes: secondes,
     etapes: [
-      { titre: 'Conversion', detail: `${duree} ${unite} = ${secondes} s`, remarque: '⚠️ La durée doit être en SECONDES pour obtenir des joules.' },
+      { titre: 'Conversion', detail: `${duree} ${unite} = ${nombre(secondes)} s`, remarque: '⚠️ La durée doit être en SECONDES pour obtenir des joules.' },
       { titre: 'Formule', detail: 'E = P × Δt' },
-      { titre: 'Calcul', detail: `E = ${puissance_W} × ${secondes} = ${E.toExponential(3)} J` },
-      { titre: 'En kWh', detail: `${Number(kWh.toPrecision(4))} kWh (1 kWh = 3,6 × 10⁶ J)` },
+      { titre: 'Calcul', detail: `E = ${nombre(puissance_W)} × ${nombre(secondes)} = ${nombre(E)} J` },
+      { titre: 'En kWh', detail: `${nombre(kWh, 4)} kWh (1 kWh = 3,6 × 10⁶ J)` },
     ],
   };
 }
@@ -305,10 +317,10 @@ export function effetJoule(R_ohm, I_A) {
     unite: 'W',
     etapes: [
       { titre: 'Formule', detail: 'PJ = R × I²' },
-      { titre: 'Calcul', detail: `PJ = ${R_ohm} × ${I_A}² = ${arrondi(P)} W` },
+      { titre: 'Calcul', detail: `PJ = ${nombre(R_ohm)} × ${par(I_A)}² = ${nombre(P)} W` },
       {
         titre: '⚠️ Dépendance en I²',
-        detail: `Doubler l'intensité QUADRUPLE les pertes : à ${2 * I_A} A, on aurait ${arrondi(4 * P)} W. `
+        detail: `Doubler l'intensité QUADRUPLE les pertes : à ${nombre(2 * I_A)} A, on aurait ${nombre(4 * P)} W. `
           + 'C’est pourquoi l’électricité est transportée à très haute tension.',
       },
     ],
@@ -327,8 +339,8 @@ export function generateurReel(E_V, r_ohm, I_A) {
     chute: arrondi(r_ohm * I_A),
     etapes: [
       { titre: 'Modèle', detail: 'U = E − r × I' },
-      { titre: 'Calcul', detail: `U = ${E_V} − ${r_ohm} × ${I_A} = ${arrondi(U)} V` },
-      { titre: 'Chute interne', detail: `${arrondi(r_ohm * I_A)} V sont perdus dans le générateur, dissipés par effet Joule.` },
+      { titre: 'Calcul', detail: `U = ${nombre(E_V)} − ${nombre(r_ohm)} × ${par(I_A)} = ${nombre(U)} V` },
+      { titre: 'Chute interne', detail: `${nombre(r_ohm * I_A)} V sont perdus dans le générateur, dissipés par effet Joule.` },
       { titre: 'Conséquence', detail: 'Plus le générateur débite, plus la tension à ses bornes CHUTE.' },
     ],
   };
@@ -345,7 +357,7 @@ export function rendement(utile, fournie) {
   if (eta > 1) {
     return {
       valide: false,
-      erreur: `Le rendement vaudrait ${arrondi(eta)} > 1 : c’est IMPOSSIBLE. `
+      erreur: `Le rendement vaudrait ${nombre(eta)} > 1 : c’est IMPOSSIBLE. `
         + 'On ne peut pas récupérer plus d’énergie qu’on n’en fournit. Vérifie l’identification de l’énergie utile.',
       rendementCalcule: arrondi(eta),
     };
@@ -358,8 +370,8 @@ export function rendement(utile, fournie) {
     energieDissipee: arrondi(dissipee),
     etapes: [
       { titre: 'Formule', detail: 'η = E_utile / E_fournie' },
-      { titre: 'Calcul', detail: `η = ${utile} / ${fournie} = ${arrondi(eta)} soit ${arrondi(eta * 100, 2)} %` },
-      { titre: 'Énergie dissipée', detail: `${arrondi(dissipee)} J partent en chaleur (effet Joule, frottements).` },
+      { titre: 'Calcul', detail: `η = ${nombre(utile)} / ${nombre(fournie)} = ${nombre(eta)} soit ${nombre(eta * 100, 2)} %` },
+      { titre: 'Énergie dissipée', detail: `${nombre(dissipee)} J partent en chaleur (effet Joule, frottements).` },
       { titre: 'Conservation', detail: 'E_fournie = E_utile + E_dissipée — rien ne disparaît.' },
     ],
   };
@@ -370,6 +382,11 @@ export function rendement(utile, fournie) {
 /** Relation fondamentale des ondes : λ = v/f = v×T. */
 export function onde({ lambda = null, v = null, f = null, T = null }) {
   // T et f sont liés
+  for (const [nom, x] of [['λ', lambda], ['v', v], ['f', f], ['T', T]]) {
+    if (x !== null && x !== undefined && !estPositif(x)) {
+      return { valide: false, erreur: `${nom} doit être un nombre strictement positif.` };
+    }
+  }
   let freq = f;
   if (freq === null && T !== null) {
     if (!estPositif(T)) return { valide: false, erreur: 'La période doit être strictement positive.' };
@@ -399,7 +416,7 @@ export function onde({ lambda = null, v = null, f = null, T = null }) {
     periode: arrondi(1 / F),
     etapes: [
       { titre: 'Relation fondamentale', detail: 'λ = v × T = v / f' },
-      { titre: 'Calcul', detail: `${manquant} = ${arrondi(valeur)} ${unite}` },
+      { titre: 'Calcul', detail: `${manquant} = ${nombre(valeur)} ${unite}` },
       { titre: 'Signification de λ', detail: 'La longueur d’onde est la DISTANCE parcourue pendant une période — une période SPATIALE.' },
       {
         titre: '⚠️ Changement de milieu',
@@ -420,7 +437,7 @@ export function retard(distance_m, celerite_ms) {
     unite: 's',
     etapes: [
       { titre: 'Formule', detail: 'τ = d / v' },
-      { titre: 'Calcul', detail: `τ = ${distance_m} / ${celerite_ms} = ${arrondi(tau)} s` },
+      { titre: 'Calcul', detail: `τ = ${nombre(distance_m)} / ${nombre(celerite_ms)} = ${nombre(tau)} s` },
     ],
   };
 }
@@ -437,8 +454,8 @@ export function lunette(focaleObjectif_m, focaleOculaire_m) {
     distanceEntreLentilles: arrondi(focaleObjectif_m + focaleOculaire_m),
     etapes: [
       { titre: 'Formule', detail: 'G = f′₁ / f′₂ (objectif au numérateur)' },
-      { titre: 'Calcul', detail: `G = ${focaleObjectif_m} / ${focaleOculaire_m} = ${arrondi(G)}` },
-      { titre: 'Configuration afocale', detail: `Distance entre les lentilles = f′₁ + f′₂ = ${arrondi(focaleObjectif_m + focaleOculaire_m)} m` },
+      { titre: 'Calcul', detail: `G = ${nombre(focaleObjectif_m)} / ${nombre(focaleOculaire_m)} = ${nombre(G)}` },
+      { titre: 'Configuration afocale', detail: `Distance entre les lentilles = f′₁ + f′₂ = ${nombre(focaleObjectif_m + focaleOculaire_m)} m` },
       { titre: '⚠️ Unités', detail: 'Les deux focales doivent être dans la MÊME unité — convertis les millimètres en mètres.' },
     ],
   };
@@ -454,7 +471,7 @@ export function vergence(focale_m) {
     unite: 'δ',
     etapes: [
       { titre: 'Formule', detail: 'C = 1 / f′' },
-      { titre: 'Calcul', detail: `C = 1 / ${focale_m} = ${arrondi(C)} δ` },
+      { titre: 'Calcul', detail: `C = 1 / ${nombre(focale_m)} = ${nombre(C)} δ` },
       { titre: '⚠️ Unité', detail: 'f′ doit être en MÈTRES. Une focale de 20 cm s’écrit 0,20 m.' },
     ],
   };

@@ -101,11 +101,10 @@ export function coutNiveau(n) {
 
 /** XP cumulés nécessaires pour ATTEINDRE un niveau donné (niveau 1 = 0 XP). */
 export function xpPourNiveau(niveau) {
-  const n = Math.max(1, Math.floor(niveau));
-  // Somme des coûts des niveaux 1..n-1.
-  let total = 0;
-  for (let k = 1; k < n; k++) total += coutNiveau(k);
-  return total;
+  const n = Math.max(1, Math.floor(Number(niveau) || 1));
+  // Somme des coûts des niveaux 1..n-1 : avec m = n − 1, 100·m + 50·m(m−1)/2 = 25·m² + 75·m.
+  const m = n - 1;
+  return 25 * m * m + 75 * m;
 }
 
 /**
@@ -114,9 +113,13 @@ export function xpPourNiveau(niveau) {
  *            xpRestant, largeurNiveau, progression}}
  */
 export function niveauPourXp(xp) {
-  const total = Math.max(0, Math.floor(xp || 0));
-  let niveau = 1;
-  while (xpPourNiveau(niveau + 1) <= total) niveau += 1;
+  // XP illisible ou infini (profil abîmé) : traité comme 0, jamais de boucle sans fin.
+  const total = Number.isFinite(Number(xp)) ? Math.max(0, Math.floor(Number(xp))) : 0;
+  // Plus grand m tel que 25·m² + 75·m ≤ total, puis correction des arrondis du calcul flottant.
+  let m = Math.max(0, Math.floor((-3 + Math.sqrt(9 + (4 * total) / 25)) / 2));
+  while (m > 0 && xpPourNiveau(m + 1) > total) m -= 1;
+  while (xpPourNiveau(m + 2) <= total) m += 1;
+  const niveau = m + 1;
 
   const xpDebutNiveau = xpPourNiveau(niveau);
   const xpProchainNiveau = xpPourNiveau(niveau + 1);

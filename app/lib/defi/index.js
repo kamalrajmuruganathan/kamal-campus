@@ -25,6 +25,15 @@ export function graineAleatoire() { return Math.floor(Math.random() * 1e9) + 1; 
 
 const SEP = '~';
 
+/** Nombre de questions accepté dans un code (un code tapé de travers ne doit pas lancer 99 999 questions). */
+export const N_MAX_DEFI = 50;
+
+/** Entier écrit seulement avec des chiffres (« 10 », pas « 10abc » ni « -5 »), sinon NaN. */
+function entierStrict(texte, base = 10) {
+  const motif = base === 36 ? /^[0-9a-z]+$/i : /^\d+$/;
+  return motif.test(texte) ? parseInt(texte, base) : NaN;
+}
+
 /** Encode un défi en code court : « D1~<graine36>~<n>~<chapId> ». */
 export function encoderDefi({ chapId, graine, n }) {
   return ['D1', Number(graine).toString(36), String(n), String(chapId)].join(SEP);
@@ -35,10 +44,10 @@ export function decoderDefi(code) {
   if (typeof code !== 'string') return null;
   const p = code.trim().split(SEP);
   if (p.length < 4 || p[0] !== 'D1') return null;
-  const graine = parseInt(p[1], 36);
-  const n = parseInt(p[2], 10);
+  const graine = entierStrict(p[1], 36);
+  const n = entierStrict(p[2]);
   const chapId = p.slice(3).join(SEP); // au cas où (chapId ne contient pas ~)
-  if (!Number.isFinite(graine) || !Number.isFinite(n) || !chapId) return null;
+  if (!Number.isFinite(graine) || !Number.isInteger(n) || n < 1 || n > N_MAX_DEFI || !chapId) return null;
   return { chapId, graine, n };
 }
 
@@ -52,10 +61,11 @@ export function decoderResultat(code) {
   if (typeof code !== 'string') return null;
   const p = code.trim().split(SEP);
   if (p.length !== 4 || p[0] !== 'S1') return null;
-  const graine = parseInt(p[1], 36);
-  const score = parseInt(p[2], 10);
-  const n = parseInt(p[3], 10);
+  const graine = entierStrict(p[1], 36);
+  const score = entierStrict(p[2]);
+  const n = entierStrict(p[3]);
   if (![graine, score, n].every(Number.isFinite)) return null;
+  if (n < 1 || n > N_MAX_DEFI || score > n) return null; // « 12 / 10 » est impossible
   return { graine, score, n };
 }
 

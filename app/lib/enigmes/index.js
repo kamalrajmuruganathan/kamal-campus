@@ -52,8 +52,10 @@ export function genererEnigmes(type, n, rand = Math.random) {
   while (out.length < n && essais < max) {
     essais += 1;
     const e = gens[out.length % gens.length](rand);
-    if (vus.has(e.enonce)) continue;
-    vus.add(e.enonce);
+    // Les grilles ont toutes le même énoncé : la clé comprend la grille elle-même.
+    const cle = e.enonce + (e.grille ? JSON.stringify(e.grille) : '');
+    if (vus.has(cle)) continue;
+    vus.add(cle);
     out.push({ ...e, id: out.length + 1 });
   }
   while (out.length < n) {

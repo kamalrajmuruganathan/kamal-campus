@@ -9,7 +9,10 @@
  * son unité ; les étapes montrent la conversion.
  */
 
-const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : Number(x.toFixed(d)));
+import { nombre, arrondi as arrondiSig } from './format-calcul.js';
+
+// 6 décimales par défaut ; les très petites valeurs gardent 6 chiffres significatifs
+const arrondi = (x, d = 6) => (Number.isInteger(x) ? x : d === 6 ? arrondiSig(x) : Number(x.toFixed(d)));
 
 /** Constante d'Avogadro, en mol⁻¹. */
 export const N_A = 6.02e23;
@@ -33,12 +36,12 @@ const FACTEURS_VOLUME = { L: 1, dL: 1e-1, cL: 1e-2, mL: 1e-3, 'µL': 1e-6, uL: 1
 export function versLitres(valeur, unite = 'L') {
   const f = FACTEURS_VOLUME[unite];
   if (f === undefined) {
-    return { valide: false, erreur: `Unité de volume inconnue : « ${unite} ». Utilise L, dL, cL, mL, µL, m3 ou cm3.` };
+    return { valide: false, erreur: `Unité de volume inconnue${typeof unite === 'string' ? ` : « ${unite} »` : ''}. Utilise L, dL, cL, mL, µL, m3 ou cm3.` };
   }
   if (typeof valeur !== 'number' || !Number.isFinite(valeur) || valeur < 0) {
     return { valide: false, erreur: 'Le volume doit être un nombre positif.' };
   }
-  return { valide: true, litres: arrondi(valeur * f, 12), origine: `${valeur} ${unite}` };
+  return { valide: true, litres: Number((valeur * f).toPrecision(12)), origine: `${nombre(valeur)} ${unite}` };
 }
 
 // ──────────────────────────── masse molaire ─────────────────────────────────
@@ -159,12 +162,14 @@ export function quantiteDepuisMasse(masse_g, M_gmol) {
     unite: 'mol',
     etapes: [
       { titre: 'Formule', detail: 'n = m / M', latex: 'n = \\dfrac{m}{M}' },
-      { titre: 'Calcul', detail: `n = ${masse_g} / ${M_gmol} = ${arrondi(n)} mol` },
+      { titre: 'Calcul', detail: `n = ${nombre(masse_g)} / ${nombre(M_gmol)} = ${nombre(arrondi(n))} mol` },
       {
         titre: 'Contrôle de bon sens',
         detail: masse_g > M_gmol
           ? 'La masse dépasse la masse molaire : on doit trouver PLUS d’une mole ✓'
-          : 'La masse est inférieure à la masse molaire : on doit trouver MOINS d’une mole ✓',
+          : masse_g === M_gmol
+            ? 'La masse est égale à la masse molaire : on doit trouver EXACTEMENT une mole ✓'
+            : 'La masse est inférieure à la masse molaire : on doit trouver MOINS d’une mole ✓',
       },
     ],
   };
@@ -182,7 +187,7 @@ export function quantiteDepuisEntites(nombreEntites) {
     unite: 'mol',
     etapes: [
       { titre: 'Formule', detail: 'n = N / N_A' },
-      { titre: 'Calcul', detail: `n = ${nombreEntites.toExponential(2)} / ${N_A.toExponential(2)} = ${Number(n.toPrecision(4))} mol` },
+      { titre: 'Calcul', detail: `n = ${nombre(nombreEntites, 3)} / (${nombre(N_A, 3)}) = ${nombre(n, 4)} mol` },
     ],
   };
 }
@@ -196,10 +201,10 @@ export function entitesDepuisQuantite(n_mol) {
   return {
     valide: true,
     entites: Number(N.toPrecision(6)),
-    texte: N.toExponential(2),
+    texte: nombre(N, 3),
     etapes: [
       { titre: 'Formule', detail: 'N = n × N_A' },
-      { titre: 'Calcul', detail: `N = ${n_mol} × ${N_A.toExponential(2)} = ${N.toExponential(2)} entités` },
+      { titre: 'Calcul', detail: `N = ${nombre(n_mol)} × ${nombre(N_A, 3)} = ${nombre(N, 3)} entités` },
     ],
   };
 }
@@ -227,9 +232,9 @@ export function concentrationMolaire(n_mol, volume, unite = 'L') {
     unite: 'mol·L⁻¹',
     volumeLitres: v.litres,
     etapes: [
-      { titre: 'Conversion', detail: `${v.origine} = ${v.litres} L`, remarque: '⚠️ Les concentrations s’expriment PAR LITRE : la conversion est obligatoire.' },
+      { titre: 'Conversion', detail: `${v.origine} = ${nombre(v.litres)} L`, remarque: '⚠️ Les concentrations s’expriment PAR LITRE : la conversion est obligatoire.' },
       { titre: 'Formule', detail: 'c = n / V', latex: 'c = \\dfrac{n}{V}' },
-      { titre: 'Calcul', detail: `c = ${n_mol} / ${v.litres} = ${arrondi(c)} mol·L⁻¹` },
+      { titre: 'Calcul', detail: `c = ${nombre(n_mol)} / ${nombre(v.litres)} = ${nombre(arrondi(c))} mol·L⁻¹` },
       { titre: 'Rappel', detail: 'V est le volume de la SOLUTION, pas celui du solvant ajouté.' },
     ],
   };
@@ -251,9 +256,9 @@ export function concentrationMassique(masse_g, volume, unite = 'L') {
     unite: 'g·L⁻¹',
     volumeLitres: v.litres,
     etapes: [
-      { titre: 'Conversion', detail: `${v.origine} = ${v.litres} L`, remarque: '⚠️ Les concentrations s’expriment PAR LITRE : la conversion est obligatoire.' },
+      { titre: 'Conversion', detail: `${v.origine} = ${nombre(v.litres)} L`, remarque: '⚠️ Les concentrations s’expriment PAR LITRE : la conversion est obligatoire.' },
       { titre: 'Formule', detail: 'cₘ = m / V' },
-      { titre: 'Calcul', detail: `cₘ = ${masse_g} / ${v.litres} = ${arrondi(cm)} g·L⁻¹` },
+      { titre: 'Calcul', detail: `cₘ = ${nombre(masse_g)} / ${nombre(v.litres)} = ${nombre(arrondi(cm))} g·L⁻¹` },
     ],
   };
 }
@@ -266,13 +271,17 @@ export function convertirConcentrations({ c = null, cm = null, M }) {
   if (c !== null && cm !== null) {
     return { valide: false, erreur: 'Fournis soit c, soit cₘ — pas les deux.' };
   }
+  const donnee = c ?? cm;
+  if (donnee !== null && (typeof donnee !== 'number' || !Number.isFinite(donnee) || donnee < 0)) {
+    return { valide: false, erreur: 'La concentration doit être un nombre positif.' };
+  }
   if (c !== null) {
     const r = c * M;
     return {
       valide: true, sens: 'molaire → massique', concentration: arrondi(r), unite: 'g·L⁻¹',
       etapes: [
         { titre: 'Formule', detail: 'cₘ = c × M' },
-        { titre: 'Calcul', detail: `cₘ = ${c} × ${M} = ${arrondi(r)} g·L⁻¹` },
+        { titre: 'Calcul', detail: `cₘ = ${nombre(c)} × ${nombre(M)} = ${nombre(arrondi(r))} g·L⁻¹` },
         { titre: 'Contrôle par les unités', detail: 'mol·L⁻¹ × g·mol⁻¹ = g·L⁻¹ ✓ (les moles se simplifient)' },
       ],
     };
@@ -283,7 +292,7 @@ export function convertirConcentrations({ c = null, cm = null, M }) {
       valide: true, sens: 'massique → molaire', concentration: arrondi(r), unite: 'mol·L⁻¹',
       etapes: [
         { titre: 'Formule', detail: 'c = cₘ / M' },
-        { titre: 'Calcul', detail: `c = ${cm} / ${M} = ${arrondi(r)} mol·L⁻¹` },
+        { titre: 'Calcul', detail: `c = ${nombre(cm)} / ${nombre(M)} = ${nombre(arrondi(r))} mol·L⁻¹` },
       ],
     };
   }
@@ -309,11 +318,13 @@ export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = '
     }
   }
 
-  let manquant, valeur;
-  if (c1 === null) { manquant = 'c₁'; valeur = (c2 * v2) / v1; }
-  else if (v1 === null) { manquant = 'V₁'; valeur = (c2 * v2) / c1; }
-  else if (c2 === null) { manquant = 'c₂'; valeur = (c1 * v1) / v2; }
-  else { manquant = 'V₂'; valeur = (c1 * v1) / c2; }
+  const vide = (x) => x === null || x === undefined;
+  const n = nombre;
+  let manquant, valeur, formule;
+  if (vide(c1)) { manquant = 'c₁'; valeur = (c2 * v2) / v1; formule = `c₁ = c₂ × V₂ / V₁ = ${n(c2)} × ${n(v2)} / ${n(v1)}`; }
+  else if (vide(v1)) { manquant = 'V₁'; valeur = (c2 * v2) / c1; formule = `V₁ = c₂ × V₂ / c₁ = ${n(c2)} × ${n(v2)} / ${n(c1)}`; }
+  else if (vide(c2)) { manquant = 'c₂'; valeur = (c1 * v1) / v2; formule = `c₂ = c₁ × V₁ / V₂ = ${n(c1)} × ${n(v1)} / ${n(v2)}`; }
+  else { manquant = 'V₂'; valeur = (c1 * v1) / c2; formule = `V₂ = c₁ × V₁ / c₂ = ${n(c1)} × ${n(v1)} / ${n(c2)}`; }
 
   valeur = arrondi(valeur);
 
@@ -323,8 +334,8 @@ export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = '
   const etapes = [
     { titre: 'Principe', detail: 'Lors d’une dilution, la QUANTITÉ DE SOLUTÉ ne change pas : n₁ = n₂, donc c₁V₁ = c₂V₂.' },
     { titre: 'Grandeur cherchée', detail: manquant },
-    { titre: 'Calcul', detail: `${manquant} = ${arrondi(valeur)}${manquant.startsWith('V') ? ' ' + unite : suffixeC}` },
-    { titre: 'Facteur de dilution', detail: `F = c₁/c₂ = V₂/V₁ = ${facteur}` },
+    { titre: 'Calcul', detail: `${formule} = ${nombre(valeur)}${manquant.startsWith('V') ? ' ' + unite : suffixeC}` },
+    { titre: 'Facteur de dilution', detail: `F = c₁/c₂ = V₂/V₁ = ${nombre(facteur)}` },
   ];
 
   if (C2 > C1) {
@@ -341,10 +352,10 @@ export function dilution({ c1 = null, v1 = null, c2 = null, v2 = null, unite = '
     unite: manquant.startsWith('V') ? unite : uniteC,
     facteurDilution: facteur,
     coherent: C2 <= C1,
-    protocole: manquant === 'V₁' || v1 !== null
+    protocole: C2 <= C1
       ? [
-        `Prélever ${arrondi(V1)} ${unite} de solution mère à la PIPETTE JAUGÉE`,
-        `Verser dans une FIOLE JAUGÉE de ${arrondi(V2)} ${unite}`,
+        `Prélever ${nombre(arrondi(V1))} ${unite} de solution mère à la PIPETTE JAUGÉE`,
+        `Verser dans une FIOLE JAUGÉE de ${nombre(arrondi(V2))} ${unite}`,
         'Compléter avec le solvant jusqu’au trait de jauge',
         'Homogénéiser en retournant la fiole',
       ]

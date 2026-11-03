@@ -28,6 +28,7 @@ import { useLangue } from '../i18n';
 import { resume as resumeCarnet, depuisAnciennesErreurs } from '../../lib/carnet';
 import { defisDeLaSemaine, nombreReussis } from '../../lib/defisSemaine';
 import { etatDuJour, libelleSeance, planActif } from '../../lib/vacances';
+import { sessionsDuJour } from '../../lib/stats';
 
 export default function Accueil({ navigation }) {
   const t = useTheme();
@@ -39,7 +40,7 @@ export default function Accueil({ navigation }) {
   const jourA = dateLocale(new Date());
   const action = useMemo(() => prochaineAction(profil, jourA), [profil, jourA]);
   const xpJour = profil.jourCourant === jourA ? profil.xpDuJour : 0;
-  const activitesJour = (profil.historique || []).filter((h) => String(h.date || '').slice(0, 10) === jourA).length;
+  const activitesJour = sessionsDuJour(profil.historique, jourA);
   const quetes = quetesDuJour({ objectif: profil.objectifQuotidien || 50, xpJour, activitesJour });
   const dimanche = new Date().getDay() === 0; // bilan de la semaine mis en avant le dimanche
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));

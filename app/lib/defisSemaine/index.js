@@ -18,7 +18,7 @@
 import { debutSemaine } from '../ligue/index.js';
 
 export const NB_DEFIS = 3;
-const NBSP = ' ';
+const NBSP = '\u00a0';
 const NIVEAUX_PRIMAIRE = new Set(['cp', 'ce1', 'ce2', 'cm1', 'cm2']);
 
 /** 'primaire' (CP → CM2) ou 'secondaire' (6e → terminale, ou niveau inconnu). */

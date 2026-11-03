@@ -13,6 +13,7 @@
 
 import { appreciation } from './index.js';
 import { comparerExercice } from '../autocorrection/index.js';
+import { citeUneLettre } from '../quizmix.js';
 
 /** Barème. */
 export const POINTS_QCM = 1;
@@ -99,7 +100,7 @@ function qcmValide(q) {
  */
 export function melangerChoix(q, rand) {
   // Explication qui cite une lettre (« le piège du choix B ») : on garde l'ordre écrit.
-  if (/\b(choix|réponses?|propositions?|options?)\s+\(?[A-F]\b/i.test(String(q.explication ?? ''))) return { ...q };
+  if (citeUneLettre(q.explication)) return { ...q };
   const ordre = melanger(q.choix.map((_, i) => i), rand);
   return { ...q, choix: ordre.map((i) => q.choix[i]), reponse: ordre.indexOf(q.reponse) };
 }
@@ -110,7 +111,7 @@ export function melangerChoix(q, rand) {
  * permettent), en sautant les doublons (`vus`, partagé).
  * @returns {Array<{chapitreId, element}>}
  */
-function tirerEquilibre(reserves, n, vus) {
+function tirerEquilibre(reserves, n, vus, avecChoix = false) {
   const pris = [];
   const curseurs = reserves.map(() => 0);
   let progres = true;
@@ -120,8 +121,11 @@ function tirerEquilibre(reserves, n, vus) {
       const { chapitreId, elements } = reserves[r];
       while (curseurs[r] < elements.length) {
         const el = elements[curseurs[r]++];
-        const k = cle(el.enonce);
-        if (!k || vus.has(k)) continue;
+        const e = cle(el.enonce);
+        // QCM : énoncé + choix (deux « Quelle phrase est correcte ? » différentes ne sont pas des doublons),
+        // et jamais l'énoncé d'un exercice déjà pris.
+        const k = avecChoix ? `${e}\u0000${el.choix.map((c) => cle(c)).sort().join('\u0001')}` : e;
+        if (!e || vus.has(k) || vus.has(e)) continue;
         vus.add(k);
         pris.push({ chapitreId, element: el });
         progres = true;
@@ -164,7 +168,7 @@ export function composerExamen({ chapitres = [], nbQcm = 0, nbExos = 0, graine =
     matiere: c.matiere ?? null,
     elements: melanger((c.questionsQcm || []).filter(qcmValide), rand),
   })).filter((r) => r.elements.length > 0);
-  const qcm = tirerEquilibre(reservesQcm, Math.max(0, Math.floor(nbQcm)) + manque, vus);
+  const qcm = tirerEquilibre(reservesQcm, Math.max(0, Math.floor(nbQcm)) + manque, vus, true);
 
   const matiereDe = new Map(chaps.map((c) => [c.id, c.matiere ?? null]));
   const itemsQcm = melanger(qcm, rand).map(({ chapitreId, element }) => ({

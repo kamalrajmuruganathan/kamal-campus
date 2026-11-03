@@ -434,8 +434,11 @@ export const NIVEAUX = {
   rate: { coef: 0, libelle: 'Raté', icone: '❌' },
 };
 
-/** Arrondi au demi-point (comme une note de copie). */
-export const arrondiDemi = (x) => Math.round(x * 2) / 2;
+/**
+ * Arrondi au demi-point (comme une note de copie), demi supérieur : 12,25 → 12,5 ; 12,75 → 13.
+ * Le calcul en virgule flottante donne parfois 16,249999… pour 16,25 exact : on arrondit d'abord à 1e-9.
+ */
+export const arrondiDemi = (x) => Math.round(Number((x * 2).toFixed(9))) / 2;
 
 /**
  * Note à partir des auto-évaluations.
@@ -489,7 +492,7 @@ export function tempsRestant(c, dureeMs, maintenant) {
 
 /** « 1:59:07 » ou « 9:07 ». */
 export function formaterChrono(ms) {
-  const s = Math.max(0, Math.ceil(ms / 1000));
+  const s = Math.max(0, Math.ceil(ms / 1000)) || 0; // NaN (durée inconnue) → 0:00
   const h = Math.floor(s / 3600);
   const m = Math.floor((s % 3600) / 60);
   const sec = s % 60;

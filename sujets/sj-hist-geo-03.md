@@ -10,7 +10,7 @@ relu_par: null
 
 # Brevet — Histoire-Géographie-EMC
 
-**Durée : 2 h — /50.**
+**Durée : 2 h — /40** (barème de cet entraînement : 4 exercices de 10 points).
 
 L'épreuve comporte quatre parties : analyse de document, maîtrise des repères,
 développement construit et enseignement moral et civique (EMC).

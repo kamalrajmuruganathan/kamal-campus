@@ -16,6 +16,8 @@
  * moyenne des deux valeurs centrales si N est pair.
  */
 
+import { nombre, par } from './format-calcul.js';
+
 const estEntier = (x) => Number.isInteger(x);
 const arrondi = (x, d = 6) => (estEntier(x) ? x : Number(x.toFixed(d)));
 
@@ -41,8 +43,12 @@ export function analyserSerie(valeurs, effectifs = null) {
     if (effectifs.some((n) => !estEntier(n) || n < 0)) {
       return { valide: false, erreur: 'Les effectifs doivent être des entiers positifs ou nuls.' };
     }
-    if (effectifs.reduce((a, b) => a + b, 0) === 0) {
+    const total = effectifs.reduce((a, b) => a + b, 0);
+    if (total === 0) {
       return { valide: false, erreur: 'L’effectif total est nul.' };
+    }
+    if (total > 1e6) {
+      return { valide: false, erreur: 'Effectif total trop grand (plus d’un million de valeurs).' };
     }
   }
 
@@ -70,8 +76,8 @@ export function analyserSerie(valeurs, effectifs = null) {
   const moyenne = sommePonderee / N;
   etapes.push({
     titre: 'Moyenne',
-    detail: `Σ(nᵢ × xᵢ) / N = ${arrondi(sommePonderee)} / ${N} = ${arrondi(moyenne)}`,
-    latex: `\\bar{x} = \\dfrac{${arrondi(sommePonderee)}}{${N}}`,
+    detail: `Σ(nᵢ × xᵢ) / N = ${nombre(sommePonderee)} / ${N} = ${nombre(moyenne)}`,
+    latex: `\\bar{x} = \\dfrac{${nombre(sommePonderee)}}{${N}}`,
   });
 
   // ── médiane
@@ -79,16 +85,16 @@ export function analyserSerie(valeurs, effectifs = null) {
   etapes.push({
     titre: 'Médiane',
     detail: N % 2 === 1
-      ? `N est impair : valeur de rang (N+1)/2 = ${(N + 1) / 2}, soit ${arrondi(med)}`
-      : `N est pair : moyenne des valeurs de rangs ${N / 2} et ${N / 2 + 1}, soit ${arrondi(med)}`,
+      ? `N est impair : valeur de rang (N+1)/2 = ${(N + 1) / 2}, soit ${nombre(med)}`
+      : `N est pair : moyenne des valeurs de rangs ${N / 2} et ${N / 2 + 1}, soit ${nombre(med)}`,
   });
 
   // ── quartiles
   const q1 = quartile(developpee, 1);
   const q3 = quartile(developpee, 3);
   etapes.push(
-    { titre: 'Premier quartile', detail: `N/4 = ${arrondi(N / 4)} → rang ${rangQuartile(N, 1)} → Q₁ = ${arrondi(q1)}` },
-    { titre: 'Troisième quartile', detail: `3N/4 = ${arrondi((3 * N) / 4)} → rang ${rangQuartile(N, 3)} → Q₃ = ${arrondi(q3)}` },
+    { titre: 'Premier quartile', detail: `N/4 = ${nombre(N / 4)} → rang ${rangQuartile(N, 1)} → Q₁ = ${nombre(q1)}` },
+    { titre: 'Troisième quartile', detail: `3N/4 = ${nombre((3 * N) / 4)} → rang ${rangQuartile(N, 3)} → Q₃ = ${nombre(q3)}` },
   );
 
   const min = developpee[0];
@@ -97,8 +103,8 @@ export function analyserSerie(valeurs, effectifs = null) {
   const interquartile = q3 - q1;
 
   etapes.push(
-    { titre: 'Étendue', detail: `max − min = ${arrondi(max)} − ${arrondi(min)} = ${arrondi(etendue)}` },
-    { titre: 'Écart interquartile', detail: `Q₃ − Q₁ = ${arrondi(q3)} − ${arrondi(q1)} = ${arrondi(interquartile)}` },
+    { titre: 'Étendue', detail: `max − min = ${nombre(max)} − ${par(arrondi(min))} = ${nombre(etendue)}` },
+    { titre: 'Écart interquartile', detail: `Q₃ − Q₁ = ${nombre(q3)} − ${par(arrondi(q1))} = ${nombre(interquartile)}` },
   );
 
   // ── mode(s)
@@ -134,6 +140,7 @@ export function analyserSerie(valeurs, effectifs = null) {
 
 /** Médiane d'une série DÉJÀ TRIÉE. */
 export function mediane(triee) {
+  if (!Array.isArray(triee)) return NaN;
   const N = triee.length;
   if (N === 0) return NaN;
   if (N % 2 === 1) return triee[(N + 1) / 2 - 1];
@@ -148,6 +155,7 @@ function rangQuartile(N, k) {
 
 /** Quartile Q1 (k=1) ou Q3 (k=3) d'une série DÉJÀ TRIÉE. */
 export function quartile(triee, k) {
+  if (!Array.isArray(triee)) return NaN;
   const N = triee.length;
   if (N === 0) return NaN;
   const rang = Math.min(Math.max(rangQuartile(N, k), 1), N);
@@ -180,7 +188,7 @@ export function transformationAffine(stats, a, b) {
     etendue: arrondi(Math.abs(a) * stats.etendue),
     interquartile: arrondi(Math.abs(a) * stats.interquartile),
     etapes: [
-      { titre: 'Moyenne', detail: `ȳ = a×x̄ + b = ${a} × ${stats.moyenne} + ${b} = ${arrondi(a * stats.moyenne + b)}` },
+      { titre: 'Moyenne', detail: `ȳ = a×x̄ + b = ${a} × ${par(stats.moyenne)} + ${par(b)} = ${nombre(a * stats.moyenne + b)}` },
       {
         titre: 'Dispersion',
         detail: `L'étendue et l'écart interquartile sont multipliés par |a| = ${Math.abs(a)}. `
@@ -197,8 +205,8 @@ export function frequences(effectifs) {
   if (!Array.isArray(effectifs) || effectifs.length === 0) {
     return { valide: false, erreur: 'Liste d’effectifs vide.' };
   }
-  if (effectifs.some((n) => typeof n !== 'number' || n < 0)) {
-    return { valide: false, erreur: 'Les effectifs doivent être positifs ou nuls.' };
+  if (effectifs.some((n) => typeof n !== 'number' || !Number.isFinite(n) || n < 0)) {
+    return { valide: false, erreur: 'Les effectifs doivent être des nombres positifs ou nuls.' };
   }
   const N = effectifs.reduce((a, b) => a + b, 0);
   if (N === 0) return { valide: false, erreur: 'L’effectif total est nul.' };
@@ -214,7 +222,7 @@ export function frequences(effectifs) {
     etapes: [
       { titre: 'Effectif total', detail: `N = ${N}` },
       { titre: 'Formule', detail: 'fᵢ = nᵢ / N' },
-      { titre: 'Contrôle', detail: `Σfᵢ = ${arrondi(somme)} — doit valoir exactement 1.` },
+      { titre: 'Contrôle', detail: `Σfᵢ = ${nombre(somme)} — doit valoir exactement 1.` },
     ],
   };
 }
@@ -232,7 +240,7 @@ export function lireListeNombres(texte) {
     if (!morceau) continue;
     const virgules = (morceau.match(/,/g) || []).length;
     const parties = virgules >= 2 ? morceau.split(',').filter((x) => x !== '') : [morceau.replace(',', '.')];
-    for (const p of parties) res.push(p.trim() === '' ? NaN : Number(p.replace('−', '-')));
+    for (const p of parties) res.push(p.trim() === '' ? NaN : Number(p.replace(/[−–]/g, '-')));
   }
   return res;
 }

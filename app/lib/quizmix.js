@@ -38,7 +38,26 @@ export function composerQcm(chapitres, n = 15, rand = Math.random) {
   return melanger(poolQuestions(chapitres), rand).slice(0, Math.max(0, n));
 }
 
-const CITE_UNE_LETTRE = /\b(choix|réponses?|propositions?|options?)\s+\(?[A-F]\b/i;
+/**
+ * L'explication cite-t-elle un choix par sa lettre (« le piège du choix B », « réponse A ») ?
+ * La lettre doit être une MAJUSCULE : « la réponse a été… », « des choix d'orientation »,
+ * « le dernier choix a la bonne valeur » ne citent aucune lettre et ne bloquent pas le mélange.
+ */
+const CITE_UNE_LETTRE = /\b([Cc]hoix|[Rr]éponses?|[Pp]ropositions?|[Oo]ptions?)\s+\(?[A-F]\b/;
+export function citeUneLettre(explication) {
+  return CITE_UNE_LETTRE.test(String(explication ?? ''));
+}
+
+/**
+ * Clé de doublon d'une question : son énoncé ET ses choix (dans n'importe quel ordre).
+ * Deux questions « Quelle phrase est correcte ? » aux choix différents ne sont pas des doublons
+ * (≈ 70 questions des banques écrites étaient perdues avec une clé sur l'énoncé seul).
+ */
+export function cleQuestion(q) {
+  const enonce = String(q?.enonce ?? '').replace(/\s+/g, ' ').trim();
+  const choix = Array.isArray(q?.choix) ? q.choix.map((c) => String(c).replace(/\s+/g, ' ').trim()).sort() : [];
+  return `${enonce}\u0000${choix.join('\u0001')}`;
+}
 
 /**
  * Mélange les choix d'une question de QCM et recalcule l'indice de la bonne
@@ -50,18 +69,19 @@ export function melangerChoix(q, rand = Math.random) {
   if (!q || !Array.isArray(q.choix) || q.choix.length < 2) return q;
   if (!Number.isInteger(q.reponse) || q.reponse < 0 || q.reponse >= q.choix.length) return q;
   // Explication qui cite une lettre (« le piège du choix B ») : l'ordre doit rester celui écrit.
-  if (CITE_UNE_LETTRE.test(String(q.explication ?? ''))) return q;
+  if (citeUneLettre(q.explication)) return q;
   const ordre = melanger(q.choix.map((_, i) => i), rand);
   return { ...q, choix: ordre.map((i) => q.choix[i]), reponse: ordre.indexOf(q.reponse) };
 }
 
-/** Garde la première question de chaque énoncé (les doublons sont retirés). */
+/** Garde la première occurrence de chaque question (même énoncé et mêmes choix = doublon). */
 export function sansDoublons(questions) {
   const vus = new Set();
   const res = [];
   for (const q of Array.isArray(questions) ? questions : []) {
-    const cle = String(q?.enonce ?? '').trim();
-    if (!q || vus.has(cle)) continue;
+    if (!q) continue;
+    const cle = cleQuestion(q);
+    if (vus.has(cle)) continue;
     vus.add(cle);
     res.push(q);
   }
@@ -76,12 +96,13 @@ export function sansDoublons(questions) {
 export function completerQuestions(base, reserve, n, rand = Math.random) {
   const debut = sansDoublons(base).slice(0, Math.max(0, n));
   if (debut.length >= n) return debut;
-  const vus = new Set(debut.map((q) => String(q.enonce ?? '').trim()));
+  const vus = new Set(debut.map(cleQuestion));
   const ajout = [];
   for (const q of melanger(Array.isArray(reserve) ? reserve : [], rand)) {
     if (debut.length + ajout.length >= n) break;
-    const cle = String(q?.enonce ?? '').trim();
-    if (!q || vus.has(cle)) continue;
+    if (!q) continue;
+    const cle = cleQuestion(q);
+    if (vus.has(cle)) continue;
     vus.add(cle);
     ajout.push(q);
   }

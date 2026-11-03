@@ -18,39 +18,129 @@ export function lectureActive(matiere, niveau = null, profil = null) {
 
 const CHIFFRES_EXPOSANTS = { 2: 'au carré', 3: 'au cube' };
 
-/** Formule LaTeX simple → mots lus par la voix française. */
+// Commandes LaTeX lues par un mot (les autres sont simplement retirées, jamais lues « backslash … »).
+const COMMANDES = {
+  // Lettres grecques
+  alpha: 'alpha', beta: 'bêta', gamma: 'gamma', Gamma: 'gamma', delta: 'delta', Delta: 'delta', epsilon: 'epsilon',
+  varepsilon: 'epsilon', zeta: 'zêta', eta: 'êta', theta: 'thêta', Theta: 'thêta', iota: 'iota', kappa: 'kappa',
+  lambda: 'lambda', Lambda: 'lambda', mu: 'mu', nu: 'nu', xi: 'xi', pi: 'pi', Pi: 'pi', rho: 'rhô', sigma: 'sigma',
+  Sigma: 'sigma', tau: 'tau', phi: 'phi', varphi: 'phi', Phi: 'phi', chi: 'khi', psi: 'psi', Psi: 'psi', omega: 'oméga', Omega: 'oméga',
+  // Fonctions
+  ln: 'logarithme népérien de', log: 'logarithme décimal de', exp: 'exponentielle de', cos: 'cosinus de', sin: 'sinus de',
+  tan: 'tangente de', lim: 'limite', sum: 'somme', int: 'intégrale', max: 'maximum', min: 'minimum', arg: 'argument', deg: 'degré',
+  // Opérations et relations
+  times: 'fois', cdot: 'fois', div: 'divisé par', pm: 'plus ou moins', mp: 'moins ou plus',
+  leqslant: 'inférieur ou égal à', leq: 'inférieur ou égal à', le: 'inférieur ou égal à',
+  geqslant: 'supérieur ou égal à', geq: 'supérieur ou égal à', ge: 'supérieur ou égal à',
+  neq: 'différent de', ne: 'différent de', approx: 'environ', simeq: 'environ', sim: 'équivalent à', equiv: 'congru à',
+  propto: 'proportionnel à', ll: 'très inférieur à', gg: 'très supérieur à', lesssim: 'inférieur ou environ égal à',
+  infty: 'l’infini', parallel: 'parallèle à', perp: 'perpendiculaire à', circ: 'rond', mid: 'tel que', nmid: 'ne divise pas',
+  // Flèches et logique
+  to: 'tend vers', rightarrow: 'donne', longrightarrow: 'donne', xrightarrow: 'donne', leftarrow: 'vient de', longleftarrow: 'vient de',
+  Rightarrow: 'donc', Longrightarrow: 'donc', implies: 'donc', iff: 'équivaut à', Leftrightarrow: 'équivaut à',
+  Longleftrightarrow: 'équivaut à', mapsto: 'associe', longmapsto: 'associe', rightleftharpoons: 'en équilibre avec',
+  nearrow: 'croissante', searrow: 'décroissante', uparrow: 'augmente', downarrow: 'diminue',
+  forall: 'pour tout', exists: 'il existe', in: 'appartient à', notin: 'n’appartient pas à', cap: 'inter', cup: 'union',
+  subset: 'inclus dans', setminus: 'privé de', emptyset: 'ensemble vide', varnothing: 'ensemble vide', wedge: 'et',
+  // Divers
+  oplus: 'plus', ominus: 'moins',
+  ell: 'l', imath: 'i', jmath: 'j', dots: '…', ldots: '…', cdots: '…', backslash: 'barre oblique inverse', checkmark: 'coché',
+};
+// Commandes « de mise en forme » dont on garde seulement le contenu (avec, parfois, un mot avant ou après).
+const ENVELOPPES = [
+  [/\\(?:text|textbf|textit|texttt|textrm|mathrm|mathbf|mathit|mathcal|mathbb|mathsf|boldsymbol|operatorname|boxed|underline|mbox|hbox|displaystyle|textstyle|phantom)\s*\{([^{}]*)\}/g, ' $1 '],
+  [/\\(?:vec|overrightarrow)\s*\{([^{}]*)\}/g, ' vecteur $1 '],
+  [/\\(?:overline|bar)\s*\{([^{}]*)\}/g, ' $1 barre '],
+  [/\\(?:widehat|hat)\s*\{([^{}]*)\}/g, ' angle $1 '],
+  [/\\(?:dot|ddot|tilde|widetilde)\s*\{([^{}]*)\}/g, ' $1 '],
+  [/\\[dt]?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, ' $1 sur $2 '],
+  [/\\[dt]?binom\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, ' $2 parmi $1 '],
+  [/\\sqrt\s*\[\s*3\s*\]\s*\{([^{}]*)\}/g, ' racine cubique de $1 '],
+  [/\\sqrt\s*\[([^\]]*)\]\s*\{([^{}]*)\}/g, ' racine d’indice $1 de $2 '],
+  [/\\sqrt\s*\{([^{}]*)\}/g, ' racine de $1 '],
+  [/\\underbrace\s*\{([^{}]*)\}\s*_\s*\{([^{}]*)\}/g, ' $1 ( $2 ) '],
+  [/\\(?:overset|underset|stackrel)\s*\{[^{}]*\}\s*\{([^{}]*)\}/g, ' $1 '],
+  [/\\xrightarrow\s*(?:\[[^\]]*\])?\s*\{([^{}]*)\}/g, ' donne ( $1 ) '],
+];
+
+/** Formule LaTeX → mots lus par la voix française (« 3 + 4 = 7 » → « 3 plus 4 égale 7 »). */
 export function latexEnMots(f) {
-  let s = String(f);
-  for (let k = 0; k < 6; k++) {
-    s = s.replace(/\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}/g, ' $1 sur $2 ').replace(/\\sqrt\{([^{}]*)\}/g, ' racine de $1 ');
-  }
+  let s = String(f ?? '');
+  // Ordinaux et degrés, avant que \text{…} ne soit déballé : 3^{e} → 3e ; 90^\circ → 90 degrés.
+  // Charges des ions : H^{+} → H plus, Cu^{2+} → Cu 2 plus. Virgule décimale {,} d'abord (elle gêne \frac{7{,}5}{…}).
   s = s
     .replace(/\{,\}/g, ',')
-    .replace(/\\[,;: !]|~/g, ' ')
+    .replace(/\^\s*\{\s*(\d*)\s*([+−-])\s*\}|\^\s*([+−-])(?![\d{])/g, (_, n, sg, sg2) => ` ${n || ''} ${(sg || sg2) === '+' ? 'plus' : 'moins'} `)
+    .replace(/(\d)\s*\^\s*\{?\s*(?:\\(?:text|mathrm)\s*\{\s*)?(er|re|e|ème|nd|nde)\s*\}?\s*\}?(?![a-zA-Z])/g, '$1$2')
+    .replace(/\^\s*\{?\s*\\circ\s*\}?/g, ' degrés ')
+    .replace(/\bbar\s+(\w)/g, '$1 barre');
+  // Intégrales, sommes et limites avec leurs bornes.
+  const borne = '(\\{[^{}]*\\}|\\\\?[a-zA-Z]+|[-−]?\\d+|\\S)';
+  const sansAccolades = (x) => x.replace(/^\{|\}$/g, '');
+  s = s
+    .replace(new RegExp(`\\\\int\\s*_\\s*${borne}\\s*\\^\\s*${borne}`, 'g'), (_, a, b) => ` intégrale de ${sansAccolades(a)} à ${sansAccolades(b)} de `)
+    .replace(new RegExp(`\\\\sum\\s*_\\s*${borne}\\s*\\^\\s*${borne}`, 'g'), (_, a, b) => ` somme pour ${sansAccolades(a)} jusqu'à ${sansAccolades(b)} de `)
+    .replace(/\\lim\s*(?:\\limits)?\s*_\s*\{([^{}]*)\}/g, ' limite quand $1 de ');
+  // Commandes à arguments, puissances et indices, de l'intérieur vers l'extérieur.
+  for (let k = 0; k < 8; k++) {
+    const avant = s;
+    for (const [re, par] of ENVELOPPES) s = s.replace(re, par);
+    s = s
+      .replace(/\^\s*\{\s*([23])\s*\}/g, (_, n) => ` ${CHIFFRES_EXPOSANTS[n]} `)
+      .replace(/\^\s*\{([^{}]*)\}/g, ' puissance $1 ')
+      .replace(/_\s*\{([^{}]*)\}/g, ' $1 ');
+    s = s.replace(/\\bar\s+(\w)/g, ' $1 barre ').replace(/\\vec\s+(\w)/g, ' vecteur $1 ').replace(/\\sqrt\s*(\d|\w)/g, ' racine de $1 ');
+    if (s === avant) break;
+  }
+  s = s
+    // Tableaux et alignements : \begin{cases} … \end{cases}, « & », « \\ » (pause).
+    .replace(/\\(?:begin|end)\s*\{[a-zA-Z*]+\}(?:\s*\{[^{}]*\})?/g, ' ')
+    .replace(/\\\\(?:\s*\[[^\]]*\])?/g, ' ; ')
+    .replace(/&/g, ' ')
+    .replace(/\\\|/g, ' norme ')
+    .replace(/\\(?:hline|left|right|big|Big|bigg|Bigg|limits|nolimits|quad|qquad|not)(?![a-zA-Z])/g, ' ')
+    .replace(/\{,\}/g, ',')
+    .replace(/\\!/g, '')
+    .replace(/\\[,;:>]|\\\s|~/g, ' ')
     .replace(/(\d)\s+(?=\d{3}\b)/g, '$1')
-    .replace(/\^\{?([23])\}?/g, (_, n) => ` ${CHIFFRES_EXPOSANTS[n]} `)
-    .replace(/\^\{([^{}]*)\}|\^(\S)/g, ' puissance $1$2 ')
-    .replace(/_\{([^{}]*)\}|_(\w)/g, ' $1$2 ')
-    .replace(/\\times|×/g, ' fois ')
-    .replace(/\\div|÷/g, ' divisé par ')
-    .replace(/\\cdot/g, ' fois ')
-    .replace(/\\leqslant|\\leq|≤/g, ' inférieur ou égal à ')
-    .replace(/\\geqslant|\\geq|≥/g, ' supérieur ou égal à ')
-    .replace(/\\neq|≠/g, ' différent de ')
-    .replace(/\\approx|≈/g, ' environ ')
-    .replace(/\\pi/g, ' pi ')
-    .replace(/\\infty/g, ' l’infini ')
+    // Puissances : ^2 / ^{2} → au carré (mais 10^{23} → puissance 23).
+    .replace(/\^\s*(?:\{\s*([23])\s*\}|([23])(?!\d))/g, (_, a, b) => ` ${CHIFFRES_EXPOSANTS[a || b]} `)
+    .replace(/\^\s*\{([^{}]*)\}|\^\s*(\\?[a-zA-Z]+|[-−]?\d|\S)/g, ' puissance $1$2 ')
+    .replace(/_\s*\{([^{}]*)\}|_\s*(\\[a-zA-Z]+|\w)/g, ' $1$2 ')
+    .replace(/_\s*\{([^{}]*)\}|_\s*(\\[a-zA-Z]+|\w)/g, ' $1$2 ')
+    // Dérivées : f'(x) → f prime de x.
+    .replace(/\b([a-zA-Z])''(?=\s*\()/g, '$1 seconde ')
+    .replace(/\b([a-zA-Z])'(?=\s*\()/g, '$1 prime ')
+    // Symboles Unicode.
+    .replace(/×|⋅|·/g, ' fois ')
+    .replace(/÷/g, ' divisé par ')
+    .replace(/≤|⩽/g, ' inférieur ou égal à ')
+    .replace(/≥|⩾/g, ' supérieur ou égal à ')
+    .replace(/≠/g, ' différent de ')
+    .replace(/≈/g, ' environ ')
+    .replace(/±/g, ' plus ou moins ')
+    .replace(/∞/g, ' l’infini ')
+    .replace(/→|⟶/g, ' donne ')
+    .replace(/⇒|⟹/g, ' donc ')
+    .replace(/⇔|⟺/g, ' équivaut à ')
+    .replace(/∈/g, ' appartient à ')
+    .replace(/√/g, ' racine de ')
     .replace(/\\%|%/g, ' pour cent ')
     .replace(/°/g, ' degrés ')
-    .replace(/\\(?:mathrm|text|mathbf|mathit)\{([^{}]*)\}/g, ' $1 ')
-    .replace(/\\(?:left|right|displaystyle)/g, ' ')
-    .replace(/\\[a-zA-Z]+/g, ' ')
-    .replace(/(\S)\s*=\s*/g, '$1 égale ')
-    .replace(/(\d|\))\s*\+\s*/g, '$1 plus ')
-    .replace(/(\d|\))\s*[-−]\s*(?=\d|\()/g, '$1 moins ')
-    .replace(/(\d)\s*<\s*/g, '$1 inférieur à ')
-    .replace(/(\d)\s*>\s*/g, '$1 supérieur à ')
-    .replace(/[{}]/g, ' ')
+    .replace(/degrés\s+C\b/g, 'degrés Celsius')
+    // Autres commandes : un mot, ou rien.
+    .replace(/\\([a-zA-Z]+)/g, (_, c) => ` ${COMMANDES[c] ?? ''} `)
+    .replace(/\\./g, ' ')
+    // Opérateurs.
+    .replace(/\s*=\s*/g, ' égale ')
+    .replace(/\s*\+\s*/g, ' plus ')
+    // « - » entre deux mots (« grand-mère » dans un \text{…}) reste un trait d'union ; sinon c'est « moins ».
+    .replace(/(?<!\p{L}\p{L})[-−]|[-−](?!\p{L}\p{L})/gu, ' moins ')
+    .replace(/\s*<\s*/g, ' inférieur à ')
+    .replace(/\s*>\s*/g, ' supérieur à ')
+    .replace(/[{}|]/g, ' ')
+    .replace(/\s+([,.;)])/g, '$1')
+    .replace(/\(\s+/g, '(')
     .replace(/\s+/g, ' ')
     .trim();
   return s;
@@ -207,10 +297,46 @@ function propre(s) {
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/\$\$([\s\S]*?)\$\$|\$([^$]*)\$/g, (_, a, b) => ` ${latexEnMots(a ?? b)} `)
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/[#>*_`~|]/g, ' ')
+    .replace(/<\/?[a-zA-Z][^<>]*>/g, ' ') // vraies balises HTML seulement (« 2 300 < 2 310 » reste du texte)
+    .replace(/[*_`~]/g, ' ')
+    .replace(/<>/g, ' différent de ')
+    .replace(/<=(?!>)/g, ' inférieur ou égal ')
+    .replace(/(?<![<=])>=/g, ' supérieur ou égal ')
+    // « 8 > 5 » se lit « 8 supérieur à 5 » ; le signe cité seul (« ne confonds pas < et > ») est nommé.
+    .replace(/([^\s<>=-])\s*<\s*(?!(?:et|ou|veut|signifie|se|est)\b)(?=[\p{L}\p{N}(])/gu, '$1 inférieur à ')
+    .replace(/([^\s<>=-])\s*>\s*(?!(?:et|ou|veut|signifie|se|est)\b)(?=[\p{L}\p{N}(])/gu, '$1 supérieur à ')
+    .replace(/^\s*>\s?/, '') // citation Markdown
+    .replace(/(^|\s)<(?=[\s.,;:!?]|$)/g, '$1signe inférieur')
+    .replace(/(\S\s+)>(?=[\s.,;:!?]|$)/g, '$1signe supérieur')
+    .replace(/\^/g, ' puissance ')
+    .replace(/\\[a-zA-Z]+/g, ' ')
+    .replace(/[#>*_`~|{}]/g, ' ')
+    .replace(/\bsignes?\s+(signe\s)/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+const MAX_SEGMENT = 218;
+
+/** Coupe une phrase trop longue en morceaux ≤ MAX_SEGMENT (aux virgules si possible, sinon aux espaces). */
+function couperLong(phrase) {
+  const res = [];
+  let bloc = '';
+  for (const mot of phrase.match(/[^,\s]+,?\s*|[,\s]+/g) || [phrase]) {
+    if (bloc && bloc.length + mot.length > MAX_SEGMENT) {
+      // Recule jusqu'à la dernière virgule du bloc si elle n'est pas trop loin.
+      const v = bloc.lastIndexOf(', ');
+      if (v > MAX_SEGMENT / 2) { res.push(bloc.slice(0, v + 2)); bloc = bloc.slice(v + 2); } else { res.push(bloc); bloc = ''; }
+    }
+    bloc += mot.length > MAX_SEGMENT ? mot.slice(0, MAX_SEGMENT) : mot;
+  }
+  if (bloc) res.push(bloc);
+  return res;
+}
+
+/** Formules $…$ et $$…$$ (même sur plusieurs lignes) lues en mots, avant tout découpage du texte. */
+export function formulesEnMots(texte) {
+  return String(texte ?? '').replace(/\$\$([\s\S]*?)\$\$|\$((?:[^$\n]|\n(?![ \t]*\n))*)\$/g, (_, a, b) => ` ${latexEnMots((a ?? b).replace(/¦/g, '\\|'))} `);
 }
 
 /**
@@ -224,17 +350,24 @@ function pousser(out, texte, langue, suite = false) {
   if (!t || !/[\p{L}\p{N}]/u.test(t)) return false;
   const der = out[out.length - 1];
   // Morceaux courts (≤ 220 caractères) : certains navigateurs coupent les lectures longues.
-  if (der && der.langue === langue && der.texte.length + t.length < 220) {
-    der.texte += (suite || /[.!?:;]$/.test(der.texte) ? ' ' : '. ') + t;
+  // On garde 2 caractères de marge pour la ponctuation ajoutée ensuite (« . » en fin de cellule, « , »).
+  const sep = der && (suite || /[.!?:;]$/.test(der.texte)) ? ' ' : '. ';
+  if (der && der.langue === langue && der.texte.length + sep.length + t.length <= MAX_SEGMENT) {
+    der.texte += sep + t;
     return true;
   }
-  if (t.length <= 220) { out.push({ texte: t, langue }); return true; }
+  if (t.length <= MAX_SEGMENT) { out.push({ texte: t, langue }); return true; }
   let bloc = '';
+  const fermer = () => { if (bloc.trim()) out.push({ texte: bloc.trim(), langue }); bloc = ''; };
   for (const phrase of t.match(/[^.!?;]+[.!?;]*\s*/g) || [t]) {
-    if (bloc && bloc.length + phrase.length > 220) { out.push({ texte: bloc.trim(), langue }); bloc = ''; }
-    bloc += phrase;
+    // Une phrase trop longue à elle seule est coupée aux virgules, puis aux espaces.
+    const morceaux = phrase.length <= MAX_SEGMENT ? [phrase] : couperLong(phrase);
+    for (const mc of morceaux) {
+      if (bloc && bloc.length + mc.length > MAX_SEGMENT) fermer();
+      bloc += mc;
+    }
   }
-  if (bloc.trim()) out.push({ texte: bloc.trim(), langue });
+  fermer();
   return true;
 }
 
@@ -312,7 +445,7 @@ function decouper(texte, matiere, defaut, loc) {
  * @returns {Array<{texte, langue}>}  langue = la matière (voix étrangère) ou 'francais'
  */
 export function segmentsTexte(texte, matiere, out = [], defaut = 'francais') {
-  const s = sansGrasDansMot(texte);
+  const s = sansGrasDansMot(formulesEnMots(texte));
   if (!LANGUES_PARLEES.includes(matiere)) { pousser(out, s, 'francais'); return out; }
   const loc = [];
   decouper(s, matiere, defaut, loc);
@@ -342,6 +475,9 @@ export function segmentsFiche(markdown, matiere) {
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/```[\s\S]*?```/g, ' ');
   const out = [];
+  // Formules lues en mots d'abord : un « | », un « = » ou une parenthèse d'une formule ne doit pas
+  // couper une cellule de tableau ou une phrase ; un $$…$$ sur plusieurs lignes reste d'un seul tenant.
+  const md2 = formulesEnMots(md.replace(/\\\|/g, '¦'));
   let paragraphe = [];
   let tableau = [];
   const vider = () => {
@@ -384,9 +520,12 @@ export function segmentsFiche(markdown, matiere) {
     }
     const dire = (cellules, langues) => cellules.forEach((c, i) => {
       // Chaque cellule est découpée : « il nonno (le grand-père) » → deux voix.
+      // Hors langues vivantes, la cellule est lue telle quelle (ses parenthèses comptent : « (x + 1)² »).
+      if (!LANGUES_PARLEES.includes(matiere)) { pousser(out, c, 'francais'); } else {
       const loc = [];
       decouper(c, matiere, langues[i] || 'francais', loc);
       loc.forEach((x, k) => pousser(out, x.texte, x.langue, k > 0));
+      }
       const der = out[out.length - 1];
       if (der && !/[.!?:;]$/.test(der.texte)) der.texte += '.';
     });
@@ -394,7 +533,7 @@ export function segmentsFiche(markdown, matiere) {
     corps.forEach((l) => dire(l, langueCol));
     tableau = [];
   };
-  for (const ligne of md.split(/\r?\n/)) {
+  for (const ligne of md2.split(/\r?\n/)) {
     const l = ligne.trim();
     if (/^\|/.test(l)) {
       vider();
@@ -407,7 +546,7 @@ export function segmentsFiche(markdown, matiere) {
     } else {
       // Un titre ou un élément de liste termine la phrase précédente.
       if (/^(#{1,6}\s|[-*+]\s|\d+[.)]\s)/.test(l)) vider();
-      paragraphe.push(l.replace(/^#{1,6}\s+/, '').replace(/^[-*+]\s+|^\d+[.)]\s+/, ''));
+      paragraphe.push(l.replace(/^>\s?/, '').replace(/^#{1,6}\s+/, '').replace(/^[-*+]\s+|^\d+[.)]\s+/, ''));
       if (/^#{1,6}\s/.test(l)) vider();
     }
   }

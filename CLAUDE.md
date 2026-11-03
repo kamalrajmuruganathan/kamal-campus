@@ -364,3 +364,18 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Quiz : « Bac blanc » réservé à la 1re/Tle ; 3e = « Brevet blanc » ; 6e-4e et 2de = « Évaluation ».
 - Lycée : g = 9,8 N/kg partout (le collège peut garder 10 si l'énoncé le dit). « Une urne contient ».
 - Autocorrection : 70,8 % (clés `ordre`, `groupes`, `exacte` dans attendus.json ; `edo.js`).
+
+## 25. Page « Parents et écoles » — PUBLIÉE le 30/10/2026 (PR #14, main `01c8ab7`)
+- `web-vitrine/parents-et-ecoles.html` (lien dans l'en-tête et le pied de page de l'accueil), imprimable sur 2 pages A4.
+- Textes à envoyer : `docs/presentation-parents-ecoles.md` (+ PDF). Contact : kamalcampus.contact@gmail.com.
+- Ne jamais y promettre : agrément de l'Éducation nationale, contenus « validés par des professeurs », appli dans les stores.
+
+## 26. Campagne de tests unitaires (03/11/2026) — sur `upgrade-sdk57`, non publiée
+- 744 → 1 214 tests (`cd app && npm test`, ≈ 16 s). Tests clés à garder verts :
+  `lib/autocorrection/coherence.test.js` (chaque bonne réponse des 34 000 exercices vérifiables est acceptée),
+  `lib/generateurs/verification.test.js` (64 générateurs recalculés), `lib/fusion/fusion.test.js` (synchro sans perte,
+  ordre indifférent ; recense les champs du profil), `lib/contenu-qcm.test.js` (959 QCM + quiz), `lib/solveur/aleatoire.test.js`.
+- Bugs corrigés : choix de QCM encore non mélangés et ~70 questions écartées à tort ; XP du jour / de la semaine perdus à
+  la synchro ; -x² mal lu par le résolveur, cos/sin inutilisable ; réponses fausses acceptées (131 pour 130, étiquettes
+  échangées, constante de primitive) ; note 16,25 → 16 ; lecture à voix haute des formules ; jours UTC au lieu du jour local.
+- `app/lib/format-calcul.js` (écriture des nombres des outils) ; BigInt utilisé dans suites/arithmétique/dérivation (build web OK).

@@ -112,12 +112,19 @@ export function intrus(rand) {
 export function grilleArithmetique(rand) {
   const op = choisir(rand, ['+', '×']);
   const f = op === '+' ? (a, b) => a + b : (a, b) => a * b;
-  const lignes = [];
-  for (let i = 0; i < 3; i++) {
-    const a = entier(rand, 1, 9);
-    const b = entier(rand, 1, 9);
-    lignes.push([a, b, f(a, b)]);
-  }
+  // L'écran n'affiche pas l'en-tête « a + b » / « a × b » : les deux lignes d'exemple doivent
+  // suffire à trouver l'opération (2 et 2 donnent 4 avec + comme avec × : au moins une ligne
+  // doit trancher, sinon deux réponses seraient justes).
+  const autre = op === '+' ? (a, b) => a * b : (a, b) => a + b;
+  let lignes;
+  do {
+    lignes = [];
+    for (let i = 0; i < 3; i++) {
+      const a = entier(rand, 1, 9);
+      const b = entier(rand, 1, 9);
+      lignes.push([a, b, f(a, b)]);
+    }
+  } while (lignes.slice(0, 2).every(([a, b, c]) => autre(a, b) === c));
   const rep = lignes[2][2];
   const grille = {
     entete: ['a', 'b', op === '+' ? 'a + b' : 'a × b'],
@@ -160,7 +167,8 @@ export function calculMental(rand) {
     val = evalDeux(a, o1, b, o2, c);
     essais += 1;
   } while ((val < 0 || val > 200) && essais < 40);
-  if (val < 0) val = evalDeux(a, '×', b, '+', c); // filet de sécurité
+  // Filet de sécurité : on change AUSSI les opérations affichées (sinon l'énoncé et la réponse divergent).
+  if (val < 0) { o1 = '×'; o2 = '+'; val = evalDeux(a, o1, b, o2, c); }
   return {
     type: 'calcul',
     difficulte: 'moyen',

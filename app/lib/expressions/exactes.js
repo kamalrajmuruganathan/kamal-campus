@@ -109,8 +109,9 @@ function lireMorceau(texte, latex) {
   let p = latex ? s.replace(/\\(?:mathrm|text)\{([A-Za-z]+)\}/g, '$1').replace(/\\[,!: ]/g, ' ') : s;
   p = p.replace(/^(?:point\s+)?[A-Za-z]{0,2}'?\s*(?=\()/i, '');
   const mp = p.match(/^\(\s*([^()]*(?:\([^()]*\)[^()]*)*)\)$/);
-  if (mp && mp[1].includes(';')) {
-    const morceaux = mp[1].split(';');
+  // Saisie « (-1, 0, 0) » : virgule SUIVIE d'une espace = séparateur (« (1,5 ; 2) » garde sa virgule décimale).
+  if (mp && (mp[1].includes(';') || (!latex && /,\s/.test(mp[1])))) {
+    const morceaux = mp[1].includes(';') ? mp[1].split(';') : mp[1].split(/\s*,\s+/);
     if (morceaux.length < 2 || morceaux.length > 3) return null;
     const vals = morceaux.map((x) => lire(x, { latex }));
     if (vals.some((v) => !v || v.kind !== 'expr' || variables(v.a).size)) return null;

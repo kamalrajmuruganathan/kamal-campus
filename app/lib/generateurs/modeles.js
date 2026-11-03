@@ -10,13 +10,24 @@ import {
   entier, entierNonNul, choisir, avecSigne, fracLatex, nombreLatex, pgcd, construireQuestion,
 } from './noyau.js';
 
+/** Terme en x précédé de son signe : « + 3x », « - x » (jamais « 1x »). */
+function termeX(b) {
+  const abs = Math.abs(b);
+  return `${b >= 0 ? '+' : '-'} ${abs === 1 ? '' : abs}x`;
+}
+
+/** Constante précédée de son signe, omise si elle est nulle (jamais « + 0 »). */
+function termeConstant(c) {
+  return c === 0 ? '' : ` ${avecSigne(c)}`;
+}
+
 // ── Collège / calcul ─────────────────────────────────────────────────────────
 
 /** Équation du premier degré : ax + b = c. */
 export function eqLineaire(rand) {
   const a = entier(rand, 2, 9);
   const x = entierNonNul(rand, -8, 8);
-  const b = entier(rand, -9, 9);
+  const b = entierNonNul(rand, -9, 9); // jamais « 3x + 0 = 6 »
   const c = a * x + b;
   return construireQuestion({
     difficulte: 'moyen',
@@ -185,10 +196,13 @@ export function fractionSomme5e(rand) {
 
 /** Somme de deux fractions : a/b + c/d. */
 export function fractionSomme(rand) {
-  const b = entier(rand, 2, 9);
-  const d = entier(rand, 2, 9);
-  const a = entierNonNul(rand, -8, 8);
-  const c = entierNonNul(rand, -8, 8);
+  let a; let b; let c; let d;
+  do { // fractions de départ irréductibles : jamais « 6/6 » ni « 2/4 » dans l'énoncé
+    b = entier(rand, 2, 9);
+    d = entier(rand, 2, 9);
+    a = entierNonNul(rand, -8, 8);
+    c = entierNonNul(rand, -8, 8);
+  } while (pgcd(a, b) !== 1 || pgcd(c, d) !== 1);
   const num = a * d + c * b;
   const den = b * d;
   return construireQuestion({
@@ -219,14 +233,16 @@ export function puissancesProduit(rand) {
     notion: 'puissances',
     enonce: `Écrire sous la forme d'une seule puissance : $${a}^{${m}} \\times ${a}^{${n}}$.`,
     bonne: `$${a}^{${m + n}}$`,
+    // Chaque piège est repéré par son exposant en base a : (a²)^k = a^(2k). On écarte les pièges de même
+    // valeur (ex. 25^9 = 5^18 quand m × n = 2(m + n)) : deux choix égaux trahiraient la réponse.
     distracteurs: [
-      `$${a}^{${m * n}}$`,
-      `$${a * a}^{${m + n}}$`,
-      `$${a}^{${m + n + 1}}$`,
-      `$${a}^{${Math.abs(m - n) + 1}}$`,
-      `$${a}^{${m + n + 2}}$`,
-      `$${a}^{${m + n + 3}}$`,
-    ],
+      [m * n, `$${a}^{${m * n}}$`],
+      [2 * (m + n), `$${a * a}^{${m + n}}$`],
+      [m + n + 1, `$${a}^{${m + n + 1}}$`],
+      [Math.abs(m - n) + 1, `$${a}^{${Math.abs(m - n) + 1}}$`],
+      [m + n + 2, `$${a}^{${m + n + 2}}$`],
+      [m + n + 3, `$${a}^{${m + n + 3}}$`],
+    ].filter(([e], i, liste) => e !== m + n && liste.findIndex(([f]) => f === e) === i).map(([, t]) => t),
     explication: `Pour un produit de puissances de même base, on ADDITIONNE les exposants : $${a}^{${m}} \\times ${a}^{${n}} = ${a}^{${m}+${n}} = ${a}^{${m + n}}$. La base ne change pas.`,
   }, rand);
 }
@@ -279,6 +295,11 @@ export function pourcentage(rand) {
   }, rand);
 }
 
+/** Nombre relatif entre parenthèses, signe toujours écrit : « (+5) », « (-3) ». */
+function relatif(n) {
+  return `(${n > 0 ? '+' : ''}${n})`;
+}
+
 /** Somme de deux nombres relatifs. */
 export function relatifsSomme(rand) {
   const a = entierNonNul(rand, -20, 20);
@@ -287,10 +308,10 @@ export function relatifsSomme(rand) {
   return construireQuestion({
     difficulte: 'facile',
     notion: 'nombres-relatifs',
-    enonce: `Calculer $(${a}) + (${b})$.`,
+    enonce: `Calculer $${relatif(a)} + ${relatif(b)}$.`,
     bonne: `$${s}$`,
     distracteurs: [`$${a - b}$`, `$${-s}$`, `$${s + 1}$`, `$${b - a}$`, `$${a * b}$`, `$${s + 2}$`, `$${s - 3}$`, `$${s + 5}$`],
-    explication: `$(${a}) + (${b}) = ${s}$. On additionne bien les deux nombres avec leur signe.`,
+    explication: `$${relatif(a)} + ${relatif(b)} = ${s}$. On additionne bien les deux nombres avec leur signe.`,
   }, rand);
 }
 
@@ -302,10 +323,10 @@ export function relatifsProduit(rand) {
   return construireQuestion({
     difficulte: 'moyen',
     notion: 'nombres-relatifs',
-    enonce: `Calculer $(${a}) \\times (${b})$.`,
+    enonce: `Calculer $${relatif(a)} \\times ${relatif(b)}$.`,
     bonne: `$${p}$`,
     distracteurs: [`$${-p}$`, `$${a + b}$`, `$${p + a}$`, `$${p - b}$`, `$${p + 3}$`, `$${p - 5}$`, `$${p + 7}$`],
-    explication: `$(${a}) \\times (${b}) = ${p}$. Règle des signes : deux facteurs de même signe donnent un produit positif, de signes contraires un produit négatif.`,
+    explication: `$${relatif(a)} \\times ${relatif(b)} = ${p}$. Règle des signes : deux facteurs de même signe donnent un produit positif, de signes contraires un produit négatif.`,
   }, rand);
 }
 
@@ -313,14 +334,19 @@ export function relatifsProduit(rand) {
 export function moyenne(rand) {
   const k = choisir(rand, [4, 5]);
   const m = entier(rand, 5, 15);
-  const valeurs = [];
-  let somme = 0;
-  for (let i = 0; i < k - 1; i++) {
-    const v = entier(rand, Math.max(1, m - 5), m + 5);
-    valeurs.push(v);
-    somme += v;
-  }
-  const dernier = k * m - somme; // garantit une moyenne entière = m
+  let valeurs;
+  let somme;
+  let dernier;
+  do { // la dernière valeur reste positive et du même ordre que les autres (pas « -7 » dans la série)
+    valeurs = [];
+    somme = 0;
+    for (let i = 0; i < k - 1; i++) {
+      const v = entier(rand, Math.max(1, m - 5), m + 5);
+      valeurs.push(v);
+      somme += v;
+    }
+    dernier = k * m - somme; // garantit une moyenne entière = m
+  } while (dernier < Math.max(1, m - 5) || dernier > m + 5);
   valeurs.push(dernier);
   const total = somme + dernier;
   return construireQuestion({
@@ -345,7 +371,7 @@ export function discriminant(rand) {
   return construireQuestion({
     difficulte: 'moyen',
     notion: 'discriminant',
-    enonce: `Quel est le discriminant de $${tete} ${avecSigne(b)}x ${avecSigne(c)}$ ?`,
+    enonce: `Quel est le discriminant de $${tete} ${termeX(b)} ${avecSigne(c)}$ ?`,
     bonne: `$${delta}$`,
     distracteurs: [
       `$${b * b + 4 * a * c}$`,
@@ -364,7 +390,7 @@ export function discriminant(rand) {
 export function secondDegreRacines(rand) {
   let r1 = entierNonNul(rand, -6, 6);
   let r2 = entierNonNul(rand, -6, 6);
-  while (r1 + r2 === 0) { r2 = entierNonNul(rand, -6, 6); }
+  while (r1 + r2 === 0 || r1 === r2) { r2 = entierNonNul(rand, -6, 6); } // deux racines distinctes
   const s = r1 + r2; // coeff de x = -s
   const p = r1 * r2;
   const petit = Math.min(r1, r2);
@@ -372,7 +398,7 @@ export function secondDegreRacines(rand) {
   return construireQuestion({
     difficulte: 'difficile',
     notion: 'racines',
-    enonce: `Résoudre $x^2 ${avecSigne(-s)}x ${avecSigne(p)} = 0$.`,
+    enonce: `Résoudre $x^2 ${termeX(-s)} ${avecSigne(p)} = 0$.`,
     bonne: `$x = ${petit}$ ou $x = ${grand}$`,
     distracteurs: [
       `$x = ${-petit}$ ou $x = ${-grand}$`,
@@ -397,7 +423,7 @@ export function nombreDerive(rand) {
   return construireQuestion({
     difficulte: 'moyen',
     notion: 'derivation',
-    enonce: `Soit $f(x) = ${tete} ${avecSigne(b)}x ${avecSigne(c)}$. Que vaut $f'(${x0})$ ?`,
+    enonce: `Soit $f(x) = ${tete} ${termeX(b)}${termeConstant(c)}$. Que vaut $f'(${x0})$ ?`,
     bonne: `$${fp}$`,
     distracteurs: [
       `$${2 * a * x0}$`,
@@ -674,7 +700,7 @@ export function rendement(rand) {
   return construireQuestion({
     difficulte: 'moyen',
     notion: 'rendement',
-    enonce: `Un système reçoit une puissance de ${Pa} W et en fournit ${Pu} W d'utile. Quel est son rendement ?`,
+    enonce: `Un système reçoit une puissance de ${Pa} W et fournit une puissance utile de ${Pu} W. Quel est son rendement ?`,
     bonne: `${eta} %`,
     distracteurs: [`${100 - eta} %`, `${Pu} %`, `${eta + 5} %`, `${eta - 5} %`, `${eta + 10} %`, `${Math.round(Pa / Pu * 100)} %`],
     explication: `η = Pu ÷ Pa × 100 = ${Pu} ÷ ${Pa} × 100 = ${eta} %.`,
@@ -692,7 +718,7 @@ export function divisionEuclidienne(rand) {
   return construireQuestion({
     difficulte: 'facile',
     notion: 'division',
-    enonce: `Division euclidienne de $${a}$ par $${b}$ : quel est le quotient et le reste ?`,
+    enonce: `Division euclidienne de $${a}$ par $${b}$ : quels sont le quotient et le reste ?`,
     bonne: `quotient ${q}, reste ${r}`,
     distracteurs: [
       `quotient ${q + 1}, reste ${r}`,
@@ -1063,7 +1089,7 @@ const PLURIELS = [
   ['foot', 'feet', ['foots', 'feets', 'footes']],
   ['tooth', 'teeth', ['tooths', 'teeths', 'toothes']],
   ['mouse', 'mice', ['mouses', 'mouse', 'mices']],
-  ['person', 'people', ['persons', 'peoples', 'personnes']],
+  ['person', 'people', ['peoples', 'personnes', 'peoplez']],
   ['leaf', 'leaves', ['leafs', 'leafes', 'leave']],
   ['knife', 'knives', ['knifes', 'knifs', 'knive']],
   ['wife', 'wives', ['wifes', 'wifs', 'wive']],
@@ -1073,11 +1099,17 @@ const PLURIELS = [
   ['country', 'countries', ['countrys', 'countryes', 'countrie']],
   ['box', 'boxes', ['boxs', 'boxies', 'box']],
   ['watch', 'watches', ['watchs', 'watchies', 'watch']],
-  ['bus', 'buses', ['buss', 'busses', 'busies']],
+  ['bus', 'buses', ['buss', 'busies', 'bus']],
   ['tomato', 'tomatoes', ['tomatos', 'tomatoies', 'tomato']],
   ['sheep', 'sheep', ['sheeps', 'sheepes', 'shept']],
-  ['fish', 'fish', ['fishs', 'fishes', 'fisches']],
+  ['fish', 'fish', ['fishs', 'fishies', 'fisches']],
 ];
+
+/**
+ * Formes AUSSI correctes, jamais proposées comme distracteur : « fishes » (espèces de poissons),
+ * « persons » (langue administrative), « busses » (variante d'orthographe), « traveled » (anglais américain).
+ */
+const AUSSI_CORRECTS = new Set(['fishes', 'persons', 'busses', 'traveled']);
 
 /** Pluriel irrégulier d'un nom. */
 export function plurielIrregulier(rand) {
@@ -1087,7 +1119,7 @@ export function plurielIrregulier(rand) {
     notion: 'pluriels',
     enonce: `Quel est le pluriel de « ${s} » ?`,
     bonne: p,
-    distracteurs: [...w, `${s}s`, `${s}es`, s],
+    distracteurs: [...w, `${s}s`, `${s}es`, s].filter((d) => !AUSSI_CORRECTS.has(d)),
     explication: p === s
       ? `« ${s} » est invariable : le pluriel est identique au singulier.`
       : `« ${s} » a un pluriel irrégulier : « ${p} » (et non « ${s}s »).`,
@@ -1102,7 +1134,7 @@ const REGULIERS = [
   ['live', 'lived', ['liveed', 'livd', 'lifed']],
   ['stop', 'stopped', ['stoped', 'stopd', 'stopt']],
   ['study', 'studied', ['studyed', 'studed', 'studdied']],
-  ['travel', 'travelled', ['traveled', 'traveld', 'travled']],
+  ['travel', 'travelled', ['traveld', 'travled', 'travelt']],
   ['cook', 'cooked', ['cookd', 'cookt', 'coocked']],
   ['help', 'helped', ['helpd', 'helpt', 'holped']],
   ['carry', 'carried', ['carryed', 'carred', 'carrid']],
@@ -1126,7 +1158,7 @@ export function preteritRegulier(rand) {
     notion: 'preterit-regulier',
     enonce: `Quel est le prétérit du verbe régulier « ${base} » ?`,
     bonne: correct,
-    distracteurs: [...w, `${base}ed`, base, `${base}d`],
+    distracteurs: [...w, `${base}ed`, base, `${base}d`].filter((d) => !AUSSI_CORRECTS.has(d)),
     explication: `« ${base} » → « ${correct} ». On ajoute -ed, en adaptant l'orthographe (doubler la consonne, y → ied, e muet…).`,
   }, rand);
 }
@@ -1372,7 +1404,8 @@ export function verbiIrregolariPresenteIT(rand) {
 
 /** Participe passé (régulier) italien : -are→-ato, -ere→-uto, -ire→-ito. */
 export function participioPassatoIT(rand) {
-  const [inf, stem, grp] = choisir(rand, VERBES_REG_IT);
+  // « aprire » a un participe passé irrégulier (aperto) : il est exclu de ce drill.
+  const [inf, stem, grp] = choisir(rand, VERBES_REG_IT.filter(([v]) => v !== 'aprire'));
   const bon = grp === 'are' ? `${stem}ato` : (grp === 'ere' ? `${stem}uto` : `${stem}ito`);
   return construireQuestion({
     difficulte: 'moyen',
