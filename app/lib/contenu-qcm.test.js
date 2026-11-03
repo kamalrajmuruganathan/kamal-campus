@@ -56,9 +56,7 @@ const LETTRE_ADMISE = new Set([
 ]);
 
 /** Doublons connus (même question deux fois) à réécrire : signalés, pas bloquants. */
-const DOUBLONS_CONNUS = new Set([
-  'contenu/quatrieme/physique-chimie/transformation-conservation-masse/qcm.json#17',
-]);
+const DOUBLONS_CONNUS = new Set([]);
 
 const norm = (s) => String(s).replace(/\s+/g, ' ').trim();
 
