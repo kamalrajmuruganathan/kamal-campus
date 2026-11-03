@@ -370,7 +370,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Textes à envoyer : `docs/presentation-parents-ecoles.md` (+ PDF). Contact : kamalcampus.contact@gmail.com.
 - Ne jamais y promettre : agrément de l'Éducation nationale, contenus « validés par des professeurs », appli dans les stores.
 
-## 26. Campagne de tests unitaires (03/11/2026) — sur `upgrade-sdk57`, non publiée
+## 26. Campagne de tests unitaires (03/11/2026) — PUBLIÉE le 03/11/2026 (PR #15, main `393b933`)
 - 744 → 1 214 tests (`cd app && npm test`, ≈ 16 s). Tests clés à garder verts :
   `lib/autocorrection/coherence.test.js` (chaque bonne réponse des 34 000 exercices vérifiables est acceptée),
   `lib/generateurs/verification.test.js` (64 générateurs recalculés), `lib/fusion/fusion.test.js` (synchro sans perte,
