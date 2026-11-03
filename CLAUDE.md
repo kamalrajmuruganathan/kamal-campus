@@ -380,7 +380,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   échangées, constante de primitive) ; note 16,25 → 16 ; lecture à voix haute des formules ; jours UTC au lieu du jour local.
 - `app/lib/format-calcul.js` (écriture des nombres des outils) ; BigInt utilisé dans suites/arithmétique/dérivation (build web OK).
 
-## 27. Les 8 chantiers du 03/11/2026 — sur `upgrade-sdk57`, non publiés
+## 27. Les 8 chantiers du 03/11/2026 — PUBLIÉS le 03/11/2026 (PR #16, main `7d377b0`)
 - **Sécurité Supabase** (`outils/sql/securite_fonctions.sql`, APPLIQUÉ) : fonctions des défis réservées à `authenticated`.
   À faire par Kamal : Authentication → activer « Leaked password protection » (si l'offre le permet).
   La base contient aussi des tables/fonctions `thaayam_*` qui ne sont PAS à Kamal Campus : ne pas y toucher.
@@ -398,3 +398,6 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   `src/accessibiliteWeb*.js` ; réglages Profil : police Atkinson Hyperlegible (OFL, `app/public/polices/`), interligne, animations.
 - **23 chapitres enrichis** : `scripts/gen_enrichi_h.py` (relancer `python3 scripts/gen_enrichi_h.py --attendus` après
   `generer-exos.py`). Autocorrection 70,9 %.
+- Le contrôle qualité GitHub lance `npm test` SANS installer les paquets : un test qui a besoin d'un paquet npm doit se sauter
+  s'il est absent (modèle : `lib/accessibilite/babel-etat.test.js`, `lib/generateurs/verification.test.js` pour katex).
+- `supabase-actif.yml` lancé à la main le 03/11 : « ok » reçu (vert).
