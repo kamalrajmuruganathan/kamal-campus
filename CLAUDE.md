@@ -401,3 +401,11 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Le contrôle qualité GitHub lance `npm test` SANS installer les paquets : un test qui a besoin d'un paquet npm doit se sauter
   s'il est absent (modèle : `lib/accessibilite/babel-etat.test.js`, `lib/generateurs/verification.test.js` pour katex).
 - `supabase-actif.yml` lancé à la main le 03/11 : « ok » reçu (vert).
+
+## 28. Réglages faits par Kamal (04/11/2026)
+- Supabase « Leaked password protection » : **réservée à l'offre Pro** → impossible en gratuit, abandonné. Longueur minimale
+  du mot de passe laissée à 6 (l'écran Connexion affiche « 6 caractères minimum »). Ne pas activer le Captcha (l'appli ne le gère pas).
+- Les tables `thaayam_*` de Supabase viennent de l'autre projet de Kamal (« thaayam », aussi sur Netlify) : ne jamais y toucher.
+- **Netlify : « Stopped builds » activé** (Developer settings → Build settings). Les crédits Netlify sont de nouveau épuisés ;
+  l'ancien lien kamal-campus.netlify.app ne répondait pas le 04/11. Rien à faire : le vrai site est GitHub Pages ;
+  ne partager que l'adresse github.io.
