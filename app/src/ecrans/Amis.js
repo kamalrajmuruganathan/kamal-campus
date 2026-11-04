@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { View, Text, TextInput, Pressable, ScrollView, ActivityIndicator, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
-import { theme } from '../theme';
+import { useTheme } from '../useTheme';
 import {
   assurerProfilPublic, definirPseudo, chercherParPseudo, envoyerDemande,
   repondreDemande, supprimerAmi, listerAmis, listerDemandesRecues, ecouterAmities,
@@ -9,7 +9,7 @@ import {
 
 export default function Amis({ navigation }) {
   const sombre = useSombre();
-  const C = theme(sombre).couleur;
+  const C = useTheme().couleur;
 
   const [chargement, setChargement] = useState(true);
   const [pseudoEdit, setPseudoEdit] = useState('');

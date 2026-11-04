@@ -409,3 +409,6 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Netlify : « Stopped builds » activé** (Developer settings → Build settings). Les crédits Netlify sont de nouveau épuisés ;
   l'ancien lien kamal-campus.netlify.app ne répondait pas le 04/11. Rien à faire : le vrai site est GitHub Pages ;
   ne partager que l'adresse github.io.
+- **Thème « 💎 Bleu cristal »** (04/11, non publié) : 4e choix d'apparence dans Profil (`themePref: 'cristal'`). Palette `CRISTAL`
+  dans `src/theme.js` (claire, bleu glacier, textes ≥ 4,5:1, testé dans `lib/affichage.test.js`) ; `theme(sombre, { palette })`,
+  passé par `useTheme` et App.js. Test d'écran `app/e2e/theme.spec.js`.

@@ -10,7 +10,7 @@ import { useProgression } from './progression/Contexte';
 export function useSombre() {
   const systeme = useColorScheme() === 'dark';
   const pref = useProgression().profil?.themePref || 'systeme';
-  if (pref === 'clair') return false;
+  if (pref === 'clair' || pref === 'cristal') return false;
   if (pref === 'sombre') return true;
   return systeme;
 }

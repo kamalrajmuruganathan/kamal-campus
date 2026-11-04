@@ -1,13 +1,13 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { View, Text, TextInput, Pressable, ScrollView, KeyboardAvoidingView, Platform, ActivityIndicator, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
-import { theme } from '../theme';
+import { useTheme } from '../useTheme';
 import { listerMessages, envoyerMessage, marquerLus, abonnerConversation, monId } from '../cloud/chat';
 
 export default function Discussion({ route }) {
   const { amiId, pseudo } = route.params ?? {};
   const sombre = useSombre();
-  const C = theme(sombre).couleur;
+  const C = useTheme().couleur;
   const [messages, setMessages] = useState([]);
   const [texte, setTexte] = useState('');
   const [chargement, setChargement] = useState(true);

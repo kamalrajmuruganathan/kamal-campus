@@ -59,7 +59,7 @@ export function profilVide() {
     onboardingFait: false,
     prenom: '',
     langue: 'fr', // langue de l'interface (fr/en/es/ar)
-    themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre'
+    themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre' | 'cristal'
     tailleTexte: 'normale', // accessibilité : 'normale' | 'grande' | 'tres-grande'
     contrasteFort: false, // accessibilité : contraste renforcé (basse vision)
     policeDyslexie: false, // accessibilité (web) : police Atkinson Hyperlegible
