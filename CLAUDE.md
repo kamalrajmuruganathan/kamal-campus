@@ -412,3 +412,12 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Thème « 💎 Bleu cristal »** (04/11, PUBLIÉ le 15/11, PR #17, main `c950fae`) : 4e choix d'apparence dans Profil (`themePref: 'cristal'`). Palette `CRISTAL`
   dans `src/theme.js` (claire, bleu glacier, textes ≥ 4,5:1, testé dans `lib/affichage.test.js`) ; `theme(sombre, { palette })`,
   passé par `useTheme` et App.js. Test d'écran `app/e2e/theme.spec.js`.
+
+## 29. Mot de passe oublié (15/11/2026) — sur `upgrade-sdk57`, non publié
+- Écran `Connexion.js` : lien « Mot de passe oublié ? » → e-mail → `resetPasswordForEmail` → code provisoire (modèle « Reset
+  Password » avec `{{ .Token }}`, valable 10 min = « Email OTP expiration » 600 s) → `verifyOtp({type:'recovery'})` puis
+  `updateUser({password})` (`AuthContexte.reinitialiserMotDePasse` ; `recuperation` garde l'écran de connexion affiché pendant ce temps,
+  App.js). Règles et messages : `app/lib/motDePasse` (+ tests). Test d'écran `app/e2e/mot-de-passe.spec.js`.
+- « Confirm email » est désactivé dans Supabase (les 2 comptes ont été confirmés à la création).
+- **À faire par Kamal** (guide `docs/guide-mot-de-passe-oublie.md`) : OTP 600 s, modèle d'e-mail en français, et **SMTP personnalisé**
+  (Gmail kamalcampus.contact@gmail.com + mot de passe d'application) : le SMTP par défaut de Supabase n'envoie qu'aux membres de l'équipe.

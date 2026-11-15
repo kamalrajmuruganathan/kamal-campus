@@ -195,11 +195,13 @@ function Navigation() {
 }
 
 function PortailAuth() {
-  const { session, chargement } = useAuth();
+  const { session, chargement, recuperation } = useAuth();
   if (chargement) {
     return <View style={{ flex: 1 }} />;
   }
-  if (!session) {
+  // Pendant « mot de passe oublié », le code ouvre une session : on reste sur l'écran de connexion
+  // jusqu'à ce que le nouveau mot de passe soit enregistré.
+  if (!session || recuperation) {
     return <Connexion />;
   }
   return (

@@ -28,6 +28,7 @@ function sessionInvalide(error) {
 export function AuthProvider({ children }) {
   const [session, setSession] = useState(null);
   const [chargement, setChargement] = useState(true);
+  const [recuperation, setRecuperation] = useState(false); // mot de passe oublié en cours
 
   useEffect(() => {
     let actif = true;
@@ -73,6 +74,30 @@ export function AuthProvider({ children }) {
 
   const seDeconnecter = () => supabase.auth.signOut();
 
+  // ── Mot de passe oublié ──────────────────────────────────────────────────
+  // 1. Supabase envoie un code provisoire par e-mail (modèle « Reset password », valable 10 min).
+  //    Pas d'erreur si l'adresse est inconnue : on ne révèle pas qui a un compte.
+  const envoyerCodeOubli = (email) => supabase.auth.resetPasswordForEmail(email);
+
+  // 2. Le code ouvre une session ; on change aussitôt le mot de passe. Pendant ce temps, `recuperation`
+  //    garde l'écran de connexion affiché (sinon l'appli s'ouvrirait avant le nouveau mot de passe).
+  const reinitialiserMotDePasse = async (email, code, nouveau) => {
+    setRecuperation(true);
+    try {
+      const v = await supabase.auth.verifyOtp({ email, token: code, type: 'recovery' });
+      if (v.error) return { error: v.error };
+      const u = await supabase.auth.updateUser({ password: nouveau });
+      if (u.error) {
+        // Mot de passe refusé : on referme la session ouverte par le code (il faudra un nouveau code).
+        try { await supabase.auth.signOut(); } catch {}
+        return { error: u.error };
+      }
+      return { error: null };
+    } finally {
+      setRecuperation(false);
+    }
+  };
+
   return (
     <AuthContexte.Provider
       value={{
@@ -82,6 +107,9 @@ export function AuthProvider({ children }) {
         sInscrire,
         seConnecter,
         seDeconnecter,
+        envoyerCodeOubli,
+        reinitialiserMotDePasse,
+        recuperation,
       }}
     >
       {children}
