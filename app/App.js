@@ -87,8 +87,8 @@ const optionsRetourWeb = (navigation) => (Platform.OS !== 'web' ? {} : {
 
 function Navigation() {
   const sombre = useSombre();
-  const t = theme(sombre);
   const { profil, charge } = useProgression();
+  const t = theme(sombre, { palette: profil?.themePref === 'cristal' ? 'cristal' : undefined });
   const { L } = useLangue();
 
   const themeNavigation = {

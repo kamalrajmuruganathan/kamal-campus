@@ -33,6 +33,7 @@ const THEMES = [
   { v: 'systeme', l: 'Système' },
   { v: 'clair', l: '☀️ Clair' },
   { v: 'sombre', l: '🌙 Sombre' },
+  { v: 'cristal', l: '💎 Bleu cristal' },
 ];
 const TAILLES_TEXTE = [
   { v: 'normale', l: 'Normal' },
@@ -359,7 +360,7 @@ export default function Profil({ navigation }) {
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
         </Pressable>
 
-        {/* Apparence — thème clair / sombre / système */}
+        {/* Apparence — thème clair / sombre / bleu cristal / système */}
         <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
           <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
             Apparence

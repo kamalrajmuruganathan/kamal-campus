@@ -91,6 +91,43 @@ const SOMBRE = {
   },
 };
 
+// Thème « Bleu cristal » : clair, aux tons bleu glacier. Même règle que le thème clair :
+// chaque couleur de texte atteint au moins 4,5:1 sur le fond, la surface et la surface haute.
+const CRISTAL = {
+  ...COMMUN,
+  sombre: false,
+  couleur: {
+    fond: '#f2f8fd',
+    surface: '#e3f0fa',
+    surfaceHaute: '#d4e8f6',
+    texte: '#0b2540',
+    attenue: '#3a5570',
+    trait: '#c2dbee',
+    accent: '#0063ad',
+    accentTexte: '#ffffff',
+    succes: '#156b44',
+    succesFond: '#e0f2e9',
+    erreur: '#ab2020',
+    erreurFond: '#fbe5e7',
+    alerte: '#735100',
+    alerteFond: '#fcf0d4',
+    maths: '#0063ad',
+    physique: '#6a35bd',
+    anglais: '#a12c5c',
+    espagnol: '#a8321f',
+    allemand: '#33429c',
+    italien: '#11677a',
+    francais: '#86209a',
+    histgeo: '#8a4e18',
+    philosophie: '#6a4d91',
+    ses: '#0b6b52',
+    hggsp: '#325d6b',
+    arts: '#a02f82',
+    lca: '#5c5e26',
+    grandoral: '#0a6874',
+  },
+};
+
 // ── Accessibilité : échelle de police et contraste renforcé ──────────────────
 // Facteurs d'agrandissement du texte selon la préférence de l'élève.
 const ECHELLE_TEXTE = { normale: 1, grande: 1.18, 'tres-grande': 1.36 };
@@ -113,10 +150,11 @@ const CONTRASTE = {
  * @param {boolean} sombre  thème sombre ?
  * @param {{taille?:string, contraste?:boolean}} [reglages]  préférences d'accessibilité.
  *   `taille` ∈ {normale, grande, tres-grande} ; `contraste` = contraste renforcé.
+ *   `palette` = 'cristal' pour le thème « Bleu cristal » (ignoré si `sombre`).
  * Rétrocompatible : `theme(sombre)` sans réglages renvoie le thème de base.
  */
 export const theme = (sombre, reglages = {}) => {
-  const base = sombre ? SOMBRE : CLAIR;
+  const base = sombre ? SOMBRE : reglages.palette === 'cristal' ? CRISTAL : CLAIR;
   const facteur = ECHELLE_TEXTE[reglages.taille] || 1;
   const contraste = !!reglages.contraste;
   if (facteur === 1 && !contraste) return base;

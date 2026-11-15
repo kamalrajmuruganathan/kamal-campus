@@ -380,7 +380,7 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   échangées, constante de primitive) ; note 16,25 → 16 ; lecture à voix haute des formules ; jours UTC au lieu du jour local.
 - `app/lib/format-calcul.js` (écriture des nombres des outils) ; BigInt utilisé dans suites/arithmétique/dérivation (build web OK).
 
-## 27. Les 8 chantiers du 03/11/2026 — sur `upgrade-sdk57`, non publiés
+## 27. Les 8 chantiers du 03/11/2026 — PUBLIÉS le 03/11/2026 (PR #16, main `7d377b0`)
 - **Sécurité Supabase** (`outils/sql/securite_fonctions.sql`, APPLIQUÉ) : fonctions des défis réservées à `authenticated`.
   À faire par Kamal : Authentication → activer « Leaked password protection » (si l'offre le permet).
   La base contient aussi des tables/fonctions `thaayam_*` qui ne sont PAS à Kamal Campus : ne pas y toucher.
@@ -398,3 +398,17 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   `src/accessibiliteWeb*.js` ; réglages Profil : police Atkinson Hyperlegible (OFL, `app/public/polices/`), interligne, animations.
 - **23 chapitres enrichis** : `scripts/gen_enrichi_h.py` (relancer `python3 scripts/gen_enrichi_h.py --attendus` après
   `generer-exos.py`). Autocorrection 70,9 %.
+- Le contrôle qualité GitHub lance `npm test` SANS installer les paquets : un test qui a besoin d'un paquet npm doit se sauter
+  s'il est absent (modèle : `lib/accessibilite/babel-etat.test.js`, `lib/generateurs/verification.test.js` pour katex).
+- `supabase-actif.yml` lancé à la main le 03/11 : « ok » reçu (vert).
+
+## 28. Réglages faits par Kamal (04/11/2026)
+- Supabase « Leaked password protection » : **réservée à l'offre Pro** → impossible en gratuit, abandonné. Longueur minimale
+  du mot de passe laissée à 6 (l'écran Connexion affiche « 6 caractères minimum »). Ne pas activer le Captcha (l'appli ne le gère pas).
+- Les tables `thaayam_*` de Supabase viennent de l'autre projet de Kamal (« thaayam », aussi sur Netlify) : ne jamais y toucher.
+- **Netlify : « Stopped builds » activé** (Developer settings → Build settings). Les crédits Netlify sont de nouveau épuisés ;
+  l'ancien lien kamal-campus.netlify.app ne répondait pas le 04/11. Rien à faire : le vrai site est GitHub Pages ;
+  ne partager que l'adresse github.io.
+- **Thème « 💎 Bleu cristal »** (04/11, non publié) : 4e choix d'apparence dans Profil (`themePref: 'cristal'`). Palette `CRISTAL`
+  dans `src/theme.js` (claire, bleu glacier, textes ≥ 4,5:1, testé dans `lib/affichage.test.js`) ; `theme(sombre, { palette })`,
+  passé par `useTheme` et App.js. Test d'écran `app/e2e/theme.spec.js`.
